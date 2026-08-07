@@ -1,0 +1,62 @@
+[
+  {
+    "category": "01",
+    "category_name": "学术写作、引用与出版",
+    "format": "xlsx",
+    "path": "01_学术写作、引用与出版_GitHub技能调研.xlsx"
+  },
+  {
+    "category": "01",
+    "category_name": "学术写作、引用与出版",
+    "format": "docx",
+    "path": "01_学术写作、引用与出版_GitHub技能调研.docx"
+  },
+  {
+    "category": "02",
+    "category_name": "文档、表格、演示文稿与办公自动化",
+    "format": "xlsx",
+    "path": "02_文档、表格、演示文稿与办公自动化_GitHub技能调研.xlsx"
+  },
+  {
+    "category": "02",
+    "category_name": "文档、表格、演示文稿与办公自动化",
+    "format": "docx",
+    "path": "02_文档、表格、演示文稿与办公自动化_GitHub技能调研.docx"
+  },
+  {
+    "category": "03",
+    "category_name": "文献检索与学术研究",
+    "format": "xlsx",
+    "path": "03_文献检索与学术研究_GitHub技能调研.xlsx"
+  },
+  {
+    "category": "03",
+    "category_name": "文献检索与学术研究",
+    "format": "docx",
+    "path": "03_文献检索与学术研究_GitHub技能调研.docx"
+  },
+  {
+    "category": "04",
+    "category_name": "图书馆与信息素养",
+    "format": "xlsx",
+    "path": "04_图书馆与信息素养_GitHub技能调研.xlsx"
+  },
+  {
+    "category": "04",
+    "category_name": "图书馆与信息素养",
+    "format": "docx",
+    "path": "04_图书馆与信息素养_GitHub技能调研.docx"
+  },
+  {
+    "category": "05",
+    "category_name": "编程、数学、数据分析和可视化",
+    "format": "xlsx",
+    "path": "05_编程、数学、数据分析和可视化_GitHub技能调研.xlsx"
+  },
+  {
+    "category": "05",
+    "category_name": "编程、数学、数据分析和可视化",
+    "format": "docx",
+    "path": "05_编程、数学、数据分析和可视化_GitHub技能调研.docx"
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "Tibsfox/gsd-skill-creator": {
+    "stars": 69,
+    "pushed": "2026-07-19",
+    "license": "NOASSERTION",
+    "branch": "main",
+    "description": "Introduces a comprehensive agent-based framework for guided software development (GSD)",
+    "archived": false
+  },
+  "AhmedAnwar-Gazy/latex_templet": {
+    "stars": 1,
+    "pushed": "2026-05-08",
+    "license": "未明确",
+    "branch": "main",
+    "description": "non",
+    "archived": false
+  },
+  "lionelsimai/claude-skills-collection": {
+    "stars": 20,
+    "pushed": "2026-02-08",
+    "license": "MIT",
+    "branch": "main",
+    "description": "",
+    "archived": false
+  },
+  "ASI2030/Fact-Check-X": {
+    "stars": 0,
+    "pushed": "2026-07-30",
+    "license": "Apache-2.0",
+    "branch": "main",
+    "description": "Evidence-first fact-checking Agent Skills suite for reproducible source verification and answer comparison.",
+    "archived": false
+  },
+  "SamaritanOC/fact-checker": {
+    "stars": 0,
+    "pushed": "2026-05-18",
+    "license": "未明确",
+    "branch": "main",
+    "description": "A systematic, evidence-grounded fact-checking Agent skill based on professional verification protocols.",
+    "archived": false
+  },
+  "wentorai/research-plugins": {
+    "stars": 270,
+    "pushed": "2026-06-19",
+    "license": "MIT",
+    "branch": "main",
+    "description": "350+ academic research skills, MCP configs, and plugins for Research-Claw and AI agents",
+    "archived": false
+  },
+  "wu-yc/LabClaw": {
+    "stars": 1044,
+    "pushed": "2026-03-19",
+    "license": "未明确",
+    "branch": "main",
+    "description": "LabClaw – Operating Layer for LabOS (Stanford-Princeton AI Co-Scientists)",
+    "archived": false
+  },
+  "scdenney/open-science-skills": {
+    "stars": 39,
+    "pushed": "2026-08-06",
+    "license": "NOASSERTION",
+    "branch": "main",
+    "description": "Agentic skills for Claude Code and Codex, built from published social-science methods sources. Covers experimental design, computational text analysis, manuscript QA, and transparent reporting.",
+    "archived": false
+  },
+  "dandye/ai-runbooks": {
+    "stars": 120,
+    "pushed": "2026-08-04",
+    "license": "Apache-2.0",
+    "branch": "main",
+    "description": "",
+    "archived": false
+  },
+  "Albert-Libra/nanobot-zotero-bridge": {
+    "stars": 3,
+    "pushed": "2026-06-01",
+    "license": "未明确",
+    "branch": "master",
+    "description": "🐈 nanobot agent skill — turn your Zotero library into an AI-searchable knowledge base. L0→L3 paper processing pipeline (metadata → abstract → full-text → LLM summary) with FTS5 + RAG hybrid search. Agent cites your papers, not random web results.",
+    "archived": false
+  },
+  "K-Dense-AI/scientific-agent-skills": {
+    "stars": 32822,
+    "pushed": "2026-08-03",
+    "license": "MIT",
+    "branch": "main",
+    "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 170,000+ scientists worldwide. 158 ready-to-use skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+    "archived": false
+  },
+  "zotero/translators": {
+    "stars": 1670,
+    "pushed": "2026-08-05",
+    "license": "未明确",
+    "branch": "master",
+    "description": "Zotero Translators",
+    "archived": false
+  },
+  "obra/superpowers": {
+    "stars": 267788,
+    "pushed": "2026-08-06",
+    "license": "MIT",
+    "branch": "main",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "archived": false
+  },
+  "wshobson/agents": {
+    "stars": 38534,
+    "pushed": "2026-08-05",
+    "license": "MIT",
+    "branch": "main",
+    "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
+    "archived": false
+  },
+  "markdown-viewer/skills": {
+    "stars": 3116,
+    "pushed": "2026-05-26",
+    "license": "未明确",
+    "branch": "main",
+    "description": "Opinionated skills for AI coding agents to create stunning diagrams and visualizations directly in Markdown. These skills extend agent capabilities across diagram generation, data visualization, and technical documentation.",
+    "archived": false
+  },
+  "leanprover/skills": {
+    "stars": 61,
+    "pushed": "2026-02-25",
+    "license": "Apache-2.0",
+    "branch": "main",
+    "description": "Skills for AIs using the Lean programming language and theorem prover — proofs, toolchain setup, bisection, and more",
+    "archived": false
+  },
+  "lyndonkl/claude": {
+    "stars": 141,
+    "pushed": "2026-08-04",
+    "license": "未明确",
+    "branch": "main",
+    "description": "Agents, skills and anything else to use with claude",
+    "archived": false
+  }
+}

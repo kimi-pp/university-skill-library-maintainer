@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+*.pyc
+~$*
+.superpowers/
+.worktrees/
+06_过程记录/renders/
+06_过程记录/pending_delivery/
+

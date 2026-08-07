@@ -1,0 +1,212 @@
+{
+  "K-Dense-AI/scientific-agent-skills": {
+    "stars": 32822,
+    "pushed": "2026-08-03",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "ShaishavMaisuria/research-paper-lifecycle-skills": {
+    "stars": 21,
+    "pushed": "2026-06-27",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  "zLanqing/codex-claude-academic-skills": {
+    "stars": 2613,
+    "pushed": "2026-05-14",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "beita6969/ScienceClaw": {
+    "stars": 872,
+    "pushed": "2026-06-08",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "wentorai/research-plugins": {
+    "stars": 270,
+    "pushed": "2026-06-19",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "stephenturner/skill-peer-review-assistant": {
+    "stars": 33,
+    "pushed": "2026-06-30",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "WUBING2023/PaperSpine": {
+    "stars": 4663,
+    "pushed": "2026-07-28",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "anthropics/skills": {
+    "stars": 166590,
+    "pushed": "2026-07-24",
+    "license": "各技能目录独立许可证",
+    "branch": "main"
+  },
+  "openai/skills": {
+    "stars": 24564,
+    "pushed": "2026-07-14",
+    "license": "各技能目录独立许可证",
+    "branch": "main"
+  },
+  "claude-office-skills/skills": {
+    "stars": 362,
+    "pushed": "2026-01-31",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "EvotecIT/OfficeIMO": {
+    "stars": 499,
+    "pushed": "2026-08-06",
+    "license": "MIT",
+    "branch": "master"
+  },
+  "Leo1998-Lu/ai-paper2slide-skill": {
+    "stars": 95,
+    "pushed": "2026-07-08",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "bowenliang123/markdown-exporter": {
+    "stars": 258,
+    "pushed": "2026-07-16",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  "dachent/skills": {
+    "stars": 18,
+    "pushed": "2026-08-03",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "kangminlee-maker/excel-workbook-editing": {
+    "stars": 0,
+    "pushed": "2026-06-29",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "Community-Access/accessibility-agents": {
+    "stars": 382,
+    "pushed": "2026-08-04",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "ustc-ai4science/academic-search": {
+    "stars": 532,
+    "pushed": "2026-07-05",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "jkitchin/litdb": {
+    "stars": 83,
+    "pushed": "2026-04-07",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "wentorai/Research-Claw": {
+    "stars": 849,
+    "pushed": "2026-08-01",
+    "license": "未明确",
+    "branch": "main"
+  },
+  "keemanxp/slr-prisma": {
+    "stars": 90,
+    "pushed": "2026-03-28",
+    "license": "未明确",
+    "branch": "main"
+  },
+  "Tibsfox/gsd-skill-creator": {
+    "stars": 69,
+    "pushed": "2026-07-19",
+    "license": "NOASSERTION",
+    "branch": "main"
+  },
+  "AhmedAnwar-Gazy/latex_templet": {
+    "stars": 1,
+    "pushed": "2026-05-08",
+    "license": "未明确",
+    "branch": "main"
+  },
+  "lionelsimai/claude-skills-collection": {
+    "stars": 20,
+    "pushed": "2026-02-08",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "ASI2030/Fact-Check-X": {
+    "stars": 0,
+    "pushed": "2026-07-30",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  "SamaritanOC/fact-checker": {
+    "stars": 0,
+    "pushed": "2026-05-18",
+    "license": "未明确",
+    "branch": "main"
+  },
+  "wu-yc/LabClaw": {
+    "stars": 1044,
+    "pushed": "2026-03-19",
+    "license": "未明确",
+    "branch": "main"
+  },
+  "scdenney/open-science-skills": {
+    "stars": 39,
+    "pushed": "2026-08-06",
+    "license": "NOASSERTION",
+    "branch": "main"
+  },
+  "dandye/ai-runbooks": {
+    "stars": 120,
+    "pushed": "2026-08-04",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  "Albert-Libra/nanobot-zotero-bridge": {
+    "stars": 3,
+    "pushed": "2026-06-01",
+    "license": "未明确",
+    "branch": "master"
+  },
+  "zotero/translators": {
+    "stars": 1670,
+    "pushed": "2026-08-05",
+    "license": "未明确",
+    "branch": "master"
+  },
+  "obra/superpowers": {
+    "stars": 267788,
+    "pushed": "2026-08-06",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "wshobson/agents": {
+    "stars": 38534,
+    "pushed": "2026-08-05",
+    "license": "MIT",
+    "branch": "main"
+  },
+  "markdown-viewer/skills": {
+    "stars": 3116,
+    "pushed": "2026-05-26",
+    "license": "未明确",
+    "branch": "main"
+  },
+  "leanprover/skills": {
+    "stars": 61,
+    "pushed": "2026-02-25",
+    "license": "Apache-2.0",
+    "branch": "main"
+  },
+  "lyndonkl/claude": {
+    "stars": 141,
+    "pushed": "2026-08-04",
+    "license": "未明确",
+    "branch": "main"
+  }
+}
