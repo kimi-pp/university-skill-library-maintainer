@@ -16,6 +16,44 @@ function safeFileName(value) {
   return value.replace(/[<>:"/\\|?*]/g, "_");
 }
 
+function assertPng(bytes, key, label, { minWidth = 600, minHeight = 180 } = {}) {
+  if (bytes.length < 5000 || bytes.readUInt32BE(0) !== 0x89504e47 || bytes.readUInt32BE(4) !== 0x0d0a1a0a) {
+    throw new Error(`${key}/${label}: 渲染结果为空或不是 PNG`);
+  }
+  const width = bytes.readUInt32BE(16);
+  const height = bytes.readUInt32BE(20);
+  if (width < minWidth || height < minHeight) throw new Error(`${key}/${label}: 渲染尺寸异常 ${width}x${height}`);
+  return { width, height };
+}
+
+async function renderToFile(workbook, outputDir, key, { sheetName, fileName, scale, range = null, minimum = {} }) {
+  const preview = await workbook.render({ sheetName, ...(range ? { range } : { autoCrop: "all" }), scale, format: "png" });
+  const bytes = Buffer.from(await preview.arrayBuffer());
+  assertPng(bytes, key, range ? `${sheetName}/${range}` : sheetName, minimum);
+  const outputPath = path.join(outputDir, fileName);
+  await fs.writeFile(outputPath, bytes);
+  return outputPath;
+}
+
+function keyCatalogRanges(sheet) {
+  const values = sheet.getUsedRange(true).values;
+  if (values.length <= 30) return [];
+  const dataRows = values.slice(4);
+  const longestRow = (columns) => dataRows.reduce((best, row, index) => {
+    const length = columns.reduce((sum, column) => sum + String(row[column] ?? "").length, 0);
+    return length > best.length ? { row: index + 5, length } : best;
+  }, { row: 5, length: -1 }).row;
+  const longestTextRow = longestRow([2, 3, 4, 5, 6, 7, 10, 11]);
+  const longestUrlRow = longestRow([20, 21]);
+  const lastRow = values.length;
+  return [
+    { label: "title-header", range: "A1:V5" },
+    { label: "longest-text", range: `A${longestTextRow}:V${longestTextRow}` },
+    { label: "longest-url", range: `A${longestUrlRow}:V${longestUrlRow}` },
+    { label: "last-row", range: `A${lastRow}:V${lastRow}` },
+  ];
+}
+
 export async function renderSpreadsheetFile(filePath, renderRoot, key) {
   const workbook = await SpreadsheetFile.importXlsx(await FileBlob.load(filePath));
   const actualNames = workbook.worksheets.items.map((sheet) => sheet.name);
@@ -29,17 +67,22 @@ export async function renderSpreadsheetFile(filePath, renderRoot, key) {
     const scale = sheetName === "AI技能清单"
       ? rowCount <= 10 ? 0.65 : rowCount <= 20 ? 0.5 : 0.4
       : sheetName === "来源清单" ? 0.75 : 1;
-    const preview = await workbook.render({ sheetName, autoCrop: "all", scale, format: "png" });
-    const bytes = Buffer.from(await preview.arrayBuffer());
-    if (bytes.length < 5000 || bytes.readUInt32BE(0) !== 0x89504e47 || bytes.readUInt32BE(4) !== 0x0d0a1a0a) {
-      throw new Error(`${key}/${sheetName}: 渲染结果为空或不是 PNG`);
+    written.push(await renderToFile(workbook, outputDir, key, {
+      sheetName,
+      fileName: `${index + 1}_${safeFileName(sheetName)}.png`,
+      scale,
+    }));
+    if (sheetName === "AI技能清单") {
+      for (const segment of keyCatalogRanges(workbook.worksheets.getItem(sheetName))) {
+        written.push(await renderToFile(workbook, outputDir, key, {
+          sheetName,
+          range: segment.range,
+          fileName: `${index + 1}_${safeFileName(sheetName)}_segment_${segment.label}_${segment.range.replace(":", "-")}.png`,
+          scale: 1.15,
+          minimum: { minWidth: 2400, minHeight: 100 },
+        }));
+      }
     }
-    const width = bytes.readUInt32BE(16);
-    const height = bytes.readUInt32BE(20);
-    if (width < 600 || height < 180) throw new Error(`${key}/${sheetName}: 渲染尺寸异常 ${width}x${height}`);
-    const outputPath = path.join(outputDir, `${index + 1}_${safeFileName(sheetName)}.png`);
-    await fs.writeFile(outputPath, bytes);
-    written.push(outputPath);
   }
   return written;
 }

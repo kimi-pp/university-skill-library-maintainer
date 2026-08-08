@@ -10,6 +10,7 @@ import { FileBlob, SpreadsheetFile } from "@oai/artifact-tool";
 import {
   CATALOG_HEADERS,
   SHEET_NAMES,
+  buildWorkbook,
   generateSpreadsheets,
   loadInputs,
   selectManifestItems,
@@ -20,6 +21,11 @@ import {
   verifySpreadsheetFile,
 } from "../tools/verify_subcategorized_spreadsheets.mjs";
 import { renderSpreadsheetFile } from "../tools/render_subcategorized_spreadsheets.mjs";
+import {
+  normalizeXlsxPackage,
+  unzipEntries,
+  zipEntries,
+} from "../tools/xlsx_package_utils.mjs";
 
 const testDir = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(testDir, "..", "..");
@@ -40,6 +46,31 @@ async function withTempDir(fn) {
 
 function xlsxPathFor(root, item) {
   return path.join(root, ...item.path.split("/"));
+}
+
+async function rewriteEntry(filePath, entryName, transform) {
+  const entries = unzipEntries(await fs.readFile(filePath));
+  const before = entries.get(entryName);
+  assert.ok(before, `missing XLSX entry ${entryName}`);
+  entries.set(entryName, Buffer.from(transform(before.toString("utf8")), "utf8"));
+  await fs.writeFile(filePath, zipEntries(entries));
+}
+
+function replaceCachedValue(xml, reference, replacement) {
+  const pattern = new RegExp(`(<x:c\\b(?=[^>]*\\br="${reference}")[^>]*>.*?<x:v>)(.*?)(</x:v>.*?</x:c>)`, "s");
+  assert.match(xml, pattern, `missing cached value for ${reference}`);
+  return xml.replace(pattern, `$1${replacement}$3`);
+}
+
+function mutateRecords(records, id, field, value) {
+  return records.map((record) => record.id === id ? { ...record, [field]: value } : { ...record });
+}
+
+async function copyAndMutate(originalPath, root, name, mutation) {
+  const copyPath = path.join(root, name);
+  await fs.copyFile(originalPath, copyPath);
+  await mutation(copyPath);
+  return copyPath;
 }
 
 test("manifest selection is safe, unique, scope-aware, and stably ordered", async () => {
@@ -163,18 +194,19 @@ test("verifier checks a real XLSX and rejects expected-member mismatch", async (
 });
 
 test("generation is byte-idempotent despite reversed input ordering", async () => {
-  await withTempDir(async (firstRoot) => withTempDir(async (secondRoot) => {
+  await withTempDir(async (root) => {
     const inputs = await loadInputs(projectRoot);
-    const [first] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, firstRoot, { only: ["01-01"] });
+    const [first] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["01-01"] });
+    const firstHash = await sha256(first.outputPath);
     const [second] = await generateSpreadsheets(
       [...inputs.records].reverse(),
       [...inputs.taxonomy].reverse(),
       [...inputs.manifest].reverse(),
-      secondRoot,
+      root,
       { only: ["01-01"] },
     );
-    assert.equal(await sha256(first.outputPath), await sha256(second.outputPath));
-  }));
+    assert.equal(await sha256(second.outputPath), firstHash);
+  });
 });
 
 test("renderer reopens one XLSX and emits one nonblank PNG per worksheet", async () => {
@@ -190,6 +222,188 @@ test("renderer reopens one XLSX and emits one nonblank PNG per worksheet", async
       assert.deepEqual([...bytes.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
       assert.ok(bytes.readUInt32BE(16) >= 600, `${renderedPath}: PNG 宽度异常`);
       assert.ok(bytes.readUInt32BE(20) >= 180, `${renderedPath}: PNG 高度异常`);
+    }
+  });
+});
+
+test("verifier rejects drift in verification, stars, and updated facts", async (t) => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [written] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["05-05"] });
+    const target = inputs.records.find((record) => record.subcategory_code === "05-05");
+    const mutations = [
+      ["本次核验", "plain_verification", `${target.plain_verification}（变异）`],
+      ["GitHub 关注数", "stars", Number(target.stars) + 1],
+      ["最近更新", "repo_pushed", "2000-01-01"],
+    ];
+    for (const [label, field, value] of mutations) {
+      await t.test(label, async () => {
+        await assert.rejects(
+          verifySpreadsheetFile(
+            written.outputPath,
+            written.item,
+            mutateRecords(inputs.records, target.id, field, value),
+            inputs.taxonomy,
+          ),
+          new RegExp(`${label}|事实|22列`),
+        );
+      });
+    }
+  });
+});
+
+test("verifier rejects swapped per-category statistics even when the total is unchanged", async () => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [written] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["05-overview"] });
+    const mutated = await copyAndMutate(written.outputPath, root, "swapped-stats.xlsx", async (filePath) => {
+      await rewriteEntry(filePath, "xl/worksheets/sheet3.xml", (xml) => {
+        const first = xml.match(/<x:c\b(?=[^>]*\br="B6")[^>]*>.*?<x:v>(.*?)<\/x:v>.*?<\/x:c>/s)?.[1];
+        const second = xml.match(/<x:c\b(?=[^>]*\br="B7")[^>]*>.*?<x:v>(.*?)<\/x:v>.*?<\/x:c>/s)?.[1];
+        assert.notEqual(first, second, "fixture must have unequal category counts");
+        return replaceCachedValue(replaceCachedValue(xml, "B6", second), "B7", first);
+      });
+    });
+    await assert.rejects(
+      verifySpreadsheetFile(mutated, written.item, inputs.records, inputs.taxonomy),
+      /小分类.*计数|分类统计.*逐项/,
+    );
+  });
+});
+
+test("verifier rejects wrong per-repository allocation even when the total is unchanged", async () => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [written] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["05-overview"] });
+    const mutated = await copyAndMutate(written.outputPath, root, "swapped-sources.xlsx", async (filePath) => {
+      await rewriteEntry(filePath, "xl/worksheets/sheet4.xml", (xml) => {
+        const first = xml.match(/<x:c\b(?=[^>]*\br="G5")[^>]*>.*?<x:v>(.*?)<\/x:v>.*?<\/x:c>/s)?.[1];
+        const second = xml.match(/<x:c\b(?=[^>]*\br="G6")[^>]*>.*?<x:v>(.*?)<\/x:v>.*?<\/x:c>/s)?.[1];
+        assert.notEqual(first, second, "fixture must have unequal repository counts");
+        return replaceCachedValue(replaceCachedValue(xml, "G5", second), "G6", first);
+      });
+    });
+    await assert.rejects(
+      verifySpreadsheetFile(mutated, written.item, inputs.records, inputs.taxonomy),
+      /仓库.*计数|来源清单.*逐项/,
+    );
+  });
+});
+
+test("verifier checks every sheet freeze and the source filter and hyperlink", async (t) => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [written] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["05-05"] });
+    const freezeCases = [
+      ["使用说明冻结", "xl/worksheets/sheet1.xml", 'ySplit="2"', 'ySplit="1"'],
+      ["分类统计冻结", "xl/worksheets/sheet3.xml", 'ySplit="4"', 'ySplit="3"'],
+      ["来源清单冻结", "xl/worksheets/sheet4.xml", 'ySplit="4"', 'ySplit="3"'],
+    ];
+    for (const [label, entryName, before, after] of freezeCases) {
+      await t.test(label, async () => {
+        const mutated = await copyAndMutate(written.outputPath, root, `${label}.xlsx`, async (filePath) => {
+          await rewriteEntry(filePath, entryName, (xml) => {
+            assert.ok(xml.includes(before));
+            return xml.replace(before, after);
+          });
+        });
+        await assert.rejects(verifySpreadsheetFile(mutated, written.item, inputs.records, inputs.taxonomy), /冻结位置/);
+      });
+    }
+    await t.test("来源清单筛选", async () => {
+      const mutated = await copyAndMutate(written.outputPath, root, "source-filter.xlsx", async (filePath) => {
+        const entries = unzipEntries(await fs.readFile(filePath));
+        const tableName = [...entries.keys()].find((name) => /^xl\/tables\/table\d+\.xml$/.test(name)
+          && entries.get(name).toString("utf8").includes('ref="A4:G'));
+        assert.ok(tableName);
+        await rewriteEntry(filePath, tableName, (xml) => xml.replace(/ref="A4:G(\d+)"/g, 'ref="A4:F$1"'));
+      });
+      await assert.rejects(verifySpreadsheetFile(mutated, written.item, inputs.records, inputs.taxonomy), /来源清单.*筛选/);
+    });
+    await t.test("来源清单链接", async () => {
+      const mutated = await copyAndMutate(written.outputPath, root, "source-link.xlsx", async (filePath) => {
+        await rewriteEntry(filePath, "xl/worksheets/_rels/sheet4.xml.rels", (xml) => {
+          assert.match(xml, /TargetMode="External"/);
+          return xml.replace(/Target="https:\/\/github\.com\/[^"]+" TargetMode="External"/, 'Target="https://example.com/wrong-source" TargetMode="External"');
+        });
+      });
+      await assert.rejects(verifySpreadsheetFile(mutated, written.item, inputs.records, inputs.taxonomy), /来源清单.*链接|HTTPS|External/);
+    });
+  });
+});
+
+test("OOXML normalization is scoped and idempotent when invoked twice on the same package", async () => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const item = selectManifestItems(inputs.manifest, ["02-08"])[0];
+    const records = inputs.records.filter((record) => record.subcategory_code === "02-08");
+    const filePath = path.join(root, "raw.xlsx");
+    const rawBlob = await SpreadsheetFile.exportXlsx(buildWorkbook(item, records, inputs.taxonomy));
+    const originalLog = console.log;
+    try {
+      console.log = () => {};
+      await rawBlob.save(filePath);
+    } finally {
+      console.log = originalLog;
+    }
+    const beforeEntries = unzipEntries(await fs.readFile(filePath));
+    const links = [
+      { sheetPath: "xl/worksheets/sheet2.xml", links: [
+        { ref: "U5", target: records[0].skill_url },
+        { ref: "V5", target: records[0].repo_url },
+      ] },
+      { sheetPath: "xl/worksheets/sheet4.xml", links: [{ ref: "B5", target: records[0].repo_url }] },
+    ];
+    const freezes = [
+      { sheetPath: "xl/worksheets/sheet1.xml", ySplit: 2, topLeftCell: "A3", activePane: "bottomLeft" },
+      { sheetPath: "xl/worksheets/sheet2.xml", xSplit: 4, ySplit: 4, topLeftCell: "E5", activePane: "bottomRight" },
+      { sheetPath: "xl/worksheets/sheet3.xml", ySplit: 4, topLeftCell: "A5", activePane: "bottomLeft" },
+      { sheetPath: "xl/worksheets/sheet4.xml", xSplit: 1, ySplit: 4, topLeftCell: "B5", activePane: "bottomRight" },
+    ];
+    await normalizeXlsxPackage(filePath, links, freezes);
+    const onceHash = await sha256(filePath);
+    const onceEntries = unzipEntries(await fs.readFile(filePath));
+    const touched = new Set([
+      ...freezes.map((plan) => plan.sheetPath),
+      ...links.map((plan) => plan.sheetPath.replace(/^(.*)\/([^/]+)$/, "$1/_rels/$2.rels")),
+    ]);
+    for (const [name, bytes] of beforeEntries) {
+      if (!touched.has(name)) assert.deepEqual(onceEntries.get(name), bytes, `unrelated entry changed: ${name}`);
+    }
+    await normalizeXlsxPackage(filePath, links, freezes);
+    assert.equal(await sha256(filePath), onceHash, "second normalization must be byte-identical");
+
+    const twiceEntries = unzipEntries(await fs.readFile(filePath));
+    for (const plan of links) {
+      const sheetXml = twiceEntries.get(plan.sheetPath).toString("utf8");
+      const relationshipPath = plan.sheetPath.replace(/^(.*)\/([^/]+)$/, "$1/_rels/$2.rels");
+      const relationshipsXml = twiceEntries.get(relationshipPath).toString("utf8");
+      const nodeIds = [...sheetXml.matchAll(/<x:hyperlink\b[^>]*\br:id="([^"]+)"/g)].map((match) => match[1]);
+      const relationshipRows = [...relationshipsXml.matchAll(/<Relationship\b[^>]*\bId="([^"]+)"[^>]*\bType="[^"]*\/hyperlink"[^>]*\bTarget="([^"]+)"[^>]*\bTargetMode="External"[^>]*\/?\s*>/g)]
+        .map((match) => ({ id: match[1], target: match[2] }));
+      assert.equal(nodeIds.length, plan.links.length);
+      assert.equal(relationshipRows.length, plan.links.length);
+      assert.deepEqual(new Set(nodeIds), new Set(relationshipRows.map(({ id }) => id)), "orphan hyperlink relationship");
+      assert.equal(new Set(relationshipRows.map(({ target }) => target)).size, relationshipRows.length, "duplicate hyperlink target");
+    }
+  });
+});
+
+test("large overview catalogs automatically emit readable high-scale key-range renders", async () => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [written] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["05-overview"] });
+    const rendered = await renderSpreadsheetFile(written.outputPath, path.join(root, "renders"), written.item.key);
+    assert.equal(rendered.filter((renderPath) => !path.basename(renderPath).includes("segment")).length, 4);
+    const segments = rendered.filter((renderPath) => path.basename(renderPath).includes("segment"));
+    assert.ok(segments.length >= 4, "large catalog needs title/header, longest text, longest URL, and last-row segments");
+    assert.ok(segments.some((renderPath) => path.basename(renderPath).includes("A1-V5")), "title and header range missing");
+    assert.ok(segments.some((renderPath) => path.basename(renderPath).includes("last-row")), "last row range missing");
+    for (const renderedPath of segments) {
+      const bytes = await fs.readFile(renderedPath);
+      assert.ok(bytes.length > 10000, `${renderedPath}: segmented PNG too small`);
+      assert.ok(bytes.readUInt32BE(16) >= 2400, `${renderedPath}: segmented PNG not high scale`);
+      assert.ok(bytes.readUInt32BE(20) >= 100, `${renderedPath}: segmented PNG height abnormal`);
     }
   });
 });

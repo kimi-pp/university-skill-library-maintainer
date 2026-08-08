@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
-import { normalizeXlsxPackage } from "./xlsx_package_utils.mjs";
+import { normalizeXlsxPackage, semanticXlsxDigest } from "./xlsx_package_utils.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 export const PROJECT_ROOT = path.resolve(scriptDir, "..", "..");
@@ -495,19 +495,21 @@ export async function generateSpreadsheets(records, taxonomy, manifest, projectR
     const prefix = `${root}${path.sep}`.toLowerCase();
     if (!outputPath.toLowerCase().startsWith(prefix)) throw new Error(`不安全的输出路径: ${item.path}`);
     const selectedRecords = scopeRecords(item, records);
-    const workbook = buildWorkbook(item, selectedRecords, taxonomy);
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
+    const candidatePath = `${outputPath}.task5-candidate`;
+    await fs.rm(candidatePath, { force: true });
+    const workbook = buildWorkbook(item, selectedRecords, taxonomy);
     const blob = await SpreadsheetFile.exportXlsx(workbook);
     const originalLog = console.log;
     try {
       console.log = () => {};
-      await blob.save(outputPath);
+      await blob.save(candidatePath);
     } finally {
       console.log = originalLog;
     }
     const repositories = [...new Set(selectedRecords.map((record) => record.repo))].sort();
     await normalizeXlsxPackage(
-      outputPath,
+      candidatePath,
       [
         {
           sheetPath: "xl/worksheets/sheet2.xml",
@@ -531,6 +533,16 @@ export async function generateSpreadsheets(records, taxonomy, manifest, projectR
         { sheetPath: "xl/worksheets/sheet4.xml", xSplit: 1, ySplit: 4, topLeftCell: "B5", activePane: "bottomRight" },
       ],
     );
+    let keepExisting = false;
+    try {
+      const [existing, candidate] = await Promise.all([fs.readFile(outputPath), fs.readFile(candidatePath)]);
+      keepExisting = semanticXlsxDigest(existing) === semanticXlsxDigest(candidate);
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+    if (!keepExisting) await fs.copyFile(candidatePath, outputPath);
+    await fs.rm(candidatePath, { force: true });
+    await fs.rm(`${candidatePath}.inspect.ndjson`, { force: true });
     await fs.rm(`${outputPath}.inspect.ndjson`, { force: true });
     written.push({ item, outputPath });
   }

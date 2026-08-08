@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import crypto from "node:crypto";
 import { deflateRawSync, inflateRawSync } from "node:zlib";
 
 function findEndOfCentralDirectory(buffer) {
@@ -132,22 +133,21 @@ function relationshipSourcePath(relationshipPath) {
   return match ? `${match[1]}/${match[2]}` : null;
 }
 
-function canonicalizeRelationships(entries) {
+function canonicalizeRelationshipsForComparison(entries) {
   for (const relationshipPath of [...entries.keys()].filter((name) => name.endsWith(".rels")).sort()) {
     let xml = entries.get(relationshipPath).toString("utf8");
     const elements = [...xml.matchAll(/<Relationship\b[^>]*\/?\s*>/g)].map((match) => match[0]);
     if (!elements.length) continue;
     const parsed = elements.map((element) => {
       const attributes = Object.fromEntries([...element.matchAll(/([A-Za-z:]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
-      return { element, attributes };
+      return { attributes };
     }).sort((left, right) => `${left.attributes.Type}|${left.attributes.Target}|${left.attributes.TargetMode ?? ""}`.localeCompare(`${right.attributes.Type}|${right.attributes.Target}|${right.attributes.TargetMode ?? ""}`));
     const mapping = new Map(parsed.map((item, index) => [item.attributes.Id, `rId${index + 1}`]));
     const rebuilt = parsed.map((item, index) => {
       const targetMode = item.attributes.TargetMode ? ` TargetMode="${item.attributes.TargetMode}"` : "";
       return `<Relationship Id="rId${index + 1}" Type="${item.attributes.Type}" Target="${item.attributes.Target}"${targetMode} />`;
     }).join("");
-    xml = xml.replace(/<Relationship\b[^>]*\/?\s*>/g, "");
-    xml = xml.replace(/<\/Relationships>/, `${rebuilt}</Relationships>`);
+    xml = xml.replace(/<Relationship\b[^>]*\/?\s*>/g, "").replace(/<\/Relationships>/, `${rebuilt}</Relationships>`);
     entries.set(relationshipPath, Buffer.from(xml, "utf8"));
     const sourcePath = relationshipSourcePath(relationshipPath);
     if (sourcePath && entries.has(sourcePath)) {
@@ -156,6 +156,12 @@ function canonicalizeRelationships(entries) {
       entries.set(sourcePath, Buffer.from(sourceXml, "utf8"));
     }
   }
+}
+
+export function semanticXlsxDigest(buffer) {
+  const entries = new Map([...unzipEntries(buffer)].map(([name, bytes]) => [name, Buffer.from(bytes)]));
+  canonicalizeRelationshipsForComparison(entries);
+  return crypto.createHash("sha256").update(zipEntries(entries)).digest("hex");
 }
 
 function addHyperlinks(entries, sheetPath, links) {
@@ -169,11 +175,19 @@ function addHyperlinks(entries, sheetPath, links) {
   const relationshipPath = sheetPath.replace(/^(.*)\/([^/]+)$/, "$1/_rels/$2.rels");
   let relationshipsXml = entries.get(relationshipPath)?.toString("utf8")
     ?? '<?xml version="1.0" encoding="utf-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"></Relationships>';
+  relationshipsXml = relationshipsXml.replace(
+    /<Relationship\b(?=[^>]*\bType="[^"]*\/hyperlink")[^>]*\/?\s*>/g,
+    "",
+  );
   const existingIds = new Set([...relationshipsXml.matchAll(/\bId="([^"]+)"/g)].map((match) => match[1]));
   const hyperlinkXml = [];
   for (let index = 0; index < links.length; index += 1) {
-    let relationshipId = `hyperlink${index + 1}`;
-    while (existingIds.has(relationshipId)) relationshipId = `hyperlink${index + 1}_${existingIds.size}`;
+    let relationshipId = `rIdHyperlink${index + 1}`;
+    let suffix = 1;
+    while (existingIds.has(relationshipId)) {
+      relationshipId = `rIdHyperlink${index + 1}_${suffix}`;
+      suffix += 1;
+    }
     existingIds.add(relationshipId);
     hyperlinkXml.push(`<x:hyperlink ref="${xmlEscape(links[index].ref)}" r:id="${relationshipId}" />`);
     relationshipsXml = relationshipsXml.replace(
@@ -212,6 +226,5 @@ export async function normalizeXlsxPackage(filePath, hyperlinkPlan = [], freezeP
   const entries = unzipEntries(await fs.readFile(filePath));
   for (const plan of hyperlinkPlan) addHyperlinks(entries, plan.sheetPath, plan.links);
   for (const plan of freezePlan) addFreezePane(entries, plan.sheetPath, plan);
-  canonicalizeRelationships(entries);
   await fs.writeFile(filePath, zipEntries(entries));
 }
