@@ -12,5 +12,5 @@
 
 | 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |
 |---|---|---|---|---|
-| GH-05-0026 | PyTorch Lightning 训练工程 | 用 LightningModule、Trainer 和 DataModule 组织可复现、可扩展的深度学习训练。 | 中 | [查看](../../skills/GH-05-0026_pytorch-lightning.md) |
-| GH-05-0027 | Transformers 模型应用 | 使用 Transformers（使用和调整预训练模型的软件库）完成模型加载、推理、任务流程和受控微调，并处理身份验证与版本差异。 | 中 | [查看](../../skills/GH-05-0027_transformers.md) |
+| GH-05-0026 | PyTorch Lightning 训练工程 | 用 LightningModule、Trainer 和 DataModule 组织可复现、可扩展的深度学习训练。 | 中 | [查看](<../../skills/GH-05-0026_pytorch-lightning.md>) |
+| GH-05-0027 | Transformers 模型应用 | 使用 Transformers（使用和调整预训练模型的软件库）完成模型加载、推理、任务流程和受控微调，并处理身份验证与版本差异。 | 中 | [查看](<../../skills/GH-05-0027_transformers.md>) |

@@ -12,5 +12,5 @@
 
 | 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |
 |---|---|---|---|---|
-| GH-02-0021 | 文档无障碍审查向导 | 引导式审查 Office 文档和 PDF（常用的固定版式文档格式）的无障碍问题。 | 高 | [查看](../../skills/GH-02-0021_document-accessibility-wizard.md) |
-| GH-02-0022 | Office 无障碍修复 | 为 Word、Excel 和 PowerPoint 生成可执行的无障碍修复方案。 | 高 | [查看](../../skills/GH-02-0022_Office Remediator.md) |
+| GH-02-0021 | 文档无障碍审查向导 | 引导式审查 Office 文档和 PDF（常用的固定版式文档格式）的无障碍问题。 | 高 | [查看](<../../skills/GH-02-0021_document-accessibility-wizard.md>) |
+| GH-02-0022 | Office 无障碍修复 | 为 Word、Excel 和 PowerPoint 生成可执行的无障碍修复方案。 | 高 | [查看](<../../skills/GH-02-0022_Office Remediator.md>) |

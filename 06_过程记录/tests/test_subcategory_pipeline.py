@@ -1,11 +1,14 @@
 import hashlib
 import json
 import re
+import subprocess
 import sys
 import tempfile
 import unittest
 from collections import Counter
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -586,6 +589,21 @@ class PlainLanguageCatalogTests(unittest.TestCase):
                 with self.subTest(skill_id=row["id"], field=field):
                     self.assertNotRegex(row[field], mechanical_spacing)
 
+    def test_term_explanations_respect_chinese_compound_word_boundaries(self):
+        """Explaining 并发 inside 并发现 or 并发症 must not corrupt the source sentence."""
+        def explain_purpose(value):
+            return pipeline._explain_terms_once({
+                field: value if field == "plain_purpose" else ""
+                for field in PLAIN_FIELDS
+            })["plain_purpose"]
+
+        self.assertIn("并发（同时推进多个任务）任务", explain_purpose("独立并发任务。"))
+        compound = explain_purpose("核对文献并发现虚构；并发症需要医学判断。")
+        self.assertIn("文献并发现虚构", compound)
+        self.assertIn("并发症需要医学判断", compound)
+        self.assertNotIn("并发（同时推进多个任务）现", compound)
+        self.assertNotIn("并发（同时推进多个任务）症", compound)
+
 
 class SubcategorizedKnowledgeBaseTests(unittest.TestCase):
     """The 61-category delivery plan must stay complete, safe, and traceable."""
@@ -712,6 +730,62 @@ class SubcategorizedKnowledgeBaseTests(unittest.TestCase):
                 content = (root / directory / "INDEX.md").read_text(encoding="utf-8")
                 self.assertEqual(content.count("## 小分类导航"), 1)
                 self.assertIn("## Skill 索引", content)
+
+    def test_rendered_markdown_links_with_spaces_resolve_for_navigation_and_entries(self):
+        """CommonMark must render space-containing navigation and Skill targets as live links."""
+        class HrefCollector(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.hrefs = []
+
+            def handle_starttag(self, tag, attrs):
+                if tag == "a":
+                    self.hrefs.append(dict(attrs).get("href"))
+
+        def rendered_hrefs(markdown_path):
+            renderer = """
+const { marked } = require('marked');
+const fs = require('fs');
+process.stdout.write(marked.parse(fs.readFileSync(process.argv[1], 'utf8')));
+"""
+            result = subprocess.run(
+                ["node", "-e", renderer, str(markdown_path)],
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            collector = HrefCollector()
+            collector.feed(result.stdout)
+            return collector.hrefs
+
+        knowledge_root = PROJECT_ROOT / "02_知识库" / "functional_domains"
+        navigation = knowledge_root / BIG_CATEGORY_DIRECTORIES["01"] / "INDEX.md"
+        navigation_target = "subcategories/01-06_LaTeX 排版与在线协作/INDEX.md"
+        rendered_navigation_target = next(
+            (href for href in rendered_hrefs(navigation) if href and unquote(href) == navigation_target),
+            None,
+        )
+        self.assertIsNotNone(rendered_navigation_target)
+        self.assertTrue((navigation.parent / unquote(rendered_navigation_target)).resolve().exists())
+
+        record = next(row for row in self.records if row["name"] == "Office Remediator")
+        entry = (
+            knowledge_root
+            / BIG_CATEGORY_DIRECTORIES[record["subcategory_code"][:2]]
+            / "subcategories"
+            / f"{record['subcategory_code']}_{record['subcategory_name']}"
+            / "INDEX.md"
+        )
+        entry_target = f"../../skills/{record['id']}_{record['name']}.md"
+        entry_hrefs = rendered_hrefs(entry)
+        self.assertFalse(any("[查看]" in unquote(href or "") for href in entry_hrefs), entry_hrefs)
+        rendered_entry_target = next(
+            (href for href in entry_hrefs if href and unquote(href) == entry_target),
+            None,
+        )
+        self.assertIsNotNone(rendered_entry_target)
+        self.assertTrue((entry.parent / unquote(rendered_entry_target)).resolve().exists())
 
 
 if __name__ == "__main__":

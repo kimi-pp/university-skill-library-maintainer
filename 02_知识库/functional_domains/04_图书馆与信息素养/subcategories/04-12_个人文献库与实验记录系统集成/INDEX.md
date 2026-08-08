@@ -12,5 +12,5 @@
 
 | 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |
 |---|---|---|---|---|
-| GH-04-0026 | Zotero 本地知识库桥接 | 把 Zotero 文献分批同步到本地检索库，方便围绕个人馆藏查找资料并生成带出处的回答。 | 高 | [查看](../../skills/GH-04-0026_zotero-bridge.md) |
-| GH-04-0028 | LabArchives 电子实验记录集成 | 规划 LabArchives 电子实验记录和库存服务的身份验证、区域地址、资料读取及受控写入。 | 中 | [查看](../../skills/GH-04-0028_labarchive-integration.md) |
+| GH-04-0026 | Zotero 本地知识库桥接 | 把 Zotero 文献分批同步到本地检索库，方便围绕个人馆藏查找资料并生成带出处的回答。 | 高 | [查看](<../../skills/GH-04-0026_zotero-bridge.md>) |
+| GH-04-0028 | LabArchives 电子实验记录集成 | 规划 LabArchives 电子实验记录和库存服务的身份验证、区域地址、资料读取及受控写入。 | 中 | [查看](<../../skills/GH-04-0028_labarchive-integration.md>) |

@@ -249,7 +249,7 @@
     "license": "Apache-2.0",
     "subcategory_code": "01-05",
     "subcategory_name": "引用、参考文献与文献库管理",
-    "plain_purpose": "逐条验证 BibTeX（保存和排版参考文献的格式）文献并发（同时推进多个任务）现虚构、错误和重复条目。",
+    "plain_purpose": "逐条验证 BibTeX（保存和排版参考文献的格式）文献并发现虚构、错误和重复条目。",
     "plain_outputs": "可得到逐条引文核验结果、错误与重复条目清单，以及修正后的 BibTeX。",
     "plain_audience": "适合科研人员、研究生、编辑支持人员使用。",
     "plain_when_to_use": "适用于毕业论文与投稿稿件参考文献审计。",

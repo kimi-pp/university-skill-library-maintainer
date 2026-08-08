@@ -12,4 +12,4 @@
 
 | 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |
 |---|---|---|---|---|
-| GH-02-0016 | OfficeIMO 文档操作 | 使用 OfficeIMO 检查、搜索、摘要、提取和转换本地文档。 | 中 | [查看](../../skills/GH-02-0016_officeimo-document-operator.md) |
+| GH-02-0016 | OfficeIMO 文档操作 | 使用 OfficeIMO 检查、搜索、摘要、提取和转换本地文档。 | 中 | [查看](<../../skills/GH-02-0016_officeimo-document-operator.md>) |

@@ -121,6 +121,12 @@ TERM_EXPLANATIONS = {
     "主动学习": "主动学习（让模型优先推荐最值得人工判断的条目）",
 }
 
+# These are ordinary Chinese words that begin with a managed technical term.
+# They must remain source prose rather than receive an inline glossary marker.
+TERM_COMPOUND_SUFFIXES = {
+    "并发": ("现", "症"),
+}
+
 COMPATIBILITY_TEXT = {
     "A": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。",
     "B": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。",
@@ -571,7 +577,15 @@ BANNED_JARGON = tuple(JARGON_REPLACEMENTS)
 
 
 def _term_pattern(terms: list[str] | tuple[str, ...]) -> re.Pattern:
-    alternatives = "|".join(re.escape(term) for term in sorted(terms, key=len, reverse=True))
+    alternatives = "|".join(
+        re.escape(term)
+        + (
+            "(?!" + "|".join(re.escape(suffix) for suffix in TERM_COMPOUND_SUFFIXES[term]) + ")"
+            if term in TERM_COMPOUND_SUFFIXES
+            else ""
+        )
+        for term in sorted(terms, key=len, reverse=True)
+    )
     return re.compile(rf"(?<![A-Za-z0-9-])(?:{alternatives})(?![A-Za-z0-9-])")
 
 

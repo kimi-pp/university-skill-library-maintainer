@@ -150,6 +150,13 @@ def _markdown_cell(value: object) -> str:
     return str(value).replace("|", "\\|").replace("\r", " ").replace("\n", "<br>").strip()
 
 
+def _markdown_link(label: str, relative_target: str) -> str:
+    """Emit a CommonMark-safe relative link, including targets with spaces."""
+    if relative_target.startswith("/") or "\\" in relative_target:
+        raise ValueError(f"Markdown 链接必须为相对 POSIX 路径: {relative_target!r}")
+    return f"[{label}](<{relative_target}>)"
+
+
 def _subcategory_index(category: dict, records: list[dict]) -> str:
     code = category["code"]
     name = category["name"]
@@ -172,12 +179,12 @@ def _subcategory_index(category: dict, records: list[dict]) -> str:
     for record in records:
         link = f"../../skills/{record['id']}_{record['name']}.md"
         lines.append(
-            "| {id} | {cn} | {purpose} | {priority} | [查看]({link}) |".format(
+            "| {id} | {cn} | {purpose} | {priority} | {link} |".format(
                 id=_markdown_cell(record["id"]),
                 cn=_markdown_cell(record["cn"]),
                 purpose=_markdown_cell(record["plain_purpose"]),
                 priority=_markdown_cell(record["priority"]),
-                link=link,
+                link=_markdown_link("查看", link),
             )
         )
     return "\n".join(lines) + "\n"
@@ -195,7 +202,7 @@ def _navigation_block(categories: list[dict], grouped: dict[str, list[dict]]) ->
         code, name = category["code"], category["name"]
         target = f"subcategories/{code}_{name}/INDEX.md"
         lines.append(
-            f"| [{code} {name}]({target}) | {_markdown_cell(category['inclusion_focus'])} | {len(grouped[code])} |"
+            f"| {_markdown_link(f'{code} {name}', target)} | {_markdown_cell(category['inclusion_focus'])} | {len(grouped[code])} |"
         )
     lines.extend(["", _NAVIGATION_END])
     return "\n".join(lines)

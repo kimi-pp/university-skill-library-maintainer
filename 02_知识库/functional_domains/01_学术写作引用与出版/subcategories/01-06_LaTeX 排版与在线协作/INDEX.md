@@ -12,5 +12,5 @@
 
 | 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |
 |---|---|---|---|---|
-| GH-01-0011 | Overleaf 协作桥接 | 把 Overleaf 项目接入本地论文检查和修改流程。 | 中 | [查看](../../skills/GH-01-0011_work-with-overleaf.md) |
-| GH-01-0016 | 学术 LaTeX 写作 | 为学术期刊和会议编写、格式化 LaTeX（常用于学术论文排版的工具）文档。 | 中 | [查看](../../skills/GH-01-0016_latex-writing.md) |
+| GH-01-0011 | Overleaf 协作桥接 | 把 Overleaf 项目接入本地论文检查和修改流程。 | 中 | [查看](<../../skills/GH-01-0011_work-with-overleaf.md>) |
+| GH-01-0016 | 学术 LaTeX 写作 | 为学术期刊和会议编写、格式化 LaTeX（常用于学术论文排版的工具）文档。 | 中 | [查看](<../../skills/GH-01-0016_latex-writing.md>) |
