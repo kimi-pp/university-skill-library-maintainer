@@ -1,5 +1,6 @@
 import hashlib
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -48,6 +49,7 @@ PLAIN_FIELDS = {
     "plain_limitations",
     "plain_integration",
     "plain_verification",
+    "plain_outputs",
 }
 
 SAMPLE_RECORD = {
@@ -217,6 +219,13 @@ class SubcategoryAssignmentTests(unittest.TestCase):
 
 
 class PlainLanguageCatalogTests(unittest.TestCase):
+    def _actual_plain_records(self):
+        source_records = enrich_with_subcategory(
+            load_source_records(DATA_DIR),
+            load_assignment_file(ASSIGNMENT_FILE),
+        )
+        return [simplify_record(record) for record in source_records]
+
     def test_plain_records_answer_user_questions_without_changing_facts(self):
         """Dropping a user field or rewriting a source fact must fail."""
         plain = simplify_record(SAMPLE_RECORD)
@@ -305,6 +314,166 @@ class PlainLanguageCatalogTests(unittest.TestCase):
         for plain in plain_records:
             for key, value in source_by_id[plain["id"]].items():
                 self.assertEqual(plain[key], value, f"{plain['id']}:{key}")
+
+    def test_specialist_ranges_do_not_reuse_generic_multi_field_profiles(self):
+        """Restoring the two source-level bulk templates must fail multiple fields."""
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+        groups = [
+            [f"GH-05-{number:04d}" for number in range(1, 28)],
+            [f"GH-05-{number:04d}" for number in range(32, 46)],
+        ]
+        fields = (
+            "plain_when_to_use",
+            "plain_prerequisites",
+            "plain_limitations",
+            "plain_integration",
+        )
+
+        def semantic_core(text):
+            text = re.sub(r"[A-Za-z0-9_.+/-]+", "", text)
+            for boilerplate in (
+                "基本可以直接放入现有工作台使用但仍需按本校制度和工具设置进行检查",
+                "经过少量调整后可以使用常见调整包括更换工具路径或账号设置",
+                "具体建议",
+                "适用于",
+                "需要准备",
+                "需要注意",
+            ):
+                text = text.replace(boilerplate, "")
+            return re.sub(r"\W+", "", text)
+
+        for group in groups:
+            for field in fields:
+                cores = [semantic_core(by_id[skill_id][field]) for skill_id in group]
+                with self.subTest(first=group[0], field=field):
+                    self.assertEqual(len(set(cores)), len(group), cores)
+
+    def test_repaired_profiles_contain_skill_specific_decision_information(self):
+        """Replacing only a product name must not satisfy purpose-to-profile matching."""
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+        expected = {
+            "GH-05-0001": {
+                "plain_when_to_use": ("算力", "开跑"),
+                "plain_prerequisites": ("查看系统信息",),
+                "plain_limitations": ("资源快照",),
+                "plain_integration": ("只查看", "不自动修改"),
+            },
+            "GH-05-0014": {
+                "plain_when_to_use": ("样本量",),
+                "plain_prerequisites": ("目标效应", "显著性水平"),
+                "plain_limitations": ("假设",),
+                "plain_integration": ("研究设计",),
+            },
+            "GH-05-0027": {
+                "plain_when_to_use": ("预训练模型",),
+                "plain_prerequisites": ("模型来源", "任务数据"),
+                "plain_limitations": ("版本", "授权"),
+                "plain_integration": ("小样本", "评估"),
+            },
+            "GH-05-0033": {
+                "plain_when_to_use": ("数据表",),
+                "plain_prerequisites": ("字段", "访问规则"),
+                "plain_limitations": ("迁移",),
+                "plain_integration": ("测试库",),
+            },
+            "GH-05-0039": {
+                "plain_when_to_use": ("测试",),
+                "plain_prerequisites": ("待测代码",),
+                "plain_limitations": ("模拟",),
+                "plain_integration": ("现有测试",),
+            },
+            "GH-04-0029": {
+                "plain_when_to_use": ("Zotero", "目标网站"),
+                "plain_prerequisites": ("样例网页",),
+                "plain_limitations": ("网站改版", "访问限制"),
+                "plain_integration": ("测试记录",),
+            },
+        }
+        for skill_id, field_anchors in expected.items():
+            for field, anchors in field_anchors.items():
+                with self.subTest(skill_id=skill_id, field=field):
+                    self.assertTrue(
+                        all(anchor in by_id[skill_id][field] for anchor in anchors),
+                        by_id[skill_id][field],
+                    )
+
+    def test_every_record_states_a_concrete_output(self):
+        """A non-empty but generic outcome sentence must not satisfy the contract."""
+        output_types = re.compile(
+            r"报告|清单|检索结果|文献记录|数据表|图表|方案|计划|草稿|修订稿|"
+            r"回复信|代码|配置|模型|预测结果|分析结果|审查意见|证明|演示文稿|"
+            r"文档|工作簿|转换文件|术语结果|证据包|流程图|结构图|测试结果|规则"
+        )
+        forbidden = ("相关结果", "相应成果", "具体形式见", "满足需求")
+        for row in self._actual_plain_records():
+            with self.subTest(skill_id=row["id"]):
+                output = row.get("plain_outputs", "")
+                self.assertTrue(output_types.search(output), output)
+                self.assertFalse(any(text in output for text in forbidden))
+
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+        self.assertRegex(by_id["GH-01-0014"].get("plain_outputs", ""), r"论文.*(?:草稿|修订稿)|回复信")
+        self.assertRegex(by_id["GH-03-0019"].get("plain_outputs", ""), r"引用.*(?:调研报告|政策简报|主题综述)")
+
+    def test_office_embedded_objects_are_not_explained_as_vector_embeddings(self):
+        """A global 'embedding' explanation must not corrupt Office document risks."""
+        row = next(
+            item for item in self._actual_plain_records()
+            if item["id"] == "GH-02-0015"
+        )
+        self.assertIn(
+            "嵌入对象（放在 Office 文件内的图片、图表或其他内容）",
+            row["plain_limitations"],
+        )
+        self.assertNotIn("把复杂数据转成便于比较的一组数字", row["plain_limitations"])
+
+    def test_later_explanation_does_not_rescue_unexplained_first_use(self):
+        """Moving a term explanation to a later field must fail first-use auditing."""
+        plain = simplify_record(SAMPLE_RECORD)
+        plain["plain_purpose"] = "使用 API 查询资料。"
+        plain["plain_prerequisites"] = "API（软件之间交换信息的接口）已由技术人员配置。"
+
+        self.assertTrue(
+            any("首次出现未解释" in issue for issue in readability_issues(plain)),
+            readability_issues(plain),
+        )
+
+    def test_required_product_terms_are_explained_where_they_first_appear(self):
+        """Dropping nearby explanations for audited product terms must fail."""
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+        self.assertIn(
+            "python-docx（自动创建和修改 Word 文档的软件）",
+            by_id["GH-02-0010"]["plain_purpose"],
+        )
+        self.assertIn(
+            "GitHub Release（项目维护者正式发布的版本包）",
+            by_id["GH-01-0020"]["plain_limitations"],
+        )
+        self.assertIn(
+            "humanize（让机器生成文本更接近自然表达的处理步骤）",
+            by_id["GH-01-0020"]["plain_limitations"],
+        )
+        self.assertIn(
+            "APA（常用于学术写作的引用格式）",
+            by_id["GH-03-0019"]["plain_outputs"],
+        )
+        self.assertIn(
+            "Spark（把大数据任务分散处理的软件）",
+            by_id["GH-05-0036"]["plain_purpose"],
+        )
+        self.assertIn(
+            "TypeScript（在 JavaScript 基础上增加类型检查的编程语言）",
+            by_id["GH-05-0045"]["plain_outputs"],
+        )
+
+    def test_plain_chinese_has_no_lint_replacement_artifact(self):
+        """Reintroducing the mechanical '本地 lint' replacement must fail."""
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+        self.assertIn("人工确认和本地自动文字检查", by_id["GH-01-0010"]["plain_integration"])
+        for row in by_id.values():
+            joined = " ".join(str(row.get(field, "")) for field in PLAIN_FIELDS)
+            self.assertNotRegex(joined, r"本地\s+自动文字检查")
+            self.assertNotIn("。 具体建议", joined)
 
 
 if __name__ == "__main__":

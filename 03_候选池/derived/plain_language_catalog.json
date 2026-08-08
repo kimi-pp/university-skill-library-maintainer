@@ -28,11 +28,12 @@
     "subcategory_code": "01-02",
     "subcategory_name": "论文结构与章节写作",
     "plain_purpose": "起草、修订并审计科学论文或研究报告。",
+    "plain_outputs": "可得到论文章节草稿、结构提纲或修订稿。",
     "plain_audience": "适合学生、科研人员、教学人员使用。",
     "plain_when_to_use": "适用于论文各章节写作、报告规范核对、投稿前一致性审查。",
     "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言） 3.11+ 仅用于可选本地小程序。",
     "plain_limitations": "需要注意：不应把生成文本视为证据；未发表材料需按授权边界处理。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接按 Codex AI 技能方式使用；按学科补充本校模板。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接按 Codex AI 技能方式使用；按学科补充本校模板。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -64,11 +65,12 @@
     "subcategory_code": "01-05",
     "subcategory_name": "引用、参考文献与文献库管理",
     "plain_purpose": "检索论文元数据（描述资料的信息，如题名、作者和日期）、验证引文并生成规范 BibTeX（保存和排版参考文献的格式）。",
+    "plain_outputs": "可得到参考文献清单、核验报告或整理后的文献记录。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于毕业论文参考文献、课题组文献库、投稿前引文核对。",
     "plain_prerequisites": "需要准备：学术数据库或搜索工具；部分流程需要网络。",
     "plain_limitations": "需要注意：数据库覆盖和速率不同；自动格式化仍需抽查。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：直接使用流程；外部检索工具按可用性替换。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：直接使用流程；外部检索工具按可用性替换。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -100,11 +102,12 @@
     "subcategory_code": "01-07",
     "subcategory_name": "投稿要求、模板与进度安排",
     "plain_purpose": "按目标期刊或会议选择并核对稿件、海报和基金文档模板。",
+    "plain_outputs": "可得到投稿要求清单、文档模板或倒排计划。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于会议投稿、期刊改投、匿名稿与终稿格式检查。",
     "plain_prerequisites": "需要准备：LaTeX（常用于学术论文排版的工具）/PDF（常用的固定版式文档格式）工具；需要访问当前官方作者指南。",
     "plain_limitations": "需要注意：投稿规则会变化，缓存（为加快使用而临时保存的数据）模板不能代替实时核对。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：直接采用验证优先流程；为本校常投期刊建立本地配置。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：直接采用验证优先流程；为本校常投期刊建立本地配置。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -136,11 +139,12 @@
     "subcategory_code": "01-05",
     "subcategory_name": "引用、参考文献与文献库管理",
     "plain_purpose": "通过 pyzotero 操作 Zotero 文献库、集合、标签和附件。",
+    "plain_outputs": "可得到参考文献清单、核验报告或整理后的文献记录。",
     "plain_audience": "适合科研人员、学生、图书馆人员使用。",
     "plain_when_to_use": "适用于共享文献库维护、参考文献批量导出、标签整理。",
     "plain_prerequisites": "需要准备：pyzotero、Zotero Web API（软件之间交换信息的接口）、用户或群组密钥。",
     "plain_limitations": "需要注意：写入和删除会改变文献库；登录或授权信息与附件权限需单独管理。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：配置 Zotero API 登录或授权信息并限制修改或新增数据；先以仅查看、不修改查询接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：配置 Zotero API 登录或授权信息并限制修改或新增数据；先以仅查看、不修改查询接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -172,11 +176,12 @@
     "subcategory_code": "01-01",
     "subcategory_name": "论文整体规划与流程管理",
     "plain_purpose": "帮助安排论文从形成研究想法、撰写到投稿的全过程。",
+    "plain_outputs": "可得到论文整体计划、章节蓝图或投稿前审计清单。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于课题论文进度管理、投稿路线规划、团队检查点。",
     "plain_prerequisites": "需要准备：同一项目资料库中的多个生命周期 AI 技能；部分阶段需要实时网页信息。",
     "plain_limitations": "需要注意：不能替代作者决策，也不应自动投稿。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：需要同时引入其配套 AI 技能或改写使用安排表。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：需要同时引入其配套 AI 技能或改写使用安排表。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -208,11 +213,12 @@
     "subcategory_code": "01-02",
     "subcategory_name": "论文结构与章节写作",
     "plain_purpose": "基于实际检索论文起草或重写 Related Work。",
+    "plain_outputs": "可得到论文章节草稿、结构提纲或修订稿。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于论文相关工作重构、补齐研究脉络和差异定位。",
     "plain_prerequisites": "需要准备：find-papers 或现有 BibTeX（保存和排版参考文献的格式）文献库。",
     "plain_limitations": "需要注意：检索不足会导致主题失衡；不应生成未核验引文。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：与检索和引文验证技能配套；替换目标学科的章节惯例。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：与检索和引文验证技能配套；替换目标学科的章节惯例。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -244,11 +250,12 @@
     "subcategory_code": "01-05",
     "subcategory_name": "引用、参考文献与文献库管理",
     "plain_purpose": "逐条验证 BibTeX（保存和排版参考文献的格式）文献并发（同时推进多个任务）现虚构、错误和重复条目。",
+    "plain_outputs": "可得到参考文献清单、核验报告或整理后的文献记录。",
     "plain_audience": "适合科研人员、研究生、编辑支持人员使用。",
     "plain_when_to_use": "适用于毕业论文与投稿稿件参考文献审计。",
     "plain_prerequisites": "需要准备：外部学术 API（软件之间交换信息的接口）；项目资料库中的小程序。",
     "plain_limitations": "需要注意：API 未解析不等于论文不存在，撤稿状态需人工复核。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应到 Codex 可用的检索工具；保留人工打开原始记录步骤。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应到 Codex 可用的检索工具；保留人工打开原始记录步骤。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -280,11 +287,12 @@
     "subcategory_code": "01-03",
     "subcategory_name": "摘要、关键词与篇幅压缩",
     "plain_purpose": "按投稿场景撰写、缩写和检查论文摘要。",
+    "plain_outputs": "可得到符合篇幅要求的摘要、关键词清单或压缩稿。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于会议摘要注册、期刊摘要改写、学位论文摘要。",
     "plain_prerequisites": "需要准备：目标会场当前指南；可选检查脚本。",
     "plain_limitations": "需要注意：摘要不能补造尚未确认的结果；字数规则会变化。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将会场规则核验连接方式替换为当前可用网页工具。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将会场规则核验连接方式替换为当前可用网页工具。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -316,11 +324,12 @@
     "subcategory_code": "01-07",
     "subcategory_name": "投稿要求、模板与进度安排",
     "plain_purpose": "从会议或期刊截止日期反推投稿准备计划。",
+    "plain_outputs": "可得到投稿要求清单、文档模板或倒排计划。",
     "plain_audience": "适合科研人员、研究生、科研管理人员使用。",
     "plain_when_to_use": "适用于会议投稿排期、课题组多人协作、终稿准备。",
     "plain_prerequisites": "需要准备：实时 CFP（会议征稿通知）或作者指南。",
     "plain_limitations": "需要注意：截止日期、时区和系统规则需实时核对。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：接入日历前先保持仅查看、不修改计划；规则从官方 CFP 核验。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：接入日历前先保持仅查看、不修改计划；规则从官方 CFP 核验。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -352,11 +361,12 @@
     "subcategory_code": "01-08",
     "subcategory_name": "终稿、版权与出版前检查",
     "plain_purpose": "为录用论文生成可执行的终稿准备清单并检查常见错误。",
+    "plain_outputs": "可得到终稿检查清单和出版前材料方案。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于录用后终稿、版权材料和出版系统准备。",
     "plain_prerequisites": "需要准备：LaTeX（常用于学术论文排版的工具）/PDF（常用的固定版式文档格式）工具；目标出版轨道信息。",
     "plain_limitations": "需要注意：出版规则与表单具有时效性；最终提交必须人工完成。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留咨询和本地 自动文字检查，禁止自动提交表单。",
+    "plain_integration": "先用目标出版要求检查终稿副本，保留人工确认和本地自动文字检查，禁止自动提交出版表单。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -388,11 +398,12 @@
     "subcategory_code": "01-06",
     "subcategory_name": "LaTeX 排版与在线协作",
     "plain_purpose": "把 Overleaf 项目接入本地论文检查和修改流程。",
+    "plain_outputs": "可得到排版后的论文文档、协作配置或修改记录。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于课题组 Overleaf 稿件本地使用前检查、同步修改。",
     "plain_prerequisites": "需要准备：Overleaf 账号；可选 Git 权限或 ZIP（压缩文件格式）。",
     "plain_limitations": "需要注意：令牌与未发表稿件敏感；错误同步可能覆盖协作内容。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：根据账号权限选择同步路径；所有把修改写回原处都要求单独确认。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：根据账号权限选择同步路径；所有把修改写回原处都要求单独确认。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -424,11 +435,12 @@
     "subcategory_code": "01-09",
     "subcategory_name": "同行评审、审稿回复与修改",
     "plain_purpose": "按会场格式起草逐点审稿回复和 rebuttal。",
+    "plain_outputs": "可得到审查意见、逐点回复信或论文修改清单。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于会议 rebuttal、期刊修回说明、审稿意见覆盖检查。",
     "plain_prerequisites": "需要准备：目标会场规则；可选字符与页面检查脚本。",
     "plain_limitations": "需要注意：审稿内容可能保密；不能虚构新增实验或改动。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：替换会场配置并保留作者逐条批准。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：替换会场配置并保留作者逐条批准。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -460,11 +472,12 @@
     "subcategory_code": "01-04",
     "subcategory_name": "学术语言润色与表达改进",
     "plain_purpose": "在不改变技术主张的前提下收紧并统一学术表达。",
+    "plain_outputs": "可得到语言润色后的修订稿和术语一致性清单。",
     "plain_audience": "适合科研人员、研究生、教学人员使用。",
     "plain_when_to_use": "适用于英文论文润色、术语统一、投稿前文字检查。",
     "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）标准库脚本。",
     "plain_limitations": "需要注意：过度润色可能改变论证强度，应进行差异复核。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留原始数值、引文与术语锁定；脚本可直接复用。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留原始数值、引文与术语锁定；脚本可直接复用。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -496,11 +509,12 @@
     "subcategory_code": "01-02",
     "subcategory_name": "论文结构与章节写作",
     "plain_purpose": "面向中文科研用户的论文写作、修订和论证规划。",
+    "plain_outputs": "可得到中文论文各章节草稿、修订稿或逐点审稿回复信。",
     "plain_audience": "适合学生、科研人员、教学人员使用。",
     "plain_when_to_use": "适用于中文论文辅写、英文术语保真、学位论文和回复信。",
     "plain_prerequisites": "通常不需要额外安装其他工具；实际使用前仍应检查本校环境。",
     "plain_limitations": "需要注意：仍需作者提供事实、数据和引用证据。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接使用；按学校写作规范补充模板。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接使用；按学校写作规范补充模板。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -532,11 +546,12 @@
     "subcategory_code": "01-02",
     "subcategory_name": "论文结构与章节写作",
     "plain_purpose": "按照 IMRaD（按引言、方法、结果和讨论组织论文的结构）结构辅助起草和改进科学论文。",
+    "plain_outputs": "可得到论文章节草稿、结构提纲或修订稿。",
     "plain_audience": "适合学生、科研人员使用。",
     "plain_when_to_use": "适用于初稿结构搭建、课程论文和实验论文章节检查。",
     "plain_prerequisites": "通常不需要额外安装其他工具；实际使用前仍应检查本校环境。",
     "plain_limitations": "需要注意：框架（组织工作步骤和配套工具的一套结构）较通用，不能替代学科报告规范。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：移除 OpenClaw 特定使用安排并接入本项目引文验证规则。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：移除 OpenClaw 特定使用安排并接入本项目引文验证规则。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -568,11 +583,12 @@
     "subcategory_code": "01-06",
     "subcategory_name": "LaTeX 排版与在线协作",
     "plain_purpose": "为学术期刊和会议编写、格式化 LaTeX（常用于学术论文排版的工具）文档。",
+    "plain_outputs": "可得到排版后的论文文档、协作配置或修改记录。",
     "plain_audience": "适合学生、科研人员使用。",
     "plain_when_to_use": "适用于论文 LaTeX 排版、复杂公式表格、期刊格式迁移。",
     "plain_prerequisites": "需要准备：LaTeX 配套工具。",
     "plain_limitations": "需要注意：内置模板可能过时；编译结果需检查。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：把内置示例作为起点，投稿前仍从官方模板核验。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：把内置示例作为起点，投稿前仍从官方模板核验。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -604,11 +620,12 @@
     "subcategory_code": "01-09",
     "subcategory_name": "同行评审、审稿回复与修改",
     "plain_purpose": "按期刊式结构评审科学手稿并生成建设性意见。",
+    "plain_outputs": "可得到审查意见、逐点回复信或论文修改清单。",
     "plain_audience": "适合科研人员、教学人员、研究生使用。",
     "plain_when_to_use": "适用于组内预审、投稿前模拟评审、论文阅读训练。",
     "plain_prerequisites": "通常不需要额外安装其他工具；实际使用前仍应检查本校环境。",
     "plain_limitations": "需要注意：评审结论只是辅助意见，不能替代领域专家。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：调整工具名称即可使用；应与统计和引文核验技能协同。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：调整工具名称即可使用；应与统计和引文核验技能协同。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -640,11 +657,12 @@
     "subcategory_code": "01-02",
     "subcategory_name": "论文结构与章节写作",
     "plain_purpose": "聚合九项学术写作配套 AI 技能，按章节提供模板和论证指导。",
+    "plain_outputs": "可得到论文章节草稿、结构提纲或修订稿。",
     "plain_audience": "适合学生、科研人员使用。",
     "plain_when_to_use": "适用于论文分章节写作、知识库按需使用。",
     "plain_prerequisites": "需要准备：同一项目资料库中的多个配套 AI 技能。",
     "plain_limitations": "需要注意：聚合项目资料库规模大，需防止加载无关内容。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将配套 AI 技能路径对应到 Codex AI 技能目录；优先加载所需章节。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将配套 AI 技能路径对应到 Codex AI 技能目录；优先加载所需章节。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -676,11 +694,12 @@
     "subcategory_code": "01-09",
     "subcategory_name": "同行评审、审稿回复与修改",
     "plain_purpose": "结合文献搜索检查手稿背景主张、遗漏引用和方法时效性。",
+    "plain_outputs": "可得到审查意见、逐点回复信或论文修改清单。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于投稿前预审、背景引用补充、方法是否过时的检查。",
     "plain_prerequisites": "需要准备：Consensus 搜索服务。",
     "plain_limitations": "需要注意：依赖外部检索结果；不能将摘要匹配等同于完整证据核验。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：需将 Consensus 搜索替换为可用学术数据库或 MCP（让 AI 连接外部工具的通用方式）。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：需将 Consensus 搜索替换为可用学术数据库或 MCP（让 AI 连接外部工具的通用方式）。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -712,10 +731,11 @@
     "subcategory_code": "01-01",
     "subcategory_name": "论文整体规划与流程管理",
     "plain_purpose": "围绕已确认的核心贡献和研究动机构建、重写并审计论文或研究报告。",
+    "plain_outputs": "可得到材料清单、章节蓝图、论文草稿或重写稿，以及投稿前审计清单。",
     "plain_audience": "适合学生、科研人员、教学与科研支持人员使用。",
     "plain_when_to_use": "适用于论文从材料到初稿、重大结构重写、投稿前证据与审稿风险审计。",
     "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）；网络检索；按输出选择 LaTeX（常用于学术论文排版的工具）/PDF（常用的固定版式文档格式）或 Pandoc（转换多种文档格式的工具）/Word 配套工具。",
-    "plain_limitations": "需要注意：流程较重且会生成较多中间产物；无固定 GitHub Release；macOS 配置界面存在公开问题；不得把 humanize 用作检测规避，也不得虚构证据或绕过付费墙。",
+    "plain_limitations": "需要注意：流程较重且会生成较多中间产物；无固定 GitHub Release（项目维护者正式发布的版本包）；macOS 配置界面存在公开问题；不得把 humanize（让机器生成文本更接近自然表达的处理步骤）用作检测规避，也不得虚构证据或绕过付费墙。",
     "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：高校部署时固定采用经过审核的版本，按本地工具调整设置，并默认停用未经审核的自动更新。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
@@ -748,11 +768,12 @@
     "subcategory_code": "02-01",
     "subcategory_name": "Word 文档制作与修改",
     "plain_purpose": "创建、读取、编辑和检查 Word 文档及模板。",
+    "plain_outputs": "可得到创建或修改后的 Word 文档及版式检查报告。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于报告、公文、课程材料、论文附件和模板处理。",
     "plain_prerequisites": "需要由技术人员准备用于处理 Office 文档的 Node.js（运行网页类小程序的环境）或 Python（常用于数据处理和自动化的编程语言）工具。",
     "plain_limitations": "需要注意：复杂样式和修订需生成预览后抽查页面；来源技能有目录级许可证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：调整 Codex 的文档运行环境和生成预览的路径；核心处理流程可复用。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：调整 Codex 的文档运行环境和生成预览的路径；核心处理流程可复用。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -784,11 +805,12 @@
     "subcategory_code": "02-02",
     "subcategory_name": "Excel 表格制作与分析",
     "plain_purpose": "读取、创建、修复和验证电子表格文件。",
+    "plain_outputs": "可得到 Excel 工作簿、数据表、公式检查或基础图表。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于成绩与调查数据、预算、统计表、业务台账。",
     "plain_prerequisites": "需要由技术人员准备表格处理工具；含公式的文件还要用表格软件重新计算。",
     "plain_limitations": "需要注意：公式缓存（为加快使用而临时保存的数据）和区域格式可能在不同软件间不一致。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：接入 Codex 电子表格依赖；保留公式重算和必须完成视觉检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：接入 Codex 电子表格依赖；保留公式重算和必须完成视觉检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -820,11 +842,12 @@
     "subcategory_code": "02-03",
     "subcategory_name": "PowerPoint 与学术演示制作",
     "plain_purpose": "创建、读取、编辑、合并和检查 PowerPoint 文件。",
+    "plain_outputs": "可得到演示文稿、讲者备注和逐页检查报告。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于课堂展示、答辩、汇报、培训和会议材料。",
     "plain_prerequisites": "需要由技术人员准备生成 PowerPoint 和检查页面效果的工具。",
     "plain_limitations": "需要注意：自动布局容易产生拥挤或遮挡，必须逐页检查。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应 Codex 的演示文稿依赖和生成预览的工具。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应 Codex 的演示文稿依赖和生成预览的工具。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -856,11 +879,12 @@
     "subcategory_code": "02-04",
     "subcategory_name": "PDF 读取、整理与生成",
     "plain_purpose": "读取、生成、转换、拆分、合并和 OCR（把图片中的文字识别为可编辑文本） PDF（常用的固定版式文档格式）。",
+    "plain_outputs": "可得到整理后的 PDF 文档、提取文本或版式检查报告。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于论文阅读、扫描件 OCR、材料合并与归档。",
     "plain_prerequisites": "需要准备：Poppler（读取和转换 PDF 的工具）、Python（常用于数据处理和自动化的编程语言） PDF/OCR 工具。",
     "plain_limitations": "需要注意：OCR 和复杂版面可能丢失结构；加密文件需合法权限。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：使用 Codex 可用的 PDF 工具替换命令路径。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：使用 Codex 可用的 PDF 工具替换命令路径。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -892,11 +916,12 @@
     "subcategory_code": "02-05",
     "subcategory_name": "文档共创与需求梳理",
     "plain_purpose": "引导用户共同撰写提案、规范、决策文档和说明材料。",
+    "plain_outputs": "可得到需求清单和经过分阶段确认的文档草稿。",
     "plain_audience": "适合教学人员、科研人员、行政人员、学生使用。",
     "plain_when_to_use": "适用于项目方案、课程规范、制度草案和决策记录。",
     "plain_prerequisites": "通常不需要额外安装其他工具；实际使用前仍应检查本校环境。",
     "plain_limitations": "需要注意：需要用户持续提供上下文，不适合无人监督生成正式制度。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：把对话阶段直接转成 Codex 任务步骤；可与 docx AI 技能联用。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：把对话阶段直接转成 Codex 任务步骤；可与 docx AI 技能联用。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -928,11 +953,12 @@
     "subcategory_code": "02-04",
     "subcategory_name": "PDF 读取、整理与生成",
     "plain_purpose": "在 Codex 中读取、创建和审查 PDF（常用的固定版式文档格式），强调生成预览后核对版面。",
+    "plain_outputs": "可得到整理后的 PDF 文档、提取文本或版式检查报告。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于报告导出、PDF 审阅、表格提取和页面级质量检查。",
     "plain_prerequisites": "需要准备：Poppler（读取和转换 PDF 的工具）与 Python（常用于数据处理和自动化的编程语言） PDF 库。",
     "plain_limitations": "需要注意：文本提取不代表版式正确，仍需生成预览检查。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接用于 Codex；按工作区依赖路径执行。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接用于 Codex；按工作区依赖路径执行。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -964,11 +990,12 @@
     "subcategory_code": "02-06",
     "subcategory_name": "Office 与 Markdown 互转",
     "plain_purpose": "使用 Microsoft MarkItDown 将多种文档安全转换为 Markdown（用简单符号排版文本的格式）。",
+    "plain_outputs": "可得到转换后的 Office 文档或 Markdown 文档及转换报告。",
     "plain_audience": "适合科研人员、学生、图书馆人员、行政人员使用。",
     "plain_when_to_use": "适用于资料入库、文档检索、RAG（先查资料再生成回答的方法）准备和批量转换。",
     "plain_prerequisites": "需要准备：Microsoft MarkItDown；可选 OCR（把图片中的文字识别为可编辑文本）、Azure 或 MCP（让 AI 连接外部工具的通用方式）。",
     "plain_limitations": "需要注意：转换可能丢失复杂布局；外部 OCR 服务涉及数据边界。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：安装对应 MarkItDown 能力或改接现有转换器。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：安装对应 MarkItDown 能力或改接现有转换器。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1000,11 +1027,12 @@
     "subcategory_code": "02-03",
     "subcategory_name": "PowerPoint 与学术演示制作",
     "plain_purpose": "为研究报告、会议和答辩构建科学演示文稿。",
+    "plain_outputs": "可得到演示文稿、讲者备注和逐页检查报告。",
     "plain_audience": "适合学生、科研人员、教学人员使用。",
     "plain_when_to_use": "适用于组会、论文分享、学术会议、开题与答辩。",
     "plain_prerequisites": "需要准备：PowerPoint 或 LaTeX（常用于学术论文排版的工具）；部分流程引用图像生成工具。",
     "plain_limitations": "需要注意：自动生成视觉素材需核验版权和科学准确性。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接作为内容与视觉规则；图像生成依赖按需替换。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接作为内容与视觉规则；图像生成依赖按需替换。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1036,11 +1064,12 @@
     "subcategory_code": "02-03",
     "subcategory_name": "PowerPoint 与学术演示制作",
     "plain_purpose": "把论文和学位材料转换为中文 Word 报告或学术演示。",
+    "plain_outputs": "可得到演示文稿、讲者备注和逐页检查报告。",
     "plain_audience": "适合学生、科研人员、教学人员使用。",
     "plain_when_to_use": "适用于论文汇报、组会、开题答辩、中文阅读报告。",
     "plain_prerequisites": "需要准备：Word/PPTX（PowerPoint 演示文稿格式）生成和生成预览依赖。",
     "plain_limitations": "需要注意：必须防止公式、变量和引用在转换中被改写。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接用于 Codex；替换本校视觉模板即可。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接用于 Codex；替换本校视觉模板即可。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1071,12 +1100,13 @@
     "license": "MIT",
     "subcategory_code": "02-01",
     "subcategory_name": "Word 文档制作与修改",
-    "plain_purpose": "使用 python-docx 通过程序自动创建和编辑 Word 文档。",
+    "plain_purpose": "使用 python-docx（自动创建和修改 Word 文档的软件）通过程序自动创建和编辑 Word 文档。",
+    "plain_outputs": "可得到创建或修改后的 Word 文档及版式检查报告。",
     "plain_audience": "适合行政人员、教学人员、科研人员使用。",
     "plain_when_to_use": "适用于批量报告、公文模板、课程材料自动生成。",
     "plain_prerequisites": "需要准备：python-docx。",
     "plain_limitations": "需要注意：复杂 Word 特性支持有限，输出仍需版式检查。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Claude 特定元数据（描述资料的信息，如题名、作者和日期）改为 Codex AI 技能；复用 python-docx 范式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Claude 特定元数据（描述资料的信息，如题名、作者和日期）改为 Codex AI 技能；复用 python-docx 范式。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1108,11 +1138,12 @@
     "subcategory_code": "02-02",
     "subcategory_name": "Excel 表格制作与分析",
     "plain_purpose": "使用 openpyxl 通过程序自动创建和编辑 Excel 工作簿。",
+    "plain_outputs": "可得到 Excel 工作簿、数据表、公式检查或基础图表。",
     "plain_audience": "适合行政人员、科研人员、学生使用。",
     "plain_when_to_use": "适用于台账、调查数据、批量工作簿和报表生成。",
     "plain_prerequisites": "需要准备：openpyxl。",
     "plain_limitations": "需要注意：openpyxl 不计算公式，复杂 Excel 对象可能丢失。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：改写工具使用并增加公式重算与必须完成页面效果检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：改写工具使用并增加公式重算与必须完成页面效果检查。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1144,11 +1175,12 @@
     "subcategory_code": "02-03",
     "subcategory_name": "PowerPoint 与学术演示制作",
     "plain_purpose": "使用 python-pptx 通过程序自动创建和修改演示文稿。",
+    "plain_outputs": "可得到演示文稿、讲者备注和逐页检查报告。",
     "plain_audience": "适合教学人员、科研人员、行政人员、学生使用。",
     "plain_when_to_use": "适用于批量培训课件、标准化汇报和模板填充。",
     "plain_prerequisites": "需要准备：python-pptx。",
     "plain_limitations": "需要注意：不支持所有 PowerPoint 特性；自动布局需要人工复核。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：改写为 Codex 工具路径并增加逐页生成预览并检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：改写为 Codex 工具路径并增加逐页生成预览并检查。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1180,11 +1212,12 @@
     "subcategory_code": "02-06",
     "subcategory_name": "Office 与 Markdown 互转",
     "plain_purpose": "把 Markdown（用简单符号排版文本的格式）内容转换为常见 Office 文件。",
+    "plain_outputs": "可得到转换后的 Office 文档或 Markdown 文档及转换报告。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于笔记转报告、Markdown 方案转 Word、提纲转演示。",
     "plain_prerequisites": "需要准备：Pandoc（转换多种文档格式的工具）或 Python（常用于数据处理和自动化的编程语言）/Node.js（运行网页类小程序的环境） Office 库。",
     "plain_limitations": "需要注意：跨格式转换可能丢失版式与语义，需要目标文件检查。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：选择本地转换工具并为目标模板增加样式对应。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：选择本地转换工具并为目标模板增加样式对应。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1216,11 +1249,12 @@
     "subcategory_code": "02-06",
     "subcategory_name": "Office 与 Markdown 互转",
     "plain_purpose": "从 DOCX（Word 文档格式）、XLSX（Excel 工作簿格式）、PPTX（PowerPoint 演示文稿格式）等 Office 文件提取结构化 Markdown（用简单符号排版文本的格式）。",
+    "plain_outputs": "可得到转换后的 Office 文档或 Markdown 文档及转换报告。",
     "plain_audience": "适合图书馆人员、科研人员、行政人员、学生使用。",
     "plain_when_to_use": "适用于档案入库、课程材料检索、文档摘要与迁移。",
     "plain_prerequisites": "需要准备：Office 解析库或转换器。",
     "plain_limitations": "需要注意：复杂图形、批注和版式信息可能无法完整保留。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：接入 MarkItDown 或本地 Office 解析器；保留源文件链接。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：接入 MarkItDown 或本地 Office 解析器；保留源文件链接。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1252,11 +1286,12 @@
     "subcategory_code": "02-07",
     "subcategory_name": "多格式批量转换与导出",
     "plain_purpose": "通过统一流程批量转换多种办公文档格式。",
+    "plain_outputs": "可得到一批转换文件、失败清单和质量检查报告。",
     "plain_audience": "适合行政人员、图书馆人员、教学人员使用。",
     "plain_when_to_use": "适用于历史材料迁移、课程文件统一格式、档案批处理。",
     "plain_prerequisites": "需要准备：LibreOffice（可批量处理办公文档的软件）、Pandoc（转换多种文档格式的工具）或相应格式库。",
-    "plain_limitations": "需要注意：转换可能造成样式或嵌入（把复杂数据转成便于比较的一组数字）对象损失；项目资料库未附专用脚本。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：需要绑定实际转换工具；先对副本运行并保存失败清单。",
+    "plain_limitations": "需要注意：转换可能丢失样式或嵌入对象（放在 Office 文件内的图片、图表或其他内容）；项目资料库没有提供可直接运行的专用小程序。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：需要绑定实际转换工具；先对副本运行并保存失败清单。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1288,11 +1323,12 @@
     "subcategory_code": "02-08",
     "subcategory_name": "Office 综合处理与流程自动化",
     "plain_purpose": "使用 OfficeIMO 检查、搜索、摘要、提取和转换本地文档。",
+    "plain_outputs": "可得到处理后的 Office 文档、工作簿或自动化执行报告。",
     "plain_audience": "适合信息化人员、行政人员、图书馆人员使用。",
     "plain_when_to_use": "适用于本地多格式文档处理、无 COM（Windows 软件之间互相控制的方式）服务器流程。",
     "plain_prerequisites": "需要准备：.NET（微软的软件开发平台） 8+ 与 OfficeIMO CLI（通过输入命令操作软件的方式）/库。",
     "plain_limitations": "需要注意：格式覆盖广但特性支持不一；转换保真度需抽查。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：安装或提供 OfficeIMO CLI 后可用于 Codex；优先仅查看、不修改操作。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：安装或提供 OfficeIMO CLI 后可用于 Codex；优先仅查看、不修改操作。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1324,11 +1360,12 @@
     "subcategory_code": "02-07",
     "subcategory_name": "多格式批量转换与导出",
     "plain_purpose": "将 Markdown（用简单符号排版文本的格式）导出为多种办公、数据和代码格式。",
+    "plain_outputs": "可得到一批转换文件、失败清单和质量检查报告。",
     "plain_audience": "适合学生、教学人员、科研人员、行政人员使用。",
     "plain_when_to_use": "适用于一份 Markdown 多渠道发布、报告与数据文件导出。",
     "plain_prerequisites": "需要准备：项目 CLI（通过输入命令操作软件的方式）/Dify 插件（给现有软件增加功能的小程序）及各格式依赖。",
     "plain_limitations": "需要注意：多格式覆盖不代表版式一致；每种目标都需单独验收。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：安装项目依赖并按目标格式选择导出器。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：安装项目依赖并按目标格式选择导出器。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1360,11 +1397,12 @@
     "subcategory_code": "02-03",
     "subcategory_name": "PowerPoint 与学术演示制作",
     "plain_purpose": "把 AI 研究论文转为会议级演示文稿。",
+    "plain_outputs": "可得到演示文稿、讲者备注和逐页检查报告。",
     "plain_audience": "适合学生、科研人员、教学人员使用。",
     "plain_when_to_use": "适用于论文分享、会议报告、组会和答辩。",
     "plain_prerequisites": "需要准备：PPTX（PowerPoint 演示文稿格式）生成与 PDF（常用的固定版式文档格式）/图像生成预览的工具。",
     "plain_limitations": "需要注意：自动提取图表需检查版权、分辨率和科学语境。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：调整 Codex 演示运行环境；用本地论文和授权图片。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：调整 Codex 演示运行环境；用本地论文和授权图片。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1396,11 +1434,12 @@
     "subcategory_code": "02-02",
     "subcategory_name": "Excel 表格制作与分析",
     "plain_purpose": "在 Windows 上通过 Microsoft Excel COM（Windows 软件之间互相控制的方式）刷新、重算和验证工作簿。",
+    "plain_outputs": "可得到 Excel 工作簿、数据表、公式检查或基础图表。",
     "plain_audience": "适合行政人员、科研人员、信息化人员使用。",
     "plain_when_to_use": "适用于复杂公式重算、现有连接刷新、Excel 环境自检。",
     "plain_prerequisites": "需要准备：Windows、Microsoft 365 Excel、COM。",
     "plain_limitations": "需要注意：会操作真实 Excel 会话；宏执行和 Power Query M 编辑不在支持范围。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：Windows 且安装桌面 Excel 时可直接使用；限制为指定工作簿。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：Windows 且安装桌面 Excel 时可直接使用；限制为指定工作簿。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1432,11 +1471,12 @@
     "subcategory_code": "02-02",
     "subcategory_name": "Excel 表格制作与分析",
     "plain_purpose": "分析、调试、核对并验证复杂 Excel 或连接型表格。",
+    "plain_outputs": "可得到 Excel 工作簿、数据表、公式检查或基础图表。",
     "plain_audience": "适合行政人员、科研人员、信息化人员使用。",
     "plain_when_to_use": "适用于复杂台账审计、模板调试、跨表公式追踪。",
     "plain_prerequisites": "需要准备：Excel/Sheets 工具；视任务使用脚本。",
     "plain_limitations": "需要注意：范围很宽，执行前需限制文件和写入边界。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：去除 Google Sheets 特定部分也可独立用于本地 Excel。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：去除 Google Sheets 特定部分也可独立用于本地 Excel。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1468,11 +1508,12 @@
     "subcategory_code": "02-09",
     "subcategory_name": "文档无障碍检查与修复",
     "plain_purpose": "引导式审查 Office 文档和 PDF（常用的固定版式文档格式）的无障碍问题。",
+    "plain_outputs": "可得到无障碍问题清单、修复方案或修复后的文档。",
     "plain_audience": "适合教学人员、行政人员、学生支持人员、信息化人员使用。",
     "plain_when_to_use": "适用于课程材料、网站附件、行政通知和报告的无障碍审查。",
     "plain_prerequisites": "需要准备：多个专项无障碍 AI 技能和文档解析工具。",
     "plain_limitations": "需要注意：自动审查不能替代辅助技术用户测试；扫描目录需严格限界。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：需要将子代理使用对应到当前 Codex 能力；规则可直接复用。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：需要将子代理使用对应到当前 Codex 能力；规则可直接复用。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1504,11 +1545,12 @@
     "subcategory_code": "02-09",
     "subcategory_name": "文档无障碍检查与修复",
     "plain_purpose": "为 Word、Excel 和 PowerPoint 生成可执行的无障碍修复方案。",
+    "plain_outputs": "可得到无障碍问题清单、修复方案或修复后的文档。",
     "plain_audience": "适合教学人员、行政人员、信息化人员使用。",
     "plain_when_to_use": "适用于修复标题结构、替代文本、表格和阅读顺序问题。",
     "plain_prerequisites": "需要由技术人员准备用于处理 Word、Excel 和 PowerPoint 的软件；部分问题仍要在 Office 界面中人工修复。",
     "plain_limitations": "需要注意：通过程序自动修复覆盖有限，视觉和屏幕阅读器体验需人工验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Gemini 扩展路径改造成 Codex AI 技能，并保留人工修复清单。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Gemini 扩展路径改造成 Codex AI 技能，并保留人工修复清单。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1540,11 +1582,12 @@
     "subcategory_code": "03-01",
     "subcategory_name": "多数据库综合查找",
     "plain_purpose": "通过十一种学术 API（软件之间交换信息的接口）检索论文、预印本、引文和开放全文。",
+    "plain_outputs": "可得到跨数据库检索结果、去重后的文献记录和来源清单。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于查 DOI（论文等数字资源的永久标识）/PMID（生物医学论文在 PubMed 中的编号）、找开放全文、引文网络和主题文献检索。",
     "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）；多个公开学术 API。",
     "plain_limitations": "需要注意：API 覆盖和速率不同，检索结果不等同于质量判断。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接用于 Codex；按 API 可用性启用相应脚本。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接用于 Codex；按 API 可用性启用相应脚本。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1576,11 +1619,12 @@
     "subcategory_code": "03-08",
     "subcategory_name": "主题性文献梳理与综述写作",
     "plain_purpose": "跨多个学术数据库开展系统化文献综述并生成报告。",
+    "plain_outputs": "可得到主题阅读清单、文献比较表或综述草稿。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于综述论文、课题背景、系统检索与证据综合。",
     "plain_prerequisites": "需要准备：学术检索 API（软件之间交换信息的接口）；Python（常用于数据处理和自动化的编程语言） PDF（常用的固定版式文档格式）与引用工具。",
     "plain_limitations": "需要注意：完整性依赖检索策略；自动摘要不能替代全文核验。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：直接复用流程；数据库和 PDF 生成工具按环境配置。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：直接复用流程；数据库和 PDF 生成工具按环境配置。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1612,11 +1656,12 @@
     "subcategory_code": "03-07",
     "subcategory_name": "深度调研与证据材料整理",
     "plain_purpose": "为科研手稿或研究简报汇集当前学术证据。",
+    "plain_outputs": "可得到带来源的证据包、调研报告或政策简报。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于论文背景证据、竞争结论、研究简报。",
     "plain_prerequisites": "需要准备：Parallel Search/Extract/Research；可选 Perplexity。",
     "plain_limitations": "需要注意：依赖商业外部服务，未授权材料不应上传。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：需替换 Parallel 系列工具或仅保留方法框架（组织工作步骤和配套工具的一套结构）。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：需替换 Parallel 系列工具或仅保留方法框架（组织工作步骤和配套工具的一套结构）。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1648,11 +1693,12 @@
     "subcategory_code": "03-11",
     "subcategory_name": "学术成果评价与反馈",
     "plain_purpose": "对学术作品进行证据可追踪的发展性评审。",
+    "plain_outputs": "可得到有证据依据的审查意见和改进清单。",
     "plain_audience": "适合教学人员、科研人员、研究生使用。",
     "plain_when_to_use": "适用于论文草稿反馈、课程研究作品评估、量表检查。",
     "plain_prerequisites": "需要准备：可选本地质量检查。",
     "plain_limitations": "需要注意：不适合招生、聘用或晋升等后果性决策。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接使用；将评价限定为作品改进。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接使用；将评价限定为作品改进。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1684,11 +1730,12 @@
     "subcategory_code": "03-04",
     "subcategory_name": "个人或团队文献库与研究笔记",
     "plain_purpose": "使用 Open Notebook 组织研究资料、生成笔记并跨材料检索。",
+    "plain_outputs": "可得到可检索的文献记录、研究笔记或本地文档库。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于个人研究库、课题组资料问答、长文档整理。",
     "plain_prerequisites": "需要准备：Docker（把软件及其运行环境打包部署的工具）/自托管服务、数据库和模型提供商。",
     "plain_limitations": "需要注意：部署与模型配置成本较高；导入资料需明确数据边界。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：需部署 Open Notebook 并配置模型；可仅借鉴笔记组织流程。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：需部署 Open Notebook 并配置模型；可仅借鉴笔记组织流程。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1721,11 +1768,12 @@
     "subcategory_name": "特定学术数据库查找",
     "decision_note": "主要产出优先：该技能的核心交付是从指定学术数据库获得检索结果，因此归入特定学术数据库查找，而非泛化的研究整理。",
     "plain_purpose": "通过 BGPT（检索并整理生物医学论文的服务） MCP（让 AI 连接外部工具的通用方式）搜索论文并提取结构化实验字段。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于系统综述数据提取、实验方法和样本量比较。",
     "plain_prerequisites": "需要准备：BGPT MCP 服务。",
     "plain_limitations": "需要注意：外部抽取质量和覆盖需核验，不能直接作为原始研究证据。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：需要部署或连接 BGPT MCP；不可用时保留字段模板。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：需要部署或连接 BGPT MCP；不可用时保留字段模板。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1757,11 +1805,12 @@
     "subcategory_code": "03-06",
     "subcategory_name": "研究问题与假设形成",
     "plain_purpose": "把观察和初步发现转化为证据有界的可检验假设。",
+    "plain_outputs": "可得到研究问题清单、可检验假设和预测。",
     "plain_audience": "适合学生、科研人员、教学人员使用。",
     "plain_when_to_use": "适用于研究设计课程、开题、实验计划和预注册。",
     "plain_prerequisites": "通常不需要额外安装其他工具；实际使用前仍应检查本校环境。",
     "plain_limitations": "需要注意：假设不是事实，生成内容可能受输入偏差影响。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接用于 Codex；输入证据需显式标注来源。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接用于 Codex；输入证据需显式标注来源。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1793,11 +1842,12 @@
     "subcategory_code": "03-05",
     "subcategory_name": "论文阅读、提炼与批判性分析",
     "plain_purpose": "评估科学主张、研究设计和证据质量。",
+    "plain_outputs": "可得到论文摘要、证据分析报告或主张核对清单。",
     "plain_audience": "适合学生、教学人员、科研人员使用。",
     "plain_when_to_use": "适用于论文研读、研究方法教学、证据质量检查。",
     "plain_prerequisites": "通常不需要额外安装其他工具；实际使用前仍应检查本校环境。",
     "plain_limitations": "需要注意：框架（组织工作步骤和配套工具的一套结构）性判断仍需领域知识和完整材料。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接使用；按学科替换评价框架。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接使用；按学科替换评价框架。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1829,11 +1879,12 @@
     "subcategory_code": "03-01",
     "subcategory_name": "多数据库综合查找",
     "plain_purpose": "以中文说明多工具学术检索和引文管理流程。",
+    "plain_outputs": "可得到跨数据库检索结果、去重后的文献记录和来源清单。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于中文课题检索培训、医学与综合文献检索。",
     "plain_prerequisites": "需要准备：PubMed MCP（让 AI 连接外部工具的通用方式）及其他外部搜索工具。",
     "plain_limitations": "需要注意：工具依赖较强，部分数据库范围偏医学。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：替换 OpenClaw MCP 名称并保留平台使用安排表。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：替换 OpenClaw MCP 名称并保留平台使用安排表。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1865,11 +1916,12 @@
     "subcategory_code": "03-02",
     "subcategory_name": "特定学术数据库查找",
     "plain_purpose": "按主题、作者和分类检索 arXiv 预印本。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合学生、科研人员使用。",
     "plain_when_to_use": "适用于计算机、物理、数学等领域前沿预印本跟踪。",
     "plain_prerequisites": "需要准备：arXiv API（软件之间交换信息的接口）。",
     "plain_limitations": "需要注意：预印本未必经过同行评审；API 速率需遵守。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应到 Codex 网络或本地 API 脚本。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应到 Codex 网络或本地 API 脚本。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1901,11 +1953,12 @@
     "subcategory_code": "03-02",
     "subcategory_name": "特定学术数据库查找",
     "plain_purpose": "用自然语言语义检索 bioRxiv 生命科学预印本。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于生命科学前沿追踪、预印本发现。",
     "plain_prerequisites": "需要准备：Valyu 服务与项目资料库中的小程序。",
     "plain_limitations": "需要注意：商业语义搜索的排序和覆盖不可完全复现。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：需要配置 Valyu；也可改为 bioRxiv 官方 API（软件之间交换信息的接口）关键词检索。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：需要配置 Valyu；也可改为 bioRxiv 官方 API（软件之间交换信息的接口）关键词检索。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1937,11 +1990,12 @@
     "subcategory_code": "03-02",
     "subcategory_name": "特定学术数据库查找",
     "plain_purpose": "通过 Crossref API（软件之间交换信息的接口）查询 DOI（论文等数字资源的永久标识）、出版物和期刊元数据（描述资料的信息，如题名、作者和日期）。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合科研人员、学生、图书馆人员使用。",
     "plain_when_to_use": "适用于参考文献校验、DOI 补全、出版元数据核对。",
     "plain_prerequisites": "需要准备：Crossref REST（通过网址使用网络服务的一种方式） API。",
     "plain_limitations": "需要注意：元数据由成员提交，字段可能缺失或存在版本差异。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：替换为 Codex HTTP（网页服务常用的通信规则）或现有 paper-lookup 脚本。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：替换为 Codex HTTP（网页服务常用的通信规则）或现有 paper-lookup 脚本。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -1973,11 +2027,12 @@
     "subcategory_code": "03-02",
     "subcategory_name": "特定学术数据库查找",
     "plain_purpose": "通过 DBLP（计算机领域文献数据库） API（软件之间交换信息的接口）查询计算机科学出版物、作者和会场。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合计算机类学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于CS（计算机科学）文献检索、作者消歧、会议论文集核对。",
     "plain_prerequisites": "需要准备：DBLP API。",
     "plain_limitations": "需要注意：作者同名和会场别名需要进一步处理。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应到 Codex HTTP（网页服务常用的通信规则）请求或 find-papers 脚本。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应到 Codex HTTP（网页服务常用的通信规则）请求或 find-papers 脚本。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2009,11 +2064,12 @@
     "subcategory_code": "03-02",
     "subcategory_name": "特定学术数据库查找",
     "plain_purpose": "通过 OpenAlex 查询论文、作者、机构和开放引文数据。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合科研人员、图书馆人员、科研管理人员使用。",
     "plain_when_to_use": "适用于机构科研分析、作者画像、主题与引文网络。",
     "plain_prerequisites": "需要准备：OpenAlex API（软件之间交换信息的接口）。",
     "plain_limitations": "需要注意：实体消歧和概念标签并非人工权威分类。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应到 paper-lookup 或直接 OpenAlex API。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应到 paper-lookup 或直接 OpenAlex API。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2045,11 +2101,12 @@
     "subcategory_code": "03-02",
     "subcategory_name": "特定学术数据库查找",
     "plain_purpose": "跨学科检索 Semantic Scholar 并遍历引用和参考文献。",
+    "plain_outputs": "可得到指定数据库的文献检索结果和文献记录。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于种子论文扩展、相关论文推荐、引文网络。",
     "plain_prerequisites": "需要准备：Semantic Scholar API（软件之间交换信息的接口）；高频请求可能需要密钥。",
     "plain_limitations": "需要注意：引用数和论文合并记录会更新，不能作为唯一评价依据。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应到 paper-lookup 或 Semantic Scholar API。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应到 paper-lookup 或 Semantic Scholar API。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2081,11 +2138,12 @@
     "subcategory_code": "03-08",
     "subcategory_name": "主题性文献梳理与综述写作",
     "plain_purpose": "搜索 PubMed 和 bioRxiv，生成摘要、引用图和综述段落。",
+    "plain_outputs": "可得到主题阅读清单、文献比较表或综述草稿。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于快速主题扫描、综述草稿和引用关系探索。",
     "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）、学术 API（软件之间交换信息的接口）、LLM（能理解并生成文本的大型语言模型）。",
     "plain_limitations": "需要注意：端到端自动化容易把摘要错误传播到综述文本。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：需要确认项目资料库列出的脚本和模型依赖；可拆分成独立阶段。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：需要确认项目资料库列出的脚本和模型依赖；可拆分成独立阶段。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2117,11 +2175,12 @@
     "subcategory_code": "03-10",
     "subcategory_name": "Meta 分析与定量证据综合",
     "plain_purpose": "合并多项研究并进行定量 Meta 分析（合并多项研究结果的统计方法）。",
+    "plain_outputs": "可得到合并后的统计结果数据表和 Meta 分析报告。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于系统综述定量综合、教学演示和分析计划。",
     "plain_prerequisites": "需要准备：统计计算库和结构化研究数据。",
     "plain_limitations": "需要注意：模型选择和研究可比性必须由研究者判断。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将统计实现对应到 statsmodels/R 等可验证工具并保存数据表。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将统计实现对应到 statsmodels/R 等可验证工具并保存数据表。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2153,11 +2212,12 @@
     "subcategory_code": "03-09",
     "subcategory_name": "系统综述流程与文献筛选",
     "plain_purpose": "使用 ASReview 主动学习（让模型优先推荐最值得人工判断的条目）为系统综述优先排序题录。",
+    "plain_outputs": "可得到检索与筛选记录、纳排清单或系统综述报告。",
     "plain_audience": "适合科研人员、研究生、图书馆人员使用。",
     "plain_when_to_use": "适用于系统综述标题摘要筛选、优先阅读排序。",
     "plain_prerequisites": "需要准备：ASReview、题录数据集。",
     "plain_limitations": "需要注意：主动学习可能漏掉少数类型研究，停止规则需预先定义。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：安装 ASReview 后使用；保留人工纳排标准和双人复核。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：安装 ASReview 后使用；保留人工纳排标准和双人复核。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2189,11 +2249,12 @@
     "subcategory_code": "03-07",
     "subcategory_name": "深度调研与证据材料整理",
     "plain_purpose": "以公开方法和多轮检索开展深度研究。",
+    "plain_outputs": "可得到带 APA（常用于学术写作的引用格式）引用和证据分级的调研报告、政策简报或主题综述。",
     "plain_audience": "适合科研人员、学生、行政研究人员使用。",
     "plain_when_to_use": "适用于背景调研、政策简报、复杂主题综述。",
     "plain_prerequisites": "需要能搜索和读取网页、并行处理多条检索线索的工具。",
     "plain_limitations": "需要注意：范围较宽，若问题界定不清会产生大量低价值材料。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：将 OpenClaw 内置工具替换为 Codex 搜索与读取工具。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：将 OpenClaw 内置工具替换为 Codex 搜索与读取工具。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2225,11 +2286,12 @@
     "subcategory_code": "03-05",
     "subcategory_name": "论文阅读、提炼与批判性分析",
     "plain_purpose": "读取、摘要并批判性分析科学论文。",
+    "plain_outputs": "可得到论文摘要、证据分析报告或主张核对清单。",
     "plain_audience": "适合学生、教学人员、科研人员使用。",
     "plain_when_to_use": "适用于课程阅读、组会准备、方法比较和数据提取。",
     "plain_prerequisites": "需要准备：PDF（常用的固定版式文档格式）/URL（网页地址）/DOI（论文等数字资源的永久标识）获取工具。",
     "plain_limitations": "需要注意：仅凭摘要不能完成方法和局限分析。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：替换论文获取工具；保留快速与深度两级输出。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：替换论文获取工具；保留快速与深度两级输出。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2261,11 +2323,12 @@
     "subcategory_code": "03-09",
     "subcategory_name": "系统综述流程与文献筛选",
     "plain_purpose": "按 PRISMA（规范系统综述过程和报告的标准） 2020 流程安排系统综述与 Meta 分析（合并多项研究结果的统计方法）流程。",
+    "plain_outputs": "可得到检索与筛选记录、纳排清单或系统综述报告。",
     "plain_audience": "适合科研人员、研究生、图书馆人员使用。",
     "plain_when_to_use": "适用于系统综述、范围综述、证据综合项目管理。",
     "plain_prerequisites": "需要准备：多个检索、筛选、提取和统计配套 AI 技能。",
     "plain_limitations": "需要注意：PRISMA 报告合规不等于方法质量；协议应预先确定。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将配套 AI 技能和工具使用安排对应到本知识库候选。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将配套 AI 技能和工具使用安排对应到本知识库候选。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2297,11 +2360,12 @@
     "subcategory_code": "03-01",
     "subcategory_name": "多数据库综合查找",
     "plain_purpose": "根据检索目标选择不同学术平台，并按步骤逐步扩大或缩小搜索范围。",
+    "plain_outputs": "可得到跨数据库检索结果、去重后的文献记录和来源清单。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于跨学科文献查找、检索策略教学和复杂查询规划。",
     "plain_prerequisites": "需要准备：网络检索；项目资料库中包含可选脚本和参考资源。",
     "plain_limitations": "需要注意：不同平台访问权限不同，搜索结果需保留来源。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接使用；按学校订购数据库补充入口。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接使用；按学校订购数据库补充入口。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2333,11 +2397,12 @@
     "subcategory_code": "03-04",
     "subcategory_name": "个人或团队文献库与研究笔记",
     "plain_purpose": "使用 litdb 建立并查询本地科研文献与文档数据库。",
+    "plain_outputs": "可得到可检索的文献记录、研究笔记或本地文档库。",
     "plain_audience": "适合科研人员、研究生、图书馆人员使用。",
     "plain_when_to_use": "适用于个人或课题组文献库、本地全文检索和研究记录。",
     "plain_prerequisites": "需要准备：litdb 软件、数据库和 MCP（让 AI 连接外部工具的通用方式）服务。",
     "plain_limitations": "需要注意：需要维护本地索引（帮助快速查找资料或数据的检索结构）与附件；导入版权受限全文时需遵守许可。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：部署 litdb 与 MCP 后接入；也可借鉴其数据组织方式。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：部署 litdb 与 MCP 后接入；也可借鉴其数据组织方式。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2369,11 +2434,12 @@
     "subcategory_code": "03-01",
     "subcategory_name": "多数据库综合查找",
     "plain_purpose": "无需 API（软件之间交换信息的接口）密钥跨四个来源搜索论文、作者、会场和引文。",
+    "plain_outputs": "可得到跨数据库检索结果、去重后的文献记录和来源清单。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于CS（计算机科学）与跨学科检索、会议论文集、种子论文扩展。",
     "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）标准库脚本；公开学术 API。",
     "plain_limitations": "需要注意：公共 API 可能限流，引用数跨平台不可直接比较。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：引入项目资料库中的小程序并按 Codex 路径调整。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：引入项目资料库中的小程序并按 Codex 路径调整。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2405,11 +2471,12 @@
     "subcategory_code": "03-03",
     "subcategory_name": "论文全文与开放资源获取",
     "plain_purpose": "为已识别论文寻找并获取合法开放全文。",
+    "plain_outputs": "可得到合法开放全文清单、下载结果或获取报告。",
     "plain_audience": "适合学生、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于获取可读全文、综述语料准备、论文阅读。",
     "plain_prerequisites": "需要准备：公开全文服务；可选 PDF（常用的固定版式文档格式）工具。",
     "plain_limitations": "需要注意：不能绕过付费墙或许可；下载版本需与引用版本对应。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对应到 Unpaywall、PMC（开放获取的生物医学论文全文库）、arXiv 等允许来源。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对应到 Unpaywall、PMC（开放获取的生物医学论文全文库）、arXiv 等允许来源。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2441,11 +2508,12 @@
     "subcategory_code": "03-08",
     "subcategory_name": "主题性文献梳理与综述写作",
     "plain_purpose": "构建每个主张都绑定已核验来源的结构化文献综述。",
+    "plain_outputs": "可得到主题阅读清单、文献比较表或综述草稿。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于论文综述章节、主题研究、相关工作全景。",
     "plain_prerequisites": "需要准备：多个兄弟 AI 技能与本地检查脚本。",
     "plain_limitations": "需要注意：综述范围和纳排标准仍需研究者预先确定。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：需要同一项目资料库中的检索与引用验证技能协同。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：需要同一项目资料库中的检索与引用验证技能协同。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2477,11 +2545,12 @@
     "subcategory_code": "03-08",
     "subcategory_name": "主题性文献梳理与综述写作",
     "plain_purpose": "把主题转为排序阅读清单和双栏综述草稿。",
+    "plain_outputs": "可得到主题阅读清单、文献比较表或综述草稿。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于快速进入新领域、课程阅读清单、综述论文初稿。",
     "plain_prerequisites": "需要准备：find-papers、verify-citations、LaTeX（常用于学术论文排版的工具）。",
     "plain_limitations": "需要注意：引用量排序可能偏向老论文，不能替代内容相关性判断。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：复用搜索与引文核验兄弟 AI 技能；排名指标按学科调整。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：复用搜索与引文核验兄弟 AI 技能；排名指标按学科调整。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2513,11 +2582,12 @@
     "subcategory_code": "03-05",
     "subcategory_name": "论文阅读、提炼与批判性分析",
     "plain_purpose": "把论文中的关键主张与结果、表格、图形和引文逐项核对。",
+    "plain_outputs": "可得到论文摘要、证据分析报告或主张核对清单。",
     "plain_audience": "适合科研人员、研究生、教学人员使用。",
     "plain_when_to_use": "适用于投稿前主张审计、结果一致性和过度推断检查。",
     "plain_prerequisites": "需要准备：稿件、结果表、图形和引用证据。",
     "plain_limitations": "需要注意：核验质量取决于能否访问完整实验记录。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：接入本地稿件和证据清单即可；避免上传敏感材料。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：接入本地稿件和证据清单即可；避免上传敏感材料。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2549,11 +2619,12 @@
     "subcategory_code": "03-01",
     "subcategory_name": "多数据库综合查找",
     "plain_purpose": "以标准操作规程组织分层文献搜索。",
+    "plain_outputs": "可得到跨数据库检索结果、去重后的文献记录和来源清单。",
     "plain_audience": "适合科研人员、学生、图书馆人员使用。",
     "plain_when_to_use": "适用于课题组统一检索规范、综述检索培训。",
     "plain_prerequisites": "需要准备：本地参考管理器、数据库和网络搜索。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；工具路线较多需按任务裁剪。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：把 Research-Claw 工具名替换为现有搜索和文献管理工具。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：把 Research-Claw 工具名替换为现有搜索和文献管理工具。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2585,11 +2656,12 @@
     "subcategory_code": "03-08",
     "subcategory_name": "主题性文献梳理与综述写作",
     "plain_purpose": "规范主题综述中的范围、深读、证据提取和综合步骤。",
+    "plain_outputs": "可得到主题阅读清单、文献比较表或综述草稿。",
     "plain_audience": "适合科研人员、研究生使用。",
     "plain_when_to_use": "适用于综述写作、读书会、研究领域进入。",
     "plain_prerequisites": "需要准备：Research-Claw 处理流程。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；需要与具体检索和引用工具配套。",
-    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。 具体建议：保留方法框架（组织工作步骤和配套工具的一套结构），替换 Research-Claw 安排与存储路径。",
+    "plain_integration": "需要较多改写或配套服务，建议先做小范围试用再决定是否建设。具体建议：保留方法框架（组织工作步骤和配套工具的一套结构），替换 Research-Claw 安排与存储路径。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2621,11 +2693,12 @@
     "subcategory_code": "03-09",
     "subcategory_name": "系统综述流程与文献筛选",
     "plain_purpose": "按 PRISMA（规范系统综述过程和报告的标准） 2020 引导用户完成系统文献综述。",
+    "plain_outputs": "可得到检索与筛选记录、纳排清单或系统综述报告。",
     "plain_audience": "适合科研人员、研究生、教学人员使用。",
     "plain_when_to_use": "适用于系统综述课程、毕业论文、PRISMA 报告审计。",
     "plain_prerequisites": "需要准备：Word/图表生成工具；用户提供筛选数据。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；PRISMA 合规不等于检索全面。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：替换 Claude 专用工具路径，并与本地 docx 生成技能协同。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：替换 Claude 专用工具路径，并与本地 docx 生成技能协同。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2661,11 +2734,12 @@
     "subcategory_code": "04-01",
     "subcategory_name": "基础信息素养与研究入门",
     "plain_purpose": "用分阶段流程训练从研究问题到检索、评价、综合和规范归因的信息素养。",
+    "plain_outputs": "可得到信息素养学习方案、练习材料或来源评价清单。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2701,11 +2775,12 @@
     "subcategory_code": "04-02",
     "subcategory_name": "信息来源判断与史料分析",
     "plain_purpose": "运用 SIFT（先停下、查来源、找更好报道、追溯原始依据的核查方法）、横向阅读和反向图像检索快速判断网络信息与来源可信度。",
+    "plain_outputs": "可得到来源可信度分析报告和证据清单。",
     "plain_audience": "适合学生、教师、科研人员、图书馆与宣传人员使用。",
     "plain_when_to_use": "适用于课程信息辨识、新闻与网络主张核验、来源教育。",
     "plain_prerequisites": "需要准备：网络检索；必要时使用网页归档或反向图像检索。",
     "plain_limitations": "需要注意：检索不到不等于主张为假；恶意网页内容、时效性和来源偏差需单独处理。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2741,11 +2816,12 @@
     "subcategory_code": "04-03",
     "subcategory_name": "媒体与新闻素养教育",
     "plain_purpose": "分析媒介形式、新闻框架（组织工作步骤和配套工具的一套结构）、算法分发和受众解码，提升媒体内容辨识能力。",
+    "plain_outputs": "可得到媒体素养课程方案、案例分析报告或评价清单。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2781,11 +2857,12 @@
     "subcategory_code": "04-02",
     "subcategory_name": "信息来源判断与史料分析",
     "plain_purpose": "用来源类型、作者、语境、目的和相互印证框架（组织工作步骤和配套工具的一套结构）分析一手与二手资料。",
+    "plain_outputs": "可得到来源可信度分析报告和证据清单。",
     "plain_audience": "适合学生、教师、科研人员、图书馆与宣传人员使用。",
     "plain_when_to_use": "适用于课程信息辨识、新闻与网络主张核验、来源教育。",
     "plain_prerequisites": "需要准备：网络检索；必要时使用网页归档或反向图像检索。",
     "plain_limitations": "需要注意：检索不到不等于主张为假；恶意网页内容、时效性和来源偏差需单独处理。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2821,11 +2898,12 @@
     "subcategory_code": "04-01",
     "subcategory_name": "基础信息素养与研究入门",
     "plain_purpose": "把数据库高级检索、来源评价、文献综合、研究方法和引文管理汇总为入门指南。",
+    "plain_outputs": "可得到信息素养学习方案、练习材料或来源评价清单。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2861,11 +2939,12 @@
     "subcategory_code": "04-07",
     "subcategory_name": "数字图书馆与技术建设",
     "plain_purpose": "生成数字图书馆建设的目标、关键组件、行动计划和成功指标。",
+    "plain_outputs": "可得到数字图书馆建设方案、系统清单或实施计划。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2901,11 +2980,12 @@
     "subcategory_code": "04-06",
     "subcategory_name": "图书馆服务、活动与推广",
     "plain_purpose": "围绕目标群体、传播渠道、行动安排和指标制定图书馆外联计划。",
+    "plain_outputs": "可得到图书馆服务方案、活动计划或推广清单。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2941,11 +3021,12 @@
     "subcategory_code": "04-06",
     "subcategory_name": "图书馆服务、活动与推广",
     "plain_purpose": "把用户需求转化为图书馆项目方案、资源安排、行动计划和成效指标。",
+    "plain_outputs": "可得到图书馆服务方案、活动计划或推广清单。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -2981,11 +3062,12 @@
     "subcategory_code": "04-07",
     "subcategory_name": "数字图书馆与技术建设",
     "plain_purpose": "规划图书馆技术现状评估、目标架构、实施步骤和质量检查。",
+    "plain_outputs": "可得到数字图书馆建设方案、系统清单或实施计划。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3021,11 +3103,12 @@
     "subcategory_code": "04-03",
     "subcategory_name": "媒体与新闻素养教育",
     "plain_purpose": "设计面向学习者的媒体素养项目，覆盖目标、核心内容、活动和评价指标。",
+    "plain_outputs": "可得到媒体素养课程方案、案例分析报告或评价清单。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3061,11 +3144,12 @@
     "subcategory_code": "04-04",
     "subcategory_name": "事实核查与证据验证",
     "plain_purpose": "提供轻量事实核查流程模板，用于定义取证步骤、输出结构和质量清单。",
+    "plain_outputs": "可得到事实核查报告、证据清单和结论说明。",
     "plain_audience": "适合学生、教师、科研人员、图书馆与宣传人员使用。",
     "plain_when_to_use": "适用于课程信息辨识、新闻与网络主张核验、来源教育。",
     "plain_prerequisites": "需要准备：网络检索；必要时使用网页归档或反向图像检索。",
     "plain_limitations": "需要注意：检索不到不等于主张为假；恶意网页内容、时效性和来源偏差需单独处理。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3101,11 +3185,12 @@
     "subcategory_code": "04-05",
     "subcategory_name": "数据素养教育",
     "plain_purpose": "设计数据获取、理解、解释与沟通能力培养项目及其评估指标。",
+    "plain_outputs": "可得到数据素养课程方案、练习数据表或评价清单。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3141,11 +3226,12 @@
     "subcategory_code": "04-08",
     "subcategory_name": "信息来源台账与书目管理",
     "plain_purpose": "为来源采集、分类、记录、更新和复核建立轻量管理流程。",
+    "plain_outputs": "可得到来源台账、书目记录或导入配置。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3181,11 +3267,12 @@
     "subcategory_code": "04-04",
     "subcategory_name": "事实核查与证据验证",
     "plain_purpose": "流程安排证据优先的主张拆解、并行取证、答案比较、裁决与可复现报告流程。",
+    "plain_outputs": "可得到事实核查报告、证据清单和结论说明。",
     "plain_audience": "适合学生、教师、科研人员、图书馆与宣传人员使用。",
     "plain_when_to_use": "适用于课程信息辨识、新闻与网络主张核验、来源教育。",
     "plain_prerequisites": "需要准备：网络检索；必要时使用网页归档或反向图像检索。",
     "plain_limitations": "需要注意：检索不到不等于主张为假；恶意网页内容、时效性和来源偏差需单独处理。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3221,11 +3308,12 @@
     "subcategory_code": "04-04",
     "subcategory_name": "事实核查与证据验证",
     "plain_purpose": "针对单一知识点从权威来源取证，由当前智能体裁决并形成可审计报告。",
+    "plain_outputs": "可得到事实核查报告、证据清单和结论说明。",
     "plain_audience": "适合学生、教师、科研人员、图书馆与宣传人员使用。",
     "plain_when_to_use": "适用于课程信息辨识、新闻与网络主张核验、来源教育。",
     "plain_prerequisites": "需要准备：网络检索；必要时使用网页归档或反向图像检索。",
     "plain_limitations": "需要注意：检索不到不等于主张为假；恶意网页内容、时效性和来源偏差需单独处理。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3261,11 +3349,12 @@
     "subcategory_code": "04-04",
     "subcategory_name": "事实核查与证据验证",
     "plain_purpose": "按专业核查协议完成主张拆分、证据搜索、来源分级和结论表达，并处理恶意网页指令。",
+    "plain_outputs": "可得到事实核查报告、证据清单和结论说明。",
     "plain_audience": "适合学生、教师、科研人员、图书馆与宣传人员使用。",
     "plain_when_to_use": "适用于课程信息辨识、新闻与网络主张核验、来源教育。",
     "plain_prerequisites": "需要准备：网络检索；必要时使用网页归档或反向图像检索。",
     "plain_limitations": "需要注意：检索不到不等于主张为假；恶意网页内容、时效性和来源偏差需单独处理。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留证据分级和人工裁决，把搜索工具替换为本项目可用的浏览与数据库连接方式。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3301,11 +3390,12 @@
     "subcategory_code": "04-09",
     "subcategory_name": "馆藏目录、机构知识库与开放资源发现",
     "plain_purpose": "识别和检索机构知识库，理解常见平台，并通过 OAI-PMH（批量交换文献基本信息的标准）发现开放资源。",
+    "plain_outputs": "可得到馆藏或开放资源检索结果和文献记录。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3341,11 +3431,12 @@
     "subcategory_code": "04-09",
     "subcategory_name": "馆藏目录、机构知识库与开放资源发现",
     "plain_purpose": "通过 WorldCat Search API（软件之间交换信息的接口）检索全球图书馆馆藏和书目元数据（描述资料的信息，如题名、作者和日期）。",
+    "plain_outputs": "可得到馆藏或开放资源检索结果和文献记录。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API 密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3381,11 +3472,12 @@
     "subcategory_code": "04-11",
     "subcategory_name": "开放科学与科研数据管理",
     "plain_purpose": "指导预注册、注册报告、开放数据、开放材料和透明研究实践。",
+    "plain_outputs": "可得到开放科学检查清单、数据管理计划或资源记录。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
     "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
     "plain_prerequisites": "无需额外安装工具；需要先准备本校资源信息和使用对象需求。",
     "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3421,11 +3513,12 @@
     "subcategory_code": "04-09",
     "subcategory_name": "馆藏目录、机构知识库与开放资源发现",
     "plain_purpose": "说明 OAI-PMH（批量交换文献基本信息的标准）六类请求、选择性与增量采集，并给出 Python（常用于数据处理和自动化的编程语言）采集处理流程。",
+    "plain_outputs": "可得到馆藏或开放资源检索结果和文献记录。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3461,11 +3554,12 @@
     "subcategory_code": "04-11",
     "subcategory_name": "开放科学与科研数据管理",
     "plain_purpose": "使用 Figshare API（软件之间交换信息的接口）检索、读取和管理公开研究数据集及文件元数据（描述资料的信息，如题名、作者和日期）。",
+    "plain_outputs": "可得到开放科学检查清单、数据管理计划或资源记录。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API 密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3501,11 +3595,12 @@
     "subcategory_code": "04-09",
     "subcategory_name": "馆藏目录、机构知识库与开放资源发现",
     "plain_purpose": "使用 PMC-OAI（批量获取开放医学论文资料的服务）批量取得开放论文的基本信息和可用全文地址。",
+    "plain_outputs": "可得到馆藏或开放资源检索结果和文献记录。",
     "plain_audience": "适合学生、教师、科研人员、图书馆人员使用。",
     "plain_when_to_use": "适用于馆藏发现、开放资源检索、知识库建设与服务规划。",
     "plain_prerequisites": "需要准备：网络；部分功能需要 API（软件之间交换信息的接口）密钥、机构订阅或本地小程序。",
     "plain_limitations": "需要注意：外部连接方式、馆藏覆盖和访问政策会变化；不得绕过权限或版权限制。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将示例服务地址、身份验证方式和输出字段对应到本校图书馆系统；先以仅查看、不修改方式接入。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3541,6 +3636,7 @@
     "subcategory_code": "04-11",
     "subcategory_name": "开放科学与科研数据管理",
     "plain_purpose": "按可发现、可访问、可互操作和可复用四项原则检查科研数据管理。",
+    "plain_outputs": "可得到开放科学检查清单、数据管理计划或资源记录。",
     "plain_audience": "适合科研人员、研究生、图书馆与科研数据管理人员使用。",
     "plain_when_to_use": "适用于个人/机构知识库、科研数据治理、元数据（描述资料的信息，如题名、作者和日期）规范与术语控制。",
     "plain_prerequisites": "需要准备对应的数据平台或标准；部分功能还要由技术人员配置 Python（常用于数据处理和自动化的编程语言）、服务授权信息或本地检索目录。",
@@ -3581,6 +3677,7 @@
     "subcategory_code": "04-11",
     "subcategory_name": "开放科学与科研数据管理",
     "plain_purpose": "清点论文关联研究对象并逐项检查其可发现性、可访问性、互操作性与复用性。",
+    "plain_outputs": "可得到开放科学检查清单、数据管理计划或资源记录。",
     "plain_audience": "适合科研人员、研究生、图书馆与科研数据管理人员使用。",
     "plain_when_to_use": "适用于个人/机构知识库、科研数据治理、元数据（描述资料的信息，如题名、作者和日期）规范与术语控制。",
     "plain_prerequisites": "需要准备对应的数据平台或标准；部分功能还要由技术人员配置 Python（常用于数据处理和自动化的编程语言）、服务授权信息或本地检索目录。",
@@ -3621,6 +3718,7 @@
     "subcategory_code": "04-10",
     "subcategory_name": "元数据、术语与数据规范",
     "plain_purpose": "从业务与检索需求出发定义字段、约束、验证规则和可维护的元数据（描述资料的信息，如题名、作者和日期）模式。",
+    "plain_outputs": "可得到字段规则、术语结果或数据规范清单。",
     "plain_audience": "适合科研人员、研究生、图书馆与科研数据管理人员使用。",
     "plain_when_to_use": "适用于个人/机构知识库、科研数据治理、元数据规范与术语控制。",
     "plain_prerequisites": "需要准备对应的数据平台或标准；部分功能还要由技术人员配置 Python（常用于数据处理和自动化的编程语言）、服务授权信息或本地检索目录。",
@@ -3661,6 +3759,7 @@
     "subcategory_code": "04-12",
     "subcategory_name": "个人文献库与实验记录系统集成",
     "plain_purpose": "把 Zotero 文献分批同步到本地检索库，方便围绕个人馆藏查找资料并生成带出处的回答。",
+    "plain_outputs": "可得到同步配置、可检索文献记录或实验记录。",
     "plain_audience": "适合科研人员、研究生、图书馆与科研数据管理人员使用。",
     "plain_when_to_use": "适用于个人/机构知识库、科研数据治理、元数据（描述资料的信息，如题名、作者和日期）规范与术语控制。",
     "plain_prerequisites": "需要准备对应的数据平台或标准；部分功能还要由技术人员配置 Python（常用于数据处理和自动化的编程语言）、服务授权信息或本地检索目录。",
@@ -3701,6 +3800,7 @@
     "subcategory_code": "04-10",
     "subcategory_name": "元数据、术语与数据规范",
     "plain_purpose": "在指定标准术语体系内，把自由文本对应到规范术语，并列出无法匹配或含义不清的部分。",
+    "plain_outputs": "可得到字段规则、术语结果或数据规范清单。",
     "plain_audience": "适合科研人员、研究生、图书馆与科研数据管理人员使用。",
     "plain_when_to_use": "适用于个人/机构知识库、科研数据治理、元数据（描述资料的信息，如题名、作者和日期）规范与术语控制。",
     "plain_prerequisites": "需要准备对应的数据平台或标准；部分功能还要由技术人员配置 Python（常用于数据处理和自动化的编程语言）、服务授权信息或本地检索目录。",
@@ -3741,6 +3841,7 @@
     "subcategory_code": "04-12",
     "subcategory_name": "个人文献库与实验记录系统集成",
     "plain_purpose": "规划 LabArchives 电子实验记录和库存服务的身份验证、区域地址、资料读取及受控写入。",
+    "plain_outputs": "可得到同步配置、可检索文献记录或实验记录。",
     "plain_audience": "适合科研人员、研究生、图书馆与科研数据管理人员使用。",
     "plain_when_to_use": "适用于个人/机构知识库、科研数据治理、元数据（描述资料的信息，如题名、作者和日期）规范与术语控制。",
     "plain_prerequisites": "需要准备对应的数据平台或标准；部分功能还要由技术人员配置 Python（常用于数据处理和自动化的编程语言）、服务授权信息或本地检索目录。",
@@ -3782,11 +3883,12 @@
     "subcategory_name": "信息来源台账与书目管理",
     "decision_note": "主要产出优先：该技能首先形成可维护的信息来源台账，因此归入信息来源台账与书目管理，而非开放资源发现。",
     "plain_purpose": "分析网站结构并制作 Zotero 网页翻译器，以改善题名、作者和日期等书目信息的抓取与导入。",
+    "plain_outputs": "可得到目标网站的 Zotero 网页翻译器代码、书目信息测试结果和维护记录。",
     "plain_audience": "适合学生、教师、图书馆人员使用。",
-    "plain_when_to_use": "适用于信息素养课程、读者培训、图书馆项目与服务设计。",
-    "plain_prerequisites": "需要准备目标网站、Zotero 以及网站页面结构信息；遇到访问限制时需要人工处理。",
-    "plain_limitations": "需要注意：内容较通用或较轻量，不能替代本校政策、专业馆员判断和学习成效评估。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：可作为课程或服务模板，需补充本校资源、制度、学习目标和评价量规。",
+    "plain_when_to_use": "当 Zotero 不能从目标网站正确导入题名、作者等书目信息，需要制作或更新网页翻译器时使用。",
+    "plain_prerequisites": "需要准备目标网站、能代表不同页面类型的样例网页、预期书目信息和 Zotero 测试环境。",
+    "plain_limitations": "需要注意：网站改版、访问限制或反自动访问措施会使翻译器失效；许可证仍需另行核验。",
+    "plain_integration": "先为目标网站编写翻译规则和测试记录，用多种样例网页核对导入结果，再决定是否纳入馆内维护。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3822,11 +3924,12 @@
     "subcategory_code": "05-01",
     "subcategory_name": "计算设备与资源规划",
     "plain_purpose": "在计算密集任务前仅查看、不修改盘点 CPU（执行通用计算任务的处理器）、GPU（适合大量并行计算的图形处理器）、内存和磁盘，并据此建议并行、分块或外存策略。",
+    "plain_outputs": "可得到计算资源清单，以及并行、分块或使用磁盘暂存的任务方案。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "在大型计算任务开跑前，需要判断现有算力、内存和磁盘是否够用时使用。",
+    "plain_prerequisites": "需要允许工具查看系统信息，并准备任务规模、预计时长和可使用的设备范围。",
+    "plain_limitations": "需要注意：资源快照只代表检查当时，不能保证任务一定完成；不得采集无关的敏感系统信息。",
+    "plain_integration": "先以只查看、不修改的方式盘点，把处理器、显卡、内存和磁盘清单交给任务规划环节，不自动修改系统。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3862,11 +3965,12 @@
     "subcategory_code": "05-02",
     "subcategory_name": "数据检查、清理与质量控制",
     "plain_purpose": "以授权范围、数据质量、分布、关系、异常和可复现输出为主线开展探索性分析。",
+    "plain_outputs": "可得到数据质量报告、描述统计数据表、异常清单和探索图表。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "收到一份新数据、尚未决定清理和分析方法，需要先了解质量与分布时使用。",
+    "plain_prerequisites": "需要准备已获授权的数据副本、字段说明、研究问题和允许输出的范围。",
+    "plain_limitations": "需要注意：探索中发现的关系不等于因果；缺失值和异常值必须结合业务含义判断。",
+    "plain_integration": "先对小样本做只查看、不修改的分析，保存每一步数据检查与图表，再由负责人批准清理规则。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3903,11 +4007,12 @@
     "subcategory_name": "并行计算与性能优化",
     "decision_note": "主要产出优先：该技能的关键结果是提升计算执行效率，故归入并行计算与性能优化，而非一般数据处理。",
     "plain_purpose": "在一台电脑内存不足或需要加快处理时，用 Dask（把大型计算任务拆开处理的软件）把大型数据任务拆开并同时计算。",
+    "plain_outputs": "可得到并行数据处理代码、分块后的数据表和任务执行报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "当表格或数组超过一台电脑内存，或计算可拆成多份同时处理时使用。",
+    "plain_prerequisites": "需要准备 Dask、Python（常用于数据处理和自动化的编程语言）、输入数据规模说明，以及可用处理器或计算集群信息。",
+    "plain_limitations": "需要注意：小任务可能因拆分和协调反而变慢；数据重排成本必须用真实任务测量。",
+    "plain_integration": "先在一台电脑上验证分块结果，再按实际规模连接集群，并固定软件版本和分块设置。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3943,11 +4048,12 @@
     "subcategory_code": "05-03",
     "subcategory_name": "表格与大型数据处理",
     "plain_purpose": "使用 Polars（快速处理表格数据的软件）的表达式、惰性执行（先记录步骤，需要结果时再计算）和列式计算（按数据列处理以提高效率的方法）构建快速、可审计的数据转换流程。",
+    "plain_outputs": "可得到表格转换代码、处理后的数据表和速度对比报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要加快多列表格筛选、连接和转换，并希望保留可复查步骤时使用。",
+    "plain_prerequisites": "需要准备 Polars、字段类型说明、输入样表和期望输出样表。",
+    "plain_limitations": "需要注意：延后计算和字段类型规则可能改变执行顺序，结果必须与原处理流程逐列比较。",
+    "plain_integration": "先替换一段最慢的表格流程，同时保留原结果作为对照，再逐步扩大使用范围。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -3983,11 +4089,12 @@
     "subcategory_code": "05-03",
     "subcategory_name": "表格与大型数据处理",
     "plain_purpose": "借助内存对应和延迟计算交互分析超大表格数据，减少内存占用。",
+    "plain_outputs": "可得到超大表格的筛选结果数据表、汇总统计和分析报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要在内存有限的电脑上浏览、筛选或汇总超大表格时使用。",
+    "plain_prerequisites": "需要准备 Vaex（减少内存占用来分析超大表格的软件）、受支持的数据文件、字段说明和要计算的统计指标。",
+    "plain_limitations": "需要注意：并非所有文件格式和表格操作都受支持；延后计算的速度要用实际文件检验。",
+    "plain_integration": "先以不改原文件的方式打开样本，核对筛选和统计结果，再建立固定的导出目录。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4024,11 +4131,12 @@
     "subcategory_name": "数据存储、数据库与查询优化",
     "decision_note": "主要产出优先：该技能面向数据存储、数据库组织和查询结果优化，故归入数据存储、数据库与查询优化。",
     "plain_purpose": "用 Zarr（把大型多维数据分块保存的工具）创建、读取和管理多维数据，可保存在本机或网络存储中。",
+    "plain_outputs": "可得到分块存储配置、Zarr 数据文件和读写测试报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要把大型多维数组分块保存，并在本机或网络存储中按需读取时使用。",
+    "plain_prerequisites": "需要准备 Zarr、数组形状和数据类型、分块方案及目标存储位置。",
+    "plain_limitations": "需要注意：分块和压缩设置不合适会拖慢读写；多人写入同一数据时要防止冲突。",
+    "plain_integration": "先用一份小数组比较分块大小和压缩效果，确认读取软件兼容后再迁移正式数据。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4064,11 +4172,12 @@
     "subcategory_code": "05-14",
     "subcategory_name": "基础绘图与科学图表",
     "plain_purpose": "用面向对象连接方式完成可控的二维绘图、布局、标注和多格式导出。",
+    "plain_outputs": "可得到可重复生成的绘图代码、科研图表和版式检查清单。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要精确控制二维科研图的坐标轴、标注、布局和导出格式时使用。",
+    "plain_prerequisites": "需要准备 Matplotlib（制作和细调二维图表的软件）、绘图数据、图表尺寸和期刊或课程的版式要求。",
+    "plain_limitations": "需要注意：代码能生成图不代表表达正确；颜色、尺度、字体和可读性仍需人工审查。",
+    "plain_integration": "先建立本校常用图表样式和导出设置，用代表性数据检查屏幕与打印效果。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4104,11 +4213,12 @@
     "subcategory_code": "05-14",
     "subcategory_name": "基础绘图与科学图表",
     "plain_purpose": "以统计语义快速制作分布、关系和分类比较图，并与 Matplotlib（制作和细调二维图表的软件）精细控制协同。",
+    "plain_outputs": "可得到分布或关系图表、配套绘图代码和图形解释说明。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要快速比较数据分布、变量关系或不同组别，并制作统计图时使用。",
+    "plain_prerequisites": "需要准备 Seaborn（快速制作统计图表的软件）、整理好的数据表、分组字段和要回答的比较问题。",
+    "plain_limitations": "需要注意：默认统计汇总可能掩盖样本差异；图形不能代替统计检验和数据说明。",
+    "plain_integration": "先为常用分布图和分组图建立示例，再用 Matplotlib 补充学校要求的标注和导出格式。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4144,11 +4254,12 @@
     "subcategory_code": "05-14",
     "subcategory_name": "基础绘图与科学图表",
     "plain_purpose": "从证据与传播目标出发选择诚实编码，落实无障碍、导出和来源追踪检查。",
+    "plain_outputs": "可得到修订后的科研图表、来源说明和图表质量审计清单。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "准备论文、报告或课程图表，需要检查图形是否诚实、清楚且便于不同读者理解时使用。",
+    "plain_prerequisites": "需要准备原始数据、图表草稿、预期读者、传播目的和最终使用载体。",
+    "plain_limitations": "需要注意：美观不能替代证据；截断坐标、颜色误导和来源缺失必须单独纠正。",
+    "plain_integration": "把图表审计放在发布前，要求每张图保留数据来源、尺度选择和无障碍检查记录。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4184,11 +4295,12 @@
     "subcategory_code": "05-15",
     "subcategory_name": "地图、网络与交互式可视化",
     "plain_purpose": "创建和分析复杂网络，覆盖路径、中心性、聚类、社区和基础网络可视化。",
+    "plain_outputs": "可得到网络分析数据表、关键节点清单、关系网络图和计算代码。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "研究对象之间存在关系，需要计算路径、关键节点、群组或连接结构时使用。",
+    "plain_prerequisites": "需要准备 NetworkX（分析关系网络的软件）、节点与关系数据表，以及每条关系的含义和方向说明。",
+    "plain_limitations": "需要注意：中心性或群组结果受网络边界影响，不能脱离数据采集范围解释。",
+    "plain_integration": "先用小网络核对节点和关系，再选择与研究问题对应的指标并保存计算参数。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4224,11 +4336,12 @@
     "subcategory_code": "05-15",
     "subcategory_name": "地图、网络与交互式可视化",
     "plain_purpose": "处理矢量空间数据、坐标系、几何有效性、空间连接与地图输出。",
+    "plain_outputs": "可得到清理后的空间数据表、区域统计、地图图表和处理报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "数据带有地点、边界或坐标，需要空间连接、区域统计或地图展示时使用。",
+    "plain_prerequisites": "需要准备 GeoPandas（处理地图和空间数据的软件）、空间数据文件、坐标系说明和有效的地理边界。",
+    "plain_limitations": "需要注意：坐标系或几何错误会造成位置偏差；敏感地点数据不得未经处理公开。",
+    "plain_integration": "先统一坐标系并检查无效几何，再对少量区域核对空间连接结果后批量处理。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4264,11 +4377,12 @@
     "subcategory_code": "05-09",
     "subcategory_name": "机器学习建模、解释与评估",
     "plain_purpose": "构建预处理、训练、验证、模型选择和解释相衔接的传统机器学习流程。",
+    "plain_outputs": "可得到机器学习模型、预测结果数据表、评估报告和处理代码。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要用结构化数据训练分类或预测模型，并比较多个传统机器学习方法时使用。",
+    "plain_prerequisites": "需要准备 Scikit-learn（用于传统机器学习的软件）、带目标字段的数据表、训练与验证划分及评价指标。",
+    "plain_limitations": "需要注意：数据泄漏和不平衡样本会夸大效果；模型必须在未参与训练的数据上评价。",
+    "plain_integration": "把数据预处理、模型训练和验证组成一条可重复流程，保存版本、随机种子和评价结果。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4304,11 +4418,12 @@
     "subcategory_code": "05-06",
     "subcategory_name": "基础统计分析与结果报告",
     "plain_purpose": "依据研究设计、变量类型和假设条件选择统计方法，并完成诊断、效应量和结果报告。",
+    "plain_outputs": "可得到统计方法选择方案、结果数据表、诊断报告和规范文字结论。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "面对研究数据但不确定应选哪种统计检验或怎样规范报告结果时使用。",
+    "plain_prerequisites": "需要准备研究设计、变量类型、样本量、数据表和需要检验的假设。",
+    "plain_limitations": "需要注意：自动推荐不能替代研究设计判断；使用条件不满足时必须改用合适方法。",
+    "plain_integration": "先把研究设计和变量说明作为必填输入，再把诊断、效应量和结论一起纳入报告模板。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4344,11 +4459,12 @@
     "subcategory_code": "05-08",
     "subcategory_name": "贝叶斯分析、因果分析与实验设计",
     "plain_purpose": "围绕目标效应、显著性水平和功效进行样本量估计及复杂模型的模拟功效分析。",
+    "plain_outputs": "可得到样本量方案、统计功效数据表、敏感性分析图表和计算报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "在研究开始前估计样本量，或判断现有样本能否发现目标效应时使用。",
+    "plain_prerequisites": "需要准备目标效应、显著性水平、期望把握度、研究设计和预计数据波动。",
+    "plain_limitations": "需要注意：样本量取决于输入假设；效应估计过于乐观会低估实际所需样本。",
+    "plain_integration": "把样本量计算放进研究设计审批，保存参数来源，并用多个合理假设做敏感性比较。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4384,11 +4500,12 @@
     "subcategory_code": "05-07",
     "subcategory_name": "回归、时间序列与统计建模",
     "plain_purpose": "使用 Statsmodels（用于统计建模和推断的软件）完成回归、广义模型、时间序列与严格推断，并保留诊断输出。",
+    "plain_outputs": "可得到统计模型、系数数据表、诊断图表和推断报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要建立回归、广义模型或时间序列模型，并保留严格的统计诊断时使用。",
+    "plain_prerequisites": "需要准备 Statsmodels、分析数据表、模型公式、变量说明和推断目标。",
+    "plain_limitations": "需要注意：系数显著不代表因果；残差、相关性和模型设定错误会影响结论。",
+    "plain_integration": "先固定模型公式与诊断清单，要求每次结果同时保存系数表、置信区间和残差检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4424,11 +4541,12 @@
     "subcategory_code": "05-08",
     "subcategory_name": "贝叶斯分析、因果分析与实验设计",
     "plain_purpose": "按标准贝叶斯处理流程选择先验与似然、采样、诊断和解释后验不确定性。",
+    "plain_outputs": "可得到贝叶斯模型、后验结果数据表、诊断图表和不确定性报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要用贝叶斯方法结合先前认识与新数据，并表达结论不确定性时使用。",
+    "plain_prerequisites": "需要准备 PyMC（用于贝叶斯统计建模的软件）、观测数据、先验依据、候选模型和需要回答的概率问题。",
+    "plain_limitations": "需要注意：先验和模型选择会影响结果；采样没有稳定收敛时不能解释后验结论。",
+    "plain_integration": "先用简化模型检查采样与诊断，再记录先验理由、收敛指标和替代模型比较。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4464,11 +4582,12 @@
     "subcategory_code": "05-11",
     "subcategory_name": "数学计算、单位与误差",
     "plain_purpose": "用精确符号对象完成代数化简、求解、微积分、矩阵和数值代码转换。",
+    "plain_outputs": "可得到精确公式、方程解数据表、推导代码和核对结果。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要保留数学符号精确性来化简表达式、解方程、求导积分或处理矩阵时使用。",
+    "plain_prerequisites": "需要准备 SymPy（进行符号数学计算的软件）、明确的数学表达式、变量假设和期望的结果形式。",
+    "plain_limitations": "需要注意：符号结果可能很复杂；变量范围或假设缺失会得到不适用的解。",
+    "plain_integration": "先把变量条件写入计算步骤，对关键结果做代入或数值复核，再导出可读公式。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4504,11 +4623,12 @@
     "subcategory_code": "05-11",
     "subcategory_name": "数学计算、单位与误差",
     "plain_purpose": "在计算中保留单位和不确定度，防止尺度、偏移温度及对数单位等常见错误。",
+    "plain_outputs": "可得到带单位和不确定度的结果数据表、换算公式和误差报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "计算涉及物理单位、测量误差或不确定度传播，担心量纲和尺度出错时使用。",
+    "plain_prerequisites": "需要准备各数值的单位、不确定度、测量来源和所用计算公式。",
+    "plain_limitations": "需要注意：输入单位或误差假设错误会传递到结果；相关误差不能一律按独立处理。",
+    "plain_integration": "先统一单位并标记每个测量来源，再把单位检查和误差传播作为计算必经步骤。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4544,11 +4664,12 @@
     "subcategory_code": "05-09",
     "subcategory_name": "机器学习建模、解释与评估",
     "plain_purpose": "选择合适解释器与背景分布，计算并审计局部和全局特征贡献。",
+    "plain_outputs": "可得到模型解释数据表、因素贡献图表和解释限制报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "已有机器学习模型，需要解释单个预测或整体上哪些因素影响结果时使用。",
+    "plain_prerequisites": "需要准备 SHAP（解释模型预测受各项因素影响程度的方法）、已训练模型、用于解释的样本和合适的参考数据。",
+    "plain_limitations": "需要注意：因素贡献不等于因果作用；参考数据选取不同会改变解释结果。",
+    "plain_integration": "先在少量已知样本上核对解释方向，再分别输出个体与整体结果并记录参考数据。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4583,12 +4704,13 @@
     "license": "MIT",
     "subcategory_code": "05-09",
     "subcategory_name": "机器学习建模、解释与评估",
-    "plain_purpose": "对标准化数据构建 UMAP（把高维数据压缩成二维或三维图形的方法）嵌入（把复杂数据转成便于比较的一组数字），调节邻域与距离参数并避免过度解释二维图。",
+    "plain_purpose": "对标准化数据构建 UMAP 嵌入（把高维数据转换成便于绘图的一组坐标），调节邻域与距离参数并避免过度解释二维图。",
+    "plain_outputs": "可得到 UMAP 嵌入坐标数据表、二维图表和设置比较报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "高维数据难以直接观察，需要压缩到二维或三维来发现群组和异常点时使用。",
+    "plain_prerequisites": "需要准备 UMAP（把高维数据压缩成二维或三维图形的方法）、完成标准化的数据表、距离含义和要比较的样本标签。",
+    "plain_limitations": "需要注意：二维位置会随设置和随机性变化，图上距离不能被当作精确原始距离。",
+    "plain_integration": "先固定随机种子并比较多组邻域设置，只把稳定出现的结构交给后续分析。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4624,11 +4746,12 @@
     "subcategory_code": "05-07",
     "subcategory_name": "回归、时间序列与统计建模",
     "plain_purpose": "在硬件和版本使用前检查后使用 TimesFM（用于时间序列预测的模型）进行零样本或微调时间序列预测与评估。",
+    "plain_outputs": "可得到时间序列预测模型、预测结果数据表和基线评估报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "有按时间排列的数据，需要快速建立预测基线或在小样本上调整 TimesFM 时使用。",
+    "plain_prerequisites": "需要准备连续时间序列、预测区间、TimesFM 对应硬件和明确的软件版本。",
+    "plain_limitations": "需要注意：时间间隔、缺失值和版本差异会影响预测；未来数据不得混入训练。",
+    "plain_integration": "先做硬件与版本检查，用历史留出区间比较基线，再决定是否进行小样本调整。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4664,11 +4787,12 @@
     "subcategory_code": "05-11",
     "subcategory_name": "数学计算、单位与误差",
     "plain_purpose": "在许可证与安全边界内编写 MATLAB（用于数值计算与工程分析的软件）/Octave 脚本、函数、数值分析和可视化。",
+    "plain_outputs": "可得到 MATLAB 或 Octave 代码、计算结果数据表和科学图表。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "课程或科研已有 MATLAB 或 Octave 代码，需要数值计算、函数实现或绘图时使用。",
+    "plain_prerequisites": "需要准备 MATLAB 或 GNU Octave、可用许可证、输入数据和预期数值结果。",
+    "plain_limitations": "需要注意：两种软件并非完全兼容；外部命令、文件写入和许可证范围要受控。",
+    "plain_integration": "先确认使用哪种软件和许可证，在隔离目录运行示例，并用已知结果核对数值误差。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4704,11 +4828,12 @@
     "subcategory_code": "05-12",
     "subcategory_name": "仿真与多目标优化",
     "plain_purpose": "用事件、进程和资源构建可重复的离散事件模型，并设计有界仿真实验。",
+    "plain_outputs": "可得到离散事件仿真模型、模拟结果数据表和方案比较报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "要模拟排队、服务台、生产流程或资源竞争等随事件变化的系统时使用。",
+    "plain_prerequisites": "需要准备 SimPy（模拟排队、资源等离散事件的软件）、事件规则、资源数量、时间分布和要比较的运行方案。",
+    "plain_limitations": "需要注意：模拟结果取决于输入分布与边界；单次运行不能代表稳定规律。",
+    "plain_integration": "先建立有明确终止条件的小模型，用多次重复运行检查波动，再增加现实细节。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4744,11 +4869,12 @@
     "subcategory_code": "05-05",
     "subcategory_name": "并行计算与性能优化",
     "plain_purpose": "先分析性能瓶颈和数据搬运成本，再选择 GPU（适合大量并行计算的图形处理器）库并分阶段优化 Python（常用于数据处理和自动化的编程语言）处理任务。",
+    "plain_outputs": "可得到性能基线报告、GPU 优化代码和分阶段测试结果。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python 及相应科学计算包；部分技能需要 GPU、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "Python 计算已经过慢，怀疑处理器、显卡传输或内存是瓶颈时使用。",
+    "plain_prerequisites": "需要准备可重复运行的 Python 任务、性能基线、兼容的 GPU 和候选加速软件。",
+    "plain_limitations": "需要注意：把数据搬到显卡也有成本；并非所有任务都会因 GPU 而加速。",
+    "plain_integration": "先测量瓶颈，只替换最耗时步骤，并逐阶段比较速度、内存和数值一致性。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4784,11 +4910,12 @@
     "subcategory_code": "05-12",
     "subcategory_name": "仿真与多目标优化",
     "plain_purpose": "定义目标、约束与算法，求解并解释多目标优化中的 Pareto 解集。",
+    "plain_outputs": "可得到多目标优化模型、候选方案数据表、折中图表和选择报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "一个方案同时受成本、效果、时间等多个目标约束，需要比较折中选择时使用。",
+    "plain_prerequisites": "需要准备 Pymoo（求解多个相互制约目标的软件）、各项目标和约束、允许范围以及评价一个方案的方法。",
+    "plain_limitations": "需要注意：得到的是一组折中方案而非唯一答案；目标定义不当会误导选择。",
+    "plain_integration": "先用少量方案验证目标计算，再保存约束、算法设置和最终人工选择理由。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4824,11 +4951,12 @@
     "subcategory_code": "05-10",
     "subcategory_name": "深度学习与大语言模型应用",
     "plain_purpose": "用 LightningModule、Trainer 和 DataModule 组织可复现、可扩展的深度学习训练。",
+    "plain_outputs": "可得到深度学习训练代码、模型文件、实验配置和评估报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "深度学习项目需要统一训练步骤、记录实验并扩展到多块显卡时使用。",
+    "plain_prerequisites": "需要准备 PyTorch Lightning（组织深度学习训练的软件）、训练与验证数据、模型结构、评价指标和计算设备。",
+    "plain_limitations": "需要注意：封装训练流程不能保证模型有效；多设备结果仍受版本和随机性影响。",
+    "plain_integration": "先把现有一台电脑上的训练拆成数据、模型和训练配置，验证结果一致后再扩展设备。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4864,11 +4992,12 @@
     "subcategory_code": "05-10",
     "subcategory_name": "深度学习与大语言模型应用",
     "plain_purpose": "使用 Transformers（使用和调整预训练模型的软件库）完成模型加载、推理、任务流程和受控微调，并处理身份验证与版本差异。",
+    "plain_outputs": "可得到预训练模型使用代码、预测结果数据表、受控调整配置和评估报告。",
     "plain_audience": "适合学生、教师、科研人员、数据与技术支持人员使用。",
-    "plain_when_to_use": "适用于课程作业、科研数据处理、统计建模、机器学习和科学图表。",
-    "plain_prerequisites": "需要准备：Python（常用于数据处理和自动化的编程语言）及相应科学计算包；部分技能需要 GPU（适合大量并行计算的图形处理器）、网络、许可证或较大内存。",
-    "plain_limitations": "需要注意：必须先核对数据授权、版本、计算资源和方法假设；示例代码不等同于已验证结果。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：按 Codex AI 技能结构接入；固定依赖版本，并为本校数据与算力环境补充使用前检查。",
+    "plain_when_to_use": "需要加载预训练模型完成文本分类、生成或其他既定任务，并评估是否要调整模型时使用。",
+    "plain_prerequisites": "需要准备 Transformers、可信模型来源、任务数据、评价指标和所需账号授权。",
+    "plain_limitations": "需要注意：模型版本、授权和数据偏差会影响结果；下载的模型代码必须先审查。",
+    "plain_integration": "先锁定模型和软件版本，用小样本评估输出与资源消耗，再决定是否受控调整。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4904,11 +5033,12 @@
     "subcategory_code": "05-17",
     "subcategory_name": "调试与错误处理",
     "plain_purpose": "按根因调查、模式分析、假设验证和修复确认四阶段处理软件缺陷。",
+    "plain_outputs": "可得到原因分析报告、修复代码或异常处理方案。",
     "plain_audience": "适合学生、教师、开发与技术支持人员使用。",
     "plain_when_to_use": "适用于课程项目、科研软件、系统开发中的调试、测试与审查。",
     "plain_prerequisites": "需要准备：代码库、测试工具和修改记录管理环境。",
     "plain_limitations": "需要注意：方法会改变开发节奏；不能把流程完成当作功能正确，仍需真实测试证据。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4944,11 +5074,12 @@
     "subcategory_code": "05-18",
     "subcategory_name": "软件测试",
     "plain_purpose": "执行先失败测试、最小实现和重构循环，确保每次行为变更都有可观察证据。",
+    "plain_outputs": "可得到测试代码、测试结果和缺陷清单。",
     "plain_audience": "适合学生、教师、开发与技术支持人员使用。",
     "plain_when_to_use": "适用于课程项目、科研软件、系统开发中的调试、测试与审查。",
     "plain_prerequisites": "需要准备：代码库、测试工具和修改记录管理环境。",
     "plain_limitations": "需要注意：方法会改变开发节奏；不能把流程完成当作功能正确，仍需真实测试证据。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -4984,11 +5115,12 @@
     "subcategory_code": "05-19",
     "subcategory_name": "代码审查、代码规范与项目结构",
     "plain_purpose": "在关键节点整理变更范围、验证证据和审查重点，发起可执行的代码审查。",
+    "plain_outputs": "可得到审查意见、代码规范清单或项目结构方案。",
     "plain_audience": "适合学生、教师、开发与技术支持人员使用。",
     "plain_when_to_use": "适用于课程项目、科研软件、系统开发中的调试、测试与审查。",
     "plain_prerequisites": "需要准备：代码库、测试工具和修改记录管理环境。",
     "plain_limitations": "需要注意：方法会改变开发节奏；不能把流程完成当作功能正确，仍需真实测试证据。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5024,11 +5156,12 @@
     "subcategory_code": "05-19",
     "subcategory_name": "代码审查、代码规范与项目结构",
     "plain_purpose": "先理解和验证审查意见，再按技术证据实施，妥善处理含糊或不适用建议。",
+    "plain_outputs": "可得到审查意见、代码规范清单或项目结构方案。",
     "plain_audience": "适合学生、教师、开发与技术支持人员使用。",
     "plain_when_to_use": "适用于课程项目、科研软件、系统开发中的调试、测试与审查。",
     "plain_prerequisites": "需要准备：代码库、测试工具和修改记录管理环境。",
     "plain_limitations": "需要注意：方法会改变开发节奏；不能把流程完成当作功能正确，仍需真实测试证据。",
-    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。 具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
+    "plain_integration": "基本可以直接放入现有 AI 工作台使用，但仍需按本校制度和工具设置进行检查。具体建议：可直接采用方法流程；与项目现有测试、修改记录管理和审查规则对齐。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5065,11 +5198,12 @@
     "subcategory_name": "数据故事与分析结果表达",
     "decision_note": "主要产出优先：该技能最终交付面向读者的分析结论与表达材料，故归入数据故事与分析结果表达。",
     "plain_purpose": "把分析结论组织为面向特定受众的背景、冲突、洞察和行动建议。",
+    "plain_outputs": "可得到数据故事提纲、面向受众的分析报告、配套图表和行动建议。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "分析已经完成，但需要把发现讲给管理者、教师或其他特定读者并推动行动时使用。",
+    "plain_prerequisites": "需要准备可靠分析结果、目标读者、沟通目的和能够支撑结论的图表。",
+    "plain_limitations": "需要注意：故事结构不能掩盖不确定性，也不能把相关关系写成因果结论。",
+    "plain_integration": "把背景、冲突、洞察和建议写入报告提纲，并让数据负责人核对每项主张。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5105,11 +5239,12 @@
     "subcategory_code": "05-04",
     "subcategory_name": "数据存储、数据库与查询优化",
     "plain_purpose": "依据 PostgreSQL（开源关系型数据库软件）特性设计数据类型、约束、索引（帮助快速查找资料或数据的检索结构）、表类别和行级安全。",
+    "plain_outputs": "可得到 PostgreSQL 表结构代码、索引与权限配置和迁移方案。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "新建或修改 PostgreSQL 数据表，需要确定字段、约束、索引和访问规则时使用。",
+    "plain_prerequisites": "需要准备业务字段说明、数据量、查询方式、保留期限和访问规则。",
+    "plain_limitations": "需要注意：表结构变更可能锁表或丢数据；迁移方案必须先备份并验证回退。",
+    "plain_integration": "先在测试库建立表结构和样例数据，检查查询与权限后再安排正式迁移。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5145,11 +5280,12 @@
     "subcategory_code": "05-02",
     "subcategory_name": "数据检查、清理与质量控制",
     "plain_purpose": "按准确性、完整性、一致性等维度设计数据质量规则、测试层级和监控。",
+    "plain_outputs": "可得到数据质量规则、自动测试代码、问题清单和监控报告。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "数据平台频繁出现缺失、重复或口径不一致，需要建立持续质量检查时使用。",
+    "plain_prerequisites": "需要准备关键数据表、字段口径、可接受范围、责任人和检查频率。",
+    "plain_limitations": "需要注意：质量阈值过严会产生大量误报；规则通过也不代表数据适合所有用途。",
+    "plain_integration": "先为少数关键字段建立准确性和完整性规则，再接入告警与责任人处理流程。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5185,11 +5321,12 @@
     "subcategory_code": "05-04",
     "subcategory_name": "数据存储、数据库与查询优化",
     "plain_purpose": "使用分层模型、命名、测试和文档惯例组织可维护的 dbt（组织和检查数据转换流程的工具）转换项目。",
+    "plain_outputs": "可得到 dbt 转换代码、分层模型配置、数据测试和项目文档。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "数据库转换项目层次混乱，需要统一 dbt 模型分层、命名、测试和文档时使用。",
+    "plain_prerequisites": "需要准备 dbt 项目、数据来源、目标数据表、命名约定和可用数据库连接。",
+    "plain_limitations": "需要注意：分层过多会增加维护成本；转换正确性仍要用业务数据和测试确认。",
+    "plain_integration": "先选择一条数据链按分层规范改造，补齐字段说明与测试后再推广到其他模型。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5224,12 +5361,13 @@
     "license": "MIT",
     "subcategory_code": "05-05",
     "subcategory_name": "并行计算与性能优化",
-    "plain_purpose": "通过执行计划、分区、连接策略和资源配置诊断并优化 Spark 作业。",
+    "plain_purpose": "通过执行计划、分区、连接策略和资源配置诊断并优化 Spark（把大数据任务分散处理的软件）作业。",
+    "plain_outputs": "可得到 Spark 优化代码、资源配置、执行计划对比和性能报告。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "Spark 作业运行缓慢或资源浪费，需要检查分区、数据连接和执行计划时使用。",
+    "plain_prerequisites": "需要准备 Spark 作业代码、执行计划、数据规模、集群资源和性能基线。",
+    "plain_limitations": "需要注意：一种分区或连接策略不适合所有数据；优化必须在真实规模下复测。",
+    "plain_integration": "先记录现有作业时间和资源，再一次只改变一项设置并比较执行计划。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5265,11 +5403,12 @@
     "subcategory_code": "05-04",
     "subcategory_name": "数据存储、数据库与查询优化",
     "plain_purpose": "读取执行计划并应用索引（帮助快速查找资料或数据的检索结构）、连接、过滤和重写模式优化 SQL（查询和管理数据库的语言）查询。",
+    "plain_outputs": "可得到优化后的 SQL 代码、索引方案、执行计划对比和性能测试结果。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "数据库查询响应过慢，需要找出扫描、连接或过滤环节的问题时使用。",
+    "plain_prerequisites": "需要准备 SQL 查询、表结构、索引、执行计划和具有代表性的数据量。",
+    "plain_limitations": "需要注意：新增索引会增加写入和存储成本；测试数据过小可能看不出真实效果。",
+    "plain_integration": "先在测试环境保存原执行计划，逐项尝试索引或查询改写并核对结果一致。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5306,11 +5445,12 @@
     "subcategory_name": "数据处理流程与机器学习工程",
     "decision_note": "主要产出优先：该技能组织从数据准备到后续维护的完整工作流，故归入数据处理流程与机器学习工程。",
     "plain_purpose": "规划机器学习从检查数据、准备特征、训练、评估到发布和持续观察的完整流程。",
+    "plain_outputs": "可得到机器学习流程图、阶段配置、模型评估报告和发布检查清单。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "机器学习项目从数据准备到发布由多人接力，需要统一步骤和质量检查时使用。",
+    "plain_prerequisites": "需要准备数据来源、特征说明、训练代码、评价标准、发布环境和负责人。",
+    "plain_limitations": "需要注意：流程自动化不能消除数据漂移或模型失效；每个阶段仍需明确批准条件。",
+    "plain_integration": "先把现有项目画成阶段流程，逐步加入数据检查、模型评估和发布记录。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5346,11 +5486,12 @@
     "subcategory_code": "05-18",
     "subcategory_name": "软件测试",
     "plain_purpose": "用测试层级、AAA（准备、执行、检查结果的测试写法）结构、夹具、模拟和隔离策略构建 Python（常用于数据处理和自动化的编程语言）测试体系。",
+    "plain_outputs": "可得到 Python 测试代码、测试数据、覆盖层级清单和测试结果。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "Python 项目缺少一致测试，需要覆盖单个函数、组件协作和完整使用流程时使用。",
+    "plain_prerequisites": "需要准备待测代码、预期行为、测试数据和项目现有测试工具。",
+    "plain_limitations": "需要注意：过度模拟会让测试脱离真实行为；测试通过也不能证明没有遗漏。",
+    "plain_integration": "先沿用现有测试目录和运行命令，从关键失败场景开始增加可重复测试。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5386,11 +5527,12 @@
     "subcategory_code": "05-19",
     "subcategory_name": "代码审查、代码规范与项目结构",
     "plain_purpose": "统一 Python（常用于数据处理和自动化的编程语言）格式化、命名、类型标注、文档字符串和自动检查。",
+    "plain_outputs": "可得到格式化后的代码、代码规范清单、类型说明和项目文档。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "多人维护 Python 项目，需要统一格式、命名、类型说明和代码文档时使用。",
+    "plain_prerequisites": "需要准备现有代码、团队命名约定、支持版本和自动检查工具。",
+    "plain_limitations": "需要注意：统一格式不能代替清晰设计；一次性改动过多会增加审查困难。",
+    "plain_integration": "先确定最小代码规范并对新增代码执行，再分批整理旧代码和补充文档。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5426,11 +5568,12 @@
     "subcategory_code": "05-17",
     "subcategory_name": "调试与错误处理",
     "plain_purpose": "设计明确异常类型、上下文保留、部分失败和恢复策略，避免吞错。",
+    "plain_outputs": "可得到错误处理代码、恢复方案、日志规则和失败测试结果。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "Python（常用于数据处理和自动化的编程语言）程序错误信息含糊、失败被忽略或需要在部分失败后安全恢复时使用。",
+    "plain_prerequisites": "需要准备会失败的代码路径、真实错误示例、允许恢复的范围和日志要求。",
+    "plain_limitations": "需要注意：捕获范围过宽会隐藏真正问题；错误日志不得泄露密码或敏感数据。",
+    "plain_integration": "先为关键边界定义明确错误类型和恢复规则，再用失败测试验证日志与清理动作。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5466,11 +5609,12 @@
     "subcategory_code": "05-19",
     "subcategory_name": "代码审查、代码规范与项目结构",
     "plain_purpose": "按内聚模块、显式连接方式和一致约定组织可测试、可维护的 Python（常用于数据处理和自动化的编程语言）项目。",
+    "plain_outputs": "可得到 Python 项目结构方案、模块关系图、调整后的代码和迁移清单。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "Python 项目文件混乱、模块互相牵连，导致测试、复用或维护困难时使用。",
+    "plain_prerequisites": "需要准备现有目录、模块职责、对外功能、启动方式和部署限制。",
+    "plain_limitations": "需要注意：大规模搬动文件可能破坏导入路径；重组不能与功能修改混在一起。",
+    "plain_integration": "先画出模块关系并确定公开入口，再小步移动文件，每一步运行原有测试。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5506,11 +5650,12 @@
     "subcategory_code": "05-05",
     "subcategory_name": "并行计算与性能优化",
     "plain_purpose": "先建立基准并定位 CPU（执行通用计算任务的处理器）、内存或 I/O（数据的输入与输出）瓶颈，再选择针对性优化手段。",
+    "plain_outputs": "可得到性能基线报告、瓶颈清单、优化代码和前后测试结果。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "Python（常用于数据处理和自动化的编程语言）程序耗时或占内存过高，需要确定真正瓶颈后再优化时使用。",
+    "plain_prerequisites": "需要准备可重复任务、代表性输入、时间与内存基线和性能分析工具。",
+    "plain_limitations": "需要注意：微小样本上的加速可能无实际价值；优化后必须核对输出一致。",
+    "plain_integration": "先保存基准结果并定位最耗资源步骤，一次只优化一个瓶颈并重新测量。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5547,11 +5692,12 @@
     "subcategory_name": "并行计算与性能优化",
     "decision_note": "主要产出优先：该技能以可扩展的高性能计算结果为主，故归入并行计算与性能优化。",
     "plain_purpose": "帮助判断程序是否需要在等待期间继续处理其他任务，并正确处理取消、超时和资源释放。",
+    "plain_outputs": "可得到异步（等待某项工作时继续处理其他工作）处理代码、超时与取消配置、资源清理方案和测试结果。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "Python（常用于数据处理和自动化的编程语言）程序经常等待网络或文件读写，希望等待期间继续处理其他任务时使用。",
+    "plain_prerequisites": "需要准备等待型任务清单、超时要求、取消规则和资源关闭方式。",
+    "plain_limitations": "需要注意：异步代码更难排错；遗漏取消和关闭处理会造成任务或连接泄漏。",
+    "plain_integration": "先确认任务确实以等待为主，从单一入口改造，并为超时、取消和清理增加测试。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5587,11 +5733,12 @@
     "subcategory_code": "05-18",
     "subcategory_name": "软件测试",
     "plain_purpose": "使用 Jest（检查 JavaScript 程序的测试工具）、Vitest（检查 JavaScript 程序的测试工具）等工具组织单元、集成和端到端测试及常见测试模式。",
+    "plain_outputs": "可得到 JavaScript（常用于网页和自动化的编程语言）或 TypeScript（在 JavaScript 基础上增加类型检查的编程语言）测试代码、测试配置和分层测试结果。",
     "plain_audience": "适合学生、教师、数据工程与开发人员使用。",
-    "plain_when_to_use": "适用于教学项目、数据平台、数据库、Python（常用于数据处理和自动化的编程语言）/JavaScript（常用于网页和自动化的编程语言）工程和 MLOps（管理机器学习模型开发和维护的流程）。",
-    "plain_prerequisites": "需要准备：对应语言、数据库或数据平台；部分流程需要云服务或测试框架（组织工作步骤和配套工具的一套结构）。",
-    "plain_limitations": "需要注意：使用的一组技术与版本差异较大；性能、安全和数据质量结论必须由实际环境验证。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：抽取单一 AI 技能并替换 Claude 插件（给现有软件增加功能的小程序）使用安排；保留与现有配套工具相匹配的章节。",
+    "plain_when_to_use": "JavaScript 或 TypeScript 项目需要补齐单元、组件协作或端到端测试时使用。",
+    "plain_prerequisites": "需要准备待测网页或程序、预期交互、测试数据，以及 Jest 或 Vitest 环境。",
+    "plain_limitations": "需要注意：端到端测试较慢且易受环境影响；模拟对象必须与真实连接方式一致。",
+    "plain_integration": "先沿用项目现有测试工具，按单元到端到端分层补充，并固定浏览器和运行版本。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5628,11 +5775,12 @@
     "subcategory_name": "数据故事与分析结果表达",
     "decision_note": "主要产出优先：该技能重点把分析发现转成面向使用者的说明，故归入数据故事与分析结果表达。",
     "plain_purpose": "按照规定的图形元素，生成数据处理流程图和系统结构图。",
+    "plain_outputs": "可得到面向特定读者的分析报告、图表或行动建议。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于分析报告、课程讲义和技术文档中的图表或架构图。",
     "plain_prerequisites": "需要准备支持 Markdown（用简单符号排版文本的格式）、Vega（用结构化说明生成图表的工具）或 Graphviz（根据文字说明生成关系图的工具）的图形生成工具。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；语法正确不保证数据表达诚实，必须复核来源与尺度。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留输出语法约束，将图形生成工具替换为项目支持的 Markdown、Vega 或 Graphviz 工具。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留输出语法约束，将图形生成工具替换为项目支持的 Markdown、Vega 或 Graphviz 工具。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5668,11 +5816,12 @@
     "subcategory_code": "05-15",
     "subcategory_name": "地图、网络与交互式可视化",
     "plain_purpose": "依据字段类型和语法约束生成可生成图表的 Vega（用结构化说明生成图表的工具）或 Vega-Lite（用结构化说明生成图表的工具） JSON（一种结构化文本数据格式）可视化。",
+    "plain_outputs": "可得到地图、网络图、流程图或交互图表。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于分析报告、课程讲义和技术文档中的图表或架构图。",
     "plain_prerequisites": "需要准备：相应图形生成工具或支持的 Markdown（用简单符号排版文本的格式）查看器。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；语法正确不保证数据表达诚实，必须复核来源与尺度。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留输出语法约束，将图形生成工具替换为项目支持的 Markdown、Vega 或 Graphviz（根据文字说明生成关系图的工具）工具。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留输出语法约束，将图形生成工具替换为项目支持的 Markdown、Vega 或 Graphviz（根据文字说明生成关系图的工具）工具。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5708,11 +5857,12 @@
     "subcategory_code": "05-15",
     "subcategory_name": "地图、网络与交互式可视化",
     "plain_purpose": "用正确的 DOT（用文本描述关系图的格式）、子图、标签和边语法生成流程、依赖与网络结构图。",
+    "plain_outputs": "可得到地图、网络图、流程图或交互图表。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于分析报告、课程讲义和技术文档中的图表或架构图。",
     "plain_prerequisites": "需要准备：相应图形生成工具或支持的 Markdown（用简单符号排版文本的格式）查看器。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；语法正确不保证数据表达诚实，必须复核来源与尺度。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：保留输出语法约束，将图形生成工具替换为项目支持的 Markdown、Vega（用结构化说明生成图表的工具）或 Graphviz（根据文字说明生成关系图的工具）工具。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：保留输出语法约束，将图形生成工具替换为项目支持的 Markdown、Vega（用结构化说明生成图表的工具）或 Graphviz（根据文字说明生成关系图的工具）工具。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5748,11 +5898,12 @@
     "subcategory_code": "05-13",
     "subcategory_name": "形式化数学证明",
     "plain_purpose": "以小步验证和错误优先策略构造、调试并清理 Lean（由计算机检查数学证明的工具）形式化证明。",
+    "plain_outputs": "可得到可由证明软件检查的证明代码和检查结果。",
     "plain_audience": "适合数学、计算机专业学生与教师、形式化方法研究人员使用。",
     "plain_when_to_use": "适用于Lean 课程、形式化证明、mathlib（供 Lean 使用的数学定理资料库）贡献与代码审查。",
     "plain_prerequisites": "需要准备：Lean 配套工具、mathlib 与项目构建环境。",
     "plain_limitations": "需要注意：本轮未编译证明；版本和导入差异会影响结论。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对接本校 Lean/mathlib 版本和构建命令，所有证明以实际编译通过为准。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对接本校 Lean/mathlib 版本和构建命令，所有证明以实际编译通过为准。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5788,11 +5939,12 @@
     "subcategory_code": "05-13",
     "subcategory_name": "形式化数学证明",
     "plain_purpose": "依据 mathlib（供 Lean 使用的数学定理资料库）的属性、API（软件之间交换信息的接口）和风格要求审查形式化数学贡献。",
+    "plain_outputs": "可得到可由证明软件检查的证明代码和检查结果。",
     "plain_audience": "适合数学、计算机专业学生与教师、形式化方法研究人员使用。",
     "plain_when_to_use": "适用于Lean（由计算机检查数学证明的工具）课程、形式化证明、mathlib 贡献与代码审查。",
     "plain_prerequisites": "需要准备：Lean 配套工具、mathlib 与项目构建环境。",
     "plain_limitations": "需要注意：本轮未编译证明；版本和导入差异会影响结论。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：对接本校 Lean/mathlib 版本和构建命令，所有证明以实际编译通过为准。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：对接本校 Lean/mathlib 版本和构建命令，所有证明以实际编译通过为准。",
     "plain_verification": "说明已核验：已核对用途与使用说明；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5828,11 +5980,12 @@
     "subcategory_code": "05-08",
     "subcategory_name": "贝叶斯分析、因果分析与实验设计",
     "plain_purpose": "显式记录先验和新证据的似然，更新概率判断并校准决策信心。",
+    "plain_outputs": "可得到贝叶斯或因果分析报告、实验方案和结果数据表。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于实验设计、因果与贝叶斯推理、可视化选择和交互图表。",
     "plain_prerequisites": "需要准备：按任务可能需要统计软件、D3.js（制作网页交互图表的工具）或浏览器环境。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；方法模板不能代替数据诊断、因果识别条件或真实运行验证。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5868,11 +6021,12 @@
     "subcategory_code": "05-08",
     "subcategory_name": "贝叶斯分析、因果分析与实验设计",
     "plain_purpose": "提出竞争性因果假设，利用反事实与可区分检验寻找更可信的根因。",
+    "plain_outputs": "可得到贝叶斯或因果分析报告、实验方案和结果数据表。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于实验设计、因果与贝叶斯推理、可视化选择和交互图表。",
     "plain_prerequisites": "需要准备：按任务可能需要统计软件、D3.js（制作网页交互图表的工具）或浏览器环境。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；方法模板不能代替数据诊断、因果识别条件或真实运行验证。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5908,11 +6062,12 @@
     "subcategory_code": "05-08",
     "subcategory_name": "贝叶斯分析、因果分析与实验设计",
     "plain_purpose": "把研究问题转化为因素、处理、对照、随机化和预先分析计划。",
+    "plain_outputs": "可得到贝叶斯或因果分析报告、实验方案和结果数据表。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于实验设计、因果与贝叶斯推理、可视化选择和交互图表。",
     "plain_prerequisites": "需要准备：按任务可能需要统计软件、D3.js（制作网页交互图表的工具）或浏览器环境。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；方法模板不能代替数据诊断、因果识别条件或真实运行验证。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5949,11 +6104,12 @@
     "subcategory_name": "数据故事与分析结果表达",
     "decision_note": "主要产出优先：该技能的直接成果是可沟通的分析输出，故归入数据故事与分析结果表达。",
     "plain_purpose": "根据问题和数据类型选择图表，完成设计检查、叙事组织和误导风险审计。",
+    "plain_outputs": "可得到面向特定读者的分析报告、图表或行动建议。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于实验设计、因果与贝叶斯推理、可视化选择和交互图表。",
     "plain_prerequisites": "需要准备：按任务可能需要统计软件、D3.js（制作网页交互图表的工具）或浏览器环境。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；方法模板不能代替数据诊断、因果识别条件或真实运行验证。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   },
   {
@@ -5989,11 +6145,12 @@
     "subcategory_code": "05-15",
     "subcategory_name": "地图、网络与交互式可视化",
     "plain_purpose": "用数据绑定、比例尺、轴、过渡和布局创建可复用的交互式 Web 可视化。",
+    "plain_outputs": "可得到地图、网络图、流程图或交互图表。",
     "plain_audience": "适合学生、教师、科研与数据分析人员使用。",
     "plain_when_to_use": "适用于实验设计、因果与贝叶斯推理、可视化选择和交互图表。",
     "plain_prerequisites": "需要准备：按任务可能需要统计软件、D3.js（制作网页交互图表的工具）或浏览器环境。",
     "plain_limitations": "需要注意：项目资料库许可证未明确；方法模板不能代替数据诊断、因果识别条件或真实运行验证。 项目资料库许可证未明确或无法由 GitHub 自动识别，采用前需单独核验。",
-    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。 具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
+    "plain_integration": "经过少量调整后可以使用，常见调整包括更换工具、路径或账号设置。具体建议：将 Claude 专用工具用法替换为 Codex 可用工具，并补充学科统计假设和必须通过的检查。",
     "plain_verification": "包内容已核验：已核对用途说明和包内文件；本次未安装、未运行，不能据此判断实际效果。"
   }
 ]
