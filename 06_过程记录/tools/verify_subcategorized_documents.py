@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import re
 import sys
 from collections import Counter, defaultdict
@@ -25,6 +24,7 @@ from build_subcategorized_documents import (  # noqa: E402
     PLAIN_CATALOG_FILE,
     PLAIN_FIELDS,
     REPOSITORIES_FILE,
+    _load_json as _load_contract_json,
     _knowledge_base_target,
     _parse_only,
     _subcategory_repository_links,
@@ -47,7 +47,7 @@ SKILL_ID_PATTERN = re.compile(r"GH-\d{2}-\d{4}")
 
 
 def _load_json(path: Path) -> object:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return _load_contract_json(path)
 
 
 def _document_text(document: Document) -> str:
@@ -206,12 +206,40 @@ def _direct_run_size_issues(document: Document) -> list[str]:
     return issues
 
 
-def _external_hyperlinks(document: Document) -> set[str]:
-    return {
-        relationship.target_ref
-        for relationship in document.part.rels.values()
-        if relationship.reltype.endswith("/hyperlink") and relationship.is_external
-    }
+def _external_hyperlinks(document: Document) -> list[str]:
+    """Return every hyperlink occurrence in package reading order, including duplicates."""
+    targets: list[str] = []
+
+    def append_targets(part, element) -> None:
+        for hyperlink in element.xpath(".//w:hyperlink"):
+            relationship_id = hyperlink.get(qn("r:id"))
+            if relationship_id is None:
+                anchor = hyperlink.get(qn("w:anchor"))
+                targets.append(f"#{anchor}" if anchor else "<missing-relationship>")
+                continue
+            relationship = part.rels.get(relationship_id)
+            if relationship is None or not relationship.is_external:
+                targets.append("<missing-relationship>")
+            else:
+                targets.append(relationship.target_ref)
+
+    append_targets(document.part, document._element)
+    seen_parts: set[str] = set()
+    for section in document.sections:
+        for region in (
+            section.header,
+            section.first_page_header,
+            section.even_page_header,
+            section.footer,
+            section.first_page_footer,
+            section.even_page_footer,
+        ):
+            part_key = str(region.part.partname)
+            if part_key in seen_parts:
+                continue
+            seen_parts.add(part_key)
+            append_targets(region.part, region._element)
+    return targets
 
 
 def _cell_hyperlink_targets(document: Document, cell) -> list[str]:
@@ -324,12 +352,16 @@ def _audit_content(
                     if any(_cell_hyperlink_targets(document, cell) for cell in row.cells[1:]):
                         issues.append(f"概览逐行链接出现在错误列: {category['code']}")
             links = _external_hyperlinks(document)
-            expected_links = {
-                *{record["repo_url"] for record in expected_records},
-                *{_knowledge_base_target(category) for category in categories},
-            }
+            expected_links = [
+                target
+                for category in categories
+                for target in (
+                    _knowledge_base_target(category),
+                    *_subcategory_repository_links(category["code"], expected_records),
+                )
+            ]
             if links != expected_links:
-                issues.append(f"概览链接与仓库/知识库不一致: expected={sorted(expected_links)} actual={sorted(links)}")
+                issues.append(f"概览链接与仓库/知识库不一致: expected={expected_links} actual={links}")
             text_count = len(expected_records)
             if f"收录 {text_count} 项 Skill" not in text or f"本总览汇总 {text_count} 项 Skill" not in text:
                 issues.append(f"概览总成员数不准确: expected={text_count}")

@@ -573,6 +573,22 @@ class VerificationAndGenerationTests(unittest.TestCase):
                         [record], [category], assignments, repositories, root
                     )
 
+    def test_json_loaders_reject_duplicate_keys_in_raw_assignment_text(self):
+        """Duplicate assignment keys must be rejected before JSON decoding can overwrite them."""
+        raw_json = (
+            '{"taxonomy":[],"assignments":{'
+            '"GH-05-0001":"05-01","GH-05-0001":"05-02"}}'
+        )
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            path = Path(temporary_directory) / "subcategory_assignments.json"
+            path.write_text(raw_json, encoding="utf-8")
+            for label, loader in {
+                "生成器": self.builder._load_json,
+                "验证器": self.verifier._load_json,
+            }.items():
+                with self.subTest(label=label), self.assertRaisesRegex(ValueError, "重复 JSON 键.*GH-05-0001"):
+                    loader(path)
+
     def test_overview_verifier_rejects_missing_wrong_duplicate_extra_rows_and_links(self):
         """Every overview navigation row and link must exactly match taxonomy and members."""
         records = [
@@ -661,6 +677,40 @@ class VerificationAndGenerationTests(unittest.TestCase):
             )
             swapped_issues = issues_for(swapped)
             self.assertTrue(any("概览逐行链接" in issue for issue in swapped_issues), swapped_issues)
+
+    def test_overview_verifier_rejects_existing_link_duplicated_outside_navigation(self):
+        """A duplicate body link must fail even when the unique target set stays unchanged."""
+        records = [
+            fixture_record("GH-05-0001", subcategory_code="05-01"),
+            fixture_record("GH-05-0003"),
+        ]
+        expected_item = {"scope": "overview", "big_category_code": "05"}
+        targets = {
+            "知识库": self.builder._knowledge_base_target(OVERVIEW["subcategories"][0]),
+            "仓库": records[0]["repo_url"],
+        }
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            for label, target in targets.items():
+                with self.subTest(label=label):
+                    document = self.builder.build_overview_document(OVERVIEW, records)
+                    paragraph = document.add_paragraph("表外重复链接：")
+                    self.builder._add_hyperlink(
+                        paragraph,
+                        label,
+                        target,
+                        allow_relative=label == "知识库",
+                    )
+                    path = root / f"overview-extra-{label}.docx"
+                    document.save(path)
+                    issues = self.verifier.verify_document(
+                        path,
+                        scope="overview",
+                        expected_records=records,
+                        expected_taxonomy=OVERVIEW["subcategories"],
+                        expected_item=expected_item,
+                    )
+                    self.assertTrue(any("概览链接" in issue for issue in issues), issues)
 
     def test_manifest_driven_generation_is_idempotent_for_overview_and_subcategory(self):
         """Repeated generation with reversed input must preserve paths, order, and bytes."""
