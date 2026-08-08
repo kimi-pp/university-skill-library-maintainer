@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "checked_at": "2026-08-08T21:23:06.372147+00:00",
+  "complete": true,
+  "counts": {
+    "source_records": 157,
+    "subcategories": 61,
+    "delivery_files": 132,
+    "docx_files": 66,
+    "xlsx_files": 66,
+    "archived_originals": 10,
+    "docx_pages": 259,
+    "worksheets": 264,
+    "overview_segments": 20,
+    "review_images": 543,
+    "review_batches": 19
+  },
+  "gates": {
+    "data_contract": {
+      "status": "pass",
+      "summary": {
+        "source_records": 157,
+        "subcategories": 61,
+        "big_category_records": {
+          "01": 20,
+          "02": 22,
+          "03": 31,
+          "04": 29,
+          "05": 55
+        },
+        "big_category_subcategories": {
+          "01": 9,
+          "02": 9,
+          "03": 11,
+          "04": 12,
+          "05": 20
+        },
+        "assignments": 157,
+        "plain_records": 157,
+        "fact_drift": 0,
+        "readability_issues": 0,
+        "decision_note_ids": [
+          "GH-03-0006",
+          "GH-04-0029",
+          "GH-05-0003",
+          "GH-05-0006",
+          "GH-05-0032",
+          "GH-05-0038",
+          "GH-05-0044",
+          "GH-05-0046",
+          "GH-05-0054"
+        ]
+      }
+    },
+    "manifest_delivery": {
+      "status": "pass",
+      "summary": {
+        "delivery_files": 132,
+        "document_files": 66,
+        "spreadsheet_files": 66,
+        "artifact_pairs": 66
+      }
+    },
+    "original_archive": {
+      "status": "pass",
+      "summary": {
+        "originals": 10,
+        "archived": 10,
+        "pilot_files": 2
+      }
+    },
+    "navigation_links": {
+      "status": "pass",
+      "summary": {
+        "leaf_pages": 61,
+        "domain_indexes": 5,
+        "total_indexes": 1,
+        "markdown_files": 273,
+        "links": 1261,
+        "local_links": 670
+      }
+    },
+    "office_structure": {
+      "status": "pass",
+      "summary": {
+        "docx_verified": 66,
+        "xlsx_verified": 66,
+        "worksheets_verified": 264
+      }
+    },
+    "visual_evidence": {
+      "status": "pass",
+      "summary": {
+        "docx_pages": 259,
+        "worksheets": 264,
+        "segments": 20,
+        "review_images": 543,
+        "review_batches": 19,
+        "review_pass": 543,
+        "review_nonpass": 0,
+        "inventory_digest": "80888dde132a1b3e0ef6069458efd3f6e1f5cde813b04f97efa895e91ca6d0f2"
+      }
+    },
+    "visible_text": {
+      "status": "pass",
+      "summary": {
+        "text_sources": 518,
+        "text_issues": 0
+      }
+    }
+  },
+  "known_legacy_test_exceptions": [
+    "test_artifact_generator.ArtifactGeneratorTests.test_catalog_is_valid_and_has_expected_category_counts",
+    "test_artifact_generator.ArtifactGeneratorTests.test_manifest_contains_six_independent_deliverables"
+  ],
+  "manual_review": {
+    "category_spot_check_ids": {
+      "01": [
+        "GH-01-0001",
+        "GH-01-0020"
+      ],
+      "02": [
+        "GH-02-0001",
+        "GH-02-0022"
+      ],
+      "03": [
+        "GH-03-0001",
+        "GH-03-0031"
+      ],
+      "04": [
+        "GH-04-0001",
+        "GH-04-0029"
+      ],
+      "05": [
+        "GH-05-0001",
+        "GH-05-0055"
+      ]
+    },
+    "decision_boundary_ids": [
+      "GH-03-0006",
+      "GH-04-0029",
+      "GH-05-0003",
+      "GH-05-0006",
+      "GH-05-0032",
+      "GH-05-0038",
+      "GH-05-0044",
+      "GH-05-0046",
+      "GH-05-0054"
+    ],
+    "technical_term_checks": [
+      {
+        "term": "API",
+        "source_id": "GH-01-0004",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "CLI",
+        "source_id": "GH-01-0020",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "JSON",
+        "source_id": "GH-02-0017",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "DOI",
+        "source_id": "GH-01-0002",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "GPU",
+        "source_id": "GH-05-0001",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "SQL",
+        "source_id": "GH-05-0033",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "UMAP",
+        "source_id": "GH-05-0020",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "PRISMA",
+        "source_id": "GH-03-0021",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "BibTeX",
+        "source_id": "GH-01-0002",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      },
+      {
+        "term": "LaTeX",
+        "source_id": "GH-01-0003",
+        "human_question": "首次出现处的中文解释是否足以让非技术读者理解，且没有改变原事实？"
+      }
+    ],
+    "boundary": "自动检查可核对结构、事实锚点、已管理术语和已知风险措辞；术语解释对不同读者是否足够自然仍需按本清单人工抽查。"
+  },
+  "semantic_digest": "d52c29e565ea89ed9b20953cf7c7122d41ecb2deda8b189bac6d702a7dd5cefe"
+}
