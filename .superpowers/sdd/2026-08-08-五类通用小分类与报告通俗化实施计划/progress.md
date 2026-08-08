@@ -39,7 +39,8 @@ Task 7: complete (commits c491157..668298f, review clean; 259 DOCX pages + 264 X
 Task 8: fix round 1/5 (1 Important addressed — global 61-subcategory total no longer shadowed by the last domain's 20-count; commit 700e9d1)
 Task 8: complete (commits 668298f..700e9d1, review clean; 61 navigation rows, 462 local Markdown links verified)
 
-Task 9: fix round 1/3 (formal manifest ordering and negative-context false positives corrected with regression tests; unified verifier complete=true)
-Task 9: fix round 2/3 (independent review findings addressed — full visible-text scope, clause-local claims, Office rich text, ordered assignment freeze, reference links, independent navigation, protected atomic output, end-to-end failure closure, exact directories and original names)
-Task 9: fix round 3/3 (comma/transition clauses, `.worktrees` exclusion, image/shortcut references and final negative-boundary regression addressed)
-Task 9: complete (third independent review APPROVED; Task 9 tests 16/16, related Python 120/120, Node 29/29; full Python discover 125 with exactly 2 approved legacy failures; formal counts 157/61/132/66/66/10/259/264/20/543/19, semantic digest stable)
+Task 9: fix round 1/5 (formal manifest ordering and negative-context false positives corrected with regression tests; unified verifier complete=true)
+Task 9: fix round 2/5 (independent review findings addressed — full visible-text scope, clause-local claims, Office rich text, ordered assignment freeze, reference links, independent navigation, protected atomic output, end-to-end failure closure, exact directories and original names)
+Task 9: fix round 3/5 (comma/transition clauses, `.worktrees` exclusion, image/shortcut references and final negative-boundary regression addressed)
+Task 9: fix round 4/5 (whole-branch review self-reference drift closed — recursive and Git-tracked discovery now both exclude `.superpowers` and `.worktrees`; independent final navigation inventory 270 Markdown / 1,261 links / 670 local links)
+Task 9: complete (commits 700e9d1..884805c plus final review repair; Task 9 tests 16/16, related Python 120/120, Node 29/29; full Python discover retains exactly 2 approved legacy failures; formal counts 157/61/132/66/66/10/259/264/20/543/19, semantic digest 32fb874d7a61e3fc59b87429655425536cd3641c3d25750a43f43442a71cb186)

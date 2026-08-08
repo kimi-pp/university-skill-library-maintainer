@@ -382,6 +382,7 @@ _REFERENCE_DEFINITION_RE = re.compile(
 _REFERENCE_USAGE_RE = re.compile(r"(?<!!)\[([^\]\n]+)\]\[([^\]\n]*)\]")
 _IMAGE_REFERENCE_USAGE_RE = re.compile(r"!\[([^\]\n]*)\]\[([^\]\n]*)\]")
 _SHORTCUT_REFERENCE_RE = re.compile(r"(?<!!)(?<!\])\[([^\]\n]+)\](?![\[\(:])")
+_INTERNAL_MARKDOWN_PARTS = frozenset({".git", ".superpowers", ".worktrees"})
 
 
 def _reference_label(value: str) -> str:
@@ -441,7 +442,7 @@ def _tracked_markdown(root: Path) -> list[Path]:
     discovered: set[Path] = set()
     for path in root.rglob("*.md"):
         relative_parts = path.relative_to(root).parts
-        if any(part in {".git", ".superpowers", ".worktrees"} for part in relative_parts):
+        if any(part in _INTERNAL_MARKDOWN_PARTS for part in relative_parts):
             continue
         resolved = path.resolve()
         if resolved == root or root in resolved.parents:
@@ -453,7 +454,7 @@ def _tracked_markdown(root: Path) -> list[Path]:
         )
         names = [name for name in result.stdout.decode("utf-8").split("\0") if name]
         for name in names:
-            if ".worktrees" in Path(name).parts:
+            if any(part in _INTERNAL_MARKDOWN_PARTS for part in Path(name).parts):
                 continue
             resolved = (root / Path(name)).resolve()
             if resolved == root or root in resolved.parents:

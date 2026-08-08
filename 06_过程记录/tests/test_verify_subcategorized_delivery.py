@@ -331,6 +331,58 @@ class DeliveryArchiveAndLinkTests(unittest.TestCase):
                     with self.assertRaisesRegex(ValueError, "引用|坏链|CommonMark"):
                         self.verifier.verify_markdown_links(root, [candidate])
 
+        # 发现范围的预期在测试中独立写死：正式项目页必须纳入，内部工作目录必须排除。
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            tracked = root / "TRACKED.md"
+            untracked = root / "UNTRACKED.md"
+            tracked.write_text("正式用户页面\n", encoding="utf-8")
+            untracked.write_text("未跟踪的正式用户页面\n", encoding="utf-8")
+
+            internal_paths = (
+                root / ".superpowers/sdd/tracked.md",
+                root / ".superpowers/sdd/untracked.md",
+                root / ".worktrees/other/tracked.md",
+                root / ".worktrees/other/untracked.md",
+            )
+            for path in internal_paths:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(f"内部文件：{path.name}\n", encoding="utf-8")
+            subprocess.run(
+                [
+                    "git", "add", "--", str(tracked),
+                    str(internal_paths[0]), str(internal_paths[2]),
+                ],
+                cwd=root,
+                check=True,
+            )
+
+            expected_paths = [tracked.resolve(), untracked.resolve()]
+
+            def inventory(paths: list[Path]) -> tuple[int, str]:
+                bindings = [
+                    (
+                        path.relative_to(root).as_posix(),
+                        hashlib.sha256(path.read_bytes()).hexdigest(),
+                    )
+                    for path in paths
+                ]
+                digest = hashlib.sha256(
+                    json.dumps(bindings, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+                ).hexdigest()
+                return len(paths), digest
+
+            discovered = self.verifier._tracked_markdown(root)
+            expected_inventory = inventory(expected_paths)
+            self.assertEqual(discovered, expected_paths)
+            self.assertEqual(inventory(discovered), expected_inventory)
+            for path in internal_paths:
+                path.write_text(f"已修改的内部文件：{path.name}\n", encoding="utf-8")
+            discovered_after = self.verifier._tracked_markdown(root)
+            self.assertEqual(discovered_after, expected_paths)
+            self.assertEqual(inventory(discovered_after), expected_inventory)
+
     def test_real_navigation_is_an_exact_projection_of_catalog_and_manifest(self):
         assignment_data = load_json(
             PROJECT_ROOT / "03_候选池/derived/subcategory_assignments.json"
@@ -556,7 +608,7 @@ class ProjectResultAndSafetyTests(unittest.TestCase):
                 "leaf_pages": 61,
                 "domain_indexes": 5,
                 "total_indexes": 1,
-                "markdown_files": 273,
+                "markdown_files": 270,
                 "links": 1261,
                 "local_links": 670,
             },
