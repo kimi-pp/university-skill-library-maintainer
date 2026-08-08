@@ -4,6 +4,16 @@ import json
 from pathlib import Path
 
 
+def _object_without_duplicate_keys(pairs: list[tuple[str, object]]) -> dict:
+    """Build JSON objects while preserving duplicate-key evidence."""
+    result: dict = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"重复 JSON 键: {key}")
+        result[key] = value
+    return result
+
+
 def load_source_records(data_dir: Path) -> list[dict]:
     """Load the five approved source-category files in stable code order."""
     records: list[dict] = []
@@ -18,7 +28,7 @@ def load_source_records(data_dir: Path) -> list[dict]:
 def load_assignment_file(path: Path) -> dict:
     """Load the standalone, reviewable Skill-ID-to-subcategory ledger."""
     with path.open(encoding="utf-8") as assignment_file:
-        return json.load(assignment_file)
+        return json.load(assignment_file, object_pairs_hook=_object_without_duplicate_keys)
 
 
 def validate_assignments(records: list[dict], assignment_data: dict) -> None:
