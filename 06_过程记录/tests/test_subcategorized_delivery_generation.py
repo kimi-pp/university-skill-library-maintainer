@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import os
 import shutil
 import sys
 import tempfile
@@ -232,6 +233,21 @@ class Task6CompleteDeliveryIntegrationTests(unittest.TestCase):
                     self.run_build(project, pipeline)
                 self.assertFalse((project / OUTPUT_RELATIVE).exists())
 
+    def test_source_cross_format_ambiguity_is_rejected_by_complete_entrypoint(self):
+        project, temporary, pipeline = self.make_project()
+        self.addCleanup(temporary.cleanup)
+        source_root = project / "05_交付物"
+        (source_root / "01_原始报告.xlsx").unlink()
+        (source_root / "02_原始报告.docx").unlink()
+        (source_root / "01_另一个版本.docx").write_bytes(b"duplicate-docx")
+        (source_root / "02_另一个版本.xlsx").write_bytes(b"duplicate-xlsx")
+
+        with self.assertRaisesRegex(ValueError, "格式配对"):
+            self.run_build(project, pipeline)
+
+        self.assertFalse((project / OUTPUT_RELATIVE).exists())
+        self.assertFalse(archive_transaction_paths(project).final.exists())
+
     def test_wrong_archive_target_is_rejected_before_copy(self):
         project, temporary, pipeline = self.make_project()
         self.addCleanup(temporary.cleanup)
@@ -261,6 +277,71 @@ class Task6CompleteDeliveryIntegrationTests(unittest.TestCase):
                 self.assertFalse(paths.final.exists())
                 self.assertFalse(paths.stage_root.exists())
                 self.assertFalse(paths.marker.exists())
+
+    def test_copy_failure_preserves_similarly_named_user_copying_file(self):
+        project, temporary, pipeline = self.make_project()
+        self.addCleanup(temporary.cleanup)
+        user_file = project / "05_交付物" / ".task6_archive-user.copying"
+        user_file.write_bytes(b"user-owned-sentinel")
+
+        def fail_copy(source: Path, target: Path):
+            shutil.copy2(source, target)
+            raise OSError("injected copy failure")
+
+        with self.assertRaises(OSError):
+            self.run_build(project, pipeline, copy_file=fail_copy)
+
+        self.assertEqual(user_file.read_bytes(), b"user-owned-sentinel")
+
+    def test_entrypoint_rejects_task_path_reparse_points_without_touching_external_sentinels(self):
+        locations = (
+            ("archive", "stage_root"),
+            ("archive", "backup"),
+            ("archive", "marker"),
+            ("delivery", "stage_root"),
+            ("delivery", "backup"),
+            ("delivery", "marker"),
+        )
+        for transaction_name, field in locations:
+            link_kinds = ("symlink", "junction") if field != "marker" and sys.platform == "win32" else ("symlink",)
+            for link_kind in link_kinds:
+                with self.subTest(transaction=transaction_name, field=field, link_kind=link_kind):
+                    project, temporary, pipeline = self.make_project()
+                    self.addCleanup(temporary.cleanup)
+                    paths = (
+                        archive_transaction_paths(project)
+                        if transaction_name == "archive"
+                        else delivery_transaction_paths(project)
+                    )
+                    task_path = getattr(paths, field)
+                    task_path.parent.mkdir(parents=True, exist_ok=True)
+                    if field == "marker":
+                        external = project.parent / f"external-{transaction_name}-{field}"
+                        external.write_bytes(b"external-sentinel")
+                        os.symlink(external, task_path)
+                        sentinel = external
+                    else:
+                        external = project.parent / f"external-{transaction_name}-{field}-{link_kind}"
+                        external.mkdir()
+                        sentinel = external / "sentinel.txt"
+                        sentinel.write_bytes(b"external-sentinel")
+                        if link_kind == "junction":
+                            import _winapi
+
+                            _winapi.CreateJunction(str(external), str(task_path))
+                        else:
+                            os.symlink(external, task_path, target_is_directory=True)
+
+                    caught: Exception | None = None
+                    try:
+                        self.run_build(project, pipeline)
+                    except Exception as error:  # the entrypoint must reject before mutation
+                        caught = error
+                    self.assertIsNotNone(caught)
+                    self.assertRegex(str(caught), "重解析|链接")
+                    self.assertEqual(sentinel.read_bytes(), b"external-sentinel")
+                    self.assertFalse(archive_transaction_paths(project).final.exists())
+                    self.assertFalse((project / OUTPUT_RELATIVE).exists())
 
     def test_archive_publish_failure_rolls_back_old_complete_archive(self):
         project, temporary, pipeline = self.make_project()
@@ -324,6 +405,31 @@ class Task6CompleteDeliveryIntegrationTests(unittest.TestCase):
         pipeline.fail_documents = RuntimeError("stop after startup recovery")
         with self.assertRaises(RuntimeError):
             self.run_build(project, pipeline)
+        self.assertEqual(tree_hashes(paths.final), before)
+        self.assertFalse(paths.backup.exists())
+        self.assertFalse(paths.stage_root.exists())
+
+    def test_archive_crash_after_final_to_backup_is_recovered_by_next_entrypoint(self):
+        project, temporary, pipeline = self.make_project()
+        self.addCleanup(temporary.cleanup)
+        self.run_build(project, pipeline)
+        paths = archive_transaction_paths(project)
+        before = tree_hashes(paths.final)
+
+        def crash(name: str, phase: str):
+            if name == "archive" and phase == "after_final_to_backup":
+                raise SystemExit("simulated archive process death")
+
+        with self.assertRaises(SystemExit):
+            self.run_build(project, pipeline, transaction_hook=crash)
+        self.assertFalse(paths.final.exists())
+        self.assertTrue(paths.backup.exists())
+
+        def stop_after_recovery(_source: Path, _target: Path):
+            raise RuntimeError("stop after archive startup recovery")
+
+        with self.assertRaises(RuntimeError):
+            self.run_build(project, pipeline, copy_file=stop_after_recovery)
         self.assertEqual(tree_hashes(paths.final), before)
         self.assertFalse(paths.backup.exists())
         self.assertFalse(paths.stage_root.exists())

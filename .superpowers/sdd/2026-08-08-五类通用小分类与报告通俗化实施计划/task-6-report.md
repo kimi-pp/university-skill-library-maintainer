@@ -146,3 +146,58 @@
 - XLSX 全量结构验证：`xlsx=66 sheets=264 formulas=OK structure=OK`。
 
 本修复轮仍未执行或声称 Task 7 的全部页面/工作表视觉检查；该范围保持不变。
+
+## 修复轮 2：重解析点防护与入口级覆盖
+
+### 复审核验与 RED
+
+复审指出的路径安全问题可在受控临时目录稳定复现。旧实现先对任务路径执行 `resolve()`，又把同一值同时作为实际值和期望值；任务 stage symlink 被清理后，项目外临时哨兵目录中的文件已不存在，marker symlink 被清理后外部哨兵文件也已不存在。根因是链接在所有权比较前已经解析，后续 `is_symlink()` 看到的是外部真实目标。
+
+先增加入口级回归再修改实现。RED 运行共 16 个测试方法：
+
+- archive/delivery 各自 stage、backup、marker 的 6 个 symlink 场景均未按“链接或重解析点”在入口拒绝；其中 stage/marker 场景可进入危险清理或继续执行；
+- Windows 下 archive/delivery 的 stage、backup 共 4 个 junction 子场景也未在入口拒绝；
+- 注入归档复制失败时，相似的用户文件 `.task6_archive-user.copying` 被旧宽前缀 glob 删除；
+- 新增的源格式交叉歧义真实入口测试和 archive `SystemExit` 后下次入口恢复测试在旧实现上已经通过，它们用于补足此前缺失的入口覆盖，不作为本轮修复的 RED 依据。
+
+RED 汇总为 `FAILED (failures=10, errors=1)`；错误项正是用户 `.copying` 文件已不存在。
+
+### 路径安全修复
+
+事务路径不再先跟随链接解析。现在采用未解析的规范化绝对字面路径，并为 archive/delivery 分别从 `project_root` 独立重建 final、stage、backup、marker 和 marker 临时文件的唯一允许位置；不再把待删路径与其自身比较。每次删除或移动前均执行：
+
+1. 实际字面路径与独立重建的期望路径完全相等；
+2. 直接父目录或允许的嵌套父目录边界正确，且路径仍位于项目字面范围内；
+3. 从项目锚点以下到目标的每个现存组件均不是 symlink、Windows junction 或带 reparse-point 属性的对象。
+
+`build_complete_delivery` 在发现源、复制、删除或移动任何内容之前，同时验证 archive 和 delivery 两套事务路径。因此即使 delivery 路径不安全，也不会先改动 archive，反之亦然。恢复、发布、回滚、marker 更新和每个清理入口仍会再次校验，所有目录替换都经过同一事务路径门禁。
+
+GREEN 中，6 个 stage/backup/marker symlink 场景和 Windows 4 个 junction 子场景均由真实入口提前拒绝；每个项目外哨兵内容保持原字节，archive 与 delivery 均未发布。
+
+### 精确临时文件清理
+
+归档异常路径已完全移除 `.task6_archive*.copying` 通配。`.copying` 只按当前 10 个已知源文件名确定性创建在任务专属 stage 内；异常时仅删除经过上述安全门禁的整个固定 stage。真实入口注入复制失败后，任务 stage 被清理，而同目录相似用户文件 `.task6_archive-user.copying` 原字节仍存在。
+
+### 测试口径更正与新增入口覆盖
+
+上一轮报告把 12 项全部称为“真实集成测试”不准确。本轮明确区分：
+
+- 3 个 helper 单元测试：逐代码逐格式源发现、缺失/多份/同名前缀歧义、大小写和目录排除；
+- 13 个入口集成测试：均直接调用真实 `build_complete_delivery`，仅对内容生成/验证等慢依赖做小 fixture 注入，事务和恢复路径不被 mock；
+- 合计任务6测试 16/16 通过。
+
+新增入口覆盖包括：01 双 DOCX、02 双 XLSX 的交叉格式歧义在任何归档/交付发布前拒绝；archive 在 final→backup 后注入 `SystemExit`，下一次真实入口先恢复旧完整 archive，再由复制失败注入停止，最终旧 archive 哈希不变且 backup/stage 清理完成。
+
+任务相关 Python 测试为 77/77（pipeline 35、DOCX 26、任务6 16）。当前 XLSX Node 套件因 Task 7 并行增加视觉测试，提交前最新运行结果为 29/29；Task 6 未修改或提交该并行文件。
+
+### 正式目录两轮复验
+
+首次尝试时 Task 7 正在使用标准渲染器读取 66 个 DOCX，Windows 在 delivery final→backup 处返回 `Access denied`。任务6普通异常路径保留原 final 并清理了 stage/marker；该次不计作正式通过，也未终止 Task 7 进程。收到 Task 7 已结束渲染并释放锁的确认后，从新的 SHA 基线重新运行完整入口两次：
+
+- 两轮均为 `published=132 docx=66 xlsx=66 archived=10 source_unchanged=10`；
+- 每轮核心 delivery 132 + archive 10 + source 10 的 SHA-256 均为 152/152 不变；
+- 排除任务范围并单独监测的 0809 DOCX/XLSX 每轮均为 2/2 不变；
+- 原位置与归档 SHA 逐一一致 10/10；
+- 最终 delivery 132（DOCX 66、XLSX 66）、archive 10、source 10；任务 stage/backup/marker、`.copying`、`.tmp` 噪声 0。
+
+本轮仍不把 Task 7 的全量视觉结果计入 Task 6 完成声明；Task 6 只重新执行并记录结构与内容门禁。

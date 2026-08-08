@@ -8,6 +8,7 @@ import json
 import os
 import re
 import shutil
+import stat
 import subprocess
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -32,6 +33,7 @@ AMBIGUOUS_PREFIX_PATTERN = re.compile(r"^(0[1-5]).*\.(docx|xlsx)$", re.IGNORECAS
 @dataclass(frozen=True)
 class TransactionPaths:
     name: str
+    project_root: Path
     final: Path
     stage_root: Path
     stage_dir: Path
@@ -48,10 +50,8 @@ def _sha256(path: Path) -> str:
 
 
 def _absolute(path: Path) -> Path:
-    # ``resolve`` also follows an existing junction/symlink, so an apparently
-    # in-project transaction target cannot redirect deletion or publication
-    # outside the approved project tree.
-    return Path(path).resolve()
+    """Return a normalized absolute path without following links/reparse points."""
+    return Path(os.path.abspath(path))
 
 
 def _inside(path: Path, root: Path) -> bool:
@@ -70,18 +70,114 @@ def _require_exact(path: Path, expected: Path, label: str) -> Path:
     return actual
 
 
-def _remove_owned_directory(path: Path, expected: Path) -> None:
-    target = _require_exact(path, expected, "任务目录")
-    if target.is_symlink():
-        target.unlink()
-    elif target.exists():
-        shutil.rmtree(target)
+def _path_exists_unfollowed(path: Path) -> bool:
+    return os.path.lexists(path)
 
 
-def _remove_owned_file(path: Path, expected: Path) -> None:
-    target = _require_exact(path, expected, "任务标记")
-    if target.exists() or target.is_symlink():
-        target.unlink()
+def _is_reparse_point(path: Path) -> bool:
+    if not _path_exists_unfollowed(path):
+        return False
+    if path.is_symlink() or (hasattr(path, "is_junction") and path.is_junction()):
+        return True
+    attributes = getattr(os.lstat(path), "st_file_attributes", 0)
+    return bool(attributes & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400))
+
+
+def _expected_transaction_locations(paths: TransactionPaths) -> tuple[dict[str, Path], dict[str, Path]]:
+    project = _absolute(paths.project_root)
+    delivery_root = project / "05_交付物"
+    if paths.name == "archive":
+        expected = {
+            "final": delivery_root / ARCHIVE_NAME,
+            "stage_root": delivery_root / ".task6_archive.stage",
+            "stage_dir": delivery_root / ".task6_archive.stage",
+            "backup": delivery_root / ".task6_archive.backup",
+            "marker": delivery_root / ".task6_archive.transaction.json",
+            "marker_tmp": delivery_root / ".task6_archive.transaction.json.tmp",
+        }
+        allowed_parents = {field: delivery_root for field in expected}
+    elif paths.name == "delivery":
+        stage_root = project / "06_过程记录" / ".task6_delivery.stage"
+        expected = {
+            "final": delivery_root / "通俗细分版_2026-08-07",
+            "stage_root": stage_root,
+            "stage_dir": stage_root / OUTPUT_RELATIVE,
+            "backup": delivery_root / ".task6_delivery.backup",
+            "marker": delivery_root / ".task6_delivery.transaction.json",
+            "marker_tmp": delivery_root / ".task6_delivery.transaction.json.tmp",
+        }
+        allowed_parents = {
+            "final": delivery_root,
+            "stage_root": project / "06_过程记录",
+            "stage_dir": stage_root,
+            "backup": delivery_root,
+            "marker": delivery_root,
+            "marker_tmp": delivery_root,
+        }
+    else:
+        raise ValueError(f"未知任务事务: {paths.name}")
+    return ({field: _absolute(path) for field, path in expected.items()}, allowed_parents)
+
+
+def _validate_owned_transaction_path(paths: TransactionPaths, field: str) -> Path:
+    expected, allowed_parents = _expected_transaction_locations(paths)
+    if field not in expected:
+        raise ValueError(f"未知任务路径字段: {field}")
+    actual_value = paths.marker.with_name(f"{paths.marker.name}.tmp") if field == "marker_tmp" else getattr(paths, field)
+    actual = _absolute(actual_value)
+    if actual != expected[field]:
+        raise ValueError(f"{paths.name}.{field} 字面路径不安全: expected={expected[field]} actual={actual}")
+    allowed_parent = _absolute(allowed_parents[field])
+    if field == "stage_dir" and paths.name == "delivery":
+        if not _inside(actual, allowed_parent) or actual == allowed_parent:
+            raise ValueError(f"{paths.name}.{field} 父目录越界: {actual}")
+    elif actual.parent != allowed_parent:
+        raise ValueError(f"{paths.name}.{field} 父目录不安全: {actual.parent}")
+    project = _absolute(paths.project_root)
+    try:
+        relative = actual.relative_to(project)
+    except ValueError as error:
+        raise ValueError(f"{paths.name}.{field} 超出项目范围: {actual}") from error
+    current = project
+    for component in relative.parts:
+        current /= component
+        if _is_reparse_point(current):
+            raise ValueError(f"{paths.name}.{field} 含链接或重解析点: {current}")
+    return actual
+
+
+def _validate_transaction_paths(paths: TransactionPaths) -> None:
+    for field in ("final", "stage_root", "stage_dir", "backup", "marker", "marker_tmp"):
+        _validate_owned_transaction_path(paths, field)
+
+
+def _remove_owned_directory(paths: TransactionPaths, field: str) -> None:
+    target = _validate_owned_transaction_path(paths, field)
+    if not _path_exists_unfollowed(target):
+        return
+    if not target.is_dir():
+        raise ValueError(f"{paths.name}.{field} 不是普通目录: {target}")
+    shutil.rmtree(target)
+
+
+def _remove_owned_file(paths: TransactionPaths, field: str) -> None:
+    target = _validate_owned_transaction_path(paths, field)
+    if not _path_exists_unfollowed(target):
+        return
+    if not target.is_file():
+        raise ValueError(f"{paths.name}.{field} 不是普通文件: {target}")
+    target.unlink()
+
+
+def _replace_transaction_path(
+    paths: TransactionPaths,
+    source_field: str,
+    target_field: str,
+    replace_path: Callable[[Path, Path], object],
+) -> None:
+    source = _validate_owned_transaction_path(paths, source_field)
+    target = _validate_owned_transaction_path(paths, target_field)
+    replace_path(source, target)
 
 
 def discover_originals(delivery_root: Path) -> list[Path]:
@@ -230,6 +326,7 @@ def archive_transaction_paths(project_root: Path, archive_root: Path | None = No
     stage = delivery_root / ".task6_archive.stage"
     return TransactionPaths(
         name="archive",
+        project_root=project,
         final=final,
         stage_root=stage,
         stage_dir=stage,
@@ -245,6 +342,7 @@ def delivery_transaction_paths(project_root: Path) -> TransactionPaths:
     stage_root = project / "06_过程记录" / ".task6_delivery.stage"
     return TransactionPaths(
         name="delivery",
+        project_root=project,
         final=final,
         stage_root=stage_root,
         stage_dir=stage_root / OUTPUT_RELATIVE,
@@ -254,8 +352,9 @@ def delivery_transaction_paths(project_root: Path) -> TransactionPaths:
 
 
 def _write_marker(paths: TransactionPaths, phase: str) -> None:
+    _validate_transaction_paths(paths)
     paths.marker.parent.mkdir(parents=True, exist_ok=True)
-    temporary = paths.marker.with_name(f"{paths.marker.name}.tmp")
+    temporary = _validate_owned_transaction_path(paths, "marker_tmp")
     temporary.write_text(
         json.dumps(
             {
@@ -271,15 +370,15 @@ def _write_marker(paths: TransactionPaths, phase: str) -> None:
         ),
         encoding="utf-8",
     )
-    os.replace(temporary, paths.marker)
+    _replace_transaction_path(paths, "marker_tmp", "marker", os.replace)
 
 
 def _cleanup_transaction_artifacts(paths: TransactionPaths, *, remove_backup: bool = False) -> None:
-    _remove_owned_directory(paths.stage_root, paths.stage_root)
+    _remove_owned_directory(paths, "stage_root")
     if remove_backup:
-        _remove_owned_directory(paths.backup, paths.backup)
-    _remove_owned_file(paths.marker, paths.marker)
-    _remove_owned_file(paths.marker.with_name(f"{paths.marker.name}.tmp"), paths.marker.with_name(f"{paths.marker.name}.tmp"))
+        _remove_owned_directory(paths, "backup")
+    _remove_owned_file(paths, "marker")
+    _remove_owned_file(paths, "marker_tmp")
 
 
 def recover_directory_transaction(
@@ -289,20 +388,21 @@ def recover_directory_transaction(
     replace_path: Callable[[Path, Path], object] = os.replace,
 ) -> None:
     """Recover a previous crash using stable task-owned stage/backup paths."""
-    final_exists = paths.final.exists()
-    backup_exists = paths.backup.exists()
+    _validate_transaction_paths(paths)
+    final_exists = _path_exists_unfollowed(paths.final)
+    backup_exists = _path_exists_unfollowed(paths.backup)
     if final_exists and backup_exists:
         try:
             validator(paths.final)
         except Exception:
             validator(paths.backup)
-            _remove_owned_directory(paths.final, paths.final)
-            replace_path(paths.backup, paths.final)
+            _remove_owned_directory(paths, "final")
+            _replace_transaction_path(paths, "backup", "final", replace_path)
         else:
-            _remove_owned_directory(paths.backup, paths.backup)
+            _remove_owned_directory(paths, "backup")
     elif not final_exists and backup_exists:
         validator(paths.backup)
-        replace_path(paths.backup, paths.final)
+        _replace_transaction_path(paths, "backup", "final", replace_path)
     elif final_exists:
         validator(paths.final)
     _cleanup_transaction_artifacts(paths, remove_backup=False)
@@ -314,10 +414,11 @@ def _rollback_transaction(
     had_final: bool,
     replace_path: Callable[[Path, Path], object],
 ) -> None:
-    if paths.final.exists() and (paths.backup.exists() or not had_final):
-        _remove_owned_directory(paths.final, paths.final)
-    if paths.backup.exists():
-        replace_path(paths.backup, paths.final)
+    _validate_transaction_paths(paths)
+    if _path_exists_unfollowed(paths.final) and (_path_exists_unfollowed(paths.backup) or not had_final):
+        _remove_owned_directory(paths, "final")
+    if _path_exists_unfollowed(paths.backup):
+        _replace_transaction_path(paths, "backup", "final", replace_path)
     _cleanup_transaction_artifacts(paths, remove_backup=False)
 
 
@@ -329,23 +430,24 @@ def publish_directory_transaction(
     transaction_hook: Callable[[str, str], object] | None = None,
 ) -> None:
     """Publish a complete stage; ordinary exceptions roll back, BaseException is recovered next run."""
+    _validate_transaction_paths(paths)
     validator(paths.stage_dir)
-    if paths.backup.exists() or paths.marker.exists():
+    if _path_exists_unfollowed(paths.backup) or _path_exists_unfollowed(paths.marker):
         raise RuntimeError(f"{paths.name} 事务尚未恢复")
-    had_final = paths.final.exists()
+    had_final = _path_exists_unfollowed(paths.final)
     _write_marker(paths, "prepared")
     try:
         if had_final:
-            replace_path(paths.final, paths.backup)
+            _replace_transaction_path(paths, "final", "backup", replace_path)
             _write_marker(paths, "final-to-backup")
             if transaction_hook:
                 transaction_hook(paths.name, "after_final_to_backup")
-        replace_path(paths.stage_dir, paths.final)
+        _replace_transaction_path(paths, "stage_dir", "final", replace_path)
         _write_marker(paths, "stage-to-final")
         if transaction_hook:
             transaction_hook(paths.name, "after_stage_to_final")
         validator(paths.final)
-        _remove_owned_directory(paths.backup, paths.backup)
+        _remove_owned_directory(paths, "backup")
         _cleanup_transaction_artifacts(paths, remove_backup=False)
     except Exception:
         _rollback_transaction(paths, had_final=had_final, replace_path=replace_path)
@@ -364,6 +466,7 @@ def archive_originals(
     """Copy all originals to a stage and publish the archive as one directory transaction."""
     project = _absolute(project_root or _absolute(archive_root).parents[1])
     paths = archive_transaction_paths(project, archive_root)
+    _validate_transaction_paths(paths)
     source_snapshot = _snapshot_sources(sources)
     recover_directory_transaction(
         paths,
@@ -371,7 +474,7 @@ def archive_originals(
         replace_path=replace_path,
     )
     paths.stage_root.parent.mkdir(parents=True, exist_ok=True)
-    _remove_owned_directory(paths.stage_root, paths.stage_root)
+    _remove_owned_directory(paths, "stage_root")
     paths.stage_root.mkdir()
     try:
         for source in sources:
@@ -392,10 +495,7 @@ def archive_originals(
             transaction_hook=transaction_hook,
         )
     except Exception:
-        _remove_owned_directory(paths.stage_root, paths.stage_root)
-        for copying in paths.final.parent.glob(".task6_archive*.copying"):
-            if copying.is_file():
-                copying.unlink()
+        _remove_owned_directory(paths, "stage_root")
         raise
     if _snapshot_sources(sources) != source_snapshot:
         raise ValueError("归档发布后源文件发生变化")
@@ -507,6 +607,11 @@ def build_complete_delivery(
     manifest = _validate_inputs(inputs)
     archive_paths = archive_transaction_paths(project, archive_root)
     delivery_paths = delivery_transaction_paths(project)
+    # Validate both transaction layouts before discovering, copying, deleting,
+    # or moving anything. This prevents one unsafe layout from allowing the
+    # other transaction to mutate the project first.
+    _validate_transaction_paths(archive_paths)
+    _validate_transaction_paths(delivery_paths)
     sources = discover_originals(project / "05_交付物")
     source_before = _snapshot_sources(sources)
 
@@ -530,7 +635,7 @@ def build_complete_delivery(
     )
 
     delivery_paths.stage_root.parent.mkdir(parents=True, exist_ok=True)
-    _remove_owned_directory(delivery_paths.stage_root, delivery_paths.stage_root)
+    _remove_owned_directory(delivery_paths, "stage_root")
     delivery_paths.stage_root.mkdir()
     try:
         seed_existing_delivery(project, delivery_paths.stage_root, manifest)
@@ -548,7 +653,7 @@ def build_complete_delivery(
             transaction_hook=transaction_hook,
         )
     except Exception:
-        _remove_owned_directory(delivery_paths.stage_root, delivery_paths.stage_root)
+        _remove_owned_directory(delivery_paths, "stage_root")
         raise
 
     if _snapshot_sources(sources) != source_before:
