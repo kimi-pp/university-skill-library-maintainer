@@ -26,6 +26,7 @@ from build_subcategorized_documents import (  # noqa: E402
 
 RENDER_SCRIPT_ENV = "DOCUMENTS_RENDER_DOCX"
 DEFAULT_RENDER_ROOT = PROJECT_ROOT / "06_过程记录" / "renders" / "subcategorized_docx"
+RENDER_MANIFEST_NAME = "rendered-pages.json"
 
 
 def resolve_render_script(
@@ -133,7 +134,11 @@ def render_plan(plan: list[dict], *, render_script: Path | None = None) -> dict[
         if not document_path.exists():
             raise FileNotFoundError(f"待渲染 DOCX 不存在: {document_path}")
         output_dir.mkdir(parents=True, exist_ok=True)
-        for stale in [*output_dir.glob("page-*.png"), output_dir / "contact-sheet.png"]:
+        for stale in [
+            *output_dir.glob("page-*.png"),
+            output_dir / "contact-sheet.png",
+            output_dir / RENDER_MANIFEST_NAME,
+        ]:
             if stale.exists():
                 stale.unlink()
         subprocess.run(
@@ -143,6 +148,10 @@ def render_plan(plan: list[dict], *, render_script: Path | None = None) -> dict[
         pages = sorted(output_dir.glob("page-*.png"), key=_page_number)
         if not pages or any(path.stat().st_size == 0 for path in pages):
             raise RuntimeError(f"{item['key']} 未生成有效页面 PNG")
+        (output_dir / RENDER_MANIFEST_NAME).write_text(
+            json.dumps({"pages": [path.name for path in pages]}, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
         _make_contact_sheet(pages, output_dir / "contact-sheet.png")
         results[item["key"]] = pages
     return results

@@ -4,8 +4,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import tempfile
+import unicodedata
 import zipfile
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -124,6 +126,22 @@ def _set_paragraph_spacing(paragraph, *, before: float = 0, after: float = 6, li
     paragraph.paragraph_format.space_before = Pt(before)
     paragraph.paragraph_format.space_after = Pt(after)
     paragraph.paragraph_format.line_spacing = line
+
+
+def _cover_title_font_size(title: str) -> float:
+    """Choose a cover-title size from estimated rendered width, not raw character count."""
+    width_units = 0.0
+    for character in title:
+        if character.isspace():
+            width_units += 0.35
+        elif unicodedata.east_asian_width(character) in {"W", "F"}:
+            width_units += 1.0
+        else:
+            width_units += 0.55
+    if width_units <= 0:
+        return 27
+    fitted = min(27.0, 445.0 / width_units)
+    return max(22.0, math.floor(fitted * 2) / 2)
 
 
 def _shade_cell(cell, fill: str) -> None:
@@ -370,7 +388,12 @@ def _add_cover(document: Document, *, title: str, subtitle: str, count: int) -> 
     title_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     _set_paragraph_spacing(title_paragraph, after=10, line=1.05)
     title_paragraph.paragraph_format.keep_with_next = True
-    _set_run_font(title_paragraph.add_run(title), size=27, bold=True, color=DOCX_TOKENS["cover_title"])
+    _set_run_font(
+        title_paragraph.add_run(title),
+        size=_cover_title_font_size(title),
+        bold=True,
+        color=DOCX_TOKENS["cover_title"],
+    )
 
     subtitle_paragraph = document.add_paragraph()
     subtitle_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -492,9 +515,19 @@ def _add_source_links(document: Document, record: dict) -> None:
 
 def _add_compact_trace(document: Document, record: dict) -> None:
     """Keep source facts distinct from user guidance without wasting a page."""
-    paragraph = document.add_paragraph()
+    if not document.paragraphs:
+        raise ValueError("技术追溯前缺少读者正文")
+    document.paragraphs[-1].paragraph_format.keep_with_next = True
+    paragraph = document.add_paragraph(style="Heading 3")
     paragraph.paragraph_format.keep_together = True
-    _set_paragraph_spacing(paragraph, after=0, line=1.0)
+    paragraph.paragraph_format.keep_with_next = False
+    _set_paragraph_spacing(paragraph, before=6, after=0, line=1.0)
+    _set_run_font(
+        paragraph.add_run("技术追溯｜"),
+        size=DOCX_TOKENS["body_size_pt"],
+        bold=True,
+        color=DOCX_TOKENS["heading_3"][1],
+    )
     fields = (
         ("内部编号", record["id"]),
         ("功能标签", record["tags"]),
@@ -645,7 +678,6 @@ def build_subcategory_document(subcategory: dict, records: list[dict]) -> Docume
         _add_labeled_paragraph(document, "可能遇到什么限制", record["plain_limitations"])
         _add_labeled_paragraph(document, "接入需要多少调整", record["plain_integration"])
         _add_labeled_paragraph(document, "本次核验到了哪一步", record["plain_verification"])
-        document.add_heading("技术追溯", level=3)
         _add_compact_trace(document, record)
     return document
 

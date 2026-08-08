@@ -20,7 +20,7 @@ import {
   inspectXlsxPackage,
   verifySpreadsheetFile,
 } from "../tools/verify_subcategorized_spreadsheets.mjs";
-import { renderSpreadsheetFile } from "../tools/render_subcategorized_spreadsheets.mjs";
+import { keyCatalogRanges, renderSpreadsheetFile } from "../tools/render_subcategorized_spreadsheets.mjs";
 import {
   normalizeXlsxPackage,
   semanticXlsxDigest,
@@ -31,6 +31,14 @@ import {
 const testDir = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(testDir, "..", "..");
 const SAMPLE_KEYS = ["05-overview", "02-08", "01-01", "05-05"];
+
+test("every overview-sized catalog receives four readable inspection segments", () => {
+  const rows = Array.from({ length: 24 }, (_, index) => Array.from({ length: 22 }, (__, column) => (
+    index < 4 ? `header-${index}-${column}` : `row-${index}-${column}`
+  )));
+  const ranges = keyCatalogRanges({ getUsedRange: () => ({ values: rows }) });
+  assert.deepEqual(ranges.map(({ label }) => label), ["title-header", "longest-text", "longest-url", "last-row"]);
+});
 
 async function sha256(filePath) {
   return crypto.createHash("sha256").update(await fs.readFile(filePath)).digest("hex");
@@ -267,6 +275,20 @@ test("renderer reopens one XLSX and emits one nonblank PNG per worksheet", async
       assert.ok(bytes.readUInt32BE(16) >= 600, `${renderedPath}: PNG 宽度异常`);
       assert.ok(bytes.readUInt32BE(20) >= 180, `${renderedPath}: PNG 高度异常`);
     }
+  });
+});
+
+test("renderer removes stale PNGs before rewriting a workbook render directory", async () => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [written] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["02-08"] });
+    const renderDir = path.join(root, "renders");
+    const workbookRenderDir = path.join(renderDir, written.item.key);
+    await fs.mkdir(workbookRenderDir, { recursive: true });
+    const stalePath = path.join(workbookRenderDir, "stale-segment.png");
+    await fs.writeFile(stalePath, Buffer.from("stale"));
+    await renderSpreadsheetFile(written.outputPath, renderDir, written.item.key);
+    await assert.rejects(fs.stat(stalePath), { code: "ENOENT" });
   });
 });
 

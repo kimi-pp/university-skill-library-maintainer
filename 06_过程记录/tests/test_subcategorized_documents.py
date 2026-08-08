@@ -237,6 +237,19 @@ class DocumentLayoutTests(unittest.TestCase):
         footer_xml = self.document.sections[0].footer._element.xml
         self.assertIn("PAGE", footer_xml)
 
+    def test_cover_title_size_uses_estimated_text_width_to_avoid_orphan_characters(self):
+        """Long full-width titles must shrink predictably instead of leaving one character alone."""
+        self.assertEqual(self.builder._cover_title_font_size("05-05 并行计算与性能优化"), 27)
+        self.assertEqual(self.builder._cover_title_font_size("02-06 Office 与 Markdown 互转"), 27)
+        self.assertLessEqual(
+            self.builder._cover_title_font_size("05-08 贝叶斯分析、因果分析与实验设计"),
+            25,
+        )
+        self.assertGreaterEqual(
+            self.builder._cover_title_font_size("04-09 馆藏目录、机构知识库与开放资源发现"),
+            22,
+        )
+
     def test_all_user_facing_body_and_table_runs_are_exactly_11pt(self):
         """Body, summary tables, links, and technical trace may not be shrunk to fit pages."""
         body_started = False
@@ -335,15 +348,17 @@ class DocumentContentTests(unittest.TestCase):
                 "plain_limitations", "plain_integration", "plain_verification", "plain_outputs",
             ):
                 self.assertIn(record[field], text, f"{record['id']}:{field}")
+        trace_paragraphs = [paragraph for paragraph in document.paragraphs if paragraph.style.name == "Heading 3"]
+        self.assertEqual(len(trace_paragraphs), len(records))
         self.assertEqual(
-            [paragraph.text for paragraph in document.paragraphs if paragraph.style.name == "Heading 3"],
+            [paragraph.text.split("｜", 1)[0] for paragraph in trace_paragraphs],
             ["技术追溯", "技术追溯"],
         )
         self.assertEqual(text.count("内部编号："), len(records))
-        trace_paragraphs = [paragraph for paragraph in document.paragraphs if paragraph.text.startswith("内部编号：")]
-        self.assertEqual(len(trace_paragraphs), len(records))
         for paragraph in trace_paragraphs:
+            self.assertTrue(paragraph.text.startswith("技术追溯｜内部编号："))
             self.assertEqual(paragraph.paragraph_format.space_after.pt, 0)
+            self.assertFalse(paragraph.paragraph_format.keep_with_next)
             paragraph_text = paragraph.text
             for label in ("功能标签：", "原生生态：", "来源形态：", "许可证：", "仓库最近更新："):
                 self.assertIn(label, paragraph_text)
@@ -353,7 +368,7 @@ class DocumentContentTests(unittest.TestCase):
         hyperlink_paragraphs = [paragraph for paragraph in document.paragraphs if "w:hyperlink" in paragraph._p.xml]
         self.assertEqual(len(hyperlink_paragraphs), len(records))
         for paragraph in hyperlink_paragraphs:
-            self.assertTrue(paragraph.text.startswith("内部编号："))
+            self.assertTrue(paragraph.text.startswith("技术追溯｜内部编号："))
             self.assertIn("原始资料地址：", paragraph.text)
             self.assertEqual(len(paragraph._p.findall(qn("w:hyperlink"))), 2)
 
@@ -377,6 +392,23 @@ class DocumentContentTests(unittest.TestCase):
         document = Document()
         self.builder._add_short_value_table(document, fixture_record("GH-05-0003"))
         self.assertEqual(document.paragraphs, [])
+
+    def test_technical_trace_is_anchored_to_the_last_reader_paragraph(self):
+        """A trace heading must not be allowed to become a one-paragraph final page."""
+        document = self.builder.build_subcategory_document(
+            SUBCATEGORY,
+            [fixture_record("GH-05-0003")],
+        )
+        trace_index = next(
+            index
+            for index, paragraph in enumerate(document.paragraphs)
+            if paragraph.text.startswith("技术追溯｜内部编号：")
+        )
+        self.assertGreater(trace_index, 0)
+        self.assertTrue(
+            document.paragraphs[trace_index - 1].paragraph_format.keep_with_next,
+            "最后一个读者字段必须与技术追溯同页，防止追溯独占尾页",
+        )
 
     def test_long_text_and_urls_remain_complete_without_full_url_display(self):
         """Truncation or dumping long addresses into tables must fail."""
@@ -434,7 +466,7 @@ class VerificationAndGenerationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
             document = self.builder.build_subcategory_document(SUBCATEGORY, records)
-            trace = next(p for p in document.paragraphs if p.text.startswith("内部编号："))
+            trace = next(p for p in document.paragraphs if p.text.startswith("技术追溯｜内部编号："))
             trace.runs[0].font.size = Pt(8.5)
             trace_path = root / "bad-trace.docx"
             document.save(trace_path)

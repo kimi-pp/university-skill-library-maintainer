@@ -35,9 +35,9 @@ async function renderToFile(workbook, outputDir, key, { sheetName, fileName, sca
   return outputPath;
 }
 
-function keyCatalogRanges(sheet) {
+export function keyCatalogRanges(sheet) {
   const values = sheet.getUsedRange(true).values;
-  if (values.length <= 30) return [];
+  if (values.length <= 14) return [];
   const dataRows = values.slice(4);
   const longestRow = (columns) => dataRows.reduce((best, row, index) => {
     const length = columns.reduce((sum, column) => sum + String(row[column] ?? "").length, 0);
@@ -60,6 +60,11 @@ export async function renderSpreadsheetFile(filePath, renderRoot, key) {
   if (actualNames.join("\u0000") !== SHEET_NAMES.join("\u0000")) throw new Error(`${key}: 渲染前发现工作表名称/顺序错误`);
   const outputDir = path.join(renderRoot, safeFileName(key));
   await fs.mkdir(outputDir, { recursive: true });
+  for (const entry of await fs.readdir(outputDir, { withFileTypes: true })) {
+    if (entry.isFile() && entry.name.toLowerCase().endsWith(".png")) {
+      await fs.unlink(path.join(outputDir, entry.name));
+    }
+  }
   const written = [];
   for (let index = 0; index < SHEET_NAMES.length; index += 1) {
     const sheetName = SHEET_NAMES[index];

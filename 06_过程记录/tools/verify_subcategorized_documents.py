@@ -175,7 +175,9 @@ def _direct_run_size_issues(document: Document) -> list[str]:
     for paragraph_index, paragraph in enumerate(document.paragraphs, start=1):
         if paragraph.style.name == "Heading 1":
             body_started = True
-        if not body_started or paragraph.style.name.startswith("Heading"):
+        if not body_started or (
+            paragraph.style.name.startswith("Heading") and paragraph.style.name != "Heading 3"
+        ):
             continue
         for run in paragraph._p.xpath(".//w:r[w:t]"):
             properties = run.find(qn("w:rPr"))
@@ -302,7 +304,11 @@ def _audit_content(
         if actual_h2 != expected_h2:
             issues.append("Skill Heading 2 顺序与派生数据不一致")
         trace_headings = [paragraph.text for paragraph in document.paragraphs if paragraph.style.name == "Heading 3"]
-        if trace_headings != ["技术追溯"] * len(expected_records):
+        expected_trace_prefixes = [f"技术追溯｜内部编号：{record['id']}" for record in sorted(expected_records, key=lambda item: item["id"])]
+        if len(trace_headings) != len(expected_trace_prefixes) or any(
+            not actual.startswith(expected_prefix)
+            for actual, expected_prefix in zip(trace_headings, expected_trace_prefixes)
+        ):
             issues.append("技术追溯分区数量错误")
     elif scope == "overview":
         required_headings = [
