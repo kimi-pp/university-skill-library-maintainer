@@ -89,3 +89,60 @@
 - 新增 10 份归档副本并补齐 132 份新交付文件；已批准的 4 个样品对由同一全量生成流程在原路径重写。
 - 本任务随本地检查点提交，提交信息为 `feat: generate complete subcategorized delivery`；不配置远程、不推送。
 - 顾虑：当前环境缺少 LibreOffice，任务6烟雾渲染未完成；完整视觉检查必须在任务7具备渲染依赖后执行。旧 `test_artifact_generator.py` 两项断言仍停留在三大类/六文件历史基线，按任务边界未修复。
+
+## 修复轮 1：逐格式发现、目录事务与崩溃恢复
+
+### RED / GREEN
+
+根据复核意见，先把任务6集成测试升级为直接导入并调用真实 `build_complete_delivery` 的失败注入测试。首次运行在测试收集阶段按预期失败：
+
+`ImportError: cannot import name 'archive_transaction_paths' from 'build_subcategorized_delivery'`
+
+这证明新增测试确实先于事务接口和恢复实现。实现完成后的结果为：
+
+- 任务6真实集成测试：12/12 通过；
+- 任务相关 Python 测试：73/73 通过（pipeline 35、DOCX 26、任务6集成 12）；
+- XLSX Node 测试：27/27 通过。
+
+### 原版发现范围收紧
+
+原版发现现在按代码和格式建立二维约束：`01`–`05` 每个代码必须各有且仅有 1 份 DOCX 和 1 份 XLSX，总计恰好 10 份。扩展名大小写不敏感，但名称必须精确匹配 `NN_名称.docx/.xlsx`。只检查 `05_交付物` 根目录普通文件，因此明确排除 `0809_`、通俗细分版目录、原始版归档目录、暂存目录和其他子目录。
+
+新增负例覆盖：01 双 DOCX/02 双 XLSX但总数与每代码总数表面仍为 10/2 的交叉陷阱、缺文件、多文件、同名前缀非精确命名歧义；另有大写扩展名正例。所有歧义均在复制或生成前拒绝。
+
+### 归档目录级事务
+
+归档目标必须精确解析为计划路径 `05_交付物/原始版_2026-08-06`；项目根、`05_交付物` 根、交付输出目录和项目外路径全部拒绝。
+
+归档流程先记录 10 个源文件的绝对路径、字节数和 SHA-256，再把全部文件复制到同盘固定任务暂存目录 `.task6_archive.stage`。每份先写 `.copying`，核对大小与 SHA 后才在暂存目录内就位；完整集合再次与源快照核对，并在发布前后再次检查源快照。只有全部通过才执行目录级发布：旧 final 移至 `.task6_archive.backup`，stage 再移至 final。普通复制或发布异常会即时清理任务暂存物并回滚到旧完整归档或保持归档不存在，不会留下半成品。
+
+### 交付发布与崩溃恢复
+
+交付使用稳定的任务专属路径：`06_过程记录/.task6_delivery.stage`、`05_交付物/.task6_delivery.backup` 和 `.task6_delivery.transaction.json`。归档采用对应的 archive 路径。每次启动都会先恢复：
+
+- final 缺失而 backup 存在：验证 backup 后恢复旧 final，清理未完成 stage；
+- final 与 backup 同时存在：final 完整则保留 final 并清理 backup，final 无效则验证 backup 并回滚；
+- 普通异常：当前进程即时回滚；
+- `SystemExit` 等模拟进程终止发生在 final→backup 或 stage→final 后：保留恢复证据，由下一次真实 `build_complete_delivery` 启动恢复。
+
+删除操作只接受与任务自己固定 stage、backup、marker 完全相等的解析路径。测试同时建立名称相似的用户目录 `.task6_delivery.backup-user`，确认恢复清理不会触碰它。
+
+### 真实集成覆盖
+
+测试通过依赖注入缩小临时 fixture 的文件内容，但没有 mock 掉编排器或事务控制路径。端到端 fixture 仍使用 132 项 manifest、5 个概览、61 个小类和 157 个唯一成员，完整调用 `build_complete_delivery` 两次，并比较 delivery 132、archive 10、source 10 的全量 SHA 均不变。
+
+负例覆盖 manifest 少项、多项和 stage 噪声，源格式歧义，错误归档目标，复制失败，源复制中途变化，归档发布失败/回滚，交付发布失败/回滚，final→backup 后崩溃与下次恢复，stage→final 后有效新 final 保留、无效新 final 回滚，以及任务暂存/备份噪声清理。
+
+### 正式目录复跑与验证
+
+修复实现后对正式目录再次运行完整编排两次。两轮结果均为：
+
+- `published=132 docx=66 xlsx=66 archived=10 source_unchanged=10`；
+- 核心 delivery 132 + archive 10 + source 10，共 152/152 个 SHA-256 不变；
+- 另行监测但明确排除任务范围的 0809 DOCX/XLSX 两份也保持不变，因此同一快照比较为 154/154；
+- 原位置与归档逐一 SHA 一致：10/10；
+- 最终目录：delivery 132（DOCX 66、XLSX 66），archive 10，source 10，任务 stage/backup/marker、`.copying`、`.tmp` 噪声 0；
+- DOCX 全量结构验证：`verified=66 overview=5 subcategory=61 preset=OK content=OK hyperlinks=OK`；
+- XLSX 全量结构验证：`xlsx=66 sheets=264 formulas=OK structure=OK`。
+
+本修复轮仍未执行或声称 Task 7 的全部页面/工作表视觉检查；该范围保持不变。
