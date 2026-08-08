@@ -11,8 +11,10 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_ROOT / "03_候选池" / "deduplicated"
 ASSIGNMENT_FILE = PROJECT_ROOT / "03_候选池" / "derived" / "subcategory_assignments.json"
+OUTPUT_CONTRACT_FILE = PROJECT_ROOT / "03_候选池" / "derived" / "plain_output_contract.json"
 sys.path.insert(0, str(PROJECT_ROOT / "06_过程记录" / "tools"))
 
+import subcategory_pipeline as pipeline
 from subcategory_pipeline import (
     enrich_with_subcategory,
     load_assignment_file,
@@ -226,6 +228,9 @@ class PlainLanguageCatalogTests(unittest.TestCase):
         )
         return [simplify_record(record) for record in source_records]
 
+    def _output_contract(self):
+        return json.loads(OUTPUT_CONTRACT_FILE.read_text(encoding="utf-8"))["records"]
+
     def test_plain_records_answer_user_questions_without_changing_facts(self):
         """Dropping a user field or rewriting a source fact must fail."""
         plain = simplify_record(SAMPLE_RECORD)
@@ -402,7 +407,8 @@ class PlainLanguageCatalogTests(unittest.TestCase):
         output_types = re.compile(
             r"报告|清单|检索结果|文献记录|数据表|图表|方案|计划|草稿|修订稿|"
             r"回复信|代码|配置|模型|预测结果|分析结果|审查意见|证明|演示文稿|"
-            r"文档|工作簿|转换文件|术语结果|证据包|流程图|结构图|测试结果|规则"
+            r"文档|工作簿|转换文件|术语结果|证据包|流程图|结构图|测试结果|规则|"
+            r"元数据|综述|记录|概率"
         )
         forbidden = ("相关结果", "相应成果", "具体形式见", "满足需求")
         for row in self._actual_plain_records():
@@ -414,6 +420,41 @@ class PlainLanguageCatalogTests(unittest.TestCase):
         by_id = {row["id"]: row for row in self._actual_plain_records()}
         self.assertRegex(by_id["GH-01-0014"].get("plain_outputs", ""), r"论文.*(?:草稿|修订稿)|回复信")
         self.assertRegex(by_id["GH-03-0019"].get("plain_outputs", ""), r"引用.*(?:调研报告|政策简报|主题综述)")
+
+    def test_every_output_matches_its_independently_audited_id_contract(self):
+        """A subcategory-generic output must not satisfy a Skill-specific source audit."""
+        source_ids = {row["id"] for row in load_source_records(DATA_DIR)}
+        contract = self._output_contract()
+        self.assertEqual(set(contract), source_ids)
+        self.assertEqual(len({item["output"] for item in contract.values()}), 157)
+
+        for skill_id, item in contract.items():
+            with self.subTest(skill_id=skill_id, part="shape"):
+                self.assertEqual(set(item), {"output", "anchors"})
+                self.assertGreaterEqual(len(item["anchors"]), 2)
+                self.assertTrue(all(anchor in item["output"] for anchor in item["anchors"]))
+
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+        for skill_id, item in contract.items():
+            with self.subTest(skill_id=skill_id, part="generated_contract"):
+                self.assertEqual(pipeline.output_contract_issues(by_id[skill_id], contract), [])
+
+    def test_output_contract_rejects_swapped_and_generic_results(self):
+        """Swapping two plausible artifact sentences or using type-only prose must fail."""
+        self.assertTrue(hasattr(pipeline, "output_contract_issues"))
+        checker = pipeline.output_contract_issues
+        contract = self._output_contract()
+        by_id = {row["id"]: row for row in self._actual_plain_records()}
+
+        for skill_id in ("GH-02-0009", "GH-05-0046"):
+            with self.subTest(skill_id=skill_id, mutation="generic"):
+                mutated = {**by_id[skill_id], "plain_outputs": "可得到分析报告、图表或行动建议。"}
+                self.assertTrue(checker(mutated, contract))
+
+        first = {**by_id["GH-02-0009"], "plain_outputs": by_id["GH-05-0046"]["plain_outputs"]}
+        second = {**by_id["GH-05-0046"], "plain_outputs": by_id["GH-02-0009"]["plain_outputs"]}
+        self.assertTrue(checker(first, contract))
+        self.assertTrue(checker(second, contract))
 
     def test_office_embedded_objects_are_not_explained_as_vector_embeddings(self):
         """A global 'embedding' explanation must not corrupt Office document risks."""
@@ -474,6 +515,14 @@ class PlainLanguageCatalogTests(unittest.TestCase):
             joined = " ".join(str(row.get(field, "")) for field in PLAIN_FIELDS)
             self.assertNotRegex(joined, r"本地\s+自动文字检查")
             self.assertNotIn("。 具体建议", joined)
+
+    def test_all_plain_fields_remove_mechanical_spaces_around_chinese_punctuation(self):
+        """A new Chinese sentence must not reintroduce punctuation-space artifacts."""
+        mechanical_spacing = re.compile(r"(?:[。，；：！？]\s+|\s+[。，；：！？])")
+        for row in self._actual_plain_records():
+            for field in PLAIN_FIELDS:
+                with self.subTest(skill_id=row["id"], field=field):
+                    self.assertNotRegex(row[field], mechanical_spacing)
 
 
 if __name__ == "__main__":
