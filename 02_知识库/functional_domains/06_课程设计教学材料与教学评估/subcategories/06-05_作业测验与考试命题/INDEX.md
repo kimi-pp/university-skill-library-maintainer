@@ -1,18 +1,37 @@
 # 06-05 作业、测验与考试命题
 
-正式技能数量：0。
+最后更新：2026-08-09
 
-## 收录边界
+本小分类共收录 **27** 项正式技能。它们均完成固定版本静态检查，未安装、未运行。
 
-收录以作业题、随堂测验、试卷、题库、参考答案或命题说明为主要输出的技能。主要执行批改和反馈的候选归 06-06，主要设计评分标准表的候选归 06-07。
+| Skill ID | 名称 | 通俗功能 | 采用建议 | 安全等级 | 来源 |
+|---|---|---|---|---|---|
+| [FD-06-0141](../../skills/FD-06-0141.md) | AI Learning Boundary Mapper | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 需要少量调整 | SB | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/ai-literacy/ai-learning-boundary-mapper/SKILL.md) |
+| [FD-06-0142](../../skills/FD-06-0142.md) | assess-setup | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者按标准检查作业并提出分数建议、生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 需要少量调整 | SB | [公开地址](https://github.com/francojc/dauber/blob/cc790c4041f97cf8bb986a0f34e142083c477366/.pi/skills/assess-setup/SKILL.md) |
+| [FD-06-0143](../../skills/FD-06-0143.md) | assess-submit | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者按标准检查作业并提出分数建议、设计或使用评分量规、生成作业或考试题、为题目配答案与分值。 | 需要重新改造 | SB-A | [公开地址](https://github.com/francojc/dauber/blob/cc790c4041f97cf8bb986a0f34e142083c477366/.pi/skills/assess-submit/SKILL.md) |
+| [FD-06-0144](../../skills/FD-06-0144.md) | assessment-architect | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者设计项目、工作坊或课堂活动、生成练习题或测验题、设计考试或终结性评价、按标准检查作业并提出分数建议。 | 需要重新改造 | SB-A | [公开地址](https://github.com/YujxZJCN/teaching-skills/blob/50258caf73fb0495adc725864fdf278a3072716c/assessment-architect/SKILL.md) |
+| [FD-06-0145](../../skills/FD-06-0145.md) | assessment-engineering | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、设计考试或终结性评价、设计形成性练习和掌握度检查、设计或使用评分量规。 | 需要重新改造 | SB-A | [公开地址](https://github.com/revfactory/harness-100/blob/8e8d35c6a19166614d1af1df85512266d51121ae/en/08-course-builder/.claude/skills/assessment-engineering/skill.md) |
+| [FD-06-0146](../../skills/FD-06-0146.md) | assessment-item-development | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、检查格式、引文和参考文献、生成作业或考试题、为题目配答案与分值。 | 可直接使用 | SA | [公开地址](https://github.com/a5c-ai/babysitter/blob/ca6e2eaa04a61c528776b1480d6a1bd3896cc028/library/specializations/domains/social-sciences-humanities/education/skills/assessment-item-development/SKILL.md) |
+| [FD-06-0147](../../skills/FD-06-0147.md) | Central Historical Question Evaluator | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/historical-thinking/central-historical-question-evaluator/SKILL.md) |
+| [FD-06-0148](../../skills/FD-06-0148.md) | Checking for Understanding Protocol Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md) |
+| [FD-06-0149](../../skills/FD-06-0149.md) | Critical Thinking Task Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md) |
+| [FD-06-0150](../../skills/FD-06-0150.md) | Discipline-Specific Critical Thinking Task Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer/SKILL.md) |
+| [FD-06-0151](../../skills/FD-06-0151.md) | Dispositional Knowledge Assessment Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者梳理学习目标和能力要求、生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md) |
+| [FD-06-0152](../../skills/FD-06-0152.md) | examprep-ai | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者整理讲义、教材或学习指南、设计实验或实践步骤、生成练习题或测验题、设计考试或终结性评价。 | 需要少量调整 | SB | [公开地址](https://github.com/sickn33/agentic-awesome-skills/blob/75c558b7ea89a023877b96eac74ced7aa1ee93f6/skills/examprep-ai/SKILL.md) |
+| [FD-06-0153](../../skills/FD-06-0153.md) | Formative Assessment Technique Selector | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者设计形成性练习和掌握度检查、检查格式、引文和参考文献、生成作业或考试题、为题目配答案与分值。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/curriculum-assessment/formative-assessment-technique-selector/SKILL.md) |
+| [FD-06-0154](../../skills/FD-06-0154.md) | formative-assessment | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、设计考试或终结性评价、设计形成性练习和掌握度检查、设计或使用评分量规。 | 需要重新改造 | SB-A | [公开地址](https://github.com/FerroxLabs/wayland/blob/b3cd0511a4406d5e837db9d7e42e395c08387baf/src/process/resources/skills-library/bodies/skills/education/formative-assessment/SKILL.md) |
+| [FD-06-0155](../../skills/FD-06-0155.md) | Hinge Question Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、诊断知识薄弱点和教学问题、生成作业或考试题、为题目配答案与分值。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/questioning-discussion/hinge-question-designer/SKILL.md) |
+| [FD-06-0156](../../skills/FD-06-0156.md) | Historical Thinking Assessment Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者设计形成性练习和掌握度检查、诊断知识薄弱点和教学问题、检查格式、引文和参考文献、生成作业或考试题。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/historical-thinking/historical-thinking-assessment-designer/SKILL.md) |
+| [FD-06-0157](../../skills/FD-06-0157.md) | kahoot | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 需要少量调整 | SB | [公开地址](https://github.com/rudini/claude-edu-plugins/blob/18c33fa8796dda66a822a39cefd733a645fcae52/plugins/kahoot-skill/skills/kahoot/SKILL.md) |
+| [FD-06-0158](../../skills/FD-06-0158.md) | Metacognitive Monitoring in AI Contexts | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 需要少量调整 | SB | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md) |
+| [FD-06-0159](../../skills/FD-06-0159.md) | Practice Problem Sequence Designer | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者按标准检查作业并提出分数建议、生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/explicit-instruction/practice-problem-sequence-designer/SKILL.md) |
+| [FD-06-0160](../../skills/FD-06-0160.md) | Project Brief Designer (PBL) | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者设计项目、工作坊或课堂活动、生成练习题或测验题、设计或使用评分量规、生成作业或考试题。 | 需要重新改造 | SB-A | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/curriculum-assessment/project-brief-designer/SKILL.md) |
+| [FD-06-0161](../../skills/FD-06-0161.md) | quiz-generator | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 需要少量调整 | SB | [公开地址](https://github.com/dmccreary/claude-skills/blob/8dd7a52fe173692b774d05eb8c41bd164aae306e/skills/quiz-generator/SKILL.md) |
+| [FD-06-0162](../../skills/FD-06-0162.md) | Retrieval Practice Question Generator | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成练习题或测验题、设计形成性练习和掌握度检查、生成作业或考试题、为题目配答案与分值。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/memory-learning-science/retrieval-practice-generator/SKILL.md) |
+| [FD-06-0163](../../skills/FD-06-0163.md) | Retrieve-First Gate | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/student-learning/retrieve-first-gate/SKILL.md) |
+| [FD-06-0164](../../skills/FD-06-0164.md) | summative-assessment | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者编写示例和逐步讲解、设计项目、工作坊或课堂活动、设计考试或终结性评价、设计形成性练习和掌握度检查。 | 需要少量调整 | SB | [公开地址](https://github.com/FerroxLabs/wayland/blob/b3cd0511a4406d5e837db9d7e42e395c08387baf/src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md) |
+| [FD-06-0165](../../skills/FD-06-0165.md) | Teach-Back Evaluator | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者发现内容覆盖不足和重复、生成练习题或测验题、按学生差异调整内容和支持、生成作业或考试题。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/student-learning/teach-back-evaluator/SKILL.md) |
+| [FD-06-0166](../../skills/FD-06-0166.md) | Transfer Bridge | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/student-learning/transfer-bridge/SKILL.md) |
+| [FD-06-0167](../../skills/FD-06-0167.md) | Unassisted Evidence Checkpoint | 这个技能主要用于作业、测验与考试命题。它可以帮助使用者生成作业或考试题、为题目配答案与分值、检查难度和知识覆盖。 | 需要重新改造 | SB-A | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/student-learning/unassisted-evidence-checkpoint/SKILL.md) |
 
-## 主要输出
-
-题目、试卷、题库、参考答案、命题说明。
-
-## 入口
-
-- [正式技能目录](../../skills/)
-- [来源快照索引](../../SOURCE_SNAPSHOT_INDEX.md)
-- [全网检索矩阵](../../../../findings/2026-08-08-FD06全网检索矩阵.md)
-- [静态安全核验记录](../../../../../04_验证记录/2026-08-08-FD06静态安全审查.md)（完成核验后生成）
+返回：[十二个小分类](../../SUBCATEGORY_INDEX.md) · [FD06 总入口](../../INDEX.md)

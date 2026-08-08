@@ -59,6 +59,19 @@
       "credential_behavior": {"type": "string", "minLength": 1},
       "file_behavior": {"type": "string", "minLength": 1},
       "evidence_paths": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true}
+      ,"detailed_function": {"type": "string", "minLength": 1}
+      ,"candidate_id": {"type": "string", "pattern": "^FD06-C[0-9]{4}$"}
+      ,"subcategory_name": {"type": "string", "minLength": 1}
+      ,"source_kind": {"enum": ["github", "huggingface_space", "clawhub_registry"]}
+      ,"source_label": {"type": "string", "minLength": 1}
+      ,"source_shape": {"type": "string", "minLength": 1}
+      ,"repository": {"type": "string", "minLength": 1}
+      ,"package_file_count": {"type": "integer", "minimum": 1}
+      ,"adaptation_requirements": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      ,"human_review": {"type": "string", "minLength": 1}
+      ,"fairness_accessibility": {"type": "string", "minLength": 1}
+      ,"untrusted_input": {"type": "string", "minLength": 1}
+      ,"academic_integrity": {"type": "string", "minLength": 1}
     }
   }
 }

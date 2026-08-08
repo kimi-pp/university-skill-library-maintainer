@@ -1,18 +1,38 @@
 # 06-03 讲义、课件与阅读材料
 
-正式技能数量：0。
+最后更新：2026-08-09
 
-## 收录边界
+本小分类共收录 **28** 项正式技能。它们均完成固定版本静态检查，未安装、未运行。
 
-收录围绕课程目标和学生受众制作讲义、课件内容、阅读包或学习指南的技能。只做通用文件转换、排版或幻灯片操作的工具归 02 大分类。
+| Skill ID | 名称 | 通俗功能 | 采用建议 | 安全等级 | 来源 |
+|---|---|---|---|---|---|
+| [FD-06-0055](../../skills/FD-06-0055.md) | Argument Structure Scaffold Generator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者生成练习题或测验题、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/literacy-critical-thinking/argument-structure-scaffold-generator/SKILL.md) |
+| [FD-06-0056](../../skills/FD-06-0056.md) | Cognitive Load Analyser | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/memory-learning-science/cognitive-load-analyser/SKILL.md) |
+| [FD-06-0057](../../skills/FD-06-0057.md) | concept-map | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者准备阅读清单和阅读提示、整理讲义、教材或学习指南、按标准检查作业并提出分数建议、评阅课程论文或学位论文。 | 需要少量调整 | SB | [公开地址](https://github.com/Jellypod-Inc/school-skills/blob/cd484795e924e454caafd13ddc25c1ec76c48718/skills/concept-map/SKILL.md) |
+| [FD-06-0058](../../skills/FD-06-0058.md) | course-generator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者编写或检查教学大纲、整理讲义、教材或学习指南、设计实验或实践步骤、把课程内容整理成易读材料。 | 需要少量调整 | SB | [公开地址](https://github.com/vishalsachdev/claude-skills/blob/92a6344c3ae6f724bc8279cafb2e2f9edd9827c9/course-generator/SKILL.md) |
+| [FD-06-0059](../../skills/FD-06-0059.md) | course-material-creator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者梳理学习目标和能力要求、编写教案和单元计划、准备阅读清单和阅读提示、整理讲义、教材或学习指南。 | 需要重新改造 | SB-A | [公开地址](https://github.com/travisjneuman/.claude/blob/e74cd20465be466b0f30c19da760bc986c50177f/skills/course-material-creator/SKILL.md) |
+| [FD-06-0060](../../skills/FD-06-0060.md) | course-publisher | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者安排周次、课时和教学进度、制作或整理教学课件、把课程内容整理成易读材料、制作讲义或课件。 | 需要重新改造 | SB-A | [公开地址](https://github.com/YujxZJCN/teaching-skills/blob/50258caf73fb0495adc725864fdf278a3072716c/course-publisher/SKILL.md) |
+| [FD-06-0061](../../skills/FD-06-0061.md) | deck-course-module | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者制作或整理教学课件、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/nexu-io/html-anything/blob/779fce327024612eba752fe42e1267a3918f7640/next/src/lib/templates/skills/deck-course-module/SKILL.md) |
+| [FD-06-0062](../../skills/FD-06-0062.md) | deck-studio | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者制作或整理教学课件、整理讲义、教材或学习指南、检查并改善无障碍学习条件、把课程内容整理成易读材料。 | 需要重新改造 | SB-A | [公开地址](https://github.com/YujxZJCN/teaching-skills/blob/50258caf73fb0495adc725864fdf278a3072716c/deck-studio/SKILL.md) |
+| [FD-06-0063](../../skills/FD-06-0063.md) | Digital Worked Example Sequence | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者编写示例和逐步讲解、设计考试或终结性评价、把课程内容整理成易读材料、制作讲义或课件。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/ai-learning-science/digital-worked-example-sequence/SKILL.md) |
+| [FD-06-0064](../../skills/FD-06-0064.md) | Disciplinary Writing Scaffold | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者设计实验或实践步骤、按标准检查作业并提出分数建议、把课程内容整理成易读材料、制作讲义或课件。 | 需要少量调整 | SB | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/literacy-critical-thinking/disciplinary-writing-scaffold/SKILL.md) |
+| [FD-06-0065](../../skills/FD-06-0065.md) | Dual Coding Designer | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者制作或整理教学课件、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 需要少量调整 | SB | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/memory-learning-science/dual-coding-designer/SKILL.md) |
+| [FD-06-0066](../../skills/FD-06-0066.md) | educational-content-creator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者设计数字课程或教学视频脚本、生成练习题或测验题、按学生差异调整内容和支持、把课程内容整理成易读材料。 | 可直接使用 | SA | [公开地址](https://github.com/FerroxLabs/wayland/blob/b3cd0511a4406d5e837db9d7e42e395c08387baf/src/process/resources/skills-library/bodies/skills/education/educational-content-creator/SKILL.md) |
+| [FD-06-0067](../../skills/FD-06-0067.md) | Elaborative Interrogation Prompt Generator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者设计实验或实践步骤、生成练习题或测验题、把课程内容整理成易读材料、制作讲义或课件。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/memory-learning-science/elaborative-interrogation-generator/SKILL.md) |
+| [FD-06-0068](../../skills/FD-06-0068.md) | elearning-storyboarding | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者设计数字课程或教学视频脚本、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/a5c-ai/babysitter/blob/ca6e2eaa04a61c528776b1480d6a1bd3896cc028/library/specializations/domains/social-sciences-humanities/education/skills/elearning-storyboarding/SKILL.md) |
+| [FD-06-0069](../../skills/FD-06-0069.md) | Erroneous Example Designer | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者编写示例和逐步讲解、设计考试或终结性评价、把课程内容整理成易读材料、制作讲义或课件。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/ai-learning-science/erroneous-example-designer/SKILL.md) |
+| [FD-06-0070](../../skills/FD-06-0070.md) | Historical Document Set Curator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者生成练习题或测验题、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/historical-thinking/historical-document-set-curator/SKILL.md) |
+| [FD-06-0071](../../skills/FD-06-0071.md) | Historical Source Adapter | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者准备阅读清单和阅读提示、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/historical-thinking/historical-source-adapter/SKILL.md) |
+| [FD-06-0072](../../skills/FD-06-0072.md) | Historical Thinking Strategy Modelling Guide | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/historical-thinking/historical-thinking-strategy-modelling-guide/SKILL.md) |
+| [FD-06-0073](../../skills/FD-06-0073.md) | lecture-to-study-guide | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者制作或整理教学课件、整理讲义、教材或学习指南、编写示例和逐步讲解、生成练习题或测验题。 | 需要少量调整 | SB | [公开地址](https://github.com/Jellypod-Inc/school-skills/blob/cd484795e924e454caafd13ddc25c1ec76c48718/skills/lecture-to-study-guide/SKILL.md) |
+| [FD-06-0074](../../skills/FD-06-0074.md) | media-scripter | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者整理讲义、教材或学习指南、设计数字课程或教学视频脚本、检查并改善无障碍学习条件、制作多语言或双语教学材料。 | 可直接使用 | SA | [公开地址](https://github.com/YujxZJCN/teaching-skills/blob/50258caf73fb0495adc725864fdf278a3072716c/media-scripter/SKILL.md) |
+| [FD-06-0075](../../skills/FD-06-0075.md) | Metacognitive Prompt Library | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者检查课程或教学材料质量、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/self-regulated-learning/metacognitive-prompt-library/SKILL.md) |
+| [FD-06-0076](../../skills/FD-06-0076.md) | Reading Comprehension Strategy Selector | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者准备阅读清单和阅读提示、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/literacy-critical-thinking/reading-comprehension-strategy-selector/SKILL.md) |
+| [FD-06-0077](../../skills/FD-06-0077.md) | Self-Explanation Prompt Designer | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者编写示例和逐步讲解、设计考试或终结性评价、把课程内容整理成易读材料、制作讲义或课件。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/ai-learning-science/self-explanation-prompt-designer/SKILL.md) |
+| [FD-06-0078](../../skills/FD-06-0078.md) | Study Strategy Selector & Guide | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/self-regulated-learning/study-strategy-selector/SKILL.md) |
+| [FD-06-0079](../../skills/FD-06-0079.md) | syllabus | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者梳理学习目标和能力要求、编写或检查教学大纲、准备阅读清单和阅读提示、设计实验或实践步骤。 | 需要重新改造 | SB-A | [公开地址](https://github.com/alirezarezvani/claude-skills/blob/aa8d778811a557a2c28ccadda4cf3d0bd028a4cc/research/syllabus/skills/syllabus/SKILL.md) |
+| [FD-06-0080](../../skills/FD-06-0080.md) | Think-Aloud Script Generator | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者准备阅读清单和阅读提示、把课程内容整理成易读材料、制作讲义或课件、补充阅读与学习提示。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/explicit-instruction/think-aloud-script-generator/SKILL.md) |
+| [FD-06-0081](../../skills/FD-06-0081.md) | Worked Example Designer with Completion Fading | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者编写示例和逐步讲解、设计考试或终结性评价、把课程内容整理成易读材料、制作讲义或课件。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/memory-learning-science/worked-example-fading-designer/SKILL.md) |
+| [FD-06-0082](../../skills/FD-06-0082.md) | Worked Example to Problem Solving Transition Designer | 这个技能主要用于讲义、课件与阅读材料。它可以帮助使用者编写示例和逐步讲解、设计考试或终结性评价、把课程内容整理成易读材料、制作讲义或课件。 | 可直接使用 | SA | [公开地址](https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/skills/ai-learning-science/worked-example-to-problem-solving-transition-designer/SKILL.md) |
 
-## 主要输出
-
-教师讲义、课件提纲、课程阅读包、学生学习指南。
-
-## 入口
-
-- [正式技能目录](../../skills/)
-- [来源快照索引](../../SOURCE_SNAPSHOT_INDEX.md)
-- [全网检索矩阵](../../../../findings/2026-08-08-FD06全网检索矩阵.md)
-- [静态安全核验记录](../../../../../04_验证记录/2026-08-08-FD06静态安全审查.md)（完成核验后生成）
+返回：[十二个小分类](../../SUBCATEGORY_INDEX.md) · [FD06 总入口](../../INDEX.md)
