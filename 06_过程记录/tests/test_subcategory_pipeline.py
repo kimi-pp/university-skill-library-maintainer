@@ -43,6 +43,16 @@ EXPECTED_SUBCATEGORY_COUNTS = {
     "05-16": 3, "05-17": 2, "05-18": 3, "05-19": 4, "05-20": 1,
 }
 APPROVED_ASSIGNMENT_SHA256 = "ca2fa005329db69b4cb07e1ffd566e0c8f773a3e9bd0ca4d8a445f9ba7633082"
+# Frozen after the 157-record, source-field-by-source-field human audit in repair
+# round 2.  These literals are deliberately independent from the runtime contract.
+APPROVED_OUTPUT_CONTRACT_SHA256 = "d67e83360ffbf3c51359fa99495703245f8d59dc213f4614a06625e745039b31"
+APPROVED_OUTPUT_CONTRACT_CATEGORY_SHA256 = {
+    "01": "3f3f945340cbfa74becde5c01b170f1c21ebbd623d4b961923efde4ea14f3be7",
+    "02": "b471937a909a9462ace32dfe6c0e8ef935375621352969badde499c8b0ff32f7",
+    "03": "3f4d9eb05cc2b2008d4c9d159d5337584a0b840c31971109ec5a00149ff2aa5a",
+    "04": "8d0b6ce92e0165009e8eb76c8feb2731d1487615a9b6fb56446914124d34e8be",
+    "05": "6a9d239997517b3a0405f564eb5c191dcd57aa1a0f00bdf00f6bb38157d4e0e5",
+}
 PLAIN_FIELDS = {
     "plain_purpose",
     "plain_audience",
@@ -230,6 +240,16 @@ class PlainLanguageCatalogTests(unittest.TestCase):
 
     def _output_contract(self):
         return json.loads(OUTPUT_CONTRACT_FILE.read_text(encoding="utf-8"))["records"]
+
+    @staticmethod
+    def _output_contract_snapshot_hash(records):
+        canonical = json.dumps(
+            records,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+        return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
     def test_plain_records_answer_user_questions_without_changing_facts(self):
         """Dropping a user field or rewriting a source fact must fail."""
@@ -438,6 +458,41 @@ class PlainLanguageCatalogTests(unittest.TestCase):
         for skill_id, item in contract.items():
             with self.subTest(skill_id=skill_id, part="generated_contract"):
                 self.assertEqual(pipeline.output_contract_issues(by_id[skill_id], contract), [])
+
+    def test_output_contract_matches_frozen_source_audit_snapshot(self):
+        """Editing the runtime contract and regenerating output must not move the gold standard."""
+        contract = self._output_contract()
+        self.assertEqual(
+            self._output_contract_snapshot_hash(contract),
+            APPROVED_OUTPUT_CONTRACT_SHA256,
+        )
+        for category_code, approved_hash in APPROVED_OUTPUT_CONTRACT_CATEGORY_SHA256.items():
+            category_records = {
+                skill_id: item
+                for skill_id, item in contract.items()
+                if skill_id.startswith(f"GH-{category_code}-")
+            }
+            with self.subTest(category=category_code):
+                self.assertEqual(
+                    self._output_contract_snapshot_hash(category_records),
+                    approved_hash,
+                )
+
+        swapped = json.loads(json.dumps(contract, ensure_ascii=False))
+        swapped["GH-02-0009"], swapped["GH-05-0046"] = (
+            swapped["GH-05-0046"],
+            swapped["GH-02-0009"],
+        )
+        generic = json.loads(json.dumps(contract, ensure_ascii=False))
+        generic["GH-02-0009"]["output"] = "可得到分析报告、图表或行动建议。"
+        self.assertNotEqual(
+            self._output_contract_snapshot_hash(swapped),
+            APPROVED_OUTPUT_CONTRACT_SHA256,
+        )
+        self.assertNotEqual(
+            self._output_contract_snapshot_hash(generic),
+            APPROVED_OUTPUT_CONTRACT_SHA256,
+        )
 
     def test_output_contract_rejects_swapped_and_generic_results(self):
         """Swapping two plausible artifact sentences or using type-only prose must fail."""
