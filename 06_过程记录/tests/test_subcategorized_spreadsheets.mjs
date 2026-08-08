@@ -23,6 +23,7 @@ import {
 import { renderSpreadsheetFile } from "../tools/render_subcategorized_spreadsheets.mjs";
 import {
   normalizeXlsxPackage,
+  semanticXlsxDigest,
   unzipEntries,
   zipEntries,
 } from "../tools/xlsx_package_utils.mjs";
@@ -71,6 +72,49 @@ async function copyAndMutate(originalPath, root, name, mutation) {
   await fs.copyFile(originalPath, copyPath);
   await mutation(copyPath);
   return copyPath;
+}
+
+const OFFICE_RELATIONSHIP_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
+const PACKAGE_RELATIONSHIP_NS = "http://schemas.openxmlformats.org/package/2006/relationships";
+
+function semanticFixture({ relationships, references, ordinaryText = "rId1", ordinaryAttribute = "ordinary-rId1" }) {
+  const relationshipXml = relationships.map(({ id, type, target, targetMode = null }) => {
+    const mode = targetMode ? ` TargetMode="${targetMode}"` : "";
+    return `<Relationship Id="${id}" Type="${OFFICE_RELATIONSHIP_NS}/${type}" Target="${target}"${mode} />`;
+  }).join("");
+  const referenceXml = references.map(({ attribute, id }, index) => `<x:item n="${index + 1}" ${attribute}="${id}" />`).join("");
+  const entries = new Map([
+    ["xl/workbook.xml", Buffer.from(`<?xml version="1.0" encoding="utf-8"?><x:workbook xmlns:x="urn:test" xmlns:r="${OFFICE_RELATIONSHIP_NS}"><x:items>${referenceXml}</x:items><x:note label="${ordinaryAttribute}">${ordinaryText}</x:note></x:workbook>`, "utf8")],
+    ["xl/_rels/workbook.xml.rels", Buffer.from(`<?xml version="1.0" encoding="utf-8"?><Relationships xmlns="${PACKAGE_RELATIONSHIP_NS}">${relationshipXml}</Relationships>`, "utf8")],
+  ]);
+  return zipEntries(entries);
+}
+
+async function cycleWorkbookRelationshipIds(filePath) {
+  const entries = unzipEntries(await fs.readFile(filePath));
+  const relationshipPath = "xl/_rels/workbook.xml.rels";
+  const sourcePath = "xl/workbook.xml";
+  let relationshipsXml = entries.get(relationshipPath).toString("utf8");
+  const elements = [...relationshipsXml.matchAll(/<Relationship\b[^>]*\/?\s*>/g)].map((match) => match[0]);
+  const rows = elements.map((element) => {
+    const attributes = Object.fromEntries([...element.matchAll(/([A-Za-z:]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
+    return { element, attributes };
+  }).sort((left, right) => `${left.attributes.Type}|${left.attributes.Target}|${left.attributes.TargetMode ?? ""}`.localeCompare(`${right.attributes.Type}|${right.attributes.Target}|${right.attributes.TargetMode ?? ""}`));
+  const sourceBefore = entries.get(sourcePath).toString("utf8");
+  const referencedIds = new Set([...sourceBefore.matchAll(/\br:(?:id|embed|link)="([^"]+)"/g)].map((match) => match[1]));
+  const referencedIndexes = rows.map((row, index) => referencedIds.has(row.attributes.Id) ? index : -1).filter((index) => index >= 0);
+  assert.ok(referencedIndexes.length >= 2, "fixture needs two referenced workbook relationships");
+  const assignedIds = rows.map((_, index) => `rId${index + 1}`);
+  [assignedIds[referencedIndexes[0]], assignedIds[referencedIndexes[1]]] = [assignedIds[referencedIndexes[1]], assignedIds[referencedIndexes[0]]];
+  const mapping = new Map(rows.map((row, index) => [row.attributes.Id, assignedIds[index]]));
+  relationshipsXml = relationshipsXml.replace(/<Relationship\b[^>]*\/?\s*>/g, (element) => element.replace(/\bId="([^"]+)"/, (match, id) => `Id="${mapping.get(id)}"`));
+  const sourceXml = sourceBefore.replace(/\b(r:(?:id|embed|link))="([^"]+)"/g, (match, attribute, id) => {
+    const replacement = mapping.get(id);
+    return replacement ? `${attribute}="${replacement}"` : match;
+  });
+  entries.set(relationshipPath, Buffer.from(relationshipsXml, "utf8"));
+  entries.set(sourcePath, Buffer.from(sourceXml, "utf8"));
+  await fs.writeFile(filePath, zipEntries(entries));
 }
 
 test("manifest selection is safe, unique, scope-aware, and stably ordered", async () => {
@@ -386,6 +430,104 @@ test("OOXML normalization is scoped and idempotent when invoked twice on the sam
       assert.deepEqual(new Set(nodeIds), new Set(relationshipRows.map(({ id }) => id)), "orphan hyperlink relationship");
       assert.equal(new Set(relationshipRows.map(({ target }) => target)).size, relationshipRows.length, "duplicate hyperlink target");
     }
+  });
+});
+
+test("semantic digest is invariant to a two-way relationship ID swap", () => {
+  const first = semanticFixture({
+    relationships: [
+      { id: "rId1", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "rId2", type: "styles", target: "styles.xml" },
+    ],
+    references: [{ attribute: "r:id", id: "rId1" }, { attribute: "r:embed", id: "rId2" }],
+  });
+  const swapped = semanticFixture({
+    relationships: [
+      { id: "rId2", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "rId1", type: "styles", target: "styles.xml" },
+    ],
+    references: [{ attribute: "r:id", id: "rId2" }, { attribute: "r:embed", id: "rId1" }],
+  });
+  assert.equal(semanticXlsxDigest(first), semanticXlsxDigest(swapped));
+});
+
+test("semantic digest is invariant to a three-way relationship ID cycle", () => {
+  const first = semanticFixture({
+    relationships: [
+      { id: "rId1", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "rId2", type: "styles", target: "styles.xml" },
+      { id: "rId3", type: "theme", target: "theme/theme1.xml" },
+    ],
+    references: [
+      { attribute: "r:id", id: "rId1" },
+      { attribute: "r:embed", id: "rId2" },
+      { attribute: "r:link", id: "rId3" },
+    ],
+  });
+  const cycled = semanticFixture({
+    relationships: [
+      { id: "rId2", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "rId3", type: "styles", target: "styles.xml" },
+      { id: "rId1", type: "theme", target: "theme/theme1.xml" },
+    ],
+    references: [
+      { attribute: "r:id", id: "rId2" },
+      { attribute: "r:embed", id: "rId3" },
+      { attribute: "r:link", id: "rId1" },
+    ],
+  });
+  assert.equal(semanticXlsxDigest(first), semanticXlsxDigest(cycled));
+});
+
+test("semantic digest changes only relationship references, not matching ordinary text or attributes", () => {
+  const first = semanticFixture({
+    relationships: [
+      { id: "oldA", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "oldB", type: "styles", target: "styles.xml" },
+    ],
+    references: [{ attribute: "r:id", id: "oldA" }, { attribute: "r:embed", id: "oldB" }],
+    ordinaryText: "rId1",
+    ordinaryAttribute: "oldA",
+  });
+  const renamed = semanticFixture({
+    relationships: [
+      { id: "alpha", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "beta", type: "styles", target: "styles.xml" },
+    ],
+    references: [{ attribute: "r:id", id: "alpha" }, { attribute: "r:embed", id: "beta" }],
+    ordinaryText: "rId1",
+    ordinaryAttribute: "oldA",
+  });
+  assert.equal(semanticXlsxDigest(first), semanticXlsxDigest(renamed));
+});
+
+test("semantic digest distinguishes a real relationship target change", () => {
+  const first = semanticFixture({
+    relationships: [{ id: "rId1", type: "worksheet", target: "worksheets/sheet1.xml" }],
+    references: [{ attribute: "r:id", id: "rId1" }],
+  });
+  const changed = semanticFixture({
+    relationships: [{ id: "different", type: "worksheet", target: "worksheets/sheet2.xml" }],
+    references: [{ attribute: "r:id", id: "different" }],
+  });
+  assert.notEqual(semanticXlsxDigest(first), semanticXlsxDigest(changed));
+});
+
+test("generator preserves existing bytes for a relationship-ID-only fresh export and rewrites real content changes", async () => {
+  await withTempDir(async (root) => {
+    const inputs = await loadInputs(projectRoot);
+    const [first] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["01-01"] });
+    await cycleWorkbookRelationshipIds(first.outputPath);
+    const permutedHash = await sha256(first.outputPath);
+
+    const [equivalent] = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, root, { only: ["01-01"] });
+    assert.equal(await sha256(equivalent.outputPath), permutedHash, "relationship-ID-only fresh export must retain existing bytes");
+
+    const target = inputs.records.find((record) => record.subcategory_code === "01-01");
+    const changedRecords = mutateRecords(inputs.records, target.id, "plain_purpose", `${target.plain_purpose}（真实内容变化）`);
+    const [changed] = await generateSpreadsheets(changedRecords, inputs.taxonomy, inputs.manifest, root, { only: ["01-01"] });
+    assert.notEqual(await sha256(changed.outputPath), permutedHash, "real content changes must rewrite the workbook");
+    await verifySpreadsheetFile(changed.outputPath, changed.item, changedRecords, inputs.taxonomy);
   });
 });
 

@@ -140,9 +140,15 @@ function canonicalizeRelationshipsForComparison(entries) {
     if (!elements.length) continue;
     const parsed = elements.map((element) => {
       const attributes = Object.fromEntries([...element.matchAll(/([A-Za-z:]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
+      if (!attributes.Id || !attributes.Type || !attributes.Target) throw new Error(`XLSX 关系缺少 Id/Type/Target: ${relationshipPath}`);
       return { attributes };
     }).sort((left, right) => `${left.attributes.Type}|${left.attributes.Target}|${left.attributes.TargetMode ?? ""}`.localeCompare(`${right.attributes.Type}|${right.attributes.Target}|${right.attributes.TargetMode ?? ""}`));
-    const mapping = new Map(parsed.map((item, index) => [item.attributes.Id, `rId${index + 1}`]));
+    const mapping = new Map();
+    for (let index = 0; index < parsed.length; index += 1) {
+      const oldId = parsed[index].attributes.Id;
+      if (mapping.has(oldId)) throw new Error(`XLSX 关系 ID 重复: ${relationshipPath}#${oldId}`);
+      mapping.set(oldId, `rId${index + 1}`);
+    }
     const rebuilt = parsed.map((item, index) => {
       const targetMode = item.attributes.TargetMode ? ` TargetMode="${item.attributes.TargetMode}"` : "";
       return `<Relationship Id="rId${index + 1}" Type="${item.attributes.Type}" Target="${item.attributes.Target}"${targetMode} />`;
@@ -151,8 +157,10 @@ function canonicalizeRelationshipsForComparison(entries) {
     entries.set(relationshipPath, Buffer.from(xml, "utf8"));
     const sourcePath = relationshipSourcePath(relationshipPath);
     if (sourcePath && entries.has(sourcePath)) {
-      let sourceXml = entries.get(sourcePath).toString("utf8");
-      for (const [oldId, newId] of mapping) sourceXml = sourceXml.replaceAll(`="${oldId}"`, `="${newId}"`);
+      const sourceXml = entries.get(sourcePath).toString("utf8").replace(
+        /\b(r:(?:id|embed|link))="([^"]+)"/g,
+        (match, attribute, oldId) => mapping.has(oldId) ? `${attribute}="${mapping.get(oldId)}"` : match,
+      );
       entries.set(sourcePath, Buffer.from(sourceXml, "utf8"));
     }
   }
