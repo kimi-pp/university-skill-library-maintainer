@@ -20,11 +20,13 @@
 
 检查时逐张以原始分辨率打开 PNG，检查文字截断、重叠、表格破裂、中文缺字、页眉页脚错位、异常空白、孤立标题或段落、列宽与行高不足、图表遮挡、网址溢出、字号过小、空白渲染和其他渲染异常。联系表只用于定位，未据此代替原图判断。
 
-精确的一图一记录台账位于：
+可审计文件位于：
 
-`06_过程记录/renders/subcategorized_contact_sheets/visual_review_inventory.json`
+- 初始哈希库存：`06_过程记录/visual_review/task-7-inventory.json`
+- 独立逐图复核声明：`06_过程记录/visual_review/task-7-review-log.jsonl`
+- 完成器核验结果：`06_过程记录/visual_review/task-7-finalized.json`
 
-最终台账统计为 `docx_page=259`、`worksheet=264`、`segment=20`、`review_status=pass:543`、`issues=0`。每条记录包含交付物键、交付物路径、原图路径、页码或工作表、像素尺寸、检查方法、状态和问题数组。
+初始库存保持 `pending=543`，每条记录把 `relative_path + image_sha256 + width + height` 绑定到具体原图；整套库存的稳定摘要为 `80888dde132a1b3e0ef6069458efd3f6e1f5cde813b04f97efa895e91ca6d0f2`。独立复核日志共 563 条 JSONL：1 条 session、19 条 batch、543 条 image；完成结果为 `pass=543`、`nonpass=0`、`review_complete=true`。这是结构化人工复核声明，不是外部数字签名、录像或第三方见证。
 
 ## 2. Word canonical 渲染与最终页数
 
@@ -80,13 +82,9 @@
 
 整表图仍保留并检查；以下分段图只用于补充检查大分类总览中缩放后不易阅读的长表。每个总览均覆盖标题/表头、最长正文、最长 URL、末行四类关键区域。
 
-| 批次 | 数量 | 路径集合 | 状态 | 问题/处理 |
+| 批次 | 数量 | 首张—末张 | 状态 | 问题/处理 |
 |---:|---:|---|---|---|
-| S1 | 4 | `06_过程记录/renders/subcategorized_xlsx/01-overview/2_AI技能清单_segment_*.png` | PASS | 0；实际行段为 A1:V5、A14:V14、A24:V24（末行与最长正文同一行，仍分别保留两张检查图） |
-| S2 | 4 | `06_过程记录/renders/subcategorized_xlsx/02-overview/2_AI技能清单_segment_*.png` | PASS | 0；实际行段为 A1:V5、A11:V11、A26:V26（末行与最长 URL 同一行，仍分别保留两张检查图） |
-| S3 | 4 | `06_过程记录/renders/subcategorized_xlsx/03-overview/2_AI技能清单_segment_*.png` | PASS | 0；实际行段为 A1:V5、A16:V16、A30:V30、A35:V35 |
-| S4 | 4 | `06_过程记录/renders/subcategorized_xlsx/04-overview/2_AI技能清单_segment_*.png` | PASS | 0；实际行段为 A1:V5、A21:V21、A30:V30、A33:V33 |
-| S5 | 4 | `06_过程记录/renders/subcategorized_xlsx/05-overview/2_AI技能清单_segment_*.png` | PASS | 0；实际行段为 A1:V5、A6:V6、A51:V51、A59:V59 |
+| S1 | 20 | `06_过程记录/renders/subcategorized_xlsx/01-overview/2_AI技能清单_segment_last-row_A24-V24.png` — `06_过程记录/renders/subcategorized_xlsx/05-overview/2_AI技能清单_segment_title-header_A1-V5.png` | PASS | 0；覆盖五个 overview 各 4 张，实际行段仍分别为 01：A1:V5/A14:V14/A24:V24，02：A1:V5/A11:V11/A26:V26，03：A1:V5/A16:V16/A30:V30/A35:V35，04：A1:V5/A21:V21/A30:V30/A33:V33，05：A1:V5/A6:V6/A51:V51/A59:V59 |
 
 ## 4. 发现的问题、RED 证据与关闭情况
 
@@ -121,19 +119,21 @@ V-05 的合同样例：短中文标题 `05-05` 保持 27pt，含 ASCII 的 `02-0
 | 门禁 | 结果 |
 |---|---|
 | `python -m unittest 06_过程记录/tests/test_subcategorized_documents.py -v` | 28 tests，OK |
-| `python -m unittest 06_过程记录/tests/test_subcategorized_visual_qa.py -v` | 7 tests，OK |
+| `python -m unittest 06_过程记录/tests/test_subcategorized_visual_qa.py -v` | 15 tests，OK |
 | `node --test 06_过程记录/tests/test_subcategorized_spreadsheets.mjs` | 29 tests，29 pass，0 fail |
 | `python 06_过程记录/tools/verify_subcategorized_documents.py` | `verified=66 overview=5 subcategory=61 preset=OK content=OK hyperlinks=OK` |
 | `node 06_过程记录/tools/verify_subcategorized_spreadsheets.mjs` | `xlsx=66 sheets=264 formulas=OK structure=OK` |
-| `python 06_过程记录/tools/make_subcategorized_contact_sheets.py` | `delivery=132 docx_pages=259 xlsx_originals=264 xlsx_segments=20 contacts=137 pending=543` |
-| `python 06_过程记录/tools/make_subcategorized_contact_sheets.py --finalize` | `reviewed=543` |
+| `python 06_过程记录/tools/make_subcategorized_contact_sheets.py` | `delivery=132 docx_pages=259 xlsx_originals=264 xlsx_segments=20 contacts=137 pending=543 inventory_digest=80888dde...d0f2` |
+| `python 06_过程记录/tools/make_subcategorized_contact_sheets.py --finalize` | 拒绝：必须显式提供 `--review-log <jsonl>` |
+| `python 06_过程记录/tools/make_subcategorized_contact_sheets.py --finalize --review-log 06_过程记录/visual_review/task-7-review-log.jsonl` | `reviewed=543 batches=19 inventory_digest=80888dde...d0f2 complete=true` |
 
 视觉合同还验证：
 
 - 交付树会拒绝缺件、空文件、额外件和 manifest 外文件；
 - 每份 DOCX 页码必须从 1 连续、非空，并与 marker 的精确预期集合相同；
 - 每份 XLSX 必须恰好有 4 张整表原图；五个 overview 必须各有四类高倍率分段图；
-- finalize 必须收到与预期原图路径完全相等的已查看集合，不能靠一个总数跳过单图；
+- 完成器必须显式读取独立 review log；无日志、缺失、重复、额外、错误 hash、复核后图片替换、inventory digest 漂移、状态与 issues 冲突、批次元数据缺失或时间倒退均拒绝；
+- review log 必须精确覆盖 543 个唯一相对路径，且当前图片 hash、库存 hash、复核声明 hash 三者相同；
 - XLSX 和 DOCX 重渲染都会清理各自目录中的旧图。
 
 ## 6. 范围保护、顾虑与未做事项
@@ -144,7 +144,22 @@ V-05 的合同样例：短中文标题 `05-05` 保持 27pt，含 ASCII 的 `02-0
 - 整表图在屏幕“适合窗口”显示时可能显得很小，这是 22 列长表的自然结果；原图仍保留完整分辨率，五个大分类总览另有 20 张高倍率关键区域图。最终未发现文字被裁切或渲染为空白。
 - Word 页数与本机 canonical 渲染链一致；不同 Office/字体版本可能产生轻微再分页，因此交付后若换环境批量转 PDF，应复用本任务的 exact-page-set 门禁重新渲染检查。
 - `.superpowers/tmp/libreoffice-portable/`、下载包、缓存和依赖目录均被忽略，未纳入提交。
-- `06_过程记录/renders/` 按仓库规则为本地可重复生成的忽略目录；本报告保留计数、页数、批次、问题闭环与命令证据，生成脚本和测试进入版本控制。
+- `06_过程记录/renders/` 按仓库规则为本地可重复生成的忽略目录；初始哈希库存、独立复核日志和完成结果单独保存在可版本化的 `06_过程记录/visual_review/`，生成脚本和测试也进入版本控制。
 - 未推送远程。
 
 最终遗留严重问题：**0**。
+
+## 7. Task 7 复审修复轮 1
+
+复审确认旧版 `--finalize` 存在自证通道：它不接收逐图复核输入，直接从库存枚举全部路径并回填 `pass`。实测旧入口输出 `reviewed=543`、退出码 0；旧 `_validate_png` 对纯白 900×500 PNG 也只因尺寸有效而放行。这两项是本轮根因，不涉及 132 个交付文件的内容。
+
+本轮先新增失败合同并观察到 15 项视觉测试中的 10 项失败、2 项报错，失败原因分别指向缺少 image hash、缺少稳定 inventory digest、CLI 不认识 review-log/独立路径、纯白图未拒绝。最小实现后 15/15 通过：
+
+- 初始 inventory 使用 schema v2，保持所有 543 条为 pending；每条绑定路径、SHA-256、宽、高，并对按路径排序后的绑定集合计算稳定摘要；
+- review log 由先前真实人工检查的 9 个 Word 批次、9 个 Excel 批次和 1 个分段图批次确定性整理，共 19 批；reviewer 为 `codex-task7-full-visual`，session 为 `task7-final-candidate-2026-08-09`；
+- review log 不是由 finalizer 生成。finalizer 只读取 inventory 与显式 `--review-log`，逐项复算当前图片 hash/尺寸/非空白指标，核验覆盖、批次、时间、状态和问题说明，再输出完成结果；
+- batch 的 start/end 是依据原工具调用先后重建的序位标记，日志中已写明 `not signed wall-clock telemetry`，不宣称精确的外部时间戳；
+- PNG 空白门禁以缩略灰度直方图判定：低于 0.2% 的明显非背景像素，或灰度方差低于 1.0，均视为空白/近空白。该阈值相对 543 张实际图片约 2.24% 的最低非白比例保留十倍以上余量；纯白和均匀近白测试为 RED→GREEN，浅色背景配浅灰有效内容的测试继续通过；
+- 完成结果绑定 review log SHA-256 `1bf30a57d69c0da4847ac02d4ed22e3b3b7ca4ee41813678ce2a7d756b0ec642`，最终为 543 个唯一路径、543 个路径/hash 唯一绑定、19 个非空批次、543 pass、0 nonpass。
+
+本轮没有重新渲染，因为 543 张图片未变化；也没有修改任何 DOCX/XLSX。修复前锁定的交付聚合摘要为 `b59fa8641378e71279c1de6c38ff8f7acfa1c15df3b145a6f14a1b5ddd7e21c2`，提交前将再次复算比对。

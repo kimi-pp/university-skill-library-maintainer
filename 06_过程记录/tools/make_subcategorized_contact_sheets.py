@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
-from collections import defaultdict
+import re
+from collections import Counter, defaultdict
+from datetime import datetime
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -17,8 +20,16 @@ DELIVERY_ROOT = PROJECT_ROOT / "05_交付物" / "通俗细分版_2026-08-07"
 DOCX_RENDER_ROOT = PROJECT_ROOT / "06_过程记录" / "renders" / "subcategorized_docx"
 XLSX_RENDER_ROOT = PROJECT_ROOT / "06_过程记录" / "renders" / "subcategorized_xlsx"
 CONTACT_ROOT = PROJECT_ROOT / "06_过程记录" / "renders" / "subcategorized_contact_sheets"
-INVENTORY_FILE = CONTACT_ROOT / "visual_review_inventory.json"
+AUDIT_ROOT = PROJECT_ROOT / "06_过程记录" / "visual_review"
+INVENTORY_FILE = AUDIT_ROOT / "task-7-inventory.json"
+FINAL_REVIEW_FILE = AUDIT_ROOT / "task-7-finalized.json"
 DOCX_RENDER_MANIFEST_NAME = "rendered-pages.json"
+
+INVENTORY_SCHEMA_VERSION = 2
+REVIEW_LOG_SCHEMA_VERSION = 1
+MIN_NON_BACKGROUND_RATIO = 0.002
+MIN_GRAYSCALE_VARIANCE = 1.0
+INVENTORY_BINDING_FIELDS = ("relative_path", "image_sha256", "width", "height")
 
 WORKSHEET_RENDER_NAMES = (
     "1_使用说明.png",
@@ -73,11 +84,77 @@ def _validate_png(path: Path) -> tuple[int, int]:
             image.verify()
         with Image.open(path) as image:
             width, height = image.size
+            grayscale = image.convert("L")
+            grayscale.thumbnail((512, 512), Image.Resampling.LANCZOS)
+            histogram = grayscale.histogram()
     except Exception as exc:  # Pillow provides format-specific exception types.
         raise ValueError(f"渲染图无效: {path}") from exc
     if width < 1 or height < 1:
         raise ValueError(f"渲染尺寸无效: {path}")
+    total = sum(histogram)
+    non_background_ratio = sum(histogram[:248]) / total
+    mean = sum(value * count for value, count in enumerate(histogram)) / total
+    variance = sum(
+        ((value - mean) ** 2) * count for value, count in enumerate(histogram)
+    ) / total
+    if (
+        non_background_ratio < MIN_NON_BACKGROUND_RATIO
+        or variance < MIN_GRAYSCALE_VARIANCE
+    ):
+        raise ValueError(
+            f"渲染图为空白或近空白: {path}; "
+            f"non_background_ratio={non_background_ratio:.6f} variance={variance:.6f}"
+        )
     return width, height
+
+
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _inventory_digest(images: list[dict]) -> str:
+    bindings: list[dict] = []
+    seen: set[str] = set()
+    for row in sorted(images, key=lambda item: item.get("relative_path", "")):
+        missing = [field for field in INVENTORY_BINDING_FIELDS if field not in row]
+        if missing:
+            raise ValueError(f"库存记录缺少绑定字段: {missing}")
+        relative_path = row["relative_path"]
+        if not isinstance(relative_path, str) or not relative_path:
+            raise ValueError("库存 relative_path 无效")
+        if relative_path in seen:
+            raise ValueError(f"库存路径重复: {relative_path}")
+        seen.add(relative_path)
+        image_hash = row["image_sha256"]
+        if not isinstance(image_hash, str) or not re.fullmatch(r"[0-9a-f]{64}", image_hash):
+            raise ValueError(f"库存 image_sha256 无效: {relative_path}")
+        if not isinstance(row["width"], int) or row["width"] < 1:
+            raise ValueError(f"库存 width 无效: {relative_path}")
+        if not isinstance(row["height"], int) or row["height"] < 1:
+            raise ValueError(f"库存 height 无效: {relative_path}")
+        bindings.append({field: row[field] for field in INVENTORY_BINDING_FIELDS})
+    encoded = json.dumps(
+        bindings,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def build_inventory_document(images: list[dict]) -> dict:
+    """Create a stable, hash-bound initial inventory without review conclusions."""
+    ordered = sorted((dict(row) for row in images), key=lambda item: item["relative_path"])
+    digest = _inventory_digest(ordered)
+    return {
+        "schema_version": INVENTORY_SCHEMA_VERSION,
+        "inventory_digest": digest,
+        "images": ordered,
+    }
 
 
 def _page_number(path: Path) -> int:
@@ -150,6 +227,7 @@ def collect_docx_render_inventory(render_root: Path, manifest: list[dict]) -> li
                     else path.as_posix(),
                     "width": width,
                     "height": height,
+                    "image_sha256": _sha256_file(path),
                     "review_status": "pending",
                 }
             )
@@ -189,6 +267,7 @@ def collect_xlsx_render_inventory(
                     else path.as_posix(),
                     "width": width,
                     "height": height,
+                    "image_sha256": _sha256_file(path),
                     "review_status": "pending",
                 }
             )
@@ -214,6 +293,7 @@ def collect_xlsx_render_inventory(
                     else path.as_posix(),
                     "width": width,
                     "height": height,
+                    "image_sha256": _sha256_file(path),
                     "review_status": "pending",
                 }
             )
@@ -268,27 +348,203 @@ def make_navigation_contact_sheets(
     return outputs
 
 
+def _parse_timestamp(value: object, *, label: str) -> datetime:
+    if not isinstance(value, str) or not value:
+        raise ValueError(f"批次元数据缺少 {label}")
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise ValueError(f"批次时间无效: {label}={value}") from exc
+    if parsed.tzinfo is None:
+        raise ValueError(f"批次时间缺少时区: {label}={value}")
+    return parsed
+
+
+def _validate_inventory_document(inventory: object) -> tuple[list[dict], str]:
+    if not isinstance(inventory, dict) or inventory.get("schema_version") != INVENTORY_SCHEMA_VERSION:
+        raise ValueError("库存 schema_version 无效")
+    images = inventory.get("images")
+    if not isinstance(images, list) or not images:
+        raise ValueError("库存 images 为空或无效")
+    computed = _inventory_digest(images)
+    recorded = inventory.get("inventory_digest")
+    if recorded != computed:
+        raise ValueError(
+            f"inventory_digest 不一致: recorded={recorded} computed={computed}"
+        )
+    return images, computed
+
+
+def load_review_log(path: Path) -> list[dict]:
+    """Load an independently prepared JSONL review declaration."""
+    records: list[dict] = []
+    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw_line.strip():
+            continue
+        try:
+            record = json.loads(raw_line)
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"review log 第 {line_number} 行不是有效 JSON") from exc
+        if not isinstance(record, dict):
+            raise ValueError(f"review log 第 {line_number} 行必须为对象")
+        records.append(record)
+    if not records:
+        raise ValueError("review log 为空")
+    return records
+
+
 def finalize_review_inventory(
-    inventory: list[dict], reviewed_paths: list[str], attestation: str
-) -> list[dict]:
-    """Mark only an exact, manually supplied set of original images as reviewed."""
-    expected = {row["relative_path"] for row in inventory}
-    reviewed = set(reviewed_paths)
-    missing = sorted(expected - reviewed)
-    extra = sorted(reviewed - expected)
-    if missing or extra:
-        raise ValueError(f"缺少人工复核或路径不匹配: missing={missing}, extra={extra}")
-    if not attestation.strip():
-        raise ValueError("人工复核说明不能为空")
-    return [
+    project_root: Path,
+    inventory: dict,
+    review_records: list[dict],
+    *,
+    review_log_sha256: str,
+) -> dict:
+    """Validate an external structured review declaration against current image bytes."""
+    images, digest = _validate_inventory_document(inventory)
+    inventory_by_path = {row["relative_path"]: row for row in images}
+
+    for relative_path, row in inventory_by_path.items():
+        image_path = _safe_resolve(project_root, relative_path)
+        width, height = _validate_png(image_path)
+        if (width, height) != (row["width"], row["height"]):
+            raise ValueError(f"复核后图片尺寸变化: {relative_path}")
+        current_hash = _sha256_file(image_path)
+        if current_hash != row["image_sha256"]:
+            raise ValueError(f"复核后图片替换或 hash 变化: {relative_path}")
+
+    unknown_types = sorted(
         {
-            **row,
-            "review_status": "pass",
-            "inspection_method": attestation.strip(),
-            "issues": [],
+            str(record.get("record_type"))
+            for record in review_records
+            if record.get("record_type") not in {"session", "batch", "image"}
         }
-        for row in inventory
-    ]
+    )
+    if unknown_types:
+        raise ValueError(f"review log 存在未知记录类型: {unknown_types}")
+    sessions = [record for record in review_records if record.get("record_type") == "session"]
+    batches = [record for record in review_records if record.get("record_type") == "batch"]
+    reviewed_images = [record for record in review_records if record.get("record_type") == "image"]
+    if len(sessions) != 1:
+        raise ValueError("review log 必须恰好包含一个 session 记录")
+    session = sessions[0]
+    if session.get("schema_version") != REVIEW_LOG_SCHEMA_VERSION:
+        raise ValueError("review log session schema_version 无效")
+    session_id = session.get("session_id")
+    if not isinstance(session_id, str) or not session_id.strip():
+        raise ValueError("review log session_id 无效")
+    if session.get("inventory_digest") != digest:
+        raise ValueError("review log inventory_digest 与库存不一致")
+    if not isinstance(session.get("time_basis"), str) or not session["time_basis"].strip():
+        raise ValueError("review log session 缺少 time_basis")
+
+    if len(batches) < 2:
+        raise ValueError("完成声明必须包含多个人工复核批次")
+    batch_ids = [record.get("batch_id") for record in batches]
+    if any(not isinstance(batch_id, str) or not batch_id for batch_id in batch_ids):
+        raise ValueError("批次元数据缺少 batch_id")
+    duplicate_batch_ids = sorted(
+        batch_id for batch_id, count in Counter(batch_ids).items() if count > 1
+    )
+    if duplicate_batch_ids:
+        raise ValueError(f"批次 ID 重复: {duplicate_batch_ids}")
+    ordered_batches = sorted(batches, key=lambda record: record.get("sequence", -1))
+    if [record.get("sequence") for record in ordered_batches] != list(
+        range(1, len(ordered_batches) + 1)
+    ):
+        raise ValueError("批次 sequence 必须从 1 连续递增")
+    previous_end: datetime | None = None
+    for batch in ordered_batches:
+        for field in ("reviewer_id", "session_id", "started_at", "ended_at", "inspection_criteria"):
+            if field not in batch:
+                raise ValueError(f"批次元数据缺少 {field}: {batch.get('batch_id')}")
+        if not isinstance(batch["reviewer_id"], str) or not batch["reviewer_id"].strip():
+            raise ValueError(f"批次 reviewer_id 无效: {batch['batch_id']}")
+        if batch["session_id"] != session_id:
+            raise ValueError(f"批次 session_id 不一致: {batch['batch_id']}")
+        criteria = batch["inspection_criteria"]
+        if (
+            not isinstance(criteria, list)
+            or not criteria
+            or any(not isinstance(item, str) or not item.strip() for item in criteria)
+        ):
+            raise ValueError(f"批次 inspection_criteria 无效: {batch['batch_id']}")
+        started = _parse_timestamp(batch["started_at"], label="started_at")
+        ended = _parse_timestamp(batch["ended_at"], label="ended_at")
+        if ended < started:
+            raise ValueError(f"批次结束时间早于开始时间: {batch['batch_id']}")
+        if previous_end is not None and started < previous_end:
+            raise ValueError(f"批次时间顺序重叠或倒退: {batch['batch_id']}")
+        previous_end = ended
+
+    reviewed_paths = [record.get("relative_path") for record in reviewed_images]
+    invalid_paths = [path for path in reviewed_paths if not isinstance(path, str) or not path]
+    if invalid_paths:
+        raise ValueError("review log image relative_path 无效")
+    duplicate_paths = sorted(
+        path for path, count in Counter(reviewed_paths).items() if count > 1
+    )
+    if duplicate_paths:
+        raise ValueError(f"review log 图片路径重复: {duplicate_paths}")
+    expected_paths = set(inventory_by_path)
+    actual_paths = set(reviewed_paths)
+    missing = sorted(expected_paths - actual_paths)
+    extra = sorted(actual_paths - expected_paths)
+    if missing or extra:
+        raise ValueError(f"review log 未精确覆盖库存: 缺失={missing} 额外={extra}")
+
+    batch_by_id = {record["batch_id"]: record for record in batches}
+    batch_counts: Counter[str] = Counter()
+    finalized_images: list[dict] = []
+    for record in reviewed_images:
+        relative_path = record["relative_path"]
+        inventory_row = inventory_by_path[relative_path]
+        batch_id = record.get("batch_id")
+        if batch_id not in batch_by_id:
+            raise ValueError(f"图片引用未知 batch_id: {relative_path}")
+        batch_counts[batch_id] += 1
+        if record.get("image_sha256") != inventory_row["image_sha256"]:
+            raise ValueError(f"review log image hash 与库存不一致: {relative_path}")
+        status = record.get("status")
+        if status not in {"pass", "fail", "needs_fix", "blocked"}:
+            raise ValueError(f"review log status 无效: {relative_path}")
+        issues = record.get("issues")
+        if not isinstance(issues, list) or any(not isinstance(issue, str) or not issue.strip() for issue in issues):
+            raise ValueError(f"review log issues 无效: {relative_path}")
+        if status == "pass" and issues:
+            raise ValueError(f"pass 记录不得包含问题 issues: {relative_path}")
+        if status != "pass" and not issues:
+            raise ValueError(f"非 pass 记录必须包含问题说明 issues: {relative_path}")
+        finalized_images.append(
+            {
+                **inventory_row,
+                "batch_id": batch_id,
+                "status": status,
+                "issues": issues,
+            }
+        )
+    empty_batches = sorted(set(batch_by_id) - set(batch_counts))
+    if empty_batches:
+        raise ValueError(f"批次没有逐图记录: {empty_batches}")
+
+    pass_count = sum(row["status"] == "pass" for row in finalized_images)
+    nonpass_count = len(finalized_images) - pass_count
+    return {
+        "schema_version": 1,
+        "evidence_scope": "structured human review declaration; not an external signature or video record",
+        "inventory_digest": digest,
+        "review_log_sha256": review_log_sha256,
+        "session": session,
+        "batches": ordered_batches,
+        "summary": {
+            "images": len(finalized_images),
+            "batches": len(ordered_batches),
+            "pass": pass_count,
+            "nonpass": nonpass_count,
+        },
+        "review_complete": nonpass_count == 0,
+        "images": sorted(finalized_images, key=lambda row: row["relative_path"]),
+    }
 
 
 def required_segment_keys(catalog: list[dict]) -> set[str]:
@@ -301,18 +557,35 @@ def required_segment_keys(catalog: list[dict]) -> set[str]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--finalize", action="store_true", help="在逐张人工查看完成后标记全部原图通过")
+    parser.add_argument("--finalize", action="store_true", help="验证独立逐图复核日志并生成完成结果")
+    parser.add_argument("--review-log", type=Path, help="独立准备的 JSONL 逐图人工复核声明")
+    parser.add_argument("--project-root", type=Path, default=PROJECT_ROOT)
+    parser.add_argument("--inventory", type=Path, default=INVENTORY_FILE)
+    parser.add_argument("--result", type=Path, default=FINAL_REVIEW_FILE)
     args = parser.parse_args(argv)
     if args.finalize:
-        inventory = json.loads(INVENTORY_FILE.read_text(encoding="utf-8"))
+        if args.review_log is None:
+            parser.error("--finalize 必须显式提供 --review-log <jsonl>")
+        inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
+        review_records = load_review_log(args.review_log)
         finalized = finalize_review_inventory(
+            args.project_root,
             inventory,
-            [row["relative_path"] for row in inventory],
-            "逐张打开原始 PNG，并检查截断、重叠、表格破裂、中文缺字、页眉页脚、空白、列宽、行高、网址溢出和渲染异常。",
+            review_records,
+            review_log_sha256=_sha256_file(args.review_log),
         )
-        INVENTORY_FILE.write_text(json.dumps(finalized, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"reviewed={len(finalized)}")
-        return 0
+        args.result.parent.mkdir(parents=True, exist_ok=True)
+        args.result.write_text(
+            json.dumps(finalized, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print(
+            f"reviewed={finalized['summary']['images']} "
+            f"batches={finalized['summary']['batches']} "
+            f"inventory_digest={finalized['inventory_digest']} "
+            f"complete={str(finalized['review_complete']).lower()}"
+        )
+        return 0 if finalized["review_complete"] else 1
 
     manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
     catalog = json.loads(CATALOG_FILE.read_text(encoding="utf-8"))
@@ -323,15 +596,17 @@ def main(argv: list[str] | None = None) -> int:
         manifest,
         required_segment_keys=required_segment_keys(catalog),
     )
-    inventory = docx + xlsx
+    inventory = build_inventory_document(docx + xlsx)
     CONTACT_ROOT.mkdir(parents=True, exist_ok=True)
-    contacts = make_navigation_contact_sheets(PROJECT_ROOT, inventory, CONTACT_ROOT)
-    INVENTORY_FILE.write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    contacts = make_navigation_contact_sheets(PROJECT_ROOT, inventory["images"], CONTACT_ROOT)
+    args.inventory.parent.mkdir(parents=True, exist_ok=True)
+    args.inventory.write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"delivery={len(validated)} docx_pages={len(docx)} "
         f"xlsx_originals={sum(row['render_kind'] == 'worksheet' for row in xlsx)} "
         f"xlsx_segments={sum(row['render_kind'] == 'segment' for row in xlsx)} "
-        f"contacts={len(contacts)} pending={len(inventory)}"
+        f"contacts={len(contacts)} pending={len(inventory['images'])} "
+        f"inventory_digest={inventory['inventory_digest']}"
     )
     return 0
 
