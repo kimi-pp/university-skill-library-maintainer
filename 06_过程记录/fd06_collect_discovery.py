@@ -37,6 +37,7 @@ REPOSITORY_SPECS = [
     {"repo": "Imbad0202/academic-research-skills", "paths": ["academic-paper-reviewer/SKILL.md"]},
     {"repo": "BESSER-PEARL/research-agent-skills", "paths": ["research-paper-review/SKILL.md"]},
     {"repo": "AlexWortega/ai-peer-review-skill", "paths": ["SKILL.md"]},
+    {"repo": "Yuan1z0825/nature-skills", "paths": ["skills/nature-reviewer/SKILL.md"]},
     {"repo": "Agents365-ai/thesis-reviewer", "paths": ["SKILL.md"]},
     {"repo": "rudini/claude-edu-plugins", "mode": "all_skills"},
     {
@@ -63,6 +64,167 @@ REPOSITORY_SPECS = [
     {
         "repo": "srednoff888-art/srednoff-os",
         "paths": [".codex/skills/education-ai-guardrails/SKILL.md"],
+    },
+    {
+        "repo": "dmccreary/claude-skills",
+        "paths": [
+            "skills/course-description-analyzer/SKILL.md",
+            "skills/quiz-generator/SKILL.md",
+        ],
+    },
+    {
+        "repo": "lyndonkl/claude",
+        "paths": [
+            "skills/abstraction-concrete-examples/SKILL.md",
+            "skills/chain-roleplay-debate-synthesis/SKILL.md",
+            "skills/evaluation-rubrics/SKILL.md",
+            "skills/experiential-kolb-teaching/SKILL.md",
+            "skills/mastery-assessment/SKILL.md",
+            "skills/scientific-manuscript-review/SKILL.md",
+            "skills/section-portfolio-assessment/SKILL.md",
+            "skills/socratic-teaching-scaffolds/SKILL.md",
+            "skills/worked-example-walkthrough/SKILL.md",
+        ],
+    },
+    {"repo": "zarazhangrui/codebase-to-course", "paths": ["SKILL.md"]},
+    {"repo": "labarba/sciwrite", "paths": ["SKILL.md"]},
+    {"repo": "wmpluto/academic-thesis-review-skill", "paths": ["SKILL.md"]},
+    {"repo": "zyan421/unified-thesis-reviewer", "paths": ["SKILL.md"]},
+    {"repo": "Lidong-Huang/thesis_format_check", "paths": ["SKILL.md"]},
+    {"repo": "1carusalwayswa/cs-thesis-reviewer", "paths": ["SKILL.md"]},
+    {
+        "repo": "yylonly/buaa-thesis-checker",
+        "paths": [
+            "skills/buaa-thesis-checking/SKILL.md",
+            "skills/buaa-thesis-content-checking/SKILL.md",
+            "skills/buaa-thesis-format-checking/SKILL.md",
+            "skills/icse-seet-review/SKILL.md",
+        ],
+    },
+    {
+        "repo": "brycewang-stanford/Auto-Empirical-Research-Skills",
+        "paths": ["skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md"],
+    },
+    {
+        "repo": "affaan-m/everything-claude-code",
+        "paths": ["skills/scientific-thinking-scholar-evaluation/SKILL.md"],
+    },
+    {"repo": "AlemTuzlak/skills", "paths": ["skills/teach-me/SKILL.md"]},
+    {
+        "repo": "jeremiahvanwagner-droid/openclaw",
+        "paths": [
+            "skills/curriculum-generator/SKILL.md",
+            "skills/education-adaptive-curriculum-sequencing/SKILL.md",
+            "skills/education-automated-assessment-generation/SKILL.md",
+            "skills/education-interactive-assignment-grading/SKILL.md",
+            "skills/education-micro-lesson-atomization/SKILL.md",
+            "skills/education-performance-rubric-application/SKILL.md",
+        ],
+    },
+    {
+        "repo": "argythana/uoa_py_course",
+        "paths": [
+            ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+            ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+            ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+            ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+            ".claude/skills/uoa-py-course-lecture-outline/SKILL.md",
+            ".claude/skills/uoa-py-course-update-lecture-post-teaching/SKILL.md",
+        ],
+    },
+    {
+        "repo": "francojc/dauber",
+        "paths": [
+            ".pi/skills/assess-ai-pass/SKILL.md",
+            ".pi/skills/assess-refine/SKILL.md",
+            ".pi/skills/assess-setup/SKILL.md",
+            ".pi/skills/assess-submit/SKILL.md",
+            ".pi/skills/course-overview/SKILL.md",
+            ".pi/skills/course-setup/SKILL.md",
+            ".pi/skills/grading-overview/SKILL.md",
+            ".pi/skills/rubrics-create/SKILL.md",
+        ],
+    },
+    {
+        "repo": "revfactory/harness-100",
+        "paths": [
+            "en/08-course-builder/.claude/skills/assessment-engineering/skill.md",
+            "en/08-course-builder/.claude/skills/course-builder/skill.md",
+            "en/08-course-builder/.claude/skills/lab-scaffolding/skill.md",
+            "en/08-course-builder/.claude/skills/learning-design/skill.md",
+        ],
+    },
+    {
+        "repo": "mohitagw15856/pm-claude-skills",
+        "paths": [
+            "plugins/pm-teaching/skills/lesson-plan-builder/SKILL.md",
+            "plugins/pm-cross/skills/teaching-lesson-plan/SKILL.md",
+            "plugins/pm-education/skills/student-feedback/SKILL.md",
+            "skills/lesson-plan/SKILL.md",
+        ],
+    },
+    {
+        "repo": "piriya33/antigravity-skills",
+        "paths": [
+            "education-stack/aligning-curriculum/SKILL.md",
+            "education-stack/planning-courses/SKILL.md",
+        ],
+    },
+    {"repo": "kc0506/ntucool", "paths": ["plugins/ntucool/skills/ntucool/SKILL.md"]},
+    {
+        "repo": "pengkangzhen/academic-review-skill",
+        "paths": ["skills/academic-reviewer-or/SKILL.md"],
+    },
+    {"repo": "shaowen-ye/manuscript-review-skill", "paths": ["SKILL.md"]},
+    {
+        "repo": "cmertdalli/polisci-review",
+        "paths": [
+            "adapters/claude-skill/polisci-review/SKILL.md",
+            "adapters/codex-skill/polisci-review/SKILL.md",
+        ],
+    },
+    {
+        "repo": "richard-kim-79/archora-skills",
+        "paths": ["skills/peer-review/SKILL.md"],
+    },
+    {
+        "repo": "claesbackman/AI-research-feedback",
+        "paths": [
+            "Skills/review-pap/SKILL.md",
+            "Skills/review-paper-code/SKILL.md",
+            "Skills/review-paper-light/SKILL.md",
+            "Skills/review-paper/SKILL.md",
+        ],
+    },
+    {
+        "repo": "aipoch/medical-research-skills",
+        "paths": [
+            "scientific-skills/Academic Writing/peer-review/SKILL.md",
+            "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        ],
+    },
+    {
+        "repo": "MattArtzAnthro/AI-Anthropology-Toolkit",
+        "paths": ["skills/academic-review/SKILL.md"],
+    },
+    {
+        "repo": "HaipingXu/social-science-claude-scholar",
+        "paths": ["skills/review-paper/SKILL.md"],
+    },
+    {
+        "repo": "caishengold/ai-agent-ops",
+        "paths": ["skills/edu-course-designer/SKILL.md"],
+    },
+    {
+        "repo": "tobiasblask/open-paper-machine",
+        "paths": [
+            "scientific-skills/peer-review/SKILL.md",
+            "skills/peer-review-engine/SKILL.md",
+        ],
+    },
+    {
+        "repo": "tinh2/skills-hub-registry",
+        "paths": ["analysis/student-personalization/SKILL.md"],
     },
 ]
 
@@ -109,6 +271,26 @@ MANUAL_DISCOVERIES = [
         "evidence_level": "versioned_host_to_review",
     },
     {
+        "query": "Hugging Face open source syllabus generator",
+        "source_path": "huggingface_space",
+        "discovery_url": "https://huggingface.co/spaces/SyllabusCraft/SyllabusGenerator/tree/main",
+        "title": "SyllabusCraft/SyllabusGenerator",
+        "claimed_function": "根据课程主题和基本要求生成课程大纲。",
+        "proposed_subcategory": "06-02",
+        "upstream_hint": "Hugging Face Space；需固定提交并检查外部模型、文件写入和许可证",
+        "evidence_level": "versioned_host_to_review",
+    },
+    {
+        "query": "Hugging Face open source syllabus formatter",
+        "source_path": "huggingface_space",
+        "discovery_url": "https://huggingface.co/spaces/Kuberwastaken/Syllabus-Formatter/tree/main",
+        "title": "Kuberwastaken/Syllabus-Formatter",
+        "claimed_function": "读取课程大纲内容并整理为更统一、易读的格式。",
+        "proposed_subcategory": "06-02",
+        "upstream_hint": "Hugging Face Space；需固定提交并检查上传内容、生成服务和许可证",
+        "evidence_level": "versioned_host_to_review",
+    },
+    {
         "query": "GitLab agent skill education SKILL.md curriculum grading rubric",
         "source_path": "gitlab_search",
         "discovery_url": "https://gitlab.com/search?search=SKILL.md%20education&nav_source=navbar",
@@ -137,6 +319,46 @@ MANUAL_DISCOVERIES = [
         "proposed_subcategory": None,
         "upstream_hint": "首轮未发现达到固定版本证据门槛的直接候选",
         "evidence_level": "search_path_no_formal_candidate_yet",
+    },
+    {
+        "query": "open academic agent skills index peer review thesis review teaching",
+        "source_path": "curated_index",
+        "discovery_url": "https://github.com/O0000-code/awesome-academic-skills",
+        "title": "Awesome Academic Skills 索引",
+        "claimed_function": "汇总学术工作公开技能，并标注许可证、联网、钩子和权限绕过等已披露能力；本项目只把它作为发现入口。",
+        "proposed_subcategory": None,
+        "upstream_hint": "每个候选必须继续回到原始仓库和固定提交版本核验",
+        "evidence_level": "curated_discovery_index_only",
+    },
+    {
+        "query": "open source academic teaching plugin syllabus exams grading feedback",
+        "source_path": "plugin_directory",
+        "discovery_url": "https://www.claudepluginhub.com/plugins/data-wise-scholar",
+        "title": "Scholar teaching plugin directory page",
+        "claimed_function": "生成统计学课程大纲、讲义、课件、作业、考试、评分标准和作业反馈，并支持 Canvas 导出。",
+        "proposed_subcategory": "06-01",
+        "upstream_hint": "目录页指向的 data-wise/scholar 仓库当前无法由 GitHub API 访问；未找到可固定的当前上游版本",
+        "evidence_level": "discovery_page_upstream_unavailable",
+    },
+    {
+        "query": "Gemini academic paper reviewer agent skill",
+        "source_path": "skill_market",
+        "discovery_url": "https://skillsmp.com/creators/davideriboli/gemini-cli-academic-research-skills/academic-paper-reviewer",
+        "title": "Gemini CLI Academic Paper Reviewer directory page",
+        "claimed_function": "对论文进行对抗式同行评审、引用核查和学术诚信审查。",
+        "proposed_subcategory": "06-12",
+        "upstream_hint": "目录页所列 GitHub 仓库当前无法访问，不能固定上游版本",
+        "evidence_level": "discovery_page_upstream_unavailable",
+    },
+    {
+        "query": "homework grading scanned assignments roster gradebook skill",
+        "source_path": "skill_market",
+        "discovery_url": "https://mcpmarket.com/tools/skills/homework-grading-workflow",
+        "title": "Homework Grading Workflow directory page",
+        "claimed_function": "把整批扫描作业按学生拆分，核对花名册并更新完成情况表格，强调人工确认姓名匹配。",
+        "proposed_subcategory": "06-06",
+        "upstream_hint": "目录页未给出可回溯的固定版本仓库；涉及学生姓名、作业扫描件和成绩表写入",
+        "evidence_level": "discovery_only_high_privacy_risk",
     },
 ]
 
@@ -362,6 +584,71 @@ def map_subcategory(repo: str, path: str, description: str) -> str | None:
         "content-evaluation-framework": "06-10",
         "education-ai-guardrails": "06-10",
         "teaching-suite": "06-01",
+        "course-description-analyzer": "06-01",
+        "evaluation-rubrics": "06-07",
+        "mastery-assessment": "06-05",
+        "section-portfolio-assessment": "06-05",
+        "experiential-kolb-teaching": "06-04",
+        "socratic-teaching-scaffolds": "06-04",
+        "worked-example-walkthrough": "06-03",
+        "abstraction-concrete-examples": "06-03",
+        "chain-roleplay-debate-synthesis": "06-04",
+        "scientific-manuscript-review": "06-12",
+        "codebase-to-course": "06-01",
+        "sciwrite": "06-12",
+        "academic-thesis-review-skill": "06-11",
+        "unified-thesis-reviewer": "06-11",
+        "thesis_format_check": "06-11",
+        "cs-thesis-reviewer": "06-11",
+        "master-thesis-review": "06-11",
+        "buaa-thesis-checking": "06-11",
+        "buaa-thesis-content-checking": "06-11",
+        "buaa-thesis-format-checking": "06-11",
+        "scientific-thinking-scholar-evaluation": "06-12",
+        "teach-me": "06-03",
+        "curriculum-generator": "06-01",
+        "education-adaptive-curriculum-sequencing": "06-09",
+        "education-automated-assessment-generation": "06-05",
+        "education-interactive-assignment-grading": "06-06",
+        "education-micro-lesson-atomization": "06-02",
+        "education-performance-rubric-application": "06-06",
+        "uoa-py-course-create-excellent-lecture": "06-03",
+        "uoa-py-course-final-assignment-feedback": "06-06",
+        "uoa-py-course-final-assignment-grade": "06-06",
+        "uoa-py-course-lecture-eval": "06-10",
+        "uoa-py-course-lecture-outline": "06-02",
+        "uoa-py-course-update-lecture-post-teaching": "06-10",
+        "assess-ai-pass": "06-10",
+        "assess-refine": "06-10",
+        "assess-setup": "06-05",
+        "assess-submit": "06-05",
+        "course-overview": "06-01",
+        "course-setup": "06-01",
+        "grading-overview": "06-06",
+        "rubrics-create": "06-07",
+        "assessment-engineering": "06-05",
+        "course-builder": "06-01",
+        "lab-scaffolding": "06-04",
+        "learning-design": "06-01",
+        "lesson-plan-builder": "06-02",
+        "teaching-lesson-plan": "06-02",
+        "ntucool": "06-06",
+        "academic-reviewer-or": "06-12",
+        "manuscript-review-skill": "06-12",
+        "polisci-review": "06-12",
+        "review-pap": "06-12",
+        "review-paper-code": "06-12",
+        "review-paper-light": "06-12",
+        "review-paper": "06-12",
+        "student-feedback": "06-06",
+        "aligning-curriculum": "06-01",
+        "planning-courses": "06-01",
+        "academic-review": "06-12",
+        "edu-course-designer": "06-01",
+        "peer-review-engine": "06-12",
+        "peer-review-response-drafter": "06-12",
+        "icse-seet-review": "06-12",
+        "student-personalization": "06-09",
     }
     if skill_slug in explicit:
         return explicit[skill_slug]
@@ -398,8 +685,9 @@ def repository_skill_paths(repo: str, ref: str) -> list[str]:
 
 def github_records() -> Iterable[dict]:
     for spec in REPOSITORY_SPECS:
-        repo = spec["repo"]
-        metadata = gh_json(f"repos/{repo}")
+        requested_repo = spec["repo"]
+        metadata = gh_json(f"repos/{requested_repo}")
+        repo = metadata["full_name"]
         branch = metadata["default_branch"]
         commit = gh_json(f"repos/{repo}/commits/{branch}")["sha"]
 
