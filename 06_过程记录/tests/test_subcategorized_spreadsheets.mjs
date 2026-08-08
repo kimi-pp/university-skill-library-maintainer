@@ -84,7 +84,7 @@ function semanticFixture({ relationships, references, ordinaryText = "rId1", ord
   }).join("");
   const referenceXml = references.map(({ attribute, id }, index) => `<x:item n="${index + 1}" ${attribute}="${id}" />`).join("");
   const entries = new Map([
-    ["xl/workbook.xml", Buffer.from(`<?xml version="1.0" encoding="utf-8"?><x:workbook xmlns:x="urn:test" xmlns:r="${OFFICE_RELATIONSHIP_NS}"><x:items>${referenceXml}</x:items><x:note label="${ordinaryAttribute}">${ordinaryText}</x:note></x:workbook>`, "utf8")],
+    ["xl/workbook.xml", Buffer.from(`<?xml version="1.0" encoding="utf-8"?><x:workbook xmlns:x="urn:test" xmlns:r="${OFFICE_RELATIONSHIP_NS}" xmlns:foo-r="urn:foo-hyphen" xmlns:foo.r="urn:foo-dot" xmlns:my_r="urn:foo-underscore"><x:items>${referenceXml}</x:items><x:note label="${ordinaryAttribute}">${ordinaryText}</x:note></x:workbook>`, "utf8")],
     ["xl/_rels/workbook.xml.rels", Buffer.from(`<?xml version="1.0" encoding="utf-8"?><Relationships xmlns="${PACKAGE_RELATIONSHIP_NS}">${relationshipXml}</Relationships>`, "utf8")],
   ]);
   return zipEntries(entries);
@@ -479,26 +479,50 @@ test("semantic digest is invariant to a three-way relationship ID cycle", () => 
   assert.equal(semanticXlsxDigest(first), semanticXlsxDigest(cycled));
 });
 
-test("semantic digest changes only relationship references, not matching ordinary text or attributes", () => {
+test("semantic digest maps exact relationship QNames without touching QName suffixes, ordinary text, or ordinary attributes", () => {
   const first = semanticFixture({
     relationships: [
-      { id: "oldA", type: "worksheet", target: "worksheets/sheet1.xml" },
-      { id: "oldB", type: "styles", target: "styles.xml" },
+      { id: "rId1", type: "worksheet", target: "worksheets/sheet1.xml" },
+      { id: "rId2", type: "styles", target: "styles.xml" },
+      { id: "rId3", type: "theme", target: "theme/theme1.xml" },
     ],
-    references: [{ attribute: "r:id", id: "oldA" }, { attribute: "r:embed", id: "oldB" }],
+    references: [
+      { attribute: "r:id", id: "rId1" },
+      { attribute: "r:embed", id: "rId2" },
+      { attribute: "r:link", id: "rId3" },
+      { attribute: "foo-r:id", id: "rId1" },
+      { attribute: "foo.r:embed", id: "rId2" },
+      { attribute: "my_r:link", id: "rId3" },
+    ],
     ordinaryText: "rId1",
-    ordinaryAttribute: "oldA",
+    ordinaryAttribute: "rId1",
   });
   const renamed = semanticFixture({
     relationships: [
       { id: "alpha", type: "worksheet", target: "worksheets/sheet1.xml" },
       { id: "beta", type: "styles", target: "styles.xml" },
+      { id: "gamma", type: "theme", target: "theme/theme1.xml" },
     ],
-    references: [{ attribute: "r:id", id: "alpha" }, { attribute: "r:embed", id: "beta" }],
+    references: [
+      { attribute: "r:id", id: "alpha" },
+      { attribute: "r:embed", id: "beta" },
+      { attribute: "r:link", id: "gamma" },
+      { attribute: "foo-r:id", id: "rId1" },
+      { attribute: "foo.r:embed", id: "rId2" },
+      { attribute: "my_r:link", id: "rId3" },
+    ],
     ordinaryText: "rId1",
-    ordinaryAttribute: "oldA",
+    ordinaryAttribute: "rId1",
   });
   assert.equal(semanticXlsxDigest(first), semanticXlsxDigest(renamed));
+});
+
+test("semantic digest rejects an unmapped exact relationship QName", () => {
+  const workbook = semanticFixture({
+    relationships: [{ id: "known", type: "worksheet", target: "worksheets/sheet1.xml" }],
+    references: [{ attribute: "r:id", id: "missing" }],
+  });
+  assert.throws(() => semanticXlsxDigest(workbook), /未映射.*关系引用.*r:id.*missing/);
 });
 
 test("semantic digest distinguishes a real relationship target change", () => {

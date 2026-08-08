@@ -133,6 +133,16 @@ function relationshipSourcePath(relationshipPath) {
   return match ? `${match[1]}/${match[2]}` : null;
 }
 
+function canonicalizeRelationshipReferences(sourceXml, mapping, sourcePath) {
+  return sourceXml.replace(/<(?![!?/])(?:[^>"']|"[^"]*"|'[^']*')+>/g, (element) => element.replace(
+    /([ \t\r\n])(r:(?:id|embed|link))([ \t\r\n]*)=([ \t\r\n]*)(["'])([\s\S]*?)\5/g,
+    (match, prefix, attribute, beforeEquals, afterEquals, quote, oldId) => {
+      if (!mapping.has(oldId)) throw new Error(`XLSX 未映射的关系引用: ${sourcePath} ${attribute}="${oldId}"`);
+      return `${prefix}${attribute}${beforeEquals}=${afterEquals}${quote}${mapping.get(oldId)}${quote}`;
+    },
+  ));
+}
+
 function canonicalizeRelationshipsForComparison(entries) {
   for (const relationshipPath of [...entries.keys()].filter((name) => name.endsWith(".rels")).sort()) {
     let xml = entries.get(relationshipPath).toString("utf8");
@@ -157,10 +167,7 @@ function canonicalizeRelationshipsForComparison(entries) {
     entries.set(relationshipPath, Buffer.from(xml, "utf8"));
     const sourcePath = relationshipSourcePath(relationshipPath);
     if (sourcePath && entries.has(sourcePath)) {
-      const sourceXml = entries.get(sourcePath).toString("utf8").replace(
-        /\b(r:(?:id|embed|link))="([^"]+)"/g,
-        (match, attribute, oldId) => mapping.has(oldId) ? `${attribute}="${mapping.get(oldId)}"` : match,
-      );
+      const sourceXml = canonicalizeRelationshipReferences(entries.get(sourcePath).toString("utf8"), mapping, sourcePath);
       entries.set(sourcePath, Buffer.from(sourceXml, "utf8"));
     }
   }
