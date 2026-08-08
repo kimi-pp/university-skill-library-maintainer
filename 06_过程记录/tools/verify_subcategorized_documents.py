@@ -24,8 +24,12 @@ from build_subcategorized_documents import (  # noqa: E402
     MANIFEST_FILE,
     PLAIN_CATALOG_FILE,
     PLAIN_FIELDS,
+    REPOSITORIES_FILE,
+    _knowledge_base_target,
     _parse_only,
     select_manifest_items,
+    validate_manifest_contract,
+    validate_source_contract,
 )
 
 
@@ -162,6 +166,45 @@ def _audit_tables(document: Document) -> list[str]:
     return issues
 
 
+def _direct_run_size_issues(document: Document) -> list[str]:
+    """Audit direct OOXML sizes after the cover; inheritance remains governed by Normal."""
+    issues: list[str] = []
+    expected = str(int(DOCX_TOKENS["body_size_pt"] * 2))
+    body_started = False
+    for paragraph_index, paragraph in enumerate(document.paragraphs, start=1):
+        if paragraph.style.name == "Heading 1":
+            body_started = True
+        if not body_started or paragraph.style.name.startswith("Heading"):
+            continue
+        for run in paragraph._p.xpath(".//w:r[w:t]"):
+            properties = run.find(qn("w:rPr"))
+            if properties is None:
+                continue
+            for tag in ("w:sz", "w:szCs"):
+                size = properties.find(qn(tag))
+                if size is not None and size.get(qn("w:val")) != expected:
+                    issues.append(
+                        f"正文直接字号不是 11 pt: paragraph={paragraph_index} value={size.get(qn('w:val'))}"
+                    )
+                    break
+    for table_index, table in enumerate(document.tables, start=1):
+        for row in table.rows:
+            for cell in row.cells:
+                for paragraph in cell.paragraphs:
+                    for run in paragraph._p.xpath(".//w:r[w:t]"):
+                        properties = run.find(qn("w:rPr"))
+                        if properties is None:
+                            continue
+                        for tag in ("w:sz", "w:szCs"):
+                            size = properties.find(qn(tag))
+                            if size is not None and size.get(qn("w:val")) != expected:
+                                issues.append(
+                                    f"表格直接字号不是 11 pt: table={table_index} value={size.get(qn('w:val'))}"
+                                )
+                                break
+    return issues
+
+
 def _external_hyperlinks(document: Document) -> set[str]:
     return {
         relationship.target_ref
@@ -170,7 +213,14 @@ def _external_hyperlinks(document: Document) -> set[str]:
     }
 
 
-def _audit_content(document: Document, scope: str, expected_records: list[dict]) -> list[str]:
+def _audit_content(
+    document: Document,
+    scope: str,
+    expected_records: list[dict],
+    *,
+    expected_taxonomy: list[dict] | None = None,
+    expected_item: dict | None = None,
+) -> list[str]:
     issues: list[str] = []
     text = _document_text(document)
     if FORBIDDEN_PLACEHOLDERS.search(text):
@@ -185,6 +235,16 @@ def _audit_content(document: Document, scope: str, expected_records: list[dict])
     expected_ids = [record["id"] for record in sorted(expected_records, key=lambda item: item["id"])]
     found_ids = SKILL_ID_PATTERN.findall(text)
     if scope == "subcategory":
+        if expected_item:
+            expected_code = expected_item.get("subcategory_code")
+            expected_name = expected_item.get("subcategory_name")
+            if expected_name:
+                header_texts = {
+                    "".join(paragraph.text for paragraph in section.header.paragraphs).strip()
+                    for section in document.sections
+                }
+                if header_texts != {expected_name} or f"{expected_code} {expected_name}" not in text:
+                    issues.append("小分类代码/名称与 manifest 路径归属不一致")
         if found_ids != expected_ids:
             issues.append(f"Skill ID 与派生数据不一致: expected={expected_ids} actual={found_ids}")
         for record in expected_records:
@@ -222,12 +282,45 @@ def _audit_content(document: Document, scope: str, expected_records: list[dict])
                 issues.append(f"大分类总览未使用通俗字段 {field}")
         if not document.tables or [cell.text for cell in document.tables[0].rows[0].cells] != ["代码与名称", "通俗定义", "数量"]:
             issues.append("大分类总览缺少三列小分类导航")
+        if expected_taxonomy is not None:
+            categories = sorted(expected_taxonomy, key=lambda item: item["code"])
+            counts = Counter(record["subcategory_code"] for record in expected_records)
+            expected_rows = [
+                (f"{category['code']} {category['name']}", category["inclusion_focus"], str(counts[category["code"]]))
+                for category in categories
+            ]
+            actual_rows: list[tuple[str, str, str]] = []
+            if document.tables:
+                for row in document.tables[0].rows[1:]:
+                    first = row.cells[0].text.splitlines()[0].strip()
+                    actual_rows.append((first, row.cells[1].text.strip(), row.cells[2].text.strip()))
+            if actual_rows != expected_rows:
+                issues.append(f"概览行与 taxonomy/成员数量不一致: expected={expected_rows} actual={actual_rows}")
+            links = _external_hyperlinks(document)
+            expected_links = {
+                *{record["repo_url"] for record in expected_records},
+                *{_knowledge_base_target(category) for category in categories},
+            }
+            if links != expected_links:
+                issues.append(f"概览链接与仓库/知识库不一致: expected={sorted(expected_links)} actual={sorted(links)}")
+            text_count = len(expected_records)
+            if f"收录 {text_count} 项 Skill" not in text or f"本总览汇总 {text_count} 项 Skill" not in text:
+                issues.append(f"概览总成员数不准确: expected={text_count}")
+            if expected_item and any(category["code"][:2] != expected_item.get("big_category_code") for category in categories):
+                issues.append("概览 taxonomy 含有跨大分类行")
     else:
         issues.append(f"未知验证 scope: {scope}")
     return issues
 
 
-def verify_document(path: Path, *, scope: str, expected_records: list[dict]) -> list[str]:
+def verify_document(
+    path: Path,
+    *,
+    scope: str,
+    expected_records: list[dict],
+    expected_taxonomy: list[dict] | None = None,
+    expected_item: dict | None = None,
+) -> list[str]:
     """Return all structural/content issues for one DOCX; an empty list means pass."""
     if not path.exists() or path.stat().st_size == 0:
         return [f"DOCX 不存在或为空: {path}"]
@@ -239,13 +332,36 @@ def verify_document(path: Path, *, scope: str, expected_records: list[dict]) -> 
     issues.extend(_audit_sections(document))
     issues.extend(_audit_styles(document))
     issues.extend(_audit_tables(document))
-    issues.extend(_audit_content(document, scope, expected_records))
+    issues.extend(_direct_run_size_issues(document))
+    issues.extend(
+        _audit_content(
+            document,
+            scope,
+            expected_records,
+            expected_taxonomy=expected_taxonomy,
+            expected_item=expected_item,
+        )
+    )
     return issues
 
 
 def verify_selected_documents(
-    records: list[dict], manifest: list[dict], project_root: Path, *, only: list[str] | None = None
+    records: list[dict],
+    manifest: list[dict],
+    project_root: Path,
+    *,
+    only: list[str] | None = None,
+    taxonomy: list[dict] | None = None,
+    assignments: dict[str, str] | None = None,
+    repositories: dict | None = None,
 ) -> dict[str, list[str]]:
+    if taxonomy is not None:
+        validate_manifest_contract(manifest, taxonomy)
+    if taxonomy is not None and assignments is not None and repositories is not None:
+        validate_source_contract(records, taxonomy, assignments, repositories, project_root)
+    taxonomy_by_big: dict[str, list[dict]] = defaultdict(list)
+    for category in taxonomy or []:
+        taxonomy_by_big[category["code"][:2]].append(category)
     grouped: dict[str, list[dict]] = defaultdict(list)
     for record in sorted(records, key=lambda item: item["id"]):
         grouped[record["subcategory_code"]].append(record)
@@ -256,7 +372,13 @@ def verify_selected_documents(
         else:
             expected = grouped[item["subcategory_code"]]
         path = project_root / Path(*Path(item["path"]).parts)
-        results[item["key"]] = verify_document(path, scope=item["scope"], expected_records=expected)
+        results[item["key"]] = verify_document(
+            path,
+            scope=item["scope"],
+            expected_records=expected,
+            expected_taxonomy=taxonomy_by_big[item["big_category_code"]] if item["scope"] == "overview" and taxonomy is not None else None,
+            expected_item=item,
+        )
     return results
 
 
@@ -267,10 +389,23 @@ def main(argv: list[str] | None = None) -> int:
     records = _load_json(PLAIN_CATALOG_FILE)
     assignment = _load_json(ASSIGNMENT_FILE)
     manifest = _load_json(MANIFEST_FILE)
-    if not isinstance(records, list) or not isinstance(assignment, dict) or not isinstance(manifest, list):
+    repositories = _load_json(REPOSITORIES_FILE)
+    if not isinstance(records, list) or not isinstance(assignment, dict) or not isinstance(manifest, list) or not isinstance(repositories, dict):
         raise ValueError("验证输入格式错误")
+    taxonomy = assignment.get("taxonomy")
+    assignments = assignment.get("assignments")
+    if not isinstance(taxonomy, list) or not isinstance(assignments, dict):
+        raise ValueError("验证归属输入格式错误")
     only = _parse_only(args.only)
-    results = verify_selected_documents(records, manifest, PROJECT_ROOT, only=only)
+    results = verify_selected_documents(
+        records,
+        manifest,
+        PROJECT_ROOT,
+        only=only,
+        taxonomy=taxonomy,
+        assignments=assignments,
+        repositories=repositories,
+    )
     failed = {key: issues for key, issues in results.items() if issues}
     if failed:
         for key, issues in failed.items():

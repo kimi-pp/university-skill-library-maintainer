@@ -35,6 +35,14 @@ BIG_CATEGORY_NAMES = {
     "04": "图书馆与信息素养",
     "05": "编程、数学、数据分析和可视化",
 }
+BIG_CATEGORY_DIRECTORIES = {
+    "01": "01_学术写作引用与出版",
+    "02": "02_文档表格演示文稿与办公自动化",
+    "03": "03_文献检索与学术研究",
+    "04": "04_图书馆与信息素养",
+    "05": "05_编程数学数据分析和可视化",
+}
+DELIVERY_ROOT = PurePosixPath("05_交付物/通俗细分版_2026-08-07")
 
 DOCX_TOKENS = {
     "preset_name": "compact_reference_guide",
@@ -121,7 +129,7 @@ def _set_cell_text(cell, text: object, *, bold: bool = False, align=WD_ALIGN_PAR
     paragraph.alignment = align
     _set_paragraph_spacing(paragraph, after=2, line=1.15)
     run = paragraph.add_run(str(text))
-    _set_run_font(run, size=9.5, bold=bold)
+    _set_run_font(run, size=DOCX_TOKENS["body_size_pt"], bold=bold)
     cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
 
 
@@ -206,9 +214,23 @@ def _repeat_table_header(row) -> None:
     properties.append(header)
 
 
-def _add_hyperlink(paragraph, label: str, url: str, *, size: float = 10) -> None:
-    if not isinstance(url, str) or not re.match(r"^https://", url):
-        raise ValueError(f"外部地址必须使用 HTTPS: {url!r}")
+def _add_hyperlink(
+    paragraph,
+    label: str,
+    url: str,
+    *,
+    size: float = DOCX_TOKENS["body_size_pt"],
+    allow_relative: bool = False,
+) -> None:
+    is_https = isinstance(url, str) and bool(re.match(r"^https://", url))
+    is_relative = (
+        allow_relative
+        and isinstance(url, str)
+        and url.startswith("../../../02_知识库/")
+        and "\\" not in url
+    )
+    if not (is_https or is_relative):
+        raise ValueError(f"超链接必须使用 HTTPS 或批准的知识库相对路径: {url!r}")
     relationship_id = paragraph.part.relate_to(url, RT.HYPERLINK, is_external=True)
     hyperlink = OxmlElement("w:hyperlink")
     hyperlink.set(qn("r:id"), relationship_id)
@@ -224,7 +246,9 @@ def _add_hyperlink(paragraph, label: str, url: str, *, size: float = 10) -> None
     underline.set(qn("w:val"), "single")
     size_element = OxmlElement("w:sz")
     size_element.set(qn("w:val"), str(int(size * 2)))
-    properties.extend((fonts, color, underline, size_element))
+    complex_size_element = OxmlElement("w:szCs")
+    complex_size_element.set(qn("w:val"), str(int(size * 2)))
+    properties.extend((fonts, color, underline, size_element, complex_size_element))
     run.append(properties)
     text = OxmlElement("w:t")
     text.text = label
@@ -462,13 +486,22 @@ def _add_compact_trace(document: Document, record: dict) -> None:
     )
     for index, (label, value) in enumerate(fields):
         if index:
-            _set_run_font(paragraph.add_run("； "), size=8.5, color=DOCX_TOKENS["muted"])
-        _set_run_font(paragraph.add_run(f"{label}："), size=8.5, bold=True, color=DOCX_TOKENS["cover_title"])
-        _set_run_font(paragraph.add_run(value), size=8.5)
-    _set_run_font(paragraph.add_run("； 原始资料地址："), size=8.5, bold=True, color=DOCX_TOKENS["cover_title"])
-    _add_hyperlink(paragraph, "Skill 说明页", record["skill_url"], size=8.5)
-    _set_run_font(paragraph.add_run(" | "), size=8.5, color=DOCX_TOKENS["muted"])
-    _add_hyperlink(paragraph, "GitHub 仓库", record["repo_url"], size=8.5)
+            _set_run_font(paragraph.add_run("； "), color=DOCX_TOKENS["muted"])
+        _set_run_font(paragraph.add_run(f"{label}："), bold=True, color=DOCX_TOKENS["cover_title"])
+        _set_run_font(paragraph.add_run(value))
+    _set_run_font(paragraph.add_run("； 原始资料地址："), bold=True, color=DOCX_TOKENS["cover_title"])
+    _add_hyperlink(paragraph, "Skill 说明页", record["skill_url"])
+    _set_run_font(paragraph.add_run(" | "), color=DOCX_TOKENS["muted"])
+    _add_hyperlink(paragraph, "GitHub 仓库", record["repo_url"])
+
+
+def _knowledge_base_target(category: dict) -> str:
+    code = category["code"]
+    name = category["name"]
+    return (
+        f"../../../02_知识库/functional_domains/{BIG_CATEGORY_DIRECTORIES[code[:2]]}/"
+        f"subcategories/{code}_{name}/INDEX.md"
+    )
 
 
 def build_overview_document(big_category: dict, records: list[dict]) -> Document:
@@ -505,6 +538,14 @@ def build_overview_document(big_category: dict, records: list[dict]) -> Document
     for category in categories:
         row = table.add_row()
         _set_cell_text(row.cells[0], f"{category['code']} {category['name']}")
+        first_paragraph = row.cells[0].paragraphs[0]
+        _set_run_font(first_paragraph.add_run("\n"), color=DOCX_TOKENS["muted"])
+        _add_hyperlink(
+            first_paragraph,
+            "知识库入口",
+            _knowledge_base_target(category),
+            allow_relative=True,
+        )
         _set_cell_text(row.cells[1], category["inclusion_focus"])
         _set_cell_text(row.cells[2], counts[category["code"]], align=WD_ALIGN_PARAGRAPH.CENTER)
     _repeat_table_header(table.rows[0])
@@ -534,8 +575,8 @@ def build_overview_document(big_category: dict, records: list[dict]) -> Document
     paragraph = document.add_paragraph()
     for index, (repository, record) in enumerate(sorted(repositories.items())):
         if index:
-            _set_run_font(paragraph.add_run("　｜　"), size=9.5, color="7F8C8D")
-        _set_run_font(paragraph.add_run(f"{repository}："), size=9.5, bold=True, color=DOCX_TOKENS["cover_title"])
+            _set_run_font(paragraph.add_run("　｜　"), color="7F8C8D")
+        _set_run_font(paragraph.add_run(f"{repository}："), bold=True, color=DOCX_TOKENS["cover_title"])
         _add_hyperlink(paragraph, "查看仓库", record["repo_url"])
     return document
 
@@ -599,6 +640,151 @@ def _safe_relative_docx_path(value: object) -> Path:
     return Path(*pure.parts)
 
 
+def _taxonomy_by_code(taxonomy: list[dict]) -> dict[str, dict]:
+    result: dict[str, dict] = {}
+    for original in taxonomy:
+        item = dict(original)
+        code = item.get("code")
+        name = item.get("name")
+        focus = item.get("inclusion_focus")
+        if not isinstance(code, str) or not re.fullmatch(r"\d{2}-\d{2}", code):
+            raise ValueError(f"小分类代码格式错误: {code!r}")
+        if code[:2] not in BIG_CATEGORY_DIRECTORIES:
+            raise ValueError(f"未知大分类: {code}")
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError(f"小分类名称不能为空: {code}")
+        if not isinstance(focus, str) or not focus.strip():
+            raise ValueError(f"小分类收录重点不能为空: {code}")
+        if code in result:
+            raise ValueError(f"小分类代码重复: {code}")
+        result[code] = item
+    return result
+
+
+def _expected_manifest_path(item: dict, taxonomy_by_code: dict[str, dict]) -> str:
+    big_code = item["big_category_code"]
+    directory = PurePosixPath(BIG_CATEGORY_DIRECTORIES[big_code])
+    suffix = item["format"]
+    if item["scope"] == "overview":
+        return str(DELIVERY_ROOT / directory / f"00_大分类总览.{suffix}")
+    code = item["subcategory_code"]
+    name = taxonomy_by_code[code]["name"]
+    stem = f"{code}_{name}_GitHub技能调研"
+    return str(DELIVERY_ROOT / directory / f"{code}_{name}" / f"{stem}.{suffix}")
+
+
+def validate_manifest_contract(
+    manifest: list[dict], taxonomy: list[dict], *, require_complete: bool = True
+) -> None:
+    """Reject metadata/path drift and require one DOCX/XLSX pair per logical output."""
+    taxonomy_map = _taxonomy_by_code(taxonomy)
+    pairs: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    paths: set[str] = set()
+    for original in manifest:
+        item = dict(original)
+        scope = item.get("scope")
+        file_format = item.get("format")
+        big_code = item.get("big_category_code")
+        if scope not in {"overview", "subcategory"} or file_format not in {"docx", "xlsx"}:
+            raise ValueError(f"manifest scope/format 错误: {scope!r}/{file_format!r}")
+        if big_code not in BIG_CATEGORY_DIRECTORIES:
+            raise ValueError(f"manifest 大分类错误: {big_code!r}")
+        path = item.get("path")
+        if not isinstance(path, str):
+            raise ValueError("manifest 路径缺失")
+        if path in paths:
+            raise ValueError(f"重复 manifest 路径: {path}")
+        paths.add(path)
+        if scope == "subcategory":
+            code = item.get("subcategory_code")
+            if not isinstance(code, str) or code[:2] != big_code:
+                raise ValueError(f"小分类与大分类代码归属不一致: {code!r}/{big_code!r}")
+            category = taxonomy_map.get(code)
+            if category is None:
+                raise ValueError(f"manifest 使用未知小分类: {code}")
+            if item.get("subcategory_name") != category["name"]:
+                raise ValueError(f"manifest 小分类名称不一致: {code}")
+            logical_key = (scope, code)
+        else:
+            logical_key = (scope, big_code)
+        expected_path = _expected_manifest_path(item, taxonomy_map)
+        if path != expected_path:
+            raise ValueError(f"manifest 路径与元数据不一致: expected={expected_path} actual={path}")
+        pairs[logical_key].append(item)
+    for logical_key, items in pairs.items():
+        formats = {item["format"] for item in items}
+        if len(items) != 2 or formats != {"docx", "xlsx"}:
+            raise ValueError(f"DOCX/XLSX 配对不完整: {logical_key}")
+        metadata = [
+            {key: value for key, value in item.items() if key not in {"path", "format"}}
+            for item in items
+        ]
+        if metadata[0] != metadata[1]:
+            raise ValueError(f"DOCX/XLSX scope 或元数据不一致: {logical_key}")
+    if require_complete:
+        expected_keys = {
+            *{("overview", code[:2]) for code in taxonomy_map},
+            *{("subcategory", code) for code in taxonomy_map},
+        }
+        if set(pairs) != expected_keys:
+            raise ValueError(
+                f"manifest 未完整覆盖 taxonomy: missing={sorted(expected_keys - set(pairs))} "
+                f"extra={sorted(set(pairs) - expected_keys)}"
+            )
+
+
+def validate_source_contract(
+    records: list[dict],
+    taxonomy: list[dict],
+    assignments: dict[str, str],
+    repositories: dict,
+    project_root: Path,
+) -> None:
+    """Cross-check catalog membership and every generated knowledge-base leaf."""
+    taxonomy_map = _taxonomy_by_code(taxonomy)
+    sorted_records = _sorted_records(records)
+    ids = [record["id"] for record in sorted_records]
+    if set(assignments) != set(ids):
+        raise ValueError("通俗目录与归属台账的 Skill ID 不一致")
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for record in sorted_records:
+        code = record["subcategory_code"]
+        category = taxonomy_map.get(code)
+        if category is None:
+            raise ValueError(f"未知小分类: {code}")
+        if record.get("cat") != code[:2] or assignments.get(record["id"]) != code:
+            raise ValueError(f"{record['id']} 的唯一归属不一致")
+        if record.get("subcategory_name") != category["name"]:
+            raise ValueError(f"{record['id']} 的小分类名称与 taxonomy 不一致")
+        if record.get("repo") not in repositories:
+            raise ValueError(f"{record['id']} 的仓库不在 repositories.json 中")
+        grouped[code].append(record)
+    for code, category in taxonomy_map.items():
+        members = grouped.get(code, [])
+        if not members:
+            raise ValueError(f"空小分类: {code}")
+        path = (
+            project_root
+            / "02_知识库"
+            / "functional_domains"
+            / BIG_CATEGORY_DIRECTORIES[code[:2]]
+            / "subcategories"
+            / f"{code}_{category['name']}"
+            / "INDEX.md"
+        )
+        if not path.is_file():
+            raise ValueError(f"知识库入口不存在: {path}")
+        content = path.read_text(encoding="utf-8")
+        required = [
+            f"# {code} {category['name']}",
+            category["inclusion_focus"],
+            f"共 {len(members)} 项 Skill。",
+            *[record["id"] for record in members],
+        ]
+        if any(value not in content for value in required):
+            raise ValueError(f"知识库内容与 taxonomy/成员数量不一致: {code}")
+
+
 def select_manifest_items(manifest: list[dict], only: list[str] | None) -> list[dict]:
     """Validate and select stable DOCX manifest entries by public key."""
     docx_items: list[dict] = []
@@ -657,13 +843,14 @@ def generate_documents(
     """Generate only selected manifest DOCX entries under a validated project root."""
     root = project_root.resolve()
     sorted_records = _sorted_records(records)
-    taxonomy_by_code = {item["code"]: dict(item) for item in taxonomy}
-    if len(taxonomy_by_code) != len(taxonomy):
-        raise ValueError("小分类代码重复")
+    validate_manifest_contract(manifest, taxonomy)
+    taxonomy_by_code = _taxonomy_by_code(taxonomy)
     grouped: dict[str, list[dict]] = defaultdict(list)
     for record in sorted_records:
         if record["subcategory_code"] not in taxonomy_by_code:
             raise ValueError(f"未知小分类: {record['subcategory_code']}")
+        if record.get("subcategory_name") != taxonomy_by_code[record["subcategory_code"]]["name"]:
+            raise ValueError(f"{record['id']} 的小分类名称与 taxonomy 不一致")
         grouped[record["subcategory_code"]].append(record)
 
     written: list[Path] = []
@@ -708,14 +895,8 @@ def load_inputs() -> tuple[list[dict], list[dict], list[dict], dict]:
     assignments = assignment.get("assignments")
     if not isinstance(taxonomy, list) or not isinstance(assignments, dict):
         raise ValueError("小分类归属数据格式错误")
-    ids = {record.get("id") for record in records}
-    if len(ids) != len(records) or set(assignments) != ids:
-        raise ValueError("通俗目录与归属台账的 Skill ID 不一致")
-    for record in records:
-        if record.get("subcategory_code") != assignments[record["id"]]:
-            raise ValueError(f"{record['id']} 的小分类与归属台账不一致")
-        if record.get("repo") not in repositories:
-            raise ValueError(f"{record['id']} 的仓库不在 repositories.json 中")
+    validate_manifest_contract(manifest, taxonomy)
+    validate_source_contract(records, taxonomy, assignments, repositories, PROJECT_ROOT)
     return records, taxonomy, manifest, repositories
 
 

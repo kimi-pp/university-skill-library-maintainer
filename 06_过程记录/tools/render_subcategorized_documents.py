@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -23,10 +24,44 @@ from build_subcategorized_documents import (  # noqa: E402
 )
 
 
-RENDER_DOCX = Path(
-    r"C:\Users\34927\.codex\plugins\cache\openai-primary-runtime\documents\26.805.11740\skills\documents\render_docx.py"
-)
+RENDER_SCRIPT_ENV = "DOCUMENTS_RENDER_DOCX"
 DEFAULT_RENDER_ROOT = PROJECT_ROOT / "06_过程记录" / "renders" / "subcategorized_docx"
+
+
+def resolve_render_script(
+    explicit: Path | None = None,
+    *,
+    environ: dict[str, str] | None = None,
+) -> Path:
+    """Resolve the canonical documents-skill renderer without version/user hard-coding."""
+    environment = os.environ if environ is None else environ
+    candidate: Path | None = explicit
+    source = "--render-script"
+    if candidate is None and environment.get(RENDER_SCRIPT_ENV):
+        candidate = Path(environment[RENDER_SCRIPT_ENV])
+        source = RENDER_SCRIPT_ENV
+    if candidate is not None:
+        resolved = candidate.expanduser().resolve()
+        if resolved.is_file():
+            return resolved
+        raise FileNotFoundError(
+            f"找不到 documents 技能渲染器（来源 {source}）: {resolved}；"
+            f"请使用 --render-script 或 {RENDER_SCRIPT_ENV} 指定 canonical render_docx.py"
+        )
+
+    codex_root = Path(environment.get("CODEX_HOME", Path.home() / ".codex")).expanduser()
+    search_root = codex_root / "plugins" / "cache" / "openai-primary-runtime" / "documents"
+    matches = sorted(
+        search_root.glob("*/skills/documents/render_docx.py"),
+        key=lambda path: path.parent.parent.parent.name,
+        reverse=True,
+    )
+    if matches:
+        return matches[0].resolve()
+    raise FileNotFoundError(
+        f"找不到 documents 技能渲染器；默认搜索 {search_root}。"
+        f"请使用 --render-script 或 {RENDER_SCRIPT_ENV} 指定 canonical render_docx.py"
+    )
 
 
 def build_render_plan(items: list[dict], project_root: Path, output_root: Path) -> list[dict]:
@@ -88,10 +123,9 @@ def _make_contact_sheet(page_paths: list[Path], output_path: Path) -> None:
     sheet.save(output_path)
 
 
-def render_plan(plan: list[dict], *, render_script: Path = RENDER_DOCX) -> dict[str, list[Path]]:
+def render_plan(plan: list[dict], *, render_script: Path | None = None) -> dict[str, list[Path]]:
     """Render selected documents with the packaged renderer and return all page PNGs."""
-    if not render_script.exists():
-        raise FileNotFoundError(f"找不到 documents 技能渲染器: {render_script}")
+    render_script = resolve_render_script(render_script)
     results: dict[str, list[Path]] = {}
     for item in plan:
         document_path = Path(item["docx_path"])
@@ -118,12 +152,16 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only", nargs="*", help="仅渲染键，如 05-overview 05-05")
     parser.add_argument("--output-root", type=Path, default=DEFAULT_RENDER_ROOT)
+    parser.add_argument("--render-script", type=Path, help="canonical documents 技能 render_docx.py 路径")
     args = parser.parse_args(argv)
     manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
     if not isinstance(manifest, list):
         raise ValueError("manifest 格式错误")
     selected = select_manifest_items(manifest, _parse_only(args.only))
-    results = render_plan(build_render_plan(selected, PROJECT_ROOT, args.output_root))
+    results = render_plan(
+        build_render_plan(selected, PROJECT_ROOT, args.output_root),
+        render_script=args.render_script,
+    )
     total_pages = sum(len(pages) for pages in results.values())
     details = ",".join(f"{key}:{len(pages)}" for key, pages in results.items())
     print(f"rendered={len(results)} pages={total_pages} details={details}")

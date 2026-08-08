@@ -11,6 +11,7 @@ from pathlib import Path
 
 from docx import Document
 from docx.oxml.ns import qn
+from docx.shared import Pt
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -64,7 +65,10 @@ def fixture_record(skill_id: str, *, subcategory_code: str = "05-05", suffix: st
         "repo_pushed": "2026-08-03",
         "license": "MIT",
         "subcategory_code": subcategory_code,
-        "subcategory_name": "并行计算与性能优化",
+        "subcategory_name": {
+            "05-01": "计算设备与资源规划",
+            "05-05": "并行计算与性能优化",
+        }.get(subcategory_code, "并行计算与性能优化"),
         "plain_purpose": f"把可拆分的计算任务分给多个处理器，缩短等待时间 {number}。",
         "plain_outputs": f"可得到性能比较报告、资源使用记录和调整建议 {number}。",
         "plain_audience": f"适合科研人员、数据分析人员 {number} 使用。",
@@ -191,6 +195,26 @@ class DocumentLayoutTests(unittest.TestCase):
         self.assertEqual(header_text.strip(), "并行计算与性能优化")
         footer_xml = self.document.sections[0].footer._element.xml
         self.assertIn("PAGE", footer_xml)
+
+    def test_all_user_facing_body_and_table_runs_are_exactly_11pt(self):
+        """Body, summary tables, links, and technical trace may not be shrunk to fit pages."""
+        body_started = False
+        for paragraph in self.document.paragraphs:
+            if paragraph.style.name == "Heading 1":
+                body_started = True
+            if not body_started or paragraph.style.name.startswith("Heading"):
+                continue
+            for run in paragraph._p.xpath(".//w:r[w:t]"):
+                size = run.find(qn("w:rPr"))
+                size = None if size is None else size.find(qn("w:sz"))
+                if size is not None:
+                    self.assertEqual(size.get(qn("w:val")), "22", paragraph.text)
+        for table in self.document.tables:
+            for run in table._tbl.xpath(".//w:r[w:t]"):
+                size = run.find(qn("w:rPr"))
+                size = None if size is None else size.find(qn("w:sz"))
+                self.assertIsNotNone(size)
+                self.assertEqual(size.get(qn("w:val")), "22")
 
 
 class DocumentContentTests(unittest.TestCase):
@@ -352,6 +376,33 @@ class VerificationAndGenerationTests(unittest.TestCase):
             self.assertTrue(any("夸大" in issue for issue in issues), issues)
             self.assertTrue(any("Skill ID" in issue for issue in issues), issues)
 
+    def test_verifier_rejects_direct_body_and_table_font_shrinking(self):
+        """Direct 8.5/9.5 pt formatting must fail even when Normal remains 11 pt."""
+        records = [fixture_record("GH-05-0003")]
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            document = self.builder.build_subcategory_document(SUBCATEGORY, records)
+            trace = next(p for p in document.paragraphs if p.text.startswith("内部编号："))
+            trace.runs[0].font.size = Pt(8.5)
+            trace_path = root / "bad-trace.docx"
+            document.save(trace_path)
+            trace_issues = self.verifier.verify_document(
+                trace_path, scope="subcategory", expected_records=records
+            )
+            self.assertTrue(any("正文直接字号" in issue for issue in trace_issues), trace_issues)
+
+            document = self.builder.build_subcategory_document(SUBCATEGORY, records)
+            table_run = next(
+                run for run in document.tables[0].cell(0, 0).paragraphs[0].runs if run.text
+            )
+            table_run.font.size = Pt(9.5)
+            table_path = root / "bad-table.docx"
+            document.save(table_path)
+            table_issues = self.verifier.verify_document(
+                table_path, scope="subcategory", expected_records=records
+            )
+            self.assertTrue(any("表格直接字号" in issue for issue in table_issues), table_issues)
+
     def test_manifest_selection_is_sorted_safe_and_scope_aware(self):
         """Unsafe paths, unstable ordering, or ambiguous selectors must fail before writes."""
         manifest = [
@@ -367,13 +418,124 @@ class VerificationAndGenerationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "不安全"):
             self.builder.select_manifest_items(unsafe, None)
 
+    def test_manifest_contract_rejects_cross_category_names_paths_and_unpaired_outputs(self):
+        """Manifest metadata and paired Office paths must be an exact projection of taxonomy."""
+        taxonomy = [OVERVIEW["subcategories"][1]]
+        base = "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-05_并行计算与性能优化/05-05_并行计算与性能优化_GitHub技能调研"
+        manifest = [
+            {"path": f"{base}.docx", "format": "docx", "scope": "subcategory", "big_category_code": "05", "subcategory_code": "05-05", "subcategory_name": "并行计算与性能优化"},
+            {"path": f"{base}.xlsx", "format": "xlsx", "scope": "subcategory", "big_category_code": "05", "subcategory_code": "05-05", "subcategory_name": "并行计算与性能优化"},
+        ]
+        self.builder.validate_manifest_contract(manifest, taxonomy, require_complete=False)
+        mutations = {
+            "跨大类代码": [{**manifest[0], "big_category_code": "03"}, manifest[1]],
+            "错名称": [{**manifest[0], "subcategory_name": "错误名称"}, manifest[1]],
+            "错路径": [{**manifest[0], "path": manifest[0]["path"].replace("05_编程数学数据分析和可视化", "03_文献检索与学术研究")}, manifest[1]],
+            "缺配对": [manifest[0]],
+            "scope不一致": [manifest[0], {**manifest[1], "scope": "overview"}],
+        }
+        for label, mutated in mutations.items():
+            with self.subTest(label=label), self.assertRaises(ValueError):
+                self.builder.validate_manifest_contract(mutated, taxonomy, require_complete=False)
+
+        overview_pair = [
+            {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.docx", "format": "docx", "scope": "overview", "big_category_code": "05"},
+            {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.xlsx", "format": "xlsx", "scope": "overview", "big_category_code": "05"},
+        ]
+        with self.assertRaisesRegex(ValueError, "未完整覆盖 taxonomy"):
+            self.builder.validate_manifest_contract(
+                [*overview_pair, *manifest], OVERVIEW["subcategories"]
+            )
+
+    def test_source_contract_rejects_assignment_name_and_knowledge_base_drift(self):
+        """Catalog rows, assignments, taxonomy, repositories, and actual KB indexes stay aligned."""
+        record = fixture_record("GH-05-0003")
+        taxonomy = [OVERVIEW["subcategories"][1]]
+        assignments = {record["id"]: "05-05"}
+        repositories = {record["repo"]: {"license": "MIT"}}
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            kb = root / "02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-05_并行计算与性能优化/INDEX.md"
+            kb.parent.mkdir(parents=True)
+            kb.write_text(
+                f"# 05-05 并行计算与性能优化\n\n{taxonomy[0]['inclusion_focus']}\n\n共 1 项 Skill。\n\n{record['id']}\n",
+                encoding="utf-8",
+            )
+            self.builder.validate_source_contract(
+                [record], taxonomy, assignments, repositories, root
+            )
+            with self.assertRaisesRegex(ValueError, "名称"):
+                self.builder.validate_source_contract(
+                    [{**record, "subcategory_name": "错误名称"}], taxonomy, assignments, repositories, root
+                )
+            with self.assertRaisesRegex(ValueError, "归属"):
+                self.builder.validate_source_contract(
+                    [record], taxonomy, {record["id"]: "03-02"}, repositories, root
+                )
+            kb.write_text(kb.read_text(encoding="utf-8").replace("共 1 项", "共 2 项"), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "知识库"):
+                self.builder.validate_source_contract(
+                    [record], taxonomy, assignments, repositories, root
+                )
+
+    def test_overview_verifier_rejects_missing_wrong_duplicate_extra_rows_and_links(self):
+        """Every overview navigation row and link must exactly match taxonomy and members."""
+        records = [
+            fixture_record("GH-05-0001", subcategory_code="05-01"),
+            fixture_record("GH-05-0003"),
+            fixture_record("GH-05-0024"),
+        ]
+        records[0]["subcategory_name"] = "计算设备与资源规划"
+        expected_item = {"scope": "overview", "big_category_code": "05"}
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+
+            def issues_for(document):
+                path = root / "overview.docx"
+                document.save(path)
+                return self.verifier.verify_document(
+                    path,
+                    scope="overview",
+                    expected_records=records,
+                    expected_taxonomy=OVERVIEW["subcategories"],
+                    expected_item=expected_item,
+                )
+
+            self.assertEqual(issues_for(self.builder.build_overview_document(OVERVIEW, records)), [])
+
+            missing = self.builder.build_overview_document(OVERVIEW, records)
+            missing.tables[0]._tbl.remove(missing.tables[0].rows[-1]._tr)
+            self.assertTrue(any("概览行" in issue for issue in issues_for(missing)))
+
+            wrong_count = self.builder.build_overview_document(OVERVIEW, records)
+            wrong_count.tables[0].cell(2, 2).text = "99"
+            self.assertTrue(any("概览行" in issue for issue in issues_for(wrong_count)))
+
+            duplicate = self.builder.build_overview_document(OVERVIEW, records)
+            duplicate_row = duplicate.tables[0].add_row()
+            for index, value in enumerate(("05-05 并行计算与性能优化", OVERVIEW["subcategories"][1]["inclusion_focus"], "2")):
+                duplicate_row.cells[index].text = value
+            self.assertTrue(any("概览行" in issue for issue in issues_for(duplicate)))
+
+            wrong_link = self.builder.build_overview_document(OVERVIEW, records)
+            relationship = next(
+                rel for rel in wrong_link.part.rels.values()
+                if rel.reltype.endswith("/hyperlink") and rel.target_ref == records[0]["repo_url"]
+            )
+            relationship._target = "https://example.invalid/wrong"
+            self.assertTrue(any("概览链接" in issue for issue in issues_for(wrong_link)))
+
     def test_manifest_driven_generation_is_idempotent_for_overview_and_subcategory(self):
         """Repeated generation with reversed input must preserve paths, order, and bytes."""
         records = [fixture_record("GH-05-0001", subcategory_code="05-01"), fixture_record("GH-05-0003")]
         taxonomy = OVERVIEW["subcategories"]
         manifest = [
             {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.docx", "format": "docx", "scope": "overview", "big_category_code": "05"},
+            {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.xlsx", "format": "xlsx", "scope": "overview", "big_category_code": "05"},
+            {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-01_计算设备与资源规划/05-01_计算设备与资源规划_GitHub技能调研.docx", "format": "docx", "scope": "subcategory", "big_category_code": "05", "subcategory_code": "05-01", "subcategory_name": "计算设备与资源规划"},
+            {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-01_计算设备与资源规划/05-01_计算设备与资源规划_GitHub技能调研.xlsx", "format": "xlsx", "scope": "subcategory", "big_category_code": "05", "subcategory_code": "05-01", "subcategory_name": "计算设备与资源规划"},
             {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-05_并行计算与性能优化/05-05_并行计算与性能优化_GitHub技能调研.docx", "format": "docx", "scope": "subcategory", "big_category_code": "05", "subcategory_code": "05-05", "subcategory_name": "并行计算与性能优化"},
+            {"path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-05_并行计算与性能优化/05-05_并行计算与性能优化_GitHub技能调研.xlsx", "format": "xlsx", "scope": "subcategory", "big_category_code": "05", "subcategory_code": "05-05", "subcategory_name": "并行计算与性能优化"},
         ]
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
@@ -398,6 +560,20 @@ class VerificationAndGenerationTests(unittest.TestCase):
         """A missing documents-skill renderer must fail before any false QA claim."""
         with self.assertRaisesRegex(FileNotFoundError, "documents 技能渲染器"):
             self.renderer.render_plan([], render_script=PROJECT_ROOT / "missing-render-docx.py")
+
+    def test_renderer_path_supports_explicit_injection_and_clear_missing_error(self):
+        """Canonical renderer discovery must be portable across users and plugin versions."""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            render_script = Path(temporary_directory) / "render_docx.py"
+            render_script.write_text("# canonical test renderer\n", encoding="utf-8")
+            self.assertEqual(
+                self.renderer.resolve_render_script(render_script, environ={}),
+                render_script.resolve(),
+            )
+            with self.assertRaisesRegex(FileNotFoundError, "--render-script|DOCUMENTS_RENDER_DOCX"):
+                self.renderer.resolve_render_script(
+                    Path(temporary_directory) / "missing.py", environ={}
+                )
 
 
 if __name__ == "__main__":
