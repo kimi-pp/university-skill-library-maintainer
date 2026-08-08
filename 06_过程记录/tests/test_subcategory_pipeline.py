@@ -24,6 +24,13 @@ from subcategory_pipeline import (
     validate_assignments,
     write_plain_catalog,
 )
+from build_subcategorized_knowledge_base import (
+    BIG_CATEGORY_DIRECTORIES,
+    build_manifest,
+    generate_knowledge_base,
+    group_records,
+    write_manifest,
+)
 
 
 EXPECTED_SUBCATEGORY_COUNTS = {
@@ -578,6 +585,133 @@ class PlainLanguageCatalogTests(unittest.TestCase):
             for field in PLAIN_FIELDS:
                 with self.subTest(skill_id=row["id"], field=field):
                     self.assertNotRegex(row[field], mechanical_spacing)
+
+
+class SubcategorizedKnowledgeBaseTests(unittest.TestCase):
+    """The 61-category delivery plan must stay complete, safe, and traceable."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.mapping = load_assignment_file(ASSIGNMENT_FILE)
+        cls.taxonomy = cls.mapping["taxonomy"]
+        cls.records = json.loads(
+            (PROJECT_ROOT / "03_候选池" / "derived" / "plain_language_catalog.json").read_text(
+                encoding="utf-8"
+            )
+        )
+
+    def test_manifest_has_66_docx_and_66_xlsx_paths(self):
+        """Dropping an overview or subcategory file must break the 132-item contract."""
+        manifest = build_manifest(self.taxonomy)
+
+        self.assertEqual(len(manifest), 132)
+        self.assertEqual(len({item["path"] for item in manifest}), 132)
+        self.assertEqual(Counter(item["format"] for item in manifest), {"docx": 66, "xlsx": 66})
+        self.assertEqual(Counter(item["scope"] for item in manifest), {"overview": 10, "subcategory": 122})
+
+    def test_manifest_paths_are_stable_relative_and_safe(self):
+        """An unsafe or colliding output path must be rejected before files are generated."""
+        manifest = build_manifest(self.taxonomy)
+        self.assertEqual(manifest, build_manifest(list(reversed(self.taxonomy))))
+        forbidden = set('<>:"|?*')
+        for item in manifest:
+            path = Path(item["path"])
+            with self.subTest(path=item["path"]):
+                self.assertFalse(path.is_absolute())
+                self.assertNotIn("..", path.parts)
+                self.assertTrue(path.parts[0].startswith("05_交付物"))
+                self.assertFalse(any(forbidden.intersection(part) for part in path.parts))
+
+        unsafe = [{"code": "01-01", "name": "含/斜杠", "inclusion_focus": "测试"}]
+        with self.assertRaisesRegex(ValueError, "非法路径字符"):
+            build_manifest(unsafe)
+        duplicate = [
+            {"code": "01-01", "name": "甲", "inclusion_focus": "测试"},
+            {"code": "01-01", "name": "乙", "inclusion_focus": "测试"},
+        ]
+        with self.assertRaisesRegex(ValueError, "重复输出路径"):
+            build_manifest(duplicate)
+
+    def test_manifest_writer_serializes_the_approved_plan_without_creating_office_files(self):
+        """Writing the plan must create only its JSON ledger, never a premature Office artifact."""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output_path = Path(temporary_directory) / "subcategory_manifest.json"
+            write_manifest(build_manifest(self.taxonomy), output_path)
+            saved = json.loads(output_path.read_text(encoding="utf-8"))
+
+            self.assertEqual(saved, build_manifest(self.taxonomy))
+            self.assertEqual(list(Path(temporary_directory).glob("*.docx")), [])
+            self.assertEqual(list(Path(temporary_directory).glob("*.xlsx")), [])
+
+    def test_grouping_exactly_matches_approved_assignments_without_loss_or_duplication(self):
+        """Moving, omitting, or duplicating any of the 157 Skills must be observable."""
+        grouped = group_records(list(reversed(self.records)))
+        expected = {
+            code: sorted(
+                skill_id
+                for skill_id, assigned_code in self.mapping["assignments"].items()
+                if assigned_code == code
+            )
+            for code in sorted(item["code"] for item in self.taxonomy)
+        }
+
+        self.assertEqual(set(grouped), set(expected))
+        self.assertTrue(all(grouped[code] for code in expected))
+        self.assertEqual({code: [row["id"] for row in rows] for code, rows in grouped.items()}, expected)
+        flattened = [row["id"] for rows in grouped.values() for row in rows]
+        self.assertEqual(len(flattened), 157)
+        self.assertEqual(len(set(flattened)), 157)
+
+    def test_knowledge_base_has_one_nonempty_plain_index_per_subcategory(self):
+        """A missing category entry or a fallback to technical source prose must fail."""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            output_root = Path(temporary_directory) / "functional_domains"
+            written = generate_knowledge_base(self.records, self.taxonomy, output_root)
+
+            self.assertEqual(len(written), 61)
+            self.assertEqual(len(set(written)), 61)
+            self.assertTrue(all(path.exists() and path.stat().st_size > 0 for path in written))
+            for path in written:
+                content = path.read_text(encoding="utf-8")
+                self.assertIn("## 收录条目", content)
+                self.assertIn("| 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |", content)
+
+            index = next(path for path in written if path.parent.name.startswith("01-01_"))
+            content = index.read_text(encoding="utf-8")
+            record = next(row for row in self.records if row["id"] == "GH-01-0005")
+            self.assertIn(record["plain_purpose"], content)
+            self.assertNotIn(record["summary"], content)
+
+    def test_generation_rejects_empty_or_unknown_subcategories(self):
+        """A taxonomy row without Skills or a record outside the approved taxonomy must stop generation."""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory) / "functional_domains"
+            empty_taxonomy = [*self.taxonomy, {"code": "01-10", "name": "空类", "inclusion_focus": "测试"}]
+            with self.assertRaisesRegex(ValueError, "空小分类"):
+                generate_knowledge_base(self.records, empty_taxonomy, root)
+            bad_records = [{**self.records[0], "subcategory_code": "99-99"}, *self.records[1:]]
+            with self.assertRaisesRegex(ValueError, "未知小分类"):
+                generate_knowledge_base(bad_records, self.taxonomy, root)
+
+    def test_domain_indexes_receive_one_navigation_block_without_losing_skill_index(self):
+        """Regeneration must keep the existing Skill table and never duplicate category navigation."""
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory) / "functional_domains"
+            for directory in BIG_CATEGORY_DIRECTORIES.values():
+                domain = root / directory
+                domain.mkdir(parents=True)
+                (domain / "INDEX.md").write_text(
+                    "# 原有大分类\n\n## Skill 索引\n\n| ID | Skill |\n|---|---|\n",
+                    encoding="utf-8",
+                )
+
+            generate_knowledge_base(self.records, self.taxonomy, root)
+            generate_knowledge_base(self.records, self.taxonomy, root)
+
+            for directory in BIG_CATEGORY_DIRECTORIES.values():
+                content = (root / directory / "INDEX.md").read_text(encoding="utf-8")
+                self.assertEqual(content.count("## 小分类导航"), 1)
+                self.assertIn("## Skill 索引", content)
 
 
 if __name__ == "__main__":

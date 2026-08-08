@@ -6,6 +6,23 @@
 - 说明：仅列入选项；落选项保存在内部归档，不进入最终 Excel 或 DOCX。
 - 验证边界：仅读取说明和目录结构；未进行安装、依赖执行或真实任务运行。
 
+<!-- SUBCATEGORY_NAVIGATION_START -->
+## 小分类导航
+
+| 代码与名称 | 白话定义 | Skill 数量 |
+|---|---|---:|
+| [02-01 Word 文档制作与修改](subcategories/02-01_Word 文档制作与修改/INDEX.md) | 创建、编辑、排版和检查 Word 文档 | 2 |
+| [02-02 Excel 表格制作与分析](subcategories/02-02_Excel 表格制作与分析/INDEX.md) | 创建表格、使用公式、整理数据和制作基础图表 | 4 |
+| [02-03 PowerPoint 与学术演示制作](subcategories/02-03_PowerPoint 与学术演示制作/INDEX.md) | 创建、修改和检查演示文稿、答辩材料及讲者备注 | 5 |
+| [02-04 PDF 读取、整理与生成](subcategories/02-04_PDF 读取、整理与生成/INDEX.md) | 提取、合并、拆分、生成和检查 PDF 文件 | 2 |
+| [02-05 文档共创与需求梳理](subcategories/02-05_文档共创与需求梳理/INDEX.md) | 通过沟通、分阶段确认和修改共同完成文档 | 1 |
+| [02-06 Office 与 Markdown 互转](subcategories/02-06_Office 与 Markdown 互转/INDEX.md) | 在 Word、Excel、PowerPoint 与 Markdown 之间转换 | 3 |
+| [02-07 多格式批量转换与导出](subcategories/02-07_多格式批量转换与导出/INDEX.md) | 对多个文件批量执行跨格式转换和导出 | 2 |
+| [02-08 Office 综合处理与流程自动化](subcategories/02-08_Office 综合处理与流程自动化/INDEX.md) | 在同一流程中处理多种 Office 文件或自动完成重复操作 | 1 |
+| [02-09 文档无障碍检查与修复](subcategories/02-09_文档无障碍检查与修复/INDEX.md) | 检查并修复影响残障人士阅读和操作的问题 | 2 |
+
+<!-- SUBCATEGORY_NAVIGATION_END -->
+
 ## Skill 索引
 
 | ID | Skill | 中文定位 | 生态 | 优先级 | 验证 | 条目 |
