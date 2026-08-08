@@ -1,6 +1,6 @@
 # 高校 AI 技能库调研总索引
 
-最后更新：2026-08-07
+最后更新：2026-08-09
 
 ## 当前状态
 
@@ -33,6 +33,94 @@
 - [04 图书馆与信息素养](../02_知识库/functional_domains/04_图书馆与信息素养/INDEX.md)
 - [05 编程、数学、数据分析和可视化](../02_知识库/functional_domains/05_编程数学数据分析和可视化/INDEX.md)
 - [0809 计算机类学科打样](../02_知识库/discipline_pilots/0809_计算机类/INDEX.md)
+
+<!-- SUBCATEGORY_OVERVIEW_START -->
+## 通俗细分版（五类样板）
+
+本轮从 13 个通用大分类中选择已完成调研的五类先做样板，只按任务用途细分，不涉及专业或学科分类。157 项 Skill 已唯一归入 61 个小分类；每项只有一个主小分类，跨用途能力继续用辅助标签说明。
+
+最终通俗细分版共有 132 个文件，包括 66 份 Word 和 66 份 Excel。原始五类 Word 与 Excel 报告仍保留在原位置，并另存一份原样副本。候选 Skill 本次只核对说明或包内容，未安装、未运行。
+
+- [通俗细分版交付目录](<../05_交付物/通俗细分版_2026-08-07/>)
+- [原始版存档](<../05_交付物/原始版_2026-08-06/>)
+
+### 五个大类入口
+
+| 大分类 | Skill 数 | 小分类数 | 大类导航 | Word 概览 | Excel 概览 |
+|---|---:|---:|---|---|---|
+| 01 学术写作、引用与出版 | 20 | 9 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/INDEX.md>) | [打开](<../05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/00_大分类总览.docx>) | [打开](<../05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/00_大分类总览.xlsx>) |
+| 02 文档、表格、演示文稿与办公自动化 | 22 | 9 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/INDEX.md>) | [打开](<../05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/00_大分类总览.docx>) | [打开](<../05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/00_大分类总览.xlsx>) |
+| 03 文献检索与学术研究 | 31 | 11 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/INDEX.md>) | [打开](<../05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/00_大分类总览.docx>) | [打开](<../05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/00_大分类总览.xlsx>) |
+| 04 图书馆与信息素养 | 29 | 12 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/INDEX.md>) | [打开](<../05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/00_大分类总览.docx>) | [打开](<../05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/00_大分类总览.xlsx>) |
+| 05 编程、数学、数据分析和可视化 | 55 | 20 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/INDEX.md>) | [打开](<../05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.docx>) | [打开](<../05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.xlsx>) |
+
+### 61 个小分类知识库入口
+
+| 小分类代码 | 小分类名称 | 知识库入口 |
+|---|---|---|
+| 01-01 | 论文整体规划与流程管理 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-01_论文整体规划与流程管理/INDEX.md>) |
+| 01-02 | 论文结构与章节写作 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-02_论文结构与章节写作/INDEX.md>) |
+| 01-03 | 摘要、关键词与篇幅压缩 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-03_摘要、关键词与篇幅压缩/INDEX.md>) |
+| 01-04 | 学术语言润色与表达改进 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-04_学术语言润色与表达改进/INDEX.md>) |
+| 01-05 | 引用、参考文献与文献库管理 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-05_引用、参考文献与文献库管理/INDEX.md>) |
+| 01-06 | LaTeX 排版与在线协作 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-06_LaTeX 排版与在线协作/INDEX.md>) |
+| 01-07 | 投稿要求、模板与进度安排 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-07_投稿要求、模板与进度安排/INDEX.md>) |
+| 01-08 | 终稿、版权与出版前检查 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-08_终稿、版权与出版前检查/INDEX.md>) |
+| 01-09 | 同行评审、审稿回复与修改 | [进入](<../02_知识库/functional_domains/01_学术写作引用与出版/subcategories/01-09_同行评审、审稿回复与修改/INDEX.md>) |
+| 02-01 | Word 文档制作与修改 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-01_Word 文档制作与修改/INDEX.md>) |
+| 02-02 | Excel 表格制作与分析 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-02_Excel 表格制作与分析/INDEX.md>) |
+| 02-03 | PowerPoint 与学术演示制作 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-03_PowerPoint 与学术演示制作/INDEX.md>) |
+| 02-04 | PDF 读取、整理与生成 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-04_PDF 读取、整理与生成/INDEX.md>) |
+| 02-05 | 文档共创与需求梳理 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-05_文档共创与需求梳理/INDEX.md>) |
+| 02-06 | Office 与 Markdown 互转 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-06_Office 与 Markdown 互转/INDEX.md>) |
+| 02-07 | 多格式批量转换与导出 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-07_多格式批量转换与导出/INDEX.md>) |
+| 02-08 | Office 综合处理与流程自动化 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-08_Office 综合处理与流程自动化/INDEX.md>) |
+| 02-09 | 文档无障碍检查与修复 | [进入](<../02_知识库/functional_domains/02_文档表格演示文稿与办公自动化/subcategories/02-09_文档无障碍检查与修复/INDEX.md>) |
+| 03-01 | 多数据库综合查找 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-01_多数据库综合查找/INDEX.md>) |
+| 03-02 | 特定学术数据库查找 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-02_特定学术数据库查找/INDEX.md>) |
+| 03-03 | 论文全文与开放资源获取 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-03_论文全文与开放资源获取/INDEX.md>) |
+| 03-04 | 个人或团队文献库与研究笔记 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-04_个人或团队文献库与研究笔记/INDEX.md>) |
+| 03-05 | 论文阅读、提炼与批判性分析 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-05_论文阅读、提炼与批判性分析/INDEX.md>) |
+| 03-06 | 研究问题与假设形成 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-06_研究问题与假设形成/INDEX.md>) |
+| 03-07 | 深度调研与证据材料整理 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-07_深度调研与证据材料整理/INDEX.md>) |
+| 03-08 | 主题性文献梳理与综述写作 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-08_主题性文献梳理与综述写作/INDEX.md>) |
+| 03-09 | 系统综述流程与文献筛选 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-09_系统综述流程与文献筛选/INDEX.md>) |
+| 03-10 | Meta 分析与定量证据综合 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-10_Meta 分析与定量证据综合/INDEX.md>) |
+| 03-11 | 学术成果评价与反馈 | [进入](<../02_知识库/functional_domains/03_文献检索与学术研究/subcategories/03-11_学术成果评价与反馈/INDEX.md>) |
+| 04-01 | 基础信息素养与研究入门 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-01_基础信息素养与研究入门/INDEX.md>) |
+| 04-02 | 信息来源判断与史料分析 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-02_信息来源判断与史料分析/INDEX.md>) |
+| 04-03 | 媒体与新闻素养教育 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-03_媒体与新闻素养教育/INDEX.md>) |
+| 04-04 | 事实核查与证据验证 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-04_事实核查与证据验证/INDEX.md>) |
+| 04-05 | 数据素养教育 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-05_数据素养教育/INDEX.md>) |
+| 04-06 | 图书馆服务、活动与推广 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-06_图书馆服务、活动与推广/INDEX.md>) |
+| 04-07 | 数字图书馆与技术建设 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-07_数字图书馆与技术建设/INDEX.md>) |
+| 04-08 | 信息来源台账与书目管理 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-08_信息来源台账与书目管理/INDEX.md>) |
+| 04-09 | 馆藏目录、机构知识库与开放资源发现 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-09_馆藏目录、机构知识库与开放资源发现/INDEX.md>) |
+| 04-10 | 元数据、术语与数据规范 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-10_元数据、术语与数据规范/INDEX.md>) |
+| 04-11 | 开放科学与科研数据管理 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-11_开放科学与科研数据管理/INDEX.md>) |
+| 04-12 | 个人文献库与实验记录系统集成 | [进入](<../02_知识库/functional_domains/04_图书馆与信息素养/subcategories/04-12_个人文献库与实验记录系统集成/INDEX.md>) |
+| 05-01 | 计算设备与资源规划 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-01_计算设备与资源规划/INDEX.md>) |
+| 05-02 | 数据检查、清理与质量控制 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-02_数据检查、清理与质量控制/INDEX.md>) |
+| 05-03 | 表格与大型数据处理 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-03_表格与大型数据处理/INDEX.md>) |
+| 05-04 | 数据存储、数据库与查询优化 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-04_数据存储、数据库与查询优化/INDEX.md>) |
+| 05-05 | 并行计算与性能优化 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-05_并行计算与性能优化/INDEX.md>) |
+| 05-06 | 基础统计分析与结果报告 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-06_基础统计分析与结果报告/INDEX.md>) |
+| 05-07 | 回归、时间序列与统计建模 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-07_回归、时间序列与统计建模/INDEX.md>) |
+| 05-08 | 贝叶斯分析、因果分析与实验设计 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-08_贝叶斯分析、因果分析与实验设计/INDEX.md>) |
+| 05-09 | 机器学习建模、解释与评估 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-09_机器学习建模、解释与评估/INDEX.md>) |
+| 05-10 | 深度学习与大语言模型应用 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-10_深度学习与大语言模型应用/INDEX.md>) |
+| 05-11 | 数学计算、单位与误差 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-11_数学计算、单位与误差/INDEX.md>) |
+| 05-12 | 仿真与多目标优化 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-12_仿真与多目标优化/INDEX.md>) |
+| 05-13 | 形式化数学证明 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-13_形式化数学证明/INDEX.md>) |
+| 05-14 | 基础绘图与科学图表 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-14_基础绘图与科学图表/INDEX.md>) |
+| 05-15 | 地图、网络与交互式可视化 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-15_地图、网络与交互式可视化/INDEX.md>) |
+| 05-16 | 数据故事与分析结果表达 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-16_数据故事与分析结果表达/INDEX.md>) |
+| 05-17 | 调试与错误处理 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-17_调试与错误处理/INDEX.md>) |
+| 05-18 | 软件测试 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-18_软件测试/INDEX.md>) |
+| 05-19 | 代码审查、代码规范与项目结构 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-19_代码审查、代码规范与项目结构/INDEX.md>) |
+| 05-20 | 数据处理流程与机器学习工程 | [进入](<../02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-20_数据处理流程与机器学习工程/INDEX.md>) |
+
+<!-- SUBCATEGORY_OVERVIEW_END -->
 
 ## 调研方法与过程
 

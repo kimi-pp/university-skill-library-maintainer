@@ -18,6 +18,7 @@ ASSIGNMENT_FILE = PROJECT_ROOT / "03_候选池" / "derived" / "subcategory_assig
 PLAIN_CATALOG_FILE = PROJECT_ROOT / "03_候选池" / "derived" / "plain_language_catalog.json"
 MANIFEST_FILE = PROJECT_ROOT / "03_候选池" / "derived" / "subcategory_manifest.json"
 KNOWLEDGE_BASE_ROOT = PROJECT_ROOT / "02_知识库" / "functional_domains"
+TOTAL_INDEX_FILE = PROJECT_ROOT / "00_索引" / "INDEX.md"
 DELIVERY_ROOT = Path("05_交付物") / "通俗细分版_2026-08-07"
 
 BIG_CATEGORY_DIRECTORIES = {
@@ -27,11 +28,20 @@ BIG_CATEGORY_DIRECTORIES = {
     "04": "04_图书馆与信息素养",
     "05": "05_编程数学数据分析和可视化",
 }
+BIG_CATEGORY_NAMES = {
+    "01": "学术写作、引用与出版",
+    "02": "文档、表格、演示文稿与办公自动化",
+    "03": "文献检索与学术研究",
+    "04": "图书馆与信息素养",
+    "05": "编程、数学、数据分析和可视化",
+}
 
 _WINDOWS_FORBIDDEN = set('<>:"|?*')
 _CODE_PATTERN = re.compile(r"^\d{2}-\d{2}$")
 _NAVIGATION_START = "<!-- SUBCATEGORY_NAVIGATION_START -->"
 _NAVIGATION_END = "<!-- SUBCATEGORY_NAVIGATION_END -->"
+_TOTAL_OVERVIEW_START = "<!-- SUBCATEGORY_OVERVIEW_START -->"
+_TOTAL_OVERVIEW_END = "<!-- SUBCATEGORY_OVERVIEW_END -->"
 
 
 def _safe_component(value: str, label: str) -> str:
@@ -190,21 +200,133 @@ def _subcategory_index(category: dict, records: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def _navigation_block(categories: list[dict], grouped: dict[str, list[dict]]) -> str:
+def _manifest_paths_by_subcategory(manifest: list[dict]) -> dict[str, dict[str, str]]:
+    paths: dict[str, dict[str, str]] = defaultdict(dict)
+    for item in manifest:
+        if item.get("scope") != "subcategory":
+            continue
+        code = item.get("subcategory_code")
+        file_format = item.get("format")
+        path = item.get("path")
+        if code in paths and file_format in paths[code]:
+            raise ValueError(f"小分类交付路径重复: {code}/{file_format}")
+        if not all(isinstance(value, str) and value for value in (code, file_format, path)):
+            raise ValueError("小分类交付清单字段不完整")
+        paths[code][file_format] = path
+    return dict(paths)
+
+
+def _navigation_block(
+    categories: list[dict],
+    grouped: dict[str, list[dict]],
+    manifest: list[dict],
+) -> str:
+    manifest_paths = _manifest_paths_by_subcategory(manifest)
     lines = [
         _NAVIGATION_START,
         "## 小分类导航",
         "",
-        "| 代码与名称 | 白话定义 | Skill 数量 |",
-        "|---|---|---:|",
+        "| 小分类代码 | 小分类名称 | 成员数 | 知识库 | Word | Excel |",
+        "|---|---|---:|---|---|---|",
     ]
     for category in categories:
         code, name = category["code"], category["name"]
-        target = f"subcategories/{code}_{name}/INDEX.md"
+        delivery = manifest_paths.get(code, {})
+        if set(delivery) != {"docx", "xlsx"}:
+            raise ValueError(f"小分类交付配对不完整: {code}")
+        knowledge_target = f"subcategories/{code}_{name}/INDEX.md"
+        word_target = f"../../../{delivery['docx']}"
+        excel_target = f"../../../{delivery['xlsx']}"
         lines.append(
-            f"| {_markdown_link(f'{code} {name}', target)} | {_markdown_cell(category['inclusion_focus'])} | {len(grouped[code])} |"
+            "| {code} | {name} | {count} | {knowledge} | {word} | {excel} |".format(
+                code=_markdown_cell(code),
+                name=_markdown_cell(name),
+                count=len(grouped[code]),
+                knowledge=_markdown_link("进入", knowledge_target),
+                word=_markdown_link("打开", word_target),
+                excel=_markdown_link("打开", excel_target),
+            )
         )
     lines.extend(["", _NAVIGATION_END])
+    return "\n".join(lines)
+
+
+def _total_overview_block(
+    categories: list[dict],
+    grouped: dict[str, list[dict]],
+    manifest: list[dict],
+) -> str:
+    record_count = sum(len(rows) for rows in grouped.values())
+    subcategory_count = len(categories)
+    format_counts = Counter(item.get("format") for item in manifest)
+    if set(format_counts) != {"docx", "xlsx"} or len(manifest) != sum(format_counts.values()):
+        raise ValueError(f"交付清单格式不符合 Word/Excel 配对规则: {dict(format_counts)}")
+    overview_paths: dict[str, dict[str, str]] = defaultdict(dict)
+    for item in manifest:
+        if item.get("scope") == "overview":
+            overview_paths[item["big_category_code"]][item["format"]] = item["path"]
+
+    lines = [
+        _TOTAL_OVERVIEW_START,
+        "## 通俗细分版（五类样板）",
+        "",
+        f"本轮从 13 个通用大分类中选择已完成调研的五类先做样板，只按任务用途细分，不涉及专业或学科分类。{record_count} 项 Skill 已唯一归入 {subcategory_count} 个小分类；每项只有一个主小分类，跨用途能力继续用辅助标签说明。",
+        "",
+        f"最终通俗细分版共有 {len(manifest)} 个文件，包括 {format_counts['docx']} 份 Word 和 {format_counts['xlsx']} 份 Excel。原始五类 Word 与 Excel 报告仍保留在原位置，并另存一份原样副本。候选 Skill 本次只核对说明或包内容，未安装、未运行。",
+        "",
+        f"- {_markdown_link('通俗细分版交付目录', '../05_交付物/通俗细分版_2026-08-07/')}",
+        f"- {_markdown_link('原始版存档', '../05_交付物/原始版_2026-08-06/')}",
+        "",
+        "### 五个大类入口",
+        "",
+        "| 大分类 | Skill 数 | 小分类数 | 大类导航 | Word 概览 | Excel 概览 |",
+        "|---|---:|---:|---|---|---|",
+    ]
+    for big_code, directory in BIG_CATEGORY_DIRECTORIES.items():
+        category_count = sum(len(grouped[item["code"]]) for item in categories if item["code"].startswith(f"{big_code}-"))
+        domain_subcategory_count = sum(
+            1 for item in categories if item["code"].startswith(f"{big_code}-")
+        )
+        overview = overview_paths.get(big_code, {})
+        if set(overview) != {"docx", "xlsx"}:
+            raise ValueError(f"大分类概览交付配对不完整: {big_code}")
+        lines.append(
+            "| {category} | {skills} | {subcategories} | {navigation} | {word} | {excel} |".format(
+                category=f"{big_code} {BIG_CATEGORY_NAMES[big_code]}",
+                skills=category_count,
+                subcategories=domain_subcategory_count,
+                navigation=_markdown_link(
+                    "进入",
+                    f"../02_知识库/functional_domains/{directory}/INDEX.md",
+                ),
+                word=_markdown_link("打开", f"../{overview['docx']}"),
+                excel=_markdown_link("打开", f"../{overview['xlsx']}"),
+            )
+        )
+
+    lines.extend(
+        [
+            "",
+            f"### {subcategory_count} 个小分类知识库入口",
+            "",
+            "| 小分类代码 | 小分类名称 | 知识库入口 |",
+            "|---|---|---|",
+        ]
+    )
+    for category in categories:
+        code, name = category["code"], category["name"]
+        lines.append(
+            "| {code} | {name} | {link} |".format(
+                code=_markdown_cell(code),
+                name=_markdown_cell(name),
+                link=_markdown_link(
+                    "进入",
+                    "../02_知识库/functional_domains/"
+                    f"{BIG_CATEGORY_DIRECTORIES[code[:2]]}/subcategories/{code}_{name}/INDEX.md",
+                ),
+            )
+        )
+    lines.extend(["", _TOTAL_OVERVIEW_END])
     return "\n".join(lines)
 
 
@@ -229,9 +351,41 @@ def _update_domain_index(index_path: Path, navigation: str) -> None:
     index_path.write_text(updated, encoding="utf-8")
 
 
+def update_total_index(
+    index_path: Path,
+    taxonomy: list[dict],
+    records: list[dict],
+    manifest: list[dict],
+) -> None:
+    """Synchronize the five-category and 61-leaf navigation from derived data."""
+    categories = _sorted_taxonomy(taxonomy)
+    grouped = group_records(records)
+    taxonomy_codes = {item["code"] for item in categories}
+    if set(grouped) != taxonomy_codes:
+        missing = sorted(taxonomy_codes - set(grouped))
+        extra = sorted(set(grouped) - taxonomy_codes)
+        raise ValueError(f"总索引分类成员不完整: missing={missing}, extra={extra}")
+    block = _total_overview_block(categories, grouped, manifest)
+    original = index_path.read_text(encoding="utf-8")
+    start = original.find(_TOTAL_OVERVIEW_START)
+    end = original.find(_TOTAL_OVERVIEW_END)
+    if start >= 0 and end >= start:
+        original = original[:start] + original[end + len(_TOTAL_OVERVIEW_END):]
+    elif start >= 0 or end >= 0:
+        raise ValueError(f"通俗细分版总索引标记不完整: {index_path}")
+
+    insert_before = original.find("## 调研方法与过程")
+    if insert_before < 0:
+        updated = original.rstrip() + "\n\n" + block + "\n"
+    else:
+        updated = original[:insert_before].rstrip() + "\n\n" + block + "\n\n" + original[insert_before:]
+    index_path.write_text(updated, encoding="utf-8")
+
+
 def generate_knowledge_base(records: list[dict], taxonomy: list[dict], output_root: Path) -> list[Path]:
     """Write 61 plain-language subcategory indexes and update five category navigations."""
     categories = _sorted_taxonomy(taxonomy)
+    manifest = build_manifest(categories)
     taxonomy_by_code = {item["code"]: item for item in categories}
     grouped = group_records(records)
     unknown_codes = sorted(set(grouped) - set(taxonomy_by_code))
@@ -257,7 +411,7 @@ def generate_knowledge_base(records: list[dict], taxonomy: list[dict], output_ro
         domain_directory.mkdir(parents=True, exist_ok=True)
         _update_domain_index(
             domain_directory / "INDEX.md",
-            _navigation_block(by_big_category[big_code], grouped),
+            _navigation_block(by_big_category[big_code], grouped, manifest),
         )
     return written
 
@@ -284,6 +438,7 @@ def main() -> None:
     manifest = build_manifest(taxonomy)
     write_manifest(manifest, MANIFEST_FILE)
     written = generate_knowledge_base(records, taxonomy, KNOWLEDGE_BASE_ROOT)
+    update_total_index(TOTAL_INDEX_FILE, taxonomy, records, manifest)
     counts = Counter(item["format"] for item in manifest)
     print(f"manifest={len(manifest)} docx={counts['docx']} xlsx={counts['xlsx']} indexes={len(written)} records={len(records)}")
 
