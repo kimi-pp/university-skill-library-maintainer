@@ -414,6 +414,7 @@ def verify_selected_documents(
     assignments: dict[str, str] | None = None,
     repositories: dict | None = None,
     expected_total: int | None = None,
+    source_project_root: Path | None = None,
 ) -> dict[str, list[str]]:
     if taxonomy is not None:
         validate_manifest_contract(manifest, taxonomy)
@@ -423,7 +424,7 @@ def verify_selected_documents(
             taxonomy,
             assignments,
             repositories,
-            project_root,
+            source_project_root or project_root,
             expected_total=expected_total,
         )
     taxonomy_by_big: dict[str, list[dict]] = defaultdict(list)

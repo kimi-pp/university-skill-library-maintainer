@@ -562,7 +562,10 @@ function parseOnly(argv) {
 export async function main(argv = process.argv.slice(2)) {
   const only = parseOnly(argv);
   const inputs = await loadInputs(PROJECT_ROOT);
-  const written = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, PROJECT_ROOT, { only, assignments: inputs.assignments });
+  const outputRoot = process.env.SUBCATEGORY_OUTPUT_ROOT
+    ? path.resolve(process.env.SUBCATEGORY_OUTPUT_ROOT)
+    : PROJECT_ROOT;
+  const written = await generateSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, outputRoot, { only, assignments: inputs.assignments });
   console.log(`xlsx=${written.length} keys=${written.map(({ item }) => item.key).join(",")}`);
   return 0;
 }

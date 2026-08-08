@@ -425,7 +425,10 @@ function parseOnly(argv) {
 
 export async function main(argv = process.argv.slice(2)) {
   const inputs = await loadInputs(PROJECT_ROOT);
-  const results = await verifySelectedSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, PROJECT_ROOT, { only: parseOnly(argv) });
+  const outputRoot = process.env.SUBCATEGORY_OUTPUT_ROOT
+    ? path.resolve(process.env.SUBCATEGORY_OUTPUT_ROOT)
+    : PROJECT_ROOT;
+  const results = await verifySelectedSpreadsheets(inputs.records, inputs.taxonomy, inputs.manifest, outputRoot, { only: parseOnly(argv) });
   console.log(`xlsx=${results.length} sheets=${results.reduce((sum, result) => sum + result.sheetCount, 0)} formulas=OK structure=OK`);
   return 0;
 }
