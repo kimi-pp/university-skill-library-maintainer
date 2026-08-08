@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "app.py",
+        "snippet": "putParser from pydantic import BaseModel, Field MODEL = \"gpt-3.5-turbo\" try: openai.api_key = os.getenv(\"OPENAI_API_KEY\") except: print(\"Set the OPENAI_API_KEY environment variable\") exit() with open('."
+      },
+      {
+        "file": "app.py",
+        "snippet": "from pydantic import BaseModel, Field MODEL = \"gpt-3.5-turbo\" try: openai.api_key = os.getenv(\"OPENAI_API_KEY\") except: print(\"Set the OPENAI_API_KEY environment variable\") exit() with open('./rubrics/act"
+      }
+    ]
+  },
+  "read_errors": []
+}

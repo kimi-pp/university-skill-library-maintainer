@@ -1,0 +1,31 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+        "snippet": "osed AI feedback approach — what the system currently says or plans to say in response to student work\" optional: - field: \"student_level\" type: \"string\" description: \"Age/year group and proficiency level"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+        "snippet": "**Feedback goals:** {{feedback_goals}} — if not provided, assume the goal is to help the student improve their work while preserving their ownership of the thinking. **System constraints:** {{system_constraints}} — if not provided, ass"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+        "snippet": "tronger — try restating your main argument. Overall, a solid effort — keep it up! 7/10\" / Student level: \"Year 9, target grade 6 (UK GCSE equivalent)\" / Subject area: \"English Language — persuasive writing\"* --- ## Feedback Evaluation: Year 9 P"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+        "snippet": "he basic criteria for persuasive writing. The score and the feedback are in conflict. The student will anchor on the score and dismiss the suggestions. ### Feedback Type Analysis | Feedback Component | Type | Effectiveness | Issue | |---|--"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+        "snippet": "ion to self not task | | \"You clearly feel strongly\" | Self | Ineffective | Describes the student, not the work | | \"Your writing voice is engaging\" | Task | Mildly effective | Specific enough to be useful, but buried in generic pr"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+        "snippet": "r one paragraph. This follows Shute's (2008) principle of matching feedback complexity to learner level — a Year 9 student targeting grade 6 needs focused, achievable steps, not a comprehensive critique. 4. **The counterargument instruction is scaffolded.**"
+      }
+    ]
+  },
+  "read_errors": []
+}

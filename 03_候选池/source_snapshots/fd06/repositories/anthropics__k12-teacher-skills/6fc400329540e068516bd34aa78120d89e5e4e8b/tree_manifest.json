@@ -1,0 +1,474 @@
+{
+  "repository": "anthropics/k12-teacher-skills",
+  "fixed_version": "6fc400329540e068516bd34aa78120d89e5e4e8b",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf0ad33cfed6c5013bcc592a31ff4093887a1405"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d32cb81db43aa0946f1118c285badc8ce0eecb4f"
+    },
+    {
+      "path": ".github/workflows/cla.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "680af0f6e81adf6c802771f5f4706a32c4ea465a",
+      "size": 4160
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34c1b8545a31f96a90aa40609a934c0c170c7c4b",
+      "size": 48
+    },
+    {
+      "path": "CLA.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5797b655ae39d1d3a6b56d56e8346d4b3fd1efda",
+      "size": 6116
+    },
+    {
+      "path": "CODEOWNERS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55711ee8612b9ebc03b847e71867e1983361df85",
+      "size": 23
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dc9363b398b2830d651cdb286da9f4b7bdd7dbb",
+      "size": 1701
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cccfc14d5738f2097dc38b36e1eff5cafbf169c9",
+      "size": 1648
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b29ba1e87edbe8f96dcffbca2daccae769cec863",
+      "size": 208
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "826d688fcab8fc391a7bd788e870435740f729dd",
+      "size": 1924
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10c6f820524a5a1fcfce0cf28bb0fcfdcb4628e9",
+      "size": 790
+    },
+    {
+      "path": "evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35238289036218c5429558d357618e0bb66e6c43"
+    },
+    {
+      "path": "evals/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67e4633da4914b6f962f37ff748f87790b4b3d7b",
+      "size": 9195
+    },
+    {
+      "path": "evals/k12-lesson-differentiation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63abf825be4c957516d8f930b1d5df6d76b6f5c3"
+    },
+    {
+      "path": "evals/k12-lesson-differentiation/rubrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1614561a42621490005400ac5e52e4593895eee"
+    },
+    {
+      "path": "evals/k12-lesson-differentiation/rubrics/clarifying_question.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b24f56d5783e97501f03addc611f04bdb85d7270",
+      "size": 559
+    },
+    {
+      "path": "evals/k12-lesson-differentiation/rubrics/differentiation.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd228a019f866dedebd4bb38376d878b37bf1bcd",
+      "size": 11770
+    },
+    {
+      "path": "evals/k12-lesson-planning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "412134fb79060097bf506e85c4977e45ed58021b"
+    },
+    {
+      "path": "evals/k12-lesson-planning/rubrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fca6c6e2466fb45184842e6e541ae595fb533a7d"
+    },
+    {
+      "path": "evals/k12-lesson-planning/rubrics/ela.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c95bdafeeadae89d40610a4494658ed1446f0cf4",
+      "size": 3027
+    },
+    {
+      "path": "evals/k12-lesson-planning/rubrics/math.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3d1663106f8b415ea669811a0c88b9e8fa45699",
+      "size": 2887
+    },
+    {
+      "path": "evals/k12-lesson-planning/rubrics/science.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa96546f3a8af7875a12f43d686864fe01403af",
+      "size": 2980
+    },
+    {
+      "path": "evals/k12-lesson-planning/rubrics/shared.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cf5bd72d5549ee6be1ced6ef88bd702131449f1",
+      "size": 13804
+    },
+    {
+      "path": "evals/k12-lesson-planning/rubrics/social_studies.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "296d49312c229b15c34a5b6e459a5a6590b7df86",
+      "size": 2859
+    },
+    {
+      "path": "plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48cbc92201be2a6caa1f3de0e586119f51a14970"
+    },
+    {
+      "path": "plugin/.claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09bfea5fcfcec48d05106b906787225a0167c9c5"
+    },
+    {
+      "path": "plugin/.claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52ea7471f7df964e3528df142f497b0f2791ccce",
+      "size": 545
+    },
+    {
+      "path": "plugin/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d98d416a0821f8089d4ce76cd3644e53c2cbfb19",
+      "size": 274
+    },
+    {
+      "path": "plugin/.mcp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afbd087667da696e8dfa4c39ac2e1f0b3259cfd1",
+      "size": 707
+    },
+    {
+      "path": "plugin/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2db0dec4873b735000a16ba194adf86704dddec0"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fce9930ba49af4a8d92179a7396acc0f5c123a8e"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ead6c5c2e8a27bd8ab6cc111e1785ba65fd20de1",
+      "size": 15904
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76ca1ece630b517911375e39ca7f26f233d747bd"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e259f74bf0b6b8dae1d0ac26f39c8b592327f113",
+      "size": 294
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a706352223b58861b16b30edaa9cdc90a0986908",
+      "size": 26557
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/example_differentiation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5370906eb79934ff78d40ffc097635a54864347c",
+      "size": 15459
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/learning-commons-kg.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "438038982738f23891dc92b1eda1f2b2f6211455",
+      "size": 12899
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/math.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dd76fa27ab58b14f5dc745d2134bc5fbab1be0f",
+      "size": 20215
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/output.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72182d9c9735746cab4a29f88e716718c63eb176",
+      "size": 16132
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/science.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7237e98788536b5ad46da22cd942369c926185c3",
+      "size": 23692
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/references/social_studies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0c34b1cd1d81d3b9a0c56cd6d983b052871c0b2",
+      "size": 22789
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "218a669738341bb556b46dc31deff3f4d6e980c0"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts/lesson_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c16e16589a626eb83774b4accfa8f41ac9060670",
+      "size": 33326
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts/render_all.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0bd6b8bb830b0d41ce7a95ebdac631512ec401ef",
+      "size": 2127
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts/render_documents.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20445fc37028634e17934e1d5956c5628fe3148f",
+      "size": 4677
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts/render_lesson_docx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fc827ab31070a55853f3bdd82e891bc209e8ba7",
+      "size": 25982
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts/render_lesson_html.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb7f95cd85e6d47545dab8c0cfb76781f2c66b0",
+      "size": 17148
+    },
+    {
+      "path": "plugin/skills/k12-lesson-differentiation/scripts/theme.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebe1fe761a4889e50668b3bdab25499647c6cf0a",
+      "size": 5293
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffe5e6a17b4a4b8a64a4afd1977424d6ff3b1ace"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "618f97a6f050adf0cd1766ef672c11533cc95696",
+      "size": 15445
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e12bbcf6c30ea7a05da20921dc92f8f855f70657"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e259f74bf0b6b8dae1d0ac26f39c8b592327f113",
+      "size": 294
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/ela.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eed91e8ee4123937b4c867c0bfc51423663d308b",
+      "size": 14388
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/example_lesson.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f9ee5b1102b04da3adbe30a9e8bd4f718f23ea6",
+      "size": 21310
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/learning-commons-kg.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7effd866832e77b55dca9c56ee8261d04ab4a6a0",
+      "size": 10117
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/math.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a114ac8d3455c2814282146963c9e02688ff546",
+      "size": 12227
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/output.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91b638e924c4908bc1b595c83ff653ceaef29419",
+      "size": 15783
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/science.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "320b7a145abf0432c714bb096a1b2d6958e4e854",
+      "size": 18495
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/references/social_studies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c2c0c87430e62c8ea07f7113bcc265151d13349",
+      "size": 12635
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b282504f85c569d3453e3e942f1db77fee5026c9"
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts/lesson_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c16e16589a626eb83774b4accfa8f41ac9060670",
+      "size": 33326
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts/render_all.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cadbb415b1c62d1f09d4b38b73086a4d13cfba7f",
+      "size": 2122
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts/render_documents.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20445fc37028634e17934e1d5956c5628fe3148f",
+      "size": 4677
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts/render_lesson_docx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fc827ab31070a55853f3bdd82e891bc209e8ba7",
+      "size": 25982
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts/render_lesson_html.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb7f95cd85e6d47545dab8c0cfb76781f2c66b0",
+      "size": 17148
+    },
+    {
+      "path": "plugin/skills/k12-lesson-planning/scripts/theme.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebe1fe761a4889e50668b3bdab25499647c6cf0a",
+      "size": 5293
+    }
+  ]
+}

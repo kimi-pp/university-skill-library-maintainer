@@ -1,0 +1,67 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "course-designer/SKILL.md",
+        "snippet": "tart ``` Design a new undergraduate course on machine learning for 60 students 帮我设计一门面向大二学生的数据结构课程 I'm inheriting CS 201 and want to redesign it — here's the old syllabus Check whether my course outline is inter"
+      },
+      {
+        "file": "course-designer/agents/design_mentor_agent.md",
+        "snippet": "esolve them** — coverage vs depth, rigor vs accessibility, their research interests vs student needs. Name the tension; the professor chooses. ## Question arc (adapt, don't march through) 1. Who actually takes this course, a"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "course-designer/SKILL.md",
+        "snippet": "uctured into self-contained async modules + sync/async split + engagement design + online accessibility defaults; passport `modality` + `schedule` updated | **Mode dispatch rule:** ambiguous between `socratic` and `full` →"
+      },
+      {
+        "file": "course-designer/SKILL.md",
+        "snippet": "nc/hybrid modality: self-contained modules, sync-vs-async split, async engagement, online accessibility (UDL); routes assessment redesign to assessment-architect | ## Workflow (`full` mode) ``` Phase 0 INTAKE — coll"
+      },
+      {
+        "file": "course-designer/SKILL.md",
+        "snippet": "-contained modules (`templates/async_module_template.md`) with a weekly rhythm and online accessibility defaults baked in (UDL, Pedagogy Foundations §7), designs async engagement (Community of Inquiry, `references/async_des"
+      },
+      {
+        "file": "course-designer/SKILL.md",
+        "snippet": "ented institutional policy.** Grading-scale rules, drop policies, integrity sanctions, accommodation procedures are institution-specific: the syllabus carries `[NEEDS PROFESSOR INPUT: <what & where to find it>]` marke"
+      },
+      {
+        "file": "course-designer/agents/async_designer_agent.md",
+        "snippet": "d hybrid modality — self-contained modules, async engagement, sync-vs-async split, online accessibility defaults\" --- # Async Designer — Online / Hybrid Modality Adapter ## Role You take a course whose outcomes and asses"
+      },
+      {
+        "file": "course-designer/agents/async_designer_agent.md",
+        "snippet": "cit. Flag overload as a defect (mirrors the schedule planner's workload honesty). 6. **Accessibility defaults for online** (UDL, Pedagogy Foundations §7): captions on all video, transcripts for audio, readable/structu"
+      },
+      {
+        "file": "course-designer/agents/design_mentor_agent.md",
+        "snippet": "Concept Brief. 5. **Surface tensions, don't resolve them** — coverage vs depth, rigor vs accessibility, their research interests vs student needs. Name the tension; the professor chooses. ## Question arc (adapt, don't"
+      },
+      {
+        "file": "course-designer/references/async_design_guide.md",
+        "snippet": "load is real: completion depends on structure and presence, not on learner willpower. ## Accessibility is the floor, not a feature {#access} Online removes the in-room cues some students relied on, so UDL (Pedagogy Founda"
+      },
+      {
+        "file": "course-designer/references/async_design_guide.md",
+        "snippet": "where the outcome allows it. These help everyone in an async context, not only registered-accommodation students, and they are defaults — not retrofits added after a complaint."
+      },
+      {
+        "file": "course-designer/templates/async_module_template.md",
+        "snippet": "ack turnaround:** {{when learners can expect substantive feedback — RSI, guide #rsi}} ## Accessibility note (default, not optional) Captions/transcripts present · documents have real heading structure and readable contras"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "course-designer/references/syllabus_checklist.md",
+        "snippet": "(P/D/O) with rationale** (Quality Gate Q1; see `shared/ai_era_integrity.md`) - [ ] Academic integrity policy ★ (link institutional policy; don't restate sanctions) - [ ] Attendance & participation policy, with the alterna"
+      },
+      {
+        "file": "course-designer/templates/syllabus_template.md",
+        "snippet": "r penalized; non-disclosure where required is an integrity matter. ## Course policies **Academic integrity:** {{link/reference to institutional policy}} **Attendance & participation:** {{policy + alternative route}} **Accommod"
+      }
+    ]
+  },
+  "read_errors": []
+}

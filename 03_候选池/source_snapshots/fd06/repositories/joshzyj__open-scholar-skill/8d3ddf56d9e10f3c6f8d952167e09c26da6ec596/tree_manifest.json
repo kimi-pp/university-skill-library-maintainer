@@ -1,0 +1,3580 @@
+{
+  "repository": "joshzyj/open-scholar-skill",
+  "fixed_version": "8d3ddf56d9e10f3c6f8d952167e09c26da6ec596",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e38e6fb0233206087ac77c63c3dd54099fc8fcac"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f102031ce1fad1ca876c2aa1975d0f8c50f65ca",
+      "size": 6333
+    },
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eec48bb9c0679eb295025d363df9c302ee4f50bc"
+    },
+    {
+      "path": ".claude/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbf2aad49f622b456eb929e3c6688d9d569825e3"
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-computational.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3b08165512396ce898989d8d11b017f21d1fac7",
+      "size": 12937
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-demographics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15564aa62cac4f08e94204b7d35a7556bc167834",
+      "size": 10724
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-ethics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43eb37db619a41ebb36c97f67a9c8c9e7281733",
+      "size": 13939
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-ling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba96a98be43bf02dcdce76560c55f24205f8cf31",
+      "size": 14147
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-mixed-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6f9d167fc3e6ef685e3da0f2ada35a1d97f0da",
+      "size": 11520
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-qual.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "136bdb9924c44e82ba07e533af9f28d1b614362c",
+      "size": 10782
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-quant.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ee4021140a33883dc40ea69c58fca22e34d1745",
+      "size": 7128
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-senior.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f378a2537ab05d40ff7a9d33e14dbb2591c2c3",
+      "size": 9618
+    },
+    {
+      "path": ".claude/agents/peer-reviewer-theory.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97eb972f7b00d339ee5fdb393d18db65f6079535",
+      "size": 8392
+    },
+    {
+      "path": ".claude/agents/review-code-correctness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49b435772fb3e75149d69f0894ba7515230f1679",
+      "size": 11286
+    },
+    {
+      "path": ".claude/agents/review-code-data-handling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33d76d53490bd2bca053fa1bbd9d4273b139dfe4",
+      "size": 17501
+    },
+    {
+      "path": ".claude/agents/review-code-reproducibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5670519e99ac7a2028c6918d6ff3fc28a0083ea0",
+      "size": 11262
+    },
+    {
+      "path": ".claude/agents/review-code-robustness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62d64cacd32554674beccafc984300532dc416c7",
+      "size": 9915
+    },
+    {
+      "path": ".claude/agents/review-code-statistics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f895900c6b403b16cf752ee7d43c5fc459564b7",
+      "size": 12466
+    },
+    {
+      "path": ".claude/agents/review-code-style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60fd02982cfae3f57726ba6821411af3604da1c5",
+      "size": 10656
+    },
+    {
+      "path": ".claude/agents/verify-claim-faithfulness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47a20289c829e275220761b8364f0f726c0927fb",
+      "size": 12286
+    },
+    {
+      "path": ".claude/agents/verify-completeness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6195c7e870de090bc78598c33fceadd7e3097248",
+      "size": 8913
+    },
+    {
+      "path": ".claude/agents/verify-figures.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67415c3c50a4318674d4c1ade8d58e4bdd30e99b",
+      "size": 10198
+    },
+    {
+      "path": ".claude/agents/verify-logic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c1b65cb2c76636c0e943b5086f6cb8a0e25a5f7",
+      "size": 10663
+    },
+    {
+      "path": ".claude/agents/verify-numerics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4eda532738b3d9669a54489e43e3f0a47552d63",
+      "size": 8387
+    },
+    {
+      "path": ".claude/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "078f35d01632717abe6e7c0c42690abac3a3585d"
+    },
+    {
+      "path": ".claude/skills/_shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14bbb0a75e403d8fdf1221122bad48f355a91223"
+    },
+    {
+      "path": ".claude/skills/_shared/agent-trace-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3825001357d241b8266baf844ed7f3a0a968b124",
+      "size": 3385
+    },
+    {
+      "path": ".claude/skills/_shared/causal-gate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f485911b1c4a1e94017a215a78f79c3e51df4245",
+      "size": 1551
+    },
+    {
+      "path": ".claude/skills/_shared/citation-verification-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5678d961c9db5114d0bdef701fe0c9efcc6149b9",
+      "size": 1629
+    },
+    {
+      "path": ".claude/skills/_shared/code-review-fix-loop.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db497dc94d4a060f3e8f98876d764a7a394a811c",
+      "size": 4858
+    },
+    {
+      "path": ".claude/skills/_shared/data-handling-policy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b5fc26b8eca0d56ebf41c685e4b95e717d97fcf",
+      "size": 34843
+    },
+    {
+      "path": ".claude/skills/_shared/dispatch-precedence.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "397146323ff6c86bd4e6520b22b9bf94174cb837",
+      "size": 3994
+    },
+    {
+      "path": ".claude/skills/_shared/knowledge-graph-search.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c15fc43c9b92695ce84758a7c85720edcca22204",
+      "size": 11141
+    },
+    {
+      "path": ".claude/skills/_shared/objectivity-mandate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e602c1b5b7cdfa3831857657daa7e36036e25213",
+      "size": 3664
+    },
+    {
+      "path": ".claude/skills/_shared/pandoc-multiformat.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "461d87a0ed34e12113d197f11b7a10ad2be0b6e4",
+      "size": 2312
+    },
+    {
+      "path": ".claude/skills/_shared/phase-runtime-sanity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c7a7830a8ebef9046fdd8f3d96ced0815b8cd43",
+      "size": 8123
+    },
+    {
+      "path": ".claude/skills/_shared/process-logger.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93a9370621e4a9ce1327dab7b42ba20792c000b1",
+      "size": 5348
+    },
+    {
+      "path": ".claude/skills/_shared/refmanager-backends.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e308dd6460a298f850b93ebd5d0f114aeff5f8d",
+      "size": 49123
+    },
+    {
+      "path": ".claude/skills/_shared/results-registry-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7bd4ca8852deecf7d1d15f9d49c0593011767c",
+      "size": 5958
+    },
+    {
+      "path": ".claude/skills/_shared/script-version-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7050c296fefeba8fc1bbef49f8c89a09ae4496fc",
+      "size": 4366
+    },
+    {
+      "path": ".claude/skills/_shared/source-integrity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61f23ddf3c6bed70f823d9b37e7a8e477ad6b273",
+      "size": 13486
+    },
+    {
+      "path": ".claude/skills/_shared/tier-b-safety-gate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc73e1d797283a156289da77de332027022221d",
+      "size": 5371
+    },
+    {
+      "path": ".claude/skills/_shared/version-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d701abde3e9010bb8bd9798d6e584a922d4a62c9",
+      "size": 4469
+    },
+    {
+      "path": ".claude/skills/scholar-analyze",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80c6cdc9f49abf3c3ff1c42b897ddd4577490c9e"
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c0f41da8d938cd5d9811b23d28160a44d979efa",
+      "size": 77849
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59816c04588ab5d5f7a9bbeabfeebcf1b494c535"
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/adjudication-rule.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9aa83ba174eb8e75655d42187e586b5062e2b2d0",
+      "size": 5122
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/analysis-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7d6ca44a8e162e2e4b65803ba0cb87d85b2440f",
+      "size": 12315
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/component-a-bayesian.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f3a857238a4fb888c3d0bc3b564b22a94e26218",
+      "size": 7480
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/component-a-core.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a4c5dfc40cec0d31caae554caf6b234fd78948f",
+      "size": 18508
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/component-a-export-robustness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b909b7df005e6f5776bdf3a96f4467c8ebccfcaf",
+      "size": 3969
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/component-a-regression.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "060bff9ec28e571ebf0374d65e2d53079023d713",
+      "size": 5575
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/component-a-specialized.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d89f21020bd5bd81608b3136a0832145a98c6b28",
+      "size": 57991
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/component-a-verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8854953a24401dceeab1b9c1ea40e3a259295d3",
+      "size": 5180
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/design-router.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623ef51a7a3d56ff1ec8d7ca49d9bc3f60e72956",
+      "size": 7833
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/ladder-decomposition.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c82ed59ef9e8149f6037005d27d0a1ec4e79fd0c",
+      "size": 4643
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/ladder-observational-causal.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e73500936272abfa576e1a62995ebe62741c22dc",
+      "size": 4198
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/ladder-observational-descriptive.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69458a16ef4dbd7bafff70f7c694e6d164e92a5a",
+      "size": 2868
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/ladder-predictive-ml.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "775e5a46cbf31f84005c7a4d55b6fbf0831abd79",
+      "size": 4197
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/ladder-quasi-experimental.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4eba449f0ad5621b063bbc5d1cd05ec5fc135e",
+      "size": 5037
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/ladder-rct.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5c2f4e8c49863c25ccc4ed2015cd79869339b04",
+      "size": 3540
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/viz-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f8a57b3fcabd85557e6c58cc5607b578e08f9e8",
+      "size": 10935
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/viz-templates-ggplot.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fb52b3ea255d51d89112a0e4d46f5807c9ba1a7",
+      "size": 22976
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/viz-templates-python.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acc107e41a94eda6deb33cc207d47f13d457883a",
+      "size": 12745
+    },
+    {
+      "path": ".claude/skills/scholar-analyze/references/viz_setting.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c075bd9eed8859d29cd444d4a1861af1f8048886",
+      "size": 13481
+    },
+    {
+      "path": ".claude/skills/scholar-annotate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91e41c30386f01362b6b05ef39623931cff87131"
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a40187173fc5c51e8c287049788b3cabee9a3be",
+      "size": 16045
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8dbc9199bd971f457525c619a7c62364e7b1d28"
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/_lib.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eb8884c1122a60bc0808e16b50e1496725e4b283",
+      "size": 1165
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/active_sample.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6955908861918ecb2fd1dcc5ab19158e8ee37503",
+      "size": 4180
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/annotate_engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90fb2dbfdc95a5f41d2bc631fe2010fd56a6b3d5",
+      "size": 15196
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/codebook_schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2a962818b9397afd8d1a3c758b8742a88ea1e0c",
+      "size": 2501
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/distill_embed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec10ef54f30c61ab84c1d0d445160c7a2dc91a1f",
+      "size": 5380
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/dspy_optimize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb4bebb0be34c0a47ce326cd2285ffb008a30c58",
+      "size": 7086
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/dspy_run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebf4b7d80a2bb227edd5712500ff0afc7b8e3f50",
+      "size": 6769
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/finetune_distill.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79dc42697626be0ef90755e2ceaaea199fff7b36",
+      "size": 8653
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/gold_reconcile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1446e327e9a5bf816787fdffdc5c6a1912c7c105",
+      "size": 3920
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/hpc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "720da7d4baab53454d373f3cf86dae89abca00d6"
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/hpc/annotate.sbatch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd97241f4d6fe63c5b42d9808ffeee06bed7e118",
+      "size": 2825
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/hpc/prep-mirror.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31916010498c10993a6383a5572c443f49a78ac2",
+      "size": 2649
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/hpc/rsync-helper.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "59b4cd3fe563cfcf7372aa86a52c435d87dc7730",
+      "size": 1117
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/providers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fae8a9b125712e7264eff1d3381efa3c2c96e86",
+      "size": 8256
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/reduce_corpus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb36a58cd838c7b197a26f54ce1bde5df643bf36",
+      "size": 17240
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "293fd1ea96fd122f1d0e721629b2c780014f75f3",
+      "size": 748
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/assets/run-annotate.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "db20a529e9d9bb30f1b8ce51650b9f9c701367dc",
+      "size": 620
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3150f880d35c4b1cfa5f37bbe97e652f85d8b0a0"
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/codebook-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcf386927b9e7a24f4db80fe457ac8cb54a1123c",
+      "size": 2026
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/corpus-profile.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f815c6212aea51539f9f15cc3b12c1fcc487d78d",
+      "size": 1577
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/data-safety.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc3737b0013ee18f4e9b8b942b65040306ed4b98",
+      "size": 2110
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/devset-construction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6d4eede23b2c0a31a9b76857b356253b9639c2e",
+      "size": 1858
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/distillation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0955ce1cbb86b9647667aa962c978e4745489037",
+      "size": 3880
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/dspy-optimization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44eb45d7205e90bbdcf5c2404cd3740c6a7c198e",
+      "size": 2634
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/gold-annotation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4cf9b086af2469d0457ad1ded519cbd7f2f7e16",
+      "size": 2847
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/local-model-scale-lessons.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8baf7b8160848a269ce179aef8b43e7ad5f2eb3",
+      "size": 8848
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/providers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9106e8b6566f27945b27ac2a8665a37d0cc980c",
+      "size": 1592
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/quickstart-worked-example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8db4567d2516c9876c9c176a4d15d7c7c89ecdcb",
+      "size": 5669
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/reporting-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fc88ff6c97796f723f13323036a33681a678798",
+      "size": 1878
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/scale-engine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d8dab8e2cc48c392f35ae57f0af17ed9009e672",
+      "size": 2218
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/task-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12323858d023da0300ed85a72941010f49d1d4d0",
+      "size": 1809
+    },
+    {
+      "path": ".claude/skills/scholar-annotate/references/validation-gate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23c14ce883015332fcfff050c6d9bd7ffef6989d",
+      "size": 1603
+    },
+    {
+      "path": ".claude/skills/scholar-auto-improve",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b138882cd41d35f2173a5be7a4186d9d0594bdbd"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-improve/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "514aa97df5d5b37cee49c2fbcd0d3bb0a9bcb2a4",
+      "size": 28688
+    },
+    {
+      "path": ".claude/skills/scholar-auto-improve/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82006610a054916cdfecbdb1ae16d8182114f00f"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-improve/references/diagnostic-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89b9213a3db99dc286c23b2b81188415779f6223",
+      "size": 7769
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e734bab693da3c26eec9e462fea02e90187cbf2"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82f8309b70975c20b2a31769bdfe32d9b8aa59fe",
+      "size": 73717
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6211fdc59ed92f373b832e16a4773a187208fa32"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/analysis-plan-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f847a78beecf8fbc5e295f6e6ce6e67ce1697aa1",
+      "size": 9306
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/analysis-premortem-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82f7324ffc1b32e79e12b4a3ff879d5bf7888e00",
+      "size": 7626
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/artifact-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e945ce1eb34b13db98ed841581c81f9a6dd6a66e",
+      "size": 690
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/citation-claim-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2915748c47d61a79ee959effe0e10d8f7a18abcf",
+      "size": 5292
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/data-measurement-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b446448f5eea703de0cbb32c78ce3f609659a8f",
+      "size": 6549
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/design-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb3d788a326bdcf07354b2b7958255a7713cd41",
+      "size": 9500
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/ethics-open-science-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ae2c7d503f832bc1df7259c0dffa27685fc25cc",
+      "size": 4513
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/execution-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "909807b1badb86d6a35b9447d71c045fcceb962a",
+      "size": 14561
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/final-assembly-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cd4ad38edd2de549dc997c32c044b239edff3e4",
+      "size": 8828
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/journal-profile-resolution-templates.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8947def787f86e9e5b4dd6d587aa6eb4cd02376e",
+      "size": 21633
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/literature-theory-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb856c8005020898648a5d3dfcfd37d6e6358e2e",
+      "size": 5876
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/manuscript-blueprint-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bddf6aead12c62ec0bf5fa1f7dcffed84abeadf7",
+      "size": 12879
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/manuscript-drafting-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8ce0579de0e25449652290dfa9eafcf5c7b5a9c",
+      "size": 41141
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/phase-contract.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e32dd0ac537016325780cfd6b5fa29732d4213",
+      "size": 27463
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/phase-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0578509e91fd9f04acf6ee21c4be154e154ed1e8",
+      "size": 922
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/post-execution-review-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19ada8224d4183b8931b6d9d02657c7e7b2c9171",
+      "size": 5603
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/pre-execution-review-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f290161aa143587bf7856c0a2c59fbb0a98187",
+      "size": 8084
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/quality-gate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10dc5aa86295fdaa5a88eafa9014c192fda73dba",
+      "size": 18689
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/replication-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d490b62f6db33e9fec11e3168a530a1be202243",
+      "size": 3303
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/research-question-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7b1fbd6a8b016e666055d41106415991cb34d50",
+      "size": 7439
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/results-lock-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85305bbabb7d6cd8e53e53b70469e4a8840f7c8b",
+      "size": 4367
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/runtime-sanity-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26627e8bfd9761cb4ac55397dd1fc1ecaeec364d",
+      "size": 4117
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/skill-routing-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16dda6702969d103c147611b665b60e4cfa72f96",
+      "size": 6086
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/state-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5adf042458716e2186cbbe60fd8e7952e1b4a41e",
+      "size": 4750
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/submission-hygiene-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c225a3c52c7247fe770bc341ced3c9dc2ee4509",
+      "size": 11201
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/verification-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "811dd338d8390ac912ca7bec49b3832ce2b6fbee",
+      "size": 11789
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/viz_setting.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a9435871a70c7307f568734357ec4ade767de40",
+      "size": 13749
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/references/weighted-survey-registry.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "defb5f0580bcb2b276db62c40a38240b78001748",
+      "size": 9154
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aede52d4b832b201881b49255b637789e7f45bc6"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/auto-research-contract-lint.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5c3f2f29c881c220537dd848b95f27808c48f815",
+      "size": 3845
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/auto-research-fixture-test.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6103e9c9fa8fcc120fad304bfc0db9f0c12264b9",
+      "size": 437953
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/auto-research-publication-quality-fixture-test.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "525eb02eeff27fdfe1392671bad49493b21ddcb7",
+      "size": 27194
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/auto-research-state.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0878d5d1837c184c8136b2bae5be87615fab761c",
+      "size": 27493
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/auto-research-system-gate-smoke.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c45731190a6e5c5077acca5bd1f1bf2b73388a6b",
+      "size": 6819
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/auto-research-verify.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5489460fd7b4747f85f0e7b923f63ea855fd60eb",
+      "size": 673993
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/detect-host-agent.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b96a72508f53cafedfb0930ec6463307b37a94d5",
+      "size": 2869
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/emit-journal-profile-resolution.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f9f80fcf4f9bdb6a34003e5b1c89ffa5499f15f",
+      "size": 6314
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad70f2875740bf6693619412a416c6fc21f188a0"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/_phase5-skill-resolver.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a5afbccf4f74dd25c0e679e38f6724ff525383e5",
+      "size": 2268
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/_section-role-helper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623d75e456e510c9da1165dc9d2f892572fc9c7d",
+      "size": 23583
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/abstract-boilerplate-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2f9ff8443754a17c059f278231741ed5d084bc99",
+      "size": 6347
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/analytic-formula-specificity-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "572c391ae134e1278176ab2ea647c131605c269a",
+      "size": 23314
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/analytic-strategy-quality-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a7bf5e250d43af7f311311de9a97fba13a8b80ac",
+      "size": 5180
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/citation-cluster-quality-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e5a665cde3e42208a1f38678082c98e310b5d6fe",
+      "size": 4022
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/codex-trigger-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "12ce4fa00a443aa70de692de3c7e60caca2cd1fc",
+      "size": 7484
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/codex-trigger-phase14.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5f6e13e8a7005fcd0008534af9d1119247b0a840",
+      "size": 809
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/codex-trigger-phase6.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2719a80513526a0e713a9fa36e4c46a4e6629e7e",
+      "size": 804
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/composite-measure-validation-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b9481329984dce44085ec3297bdd67c3f3f188b",
+      "size": 7536
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/concept-to-measure-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2731b5cf2ad250c71668bc55552bcfa6ecb6d0dc",
+      "size": 12457
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/conclusion-contribution-support-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ca8cec175a6e4058c0c790bb4a821a7630a67d45",
+      "size": 192
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/control-variables-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "af86453df77aa60f1a812c926dd8c94436f1225c",
+      "size": 10951
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/cross-section-continuity-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "301b1cf5955dd532b80f9c454c82943231ea10bd",
+      "size": 192
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/data-sample-flow-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fdfb3c0429272b01355408b2cdf205833ceea798",
+      "size": 10361
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/derive-manuscript-path.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "faacaf7ec642f4b48ad9f319fb6dc00da814070b",
+      "size": 8124
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/descriptive-table-display-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9f471d429eace29e05c54f19efdbf14941c1b4e0",
+      "size": 7123
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/descriptives-coverage-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ede1ad0312d2c5dd6921820e3508d74ef26faa26",
+      "size": 5851
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/discussion-adjudication-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "70fae982f4600b5b0b887781e86f32deddb5ecd7",
+      "size": 192
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/figure-style-source-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9c993136b50a636572c2ac173a822e235afde7aa",
+      "size": 4733
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/front-matter-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "27f6adda748e237713f2c99bedc0beff4e716cae",
+      "size": 6464
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/interaction-joint-test-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "99996a6785385d1de6a5c91dbdeaaf7423ba92d8",
+      "size": 6323
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/introduction-argument-architecture-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "df612a4dc3413525f3cf43e50e7c7b45b306dc84",
+      "size": 194
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/journal-section-architecture-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3d027a65e3cc92c1cdf3eaf81c4755c30da3ffe4",
+      "size": 12448
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/locked-artifact-transclusion-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "caf667a9047802019035a357f69070643a78ecc0",
+      "size": 4671
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/manuscript-artifact-leakage-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ad15f5444730ffc51dd42211c3daf70942bafde6",
+      "size": 4287
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/manuscript-title-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "feb9e090d953255707fd9f375e3d11e84710f607",
+      "size": 8613
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/methods-role-subsections-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "acd785b23af23ee7baa25e434ac18409a4f60925",
+      "size": 6255
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/regression-table-display-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "364213d154c9f84cb3583e3d57fea7b8d25e22c2",
+      "size": 17517
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/regression-table-export-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23841f02c0c95f296c12e971daa9474a90a1d368",
+      "size": 13268
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/regression-table-family-shape-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d0e1a77aa5e4e34538b0851b330570609fbe07e8",
+      "size": 8290
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/survey-weights-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6bc7e16bf17a780e7f3bac68d8b66d62e9da7ee8",
+      "size": 8442
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/theory-hypothesis-continuity-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e344b211a146d0e7e6cc0f9cb6ebe6b564631ecd",
+      "size": 11680
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/theory-structure-depth-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8ed7780389f4676287b580da4665b9c6acba69b1",
+      "size": 188
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/verify-citation-local-library.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "41f92c19f4972fd166f7ec25e02cf776d8860a4a",
+      "size": 21277
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/verify-citation-metadata.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ef592f065966739f7aa7163fe04f1be84fcfd4c7",
+      "size": 33713
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/gates/verify-rendered-references-against-bib.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0c328c909e2bec90a6c473d4623e7964bd25da50",
+      "size": 31868
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/setup-project-claudemd.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2d54d1621f8acdf1a92604fb46c5fd485db6c190",
+      "size": 9769
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a3b9ae61eea97320f90099ff5236a2386b344093"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/scripts/templates/claudemd-auto-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acc5303ea0e0a1e880fe5fd36c326534049dfba1",
+      "size": 10497
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d389a4bb6183ab95ae1367b8895653aa1a51ec83"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/tests/smoke",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d23061df1acd37b92b516971a853e028fce1ad09"
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/tests/smoke/test-codex-trigger-auto-research.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "017661a7e5bd5105c6e1be699804b6c20ecb07a7",
+      "size": 6577
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/tests/smoke/test-control-variables-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9dd1b1080b06d213f6d1f07bab77b1269c563410",
+      "size": 9376
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/tests/smoke/test-layer1-design-aware.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "650a9576aa18a5b96cbcd76cc621c63b18ee2138",
+      "size": 5550
+    },
+    {
+      "path": ".claude/skills/scholar-auto-research/tests/smoke/test-phase5-skill-resolver.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f1c4d467ddfdbb9c4ee4bbc97e41b292f47e516e",
+      "size": 6620
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb055d7040ea532d82c56a07ebe60df04d4323ec"
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727fa7a4e927150425818d425b1b8458813e1834",
+      "size": 17461
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29ec926d6eda4650e4e508dcb0f075ec2194ad31"
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm/references/brainstorm-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9115964b545c84fc0865fc9fe3fbe0bb471b44f0",
+      "size": 15688
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm/references/mode-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c8b93165534b1a71d9555ab0a3c7e2b8ba0ccbe",
+      "size": 29528
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm/references/mode-paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49be401b703764612257c116cb5e58bfab529ef5",
+      "size": 4876
+    },
+    {
+      "path": ".claude/skills/scholar-brainstorm/references/shared-evaluation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5410cc85768fbf9a6750204d08b6185f883a5773",
+      "size": 25301
+    },
+    {
+      "path": ".claude/skills/scholar-causal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0abd28b641f93f91cda5d4fb8ac5e4b38e979fcd"
+    },
+    {
+      "path": ".claude/skills/scholar-causal/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e5417159f6b2b9d64f67798353bc92e9ba476c3",
+      "size": 40041
+    },
+    {
+      "path": ".claude/skills/scholar-causal/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9142977776171083bf81eb4c1ed54cf179fe7f74"
+    },
+    {
+      "path": ".claude/skills/scholar-causal/references/dag-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e050a598aa2e49a8f3af1742d1f1bccf2d32a4",
+      "size": 16689
+    },
+    {
+      "path": ".claude/skills/scholar-causal/references/did-cs-workflow.R",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cc9f1096b71f112db8c6c88ba1997656d6af814",
+      "size": 12457
+    },
+    {
+      "path": ".claude/skills/scholar-causal/references/identification-toolkit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c616e1e76d6fb430052262ec2578c80aee306ea",
+      "size": 23923
+    },
+    {
+      "path": ".claude/skills/scholar-causal/references/matching-weighting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cafb3915f26c78634ad356b682e7717381f91303",
+      "size": 15508
+    },
+    {
+      "path": ".claude/skills/scholar-causal/references/strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de2bd84c38216be5da5c1d4e6f704f000741bf4",
+      "size": 78392
+    },
+    {
+      "path": ".claude/skills/scholar-citation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8026057b73cfa954eb8e2cd4ddfc6e9b307a2c27"
+    },
+    {
+      "path": ".claude/skills/scholar-citation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "177bbbc77919ea0aebbcabf0de7c73a19a998cf4",
+      "size": 34890
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f84a9b826a9f1ae1ff9865a9f424855cafc7810"
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references/mode-convert-export.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a71368ee13e8a03c98f5e02649904382e52f413a",
+      "size": 5520
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references/mode-full-rebuild.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4761b0b992afeaefb566a81240452c54c993348d",
+      "size": 1262
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references/mode-insert-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fb379e01fa0ec89d5b368ce43f52484f009667b",
+      "size": 12312
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references/mode-reporting-summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb14d94bd3dac9477aff19d52fe6d13eaf5ccb0",
+      "size": 6416
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references/mode-verify-retraction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc61b64c137f198337a7b28aec9dd3131ef85c7d",
+      "size": 18426
+    },
+    {
+      "path": ".claude/skills/scholar-citation/references/refmanager-backends.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7695c933f92b34f314a9e8d4bda36043ff01f6b7",
+      "size": 48745
+    },
+    {
+      "path": ".claude/skills/scholar-code-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "310a7fe8ae03b0163d31bd97e08c418d8b53e7e0"
+    },
+    {
+      "path": ".claude/skills/scholar-code-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cc5c845a7cc3fd5b1195bec2e58342112e6eb96",
+      "size": 27518
+    },
+    {
+      "path": ".claude/skills/scholar-code-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccbea7be6e1375dfeabd14c9d009c70bd454d274"
+    },
+    {
+      "path": ".claude/skills/scholar-code-review/references/code-review-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ea47a650d9f04df9ad62b08bfec9ee35852c5d7",
+      "size": 6139
+    },
+    {
+      "path": ".claude/skills/scholar-collaborate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abaa6d009f2df1ce9734cbae518d0d376e6668f0"
+    },
+    {
+      "path": ".claude/skills/scholar-collaborate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48d878ec85a8d314e376b7b55c7e1741fbd4f655",
+      "size": 23081
+    },
+    {
+      "path": ".claude/skills/scholar-compute",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10aee9ac0229d229d78f02d018f0bd172f1ceb95"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf78e3dfe5a9043080a6a208c7e82d86fc3d226",
+      "size": 53626
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d789f423e8e5b2738dbf1bb0da568acf5cc7efac"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/computer-vision.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d269d73a9c048ef590a34dc68c051edfe010940",
+      "size": 25149
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/ml-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b7d666c593afbb2da67cffa967474078160efe",
+      "size": 11171
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-01-nlp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2de0614857ec4551504f47bf93caa0a58211666a",
+      "size": 50887
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-02-ml.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaf4445a3e1946a2bf0c74211638bb12d93081d8",
+      "size": 40895
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-03-network.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e5f867b3980521f39ae771ad616cc87e00fb679",
+      "size": 20164
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-04-abm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bf851c7857c66cb8f7e39f2535ed9dd9600f586",
+      "size": 15619
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-05-reproducibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "245c40cf5c956ee99f3b98b4d61de00e13dbb8ac",
+      "size": 3136
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-06-cv.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e4cf8494dd74c57e66c0f4986c6c1c631546f80",
+      "size": 21025
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-07-llm-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba5173fc327790debc5d894484c30775e01b4712",
+      "size": 23073
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-08-synthetic-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "850474e980bd8edcf0381d1311a71ee30e6db432",
+      "size": 27812
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-09-geospatial.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "872859fba2f25fcd4b92d6ad053c5678ed97894f",
+      "size": 12081
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-10-audio.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdee4a6508dea3f7460ed2d64aac769e276cf84a",
+      "size": 41955
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/module-11-life2vec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90ca2390b9bfc8d5849f0af168e308392efccd51",
+      "size": 52540
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/network-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d583761e097df1e76ee14b986cbb37f0d058a73f",
+      "size": 16604
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/nlp-pipeline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48122f3cbb505c583f49fdb2f6deed559511d1c9",
+      "size": 30721
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a19a227ed3d351b83a7b22408bc71d853e8d740d"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54cab9b1a14c20d3fd7d6541fb9400b8b5ddc88b",
+      "size": 2718
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adb3bc98f4b6af7be9fdc690871ea9ff0f0e6ae0"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/CODEBOOK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d75cf6598b2bfa74272fc567ad21e54d55f84cb5",
+      "size": 2358
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cd8eddc008156957a7dfc9c94b75ef014e10e06",
+      "size": 4607
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/dspy_demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e68a8312463fb40561264a9834370592bbaeabf2",
+      "size": 9858
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "507ea20695b81fdce197e01d309fdbb04091ef17"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/bootstrap_demos.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347fb411097b8eef2000abd9a2ec252a03086b1c",
+      "size": 787
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/mipro_demos.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "size": 2
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/mipro_instruction.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "792f22189927662579784ec3832252a81884f064",
+      "size": 472
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/predictions_baseline.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02c53adb2b07e7c71dc72527ca745f4771972cc1",
+      "size": 918
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/predictions_bootstrap.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02c53adb2b07e7c71dc72527ca745f4771972cc1",
+      "size": 918
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/predictions_mipro.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f44fccd46906c23da880706fec308f22316c013",
+      "size": 918
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/rendered_prompt_baseline.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29bf9f0e56e1306b7391f35c31818fa35da31b58",
+      "size": 739
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/rendered_prompt_bootstrap.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9573b849143f8f58f136557d9e69539e792a06",
+      "size": 1852
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/rendered_prompt_mipro.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f163ed13f24fb3dce460003d2d127ffe68535f77",
+      "size": 1170
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/run_log.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6664cda207cbf8828142891e4919410fa5cf8b64",
+      "size": 1161
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/outputs/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4773f4f57c72b0aa94006e7be23133f3626fa46",
+      "size": 1317
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b39a2eba547222222696f041c58965749efb9e5f",
+      "size": 258
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/dspy-demo/synthetic_data.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60bd8d5b308dd33eea5e0f37b3a9aeb8a56e93c7",
+      "size": 2704
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6e308aac5a090b6f929a0e6d493637595675259"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/CODEBOOK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d75cf6598b2bfa74272fc567ad21e54d55f84cb5",
+      "size": 2358
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f503aef960fa99a802420a7dc1a1beadf340d6be",
+      "size": 4017
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/make_data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f3b45b37e29097368988b245758063c9c2c985b",
+      "size": 7113
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/optimize_prompt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fd6e7e1d1c0607e5b5867af6d460c1cd05a3aa9",
+      "size": 10249
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "72f934be02dd0da475b01c2c6e5787187611fa99"
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/initial_prompt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347bbaabc83aeb580d65342aa1a588955ac83b25",
+      "size": 119
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/optimized_prompt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3389d34890a7d135290ae502439f1e99bf454a80",
+      "size": 282
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/predictions_initial.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abc3b7f6f7a2397b5489811995621b7c971d742f",
+      "size": 1018
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/predictions_optimized.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a7cb00c5dc0d3342b3e641e96d6ad965cfd874",
+      "size": 1018
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/run_log.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080091974501b36b14ee65eb7e57b37f7064d0d6",
+      "size": 1148
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab0a0c66b5cb367ebe59ba1867e07645023e4204",
+      "size": 518
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/outputs/trajectory.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548943d6dcdee1e15ce11b792f391187767e03b2",
+      "size": 584
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a906ebc02f92ede99ad4b1b6b3e854c6db494be1",
+      "size": 180
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/prompt-optimization-demo/textgrad-demo/synthetic_data.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60bd8d5b308dd33eea5e0f37b3a9aeb8a56e93c7",
+      "size": 2704
+    },
+    {
+      "path": ".claude/skills/scholar-compute/references/synthetic-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ece00754fd2c27e239ac4b69aa6dd29525c5313f",
+      "size": 17589
+    },
+    {
+      "path": ".claude/skills/scholar-conceptual",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0dc231fa32b9f296884fddd1cb795933112a5ac"
+    },
+    {
+      "path": ".claude/skills/scholar-conceptual/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56390c122d7313b865fbc28c17d592f08d4f8f2b",
+      "size": 20750
+    },
+    {
+      "path": ".claude/skills/scholar-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b156f32ea0fca5d670674bf4b0cb877a0068c5a"
+    },
+    {
+      "path": ".claude/skills/scholar-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "051d09a63d8c9673cc6ffc36c57e605b54a1ceac",
+      "size": 90680
+    },
+    {
+      "path": ".claude/skills/scholar-data/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0520ad5c5524a5dbb330cc62aa683ce57730c291"
+    },
+    {
+      "path": ".claude/skills/scholar-data/references/data-management.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83ffbda38ee1f748102d24413eef7df2d9b67b12",
+      "size": 8149
+    },
+    {
+      "path": ".claude/skills/scholar-data/references/interview-protocols.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cdaea7ee5c6b80b95e517c754a60dda76cf6dcb",
+      "size": 8480
+    },
+    {
+      "path": ".claude/skills/scholar-data/references/survey-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70926ce4e7503bd6bf8e8e4149edfec8dc5bcb47",
+      "size": 8054
+    },
+    {
+      "path": ".claude/skills/scholar-data/references/web-scraping.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1876225f42b143ebbc5f4e46fb2d8ce5cb1665c1",
+      "size": 14615
+    },
+    {
+      "path": ".claude/skills/scholar-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7dd808837b30fbc90bb088c0903ded0705b1a6c9"
+    },
+    {
+      "path": ".claude/skills/scholar-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d11893e538bfb4db60e89db0efbd031cef9391b",
+      "size": 114393
+    },
+    {
+      "path": ".claude/skills/scholar-design/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c7fa93f419c219aa9e691a5ecc67feae88152b2"
+    },
+    {
+      "path": ".claude/skills/scholar-design/references/computational-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1a540f25c75ef382c6c606a4702f71ecbb2084f",
+      "size": 19331
+    },
+    {
+      "path": ".claude/skills/scholar-design/references/qual-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f004ebdeacc210b9a6df64f9dcd3eb0060c8272",
+      "size": 8962
+    },
+    {
+      "path": ".claude/skills/scholar-design/references/quant-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54598d0fcac73de9f73d4e8c2ed2bd6de9f9fdb8",
+      "size": 17343
+    },
+    {
+      "path": ".claude/skills/scholar-eda",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb235b2eeb5b45be368f3e73fb698b06ebaaf057"
+    },
+    {
+      "path": ".claude/skills/scholar-eda/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ac62e7e6df96a20ae07cdaacb0437ddc777e18",
+      "size": 45867
+    },
+    {
+      "path": ".claude/skills/scholar-eda/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63f8e3f8310524a0815659d8cfd8f7cfef28b00c"
+    },
+    {
+      "path": ".claude/skills/scholar-eda/references/cleaning-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51eae6167ae753764a34a6b64695cb4273bc5ab4",
+      "size": 6027
+    },
+    {
+      "path": ".claude/skills/scholar-eda/references/missing-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfc7f988e41aeaf69ec6c93d6d42c6ae681fccad",
+      "size": 5497
+    },
+    {
+      "path": ".claude/skills/scholar-ethics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "425b7a37cffa6ab2bb4f30f7e7cb7447e374fe6a"
+    },
+    {
+      "path": ".claude/skills/scholar-ethics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cee10a8714e95b323e2061865d91b79c90201ec4",
+      "size": 38850
+    },
+    {
+      "path": ".claude/skills/scholar-ethics/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cec4b9141b8745bff7d73fe01aa7ee80bee3f99"
+    },
+    {
+      "path": ".claude/skills/scholar-ethics/references/data-privacy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80390742e348cd3f9ac4c88736116c9a648f5966",
+      "size": 8364
+    },
+    {
+      "path": ".claude/skills/scholar-ethics/references/ethics-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d424697aae3469158754e626f38374aa95c44b0",
+      "size": 14732
+    },
+    {
+      "path": ".claude/skills/scholar-ethics/references/plagiarism-guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c663dd4b2865b66c21248839ae662336caa17e",
+      "size": 9940
+    },
+    {
+      "path": ".claude/skills/scholar-ethics/references/research-integrity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a65c6ca696f5b76cc001c62201c5940641316316",
+      "size": 13071
+    },
+    {
+      "path": ".claude/skills/scholar-hypothesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1e2fa41c2d5f81411ed8320581671dac07d6f30"
+    },
+    {
+      "path": ".claude/skills/scholar-hypothesis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e3183738eec3cb9c00ca2436d21d5c48ce1c938",
+      "size": 44146
+    },
+    {
+      "path": ".claude/skills/scholar-hypothesis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d5e3b235453c2b9c9b7cdff788cb48c3ee08880"
+    },
+    {
+      "path": ".claude/skills/scholar-hypothesis/references/theory-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64d423e3f69c88f2b445cf0e83f370736ff68297",
+      "size": 47469
+    },
+    {
+      "path": ".claude/skills/scholar-idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1459cee71e97ef19f78944da6e4f118e023c46f"
+    },
+    {
+      "path": ".claude/skills/scholar-idea/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26f4b92d44bf6d8585bd81497362f347f057a675",
+      "size": 31535
+    },
+    {
+      "path": ".claude/skills/scholar-idea/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cc76c24e8062b1e6dc1788c272d20546cdb6159"
+    },
+    {
+      "path": ".claude/skills/scholar-idea/references/idea-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1425fd20f0ce4dea7b7768f0d30fd36d637fa2b0",
+      "size": 62955
+    },
+    {
+      "path": ".claude/skills/scholar-init",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "202ead219bdcc74599b21defcf1292699eed9c25"
+    },
+    {
+      "path": ".claude/skills/scholar-init/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5febded7c88af819ef3e4e919b6ba2f85a58584",
+      "size": 33014
+    },
+    {
+      "path": ".claude/skills/scholar-journal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d1b58d1c539ff77da7f3e69034898bf31a771be"
+    },
+    {
+      "path": ".claude/skills/scholar-journal/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c574ba4063bf923b40b366bd09431999c02225b6",
+      "size": 59038
+    },
+    {
+      "path": ".claude/skills/scholar-journal/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d03f96fa9be5154ebc21846c0e42a28490a4611"
+    },
+    {
+      "path": ".claude/skills/scholar-journal/references/top-journals.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39695104ee5e683469bf3d329fe5f0691c2ee0b9",
+      "size": 22360
+    },
+    {
+      "path": ".claude/skills/scholar-knowledge",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b1fe2a124574c6732bf78e083afef74c411ef36"
+    },
+    {
+      "path": ".claude/skills/scholar-knowledge/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57cda50c8ed0cf8bbb2ca7fc89fe17373bfd75f8",
+      "size": 68397
+    },
+    {
+      "path": ".claude/skills/scholar-knowledge/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bba660e5a49fe74f89c9c8f9a68a7dab780acbc6"
+    },
+    {
+      "path": ".claude/skills/scholar-knowledge/references/knowledge-graph-search.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c15fc43c9b92695ce84758a7c85720edcca22204",
+      "size": 11141
+    },
+    {
+      "path": ".claude/skills/scholar-knowledge/references/obsidian-setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20f7469134a9ac130b309829ccd5bf86c176cf8",
+      "size": 5020
+    },
+    {
+      "path": ".claude/skills/scholar-ling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "517532b4aaf4e7b64b7c8722b1f62813da04f539"
+    },
+    {
+      "path": ".claude/skills/scholar-ling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9c7f32fbda804fd06f718fd6043a525e5f118ba",
+      "size": 24767
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7917104bdc8b304a4da504e7c628bbb6aef9406"
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/discourse-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2362e8459fd7afda306b679583496feccc5450c5",
+      "size": 16035
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-01-theory.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a71c52dd2f2b14eed63db58dd68d7e5f09e4dc3",
+      "size": 3555
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-02-quantitative.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6106340da598f89be8d836d33619390292a85d73",
+      "size": 8865
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-03-qualitative.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa9e044df769b60e61af31d64e079a08c4b32ffc",
+      "size": 2780
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-04-attitudes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "487dc711445c75bd6d0c77f6544c8a907d09de50",
+      "size": 2426
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-05-corpus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68aea5e107ceb65e0e5dea17460fda188165595e",
+      "size": 5351
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-06-computational.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23bb1febc6fc3e0c9de3ce41be17e0cade195000",
+      "size": 16158
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-07-experimental.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e3ff37b37272ac394ebf4bf76c2779c7c15bd4",
+      "size": 7393
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-08-biber-mda.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f83acfb4e8ec82be14bb55aa5601690899318dc",
+      "size": 7562
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/module-09-tts-mgt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d45b4058cf0548da510a65f210007bf1d7646d7",
+      "size": 12028
+    },
+    {
+      "path": ".claude/skills/scholar-ling/references/socioling-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cad7eafbb544633747678dfc760fc8129a2730d",
+      "size": 17309
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e297c582212a7fb3e10a5eb0170b315f730edcb7"
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b37c5786daca672f787d7e3b639f859281bc686",
+      "size": 53834
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5daa2312c780549747e0793b079cc1d9f2d72382"
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis/references/gap-to-hypothesis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7fa5b9a19aaeb80f1ff84c21a1e432c0b2c877e",
+      "size": 12554
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis/references/search-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a32e63afdd5e4040691cb68a95364dbf90ab2f63",
+      "size": 4981
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis/references/synthesis-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42ccdb81006441bd67f8f465f78db24e5ec3da2a",
+      "size": 6084
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review-hypothesis/references/theory-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e6ee409d254c1dee44632b26254d75aa37ce381",
+      "size": 18323
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c111290bb13a53e5eb669890221be7c1378af823"
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80cf7bf9e77732b973ae11d7ed7824c7897aabad",
+      "size": 52885
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "587e9fa9a63185d8f7c9005bcdaebb1212e5c878"
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review/references/search-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7153731ad1ab735b83583aeb467041e82bdca88",
+      "size": 8969
+    },
+    {
+      "path": ".claude/skills/scholar-lit-review/references/synthesis-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b1370ebe725bb52508a287d6b73b57175a31490",
+      "size": 14230
+    },
+    {
+      "path": ".claude/skills/scholar-monitor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0c4ab18004035f5062124bbd6be1a2cdd7d52d3"
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e0f175f283ebd6bc21e962c06afddfa82ac9a74",
+      "size": 46932
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31c96bac37319c01a5b8c547b5ae0be9742e7b2e"
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/assets/default-sources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2964a56aa177d2cda0b97895329b1aaac2f9a866",
+      "size": 5853
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/assets/deliver.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3152bee910db43a7efa181f7d9696d522e023066",
+      "size": 5229
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/assets/fetch.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "32a7cd5cac1568b8503cab3c1fcaabb43f30751f",
+      "size": 14237
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3067e5264cc688f38b1bd24d3a5f30fc53220bcf"
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/references/delivery-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "114784d1b0034e021af60e6e10b1dd8cfce4edeb",
+      "size": 5910
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/references/fetcher-protocols.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fd721176746f70cf948cf27fbf2868831875ac1",
+      "size": 6753
+    },
+    {
+      "path": ".claude/skills/scholar-monitor/references/registry-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee8d62886895cacba09b491cf688ff5629eb405c",
+      "size": 6558
+    },
+    {
+      "path": ".claude/skills/scholar-open",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25de5a8e8804b9e27e53a167226025023cd9366a"
+    },
+    {
+      "path": ".claude/skills/scholar-open/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c317a5846ad2d76653622c587fa7811f5221616a",
+      "size": 57908
+    },
+    {
+      "path": ".claude/skills/scholar-open/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3f26369eb61fd2921bf599eb7afc10860d27190"
+    },
+    {
+      "path": ".claude/skills/scholar-open/references/data-sharing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38e95b3c4d7400eb9c4aa5dc3dfa53d1ab15125b",
+      "size": 22497
+    },
+    {
+      "path": ".claude/skills/scholar-open/references/preregistration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e59adb275ba50f184e15a6b5709acfb1131bc95",
+      "size": 14236
+    },
+    {
+      "path": ".claude/skills/scholar-openai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c60c67294c2188b9d0f623b9e74b59baf6b72135"
+    },
+    {
+      "path": ".claude/skills/scholar-openai/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a9273d319049022871304d384b0778d8a02193",
+      "size": 24626
+    },
+    {
+      "path": ".claude/skills/scholar-openai/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7839145269221dba9b4a08e739ec0b4cf25a2d2f"
+    },
+    {
+      "path": ".claude/skills/scholar-openai/references/codex-review-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb657dd166b13ac4a9282643009832cef6cccdc0",
+      "size": 10444
+    },
+    {
+      "path": ".claude/skills/scholar-polish",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74b92db12f487e33423d8e0c3a808e16ebb6b802"
+    },
+    {
+      "path": ".claude/skills/scholar-polish/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20f0f558b88ed95b882ab142fc4008211e7359e9",
+      "size": 47626
+    },
+    {
+      "path": ".claude/skills/scholar-qual",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07468c6a7a7018dde5ea7a989f773b72ee344c27"
+    },
+    {
+      "path": ".claude/skills/scholar-qual/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc0665b98bc2710ca7bbed52e5f72d4672af9bd",
+      "size": 61940
+    },
+    {
+      "path": ".claude/skills/scholar-rag",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba0a18afd6a5927166f9d57de7c246d4845df40a"
+    },
+    {
+      "path": ".claude/skills/scholar-rag/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6c74bbc637b1bd010bcd209dca9179479b248b4",
+      "size": 10825
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "658dee27f3a7611a3ee6a171e5542c3b696b82cd"
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/_lib.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f25257449c73707aabb5e9c8b869b4dba019bd27",
+      "size": 2038
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/build-all.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0cf312f0820368e8b8cb96db9b462fcb5b84dd39",
+      "size": 1855
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/chunk_embed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e7a827263954174b8bf1e04c714efb160783d99",
+      "size": 14971
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/extract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "516049ec9a052ef369cef0fd15bfb9d224fc62a1",
+      "size": 9162
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/fetch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca9ab1c64c03916b0897796661ed17151130d76b",
+      "size": 5435
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/graphrag.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "390a0c81c3164a5054156a5dbc1454d530983bc9",
+      "size": 22396
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/ingest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02fb8e14b5a410928442169fe199d85f8fa668d6",
+      "size": 4628
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/mcp-setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5ec39515a59164ca2b73acd5529981520fe019b9",
+      "size": 3116
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/mcp_server.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0db3ced548b02bc04e8fbaf8326a248084e353af",
+      "size": 5318
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/query.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a7f480bdc1a6bfdcb2730b14aa5f97023179053",
+      "size": 7243
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c1c9ecd65e5493984d7390ca9c389432e956b21",
+      "size": 1259
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/run-graph.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5d6671caebb38f5f05dd5bef69825a8958008a8c",
+      "size": 1063
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/run-ingest.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "56977f4f8e5038184d8bb9e2070bf8ebfb9ced40",
+      "size": 2392
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/setup-venv.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7add9742094ccdc163c7e42333b1acdd909cbf96",
+      "size": 3213
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/store.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "183840ef932a73cb46588b581e5115380372e6ce",
+      "size": 9014
+    },
+    {
+      "path": ".claude/skills/scholar-rag/assets/zotero_reader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e714fbdd65bb9806f8f80f49d23dcd899e84adb2",
+      "size": 12838
+    },
+    {
+      "path": ".claude/skills/scholar-rag/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "947ba0f662c62f1fd2010de6065e2381ac06ad22"
+    },
+    {
+      "path": ".claude/skills/scholar-rag/references/engine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "194a69977adedfb21b9576c376e0cfde80baebbc",
+      "size": 6203
+    },
+    {
+      "path": ".claude/skills/scholar-replication",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b43420ec0f8871288deb71e83cad4fde22edc29"
+    },
+    {
+      "path": ".claude/skills/scholar-replication/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a467f7259e17361359f04eadbd0c81e5735daad0",
+      "size": 74970
+    },
+    {
+      "path": ".claude/skills/scholar-replication/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23fe8bf353a41fd2debb8964af52bcc4fbaa2e4b"
+    },
+    {
+      "path": ".claude/skills/scholar-replication/references/replication-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7579416259a34ad53ba10bd7400418b260edc246",
+      "size": 23025
+    },
+    {
+      "path": ".claude/skills/scholar-respond",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "379e55bff63bd2573670c85d1e22ff307edc7c32"
+    },
+    {
+      "path": ".claude/skills/scholar-respond/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6863fabb5d46fd9ece602c5b806417ec2092e486",
+      "size": 63549
+    },
+    {
+      "path": ".claude/skills/scholar-respond/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd9c5976dca760b556a2141e42f870f065e2ebec"
+    },
+    {
+      "path": ".claude/skills/scholar-respond/references/common-concerns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3804b3a64bbd87a66c07c2797e45c2ca4f5ec8a",
+      "size": 48333
+    },
+    {
+      "path": ".claude/skills/scholar-respond/references/response-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab4babff5fbf0d26fd4c27bb12d4091ce953f0f0",
+      "size": 17828
+    },
+    {
+      "path": ".claude/skills/scholar-safety",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca65adf17dddb3b4394bfe4dbd43b039e5d69af6"
+    },
+    {
+      "path": ".claude/skills/scholar-safety/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee0ab55269f4a763ba4d64288ec737ef50da337",
+      "size": 46591
+    },
+    {
+      "path": ".claude/skills/scholar-safety/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5230c7742f2405af1d9a5b280fc54aefea708817"
+    },
+    {
+      "path": ".claude/skills/scholar-safety/references/permission-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce252f61ed2cab874a4ce742b182ce833a003969",
+      "size": 12231
+    },
+    {
+      "path": ".claude/skills/scholar-safety/references/safe-mode-protocols.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42f034998140287b1af2fd536409553cfbe58a13",
+      "size": 15246
+    },
+    {
+      "path": ".claude/skills/scholar-safety/references/sensitivity-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a76d88f8366693d6e6600b454377d251b7f6880",
+      "size": 13042
+    },
+    {
+      "path": ".claude/skills/scholar-simulate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa6698167eb7ee14177a1f4f165c776d76209a25"
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de20a2fb938a0be4e72cb2ba28baca37f618cd2c",
+      "size": 18773
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a43c05b85db9ce7ad63719ab77f9b8d23e79424b"
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/interactive_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95678745cf65262aa4c791fb6f06f36bd7de0e18",
+      "size": 38105
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/personas.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "140f1fbfcfca2fec1964bef91805056121d0ae5a",
+      "size": 11590
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/providers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5eb11a575e55206b4f8f6dda446cf32f7fb4dd",
+      "size": 24260
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/requirements-interactive.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1105b2e9b16061df6a824922adba51e023e73407",
+      "size": 1627
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/run-simulate.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2ca6b40407a271d4df1462143940e244e2ff98b9",
+      "size": 3139
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "398f7e9b99b7bad3bca48feac2d7352d50a8ade1"
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/schema/item.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "beab226d8a3e036f8c311c7f525bda2a3b263a77",
+      "size": 1255
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/schema/persona.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4fc1d3e231304cd55375f798f6f94b610ed404f",
+      "size": 761
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/schema/response.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0baed9aa723bb5a5decbb64cebdf99102e6a464f",
+      "size": 956
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/schema/run-manifest.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c860c140c7e86ef13cc20eabb8613f6d53a67775",
+      "size": 5335
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/simulate_engine.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f079228a809d544461e27c1ee6d333994768140b",
+      "size": 23134
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/assets/validate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb189dbcc661732d496ba3405efff6f849065f47",
+      "size": 20002
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63fa289a00c5e60cf62ce1dda331ad019e24abff"
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/dynamic-orchestration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de60c00ff8a13c94a9605decd47ed6b5efc29f29",
+      "size": 9856
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/generative-abm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0383e21267e4edad38ea7fcb89f3592a41c6edd7",
+      "size": 21928
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/interactive-multiagent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7da08ea472b47616851ab1f77d5aab49a83224",
+      "size": 9804
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/paradigms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9f7f69c4ee930178007d600145cb4a09d22a23c",
+      "size": 9443
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/persona-construction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b6f6c11bed1b87be4ba49e6fae22d59b5dd851a",
+      "size": 11883
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/providers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5adc79577742ab08c2e36c9a28a7e72ed3f5fc3",
+      "size": 6330
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/reporting-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6913427caee71441c6b587a98e191795053f18e0",
+      "size": 10962
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/scale-engine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1d758854586208074ea988afb08c348137f47a5",
+      "size": 9212
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/silicon-sampling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feeeca16421ebc650ce283007761fe2306e1abef",
+      "size": 12122
+    },
+    {
+      "path": ".claude/skills/scholar-simulate/references/validation-fidelity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a3373cd809f219f7b34f16f59b177d4dd40c0a1",
+      "size": 16985
+    },
+    {
+      "path": ".claude/skills/scholar-verify",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e22ed34a9fd4391202728715da8e12b24b21372c"
+    },
+    {
+      "path": ".claude/skills/scholar-verify/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e262d1affd02fddf3d4c1765e5f8aa88d47695",
+      "size": 25893
+    },
+    {
+      "path": ".claude/skills/scholar-verify/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6229a7545a6234de41766ad671360a13c6683d4"
+    },
+    {
+      "path": ".claude/skills/scholar-verify/references/verification-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d7264e3fe96fb008fb0e05d30cc2bf08813a907",
+      "size": 4272
+    },
+    {
+      "path": ".claude/skills/scholar-write",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6d6386c09ffca11dd46fb3f5429462dd4db9462"
+    },
+    {
+      "path": ".claude/skills/scholar-write/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0f9ee8f6548f2f3c37ed9d797a84a395d1bc662",
+      "size": 41592
+    },
+    {
+      "path": ".claude/skills/scholar-write/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "697a7f8b8f2a3701aa4e0d5ca4f7bc10e0be7c0a"
+    },
+    {
+      "path": ".claude/skills/scholar-write/assets/article-knowledge-base.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfa8762c28ab626087aaf71c55e26d56d161ee7f",
+      "size": 3613
+    },
+    {
+      "path": ".claude/skills/scholar-write/assets/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf69fcc5eb89aff2599f8f4bb73d1181c09b7287",
+      "size": 2640
+    },
+    {
+      "path": ".claude/skills/scholar-write/assets/section-snippets.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59a4f801dae3e540ec3c4c213e2cb5785bf366c8",
+      "size": 2205
+    },
+    {
+      "path": ".claude/skills/scholar-write/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "340fbe3831905c206891594a85d17d225c56c22a"
+    },
+    {
+      "path": ".claude/skills/scholar-write/references/academic-writing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73dca03946509b67853ae390949731e074b63d0f",
+      "size": 16547
+    },
+    {
+      "path": ".claude/skills/scholar-write/references/methods-prose-examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f0cf7449e1ec29d5475132909a44a8945fbe7ff",
+      "size": 8081
+    },
+    {
+      "path": ".claude/skills/scholar-write/references/paper-structure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05051cc024bf761a2088b1d83ae5a0d4508faf46",
+      "size": 16280
+    },
+    {
+      "path": ".claude/skills/scholar-write/references/review-panel.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b584abd25106cba8a57118f26e4516dcecdebe12",
+      "size": 25005
+    },
+    {
+      "path": ".claude/skills/scholar-write/references/section-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "752780fb63f88f70df1360fe249eb5548ee53cdd",
+      "size": 17814
+    },
+    {
+      "path": ".claude/skills/scholar-write/references/writing-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1ecb68c6d48debe8e5e861c0d80e618a3029461",
+      "size": 11997
+    },
+    {
+      "path": ".claude/skills/sync-docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f015dc2d6fab6c8e42b2b2703c78d3b99c4073e"
+    },
+    {
+      "path": ".claude/skills/sync-docs/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd8af5ad02c28f6d57588fb5fc353ef9ee11619d",
+      "size": 7340
+    },
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1b907e85615733845e57c27be596ca0ba5139b7",
+      "size": 2153
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c7a063f716472244b184863e470b7d9e56f6521",
+      "size": 418
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e281fbe01f0aa16bbcf0a7a1ddbebca0c29ef650",
+      "size": 58607
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43d744154264b9893cfc4d870b074c49db213366",
+      "size": 13858
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a855a13b564a9f04a72aa01e1da360a9cf4de601",
+      "size": 1456
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "786f07f698bf2bb8a3343213c6caa3313eacf6ae",
+      "size": 45539
+    },
+    {
+      "path": "README.zh-CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3919d80467ef70bb137a72934654ab385f01c44",
+      "size": 44675
+    },
+    {
+      "path": "USAGE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c281b7e15574571eb33661d1d38b48e2a0ac6ff6",
+      "size": 73222
+    },
+    {
+      "path": "USAGE.zh-CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd7f103b47cbbfad3fd2dc9c5ee928dd502c24fe",
+      "size": 69586
+    },
+    {
+      "path": "agents",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "c44ebc517fb594d3e54b5a76a54855eb1b37d674",
+      "size": 14
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1a97ba6b7aedc62c918df760ab508a7b9c481fd"
+    },
+    {
+      "path": "assets/logo-mark.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06d41904e24e98250efd12f8208755c510005bfd",
+      "size": 2859
+    },
+    {
+      "path": "assets/logo-mark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aee5c74d4256e00dd55c8322f63fd2a02e20b01a",
+      "size": 13103
+    },
+    {
+      "path": "assets/logo-mark.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e94c53c7bead4f6cca1b83b0bfa52ac9dcc5700",
+      "size": 1468
+    },
+    {
+      "path": "assets/logo.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca0d7a99d133bc1426f529a4e327004af5940f60",
+      "size": 33492
+    },
+    {
+      "path": "assets/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1ef613f9d2b0e00d3171f7e6038960ba4bc1a85",
+      "size": 60013
+    },
+    {
+      "path": "assets/logo.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e814870ac68ca8354d48e6c6e6e520ebd56bc235",
+      "size": 3364
+    },
+    {
+      "path": "assets/wechat.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26914c53da161269dec783aa0cc592497ee27d50",
+      "size": 72282
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f71abddd8a0e79293f75a580d2624dbd8265001"
+    },
+    {
+      "path": "scripts/detect-host-agent.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b96a72508f53cafedfb0930ec6463307b37a94d5",
+      "size": 2869
+    },
+    {
+      "path": "scripts/gates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d793d46cb154144cee28cde6734ce18152ef64ec"
+    },
+    {
+      "path": "scripts/gates/anonymize-presidio.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "875150b0a2d9ae989b788d1eae27e22292649214",
+      "size": 13980
+    },
+    {
+      "path": "scripts/gates/codex-pretooluse-hook.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "560f93aa86cb861050cd6042c47ee46371a5495e",
+      "size": 3581
+    },
+    {
+      "path": "scripts/gates/derive-proj.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6b082da5743f3dc6bc96db899e6b9d15c5550165",
+      "size": 3272
+    },
+    {
+      "path": "scripts/gates/emit-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "af9936d948306ad73264128cb3db358dbe4994a4",
+      "size": 6274
+    },
+    {
+      "path": "scripts/gates/generate-lockdown-config.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2798e9a55a9955f811d7283168334d87c01f1325",
+      "size": 13876
+    },
+    {
+      "path": "scripts/gates/ingest-agent-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "94309d49fc250c148ee50f471f2d006aa1dece21",
+      "size": 5121
+    },
+    {
+      "path": "scripts/gates/init-handshake.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9d41163f162a66425ab121665cd1b8666b72936a",
+      "size": 10848
+    },
+    {
+      "path": "scripts/gates/phase-verify.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "301454624ec0aef2b8c6ca26a5e38cbbfcfeed22",
+      "size": 19267
+    },
+    {
+      "path": "scripts/gates/posttooluse-output-guard.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4daa7c1b06459b9967e253d90c833ffe03919c93",
+      "size": 5687
+    },
+    {
+      "path": "scripts/gates/pretooluse-data-guard.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3d91ef4c161aaa6118fd1b17859291fdee7738e9",
+      "size": 71603
+    },
+    {
+      "path": "scripts/gates/render-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c7497e7be210ffc7f663ffef20fbf67d6e985e05",
+      "size": 3735
+    },
+    {
+      "path": "scripts/gates/safety-scan-presidio.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "93ac83ee67b4c814a86bca394cc9ce0f4bd8b616",
+      "size": 15874
+    },
+    {
+      "path": "scripts/gates/safety-scan.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0f142d5e2474292f553837e214a2e27184078ec3",
+      "size": 13734
+    },
+    {
+      "path": "scripts/gates/sidecar-schema.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "083cc0dc9fc788c006f5aee9b74ef998457afd32",
+      "size": 4924
+    },
+    {
+      "path": "scripts/gates/trace-coverage-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "be6e4b8efbeac7196e992e4faca3771fec37e109",
+      "size": 6264
+    },
+    {
+      "path": "scripts/gates/verify-citations.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6c6ea5698233e6abd3e7acaeaac438b82c948abf",
+      "size": 2379
+    },
+    {
+      "path": "scripts/gates/verify-claims.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2d9029562323c86cbf9250e24e0fc9e42384ffac",
+      "size": 5304
+    },
+    {
+      "path": "scripts/gates/version-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "de167bd8b9406bfd8da3f84a4c1382056d467896",
+      "size": 785
+    },
+    {
+      "path": "scripts/init-project.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "efeb970404bca128e9428fb79359d909e1c194d5",
+      "size": 32908
+    },
+    {
+      "path": "scripts/phases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cfa01fd221f9b09a725caf9605a60b1680097085"
+    },
+    {
+      "path": "scripts/phases/build-codex-mirror.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ceebd6c12efa61e30b653d1c030a8c66cbc2d673",
+      "size": 8236
+    },
+    {
+      "path": "scripts/phases/local-mode-detect.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b02f96744609133529c1f1d53669922ff098bd0d",
+      "size": 1967
+    },
+    {
+      "path": "scripts/phases/setup-codex-hooks.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "20a627da8e16c38e1289f1efe2438e0de99fe22b",
+      "size": 5279
+    },
+    {
+      "path": "scripts/phases/setup-project-claudemd.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ac9c88dbfbf94413d070d0269f4d98f37203a8e9",
+      "size": 12434
+    },
+    {
+      "path": "scripts/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b6ee4eeaa95fd3ad83bab749986cd3a8c04e604"
+    },
+    {
+      "path": "scripts/templates/claudemd-auto-rules-lean.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7d07c4c974f605089979cdd15cceb0587a17da0",
+      "size": 5423
+    },
+    {
+      "path": "setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d8cec77aaa2ffa26d87e1d48b1fc6308cc4322c8",
+      "size": 24534
+    },
+    {
+      "path": "skills",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "ec22b3dafd3879ce99e39f16c02db4fe27938aff",
+      "size": 14
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87087f16c0e4498898ed54da5e592b7295919e05"
+    },
+    {
+      "path": "tests/smoke",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cd64e1d2f200c62908da872b1296bcdfbe12c9c"
+    },
+    {
+      "path": "tests/smoke/run-all.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5b56e0fc34156c27f2b29a96c4f38515c1283c2e",
+      "size": 585
+    },
+    {
+      "path": "tests/smoke/test-all-skills-emit-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "deced87e3539ef94aabbcf5222e45c68e403f850",
+      "size": 3660
+    },
+    {
+      "path": "tests/smoke/test-codex-data-guard.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c01648e86c24fb331bb75ca4ed896d5bc83a0845",
+      "size": 4052
+    },
+    {
+      "path": "tests/smoke/test-consistency.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0103b95767bdfd7524fee0dbfffad22cd99f504d",
+      "size": 6865
+    },
+    {
+      "path": "tests/smoke/test-emit-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "66f5c71ab8e43311da92541b3f44611c5fb3898b",
+      "size": 3584
+    },
+    {
+      "path": "tests/smoke/test-gates.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "965479484a5c9868e5f5735927a3e3c7660c5276",
+      "size": 4683
+    },
+    {
+      "path": "tests/smoke/test-generate-lockdown-config.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c9a4359cbc1b61b829afdc6050c72fabf1125054",
+      "size": 6248
+    },
+    {
+      "path": "tests/smoke/test-ingest-agent-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b0f6a9106925d1379e8acbb2ebd18ba3b9cbb542",
+      "size": 3683
+    },
+    {
+      "path": "tests/smoke/test-init-project.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "22e00f38663cea174a551477487295d5fd8027dc",
+      "size": 16827
+    },
+    {
+      "path": "tests/smoke/test-phase-verify.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "329e39cf22dc295ff28a8a509f5734974ce7183d",
+      "size": 5864
+    },
+    {
+      "path": "tests/smoke/test-posttooluse-output-guard.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "15c38d237bad6758921f1de1ebc48f593f32df79",
+      "size": 3828
+    },
+    {
+      "path": "tests/smoke/test-posttooluse-redactor.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dc9a250bb49d116de0b8bc16f6fbccf03a57195",
+      "size": 2963
+    },
+    {
+      "path": "tests/smoke/test-pretooluse-guard.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c80a1235aff5ac4bfef4148037a07a86f1c4b9df",
+      "size": 60842
+    },
+    {
+      "path": "tests/smoke/test-render-trace.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f976e13432aabb5c98f04f907428231dad11c509",
+      "size": 2582
+    },
+    {
+      "path": "tests/smoke/test-routing.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b79320079734384fa92270e538b2fa4c46a325b2",
+      "size": 5471
+    },
+    {
+      "path": "tests/smoke/test-seatbelt-resolved-path.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f12c8f4e298c3aac2f52c96f33bdeb965c0eab4",
+      "size": 3125
+    },
+    {
+      "path": "tests/smoke/test-setup-codex-hooks.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "95611056845b50431bec041bcb05cef1d688d37e",
+      "size": 3283
+    },
+    {
+      "path": "tests/smoke/test-setup-install.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "33b2af5d97ea0b71a5d8103b2c1cb21b8d975e57",
+      "size": 7519
+    },
+    {
+      "path": "tests/smoke/test-setup-project-claudemd.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1bebe5ff9c7ec94b781367a93154df6712f5b373",
+      "size": 6794
+    },
+    {
+      "path": "tests/smoke/test-sidecar-schema.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eabab27d706a39c70149b364ef2f788789ac8f80",
+      "size": 4053
+    },
+    {
+      "path": "tests/smoke/test-skill-structure.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e61c0dd6fe52081c9e803d9e2300eaf45f1ffee8",
+      "size": 4395
+    },
+    {
+      "path": "tests/smoke/test-trace-coverage-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c9a5b216edcbc84bb61d349d089d89b542cea8ba",
+      "size": 3923
+    }
+  ]
+}

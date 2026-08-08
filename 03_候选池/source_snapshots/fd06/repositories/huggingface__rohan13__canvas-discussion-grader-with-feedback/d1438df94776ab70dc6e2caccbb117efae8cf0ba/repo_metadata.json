@@ -1,0 +1,85 @@
+{
+  "_id": "64b46ee528fd98e7cc16e1e9",
+  "id": "rohan13/canvas-discussion-grader-with-feedback",
+  "sdk": "gradio",
+  "likes": 0,
+  "tags": [
+    "gradio",
+    "region:us"
+  ],
+  "private": false,
+  "author": "rohan13",
+  "sha": "d1438df94776ab70dc6e2caccbb117efae8cf0ba",
+  "lastModified": "2023-09-04T16:15:09.000Z",
+  "cardData": {
+    "title": "Canvas Discussion Grader With Feedback",
+    "emoji": "🌍",
+    "colorFrom": "indigo",
+    "colorTo": "green",
+    "sdk": "gradio",
+    "sdk_version": "3.36.1",
+    "app_file": "app.py",
+    "pinned": false
+  },
+  "subdomain": "rohan13-canvas-discussion-grader-with-feedback",
+  "gated": false,
+  "disabled": false,
+  "host": "https://rohan13-canvas-discussion-grader-with-feedback.hf.space",
+  "runtime": {
+    "stage": "RUNTIME_ERROR",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "gcTimeout": 86400,
+    "errorMessage": "",
+    "replicas": {
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "rohan13-canvas-discussion-grader-with-feedback.hf.space",
+        "stage": "READY"
+      }
+    ]
+  },
+  "region": "us",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "app.py"
+    },
+    {
+      "rfilename": "csv_agent.py"
+    },
+    {
+      "rfilename": "custom_csv_loader.py"
+    },
+    {
+      "rfilename": "grader.py"
+    },
+    {
+      "rfilename": "grader_qa.py"
+    },
+    {
+      "rfilename": "ingest.py"
+    },
+    {
+      "rfilename": "requirements.in"
+    },
+    {
+      "rfilename": "requirements.txt"
+    },
+    {
+      "rfilename": "utils.py"
+    }
+  ],
+  "createdAt": "2023-07-16T22:27:49.000Z",
+  "usedStorage": 0
+}

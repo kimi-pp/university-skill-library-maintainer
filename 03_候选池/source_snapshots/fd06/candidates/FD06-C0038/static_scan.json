@@ -1,0 +1,73 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "plugin/skills/k12-lesson-planning/SKILL.md",
+        "snippet": "; - the sequence as one bullet per phase (name, minutes, one line of what happens); - the student work at a glance — the actual tasks students will do, enough for the teacher to skim and judge coverage; - what the lesson"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/ela.md",
+        "snippet": "m-up; they differ in primary focus. **Lesson Type A — Phonics/Decoding (RF standards)** Student-page word work renders as `display: \"large\"` table grids — big type a child points to and reads — never as paragraph runs of words. Wo"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/example_lesson.json",
+        "snippet": "ket\" }, { \"type\": \"h3\", \"text\": \"Sort student work\" }, { \"type\": \"from_shared\", \"key\": \"exit_sort\" }"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/math.md",
+        "snippet": "table` block — and pull it into the lesson plan next to the rationale. Pull it onto the student page only when it is something students work with (a blank organizer, a number line to mark, the data set the problems analyze); a worked reference table the teac"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/math.md",
+        "snippet": "nceptions, a `list` for look-fors) — there is no special-case rendering by key name. **Student page layout** (the `id: \"student_materials\"` document) — start from this skeleton and adapt: ``` sections: \"<warm-up heading, kid-facing>\""
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/output.md",
+        "snippet": "de reader can read: short sentences, everyday words, one instruction at a time). Size the student work to the class period: a typical student finishes the worksheet in the minutes its phase allows. Say \"home language,\" not"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/social_studies.md",
+        "snippet": "The student worksheet opens with \"*See your Source Packet for Source A and Source B.*\" **Student page layout** (the `id: \"student_materials\"` document): ``` sections: \"Supporting question\" callout(student-task) from_shared:supporting"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/scripts/lesson_common.py",
+        "snippet": "in(str(b) for b in bits if b) name_line = \"\" if meta and data.get(\"audience\") == \"student\" and re.search(r\"name\\s*:\", meta, re.I): name_line, meta = meta, \"\" return {\"eyebrow\": data.get(\"eyebrow\", \"\"), \"title\": data.get"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/output.md",
+        "snippet": "ls, a ratio table's entries, a coin total) produce the numbers the materials state. ## Accessibility (also black-and-white printing) Meaning lives in the words, never in color, position, or formatting alone: point stude"
+      }
+    ],
+    "network": [
+      {
+        "file": "plugin/skills/k12-lesson-planning/references/social_studies.md",
+        "snippet": "real, high-quality, and specifically cited (title, author, date, archive). If you have web search, confirm before using. A public-domain text source (pre-1929, government documents) gets an excerpt reproduced, size"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "plugin/skills/k12-lesson-planning/scripts/render_all.sh",
+        "snippet": "${2:?usage: render_all.sh LESSON_JSON OUTPUT_DIR}\" here=\"$(cd \"$(dirname \"$0\")\" && pwd)\" mkdir -p \"$outdir\" # python-docx powers the .docx output; the .html twins render without it. If the install # can't complete"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/scripts/render_all.sh",
+        "snippet": "the failure this removes. if [ -n \"${OUTPUT_DIR:-}\" ] && [ \"$(cd \"$outdir\" && pwd)\" != \"$(mkdir -p \"$OUTPUT_DIR\" && cd \"$OUTPUT_DIR\" && pwd)\" ]; then cp -R \"$outdir\"/. \"$OUTPUT_DIR\"/ fi"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/scripts/render_documents.py",
+        "snippet": "ay in input\", file=sys.stderr) return 1 outdir = Path(args.outdir) outdir.mkdir(parents=True, exist_ok=True) written = [] for i, doc in enumerate(docs): # Sanitize the document id be"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/scripts/render_documents.py",
+        "snippet": "n_html import render as render_html path = outdir / f\"{doc_id}.html\" path.write_text(render_html(full), encoding=\"utf-8\") written.append(str(path)) if args.format in (\"docx\", \"both\"):"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-planning/scripts/render_lesson_html.py",
+        "snippet": "data = json.loads(Path(args.input).read_text(encoding=\"utf-8\")) Path(args.output).write_text(render(data), encoding=\"utf-8\") print(f\"wrote {args.output}\") return 0 if __name__ == \"__main__\": sys.exi"
+      }
+    ]
+  },
+  "read_errors": []
+}

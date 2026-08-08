@@ -1,0 +1,41 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "d calibrate with anchor papers (scored examples at each performance level) before scoring student work. Mention this as a scoring implementation note. --- ### Step 5: Write the Complete Answer Key and Scoring Guide An a"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "akdowns, and/or a holistic vs. analytic rubric. - **Accommodations:** Ask if any built-in accommodation notes are needed (extended time, read-aloud eligibility per section, reduced answer choices for identified students)."
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "rument into a diagnostic teaching tool. --- ### Step 6: Review for Validity Threats and Bias A technically correct assessment can still produce invalid inferences if it contains threats to construct validity or"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "ish Language Arts assessments where reading complexity is intentional. - **Stereotype and bias review:** Ensure that named characters, scenarios, and contexts in items are diverse, do not reinforce stereotypes, and"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "clude occupations, family structures, hobbies, and socioeconomic contexts for inadvertent bias. - **Cluing check:** Read all items simultaneously to ensure no item gives away the answer to another. Verify that corr"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "lator-prohibited if relevant. Note whether collaboration is permitted on any portion. - **Accommodation flags:** Mark any items where extended time most significantly changes difficulty (typically items at the end of timed"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "he construct being assessed] - **Calculator use:** [Specify by section if applicable] - **Accommodation notes:** [Extended time, segmented administration, reduced items per page notes] - **Estimated completion time check:**"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/assessment-design/SKILL.md",
+        "snippet": "arily in another language. Note which items are most language-dependent and flag them for accommodation decision-making. ### Performance Task Only (No Traditional Test) When the entire assessment is a performance task, the"
+      }
+    ]
+  },
+  "read_errors": []
+}

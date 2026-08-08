@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "Skills/review-pap/SKILL.md",
+        "snippet": "r all 6 agents return their results, consolidate them into a single structured report. **Save location**: save the report inside a `reviews/` subfolder of the PAP's directory (create it if it does not exist). Keeping reports out of the worki"
+      },
+      {
+        "file": "Skills/review-pap/SKILL.md",
+        "snippet": "-DD].md` already exists. If it does, append `-v2` (or `-v3`, etc.) to avoid overwriting. Save the report to: `reviews/PAP_REVIEW_[YYYY-MM-DD].md` where `[YYYY-MM-DD]` is today's date. **Report structure:** ```markdown #"
+      }
+    ]
+  },
+  "read_errors": []
+}

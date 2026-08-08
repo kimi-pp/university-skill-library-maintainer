@@ -1,0 +1,47 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "accreditation-mapper/agents/evidence_assembler_agent.md",
+        "snippet": "y rule.** Aggregate data only — distributions, attainment rates, counts. No individual student work, names, or identifiable performance enters the index (suite-wide rule: student data never enters the passport, and i"
+      },
+      {
+        "file": "accreditation-mapper/references/accreditation_frameworks.md",
+        "snippet": "program changes — not one-time snapshots. - **Evidence expectation**: direct measures of student work tied to each outcome; indirect measures (surveys, exit interviews) supplement, never substitute. - Mapping is usually"
+      },
+      {
+        "file": "accreditation-mapper/references/accreditation_frameworks.md",
+        "snippet": "vocabulary | Term | Meaning | |------|---------| | Direct measure | Evaluation of actual student work against the outcome (exam items, rubric-scored projects, 课程考核) | | Indirect measure | Perception or proxy data (surveys"
+      },
+      {
+        "file": "accreditation-mapper/references/accreditation_frameworks.md",
+        "snippet": "s skill) | Type | What it is | Examples | |------|-----------|----------| | **Direct** | Student work measured against the outcome | tagged exam items + distributions, rubric-scored project results | | **Indirect** | Perc"
+      },
+      {
+        "file": "accreditation-mapper/templates/evidence_index_template.md",
+        "snippet": "x contains aggregate data only — > distributions, attainment rates, counts. No individual student work, names, or > identifiable performance. Sample-work exhibits a body requires are listed as > placeholders for the profes"
+      },
+      {
+        "file": "accreditation-mapper/templates/evidence_index_template.md",
+        "snippet": "le by this skill | Exhibit | Why | Marker | |---------|-----|--------| | {{e.g., \"sample student work, three performance levels\"}} | {{individual work — privacy rule}} | [NEEDS PROFESSOR INPUT: {{selection + anonymization per institutional policy}}] | ## Assembly notes"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "accreditation-mapper/agents/evidence_assembler_agent.md",
+        "snippet": "review binder draw on, not a prose argument. Your defining constraint is the suite's anti-fabrication rule applied to institutional evidence: an item enters the index only if it exists as an artifact or as data the profes"
+      },
+      {
+        "file": "accreditation-mapper/agents/evidence_assembler_agent.md",
+        "snippet": "or as data the professor provided. A plausible score distribution is not evidence; it is fabrication with a table format. ## Procedure 1. **Load inputs**: the confirmed matrix (with its standard-version pin) and the Co"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "accreditation-mapper/templates/evidence_index_template.md",
+        "snippet": "ork exhibits a body requires are listed as > placeholders for the professor to select and anonymize per institutional policy. ## Evidence by claim ### {{LO_id}} × {{criterion_id}} — {{strength}} · {{evidence_status}}"
+      }
+    ]
+  },
+  "read_errors": []
+}

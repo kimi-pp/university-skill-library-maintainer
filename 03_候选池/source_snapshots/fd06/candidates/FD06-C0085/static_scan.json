@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "academic_integrity": [
+      {
+        "file": "skills/ai-literacy/ai-hallucination-fact-check-protocol/SKILL.md",
+        "snippet": "description: \"The specific hallucination type most likely in this context — citation fabrication, statistical invention, event misattribution, false consensus claims\" - field: \"verification_resources\" type:"
+      },
+      {
+        "file": "skills/ai-literacy/ai-hallucination-fact-check-protocol/SKILL.md",
+        "snippet": "ated research summary with named citations **Highest-risk hallucination types:** Citation fabrication (real authors, wrong study), statistical invention (plausible number, no real source), miscontextualisation (real study"
+      },
+      {
+        "file": "skills/ai-literacy/ai-hallucination-fact-check-protocol/SKILL.md",
+        "snippet": "isation (real study, wrong population or context) ### Hallucination Taxonomy **Citation fabrication: real author, wrong study** - **What it looks like:** \"Twenge and colleagues (2021) in JAMA Psychiatry\" — Jean Twenge i"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/original-frameworks/compassionate-systems-awareness-orchestrator/SKILL.md",
+        "snippet": "idence\" type: \"string\" description: \"Existing data, stories, observations, or student work\" - field: \"safety_sensitivities\" type: \"string\" description: \"Conflict, trauma, identity, power, or saf"
+      },
+      {
+        "file": "skills/original-frameworks/compassionate-systems-awareness-orchestrator/SKILL.md",
+        "snippet": "group. - **Available time:** Time available. - **Prior evidence:** Existing observations, student work, surveys, photos, stories. - **Safety sensitivities:** Conflict, trauma, power, identity, safeguarding. ## Prompt ```"
+      }
+    ]
+  },
+  "read_errors": []
+}

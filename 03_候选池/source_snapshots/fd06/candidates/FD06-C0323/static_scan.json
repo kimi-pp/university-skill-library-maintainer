@@ -1,0 +1,35 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/formative-assessment/SKILL.md",
+        "snippet": "or Microsoft Form with no more than 3 questions sent in the last 4 minutes works well -- export to a spreadsheet for quick column-sort analysis. ### Students with IEPs or 504 Plans Requiring Extended Time or Response Modifications"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/formative-assessment/SKILL.md",
+        "snippet": "ion) to the next lesson -- today focus only on Objectives 1 and 2. | **Logistics Note:** Post the poll link in the LMS the night before so students can open it the moment they sit down. This eliminates transition time. View live results o"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/formative-assessment/SKILL.md",
+        "snippet": "individual whiteboards, worked example analysis (students identify errors in a fictitious student's work), two-problem probe - **Consolidation and transfer check (lesson close, last 4-6 minutes):** Purpose is to determine ov"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/formative-assessment/SKILL.md",
+        "snippet": "es on prior knowledge, KWL-W (What I Know, What I Wonder, What I Want to Know). Data use: teacher decides whether to proceed, briefly review, or pause for prerequisite reteaching - **Monitoring comprehension during instruction (mid-lesson, every 15-20 minutes)"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/formative-assessment/SKILL.md",
+        "snippet": "e teacher counts down from 3 -- all responses appear simultaneously, preventing anchoring bias where later students copy earlier ones. Annotation tools: students use the platform's drawing or stamp tools to mark up"
+      }
+    ]
+  },
+  "read_errors": []
+}

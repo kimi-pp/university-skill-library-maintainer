@@ -1,0 +1,120 @@
+{
+  "repository": "ChrisMayfield/claude-skills",
+  "fixed_version": "1da8e24f1a871fbea602c7056c5d9829d333776d",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61be6f62a710dcf31a7c3c22ba5960a513e5d2df"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc362d2369ab313f2c79f2a6a3cf7721df75a339"
+    },
+    {
+      "path": ".github/workflows/package-skills.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "607b8f036bcfe1aa7dbe4b51be1e81875fb95b74",
+      "size": 1149
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1333ed77b7e1ed056329cae96075dc558158ee69",
+      "size": 5
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "059ba30db119fa424db55875193caae1d267cdb9",
+      "size": 2650
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8205901f564cedf5e36f452c515ee1e937a16917",
+      "size": 1071
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d3ce60f236f570ec76853197c2a9f2fb9208721",
+      "size": 803
+    },
+    {
+      "path": "course-evaluations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83a752e0b40fb33d87270be07c9953759af150f5"
+    },
+    {
+      "path": "course-evaluations/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cd99c375f625d06a0d6c9a4dcdbc2a304396e6e",
+      "size": 29726
+    },
+    {
+      "path": "course-evaluations/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88562fa827934698f018730a6a356411aa959931"
+    },
+    {
+      "path": "course-evaluations/scripts/parse_evaluations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46b07cde17e490d758a3b948b54a1453765ae3ab",
+      "size": 23013
+    },
+    {
+      "path": "import_history.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59e34aed4e5a5880b095b17ad64c3cd2de72db3d",
+      "size": 3206
+    },
+    {
+      "path": "pogil-activity-writer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ab6a456b5ff9233e02559cc627c36513bc70d9b"
+    },
+    {
+      "path": "pogil-activity-writer/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc92f9cd1e1c94bc5a6f0b641f9ff51a68e1c534",
+      "size": 5831
+    },
+    {
+      "path": "pogil-activity-writer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7f4a3653f2343563805c5dc1f41a453c146b91d",
+      "size": 29260
+    },
+    {
+      "path": "pogil-activity-writer/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20eae44ba41e28902a0b9bab06a0411951a89c7c"
+    },
+    {
+      "path": "pogil-activity-writer/scripts/generate_student_version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dcdba0a848d7bafe440c82506a2016f936e75ca",
+      "size": 5472
+    }
+  ]
+}

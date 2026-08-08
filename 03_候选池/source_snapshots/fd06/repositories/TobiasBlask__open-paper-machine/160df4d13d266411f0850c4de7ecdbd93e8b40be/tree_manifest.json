@@ -1,0 +1,2538 @@
+{
+  "repository": "TobiasBlask/open-paper-machine",
+  "fixed_version": "160df4d13d266411f0850c4de7ecdbd93e8b40be",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "589f7801178d78fefb28067ba5d3037f8dfddaf6"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d065fd075591886ccb24556c2eab710c35bdcc",
+      "size": 562
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ae4074799c76b72b165ed1a4661a0d5b234ec1f",
+      "size": 1837
+    },
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f008928ec21a0208e67c53e9974d82be5e67d391",
+      "size": 461
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9f92ead3e1184ab06136f10abdb2b3e6f0d6a7f",
+      "size": 510
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e83d32b702d05ee3b55186e03d81d40cc62e625",
+      "size": 1078
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e240be667ba5e48957a7f78d67e5fddf618f3a33",
+      "size": 39851
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e40b2aee32a3b016c2d4f18a84cb50b3eeb916f"
+    },
+    {
+      "path": "agents/brainstormer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "745d14f0ebf1a6835ce0788973653f97038d99d7",
+      "size": 5193
+    },
+    {
+      "path": "agents/idea-critic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "469b0360507d8e45b1fd787ad3ec4d4d03b312db",
+      "size": 7058
+    },
+    {
+      "path": "agents/paper-machine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68467fa5d17ee833f3a7f01b08f402aac5ebcc70",
+      "size": 30779
+    },
+    {
+      "path": "agents/research-strategist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9ef9fb2e23169bbe989ab56f4a5ad71250d8b24",
+      "size": 6517
+    },
+    {
+      "path": "commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "195257896bd216fb14362964eb1560c9abf4cdcb"
+    },
+    {
+      "path": "commands/analyze-interviews.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f050b0de954aaaa3261cf06034a0d8b6733408d4",
+      "size": 544
+    },
+    {
+      "path": "commands/analyze-positioning.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "091ae6073320e79943c37ddf0a2542fad98dd570",
+      "size": 1294
+    },
+    {
+      "path": "commands/analyze-writing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed67d3b37ac9de6a1cb4c2afc350da08eee833e",
+      "size": 1625
+    },
+    {
+      "path": "commands/audit-paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4db3bd472aafb5b8350d6989c6e8d2a3745d525",
+      "size": 1175
+    },
+    {
+      "path": "commands/brainstorm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "463627fa1b4ccc25596538f6a21b98c21df9d2be",
+      "size": 1207
+    },
+    {
+      "path": "commands/draft-section.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d19814cd2cd914d9681a3dfc06ce8bc5e7a65fb0",
+      "size": 341
+    },
+    {
+      "path": "commands/evaluate-idea.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db026936db678f1c7afc49f7692ca447f192bc7d",
+      "size": 1289
+    },
+    {
+      "path": "commands/export-latex.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc97ed2e1aced139b260138b0eda0d65eedbfbd5",
+      "size": 1458
+    },
+    {
+      "path": "commands/generate-figure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1786c312a5fc83c7212e18edc415decda7e7412f",
+      "size": 1249
+    },
+    {
+      "path": "commands/generate-plot.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e3de7c79542eb5b2283d7cef2cc643ffc7b2548",
+      "size": 1120
+    },
+    {
+      "path": "commands/generate-slides.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7359012a8d8b09e1b95a37c6d88167d1be952e7",
+      "size": 1384
+    },
+    {
+      "path": "commands/monitor-literature.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aec2e38e6d86c9d9c58c6960e30103045ce06e0",
+      "size": 1222
+    },
+    {
+      "path": "commands/prepare-submission.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34d3362ec9b3eff01e6221b634f6234d3b3f4dba",
+      "size": 1629
+    },
+    {
+      "path": "commands/respond-reviewers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c83f5a6f4e4294a6c8ecbc9b2ec99fff7aef739c",
+      "size": 1428
+    },
+    {
+      "path": "commands/review-paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e333d4a55efdfe353eda4ac16d82bdd6367380",
+      "size": 1903
+    },
+    {
+      "path": "commands/scooping-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28f905804be1a3f59ca789a0a737c16c1c5b4d06",
+      "size": 1635
+    },
+    {
+      "path": "commands/screen-papers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08a49c0ee9f72690330f9cc08603d4df3977116f",
+      "size": 1786
+    },
+    {
+      "path": "commands/search-papers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a44cd664c51e8b44f2c61d55d53fb80656565609",
+      "size": 375
+    },
+    {
+      "path": "commands/triage-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "618ae8fe3d0f9506ba2b1a7aaf41297bd8ace725",
+      "size": 1847
+    },
+    {
+      "path": "commands/verify-citations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f864788eff052f5c1a7a0b23ebfc15a81058b01",
+      "size": 779
+    },
+    {
+      "path": "commands/write-paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "848531a2f025c9cc94ce532a9d10e127e6f9001f",
+      "size": 485
+    },
+    {
+      "path": "outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "494e429b9910a13bb657ca64e2cc4a5851146613"
+    },
+    {
+      "path": "outputs/orchestration_log.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be56b0fe63e204b665285bfa7a885659f488e8de",
+      "size": 3671
+    },
+    {
+      "path": "outputs/revision_letter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba349baef309f9324e11136bbac57b446e24dd78",
+      "size": 6293
+    },
+    {
+      "path": "outputs/revision_log_r1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0ec5ce6adbbf79dac0408391b41be7903d7dd9f",
+      "size": 7353
+    },
+    {
+      "path": "paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31b864cf37795744da27f4c771b979f795bfdb7c"
+    },
+    {
+      "path": "paper/figures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6725b3c34e60c60435e3c3d2d83efd467a0870f3"
+    },
+    {
+      "path": "paper/figures/fig1_system_architecture.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0967f6c1ac8bc934f73d828e93f0bf86f086be82",
+      "size": 4965968
+    },
+    {
+      "path": "paper/figures/fig2_pipeline_flow.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c4c3a6c6d6e9d0f86bed5cff27cd40b002bd91",
+      "size": 3728654
+    },
+    {
+      "path": "paper/figures/fig3_mcp_integration.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bcb5562d64d5c07ba2b947eb05bbba26da20529",
+      "size": 5247945
+    },
+    {
+      "path": "paper/paper.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "952be05db994b882c65dc6167e88d04ba2be8169",
+      "size": 14190185
+    },
+    {
+      "path": "paper/paper.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1bece925da165a21cd506d2880aad4b76e7ed6a",
+      "size": 78367
+    },
+    {
+      "path": "paper/references.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a9e58a89a5b8007cc27f8a4657026b9820c1297",
+      "size": 16359
+    },
+    {
+      "path": "principles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f89596b916ace9937bd753ddc2411c4028c3def"
+    },
+    {
+      "path": "principles/research-strategy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7e867f377ed8dc18653fd41ea1c8de97c44d95b",
+      "size": 5438
+    },
+    {
+      "path": "scientific-skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc571eff3d688c36c451800c5771301e76775082"
+    },
+    {
+      "path": "scientific-skills/citation-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38cf83db72af298da24d0ff6661f3e3c3b160e0e"
+    },
+    {
+      "path": "scientific-skills/citation-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a368f744778596a55289c64ddbd2a1550883b00",
+      "size": 32596
+    },
+    {
+      "path": "scientific-skills/citation-management/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25e3928bc9c6af8013cd53eb174257c410b44443"
+    },
+    {
+      "path": "scientific-skills/citation-management/assets/bibtex_template.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb6464f72e91a631ac1f54513843040c2013a6f0",
+      "size": 9201
+    },
+    {
+      "path": "scientific-skills/citation-management/assets/citation_checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5a735cbf446f6b18c2ce10b9708690ec585591e",
+      "size": 10348
+    },
+    {
+      "path": "scientific-skills/citation-management/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "902110ea0829a245047ac6cf96fff54a5de37612"
+    },
+    {
+      "path": "scientific-skills/citation-management/references/bibtex_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fd22feb3b873eb3a3e0a2782e224bde0429d8c0",
+      "size": 19286
+    },
+    {
+      "path": "scientific-skills/citation-management/references/citation_validation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3ed5414288489a473a9d047a7c8b1871e13b2c7",
+      "size": 16075
+    },
+    {
+      "path": "scientific-skills/citation-management/references/google_scholar_search.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d55dd8dd7bc9125925c5017e8b510ec6675960b4",
+      "size": 17045
+    },
+    {
+      "path": "scientific-skills/citation-management/references/metadata_extraction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbf2d96681983b5698bf8e336ba6a8222c787d34",
+      "size": 19182
+    },
+    {
+      "path": "scientific-skills/citation-management/references/pubmed_search.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ea97bd2ec98933519d0825ca282fd365beeb3f9",
+      "size": 17735
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92fbb42d6350b6acc92e6ded3bcc1c219778d589"
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts/doi_to_bibtex.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0294e3dc15fa345782545250c65b23fc2310f7e",
+      "size": 6299
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts/extract_metadata.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8e9d076cc93e475782c04841b02ef8139411a1bb",
+      "size": 20794
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts/format_bibtex.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "31a4d73c889b4748e9da6e6d5778d0913e761b2d",
+      "size": 11444
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts/search_google_scholar.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "94a4e02b993922289a4148b1dd396f63062b3d8b",
+      "size": 8982
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts/search_pubmed.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3b307bc85fbdb8721f3b6173bc16b7f1e4e38ab6",
+      "size": 12832
+    },
+    {
+      "path": "scientific-skills/citation-management/scripts/validate_citations.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b248f4c436dcef9eba0e803e0e50adba67e3fadf",
+      "size": 17482
+    },
+    {
+      "path": "scientific-skills/consciousness-council",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccc5fac29bf62c80e1e58878412f8a13ae30baae"
+    },
+    {
+      "path": "scientific-skills/consciousness-council/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d192cf0e328b2777467b68a5de204e454b445e99",
+      "size": 8728
+    },
+    {
+      "path": "scientific-skills/consciousness-council/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "750ee61281860498670d41510b0c61277737290b"
+    },
+    {
+      "path": "scientific-skills/consciousness-council/references/advanced-configurations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8b5f4892ffbfa886d2c3fc81fcb8358aab76abc",
+      "size": 5175
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0705c2d1440f4c3a9aa544fee04aa5f9739d1a7a"
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "628110578e5b9edc9bd1273a74a3d6b58c1cb8c6",
+      "size": 14316
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7195ca716e607a5ebf5dd8be6d9b90b06faf7e4"
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/assets/report_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de0e80795a5f3bd09416cdafe724bbd5dd958cae",
+      "size": 3488
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8ffafac989a4a40dff6d542863a1c707706eb19"
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references/bioinformatics_genomics_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "346717dd46836046bdefd608caf6d90719f991ff",
+      "size": 21163
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references/chemistry_molecular_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16d5becfbbd501f042c4b27e1d41e1bd2d062b48",
+      "size": 22029
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references/general_scientific_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a440df7971c971c2311b9410164a6e840c79cfe",
+      "size": 15287
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references/microscopy_imaging_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc6e0b767c60e8b9463fd27b197f4c7e9920e41",
+      "size": 18549
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references/proteomics_metabolomics_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dacc77a16a03da74cdae0f8074b100439d297a0d",
+      "size": 15543
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/references/spectroscopy_analytical_formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7c8823854db8ea7e93bb8b7e5b766a826f2ac5d",
+      "size": 18073
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05db33aa9c1e7d00571823b9e9528de65f268263"
+    },
+    {
+      "path": "scientific-skills/exploratory-data-analysis/scripts/eda_analyzer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7bac709754e9dc0ad751fddb3c84017770302396",
+      "size": 21318
+    },
+    {
+      "path": "scientific-skills/get-available-resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccb75f328e368ee39e46932a7edec091b3e24588"
+    },
+    {
+      "path": "scientific-skills/get-available-resources/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e61d793e02caa4f759e2f55980b241c906604f6",
+      "size": 9837
+    },
+    {
+      "path": "scientific-skills/get-available-resources/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46a66687a994b8ef6225b503da6a51d58d4737b0"
+    },
+    {
+      "path": "scientific-skills/get-available-resources/scripts/detect_resources.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fc31e9792a2c72bf08023db1d2e86fe2cd338afa",
+      "size": 14081
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdd0664adc988251786676f0daf31fd3f39fdb5e"
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e1ea13a150d8eda45fe50a25e2dc071d903f3bb",
+      "size": 13847
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0450a749fb0f1b24a0869568aa3ddd652a530b9d"
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/assets/FORMATTING_GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82b0737635bb69f7298a0532c72a90622b481cf5",
+      "size": 19304
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/assets/hypothesis_generation.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6515d4b6d7578242dab37bb5b5234106a41237f0",
+      "size": 7625
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/assets/hypothesis_report_template.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e54a2d0a1cb2243b249e5e9c49117001e6261fa2",
+      "size": 20148
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68fafcb8a6f34e9de9638b79af4d093fa5d01d80"
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/references/experimental_design_patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "484043a437d4f9b46538665f64df483c0b9b9f4a",
+      "size": 14208
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/references/hypothesis_quality_criteria.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ba8761757b089c5c6335e97c4a28ccf5bd87fbd",
+      "size": 8051
+    },
+    {
+      "path": "scientific-skills/hypothesis-generation/references/literature_search_strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "427820fc59933c959fc147d1c1181184e309be38",
+      "size": 20277
+    },
+    {
+      "path": "scientific-skills/literature-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5001e105e94d7262600bd83f9fa32cddd274ee8f"
+    },
+    {
+      "path": "scientific-skills/literature-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44d50ee3951194c42cc48a0103f1dbc61ec2eef3",
+      "size": 23789
+    },
+    {
+      "path": "scientific-skills/literature-review/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "927b1bf72152494cf0e13f2955ddd9b717364a52"
+    },
+    {
+      "path": "scientific-skills/literature-review/assets/review_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "601325b109b6aeda989dcdb6a1b4c4f7d1c71f7a",
+      "size": 12982
+    },
+    {
+      "path": "scientific-skills/literature-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c68b255cb6ed05d61af950a44a405cbb2678a71"
+    },
+    {
+      "path": "scientific-skills/literature-review/references/citation_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a72cab86256bdda3c61f3ad13b02e58e877f6ff",
+      "size": 6112
+    },
+    {
+      "path": "scientific-skills/literature-review/references/database_strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45025a6d9c9faf1a5ae86d4fd100f123b446ef2a",
+      "size": 15491
+    },
+    {
+      "path": "scientific-skills/literature-review/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e93f0feba66a874572d75c3cca1d9585ab6a775"
+    },
+    {
+      "path": "scientific-skills/literature-review/scripts/generate_pdf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9cc7dd3814a67bff0cbe6a6021fb0782696c909",
+      "size": 5410
+    },
+    {
+      "path": "scientific-skills/literature-review/scripts/search_databases.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19081cdca02a02cffc7dae48b11b3fd70e9b6a21",
+      "size": 9036
+    },
+    {
+      "path": "scientific-skills/literature-review/scripts/verify_citations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6e4d5c07421783d27de70d7413b6a94635fcfb",
+      "size": 7050
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e919dc8a3b7096cb59a032427abe45f69562c7db"
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "410ac99e9931fb94497e982b80bc6b61f482f01a",
+      "size": 14888
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94c29da8dc764234860e5a03deff9c21bdd300d5"
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/assets/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00000bc092da9aee76b9adca38ea6c36af581067"
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/assets/examples/example-research-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e2d409670f18b684e80f82962f30816eac009f",
+      "size": 9010
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "104a2b9d9a6e554a8bdd2f85b47d8bd32d293b59"
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43668692ed5f35ee1e03021dc9410ecaac24ec12"
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/architecture.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f321303632d15fcbd951dd43145a9f6e2b65db2",
+      "size": 4369
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/block.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7009eb96f186d1e4be5bb8389c0ea129c403c2c2",
+      "size": 4825
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/c4.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae5117b135db74720d23dec37a2bd2125801055",
+      "size": 6201
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/class.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a93eb08d81ae312929944d1229f2a57e94adf953",
+      "size": 8521
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/complex_examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "919c32d39ab4406a69addf2cf2f2bedf99de80ac",
+      "size": 17079
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/er.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "140352dfeea9417e42b64a5473ff348d0d78adbd",
+      "size": 7601
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/flowchart.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9095e3760297550ef7bdea8df75665209b9f44cb",
+      "size": 6961
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/gantt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "217d1090f3033c6f6678c488502d1b5a3669eb24",
+      "size": 5851
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/git_graph.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8514200b457122c02930dfc677182506f306e62",
+      "size": 2009
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/kanban.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3d4b5d0a8b6a99bad5c7387753d430f51b002dc",
+      "size": 3544
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/mindmap.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61a7b36eaf0e2f21e16a2ac57b342f36564ad323",
+      "size": 2232
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/packet.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f858963fb3d99ecb57f5b0c2533cf0e77b7f430b",
+      "size": 1721
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/pie.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d3e3352c9dbfb33424aed332a81d1b297e73576",
+      "size": 1560
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/quadrant.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "660e8f2f1cbd4f17fdaf32d6b0ff82fd235499c9",
+      "size": 2163
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/radar.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ee8cda77b8a6d17c08c6747dea684a9c501bbf",
+      "size": 2176
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d88ff708b686a1c78143780b535d3a4069be7e6e",
+      "size": 2463
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/sankey.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acfebfc8d0d5f47de60abd86e098755dcf41fd80",
+      "size": 2143
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/sequence.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71bf43c4f2575051a979195858f80a38c42104fe",
+      "size": 5510
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d142b5a133aa50c2e307c0901785883fd2f7a54f",
+      "size": 5464
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/timeline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "246568939940633bc5de8664f9d2991b0201fed4",
+      "size": 4181
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/treemap.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c081804e206a83432ed1d0d9e0f74d85219f4260",
+      "size": 2039
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/user_journey.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9faadc586bd4b97b3fad4552de1300e215b0a52",
+      "size": 5049
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/xy_chart.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82c159b76b5fc0e0b7c504f35fb4560a82c4ef54",
+      "size": 1887
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/diagrams/zenuml.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fba01615e2e995c76c108c229c8dbd29f77e535e",
+      "size": 2285
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/markdown_style_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "952b7335e19a6f07939911a6a68fd5e1dc4e9c99",
+      "size": 35114
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/references/mermaid_style_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16246e99c9c0f5ff210dd4655c4a63ce36310426",
+      "size": 26433
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9787636f7fb195a911acea7aec23afec82d80a1e"
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/decision_record.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b831d6a561b2af2c54b087bac5fbd6ac3adaac8",
+      "size": 7169
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/how_to_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62f4fd8f63749055f5d9ca651e5ed23a49a859b5",
+      "size": 7091
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/issue.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79b77a64c3bff148a23293b2e4cdb4cd67a0dd28",
+      "size": 12835
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/kanban.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e95aeebaf492f6ec284a5054466c1b4cca37bc24",
+      "size": 11403
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/presentation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "757186a7b7a6dab5cc48248457b0cae1ac969cf1",
+      "size": 8068
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/project_documentation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c903cfdbeed17c409e8010f2f97efd4e6d4f2e6",
+      "size": 11489
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/pull_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d22b0a1c0bb319b0b2ceae8dde6911fd9d48e520",
+      "size": 12903
+    },
+    {
+      "path": "scientific-skills/markdown-mermaid-writing/templates/research_paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ccb3eb155d226ca9c230897597cb9430bd32c06",
+      "size": 10157
+    },
+    {
+      "path": "scientific-skills/matplotlib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b510fa4ffff516ec674b59c802a0276f64cc6b79"
+    },
+    {
+      "path": "scientific-skills/matplotlib/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be1d22912de994c6e50da6e0c3ab3f1871384cba",
+      "size": 11454
+    },
+    {
+      "path": "scientific-skills/matplotlib/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6b067b0f8cae758e69ecc8834b8382d750a18a5"
+    },
+    {
+      "path": "scientific-skills/matplotlib/references/api_reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ca3c61971556697c625036aebba702165c18e55",
+      "size": 11233
+    },
+    {
+      "path": "scientific-skills/matplotlib/references/common_issues.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1304c7b718262bee42d855a3ea73f0a26711479",
+      "size": 12836
+    },
+    {
+      "path": "scientific-skills/matplotlib/references/plot_types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aad9aa40366a9ff5ac231fc68851068655876ac",
+      "size": 11839
+    },
+    {
+      "path": "scientific-skills/matplotlib/references/styling_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f9fbaf05c4bc57fa26dd4e4b495426d075cfe6d",
+      "size": 13583
+    },
+    {
+      "path": "scientific-skills/matplotlib/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d623da59671ecf1c20107da0cc6c86df34498d8"
+    },
+    {
+      "path": "scientific-skills/matplotlib/scripts/plot_template.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88721c1a919b5c2691ddb75c4a0d31fd9dd4c2a9",
+      "size": 12093
+    },
+    {
+      "path": "scientific-skills/matplotlib/scripts/style_configurator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a0aca236605e633b50267599c917d4cbd60cf7a",
+      "size": 13179
+    },
+    {
+      "path": "scientific-skills/networkx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d898ad7cb3a71368104659e9891e5b9fad3b663a"
+    },
+    {
+      "path": "scientific-skills/networkx/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0636f01accf4b68c2e2d9d3ac48e4b4107f7968",
+      "size": 12714
+    },
+    {
+      "path": "scientific-skills/networkx/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b493900fc8734b054ce15c71e99f4667e1f00f90"
+    },
+    {
+      "path": "scientific-skills/networkx/references/algorithms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad94243facce7f5037fb98ecdd4ae6966985fdd",
+      "size": 9170
+    },
+    {
+      "path": "scientific-skills/networkx/references/generators.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f92b2b43c3323d2447b97ea5b00ef298c446281",
+      "size": 8228
+    },
+    {
+      "path": "scientific-skills/networkx/references/graph-basics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05d7de3752584bb37fc584ec3413a1546c8436ed",
+      "size": 6261
+    },
+    {
+      "path": "scientific-skills/networkx/references/io.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12aee621a577e21c6c5a8521b871e30794bfd49",
+      "size": 9395
+    },
+    {
+      "path": "scientific-skills/networkx/references/visualization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caf9b7a3fc55adee546bd9ec57f56a840115693c",
+      "size": 12388
+    },
+    {
+      "path": "scientific-skills/peer-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "955433ace60dc26930c61d523f72209c2497c297"
+    },
+    {
+      "path": "scientific-skills/peer-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d651955794147b5ec8b270f06b460f26b1b16838",
+      "size": 23120
+    },
+    {
+      "path": "scientific-skills/peer-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "784d975b5638b16168514b9f20ee67a7d09c1399"
+    },
+    {
+      "path": "scientific-skills/peer-review/references/common_issues.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec648c2059270cfb8dea887ad2e4b5b8e51d0fa5",
+      "size": 19321
+    },
+    {
+      "path": "scientific-skills/peer-review/references/reporting_standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d995b9d0c9ef2575330dc98c9beae656135d65f",
+      "size": 10200
+    },
+    {
+      "path": "scientific-skills/plotly",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1433dd76d0c074fec42519d1c52abe5026a607d9"
+    },
+    {
+      "path": "scientific-skills/plotly/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aaa8db9ca9684a06e22d5a1429ea4cb0ef20105",
+      "size": 7199
+    },
+    {
+      "path": "scientific-skills/plotly/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d659c74caf48acf18e7bfbbeba598a7a181c858a"
+    },
+    {
+      "path": "scientific-skills/plotly/references/chart-types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4cdc252a6001c423f795552cac37ec8abc16ae1",
+      "size": 8763
+    },
+    {
+      "path": "scientific-skills/plotly/references/export-interactivity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27bbfd62cf80bc43dfa6ee23c469ea8669c3da1b",
+      "size": 9204
+    },
+    {
+      "path": "scientific-skills/plotly/references/graph-objects.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f2cbd9023382a5c37a3bbd198b5942ba11c0c14",
+      "size": 5986
+    },
+    {
+      "path": "scientific-skills/plotly/references/layouts-styling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c03b25efaa913a67c05c1821e757bb3f431722b",
+      "size": 9128
+    },
+    {
+      "path": "scientific-skills/plotly/references/plotly-express.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc7001963a7717f2cf7751662bb62f037a1f9c29",
+      "size": 4893
+    },
+    {
+      "path": "scientific-skills/pyzotero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3b5efafbf4df14dea81dad4d58c1000221abaa0"
+    },
+    {
+      "path": "scientific-skills/pyzotero/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6da1655c79c225e823e5333c977b60ddc5946800",
+      "size": 4398
+    },
+    {
+      "path": "scientific-skills/pyzotero/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d55583c1ddf864f6414130ecef9f512802ba83ad"
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/authentication.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd19f974f7db802ce78740d55f268d79f9ec6ea4",
+      "size": 2250
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/cli.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba4a7d628fc84b86031cd984b6e81e7c8e0cdf1b",
+      "size": 2293
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/collections.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a631f209bff7f6f90e6e7ae0ed4fa881398783c7",
+      "size": 2526
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/error-handling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "159896b6512916ba4de43698fa7c6114f07dd737",
+      "size": 2617
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/exports.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7e246d02496e8f305fd6c7f94f706a735b81811",
+      "size": 2603
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/files-attachments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db2f6f9c3eff370b1221da9f5a4924ffbcf5450e",
+      "size": 2760
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/full-text.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "442f085c673f060f36779166359d68e2ab2ddc2c",
+      "size": 1695
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/pagination.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04093239fc91087148f31d31a750cc3851582b1e",
+      "size": 2056
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/read-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68d75626fb5938bfd6e6d2d2942cfd8521b8de3e",
+      "size": 2972
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/saved-searches.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042e67d48d02d6e9a57de106096e3be1270ff4a5",
+      "size": 2009
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/search-params.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9150ceed19c581189a6f1034ec3ac7f1b752a14f",
+      "size": 3047
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/tags.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d36e61536ac1cd41dc7c4a13e09f24349b2adf0d",
+      "size": 2083
+    },
+    {
+      "path": "scientific-skills/pyzotero/references/write-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5301c81401481ef0e63513008540183adc420638",
+      "size": 3294
+    },
+    {
+      "path": "scientific-skills/research-grants",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f374dbd5c7b4f79e09d7135766eca5df94eea3a7"
+    },
+    {
+      "path": "scientific-skills/research-grants/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e4132309fe3abfe2f59577a1d7cd4af579dd794",
+      "size": 37217
+    },
+    {
+      "path": "scientific-skills/research-grants/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e76529a2fd684a3598cf54567b2b092a582e07c7"
+    },
+    {
+      "path": "scientific-skills/research-grants/assets/budget_justification_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac2dc42817617a6d5d59d030f46c5bc7211e12db",
+      "size": 21866
+    },
+    {
+      "path": "scientific-skills/research-grants/assets/nih_specific_aims_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b6568f60dcbac0a9bcbaefe979d70fa58f711dd",
+      "size": 11120
+    },
+    {
+      "path": "scientific-skills/research-grants/assets/nsf_project_summary_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f070713358ba959374a986fd3e047a7fa88f7fc",
+      "size": 5886
+    },
+    {
+      "path": "scientific-skills/research-grants/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee0454f31afeebd74f79dfeb91d76f4999b24275"
+    },
+    {
+      "path": "scientific-skills/research-grants/references/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a27e8b7710a5b0fae6217ac15159d816fd74c124",
+      "size": 9414
+    },
+    {
+      "path": "scientific-skills/research-grants/references/broader_impacts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c70e3d051fee1685f1e8e99bc3b7a94d797c4de6",
+      "size": 23284
+    },
+    {
+      "path": "scientific-skills/research-grants/references/darpa_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a68565979e2d9f17681fcccb4fbe2b89685f66f",
+      "size": 20501
+    },
+    {
+      "path": "scientific-skills/research-grants/references/doe_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "954bb5f54e281efd9b56f361d848fa678cd304b4",
+      "size": 19409
+    },
+    {
+      "path": "scientific-skills/research-grants/references/nih_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "124325b41d40935bdab82c899f77452810e0d370",
+      "size": 30192
+    },
+    {
+      "path": "scientific-skills/research-grants/references/nsf_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67581e1ac687baf53e70fd25414dc8b8e71cd000",
+      "size": 21683
+    },
+    {
+      "path": "scientific-skills/research-grants/references/nstc_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b672d1f9d56dcd30dc06823ba276d1c3b6206ad7",
+      "size": 26945
+    },
+    {
+      "path": "scientific-skills/research-grants/references/specific_aims_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1a8a5db44d3fa1ba0a2cc29aa7b3d7148ab35bc",
+      "size": 21040
+    },
+    {
+      "path": "scientific-skills/scholar-evaluation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db863ab99d37bf8ee790aa8a32fad89652a8f3c7"
+    },
+    {
+      "path": "scientific-skills/scholar-evaluation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c30dee9132df196a3efa7c994ce0f96a24d5221",
+      "size": 12258
+    },
+    {
+      "path": "scientific-skills/scholar-evaluation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3e8992f1d30a5fad258cd6699e6592f429db8db"
+    },
+    {
+      "path": "scientific-skills/scholar-evaluation/references/evaluation_framework.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1170c0848c9943090abf88e6ddaf9d02dde0235",
+      "size": 19950
+    },
+    {
+      "path": "scientific-skills/scholar-evaluation/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f4bdf436b20e52de3fc9c44af541e83009554f4"
+    },
+    {
+      "path": "scientific-skills/scholar-evaluation/scripts/calculate_scores.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e705b84e390c0009fe1e7bbd78aebf85e2076fb7",
+      "size": 11551
+    },
+    {
+      "path": "scientific-skills/scientific-brainstorming",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5282a5139519c41dcaf4916e5e9ff2d4efb12bef"
+    },
+    {
+      "path": "scientific-skills/scientific-brainstorming/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "166d7d4e63d6512ac4a3d7239c869f13d382b6c4",
+      "size": 8179
+    },
+    {
+      "path": "scientific-skills/scientific-brainstorming/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f521d18eab1e98a03f0bb051bc31412dafb0dca"
+    },
+    {
+      "path": "scientific-skills/scientific-brainstorming/references/brainstorming_methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "152773eeec504ab283cac03d04c0d549e8d9a173",
+      "size": 12065
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8ddbaae978546c5a237ca3af151436c89be1c87"
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e17fcc368d47dbc45e0206ce4c4cf0f73966fbe",
+      "size": 23705
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44ac76fccfcc100818afcaae58462540865f4a34"
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references/common_biases.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23d67a2f7f4a43c588f689321b9b65238066729f",
+      "size": 11093
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references/evidence_hierarchy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dd08a15ec9238489d211293194acd391bad872c",
+      "size": 13444
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references/experimental_design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e76c323e5c8efbc1f30077d8cc97e7a87d66a94",
+      "size": 16068
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references/logical_fallacies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9e7492138c21398bb43f0273b4f2caf8be73c9",
+      "size": 18014
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references/scientific_method.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae43f9a0761d31324bdbb7a72a8a26b05e7b17a5",
+      "size": 6100
+    },
+    {
+      "path": "scientific-skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727366d4c56f41898613136029cec31527fc2bb1",
+      "size": 15726
+    },
+    {
+      "path": "scientific-skills/scientific-schematics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c46b1d4c90a540b9cd6830c9b80626af70d8745d"
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6397eb7b6e6db188865a7462d2fbcdf0ef51ff77",
+      "size": 23850
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aee84fdb201191db81266412ad35dec2ffea4c97"
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/references/QUICK_REFERENCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f03c528009c024347fedc280c74503a0008b09b0",
+      "size": 4784
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/references/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb7f6320a3ec813bb8f82bd5f8f904ca9d2f03af",
+      "size": 8676
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/references/best_practices.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6033b3393d0cd45f4f1dc07ce50cdd0faa1577e",
+      "size": 16026
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d0bbe29c9d57c90d75e0e2d936253a3fb37cbf5"
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/scripts/example_usage.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2e638d929adc3180eba1e8659263581e1c076b4d",
+      "size": 3052
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/scripts/generate_schematic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1181adcc5465b1608c6c17a40d8023b55d18a8c3",
+      "size": 5030
+    },
+    {
+      "path": "scientific-skills/scientific-schematics/scripts/generate_schematic_ai.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eed7a87074ee279f96609a2bfdedfe565b06c5e",
+      "size": 33577
+    },
+    {
+      "path": "scientific-skills/scientific-visualization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16b7682873611a7939482e2cd1f1203c223cc78b"
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d4ddda76abac7647b76ccd445514e3a6039190",
+      "size": 25528
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3656dd8de1dec887ff2177d9251ca1650de16bcf"
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/assets/color_palettes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be4f0e984b5b8cc5a23609d9dde631e9964de2f2",
+      "size": 5754
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/assets/nature.mplstyle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd8386d560533710774644b4de032ef39ddc72f9",
+      "size": 1449
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/assets/presentation.mplstyle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d435fef765d023b098d9e407a570d9c81660bb40",
+      "size": 1309
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/assets/publication.mplstyle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe224c40cf66be553cd44930cee90d3259f02b66",
+      "size": 1474
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c4bb625c23a678adabbb88243ca440d4025979a"
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/references/color_palettes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "293270af74608a2cf06b68c64b4db98be9dd2c72",
+      "size": 9861
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/references/journal_requirements.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2256fe14ed83dd1ae14c95039b966daddb3c0898",
+      "size": 9533
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/references/matplotlib_examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "637cdd2373ac47d2662feeff3c12666a5d2a1a23",
+      "size": 18103
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/references/publication_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d61f59117cc45be700bb36dcbad464af5b9b7b43",
+      "size": 8556
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56c5e13c84a911aef450710a6ebb0e597804eaff"
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/scripts/figure_export.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a643ff2d221223397cd756cbad11a6da6a62dbb",
+      "size": 10904
+    },
+    {
+      "path": "scientific-skills/scientific-visualization/scripts/style_presets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6b154657a7a868eb92d3caceadf10bbd3c9da23",
+      "size": 12199
+    },
+    {
+      "path": "scientific-skills/scientific-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e4b55f9a19daa5f23aa2b4c6402847ab2d0e7d4"
+    },
+    {
+      "path": "scientific-skills/scientific-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8c8ac3d34efa5892185c4ad806db0312a350e0",
+      "size": 33781
+    },
+    {
+      "path": "scientific-skills/scientific-writing/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11bc70bb8174448290dd7aa9ed57094009296bf5"
+    },
+    {
+      "path": "scientific-skills/scientific-writing/assets/REPORT_FORMATTING_GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e476fcd405284b8fb6d3c11246d52185a3105e6c",
+      "size": 14173
+    },
+    {
+      "path": "scientific-skills/scientific-writing/assets/scientific_report.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7ec307a024aa1fa470da4ff86ef37ca0b980c1d",
+      "size": 16643
+    },
+    {
+      "path": "scientific-skills/scientific-writing/assets/scientific_report_template.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc45036922776f8bcfef34b7546077730ae43677",
+      "size": 15638
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b04e9ea598eb4feb7f1ae7a5885ec10c0e59657"
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references/citation_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e27d1bb7980e773af55a7fb5d8c7eaeedaa3e4c5",
+      "size": 23705
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references/figures_tables.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f612425a8bed3c3202ec8abd0c745a899e3e0f8",
+      "size": 27883
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references/imrad_structure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda6607ab98ee08eb532dea74673f50819f53f0a",
+      "size": 26135
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references/professional_report_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58c581c14236e2a153af1bcf840051f6c182603d",
+      "size": 20620
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references/reporting_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9864705275fdd96f9865b00119b0de893642531",
+      "size": 25012
+    },
+    {
+      "path": "scientific-skills/scientific-writing/references/writing_principles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83cb57728221de190f9c8c0717066c15c0e26d3a",
+      "size": 27593
+    },
+    {
+      "path": "scientific-skills/seaborn",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffe548fede70f9e946f0aa7fee02eaf811e235e5"
+    },
+    {
+      "path": "scientific-skills/seaborn/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d248bed8726758c2aae5c8f21892553992f85126",
+      "size": 19601
+    },
+    {
+      "path": "scientific-skills/seaborn/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "265314a21c2827c59b5e38c690ff6ed7a7000c22"
+    },
+    {
+      "path": "scientific-skills/seaborn/references/examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd7a0d4dd636638490f349feed3ef063b602b99d",
+      "size": 17624
+    },
+    {
+      "path": "scientific-skills/seaborn/references/function_reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "139391841dd205f1d2a301f7d8174b483815bfe3",
+      "size": 24615
+    },
+    {
+      "path": "scientific-skills/seaborn/references/objects_interface.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cd1be56b72d2e802b5e8606bb321349d7d10cc1",
+      "size": 20801
+    },
+    {
+      "path": "scientific-skills/statistical-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7909ef2f20a3f865cc759e628a30b76164bedcd2"
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d029c23c234dca8ef373cc0fd8a2a1fb265a4ebf",
+      "size": 19766
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c5f343de3bd2d50ecc0af82f79e539ba2caa9da"
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b1d2b464e7b914a16ac6980f0eefc91c0dd5c96",
+      "size": 11139
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/references/bayesian_statistics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e83a5c71d193cce630d7a747cd0dba1e618aece",
+      "size": 17533
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/references/effect_sizes_and_power.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40f0733723993a893a63c3ac37740c1c87ab7924",
+      "size": 14989
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/references/reporting_standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e03e9f696913d8e1423d614c24230d71b95b99f",
+      "size": 19504
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/references/test_selection_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25e7ccb1e203134c2074de8bb2fca2a5c340a47d",
+      "size": 5077
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6a2aad91d8d63a89acb960d1c6a73a4f5a2a092"
+    },
+    {
+      "path": "scientific-skills/statistical-analysis/scripts/assumption_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72a55459e0fe728d8e5a22894a812a73566de688",
+      "size": 15859
+    },
+    {
+      "path": "scientific-skills/statsmodels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "273076e09877cfdc1275ae7248e7be0503a786cb"
+    },
+    {
+      "path": "scientific-skills/statsmodels/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4c76aa14c66913450d26ef24dfc5b22752287ee",
+      "size": 19692
+    },
+    {
+      "path": "scientific-skills/statsmodels/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2fd08b7147994c0990b2ae1c86fe89afd9ee62b"
+    },
+    {
+      "path": "scientific-skills/statsmodels/references/discrete_choice.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d51bee639d4fc1f6e27a20fbcc2a213c2086420",
+      "size": 17182
+    },
+    {
+      "path": "scientific-skills/statsmodels/references/glm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ab8e7f473bc9e5d67d62faf0f9afe81531a237",
+      "size": 16581
+    },
+    {
+      "path": "scientific-skills/statsmodels/references/linear_models.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf42340536540bd1863fb597192093bf5a05b4bf",
+      "size": 12966
+    },
+    {
+      "path": "scientific-skills/statsmodels/references/stats_diagnostics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d5432e6e00a54151afea44b88b5d8bd8ce47a7d",
+      "size": 20526
+    },
+    {
+      "path": "scientific-skills/statsmodels/references/time_series.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e7cb2f5f7fdddbce87db167e795433e49d1b31d",
+      "size": 18934
+    },
+    {
+      "path": "scientific-skills/venue-templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b270fe51fb93a3649f9b02d0f8034f11a1d68ef6"
+    },
+    {
+      "path": "scientific-skills/venue-templates/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a879f481662a34c5744d9d53d0c42bc2086b1ae7",
+      "size": 23296
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6959b3de65809f9509ce84db5aa4a757149d788"
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba966cf04e44bd1da36e5999383851208d8bfaba"
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/examples/cell_summary_example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0047d26b30e7fe27f35d7e1f72fe50b22cb90385",
+      "size": 8877
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/examples/medical_structured_abstract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e512d42c50b2bcbf6b8c0762f6a585180471405b",
+      "size": 12074
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/examples/nature_abstract_examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "192d29422a454a7a307affe0bc26e882501152df",
+      "size": 8954
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/examples/neurips_introduction_example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53d1fa913d2ea304d486ca4e0d956f1c0a3bec31",
+      "size": 8779
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/grants",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cf55c5c08c783eb9c7dd3a9cc8e3a9015b4e5a8"
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/grants/nih_specific_aims.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be46fa9a8393bda632d466206115c9068f0f88d8",
+      "size": 9082
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/grants/nsf_proposal_template.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d45a3afccc959249f96232c1382179e8c88bee",
+      "size": 13157
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/journals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f5dbae478f151a34d9e3735ad914e13a1548d75"
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/journals/nature_article.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "713b406016ba000eed0d842869607f917a4985c8",
+      "size": 6242
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/journals/neurips_article.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8098961cdd69803f03da5528d674a7107c93092c",
+      "size": 8925
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/journals/plos_one.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccae2bb65cec398fb85e36a53d6b4e5362037b4a",
+      "size": 11713
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/posters",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1365302746ad2622dcfd1f6abb3af280f9329d3d"
+    },
+    {
+      "path": "scientific-skills/venue-templates/assets/posters/beamerposter_academic.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f5d99d6f276dfe93c32584350eebfad1338f81d",
+      "size": 8495
+    },
+    {
+      "path": "scientific-skills/venue-templates/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "230f32159ad8547df4f8d59d6c66414b2d7a01b1"
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/cell_press_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b483639eca8adce2f5af81ed848a3eebce7e8422",
+      "size": 14290
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/conferences_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89e2a7d5082ea0b13f97f598b468e0d4dc94cac6",
+      "size": 17164
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/cs_conference_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcafd5cdb00686e7ddc9b65960e68ce6942a6a85",
+      "size": 15652
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/grants_requirements.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1c7c3af969936189866346f7f03a10711b569ba",
+      "size": 22873
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/journals_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f1f7991856b6b759759496ad07dde9dbff17c4b",
+      "size": 17649
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/medical_journal_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3285102cd315a6fda12ebef303e43276f77f8887",
+      "size": 15963
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/ml_conference_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "441b79418ad8ceb945bb6254d0b24a2731b71bf8",
+      "size": 17838
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/nature_science_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77fcd83d3217bde191d9187fa41a6678defc2db",
+      "size": 13574
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/posters_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccf4c0f5ad96be6e1e71c7aca5d4ccdbefe5818d",
+      "size": 17113
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/reviewer_expectations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0da05f56edd4c4196608c7640a8aee7a18d3755",
+      "size": 15837
+    },
+    {
+      "path": "scientific-skills/venue-templates/references/venue_writing_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef877d7349b32733ad1a11c2a47f2538863ad35d",
+      "size": 12671
+    },
+    {
+      "path": "scientific-skills/venue-templates/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ce52a0eef0c08106ec15278e2e0b96c79026b92"
+    },
+    {
+      "path": "scientific-skills/venue-templates/scripts/customize_template.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "41f62ef773b650513a5869e8ec2689f1513050d1",
+      "size": 6875
+    },
+    {
+      "path": "scientific-skills/venue-templates/scripts/query_template.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "95466e9429d478b2104d974740e600ed36dd3538",
+      "size": 8959
+    },
+    {
+      "path": "scientific-skills/venue-templates/scripts/validate_format.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "262ede34b7ad24b5cc90dcad40df7724c75f23e2",
+      "size": 8766
+    },
+    {
+      "path": "scientific-skills/what-if-oracle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "107528f1f624728308025f86648c304e62ce8873"
+    },
+    {
+      "path": "scientific-skills/what-if-oracle/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "076829c6788a1a57c1e5105b2c201aef69cb7c14",
+      "size": 9481
+    },
+    {
+      "path": "scientific-skills/what-if-oracle/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68990f018654683245f3b07ec70059c00ffffbfb"
+    },
+    {
+      "path": "scientific-skills/what-if-oracle/references/scenario-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6718bd0d5b260f616f6f14486a225f4a119455a1",
+      "size": 4150
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e76de68edbc1e396e4063cd1dedc401bc413ac8"
+    },
+    {
+      "path": "scripts/extract_annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b95e4f8c3f09a5130f5026da22d7d768a800519",
+      "size": 4610
+    },
+    {
+      "path": "scripts/md_to_latex.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "668ef30aa629817b3683d9ca1c85121ede16575d",
+      "size": 25029
+    },
+    {
+      "path": "scripts/paperbanana_direct.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f0dcdda43da3df82b918dda0e143c09414a28674",
+      "size": 11766
+    },
+    {
+      "path": "scripts/process_interviews.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "360b98dd876b86bd7144f1a5e55456ce440c73ab",
+      "size": 6818
+    },
+    {
+      "path": "simulated_reviews.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92578f95e0645a9f8acfe19560345fa90094d574",
+      "size": 24238
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebe8bb44ad4ce22c4a676038190ebe7c24dbf330"
+    },
+    {
+      "path": "skills/audit-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d54d2ca7386746b51a77e68af56c19f29dae7e91"
+    },
+    {
+      "path": "skills/audit-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92ff0918c0b6ab8385b7225b90d2c0b71cbf4e6b",
+      "size": 15622
+    },
+    {
+      "path": "skills/coauthor-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "764367bbd0dee682db17d4ec8a851a3cd97faeda"
+    },
+    {
+      "path": "skills/coauthor-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cf8b0bb2081d23c69372e9b01ee61ceb76526fc",
+      "size": 7110
+    },
+    {
+      "path": "skills/figure-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1f6f7ae33fea4183926893a3ea9dd976f027afd"
+    },
+    {
+      "path": "skills/figure-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5765ca2fde0458d3f31308e9d3dcc69b68b9b7e1",
+      "size": 9154
+    },
+    {
+      "path": "skills/idea-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dadf38c274f0642e04444b1d8a2276403a605082"
+    },
+    {
+      "path": "skills/idea-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f8de2da79b833d97379925b1056fcfe40b5d20",
+      "size": 8717
+    },
+    {
+      "path": "skills/latex-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e47456297a374e6403e6e89565e8c08787fd08f"
+    },
+    {
+      "path": "skills/latex-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ad3173b848477bc9e770e80963570d984360ab",
+      "size": 8742
+    },
+    {
+      "path": "skills/literature-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09d3cdf17b76c1dea3eca5a439db3682c3146da9"
+    },
+    {
+      "path": "skills/literature-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72cd20000f907d43697c856c9127ae8f51daef97",
+      "size": 12839
+    },
+    {
+      "path": "skills/method-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d84cb1df003674e04b90e200e65e8f8de86d2fec"
+    },
+    {
+      "path": "skills/method-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98a11121444f915275b8f0d2fa7301aaf2e65751",
+      "size": 31552
+    },
+    {
+      "path": "skills/peer-review-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2c4efe9b19e412ea82bd27a3ac4c3eb6cf8355d"
+    },
+    {
+      "path": "skills/peer-review-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a593acb6a19e9f0f51b470141770a39996d90641",
+      "size": 20315
+    },
+    {
+      "path": "skills/positioning-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62dc4ca316d113abc75ae3923e3f94791c86a81c"
+    },
+    {
+      "path": "skills/positioning-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf01159eb6f516e229809067ef132aacd6260d6e",
+      "size": 10595
+    },
+    {
+      "path": "skills/presentation-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eddf4cb8d57da7bacc1cdc0cf852d59eedfa022b"
+    },
+    {
+      "path": "skills/presentation-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a47d7470053a8a6252f552da07f8bcf3ebe630e7",
+      "size": 7867
+    },
+    {
+      "path": "skills/qualitative-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5914769cbd59d4f03a5123797373f61bc081202"
+    },
+    {
+      "path": "skills/qualitative-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "591c821f6edc2b7134f2b05607818fc412a2f66a",
+      "size": 11661
+    },
+    {
+      "path": "skills/review-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f6fe790bdd504e4a69d810425ccbb7cb6cab39a"
+    },
+    {
+      "path": "skills/review-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a899297789ed1b6eaeb62ca79a63fc6decb07177",
+      "size": 20408
+    },
+    {
+      "path": "skills/review-engine/review_engine_workflow.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72af527f33600abbb0586f0a2b1f7931d63f4dd4",
+      "size": 4773594
+    },
+    {
+      "path": "skills/screening-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a246e08b34a9a72776084058dd7dbb5516a3529"
+    },
+    {
+      "path": "skills/screening-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "898d3baf2ae9568f588c822e2166b95af81457f3",
+      "size": 13526
+    },
+    {
+      "path": "skills/submission-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c293c20faa5499e088816d24a0834d1e26213bd"
+    },
+    {
+      "path": "skills/submission-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d71ef8256532cba816bc218568975bffa0110bca",
+      "size": 14832
+    },
+    {
+      "path": "skills/theory-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "770409dd3c6e8acb66d1c530e96a7b9de44ca0c5"
+    },
+    {
+      "path": "skills/theory-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8fa9bf92b95502262e2ef2cbe7dca6bd8543c04",
+      "size": 9323
+    },
+    {
+      "path": "skills/verification-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8906f1341b833c76375356e02d605cf417adb2fd"
+    },
+    {
+      "path": "skills/verification-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc204ca99b1a9a773516e2d51933c35f5663459",
+      "size": 14391
+    },
+    {
+      "path": "skills/writing-engine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7824f2862da32d3a2e50333ef53b1f2a0128bcad"
+    },
+    {
+      "path": "skills/writing-engine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af236ea29330398585acbaa3bb04765e8cd17eae",
+      "size": 21390
+    },
+    {
+      "path": "templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "090177e124fb0bcd0bf574ab5225c0eff5e719dc"
+    },
+    {
+      "path": "templates/arxiv.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "081d21c8a77f08d13db53ee7d04ce47b2569ab86",
+      "size": 7642
+    },
+    {
+      "path": "writing_analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70044e55ff15b8e3e70b43e82bf21f2c122986d1",
+      "size": 18533
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-assessment/criterion-referenced-rubric-generator/SKILL.md",
+        "snippet": "ith: - \"competency-unpacker\" - \"backwards-design-unit-planner\" - \"gap-analysis-from-student-work\" - \"feedback-quality-analyser\" - \"kud-knowledge-type-mapper\" teacher_time: \"3 minutes\" tags: [\"rubric\", \"assessment"
+      },
+      {
+        "file": "skills/curriculum-assessment/criterion-referenced-rubric-generator/SKILL.md",
+        "snippet": "ve (not evaluative) language at each performance level. Each criterion describes what the student's work LOOKS LIKE at each level — not how \"good\" it is. The output includes the full rubric, a design rationale, a student-fri"
+      },
+      {
+        "file": "skills/curriculum-assessment/criterion-referenced-rubric-generator/SKILL.md",
+        "snippet": "07):** - Each criterion should assess a distinct, separable aspect of the work. - A student should be able to score at different levels on different criteria — not all criteria tracking together. - If two criteria always produce the"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,89 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "t check, check against template, does this meet the requirements, lab report check, audit student work, compliance check, submission requirements, batch check, 检查作业, 格式检查, 格式审查, 实验报告检查, 论文格式, 检查是否符合要求, 批量检查, 提交规范.\" metadata: version: \"1.0.0\" last_u"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "al and which were judgment. > **Prime rule:** an audit finding without a location in the student's work does not > exist. Every finding cites where it looked (\"§3 Results, p.2: figure has no caption\"), > and every judgment-"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "on_spec.md` — the confirmed spec (from `templates/submission_spec_template.md`) - `audit/<student-id>_report.md` — per-student feedback report drafts (from `templates/feedback_report_template.md`) - `audit/class_patter"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "port check, audit student work, compliance check, submission requirements, batch check, 检查作业, 格式检查, 格式审查, 实验报告检查, 论文格式, 检查是否符合要求, 批量检查, 提交规范.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\" status: a"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "`` Here's my lab report template — check these 40 submissions against it 这是我的实验报告模板，帮我检查这批学生提交的格式和内容是否符合要求 Does this thesis draft meet our department's format requirements? (attach both) Build a submission checkl"
+      },
+      {
+        "file": "submission-auditor/agents/format_auditor_agent.md",
+        "snippet": "erdicts, it is not deterministic — flag it for reclassification. - You never see or use student identity; the submission's pseudonym is your only handle."
+      }
+    ],
+    "fairness": [
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "eferences/feedback_principles.md` structure) + class-level pattern report; runs the batch fairness pass | ## Workflow (`batch-audit` mode) ``` Phase 0 SPEC — load confirmed Submission Spec (or run `spec` mode"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "findings ledger per student, every finding location-cited Phase 2 FAIRNESS — report_writer cross-submission pass: same defect ⇒ same severity and same wording class every"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "rson-affecting hard rule applies in full (`shared/checkpoint_protocol.md`). 5. **Batch fairness is a checked property, not an assumption.** The fairness pass runs on every batch; its record (checks compared, drif"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "kpoint_protocol.md`). 5. **Batch fairness is a checked property, not an assumption.** The fairness pass runs on every batch; its record (checks compared, drift found and fixed) ships with the batch. Same defect,"
+      },
+      {
+        "file": "submission-auditor/SKILL.md",
+        "snippet": "tern_report.md` — frequencies, common misses, teaching signals, spec-ambiguity signals, fairness-pass record - `self_check.md` (`self-check` mode) — student-facing checklist - Passport: `iteration_history` evidence e"
+      },
+      {
+        "file": "submission-auditor/agents/content_auditor_agent.md",
+        "snippet": "ver batch:** apply the same evidence threshold to every submission; the report writer's fairness pass will compare your verdicts across the batch — drift discovered there is rework for you. - **Verdicts about work,"
+      },
+      {
+        "file": "submission-auditor/agents/report_writer_agent.md",
+        "snippet": "gers into per-student feedback reports and the class-level pattern report; runs the batch fairness pass\" --- # Report Writer — Two-Altitude Reporter & Fairness Pass ## Role You consume the auditors' ledgers and prod"
+      },
+      {
+        "file": "submission-auditor/agents/report_writer_agent.md",
+        "snippet": "tern report; runs the batch fairness pass\" --- # Report Writer — Two-Altitude Reporter & Fairness Pass ## Role You consume the auditors' ledgers and produce everything humans actually read: a feedback report per stu"
+      },
+      {
+        "file": "submission-auditor/agents/report_writer_agent.md",
+        "snippet": "out the teaching and about the spec). Before writing anything student-facing, you run the fairness pass. ## Phase 1 — Fairness pass (batch mode) 1. **Group identical findings** across submissions (same check_id, same"
+      },
+      {
+        "file": "submission-auditor/agents/report_writer_agent.md",
+        "snippet": "e spec). Before writing anything student-facing, you run the fairness pass. ## Phase 1 — Fairness pass (batch mode) 1. **Group identical findings** across submissions (same check_id, same verdict class). Same defe"
+      },
+      {
+        "file": "submission-auditor/agents/report_writer_agent.md",
+        "snippet": "e, professor-only) — including any integrity concerns the content auditor escalated - **Fairness-pass record** + anonymous counts formatted for passport `iteration_history` (no identifiers, ever — Iron Rule 6) ##"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "submission-auditor/agents/content_auditor_agent.md",
+        "snippet": "ta) go directly to the professor in the outside-the-spec note — flagged as concerns for human judgment, never as findings, never to the student report. - **Consistency over batch:** apply the same evidence threshold to e"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "submission-auditor/agents/content_auditor_agent.md",
+        "snippet": "n't cover are not yours to assess. Genuinely concerning off-spec observations (possible plagiarism, fabricated-looking data) go directly to the professor in the outside-the-spec note — flagged as concerns for human j"
+      }
+    ]
+  },
+  "read_errors": []
+}

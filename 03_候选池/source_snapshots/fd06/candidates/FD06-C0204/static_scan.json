@@ -1,0 +1,61 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "bilingual-courseware/SKILL.md",
+        "snippet": "nslator_agent` | Glossary-bound translation with pedagogical-equivalence checks: cultural accessibility, difficulty shift, register, length expansion; logs every deliberate divergence | | `parallel_sync_agent` | Pairing reg"
+      },
+      {
+        "file": "bilingual-courseware/SKILL.md",
+        "snippet": "lations are checked for difficulty shift: an exam that is harder in one language is an equity defect, not a style choice. 4. **Version pairing is recorded.** Every translated artifact records the exact source"
+      },
+      {
+        "file": "bilingual-courseware/SKILL.md",
+        "snippet": "apping, punctuation/typography, terminology authority hierarchy, assessment-translation equity, layout expansion, classroom code-switching conventions - `templates/glossary_template.md` - `templates/sync_register"
+      },
+      {
+        "file": "bilingual-courseware/agents/translator_agent.md",
+        "snippet": "the same pedagogical demand as the source — same difficulty, same register function, same accessibility — which is a stricter standard than word-for-word fidelity and sometimes requires departing from it. Every such departu"
+      },
+      {
+        "file": "bilingual-courseware/agents/translator_agent.md",
+        "snippet": "s stay verbatim. 3. **Pedagogical-equivalence pass**, flagging as you go: - **Cultural accessibility of examples** — an example that doesn't cross cultures (local sports, idioms, institutions) is flagged with a prop"
+      },
+      {
+        "file": "bilingual-courseware/agents/translator_agent.md",
+        "snippet": "mplexity, culturally-loaded contexts per `references/emi_conventions.md` §assessment equity. An item that got harder or easier in translation is flagged: equity defect, not style (Iron Rule 3). - **Lengt"
+      },
+      {
+        "file": "bilingual-courseware/agents/translator_agent.md",
+        "snippet": "md` §assessment equity. An item that got harder or easier in translation is flagged: equity defect, not style (Iron Rule 3). - **Length expansion** where space is real — slides, captions, table cells. Apply"
+      },
+      {
+        "file": "bilingual-courseware/agents/translator_agent.md",
+        "snippet": ".** The professor's name, institutional names, and legal/policy text (integrity policy, accommodation procedures) may have official institutional translations — flag with `[NEEDS PROFESSOR INPUT: official translation"
+      },
+      {
+        "file": "bilingual-courseware/references/emi_conventions.md",
+        "snippet": "nventions, recorded per course; this file's *structure* (register, typography, authority, equity, layout, code-switching) is the checklist of what those conventions must cover. ## Academic register mapping Academic"
+      },
+      {
+        "file": "bilingual-courseware/references/emi_conventions.md",
+        "snippet": "ually use, and that knowledge outranks any list (Iron Rule 2). ## Assessment-translation equity An assessment item that shifts difficulty in translation is an equity defect. Known shift patterns to check item-by-it"
+      },
+      {
+        "file": "bilingual-courseware/references/emi_conventions.md",
+        "snippet": "ssment-translation equity An assessment item that shifts difficulty in translation is an equity defect. Known shift patterns to check item-by-item: - **Vocabulary load** — the zh rendering of an EN stem may use rar"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "bilingual-courseware/agents/glossary_keeper_agent.md",
+        "snippet": "day word; whether the rendering shifts by context (lecture discourse vs exam text vs student-facing email). - **Do-not-translate flag** where it applies: proper nouns, established loanwords, code identifiers, API name"
+      },
+      {
+        "file": "bilingual-courseware/references/emi_conventions.md",
+        "snippet": "h space between a zh character and an adjacent Latin word, identifier, or number (共 90 名学生使用 Python 完成). No space before/after full-width punctuation. - **Quotation marks:** zh text uses “ ” (and ‘ ’ for nest"
+      }
+    ]
+  },
+  "read_errors": []
+}

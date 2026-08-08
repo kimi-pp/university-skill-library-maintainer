@@ -1,0 +1,71 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "to the AI. - The school's data protection officer (or equivalent) should be informed that student work is being processed by a third-party AI system. - In jurisdictions covered by GDPR or similar frameworks, parental notif"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "eplacement use — avoiding thinking). - **Between lessons:** Evaluate whether AI-generated student work is distinguishable from student-generated work. If it is not, the task design may need revision — the thinking demand may not be visible enough in the product. - **Re"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "student work is being processed by a third-party AI system. - In jurisdictions covered by GDPR or similar frameworks, parental notification or consent may be required for this age group using third-party AI tools."
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "e are its outputs for this specific content domain? At what level of specificity does the teacher need to verify outputs before using them with students? What kinds of errors is this AI most likely to make in this domain? **Step 3"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "ude may give slightly wrong dates), and claims about what specific documents \"prove.\" The teacher must verify any specific factual claim Claude makes about primary sources before allowing it to be used as content with students."
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "otification or consent may be required for this age group using third-party AI tools. The teacher should verify this with their school before proceeding. **Content-specific ethics:** The WWI topic does not involve personal disclos"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "by jurisdiction and are changing rapidly. For any technology collecting student data, the teacher and school must verify compliance with applicable law — this skill provides a checklist prompt, not legal advice. 5. **TPACK development requ"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "type: \"object\" description: \"Data privacy implications for this learner stage, equity risks if technology access is uneven, and any content-specific ethical issues with this technology in this context\" cha"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "designed to build? If so, how should the task be structured to mitigate this? **Step 5 — Equity and Ethics.** Identify the equity and ethical dimensions of this technology integration: - Does uneven access to the te"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "ld the task be structured to mitigate this? **Step 5 — Equity and Ethics.** Identify the equity and ethical dimensions of this technology integration: - Does uneven access to the technology create differential learn"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "students who already have more technology access at home, widening rather than narrowing equity gaps? **Step 6 — Dispositional TPACK.** Describe the orientation the teacher needs to maintain effective TPACK in prac"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "ific first-lesson move] **Autonomy-dependency risk:** [Assessment and mitigation] ### 5. Equity and Ethics **Access equity:** [Differential access risks] **Data privacy:** [Requirements for this age group and this"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "tonomy-dependency risk:** [Assessment and mitigation] ### 5. Equity and Ethics **Access equity:** [Differential access risks] **Data privacy:** [Requirements for this age group and this technology] **Content-specif"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "AI-specific guidance (if applicable) addresses autonomy-dependency risk directly, (e) the equity and ethics section is specific to this technology and this learner stage, (f) the dispositional section describes a cri"
+      },
+      {
+        "file": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "(which shows their ability to engage with challenges and refine their reasoning). ### 5. Equity and Ethics **Access equity:** If Claude is used during class time on school devices, access is equitable during the le"
+      }
+    ]
+  },
+  "read_errors": []
+}

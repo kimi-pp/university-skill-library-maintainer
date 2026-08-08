@@ -1,0 +1,50 @@
+[
+  {
+    "path": "research/syllabus/skills/syllabus/SKILL.md",
+    "type": "blob",
+    "size": 12540,
+    "sha": "1543e7b2a76260447d2526ab5a7487976c855983"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/references/applied_domain_weaving.md",
+    "type": "blob",
+    "size": 8232,
+    "sha": "090c0bd67e4aa74c0dfacd35aebab05c78530333"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/references/audience_calibration.md",
+    "type": "blob",
+    "size": 10240,
+    "sha": "3cc9661e355880984a12947203306d74b4229b9c"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/references/bundled_script_pattern.md",
+    "type": "blob",
+    "size": 7280,
+    "sha": "c764ea0630b267bf8e3ae7e1f5fa9fc40e566fb4"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/scripts/citation_tracker.py",
+    "type": "blob",
+    "size": 8343,
+    "sha": "3f92a03ad2a624885dce7b6c9dd2e52a2be3480e"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/scripts/discussion_question_validator.py",
+    "type": "blob",
+    "size": 8866,
+    "sha": "ec0a526ec21386ef7f9f7cac2fda2e785a6ada8c"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/scripts/generate_reading_list.js",
+    "type": "blob",
+    "size": 13810,
+    "sha": "a553a120c8cab9b01e0f7874701425b2f1a6d329"
+  },
+  {
+    "path": "research/syllabus/skills/syllabus/scripts/topic_grouper.py",
+    "type": "blob",
+    "size": 7125,
+    "sha": "19e84d4017a81472db5b5410952240cc9f77ed9f"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/curriculum-designer/SKILL.md",
+        "snippet": "objectives drive assessment choices and instructional activities. You balance rigor with accessibility and help users create materials that serve diverse learners. ## When to Use **Use this skill when:** - User asks abo"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/curriculum-designer/SKILL.md",
+        "snippet": "pport stated objectives? | | Accuracy | Is the content current and factually correct? | | Accessibility | Is it readable at the appropriate level? Available in multiple formats? | | Engagement | Does it include varied examp"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/curriculum-designer/SKILL.md",
+        "snippet": "interactive elements? | | Inclusivity | Does it represent diverse perspectives and avoid bias? | | Cost | Is it within budget? Are there open-source alternatives? | | Licensing | Can it be reproduced or shared as"
+      }
+    ]
+  },
+  "read_errors": []
+}

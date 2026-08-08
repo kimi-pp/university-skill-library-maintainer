@@ -1,0 +1,37 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "am someone — I have things I like, things I'm good at, and people who matter to me. | The student can name three things they like about themselves and describe what makes them different from and similar to a classmate. | Basel"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "ring_notes type: string description: Decisions made during authoring that the teacher should review — ambiguous classification calls, cells where the warrant is thin, bands where the progression logic is uncertain. chai"
+      },
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "roceeding with a direct draft — expect the Know layer and progression levers to need more teacher review than usual.\" If input_type is competency_only AND no existing_do_statements are supplied: set routing_note to — \"Runni"
+      },
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "l + cross-reference] --- ## Authoring Notes [Decisions made during authoring requiring teacher review: ambiguous classification calls, cells where the warrant is thin, bands where progression logic is uncertain, any devia"
+      },
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "ontexts — a structured activity produces more valid evidence at this developmental stage. Teacher should review whether this matches their assessment practice. Band F Understand draws on Kegan's constructive-developmental theory —"
+      },
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "sessment practice. Band F Understand draws on Kegan's constructive-developmental theory — teacher should verify this aligns with the programme's philosophical stance on self-authorship before adopting. # Known Limitations The Und"
+      },
+      {
+        "file": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+        "snippet": "e authoring notes will flag this, but the teacher should not treat a direct-from-document draft as production-ready without additional review. Prerequisite typing is based on the logical structure of the content as the skill can assess it from the inputs suppl"
+      }
+    ]
+  },
+  "read_errors": []
+}

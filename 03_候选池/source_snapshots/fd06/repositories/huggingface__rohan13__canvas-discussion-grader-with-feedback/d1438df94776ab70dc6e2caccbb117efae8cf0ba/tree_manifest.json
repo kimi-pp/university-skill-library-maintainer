@@ -1,0 +1,72 @@
+{
+  "repository": "rohan13/canvas-discussion-grader-with-feedback",
+  "fixed_version": "d1438df94776ab70dc6e2caccbb117efae8cf0ba",
+  "tree": [
+    {
+      "type": "file",
+      "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519,
+      "path": ".gitattributes"
+    },
+    {
+      "type": "file",
+      "oid": "b10ed662bafb366865096f21d9317ec760093394",
+      "size": 260,
+      "path": "README.md"
+    },
+    {
+      "type": "file",
+      "oid": "b9839fd8c9aff0a003bbd794c38346abe1ae2b56",
+      "size": 11546,
+      "path": "app.py"
+    },
+    {
+      "type": "file",
+      "oid": "f21ddec9697dda592be19f8385782071cbbfd8f5",
+      "size": 1342,
+      "path": "csv_agent.py"
+    },
+    {
+      "type": "file",
+      "oid": "6a9f40d137125ef443a1d837772f8e58f12b7da6",
+      "size": 4237,
+      "path": "custom_csv_loader.py"
+    },
+    {
+      "type": "file",
+      "oid": "e5e24e2a51702d0c164b25014f2fd4b7673ccd7f",
+      "size": 11908,
+      "path": "grader.py"
+    },
+    {
+      "type": "file",
+      "oid": "0d39147de3730d0be28384cd860d7dfac2cc616c",
+      "size": 16660,
+      "path": "grader_qa.py"
+    },
+    {
+      "type": "file",
+      "oid": "0081ab93588e37b058bdcdbf8171a2b1543e7a66",
+      "size": 6932,
+      "path": "ingest.py"
+    },
+    {
+      "type": "file",
+      "oid": "20ffdf62d42c07a7d2dc13488865ebe26f0d44de",
+      "size": 106,
+      "path": "requirements.in"
+    },
+    {
+      "type": "file",
+      "oid": "2892b51a63f425bc90cc7430794357e44864b5da",
+      "size": 6186,
+      "path": "requirements.txt"
+    },
+    {
+      "type": "file",
+      "oid": "349ce866bdf61f31e6f74bd324b754fb2f3c3e60",
+      "size": 2682,
+      "path": "utils.py"
+    }
+  ]
+}

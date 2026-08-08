@@ -1,0 +1,113 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "SKILL.md",
+        "snippet": "ster's theses. compatibility: Requires python-docx library for reading Word documents and WebSearch for reference verification. --- # Thesis Review Skill A comprehensive skill for reviewing Chinese master's theses for"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "with `python-docx` library installed: ```bash pip install python-docx ``` 2. **WebSearch tool access** for reference verification (automatically available in Claude Code). ## Workflow ### Step 1: Extract an"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "t - **Fake reference detection**: Randomly select 5-10 references and verify online using WebSearch ### Step 3: Generate review document Create a new text file (`.txt`) with: 1. **Executive summary**: Overall assessm"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "es, examine `document.tables` and extract cell text - For reference verification, use the WebSearch tool with queries like `\"[author] [title] [year]\"` to check existence - When reporting locations, be as specific as pos"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "SKILL.md",
+        "snippet": "5-10 references and verify online using WebSearch ### Step 3: Generate review document Create a new text file (`.txt`) with: 1. **Executive summary**: Overall assessment and major issues 2. **Detailed findings by section**: For"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "n Notes - Use `python-docx` to read the input document - Use standard file operations to write the review as a `.txt` file - For text extraction, iterate through `document.paragraphs` and check `paragraph.style` for headings - For tables, exa"
+      },
+      {
+        "file": "README.md",
+        "snippet": "### 测试样本论文 ```bash python test_comprehensive.py ``` 使用包含故意设计问题的样本论文进行测试，展示完整的评审功能。 ### 生成测试文件 ```bash python scripts/generate_test_docx.py ``` 生成包含各种常见问题的测试论文文件。 ## 输出格式 评审结果以Word文档形式输出，包含以下部分： 1. **总体评价**"
+      },
+      {
+        "file": "README.md",
+        "snippet": "故意设计问题的样本论文进行测试，展示完整的评审功能。 ### 生成测试文件 ```bash python scripts/generate_test_docx.py ``` 生成包含各种常见问题的测试论文文件。 ## 输出格式 评审结果以Word文档形式输出，包含以下部分： 1. **总体评价** - 主要优点 - 主要问题统计 - 修改优先级分布 2. **具体问题及修改建议** - 格式问题 - 语言与"
+      },
+      {
+        "file": "README.md",
+        "snippet": "- 包含参考文献部分，体现学术规范 ``` ## 自定义使用 要评审自己的论文，可以修改 `thesis_review.py` 中的文件路径： ```python # 修改输入文件路径 input_path = \"path/to/your/thesis.docx\" # 修改输出目录 output_dir = \"path/to/output/directory/\" ``` ## 注意事项 1. 技能主要针对中文硕"
+      },
+      {
+        "file": "README.md",
+        "snippet": "hesis_review.py` 中的文件路径： ```python # 修改输入文件路径 input_path = \"path/to/your/thesis.docx\" # 修改输出目录 output_dir = \"path/to/output/directory/\" ``` ## 注意事项 1. 技能主要针对中文硕士学位论文设计 2. 部分检查基于启发式规则，可能需要人工复核 3. 参考文献真实性验证需要网络连接"
+      },
+      {
+        "file": "enhanced_review.py",
+        "snippet": "review-workspace/iteration-2/eval-focused-check/with_skill/outputs/\" # 创建输出目录 os.makedirs(output_dir, exist_ok=True) # 生成输出文件名 timestamp = datetime.now().strftime(\"%Y%m%d_%H%M%S\") output_path = os"
+      },
+      {
+        "file": "enhanced_review.py",
+        "snippet": "content.append(\"评审结束\") content.append(\"=\" * 80) # 写入文件 with open(output_path, 'w', encoding='utf-8') as f: f.write('\\n'.join(content)) print(f\"评审意见已保存至: {output_path}\") ret"
+      },
+      {
+        "file": "enhanced_review.py",
+        "snippet": "成，共发现{len(self.issues)}个问题\") def generate_review_text(self, output_path): \"\"\"生成评审文档\"\"\" content = [] # 标题 content.append(\"=\" * 80) content.append(\"硕士学位论文评审意见（增强版）\")"
+      },
+      {
+        "file": "enhanced_review.py",
+        "snippet": "pend(\"=\" * 80) content.append(\"评审结束\") content.append(\"=\" * 80) # 写入文件 with open(output_path, 'w', encoding='utf-8') as f: f.write('\\n'.join(content)) print(f\"评审"
+      },
+      {
+        "file": "enhanced_review.py",
+        "snippet": "heck/with_skill/outputs/\" # 创建输出目录 os.makedirs(output_dir, exist_ok=True) # 生成输出文件名 timestamp = datetime.now().strftime(\"%Y%m%d_%H%M%S\") output_path = os.path.join(output_dir, f\"论文终稿_增强评审_{times"
+      },
+      {
+        "file": "enhanced_review.py",
+        "snippet": "er(input_path) # 执行评审 reviewer.perform_comprehensive_review() # 生成评审文档 review_doc = reviewer.generate_review_text(output_path) print(\"\\n\" + \"=\"*60) print(\"增强版论文评审完成!"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "SKILL.md",
+        "snippet": "following: 1. **Python environment** with `python-docx` library installed: ```bash pip install python-docx ``` 2. **WebSearch tool access** for reference verification (automatically available in Claude Code). ## Workflow"
+      },
+      {
+        "file": "README.md",
+        "snippet": "肯定** - 论文做得好的方面 ## 技术要求 - Python 3.6+ - python-docx 库 - 支持中文编码的环境 ### 安装依赖 ```bash pip install python-docx ``` ## 文件结构 ``` thesis-review/ ├── thesis_review.py # 主评审脚本 ├── test_comprehensive.py # 测试脚本 ├── scripts"
+      },
+      {
+        "file": "scripts/generate_test_docx.py",
+        "snippet": "ImportError as e: print(f\"Error: {e}\") print(\"Please install python-docx: pip install python-docx\") except Exception as e: print(f\"Unexpected error: {e}\")"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "README.md",
+        "snippet": "ut_dir = \"path/to/output/directory/\" ``` ## 注意事项 1. 技能主要针对中文硕士学位论文设计 2. 部分检查基于启发式规则，可能需要人工复核 3. 参考文献真实性验证需要网络连接和WebSearch工具支持 4. 统计表达检查遵循一般学术规范，具体学科可能有特殊要求 ## 开发说明 技能基于 `python-docx` 库实现文档解析，使用正则表达式进行模式匹配，采用模块化"
+      }
+    ],
+    "process": [
+      {
+        "file": "run_review.py",
+        "snippet": "#!/usr/bin/env python3 \"\"\" 运行论文评审的脚本 \"\"\" import os import sys from datetime import datetime # 添加当前目录到Python路径 sys.path.append(os.path.dirname(os.path.absp"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "scripts/generate_test_docx.py",
+        "snippet": "PARAGRAPH.CENTER # Author info doc.add_paragraph('作者：张三') doc.add_paragraph('学号：2023123456') doc.add_paragraph('指导教师：李四 教授') doc.add_paragraph('专业：计算机科学与技术') doc.add_paragraph('完成日期：2025年"
+      },
+      {
+        "file": "scripts/generate_test_docx.py",
+        "snippet": "dd_heading('3.3 模型评估', 2) # Skipped 3.2 intentionally doc.add_paragraph('采用准确率、召回率和F1分数评估模型性能。') doc.add_heading('3.2 模型构建', 2) # Out of order doc.add_paragraph('构建ResNet-50卷积神经网络。') # Chapter"
+      },
+      {
+        "file": "scripts/generate_test_docx.py",
+        "snippet": "型' hdr_cells[1].text = '准确率' hdr_cells[2].text = '召回率' hdr_cells[3].text = 'F1分数' # Data rows data = [ ('CNN', '0.9234', '0.9123', '0.9178'), ('ResNet', '0.9456', '0.9321', '0"
+      }
+    ]
+  },
+  "read_errors": []
+}

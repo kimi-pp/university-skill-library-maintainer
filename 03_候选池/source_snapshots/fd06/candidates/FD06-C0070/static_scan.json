@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/lecture-to-study-guide/references/output-format.md",
+        "snippet": "equator\",\"\",\"cloze\" ``` End the guide with a single suggestion line: `> For Anki/Quizlet export, run the flashcards skill on this file next.`"
+      }
+    ]
+  },
+  "read_errors": []
+}

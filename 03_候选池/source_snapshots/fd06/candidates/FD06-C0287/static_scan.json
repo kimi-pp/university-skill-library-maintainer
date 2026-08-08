@@ -1,0 +1,121 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "e or before scholar-journal submission prep. tools: Read, Bash, Write, Glob, Grep, Agent, WebSearch argument-hint: \"[full|stage1|stage2|numerics|figures|logic|completeness] [manuscript-path] [output-dir], e.g., 'full ou"
+      },
+      {
+        "file": ".claude/skills/_shared/citation-verification-protocol.md",
+        "snippet": "_API_KEY set | | 2c | OpenAlex API | 50 | YES (no key needed) | | 2d | Google Scholar via WebSearch | 20 | Fallback only | ## Verification Levels Skills operate at different verification levels depending on their role"
+      }
+    ],
+    "file_write": [
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "xit 1 fi fi ``` ### 0a. Locate Artifacts ```bash OUTPUT_ROOT=\"${OUTPUT_ROOT:-output}\" mkdir -p \"${OUTPUT_ROOT}/verify\" \"${OUTPUT_ROOT}/logs\" ``` 1. **Locate manuscript**: If `--no-manuscript` was provided, skip"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "m-%d)\")\" STEM=\"$(basename \"${OUTPUT_ROOT}/verify/verification-report-$(date +%Y-%m-%d)\")\" mkdir -p \"$OUTDIR\" bash \"${SCHOLAR_SKILL_DIR:-.}/scripts/gates/version-check.sh\" \"$OUTDIR\" \"$STEM\" ``` **Use the printed `SA"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "ectory exists, then run the version-check from above OUTPUT_ROOT=\"${OUTPUT_ROOT:-output}\" mkdir -p \"${OUTPUT_ROOT}/verify\" ``` Run the Version Collision Avoidance block above to get `SAVE_PATH`. Write the consolida"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "le (.md, .tex, .docx) — auto-detect if not specified - **Output directory**: override for save location (default: `output/verify/`) - **`--manuscript [path]`**: Explicit manuscript path — skip auto-detection entirely. Use when called from an"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "— verdict/metric/count/error/file ref>\" --status ok # ok|fail|skipped ``` At the end (Save Output), render the human-readable log and self-check: ```bash OUTPUT_ROOT=\"${OUTPUT_ROOT:-output}\" bash \"${SCHOLAR_SKILL_DIR"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "ipt issues) 5. **Stage 2 Summary** (manuscript → text issues) Ask: \"Would you like me to save the full verification report to disk?\" --- ## Step 5: Save Output ### Version Collision Avoidance (MANDATORY) **Before EVERY Write tool call bel"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "Ask: \"Would you like me to save the full verification report to disk?\" --- ## Step 5: Save Output ### Version Collision Avoidance (MANDATORY) **Before EVERY Write tool call below**, run this Bash block to determine"
+      },
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "rsion suffix must be used for all related output files (.md, .docx, .tex, .pdf). ### 5a. Save Consolidated Report ```bash # Ensure directory exists, then run the version-check from above OUTPUT_ROOT=\"${OUTPUT_ROOT:-output}\" mkdir -p"
+      },
+      {
+        "file": ".claude/agents/review-code-correctness.md",
+        "snippet": "ches you with an explicit `--write-to <absolute-path>` argument: 1. **You MUST call the `Write` tool** to persist the full review report to the supplied path. The Anthropic harness default (\"do not create new files unless explicitly required\") does NOT app"
+      },
+      {
+        "file": ".claude/agents/review-code-correctness.md",
+        "snippet": "`** so the dispatcher can confirm persistence by grepping the agent's last line. 3. **If `Write` fails**, report the failure in stdout and exit non-zero. Do NOT silently degrade to stdout-only output. 4. **Boilerplate refusals** (\"I"
+      },
+      {
+        "file": ".claude/agents/review-code-correctness.md",
+        "snippet": "fy files\") indicate the harness directive won the conflict; treat them as a bug and call `Write` anyway. Your *report* is not the script being reviewed. If `--write-to` is absent (standalone debugging), emit the report to stdout only."
+      },
+      {
+        "file": ".claude/agents/review-code-correctness.md",
+        "snippet": "a **sidecar** trace file capturing HOW you reached your verdict. When dispatched with `--write-to <report-path>` (default the sidecar to `<report-path>.trace.ndjson`, or use `--trace-to <path>` if provided), `Write` the sidec"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "metrics, verdicts, counts, and file refs ONLY — never raw data rows, verbatim quotes, or PII. **IMPORTANT:** Shell variables do NOT persist across Bash tool calls. Every step MUST re-derive `OUTPUT_ROOT` and `LO"
+      },
+      {
+        "file": ".claude/agents/review-code-correctness.md",
+        "snippet": "ts, severities, and file refs ONLY — never raw data rows, verbatim participant quotes, or PII. ## Objectivity Mandate (BINDING) This agent operates under the Objectivity Mandate (`_shared/objectivity-mandate.md`"
+      },
+      {
+        "file": ".claude/agents/review-code-data-handling.md",
+        "snippet": "ts, severities, and file refs ONLY — never raw data rows, verbatim participant quotes, or PII. ## Objectivity Mandate (BINDING) This agent operates under the Objectivity Mandate (`_shared/objectivity-mandate.md`"
+      },
+      {
+        "file": ".claude/agents/review-code-reproducibility.md",
+        "snippet": "ts, severities, and file refs ONLY — never raw data rows, verbatim participant quotes, or PII. ## Objectivity Mandate (BINDING) This agent operates under the Objectivity Mandate (`_shared/objectivity-mandate.md`"
+      },
+      {
+        "file": ".claude/agents/review-code-robustness.md",
+        "snippet": "ts, severities, and file refs ONLY — never raw data rows, verbatim participant quotes, or PII. ## Objectivity Mandate (BINDING) This agent operates under the Objectivity Mandate (`_shared/objectivity-mandate.md`"
+      },
+      {
+        "file": ".claude/agents/review-code-statistics.md",
+        "snippet": "ts, severities, and file refs ONLY — never raw data rows, verbatim participant quotes, or PII. ## Objectivity Mandate (BINDING) This agent operates under the Objectivity Mandate (`_shared/objectivity-mandate.md`"
+      },
+      {
+        "file": ".claude/agents/review-code-style.md",
+        "snippet": "ts, severities, and file refs ONLY — never raw data rows, verbatim participant quotes, or PII. ## Objectivity Mandate (BINDING) This agent operates under the Objectivity Mandate (`_shared/objectivity-mandate.md`"
+      }
+    ],
+    "human_review": [
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "ce at `${OUTPUT_ROOT}/logs/trace-scholar-verify-<date>.ndjson` — the source of truth. The human-readable `process-log-scholar-verify-<date>.md` is *rendered* from it. Full protocol + privacy rule: `_shared/process-logger.md`. At each meaningful step ("
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": ".claude/skills/scholar-verify/SKILL.md",
+        "snippet": "| --- ## ABSOLUTE RULE — NEVER Fabricate Citations > **ZERO TOLERANCE FOR CITATION FABRICATION.** Any reference cited in verification reports, adjudication rationales, or remediation plans produced by this skill MU"
+      },
+      {
+        "file": ".claude/skills/_shared/citation-verification-protocol.md",
+        "snippet": "# Citation Verification Protocol (Shared) All skills that produce or modify citations MUST follow this protocol. ## Verification Tiers | Tie"
+      },
+      {
+        "file": ".claude/skills/_shared/citation-verification-protocol.md",
+        "snippet": "ls that produce citations should state their verification level in their process log: ``` Citation verification level: [FULL/STANDARD/LIGHT] References verified: [N] | Unverified: [N] | [CITATION NEEDED] markers: [N] ```"
+      }
+    ],
+    "fairness": [
+      {
+        "file": ".claude/agents/review-code-statistics.md",
+        "snippet": "lues for causal claims; Rosenbaum bounds for matching; Oster's delta for omitted variable bias - **Model fit reporting**: R-squared, AIC/BIC, log-likelihood as appropriate for model type - **Complete coefficient ta"
+      }
+    ]
+  },
+  "read_errors": []
+}

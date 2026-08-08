@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md",
+        "snippet": "ep\" from the last success, not a leap. 3. **Watch for regression after failure.** If the student produces a weaker piece of work (as every writer does), they may interpret this as evidence that \"I can't really write.\" Respond immediately with attri"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md",
+        "snippet": "articulation strength described in the example suggests the gap IS motivational — but the teacher must verify this. 3. **Self-efficacy is domain-specific.** Building writing self-efficacy does not automatically improve self-effi"
+      }
+    ]
+  },
+  "read_errors": []
+}

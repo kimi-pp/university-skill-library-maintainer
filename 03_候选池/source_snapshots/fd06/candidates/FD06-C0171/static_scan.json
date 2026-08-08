@@ -1,0 +1,23 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/education-performance-rubric-application/SKILL.md",
+        "snippet": "tion: Apply performance rubrics consistently across automated scoring workflows to ensure fairness and repeatability. Use when enforcing standardized evaluation criteria at scale. --- # Performance Rubric Application"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/education-performance-rubric-application/index.mjs",
+        "snippet": "ues.push('empty_rubric'); if (rubric?.version !== assignment.required_rubric_version && assignment.required_rubric_version) issues.push('version_mismatch'); return { valid: issues.length === 0, issues }; } export function applyScoring(submission, rubri"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/education-performance-rubric-application/index.mjs",
+        "snippet": "_points * threshold).map(c => ({ criterion: c.criterion_name, reason: 'Partial evidence — human review recommended' })); } export async function generateScoreBreakdown(submissionId, learnerId, scoring, rubricVersion) {"
+      }
+    ]
+  },
+  "read_errors": []
+}

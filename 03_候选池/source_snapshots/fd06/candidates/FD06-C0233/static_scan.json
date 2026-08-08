@@ -1,0 +1,53 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "evaluated (skipped): Y students - No submission (skipped): Z students - Already graded in Canvas (excluded during setup): A students Score Distribution: Average: {avg} / {points_possible} pts Range: {min} - {max"
+      },
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "sessments as \"approved\" when ready 4. Run `/assess:submit` to submit approved grades to Canvas ``` ## Error Handling - If agent fails to evaluate: Report error, continue with next student - If feedback not 15-20"
+      },
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "d by setup) - **Already-graded submissions excluded during setup** to prevent overwriting Canvas grades - Never overwrite existing assessments (skip if already evaluated) - All assessments marked as \"reviewed\" but NO"
+      },
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "ents marked as \"reviewed\" but NOT \"approved\" - Human review required before submission to Canvas - Agent selection is based on `metadata.language_learning`: `spanish-pedagogy-expert` for language courses, `pedagogy-e"
+      }
+    ],
+    "external_write": [
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "ew tools or JSON editing 3. Mark assessments as \"approved\" when ready 4. Run `/assess:submit` to submit approved grades to Canvas ``` ## Error Handling - If agent fails to evaluate: Report error, continue with next student - If feedback not 15-20"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "a Task tool **Launch the selected agent** with this prompt: ``` You are evaluating a student's submission for a {level} course. Feedback language: {feedback_language} (write ALL feedback in this language) Formality: {formali"
+      },
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "age: {feedback_language} (write ALL feedback in this language) Formality: {formality} ## Student Submission User ID: {user_id} Submission Time: {submitted_at} Word Count: {word_count} ### Submission Text: {submission_text} #"
+      },
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "insight *Note: no need to report the word count in your feedback, only mention it if the student's submission is very short or very long.* ## Evaluation Guidelines - Use the assignment prompt as essential context: it defines wh"
+      }
+    ],
+    "human_review": [
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "The `--reviewed` flag marks as reviewed by AI - Do NOT include `--approved` (requires human review before submission) 6. **Report progress**: ``` Evaluated User {user_id} - {total_points}/{points_possible} pts"
+      },
+      {
+        "file": ".pi/skills/assess-ai-pass/SKILL.md",
+        "snippet": "s (skip if already evaluated) - All assessments marked as \"reviewed\" but NOT \"approved\" - Human review required before submission to Canvas - Agent selection is based on `metadata.language_learning`: `spanish-pedagogy-expe"
+      }
+    ]
+  },
+  "read_errors": []
+}

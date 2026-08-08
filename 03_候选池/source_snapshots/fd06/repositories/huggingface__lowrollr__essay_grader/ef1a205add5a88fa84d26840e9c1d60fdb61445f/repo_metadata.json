@@ -1,0 +1,72 @@
+{
+  "_id": "6446abc4c50af85000147da7",
+  "id": "lowrollr/essay_grader",
+  "sdk": "gradio",
+  "likes": 3,
+  "tags": [
+    "gradio",
+    "region:us"
+  ],
+  "private": false,
+  "author": "lowrollr",
+  "sha": "ef1a205add5a88fa84d26840e9c1d60fdb61445f",
+  "lastModified": "2023-04-24T17:51:21.000Z",
+  "cardData": {
+    "title": "essay_grader",
+    "emoji": "🐠",
+    "colorFrom": "pink",
+    "colorTo": "green",
+    "sdk": "gradio",
+    "sdk_version": "3.27.0",
+    "app_file": "app.py",
+    "pinned": false
+  },
+  "subdomain": "lowrollr-essay-grader",
+  "gated": false,
+  "disabled": false,
+  "host": "https://lowrollr-essay-grader.hf.space",
+  "runtime": {
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "gcTimeout": 86400,
+    "replicas": {
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "lowrollr-essay-grader.hf.space",
+        "stage": "READY"
+      }
+    ]
+  },
+  "region": "us",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": ".gitignore"
+    },
+    {
+      "rfilename": "LICENSE"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "app.py"
+    },
+    {
+      "rfilename": "requirements.txt"
+    },
+    {
+      "rfilename": "rubrics/act_rubric.json"
+    }
+  ],
+  "createdAt": "2023-04-24T16:18:12.000Z",
+  "usedStorage": 0
+}

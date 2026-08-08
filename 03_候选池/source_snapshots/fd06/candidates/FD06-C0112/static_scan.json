@@ -1,0 +1,23 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/literacy-critical-thinking/media-literacy-deconstruction-protocol/SKILL.md",
+        "snippet": "ction-protocol description: \"Design a media deconstruction protocol analysing persuasion, bias, or representation in media texts. Use when teaching students to critically read advertisements, news, or social media"
+      },
+      {
+        "file": "skills/literacy-critical-thinking/media-literacy-deconstruction-protocol/SKILL.md",
+        "snippet": "\"What the teacher wants students to notice — e.g. persuasive techniques, representation, bias, audience targeting, omission\" - field: \"student_level\" type: \"string\" description: \"Age/year group\""
+      },
+      {
+        "file": "skills/literacy-critical-thinking/media-literacy-deconstruction-protocol/SKILL.md",
+        "snippet": "r, body language, music, slogans, celebrity endorsement, lifestyle association, emotional appeal - News articles: headline framing, source selection, quote placement, active/passive voice, image selection, story p"
+      },
+      {
+        "file": "skills/literacy-critical-thinking/media-literacy-deconstruction-protocol/SKILL.md",
+        "snippet": "on, editing, music, narrative structure, point of view - Political material: emotional appeal, us/them framing, statistics presentation, visual symbolism 5. **Model the analysis explicitly:** - Include a teach"
+      }
+    ]
+  },
+  "read_errors": []
+}

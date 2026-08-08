@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "\" evidence_sources: - \"Rose & Meyer (2002) — Teaching Every Student in the Digital Age: Universal Design for Learning\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014)"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "ching Every Student in the Digital Age: Universal Design for Learning\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Pract"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — Universal Design for Learning in Pre-K to"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "ersal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — Universal Design for Learning in Pre-K to Grade 12 Classrooms: A Systematic Review of Research\" - \"Rao & Meo (2016) — Using Universal"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "-K to Grade 12 Classrooms: A Systematic Review of Research\" - \"Rao & Meo (2016) — Using Universal Design for Learning to Design Standards-Based Lessons\" - \"Edyburn (2010) — Would You Recognize Universal Design for Learning"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "for Learning to Design Standards-Based Lessons\" - \"Edyburn (2010) — Would You Recognize Universal Design for Learning if You Saw It?\" input_schema: required: - field: \"task_description\" type: \"string\" descr"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "type: \"array\" description: \"Barriers that require individualised support beyond universal design\" - field: \"environmental_barriers\" type: \"array\" description: \"Physical, digital, and social environmen"
+      },
+      {
+        "file": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+        "snippet": "at can be reduced through design and barriers that require specialist support beyond what universal design can provide. Honest acknowledgement of this limit matters: claiming UDL can address what it cannot address leads teache"
+      }
+    ]
+  },
+  "read_errors": []
+}

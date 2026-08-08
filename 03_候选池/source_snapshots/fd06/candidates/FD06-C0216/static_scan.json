@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/eal-language-development/language-demand-analyser/SKILL.md",
+        "snippet": "multilingual learners. Use when adapting tasks, planning support, or assessing linguistic accessibility.\" disable-model-invocation: false user-invocable: true effort: medium # EXISTING FIELDS skill_id: \"eal-language-devel"
+      }
+    ]
+  },
+  "read_errors": []
+}

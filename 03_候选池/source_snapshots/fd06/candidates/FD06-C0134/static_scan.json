@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/systems-thinking/systems-wellbeing-impact-mapper/SKILL.md",
+        "snippet": "* Roffey's work makes clear that pupil and teacher wellbeing are interconnected. A map of student wellbeing patterns that does not name teaching conditions is incomplete. 5. **Naming only what schools can change.** Structural causes at the societal level"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/systems-thinking/systems-wellbeing-impact-mapper/SKILL.md",
+        "snippet": "funding, inequality, systemic factors] - What is missing: [policy conditions, structural equity] ### Reinforcing Loops For each loop: **Loop [N]: [Name]** - [Element A] → [Element B] → [Element C] → back to [Elemen"
+      }
+    ]
+  },
+  "read_errors": []
+}

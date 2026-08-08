@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": ".claude/skills/uoa-py-course-update-lecture-post-teaching/SKILL.md",
+        "snippet": "o `uoa-py-course-create-excellent-lecture` directly. The whole value of this skill is the post-teaching feedback signal — without it there is no diagnostic step to do. - **One lecture per invocation.** No batch updates across lectur"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".claude/skills/uoa-py-course-update-lecture-post-teaching/SKILL.md",
+        "snippet": "-lecture-outline`); evaluate or score a lecture (use `uoa-py-course-lecture-eval`); grade student work; or apply a maintainer-named change that does not stem from teaching observations (use `uoa-py-course-create-excellent-"
+      }
+    ]
+  },
+  "read_errors": []
+}

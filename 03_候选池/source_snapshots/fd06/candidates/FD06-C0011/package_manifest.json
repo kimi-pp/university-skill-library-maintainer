@@ -1,0 +1,86 @@
+[
+  {
+    "path": "course-designer/SKILL.md",
+    "type": "blob",
+    "size": 9919,
+    "sha": "34018b74aa5851fd4ac337e9e9df65c7e9804456"
+  },
+  {
+    "path": "course-designer/agents/alignment_auditor_agent.md",
+    "type": "blob",
+    "size": 2502,
+    "sha": "3a7416f4e3e0347c82b85071121d7d030318e475"
+  },
+  {
+    "path": "course-designer/agents/assessment_planner_agent.md",
+    "type": "blob",
+    "size": 2747,
+    "sha": "bda3f2fd8e08418d8f90c2fbfe1f47e29966e040"
+  },
+  {
+    "path": "course-designer/agents/async_designer_agent.md",
+    "type": "blob",
+    "size": 4456,
+    "sha": "2f24a363171fc9e46629c312085a3f6c4fcf1dcb"
+  },
+  {
+    "path": "course-designer/agents/design_mentor_agent.md",
+    "type": "blob",
+    "size": 3031,
+    "sha": "39641e86acb29e32106694b89d3f93938265799e"
+  },
+  {
+    "path": "course-designer/agents/outcome_architect_agent.md",
+    "type": "blob",
+    "size": 2684,
+    "sha": "9b27ca314654bad591dcaf4d3b8ff25abe8ff621"
+  },
+  {
+    "path": "course-designer/agents/schedule_planner_agent.md",
+    "type": "blob",
+    "size": 2986,
+    "sha": "6eca1816b04e74354fb698477adcc9652497c7c0"
+  },
+  {
+    "path": "course-designer/agents/syllabus_writer_agent.md",
+    "type": "blob",
+    "size": 2283,
+    "sha": "f07f2e1d86fbd4b37d717929e35a30ceaf98870d"
+  },
+  {
+    "path": "course-designer/references/async_design_guide.md",
+    "type": "blob",
+    "size": 5225,
+    "sha": "ba76fe72bbf388b749c4c543ddf77b26077f3ac6"
+  },
+  {
+    "path": "course-designer/references/outcome_verbs.md",
+    "type": "blob",
+    "size": 2957,
+    "sha": "2766148d7d0d8284ac36a952daeff830c482d8ee"
+  },
+  {
+    "path": "course-designer/references/syllabus_checklist.md",
+    "type": "blob",
+    "size": 2028,
+    "sha": "caa8f1a0e449c67fd532e9c061300531c1cae2c3"
+  },
+  {
+    "path": "course-designer/templates/async_module_template.md",
+    "type": "blob",
+    "size": 2737,
+    "sha": "85d3658ea9aba1a6f508a4866edd5b9c7eef28e9"
+  },
+  {
+    "path": "course-designer/templates/course_passport_starter.yaml",
+    "type": "blob",
+    "size": 1090,
+    "sha": "fa35e8db21acce1f6f428086af8969defbeacb0c"
+  },
+  {
+    "path": "course-designer/templates/syllabus_template.md",
+    "type": "blob",
+    "size": 2230,
+    "sha": "d12e6bbe2e68db10978804e770b5f98c3533db71"
+  }
+]

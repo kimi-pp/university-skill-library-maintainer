@@ -1,0 +1,14 @@
+[
+  {
+    "path": "course-evaluations/SKILL.md",
+    "type": "blob",
+    "size": 29726,
+    "sha": "5cd99c375f625d06a0d6c9a4dcdbc2a304396e6e"
+  },
+  {
+    "path": "course-evaluations/scripts/parse_evaluations.py",
+    "type": "blob",
+    "size": 23013,
+    "sha": "46b07cde17e490d758a3b948b54a1453765ae3ab"
+  }
+]

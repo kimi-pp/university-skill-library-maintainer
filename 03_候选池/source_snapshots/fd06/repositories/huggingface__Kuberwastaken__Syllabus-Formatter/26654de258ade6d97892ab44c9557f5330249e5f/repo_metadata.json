@@ -1,0 +1,109 @@
+{
+  "_id": "6842af1383d158cb351b47a4",
+  "id": "Kuberwastaken/Syllabus-Formatter",
+  "sdk": "gradio",
+  "likes": 0,
+  "tags": [
+    "gradio",
+    "region:us"
+  ],
+  "private": false,
+  "author": "Kuberwastaken",
+  "sha": "26654de258ade6d97892ab44c9557f5330249e5f",
+  "lastModified": "2025-06-06T09:40:38.000Z",
+  "cardData": {
+    "title": "Syllabus Formatter",
+    "emoji": "📚",
+    "colorFrom": "indigo",
+    "colorTo": "blue",
+    "sdk": "gradio",
+    "sdk_version": "5.11.0",
+    "app_file": "app.py",
+    "pinned": false
+  },
+  "subdomain": "kuberwastaken-syllabus-formatter",
+  "gated": false,
+  "disabled": false,
+  "host": "https://kuberwastaken-syllabus-formatter.hf.space",
+  "models": [
+    "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "microsoft/Phi-3-mini-4k-instruct"
+  ],
+  "runtime": {
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "gcTimeout": 172800,
+    "replicas": {
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "kuberwastaken-syllabus-formatter.hf.space",
+        "stage": "READY"
+      }
+    ]
+  },
+  "region": "us",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": ".gitignore"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "__pycache__/script_search_api.cpython-310.pyc"
+    },
+    {
+      "rfilename": "app.py"
+    },
+    {
+      "rfilename": "gradio_app.py"
+    },
+    {
+      "rfilename": "model/__pycache__/analyzer.cpython-310.pyc"
+    },
+    {
+      "rfilename": "model/analyzer.py"
+    },
+    {
+      "rfilename": "public/Content-Meta/Dotnotes.json"
+    },
+    {
+      "rfilename": "public/Content-Meta/FifteenFourteen.json"
+    },
+    {
+      "rfilename": "public/Content-Meta/StudyX.json"
+    },
+    {
+      "rfilename": "public/Content-Meta/UnifiedContent.json"
+    },
+    {
+      "rfilename": "public/Content-Meta/syllabus.json"
+    },
+    {
+      "rfilename": "public/Content-Meta/videos.json"
+    },
+    {
+      "rfilename": "requirements.txt"
+    },
+    {
+      "rfilename": "script_search_api.py"
+    },
+    {
+      "rfilename": "scripts/requirements.txt"
+    },
+    {
+      "rfilename": "scripts/syllabus_formatter.py"
+    }
+  ],
+  "createdAt": "2025-06-06T09:04:19.000Z",
+  "usedStorage": 0
+}

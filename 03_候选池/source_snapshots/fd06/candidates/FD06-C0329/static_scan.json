@@ -1,0 +1,29 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "skills/civitas-learning/SKILL.md",
+        "snippet": "AS_BASE_URL` - Civitas Learning API base URL provided at onboarding - `CIVITAS_API_KEY` - API key issued by Civitas Learning institutional account ## Key operations - `GET /students/:id/risk` — graduation probability"
+      },
+      {
+        "file": "skills/civitas-learning/SKILL.md",
+        "snippet": "ional data use agreement and FERPA. - The API requires IP-allowlisting in addition to the API key; ensure the agent's egress IP is registered with Civitas."
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/civitas-learning/SKILL.md",
+        "snippet": "roactively and measure intervention effectiveness. ## When to use this skill - Pulling a student's graduation probability score and the top risk factors driving it - Identifying the highest-risk student cohorts in a given term for targeted outreac"
+      },
+      {
+        "file": "skills/civitas-learning/SKILL.md",
+        "snippet": "y); surface the score's `as_of_date` alongside the value. - Civitas data contains derived PII; access is governed by institutional data use agreement and FERPA. - The API requires IP-allowlisting in addition to th"
+      },
+      {
+        "file": "skills/civitas-learning/SKILL.md",
+        "snippet": "tas data contains derived PII; access is governed by institutional data use agreement and FERPA. - The API requires IP-allowlisting in addition to the API key; ensure the agent's egress IP is registered with Civitas"
+      }
+    ]
+  },
+  "read_errors": []
+}

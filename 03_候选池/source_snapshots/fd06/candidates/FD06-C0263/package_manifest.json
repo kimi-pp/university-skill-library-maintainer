@@ -1,0 +1,14 @@
+[
+  {
+    "path": "skills/icse-seet-review/SKILL.md",
+    "type": "blob",
+    "size": 14889,
+    "sha": "2f9f3cdd308eec3b0d6bbc9bc8f7163b84685980"
+  },
+  {
+    "path": "skills/icse-seet-review/agents/openai.yaml",
+    "type": "blob",
+    "size": 326,
+    "sha": "f983e55a91b1d341bea5ba50006c23a6f23f6c70"
+  }
+]

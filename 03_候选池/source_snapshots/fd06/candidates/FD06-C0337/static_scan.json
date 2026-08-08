@@ -1,0 +1,177 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "lterLab Academic Skills suite.\" license: MIT allowed-tools: Read Write Edit Bash WebFetch WebSearch compatibility: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or accoun"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "h WebSearch compatibility: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or account required metadata: skill-author: AlterLab version: \"1.4\" last_updated: \"2026-03-"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "patibility: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or account required metadata: skill-author: AlterLab version: \"1.4\" last_updated: \"2026-03-08\" --- # Academi"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/commands/review-paper.md",
+        "snippet": "te the paper] disable-model-invocation: true allowed-tools: Read Write Edit Bash WebFetch WebSearch --- **Review the paper**: $ARGUMENTS Use the `alterlab-paper-reviewer` skill in **full review mode**. Steps: 1. **Id"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "y: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or account required metadata: skill-author: AlterLab version: \"1.4\" last_updated: \"2026-03-08\" --- # Academic Pa"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "ant to learn by doing (guided review) | guided | Not sure? Use `full` for pre-submission review, `re-review` for post-revision verification. --- ## Agent Team (7 Agents) | # | Agent | Role | Phase | |---|-------|------|-------| | 1 |"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/evals/evals.json",
+        "snippet": "rates and management strategies of private universities in Turkey. Can you do a full peer review of it before I submit?\", \"expected_output\": \"Invokes alterlab-paper-reviewer in full mode: runs Phase 0 field analysis, presents a 5-re"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+        "snippet": "-----|-------------|---------| | R1 (First revision) | Respond to all reviewer comments | Send for re-review or EIC review | | R2 (Second revision) | Respond to residual issues | Usually EIC makes final decision | | R3 (Third revision) | Very"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/statistical_reporting_standards.md",
+        "snippet": "without exception | MEDIUM | | Exploratory analysis packaged as confirmatory | Literature review clearly constructed post-hoc | HIGH | | Hypothesis directionality change | Originally predicted positive but result was negative, yet claimed \"a"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "--- name: alterlab-paper-reviewer description: \"Simulates a full multi-reviewer journal review PANEL — 5 personas (Editor-in-Chief + 3 peer reviewers + a Devil's Advocate) debate a manuscript and produce a consensu"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "or: simulate peer review, mock review panel, editorial review before submission, multiple reviewer perspectives, re-review of a revised manuscript, or 'critique my paper hard'. For a single-reviewer referee report use alterlab-peer-review; fo"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "erspectives, re-review of a revised manuscript, or 'critique my paper hard'. For a single-reviewer referee report use alterlab-peer-review; for rubric/grade scoring use alterlab-scholar-eval; to write/revise the paper use alterlab-paper-writer. Part of the A"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "kill-author: AlterLab version: \"1.4\" last_updated: \"2026-03-08\" --- # Academic Paper Reviewer v1.4 — Multi-Perspective Academic Paper Review Agent Team Simulates a complete international journal peer review process: automatically identifies the paper's field,"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "process: automatically identifies the paper's field, dynamically configures 5 reviewers (Editor-in-Chief + 3 peer reviewers + Devil's Advocate) who review from four non-overlapping perspectives — methodology, domain expertise, cross-disciplinary viewpoints, and core argumen"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "`alterlab-paper-writer` (revision mode) | | Want a single structured referee report (one reviewer, checklist-based) | `alterlab-peer-review` | | Want a rubric/grade-style numeric score of a paper or thesis | `alterlab-scholar-eval` | ### Quick Mode Selection"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "amically generates specific identities for 5 reviewers: * EIC: Which journal's editor, area of expertise, review preferences * Reviewer 1 (Methodology): Methodological expertise, what they particularly focus on"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "alterlab-deep-research --> alterlab-paper-writer --> [integrity check] --> alterlab-paper-reviewer --> alterlab-paper-writer (revision) --> alterlab-paper-reviewer (re-review) --> [final integrity] --> finalize (research) (writing) (integrity audit) (review)"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "allenges rather than scoring the paper. allowed-tools: Read, Write --- # Devil's Advocate Reviewer Agent — Paper Review Devil's Advocate ## Role Definition You are the Devil's Advocate for paper review. Your job is **not** to score the p"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/domain_reviewer_agent.md",
+        "snippet": "y impact (that's Reviewer 3's job). --- ## Expertise Configuration After receiving the Reviewer Configuration Card from field_analyst_agent, adjust review depth based on the paper's Primary Discipline: 1. **Domain identity**: Review as the subject expert specified in the C"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/editorial_synthesizer_agent.md",
+        "snippet": "- name: editorial-synthesizer-agent description: Acts as the journal's managing/associate editor, consolidating all review comments, identifying consensus and disagreements, making the final editorial decision, and producing a structured Revi"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/editorial_synthesizer_agent.md",
+        "snippet": "ite --- # Editorial Synthesizer Agent ## Role & Identity You are the journal's Managing Editor / Associate Editor, responsible for consolidating all review comments, identifying consensus and disagreements, making the final Editorial Decision, and producing a structured Revi"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "(strongest counter-arguments) - Cherry-picking detection - Confirmation bias detection - Logic chain validation - Overgeneralization detection - Alternative paths analys"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "l explanation for these findings is Z, which the authors do not address\" | | Confirmation Bias Detection | Spot selective use of evidence that favors the hypothesis | \"The authors cite 5 supporting studies but omit"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "lanation is more parsimonious AND better fits the presented data - Example: \"Selection bias in the sample (voluntary participation) is a more likely explanation for the observed effect than the proposed interven"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "the one proposed by the authors? ``` ### 2. Cherry-Picking Detection (Evidence Selection Bias) ``` - Are the references cited by the authors biased toward studies supporting their argument? - Is there important co"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "? - Ratio of \"representative\" citations vs. \"selective\" citations - Is there survivorship bias? ``` ### 3. Confirmation Bias Detection ``` - Were the conclusions predetermined before the literature review? - Does"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "itations vs. \"selective\" citations - Is there survivorship bias? ``` ### 3. Confirmation Bias Detection ``` - Were the conclusions predetermined before the literature review? - Does the framing of research questio"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "licy recommendations consider all affected groups? - Is there an implicit power structure bias? ``` ### 8. \"So What?\" Test ``` - What is the actual impact of this paper? - If the research conclusions are correct,"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+        "snippet": "the strongest counter-argument, use 1-2 sentences to affirm what the paper does well (for fairness) 6. **Specific citations**: Every issue must cite specific passages or page numbers from the paper"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/domain_reviewer_agent.md",
+        "snippet": "If it's a regional study, is there discussion of result generalizability? - Has cultural bias or centrism been avoided? **4c. Positioning within existing knowledge** - How does the paper position itself within th"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/field_analyst_agent.md",
+        "snippet": "policy context | | R3 | AI ethics researcher, information science background | Algorithm bias, data privacy, feasibility of technical claims | **Example 2: \"Impact of Declining Birth Rates on Management Strategie"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/field_analyst_agent.md",
+        "snippet": "review / Meta-analysis - Reviewer 1 focus: search strategy, inclusion/exclusion criteria, bias assessment - Reviewer 2 focus: completeness of literature coverage, reasonableness of classification framework - Review"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/agents/methodology_reviewer_agent.md",
+        "snippet": "issues: p-hacking, uncorrected multiple comparisons, confounding variables, survivorship bias ### Qualitative Research - Focus: Research question appropriateness, data collection strategy (interview/observation/d"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/SKILL.md",
+        "snippet": "cisms | | Evidence-based | EIC's decision must be based on specific reviewer comments; no fabrication | | Specificity | Reviews must cite specific passages, data, or page numbers from the paper; no vague comments | | Bala"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+        "snippet": "partiality**: No bias based on author's gender, race, institution, or nationality 6. **No plagiarism**: Do not use unpublished ideas seen during review 7. **Appropriate language**: Avoid personal attacks, sarcasm, or dem"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+        "snippet": "nds it | May point it out but cannot require citation of your own work | | Suspected data fabrication | Report to EIC; journal initiates investigation procedure | | Paper is similar to your ongoing research | Disclose pot"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+        "snippet": "ew ### Reviewer Ethics 1. **Confidentiality**: The review process and paper content are confidential 2. **Conflict of interest**: Recuse if there is a collaborative or competitive relationship with the author 3. **Timeli"
+      },
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+        "snippet": "ed on author's gender, race, institution, or nationality 6. **No plagiarism**: Do not use unpublished ideas seen during review 7. **Appropriate language**: Avoid personal attacks, sarcasm, or demeaning language ### Edito"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+        "snippet": "extension --- ## 5. Professional Ethics of Editorial Review ### Reviewer Ethics 1. **Confidentiality**: The review process and paper content are confidential 2. **Conflict of interest**: Recuse if there is a collaborativ"
+      }
+    ]
+  },
+  "read_errors": []
+}

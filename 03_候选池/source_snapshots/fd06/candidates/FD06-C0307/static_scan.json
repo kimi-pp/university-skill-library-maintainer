@@ -1,0 +1,35 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "skills/faculty-life/alterlab-accreditation-aol/SKILL.md",
+        "snippet": "suite. license: MIT allowed-tools: Read Write Edit Bash(python:*) Bash compatibility: No API key, account, or network required — accreditation-format guidance plus a stdlib-only outcome-mapping-matrix validator (scri"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-accreditation-aol/references/accreditor_standards.md",
+        "snippet": "to curricular and process improvements. - **5.2** — Programs resulting in the same degree credential are structured and designed to ensure equivalence of high-quality outcomes irrespective of location and modality of"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/faculty-life/alterlab-accreditation-aol/SKILL.md",
+        "snippet": "direct measures** across the assessment portfolio. - **Direct measures** — evidence from learner work based on direct observation of performance: examinations, quizzes, assignments, internship/externship feedback. - *"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-accreditation-aol/references/accreditor_standards.md",
+        "snippet": "han detailed competency goals by course or topic.\" - **Direct measures** — \"evidence from learner work such as examinations, quizzes, assignments, and internship or externship feedback that is based on direct observati"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-accreditation-aol/references/aol_templates.md",
+        "snippet": "le_ | _observable_ | _observable_ | _observable_ | | _trait 2_ | … | … | … | … | - Score student work against the trait descriptors; aggregate to the outcome-level result that feeds the assessment plan's target. - Keep"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/faculty-life/alterlab-accreditation-aol/evals/evals.json",
+        "snippet": "ng-final-report\", \"prompt\": \"My TUBITAK-funded project is wrapping up and I need to write the final project report for the funder — milestones achieved, deliverables, and the budget-vs-actual narrative. Can you help me draft it?\","
+      }
+    ]
+  },
+  "read_errors": []
+}

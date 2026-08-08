@@ -1,0 +1,29 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/historical-thinking/sourcing-skill-builder/SKILL.md",
+        "snippet": "s account. The source note at the top of the document is ignored entirely — if asked, the student may not be able to name the author, the date, or the publication. **Developing — sourcing superficially:** The student notes that John Smith w"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/historical-thinking/sourcing-skill-builder/SKILL.md",
+        "snippet": "he document's reliability\" / \"They dismiss sources as 'biased' without explaining how the bias shapes the content\" / \"They treat all primary sources as equally trustworthy because they're 'from the time'\"* Optiona"
+      },
+      {
+        "file": "skills/historical-thinking/sourcing-skill-builder/SKILL.md",
+        "snippet": "hat was happening at that time, labelling a source as \"biased\" without explaining how the bias shapes the content. - **Proficient:** The student uses source information to generate hypotheses about the document'"
+      },
+      {
+        "file": "skills/historical-thinking/sourcing-skill-builder/SKILL.md",
+        "snippet": "n 1624, I expect to find... / I'm suspicious that... / I want to check whether...\" **3. \"Bias as dismissal\" — using \"biased\" as a reason to reject a source** *What it looks like:* The student says \"This source is"
+      },
+      {
+        "file": "skills/historical-thinking/sourcing-skill-builder/SKILL.md",
+        "snippet": "hem to emphasise... and downplay...\" This forces students to specify the DIRECTION of the bias rather than using it as a blanket dismissal. Point out that even a \"biased\" source tells us something — it reveals what"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/ai-learning-science/productive-failure-desirable-difficulty-designer/SKILL.md",
+        "snippet": "e Offloading Risks **Risk 1: Students Google \"how to measure spread.\"** If students have internet access, they will find \"standard deviation\" within 30 seconds, bypassing the entire generation phase. **Mitigation:** This is"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/ai-learning-science/productive-failure-desirable-difficulty-designer/SKILL.md",
+        "snippet": "nproductive. If frustration persists at 15 minutes, begin Phase 2 early — you have enough student approaches to work with. **Condition 4: The consolidation must be thorough.** If you run out of time, cut the practice questions (Step 4)"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,115 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "ooks (jsdom, marked, marked-highlight, highlight.js, turndown, playwright) - **Playwright browser**: Installed automatically on first `login` command ## Workflow ### Phase 1: Parse Command 1. Parse `$ARGUMENTS` — i"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "ch command to run. ### Phase 2: Dry-Run **`login` command**: Execute directly — opens a browser for authentication. The browser auto-closes once login is detected. Supports `--browser msedge` or `--browser chrome` f"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "Dry-Run **`login` command**: Execute directly — opens a browser for authentication. The browser auto-closes once login is detected. Supports `--browser msedge` or `--browser chrome` for SSO. **Read-only commands**"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "a browser for authentication. The browser auto-closes once login is detected. Supports `--browser msedge` or `--browser chrome` for SSO. **Read-only commands** (`structure`, `list-activities`, `show-label`, `show-pag"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "cation. The browser auto-closes once login is detected. Supports `--browser msedge` or `--browser chrome` for SSO. **Read-only commands** (`structure`, `list-activities`, `show-label`, `show-page`, `dump-form`, `dump"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "| Description | |-------|---------|-----------|-------------| | **Setup** | `login` | `[--browser msedge\\|chrome]` | Open browser, login, save cookie to .env (auto-closes) | | **Read** | `structure` | — | Show course"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "--|-----------|-------------| | **Setup** | `login` | `[--browser msedge\\|chrome]` | Open browser, login, save cookie to .env (auto-closes) | | **Read** | `structure` | — | Show course structure | | **Read** | `list-a"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "script only prints the plan. ## Session Handling - **Primary method**: `login` opens a browser, user logs in, browser auto-closes once login is detected, and cookie is saved to `.env`. Use `--browser msedge` or `--"
+      }
+    ],
+    "credential": [
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "-------| | **Setup** | `login` | `[--browser msedge\\|chrome]` | Open browser, login, save cookie to .env (auto-closes) | | **Read** | `structure` | — | Show course structure | | **Read** | `list-activities` | `<secti"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "*: `login` opens a browser, user logs in, browser auto-closes once login is detected, and cookie is saved to `.env`. Use `--browser msedge` or `--browser chrome` for SSO. - The `MoodleSession` cookie expires after in"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "ed to `.env`. Use `--browser msedge` or `--browser chrome` for SSO. - The `MoodleSession` cookie expires after inactivity. If a command fails with a session error, run `login` again. - Use `structure` as a quick conn"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "ionNum> <htmlOrMdFile>` | Create label (no name field; .md auto-converts) | | **CRUD** | `create-resource` | `<sectionNum> <name> <file>` | Upload file resource | | **CRUD** | `create-assign` | `<sectionNum> <name> <htmlOrMdFile> [--open ts] [--due ts]` |"
+      }
+    ],
+    "lms": [
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "--- name: moodle description: \"Manage Moodle courses via CLI — create/update/delete activities, sections, quizzes, import GIFT questions"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "--- name: moodle description: \"Manage Moodle courses via CLI — create/update/delete activities, sections, quizzes, import GIFT questions, and AI-assisted essay grad"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "activities, sections, quizzes, import GIFT questions, and AI-assisted essay grading. Use /moodle-skill:moodle to interact with any Moodle instance.\" argument-hint: \"[command] [args...]\" disable-model-invocation: true"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "ections, quizzes, import GIFT questions, and AI-assisted essay grading. Use /moodle-skill:moodle to interact with any Moodle instance.\" argument-hint: \"[command] [args...]\" disable-model-invocation: true --- # Moodl"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "T questions, and AI-assisted essay grading. Use /moodle-skill:moodle to interact with any Moodle instance.\" argument-hint: \"[command] [args...]\" disable-model-invocation: true --- # Moodle Skill — Generic Moodle Cou"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "dle instance.\" argument-hint: \"[command] [args...]\" disable-model-invocation: true --- # Moodle Skill — Generic Moodle Course Management Manage any Moodle course via the `moodle-updater.js` CLI. All destructive ope"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "-hint: \"[command] [args...]\" disable-model-invocation: true --- # Moodle Skill — Generic Moodle Course Management Manage any Moodle course via the `moodle-updater.js` CLI. All destructive operations require a dry-r"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "model-invocation: true --- # Moodle Skill — Generic Moodle Course Management Manage any Moodle course via the `moodle-updater.js` CLI. All destructive operations require a dry-run first, then explicit user confirma"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "lot N] --output <file>` | Export student responses as JSON | | **Grading** | `grade-essay submit` | `<cmid> --grades <file> [--live]` | Submit grades to Moodle | | **Assignment** | `assign-students` | `<cmid> [--out <path>]` | List participants + submission status | | **Assignme"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "<path> [--slot N] --output <file>` | Export student responses as JSON | | **Grading** | `grade-essay submit` | `<cmid> --grades <file> [--live]` | Submit grades to Moodle | | **Assignment** | `assign-students` | `<cmid> [--out <path>]` | List participants + submission stat"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "t** | `assign-grades` | `<cmid> [--user <id>]` | Read current grade per participant | | **Assignment** | `assign-submit` | `<cmid> --from <grades.json> [--user <id>] [--live]` | Write points + comments back to Moodle | | **Gradebook** | `g"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "t grading page | ## grade-essay Workflow The AI grading workflow is split into scrape → grade → submit: ### Step 1: Scrape student responses ```bash NODE_PATH=\"${CLAUDE_PLUGIN_DATA}/node_modules\" node \"${CLAUDE_PLUGIN_RO"
+      },
+      {
+        "file": "plugins/moodle-skill/skills/moodle/SKILL.md",
+        "snippet": "{CLAUDE_PLUGIN_DATA}/node_modules\" node \"${CLAUDE_PLUGIN_ROOT}/scripts/moodle-updater.js\" grade-essay submit <cmid> --grades grades-result.json --live ``` ## Course Round-Trip Workflow (download → edit → re-upload) In addition"
+      }
+    ]
+  },
+  "read_errors": []
+}

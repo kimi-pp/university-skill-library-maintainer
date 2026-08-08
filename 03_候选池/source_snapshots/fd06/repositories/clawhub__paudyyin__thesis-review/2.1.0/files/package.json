@@ -1,0 +1,8 @@
+{
+  "name": "thesis-review",
+  "version": "2.1.0",
+  "description": "高校学位论文智能评审。基于13篇真实论文评审经验的结构化评审框架，支持学硕/专硕/博士论文，自动生成Word格式评审意见。",
+  "author": "yindb2",
+  "category": "academic",
+  "triggers": ["论文评审", "评审意见", "评阅书", "毕业论文", "论文评价"]
+}

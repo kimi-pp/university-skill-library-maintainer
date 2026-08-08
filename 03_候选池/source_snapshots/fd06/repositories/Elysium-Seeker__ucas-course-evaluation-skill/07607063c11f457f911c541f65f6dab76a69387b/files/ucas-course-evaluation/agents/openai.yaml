@@ -1,0 +1,4 @@
+interface:
+  display_name: "UCAS Course Evaluation"
+  short_description: "Draft and submit UCAS course evaluations safely"
+  default_prompt: "Use $ucas-course-evaluation to help complete UCAS undergraduate course evaluations from SEP with preview and confirmation."

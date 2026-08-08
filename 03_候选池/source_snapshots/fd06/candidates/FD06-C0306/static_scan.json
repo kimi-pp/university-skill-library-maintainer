@@ -1,0 +1,49 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "SKILL.md",
+        "snippet": "摘要是否对应？ - 参考文献格式是否统一？ - 公式编号是否规范？ - 图表标注是否完整？ - 英文摘要是否存在拼写/格式/语法问题？ ### 步骤 3：公开文献对比 使用 `web_search` 搜索相关领域的最新进展，对比论文方法的创新性： ``` web_search: query: \"{论文核心方法关键词} {研究领域} 2024 2025 2026\" count: 10 freshness: \"oneYea"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "否完整？ - 英文摘要是否存在拼写/格式/语法问题？ ### 步骤 3：公开文献对比 使用 `web_search` 搜索相关领域的最新进展，对比论文方法的创新性： ``` web_search: query: \"{论文核心方法关键词} {研究领域} 2024 2025 2026\" count: 10 freshness: \"oneYear\" ``` **对比维度**： - 与已有工作的创新区分度 - 实验结果的先进"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "SKILL.md",
+        "snippet": "D}.docx ``` --- ## 批量评审 当需要评审多篇论文时： 1. 依次提取每篇论文信息 2. 按评审框架逐一分析 3. 生成各自的 Word 评审意见 4. 最后生成对比分析报告（包含创新性排名、共性问题分析、亮点总结） --- ## 相关文件 | 文件 | 说明 | |------|------| | `skills/thesis-review-pro/SKILL.md` | 本技能文档 | | `memo"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "SKILL.md",
+        "snippet": "> 基于13篇真实硕士学位论文评审经验总结的完整评审框架 --- ## 适用场景 - 硕士学位论文评审（学术硕士 / 专业硕士） - 博士学位论文评审 - 论文预审 / 盲审 - 批量论文评审 --- ## 评审工作流 ### 步骤 1：论文信息提取 从 PDF 论文中提取关键信息： ```python from pypdf import PdfReader reader = PdfReader(pd"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "Mitigations: <br> Risk: Thesis PDFs and generated review documents may contain personal, confidential, or unpublished academic information. <br> Mitigation: Remove identifying details for blind or confidential reviews and"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "> Risk: Thesis PDFs and generated review documents may contain personal, confidential, or unpublished academic information. <br> Mitigation: Remove identifying details for blind or confidential reviews and keep generated"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "npublished academic information. <br> Mitigation: Remove identifying details for blind or confidential reviews and keep generated documents within the approved review process. <br> Risk: Generated review opinions may be in"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skill-card.md",
+        "snippet": "urate, or too sensitive to use without expert judgment. <br> Mitigation: Have a qualified reviewer verify factual claims, literature comparisons, evaluation conclusions, and final recommendations before sharing them. <br> #"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "ss originality, compare relevant literature, identify writing and methodology issues, and draft structured review opinions. It supports individual and batch review workflows for master's and doctoral theses. <br> ### Deployment Geog"
+      }
+    ]
+  },
+  "read_errors": []
+}

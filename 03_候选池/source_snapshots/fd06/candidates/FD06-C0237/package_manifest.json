@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".codex/skills/education-ai-guardrails/SKILL.md",
+    "type": "blob",
+    "size": 2622,
+    "sha": "d8ec0234efa3625e487e112b1558cb7d755643c1"
+  },
+  {
+    "path": ".codex/skills/education-ai-guardrails/agents/openai.yaml",
+    "type": "blob",
+    "size": 246,
+    "sha": "a6b324df43dca699ce29700b4b581d17c5aa666c"
+  }
+]

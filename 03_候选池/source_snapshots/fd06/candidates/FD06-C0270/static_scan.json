@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "scientific-skills/Academic Writing/peer-review/peer-review_audit_result_v1.json",
+        "snippet": "is 79.6/100\", \"Assertions and command execution outcomes are recorded per input for human review\", \"Execution verification summary: No script verification was applicable\" ], \"recommendations\": [ {"
+      }
+    ]
+  },
+  "read_errors": []
+}

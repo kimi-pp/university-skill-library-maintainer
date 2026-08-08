@@ -1,0 +1,118 @@
+{
+  "skill": {
+    "slug": "lesson-plan-eval",
+    "displayName": "Lesson Plan Eval"
+  },
+  "version": {
+    "version": "0.1.0",
+    "createdAt": 1783149038538,
+    "changelog": "Initial public release — comprehensive teaching plan evaluation tool for vocational education.\n\n- Implements reverse \"audit for problems\" approach based on Bloom, Gagné, Marzano, 5E Model, and vocational standards.\n- Multi-dimensional audit covering eight key areas: basic info, learner analysis, objectives, methods, activities, questioning, support, and alignment.\n- Includes clear output templates, mandatory detection for multiple lesson plans, and strict \"NEVER\" rules for critical errors.\n- Supports both specialized and general courses, with additional checks for vocational (专业课) classes.\n- Smart handling of incomplete materials, multiple plans, and non-standard scenarios, always prompting for missing elements.\n- Output features structured scoring, diagnostic tables, improvement roadmap, and flexible report export (Markdown/Word).",
+    "changelogSource": "auto",
+    "license": "MIT-0",
+    "files": [
+      {
+        "path": "SKILL.md",
+        "size": 13890,
+        "sha256": "c753d7d6e6ce7cef18b248207090401190c89193552308cdb7c6a86d2392d45e",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "references/output-template.md",
+        "size": 6294,
+        "sha256": "de13aa33fbac34cc9cda90f20b19457c575e9bccc9d90b16bfcbf8c84449983f",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "references/pandoc-guide.md",
+        "size": 2474,
+        "sha256": "939686563717ccd9e771e133c8fef08d45b58d6195a4a555e5829a562a092caf",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "references/scoring-standard.md",
+        "size": 5304,
+        "sha256": "753d5e88ad59aa94593d223bae0ef30ba010a12a59aec3f6e5990550eeb763a5",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "skill-card.md",
+        "size": 2231,
+        "sha256": "f51d3b22519902749c7a3e89b30e2e762b406409dc5f4d2fab5c0f4ad786c9f4",
+        "contentType": "text/markdown"
+      }
+    ],
+    "security": {
+      "status": "clean",
+      "hasWarnings": true,
+      "checkedAt": 1783614889015,
+      "model": "gpt-5.5",
+      "hasScanResult": true,
+      "sha256hash": "07e3f1f8a2cf4a2b323361e208e20a6cf88e0c8a5c54aaf1bede6124d584254b",
+      "virustotalUrl": "https://www.virustotal.com/gui/file/07e3f1f8a2cf4a2b323361e208e20a6cf88e0c8a5c54aaf1bede6124d584254b",
+      "scanners": {
+        "vt": {
+          "status": "clean",
+          "verdict": null,
+          "normalizedStatus": "clean",
+          "analysis": null,
+          "source": "engines",
+          "checkedAt": 1783149407607
+        },
+        "skillspector": {
+          "status": "suspicious",
+          "normalizedStatus": "suspicious",
+          "score": 41,
+          "severity": "MEDIUM",
+          "recommendation": "CAUTION",
+          "issueCount": 3,
+          "checkedAt": 1783614837345
+        },
+        "llm": {
+          "status": "clean",
+          "verdict": "benign",
+          "normalizedStatus": "clean",
+          "confidence": "high",
+          "summary": "This skill is a coherent lesson-plan review assistant with optional document export, and I did not find evidence of hidden data access, persistence, exfiltration, or destructive behavior.",
+          "dimensions": [
+            {
+              "detail": "The artifacts consistently describe vocational lesson-plan auditing, scoring, and improvement guidance using educational frameworks; the referenced templates and scoring rubric match that purpose.",
+              "label": "Purpose & Capability",
+              "name": "purpose_capability",
+              "rating": "ok"
+            },
+            {
+              "detail": "The activation language is broad within lesson-plan quality discussions, and the skill defaults non-Chinese lesson plans to Chinese reports, which may be surprising but remains domain-scoped and disclosed.",
+              "label": "Instruction Scope",
+              "name": "instruction_scope",
+              "rating": "note"
+            },
+            {
+              "detail": "The package is markdown-only with no executable scripts; it includes optional Pandoc installation and conversion commands for user-requested .docx export.",
+              "label": "Install Mechanism",
+              "name": "install_mechanism",
+              "rating": "note"
+            },
+            {
+              "detail": "The expected inputs are lesson-plan documents and the outputs are reports; no credential use, broad local indexing, network calls, or unrelated filesystem access are requested.",
+              "label": "Credentials",
+              "name": "environment_proportionality",
+              "rating": "ok"
+            },
+            {
+              "detail": "No persistence, background workers, privilege escalation, account mutation, or ongoing agent behavior changes are present in the artifacts.",
+              "label": "Persistence & Privilege",
+              "name": "persistence_privilege",
+              "rating": "ok"
+            }
+          ],
+          "guidance": "Install this if you want a Chinese-language vocational lesson-plan audit workflow. Review the optional Pandoc command before running .docx export, especially with untrusted filenames or documents, and be aware the skill may activate broadly for lesson-plan quality discussions.",
+          "findings": "[SDI-2] expected: The Pandoc path is an optional user-selected report export feature and uses a fixed example command, so it is disclosed and proportionate, though users should confirm the file being converted.\n[SQP-1] expected: The trigger language is broad, but it is still limited to lesson-plan quality and teaching-design review rather than unrelated conversations or privileged actions.\n[SQP-3] expected: Chinese output for non-Chinese lesson plans is explicitly stated as the skill behavior; it is a usability and expectation issue rather than evidence of unsafe conduct.",
+          "agenticRiskFindings": null,
+          "riskSummary": null,
+          "model": "gpt-5.5",
+          "checkedAt": 1783614889015
+        }
+      }
+    }
+  }
+}

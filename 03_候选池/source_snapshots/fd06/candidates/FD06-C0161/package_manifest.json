@@ -1,0 +1,20 @@
+[
+  {
+    "path": "skills/quiz-generator/README.md",
+    "type": "blob",
+    "size": 13395,
+    "sha": "c712678e332a33be097c2c77977bc8a387c87ce5"
+  },
+  {
+    "path": "skills/quiz-generator/SKILL.md",
+    "type": "blob",
+    "size": 27121,
+    "sha": "7635e32b4b1e90c00384a834b261229f7bc34d38"
+  },
+  {
+    "path": "skills/quiz-generator/references/distractor-writing-guide.md",
+    "type": "blob",
+    "size": 13178,
+    "sha": "a0b1d7b93acf9d8c914e4037018caa82f6eb903c"
+  }
+]

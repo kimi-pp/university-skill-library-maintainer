@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/explicit-instruction/explicit-instruction-sequence-builder/SKILL.md",
+        "snippet": "knowledge}} — if not provided, state the assumed prerequisite knowledge explicitly so the teacher can verify. **Success criteria:** {{success_criteria}} — if not provided, generate clear success criteria that describe what succe"
+      },
+      {
+        "file": "skills/explicit-instruction/explicit-instruction-sequence-builder/SKILL.md",
+        "snippet": "ble to do by the end] ### Prerequisites [What students need to know before this lesson — teacher should verify] ### I Do — Teacher Models (approx. X minutes) **Setup:** [How to frame the skill and connect to prior knowledge] **M"
+      },
+      {
+        "file": "skills/explicit-instruction/explicit-instruction-sequence-builder/SKILL.md",
+        "snippet": "a text, and understand the difference between a character's action and a writer's choice. Teacher should verify with a quick question: \"What's the difference between saying 'Macbeth kills Duncan' and 'Shakespeare presents Macbeth a"
+      }
+    ]
+  },
+  "read_errors": []
+}

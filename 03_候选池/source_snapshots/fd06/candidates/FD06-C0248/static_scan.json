@@ -1,0 +1,63 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": ".0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36\" curl -sL -A \"$UA\" -m 15 -o /dev/null -w \"%{http_code}\" ``` GET with redirect-follow, realistic browser UA, 15-s timeout. **N"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "sL -A \"$UA\" -m 15 -o /dev/null -w \"%{http_code}\" ``` GET with redirect-follow, realistic browser UA, 15-s timeout. **Never use `-fsLI` (HEAD)** — Kaggle, Cloudflare-protected sites, and many CDNs return 404/403 to HE"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "and many CDNs return 404/403 to HEAD or to bot-shaped UAs while serving real content to a browser GET. Triage the resulting status into three buckets: | Status | Verdict | Bucket / surfaced as | | --- | --- | --- |"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "**(c) needs verification** | For bucket (c), include a one-line \"verify by opening in a browser\" recommendation. Do not claim the link is broken on this evidence alone. If the maintainer wants a stronger verdict for"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "roken-link finding. - External: <N> total - **(a) Confirmed broken** (404/410 GET with browser UA): <N> — listed under cat 5 must-fix - **(b) Markdown source hygiene** (trailing `**`, nested `(http...)`, etc. — l"
+      }
+    ],
+    "credential": [
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "tice_exercises/`: 1. **Secret-gated detection.** Before executing, grep the source for: `os.environ`, `getenv`, `HF_TOKEN`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `load_dotenv`, `dotenv`, hard-coded `hf_*` / `sk-*` stri"
+      }
+    ],
+    "file_write": [
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "atch for missing content. Per the rubric, none of the nine categories is N/A by default. Write the report to `.claude/uoa-py-course-lecture-eval-reports/<lecture-folder-name>_<YYYY-MM-DD>.md` using the template at the end of"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "aluate non-lecture material such as `README.md`, `CLAUDE.md`, or arbitrary scripts; grade student submissions or final-assignment notebooks (use `final_assignment/grade_feedback.prompt.md` instead). If the lecture number or path doesn't resolve to e"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "provement work is the job of the future `create-improve-lecture` skill. - Not for grading student work. Final-assignment grading lives at `final_assignment/grade_feedback.prompt.md` and uses different criteria. - Not for non-lecture materia"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "ome target — and the five mandatory notebooks summed to 84 code cells and 5.05 h of total student work in a week. The totals × 0.4 looked fine (2.89 h); the totals × 1.0 (5.05 h) and the per-notebook ceiling were never com"
+      }
+    ],
+    "human_review": [
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "es; if neither resolves, only then mark as broken. - URL longer than 500 chars → flag for human review. These hygiene findings are real but cosmetic. They do **not** count as broken links and must not pull cat 5 toward `g"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+        "snippet": "to link two distinct nouns (\"covers KMeans clustering and Gaussian mixtures\") — flag for human review. - Compare against Lecture 09's notebook count and rough size as a benchmark — significant outliers in either direction"
+      }
+    ]
+  },
+  "read_errors": []
+}

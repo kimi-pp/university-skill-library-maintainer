@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "plugins/pm-education/skills/student-feedback/SKILL.md",
+        "snippet": "--- name: student-feedback description: \"Write constructive, specific feedback on student work that motivates and tells the student exactly how to improve. Use when asked to give feedback on a student's work, write"
+      },
+      {
+        "file": "plugins/pm-education/skills/student-feedback/SKILL.md",
+        "snippet": "ivates and tells the student exactly how to improve. Use when asked to give feedback on a student's work, write grading comments, respond to an essay or assignment, or coach a learner. Produces feedback that names concrete s"
+      },
+      {
+        "file": "plugins/pm-education/skills/student-feedback/SKILL.md",
+        "snippet": "\"[comment]\" placeholders. ## Required Inputs Ask for (if not already provided): - **The student work** (or a description) and the **assignment / objective** it's graded against - **Grade or level** and **tone** (encouraging for a struggling student; more rigorou"
+      }
+    ]
+  },
+  "read_errors": []
+}

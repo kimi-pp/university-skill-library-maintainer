@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/curriculum-assessment/kud-knowledge-type-mapper/SKILL.md",
+        "snippet": "d response, auto-assessable - Horizontal Know/Understand → analytical task assessed by teacher judgment using criteria - Hierarchical Do (Skill) → procedural demonstration, criterion-referenced rubric - Horizontal Do"
+      },
+      {
+        "file": "skills/curriculum-assessment/kud-knowledge-type-mapper/SKILL.md",
+        "snippet": "are assessed directly **Horizontal Know and Understand elements → Analytical tasks with teacher judgment** - Invoke: Coherent Rubric Logic Builder (to build rubrics for analytical quality) - Input needed: the specific unders"
+      },
+      {
+        "file": "skills/curriculum-assessment/kud-knowledge-type-mapper/SKILL.md",
+        "snippet": "cies and flexible-order elements, but the actual lesson-by-lesson sequence depends on the teacher's judgment about pacing, student needs, and contextual factors that the chart cannot anticipate."
+      }
+    ]
+  },
+  "read_errors": []
+}

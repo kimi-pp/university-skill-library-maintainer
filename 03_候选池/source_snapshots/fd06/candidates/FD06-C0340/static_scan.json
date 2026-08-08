@@ -1,0 +1,87 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "s your prompt to [OpenRouter](https://openrouter.ai/) (a third-party API). Do not include unpublished sensitive details unless that transmission is appropriate for your project. --- ## Core Capabilities Seven capabilit"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/experimental_design.md",
+        "snippet": "- Compare groups at baseline - Report any significant differences ### Blinding - [ ] **Single-blind:** Participants don't know group assignment - [ ] **Double-blind:** Participants and researchers don't know - [ ] **Tri"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/experimental_design.md",
+        "snippet": "es ### Blinding - [ ] **Single-blind:** Participants don't know group assignment - [ ] **Double-blind:** Participants and researchers don't know - [ ] **Triple-blind:** Participants, researchers, and data analysts don't k"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/experimental_design.md",
+        "snippet": "- [ ] Range checks and validation rules - [ ] Regular backups - [ ] Secure storage (HIPAA/GDPR compliant if needed) ### Data Quality - [ ] Real-time data validation - [ ] Regular quality checks - [ ] Missing data"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/experimental_design.md",
+        "snippet": "s - [ ] Access controls - [ ] Audit trails - [ ] Compliance with regulations (IRB, HIPAA, GDPR) ## Statistical Analysis Planning ### Analysis Plan (Prespecify Before Data Collection) - [ ] **Primary analysis:**"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+        "snippet": "* - Funnel plots - Trim-and-fill - PET-PEESE - P-curve analysis **Solutions:** - Include unpublished studies - Register reviews - Use bias-correction methods ## General Best Practices 1. **Preregister studies** - Disti"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "ing biases and confounders, applying evidence grading frameworks (GRADE, Cochrane Risk of Bias), or teaching critical analysis. Best for understanding evidence quality, identifying flaws. For formal peer review wri"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "ons - Conducting systematic reviews or meta-analyses - Applying GRADE or Cochrane risk of bias assessments - Providing critical analysis of research papers ## Visual Aids (Optional) Only add figures when the **us"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "figures when the **user explicitly requests** a diagram (for example, a GRADE flowchart, bias decision tree, or evidence-quality framework). **When figures help:** - Critical thinking framework diagrams - Bias id"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "ence-quality framework). **When figures help:** - Critical thinking framework diagrams - Bias identification decision trees - Evidence quality assessment flowcharts - GRADE or risk-of-bias evaluation frameworks *"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "identification decision trees - Evidence quality assessment flowcharts - GRADE or risk-of-bias evaluation frameworks **How to create figures:** - **Preferred:** Use the **scientific-schematics** skill for AI-gener"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "ign, controls, confounding, and whether the method can answer the question asked. 2. **Bias detection** — selection, measurement, publication, and cognitive biases. 3. **Statistical analysis evaluation** — power"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/SKILL.md",
+        "snippet": "n, variables, sampling, blinding, randomization, control groups, procedures, measurement, bias minimization, data management, statistical planning, ethical considerations, validity threats, and reporting standards"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/common_biases.md",
+        "snippet": "es in Scientific Research ## Cognitive Biases Affecting Researchers ### 1. Confirmation Bias **Description:** Tendency to search for, interpret, and recall information that confirms preexisting beliefs. **Manife"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/common_biases.md",
+        "snippet": "evidence - Use blinded data analysis - Consider alternative hypotheses ### 2. Hindsight Bias (I-Knew-It-All-Along Effect) **Description:** After an event, people perceive it as having been more predictable than i"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/common_biases.md",
+        "snippet": "register studies - Distinguish exploratory from confirmatory analyses ### 3. Publication Bias (File Drawer Problem) **Description:** Positive/significant results are more likely to be published than negative/null"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/common_biases.md",
+        "snippet": "with grey literature - Check for funnel plot asymmetry in meta-analyses ### 4. Anchoring Bias **Description:** Over-reliance on the first piece of information encountered. **Manifestations:** - Initial hypotheses"
+      },
+      {
+        "file": "skills/scientific-critical-thinking/references/common_biases.md",
+        "snippet": "- Update beliefs based on evidence - Distinguish between theories and ego ### 8. Outcome Bias **Description:** Judging decisions based on outcomes rather than the quality of the decision at the time. **Manifestat"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "skills/scientific-critical-thinking/references/experimental_design.md",
+        "snippet": "d - [ ] Vulnerable populations protected - [ ] Data safety monitoring (if high risk) ### Confidentiality - [ ] Data de-identified - [ ] Secure storage - [ ] Limited access - [ ] Reporting doesn't allow re-identification ##"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,25 @@
+{
+  "name": "LICENSE",
+  "path": "LICENSE",
+  "sha": "a855a13b564a9f04a72aa01e1da360a9cf4de601",
+  "size": 1456,
+  "url": "https://api.github.com/repos/joshzyj/open-scholar-skill/contents/LICENSE?ref=8d3ddf56d9e10f3c6f8d952167e09c26da6ec596",
+  "html_url": "https://github.com/joshzyj/open-scholar-skill/blob/8d3ddf56d9e10f3c6f8d952167e09c26da6ec596/LICENSE",
+  "git_url": "https://api.github.com/repos/joshzyj/open-scholar-skill/git/blobs/a855a13b564a9f04a72aa01e1da360a9cf4de601",
+  "download_url": "https://raw.githubusercontent.com/joshzyj/open-scholar-skill/8d3ddf56d9e10f3c6f8d952167e09c26da6ec596/LICENSE",
+  "type": "file",
+  "content": "T3BlbiBTY2hvbGFyIFNraWxsIExpY2Vuc2UgKEFjYWRlbWljIFVzZSkKCkNv\ncHlyaWdodCAoYykgMjAyNS0yMDI2IE9wZW4gU2Nob2xhciBTa2lsbCBDb250\ncmlidXRvcnMKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUg\nb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2Yg\ndGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZp\nbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJl\nIGZvciBhY2FkZW1pYywgZWR1Y2F0aW9uYWwsIGFuZCBub24tY29tbWVyY2lh\nbCByZXNlYXJjaApwdXJwb3NlcyB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNs\ndWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHMgdG8gdXNlLApj\nb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBhbmQv\nb3Igc3VibGljZW5zZSBjb3BpZXMgb2YgdGhlClNvZnR3YXJlLCBzdWJqZWN0\nIHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKCjEuIFRoZSBhYm92ZSBj\nb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNo\nYWxsIGJlIGluY2x1ZGVkIGluCiAgIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRp\nYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKMi4gQ29tbWVyY2lhbCB1\nc2Ugb2YgdGhlIFNvZnR3YXJlIOKAlCBpbmNsdWRpbmcgYnV0IG5vdCBsaW1p\ndGVkIHRvIGluY29ycG9yYXRpb24KICAgaW50byBjb21tZXJjaWFsIHByb2R1\nY3RzLCB1c2UgaW4gcGFpZCBzZXJ2aWNlcywgb3IgYW55IHVzZSBwcmltYXJp\nbHkKICAgaW50ZW5kZWQgZm9yIGNvbW1lcmNpYWwgYWR2YW50YWdlIG9yIG1v\nbmV0YXJ5IGNvbXBlbnNhdGlvbiDigJQgcmVxdWlyZXMKICAgc2VwYXJhdGUg\nd3JpdHRlbiBwZXJtaXNzaW9uIGZyb20gdGhlIGF1dGhvci4gQ29udGFjdDoK\nICAgaHR0cHM6Ly9naXRodWIuY29tL2pvc2h6eWovb3Blbi1zY2hvbGFyLXNr\naWxsCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9V\nVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJ\nTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9G\nIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBV\nUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwg\nVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZP\nUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVU\nSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJ\nU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lU\nSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJ\nTiBUSEUKU09GVFdBUkUuCg==\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/joshzyj/open-scholar-skill/contents/LICENSE?ref=8d3ddf56d9e10f3c6f8d952167e09c26da6ec596",
+    "git": "https://api.github.com/repos/joshzyj/open-scholar-skill/git/blobs/a855a13b564a9f04a72aa01e1da360a9cf4de601",
+    "html": "https://github.com/joshzyj/open-scholar-skill/blob/8d3ddf56d9e10f3c6f8d952167e09c26da6ec596/LICENSE"
+  },
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  }
+}

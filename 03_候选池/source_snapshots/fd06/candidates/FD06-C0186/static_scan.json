@@ -1,0 +1,69 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "e-assessment-technique-selector\" - \"assessment-validity-checker\" - \"gap-analysis-from-student-work\" - \"differentiation-adapter\" - \"self-regulation-scaffold-generator\" - \"inclusive-design-orchestrator\" - \"udl-ba"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "n formative-assessment-technique-selector, assessment-validity-checker, gap-analysis-from-student-work, differentiation-adapter, and self-regulation-scaffold-generator. Review this orchestrator whenever any chained skill c"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "sequences. Typical chain: `formative-assessment-technique-selector` → `gap-analysis-from-student-work` → feedback design. Best when: mid-unit, checking understanding before moving forward, planning differentiated next st"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "student self-assessment against criteria. Do not use this pathway: without exemplars or student work samples to calibrate against. Rubrics without calibration create false precision. ### 3. Authentic/Performance Assessm"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "ge probe, or concept map protocol. Typical chain: diagnostic design → `gap-analysis-from-student-work` → planning next instructional steps. Best when: start of year, start of unit, after a break, with a new group, or whe"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "ing before designing the assessment - [ ] You are designing a rubric without exemplars or student work to calibrate against - [ ] You are designing peer assessment without a plan to teach students how to give feedback - ["
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "understanding to check. 2. Formative assessment technique selector. 3. Gap analysis from student work. 4. Plan differentiated next steps. ### End-of-unit rubric-based assessment 1. Clarify learning goals and what quality"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "ve, rubric/criteria, authentic/performance, peer/self, and diagnostic — with validity and equity checks. Use when a teacher needs help choosing how to assess.\" disable-model-invocation: false user-invocable: true eff"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "essment\", \"rubric\", \"authentic-assessment\", \"peer-assessment\", \"diagnostic\", \"validity\", \"equity\"] --- # Assessment Design Orchestrator ## What This Skill Does Helps teachers navigate the question \"how should I as"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "ay architecture — including routing logic, handoff structure, and integrated validity and equity checks — has not been evaluated as a complete intervention. Use it as an assessment design scaffold, not as a claim tha"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "ding the five named pathways, routing logic, validity checks integrated at each step, and equity audit — is an original synthesis by Gareth Manning drawing on REAL School rubric logic and competency assessment practi"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "iate for specific students. Do not claim this sequence ensures equitable assessment — the equity check flags potential barriers but cannot guarantee access. ### Appropriate Use Use this skill as a design scaffold f"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "entation protocol. Typical chain: project brief design → `assessment-validity-checker` → equity check for format barriers. Best when: PBL contexts, competency-based assessment, end-of-unit demonstrations where proc"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "reading demands in a maths assessment, verbal fluency in a written task)? Step 6: Apply equity check. For each assessment task, ask: - Does this format create barriers for students with language differences, learni"
+      },
+      {
+        "file": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+        "snippet": "dgment? - [ ] Could a student understand the content but fail due to format demands? ### Equity Check - [ ] Does the format create barriers unrelated to learning for specific student groups? - [ ] Are UDL-informed a"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "path": "cohort-analyst/SKILL.md",
+    "type": "blob",
+    "size": 10481,
+    "sha": "6e005d8b363736a5231b014cf2b771930d41b370"
+  },
+  {
+    "path": "cohort-analyst/agents/calibration_advisor_agent.md",
+    "type": "blob",
+    "size": 4991,
+    "sha": "b2d9514fac1537e3b55d8dd178c71c39c17f36c5"
+  },
+  {
+    "path": "cohort-analyst/agents/cohort_analyst_agent.md",
+    "type": "blob",
+    "size": 5156,
+    "sha": "918a0774802d197c1d50619426d316295f0edd56"
+  },
+  {
+    "path": "cohort-analyst/agents/diagnostic_designer_agent.md",
+    "type": "blob",
+    "size": 4947,
+    "sha": "87f4cc1370135bd022439af72e3aaf2d1b85d5d5"
+  },
+  {
+    "path": "cohort-analyst/agents/grouping_strategist_agent.md",
+    "type": "blob",
+    "size": 4737,
+    "sha": "3f22f2d7e25a5d7f51f26a9a51ab385d9a54f0f1"
+  },
+  {
+    "path": "cohort-analyst/references/analytics_honesty.md",
+    "type": "blob",
+    "size": 9889,
+    "sha": "2508ec4ebfde4d580aa5607b883b26524e75c3db"
+  },
+  {
+    "path": "cohort-analyst/references/diagnostic_design_guide.md",
+    "type": "blob",
+    "size": 8775,
+    "sha": "e0ebe3d909803f0d3d28c4b66497b434ffeab531"
+  },
+  {
+    "path": "cohort-analyst/templates/cohort_profile_template.md",
+    "type": "blob",
+    "size": 4952,
+    "sha": "3b25f9c745e7ac4c2606dae684d9e13978cc3c2b"
+  },
+  {
+    "path": "cohort-analyst/templates/diagnostic_template.md",
+    "type": "blob",
+    "size": 3995,
+    "sha": "2732649af7044fcdc31cae799a380966cd303b06"
+  }
+]

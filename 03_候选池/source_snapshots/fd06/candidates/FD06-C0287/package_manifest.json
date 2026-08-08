@@ -1,0 +1,56 @@
+[
+  {
+    "path": ".claude/skills/scholar-verify/SKILL.md",
+    "type": "blob",
+    "size": 25893,
+    "sha": "76e262d1affd02fddf3d4c1765e5f8aa88d47695"
+  },
+  {
+    "path": ".claude/skills/scholar-verify/references/verification-standards.md",
+    "type": "blob",
+    "size": 4272,
+    "sha": "5d7264e3fe96fb008fb0e05d30cc2bf08813a907"
+  },
+  {
+    "path": ".claude/agents/review-code-correctness.md",
+    "type": "blob",
+    "size": 11286,
+    "sha": "49b435772fb3e75149d69f0894ba7515230f1679"
+  },
+  {
+    "path": ".claude/agents/review-code-data-handling.md",
+    "type": "blob",
+    "size": 17501,
+    "sha": "33d76d53490bd2bca053fa1bbd9d4273b139dfe4"
+  },
+  {
+    "path": ".claude/agents/review-code-reproducibility.md",
+    "type": "blob",
+    "size": 11262,
+    "sha": "5670519e99ac7a2028c6918d6ff3fc28a0083ea0"
+  },
+  {
+    "path": ".claude/agents/review-code-robustness.md",
+    "type": "blob",
+    "size": 9915,
+    "sha": "62d64cacd32554674beccafc984300532dc416c7"
+  },
+  {
+    "path": ".claude/agents/review-code-statistics.md",
+    "type": "blob",
+    "size": 12466,
+    "sha": "9f895900c6b403b16cf752ee7d43c5fc459564b7"
+  },
+  {
+    "path": ".claude/agents/review-code-style.md",
+    "type": "blob",
+    "size": 10656,
+    "sha": "60fd02982cfae3f57726ba6821411af3604da1c5"
+  },
+  {
+    "path": ".claude/skills/_shared/citation-verification-protocol.md",
+    "type": "blob",
+    "size": 1629,
+    "sha": "5678d961c9db5114d0bdef701fe0c9efcc6149b9"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-structure-001",
+      "source": "unknown",
+      "category": "structure",
+      "severity": "fatal",
+      "scope": "document",
+      "locator": {
+        "chapter": "全文",
+        "paragraph_index": 0
+      },
+      "excerpt": "",
+      "problem": "问题",
+      "suggestion": [
+        "建议"
+      ],
+      "group_id": "g-001",
+      "anchor_text": "全文"
+    }
+  ]
+}

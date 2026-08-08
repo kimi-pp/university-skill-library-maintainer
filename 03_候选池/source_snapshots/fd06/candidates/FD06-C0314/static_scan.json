@@ -1,0 +1,125 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "e.\" license: MIT allowed-tools: Read Write Edit Bash(python:*) WebFetch compatibility: No API key or network required — emits institution-parameterized policy text from local templates via `uv run python`; WebFetch is"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "-research-ethics` | Research-ethics / IRB territory, not a teaching policy | | Whether a *student submission* was AI-generated; running a detector | `alterlab-teaching-design` (assessment) | This skill writes policy; it does **n"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/evals/evals.json",
+        "snippet": "abus that specifically covers AI tools, and it has to be consistent with our university's student disciplinary code. Can you write one with per-assignment rules on where AI is and isn't allowed?\", \"expected_output\": \"Invokes alterlab-syllabus-ai-policy. Writes a per-a"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/references/integrity_accessibility.md",
+        "snippet": "e or institutionally provided. - [ ] No claim that a named tool is \"accurate\", \"secure\", \"FERPA/KVKK-compliant\", or \"accessible\" — unless the instructor supplied that fact with a source. - [ ] Students warned"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "d|restricted|permitted`. A task with no tier is emitted as `prohibited` with a visible \"instructor to confirm\" note. - `--doc-standard apa|mla|chicago|none` selects the citation template block. - `--integrity-code \"<ref>\"` is ins"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/evals/evals.json",
+        "snippet": "d (named sub-tasks only) / permitted, defaulting any unstated task to prohibited with an 'instructor to confirm' note rather than leaving it ambiguous. Can run scripts/policy_builder.py to generate the table.\", \"assertions\":"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/evals/evals.json",
+        "snippet": "defers to alterlab-research-ethics. The question is about the research ethics of running human-subjects data through an AI tool — IRB review, informed consent, de-identification — not about a course syllabus AI-use policy. alterlab-syllabus-ai-policy writes te"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/references/tier_framework.md",
+        "snippet": "g AI produced. 4. **Unsure / not yet decided?** → **Prohibited by default,** flagged \"instructor to confirm.\" Never emit \"students may use AI responsibly\" with no per-task tier — that is unenforceable and is the single mo"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "and reported. - DEFAULT-DENY. A task given no tier is emitted as ``prohibited`` with a \"instructor to confirm\" note — never a silent \"responsible use\". Tiers: prohibited | restricted | permitted (see ../references/tier_framewor"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "tier: str scope: str = \"\" confirm: bool = False # True when tier was defaulted (instructor to confirm) def parse_task(spec: str) -> Task: \"\"\"Parse \"Name=tier:scope\" / \"Name=tier\" / \"Name\" (-> default-deny).\"\"\" i"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "( \" _(No tier was specified; defaulted to Prohibited — \" \"instructor to confirm.)_\" ) placeholders.append( f\"Tier for '{t.name}' defaulted to Prohibited — conf"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "ier in {prohibited,restricted,permitted}. \" \"'NAME' alone defaults to prohibited (instructor to confirm).\", ) p.add_argument(\"--out\", help=\"Write Markdown here; omit to print to stdout\") args = p.parse_args(argv"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "I, 2023) or MLA Works Cited citation template for ChatGPT, and adds assessment-integrity, accessibility, and equity language bound to the institution's own academic-integrity code. Ships scripts/policy_builder.py to emit a"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "ks Cited citation template for ChatGPT, and adds assessment-integrity, accessibility, and equity language bound to the institution's own academic-integrity code. Ships scripts/policy_builder.py to emit a paste-ready"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "clause | | **Permitted** | AI use is allowed and may be encouraged (e.g. as a tutor, for accessibility) | Disclose and attribute per the citation template; remain responsible for accuracy | **Default-deny when unstated.**"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "ration\" block the statement can append to each submission. --- ## Assessment-Integrity, Accessibility & Equity Language Three clauses every statement should carry, all parameterized — never asserted as fact about a speci"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "e statement can append to each submission. --- ## Assessment-Integrity, Accessibility & Equity Language Three clauses every statement should carry, all parameterized — never asserted as fact about a specific tool:"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "ble; leave `<CODE_REF>` as a fill-in if the user has not supplied it, and say so. 2. **Accessibility / equity** — note that some students rely on AI assistive tools and that not all students have paid-tier access, so"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "E_REF>` as a fill-in if the user has not supplied it, and say so. 2. **Accessibility / equity** — note that some students rely on AI assistive tools and that not all students have paid-tier access, so required"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+        "snippet": "vidual case is out of scope — see the routing table.) Detail, sample wording, and the equity checklist live in `references/integrity_accessibility.md`. --- ## How to Run It ### 1. Build a statement from course"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/references/integrity_accessibility.md",
+        "snippet": "# Assessment-Integrity, Accessibility & Equity Language Wording and checklists for the three clauses that surround the per-task tiers. All wording here is *"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/references/integrity_accessibility.md",
+        "snippet": "# Assessment-Integrity, Accessibility & Equity Language Wording and checklists for the three clauses that surround the per-task tiers. All wording here is **paramete"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/references/integrity_accessibility.md",
+        "snippet": "**parameterized** — it never asserts a fact about a specific tool (accuracy, compliance, accessibility) unless the instructor supplies it. ## Contents 1. Integrity binding (the enforceable sentence) 2. Accessibility & eq"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/references/integrity_accessibility.md",
+        "snippet": "instructor supplies it. ## Contents 1. Integrity binding (the enforceable sentence) 2. Accessibility & equity checklist 3. The detector-as-evidence caution 4. What this skill does NOT do --- ## 1. Integrity binding A"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "k is required\") statement, placeholders = build(args) if args.out: with open(args.out, \"w\", encoding=\"utf-8\") as fh: fh.write(statement) print(f\"Wrote policy to {args.out}\", file=sys.stderr)"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "ifier's house style): - STDLIB ONLY. No network, no API keys, no third-party deps. - ZERO FABRICATION. The script never invents an integrity-code reference, a tool capability, a version string, or a citation URL. Anythi"
+      },
+      {
+        "file": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+        "snippet": "LOCKS[args.doc_standard]) out.append(\"\") # Integrity binding out.append(\"### Academic integrity\") out.append(\"\") out.append( f\"Use of generative AI on a *Prohibited* task, or undisclosed use on a \""
+      }
+    ]
+  },
+  "read_errors": []
+}

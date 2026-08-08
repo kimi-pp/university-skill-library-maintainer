@@ -1,0 +1,150 @@
+{
+  "repository": "Kuberwastaken/Syllabus-Formatter",
+  "fixed_version": "26654de258ade6d97892ab44c9557f5330249e5f",
+  "tree": [
+    {
+      "type": "directory",
+      "oid": "d0b72d1f1dce197029c713beb81821be42b4283d",
+      "size": 0,
+      "path": "__pycache__"
+    },
+    {
+      "type": "directory",
+      "oid": "a56c95a4a2288d43e4d548e300afc53c9d1e5d15",
+      "size": 0,
+      "path": "model"
+    },
+    {
+      "type": "directory",
+      "oid": "1de007c34a0abfdc3452fc8681cd7fcee10ad2cc",
+      "size": 0,
+      "path": "model/__pycache__"
+    },
+    {
+      "type": "directory",
+      "oid": "9d028968408258b1e6a57b17399c79f5476cf06e",
+      "size": 0,
+      "path": "public"
+    },
+    {
+      "type": "directory",
+      "oid": "01e6811e979ca2b8b38f17e77427a9e6d60732cb",
+      "size": 0,
+      "path": "public/Content-Meta"
+    },
+    {
+      "type": "directory",
+      "oid": "136838582d17c0f28f289e2dfd951c0425f56306",
+      "size": 0,
+      "path": "scripts"
+    },
+    {
+      "type": "file",
+      "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519,
+      "path": ".gitattributes"
+    },
+    {
+      "type": "file",
+      "oid": "f7ab38c0ba4a1ed101b61946a2f0aa98a3796788",
+      "size": 8,
+      "path": ".gitignore"
+    },
+    {
+      "type": "file",
+      "oid": "444ed8413415d22f5b3f1c53c6dfc731e7564b7f",
+      "size": 493,
+      "path": "README.md"
+    },
+    {
+      "type": "file",
+      "oid": "c8542c48d11b8b04fdbffcd63976cfbf870fb774",
+      "size": 8432,
+      "path": "__pycache__/script_search_api.cpython-310.pyc"
+    },
+    {
+      "type": "file",
+      "oid": "2d94d0d180e24cf54369f481dddd430216f27a0d",
+      "size": 21994,
+      "path": "app.py"
+    },
+    {
+      "type": "file",
+      "oid": "8eefe0659256419004168f27c02647569e0caa9c",
+      "size": 21232,
+      "path": "gradio_app.py"
+    },
+    {
+      "type": "file",
+      "oid": "479df432b862e3399b27a0a270d45e9b25939da4",
+      "size": 7506,
+      "path": "model/__pycache__/analyzer.cpython-310.pyc"
+    },
+    {
+      "type": "file",
+      "oid": "e8d03b802063527aeb572a2760964a5486babbb7",
+      "size": 9956,
+      "path": "model/analyzer.py"
+    },
+    {
+      "type": "file",
+      "oid": "8d546d10b4eca1285741e5aa02c51d17640b3692",
+      "size": 3025238,
+      "path": "public/Content-Meta/Dotnotes.json"
+    },
+    {
+      "type": "file",
+      "oid": "7c37a0fa79f9be760d66a70d6b98c780562cc3c5",
+      "size": 45992,
+      "path": "public/Content-Meta/FifteenFourteen.json"
+    },
+    {
+      "type": "file",
+      "oid": "89b97f82332234c9dee4b590c13e844c04bc50d9",
+      "size": 3001656,
+      "path": "public/Content-Meta/StudyX.json"
+    },
+    {
+      "type": "file",
+      "oid": "b896dbd552e81829643e71fa5f9dbb828e43a454",
+      "size": 6439017,
+      "path": "public/Content-Meta/UnifiedContent.json"
+    },
+    {
+      "type": "file",
+      "oid": "6d37919be5de3483d2418e69dbdcbd69aa82031f",
+      "size": 650118,
+      "path": "public/Content-Meta/syllabus.json"
+    },
+    {
+      "type": "file",
+      "oid": "da86daf6e705104da758a91adadd280233fd39bb",
+      "size": 365438,
+      "path": "public/Content-Meta/videos.json"
+    },
+    {
+      "type": "file",
+      "oid": "3e49cef4cdd88d4ab73332d705877ba6c5dba37a",
+      "size": 145,
+      "path": "requirements.txt"
+    },
+    {
+      "type": "file",
+      "oid": "1c0ffaadd3d49b7716e3857aed63c958baf9f637",
+      "size": 9438,
+      "path": "script_search_api.py"
+    },
+    {
+      "type": "file",
+      "oid": "5123bf6686c05d1a689581af1976ed38e78a764f",
+      "size": 59,
+      "path": "scripts/requirements.txt"
+    },
+    {
+      "type": "file",
+      "oid": "3e23bbfdaf7170bee9979c46acae6cf86ddeea4e",
+      "size": 17640,
+      "path": "scripts/syllabus_formatter.py"
+    }
+  ]
+}

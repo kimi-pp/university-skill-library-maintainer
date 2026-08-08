@@ -1,0 +1,14 @@
+[
+  {
+    "path": "skills/buaa-thesis-checking/SKILL.md",
+    "type": "blob",
+    "size": 13746,
+    "sha": "0de449e7b5738fc737e9c76036ddc144a60c9931"
+  },
+  {
+    "path": "skills/buaa-thesis-checking/agents/openai.yaml",
+    "type": "blob",
+    "size": 242,
+    "sha": "1b91e8c9fa9603c474b9d2f73b1e4a53254832e6"
+  }
+]

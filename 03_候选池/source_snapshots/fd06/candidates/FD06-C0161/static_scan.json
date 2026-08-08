@@ -1,0 +1,71 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "each question - Verify distribution after completion - Adjust if imbalanced #### Step 8: Create Quiz File Generate quiz file with proper structure: **Separate Quiz File** (`docs/chapters/[chapter-name]/quiz.md`): ```markdo"
+      },
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "tion (practice questions) - Study app integration #### Step 12: Generate Quality Report Create `docs/learning-graph/quiz-generation-report.md`: ```markdown # Quiz Generation Quality Report Generated: YYYY-MM-DD Execution Mode: Serial (1 agent) Wall-clock T"
+      }
+    ],
+    "lms": [
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "rerequisites\", \"scaffolding\"] } ] } ``` **Use Cases for Quiz Bank:** - LMS export (Moodle, Canvas, Blackboard XML) - Quiz randomization (select subset) - Alternative quiz versions - Chatbot integration (practi"
+      },
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "ites\", \"scaffolding\"] } ] } ``` **Use Cases for Quiz Bank:** - LMS export (Moodle, Canvas, Blackboard XML) - Quiz randomization (select subset) - Alternative quiz versions - Chatbot integration (practice quest"
+      },
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "scaffolding\"] } ] } ``` **Use Cases for Quiz Bank:** - LMS export (Moodle, Canvas, Blackboard XML) - Quiz randomization (select subset) - Alternative quiz versions - Chatbot integration (practice questions) - Stud"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "d Patterns:** - All C's in a row - Alternating A-B-A-B - Predictable sequences - Position bias (first/last always correct) **Randomization Strategy:** - Generate random sequence before writing quiz - Shuffle for e"
+      },
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "z.md files that do not work - Do not use link labels to sections that do not exist **10. Bias Check:** - No cultural bias - No gender bias - No assumptions about background - Accessible language **Success Criteri"
+      },
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "- Do not use link labels to sections that do not exist **10. Bias Check:** - No cultural bias - No gender bias - No assumptions about background - Accessible language **Success Criteria:** - Overall quality score"
+      },
+      {
+        "file": "skills/quiz-generator/SKILL.md",
+        "snippet": "labels to sections that do not exist **10. Bias Check:** - No cultural bias - No gender bias - No assumptions about background - Accessible language **Success Criteria:** - Overall quality score > 70/100 - 8-12"
+      },
+      {
+        "file": "skills/quiz-generator/README.md",
+        "snippet": "four qualities of effective distractors (plausibility, educational value, discrimination, fairness) - Distractor construction patterns - Common mistakes to avoid - Quality checklist - Examples by Bloom's level - Revisi"
+      },
+      {
+        "file": "skills/quiz-generator/references/distractor-writing-guide.md",
+        "snippet": "ions 3. **Discrimination** - Helps distinguish between different levels of knowledge 4. **Fairness** - Not trick questions or unfair traps ## Plausibility ### Definition A plausible distractor is one that appears co"
+      },
+      {
+        "file": "skills/quiz-generator/references/distractor-writing-guide.md",
+        "snippet": "scrimination **No Knowledge → Partial Understanding → Mastery** Create distractors that appeal to different knowledge levels: **Example:** Question: \"What does ISO 11179 compliance require for glossary definition"
+      },
+      {
+        "file": "skills/quiz-generator/references/distractor-writing-guide.md",
+        "snippet": "els Tested:** - **A** appeals to someone with no knowledge of ISO 11179 - **B** and **D** appeal to someone with partial understanding - **C** requires mastery of the specific criteria --- ## Fairness ### Definiti"
+      },
+      {
+        "file": "skills/quiz-generator/references/distractor-writing-guide.md",
+        "snippet": "one with partial understanding - **C** requires mastery of the specific criteria --- ## Fairness ### Definition Fair distractors test knowledge of the subject matter, not test-taking skills, reading comprehension,"
+      },
+      {
+        "file": "skills/quiz-generator/references/distractor-writing-guide.md",
+        "snippet": "Every distractor should help you understand what the student does or doesn't know. **The Fairness Rule:** > Every distractor should test subject knowledge, not test-taking skills."
+      }
+    ]
+  },
+  "read_errors": []
+}

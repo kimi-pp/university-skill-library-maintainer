@@ -1,0 +1,4 @@
+interface:
+  display_name: "CS Thesis Reviewer"
+  short_description: "Review and improve CS master theses"
+  default_prompt: "Use $cs-thesis-reviewer to review this CS master thesis chapter for structure, evidence boundaries, and writing risks."

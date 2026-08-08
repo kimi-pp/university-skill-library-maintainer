@@ -1,0 +1,45 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "author. - **Evidence looks like:** When asked \"Where did you find this information?\", the student can name the source and its type. May note \"I'm not sure if this is reliable\" but cannot yet explain why. - **The student cannot"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "rconnected causes of climate change\" / \"Year 10 Computer Science — students understanding bias in AI systems\"* Optional (injected by context engine if available): - **Student level:** Year group - **Subject area:*"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "fic, not generic.** \"Evaluating sources\" looks different in History (checking provenance, bias, context) than in Science (checking methodology, peer review, sample size) than in Media Studies (checking ownership, f"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "ent), what evidence it cites (and whether the claims are supported), and whether it has a bias or purpose that affects its reliability. This is not a generic digital literacy skill — it is SOURCE EVALUATION as hist"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "cannot yet:** Compare two sources to evaluate which is more reliable, or identify subtle bias (e.g., a nationalist perspective on the causes of WW1). **Level 3: Competent — Evaluates and compares sources** - **Th"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "me topic and identify which is more credible, giving specific reasons. Can identify basic bias (\"This website is run by a German heritage organisation — they might present the German perspective differently from a"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "(not just the first Google result). - **The student cannot yet:** Recognise sophisticated bias (e.g., how source selection itself shapes a narrative), or evaluate the methodology behind the source's claims. **Leve"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "ogy behind the source's claims. **Level 4: Extending — Critically evaluates credibility, bias, and purpose** - **The student can:** Analyse the purpose and audience of a digital source (\"This was written to commem"
+      },
+      {
+        "file": "skills/professional-learning/competency-framework-translator/SKILL.md",
+        "snippet": "ok for:** Do students cite specific features of the source (author credentials, evidence, bias) or give vague reasons (\"It looks professional\")? Do they distinguish between different TYPES of unreliability (no evid"
+      }
+    ]
+  },
+  "read_errors": []
+}

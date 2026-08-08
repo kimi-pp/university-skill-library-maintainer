@@ -1,0 +1,54 @@
+{
+  "repository": "1carusalwayswa/cs-thesis-reviewer",
+  "fixed_version": "c19cbb5db8e357828972b924b6fb83a9e7738cc3",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "039528085e838115c23f75ecbc5dc1c1e7776fc5",
+      "size": 35
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6ec510972e11e9b66e2a1e7b79194ab47b61dc9",
+      "size": 3889
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adf8f6da00c83b5324c671c19a5bab6abf5da925",
+      "size": 7331
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f700280182e70b2abeecc7352a1aac8ce5495432"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7915242526c52cf95072d2b58f0cb7dc48281ccf",
+      "size": 246
+    },
+    {
+      "path": "references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e17b8ff70ce20d7325facae4d504c86e22732fbd"
+    },
+    {
+      "path": "references/general-context.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459263e5ef39b7f643d9b96dc8f60fb3052ee846",
+      "size": 20759
+    }
+  ]
+}

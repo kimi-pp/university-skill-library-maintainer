@@ -1,0 +1,165 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "SKILL.md",
+        "snippet": "that generates bilingual annotated docx. Use when the user wants to review a manuscript, create a multi-agent review document, generate bilingual annotated review, or improve a paper before journal submission. Also trigger on: '审稿', '多Agent审稿',"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "ocx-js-api.md) for correct API usage and common pitfalls. #### Step 2: Build the script Create a new JS file (e.g., `create_bilingual_agents.js`) in the user's working directory: 1. **Copy the scaffold template** as the file he"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "andle long scripts Since the generated file will be 1000+ lines, write it in batches: 1. Write file header (helpers + Title/Significance/Abstract) with the Write tool 2. Append Introduction section with Bash heredoc (`c"
+      },
+      {
+        "file": "README.md",
+        "snippet": "e Code](https://docs.anthropic.com/en/docs/claude-code) 技能，模拟由6位专家组成的审稿团队，在投稿前对学术稿件进行全面评审。生成中英双语彩色批注 `.docx` 文件，含逐段评审、量化评分矩阵和改进建议优先级排序。 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that simulates a panel o"
+      },
+      {
+        "file": "README.md",
+        "snippet": "s and a quantitative scoring matrix. --- ## 功能概述 | What It Does 输入稿件（docx、PDF 或粘贴文本），即可生成一份专业审稿文档：6位专业AI审稿人逐段点评，每位审稿人按1–10分制打分，评分标准根据目标期刊校准。 Give it a manuscript (docx, PDF, or pasted text), and it produces a profess"
+      },
+      {
+        "file": "README.md",
+        "snippet": "~/.claude/skills/manuscript-review ``` ### 依赖 | Dependencies ```bash # Node.js docx 包（用于生成 .docx 输出） # Node.js docx package (for generating .docx output) npm install docx # Pandoc（可选，用于将 .docx 输入转为可读文本） # Pandoc (optio"
+      },
+      {
+        "file": "README.md",
+        "snippet": "script using the scaffold template that builds the annotated docx 4. **输出 Output** — 运行脚本生成最终双语审稿文档 Runs the script to produce the final bilingual review document 脚手架模板（`template/scaffold.js`）提供所有 docx 格式化基础设施——彩色审稿人面板"
+      },
+      {
+        "file": "references/docx-js-api.md",
+        "snippet": "ions[0].children` as an array of `Paragraph`/`Table`. 7. **`Packer.toBuffer` is async** — write the file inside `.then()`, and set `process.exitCode = 1` in `.catch()` so callers can detect failure. ## Paragraph & TextRun"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "Skill 中文说明 > 本文件仅供人工阅读参考，不影响 skill 运行。 --- ## 一、SKILL.md 各段对照 ### 概述 多Agent学术文稿审阅系统。生成双语（英-中）标注 docx 文件，由 6 位专家 Agent 组成审稿团队，对学术稿件进行全方位审阅。每位 Agent 提供其领域专属的评审意见和评分，最终产出一份完整的投稿前审阅文档。 ### 触发条件 (When to Use) - 用户希望对学术稿件进行多 Ag"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "提供其领域专属的评审意见和评分，最终产出一份完整的投稿前审阅文档。 ### 触发条件 (When to Use) - 用户希望对学术稿件进行多 Agent 审阅 - 用户要求生成双语标注审阅文档 - 用户想在投稿前改进论文 - 用户提到\"审稿\"、\"多Agent审稿\"、\"agent team review\"、\"投稿前审阅\"等关键词 - 用户提供文稿（docx、PDF 或文本）并想要专家评审 ### 6 位核心 Agent | A"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "5-7 分。得 8 分意味着\"仅需小修\"。9-10 分在首次审阅中几乎不可能出现。 每位 Agent 对每个主要章节进行 1-10 评分。 #### 评分矩阵表 在文档末尾生成交叉表格： | 章节 | A 架构 | B 理论 | C 方法 | D 应用 | E 主编 | F 合作 | 均分 | |------|--------|--------|--------|--------|--------|--------|-"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "SKILL.md",
+        "snippet": "ncies ```bash # Check docx package node -e \"require('docx')\" 2>/dev/null && echo \"OK\" || npm install docx # Check pandoc (if needed for docx input) which pandoc || brew install pandoc ```"
+      },
+      {
+        "file": "README.md",
+        "snippet": "bash # Node.js docx 包（用于生成 .docx 输出） # Node.js docx package (for generating .docx output) npm install docx # Pandoc（可选，用于将 .docx 输入转为可读文本） # Pandoc (optional, for converting .docx input to readable text) brew install pan"
+      },
+      {
+        "file": "references/docx-js-api.md",
+        "snippet": "leCell, WidthType } = require('docx'); ``` Install in the working directory if missing: `npm install docx` ## Critical Rules (violating these corrupts the file or breaks rendering) 1. **Never use `\\n` inside a `TextRun"
+      },
+      {
+        "file": "template/scaffold.js",
+        "snippet": "('docx'); } catch (e) { console.error('Error: the \"docx\" package is not installed. Run: npm install docx'); process.exit(1); } const { Document, Packer, Paragraph, TextRun, Header, Footer, ImageRun, AlignmentT"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "(Dependencies) ```bash # 检查 docx 包 node -e \"require('docx')\" 2>/dev/null && echo \"OK\" || npm install docx # 检查 pandoc（如需从 docx 输入） which pandoc || brew install pandoc ``` --- ## 二、agent-profiles.md 各段对照 ### 总纲 每位 Age"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "SKILL.md",
+        "snippet": "...\"), chn(\"中文翻译...\"), separator() ); // Agent review panel for this section content.push(panelHeader(\"▶ Agent Team Review: Section Name 中文标签\")); content.push( agentA(\"审稿评语... [Score: 8/10]\"), agentB(\"审稿评语... [Score: 7/10]\"), agentC(\"审稿"
+      },
+      {
+        "file": "references/agent-profiles.md",
+        "snippet": "90%. Reads the first paragraph, Abstract, and figures to decide in 60 seconds whether to send for review. If the paper doesn't pass this \"60-second test,\" it gets desk-rejected. Obsessed with clarity, conciseness, format com"
+      },
+      {
+        "file": "template/scaffold.js",
+        "snippet": "eng(\"English paragraph text...\"), // chn(\"中文翻译...\"), // separator() // ); // content.push(panelHeader(\"▶ Agent Team Review: Section 中文标签\")); // content.push( // agentA(\"审稿评语... [Score: X/10]\"), // agentB(\"审稿评语... [Score: X/10]\"), // age"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "CHANGELOG.md",
+        "snippet": "column means (which was biased when agents score different numbers of sections). 总均分改为全部有效分数的真实平均，修正了\"均值的均值\"偏差。 - **scaffold.js**: the script now sets a non-zero exit code when document generation fails, so autom"
+      },
+      {
+        "file": "README.md",
+        "snippet": "准： Scores are calibrated to the **top 10% of accepted papers** at the target journal: | 分数 Score | 含义 Meaning | 频率 Frequency | |:---:|---|:---:| | 9-10 | 卓越——可直接发表 Exceptional — publish as-is | < 5% | | 8 | 优秀—"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "否存在且大小合理（通常 >100KB） - 可选：转 PDF 或图片进行视觉检查 --- ### 评分系统 — 严格校准 (Scoring System) **校准原则**：分数以目标期刊已接收论文中排名前 10% 为标准。大多数初稿应该得 5-7 分。得 8 分意味着\"仅需小修\"。9-10 分在首次审阅中几乎不可能出现。 每位 Agent 对每个主要章节进行 1-10 评分。 #### 评分矩阵表 在文档末"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "理化、未声明假设、循环论证、挑选数据 | | 5 | **极度严格评分** | 默认假设一个章节得 5-6 分（尚可但需大幅修改）。8+ 分应罕见。评分必须附理由：说明为什么是这个分数而不是更高 | | 6 | **用中文写评语** | 所有 Agent 评审文字用中文撰写，技术术语保留英文 | | 7 | **保持角色定位** | 每位 Agent 聚焦于自己的领域，但可以标记需要其他 Agent 关注的跨域问题。Ag"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "预测区间或后验分布？ - 空间/时间结构：自相关是否被显式建模？ --- ### 评分量表 — 严格校准 所有 Agent 使用以目标期刊标准校准的 1-10 评分： | 分数 | 含义 | 出现频率 | |------|------|----------| | 10 | 完美无瑕 — 一个字都不用改 | <1% | | 9 | 优秀 — 仅需外观修改即可发表 | ~2-5% | | 8 | 很好 — 小修，1-"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "\" - 9+分 = 保留给真正推进领域的工作 - 不因科学有趣就给高分 — 执行质量必须匹配 - 如果在某章节找不到至少2个具体问题，说明没仔细读 - 评分必须附理由：说明为何是该分数而非高一分 **评分规则**： - 相对目标期刊标准评分（Nature 比区域期刊更难） - 非所有 Agent 对所有章节评分（如 Agent C 可能跳过标题） - 评分矩阵中未审阅的章节用 `null` - 每条评语以 `[Scor"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "CHANGELOG.md",
+        "snippet": "h was biased when agents score different numbers of sections). 总均分改为全部有效分数的真实平均，修正了\"均值的均值\"偏差。 - **scaffold.js**: the script now sets a non-zero exit code when document generation fails, so automated callers can d"
+      },
+      {
+        "file": "README.md",
+        "snippet": "bility | Nature Engineering, IEEE | | 社会科学 Social Science | 政策影响、公平性 Policy implications, equity | Nature Human Behaviour | | 化学 Chemistry | 合成可行性、安全性 Synthesis feasibility, safety | JACS, Angewandte Chemie | | 基因组学"
+      },
+      {
+        "file": "README.md",
+        "snippet": "trial applications, scalability | Nature Engineering, IEEE | | 社会科学 Social Science | 政策影响、公平性 Policy implications, equity | Nature Human Behaviour | | 化学 Chemistry | 合成可行性、安全性 Synthesis feasibility, safety | JACS"
+      },
+      {
+        "file": "references/agent-profiles.md",
+        "snippet": "\" it gets desk-rejected. Obsessed with clarity, conciseness, format compliance, and broad appeal. ### Review Dimensions — Exhaustive Checklist **60-Second Test:** - After reading only the Title and Abstract, can a"
+      },
+      {
+        "file": "references/agent-profiles.md",
+        "snippet": "sm a competitor could make? - If this paper is rejected, what is the strongest ground for appeal? **Future Directions:** - Does the paper clearly point to the next 2-3 studies? - Are Future Directions specific (with"
+      },
+      {
+        "file": "references/agent-profiles.md",
+        "snippet": ", cost-effectiveness | Nature Engineering, IEEE | | Social Science | Policy implications, equity, implementation barriers | Nature Human Behaviour | | Chemistry | Synthesis feasibility, applications, safety | JACS, A"
+      },
+      {
+        "file": "references/agent-profiles.md",
+        "snippet": "前版本仅做了(1)。\" - \"逻辑链在以下位置断裂：[证据A：跨流域β多样性差异] → [未支持的跳跃] → [结论：陆地飞行是原因]。缺失的环节是：排除了替代解释（环境差异、采样偏差）。虽然MRM试图做到这一点，但仅控制了4个环境变量——这不足以支持因果推断。\" --- ## Agent B: Theory Mentor 理论导师 | Property | Value | |----------|-------|"
+      },
+      {
+        "file": "references/agent-profiles.md",
+        "snippet": "nal connectivity, landscape permeability）的界限划定，(3)可操作化的量化方式。建议添加一个Box或正式定义段落。\" - \"文献综述存在确认偏差：Introduction引用了13篇支持NPH的论文，但仅引用2篇质疑NPH的论文。具体来说，缺少Heino et al. 2015对NPH的批评性评估和Datry et al. 2016关于间歇性河流中扩散模式的工作。\" --- #"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "果之外增加了真正的解释？局限性是否诚实？替代解释是否被认真对待（而非仅提及后驳回）？推测是否明确标注？ | | 图 | C, E | 每张图是否必要？坐标轴是否有单位标签？配色是否无障碍友好？图说是否不读正文也能自解释？各面板格式是否一致？ | | 表 | C, E | 表是否是最佳呈现方式（vs 文字或图）？所有列/行是否都有必要？表头是否有单位？有效数字是否一致？表说是否完整解释缩写和统计标注？数值是否与正文完全一致？"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "独立思考，还是看起来是导师的想法？是否构建了连贯的发表弧线？ | | 脆弱性评估 | 审稿人2号会首先攻击什么？预先应对。竞争者可能提出的最具毁灭性的批评是什么？如果被拒，最有力的申诉依据是什么？ | | 未来方向 | 论文是否明确指向接下来的 2-3 项研究？未来方向是否具体（有命名的方法、类群和地区）还是泛泛之谈？ | | 投稿信策略 | 给编辑的 3 个最有说服力的论点是什么？哪个发现最出人意料？应建议（和避免）谁"
+      },
+      {
+        "file": "中文说明.md",
+        "snippet": "| NEJM, Lancet, JAMA | | 工程学 | 工业应用、可扩展性、成本效益 | Nature Engineering, IEEE | | 社会科学 | 政策含义、公平性、实施障碍 | Nature Human Behaviour | | 化学 | 合成可行性、应用、安全性 | JACS, Angewandte Chemie | | 基因组学 | 临床诊断、公共卫生、数据共享 | Nature Genet"
+      }
+    ],
+    "process": [
+      {
+        "file": "README.md",
+        "snippet": "e.js script using the scaffold template that builds the annotated docx 4. **输出 Output** — 运行脚本生成最终双语审稿文档 Runs the script to produce the final bilingual review document 脚手架模板（`template/scaffold.js`）提供所有 docx 格式化基础设"
+      }
+    ]
+  },
+  "read_errors": []
+}

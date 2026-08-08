@@ -1,0 +1,26 @@
+[
+  {
+    "path": "scientific-skills/Academic Writing/peer-review/SKILL.md",
+    "type": "blob",
+    "size": 5564,
+    "sha": "a0847d4796ea5da959b4906fc915e4efc9bd58aa"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review/assets/peer_review_template.md",
+    "type": "blob",
+    "size": 191,
+    "sha": "ad80dd93398b9e7b2c019b751537c79d9a968099"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review/peer-review_audit_result_v1.json",
+    "type": "blob",
+    "size": 12116,
+    "sha": "65a8e8d8cca9753b05f1318881ab835064ef3012"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review/references/guide.md",
+    "type": "blob",
+    "size": 591,
+    "sha": "166f85744dde5931d519c07b299722e5e48ebd7f"
+  }
+]

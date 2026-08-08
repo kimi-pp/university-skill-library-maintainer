@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "\" evidence_sources: - \"Rose & Meyer (2002) — Teaching Every Student in the Digital Age: Universal Design for Learning\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014)"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "ching Every Student in the Digital Age: Universal Design for Learning\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Pract"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — Universal Design for Learning in Pre-K to"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "ersal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — Universal Design for Learning in Pre-K to Grade 12 Classrooms: A Systematic Review of Research\" - \"Rao & Meo (2016) — Using Universal"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "-K to Grade 12 Classrooms: A Systematic Review of Research\" - \"Rao & Meo (2016) — Using Universal Design for Learning to Design Standards-Based Lessons\" - \"Edyburn (2010) — Would You Recognize Universal Design for Learning"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "for Learning to Design Standards-Based Lessons\" - \"Edyburn (2010) — Would You Recognize Universal Design for Learning if You Saw It?\" input_schema: required: - field: \"lesson_plan\" type: \"string\" descriptio"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "## What This Skill Does Takes an existing lesson or unit plan and evaluates it against Universal Design for Learning's three principles and their guidelines. Identifies specific access barriers and suggests concrete modific"
+      },
+      {
+        "file": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+        "snippet": "eacher cannot move, and names what the lesson already does well. ## Evidence Foundation Universal Design for Learning is a design framework developed by CAST (Rose & Meyer, 2002; CAST, 2018; Meyer, Rose & Gordon, 2014). It i"
+      }
+    ]
+  },
+  "read_errors": []
+}

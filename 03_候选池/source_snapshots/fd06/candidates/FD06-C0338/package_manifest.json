@@ -1,0 +1,32 @@
+[
+  {
+    "path": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+    "type": "blob",
+    "size": 17270,
+    "sha": "11ab9cb9df01b99dbedb6ccb663723d78285e496"
+  },
+  {
+    "path": "skills/writing-tools/alterlab-peer-review/evals/evals.json",
+    "type": "blob",
+    "size": 4097,
+    "sha": "ce81c176dfd0047d679912f322e7637d40eded3b"
+  },
+  {
+    "path": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+    "type": "blob",
+    "size": 19321,
+    "sha": "ec648c2059270cfb8dea887ad2e4b5b8e51d0fa5"
+  },
+  {
+    "path": "skills/writing-tools/alterlab-peer-review/references/presentation_review.md",
+    "type": "blob",
+    "size": 5374,
+    "sha": "e171b7795756bf73e74fcb3b25b1b01b69c741a2"
+  },
+  {
+    "path": "skills/writing-tools/alterlab-peer-review/references/reporting_standards.md",
+    "type": "blob",
+    "size": 10200,
+    "sha": "0d995b9d0c9ef2575330dc98c9beae656135d65f"
+  }
+]

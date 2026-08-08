@@ -1,0 +1,2404 @@
+{
+  "repository": "YujxZJCN/teaching-skills",
+  "fixed_version": "50258caf73fb0495adc725864fdf278a3072716c",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8914eb965cfc27b13b7adef6b54007ff90f0428"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c7004a18a094eff5d5fc8620c1a6ca32cdad6a2",
+      "size": 478
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98a20654afc86a8b479b502e9d59dba33b0593f4",
+      "size": 968
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d40c6228ad67b5178cdbf89adc484879680487c8"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "12d781823905604aff2d22464eafae2993978da6"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62c92210192c44427dd04c47583b36ffd808763e",
+      "size": 219
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/skill-misbehavior.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b98c6e24427ecc7a4cce207b2521146f50b0e12",
+      "size": 741
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/skill-request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c81522ab94b0a6ed1ca353864fc97e45d677cc5",
+      "size": 571
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba1d6303dd32ac4f8b66d21b813378a987362803"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fb6132b275979a36151c600f19fd4bf967c5162",
+      "size": 1071
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd6769b2edde2531801b4e92a3cbaaec96757e8b",
+      "size": 29
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8f619c5f87128c5e333deff9d6fe3f2c9f28bf",
+      "size": 3496
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c35959531a7886fdbd85395b9134eaa61d7a0167",
+      "size": 2714
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36a8c707d2605c45d7c1669ae17f996f06642d3b",
+      "size": 2812
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "024003bb56236b1161c03c575372d0e97abd8fc4",
+      "size": 1067
+    },
+    {
+      "path": "MODE_REGISTRY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93f4e5df8d0f7d586b6fcbf97610d28b0ff3f60a",
+      "size": 9321
+    },
+    {
+      "path": "QUICKSTART.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "953e5a55c2ce48471cede33d0153db8b9b978325",
+      "size": 3361
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb3173b31d9d440066184854ba4afb847ce18597",
+      "size": 12220
+    },
+    {
+      "path": "README.zh-CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1829b95bcb5cca62931b3b1c4551eb089f8427bb",
+      "size": 12611
+    },
+    {
+      "path": "accreditation-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04c2a6d66a20b1068c5cf21afcde54f57662c3f0"
+    },
+    {
+      "path": "accreditation-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71b8b3712f7bb84f337e222401272ad214839ad0",
+      "size": 9342
+    },
+    {
+      "path": "accreditation-mapper/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90452058f285edbc9f7f4529730af06eda593d32"
+    },
+    {
+      "path": "accreditation-mapper/agents/evidence_assembler_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e8b9d54c530ad1cfbcde46cb0161ebeda4d4170",
+      "size": 3947
+    },
+    {
+      "path": "accreditation-mapper/agents/matrix_builder_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc12b5b7fc13f3a20ee5bc55a153e10fec8dd81f",
+      "size": 3998
+    },
+    {
+      "path": "accreditation-mapper/agents/selfstudy_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "874817af452812735c0470a22d7e3b61f279dcc5",
+      "size": 4191
+    },
+    {
+      "path": "accreditation-mapper/agents/standards_analyst_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93bc729a30a14ffba42dee9b8de42d82eaec88d9",
+      "size": 4071
+    },
+    {
+      "path": "accreditation-mapper/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa0b39b94ab7790f9924fda8a30d8ad9673f69bb"
+    },
+    {
+      "path": "accreditation-mapper/references/accreditation_frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c37f37230050af0a896a013dd067c3c569f9cffc",
+      "size": 5991
+    },
+    {
+      "path": "accreditation-mapper/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34e022068c2540370bb2b17e8f34329cf82039a3"
+    },
+    {
+      "path": "accreditation-mapper/templates/evidence_index_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e89e8f302ee1f295dda34b0f876c29c3b162681",
+      "size": 2841
+    },
+    {
+      "path": "accreditation-mapper/templates/outcome_matrix_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54e45c2f332c4c1c8d72ea3a93220bb46845f391",
+      "size": 2924
+    },
+    {
+      "path": "assessment-architect",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15bca41af3afbd141acc381cb599cd437df33a91"
+    },
+    {
+      "path": "assessment-architect/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a6e52a9cd9e9351d029f2433db5b472a9e9fca4",
+      "size": 13894
+    },
+    {
+      "path": "assessment-architect/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4909056213d405b6e43df4ce8e87b92a57ea68ed"
+    },
+    {
+      "path": "assessment-architect/agents/accommodation_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15c4d13c4e0307a6c897ea2c644d11a49a435806",
+      "size": 4721
+    },
+    {
+      "path": "assessment-architect/agents/answer_key_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "924f822123db6994e2a7221dfae7582489fcfcc5",
+      "size": 3812
+    },
+    {
+      "path": "assessment-architect/agents/blueprint_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fac3741b8553f0050e6ee94767fcfc086929f3d9",
+      "size": 3743
+    },
+    {
+      "path": "assessment-architect/agents/grade_analyst_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae1bb7482f733c2eaa89f6a46ef7778243e4c4e",
+      "size": 4453
+    },
+    {
+      "path": "assessment-architect/agents/group_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ba89ec5fcb5cc5e6f466d5735d8a264ef266c7",
+      "size": 4714
+    },
+    {
+      "path": "assessment-architect/agents/integrity_auditor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75fb7fa4dafad94cd52801f13dcac49d6ca5ca80",
+      "size": 3996
+    },
+    {
+      "path": "assessment-architect/agents/item_analyst_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31326fe797c5f6118321bc5c8810c6ca415f7f23",
+      "size": 4223
+    },
+    {
+      "path": "assessment-architect/agents/item_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3ea6b77dfe2c1db743de3716b29f00fa8f97c23",
+      "size": 3927
+    },
+    {
+      "path": "assessment-architect/agents/project_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34a7e17afd30bae54b192b15c4cdece3b4b5e9c6",
+      "size": 4025
+    },
+    {
+      "path": "assessment-architect/agents/rubric_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b5e5b05c182b5d7db8f21d4b92eee1ade7225e9",
+      "size": 4006
+    },
+    {
+      "path": "assessment-architect/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ffc2b52f209c801db9f657353c8ceceba811463"
+    },
+    {
+      "path": "assessment-architect/references/grade_analysis_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "657f7de0107cbb06e9a5a29535e20394f69162bc",
+      "size": 6339
+    },
+    {
+      "path": "assessment-architect/references/item_writing_rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cedb6d9712058a930907f97769175cd8fb60f415",
+      "size": 6289
+    },
+    {
+      "path": "assessment-architect/references/lms_export_format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c6a55430ad4cff11190697308ebbdccddff5a6e",
+      "size": 2059
+    },
+    {
+      "path": "assessment-architect/references/peer_assessment_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bdd01808ce3e153a8dbc6a1dbe73d822882b44a",
+      "size": 5510
+    },
+    {
+      "path": "assessment-architect/references/rubric_patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c0b187d8ff0be1649651265cfd2460ef063a630",
+      "size": 5610
+    },
+    {
+      "path": "assessment-architect/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33fa48a0ce4176c0f6609de8942727f845a2a578"
+    },
+    {
+      "path": "assessment-architect/templates/grade_report_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "723c21ad6d857b9cf0c4583fd791206de54aeda1",
+      "size": 4329
+    },
+    {
+      "path": "assessment-architect/templates/group_project_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a47755116bb03499b02a1f89456b01013f0a7c0b",
+      "size": 6206
+    },
+    {
+      "path": "assessment-architect/templates/project_brief_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "932ecd8c19b179e1215d1c666e27e20252b58919",
+      "size": 4011
+    },
+    {
+      "path": "assessment-architect/templates/test_blueprint_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5ed5b9260348f915857b29cafe5203e8369859b",
+      "size": 2711
+    },
+    {
+      "path": "bilingual-courseware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5438ec39fdc5717fac4a93af318b21314fea5e54"
+    },
+    {
+      "path": "bilingual-courseware/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "628c998d54451d8e53a202e81fd3a62ac55e7624",
+      "size": 9187
+    },
+    {
+      "path": "bilingual-courseware/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b5504105b4dbc19d812a54a669c645cedbeb941"
+    },
+    {
+      "path": "bilingual-courseware/agents/glossary_keeper_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87b744073de00e20c12e8e0bf0470330c4904d5d",
+      "size": 3941
+    },
+    {
+      "path": "bilingual-courseware/agents/parallel_sync_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5183978eafbcd4b34262c7735a8454836a578608",
+      "size": 3678
+    },
+    {
+      "path": "bilingual-courseware/agents/terminology_auditor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c184350d124d56b8bf2df11a4586e8c7c5ba21b",
+      "size": 4054
+    },
+    {
+      "path": "bilingual-courseware/agents/translator_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b5a132b6cade4fa412be70b710740511a819b50",
+      "size": 4202
+    },
+    {
+      "path": "bilingual-courseware/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20968fe72e94ef651cf8e08207cc2f6708643732"
+    },
+    {
+      "path": "bilingual-courseware/references/emi_conventions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "429b4099d15f72b1e01f4fdee6ee98f46d56cc23",
+      "size": 7598
+    },
+    {
+      "path": "bilingual-courseware/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68346cf932e7d7a7b15ebcaa78c1cc0eea7601d6"
+    },
+    {
+      "path": "bilingual-courseware/templates/glossary_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8f82c03e4ee519d6aff2f0cfbd5e39c31583bcb",
+      "size": 2757
+    },
+    {
+      "path": "bilingual-courseware/templates/sync_register_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8072669c5a23a3166a643a7a32726b397c6a24e",
+      "size": 2245
+    },
+    {
+      "path": "cohort-analyst",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc9821d4377444d50a4f38490581856bd724ba3e"
+    },
+    {
+      "path": "cohort-analyst/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e005d8b363736a5231b014cf2b771930d41b370",
+      "size": 10481
+    },
+    {
+      "path": "cohort-analyst/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60f122808f77e387f898e541d07af8b297613051"
+    },
+    {
+      "path": "cohort-analyst/agents/calibration_advisor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d9514fac1537e3b55d8dd178c71c39c17f36c5",
+      "size": 4991
+    },
+    {
+      "path": "cohort-analyst/agents/cohort_analyst_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "918a0774802d197c1d50619426d316295f0edd56",
+      "size": 5156
+    },
+    {
+      "path": "cohort-analyst/agents/diagnostic_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87f4cc1370135bd022439af72e3aaf2d1b85d5d5",
+      "size": 4947
+    },
+    {
+      "path": "cohort-analyst/agents/grouping_strategist_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f22f2d7e25a5d7f51f26a9a51ab385d9a54f0f1",
+      "size": 4737
+    },
+    {
+      "path": "cohort-analyst/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "231f299b3f7d1aa8ee6acfd3391e32decbf56025"
+    },
+    {
+      "path": "cohort-analyst/references/analytics_honesty.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2508ec4ebfde4d580aa5607b883b26524e75c3db",
+      "size": 9889
+    },
+    {
+      "path": "cohort-analyst/references/diagnostic_design_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0ebe3d909803f0d3d28c4b66497b434ffeab531",
+      "size": 8775
+    },
+    {
+      "path": "cohort-analyst/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "642761d86a80f71d62a32335c9cecc43eddbe52d"
+    },
+    {
+      "path": "cohort-analyst/templates/cohort_profile_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b25f9c745e7ac4c2606dae684d9e13978cc3c2b",
+      "size": 4952
+    },
+    {
+      "path": "cohort-analyst/templates/diagnostic_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2732649af7044fcdc31cae799a380966cd303b06",
+      "size": 3995
+    },
+    {
+      "path": "commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06747c561783edb21b051fdda1314d04f693c4ec"
+    },
+    {
+      "path": "commands/ts-accredit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "460f74a5ff2a56a7a11ce936e6c763623996d8a8",
+      "size": 429
+    },
+    {
+      "path": "commands/ts-activities.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f713f5d356fabf7a5a581fd3ce1a288b5cbb661",
+      "size": 366
+    },
+    {
+      "path": "commands/ts-align.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc9f355ec4a142c57ab1d8bd3a544954b643972d",
+      "size": 322
+    },
+    {
+      "path": "commands/ts-announce.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5038959680895a6e3074c71a98368c04b2ad3d17",
+      "size": 352
+    },
+    {
+      "path": "commands/ts-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0443e304b1d55f9a53e7e485e0f56c0723dd3fca",
+      "size": 494
+    },
+    {
+      "path": "commands/ts-calibrate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97bd10267e199d83208eef9c7639bdc504251c67",
+      "size": 360
+    },
+    {
+      "path": "commands/ts-cohort.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "528f96fe9f322ad138a01466ddbe7747c9efcd45",
+      "size": 467
+    },
+    {
+      "path": "commands/ts-course.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "137fac17f51e528e280832886a8c8838f48e6813",
+      "size": 368
+    },
+    {
+      "path": "commands/ts-dashboard.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73b6949d5dbaa7c431939d29bbb515fbd116d165",
+      "size": 590
+    },
+    {
+      "path": "commands/ts-deck.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c41d4da00e00fa55051463306f13c7451676ade",
+      "size": 495
+    },
+    {
+      "path": "commands/ts-diagnostic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a00f3b99f1e818b541ae3517d746c44f5d7c0e5",
+      "size": 429
+    },
+    {
+      "path": "commands/ts-evals.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f79da98cca114279165c3d68b01ac37d57f48a85",
+      "size": 387
+    },
+    {
+      "path": "commands/ts-exam.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a584ad055d49c21f4a01aac8fb5503febfbe0cbb",
+      "size": 386
+    },
+    {
+      "path": "commands/ts-feedback.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97474b1d77e9c8a5bfbe847290b8d3af3244dda7",
+      "size": 351
+    },
+    {
+      "path": "commands/ts-full.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bb292cdcfddcdc4589dc3ec4ab8151ccda8ea43",
+      "size": 361
+    },
+    {
+      "path": "commands/ts-glossary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93f94efdf1dde11ee538051ebae1cb37e5364914",
+      "size": 414
+    },
+    {
+      "path": "commands/ts-integrity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b031bc56f770d9fb441ef374b87ad9bd8411129d",
+      "size": 393
+    },
+    {
+      "path": "commands/ts-lab.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d079aecc301dafcd1d865f07a3599f051d7809a4",
+      "size": 463
+    },
+    {
+      "path": "commands/ts-lesson.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2856721fb2d2ac5d7337851d786bea970c77f99",
+      "size": 347
+    },
+    {
+      "path": "commands/ts-letter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6df8db75c7f0b6474ec46c264485471d13ce88a",
+      "size": 378
+    },
+    {
+      "path": "commands/ts-midcourse.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5459879c4d1eb51fa60adb69c0adde2602132bd0",
+      "size": 341
+    },
+    {
+      "path": "commands/ts-outcomes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9ecaa52f43d4fab45d6e32a62ffe1c99198b003",
+      "size": 346
+    },
+    {
+      "path": "commands/ts-redesign.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "588fcefd2e541b34858cbc7762db42bc75b88cc0",
+      "size": 360
+    },
+    {
+      "path": "commands/ts-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a4c5b7d38643fa32110f2e1f5e4308c1ca5573",
+      "size": 339
+    },
+    {
+      "path": "commands/ts-script.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9f97985334874ed26116ec95f9fc18eaea15105",
+      "size": 406
+    },
+    {
+      "path": "commands/ts-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "060063803990412731651602c84861b94a7b75ed",
+      "size": 460
+    },
+    {
+      "path": "commands/ts-statement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3088ae4f0803dc4e4a6877096a99924399f0f238",
+      "size": 369
+    },
+    {
+      "path": "commands/ts-status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65f5f593303fa38d54da377a36ab52c1365c4a74",
+      "size": 341
+    },
+    {
+      "path": "commands/ts-syllabus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16f8af45c906af3542e147831bdaa8b1615d25f7",
+      "size": 365
+    },
+    {
+      "path": "commands/ts-translate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ac86bef2af279422a51d261c0f61fe39fea810",
+      "size": 410
+    },
+    {
+      "path": "course-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a57aa4e4eb6ca0b3965c83055be4a926700f941e"
+    },
+    {
+      "path": "course-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34018b74aa5851fd4ac337e9e9df65c7e9804456",
+      "size": 9919
+    },
+    {
+      "path": "course-designer/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d61994806d204e2ddd0eac06d313c6be45470551"
+    },
+    {
+      "path": "course-designer/agents/alignment_auditor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a7416f4e3e0347c82b85071121d7d030318e475",
+      "size": 2502
+    },
+    {
+      "path": "course-designer/agents/assessment_planner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda3f2fd8e08418d8f90c2fbfe1f47e29966e040",
+      "size": 2747
+    },
+    {
+      "path": "course-designer/agents/async_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f24a363171fc9e46629c312085a3f6c4fcf1dcb",
+      "size": 4456
+    },
+    {
+      "path": "course-designer/agents/design_mentor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39641e86acb29e32106694b89d3f93938265799e",
+      "size": 3031
+    },
+    {
+      "path": "course-designer/agents/outcome_architect_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b27ca314654bad591dcaf4d3b8ff25abe8ff621",
+      "size": 2684
+    },
+    {
+      "path": "course-designer/agents/schedule_planner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6eca1816b04e74354fb698477adcc9652497c7c0",
+      "size": 2986
+    },
+    {
+      "path": "course-designer/agents/syllabus_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f07f2e1d86fbd4b37d717929e35a30ceaf98870d",
+      "size": 2283
+    },
+    {
+      "path": "course-designer/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "903b64e84dad2138adb3741a249d0c554b0cb2bb"
+    },
+    {
+      "path": "course-designer/references/async_design_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba76fe72bbf388b749c4c543ddf77b26077f3ac6",
+      "size": 5225
+    },
+    {
+      "path": "course-designer/references/outcome_verbs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2766148d7d0d8284ac36a952daeff830c482d8ee",
+      "size": 2957
+    },
+    {
+      "path": "course-designer/references/syllabus_checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caa8f1a0e449c67fd532e9c061300531c1cae2c3",
+      "size": 2028
+    },
+    {
+      "path": "course-designer/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0073136ad9382c15b888f5e244fe34173bd735c5"
+    },
+    {
+      "path": "course-designer/templates/async_module_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85d3658ea9aba1a6f508a4866edd5b9c7eef28e9",
+      "size": 2737
+    },
+    {
+      "path": "course-designer/templates/course_passport_starter.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa35e8db21acce1f6f428086af8969defbeacb0c",
+      "size": 1090
+    },
+    {
+      "path": "course-designer/templates/syllabus_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d12e6bbe2e68db10978804e770b5f98c3533db71",
+      "size": 2230
+    },
+    {
+      "path": "course-publisher",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f16ef0290dd0c9cf445fcb6f34c17695bc568b5"
+    },
+    {
+      "path": "course-publisher/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5edb7e0830789b45fb0c21f9ff89d6d2e217531e",
+      "size": 8535
+    },
+    {
+      "path": "course-publisher/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db8dfec5a6a44078a2a82abc00114a63b9690843"
+    },
+    {
+      "path": "course-publisher/agents/announcement_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef3985b7a1df0c5b623260c20bce581543ec64e2",
+      "size": 3817
+    },
+    {
+      "path": "course-publisher/agents/comms_planner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "124d0e2dfd4e01f6d831e6b0012b64d1b28cf043",
+      "size": 4007
+    },
+    {
+      "path": "course-publisher/agents/lms_packager_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c09901a55125a7b08fc71a89752d2a2985e7286",
+      "size": 3749
+    },
+    {
+      "path": "course-publisher/agents/site_builder_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66a43c7dedb5c0d0e7720768faedc3efba1a2de4",
+      "size": 3994
+    },
+    {
+      "path": "course-publisher/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3cfa21afb9aa67f167b03ca4e33dd7c0d48721a"
+    },
+    {
+      "path": "course-publisher/references/student_comms_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9f501faf08bc59efacc6e007d773ee12eefb64",
+      "size": 9590
+    },
+    {
+      "path": "course-publisher/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74e2566e991df6deb3a13f27fd68a2f6b8a0f630"
+    },
+    {
+      "path": "course-publisher/templates/course_site_structure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a212aec7f2a6199256631f74b73d23fd8d3d7093",
+      "size": 4675
+    },
+    {
+      "path": "course-publisher/templates/weekly_email_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a3d54e38370cbe20b050dc62fc1b384e248eacf",
+      "size": 2892
+    },
+    {
+      "path": "deck-studio",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6017a6bb4223846ae3b5da4652db9d05297458b3"
+    },
+    {
+      "path": "deck-studio/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e40ab5c3b1f3339bbbfcd056604bf147b996f21a",
+      "size": 10182
+    },
+    {
+      "path": "deck-studio/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f2af03e733b77423c23f9ed91d13282b8484203"
+    },
+    {
+      "path": "deck-studio/agents/deck_architect_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0a3ed2100ead47e5c096bd5367da96128d32382",
+      "size": 3876
+    },
+    {
+      "path": "deck-studio/agents/figure_maker_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76ec37aa1e66d6a753c2976786607bde399dc309",
+      "size": 3891
+    },
+    {
+      "path": "deck-studio/agents/renderer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe66a7e86da7f29e42f9f8d81bf70ad836e43350",
+      "size": 4511
+    },
+    {
+      "path": "deck-studio/agents/visual_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ce2373ce60aa0131cc0406a6012a1cbc5b15d77",
+      "size": 3884
+    },
+    {
+      "path": "deck-studio/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c3c8c5b13dcd9943fa426b1122da362bd3325b8"
+    },
+    {
+      "path": "deck-studio/references/slide_design_rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba71ea4b2713806943213b615245fb98fe1ea63f",
+      "size": 7769
+    },
+    {
+      "path": "deck-studio/references/toolchain_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b3faf7cf89fec00fc9627cdaee3da7b6fba1936",
+      "size": 7941
+    },
+    {
+      "path": "deck-studio/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5e371b87944ae0976c966fda0c0afd9d2d295e4"
+    },
+    {
+      "path": "deck-studio/templates/deck_source_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1c4261572ef02048ed43ca6175fa936e5f8a82a",
+      "size": 3947
+    },
+    {
+      "path": "deck-studio/templates/theme_spec_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d031e7219853ca8f51eb1965b2f70a44775e3dfb",
+      "size": 4905
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61eaf7a741391a9dcdeed0174ad632f7fc452c02"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4787678fea5fdd8a8bd72174ab18477c5cbd1efc",
+      "size": 13243
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6540ea8c9fd597848f4e181524d557b5fa9e5f6"
+    },
+    {
+      "path": "examples/showcase-seminar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7bd6cd141af47383c1621ae05e6a1759a0284f83"
+    },
+    {
+      "path": "examples/showcase-seminar/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d88f26a4a045a25bae9c8b01023659fcd2992e10",
+      "size": 6906
+    },
+    {
+      "path": "examples/showcase-seminar/alignment_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9c197a8348505ce15d9034c3005cdf57df3a0f",
+      "size": 7161
+    },
+    {
+      "path": "examples/showcase-seminar/course_dashboard.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58364b0d1c5edeec820276b018eebe8e19b7c5b",
+      "size": 34261
+    },
+    {
+      "path": "examples/showcase-seminar/course_passport.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "add7760e2ca1f01695c1290119710e3e1039c5f3",
+      "size": 16821
+    },
+    {
+      "path": "examples/showcase-seminar/feedback_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6bcec513ecc7ed2e83c7be6583ddb402f3c5000",
+      "size": 4863
+    },
+    {
+      "path": "examples/showcase-seminar/intake_record.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc1e9e11332f9f6cfae8c3467dbde04b259cb91f",
+      "size": 5296
+    },
+    {
+      "path": "examples/showcase-seminar/recommendation_letter_draft.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a3eb2a852cfd232322fdec251d811373b499030",
+      "size": 6125
+    },
+    {
+      "path": "examples/showcase-seminar/research_essay_brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e9137bd7cd857e109f4be1a61d4d5d2cba2012c",
+      "size": 7751
+    },
+    {
+      "path": "examples/showcase-seminar/syllabus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ed9efa0cfdeed0c43ede010f9e860feb65b2179",
+      "size": 10961
+    },
+    {
+      "path": "examples/showcase",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f7cb3d8849a178edbedfb0db75c0dd4d1d796c94"
+    },
+    {
+      "path": "examples/showcase/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06cad45ce92acaacfd547aba63272fdd9a59a8da",
+      "size": 4559
+    },
+    {
+      "path": "examples/showcase/activity_W06_bias_variance.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaa2e0f4e0543a86c5bb183ab717dfa1e9983e02",
+      "size": 5478
+    },
+    {
+      "path": "examples/showcase/alignment_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c60d97c954d4ceb853deef1b894224cf98eb3c43",
+      "size": 5808
+    },
+    {
+      "path": "examples/showcase/course_dashboard.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc9d77f66464d6032f56a5869ca7bfe5b5905412",
+      "size": 35740
+    },
+    {
+      "path": "examples/showcase/course_passport.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "147479b489de69cc42701c867ab9c09f2d5be068",
+      "size": 14276
+    },
+    {
+      "path": "examples/showcase/exam_blueprint_midterm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "657237675a44ab75756c8fb9fcef3312f5ca576e",
+      "size": 5087
+    },
+    {
+      "path": "examples/showcase/integrity_audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "694510f781550066eeaaefad394236a2400fa84b",
+      "size": 6393
+    },
+    {
+      "path": "examples/showcase/lesson_W06_overfitting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c762eff517387cc3783c0feee2f5b95f4dfc0b5",
+      "size": 7517
+    },
+    {
+      "path": "examples/showcase/midterm_items_sample.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e220d35f7fe116d7fc28d66163a23d5a9ef4ff3d",
+      "size": 8531
+    },
+    {
+      "path": "examples/showcase/syllabus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab2b7fb1aec37ead3f1092742f0aa113fa5846e2",
+      "size": 8810
+    },
+    {
+      "path": "lab-forge",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d4c8abac692169505ae491550400262fa874f2a"
+    },
+    {
+      "path": "lab-forge/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2787641567e44c85790c6425c760b1e8c908815",
+      "size": 10617
+    },
+    {
+      "path": "lab-forge/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b462d8ffa7ffc6d76e2fa0b5b401dfcb9d81e71"
+    },
+    {
+      "path": "lab-forge/agents/autograder_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7c8b809ee1a27d23215ac82302e64b71faf9028",
+      "size": 4698
+    },
+    {
+      "path": "lab-forge/agents/dataset_smith_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c97aacb792e8e81cf9101fe136a6b1439ee1669",
+      "size": 4491
+    },
+    {
+      "path": "lab-forge/agents/lab_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53c1a89c518c6e59c44557ffae6473d82f791a75",
+      "size": 4211
+    },
+    {
+      "path": "lab-forge/agents/solution_verifier_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5ac7923000203792340319ad7f34b3d6502c40b",
+      "size": 4705
+    },
+    {
+      "path": "lab-forge/agents/starter_code_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c6935d34a205cb569619d08ca6685d63808a5d6",
+      "size": 4191
+    },
+    {
+      "path": "lab-forge/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1645353313284594a3d99d475ea15a9cdb2f44b7"
+    },
+    {
+      "path": "lab-forge/references/autograder_patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a5ea0910ad0d1a037567c29cd5c6209b3711a3a",
+      "size": 7394
+    },
+    {
+      "path": "lab-forge/references/synthetic_data_patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c77fde56b7a86575f11b1ccbad8647390e6ae3de",
+      "size": 7262
+    },
+    {
+      "path": "lab-forge/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe38a1625accec4458461a146f8fbc4cf47fc06f"
+    },
+    {
+      "path": "lab-forge/templates/lab_handout_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c116514f8b1c8569bf1cd4351e1e182bb347997",
+      "size": 4305
+    },
+    {
+      "path": "lesson-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce7881c8e1e2841768f2d6646cf966773e498298"
+    },
+    {
+      "path": "lesson-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2142f057494735ef6105feeaa7831683f5238cfa",
+      "size": 9727
+    },
+    {
+      "path": "lesson-builder/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "350a0dd4a73f1f85fc7ba80c62baadf1b67be4d1"
+    },
+    {
+      "path": "lesson-builder/agents/activity_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c776acc376f50230218779723a9c772ebfdd7c07",
+      "size": 3694
+    },
+    {
+      "path": "lesson-builder/agents/case_study_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39213cc57d8e297e2e6bdc3951cee697bdd17776",
+      "size": 3894
+    },
+    {
+      "path": "lesson-builder/agents/discussion_designer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "572c1031b4a62f3ab35d1c8981dd7cad143c3fb6",
+      "size": 4219
+    },
+    {
+      "path": "lesson-builder/agents/lecture_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036a254a8a18cb34562841c6335189cb27b9f305",
+      "size": 3799
+    },
+    {
+      "path": "lesson-builder/agents/lesson_planner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5f61f542ee2bb8b4ab42e253673f0a98a696fa",
+      "size": 3750
+    },
+    {
+      "path": "lesson-builder/agents/slide_outliner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a65922747ec6fe00f8b4225ae97b42a0c328c3e6",
+      "size": 3751
+    },
+    {
+      "path": "lesson-builder/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e3892b4189d6c1ace09638d51482dd351f1c063"
+    },
+    {
+      "path": "lesson-builder/references/active_learning_catalog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a0ab3b5ef91858727317c768ed4371c4180bfbc",
+      "size": 12013
+    },
+    {
+      "path": "lesson-builder/references/lesson_anatomy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e179370676f20d2a560da0cb1e1413a984228a0f",
+      "size": 5487
+    },
+    {
+      "path": "lesson-builder/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e388b24a9357bc58cd8a661322218d1196c33682"
+    },
+    {
+      "path": "lesson-builder/templates/activity_sheet_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdf6e7713e506832e8f6266a2d08a270679301e1",
+      "size": 2391
+    },
+    {
+      "path": "lesson-builder/templates/lesson_plan_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d8b0fc11b940f8dd5bf64c3fc1f44adb2cad502",
+      "size": 2134
+    },
+    {
+      "path": "media-scripter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06f8362251abe9203fca51c4c129f401b1701664"
+    },
+    {
+      "path": "media-scripter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02a6bb78e0a06930b84cc86ea0006a138181e40a",
+      "size": 10500
+    },
+    {
+      "path": "media-scripter/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a7dddda24ad4cef0caf18c31227b7dcd19330fa"
+    },
+    {
+      "path": "media-scripter/agents/script_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29d8abf32737051b2562bdfe48c5195a75582885",
+      "size": 4672
+    },
+    {
+      "path": "media-scripter/agents/segmenter_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3985d1c2ec694b54f1b0aff5754aa22a9574bc30",
+      "size": 4128
+    },
+    {
+      "path": "media-scripter/agents/storyboard_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "553fcc13dd50d8ecd756dda59d3a8cdbd7cb87dd",
+      "size": 4622
+    },
+    {
+      "path": "media-scripter/agents/transcript_editor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa07dfe287e75639fc05a48547008ce11012daa0",
+      "size": 4300
+    },
+    {
+      "path": "media-scripter/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "142de33be266396c32967080f6127d023960c3c2"
+    },
+    {
+      "path": "media-scripter/references/video_pedagogy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce9e59fe0bc7b0c6ceda23ee762220a79649f945",
+      "size": 7281
+    },
+    {
+      "path": "media-scripter/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ea5def3b931c9c29e6f01e6217ee982c0f59f24"
+    },
+    {
+      "path": "media-scripter/templates/script_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fdc447777ff7b231e7dbdba68009a958762e34f",
+      "size": 3234
+    },
+    {
+      "path": "media-scripter/templates/series_map_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2e2f218c712b9f8d900713342e4ea907ae3b4d0",
+      "size": 2297
+    },
+    {
+      "path": "requirements-dev.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7771bfbb4d87b21c6397d9b76f88c251958f1c81",
+      "size": 41
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5195e9d4d2b1f183c0c73baf242190e6d5fcddfc"
+    },
+    {
+      "path": "scripts/__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f25ebb0b5cd679aa0157caa5e7d6815587ad2e0c"
+    },
+    {
+      "path": "scripts/__pycache__/build_codex.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f1e7ee7f851e04855b0daad3404c037f5e1bf38",
+      "size": 27056
+    },
+    {
+      "path": "scripts/__pycache__/build_dashboard.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca40dbfc1cb92edb6719f75676031944619f00d0",
+      "size": 38222
+    },
+    {
+      "path": "scripts/__pycache__/check_alignment_gate.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f23dde1ee5a006afe605dfc296fafa5d78fc0807",
+      "size": 14718
+    },
+    {
+      "path": "scripts/__pycache__/check_content_markers.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1f9fbbcfb4667b786a30713dcc80cbbfee3189f",
+      "size": 6206
+    },
+    {
+      "path": "scripts/__pycache__/check_links.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdaea6ad0da94ceaecb45893e7790112e62c3465",
+      "size": 4344
+    },
+    {
+      "path": "scripts/__pycache__/check_passport.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45ecdec3ae5fb70fa1670e4277ce0fe8fbef468f",
+      "size": 14019
+    },
+    {
+      "path": "scripts/__pycache__/check_quality_gate.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80f8d586a46371b3b5ba08135e5693eb865a1c56",
+      "size": 10708
+    },
+    {
+      "path": "scripts/__pycache__/check_registry_consistency.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33d0a2510f4e0fd0f4a29ff1ed82c9fa34543a9c",
+      "size": 11222
+    },
+    {
+      "path": "scripts/__pycache__/export_lms.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b22eaad8d5e41a493948b02e7c6dec1a679df184",
+      "size": 16181
+    },
+    {
+      "path": "scripts/__pycache__/render_document.cpython-312.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20ee9a8bc14c7ad534ad7745a9c6a79092ec66d3",
+      "size": 5687
+    },
+    {
+      "path": "scripts/build_codex.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93b2cf382d547538ecf59f55077165166c8d7683",
+      "size": 22802
+    },
+    {
+      "path": "scripts/build_dashboard.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "933182f80a5b7166aece5110ce3c8f59f5079738",
+      "size": 23536
+    },
+    {
+      "path": "scripts/check_alignment_gate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2f25d3daa0a47d9195153aeccf38534c997b18e",
+      "size": 10257
+    },
+    {
+      "path": "scripts/check_content_markers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f91d8c51edf9ce9869522bb97f6875a79c3c04",
+      "size": 3544
+    },
+    {
+      "path": "scripts/check_links.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ad89c3fbff3950de28b25b6f936502f7810e15e",
+      "size": 2954
+    },
+    {
+      "path": "scripts/check_passport.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7d7c400f9fff3c4ad4f825de0b8eff77187068d",
+      "size": 9431
+    },
+    {
+      "path": "scripts/check_quality_gate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a50565ea59f5b9ea1099ff30505b7dfabdc7468",
+      "size": 7376
+    },
+    {
+      "path": "scripts/check_registry_consistency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "775ecb8070a0b7c50f280c23cb681d7e0ac0509d",
+      "size": 7815
+    },
+    {
+      "path": "scripts/export_lms.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aabf7b22859367a3dd105fe8399cea2fde0d72d",
+      "size": 10980
+    },
+    {
+      "path": "scripts/render_document.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1cc0cdd7ad5dd4846fea099bbff93ac8d054aba",
+      "size": 3869
+    },
+    {
+      "path": "shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "641c3c160729008109ddc1404eb867f1062075ba"
+    },
+    {
+      "path": "shared/ai_era_integrity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "518eb6ca2e19c14caa782b6959970dd4c5f2d7ae",
+      "size": 4246
+    },
+    {
+      "path": "shared/alignment_gate_protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2012b4aa14c8c3ef7c5461aaa625d99a10248ae2",
+      "size": 4609
+    },
+    {
+      "path": "shared/checkpoint_protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41e533bd540d397053a0807f4147da42344eb97c",
+      "size": 4303
+    },
+    {
+      "path": "shared/course_passport.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5822d8d967a8e502a8458aeb93fbc99f14cd2180",
+      "size": 7725
+    },
+    {
+      "path": "shared/course_passport_schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4114355c18e00aa5178d40756eaf596b3c94456",
+      "size": 7385
+    },
+    {
+      "path": "shared/output_self_check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "202e74a000185a28cfff1158a83a27379dc47fd5",
+      "size": 2485
+    },
+    {
+      "path": "shared/pedagogy_foundations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab8172a092ba8812266e31443cc93e4802befe22",
+      "size": 11473
+    },
+    {
+      "path": "shared/quality_gate_protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "464f3d3d31ee1a0a9ed0675dca23fc8d75894894",
+      "size": 3687
+    },
+    {
+      "path": "shared/workload_constants.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a6351e6d8de67109b64f7eeb9ffbe1096851b4b",
+      "size": 1812
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81186ebe1161e4267a1fa9183d28b8561714140c"
+    },
+    {
+      "path": "skills/accreditation-mapper",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "3737f6ec266d0cf5ac037575d1ac9bc0926ae503",
+      "size": 23
+    },
+    {
+      "path": "skills/assessment-architect",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "b17bb330aa9dfa7fac259285f9b74de0b1cf02c8",
+      "size": 23
+    },
+    {
+      "path": "skills/bilingual-courseware",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "aefefef0988e878dfba7016733027d8f00e7cd0e",
+      "size": 23
+    },
+    {
+      "path": "skills/cohort-analyst",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "4a216a31f845f31a8f2045324bd08743d9ed62f3",
+      "size": 17
+    },
+    {
+      "path": "skills/course-designer",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "5ac84079261a8e1c32a6763c6127923f08052eb3",
+      "size": 18
+    },
+    {
+      "path": "skills/course-publisher",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "4b21aea647c36eafe89d69306ee22566ce0942af",
+      "size": 19
+    },
+    {
+      "path": "skills/deck-studio",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "a41ee298535e70fec9c81cf6c9286d62f78ddb35",
+      "size": 14
+    },
+    {
+      "path": "skills/lab-forge",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "7b55ca0f0d9798713d8464f35d0186be224ad6b3",
+      "size": 12
+    },
+    {
+      "path": "skills/lesson-builder",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "0c61834e3a34b800ed4552aa2d1f889b8481405f",
+      "size": 17
+    },
+    {
+      "path": "skills/media-scripter",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "0df2c96ddee25ed7b31c108af76edae4c571fcbe",
+      "size": 17
+    },
+    {
+      "path": "skills/student-mentor",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "91287a6a766f3518a2d1afebf70f1712764f2785",
+      "size": 17
+    },
+    {
+      "path": "skills/submission-auditor",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "84de5ce11bb3e8aefb6c21b164302eaf1e3e2925",
+      "size": 21
+    },
+    {
+      "path": "skills/ta-coordinator",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "e70a95079f4fceb0452979b465175f823b945e13",
+      "size": 17
+    },
+    {
+      "path": "skills/teaching-pipeline",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "85dfbef95d12a7bddae4d182c1b755a86ce12429",
+      "size": 20
+    },
+    {
+      "path": "skills/teaching-reflector",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "dc8c122c9bd137894f730e40e5df34d4138d85de",
+      "size": 21
+    },
+    {
+      "path": "student-mentor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b7564540343e701b30352ab305ae08f01daf361"
+    },
+    {
+      "path": "student-mentor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e14f97f2a3894d8db043cc094fae071286fae1",
+      "size": 12940
+    },
+    {
+      "path": "student-mentor/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed9e859690e96809b0da930ac36f0748e753797a"
+    },
+    {
+      "path": "student-mentor/agents/communication_coach_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "268263c22b7180d31bc20731f52b72ddd8ec669b",
+      "size": 4149
+    },
+    {
+      "path": "student-mentor/agents/feedback_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c69f7ff2e5887a57dfc8633d719a4644c7a3ff2",
+      "size": 3862
+    },
+    {
+      "path": "student-mentor/agents/integrity_case_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17b4789f8ec4e35da36629d2a42d2148d1da6afc",
+      "size": 4961
+    },
+    {
+      "path": "student-mentor/agents/intervention_advisor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3b0f69c0f447fa35c95b6e9dd28ad2d27236426",
+      "size": 3797
+    },
+    {
+      "path": "student-mentor/agents/mentoring_planner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae41a881e8e423e6f27e2585bb277f6a21a6bf4b",
+      "size": 4435
+    },
+    {
+      "path": "student-mentor/agents/recommendation_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdf3aef5e6e146155393272a3bbf4419f08bee4e",
+      "size": 4488
+    },
+    {
+      "path": "student-mentor/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b1d94d8d454b472b790b66701989c85145bbd09"
+    },
+    {
+      "path": "student-mentor/references/feedback_principles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb35d1d4629a35160815f05b5b4097bcc01a7160",
+      "size": 6668
+    },
+    {
+      "path": "student-mentor/references/integrity_process_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77e22361600b6919f14ca21b0c1114d8c1552d03",
+      "size": 4959
+    },
+    {
+      "path": "student-mentor/references/recommendation_letter_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25944ef92a0b662a870e97e95a3e12ffd47fd323",
+      "size": 6227
+    },
+    {
+      "path": "student-mentor/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c6a133b62a943bf675342e65286b5746b2d3d12"
+    },
+    {
+      "path": "student-mentor/templates/feedback_comments_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7e16c2d7d7439f1623a64d202c53659af5f6751",
+      "size": 1344
+    },
+    {
+      "path": "student-mentor/templates/intake_record_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41673a7ebe6363fec9d44e31269261f2778dd0a4",
+      "size": 1680
+    },
+    {
+      "path": "student-mentor/templates/integrity_case_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44a521a8dd0108dd6c752c3878cdaa3fdaea1438",
+      "size": 4685
+    },
+    {
+      "path": "student-mentor/templates/intervention_outreach_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7704438076b446db8fe7a3f13feafe14588b8837",
+      "size": 3393
+    },
+    {
+      "path": "student-mentor/templates/mentoring_expectations_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35144708e01aac1bcd6f05e1fe8cc358ba0a40be",
+      "size": 4264
+    },
+    {
+      "path": "student-mentor/templates/recommendation_letter_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80cd0ac804a03d3b39ac5c74c48801f5fa1a4f43",
+      "size": 2077
+    },
+    {
+      "path": "submission-auditor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9bfa23e2d497c948cf9dd41fbf02f2d66d56c30c"
+    },
+    {
+      "path": "submission-auditor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46adb631687ec846990cf3399476a8aeaaee9353",
+      "size": 9211
+    },
+    {
+      "path": "submission-auditor/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14c244a53e5830c9f4769be379ea7e625dd9c8bf"
+    },
+    {
+      "path": "submission-auditor/agents/content_auditor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "868742fdb5a49d42c77a8ecf906fc44d9095fd7e",
+      "size": 3103
+    },
+    {
+      "path": "submission-auditor/agents/format_auditor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa34ff7f3457a9ee07f20ff5bbb9d4bddd578e7b",
+      "size": 2734
+    },
+    {
+      "path": "submission-auditor/agents/report_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "317f217fb217033854680712cd99fa789455156e",
+      "size": 3465
+    },
+    {
+      "path": "submission-auditor/agents/spec_compiler_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c034d362de19c4a67fe6544037e687d8af6bf0f",
+      "size": 3061
+    },
+    {
+      "path": "submission-auditor/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "289c25ac321c97500a8d9cada26a453ca7655a9e"
+    },
+    {
+      "path": "submission-auditor/references/spec_design_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8935b1b59146b9b46d219416ff3c6df8ebde34a",
+      "size": 4657
+    },
+    {
+      "path": "submission-auditor/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fcab644855223ecb0976082fcec4d3b8685e6bbd"
+    },
+    {
+      "path": "submission-auditor/templates/feedback_report_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d35649067dda4ef6f85a1eb0d3603699b2b6acf1",
+      "size": 1433
+    },
+    {
+      "path": "submission-auditor/templates/submission_spec_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0ce07f993c658bd08d8888347d9c3505b28ec3",
+      "size": 2028
+    },
+    {
+      "path": "ta-coordinator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b2120ca9e9051c7552a71ab7479631367a871ca"
+    },
+    {
+      "path": "ta-coordinator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e49d0bce55b9f70b12b2cd521235826fa505d5cd",
+      "size": 8960
+    },
+    {
+      "path": "ta-coordinator/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c73e7c7e41c787c3fc55c0026096125125c60c9"
+    },
+    {
+      "path": "ta-coordinator/agents/calibration_facilitator_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf9592283e531d1ee0e25e577a3414017581c4b4",
+      "size": 4508
+    },
+    {
+      "path": "ta-coordinator/agents/consistency_auditor_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46a82047766c398a6ae25184dbd99b38d24fc6c8",
+      "size": 4681
+    },
+    {
+      "path": "ta-coordinator/agents/onboarding_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4c49834091ba7b56de260831b3dfa0217f85cd4",
+      "size": 4495
+    },
+    {
+      "path": "ta-coordinator/agents/workload_allocator_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b338a8312210f897965c201182e037bc64ab3719",
+      "size": 4186
+    },
+    {
+      "path": "ta-coordinator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "373c07adf78d021aad17e48f4627ef597fb62608"
+    },
+    {
+      "path": "ta-coordinator/references/ta_management_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5cd98725b0329803cdd2c64317eb469b58e098f",
+      "size": 11493
+    },
+    {
+      "path": "ta-coordinator/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d109ea7a13682e16a691350fabdd8e74fcef0341"
+    },
+    {
+      "path": "ta-coordinator/templates/calibration_session_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2ec60431d9bbc7c6555fe834570e548109baa3e",
+      "size": 3705
+    },
+    {
+      "path": "ta-coordinator/templates/ta_handbook_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be04ad42ab7a9a2a31a328334f783c76f8cad49b",
+      "size": 4685
+    },
+    {
+      "path": "teaching-pipeline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bc64ce5c7fe02cc6307e4c9bbcbb742806d6f42"
+    },
+    {
+      "path": "teaching-pipeline/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb2e21b62fb88e62b7adfb5823712e326454da1a",
+      "size": 16247
+    },
+    {
+      "path": "teaching-pipeline/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e4e472e470c67b9e42d1875a8f5002063c210963"
+    },
+    {
+      "path": "teaching-pipeline/agents/gate_runner_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6b44c2181af207d645f3353821060e75306ac00",
+      "size": 5026
+    },
+    {
+      "path": "teaching-pipeline/agents/iteration_coach_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "344635928bc7738fd1ddf6fced422e88546a6815",
+      "size": 3713
+    },
+    {
+      "path": "teaching-pipeline/agents/passport_keeper_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bdb9174cf9e59d44febd6c510bb07ed6bff6452",
+      "size": 3824
+    },
+    {
+      "path": "teaching-pipeline/agents/pipeline_orchestrator_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "370d065f54dc0cec215b814846382c2ca07037ca",
+      "size": 4039
+    },
+    {
+      "path": "teaching-pipeline/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afb3a2e02cdfde41a7964786eb596e07fee2e16c"
+    },
+    {
+      "path": "teaching-pipeline/references/pipeline_state_machine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dff640beff328c7edb350ef3ac0a3ebf86e0719f",
+      "size": 9991
+    },
+    {
+      "path": "teaching-reflector",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0dfd34a577941777ea3ec09f13e8b9275282a51d"
+    },
+    {
+      "path": "teaching-reflector/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91379b5d7eb0e0487c0a2837fb4d70a31ae69ed7",
+      "size": 8633
+    },
+    {
+      "path": "teaching-reflector/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23efc0d3efded76c0508612e9d5c6c0d3392952b"
+    },
+    {
+      "path": "teaching-reflector/agents/eval_analyst_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8bdecc74db58d5164ffb68412ddf2d07683cba5",
+      "size": 3882
+    },
+    {
+      "path": "teaching-reflector/agents/midcourse_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad45a1bd675b34efb4841fe30240b41f006cf9cf",
+      "size": 3779
+    },
+    {
+      "path": "teaching-reflector/agents/observation_prep_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "875066dc0cf862c64f582ea74442e9865a818367",
+      "size": 3751
+    },
+    {
+      "path": "teaching-reflector/agents/portfolio_builder_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcd3fe8a5d7046377193b10bc264ae9b5d7b5b2f",
+      "size": 3735
+    },
+    {
+      "path": "teaching-reflector/agents/sotl_consultant_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de2a4d0ed5004bb3525b47d5bc3e71dab1103779",
+      "size": 4591
+    },
+    {
+      "path": "teaching-reflector/agents/statement_writer_agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b90a4e7bb3052a5964a70a4725dafd2dc53b9b2f",
+      "size": 4026
+    },
+    {
+      "path": "teaching-reflector/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3bc03c555ae82db7e587743b205dff88b47b0af1"
+    },
+    {
+      "path": "teaching-reflector/references/eval_analysis_protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa977c411c4e87273e9ef43c5a7d73c30db0113",
+      "size": 7746
+    },
+    {
+      "path": "teaching-reflector/references/teaching_statement_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e35f5ed10b59756019902e7dac2d64694f11e52",
+      "size": 7714
+    },
+    {
+      "path": "teaching-reflector/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75bf0cce4eb6261fb98e88306a57e6c32d407a28"
+    },
+    {
+      "path": "teaching-reflector/templates/midcourse_survey_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41c7bc35e76b7b42d0d81f182304c7e2738619de",
+      "size": 3332
+    },
+    {
+      "path": "teaching-reflector/templates/observation_brief_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc5f7a5eff937e769677713459d1c06c77bae320",
+      "size": 4063
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0004cda46a14989a43165c57528c16594de5f4c"
+    },
+    {
+      "path": "tests/__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29f8e5514764118eae98c53abc86bd71be24877e"
+    },
+    {
+      "path": "tests/__pycache__/test_adoption_tooling.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74c9b0e45d2b1f7d01b46546b80f8bd3c2c7e2ba",
+      "size": 12215
+    },
+    {
+      "path": "tests/__pycache__/test_build_codex.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28ca9819c5cacde1a9009c5abf188fa9829a21ad",
+      "size": 25273
+    },
+    {
+      "path": "tests/__pycache__/test_content_markers.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "995bbd3120737945b99b1bd95c9d1e25ea7d93b0",
+      "size": 5318
+    },
+    {
+      "path": "tests/__pycache__/test_dashboard.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f488551e34cbe10e4a5cee838defa072b93bb6ed",
+      "size": 10940
+    },
+    {
+      "path": "tests/__pycache__/test_quality_gate.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0203c408379725067e4a1b4ae8c020fb75917689",
+      "size": 6670
+    },
+    {
+      "path": "tests/__pycache__/test_registry.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd3c1346b3e4267c060a2820a25f9e4b2bd2b2f0",
+      "size": 2039
+    },
+    {
+      "path": "tests/__pycache__/test_repo_integrity.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20419f9c7d221c88df0a23685bd49b218ba0c1af",
+      "size": 9965
+    },
+    {
+      "path": "tests/__pycache__/test_validators.cpython-312-pytest-7.4.4.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9f17fe0832a35a5cc43ba9b6936818286f5b7d9",
+      "size": 28640
+    },
+    {
+      "path": "tests/test_adoption_tooling.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e613e0c88141c6a67e890c1e9e9a36ea6ac68b63",
+      "size": 2949
+    },
+    {
+      "path": "tests/test_build_codex.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9a9a2b46c6b500a4842371fb5a065eef573656",
+      "size": 5553
+    },
+    {
+      "path": "tests/test_content_markers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e211ff3bee48dd7acb60c77ad6a66a8e8d77c3c4",
+      "size": 1167
+    },
+    {
+      "path": "tests/test_dashboard.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54aaf2eb3e1dbb3f48b9089496ec34f6460ced08",
+      "size": 2828
+    },
+    {
+      "path": "tests/test_quality_gate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "094ce2d21234358d0a2a45abad7fb198bb81f6e9",
+      "size": 1398
+    },
+    {
+      "path": "tests/test_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e5e5308c93d60c49412d7cdd73957a161aa3efc",
+      "size": 371
+    },
+    {
+      "path": "tests/test_repo_integrity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5184c3a5f7e4a2c94197f6e1c0d3126fadbb6dc2",
+      "size": 2744
+    },
+    {
+      "path": "tests/test_validators.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5971ec00040cd11938631a7f260b8b584924a20f",
+      "size": 8187
+    }
+  ]
+}

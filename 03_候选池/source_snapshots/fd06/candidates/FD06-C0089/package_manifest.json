@@ -1,0 +1,38 @@
+[
+  {
+    "path": "skills/arts-crafts/SKILL.md",
+    "type": "blob",
+    "size": 11948,
+    "sha": "7e91733939c8eaafe148b3fd5020931615239c92"
+  },
+  {
+    "path": "skills/arts-crafts/evals/evals.json",
+    "type": "blob",
+    "size": 2959,
+    "sha": "8e031a5d5944b0de5a39b620e2d2383285babec3"
+  },
+  {
+    "path": "skills/arts-crafts/references/catalog.md",
+    "type": "blob",
+    "size": 18573,
+    "sha": "58eaa9203f9b96a0478360c3f9a150e69a294fa2"
+  },
+  {
+    "path": "skills/arts-crafts/references/fine-motor.md",
+    "type": "blob",
+    "size": 4902,
+    "sha": "d6fa3c49126ab3e1520534613f52177bb35fbd31"
+  },
+  {
+    "path": "skills/arts-crafts/references/safety.md",
+    "type": "blob",
+    "size": 4855,
+    "sha": "6c3b11ce05af80497974e53711a389dfa1ba5f03"
+  },
+  {
+    "path": "skills/arts-crafts/references/substitutions.md",
+    "type": "blob",
+    "size": 5275,
+    "sha": "14293533a66763164b1889fe7c839d68bad334d9"
+  }
+]

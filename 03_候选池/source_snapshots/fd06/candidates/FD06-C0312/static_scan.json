@@ -1,0 +1,31 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/medical-education-designer/SKILL.md",
+        "snippet": "ceptions, and evidence references 7. **Peer review**: Have a subject matter expert and an educator review the case 8. **Pilot test**: Run the case with a small group and refine based on feedback ### Case Structure Template"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/medical-education-designer/SKILL.md",
+        "snippet": "ferently?\" | **Debriefing Best Practices** - Create a psychologically safe environment (confidentiality, no judgment) - Use a curious, non-judgmental tone: \"Help me understand...\" not \"Why didn't you...\" - Ask open-ended qu"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/medical-education-designer/SKILL.md",
+        "snippet": "deployment - [ ] Equipment is maintained and tested before each session - [ ] Participant confidentiality is maintained ## Case-Based Learning ### Case Development Process 1. **Identify the learning objective**: What shoul"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/medical-education-designer/SKILL.md",
+        "snippet": "rs with feedback | Feasible, longitudinal, formative | Single-point observation, assessor bias | | 360-degree feedback | Behavior as perceived by multiple raters | Multi-perspective, captures interpersonal skills |"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/medical-education-designer/SKILL.md",
+        "snippet": "ltiple raters | Multi-perspective, captures interpersonal skills | Subjectivity, leniency bias | | Portfolio | Longitudinal evidence of growth | Learner-driven, comprehensive, reflective | Time-intensive to create"
+      }
+    ]
+  },
+  "read_errors": []
+}

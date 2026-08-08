@@ -1,0 +1,25 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "library/specializations/domains/social-sciences-humanities/education/skills/quality-assurance-review/SKILL.md",
+        "snippet": "ic systematically 3. Document observations 4. Assess each standard 5. Compile findings 6. Write feedback report 7. Support improvement ### Quality Criteria - Alignment of objectives, activities, assessments - Clear navigation and"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "library/specializations/domains/social-sciences-humanities/education/skills/quality-assurance-review/SKILL.md",
+        "snippet": "pplication - Apply Quality Matters rubric - Use instructional design standards - Evaluate accessibility compliance - Assess alignment quality - Check technical functionality ### Review Process - Conduct systematic reviews"
+      },
+      {
+        "file": "library/specializations/domains/social-sciences-humanities/education/skills/quality-assurance-review/SKILL.md",
+        "snippet": "ogram Accreditation Preparation - E-Learning Course Authoring ### Collaborating Skills - accessibility-compliance-auditing - curriculum-gap-analysis - learning-analytics-interpretation ## References - Quality Matters rub"
+      },
+      {
+        "file": "library/specializations/domains/social-sciences-humanities/education/skills/quality-assurance-review/SKILL.md",
+        "snippet": "ality Matters rubric and standards - OSCQR rubric - Instructional design best practices - Accessibility standards"
+      }
+    ]
+  },
+  "read_errors": []
+}

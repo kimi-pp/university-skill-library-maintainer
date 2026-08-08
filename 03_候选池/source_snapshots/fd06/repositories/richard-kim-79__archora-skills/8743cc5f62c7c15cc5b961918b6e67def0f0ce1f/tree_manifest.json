@@ -1,0 +1,150 @@
+{
+  "repository": "richard-kim-79/archora-skills",
+  "fixed_version": "8743cc5f62c7c15cc5b961918b6e67def0f0ce1f",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3d5206b165a7080794def2aaaaa423f3695b492"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5ec7dce055b15dc9b5bc543df0325b4cb8108bc",
+      "size": 492
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b14b8220f0c75557a41293efe329736fdadc2a4b",
+      "size": 4729
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2deee8b6b9f58b2fa99489b6b0e33524d7e0d9a5"
+    },
+    {
+      "path": "skills/counterargument",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "077c5d34d84c1bf431e1d680a4e6d0e11c757b31"
+    },
+    {
+      "path": "skills/counterargument/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "681d2e86bf65eb6113bfba45dcd9a41a6f6cbfad",
+      "size": 2721
+    },
+    {
+      "path": "skills/draft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3842db65382a134fc242238232bac7676f23c3d9"
+    },
+    {
+      "path": "skills/draft/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e692d4a77c6e4a04bc41a09b2296142b72df33f",
+      "size": 2722
+    },
+    {
+      "path": "skills/figure",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5cc7488942529142b8569403e6bc80a38534efc"
+    },
+    {
+      "path": "skills/figure/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "423c7682fba070c1aeb3a8b190368a937d102324",
+      "size": 2962
+    },
+    {
+      "path": "skills/hypothesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78519c401a9886dee504e21e5ebd6d0073c59391"
+    },
+    {
+      "path": "skills/hypothesis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62526eface2eac03460ba00178963147cab56efe",
+      "size": 2515
+    },
+    {
+      "path": "skills/peer-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f5758be917787ea69dd3a58352f851baad439fe"
+    },
+    {
+      "path": "skills/peer-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "949cb3ee69efa8157b91e35f443064aecb3ffd03",
+      "size": 2947
+    },
+    {
+      "path": "skills/stats",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f8a632833a2f5545b3d6e628cb708c812c0c32c"
+    },
+    {
+      "path": "skills/stats/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82bfc0ebba09ff93003b7d53a704158470f7ecd0",
+      "size": 2663
+    },
+    {
+      "path": "skills/synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bce2aa244611d876352375089a7da1ae6aebfc8"
+    },
+    {
+      "path": "skills/synthesis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48f98f1e0bd90e6b81fb6ac2c79d029213ffed4d",
+      "size": 1892
+    },
+    {
+      "path": "skills/validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e08b998bc920747552c49d341c6ae70bbab3ef5"
+    },
+    {
+      "path": "skills/validation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1a9bfbb1d6393085b77a6628d3a34796215afaa",
+      "size": 2555
+    },
+    {
+      "path": "skills/wiki-sync",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c41c1f71cbe9076dfe8d356f8c706ef57c2ef5d4"
+    },
+    {
+      "path": "skills/wiki-sync/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4340c7225b7aa5c08e66595192bae5f642083b6",
+      "size": 2994
+    }
+  ]
+}

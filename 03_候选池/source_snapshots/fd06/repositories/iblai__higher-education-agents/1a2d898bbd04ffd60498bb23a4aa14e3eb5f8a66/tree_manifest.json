@@ -1,0 +1,919 @@
+{
+  "repository": "iblai/higher-education-agents",
+  "fixed_version": "1a2d898bbd04ffd60498bb23a4aa14e3eb5f8a66",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".config-hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0a653435e7f69f856a315c5f8bd636e50a4407c",
+      "size": 80
+    },
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c4b4512c573eaf287ec331cb75d7e7cefd1e37a",
+      "size": 3133
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ece989575dccb7a8e43f8667631b4186fa2a7bcd",
+      "size": 1063
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ec32e50129bcc99ec334036a7fba9bcf1c32fc8",
+      "size": 10780
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62e52c0ea6a63eef1f55cf911296c900a80fcb99"
+    },
+    {
+      "path": "agents/academic-advisor-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bbd4e34d33ee9525a766cda5a1d4e5d34afbd98c"
+    },
+    {
+      "path": "agents/academic-advisor-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb52a9953df41c7a2c61adff9e710f99ebff897e"
+    },
+    {
+      "path": "agents/academic-advisor-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd311e95f8353cf55f6c4b79e448c1682b0b81a",
+      "size": 170
+    },
+    {
+      "path": "agents/academic-advisor-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d46919927fa728dc25b4c02ac03eb7cc621d8e9c",
+      "size": 1213
+    },
+    {
+      "path": "agents/academic-advisor-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8dd94ea7340ab6bafd8ff8969fa115c94a4c323",
+      "size": 2744
+    },
+    {
+      "path": "agents/academic-advisor-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/administrative-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "728e0eae6853c31d1982641ad1a59e3a1dfd9071"
+    },
+    {
+      "path": "agents/administrative-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1510bdad71348ce63c8c1ccebadc09fc745282e"
+    },
+    {
+      "path": "agents/administrative-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "861db14259fce931fa9988a85aea1a73fd91d0dc",
+      "size": 225
+    },
+    {
+      "path": "agents/administrative-agent/agent/MEMORY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "410b3b49a76cdf8c0e249fa2de5108f673232847",
+      "size": 3193
+    },
+    {
+      "path": "agents/administrative-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e26718313d35ed01c62ed06396796b0cfa7fd710",
+      "size": 1493
+    },
+    {
+      "path": "agents/administrative-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60f4d8491f0737b341cf6f4a9de4917c6bb85981",
+      "size": 3963
+    },
+    {
+      "path": "agents/administrative-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/alumni-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba3fc3a4ab34320fa2c3d5f0c0e1703229188437"
+    },
+    {
+      "path": "agents/alumni-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c1e001d04043590d01901482c34ab7586c06e00"
+    },
+    {
+      "path": "agents/alumni-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f85c269980d4913226a5c7dfe75d2a24f6d01183",
+      "size": 226
+    },
+    {
+      "path": "agents/alumni-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3efd0fe219bc6d14512780ab6f68164bee293875",
+      "size": 1175
+    },
+    {
+      "path": "agents/alumni-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c655db335be7ac072a415ac19b937b4a00ddf8",
+      "size": 3392
+    },
+    {
+      "path": "agents/alumni-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/application-reader-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "767ec0fce7e8ef9d733af20f40daacbb53dba786"
+    },
+    {
+      "path": "agents/application-reader-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae1c79cd83693690d93e1995d01d18b33bc0579a"
+    },
+    {
+      "path": "agents/application-reader-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6eb66596c6c2fd95335dd30bf01e81dd0c702c5",
+      "size": 198
+    },
+    {
+      "path": "agents/application-reader-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75120250d8208bffc1dee42b941f36012c741397",
+      "size": 1273
+    },
+    {
+      "path": "agents/application-reader-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a75e3a74ba2baa4dcbfa8c7be02f409e517ac3a2",
+      "size": 2906
+    },
+    {
+      "path": "agents/application-reader-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/career-services-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eed2eb5e608580233105c69c2121a3bc9598c156"
+    },
+    {
+      "path": "agents/career-services-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eabc448a723cd503e0e0673ad881232baac07204"
+    },
+    {
+      "path": "agents/career-services-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7274c12c2d1d6054cacd9b73bbc1eab77557c72f",
+      "size": 198
+    },
+    {
+      "path": "agents/career-services-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2aad4da05a9e8f2bbc7b764ca26fa91d0a606da",
+      "size": 1280
+    },
+    {
+      "path": "agents/career-services-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efd8cdb718c8fbf72a3aa9d3b4c2cdfe19fb33d6",
+      "size": 3371
+    },
+    {
+      "path": "agents/career-services-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/continuing-education-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55686fbc540a51bcb367a3f2b4e7f4c9bc1e9e7c"
+    },
+    {
+      "path": "agents/continuing-education-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "911a47c1164c124132567715088fe301e4d4c977"
+    },
+    {
+      "path": "agents/continuing-education-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24c28cbf49560852accdf36f6c5fa7c69f66b6eb",
+      "size": 229
+    },
+    {
+      "path": "agents/continuing-education-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6750ecd8dc3ecb5260abf2b63b32427b98672c08",
+      "size": 1234
+    },
+    {
+      "path": "agents/continuing-education-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6589b0e80e558bd4553b11dba2fbab75e8183c12",
+      "size": 3361
+    },
+    {
+      "path": "agents/continuing-education-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/enrollment-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "507cfd7aba0e3b6e831689d5984386ec31780a3a"
+    },
+    {
+      "path": "agents/enrollment-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3742c7a93c02d5a004889aa170b7c126e90e44b"
+    },
+    {
+      "path": "agents/enrollment-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b41dcf87a227dbc4b0a64b891edca2bdc913c50d",
+      "size": 185
+    },
+    {
+      "path": "agents/enrollment-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83aea562e2fc26d49c297a2c8f0452ef7634019d",
+      "size": 1030
+    },
+    {
+      "path": "agents/enrollment-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "454d114a21b85cb6e924c8a06cde7881fb9f5382",
+      "size": 3110
+    },
+    {
+      "path": "agents/enrollment-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/faculty-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b7789acd8efdc0744b694cf3ee3ae3dc7030263"
+    },
+    {
+      "path": "agents/faculty-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26e61b35e0871e5be7507230a007089129267af1"
+    },
+    {
+      "path": "agents/faculty-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bea1e7817a014e16889a2d9d21a9b5c868ee13d9",
+      "size": 210
+    },
+    {
+      "path": "agents/faculty-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f117579ccc286681a5c9b921c1a9baf91dd3280e",
+      "size": 1349
+    },
+    {
+      "path": "agents/faculty-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c39afe6f1acc85faa9ff8d8688308d646374dd7",
+      "size": 3159
+    },
+    {
+      "path": "agents/faculty-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/financial-aid-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73aba74f5310ff167421cb6d3a2c316e985256f6"
+    },
+    {
+      "path": "agents/financial-aid-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da64c569c8fa22ba7f06dd2182f8db64c2db3524"
+    },
+    {
+      "path": "agents/financial-aid-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67adb8f1f11ebab28c4a36f52583e9612fbbed57",
+      "size": 187
+    },
+    {
+      "path": "agents/financial-aid-agent/agent/MEMORY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da80c1dbd23f0ef8709f9327cea3a12f44c553b6",
+      "size": 2564
+    },
+    {
+      "path": "agents/financial-aid-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8334f16c9b204ed943712f90b699cb0f5420bd31",
+      "size": 1281
+    },
+    {
+      "path": "agents/financial-aid-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68a81a9747f50bb95691fe3209606eafe94bcce5",
+      "size": 3390
+    },
+    {
+      "path": "agents/financial-aid-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/higher-education-assistant",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5284141a19333d402507ee8e22557b8dd445f49a"
+    },
+    {
+      "path": "agents/higher-education-assistant/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebb9e6f17f5372abd17db4d0c1305f7313faf335"
+    },
+    {
+      "path": "agents/higher-education-assistant/agent/AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65e8a1c397d64855496cb3a457578182c11ed4bc",
+      "size": 2895
+    },
+    {
+      "path": "agents/higher-education-assistant/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0170980eebd8ddca868a6f2c2effe25388eb636c",
+      "size": 214
+    },
+    {
+      "path": "agents/higher-education-assistant/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4364e0f07ca85718edd62c59ea0c4a19ae6ea6c0",
+      "size": 1207
+    },
+    {
+      "path": "agents/higher-education-assistant/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f383160333861df92066395f591ca418f8fc829",
+      "size": 2018
+    },
+    {
+      "path": "agents/higher-education-assistant/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/it-help-desk-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91d198c9c88f0788d361fdfe329add0c670770c1"
+    },
+    {
+      "path": "agents/it-help-desk-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8256bfd2fa5db53abb5868f863b97430a4898eb6"
+    },
+    {
+      "path": "agents/it-help-desk-agent/agent/HEARTBEAT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "780592a413561ceb83948f766fea775cdfe1297e",
+      "size": 1018
+    },
+    {
+      "path": "agents/it-help-desk-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e5be41ec248a67458bf4fbed1c97091a2bb0b4",
+      "size": 194
+    },
+    {
+      "path": "agents/it-help-desk-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8a97f39568e41603759435198b2b6a056cf4801",
+      "size": 1323
+    },
+    {
+      "path": "agents/it-help-desk-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b6b73668f0d1d21f256101ec6c104a1589e20e6",
+      "size": 3377
+    },
+    {
+      "path": "agents/it-help-desk-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/prospective-student-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "813444505f42cf89a18c696563818bb18017be80"
+    },
+    {
+      "path": "agents/prospective-student-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ef92f8945338a49f435e31b20cbfcf838b220a9"
+    },
+    {
+      "path": "agents/prospective-student-agent/agent/BOOTSTRAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ac2d9dba49f4a7fdda6f2479a981a27b6d4c5c0",
+      "size": 1284
+    },
+    {
+      "path": "agents/prospective-student-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "808379004ef91bb531fdf144bcf7bef9ab33fbf4",
+      "size": 214
+    },
+    {
+      "path": "agents/prospective-student-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ce32061c3fcdc4cfceaa64ed1d7c19c2e1ab5fe",
+      "size": 1313
+    },
+    {
+      "path": "agents/prospective-student-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dade2f01c22ce61f3925b869d644ba7d358f8107",
+      "size": 3530
+    },
+    {
+      "path": "agents/prospective-student-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/research-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "743319bbdbb221aa13a92e877812189b55aa8703"
+    },
+    {
+      "path": "agents/research-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cb2abcf3c95f77ce8af3ed611bb86f34b0b46cd"
+    },
+    {
+      "path": "agents/research-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b68abcbe425748381ef995a3fbc8999a483eed2",
+      "size": 192
+    },
+    {
+      "path": "agents/research-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a2b0176a3f1cb2b0787930c548ca2cd09e18d6",
+      "size": 1291
+    },
+    {
+      "path": "agents/research-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8867f1fa6e9f70aea71b6ad530dfa4caf6e42558",
+      "size": 4114
+    },
+    {
+      "path": "agents/research-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/retention-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a18a4451cc600387dcee10d8a0972ea17995b1f2"
+    },
+    {
+      "path": "agents/retention-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d0374d27e3c5d5463c15f563e768046049f7b9f"
+    },
+    {
+      "path": "agents/retention-agent/agent/HEARTBEAT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ed77b0c5f2eed8d3393e028f1ff31c7212cc34d",
+      "size": 988
+    },
+    {
+      "path": "agents/retention-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5e3cbe46866bec6061bd1f97e66a6011f432dd",
+      "size": 195
+    },
+    {
+      "path": "agents/retention-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d554c565922c6608a12646e1e44fb57b7499238b",
+      "size": 1269
+    },
+    {
+      "path": "agents/retention-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c5a940fdcbd8858a2f03a5e28c8fd1387ed1ed",
+      "size": 3305
+    },
+    {
+      "path": "agents/retention-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/student-services-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25bdfb023e909aceecdee97b1b5c1fc2dfa1b02c"
+    },
+    {
+      "path": "agents/student-services-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b1293036921769a9476a1eb130ee575da5a4e8e"
+    },
+    {
+      "path": "agents/student-services-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbf606effb0aa775568bb58d744f68e962aab135",
+      "size": 196
+    },
+    {
+      "path": "agents/student-services-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d1592b50735203743e50f83d4ce1d694605ea3",
+      "size": 1385
+    },
+    {
+      "path": "agents/student-services-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "589bc35a3d818215d9f51d25056c8bf9ce2e7414",
+      "size": 3403
+    },
+    {
+      "path": "agents/student-services-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/tutoring-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a69660522b0e24f5d7093e0540e316a04afc8266"
+    },
+    {
+      "path": "agents/tutoring-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29e4826c09e0ac5c1936e57a8397093ad46023fa"
+    },
+    {
+      "path": "agents/tutoring-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15fa5b267c0fdf866dd9c725de52a1272db15a05",
+      "size": 169
+    },
+    {
+      "path": "agents/tutoring-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e24c369bc6864c5585d4724eb346bc2b36280f0",
+      "size": 1041
+    },
+    {
+      "path": "agents/tutoring-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1701129851ffb87c3689c9307a1e9c59e9fe090",
+      "size": 3395
+    },
+    {
+      "path": "agents/tutoring-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "agents/yield-agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "133750e3fe63d41aa8ebb71d051887bfe810a16c"
+    },
+    {
+      "path": "agents/yield-agent/agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48e053f7c647e6ec27be300a3a814f58e9b034b7"
+    },
+    {
+      "path": "agents/yield-agent/agent/IDENTITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8229f46bef38ecfa14f294e461de4f083703bf4",
+      "size": 191
+    },
+    {
+      "path": "agents/yield-agent/agent/SOUL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fe70264b0a8eaea100140883a3d843fa0dff869",
+      "size": 1311
+    },
+    {
+      "path": "agents/yield-agent/agent/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c419978c79d9e8ccc79375f537d7053fb0a4a8",
+      "size": 3389
+    },
+    {
+      "path": "agents/yield-agent/agent/auth-profiles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0420bb62da17cae03fa68aa9a17f4df2f15daf7",
+      "size": 306
+    },
+    {
+      "path": "openclaw.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc2bf27aee7591ef03890bd9865a4dccc806658",
+      "size": 8052
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "726a2610fec26fa6b2e04aaa9d90c1f3a97b19bb"
+    },
+    {
+      "path": "skills/banner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbffcf8f462e7f7f4a332d888d7c5f3636fc04f6"
+    },
+    {
+      "path": "skills/banner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a07c3dbb60fcdb70e6944c2004d3a22ed8ae782",
+      "size": 2474
+    },
+    {
+      "path": "skills/blackbaud-raisers-edge",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a448fef4dd756b737eaaec78c0022d74d3079e3c"
+    },
+    {
+      "path": "skills/blackbaud-raisers-edge/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd9855eb355da55e2ca3d395546d056c034eb772",
+      "size": 2857
+    },
+    {
+      "path": "skills/canvas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd169887c0aa494b75852d1ab6a35d48f18a7530"
+    },
+    {
+      "path": "skills/canvas/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65c25b32ccfd6e0d5b412869b87f0e5cf1ba9ef0",
+      "size": 2262
+    },
+    {
+      "path": "skills/civitas-learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5da50397997812baa8186251fcf035cd31e32a42"
+    },
+    {
+      "path": "skills/civitas-learning/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24ceeee6b5e1104a3c0587821bac7e08d1d46445",
+      "size": 2544
+    },
+    {
+      "path": "skills/eab-navigate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4173bd4b09a1130b1a19548991d759deaa5c6290"
+    },
+    {
+      "path": "skills/eab-navigate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d2253011e5ec15c16d72c1141ddf13fe215637e",
+      "size": 2394
+    },
+    {
+      "path": "skills/handshake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7b6587ef50e0efb9eb872aacba8efbdc35307c7"
+    },
+    {
+      "path": "skills/handshake/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ee533d45c85b89bf6a7c1d8f5839a80e191f6a9",
+      "size": 2516
+    },
+    {
+      "path": "skills/salesforce-education-cloud",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c7bffcd23b9b88009e36a438299a3d1e5100e4b"
+    },
+    {
+      "path": "skills/salesforce-education-cloud/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f72c399f085ec420d3e2ebaf1fe9833ea9bb359",
+      "size": 2717
+    },
+    {
+      "path": "skills/servicenow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "117c4b480f9bf3225f8e68fd1028cb6304a686fe"
+    },
+    {
+      "path": "skills/servicenow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1444e236be02ed14b901abaa431a5a3ce4dfbf40",
+      "size": 2528
+    },
+    {
+      "path": "skills/slate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc38920dab4651b026fc6c8d86f60d4523b1a2e8"
+    },
+    {
+      "path": "skills/slate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37d1adf16d9d4aff00320b914b1f62e6ad605831",
+      "size": 2417
+    },
+    {
+      "path": "skills/workday",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "671cedb185079c4666161c0dbde26323c31d14a8"
+    },
+    {
+      "path": "skills/workday/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39a4d78935312e049742f7b6ea7a2b21bb5195ce",
+      "size": 2510
+    },
+    {
+      "path": "workspace",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e"
+    },
+    {
+      "path": "workspace/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    }
+  ]
+}

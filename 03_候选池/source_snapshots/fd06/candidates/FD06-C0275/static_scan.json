@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "research-paper-review/README.md",
+        "snippet": "ect Knowledge or start of conversation - **Gemini** → Gems or start of conversation 3. Upload your paper (PDF) and ask for a review > **Tip:** For best results, paste the SKILL.md content first, then upload the paper and write: > *\"Review this paper"
+      }
+    ]
+  },
+  "read_errors": []
+}

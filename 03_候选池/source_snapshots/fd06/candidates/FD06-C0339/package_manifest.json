@@ -1,0 +1,116 @@
+[
+  {
+    "path": "skills/scholar-evaluation/SKILL.md",
+    "type": "blob",
+    "size": 10622,
+    "sha": "eb9695e75652dd60acb13fa2154992aaa6593948"
+  },
+  {
+    "path": "skills/scholar-evaluation/assets/evaluation_template.json",
+    "type": "blob",
+    "size": 1344,
+    "sha": "e5371ee2b3219683f9590fbc99d09113206c92bc"
+  },
+  {
+    "path": "skills/scholar-evaluation/assets/evidence_manifest_template.json",
+    "type": "blob",
+    "size": 1841,
+    "sha": "4c49e153ae35934d4433015c90407ce3c8941231"
+  },
+  {
+    "path": "skills/scholar-evaluation/assets/process_checklist_template.json",
+    "type": "blob",
+    "size": 2130,
+    "sha": "2e2559bf24b0623ee399193830ea9965f8e028e3"
+  },
+  {
+    "path": "skills/scholar-evaluation/assets/ratings_template.csv",
+    "type": "blob",
+    "size": 1762,
+    "sha": "c97c1c8e0adcf70dd030ed9664c42b0139f40dcb"
+  },
+  {
+    "path": "skills/scholar-evaluation/assets/rubric_template.json",
+    "type": "blob",
+    "size": 12111,
+    "sha": "38b281ab8aac37ed10e74552bb89dac23af8b790"
+  },
+  {
+    "path": "skills/scholar-evaluation/references/evaluation_framework.md",
+    "type": "blob",
+    "size": 9735,
+    "sha": "1fbbd82f5b2d3c3244b69ca271b1cbeac7c597d6"
+  },
+  {
+    "path": "skills/scholar-evaluation/references/local_tooling.md",
+    "type": "blob",
+    "size": 7908,
+    "sha": "9ced3895049fd24b5f8fad151680bcffd645252f"
+  },
+  {
+    "path": "skills/scholar-evaluation/references/responsible_assessment.md",
+    "type": "blob",
+    "size": 9134,
+    "sha": "a725c1d68a8dc80c41a2ff22caad4c96ba0ef057"
+  },
+  {
+    "path": "skills/scholar-evaluation/references/security_validation.md",
+    "type": "blob",
+    "size": 3897,
+    "sha": "65be38cccfbd07be244a92b0667999c8eae21436"
+  },
+  {
+    "path": "skills/scholar-evaluation/references/source_ledger.md",
+    "type": "blob",
+    "size": 12567,
+    "sha": "0a536f457cc560e21e758696c0b0bb4fb563133d"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/_common.py",
+    "type": "blob",
+    "size": 35590,
+    "sha": "eb0d80344f4cd42d17a0cbc4d0245d2b027a8925"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/calculate_scores.py",
+    "type": "blob",
+    "size": 1885,
+    "sha": "d6eb5d6ed100fc148c999459e4ee0b47a8b1172f"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/check_process.py",
+    "type": "blob",
+    "size": 8289,
+    "sha": "b9c2819ef13bcadf52236a53dff9e11b152c4665"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/check_traceability.py",
+    "type": "blob",
+    "size": 9071,
+    "sha": "3bc4c3e4ff309d93423102ea80c9b14b58a1e62f"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/generate_report_scaffold.py",
+    "type": "blob",
+    "size": 8986,
+    "sha": "4f5db9f178830b491251e410d8815a16f088278b"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/summarize_agreement.py",
+    "type": "blob",
+    "size": 8916,
+    "sha": "e5242e4cd995ace65b56e61096fca9399c4db5bd"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/validate_rubric.py",
+    "type": "blob",
+    "size": 1729,
+    "sha": "51b03bd4f704624e8de1d20fe8037fd4355eba32"
+  },
+  {
+    "path": "skills/scholar-evaluation/scripts/weight_sensitivity.py",
+    "type": "blob",
+    "size": 9231,
+    "sha": "428681847bbd601f63f7e9eddee11ca7c6e7c893"
+  }
+]

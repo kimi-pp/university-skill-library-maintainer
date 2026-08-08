@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/scientific-manuscript-review/SKILL.md",
+    "type": "blob",
+    "size": 11226,
+    "sha": "22206b21ebc69523466d165715d41871b50b4f56"
+  },
+  {
+    "path": "skills/scientific-manuscript-review/resources/evaluators/rubric_scientific_manuscript.json",
+    "type": "blob",
+    "size": 3734,
+    "sha": "311b98505083b2323da65ef7ef73e0fb45299dba"
+  },
+  {
+    "path": "skills/scientific-manuscript-review/resources/methodology.md",
+    "type": "blob",
+    "size": 4635,
+    "sha": "0517176793c0b2c418ece650b0fec49c4f18a02b"
+  },
+  {
+    "path": "skills/scientific-manuscript-review/resources/template.md",
+    "type": "blob",
+    "size": 5508,
+    "sha": "914490ac8f186e60dd7855f0d70967ca9aa13a13"
+  }
+]

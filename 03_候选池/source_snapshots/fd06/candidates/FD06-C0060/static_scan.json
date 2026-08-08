@@ -1,0 +1,151 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "sor publishes. Triggers on: announcement, weekly email, course website, course page, LMS, Canvas, Moodle, Blackboard, post materials, publish course, student FAQ, 课程通知, 周报, 课程网站, 课程主页, 学习平台, 发布课件, 课程公告, 常见问题.\" metada"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "ishes. Triggers on: announcement, weekly email, course website, course page, LMS, Canvas, Moodle, Blackboard, post materials, publish course, student FAQ, 课程通知, 周报, 课程网站, 课程主页, 学习平台, 发布课件, 课程公告, 常见问题.\" metadata: ve"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "riggers on: announcement, weekly email, course website, course page, LMS, Canvas, Moodle, Blackboard, post materials, publish course, student FAQ, 课程通知, 周报, 课程网站, 课程主页, 学习平台, 发布课件, 课程公告, 常见问题.\" metadata: version: \"1.0."
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "for my course — it's week 6 Build a course website from my passport Package weeks 1–4 for Canvas upload 学生总在问迟交政策，帮我整理一个常见问题页 帮我起草下周的课程周报 ``` ## Modes | Mode | Trigger intent | Output | |------|---------------|----"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "— plain HTML/Markdown for any static host or LMS pages | | `lms-package` | \"Get this into Canvas/Moodle/Blackboard\", post materials, 发布课件 | Upload-ready folder structure with naming conventions + per-LMS upload check"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "HTML/Markdown for any static host or LMS pages | | `lms-package` | \"Get this into Canvas/Moodle/Blackboard\", post materials, 发布课件 | Upload-ready folder structure with naming conventions + per-LMS upload checklist (t"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "arkdown for any static host or LMS pages | | `lms-package` | \"Get this into Canvas/Moodle/Blackboard\", post materials, 发布课件 | Upload-ready folder structure with naming conventions + per-LMS upload checklist (the skill ca"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "run `scripts/export_lms.py --to imscc` to build an IMS Common Cartridge (`.imscc`) that Canvas/Moodle/Blackboard import directly; render the syllabus and handouts to DOCX/PDF with `scripts/render_document.py` - `"
+      },
+      {
+        "file": "course-publisher/agents/lms_packager_agent.md",
+        "snippet": "istent names, and a checklist of what goes where with which settings. **You cannot access Canvas, Moodle, Blackboard, or any other LMS.** Say this plainly at the start of every package, and never phrase output as if"
+      },
+      {
+        "file": "course-publisher/agents/lms_packager_agent.md",
+        "snippet": "ames, and a checklist of what goes where with which settings. **You cannot access Canvas, Moodle, Blackboard, or any other LMS.** Say this plainly at the start of every package, and never phrase output as if somethin"
+      },
+      {
+        "file": "course-publisher/agents/lms_packager_agent.md",
+        "snippet": "d a checklist of what goes where with which settings. **You cannot access Canvas, Moodle, Blackboard, or any other LMS.** Say this plainly at the start of every package, and never phrase output as if something was upload"
+      },
+      {
+        "file": "course-publisher/agents/lms_packager_agent.md",
+        "snippet": "cklist makes the professor's two-minute verification systematic. Written generically for Canvas/Moodle/Blackboard (modules ≈ sections ≈ content areas; assignments carry due dates and points everywhere). LMS-specific"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "ages | | `lms-package` | \"Get this into Canvas/Moodle/Blackboard\", post materials, 发布课件 | Upload-ready folder structure with naming conventions + per-LMS upload checklist (the skill cannot access the LMS and says so plainly) | | `faq` | Recurring student questions, 常见问题 |"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "\", post materials, 发布课件 | Upload-ready folder structure with naming conventions + per-LMS upload checklist (the skill cannot access the LMS and says so plainly) | | `faq` | Recurring student questions, 常见问题 | Living FAQ: professor pastes the questions, answer"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "kager_agent` | Upload-ready packaging: folder/naming conventions, week-aligned structure, upload checklist per LMS; verifies completeness against `artifacts[]`; never claims to have uploaded | | `comms_planner_agent` | Semester commun"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "only.** This skill never sends, posts, publishes, or uploads. Every output ends with a review-and-publish-yourself note, non-removable by configuration. 3. **Consistency is checked, not hoped.** Each artifact regenerated cros"
+      },
+      {
+        "file": "course-publisher/agents/announcement_writer_agent.md",
+        "snippet": "cement_<topic>.md` with the fact-trace block; 🧑 checkpoint; the professor posts it. The review-and-publish-yourself note is non-removable. - Anything addressed to an *individual* student is not yours — route to `student-me"
+      },
+      {
+        "file": "course-publisher/agents/lms_packager_agent.md",
+        "snippet": "--- name: lms_packager_agent description: \"Organizes built artifacts into an upload-ready LMS package with checklists; cannot access any LMS and never claims to have uploaded\" --- # LMS Packager — Upload-Ready Structure Builder ## Role You organize what the"
+      },
+      {
+        "file": "course-publisher/agents/lms_packager_agent.md",
+        "snippet": "memory test. Anything missing → `[NEEDS PROFESSOR INPUT: ...]`. - Never claim or imply upload, publication, or LMS state. The package ends with the non-removable note: nothing is in front of students until the professor uploads, v"
+      },
+      {
+        "file": "course-publisher/references/student_comms_guide.md",
+        "snippet": "not submitted the project proposal which was due last week. It is very important that you submit as soon as possible as this affects your grade. Late penalties are described in the syllabus.\" | Guilt framing at the whole class; \"as soon as possible\" is not a dead"
+      },
+      {
+        "file": "course-publisher/templates/weekly_email_template.md",
+        "snippet": "k rule) — drafted separately\"}} > ⚠️ **Draft only (non-removable):** This skill does not send email. Review the facts > above against your own records, fill any [NEEDS PROFESSOR INPUT] markers, and send it > yourself. Status in"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "DS PROFESSOR INPUT: ...]` — shipped visibly, never guessed. A plausible wrong > date in a student email does more damage than a visible gap. ## Quick Start ``` Draft an announcement: Thursday's lecture moves to room B204"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "trigger | Scenario | Use instead | |----------|-------------| | Writing to an individual student (feedback, intervention, difficult email) | `student-mentor` | | Building the materials themselves — lessons, slides, activity sheets | `lesson-builder` / `deck"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "— it's week 6 Build a course website from my passport Package weeks 1–4 for Canvas upload 学生总在问迟交政策，帮我整理一个常见问题页 帮我起草下周的课程周报 ``` ## Modes | Mode | Trigger intent | Output | |------|---------------|--------| | `a"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "gister, flag once (Quality Gate I2 spirit); their call wins, with the reason logged. 5. **Accessibility by default.** Web and email output use semantic headings, real link text, alt text for images, and tables that survi"
+      },
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "e.md` — action-first anatomy, subject conventions, tone calibration, bad-news patterns, accessibility rules - `templates/weekly_email_template.md` - `templates/course_site_structure.md` - Shared: `shared/course_passport_s"
+      },
+      {
+        "file": "course-publisher/agents/comms_planner_agent.md",
+        "snippet": "| `assessment_plan` (each entry) | Logistics email: format, location, materials allowed, accommodation route | ≥2 weeks before the assessment date | | `assessment_plan` (exams) | Post-exam debrief: results posted where, re"
+      },
+      {
+        "file": "course-publisher/agents/site_builder_agent.md",
+        "snippet": "content files. Never introduce a framework dependency the professor didn't ask for. ## Accessibility checklist (Quality Gate U1, applied to web output) Before the checkpoint, verify and report: one `<h1>` per page with"
+      },
+      {
+        "file": "course-publisher/agents/site_builder_agent.md",
+        "snippet": "rials index — when in doubt, exclude and ask at the checkpoint. - 🧑 checkpoint with the accessibility report and any `[NEEDS PROFESSOR INPUT]` markers listed first."
+      },
+      {
+        "file": "course-publisher/references/student_comms_guide.md",
+        "snippet": "(with a gloss if helpful) — students need the searchable string, not a translation. ## Accessibility — email and web (Quality Gate U1) - **Semantic structure:** real headings in web output (one `h1`, no skipped levels);"
+      },
+      {
+        "file": "course-publisher/templates/course_site_structure.md",
+        "snippet": "nearize readably at narrow widths (each row readable as a labeled block); verified in the accessibility pass. ## Materials index — inclusion and naming rules - **Appears:** {{student_artifact_types — default: slides, hand"
+      },
+      {
+        "file": "course-publisher/templates/course_site_structure.md",
+        "snippet": "Files land in `site/`; nothing is live until the professor deploys (draft-only rule). ## Accessibility checklist (Quality Gate U1 — run before checkpoint) - [ ] One `h1` per page; heading levels unskipped - [ ] Alt text o"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "course-publisher/SKILL.md",
+        "snippet": "s visibly in the draft rather than being guessed — a gap the professor can see beats a fabrication students will quote back. 2. **Draft-only.** This skill never sends, posts, publishes, or uploads. Every output ends"
+      },
+      {
+        "file": "course-publisher/agents/comms_planner_agent.md",
+        "snippet": "s are `[NEEDS PROFESSOR INPUT]` until supplied — an invented drop deadline is the worst fabrication this suite could produce. - Never auto-send, never auto-draft on schedule: at the trigger point you *propose* the dra"
+      }
+    ]
+  },
+  "read_errors": []
+}

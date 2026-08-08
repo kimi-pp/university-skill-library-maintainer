@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "Skills/review-paper-code/SKILL.md",
+        "snippet": "bility and quality, extract the paper's main empirical claims, compare paper to code, and write a constructive markdown report. Designed for social science / economics projects with LaTeX papers and Stata, R, or Python code. argument-hint: [optio"
+      },
+      {
+        "file": "Skills/review-paper-code/SKILL.md",
+        "snippet": "MS`: important paper elements with no plausible code match in reviewed files ## Phase 5: Write the Report Write the final report to a `reviews/` subfolder of the current working directory (create it if it does not exist) as:"
+      },
+      {
+        "file": "Skills/review-paper-code/SKILL.md",
+        "snippet": "er elements with no plausible code match in reviewed files ## Phase 5: Write the Report Write the final report to a `reviews/` subfolder of the current working directory (create it if it does not exist) as: - `reviews/code_review_"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "package.json",
+    "size": 381,
+    "sha256": "d99a00f8bb961b11fde9ab0f14fcd22acbba54c329de6de60f223ba4dc3b87cf",
+    "contentType": "application/json"
+  },
+  {
+    "path": "references/review-patterns.md",
+    "size": 3948,
+    "sha256": "5d74e78bfa7b90e7943a57d3d99cfe9a1162558c60063df21046cacc865aa1aa",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "references/review-templates.md",
+    "size": 1574,
+    "sha256": "acb493737bc5277fcc80e9fe44b83ae88db5b6cc113be9df067189cca4c12db4",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "SKILL.md",
+    "size": 11681,
+    "sha256": "bde29337e3b03d98ab05668c542beb53745d207a4ef616f4d88cea7b9f7877cf",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "skill-card.md",
+    "size": 2363,
+    "sha256": "59213956f6636dd5934558673e1e0650f58507664a107bcc3ace495dad5c5331",
+    "contentType": "text/markdown"
+  }
+]

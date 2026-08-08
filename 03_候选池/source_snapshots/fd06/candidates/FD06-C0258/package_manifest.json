@@ -1,0 +1,626 @@
+[
+  {
+    "path": ".gitattributes",
+    "type": "blob",
+    "size": 93,
+    "sha": "58d8fb17ee0977c292ce5d26babf3078efe22267"
+  },
+  {
+    "path": ".gitignore",
+    "type": "blob",
+    "size": 212,
+    "sha": "4e189b0ac06cd4e03628b0f1bc81e09f8498b52a"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "type": "blob",
+    "size": 12003,
+    "sha": "09ccaecf26e38ec32e69815565d252ed0b0a72df"
+  },
+  {
+    "path": "LICENSE",
+    "type": "blob",
+    "size": 11323,
+    "sha": "b05d60cdf5c193b737d46dcb7455e7f912d1a09b"
+  },
+  {
+    "path": "LICENSE-NOTICE.md",
+    "type": "blob",
+    "size": 4110,
+    "sha": "ae9d6d74e22a8f5fa7c5f66d1676828241d446f7"
+  },
+  {
+    "path": "README.md",
+    "type": "blob",
+    "size": 6294,
+    "sha": "87a164a8eff7db9c249262526bc3766d22bf4c8c"
+  },
+  {
+    "path": "RELEASE-CHECKLIST.md",
+    "type": "blob",
+    "size": 2537,
+    "sha": "120268c9a41728d31eccb53935cfa3349de89424"
+  },
+  {
+    "path": "RELEASE_NOTES_v2.7.0.md",
+    "type": "blob",
+    "size": 1755,
+    "sha": "2fd548e75b7826040b523d9eed85cb60c938d753"
+  },
+  {
+    "path": "SKILL.md",
+    "type": "blob",
+    "size": 14272,
+    "sha": "fbeacc8bf0a7f04c4e2d4901a7b8f009124e4206"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/rules/common-errors.md",
+    "type": "blob",
+    "size": 16494,
+    "sha": "ca2bfef2a420d9c621e525a92478f4402f3bc11a"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/rules/comparison-table.md",
+    "type": "blob",
+    "size": 6562,
+    "sha": "d28649d0c69f375775a02317ba635d5d89c1d31d"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/rules/gb7714-checklist.md",
+    "type": "blob",
+    "size": 10269,
+    "sha": "c7d4ce324eb2e54812695b339e05a37ea880b9b3"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/rules/manual-checklist.md",
+    "type": "blob",
+    "size": 16197,
+    "sha": "9aeb5c4f578f1260c656e2801084dc21dc4a4af7"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/rules/multilang-citations.md",
+    "type": "blob",
+    "size": 9089,
+    "sha": "2776fa60058b3cb941e85458d8a0786c631f6ff3"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/templates/interaction-prompts.md",
+    "type": "blob",
+    "size": 4048,
+    "sha": "7ff69d5426e4f9a800fc1abb1f7405bc35179461"
+  },
+  {
+    "path": "_bundled/legal-citation-checker.rules/templates/report-template.md",
+    "type": "blob",
+    "size": 2705,
+    "sha": "fdddeeadf9c748dfaed1ca4b26af125763be1fa5"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+    "type": "blob",
+    "size": 6770,
+    "sha": "23c3636161725b854fb3606a6a04b1ca8af73248"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/argumentation-depth.md",
+    "type": "blob",
+    "size": 4538,
+    "sha": "263054e982b349179f9749052ad7bf9be46606af"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/empirical-and-cases.md",
+    "type": "blob",
+    "size": 6216,
+    "sha": "ca2e51e7cd32d05581fcc2129eb20a816cf96c20"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/language-and-style.md",
+    "type": "blob",
+    "size": 5452,
+    "sha": "8452751a6fc5d9ce866399500e90dcf1325bc449"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/legal-norms-adaptation.md",
+    "type": "blob",
+    "size": 7288,
+    "sha": "c761050b327c09d8ff46e4e56344989d597e647b"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/literature-review.md",
+    "type": "blob",
+    "size": 5683,
+    "sha": "6da9e325c9e4febd05ef2fb59ef21d5afac88cd5"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/online-verification.md",
+    "type": "blob",
+    "size": 9417,
+    "sha": "a2538f22b7e1226f8d70eb542cd2b4f7385ac7f7"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/phrase-bank.md",
+    "type": "blob",
+    "size": 16456,
+    "sha": "196cef8a78ff83b3019e482c1e5c4c00dba1bfd8"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/policy-suggestions.md",
+    "type": "blob",
+    "size": 5800,
+    "sha": "5cc62b125f10ab8d188efaf33ddb22fdf31506a8"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/should-have-discussed.md",
+    "type": "blob",
+    "size": 9145,
+    "sha": "fb2c714d460df7eaaa66a2cf5871be4543eb7e78"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/structure-and-logic.md",
+    "type": "blob",
+    "size": 3910,
+    "sha": "3b3b7518db1acb7eef42fb68e9aa7355649fbc34"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/topic-and-problem-awareness.md",
+    "type": "blob",
+    "size": 3899,
+    "sha": "7605791485beda01e2356694db93b648b399c12a"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/rules/zhangqinglin-patterns.md",
+    "type": "blob",
+    "size": 41504,
+    "sha": "dedf0ca11f79b5a7a36c889422fd8cd0fac762dd"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/templates/interaction-prompts.md",
+    "type": "blob",
+    "size": 6933,
+    "sha": "8dd0a40f554ca82e76702671c713dfad67a279b5"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/templates/question-bank.md",
+    "type": "blob",
+    "size": 6695,
+    "sha": "8c173649ed801ce66510b7c43e8018d941d10b2b"
+  },
+  {
+    "path": "_bundled/legal-thesis-reviewer.rules/templates/review-report-template.md",
+    "type": "blob",
+    "size": 6313,
+    "sha": "47b3682ec8d3febf2799a4f3a69bbe264caa328c"
+  },
+  {
+    "path": "_bundled/manifest.json",
+    "type": "blob",
+    "size": 5124,
+    "sha": "f1a7501225c0c340c39d37909bf66a7401d82ab0"
+  },
+  {
+    "path": "examples/.gitkeep",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "examples/example-issues.json",
+    "type": "blob",
+    "size": 12793,
+    "sha": "07c1057a559a827cd481ee73a624bbc73427b3f9"
+  },
+  {
+    "path": "examples/example-unified-review.md",
+    "type": "blob",
+    "size": 15085,
+    "sha": "87cb900b260ede3f6ba45cc75847d40a2782757a"
+  },
+  {
+    "path": "rules/.gitkeep",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "rules/academic-integrity-guard.md",
+    "type": "blob",
+    "size": 5918,
+    "sha": "902595432e0c60d970c52746056f88063f02cc78"
+  },
+  {
+    "path": "rules/anchor-text-locator.md",
+    "type": "blob",
+    "size": 8289,
+    "sha": "9e477e00cbf831eba2d7c5c19aa2db367f8b8559"
+  },
+  {
+    "path": "rules/annotation-placement.md",
+    "type": "blob",
+    "size": 6137,
+    "sha": "d2ced2d29faed9c9b0cfffd3316776a784b431f3"
+  },
+  {
+    "path": "rules/case-studies.md",
+    "type": "blob",
+    "size": 10943,
+    "sha": "d3d4a6bcb08b779855cf299af2de489d6f1f014f"
+  },
+  {
+    "path": "rules/docx-annotation.md",
+    "type": "blob",
+    "size": 28786,
+    "sha": "86967ecd532dd8f0224dcd1e84d314435c5d078d"
+  },
+  {
+    "path": "rules/error-handling.md",
+    "type": "blob",
+    "size": 12138,
+    "sha": "77a5d75eb56f1cbf3d690c9087da46856d48cafc"
+  },
+  {
+    "path": "rules/input-collection.md",
+    "type": "blob",
+    "size": 8469,
+    "sha": "eded13964bed4b5ff51d8cdc6e58f1a54ef09c23"
+  },
+  {
+    "path": "rules/intent-recognition.md",
+    "type": "blob",
+    "size": 6723,
+    "sha": "40ab4d4d68ebffecaeb909210bf28d230f9c422e"
+  },
+  {
+    "path": "rules/issues-schema.md",
+    "type": "blob",
+    "size": 23089,
+    "sha": "f338a0ae23b0443710cb64ca49cb020674446764"
+  },
+  {
+    "path": "rules/network-tool-discovery.md",
+    "type": "blob",
+    "size": 6717,
+    "sha": "c48ce15cd0851cb0207611cdef2ccbf3a123ab4e"
+  },
+  {
+    "path": "rules/online-verification-unified.md",
+    "type": "blob",
+    "size": 7884,
+    "sha": "454e552c1411e695d55708885204a1b1e2803a8d"
+  },
+  {
+    "path": "rules/ooxml-style-check.md",
+    "type": "blob",
+    "size": 4796,
+    "sha": "ac98fac75a9db3d878238c2a719dfe17e6998859"
+  },
+  {
+    "path": "rules/orchestration-flow.md",
+    "type": "blob",
+    "size": 12326,
+    "sha": "44f263c8b4b9c3a678fc40256e3f4f9b3a9c0d14"
+  },
+  {
+    "path": "rules/pdf-annotation.md",
+    "type": "blob",
+    "size": 7133,
+    "sha": "76fd9a810a0323d7f13ce1091f33a91b3a2aeed1"
+  },
+  {
+    "path": "rules/report-merging.md",
+    "type": "blob",
+    "size": 7479,
+    "sha": "af9f9c0af65f994673dff5a129c3fa5706d1e021"
+  },
+  {
+    "path": "rules/size-tier.md",
+    "type": "blob",
+    "size": 5824,
+    "sha": "32098f5261e43635d87304f69054de4da62323f3"
+  },
+  {
+    "path": "rules/substantive-review.md",
+    "type": "blob",
+    "size": 6413,
+    "sha": "fa6db77ae69a2349266c515645b9881b4340a1d6"
+  },
+  {
+    "path": "rules/table-audit.md",
+    "type": "blob",
+    "size": 5744,
+    "sha": "bce9bdb666efa5db05d85d062dfb154fadea02ea"
+  },
+  {
+    "path": "rules/xfdf-annotation.md",
+    "type": "blob",
+    "size": 12159,
+    "sha": "05bb9cb3e6476525058bcd92c0f2ac23d2db0643"
+  },
+  {
+    "path": "templates/.gitkeep",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "templates/annotation-body-template.md",
+    "type": "blob",
+    "size": 3974,
+    "sha": "52f3d75e53eb37d7497ca1d008c5eb12af314cf9"
+  },
+  {
+    "path": "templates/interaction-prompts.md",
+    "type": "blob",
+    "size": 7688,
+    "sha": "d9408ff5b0f0d718700aa61711500d5fa202b46d"
+  },
+  {
+    "path": "templates/issues-json-skeleton.json",
+    "type": "blob",
+    "size": 46,
+    "sha": "b947ca1c47c49f8cdf8ab26ecc2c7850f9ba17c3"
+  },
+  {
+    "path": "templates/readme-section-import-xfdf.md",
+    "type": "blob",
+    "size": 4850,
+    "sha": "935d06a874e9b54b83bf4f90108d213e4d8025d4"
+  },
+  {
+    "path": "templates/unified-report-template.md",
+    "type": "blob",
+    "size": 7905,
+    "sha": "c07949dff678e7b4c79cd61f620ceec429d3f591"
+  },
+  {
+    "path": "tests/README.md",
+    "type": "blob",
+    "size": 1876,
+    "sha": "d981acc97d66a98d026789dc1f9bfed0864c0347"
+  },
+  {
+    "path": "tests/__init__.py",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "tests/_script_loader.py",
+    "type": "blob",
+    "size": 1024,
+    "sha": "1a2fd0b7647d8e0a71a8a91f9ad79e724660ad25"
+  },
+  {
+    "path": "tests/conftest.py",
+    "type": "blob",
+    "size": 1389,
+    "sha": "bda563482b517f78d83d3e532c21bada91d25e3b"
+  },
+  {
+    "path": "tests/fixtures/__init__.py",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "tests/fixtures/build_issues_fixtures.py",
+    "type": "blob",
+    "size": 10756,
+    "sha": "cad6e929939d910ae7b0b8b396da5a0be5549482"
+  },
+  {
+    "path": "tests/fixtures/build_minimal_docx.py",
+    "type": "blob",
+    "size": 5502,
+    "sha": "2d79a0c4dfbd8df7f9b32a4642168b51a23a5743"
+  },
+  {
+    "path": "tests/fixtures/build_minimal_pdf.py",
+    "type": "blob",
+    "size": 2293,
+    "sha": "0d0e8bcd1a0537f11077c36c5bf2b903002fba74"
+  },
+  {
+    "path": "tests/fixtures/issues_boundary_600.json",
+    "type": "blob",
+    "size": 252207,
+    "sha": "8c9e0cfabf7e39c7872336063f517a4740d06e17"
+  },
+  {
+    "path": "tests/fixtures/issues_boundary_pdf_bbox.json",
+    "type": "blob",
+    "size": 587,
+    "sha": "5f369ce3d944ae216db070bbcb4020193bf1cfc5"
+  },
+  {
+    "path": "tests/fixtures/issues_boundary_pdf_bbox_oob.json",
+    "type": "blob",
+    "size": 600,
+    "sha": "5ded42e89e2efe0a842af5c5a87af561c33ae2c7"
+  },
+  {
+    "path": "tests/fixtures/issues_boundary_same_group_id.json",
+    "type": "blob",
+    "size": 861,
+    "sha": "0f3a1b7922033c62d2029f43f889a8b53ccf136c"
+  },
+  {
+    "path": "tests/fixtures/issues_boundary_span.json",
+    "type": "blob",
+    "size": 528,
+    "sha": "f3f00663be49db583c6292688670fd67025f8be1"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_duplicate_id.json",
+    "type": "blob",
+    "size": 815,
+    "sha": "c8e0747427c9aad001a50e4d07c3b60cebbf4c39"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_enum.json",
+    "type": "blob",
+    "size": 447,
+    "sha": "6d67ae7eeb7daf7b8438a889894c9c2d64b1bddd"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_group_id.json",
+    "type": "blob",
+    "size": 833,
+    "sha": "71680a1724ffaa171c5aa38dab522a026010f18d"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_id_pattern.json",
+    "type": "blob",
+    "size": 458,
+    "sha": "be899bd78a726c89a6b87cba63cf03a5859492e5"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_length.json",
+    "type": "blob",
+    "size": 1259,
+    "sha": "1a8419674fcbbd84d1bec0000acf54bb8c72a84b"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_scope_excerpt.json",
+    "type": "blob",
+    "size": 491,
+    "sha": "825d8b2019680e5817944c0191e404c4e927fb96"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid_table_incomplete.json",
+    "type": "blob",
+    "size": 519,
+    "sha": "f029b8df0fc249fe9c7746046e2953865dd41285"
+  },
+  {
+    "path": "tests/fixtures/issues_valid.json",
+    "type": "blob",
+    "size": 1454,
+    "sha": "f13fe83fea04810b331696a256c4ab36f3395a8f"
+  },
+  {
+    "path": "tests/fixtures/minimal.annotated.docx",
+    "type": "blob",
+    "size": 7722,
+    "sha": "a23658d6101a9daea1584a427cc75d0c6111f22b"
+  },
+  {
+    "path": "tests/fixtures/minimal.docx",
+    "type": "blob",
+    "size": 2674,
+    "sha": "7876e1b14205ab1b6656c42e6cfcd46be737abad"
+  },
+  {
+    "path": "tests/fixtures/minimal.pdf",
+    "type": "blob",
+    "size": 895,
+    "sha": "74cdc6b4f3175dca340acbe58358c7f631d5e97d"
+  },
+  {
+    "path": "tests/fixtures/minimal.xfdf",
+    "type": "blob",
+    "size": 442,
+    "sha": "3c393da27219758273dcd76a6728e96d980c6580"
+  },
+  {
+    "path": "tests/real-samples-report.md",
+    "type": "blob",
+    "size": 9220,
+    "sha": "0c83564fb3583d40d349613e31f603493ec0e659"
+  },
+  {
+    "path": "tests/test_annotate_pdf.py",
+    "type": "blob",
+    "size": 7516,
+    "sha": "615806d5638510192b2329cb4a52b960433379be"
+  },
+  {
+    "path": "tests/test_docx_injection.py",
+    "type": "blob",
+    "size": 10535,
+    "sha": "9b8213c16de4cfbbfa29878d2ebe882e7facb20e"
+  },
+  {
+    "path": "tests/test_issues_json.py",
+    "type": "blob",
+    "size": 9095,
+    "sha": "5f7bf039af6b9d2784794548823dc9ebca39af86"
+  },
+  {
+    "path": "tests/test_network_tool_discovery.py",
+    "type": "blob",
+    "size": 4824,
+    "sha": "7044a9eedd9c951fa82f98225f60aaccc8880326"
+  },
+  {
+    "path": "tests/test_skill_meta.py",
+    "type": "blob",
+    "size": 5807,
+    "sha": "b059a1391f712865012e43335aeec9ff32c030eb"
+  },
+  {
+    "path": "tests/test_xfdf_generation.py",
+    "type": "blob",
+    "size": 8980,
+    "sha": "96eee2aee655203ac82b290653eb91dbfc38eb83"
+  },
+  {
+    "path": "tools/.gitkeep",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "tools/annotate-pdf.py",
+    "type": "blob",
+    "size": 14148,
+    "sha": "04c23c8b41d435477c835fbec618f3e75da597cc"
+  },
+  {
+    "path": "tools/build-bundle.py",
+    "type": "blob",
+    "size": 11679,
+    "sha": "3e360ca470ae7005efba9da80b800332c4a1346c"
+  },
+  {
+    "path": "tools/bundle-verify.py",
+    "type": "blob",
+    "size": 4492,
+    "sha": "994877cbba33f702e5fd2ec2398dd7dba57a1ada"
+  },
+  {
+    "path": "tools/citation-crossref.py",
+    "type": "blob",
+    "size": 11519,
+    "sha": "10bc74f55a1a6a8f5a21075c8698760dd1a418e7"
+  },
+  {
+    "path": "tools/extract-docx.py",
+    "type": "blob",
+    "size": 5603,
+    "sha": "33694931fe7501b3390b27d39958d57449620cd5"
+  },
+  {
+    "path": "tools/extract-pdf-text.py",
+    "type": "blob",
+    "size": 4537,
+    "sha": "62d4d42e860fb2f2f3489027ece2a7dcda0244c1"
+  },
+  {
+    "path": "tools/generate-xfdf.py",
+    "type": "blob",
+    "size": 22494,
+    "sha": "da2eb7bbbd485ab2bd04b58f56319185853fa080"
+  },
+  {
+    "path": "tools/inject-docx-comments.py",
+    "type": "blob",
+    "size": 51589,
+    "sha": "a55951d9d8c4b1bdec73e1e94c224044d02ef122"
+  },
+  {
+    "path": "tools/make-dist.py",
+    "type": "blob",
+    "size": 5622,
+    "sha": "e39005d8e188d49f99b00c1b45290ed3cf7330c8"
+  }
+]

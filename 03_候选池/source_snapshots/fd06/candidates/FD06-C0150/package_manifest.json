@@ -1,0 +1,14 @@
+[
+  {
+    "path": "skills/education-automated-assessment-generation/SKILL.md",
+    "type": "blob",
+    "size": 720,
+    "sha": "ab3b453bcec6dbf8923c3fdeb31e39ef532ee8e2"
+  },
+  {
+    "path": "skills/education-automated-assessment-generation/index.mjs",
+    "type": "blob",
+    "size": 3196,
+    "sha": "c4f0687b92497027f3e944474b7581a7bc614f8d"
+  }
+]

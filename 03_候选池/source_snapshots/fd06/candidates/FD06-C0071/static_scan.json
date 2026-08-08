@@ -1,0 +1,35 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "media-scripter/SKILL.md",
+        "snippet": "anscripts, and podcast-style audio adaptations. Scripts are spoken language with built-in accessibility — not read-aloud prose. Triggers on: video script, record a lecture, lecture video, mini-lecture, screencast, storyboar"
+      },
+      {
+        "file": "media-scripter/SKILL.md",
+        "snippet": "wn voice; this skill brings spoken-register craft, the recorded- media evidence base, and accessibility built in from the first draft. > **Prime rule:** lecture notes are raw material, not the script. Prose that reads > we"
+      },
+      {
+        "file": "media-scripter/SKILL.md",
+        "snippet": "es (\"this graph\" with nothing scripted on screen) are defects caught at assembly. 4. **Accessibility is first-class, not retrofit** (Pedagogy Foundations §7). Narration describes visuals, never just points at them — \""
+      },
+      {
+        "file": "media-scripter/SKILL.md",
+        "snippet": "Mayer's principles operationalized, retrieval integration, production-value honesty, accessibility standards - `templates/script_template.md` - `templates/series_map_template.md` - Shared: `shared/pedagogy_foundations."
+      },
+      {
+        "file": "media-scripter/agents/script_writer_agent.md",
+        "snippet": "mentioned earlier\" (without saying what was mentioned) are banned strings — each is an accessibility or replay defect."
+      },
+      {
+        "file": "media-scripter/agents/storyboard_agent.md",
+        "snippet": "the shot table has something on screen the script never puts into words, route it back (accessibility, SKILL Iron Rule 4); audio-only students hear the script. - Duration estimates for action shots come from doing the m"
+      },
+      {
+        "file": "media-scripter/references/video_pedagogy.md",
+        "snippet": "skill never makes studio production a prerequisite for shipping a teaching video. ## 5. Accessibility standards (Pedagogy Foundations §7; Quality Gate U1) Built in from the script, not retrofit after recording: - **Capt"
+      }
+    ]
+  },
+  "read_errors": []
+}

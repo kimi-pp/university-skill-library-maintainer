@@ -1,0 +1,37 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "--- name: course-overview description: Pull a comprehensive course status dashboard from Canvas --- # Course Overview - Status Dashboard Pull a comprehensive snapshot of the current course and present a formatted"
+      },
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "` Course Dashboard ================ {course_title} ({course_code}) Term: {term} {year} | Canvas ID: {canvas_course_id} Enrollment ---------- Students: X | Teachers: Y | TAs: Z | Observers: W Upcoming Deadlines ("
+      },
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "ndling - If dauber/config.toml missing: Report error, direct to `/course:setup` - If any Canvas fetch fails: Report the error for that section, continue with remaining sections (partial dashboard is better than no"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "ing. Take the next 5. ### 3b. Assignment Statistics - Total assignments - Published vs. unpublished count - Assignments with no due date - Points possible range (min, max, total) ### 3c. Module Statistics - Total modu"
+      },
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "sible range (min, max, total) ### 3c. Module Statistics - Total modules - Published vs. unpublished count - Total items across all modules ## Step 4: Display Dashboard ``` Course Dashboard ================ {course_ti"
+      },
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "pcoming deadlines\" if none) Assignments ({total}) --------------------- Published: X | Unpublished: Y | No due date: Z Points range: {min} - {max} pts All assignments: - {name} | Due: {due_at or \"none\"} | {point"
+      },
+      {
+        "file": ".pi/skills/course-overview/SKILL.md",
+        "snippet": "{points} pts | {published} - ... Modules ({total}) ----------------- Published: X | Unpublished: Y Total items: Z - {module_name} ({items_count} items) {published_status} - ... ``` ## Error Handling - If da"
+      }
+    ]
+  },
+  "read_errors": []
+}

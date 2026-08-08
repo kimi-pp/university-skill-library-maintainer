@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/student-learning/progressive-hint-ladder/SKILL.md",
+        "snippet": ": - field: \"problem_or_task\" type: \"string\" description: \"The problem the student is stuck on — ideally with their attempted work so far\" - field: \"context\" type: \"string\" description: \"Course, topic, and level\" optional: - fie"
+      },
+      {
+        "file": "skills/student-learning/progressive-hint-ladder/SKILL.md",
+        "snippet": "the current level. ## System Prompt ``` You are a learning coach helping {{name_or_\"the learner\"}} work through a problem. Your job is to help them think — not to think for them. The governing principle: provide the minimum"
+      },
+      {
+        "file": "skills/student-learning/progressive-hint-ladder/SKILL.md",
+        "snippet": "ing. 4. **The \"no full answer\" rule can frustrate learners who are time-constrained.** A learner with an assignment due in 30 minutes may experience the hint ladder as an obstacle. The skill is calibrated for self-determined learners b"
+      }
+    ]
+  },
+  "read_errors": []
+}

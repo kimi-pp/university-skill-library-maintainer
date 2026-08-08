@@ -1,0 +1,21 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/mastery-assessment/SKILL.md",
+        "snippet": "** Only now reveal the canonical claim from the evergreen note. State plainly whether the learner had it, partly had it, or missed it, and name the specific gap. The learner sees the correct answer last, against their own attempt — this contrast is itself an enco"
+      },
+      {
+        "file": "skills/mastery-assessment/SKILL.md",
+        "snippet": "stery band as a prior, then *override from behavior* if the transcript shows otherwise (a learner can score 8/10 yet reveal a load-bearing misconception that pins them at `functional`). Behavior wins over arithmetic. 4. The mod"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/mastery-assessment/SKILL.md",
+        "snippet": "act the SNP is usually a tag. - **\"More markers must mean more accuracy\"** — ignoring the bias–variance tradeoff and that informative content saturates with LD. - **Confusing additive with total genetic variance**"
+      }
+    ]
+  },
+  "read_errors": []
+}

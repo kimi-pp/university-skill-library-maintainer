@@ -1,0 +1,31 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/discussion-questions/SKILL.md",
+        "snippet": "roup\" - Assessment shifts heavily toward self-assessment and peer assessment -- include a post-seminar peer feedback form with 2-3 specific criteria --- ## Example **Input:** \"I need discussion questions for a 9th grade world history"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/discussion-questions/SKILL.md",
+        "snippet": "ions without endorsing or correcting - \"So you're saying... Is that right?\" -- revoicing: teacher paraphrases to confirm and elevate - \"Who sees it differently?\" -- invites counter-argument after a strong claim - \"What would someone who dis"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/discussion-questions/SKILL.md",
+        "snippet": "a, structured academic controversy, or four corners - A user wants to build participation equity strategies alongside questions -- managing dominant voices, drawing out quiet students, or scaffolding for diverse lear"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/discussion-questions/SKILL.md",
+        "snippet": "on does that raise for you?\" -- shifts ownership from teacher to student **Participation Equity Strategies:** - Dominant speakers: Establish a \"2-contribution wait\" norm (students who have spoken twice wait for 3 ot"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/discussion-questions/SKILL.md",
+        "snippet": "s to spend; place one on the table each time they speak) to manage participation and make equity visual - Replace written facilitation notes with a list of sentence stems the teacher models aloud: \"I think... because"
+      }
+    ]
+  },
+  "read_errors": []
+}

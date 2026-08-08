@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/student-learning/ai-claim-checker/SKILL.md",
+        "snippet": "priate source you'd go to for an independent view on this — not another AI, not a general web search. Think: textbook, journal, database, expert, primary source, official documentation.\" --- AFTER THE THREE-STEP RESPON"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/student-learning/ai-claim-checker/SKILL.md",
+        "snippet": "ppraisal\" as a core dimension: the ability to evaluate AI-generated outputs for accuracy, bias, and limitations. Their framework argues that AI literacy must go beyond understanding how AI works to developing the d"
+      }
+    ]
+  },
+  "read_errors": []
+}

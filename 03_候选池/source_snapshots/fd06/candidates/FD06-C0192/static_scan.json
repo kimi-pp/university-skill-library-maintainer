@@ -1,0 +1,31 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+        "snippet": "e\" type: \"string\" description: \"Who will use this rubric and for what — e.g. 'student self-assessment before submission', 'peer feedback during drafting', 'teacher formative feedback', 'pre-task planning to clarify quality'\" optional:"
+      },
+      {
+        "file": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+        "snippet": "one clearly controlled variable\"* - **Purpose:** Who uses the rubric and for what. *e.g. \"student self-assessment before submission\" / \"peer feedback during drafting\" / \"teacher formative feedback\" / \"pre-task planning to clarify quality\" / \"personal"
+      },
+      {
+        "file": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+        "snippet": "plies, apply the closest match if exact match is not found, and note the adaptation. - **Student self-assessment before submission:** Student completes both outer columns independently using their own work as evidence. They then decide whether to rev"
+      },
+      {
+        "file": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+        "snippet": "ear claim, supporting evidence, and acknowledgement of a different viewpoint\" / Purpose: \"student self-assessment before submission\" / No band specified / Format: three-column (default)* --- ## Single-Point Rubric: Reasoned Argument **Learning targ"
+      },
+      {
+        "file": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+        "snippet": "ear claim, supporting evidence, and acknowledgement of a different viewpoint **Purpose:** Student self-assessment before submission **Format selected:** Three-column — no band specified, default applies ### Criterion The argument states a clear posi"
+      },
+      {
+        "file": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+        "snippet": "is a more advanced expectation than the LT implies at this level. ### Usage Guidance **Student self-assessment before submission:** The student completes this rubric independently, using their own draft as evidence. The sequence: 1. Read the crit"
+      }
+    ]
+  },
+  "read_errors": []
+}

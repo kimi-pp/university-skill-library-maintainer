@@ -1,0 +1,21 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/curriculum-mapping/SKILL.md",
+        "snippet": "exam review before the exam date, full content instruction completed 3 weeks before that review period begins. Post-exam time (typically 2-4 weeks remaining in the school year) should be explicitly planned as enrichment, independent re"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/curriculum-mapping/SKILL.md",
+        "snippet": "\"Honors Biology,\" \"8th Grade ELA,\" \"AP Calculus AB,\" \"IB History of the Americas HL\") - **Student population:** Grade level(s), typical prior knowledge, any tracked or mixed-ability context, ELL or IEP prevalence if the educator mentions"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/curriculum-mapping/SKILL.md",
+        "snippet": "with additional examples before Week 2 | | HAPP annotation check -- Week 2 | Spot-check 6 student documents during work time; look for all 4 HAPP categories annotated (Historical Context, Audience, Purpose, Point of View) | HTS-1 Contextua"
+      }
+    ]
+  },
+  "read_errors": []
+}

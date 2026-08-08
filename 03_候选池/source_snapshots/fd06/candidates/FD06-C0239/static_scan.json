@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md",
+        "snippet": "\"desired_use\" type: \"string\" description: \"Reflection, restorative dialogue, bias check, discussion, or inquiry\" output_schema: type: \"object\" fields: - field: \"ladder_map\" type: \"object\""
+      },
+      {
+        "file": "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md",
+        "snippet": "utes\" tags: [\"ladder-of-inference\", \"assumptions\", \"dialogue\", \"reflection\", \"conflict\", \"bias\", \"compassionate-systems\"] --- # Ladder of Inference Reflection ## What This Skill Does Helps students and adults sl"
+      },
+      {
+        "file": "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md",
+        "snippet": "rently believes the situation means. - **Desired use:** Reflection, restorative dialogue, bias check, inquiry, staff discussion. ## Prompt ```text You are guiding a Ladder of Inference reflection. Help the user m"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,37 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "he project folder --- ## Language Rule - **Communicate with the user in Chinese.** - **Write the review report entirely in Chinese.** --- ## Workflow ### Phase 1: Initialization 1. **Receive folder path** from user (via `$ARGU"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "AskUserQuestion call with **one** question: **Question — 评分 (Score)**: - Ask: \"请输入您给该论文的分数（满分100分）\" - Options: 90–100 分 / 80–89 分 / 70–79 分 / 60–69 分 - User can type exact score via \"Other\" (e.g., 85) Record t"
+      },
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "以下五个方面（自然融合，不要逐条罗列）： 1. 选题意义 2. 文献资料的掌握 3. 所用资料、数据的可靠性 4. 写作规范和逻辑性 5. 论文创新点 - 根据分数档调整褒贬比例和用词力度 - 必须基于论文的**实际内容**，引用具体的研究主题、方法、变量、发现等 ### Section 2: 论文的不足之处和建议 **要求**: - **300 字**（中文字符，±10%） - **不分点**，"
+      },
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "300 字**（中文字符，±10%） - **不分点**，写成一个完整的段落 - 明确指出论文中存在的具体问题和不足之处 - 提出具有可操作性的修改建议 - 问题的数量和严重程度与分数档匹配（高分→少而轻微；低分→多而严重） - 必须基于论文的**实际内容**，指出具体章节、表格、论述中的问题 --- ## Phase 4: Output 1. **Determine output filename**: Stri"
+      },
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "report** with this structure: ``` 对学位论文的学术评语 [240字学术评语段落] 论文的不足之处和建议 [300字不足与建议段落] 建议成绩：XX 分 ``` 3. **Generate .doc** using python-docx (preferred) or pandoc. Font: 宋体 (SimSun), size 12pt, 1.5x line spacing"
+      },
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "须是连贯的段落，禁止使用编号、序号、bullet points。 3. **基于实际内容。** 所有评价必须针对论文的真实内容（题目、方法、数据、结论），不可泛泛而谈。 4. **分数校准。** 评语的褒贬比例、用词力度、问题严重程度必须与给定分数一致。90 分的评语不能比 70 分的更严厉。 5. **学术语体。** 使用正式的学术评审语言，符合中国硕士学位论文评阅的惯例和格式。 6. **先读后写。** 必须完整阅读"
+      },
+      {
+        "file": "skills/67-econfin-workflow-toolkit/master-thesis-review/SKILL.md",
+        "snippet": "3. **基于实际内容。** 所有评价必须针对论文的真实内容（题目、方法、数据、结论），不可泛泛而谈。 4. **分数校准。** 评语的褒贬比例、用词力度、问题严重程度必须与给定分数一致。90 分的评语不能比 70 分的更严厉。 5. **学术语体。** 使用正式的学术评审语言，符合中国硕士学位论文评阅的惯例和格式。 6. **先读后写。** 必须完整阅读论文后再撰写评语，不可基于部分内容生成。 7. **不要使用 A"
+      }
+    ]
+  },
+  "read_errors": []
+}

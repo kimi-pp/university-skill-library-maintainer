@@ -1,0 +1,55 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "--- name: canvas-course-audit description: Audit an entire Canvas LMS course against the Four Learning Design Pillars (Clear Structure,"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "--- name: canvas-course-audit description: Audit an entire Canvas LMS course against the Four Learning Design Pillars (Clear Structure, Active Content, Continuous Practice, Intuitive UX"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "uate course quality, identify improvement areas, or prepare for course redesign. Requires canvas-mcp server for course data access. Triggers on \"audit course\", \"course review\", \"evaluate my course\", or Canvas course"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "course data access. Triggers on \"audit course\", \"course review\", \"evaluate my course\", or Canvas course IDs/codes. --- # Canvas Course Audit Systematically evaluate a Canvas course against 46 evidence-based learnin"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "\"audit course\", \"course review\", \"evaluate my course\", or Canvas course IDs/codes. --- # Canvas Course Audit Systematically evaluate a Canvas course against 46 evidence-based learning design principles organized in"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "ourse\", or Canvas course IDs/codes. --- # Canvas Course Audit Systematically evaluate a Canvas course against 46 evidence-based learning design principles organized into four pillars. ## Prerequisites - **canvas-"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "ence-based learning design principles organized into four pillars. ## Prerequisites - **canvas-mcp** server must be configured and running - User must have instructor/TA/admin access to the target course - Principl"
+      },
+      {
+        "file": "canvas-course-audit/SKILL.md",
+        "snippet": "file 3. Verify course access via `get_course_details` ### Step 2: Fetch Course Data Use canvas-mcp to gather: - `get_course_details` — metadata, syllabus - `list_modules` — structure, item counts, prerequisites - `"
+      },
+      {
+        "file": "canvas-course-audit/references/audit-criteria.md",
+        "snippet": "# Canvas Course Audit Criteria Complete audit criteria tables by pillar with Canvas-specific checks and weights. ## Table of C"
+      },
+      {
+        "file": "canvas-course-audit/references/audit-criteria.md",
+        "snippet": "# Canvas Course Audit Criteria Complete audit criteria tables by pillar with Canvas-specific checks and weights. ## Table of Contents - [Pillar 1: Clear, Purposeful Structure](#pillar-1-clear-purposeful"
+      },
+      {
+        "file": "canvas-course-audit/references/audit-criteria.md",
+        "snippet": "itive-user-experience) --- ## Pillar 1: Clear, Purposeful Structure | ID | Criterion | Canvas Check | Weight | |----|-----------|--------------|--------| | 1.1.1 | Small segments | Items per module <= 10 | High |"
+      },
+      {
+        "file": "canvas-course-audit/references/audit-criteria.md",
+        "snippet": "ntent | Medium | --- ## Pillar 2: Active, Engaging Learning Content | ID | Criterion | Canvas Check | Weight | |----|-----------|--------------|--------| | 2.1.1 | Streamlined content | Page word count reasonable"
+      }
+    ]
+  },
+  "read_errors": []
+}

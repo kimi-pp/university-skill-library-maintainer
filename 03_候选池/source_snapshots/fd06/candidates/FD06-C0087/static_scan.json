@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/ai-literacy/ai-socratic-dialogue-designer/SKILL.md",
+        "snippet": "ch correlates with agreeing with the human's implied position. This produces a systematic bias: when users express disagreement with an AI response, the AI will often revise toward the user's position even when the"
+      }
+    ]
+  },
+  "read_errors": []
+}

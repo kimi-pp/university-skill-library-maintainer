@@ -1,0 +1,50 @@
+[
+  {
+    "path": "media-scripter/SKILL.md",
+    "type": "blob",
+    "size": 10500,
+    "sha": "02a6bb78e0a06930b84cc86ea0006a138181e40a"
+  },
+  {
+    "path": "media-scripter/agents/script_writer_agent.md",
+    "type": "blob",
+    "size": 4672,
+    "sha": "29d8abf32737051b2562bdfe48c5195a75582885"
+  },
+  {
+    "path": "media-scripter/agents/segmenter_agent.md",
+    "type": "blob",
+    "size": 4128,
+    "sha": "3985d1c2ec694b54f1b0aff5754aa22a9574bc30"
+  },
+  {
+    "path": "media-scripter/agents/storyboard_agent.md",
+    "type": "blob",
+    "size": 4622,
+    "sha": "553fcc13dd50d8ecd756dda59d3a8cdbd7cb87dd"
+  },
+  {
+    "path": "media-scripter/agents/transcript_editor_agent.md",
+    "type": "blob",
+    "size": 4300,
+    "sha": "aa07dfe287e75639fc05a48547008ce11012daa0"
+  },
+  {
+    "path": "media-scripter/references/video_pedagogy.md",
+    "type": "blob",
+    "size": 7281,
+    "sha": "ce9e59fe0bc7b0c6ceda23ee762220a79649f945"
+  },
+  {
+    "path": "media-scripter/templates/script_template.md",
+    "type": "blob",
+    "size": 3234,
+    "sha": "5fdc447777ff7b231e7dbdba68009a958762e34f"
+  },
+  {
+    "path": "media-scripter/templates/series_map_template.md",
+    "type": "blob",
+    "size": 2297,
+    "sha": "a2e2f218c712b9f8d900713342e4ea907ae3b4d0"
+  }
+]

@@ -1,0 +1,6738 @@
+{
+  "repository": "flonat/flonat-research",
+  "fixed_version": "e5561f7d6c867526043f0d676cd749cf6c51cefb",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42f4219fbade5eed4c1ad56ff5e48662462cc5e3"
+    },
+    {
+      "path": ".claude/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09bf14df1ba8ed67c3ce96d3e6da758327b0d341"
+    },
+    {
+      "path": ".claude/agents/artifact-coherence-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9af26fb6935c1414a834a98251eeee1baaf03638",
+      "size": 12156
+    },
+    {
+      "path": ".claude/agents/blindspot.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa679f639ea460c50030c66cce934e8b4c946ad9",
+      "size": 19377
+    },
+    {
+      "path": ".claude/agents/claim-verify.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e73008a1b56ee47e71f2fc587e287d126d4880be",
+      "size": 20924
+    },
+    {
+      "path": ".claude/agents/code-paper-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d81c5c64221070e896748084e808c7c497b36ec3",
+      "size": 15918
+    },
+    {
+      "path": ".claude/agents/code-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "500cb4fef9d054c35d5f2252daae3f2e76e7b86e",
+      "size": 18268
+    },
+    {
+      "path": ".claude/agents/codex-research.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3574a063c744a2346153c27a1caab1fc544a05e7",
+      "size": 6113
+    },
+    {
+      "path": ".claude/agents/domain-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4875f7271f39faab62a191bcc25d4ca80fc7c429",
+      "size": 26503
+    },
+    {
+      "path": ".claude/agents/fatal-error-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2954da2ab959912b5d26d2db4b157ef3c778894c",
+      "size": 12795
+    },
+    {
+      "path": ".claude/agents/fixer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41eb958790a346fc4bd52c0053835e60b1150ce9",
+      "size": 16521
+    },
+    {
+      "path": ".claude/agents/gemini-research.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e235419ec500868b50530ca07e16cfb4bd18f202",
+      "size": 5480
+    },
+    {
+      "path": ".claude/agents/paper-critic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "875694c56796ede7a74899d00f45705bc6b06a6d",
+      "size": 39516
+    },
+    {
+      "path": ".claude/agents/peer-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "625710c1c13977ff68c6f2c0659db7f5d5ed9194",
+      "size": 24658
+    },
+    {
+      "path": ".claude/agents/proposal-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5f45d78079d2d9eebd1583b80848030d9af5860",
+      "size": 17468
+    },
+    {
+      "path": ".claude/agents/referee2-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71e1dc1784a0404b42b4a1166c3a7f9e2edef771",
+      "size": 41374
+    },
+    {
+      "path": ".claude/agents/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f88c783ba9918345d4dc50394fb163f1b80c052"
+    },
+    {
+      "path": ".claude/agents/references/code-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8ba6cc3d7bf232111bcaabd48d87ab39054d510"
+    },
+    {
+      "path": ".claude/agents/references/code-review/checklist-categories.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4448bb4e986f47539f9eff4295b086a1bcdc8204",
+      "size": 5122
+    },
+    {
+      "path": ".claude/agents/references/code-review/findings-schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfa876702ae947e71f481359a40ffe006f23e69e",
+      "size": 1648
+    },
+    {
+      "path": ".claude/agents/references/code-review/persona-catalog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9808fbdf15fac882d7ec737d846e86982bc09540",
+      "size": 5846
+    },
+    {
+      "path": ".claude/agents/references/code-review/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e0aa5558f2354221ae476a6da81af4cdef6e23",
+      "size": 3012
+    },
+    {
+      "path": ".claude/agents/references/code-review/subagent-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1b1596d0f389ce617fc15e98885ea4cb3d5a1b",
+      "size": 1700
+    },
+    {
+      "path": ".claude/agents/references/journal-referee-profiles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c06ba5919d242cd07eaa1294948b6cd79e9dd198",
+      "size": 27108
+    },
+    {
+      "path": ".claude/agents/references/paper-critic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc1c250c684a832ef7aeb5cca03cfe41c29c0157"
+    },
+    {
+      "path": ".claude/agents/references/paper-critic/council-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b455a8f7650964d2b9b96c495c874b3057816e8a",
+      "size": 884
+    },
+    {
+      "path": ".claude/agents/references/paper-critic/council-personas.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa4e939586991e00856539dde8c5074ba112182",
+      "size": 5772
+    },
+    {
+      "path": ".claude/agents/references/paper-critic/council-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a1e1502d5a0bfee5263dc82b3bd6d8b7a0e5254",
+      "size": 6960
+    },
+    {
+      "path": ".claude/agents/references/paper-critic/json-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0944fa70ed533341bf56936d4cf836e7607d78",
+      "size": 6426
+    },
+    {
+      "path": ".claude/agents/references/paper-critic/report-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19f748ea8b88c61e3c94f3f2bde36c36559c91e5",
+      "size": 3165
+    },
+    {
+      "path": ".claude/agents/references/paper-critic/specialist-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a313e2fa3cec0451ac661cf1389be8586892a928",
+      "size": 4494
+    },
+    {
+      "path": ".claude/agents/references/peer-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1f5e10e7c77b3c7cdfe3fc2f7869589123908c9"
+    },
+    {
+      "path": ".claude/agents/references/peer-reviewer/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb14765947af13af0604c57c81c9505a6c7de9cc",
+      "size": 5841
+    },
+    {
+      "path": ".claude/agents/references/peer-reviewer/sa-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e32e86f5796508b0931b0f44572c9f2446f27e08",
+      "size": 14139
+    },
+    {
+      "path": ".claude/agents/references/peer-reviewer/security-scan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33daa3d31f0dcd5d53600f2d9590b2bec7a12aba",
+      "size": 7269
+    },
+    {
+      "path": ".claude/agents/references/proposal-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01ceab086c1746e478083dc72db17e4d0521073a"
+    },
+    {
+      "path": ".claude/agents/references/proposal-reviewer/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc488503ef45c3b7322c5c8a4df676834b4562c6",
+      "size": 3459
+    },
+    {
+      "path": ".claude/agents/references/proposal-reviewer/sa-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3acc8f2bd7375c2a16bc2a146200259fbc2ef402",
+      "size": 6803
+    },
+    {
+      "path": ".claude/agents/references/referee-config.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "942ecb45279645b3ee0a790620a361f10ee0610a",
+      "size": 6386
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f1737382c8f3fdf4f3c8b38149a2f65e08d66f3"
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/audit-checklists.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff07d1327d5ee938dadd77cc4842367f6b852d4e",
+      "size": 16119
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/council-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f09dc895d16a9e5db5996624b6ea34c75836db",
+      "size": 768
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/deep-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1979c7fe375e646ca41ad4c62569192388b5f76a",
+      "size": 4661
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/grounded-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e38dc9baedfa80c68b7bd5c67285708b44da46b2",
+      "size": 8787
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/json-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8298a1281eb2d635e1d41254f52818ce900fdb38",
+      "size": 4363
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87242e2075c8285a66f727e55e6c7ec1d9e7b4ee"
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/causal-inference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38d3432c780838a1a8df3d3e3fa5662a8d1ce5b7",
+      "size": 3074
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/computational-simulation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ffcfc6e2f35fe37fdee9996ec9b68818b0ac18d",
+      "size": 2975
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/content-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee1e142bd02bcfe801835ffd25aafdf25779e196",
+      "size": 3504
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/cross-cutting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "990f55b15f95be0b3f4e168aa2b33409036ced34",
+      "size": 2581
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/experiments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e3010b1a6384fcc466b1ec723b361d7462ea088",
+      "size": 2922
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/mcdm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f6262bee41e3d6b4c1c6f835385cf821a04f219",
+      "size": 3903
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/ml-nlp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6906a453b397149a981ebcf16584123ff955b2da",
+      "size": 3559
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/methods/survey-psychometrics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5764cc2ded78a9055ff54117a8da526fb39d08fb",
+      "size": 3452
+    },
+    {
+      "path": ".claude/agents/references/referee2-reviewer/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a98c7b03604c1b372c02a1c0829e58dc8f511ab",
+      "size": 12071
+    },
+    {
+      "path": ".claude/agents/reproducibility-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "249e294e49a5bd1061e909149be59e609bdd4e78",
+      "size": 15495
+    },
+    {
+      "path": ".claude/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ef83b3f73febb50f3e89049df36a63386cf77f9"
+    },
+    {
+      "path": ".claude/commands/beamer-deck.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e11d88318a4dcd8ac5b7286efb4e63e3d903121a",
+      "size": 294
+    },
+    {
+      "path": ".claude/commands/bib-coverage.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6d47867d64e46bfbc7495adb861451018467102",
+      "size": 320
+    },
+    {
+      "path": ".claude/commands/bib-filter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d4c779defb938b8ece7998fd32ba2c393364305",
+      "size": 278
+    },
+    {
+      "path": ".claude/commands/bib-parse.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bb554d71db129f426fb4b4c18df3985c7a950d5",
+      "size": 368
+    },
+    {
+      "path": ".claude/commands/brief-compliance-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f535ef46c7ae8962e52e42f156563e897119c080",
+      "size": 290
+    },
+    {
+      "path": ".claude/commands/camera-ready.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "130792997d1a8167eef7947ca9c97fad7f00fd87",
+      "size": 647
+    },
+    {
+      "path": ".claude/commands/causal-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d909e872de93f93dc675b87f39364069e376a85a",
+      "size": 286
+    },
+    {
+      "path": ".claude/commands/checkpoint.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e89321165ad57a98e6c8092d52e6188a30072e44",
+      "size": 287
+    },
+    {
+      "path": ".claude/commands/code-archaeology.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4bab6948d7c934ac05a031e41e21d93b5e8154d",
+      "size": 278
+    },
+    {
+      "path": ".claude/commands/compile-knowledge.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ca61dc8558a6173daa3cc90d4ec100ae941beca",
+      "size": 438
+    },
+    {
+      "path": ".claude/commands/computational-experiments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c02d99f5af98fd38d62f4e52998eb599bc584003",
+      "size": 301
+    },
+    {
+      "path": ".claude/commands/cross-language-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72bd26a99461d55f3cf9c603e47dd08c46dd9669",
+      "size": 375
+    },
+    {
+      "path": ".claude/commands/data-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b43a95a909add62981e0dff7b1af84e2bc704b",
+      "size": 287
+    },
+    {
+      "path": ".claude/commands/devils-advocate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3602bf48180e0b35228cd823baf6d118ae176cc",
+      "size": 274
+    },
+    {
+      "path": ".claude/commands/docs-consistency.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f281fdcb95b44cf967781eedea38ae0e2689d82",
+      "size": 432
+    },
+    {
+      "path": ".claude/commands/docx.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fa80116975e466b2063fff1ec5084d3507b1023",
+      "size": 994
+    },
+    {
+      "path": ".claude/commands/experiment-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94ba920b5fc7a424afe84d83935a9aafd7a674d1",
+      "size": 287
+    },
+    {
+      "path": ".claude/commands/grill-me.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7f7f04af18c5659d9b5761fdffeeffb6172d93f",
+      "size": 930
+    },
+    {
+      "path": ".claude/commands/handoff.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c77f875cce38d342772d1be2c70399a76f81781",
+      "size": 521
+    },
+    {
+      "path": ".claude/commands/ideas.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "536bf4c50d9f2d3581b6b7e453a9c023c10e6b29",
+      "size": 270
+    },
+    {
+      "path": ".claude/commands/init-project-course.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "122f39f56b4ae6706af4a88235e17d82223df506",
+      "size": 273
+    },
+    {
+      "path": ".claude/commands/init-project-light.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "973c02b8854be722e6789041458bab90b789ad71",
+      "size": 279
+    },
+    {
+      "path": ".claude/commands/init-project-orchestration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99932a7bedc02deebc62b146a3da3ffee1b23359",
+      "size": 598
+    },
+    {
+      "path": ".claude/commands/insights-deck.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec2b4c153eae8b07c158a09a5778c017974559de",
+      "size": 425
+    },
+    {
+      "path": ".claude/commands/interview-me.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dda4aa080c38117c8c70d20da24637750d2a4569",
+      "size": 281
+    },
+    {
+      "path": ".claude/commands/knowledge-lint.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f8aaaf53c598c0f7ed65ba0710d559fc3fdb83",
+      "size": 338
+    },
+    {
+      "path": ".claude/commands/latex-diff.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4953cced5ed59fe7028d9c4ef5aa1e8393d10d8",
+      "size": 530
+    },
+    {
+      "path": ".claude/commands/latex-health-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "373b7359560bafe49043a61785a81a41f747cfc8",
+      "size": 289
+    },
+    {
+      "path": ".claude/commands/latex-polish.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0328669a0c4d7958c538b7f3493d3c6a24306e7",
+      "size": 542
+    },
+    {
+      "path": ".claude/commands/latex-posters.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "115651919e23687ebe641f05a1ca8f5138e73c3c",
+      "size": 290
+    },
+    {
+      "path": ".claude/commands/latex-scaffold.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f547a5721a4e6b5aa474e0474a28e8def746abad",
+      "size": 274
+    },
+    {
+      "path": ".claude/commands/latex-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ab014674ab94a3310aff15084d61182b0e0fa66",
+      "size": 288
+    },
+    {
+      "path": ".claude/commands/latex.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fea5a61a325276511af5d4f7adbcca920a167cf",
+      "size": 303
+    },
+    {
+      "path": ".claude/commands/lean-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99548b20953605750ca58386ee15c4221834749d",
+      "size": 928
+    },
+    {
+      "path": ".claude/commands/math-proof.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fe2126b399aee2475f0aa611542961c3231f5f1",
+      "size": 493
+    },
+    {
+      "path": ".claude/commands/mcp-builder.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06638add38dda4a0fbac760ddbd5c85d985f5e07",
+      "size": 432
+    },
+    {
+      "path": ".claude/commands/meetings-cleanup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4968bc8897096982bf7c4e99b40e9acf9b9f1a85",
+      "size": 491
+    },
+    {
+      "path": ".claude/commands/meetings-debrief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2af904486eff7c83d5d2613c19c8677282f4fc",
+      "size": 507
+    },
+    {
+      "path": ".claude/commands/meetings-list.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d98be82615957ade70ce8e20339659c1d909408",
+      "size": 494
+    },
+    {
+      "path": ".claude/commands/meetings-prep.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a774170a6fcba3c02c2ef62684a1511d154c95f",
+      "size": 517
+    },
+    {
+      "path": ".claude/commands/meetings-recap.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "131f0d8c5875ab04f87acd09f943c840c54cfd06",
+      "size": 539
+    },
+    {
+      "path": ".claude/commands/meetings-search.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca309b80a7ea5932991eafc561c801bfd48e5231",
+      "size": 625
+    },
+    {
+      "path": ".claude/commands/meetings-weekly.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc009081571a6341c43aa3dc7367dff7551f56e5",
+      "size": 492
+    },
+    {
+      "path": ".claude/commands/method-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50048ef701de5d6c918511453f4c712cc4d36d25",
+      "size": 282
+    },
+    {
+      "path": ".claude/commands/multi-perspective.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2f8b4ad1e2ab7201d7b0a19cfcbf04502c600d0",
+      "size": 291
+    },
+    {
+      "path": ".claude/commands/numerical-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "274546a0c9f5e0da525b990e5ad03e746ea3c47a",
+      "size": 1040
+    },
+    {
+      "path": ".claude/commands/pdf.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41263fd09d8ebb72763be97afe4df44ac95121c5",
+      "size": 620
+    },
+    {
+      "path": ".claude/commands/pipeline-manifest.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e97d18606791c2ba420911711a9e57f28015a96",
+      "size": 287
+    },
+    {
+      "path": ".claude/commands/playwright-cli.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77a997bf9b659b99472a214520ea5e949275108c",
+      "size": 295
+    },
+    {
+      "path": ".claude/commands/postmortem.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4383f893ba3b10a5dbdf1a1dab8a8078c9f65964",
+      "size": 277
+    },
+    {
+      "path": ".claude/commands/pre-commit-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6eb35549a3248ff635131ccdce90fa100d7c1bc",
+      "size": 437
+    },
+    {
+      "path": ".claude/commands/pre-submission-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615580474f468321ec89bee354e90c377eaa6f8d",
+      "size": 426
+    },
+    {
+      "path": ".claude/commands/project-deck.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cab91f96033dd9a6627ed2a7b47cddbbd766d38",
+      "size": 271
+    },
+    {
+      "path": ".claude/commands/project-safety.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4a8d5d631d35f88bd662e3872cc8c54095180dc",
+      "size": 283
+    },
+    {
+      "path": ".claude/commands/proof-readability.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a35018bac32a823937cc238b0cd0703f99c2f037",
+      "size": 558
+    },
+    {
+      "path": ".claude/commands/proofread.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22a5d25dd124a025cb9509f3e12704e8b350c0d9",
+      "size": 264
+    },
+    {
+      "path": ".claude/commands/python-env.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af8fa3fd4eecf43207924404b8e0fac5232d87aa",
+      "size": 281
+    },
+    {
+      "path": ".claude/commands/quarto-deck.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5a7c9d641a9b57306c9ff6e607c63ffc17c9f45",
+      "size": 263
+    },
+    {
+      "path": ".claude/commands/reorg.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e97a2f31a2554c5131f180653f2e5fd79874db3b",
+      "size": 682
+    },
+    {
+      "path": ".claude/commands/replication-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f344c1b5c5ff20c9dacdd937191315d3db58fa",
+      "size": 292
+    },
+    {
+      "path": ".claude/commands/replication-package.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c667645ad69226b93d62da8532f00c261407d068",
+      "size": 278
+    },
+    {
+      "path": ".claude/commands/retarget-journal.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c22be2ed73b48bd5f000b9d1842f7edae6574a6",
+      "size": 299
+    },
+    {
+      "path": ".claude/commands/review-cluster.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e8de399727847ef158a5bd3483454854f6667a6",
+      "size": 691
+    },
+    {
+      "path": ".claude/commands/review-response.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaeb5ec18c159e5025b1a2908a8c5c78d7b003b1",
+      "size": 443
+    },
+    {
+      "path": ".claude/commands/session-health.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb3a7d545b5e0d990335b1a9f012c1b4e3a00e1",
+      "size": 264
+    },
+    {
+      "path": ".claude/commands/session-log.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "332ed867d7ef9948ff8596fb2cf1c59b307e4c33",
+      "size": 269
+    },
+    {
+      "path": ".claude/commands/skill-extract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a275b19663afb2afceb3306d3a89f3621ec1ff",
+      "size": 419
+    },
+    {
+      "path": ".claude/commands/skill-preflight.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79f8c7282789bb23133e607bc5f7ddbf8ddf1b38",
+      "size": 283
+    },
+    {
+      "path": ".claude/commands/split-pdf.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "367532eccb6827a0109c494a55348f29aae3428a",
+      "size": 344
+    },
+    {
+      "path": ".claude/commands/strategic-revision.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef6353acc9c8042b2a8eb719050bb488d2f91efe",
+      "size": 444
+    },
+    {
+      "path": ".claude/commands/symbolic-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de97eb690d8c21d680ee9757b2988a57a957145",
+      "size": 940
+    },
+    {
+      "path": ".claude/commands/synthesise-reviews.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8327dd1c555acfa5c4898747506188c08afe9982",
+      "size": 294
+    },
+    {
+      "path": ".claude/commands/synthetic-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66680d6146500223e8f74e60194b192985020707",
+      "size": 305
+    },
+    {
+      "path": ".claude/commands/tailscale-mosh-recover.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ac6eb1cfceec0588ca81cab8f3584a64896113b",
+      "size": 956
+    },
+    {
+      "path": ".claude/commands/task-management.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4603fc40c5514237e5bf17e25fdce348e6b0fe1",
+      "size": 728
+    },
+    {
+      "path": ".claude/commands/test-iterate-loop.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69f72fa59d1084be067a22643fbb9149aea91c87",
+      "size": 492
+    },
+    {
+      "path": ".claude/commands/tikz.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b1611f62b2219595c0edc8be241a5184b7c8b4a",
+      "size": 533
+    },
+    {
+      "path": ".claude/commands/update-focus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3126faf8343f6cfa59b22ec71453abafdba7868f",
+      "size": 272
+    },
+    {
+      "path": ".claude/commands/update-project-doc.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bde0ef0912e6be07380a128efda656e073628942",
+      "size": 305
+    },
+    {
+      "path": ".claude/commands/venue-fork.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "054f451e1e37fb6b535a4a4fbbf537fc6d821442",
+      "size": 940
+    },
+    {
+      "path": ".claude/commands/venue-guidelines-compliance.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77df2f9537ddf1e712a6e4b2c516d688ccb5951c",
+      "size": 762
+    },
+    {
+      "path": ".claude/commands/verify-math.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6779687aa481606a48c2a0420099f4b8fd2cd5a3",
+      "size": 833
+    },
+    {
+      "path": ".claude/commands/voice-analyzer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91f16872531345fdae306cc4810416b4f8110ff3",
+      "size": 468
+    },
+    {
+      "path": ".claude/commands/voice-editor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "342c0dfd6326dfe183a8dc703d8108a7018f0519",
+      "size": 453
+    },
+    {
+      "path": ".claude/commands/weakness-scanner.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c69050792833edc9b928d7a43d4c6d4d81492d5",
+      "size": 271
+    },
+    {
+      "path": ".claude/commands/webapp-testing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6da3b6b3f23d7be656932a42813da3af8f51b440",
+      "size": 281
+    },
+    {
+      "path": ".claude/commands/wiki-curate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa94d9b75f038228d81287ef56fdb3d3f905de3",
+      "size": 498
+    },
+    {
+      "path": ".claude/commands/wiki-grow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c877778e5e123fdd5147c0f9b2c33e0d62bf83cd",
+      "size": 538
+    },
+    {
+      "path": ".claude/commands/wiki-merge.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8fe0e0e0579b8e272e3456663ac28ef9aae5526",
+      "size": 470
+    },
+    {
+      "path": ".claude/commands/wire-shared-package.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5e92e6c43a67f1e0833422e3a8850f72d363f7e",
+      "size": 299
+    },
+    {
+      "path": ".claude/commands/xlsx.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22adb28105a5c8732766c38048a955a4a431b4cd",
+      "size": 1144
+    },
+    {
+      "path": ".claude/rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffdc2a761f8d895c6d37c355c23730d54685ca53"
+    },
+    {
+      "path": ".claude/rules/audit-before-fix.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa8d17db4fcb2747771fb9eac229aba83f2adb5",
+      "size": 1998
+    },
+    {
+      "path": ".claude/rules/client-guidance-ownership.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c1b9962daeb10c2c4d5b11b0537e71805c959ab",
+      "size": 1054
+    },
+    {
+      "path": ".claude/rules/design-before-results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ed96fb7d1390835561747aec4ebf5121bb3d6f",
+      "size": 2494
+    },
+    {
+      "path": ".claude/rules/doi-verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40fac2e43bffaa924f5b9ec51a98f9650628e70c",
+      "size": 4077
+    },
+    {
+      "path": ".claude/rules/latex-hygiene.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7de0461f3cddc167aa4fe2e70a872672a603412b",
+      "size": 7104
+    },
+    {
+      "path": ".claude/rules/lean-guidance-files.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc7191548ea1ef131cbd44c74712fb7a510da2b",
+      "size": 2076
+    },
+    {
+      "path": ".claude/rules/learn-tags.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a147be024b124ad6b11255fe4e54090c715c205e",
+      "size": 4865
+    },
+    {
+      "path": ".claude/rules/mark-unverified.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5712ace9000f6d1290e3bd7c5d15bde6603d2302",
+      "size": 9930
+    },
+    {
+      "path": ".claude/rules/no-hardcoded-results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a8faeac39785072e493ae80301659afb0c02b15",
+      "size": 2363
+    },
+    {
+      "path": ".claude/rules/overleaf-separation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "951e85f3c08cfa844c26581b1a666e6bee840ec1",
+      "size": 3715
+    },
+    {
+      "path": ".claude/rules/paper-code-consistency.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "865bdc801b4682d11a8b7044564e5bf551609920",
+      "size": 4510
+    },
+    {
+      "path": ".claude/rules/plan-first.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68a6d927498f9539d2eff6834764609691afaa28",
+      "size": 5271
+    },
+    {
+      "path": ".claude/rules/python-uv.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43a2a652e0f1f0a89b5e6bbffcdec70dbbfc7165",
+      "size": 1922
+    },
+    {
+      "path": ".claude/rules/read-docs-first.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eab359dce949f607352d953e4dc59cd6f870db4e",
+      "size": 2678
+    },
+    {
+      "path": ".claude/rules/scope-discipline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cff82060c39e2b068a7a19a1e6b67f364d2aa24",
+      "size": 1397
+    },
+    {
+      "path": ".claude/rules/severity-gradient.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b50e62d896430d863f2277d51014df8644bf0910",
+      "size": 4892
+    },
+    {
+      "path": ".claude/rules/spec-before-quality.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f98985c39f8d5f87c080f19255c3cf2e8fc6a8",
+      "size": 2694
+    },
+    {
+      "path": ".claude/rules/subagent-write-guard.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c99672b0aca6831275705afdd51e51e1ef94e5a",
+      "size": 4455
+    },
+    {
+      "path": ".claude/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6151a0bc1ebc56c649fb2fd08316ca74100a4d0f",
+      "size": 2561
+    },
+    {
+      "path": ".codex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7cd5616cb4b77b31cc18b47ab7d5a50cc949add"
+    },
+    {
+      "path": ".codex/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54e1bc7b15097763d2807e535d9e791e7ff98da2"
+    },
+    {
+      "path": ".codex/agents/artifact-coherence-auditor.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f6fb02ea859b10d9037a9451a4346e53474f5e7",
+      "size": 12076
+    },
+    {
+      "path": ".codex/agents/blindspot.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "787f768c0a523741c8fde9ed33ab4a52caa56451",
+      "size": 19258
+    },
+    {
+      "path": ".codex/agents/claim-verify.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61cf0d70efff277fb3e8610fe2b6459e330a35ed",
+      "size": 20798
+    },
+    {
+      "path": ".codex/agents/code-paper-auditor.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ac772220d7effb94d8ac8a2565591c7b65f5781",
+      "size": 15845
+    },
+    {
+      "path": ".codex/agents/code-review.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c586260c3892e5bd82e5c0d04a30eb63ed9151d9",
+      "size": 18123
+    },
+    {
+      "path": ".codex/agents/domain-reviewer.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9394f1beca11b8aff762e53ad32f3c4d17eaf222",
+      "size": 26415
+    },
+    {
+      "path": ".codex/agents/fatal-error-check.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b834291bdb7daebf6c1cdce177800fb5a86fcdf",
+      "size": 12736
+    },
+    {
+      "path": ".codex/agents/fixer.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e64c6b695882c361e8c3769aaec2221f4b4668b9",
+      "size": 16463
+    },
+    {
+      "path": ".codex/agents/gemini-research.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d60f8cfdfe6acd0916cf23d7d50f5d11ccfd012b",
+      "size": 5422
+    },
+    {
+      "path": ".codex/agents/paper-critic.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "160f8b0c7dad5082c1ee4fa2a24e2074a6e5e280",
+      "size": 39339
+    },
+    {
+      "path": ".codex/agents/peer-reviewer.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "307624cf7ddfe29fcffaa0683155f72268f099a7",
+      "size": 24502
+    },
+    {
+      "path": ".codex/agents/proposal-reviewer.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "050dcd6805a5c465285c5f2d965a0db503b88447",
+      "size": 17318
+    },
+    {
+      "path": ".codex/agents/referee2-reviewer.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49c029f3c5affe128d7573c38b711734e931c15b",
+      "size": 41318
+    },
+    {
+      "path": ".codex/agents/reproducibility-auditor.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abe23b90212694a921fa2f7d0b7240ae621e1312",
+      "size": 15404
+    },
+    {
+      "path": ".context",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd00d59f271fe8f1def73282b482655ec6e9c90f"
+    },
+    {
+      "path": ".context/current-focus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85dd79145255cac0f85c3a1ff57ae75451bf8e20",
+      "size": 1001
+    },
+    {
+      "path": ".context/preferences",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4569a6d101f2b0c38a329e1baae44ccfd94ee76d"
+    },
+    {
+      "path": ".context/preferences/priorities.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73f68ae21fcbe90ee01471cae6c2c8c823e0befa",
+      "size": 1019
+    },
+    {
+      "path": ".context/preferences/task-naming.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b345ed8fecad1044b0462a21acbe8fc9efe5d38d",
+      "size": 760
+    },
+    {
+      "path": ".context/profile.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9d540dc330386dfe13f605862d7efbd2dda93c9",
+      "size": 783
+    },
+    {
+      "path": ".context/projects",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b16bbfe70533a8a6cd7e81212fbef1d0fea6d67"
+    },
+    {
+      "path": ".context/projects/_index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c99df4d979f0f750bb7368f91252f2cb76d95528",
+      "size": 1341
+    },
+    {
+      "path": ".context/projects/papers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c155abd303774b8b759d8722c6fb784d9e0730ea"
+    },
+    {
+      "path": ".context/projects/papers/nudge-exp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93653f1198545ff0bad28443112aaffa6fa8afe7",
+      "size": 627
+    },
+    {
+      "path": ".context/projects/papers/uncertainty.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "654a3b477625155114d697913d6558f41e8728a7",
+      "size": 958
+    },
+    {
+      "path": ".context/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdee026c08d122708bfa0d1df571a66de4d3dca8"
+    },
+    {
+      "path": ".context/resources/claude-scientific-writer-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbc04e0256b725164cb099bbabfd3b26ece28901",
+      "size": 3213
+    },
+    {
+      "path": ".context/resources/coauthor-venues.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e735a32f553eec0e101eb6e96bf9a55af67098c",
+      "size": 6916
+    },
+    {
+      "path": ".context/resources/css-change-vs-benchmark-lens.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f64a77529f2d7a11752ef8c78eddc5d4bdfed67",
+      "size": 3202
+    },
+    {
+      "path": ".context/resources/cunningham-multi-analyst-agents.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c2705d7695bb4940822afa5f6db8a2e8df58c64",
+      "size": 5389
+    },
+    {
+      "path": ".context/resources/cunningham-multilang-code-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4ce9c4c714a83ee0a5ad3bc066e07bc463066c3",
+      "size": 3298
+    },
+    {
+      "path": ".context/resources/google-ai-co-scientist-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba4fa1cd3e8dae79208f8c948640e81edc459b1",
+      "size": 3958
+    },
+    {
+      "path": ".context/resources/karpathy-llm-council-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74063006dde004509798d70bf0999668d946e353",
+      "size": 2721
+    },
+    {
+      "path": ".context/resources/multi-coder-reliability-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7438385e0628bb6e768d83dee2a2ade0d786c60",
+      "size": 5451
+    },
+    {
+      "path": ".context/resources/pedro-santanna-takeaways.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfef6db73b506fd4e67a0c10719bc91967b9e130",
+      "size": 4475
+    },
+    {
+      "path": ".context/resources/venue-rankings.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64a203142b52d90e7b9fa17038ed4548f038265d",
+      "size": 5591
+    },
+    {
+      "path": ".context/resources/venue-rankings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36ed1fc21f0df64f2f1abb5c28a5f3ef28bd4792"
+    },
+    {
+      "path": ".context/resources/venue-rankings/abs_ajg_2024.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba61e31abe943b81cfcad1082c05413551e95ad2",
+      "size": 122436
+    },
+    {
+      "path": ".context/resources/venue-rankings/abs_ajg_2024_econ.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d90e00d925aa2bd9ab0ce8e1f0d98214d725b4e",
+      "size": 19533
+    },
+    {
+      "path": ".context/resources/venue-rankings/cabs_4_4star_theory.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9631bd9c822d9a37642c5d11b58253a5d8d9cf9b",
+      "size": 4916
+    },
+    {
+      "path": ".context/resources/venue-rankings/core_2026.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37b98dd06b8795068eada229c2d5caabcfb35df8",
+      "size": 65560
+    },
+    {
+      "path": ".context/resources/venue-rankings/ft50.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd53b4fa94b832d825b29b90fc88abaeb1296af3",
+      "size": 3188
+    },
+    {
+      "path": ".context/resources/venue-rankings/scimagojr-2025.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a4e1ea4868698dedf7aabb11c8bb87bedc65ac0",
+      "size": 11248204
+    },
+    {
+      "path": ".context/resources/venue-rankings/wbs60.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a5989e28c7ae9c925f5361b4553bdea3700db11",
+      "size": 3869
+    },
+    {
+      "path": ".context/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc41f5512760e9d1084e252d84449509d1280eb5"
+    },
+    {
+      "path": ".context/workflows/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73ea2d709f946b80b236b41b9e9cc397cdae7e38",
+      "size": 2631
+    },
+    {
+      "path": ".context/workflows/daily-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f33c0248d2058d36670a07bfba1e2a05a0ffab9e",
+      "size": 2599
+    },
+    {
+      "path": ".context/workflows/meeting-actions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaf181995888b3f2bda4a57a163db196bdcec850",
+      "size": 4397
+    },
+    {
+      "path": ".context/workflows/replication-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60dd859bc03eb27f6cead2e863b91746fd0ba828",
+      "size": 4488
+    },
+    {
+      "path": ".context/workflows/weekly-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c91c5d2f20050f661393566acf8b3271961e3ab",
+      "size": 2500
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bed2727c0c141705512b91f10f9b67e61b1fed52",
+      "size": 314
+    },
+    {
+      "path": ".npmignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "829f3c7db7c44ff51a9f73d9255cab5eaff3dc10",
+      "size": 54
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b6a44e03300774cc29edcd940fe148915c27c72",
+      "size": 240
+    },
+    {
+      "path": "AI.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc5e781862dc09f8e176b60398515994ffb3a7b1",
+      "size": 8914
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f194d906e60d59d333a90555e135d04b7be29939",
+      "size": 147
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14e3f60c7d8ac3fe82c6d3622b6be49456a9c9f4",
+      "size": 1346
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f7f8ac3d6aefe422a704454d9558dada86850a2",
+      "size": 1071
+    },
+    {
+      "path": "MEMORY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1c8b611a8454542da053426a799355bf79d7509",
+      "size": 748
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec41ee874c9560e77f021075b5e7f1cf2e22f60e",
+      "size": 20742
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09bf14df1ba8ed67c3ce96d3e6da758327b0d341"
+    },
+    {
+      "path": "agents/artifact-coherence-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9af26fb6935c1414a834a98251eeee1baaf03638",
+      "size": 12156
+    },
+    {
+      "path": "agents/blindspot.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa679f639ea460c50030c66cce934e8b4c946ad9",
+      "size": 19377
+    },
+    {
+      "path": "agents/claim-verify.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e73008a1b56ee47e71f2fc587e287d126d4880be",
+      "size": 20924
+    },
+    {
+      "path": "agents/code-paper-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d81c5c64221070e896748084e808c7c497b36ec3",
+      "size": 15918
+    },
+    {
+      "path": "agents/code-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "500cb4fef9d054c35d5f2252daae3f2e76e7b86e",
+      "size": 18268
+    },
+    {
+      "path": "agents/codex-research.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3574a063c744a2346153c27a1caab1fc544a05e7",
+      "size": 6113
+    },
+    {
+      "path": "agents/domain-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4875f7271f39faab62a191bcc25d4ca80fc7c429",
+      "size": 26503
+    },
+    {
+      "path": "agents/fatal-error-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2954da2ab959912b5d26d2db4b157ef3c778894c",
+      "size": 12795
+    },
+    {
+      "path": "agents/fixer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41eb958790a346fc4bd52c0053835e60b1150ce9",
+      "size": 16521
+    },
+    {
+      "path": "agents/gemini-research.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e235419ec500868b50530ca07e16cfb4bd18f202",
+      "size": 5480
+    },
+    {
+      "path": "agents/paper-critic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "875694c56796ede7a74899d00f45705bc6b06a6d",
+      "size": 39516
+    },
+    {
+      "path": "agents/peer-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "625710c1c13977ff68c6f2c0659db7f5d5ed9194",
+      "size": 24658
+    },
+    {
+      "path": "agents/proposal-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5f45d78079d2d9eebd1583b80848030d9af5860",
+      "size": 17468
+    },
+    {
+      "path": "agents/referee2-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71e1dc1784a0404b42b4a1166c3a7f9e2edef771",
+      "size": 41374
+    },
+    {
+      "path": "agents/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f88c783ba9918345d4dc50394fb163f1b80c052"
+    },
+    {
+      "path": "agents/references/code-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8ba6cc3d7bf232111bcaabd48d87ab39054d510"
+    },
+    {
+      "path": "agents/references/code-review/checklist-categories.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4448bb4e986f47539f9eff4295b086a1bcdc8204",
+      "size": 5122
+    },
+    {
+      "path": "agents/references/code-review/findings-schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfa876702ae947e71f481359a40ffe006f23e69e",
+      "size": 1648
+    },
+    {
+      "path": "agents/references/code-review/persona-catalog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9808fbdf15fac882d7ec737d846e86982bc09540",
+      "size": 5846
+    },
+    {
+      "path": "agents/references/code-review/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e0aa5558f2354221ae476a6da81af4cdef6e23",
+      "size": 3012
+    },
+    {
+      "path": "agents/references/code-review/subagent-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1b1596d0f389ce617fc15e98885ea4cb3d5a1b",
+      "size": 1700
+    },
+    {
+      "path": "agents/references/journal-referee-profiles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c06ba5919d242cd07eaa1294948b6cd79e9dd198",
+      "size": 27108
+    },
+    {
+      "path": "agents/references/paper-critic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc1c250c684a832ef7aeb5cca03cfe41c29c0157"
+    },
+    {
+      "path": "agents/references/paper-critic/council-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b455a8f7650964d2b9b96c495c874b3057816e8a",
+      "size": 884
+    },
+    {
+      "path": "agents/references/paper-critic/council-personas.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa4e939586991e00856539dde8c5074ba112182",
+      "size": 5772
+    },
+    {
+      "path": "agents/references/paper-critic/council-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a1e1502d5a0bfee5263dc82b3bd6d8b7a0e5254",
+      "size": 6960
+    },
+    {
+      "path": "agents/references/paper-critic/json-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0944fa70ed533341bf56936d4cf836e7607d78",
+      "size": 6426
+    },
+    {
+      "path": "agents/references/paper-critic/report-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19f748ea8b88c61e3c94f3f2bde36c36559c91e5",
+      "size": 3165
+    },
+    {
+      "path": "agents/references/paper-critic/specialist-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a313e2fa3cec0451ac661cf1389be8586892a928",
+      "size": 4494
+    },
+    {
+      "path": "agents/references/peer-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1f5e10e7c77b3c7cdfe3fc2f7869589123908c9"
+    },
+    {
+      "path": "agents/references/peer-reviewer/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb14765947af13af0604c57c81c9505a6c7de9cc",
+      "size": 5841
+    },
+    {
+      "path": "agents/references/peer-reviewer/sa-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e32e86f5796508b0931b0f44572c9f2446f27e08",
+      "size": 14139
+    },
+    {
+      "path": "agents/references/peer-reviewer/security-scan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33daa3d31f0dcd5d53600f2d9590b2bec7a12aba",
+      "size": 7269
+    },
+    {
+      "path": "agents/references/proposal-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01ceab086c1746e478083dc72db17e4d0521073a"
+    },
+    {
+      "path": "agents/references/proposal-reviewer/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc488503ef45c3b7322c5c8a4df676834b4562c6",
+      "size": 3459
+    },
+    {
+      "path": "agents/references/proposal-reviewer/sa-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3acc8f2bd7375c2a16bc2a146200259fbc2ef402",
+      "size": 6803
+    },
+    {
+      "path": "agents/references/referee-config.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "942ecb45279645b3ee0a790620a361f10ee0610a",
+      "size": 6386
+    },
+    {
+      "path": "agents/references/referee2-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f1737382c8f3fdf4f3c8b38149a2f65e08d66f3"
+    },
+    {
+      "path": "agents/references/referee2-reviewer/audit-checklists.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff07d1327d5ee938dadd77cc4842367f6b852d4e",
+      "size": 16119
+    },
+    {
+      "path": "agents/references/referee2-reviewer/council-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f09dc895d16a9e5db5996624b6ea34c75836db",
+      "size": 768
+    },
+    {
+      "path": "agents/references/referee2-reviewer/deep-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1979c7fe375e646ca41ad4c62569192388b5f76a",
+      "size": 4661
+    },
+    {
+      "path": "agents/references/referee2-reviewer/grounded-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e38dc9baedfa80c68b7bd5c67285708b44da46b2",
+      "size": 8787
+    },
+    {
+      "path": "agents/references/referee2-reviewer/json-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8298a1281eb2d635e1d41254f52818ce900fdb38",
+      "size": 4363
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87242e2075c8285a66f727e55e6c7ec1d9e7b4ee"
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/causal-inference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38d3432c780838a1a8df3d3e3fa5662a8d1ce5b7",
+      "size": 3074
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/computational-simulation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ffcfc6e2f35fe37fdee9996ec9b68818b0ac18d",
+      "size": 2975
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/content-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee1e142bd02bcfe801835ffd25aafdf25779e196",
+      "size": 3504
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/cross-cutting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "990f55b15f95be0b3f4e168aa2b33409036ced34",
+      "size": 2581
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/experiments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e3010b1a6384fcc466b1ec723b361d7462ea088",
+      "size": 2922
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/mcdm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f6262bee41e3d6b4c1c6f835385cf821a04f219",
+      "size": 3903
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/ml-nlp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6906a453b397149a981ebcf16584123ff955b2da",
+      "size": 3559
+    },
+    {
+      "path": "agents/references/referee2-reviewer/methods/survey-psychometrics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5764cc2ded78a9055ff54117a8da526fb39d08fb",
+      "size": 3452
+    },
+    {
+      "path": "agents/references/referee2-reviewer/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a98c7b03604c1b372c02a1c0829e58dc8f511ab",
+      "size": 12071
+    },
+    {
+      "path": "agents/reproducibility-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "249e294e49a5bd1061e909149be59e609bdd4e78",
+      "size": 15495
+    },
+    {
+      "path": "config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "851a924a2a8ba1f6ff2ada4cdb5149ccbada14d3"
+    },
+    {
+      "path": "config/ai-contracts.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebfcb4f8be758e14e0fd919613c8d6e0233e500f",
+      "size": 32763
+    },
+    {
+      "path": "config/install-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe3bff5d020606a2523bef7f76cf76fa872c2336",
+      "size": 48311
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e172f69164cfbe3902791c208b8c530f7b810439"
+    },
+    {
+      "path": "docs/agents.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd6419d186d130de67df2745162a7688be77865e",
+      "size": 3243
+    },
+    {
+      "path": "docs/availability.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60cf642c09ec8a495ff26cbd41d324d7f27390d2",
+      "size": 19125
+    },
+    {
+      "path": "docs/bibliography-setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3f00cd20ab51c438abab2f70c0108f16383fb43",
+      "size": 3039
+    },
+    {
+      "path": "docs/council-mode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89fb2a8499125320bc0ef04827bfd24d23ef7bbf",
+      "size": 1684
+    },
+    {
+      "path": "docs/dual-client-ai-control-plane.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30c843bb76c40d211bcd0161f29429efcfff03cf",
+      "size": 20979
+    },
+    {
+      "path": "docs/getting-started.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cef1246554ee7b4526778efdd2fdfccc945e0541",
+      "size": 4867
+    },
+    {
+      "path": "docs/hooks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d27ba17637fcdae92240c456d9facb8d7b64365",
+      "size": 1545
+    },
+    {
+      "path": "docs/mcp-servers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44169e9fce24a32460a7cc2ad9b13d25d1f77c3a",
+      "size": 1719
+    },
+    {
+      "path": "docs/notion-setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ac32fd7377b7b7a67ecb28b35c0ab6c0890c475",
+      "size": 1959
+    },
+    {
+      "path": "docs/rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dc7557dbc968f75b71f78252cf38eea958a2dad",
+      "size": 3037
+    },
+    {
+      "path": "docs/scripts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24285f8c2fec8b56bd4479b41638b8c3556d56b1",
+      "size": 2136
+    },
+    {
+      "path": "docs/setup-overview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db2f23f66398199253a8de7afc371e0a3a1191bb"
+    },
+    {
+      "path": "docs/setup-overview/setup-overview.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02ca43fa8776157d164d8407978c7a4e972a3ebe",
+      "size": 432295
+    },
+    {
+      "path": "docs/setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d295b7341571dd7e6623eed80b38764c7e3b2352"
+    },
+    {
+      "path": "docs/setup/setup-overview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "950753d8d88c938a92ee7dda9f1ca79ce7735a6b"
+    },
+    {
+      "path": "docs/setup/setup-overview/setup-overview.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8a48aa0444f8fed22753cd91a30d2dc41f8b876",
+      "size": 432342
+    },
+    {
+      "path": "docs/skills.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40230958a7bc478083f9a2abd65d366d7d754b0d",
+      "size": 25912
+    },
+    {
+      "path": "docs/system.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a12e0e869f0789f0e8d439fa49566c2031a9a63",
+      "size": 2887
+    },
+    {
+      "path": "docs/transitioning-to-flonat-research.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e5347a741b7d8a87819f31b526ea64605c4c24f",
+      "size": 5761
+    },
+    {
+      "path": "hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "12044f670fae8dd88dc8fb9da16e00141eb315e6"
+    },
+    {
+      "path": "hooks/block-destructive-git.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "622c44aea76db19aea02154c2688decee2cc405f",
+      "size": 2700
+    },
+    {
+      "path": "hooks/handoff-read.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "70542f551f9d67a2ba6a388db2c87c6d825f4288",
+      "size": 907
+    },
+    {
+      "path": "hooks/promise-checker.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c256889460fb58e5c7beae0775f8d69636988cc9",
+      "size": 3982
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "044deae470792f2b6fa9c6fe3f31ebedd7b7a44d",
+      "size": 1246
+    },
+    {
+      "path": "packages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f4bae8c72c5453579736aa1305cd14f433f0ea7"
+    },
+    {
+      "path": "packages/council-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c07049fb53b068df107fba690b74948ba6e7c71"
+    },
+    {
+      "path": "packages/council-api/.github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b72f8646d3648759c5dfa9966272a295dbe2acaa"
+    },
+    {
+      "path": "packages/council-api/.github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b779799b6fa95a38e5f76f5ff99536048be13e9"
+    },
+    {
+      "path": "packages/council-api/.github/workflows/claude-code-review.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5e8cfd4dc37c61955c30f11cebe4e7bf7d126dd",
+      "size": 1433
+    },
+    {
+      "path": "packages/council-api/.github/workflows/claude.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d300267f1855c6feac7fcd99500b033a9cd8c0c1",
+      "size": 1886
+    },
+    {
+      "path": "packages/council-api/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3732f362da8332f4182fb379c693dbf6221cfb02",
+      "size": 188
+    },
+    {
+      "path": "packages/council-api/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12ce1c6c8442913a32cfb11d65d9ca0b437d0f2",
+      "size": 18022
+    },
+    {
+      "path": "packages/council-api/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac9c8c95042fefe270d0aace1e8c90dc58f17136",
+      "size": 1493
+    },
+    {
+      "path": "packages/council-api/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b180d7ac996ad743450f08c9194b6e073f57e5ea"
+    },
+    {
+      "path": "packages/council-api/src/council_api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42177b784d61c3310b30c5a6554be12861cadebd"
+    },
+    {
+      "path": "packages/council-api/src/council_api/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f22017ed43693d286dddf172b02e792276d08d5",
+      "size": 656
+    },
+    {
+      "path": "packages/council-api/src/council_api/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f234d37d65a5f86af13877a448de949e87a9ed6c",
+      "size": 8175
+    },
+    {
+      "path": "packages/council-api/src/council_api/checkpoint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eed538df3b2343561ca2417bbf53397fcbfaadf",
+      "size": 6150
+    },
+    {
+      "path": "packages/council-api/src/council_api/client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0154b950d28414364bf8c472f4275d1150d3600",
+      "size": 15803
+    },
+    {
+      "path": "packages/council-api/src/council_api/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b51d97a54f041e69fb932e68ca179bb4e3cd2fe",
+      "size": 8241
+    },
+    {
+      "path": "packages/council-api/src/council_api/council.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc1e81eb9b5b7f9d7a9b10c55ab462bbe0322fea",
+      "size": 17814
+    },
+    {
+      "path": "packages/council-api/src/council_api/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0189c63712420fe07ba0a626659265207d31e37",
+      "size": 1352
+    },
+    {
+      "path": "rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffdc2a761f8d895c6d37c355c23730d54685ca53"
+    },
+    {
+      "path": "rules/audit-before-fix.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa8d17db4fcb2747771fb9eac229aba83f2adb5",
+      "size": 1998
+    },
+    {
+      "path": "rules/client-guidance-ownership.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c1b9962daeb10c2c4d5b11b0537e71805c959ab",
+      "size": 1054
+    },
+    {
+      "path": "rules/design-before-results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ed96fb7d1390835561747aec4ebf5121bb3d6f",
+      "size": 2494
+    },
+    {
+      "path": "rules/doi-verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40fac2e43bffaa924f5b9ec51a98f9650628e70c",
+      "size": 4077
+    },
+    {
+      "path": "rules/latex-hygiene.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7de0461f3cddc167aa4fe2e70a872672a603412b",
+      "size": 7104
+    },
+    {
+      "path": "rules/lean-guidance-files.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc7191548ea1ef131cbd44c74712fb7a510da2b",
+      "size": 2076
+    },
+    {
+      "path": "rules/learn-tags.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a147be024b124ad6b11255fe4e54090c715c205e",
+      "size": 4865
+    },
+    {
+      "path": "rules/mark-unverified.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5712ace9000f6d1290e3bd7c5d15bde6603d2302",
+      "size": 9930
+    },
+    {
+      "path": "rules/no-hardcoded-results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a8faeac39785072e493ae80301659afb0c02b15",
+      "size": 2363
+    },
+    {
+      "path": "rules/overleaf-separation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "951e85f3c08cfa844c26581b1a666e6bee840ec1",
+      "size": 3715
+    },
+    {
+      "path": "rules/paper-code-consistency.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "865bdc801b4682d11a8b7044564e5bf551609920",
+      "size": 4510
+    },
+    {
+      "path": "rules/plan-first.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68a6d927498f9539d2eff6834764609691afaa28",
+      "size": 5271
+    },
+    {
+      "path": "rules/python-uv.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43a2a652e0f1f0a89b5e6bbffcdec70dbbfc7165",
+      "size": 1922
+    },
+    {
+      "path": "rules/read-docs-first.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eab359dce949f607352d953e4dc59cd6f870db4e",
+      "size": 2678
+    },
+    {
+      "path": "rules/scope-discipline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cff82060c39e2b068a7a19a1e6b67f364d2aa24",
+      "size": 1397
+    },
+    {
+      "path": "rules/severity-gradient.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b50e62d896430d863f2277d51014df8644bf0910",
+      "size": 4892
+    },
+    {
+      "path": "rules/spec-before-quality.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f98985c39f8d5f87c080f19255c3cf2e8fc6a8",
+      "size": 2694
+    },
+    {
+      "path": "rules/subagent-write-guard.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c99672b0aca6831275705afdd51e51e1ef94e5a",
+      "size": 4455
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3da13fa9a1929473ae9811d0401a27369ee0c2f0"
+    },
+    {
+      "path": "scripts/install.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7110b4b4162dcd4733ad7e07f1ec89a5b06e46d9",
+      "size": 11553
+    },
+    {
+      "path": "scripts/npm-install.mjs",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "804a972736c75a502e9127711015cf9d645ea951",
+      "size": 746
+    },
+    {
+      "path": "scripts/setup.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c0e00b6286556af5d966351225fead7172d768",
+      "size": 706
+    },
+    {
+      "path": "scripts/setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5def7e5dca5c4687cea3b9796cc040340a53a42d",
+      "size": 319
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36d8e4e801073b5016be63caf79687dd90dbe457"
+    },
+    {
+      "path": "skills/_shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53331d00614fff765cb8a95307dbc9721646c39c"
+    },
+    {
+      "path": "skills/_shared/audit-integrity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8f2eca6a863674112e1a5cf9f45ee999a6885c5",
+      "size": 1303
+    },
+    {
+      "path": "skills/_shared/cli-dispatch-policy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b21c36eaa77a276df27c4632cbb81212d3fd108",
+      "size": 1027
+    },
+    {
+      "path": "skills/_shared/double-blind-anonymity-checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea28ef4389a242cab5521cd0067c393305d9f17f",
+      "size": 10933
+    },
+    {
+      "path": "skills/_shared/parse-stamp-directive.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4eaca72e152328c0848938d2e39decf1c430cfdb",
+      "size": 6307
+    },
+    {
+      "path": "skills/_shared/post-dispatch-verify.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1fc4ee042594979cf4e3b8c35259d915d1f8aad7",
+      "size": 6495
+    },
+    {
+      "path": "skills/_shared/review-state-log.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "672e8b7f031fc8dc2508b113f5f82073b6396e06",
+      "size": 8720
+    },
+    {
+      "path": "skills/_shared/skill-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdeb38003f90cad691a05922653ab65f56167c33",
+      "size": 972
+    },
+    {
+      "path": "skills/_shared/stamp-directive-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8562bbca6039edacec85a40c73eab0fc9eccf4b6",
+      "size": 7471
+    },
+    {
+      "path": "skills/_shared/verify-outputs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d1f5df75dfc18ea1b4734ca02134680699350fe",
+      "size": 2574
+    },
+    {
+      "path": "skills/_shared/verify_outputs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b29e5b1d3060178c1691af584210e47535d57405",
+      "size": 3604
+    },
+    {
+      "path": "skills/beamer-deck",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe19985e0e1c2992a2c04cc335e5c72d271e66a7"
+    },
+    {
+      "path": "skills/beamer-deck/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d83166719e0891b0c021f6b76b20262017636db1",
+      "size": 12696
+    },
+    {
+      "path": "skills/beamer-deck/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0eab2e8710f1217e0b65b026b17c5905c79fa65c"
+    },
+    {
+      "path": "skills/beamer-deck/references/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29e43e89eec48e5fb3f489d2d9e8f0ac463487e4",
+      "size": 2415
+    },
+    {
+      "path": "skills/beamer-deck/references/review-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e788d283984fa93edcf05a3b11d35d38cf04e4b",
+      "size": 4861
+    },
+    {
+      "path": "skills/bib-coverage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3fd801d03d5de93969c44764a181ec12de0f0de"
+    },
+    {
+      "path": "skills/bib-coverage/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c95b1b67fe58974a8dd759701b816d66b6632b6",
+      "size": 5576
+    },
+    {
+      "path": "skills/bib-filter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66581c6d5c8e4c510eb5c74e1d37055fa09ddd98"
+    },
+    {
+      "path": "skills/bib-filter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e910747652c618c4ae7e5f98e8e541ee6d97a016",
+      "size": 4425
+    },
+    {
+      "path": "skills/bib-parse",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbabfc657c6571c2fd84366fb24e307226717f05"
+    },
+    {
+      "path": "skills/bib-parse/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73da408c1a08b219fdaae175920e1653f595072a",
+      "size": 15112
+    },
+    {
+      "path": "skills/brief-compliance-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c3190b61b13febf94689959ce8acc9edbb6f73d"
+    },
+    {
+      "path": "skills/brief-compliance-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f23a70d9b95afe689139ecb7643ee866d4573e2",
+      "size": 6859
+    },
+    {
+      "path": "skills/camera-ready",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5776d0f990ae273289e5232232adbd601f17c463"
+    },
+    {
+      "path": "skills/camera-ready/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f67cd35acca8f6d9b88c0dcf7af563422e6bb01e",
+      "size": 8386
+    },
+    {
+      "path": "skills/causal-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f115be69c15649de3884cde675adaa79c766606d"
+    },
+    {
+      "path": "skills/causal-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0ecd066c78ab20daa184b01e5367f497c39a8b8",
+      "size": 10595
+    },
+    {
+      "path": "skills/causal-design/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d217d5a3f21d89def813487d62b5cbddc13721d"
+    },
+    {
+      "path": "skills/causal-design/references/causal-audit-prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da896c9e8dc0b3d375c3c23fc62b2dbe60ac5ac2",
+      "size": 7762
+    },
+    {
+      "path": "skills/causal-design/references/design-decision-tree.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abc86183873d762210792c598d994db4acb87ab0",
+      "size": 9141
+    },
+    {
+      "path": "skills/causal-design/references/strategy-memo-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45f2675062bec424c7662b5012e1b188491331e3",
+      "size": 4470
+    },
+    {
+      "path": "skills/checkpoint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87de546ebb7b344da88347edb1780744480d406b"
+    },
+    {
+      "path": "skills/checkpoint/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dc719d60f09a1599f1801a93f867107bdb5591d",
+      "size": 3849
+    },
+    {
+      "path": "skills/code-archaeology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89a2ab0e4ef7b66765cb0dd0c4063df9106a57fe"
+    },
+    {
+      "path": "skills/code-archaeology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb3fb51ff39d40349b2804cfb453c7c7c84b30a0",
+      "size": 4587
+    },
+    {
+      "path": "skills/compile-knowledge",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2cf0def914a332a99c255869273dce74aaabfc4c"
+    },
+    {
+      "path": "skills/compile-knowledge/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c8610de582411ff477017d513e83726be04226c",
+      "size": 10087
+    },
+    {
+      "path": "skills/computational-experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1506c1020d019815efaa1c21aee9b90c6bf1ac6d"
+    },
+    {
+      "path": "skills/computational-experiments/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bfb21aaef3d5a45022f9000880a36ba26d6333e",
+      "size": 15993
+    },
+    {
+      "path": "skills/computational-experiments/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e926b917eff675b52665975b477c1e4ebe3dc46"
+    },
+    {
+      "path": "skills/computational-experiments/references/algorithm-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0f5f34e55674689554ea60fc1a93812c7350a88",
+      "size": 17192
+    },
+    {
+      "path": "skills/computational-experiments/references/autonomous-sweep.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c954efcc46448d58401cabd472f9da88d918ec52",
+      "size": 5737
+    },
+    {
+      "path": "skills/computational-experiments/references/experiment-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "504eda46ea83e0d92949766ccd7862d990085782",
+      "size": 17445
+    },
+    {
+      "path": "skills/computational-experiments/references/explore-loop.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b933e85c227982d6aba835befa02960b28b8983d",
+      "size": 7336
+    },
+    {
+      "path": "skills/computational-experiments/references/figure-recipes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1bda5e2bbde11a5af89c1c9d60a14dfb3399f35",
+      "size": 13702
+    },
+    {
+      "path": "skills/computational-experiments/references/multi-agent-infrastructure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "308cc69af5db3586226556eb7c164e262246bbf2",
+      "size": 13927
+    },
+    {
+      "path": "skills/computational-experiments/references/multi-agent-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de0766550cd84461b990ba8325eb308961ab0351",
+      "size": 8830
+    },
+    {
+      "path": "skills/computational-experiments/references/multi-analyst-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4db803a61f51f6259ecb5feeee5098c2c1dfcc6e",
+      "size": 7062
+    },
+    {
+      "path": "skills/computational-experiments/references/package-scaffold.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aba2156bb359cab17c5f2a572ff26b8fb9a98a67",
+      "size": 7892
+    },
+    {
+      "path": "skills/computational-experiments/references/python-econometrics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e73c77c03bdb861c8a325c7fae1637ad2be1568",
+      "size": 4592
+    },
+    {
+      "path": "skills/cross-language-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4e07248e6161dd85e62f621c9e791ec555c9cdb"
+    },
+    {
+      "path": "skills/cross-language-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b36013c68f18103aac7383e2bf980b148884e76",
+      "size": 8214
+    },
+    {
+      "path": "skills/data-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c3e6482a5b251251d6fdfe3c6dcbe57baa56edb"
+    },
+    {
+      "path": "skills/data-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "739f219d300b26a0ef418f508033d18e02f14cda",
+      "size": 8201
+    },
+    {
+      "path": "skills/data-analysis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "660887e6ecf4c89a8907f0d3ed60dc87e4247996"
+    },
+    {
+      "path": "skills/data-analysis/references/econ-visualisation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d8ead19e3389c7e2277d96f621cd26bc8a82525",
+      "size": 3057
+    },
+    {
+      "path": "skills/data-analysis/references/estimation-recipes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c37a163f94a567989446866dc16ab638ef36398",
+      "size": 3022
+    },
+    {
+      "path": "skills/data-analysis/references/language-conventions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f278f49ac08ff6ab3a3dee10bc555e38a3c61b8",
+      "size": 2028
+    },
+    {
+      "path": "skills/data-analysis/references/matplotlib.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6729934547d8ffc47e3d9762a47fa28cf5cbcb05",
+      "size": 11311
+    },
+    {
+      "path": "skills/data-analysis/references/plotly.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f606b59db529921ff6d0f39d45a00adebcd11b4",
+      "size": 6845
+    },
+    {
+      "path": "skills/data-analysis/references/seaborn.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7969df0d358de7d158cc6217eb770f8e44ac10c2",
+      "size": 19544
+    },
+    {
+      "path": "skills/data-analysis/references/statsmodels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea7872f4ab4877e750fce5ff40496885926af5b",
+      "size": 19615
+    },
+    {
+      "path": "skills/data-analysis/references/sympy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a69300446f732d39f6daa09ee5efb3d1eb71671",
+      "size": 13125
+    },
+    {
+      "path": "skills/data-analysis/references/table-formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77296b71237e0bddd22193b9e47c9acf37babbed",
+      "size": 4238
+    },
+    {
+      "path": "skills/devils-advocate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e1c56a6ea2270bcca30a729e6c07c1dc8c3ed23"
+    },
+    {
+      "path": "skills/devils-advocate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da93f4291d2be582afe552c06858444e25da5d07",
+      "size": 6919
+    },
+    {
+      "path": "skills/devils-advocate/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1efd4315fa54cb0097c3cbafb17170830c339d78"
+    },
+    {
+      "path": "skills/devils-advocate/references/competing-hypotheses.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "613e69848b1300bb1998f269fd31ae453ff6ec46",
+      "size": 5089
+    },
+    {
+      "path": "skills/docs-consistency",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "110e54b190fe706dee1d1aebb9b2f8b3e302f651"
+    },
+    {
+      "path": "skills/docs-consistency/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37325f9ef69d9c772d30401d6e9413dce8c75784",
+      "size": 10301
+    },
+    {
+      "path": "skills/docx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb5436238f67c177a099098bc61634996d1e64dc"
+    },
+    {
+      "path": "skills/docx/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/docx/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "782c3d092254ae64b246244abab49a36d64f5576",
+      "size": 5278
+    },
+    {
+      "path": "skills/docx/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1274b5617e4c3e0c0eb0f46da8b37a25d7de9b5e"
+    },
+    {
+      "path": "skills/docx/references/docx-js-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31f7b862ce26e7c13b9d0517a2b39a5e9a6f504c",
+      "size": 9529
+    },
+    {
+      "path": "skills/docx/references/xml-reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ce3f9946c6e1bf34392a165c9614e2962b17b45",
+      "size": 4031
+    },
+    {
+      "path": "skills/docx/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3152e7738fa893a463a9376b9e47067fa56db71c"
+    },
+    {
+      "path": "skills/docx/scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1
+    },
+    {
+      "path": "skills/docx/scripts/accept_changes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e363161915d3720409bb8b6ef9bc4ade33b64e4",
+      "size": 4051
+    },
+    {
+      "path": "skills/docx/scripts/comment.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "991a75ec71dc912cae30bb9b07741ba0a421d847",
+      "size": 10688
+    },
+    {
+      "path": "skills/docx/scripts/office",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d9a608a1c32e5e20d2878739d0746c2bd1aa99c"
+    },
+    {
+      "path": "skills/docx/scripts/office/helpers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9aa1626c4c0f4e134aab828890f5c1be3bc6ee26"
+    },
+    {
+      "path": "skills/docx/scripts/office/helpers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/docx/scripts/office/helpers/merge_runs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "731f47cc16c1da802629a43851cdd4aa47748d64",
+      "size": 5565
+    },
+    {
+      "path": "skills/docx/scripts/office/helpers/simplify_redlines.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db963bb998d7d5a8517d8252ce82ec9ab28665bc",
+      "size": 5754
+    },
+    {
+      "path": "skills/docx/scripts/office/pack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8b8db7517addcf0be1dc3e76c7c375c10734557",
+      "size": 5012
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd5537e270f01e5e6f703d20ddef51d1aa2fab0d"
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a1687fed5a87dc969e4123731c2812b912f5e2e"
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6454ef9a94d52512e4905df61280a3fd1dafc0a4",
+      "size": 74984
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afa4f463e3140a3f626c73f7966d689270d89b2c",
+      "size": 6956
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e66b8abd496d2e450c08110e40607e90b3fe13",
+      "size": 51302
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "687eea8297caa298581aa06c40ca40ef7b8a58bc",
+      "size": 624
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac81b06b7a3ef916d677953084ae225504a77bc",
+      "size": 152039
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dbf05140d07fa014f18a5630acc0613d8058e52",
+      "size": 1231
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1af17db4e83b1c40152577eca4a575ab63a1ca7",
+      "size": 8862
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a185ab6ed0c2dd9b383a403c56c909bbab8b9a1",
+      "size": 14795
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14ef488865f3ae6150776220ebbcf4788f89066a",
+      "size": 83612
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c20f3bf14720d34247e8e1302dc3c40f7b832099",
+      "size": 1269
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac60252262534e7b87523fd04d252f085b38bec0",
+      "size": 7328
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "424b8ba8d1f9ebb22ba72cdd174c8a2ade0ecf89",
+      "size": 6382
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bddce29214882eb9fdf2be8a50ed5bdd0c69dfc",
+      "size": 1248
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a8c18ba2d5caa7e60a365e77ae0d1b872141bb0",
+      "size": 880
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c42706a0d53c5e8b96818d9c29a292d1504f720",
+      "size": 2608
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "853c341c87feb51e10d757aea28b4185ae4c2731",
+      "size": 3507
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da835ee82d5cc31be9fa9792512930f7ae3fb5ce",
+      "size": 7507
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87ad2658fa51cb4c172f82d0fdf33a492a750eca",
+      "size": 23313
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e86f1b2be0d431cd3c250ddeaf4efabdbcb088b",
+      "size": 1367
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0be42e757f3cce533c1c80770239f0097d3de6b",
+      "size": 242277
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8821dd183caf9c8c3b809e0e2d9e0df56c4e9ed9",
+      "size": 26148
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca2575c753be78cdaa96de56b3ff8770173c324d",
+      "size": 25279
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd079e603f5770176212776a1d565b108875cf64",
+      "size": 535
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dd6cf625a740398c2a4dc8abbe18e25e0ac5e9f",
+      "size": 5712
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1041e34ef365926f5670b896f5bb23e553ac36d",
+      "size": 4010
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5b7a633411c2313ce839f748e4623bb0a70efe",
+      "size": 171367
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f13678d80a762375223f060e23b56c7b2eac89e",
+      "size": 4646
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ecma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "199f64d0c169af4541649e7a6f591a691e76fb1d"
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ecma/fouth-edition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae6fce07ca75c8799a25ed1150a37550b49af977"
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6de9d2733d3f0eea12ae87b24122495df1f0928",
+      "size": 1963
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e978b661fc291cbeea9ab0c248601cf216f96d",
+      "size": 2515
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4248bf7a39c793c9f319bae7d09f92983efe5368",
+      "size": 2856
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56497467120b52b742756379959d4b2536be6df7",
+      "size": 1344
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/mce",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09a345ff1206946cc3fbb76469eca8792dea69d1"
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/mce/mc.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef725457cf39116672e285d021be69b7ad022574",
+      "size": 3127
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94823a5acddd96d8a6caf627e4d7b86c0eaa1812"
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-2010.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f65f777730d82162f4248f03c703b1b85fda5fe2",
+      "size": 26549
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-2012.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b00755a9a8733f0fb171a47b25d0d7b4c70dee8",
+      "size": 3745
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-2018.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f321d333a5e6ef98cbdfeeeaa334923e4cfc8a6c",
+      "size": 901
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-cex-2018.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "364c6a9b8df6e252bb5ae39e2ca031fcbfc4e8a5",
+      "size": 1778
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-cid-2016.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fed9d15b7f504e14ac82793d79db2d7ad83d56ed",
+      "size": 1002
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "680cf15400cd57ce2bf17a58ecd29caa0d8a8422",
+      "size": 600
+    },
+    {
+      "path": "skills/docx/scripts/office/schemas/microsoft/wml-symex-2015.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89ada90837b2db3f3d453212ae426520acedbbea",
+      "size": 745
+    },
+    {
+      "path": "skills/docx/scripts/office/soffice.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f7e3289fdff196399fd6f3d6668b9aa68eec87",
+      "size": 5301
+    },
+    {
+      "path": "skills/docx/scripts/office/unpack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f86b0d562e3516439da10e6d6c1f1486f1b22810",
+      "size": 4070
+    },
+    {
+      "path": "skills/docx/scripts/office/validate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9747fff010e1b805dda9e3d4f15b58050ad39c85",
+      "size": 3673
+    },
+    {
+      "path": "skills/docx/scripts/office/validators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35766602eb569360c15061ebc9ac0cb2a93ec079"
+    },
+    {
+      "path": "skills/docx/scripts/office/validators/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db092ece7e21de98f87bd81471578259a1bc642f",
+      "size": 336
+    },
+    {
+      "path": "skills/docx/scripts/office/validators/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae378bba39b1df30e96964a09a9aab5eaba32bb9",
+      "size": 32581
+    },
+    {
+      "path": "skills/docx/scripts/office/validators/docx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c4b9aa92c0e5db631ee4ca3f4a51a42414f8952",
+      "size": 16370
+    },
+    {
+      "path": "skills/docx/scripts/office/validators/pptx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a667b35c7d729853be362149eba0693f027d4a46",
+      "size": 9820
+    },
+    {
+      "path": "skills/docx/scripts/office/validators/redlining.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8362d01b367d3f42b0c4b67245b1f0eb977e54b7",
+      "size": 8912
+    },
+    {
+      "path": "skills/docx/scripts/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1453a9a1435d133ff8441ebbf1555c5e16644c6d"
+    },
+    {
+      "path": "skills/docx/scripts/templates/comments.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd01a7d7155f9a78cf3d11470e2ce2b5ccdac640",
+      "size": 2603
+    },
+    {
+      "path": "skills/docx/scripts/templates/commentsExtended.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411003cc485356c560e29687ca359d64cd89d4b4",
+      "size": 2611
+    },
+    {
+      "path": "skills/docx/scripts/templates/commentsExtensible.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5572d710826dd7a1f455af7487e2157ef01ada0",
+      "size": 2707
+    },
+    {
+      "path": "skills/docx/scripts/templates/commentsIds.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32f1629f2a8bb9aafebb0699349d0d799edce9f3",
+      "size": 2619
+    },
+    {
+      "path": "skills/docx/scripts/templates/people.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3803d2de0faa635687a48947b52ab98b9655f631",
+      "size": 115
+    },
+    {
+      "path": "skills/experiment-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d02d3b88cd02700578b7993c9c376aeab27fbe3"
+    },
+    {
+      "path": "skills/experiment-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e417cbf8fbfd05dc3b3e4d4ddc5e1cfe42c36bf8",
+      "size": 9096
+    },
+    {
+      "path": "skills/experiment-design/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7eb8bb48009d35b7f12c3968b179b0397cdcc8cc"
+    },
+    {
+      "path": "skills/experiment-design/references/identification-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4b66fafc1fd47c5575821166c789d0ff5bf96b7",
+      "size": 3097
+    },
+    {
+      "path": "skills/experiment-design/references/known-scales-registry.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bfa9835a5623a7a7cb2ceb27129c102d83e75da",
+      "size": 5721
+    },
+    {
+      "path": "skills/experiment-design/references/pap-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc7eaeb5d29ceb875790a7e88a2b65c8b59e5210",
+      "size": 4279
+    },
+    {
+      "path": "skills/experiment-design/references/power-analysis-recipes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4cbc6317c3e4d7c3cbb009159bd5226e81006b6",
+      "size": 4035
+    },
+    {
+      "path": "skills/experiment-design/references/qsf-parsing-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb0018f6ebb1c75edbf7ea050e6f88127d4bed7b",
+      "size": 5433
+    },
+    {
+      "path": "skills/experiment-design/references/survey-design-checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efdc5f0b9a344d668918edfb1871367deb5a022c",
+      "size": 5116
+    },
+    {
+      "path": "skills/grill-me",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee362c3e9dabdbbaae3b2a0478ee2037761cbb53"
+    },
+    {
+      "path": "skills/grill-me/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e127066d20a21797942552246e03c0dd36487ea8",
+      "size": 11877
+    },
+    {
+      "path": "skills/handoff",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03b2c87e9a75f98176d951d360b9d061ead00d7f"
+    },
+    {
+      "path": "skills/handoff/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73da161fbd37700bcbc76191a3e7141306c5e4c6",
+      "size": 3543
+    },
+    {
+      "path": "skills/handoff/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37aa7af85765ce1bd4ac5dc67c95e07c9e0bbec8"
+    },
+    {
+      "path": "skills/handoff/agents/openai.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8529c59d0e02a23c33651ac565ecdbd87c685980",
+      "size": 200
+    },
+    {
+      "path": "skills/ideas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71526f4a2b7c4bc644a2ab6d527ba38d81eae5fd"
+    },
+    {
+      "path": "skills/ideas/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da6550153d442c5d8198699cde52aa55fec8b01b",
+      "size": 5426
+    },
+    {
+      "path": "skills/init-project-course",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f6680be167c73ef9a96ae3fb4cb1644cf85d03c"
+    },
+    {
+      "path": "skills/init-project-course/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e9d7d9a6c46c95352388e5662dd6939c0b1ff3",
+      "size": 6326
+    },
+    {
+      "path": "skills/init-project-course/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3501f1f11f6d3674d7629751bf393052bfddc6c"
+    },
+    {
+      "path": "skills/init-project-course/references/memory-and-settings.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f19f84483567886d8dfee41b7045e5424877df29",
+      "size": 2032
+    },
+    {
+      "path": "skills/init-project-course/references/organise-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11a9f8eb7c3a8481fadc4bedf3ce9d97d2b4c667",
+      "size": 4153
+    },
+    {
+      "path": "skills/init-project-light",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb6dd81c5849433f9b00e896d406fc13978393b7"
+    },
+    {
+      "path": "skills/init-project-light/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e226c2c81b335a89d4e43673927ef3f5363194a8",
+      "size": 4281
+    },
+    {
+      "path": "skills/init-project-orchestration",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7dbc4b6a154585e515881039bfeeaaee8c8b8e0"
+    },
+    {
+      "path": "skills/init-project-orchestration/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "322ba04f39b7676430a99173d11e3f2a97feab2c",
+      "size": 6478
+    },
+    {
+      "path": "skills/init-project-orchestration/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "616bdce2a1f05081cd8d5e035327989efcaf14f8"
+    },
+    {
+      "path": "skills/init-project-orchestration/scripts/project-orchestration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c2ba0e8281859e852c36767c297bef3ab154a4a",
+      "size": 19390
+    },
+    {
+      "path": "skills/init-project-orchestration/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9029cd4205e78520578d873bc843e2cae553fd6"
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/agent-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6c0832fe7e89e6ad9dfe590fe482af277a9051e",
+      "size": 1308
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/command-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f69a53f8e6be6764f1373942240145e604f64a40",
+      "size": 1159
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/manifest-template.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6941fdd36479cfaf3832214bfc2d56a28dbb0160",
+      "size": 88
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/presets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "637b3b7b773820d1aa694334b30afb0ff380f839"
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/presets/computational.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e98439286f3e851b33ff01523dee01a89f9b5323",
+      "size": 1846
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/presets/experimental.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e22ff84414aed1da68407014d4875968f74b2c10",
+      "size": 2052
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/presets/theoretical.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817d16393e73f183b7bc2860439d6f9c34e6913b",
+      "size": 1344
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/roadmap-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89fde239026b06498f76752a38e800cae4ed1e9d",
+      "size": 864
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/state-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cd1d9a60d2a4f103032cd1152237b0ab67fa737",
+      "size": 1200
+    },
+    {
+      "path": "skills/init-project-orchestration/templates/update-state-command.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c234953ecd52d08e2edb9c1be39c0a6cbcc0479",
+      "size": 952
+    },
+    {
+      "path": "skills/init-project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98ae5d8f7cdff36cadca26cd9b206de42297b6b7"
+    },
+    {
+      "path": "skills/init-project/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d59f9698e0a2958a311654cb980173c8cb367762",
+      "size": 3869
+    },
+    {
+      "path": "skills/insights-deck",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b74df0f342e315fe5640ca9bfaf718bb4d1662fe"
+    },
+    {
+      "path": "skills/insights-deck/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e52d97463cd8da2f17ace212b97a356b88d856c",
+      "size": 5722
+    },
+    {
+      "path": "skills/interview-me",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd59c39751089dce335fb0859f40948249342814"
+    },
+    {
+      "path": "skills/interview-me/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a48df34be399dabc7a59b47c029accabfd9d2b2a",
+      "size": 6391
+    },
+    {
+      "path": "skills/knowledge-lint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "141d7d65fd65ba814b983b4cdbe1c30d6e2665a3"
+    },
+    {
+      "path": "skills/knowledge-lint/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11dc7961c7ef8b5b7e62e8985cd49532fedc5137",
+      "size": 6611
+    },
+    {
+      "path": "skills/latex-diff",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd223112369452a09284dc22b7d309f588ce414f"
+    },
+    {
+      "path": "skills/latex-diff/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "016257dbe7780682e19bea6260ac4c16935c136e",
+      "size": 7839
+    },
+    {
+      "path": "skills/latex-health-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d598ce24bbd23f5a45a7bd8067926a908c5e41a"
+    },
+    {
+      "path": "skills/latex-health-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ff3e3a79689d7c62595a4a404e1d79f9140bc77",
+      "size": 7864
+    },
+    {
+      "path": "skills/latex-polish",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e55d5aaef801e70b31f638328e4c7528404dfef8"
+    },
+    {
+      "path": "skills/latex-polish/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ffd6e4d3b71fede21e93e02a67ae59dc4a0b0b8",
+      "size": 9173
+    },
+    {
+      "path": "skills/latex-polish/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83e1e464b894742bdb8b048acaea77bacff08a38"
+    },
+    {
+      "path": "skills/latex-polish/references/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c68fcda43f019aea43ea25a47f3e4c37cf9fc0",
+      "size": 4733
+    },
+    {
+      "path": "skills/latex-polish/references/vision-prompts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2501bcd2255cdd09374d2aa99177737266870c3",
+      "size": 6216
+    },
+    {
+      "path": "skills/latex-posters",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ea5ddc39a799a8deadd01b87736a752fe6857b0"
+    },
+    {
+      "path": "skills/latex-posters/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d833195c63073160e270bc5f9c9f3aa20a39cc8",
+      "size": 11653
+    },
+    {
+      "path": "skills/latex-posters/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b575a7083143507bcc8fdbc35292e1e005a2f873",
+      "size": 5812
+    },
+    {
+      "path": "skills/latex-posters/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04681d4a7f2c1b13cc3d2046be0244ba3f633a80"
+    },
+    {
+      "path": "skills/latex-posters/assets/baposter_template.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4c2d0d495d860cca6e995bdd5544b0a91880aa8",
+      "size": 7339
+    },
+    {
+      "path": "skills/latex-posters/assets/beamerposter_template.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c075d10a4a8d041b98f0caec356090a8cd57bab",
+      "size": 7373
+    },
+    {
+      "path": "skills/latex-posters/assets/poster_quality_checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f9158de704351617af207baf95fe18c00c5cf41",
+      "size": 11171
+    },
+    {
+      "path": "skills/latex-posters/assets/tikzposter_template.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11bbdb7c19f56dc742c0cbd8b1bd3c488537c2a0",
+      "size": 7756
+    },
+    {
+      "path": "skills/latex-posters/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efa96f291cd97f560adc392e95fc6ca73e4e876d"
+    },
+    {
+      "path": "skills/latex-posters/references/poster_content_sections.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c461827e81f044ce2b17cefc35da91239b7013b8",
+      "size": 13004
+    },
+    {
+      "path": "skills/latex-posters/references/poster_content_writing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b2b5583e2ac44e172877f1da592ca44a82b120",
+      "size": 7772
+    },
+    {
+      "path": "skills/latex-posters/references/poster_design_accessibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a655871fbdd41c49bfd317ac5f021610da9f0977",
+      "size": 11604
+    },
+    {
+      "path": "skills/latex-posters/references/poster_design_typography.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66c09d54338bc089ed4628387e53cdb632be2098",
+      "size": 11778
+    },
+    {
+      "path": "skills/latex-posters/references/poster_layout_blocks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d9e67b6cc4f5b460d148ddc6d6f90325e957e44",
+      "size": 9598
+    },
+    {
+      "path": "skills/latex-posters/references/poster_layout_flow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "176d420ee828a2855646608a508e4e4c4b99b0a6",
+      "size": 3045
+    },
+    {
+      "path": "skills/latex-posters/references/poster_layout_grids.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "174bcda9a3b2a1f6aabf7a6ecfe53051a6ae22c3",
+      "size": 7181
+    },
+    {
+      "path": "skills/latex-posters/references/poster_layout_spatial.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d45dd86a49a52a450fa85733c5322fdf80a19b32",
+      "size": 3657
+    },
+    {
+      "path": "skills/latex-posters/references/poster_packages_baposter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "422393298f6a4f81d06d044162cb0d1d1e0a98d7",
+      "size": 8620
+    },
+    {
+      "path": "skills/latex-posters/references/poster_packages_beamerposter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff613cbe7de95173e20e7b57a15117deb44e6f04",
+      "size": 9607
+    },
+    {
+      "path": "skills/latex-posters/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "351f2dafcc7436e2bc63f555eaaf78725dde721e"
+    },
+    {
+      "path": "skills/latex-posters/scripts/review_poster.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e6f69073706238fcc34510e47d68697ede59942",
+      "size": 7906
+    },
+    {
+      "path": "skills/latex-scaffold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ef6bb2d297121c9773b8da0e27e4949f4a5b6d7"
+    },
+    {
+      "path": "skills/latex-scaffold/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9065568d671a6e5cb40b92a76feb21263e569474",
+      "size": 6491
+    },
+    {
+      "path": "skills/latex-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71624f7b4bb732508ad55063dbcf7361ade9c59c"
+    },
+    {
+      "path": "skills/latex-template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2f48f930423f8b558617b4277b5a1b78152b5f7",
+      "size": 11787
+    },
+    {
+      "path": "skills/latex-template/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6b3e9af9c994bfeccabd2394fd4d137f2d62afdd"
+    },
+    {
+      "path": "skills/latex-template/references/comparison-checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e06bdd529e3945c3ab80d319de18d0ff32a369a",
+      "size": 6920
+    },
+    {
+      "path": "skills/latex-template/references/report-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90c0956b1e9134f781ff361f31f2a0451aba4f73",
+      "size": 6547
+    },
+    {
+      "path": "skills/latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8ef54ea6c7bb60869778cff014ce878e63deaff"
+    },
+    {
+      "path": "skills/latex/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "addbd0785c7a689f7dfd65c39de689e74534036b",
+      "size": 18713
+    },
+    {
+      "path": "skills/latex/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe65fdecd3c78f1053aac819bd1f047fa67ffb6f"
+    },
+    {
+      "path": "skills/latex/references/known-errors.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a035960507d3c0a6cbcd357696fbbaaf41bf71c9",
+      "size": 7463
+    },
+    {
+      "path": "skills/latex/references/latex-configs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c09d73b395c2586687b0e47a64388210d05b666a",
+      "size": 4313
+    },
+    {
+      "path": "skills/latex/references/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f16e06dbbd653c5759f303b02a8c028700f6b25",
+      "size": 3729
+    },
+    {
+      "path": "skills/latex/references/source-pathologies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "469b774166c7cf45b6dcaaa9e4ed685bd882dcf1",
+      "size": 10095
+    },
+    {
+      "path": "skills/latex/references/templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc2e8e6ba94dad8c594170b2ce6a72413fac9b3d",
+      "size": 1694
+    },
+    {
+      "path": "skills/latex/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f183b7b2cf5d0f456daf093f9c08f65e3849ac6"
+    },
+    {
+      "path": "skills/latex/templates/build-config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a85a44e93fff314a6a876d45fc786eb3929a927c"
+    },
+    {
+      "path": "skills/latex/templates/build-config/.latexmkrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98e3dbbb52677f655fefac50d92a8362608831e4",
+      "size": 17981
+    },
+    {
+      "path": "skills/latex/templates/build-config/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "486ac051d751a2654a170dace13e47787be10779",
+      "size": 3871
+    },
+    {
+      "path": "skills/latex/templates/build-config/vscode-settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7d0f512880894121fa4c96e414b5b80d88c33f",
+      "size": 436
+    },
+    {
+      "path": "skills/latex/templates/working-paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60b1e9565dc3d2f68299c9de4db1cb9dbe74d13f"
+    },
+    {
+      "path": "skills/latex/templates/working-paper/.gitignore",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5407c09a0303cff0720116e68ec84dc0cb6549ad",
+      "size": 212
+    },
+    {
+      "path": "skills/latex/templates/working-paper/.latexmkrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98e3dbbb52677f655fefac50d92a8362608831e4",
+      "size": 17981
+    },
+    {
+      "path": "skills/latex/templates/working-paper/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4573615e187e2a4878e3458cc610f05f7d8a3ca1",
+      "size": 5238
+    },
+    {
+      "path": "skills/latex/templates/working-paper/biblatex-preamble.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc8c1d09b14860a84182073f09be65bfbca501f8",
+      "size": 3904
+    },
+    {
+      "path": "skills/latex/templates/working-paper/citation-placeholders.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caca89cf6fcee5981ba1e308a245ad72fca806a3",
+      "size": 1036
+    },
+    {
+      "path": "skills/latex/templates/working-paper/flonat-bib.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e81197666ac11c1a04108e55921241d9b051a24",
+      "size": 8997
+    },
+    {
+      "path": "skills/latex/templates/working-paper/flonat-math.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "027ff0d578c1ae2a0e5b6e41fc5b33c3b9e429a3",
+      "size": 5974
+    },
+    {
+      "path": "skills/latex/templates/working-paper/flonat-rev.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b70925cfb9213eef7355903048b671a06e9a07d5",
+      "size": 3069
+    },
+    {
+      "path": "skills/latex/templates/working-paper/flonat-wp.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "524a13a1d09cfea4b0c63b128ae956f1dfd94533",
+      "size": 3150
+    },
+    {
+      "path": "skills/latex/templates/working-paper/main.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a29943c1c9b7cff71fcdb7a1e20777bd0528a23",
+      "size": 23906
+    },
+    {
+      "path": "skills/latex/templates/working-paper/main.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e2ad9b5dd158572d4ab050e01393174384f0199",
+      "size": 1819
+    },
+    {
+      "path": "skills/latex/templates/working-paper/paperpile.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "540542b525962a9c782100b9968b1ecc7e5531cb"
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections/conclusion.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a58ff6ad3ce7df43dacf983b60531b3db4bff355",
+      "size": 48
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections/data.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "008d06696f1fd46f953cb6ab78a350d35171dae9",
+      "size": 55
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections/discussion.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a1c8db127d50c1c1e545f1afba51314b0db7e55",
+      "size": 48
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections/introduction.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9097bce6ed52f2750c5e0d2e8674c26289060a8b",
+      "size": 52
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections/literature.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dd444e3378ae58fff2ebde5358aa3acb91099e7",
+      "size": 55
+    },
+    {
+      "path": "skills/latex/templates/working-paper/sections/results.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f01ff94697a90b1fab8cef647a286b593193e6f",
+      "size": 44
+    },
+    {
+      "path": "skills/lean-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0a5238bfe4181e682deff83b3b70c6f37356e33"
+    },
+    {
+      "path": "skills/lean-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "875b453703152c826df0ffbb6ff142d93bd28de1",
+      "size": 7033
+    },
+    {
+      "path": "skills/math-proof",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25cdfbfa3f35be1ae424548ef1e5b75bb48ee801"
+    },
+    {
+      "path": "skills/math-proof/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e4216b828b4e0ad2f9e21d22a4c01f1101bccff",
+      "size": 10317
+    },
+    {
+      "path": "skills/mcp-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1bea6870f508c8cf4184af61d90a9b8639edab8"
+    },
+    {
+      "path": "skills/mcp-builder/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "skills/mcp-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fa70b7587e2b316aa32b5728043d7f6d11d5b68",
+      "size": 9169
+    },
+    {
+      "path": "skills/mcp-builder/reference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a64bb9430e3de72f5626a0c0987b81a521f0af59"
+    },
+    {
+      "path": "skills/mcp-builder/reference/evaluation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdf6b14788e759b873a0d1d3454cc10d27122df4",
+      "size": 21730
+    },
+    {
+      "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9d343cc3ae89b1fc139dae96bdb2b7e29ba3648",
+      "size": 7330
+    },
+    {
+      "path": "skills/mcp-builder/reference/node_mcp_server.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6e5df982adc0848bf261c47ab8d65a1e0469391",
+      "size": 28550
+    },
+    {
+      "path": "skills/mcp-builder/reference/python_mcp_server.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d161b1686593487a7ce5583df5ba787a672b459b",
+      "size": 25107
+    },
+    {
+      "path": "skills/mcp-builder/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df2b4abea80c2d668eb90ca433fabc98a3f22372"
+    },
+    {
+      "path": "skills/mcp-builder/scripts/connections.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffcd0da3fbe1539320d022017ae83b61a9587a5c",
+      "size": 4875
+    },
+    {
+      "path": "skills/mcp-builder/scripts/evaluation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "475483b26e0c9fa3f288d643d17995a17c159e83",
+      "size": 12600
+    },
+    {
+      "path": "skills/mcp-builder/scripts/example_evaluation.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41e4459b5af861e61f1ca87d2f8f5ab5543dc054",
+      "size": 1194
+    },
+    {
+      "path": "skills/mcp-builder/scripts/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e73e5d1e356edafadb9dc9243e6f300f2c5529b3",
+      "size": 29
+    },
+    {
+      "path": "skills/meetings-cleanup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84d9506b0972a920dd7d1fb6ecc1f1de59c9024d"
+    },
+    {
+      "path": "skills/meetings-cleanup/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31e2d5a6796e6f6bca50b4e867ba64ca3af0c51c",
+      "size": 3367
+    },
+    {
+      "path": "skills/meetings-debrief",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37ac7eefff534eb76e7e6561b38e2f5712172834"
+    },
+    {
+      "path": "skills/meetings-debrief/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f36b6529ea2f3e3c41e9f51dcd14c1b478e6f466",
+      "size": 7686
+    },
+    {
+      "path": "skills/meetings-list",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2c77a0cb3c0cc544ff737b189236da275c79274"
+    },
+    {
+      "path": "skills/meetings-list/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6d4939a8b7630b019d301e800d34a3e27f93a72",
+      "size": 1487
+    },
+    {
+      "path": "skills/meetings-prep",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89d435475445a7edb3ce1100713ee15431880e03"
+    },
+    {
+      "path": "skills/meetings-prep/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878007045e69b47699bf44afdd4616354802baab",
+      "size": 9220
+    },
+    {
+      "path": "skills/meetings-recap",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58a793ff02e4374fbb10b40bc8abbcb78fb1a115"
+    },
+    {
+      "path": "skills/meetings-recap/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec59965bf5a520e0b3c1afaf0ba8523bfe89dce",
+      "size": 3147
+    },
+    {
+      "path": "skills/meetings-recap/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6dc086628eba17d6394b2c8ba2bd0ad675250bc9"
+    },
+    {
+      "path": "skills/meetings-recap/templates/daily-recap.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa66697bdb4dd993d7eed24a94b020be73389172",
+      "size": 944
+    },
+    {
+      "path": "skills/meetings-search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f525d2543862f7bddbc24a2e62126aba8ef877b5"
+    },
+    {
+      "path": "skills/meetings-search/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cbe511e68279d2a19d64cc94bc7fff229ccdb49",
+      "size": 4426
+    },
+    {
+      "path": "skills/meetings-weekly",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "672fe068253cb3bdfdab0bdbd4ea9937a8294e67"
+    },
+    {
+      "path": "skills/meetings-weekly/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c3ca91c77283164b8abae007053f5ca8b33cc21",
+      "size": 6213
+    },
+    {
+      "path": "skills/method-audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4296f2e5116763f77e10f53d7bd53633844b992c"
+    },
+    {
+      "path": "skills/method-audit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eba9d9393126ab232edab2ae90c7ad1b9d08c25",
+      "size": 6630
+    },
+    {
+      "path": "skills/multi-perspective",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "841dd41076f829cad8ac90bbc31773f169ec2670"
+    },
+    {
+      "path": "skills/multi-perspective/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a249bf6ea07cb8e8d3a8e536f291298229ae9c4",
+      "size": 13880
+    },
+    {
+      "path": "skills/multi-perspective/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df96b006e3806b518dc2216234c35c173e1be2a8"
+    },
+    {
+      "path": "skills/multi-perspective/references/computational-many-analysts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bec9990ea58bbb524c31d0512261ed59521fbc66",
+      "size": 5424
+    },
+    {
+      "path": "skills/multi-perspective/references/perspective-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b6f8f09a2353708bdad1908497f11d4158e5740",
+      "size": 1999
+    },
+    {
+      "path": "skills/numerical-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e6088a6346e91bc5b6bd18bb0a9304130c96ff9"
+    },
+    {
+      "path": "skills/numerical-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08fd3a90e0b400e856c42b371e2ed08924d4cbd2",
+      "size": 9324
+    },
+    {
+      "path": "skills/pdf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4a7da9d5083b24d9aefa855e52d81a50d476b01"
+    },
+    {
+      "path": "skills/pdf/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/pdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dfeb4268b91b17ae51ade90bb6c23b51661e1e0",
+      "size": 2168
+    },
+    {
+      "path": "skills/pdf/forms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac2e45a7239c4f6cac377cb17c07c38afb51f49f",
+      "size": 11931
+    },
+    {
+      "path": "skills/pdf/reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b6251b4b30933ff923f8de3415c31cd300cf784",
+      "size": 16572
+    },
+    {
+      "path": "skills/pdf/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1aa30ce3e22ac17d83d03b6ff9c9460a3c6cd545"
+    },
+    {
+      "path": "skills/pdf/references/pdf-recipes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25189f0927f13605960fe49e28efa4b3097eba4d",
+      "size": 6424
+    },
+    {
+      "path": "skills/pdf/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce0bc2d0615dd0a09c464931f2c876339c57fce2"
+    },
+    {
+      "path": "skills/pdf/scripts/check_bounding_boxes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cc5e348f359b7aa7179e6a26772dacfdbbeba53",
+      "size": 2774
+    },
+    {
+      "path": "skills/pdf/scripts/check_fillable_fields.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36dfb9513e2f54e051820b58c3cdd1f09bc6ff37",
+      "size": 268
+    },
+    {
+      "path": "skills/pdf/scripts/convert_pdf_to_images.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e83d40543d84083b0768b0c294195f3d2e5b13b0",
+      "size": 1000
+    },
+    {
+      "path": "skills/pdf/scripts/create_validation_image.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c52e6e95ba166ba9dd3dc9e77eeeaed9ef1fb22",
+      "size": 1242
+    },
+    {
+      "path": "skills/pdf/scripts/extract_form_field_info.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb1401bfce26be30c1930af24063493ae7f91397",
+      "size": 4294
+    },
+    {
+      "path": "skills/pdf/scripts/extract_form_structure.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f219e7d5b5e30616b2259abb924253afd0240aee",
+      "size": 3945
+    },
+    {
+      "path": "skills/pdf/scripts/fill_fillable_fields.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6380b0d9b50f9d09f1482fa9cd468a4db73d06bb",
+      "size": 3810
+    },
+    {
+      "path": "skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cc25d729725ef3fd1f0d4724f3831857793aeac",
+      "size": 3174
+    },
+    {
+      "path": "skills/pipeline-manifest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4099a7c1f1113777bb4549c14bfce16a878415d2"
+    },
+    {
+      "path": "skills/pipeline-manifest/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3743a4dc01173f41f0fe8d337e22973df2db9ce1",
+      "size": 10217
+    },
+    {
+      "path": "skills/playwright-cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b293ddabba2de4a03f54094ca0233028db4b212d"
+    },
+    {
+      "path": "skills/playwright-cli/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d1c8d9bd76239e943af46e4b5399c8443a0bba3",
+      "size": 5272
+    },
+    {
+      "path": "skills/playwright-cli/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48521c9d64686b6249228698b9e2db507410e649"
+    },
+    {
+      "path": "skills/playwright-cli/references/commands.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "598d96f19ecaf5397758c8ba685c4fc30442d70a",
+      "size": 5373
+    },
+    {
+      "path": "skills/playwright-cli/references/element-attributes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e9fa6b99103bbe4e1262c37a9c4a664dfe1dbd5",
+      "size": 665
+    },
+    {
+      "path": "skills/playwright-cli/references/playwright-tests.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47627c2a6a234e4a959b6b896d7e3cf496bcc97d",
+      "size": 1635
+    },
+    {
+      "path": "skills/playwright-cli/references/request-mocking.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9005fda67dfc4af13848fd9ebedee08420aeec97",
+      "size": 2182
+    },
+    {
+      "path": "skills/playwright-cli/references/running-code.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b35e9a41daabbdb62d13ebb78bd407b0ecc34c5",
+      "size": 5398
+    },
+    {
+      "path": "skills/playwright-cli/references/session-management.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fac96066c949ba5016a2362b087e6338b0984d84",
+      "size": 3998
+    },
+    {
+      "path": "skills/playwright-cli/references/storage-state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c856db5e40ba51f2793fc67cfc32370218e44d83",
+      "size": 5198
+    },
+    {
+      "path": "skills/playwright-cli/references/test-generation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a09df387f241be8252654b582fae5161dc22bc4",
+      "size": 2411
+    },
+    {
+      "path": "skills/playwright-cli/references/tracing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce7babbdf17c685a65228d4328e56fbd42e10a2",
+      "size": 3440
+    },
+    {
+      "path": "skills/playwright-cli/references/video-recording.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c04afb94fd8a7e02f60d4a8aa626efb92fdabfb",
+      "size": 5381
+    },
+    {
+      "path": "skills/postmortem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e96e16e3add5836f2067552131f87991ac5c357"
+    },
+    {
+      "path": "skills/postmortem/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa1feaecc148a13c6a7f7d326d17242eff39c449",
+      "size": 6503
+    },
+    {
+      "path": "skills/pre-commit-audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8195e57c685e06a30503cf43effe9108f0ad5511"
+    },
+    {
+      "path": "skills/pre-commit-audit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2bce582c4616e79be110afd05a19d062e1ea829",
+      "size": 7673
+    },
+    {
+      "path": "skills/pre-submission-report",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d55e2e21603fc9015b4a0d5f0e1541b448f8a79f"
+    },
+    {
+      "path": "skills/pre-submission-report/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5359df54e9dc444729dd22b591338a51c7b6959",
+      "size": 28659
+    },
+    {
+      "path": "skills/project-deck",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "055fd02eb166b27bd73abc8457a60fa06797535e"
+    },
+    {
+      "path": "skills/project-deck/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01ce4353011b330ef7abc840e0b3d1c763db28db",
+      "size": 3349
+    },
+    {
+      "path": "skills/project-safety",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1881c3fe516fd1f80ecf345f22d6bb8e70e8f1f5"
+    },
+    {
+      "path": "skills/project-safety/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f98c2a13a95e99cb4dc1cfdb7002e647132382aa",
+      "size": 3781
+    },
+    {
+      "path": "skills/proof-readability",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f648157f936f0e98143febea8451ef7b6c526b4"
+    },
+    {
+      "path": "skills/proof-readability/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df12e7112bb7c32aba14eeb9732417d4f258e91f",
+      "size": 28000
+    },
+    {
+      "path": "skills/proofread",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b4157d698b1fb9c60b5cc92e9507e48f36fd73d"
+    },
+    {
+      "path": "skills/proofread/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51026c724b3a9632f1c9cc2fac32c03a29d4d53a",
+      "size": 16827
+    },
+    {
+      "path": "skills/proofread/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e984e2497ab992fd11b041b3413df9559fa7ae7"
+    },
+    {
+      "path": "skills/proofread/references/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c8e1cfaa53c4e02e8c617ffebd6ba577b791a38",
+      "size": 4927
+    },
+    {
+      "path": "skills/python-env",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c43a0362809ffc63e22e47dba211207bc9b94491"
+    },
+    {
+      "path": "skills/python-env/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc9c8e3d595f6b2dea60d2d7c1d1bdbf1cabdc1",
+      "size": 2134
+    },
+    {
+      "path": "skills/quarto-deck",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a6f44b5834679986beb6a4a2effe86972ea7a4e"
+    },
+    {
+      "path": "skills/quarto-deck/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "805f7561661dfcaf13f55a135739fd2ef5ec0b59",
+      "size": 8781
+    },
+    {
+      "path": "skills/quarto-deck/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40e5db73727a9b23a37e1901fb2981316ea7980e"
+    },
+    {
+      "path": "skills/quarto-deck/references/markdown-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdc8c83c988316d3fdb2ba1ac4bc1e9f781bc399",
+      "size": 2292
+    },
+    {
+      "path": "skills/quarto-deck/references/quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c83ede075e2f5549345eeef2ebd5e232e81007a1",
+      "size": 2210
+    },
+    {
+      "path": "skills/reorg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3ee8315c75b237a300e7ef3d49ae8b040f3b0d3"
+    },
+    {
+      "path": "skills/reorg/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5984880c4aa944c276261fc1260e757f8466fec",
+      "size": 4220
+    },
+    {
+      "path": "skills/replication-audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04284551e1c4eb6f2e21bdc809084db074ef9624"
+    },
+    {
+      "path": "skills/replication-audit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "263af44e51d462d9755b565a729e483449aa22e3",
+      "size": 9225
+    },
+    {
+      "path": "skills/replication-package",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ddd90ca24208b101508feebb669aae5aa8e6919"
+    },
+    {
+      "path": "skills/replication-package/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "449bb15a3db868edfb5a160dd4d6ed342166cc87",
+      "size": 9992
+    },
+    {
+      "path": "skills/replication-package/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "524087a86032b852a4c773c33c347e18d1dd1b78"
+    },
+    {
+      "path": "skills/replication-package/references/aea-readme-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b47baa6b1b719044b38c99d4cb448001bd85561",
+      "size": 5506
+    },
+    {
+      "path": "skills/replication-package/references/anonymization-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d68be3c31054becdb25e3271c0b5aae458c5aea4",
+      "size": 3939
+    },
+    {
+      "path": "skills/replication-package/references/assemble-workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "784e605627f412c099f37eadd0ccc45b1ed32cc0",
+      "size": 10224
+    },
+    {
+      "path": "skills/replication-package/references/audit-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b6f8a6215e97b59019325da314c5b99215213f",
+      "size": 11371
+    },
+    {
+      "path": "skills/replication-package/references/audit-workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc065ce2c6ac0ef96eaaa67e1cd59bdbbb262cb0",
+      "size": 3861
+    },
+    {
+      "path": "skills/replication-package/references/blind-workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "132a0a84b97b1fad1c2c9c162f8ea74ba948bcf6",
+      "size": 4072
+    },
+    {
+      "path": "skills/replication-package/references/deposit-checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "088c8c6f8196f348090e77509769cfd3c597f83f",
+      "size": 6739
+    },
+    {
+      "path": "skills/replication-package/references/expected-values-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e39ad97b50a647f4734a4d987b99ad022f9b7cba",
+      "size": 4898
+    },
+    {
+      "path": "skills/replication-package/references/figure-table-crosswalk.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b217af7eae88852e23db7f2ef22f5cbdb8c3bd75",
+      "size": 3789
+    },
+    {
+      "path": "skills/replication-package/references/logging-skeletons.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b0ce50a832352a7f3ed53ed25867c5262702aa4",
+      "size": 3809
+    },
+    {
+      "path": "skills/replication-package/references/release-readiness-checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55e96e1ef1e68e69c18ed2de6a044ef5c422ad60",
+      "size": 3225
+    },
+    {
+      "path": "skills/replication-package/references/report-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "416563e898956ac29ba966c36a3b844d0d988312",
+      "size": 2112
+    },
+    {
+      "path": "skills/replication-package/references/rules.dropboxignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f31211b27c3b6cac0267b0f55e3ff8b1461ffd8d",
+      "size": 677
+    },
+    {
+      "path": "skills/retarget-journal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c276c0f7e11d1df1a35b8ba6d41c7e74e499778"
+    },
+    {
+      "path": "skills/retarget-journal/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ea19164d072c70ab9abbd99228efbe4f6cad058",
+      "size": 7026
+    },
+    {
+      "path": "skills/review-cluster",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffdda4d3e8a3e4f775ed3507c4be9861d90159af"
+    },
+    {
+      "path": "skills/review-cluster/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33d8fa4314ce1da1071cbad2f3edf30fa39082b8",
+      "size": 18510
+    },
+    {
+      "path": "skills/review-response",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ee971a3a343bb49e38dc02f2166f2cb9edc4bad"
+    },
+    {
+      "path": "skills/review-response/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "595c085d84b925f810af98755ddead606bcdd121",
+      "size": 10180
+    },
+    {
+      "path": "skills/review-response/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abbd5bf57ee5dd90e8a3410a22ce2ec8f3a2a278"
+    },
+    {
+      "path": "skills/review-response/references/figure-interpretation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41cf23d780f05c9e65fd51d1a4af3819515d52be",
+      "size": 1582
+    },
+    {
+      "path": "skills/review-response/references/rebuttal-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f82a2cf2105486547e775cabad92ed5e4cb85de",
+      "size": 5294
+    },
+    {
+      "path": "skills/review-response/references/response-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9366572e696aa4c7500321810884acffe91a80ca",
+      "size": 6591
+    },
+    {
+      "path": "skills/review-response/references/review-classification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47b4b4e5f0a842bd6cb1e6cae63f322aa20afc1c",
+      "size": 3903
+    },
+    {
+      "path": "skills/review-response/references/tone-guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e8753fd7277eeeaa529992b912edd9c4e1909c7",
+      "size": 6324
+    },
+    {
+      "path": "skills/session-health",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4de6f849ae06394601fa913f2f65622dae56ab43"
+    },
+    {
+      "path": "skills/session-health/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eca3900290f11cbba4bcd07ad859bb877303ab3a",
+      "size": 4054
+    },
+    {
+      "path": "skills/session-log",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36c8cc2eea93295fe2ff9eeaa963ac01b170c128"
+    },
+    {
+      "path": "skills/session-log/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9812f6d1f1af6ab0934a242d1ff28882ef0754fc",
+      "size": 3504
+    },
+    {
+      "path": "skills/shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ca5da6aec057bb860385ba212d3497253780500"
+    },
+    {
+      "path": "skills/shared/checkpoint-resumability.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0312cd73028e005065845df989f52bb3f6379164",
+      "size": 5679
+    },
+    {
+      "path": "skills/shared/citation-integrity-receipt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5433da562aa96dbf61aef4a3b623ea5964f2e6a3",
+      "size": 7151
+    },
+    {
+      "path": "skills/shared/concept-validation-gate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d6fb63e74e21141708b29684f35efa6e818916",
+      "size": 6114
+    },
+    {
+      "path": "skills/shared/council-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b449212e8379f86d6035e041e225aecd78798d4c",
+      "size": 1550
+    },
+    {
+      "path": "skills/shared/cross-client-handoff.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "831e366158fd8deeaea84469ed7960b20f5227f7",
+      "size": 3429
+    },
+    {
+      "path": "skills/shared/distribution-diagnostics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdf98313a94e2bb9473bcd98f88bdba01be2b00f",
+      "size": 5934
+    },
+    {
+      "path": "skills/shared/engagement-stratified-sampling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1b3e3e8285df17a64ceabf7cafba92aa43537d2",
+      "size": 7368
+    },
+    {
+      "path": "skills/shared/escalation-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5a864d617579e0bd956cd83a71013dba5f3c02b",
+      "size": 4095
+    },
+    {
+      "path": "skills/shared/external-audit-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7205fad9e0b3bf4cb8646e25e1c608cfc46ca2e2",
+      "size": 7482
+    },
+    {
+      "path": "skills/shared/integrity-gates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "792dffbd35c2ddccfe5b315445d45f5c9b6efe29",
+      "size": 6106
+    },
+    {
+      "path": "skills/shared/intercoder-reliability.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09c42edff78b575aebbe332f271f25dfff370ed0",
+      "size": 8295
+    },
+    {
+      "path": "skills/shared/knowledge-acquisition.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ad85cdd14dcfa550d09d5846c1154778f7c8b26",
+      "size": 10146
+    },
+    {
+      "path": "skills/shared/learn-tag-routing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d84306295191395c167f1f5d681a81c375eeb2c",
+      "size": 4775
+    },
+    {
+      "path": "skills/shared/material-passport.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7033676f82ad999fd45807a2062adf9cd750e76",
+      "size": 6474
+    },
+    {
+      "path": "skills/shared/mcp-degradation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a85b0fbe9a3492d3bbcbc333f7a181987ff20021",
+      "size": 2942
+    },
+    {
+      "path": "skills/shared/method-fitness-gate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989539028bae6c62a39852d0345c9bf9cfe8c9ef",
+      "size": 6580
+    },
+    {
+      "path": "skills/shared/method-probing-questions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a0f3e735f1ff46c5276385fd6b70b2891020b49",
+      "size": 7596
+    },
+    {
+      "path": "skills/shared/multi-language-conventions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d97420024418753b228f56f5a372106b069d40bf",
+      "size": 4781
+    },
+    {
+      "path": "skills/shared/overfull-boxes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99133a8447f7598587e9206a9710a5cb7b9e6d84",
+      "size": 3943
+    },
+    {
+      "path": "skills/shared/paid-api-safety.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a49571bded2e0f19ae8b599f0e016a1aea81da",
+      "size": 6743
+    },
+    {
+      "path": "skills/shared/palettes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea5fe7dddfc3a6ef748f5525bf8dfe71e6d8a679",
+      "size": 2182
+    },
+    {
+      "path": "skills/shared/progressive-disclosure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca4699f18b052c6e0e7e24f60a79d8c52dc0c4ce",
+      "size": 4418
+    },
+    {
+      "path": "skills/shared/project-documentation-content.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d9183b3345bce3625aaf420c5f5796a58e3ad1b",
+      "size": 11471
+    },
+    {
+      "path": "skills/shared/project-documentation-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d106fb3329a351c7d89bdb689dc6718828e19a04",
+      "size": 10454
+    },
+    {
+      "path": "skills/shared/project-documentation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cc326211de0457d2eeef4a7bef6e8bf3095d254",
+      "size": 5108
+    },
+    {
+      "path": "skills/shared/publication-output.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10c73e59ad80424d48a2954d249d239eecf6d626",
+      "size": 5374
+    },
+    {
+      "path": "skills/shared/quality-scoring.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80d7dbc32618d7add9a703931315ca94001ff3c9",
+      "size": 3216
+    },
+    {
+      "path": "skills/shared/reference-resolution.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "675308fce3d6c1f274c1d719443ab748901470cc",
+      "size": 12236
+    },
+    {
+      "path": "skills/shared/research-quality-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "638a2b302617f6a89a9afa7a1727677abf9df094",
+      "size": 8569
+    },
+    {
+      "path": "skills/shared/research-query-routing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "121baeeb62eacf212ce95bd165c33e5f4d31c185",
+      "size": 2073
+    },
+    {
+      "path": "skills/shared/review-state-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b5955936f5efe01855805834fa6d35a90152ecd",
+      "size": 1450
+    },
+    {
+      "path": "skills/shared/rhetoric-principles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b922aa0ea026a9aadd0c85125477c084ac184dd8",
+      "size": 3613
+    },
+    {
+      "path": "skills/shared/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00bfbf24fb87890065ecf9a36a102b5961513b92"
+    },
+    {
+      "path": "skills/shared/scripts/assemble_integrity_receipt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70ff06dd1c60b82a543ec3988c4e4d826e841807",
+      "size": 18712
+    },
+    {
+      "path": "skills/shared/skill-design-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e67b79def92c35bbf9acb5b5e7623b3dee96d7df",
+      "size": 15563
+    },
+    {
+      "path": "skills/shared/skill-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4edabdbb7f19fb6d1ce612f76a509e6469baf995",
+      "size": 26773
+    },
+    {
+      "path": "skills/shared/sources-cache.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e0de216da561455978cd65dec578d94700c20c8",
+      "size": 4496
+    },
+    {
+      "path": "skills/shared/system-documentation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "581f7a630c73acd89d8b836b6ee43b1f8ed5c9d7",
+      "size": 12881
+    },
+    {
+      "path": "skills/shared/tikz-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df049c853ee442610e32676aac86a97ba338cf4c",
+      "size": 18953
+    },
+    {
+      "path": "skills/shared/validation-tiers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6e9cf98e1d4cb60505d6ec9e52d1c2fc59aa354",
+      "size": 5740
+    },
+    {
+      "path": "skills/shared/venue-guides",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13ff1af733d24c5690a05d11fb52d41e0a075ae8"
+    },
+    {
+      "path": "skills/shared/venue-guides/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9460892cbda50dd970a1e608817e6a947beeb5d",
+      "size": 2263
+    },
+    {
+      "path": "skills/shared/venue-guides/cell_press_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "176b7cf93ca4a3774d95ac458c7f3ac80a8ed2e1",
+      "size": 14241
+    },
+    {
+      "path": "skills/shared/venue-guides/conferences_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8815d0e0140263d566df060ffe49fabda8af06a",
+      "size": 17115
+    },
+    {
+      "path": "skills/shared/venue-guides/cs_conference_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecae9693739f66ac5de50c50e11433b32d312bd5",
+      "size": 15613
+    },
+    {
+      "path": "skills/shared/venue-guides/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3d25e6eff2bf05afdde7fbeb4c16aa8c93eb3af"
+    },
+    {
+      "path": "skills/shared/venue-guides/examples/cell_summary_example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9701144a74677ee285f2f3ab8d7d2352e7086577",
+      "size": 8807
+    },
+    {
+      "path": "skills/shared/venue-guides/examples/medical_structured_abstract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b808898f4aa132d0da10e28f89112ce9c35e8c0",
+      "size": 11979
+    },
+    {
+      "path": "skills/shared/venue-guides/examples/nature_abstract_examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99409cba370ce5de5da8b0f84b8596a53e2c4c0f",
+      "size": 8887
+    },
+    {
+      "path": "skills/shared/venue-guides/examples/neurips_introduction_example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "665eeb619e54228e2cec69018914fc705e3c2044",
+      "size": 8709
+    },
+    {
+      "path": "skills/shared/venue-guides/journals_formatting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e35d631643732f445ac08647fcf8c32ad2bdf41",
+      "size": 17623
+    },
+    {
+      "path": "skills/shared/venue-guides/medical_journal_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e84e5d1093a80b9388005063a7a7921ba58af050",
+      "size": 15915
+    },
+    {
+      "path": "skills/shared/venue-guides/ml_conference_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14584cf6afb70e358733e1e6fc6c5170f016742d",
+      "size": 17782
+    },
+    {
+      "path": "skills/shared/venue-guides/nature_science_style.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e01d789e4daafd26275fc68283884d63b92659f",
+      "size": 13534
+    },
+    {
+      "path": "skills/shared/venue-guides/reviewer_expectations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b0c34219aa406777021dabfa5a260901e2e7a91",
+      "size": 15834
+    },
+    {
+      "path": "skills/shared/venue-guides/venue_writing_styles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9c5d62909651d2258fd2d37b2ba51406896bf8d",
+      "size": 12669
+    },
+    {
+      "path": "skills/shared/worker-critic-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "294319ca39668c4c28f86154310704a382b31735",
+      "size": 6116
+    },
+    {
+      "path": "skills/skill-creator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7aefeb28a975aa563f5ad1d9725ce0cdc267fc55"
+    },
+    {
+      "path": "skills/skill-creator/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "skills/skill-creator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc559c56b0fbbd68a4668ef92898c97f775096c",
+      "size": 17722
+    },
+    {
+      "path": "skills/skill-creator/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71facb0554061ee6e5ea11af6bf85ae58d768c64"
+    },
+    {
+      "path": "skills/skill-creator/agents/analyzer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14e41d6068635f4dd3fb878fd1626312395dda63",
+      "size": 10376
+    },
+    {
+      "path": "skills/skill-creator/agents/comparator.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80e00eb45db3ee53a132fc2ba97fd59a7339e563",
+      "size": 7287
+    },
+    {
+      "path": "skills/skill-creator/agents/grader.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "558ab05c0a9a8bb062ef4c51823d4d76c3acf7c4",
+      "size": 9049
+    },
+    {
+      "path": "skills/skill-creator/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5568681584ea3e29bd58a766e47a433d763f89c"
+    },
+    {
+      "path": "skills/skill-creator/assets/eval_review.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "938ff32aed9bffabf723bd5492d720f4736c8e4d",
+      "size": 7058
+    },
+    {
+      "path": "skills/skill-creator/eval-viewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c166868ff91b4e175b94f27e156f48f18fa73c1"
+    },
+    {
+      "path": "skills/skill-creator/eval-viewer/generate_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37d187575e09be186ae9cf912f47cb1675caefd7",
+      "size": 16379
+    },
+    {
+      "path": "skills/skill-creator/eval-viewer/viewer.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d8e96348a02e66c3363d2ff3b3ae58ac11e6382",
+      "size": 44998
+    },
+    {
+      "path": "skills/skill-creator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "729332245f160d2319ffe5d52a8a1b5fd03b5a74"
+    },
+    {
+      "path": "skills/skill-creator/references/description-optimization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95d3e08165815e1a7b3a5a557e91a65156372ccc",
+      "size": 5671
+    },
+    {
+      "path": "skills/skill-creator/references/eval-workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9af672b833d7503e5f2b0085d5e803dadafa7479",
+      "size": 7730
+    },
+    {
+      "path": "skills/skill-creator/references/platform-notes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1f40ff3c7d8f23c9110130116216660337dabad",
+      "size": 3852
+    },
+    {
+      "path": "skills/skill-creator/references/schemas.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6eeaa2d4a34c1653069585c6c5603da39a5bdbe",
+      "size": 12061
+    },
+    {
+      "path": "skills/skill-creator/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "403f9aaf6303fc8884e8c46776d48cc82fd149e8"
+    },
+    {
+      "path": "skills/skill-creator/scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/skill-creator/scripts/aggregate_benchmark.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3e7ddcb886a148a4a5735f01335bf0f912074532",
+      "size": 14400
+    },
+    {
+      "path": "skills/skill-creator/scripts/generate_report.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b1bba643d76eacdb36366fe2c07167aecb23e444",
+      "size": 12855
+    },
+    {
+      "path": "skills/skill-creator/scripts/improve_description.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b0e8847fa00851544190341ede119044ab92f2bb",
+      "size": 10722
+    },
+    {
+      "path": "skills/skill-creator/scripts/package_skill.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e12f01831e640cb73de21ca3da51911ad79f77f0",
+      "size": 4255
+    },
+    {
+      "path": "skills/skill-creator/scripts/quick_validate.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "922a37b5d295ccdf31d5102c8d8a6efa2ca0f1a8",
+      "size": 4214
+    },
+    {
+      "path": "skills/skill-creator/scripts/run_eval.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e58c70bea39d5b252a1e819f242bbdcdf20e8b87",
+      "size": 11464
+    },
+    {
+      "path": "skills/skill-creator/scripts/run_loop.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "36f9b4e0545909696b7275634c92c7885b2c765b",
+      "size": 13685
+    },
+    {
+      "path": "skills/skill-creator/scripts/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b6a07dd57174197a937034b7eecebd5768ff8a",
+      "size": 1661
+    },
+    {
+      "path": "skills/skill-extract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f1632c259aed61345f35bcaf75a147c3ae790f7"
+    },
+    {
+      "path": "skills/skill-extract/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07a1153d59622e0dc562e8119a7ae7958c305278",
+      "size": 9540
+    },
+    {
+      "path": "skills/skill-extract/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76f11ca7c8995a41a398935026b314589048a1cd"
+    },
+    {
+      "path": "skills/skill-extract/scripts/validate_skill.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c13e4a72c4e014200bc7658e2f1bc4232a535c57",
+      "size": 9608
+    },
+    {
+      "path": "skills/skill-preflight",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d05b5c6c62c0f20335d931075c3c5c7e4bb00ce0"
+    },
+    {
+      "path": "skills/skill-preflight/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b6c63ce5db5bcf37db655a3644f9816fa14a123",
+      "size": 8907
+    },
+    {
+      "path": "skills/split-pdf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdd04735c53fb7220c48564771951d9f9b2fad6c"
+    },
+    {
+      "path": "skills/split-pdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4a5914b6243194f6756eb688f60cdc32a86d801",
+      "size": 11958
+    },
+    {
+      "path": "skills/split-pdf/methodology.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01c029e9422b879ead04a59824d7e2eeafab5b45",
+      "size": 4411
+    },
+    {
+      "path": "skills/strategic-revision",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f3f1a2a9030c17772298418acc1fe59b5a4123a"
+    },
+    {
+      "path": "skills/strategic-revision/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c2959b9d42e2e86963dac8e1289d314f6df2d8f",
+      "size": 21075
+    },
+    {
+      "path": "skills/strategic-revision/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e7963e3ed7c0d45bc28f03bdacc3765fa721e85"
+    },
+    {
+      "path": "skills/strategic-revision/references/dag-validation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fda93304243cf354af7a7e8509b037c162e5fc0",
+      "size": 7583
+    },
+    {
+      "path": "skills/strategic-revision/references/fold-in-protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b78f3681a5fbfbcab757a9ab71faf6706e155bff",
+      "size": 13083
+    },
+    {
+      "path": "skills/strategic-revision/references/modes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ea511bb6da89ffe616feefd40a74a329ce8a87c",
+      "size": 5258
+    },
+    {
+      "path": "skills/strategic-revision/references/phases.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22c859efe5175650f82fb7656577272a8d3a4083",
+      "size": 23980
+    },
+    {
+      "path": "skills/strategic-revision/references/rr-routing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d7a46bff16cb102feb4765ce5f6d45b9bd86cbd",
+      "size": 5466
+    },
+    {
+      "path": "skills/strategic-revision/references/task-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b561b9f3d52c67cc8995c1a357cd302c2a8f597b",
+      "size": 5773
+    },
+    {
+      "path": "skills/strategic-revision/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fe94c1e8a4c30c3eeb3f5f6af7166c67dad3e38"
+    },
+    {
+      "path": "skills/strategic-revision/scripts/dag_validator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38d63a83154d17eb7d1c5c019c0bdb25d8b0ecfe",
+      "size": 26215
+    },
+    {
+      "path": "skills/strategic-revision/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f9a07b3cf4563ba8360b7ae2157e453f51f6ec6"
+    },
+    {
+      "path": "skills/strategic-revision/templates/referee-comments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2cb2bb0ca39126afbb804019e642d2e9c39af924"
+    },
+    {
+      "path": "skills/strategic-revision/templates/referee-comments/comment-tracker.md",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5261929fd54fbfecc54480c812c0b3d01f24d717",
+      "size": 3908
+    },
+    {
+      "path": "skills/strategic-revision/templates/referee-comments/review-analysis.md",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "84ea14ec72bc2096e7c78027a2718ed90a4a7d4e",
+      "size": 2245
+    },
+    {
+      "path": "skills/strategic-revision/templates/referee-comments/reviewer-comments-verbatim.tex",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "86d603befcc822edc4a6299a25d8fcf54a8c0431",
+      "size": 3821
+    },
+    {
+      "path": "skills/symbolic-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cda4397fa276dfb0d413edafc51522829869539"
+    },
+    {
+      "path": "skills/symbolic-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ded807aeb7d0515292bef3e05f631cf783dd764",
+      "size": 7662
+    },
+    {
+      "path": "skills/sync-permissions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06fee0be1d679868176e75542ed0548f28a6bd3c"
+    },
+    {
+      "path": "skills/sync-permissions/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a38d56011c6c7154df534cf4859319ae6a98f13",
+      "size": 4107
+    },
+    {
+      "path": "skills/synthesise-reviews",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1247a0d25775673cee4d2dd7c761c193f0a2ab8d"
+    },
+    {
+      "path": "skills/synthesise-reviews/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a75dcd4697e01acc734d598e78ce9f52783b0bdf",
+      "size": 9053
+    },
+    {
+      "path": "skills/synthetic-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cbddd34d1d26788e749ab507f9251b19b5389fd"
+    },
+    {
+      "path": "skills/synthetic-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "267a9c2d4eacea73b4728ff93ff1825bd827d32f",
+      "size": 10062
+    },
+    {
+      "path": "skills/synthetic-data/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68b0d43e308c1918e2e8da5d7218d630e351d301"
+    },
+    {
+      "path": "skills/synthetic-data/references/calibration-targets.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "310d8c504095442e0fb9763f34f2be79485d6765",
+      "size": 14841
+    },
+    {
+      "path": "skills/synthetic-data/references/dgp-recipes-experimental.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9e5fa3460220be5265be3651b7723aaf5f67553",
+      "size": 4851
+    },
+    {
+      "path": "skills/synthetic-data/references/dgp-recipes-observational.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77e6f01292ae69e01ed999e581c081ae67761bf",
+      "size": 4211
+    },
+    {
+      "path": "skills/synthetic-data/references/dgp-recipes-survey-mediation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c471b7d080d6ea5e5f4b91a66a7626a5ccb6b672",
+      "size": 6589
+    },
+    {
+      "path": "skills/synthetic-data/references/dgp-recipes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3f91d481a6fee76cedb8d8d67d7e8d7048c63e6",
+      "size": 720
+    },
+    {
+      "path": "skills/tailscale-mosh-recover",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "770580986873a491a8e4eecc61e76ed0fc10787c"
+    },
+    {
+      "path": "skills/tailscale-mosh-recover/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeb488d780668ed7242ca0f472c960192c22adc8",
+      "size": 16191
+    },
+    {
+      "path": "skills/tailscale-mosh-recover/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "104a7fd12aca29e05cff120a6c3b6691d946c208"
+    },
+    {
+      "path": "skills/tailscale-mosh-recover/references/dropbox-fda-eperm.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a66783ba27de5163175ccb024b94011755678d4",
+      "size": 4993
+    },
+    {
+      "path": "skills/tailscale-mosh-recover/references/extended-diagnostics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b8468646bb097e83425c2af56d05890828ae34e",
+      "size": 14287
+    },
+    {
+      "path": "skills/task-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d330c5859b1517b87518e3e9b553050c2387cf2"
+    },
+    {
+      "path": "skills/task-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a082925d442251cb6b8a70ffc2e6537657f23afc",
+      "size": 6607
+    },
+    {
+      "path": "skills/test-iterate-loop",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "430a5e4ba86bb4ea1a1fd5e59b00e3036da8ce2a"
+    },
+    {
+      "path": "skills/test-iterate-loop/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af7e697eb84124fdf32944dffb10c35beed3c608",
+      "size": 9036
+    },
+    {
+      "path": "skills/tikz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2eb711fb7e9ca104d0e899a759d8812ee558a267"
+    },
+    {
+      "path": "skills/tikz/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37d4cda9c61cd22686591a94588e8d085e3a90e8",
+      "size": 12643
+    },
+    {
+      "path": "skills/tikz/tikz_rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc88e3f24c7e2c00bdd9d79e7bfc8356a5e2747e",
+      "size": 15681
+    },
+    {
+      "path": "skills/update-focus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa17fd4e062b02fb4b7007cd5979bad27718c435"
+    },
+    {
+      "path": "skills/update-focus/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83aed328099c924541dc072a8270373bd8f7e221",
+      "size": 6770
+    },
+    {
+      "path": "skills/update-project-doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69abe81259176c34084584756627f7fd42df22ce"
+    },
+    {
+      "path": "skills/update-project-doc/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70adfa40af1be5d2f7a5a47ab1b3e9097ec59459",
+      "size": 9645
+    },
+    {
+      "path": "skills/venue-fork",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9f823af7e4940ca6fabd3550a2e795152ab3636"
+    },
+    {
+      "path": "skills/venue-fork/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32b559462f70653e5b577a9c63ece5f0b4dc55bf",
+      "size": 11299
+    },
+    {
+      "path": "skills/venue-guidelines-compliance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "038a27ddeef5265daeb8da87a43959a05a25178f"
+    },
+    {
+      "path": "skills/venue-guidelines-compliance/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2662d7931d99fcc1b02acec849f400fc75f0c71e",
+      "size": 11233
+    },
+    {
+      "path": "skills/venue-guidelines-compliance/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a7e66a0a796412102a14160d1fae3e098e4d2ee"
+    },
+    {
+      "path": "skills/venue-guidelines-compliance/agents/openai.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec066001cc86c11b0da8509ecc734a4ddacf9b40",
+      "size": 243
+    },
+    {
+      "path": "skills/verify-math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d2cfb613ea277aca9d8b1727eb7e74aaa62150f"
+    },
+    {
+      "path": "skills/verify-math/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da3d066a6b03b1e872fb1f39236a03d8771b5212",
+      "size": 8024
+    },
+    {
+      "path": "skills/verify-math/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b326aa666460552dab2b5c46cbbec14d297f5371"
+    },
+    {
+      "path": "skills/verify-math/scripts/extract_block.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3da74d09f4c6dc8b0dab60593cf1380ac7d275dd",
+      "size": 5528
+    },
+    {
+      "path": "skills/voice-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16615886dffb5408a596409fee5be8cd9d3f1b44"
+    },
+    {
+      "path": "skills/voice-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4ed106ccfb6f851ca03a59441c3b7af855b9e27",
+      "size": 9231
+    },
+    {
+      "path": "skills/voice-editor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b55fe06024689a8b7163b9f564c735c98bcfb2c7"
+    },
+    {
+      "path": "skills/voice-editor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0189872455951fdb7bfc159ce2eee2c77b1dd7fd",
+      "size": 8730
+    },
+    {
+      "path": "skills/voice-editor/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "078f0e28421ff7fe51871042efb720b903ffe3da"
+    },
+    {
+      "path": "skills/voice-editor/references/common-problems.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13043dee7064d438163881ad8145f4bbebb2ff74",
+      "size": 959
+    },
+    {
+      "path": "skills/voice-editor/references/editing-modes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2fe9881eba6e3281b8be08a183503889b49a732",
+      "size": 899
+    },
+    {
+      "path": "skills/weakness-scanner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2124cc3cbc86899bb92eacda132910ed0cc3df2"
+    },
+    {
+      "path": "skills/weakness-scanner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd25909f9c756aeaa1ec552980b20f5c0acb0dae",
+      "size": 5686
+    },
+    {
+      "path": "skills/webapp-testing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ceef54b9978957e176dddefc1221f9e7485311b0"
+    },
+    {
+      "path": "skills/webapp-testing/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "skills/webapp-testing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "749c96dda47193df7d2d7573a172ca3e160bc553",
+      "size": 5125
+    },
+    {
+      "path": "skills/webapp-testing/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d18b45eccd4e8cafe1cc7b3e060e5aa811f76689"
+    },
+    {
+      "path": "skills/webapp-testing/examples/console_logging.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9329b5e232ed53d944bfe95e750070117d31b9ab",
+      "size": 1027
+    },
+    {
+      "path": "skills/webapp-testing/examples/element_discovery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "917ba72f52421a1b324f93ae8e38af72010a87b9",
+      "size": 1463
+    },
+    {
+      "path": "skills/webapp-testing/examples/static_html_automation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90bbedcc08cdb345c74fb938ebad02c0baf56603",
+      "size": 953
+    },
+    {
+      "path": "skills/webapp-testing/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f004d2cd8b408ce5cfc79e662dfdebe3bb2aed17"
+    },
+    {
+      "path": "skills/webapp-testing/scripts/with_server.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "561f7afc0a6edb3b717b010fcb67f6e6240f519d",
+      "size": 3743
+    },
+    {
+      "path": "skills/wiki-curate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a43d1d18afa537bbb4e49d4ffd1644efba78342"
+    },
+    {
+      "path": "skills/wiki-curate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "097c69f6aaf5c33b5aa8705b4a11c9c82fcf9b1a",
+      "size": 8136
+    },
+    {
+      "path": "skills/wiki-grow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f7e833ad253ce2f4f2b9443b075f2fddb8c387f"
+    },
+    {
+      "path": "skills/wiki-grow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548b08bcf810201dfe527d9b8e414ba8bbd6ae70",
+      "size": 6679
+    },
+    {
+      "path": "skills/wiki-merge",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bee4fde6a9526675f3cbfe2683cec5b2328cff95"
+    },
+    {
+      "path": "skills/wiki-merge/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fde82280df62e21927bc2678a53b51d827735cc1",
+      "size": 5814
+    },
+    {
+      "path": "skills/wire-shared-package",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb94b8536fa0ba577214ea2afd2bd086837004bf"
+    },
+    {
+      "path": "skills/wire-shared-package/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c209a1b99eb61b2a3b26ff3a0d5ad8f230d4a3b2",
+      "size": 6672
+    },
+    {
+      "path": "skills/xlsx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e6ca301a6a8319bc8fb53362a8e1ec41750e6c6"
+    },
+    {
+      "path": "skills/xlsx/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/xlsx/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af46203410c1acdab1ba9caa2a8451b297705f76",
+      "size": 11533
+    },
+    {
+      "path": "skills/xlsx/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "923ed89833b66bf6b976410942bb556532324507"
+    },
+    {
+      "path": "skills/xlsx/scripts/office",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d9a608a1c32e5e20d2878739d0746c2bd1aa99c"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/helpers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9aa1626c4c0f4e134aab828890f5c1be3bc6ee26"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/helpers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/xlsx/scripts/office/helpers/merge_runs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "731f47cc16c1da802629a43851cdd4aa47748d64",
+      "size": 5565
+    },
+    {
+      "path": "skills/xlsx/scripts/office/helpers/simplify_redlines.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db963bb998d7d5a8517d8252ce82ec9ab28665bc",
+      "size": 5754
+    },
+    {
+      "path": "skills/xlsx/scripts/office/pack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8b8db7517addcf0be1dc3e76c7c375c10734557",
+      "size": 5012
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd5537e270f01e5e6f703d20ddef51d1aa2fab0d"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a1687fed5a87dc969e4123731c2812b912f5e2e"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6454ef9a94d52512e4905df61280a3fd1dafc0a4",
+      "size": 74984
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afa4f463e3140a3f626c73f7966d689270d89b2c",
+      "size": 6956
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e66b8abd496d2e450c08110e40607e90b3fe13",
+      "size": 51302
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "687eea8297caa298581aa06c40ca40ef7b8a58bc",
+      "size": 624
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac81b06b7a3ef916d677953084ae225504a77bc",
+      "size": 152039
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dbf05140d07fa014f18a5630acc0613d8058e52",
+      "size": 1231
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1af17db4e83b1c40152577eca4a575ab63a1ca7",
+      "size": 8862
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a185ab6ed0c2dd9b383a403c56c909bbab8b9a1",
+      "size": 14795
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14ef488865f3ae6150776220ebbcf4788f89066a",
+      "size": 83612
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c20f3bf14720d34247e8e1302dc3c40f7b832099",
+      "size": 1269
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac60252262534e7b87523fd04d252f085b38bec0",
+      "size": 7328
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "424b8ba8d1f9ebb22ba72cdd174c8a2ade0ecf89",
+      "size": 6382
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bddce29214882eb9fdf2be8a50ed5bdd0c69dfc",
+      "size": 1248
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a8c18ba2d5caa7e60a365e77ae0d1b872141bb0",
+      "size": 880
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c42706a0d53c5e8b96818d9c29a292d1504f720",
+      "size": 2608
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "853c341c87feb51e10d757aea28b4185ae4c2731",
+      "size": 3507
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da835ee82d5cc31be9fa9792512930f7ae3fb5ce",
+      "size": 7507
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87ad2658fa51cb4c172f82d0fdf33a492a750eca",
+      "size": 23313
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e86f1b2be0d431cd3c250ddeaf4efabdbcb088b",
+      "size": 1367
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0be42e757f3cce533c1c80770239f0097d3de6b",
+      "size": 242277
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8821dd183caf9c8c3b809e0e2d9e0df56c4e9ed9",
+      "size": 26148
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca2575c753be78cdaa96de56b3ff8770173c324d",
+      "size": 25279
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd079e603f5770176212776a1d565b108875cf64",
+      "size": 535
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dd6cf625a740398c2a4dc8abbe18e25e0ac5e9f",
+      "size": 5712
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1041e34ef365926f5670b896f5bb23e553ac36d",
+      "size": 4010
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5b7a633411c2313ce839f748e4623bb0a70efe",
+      "size": 171367
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f13678d80a762375223f060e23b56c7b2eac89e",
+      "size": 4646
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ecma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "199f64d0c169af4541649e7a6f591a691e76fb1d"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ecma/fouth-edition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae6fce07ca75c8799a25ed1150a37550b49af977"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6de9d2733d3f0eea12ae87b24122495df1f0928",
+      "size": 1963
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e978b661fc291cbeea9ab0c248601cf216f96d",
+      "size": 2515
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4248bf7a39c793c9f319bae7d09f92983efe5368",
+      "size": 2856
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56497467120b52b742756379959d4b2536be6df7",
+      "size": 1344
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/mce",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09a345ff1206946cc3fbb76469eca8792dea69d1"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/mce/mc.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef725457cf39116672e285d021be69b7ad022574",
+      "size": 3127
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94823a5acddd96d8a6caf627e4d7b86c0eaa1812"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-2010.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f65f777730d82162f4248f03c703b1b85fda5fe2",
+      "size": 26549
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-2012.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b00755a9a8733f0fb171a47b25d0d7b4c70dee8",
+      "size": 3745
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-2018.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f321d333a5e6ef98cbdfeeeaa334923e4cfc8a6c",
+      "size": 901
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-cex-2018.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "364c6a9b8df6e252bb5ae39e2ca031fcbfc4e8a5",
+      "size": 1778
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-cid-2016.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fed9d15b7f504e14ac82793d79db2d7ad83d56ed",
+      "size": 1002
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "680cf15400cd57ce2bf17a58ecd29caa0d8a8422",
+      "size": 600
+    },
+    {
+      "path": "skills/xlsx/scripts/office/schemas/microsoft/wml-symex-2015.xsd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89ada90837b2db3f3d453212ae426520acedbbea",
+      "size": 745
+    },
+    {
+      "path": "skills/xlsx/scripts/office/soffice.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f7e3289fdff196399fd6f3d6668b9aa68eec87",
+      "size": 5301
+    },
+    {
+      "path": "skills/xlsx/scripts/office/unpack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f86b0d562e3516439da10e6d6c1f1486f1b22810",
+      "size": 4070
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9747fff010e1b805dda9e3d4f15b58050ad39c85",
+      "size": 3673
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35766602eb569360c15061ebc9ac0cb2a93ec079"
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validators/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db092ece7e21de98f87bd81471578259a1bc642f",
+      "size": 336
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validators/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae378bba39b1df30e96964a09a9aab5eaba32bb9",
+      "size": 32581
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validators/docx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c4b9aa92c0e5db631ee4ca3f4a51a42414f8952",
+      "size": 16370
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validators/pptx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a667b35c7d729853be362149eba0693f027d4a46",
+      "size": 9820
+    },
+    {
+      "path": "skills/xlsx/scripts/office/validators/redlining.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8362d01b367d3f42b0c4b67245b1f0eb977e54b7",
+      "size": 8912
+    },
+    {
+      "path": "skills/xlsx/scripts/recalc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e3cde66c5d4eff49b23408d6dd10b519445dc76",
+      "size": 5778
+    }
+  ]
+}

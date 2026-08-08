@@ -1,0 +1,25 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "lesson-builder/SKILL.md",
+        "snippet": "as real-world fact | | `discussion_designer_agent` | Discussion guides: question ladders, equity-of-voice tactics, facilitation moves, online-async variant | ## Workflow (`full` mode) ``` Phase 0 LOAD — rea"
+      },
+      {
+        "file": "lesson-builder/agents/discussion_designer_agent.md",
+        "snippet": "name: discussion_designer_agent description: \"Builds discussion guides: question ladders, equity-of-voice tactics, facilitation moves, async variants\" --- # Discussion Designer — Seminar & Discussion Guide Builder"
+      },
+      {
+        "file": "lesson-builder/agents/discussion_designer_agent.md",
+        "snippet": "dead-room mistake — flag it if the professor's own draft questions do this. 3. **Plan equity of voice**: cold-calling alone is high-anxiety and rewards the fastest hand. Build in alternatives — warm calls (\"I'"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "lesson-builder/references/active_learning_catalog.md",
+        "snippet": "orm); professor opens the next meeting with patterns found. - **Time:** 3–5 min + 10 min instructor review after · **Size:** any · **Modality:** all - **Prep:** none - **For:** closure/retrieval (§5) and instructor feedback; t"
+      }
+    ]
+  },
+  "read_errors": []
+}

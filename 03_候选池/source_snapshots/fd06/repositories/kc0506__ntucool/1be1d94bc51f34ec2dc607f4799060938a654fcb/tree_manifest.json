@@ -1,0 +1,1933 @@
+{
+  "repository": "kc0506/ntucool",
+  "fixed_version": "1be1d94bc51f34ec2dc607f4799060938a654fcb",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e6632876fc37d830b6f55d8dfbd2e0c29e0f628"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3e502249871c5ed2cd5ff123dc5dc915a7af0b5",
+      "size": 780
+    },
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b08711b749ac3a0bb1d4231004158add422065e7"
+    },
+    {
+      "path": ".claude/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f842ae489a019e5a0397b76a858514e59da65525"
+    },
+    {
+      "path": ".claude/skills/demo-recording",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07593476623aaaee546d0034355ef7cb3d7c4ed3"
+    },
+    {
+      "path": ".claude/skills/demo-recording/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a95861b8f14099b5171046709c70a9283606619",
+      "size": 7795
+    },
+    {
+      "path": ".claude/skills/releasing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07df2a9e5761c43fd60dd93f7f97f1d3440a8821"
+    },
+    {
+      "path": ".claude/skills/releasing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f734bd9739024d8d8069c2f74a77e941f00f7968",
+      "size": 6904
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf887bc31a8646783155eb300f7ac3c18e4d462d"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca610ffe1bd059621046886699906d4a463c6d0f"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f48e57413bc0cd906ecd73243f8f61b7d0366c0",
+      "size": 12401
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09004d7711b64fda2f25e338d798178da42b7862",
+      "size": 424
+    },
+    {
+      "path": ".mcp.dev.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16bd2112957e5251d5ee43bbeb94153b7b3c873c",
+      "size": 198
+    },
+    {
+      "path": ".mcp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b31fd83f2347f6aba48ab920ca11ad252493be4f",
+      "size": 112
+    },
+    {
+      "path": "Cargo.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b406c61360325513e4b1eadb7e685c56188020e8",
+      "size": 112639
+    },
+    {
+      "path": "Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efcc123751ba4deec9d78235e88454f5b439fff6",
+      "size": 360
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bbdbcec215d1012fa6c25f3d8bcf6021cd20c32",
+      "size": 1066
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67845b71331f59d219be580efffa7fad6ec47404",
+      "size": 10789
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "397e741503f42dda0eca67a2b0b87ef5d21b3a78"
+    },
+    {
+      "path": "assets/add-connector.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d13dea0d7ff1d7f9ecb4d95a89895ff21a92f9",
+      "size": 140378
+    },
+    {
+      "path": "assets/auth.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "988c107800e11b9f5fca66d3dbe31215f1844e63",
+      "size": 45956
+    },
+    {
+      "path": "codegen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55a65c40543dab8cab7b88200efe1b26592446e5"
+    },
+    {
+      "path": "codegen/api-spec.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5364a5a0c5b02d22cac8ceb9d21cd594bb128243",
+      "size": 983599
+    },
+    {
+      "path": "codegen/gen.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b90b772f7b1108a25219821ed5559d86ac6acf7",
+      "size": 3684
+    },
+    {
+      "path": "codegen/gen_ir.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ea00288258f420125ce056bc286121e1cdfb299",
+      "size": 16053
+    },
+    {
+      "path": "codegen/languages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f69dfc52c0c1dc3a2fc5a86302fb587f6503cdc"
+    },
+    {
+      "path": "codegen/languages/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "codegen/languages/rust.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "368d9f74dca16b0fd2a26ddcab701ab6c254adeb",
+      "size": 4239
+    },
+    {
+      "path": "codegen/overrides",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1515b7b36fcd1f2d56c3a9fd440577761da5d837"
+    },
+    {
+      "path": "codegen/overrides/file_upload.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf68e99018138ac94f4f1ffdfdeb60814957c08",
+      "size": 748
+    },
+    {
+      "path": "codegen/overrides/pagination.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "622fc92e36bd81c3dab4f75256ebf1e741d82972",
+      "size": 5963
+    },
+    {
+      "path": "codegen/overrides/type_fixes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "802d307499adbc04827f2e2d474ea22c645ac869",
+      "size": 1245
+    },
+    {
+      "path": "codegen/schemas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46819807c43ea046c5c7c478fa108a1a6f37abbd"
+    },
+    {
+      "path": "codegen/schemas/access_tokens.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be8c8a90370c49a55c343a3eb423a22d26ca9a4e",
+      "size": 7232
+    },
+    {
+      "path": "codegen/schemas/account_calendars.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba10c19bb6e25313e928185653d91fbe3be95383",
+      "size": 11702
+    },
+    {
+      "path": "codegen/schemas/account_domain_lookups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6216f77e8aa2a6d9caa0884e9ebe84f1f6e79817",
+      "size": 2022
+    },
+    {
+      "path": "codegen/schemas/account_notifications.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a636934d8287dcac0bbb50a707f0ed3213ba25aa",
+      "size": 13316
+    },
+    {
+      "path": "codegen/schemas/account_reports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2e6376283b2d2ac24f08da4c31ddc8057596d4c",
+      "size": 15097
+    },
+    {
+      "path": "codegen/schemas/accounts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d768151a6e9550f7de3b394bd2293c74a49d13a6",
+      "size": 55851
+    },
+    {
+      "path": "codegen/schemas/accounts_(lti).json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac5c9aa681ad532724c18e179da060cee5dfe480",
+      "size": 2337
+    },
+    {
+      "path": "codegen/schemas/admins.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "378b840162e16509b929dc64878068c94eaef03a",
+      "size": 7940
+    },
+    {
+      "path": "codegen/schemas/analytics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4c326ace30ee94cef2c6fde8fc4b71050c7e1a",
+      "size": 33965
+    },
+    {
+      "path": "codegen/schemas/announcement_external_feeds.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fc8f67fb30e8b9b2be08e4c3efc622070ad306c",
+      "size": 10045
+    },
+    {
+      "path": "codegen/schemas/announcements.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e71074394f89bb2946d97efa24336453cc33614",
+      "size": 4670
+    },
+    {
+      "path": "codegen/schemas/api_token_scopes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55b8c475e0623f97ea2b46946c19c6fad39438d6",
+      "size": 2749
+    },
+    {
+      "path": "codegen/schemas/appointment_groups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96329e3d74ed075d43625e2202198729be98e676",
+      "size": 31751
+    },
+    {
+      "path": "codegen/schemas/assignment_extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90317b6a60e6a38f3ae2f1e91bee2eb1a7ea6575",
+      "size": 3560
+    },
+    {
+      "path": "codegen/schemas/assignment_groups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5645ff4d2d9eacb5b2710d33b4e8ccb9479357a3",
+      "size": 17801
+    },
+    {
+      "path": "codegen/schemas/assignments.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73aeacfea17cb64955a74a75fbc5cc38f827e8d5",
+      "size": 120430
+    },
+    {
+      "path": "codegen/schemas/authentication_providers.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eddcbf3756c2aa123ce1eaddac6abfc35ed7c83a",
+      "size": 40937
+    },
+    {
+      "path": "codegen/schemas/authentications_log.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e4a26eeb0fa2e65bfc1f4f86dc2303017b80d9",
+      "size": 6101
+    },
+    {
+      "path": "codegen/schemas/blackout_dates.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ded78f5e0f94e7e6d7af9bf17f21c4ca396ab36e",
+      "size": 18727
+    },
+    {
+      "path": "codegen/schemas/blueprint_courses.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b98a1cdc77019adbc776dafd8d835daec0b3da42",
+      "size": 32584
+    },
+    {
+      "path": "codegen/schemas/bookmarks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8657913266f5d9c4762ab62a04b5b328e9e5fbcd",
+      "size": 6688
+    },
+    {
+      "path": "codegen/schemas/brand_configs.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5196f3e0251e1e33a712fa9ac0743757e8cd5993",
+      "size": 1266
+    },
+    {
+      "path": "codegen/schemas/calendar_events.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2c97e54f550ecf5c4e1cbbf6d2b557b7c59d56a",
+      "size": 55846
+    },
+    {
+      "path": "codegen/schemas/collaborations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42092a7e88babf9b9f1b88134c8f6cf061009815",
+      "size": 10587
+    },
+    {
+      "path": "codegen/schemas/comm_messages.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6371e4e54901a6c6a8cb22690c8dcf4da0dbfc4",
+      "size": 4516
+    },
+    {
+      "path": "codegen/schemas/communication_channels.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "364c2ae08b0ef0192ce5bc59c525f2aa9d8b79fa",
+      "size": 9491
+    },
+    {
+      "path": "codegen/schemas/conferences.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "756dc022274cf8ee12f77c3bc614d5a7dce22e56",
+      "size": 8869
+    },
+    {
+      "path": "codegen/schemas/content_exports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07910c55d5425e0bfa04c266371daadc3da56117",
+      "size": 20070
+    },
+    {
+      "path": "codegen/schemas/content_migrations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee5f0fb205d9a324fe4f95ce4483f41ffff4cdd",
+      "size": 132343
+    },
+    {
+      "path": "codegen/schemas/content_security_policy_settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23b6ed59c99b887252ae718923d4c684d3f17f98",
+      "size": 15432
+    },
+    {
+      "path": "codegen/schemas/content_shares.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aa97f3db303576e4be829175ce90fbea5004062",
+      "size": 14491
+    },
+    {
+      "path": "codegen/schemas/conversations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33dc552d36a03577f49165af4fd0e8a9e503d676",
+      "size": 42490
+    },
+    {
+      "path": "codegen/schemas/course_audit_log.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a92650334a03e4eb01bc73339efe3c9c65bdc87",
+      "size": 9326
+    },
+    {
+      "path": "codegen/schemas/course_pace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85c70ccdfb054f71f827ef5d7d7089cdc04a1f67",
+      "size": 18173
+    },
+    {
+      "path": "codegen/schemas/course_quiz_extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cc60cd50d8bf684137a5df611023cfbc4397cf8",
+      "size": 5109
+    },
+    {
+      "path": "codegen/schemas/courses.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0c752373cb86d18d0bae5440d1a563a581c27bd",
+      "size": 131408
+    },
+    {
+      "path": "codegen/schemas/custom_gradebook_columns.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d3844bdfe7687e3e71d50f4694505508f99fb3a",
+      "size": 14552
+    },
+    {
+      "path": "codegen/schemas/discussion_topics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b928f696d020a15b2366fd973fa50c8ea1f2b489",
+      "size": 157491
+    },
+    {
+      "path": "codegen/schemas/e_portfolios.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7378fa69d5e55456a6650483cc7f11718b384537",
+      "size": 11296
+    },
+    {
+      "path": "codegen/schemas/e_pub_exports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c71af4cfd62578fbb2be4d09197009241f1bb45b",
+      "size": 5963
+    },
+    {
+      "path": "codegen/schemas/enrollment_terms.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a98ebf7cf21b9988bcc5d3f987dec2688b7f742",
+      "size": 14683
+    },
+    {
+      "path": "codegen/schemas/enrollments.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "438648805cfb3f6659c6c973ed32f29165350994",
+      "size": 70040
+    },
+    {
+      "path": "codegen/schemas/error_reports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f03c4acaf86b10d1532ca2ae8f5c0e3319a868e",
+      "size": 4742
+    },
+    {
+      "path": "codegen/schemas/external_tools.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d82f4513e5a11616e2bf6409a83d7db50a7b70ac",
+      "size": 93756
+    },
+    {
+      "path": "codegen/schemas/favorites.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d11b5f672dcaaa025d1c62b756263e9540c74186",
+      "size": 8747
+    },
+    {
+      "path": "codegen/schemas/feature_flags.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ebd94485d3fd76f3a34c45aa86bd6f4a6e4e722",
+      "size": 27831
+    },
+    {
+      "path": "codegen/schemas/files.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55e2fa244e00e5b3ecf0e47d26485f79a784d774",
+      "size": 114912
+    },
+    {
+      "path": "codegen/schemas/grade_change_log.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f74052e6354eea2d2097516415fb26873a32bf",
+      "size": 13069
+    },
+    {
+      "path": "codegen/schemas/gradebook_history.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb157f8bcc1b16d08aa3b149a92827826e6b1961",
+      "size": 14788
+    },
+    {
+      "path": "codegen/schemas/grading_period_sets.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e1a4de21ebc163e426fa48ef632e1ed224e04d",
+      "size": 8680
+    },
+    {
+      "path": "codegen/schemas/grading_periods.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2abbbb49ec040af50a3d06b241cb7c3bad9cc5c",
+      "size": 17778
+    },
+    {
+      "path": "codegen/schemas/grading_standards.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce06fa838b250fe841724b9cfaf8edc6be7aa93f",
+      "size": 11881
+    },
+    {
+      "path": "codegen/schemas/group_categories.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b1180f735978148635e9de1a186c9af2ebd6259",
+      "size": 26669
+    },
+    {
+      "path": "codegen/schemas/groups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e6b20efec9b3ae2a9fb7a45f364a7d5fe772464",
+      "size": 47560
+    },
+    {
+      "path": "codegen/schemas/history.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6bdc0373d3e071bb0ed65cd18172cd08c5dd6b2",
+      "size": 4298
+    },
+    {
+      "path": "codegen/schemas/inst_access_tokens.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1b8477352eb5d657ce79eb4b7558fe89ef6ac22",
+      "size": 2670
+    },
+    {
+      "path": "codegen/schemas/jw_ts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "001f51b228765ad2d3542bf6f6dc0b3307237ac4",
+      "size": 5113
+    },
+    {
+      "path": "codegen/schemas/late_policy.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "436d3b6ad4e5997c5178401f4c1bf52c161a3af0",
+      "size": 10703
+    },
+    {
+      "path": "codegen/schemas/learning_object_dates.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd7e7722752229e3b39d36b696a41f02ef07402",
+      "size": 32112
+    },
+    {
+      "path": "codegen/schemas/line_items.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102ba093e796800dabc1e34924019209dfd57952",
+      "size": 15254
+    },
+    {
+      "path": "codegen/schemas/live_assessments.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97217326d1fff575dcdb966ea882ea3384ae82a2",
+      "size": 7303
+    },
+    {
+      "path": "codegen/schemas/logins.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "758398a3a8a3fcda7c4aa9fd387e7e950d88a7e5",
+      "size": 18610
+    },
+    {
+      "path": "codegen/schemas/lti_resource_links.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31059a660d532c0c83fb06f261d496c44390bbc1",
+      "size": 10238
+    },
+    {
+      "path": "codegen/schemas/media_objects.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d15ba1a5f631755eb77d33f427f2e9a88e9192e9",
+      "size": 27321
+    },
+    {
+      "path": "codegen/schemas/moderated_grading.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a472cefb1b89f284e7a5de4526706b05770303b0",
+      "size": 12877
+    },
+    {
+      "path": "codegen/schemas/modules.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "152b79659cfd0785c886068c3ee078ff22f8b218",
+      "size": 59036
+    },
+    {
+      "path": "codegen/schemas/names_and_role.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0f831d1b38ab0d6366c83ff5368340c27f2b993",
+      "size": 14719
+    },
+    {
+      "path": "codegen/schemas/new_quiz_items.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91e6f23714daf131a6481ea294af969e5f4fd75e",
+      "size": 28997
+    },
+    {
+      "path": "codegen/schemas/new_quizzes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817c8a7bb6787977f85d2669364a38f78abd8fcc",
+      "size": 40549
+    },
+    {
+      "path": "codegen/schemas/notification_preferences.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f253000b8835e34e732a3eb92f1ed9b4c8ea5ed",
+      "size": 17159
+    },
+    {
+      "path": "codegen/schemas/originality_reports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd6fb7b2327c0d0eca38d97c343ae60dbda1446a",
+      "size": 20333
+    },
+    {
+      "path": "codegen/schemas/outcome_groups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04bc2e52816b7b3e09c78b65f9d28c6afa0ddacb",
+      "size": 104276
+    },
+    {
+      "path": "codegen/schemas/outcome_imports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d7b091c1366a76853d4ffb9d81b4b099e8f39fe",
+      "size": 18589
+    },
+    {
+      "path": "codegen/schemas/outcome_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a52ec9cbd06eb0fcdf7b6b7456fca0eb99eba70e",
+      "size": 16465
+    },
+    {
+      "path": "codegen/schemas/outcomes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cbeb9cb2b16775df4b09443e316e8678859845c",
+      "size": 13816
+    },
+    {
+      "path": "codegen/schemas/pages.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9a8d0d96f7dc28309e1bcc240b03fc1abf3e6f5",
+      "size": 53094
+    },
+    {
+      "path": "codegen/schemas/peer_reviews.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fadcaf8e636663c62bada1f8d90095e963c34ef4",
+      "size": 16709
+    },
+    {
+      "path": "codegen/schemas/plagiarism_detection_platform_assignments.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c26b8967727b1a2488fb27a3b151380cfa2b8d",
+      "size": 2914
+    },
+    {
+      "path": "codegen/schemas/plagiarism_detection_platform_users.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fa40b4e359e8cc71901836807a8226e8f3648c6",
+      "size": 2327
+    },
+    {
+      "path": "codegen/schemas/plagiarism_detection_submissions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "573780e995d2a746f44cb128621952a13bc807b0",
+      "size": 6328
+    },
+    {
+      "path": "codegen/schemas/planner.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e812918400fa16dffaef61c2e84ba1249f601c5",
+      "size": 27675
+    },
+    {
+      "path": "codegen/schemas/poll_choices.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7081a874faaf3a19db99471ecbd95329d0a0930",
+      "size": 8948
+    },
+    {
+      "path": "codegen/schemas/poll_sessions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60ddb3ebe5a9d7391f68f0e8c9d1b6dfb9abb350",
+      "size": 13372
+    },
+    {
+      "path": "codegen/schemas/poll_submissions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c3227f581da623763d2880bf7c4a4dc420e7e13",
+      "size": 4269
+    },
+    {
+      "path": "codegen/schemas/polls.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f925fd583c7e8aa0fe5c8678ef6bb2dc39584ca2",
+      "size": 6839
+    },
+    {
+      "path": "codegen/schemas/proficiency_ratings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd7a8298fbc6e86998e3db4443bfeb77e7539592",
+      "size": 10198
+    },
+    {
+      "path": "codegen/schemas/progress.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f2f7d3883a281bb58e5ad3051f97dec2e20c646",
+      "size": 5802
+    },
+    {
+      "path": "codegen/schemas/public_jwk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9881603eae1e165848db3f5676d8c046b4230a46",
+      "size": 5287
+    },
+    {
+      "path": "codegen/schemas/quiz_assignment_overrides.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f4f73bd6329a65179bb5dc4e6f7976d6b2166a",
+      "size": 6526
+    },
+    {
+      "path": "codegen/schemas/quiz_extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b332e321f8a98a445597fe5a2b23edb26f7f993e",
+      "size": 6153
+    },
+    {
+      "path": "codegen/schemas/quiz_ip_filters.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "517ba0e837f1651bd9e67a84abd0e754249ffa7f",
+      "size": 2318
+    },
+    {
+      "path": "codegen/schemas/quiz_question_groups.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2de7b66ed4387beedb6ad7ea8da634cac48c01c",
+      "size": 12781
+    },
+    {
+      "path": "codegen/schemas/quiz_questions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4be1de2aec933e05c32c5788f6b9d268d0c73c",
+      "size": 23371
+    },
+    {
+      "path": "codegen/schemas/quiz_reports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a708737105e8d8ad5c8be08f04051c7eac9950f3",
+      "size": 12786
+    },
+    {
+      "path": "codegen/schemas/quiz_statistics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9ba82c97aa7c50746d641bd67a721ef04b9481c",
+      "size": 10505
+    },
+    {
+      "path": "codegen/schemas/quiz_submission_events.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc8721efbab1fda4536ee11b55f8dc3accbf7d0a",
+      "size": 4888
+    },
+    {
+      "path": "codegen/schemas/quiz_submission_files.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "056eb1c1b1b6fd8dab8fcaeb1f1a85e67943fd35",
+      "size": 2424
+    },
+    {
+      "path": "codegen/schemas/quiz_submission_questions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b0665d34c207572254d7a088a1a15214b5fa0ca",
+      "size": 11683
+    },
+    {
+      "path": "codegen/schemas/quiz_submission_user_list.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ef640b6da4a65ded13dc03d0042133366d7c4fb",
+      "size": 3382
+    },
+    {
+      "path": "codegen/schemas/quiz_submissions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d584b8ac3bfed8f7e0a032d3086fb8921ef13a0",
+      "size": 22891
+    },
+    {
+      "path": "codegen/schemas/quizzes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d39062c6246190e7d88e24f00ce565e335a4203",
+      "size": 29894
+    },
+    {
+      "path": "codegen/schemas/result.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da46dadce3e774ce90975aeef00e02fa79eed11c",
+      "size": 4873
+    },
+    {
+      "path": "codegen/schemas/roles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1350d707c4ff11b9def0175a7b82f919a03f15b4",
+      "size": 29769
+    },
+    {
+      "path": "codegen/schemas/rubrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65caaae04d037eadf28525ad47d05528cb02dd15",
+      "size": 51330
+    },
+    {
+      "path": "codegen/schemas/sandboxes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c00fd267532eb768ef2214be84eb5009ef0cdf35",
+      "size": 1212
+    },
+    {
+      "path": "codegen/schemas/score.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff9fe584a136ce671f03d01c436fa0c45f51cf5",
+      "size": 13776
+    },
+    {
+      "path": "codegen/schemas/search.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6995e06e0810f1f98e71d19239c8fd403114792",
+      "size": 15157
+    },
+    {
+      "path": "codegen/schemas/sections.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4745bb96eb533ef5dcaf1d5d6370d70a2b71d5f1",
+      "size": 20269
+    },
+    {
+      "path": "codegen/schemas/services.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ead960d4e6aae73ff29a3214b73464ee31c41b0",
+      "size": 2751
+    },
+    {
+      "path": "codegen/schemas/shared_brand_configs.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89b5e37d4085f6e853ac072f7ae32a728ced380c",
+      "size": 5524
+    },
+    {
+      "path": "codegen/schemas/sis_import_errors.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "123e22911cba7e1dc1de3bdb97a37defdac9051d",
+      "size": 5634
+    },
+    {
+      "path": "codegen/schemas/sis_imports.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c89a19b291a472de2efd8635ca1ec095459aecaa",
+      "size": 38422
+    },
+    {
+      "path": "codegen/schemas/sis_integration.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c9a4a717e112d46c4f1a655ce26477e350523f",
+      "size": 23072
+    },
+    {
+      "path": "codegen/schemas/smart_search.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ebfe32adeba8eae851e24bafe0cfa6b03fb734d",
+      "size": 3359
+    },
+    {
+      "path": "codegen/schemas/submission_comments.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0201cb298e8f7f8c74dd1389e5d866885e5ca6d2",
+      "size": 5949
+    },
+    {
+      "path": "codegen/schemas/submissions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a05d74349068c4f1906b3b97f1e9bdc7b54a3629",
+      "size": 171912
+    },
+    {
+      "path": "codegen/schemas/tabs.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6b46d0826fc60a6f818b1b5764204ba2cabdb8d",
+      "size": 9672
+    },
+    {
+      "path": "codegen/schemas/temporary_enrollment_pairings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99190f2a2a53420db44453666f3569d7a1ac5e45",
+      "size": 7063
+    },
+    {
+      "path": "codegen/schemas/user_observees.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e75acd3eebc787f15ce3b319f57e5df1d6c49b15",
+      "size": 15297
+    },
+    {
+      "path": "codegen/schemas/users.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9bbe29185af35bc478a29859190e4c0159899f6",
+      "size": 139492
+    },
+    {
+      "path": "codegen/schemas/webhooks_subscriptions_for_plagiarism_platform.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36805fb549e7632ef0f40361b3c58e5de57eeb8d",
+      "size": 6529
+    },
+    {
+      "path": "codegen/schemas/what_if_grades.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5db18d73585acf2578dfa46d761ea20ad4c463a3",
+      "size": 5155
+    },
+    {
+      "path": "codegen/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ae7719e82ec8f3526dc6aeb30e6e87bf4940a7b"
+    },
+    {
+      "path": "codegen/templates/rust",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58fc712fa77b5b958781f4fb0bb9ded2d720871b"
+    },
+    {
+      "path": "codegen/templates/rust/endpoints.rs.jinja2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e26b81ac01dd38f77a4f351a0135b586de6ad1d2",
+      "size": 5384
+    },
+    {
+      "path": "codegen/templates/rust/models.rs.jinja2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6eedfb84ae0ff8dbb97ceb4923789ebb09ceaf2b",
+      "size": 623
+    },
+    {
+      "path": "codegen/templates/rust/params.rs.jinja2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f43f097a6b64b63ae262f92b26d3c3e7a9b8efb2",
+      "size": 1354
+    },
+    {
+      "path": "codegen/validate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f25d9c5956a072aca610b37bcb6fd02a90ec124",
+      "size": 4912
+    },
+    {
+      "path": "cool-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "190b64b1142a75c6401ed27765640ae1cbd3d97d"
+    },
+    {
+      "path": "cool-api/Cargo.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b832bb0124aca65b796e334f290c0b4e203bf9af",
+      "size": 59352
+    },
+    {
+      "path": "cool-api/Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45f03a99fc29295e107476b6107ba9f41c0947a6",
+      "size": 895
+    },
+    {
+      "path": "cool-api/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c33ab6d97618ee2aeee12f2933e3754dff8f2f46"
+    },
+    {
+      "path": "cool-api/src/auth.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bc2687c5ae065ebccec2576e0794d78b6b8d6d1",
+      "size": 12662
+    },
+    {
+      "path": "cool-api/src/client.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff21cfcbc3760f550e93e2050c24280f236f9a16",
+      "size": 17983
+    },
+    {
+      "path": "cool-api/src/config.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b7df26b09446ef8e3624a0ae7ebfed78dbc2493",
+      "size": 7475
+    },
+    {
+      "path": "cool-api/src/credentials.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad9d20bd358e3fed16f5cd039428d25ed0fe0205",
+      "size": 5432
+    },
+    {
+      "path": "cool-api/src/download.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8adc5a7690795e862fe07996b4554f18806a0b95",
+      "size": 2802
+    },
+    {
+      "path": "cool-api/src/error.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cd54e1f522040d217ee2a72a5c686386fac22e8",
+      "size": 1495
+    },
+    {
+      "path": "cool-api/src/generated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29f874e634b837c2c5b0842b4ec48a825b771af9"
+    },
+    {
+      "path": "cool-api/src/generated/endpoints.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ead8ab7b1049eb9d09c63a6deb0dc6ae3f18f75a",
+      "size": 490194
+    },
+    {
+      "path": "cool-api/src/generated/models.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89000ccd3e2594655fa37d37a89fba2c3346ec1c",
+      "size": 215062
+    },
+    {
+      "path": "cool-api/src/generated/params.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbd4cd612cc018892a0a65ac0c3c3cf72958635e",
+      "size": 351278
+    },
+    {
+      "path": "cool-api/src/lib.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ade20a9582c7c7a9f79c94108a980d399c55e6b",
+      "size": 417
+    },
+    {
+      "path": "cool-api/src/paths.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33c9526ea48c3cb127c0f3649988fac8b063ca5d",
+      "size": 2220
+    },
+    {
+      "path": "cool-api/src/session.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb9ed67c747700cd044efb41343c7c542eded97f",
+      "size": 3421
+    },
+    {
+      "path": "cool-api/src/upload.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a10d3ef47043d763a81c4813f3130dd240f2f19c",
+      "size": 2347
+    },
+    {
+      "path": "cool-api/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adc1c9403e6513ea090eec5142d86c897edeaec8"
+    },
+    {
+      "path": "cool-api/tests/smoke.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f518272fab620895055c47b2fa0c012100b1ae99",
+      "size": 1483
+    },
+    {
+      "path": "cool-cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04bccdd55930394e48aabbfbdf5f8d3f14514177"
+    },
+    {
+      "path": "cool-cli/Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e120b2d04a03913efb750f70a0bec5d43ac1a034",
+      "size": 1934
+    },
+    {
+      "path": "cool-cli/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3213399f277441e6b1173061dff3e4b76d6631e2"
+    },
+    {
+      "path": "cool-cli/src/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57d93889816576485220168385c8e075d888ee75"
+    },
+    {
+      "path": "cool-cli/src/commands/announcement.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "744dd928bd9e86e4d0633a80a533efce495db77e",
+      "size": 3467
+    },
+    {
+      "path": "cool-cli/src/commands/assignment.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3be74729581a7fae8bdfb1fd3a998fde1941f2d0",
+      "size": 10274
+    },
+    {
+      "path": "cool-cli/src/commands/course.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa0ffebd62ea3573675d6079fde9e67897b59878",
+      "size": 4086
+    },
+    {
+      "path": "cool-cli/src/commands/discussion.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a17bce81f1006520ed06beac7e59a157c5450483",
+      "size": 3886
+    },
+    {
+      "path": "cool-cli/src/commands/file.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78fff9924220bc4109980d2e62b0c07371449d9e",
+      "size": 4584
+    },
+    {
+      "path": "cool-cli/src/commands/grade.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92a696bd35664d350432f4553bbbd69b30234108",
+      "size": 1653
+    },
+    {
+      "path": "cool-cli/src/commands/login.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4acbe6a3018255e190388b5842a9d933524a077",
+      "size": 4406
+    },
+    {
+      "path": "cool-cli/src/commands/logout.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9777590c3ba02a4cf2c1086149bffe1230276bec",
+      "size": 651
+    },
+    {
+      "path": "cool-cli/src/commands/mcp.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3ab227f351a93c8a8de5b7d85131b5e45c4563f",
+      "size": 6048
+    },
+    {
+      "path": "cool-cli/src/commands/mod.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a02e528f44d34ae8afd41658f813189d1b4853a",
+      "size": 2610
+    },
+    {
+      "path": "cool-cli/src/commands/module.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ea611000ef62d0436e40a1aa5c249e21c1a56f2",
+      "size": 13158
+    },
+    {
+      "path": "cool-cli/src/commands/submission.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "015a0262a414bb270efbebd48ee326b85c0996b5",
+      "size": 2804
+    },
+    {
+      "path": "cool-cli/src/commands/update.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc937678b46e5c5af47e93eb5a1206178ddf32a0",
+      "size": 2052
+    },
+    {
+      "path": "cool-cli/src/commands/user.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1def5705233869668d74d08db35e6c5c2014bb25",
+      "size": 1888
+    },
+    {
+      "path": "cool-cli/src/commands/whoami.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a33ab70c47f4267a9e147ed2d049d019db8f230",
+      "size": 858
+    },
+    {
+      "path": "cool-cli/src/main.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84fa786dc5d82b642d91b5f05ab31f296a49b738",
+      "size": 1430
+    },
+    {
+      "path": "cool-cli/src/mcp",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20af36db027d4fab357c4eb798b1306bd7db7694"
+    },
+    {
+      "path": "cool-cli/src/mcp/auth.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04b8428203f881b09c779ba20a69d60646f2af1d",
+      "size": 7143
+    },
+    {
+      "path": "cool-cli/src/mcp/file_server.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f39b98f9ba8084659b2b390355ad8475682bae47",
+      "size": 11342
+    },
+    {
+      "path": "cool-cli/src/mcp/mod.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "429c2022d824de62a8a5c3b265c929fb5b10b9a7",
+      "size": 46187
+    },
+    {
+      "path": "cool-cli/src/mcp/oauth.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "112759da8ab3d7fb5336343f04d76fb75ecdac77",
+      "size": 19671
+    },
+    {
+      "path": "cool-cli/src/output.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd690036616c18b9423341f2f4005e56e55ba2b3",
+      "size": 241
+    },
+    {
+      "path": "cool-cli/src/tui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f630865cf7a995a731eb5578eb49dcd6d127900"
+    },
+    {
+      "path": "cool-cli/src/tui/browser.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d241458b74997fd62dc8bcaa9a4a34c1d0b43265",
+      "size": 30105
+    },
+    {
+      "path": "cool-cli/src/tui/fuzzy_select.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "457f89b062b2c52d3511f601aadb62d525fd4e1a",
+      "size": 9712
+    },
+    {
+      "path": "cool-cli/src/tui/mod.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89ffd44c5596609c459d8a5b7782cbc4ac871138",
+      "size": 2082
+    },
+    {
+      "path": "cool-tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb61092b4e32b5a413c1fd46a5e9eb4827ff565b"
+    },
+    {
+      "path": "cool-tools/Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9053d439a9e41144db4b325d61bb249b3b4759e",
+      "size": 793
+    },
+    {
+      "path": "cool-tools/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b7f4067716c6143489c8730846e998b8613d33e"
+    },
+    {
+      "path": "cool-tools/src/announcements.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52aed962df1750fe01739d33f0161dbad2313e14",
+      "size": 5221
+    },
+    {
+      "path": "cool-tools/src/assignments.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c28567b0084e3886df35bfd89dead2cd902d707",
+      "size": 25860
+    },
+    {
+      "path": "cool-tools/src/attachments.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ca887d1080878c66ef60b0367188220172651ec",
+      "size": 5866
+    },
+    {
+      "path": "cool-tools/src/courses.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b64e10d74c6160e2757a1f40104a552b388279a9",
+      "size": 16656
+    },
+    {
+      "path": "cool-tools/src/discussions.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e986c1f04fa1f1e23fb2ae8681ad5b9e7c0e283",
+      "size": 5607
+    },
+    {
+      "path": "cool-tools/src/files.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eaf60a901fe1bcc869ed303a9135759795a7384",
+      "size": 15082
+    },
+    {
+      "path": "cool-tools/src/grades.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84a52d50d4ad9463fd81f3bbf608874d06ef28b6",
+      "size": 3434
+    },
+    {
+      "path": "cool-tools/src/lib.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b8a72426e54ea240ab5dc9ac3c8f0c6b3c93338",
+      "size": 546
+    },
+    {
+      "path": "cool-tools/src/modules.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "415725a478dcb72af8f5e999496b95332c6bd3f0",
+      "size": 6312
+    },
+    {
+      "path": "cool-tools/src/pages.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbfbe0b9f70718590bd191641d17b0c8c20bf5c4",
+      "size": 2603
+    },
+    {
+      "path": "cool-tools/src/pdf.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f95812985ecf4a7a733a0445f45d8506b9738733",
+      "size": 10298
+    },
+    {
+      "path": "cool-tools/src/profile.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4c0f681339032295d623a57333a09633409cf9c",
+      "size": 716
+    },
+    {
+      "path": "cool-tools/src/submissions.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89b5ae458cbaff286293b30d07411bb8107259f9",
+      "size": 5352
+    },
+    {
+      "path": "cool-tools/src/text.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01afa043fe282e541531e8f702222e1afb851a55",
+      "size": 2010
+    },
+    {
+      "path": "cool-tools/src/types.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4035b7f43efb53bf9e2ae6d74a11c6dc0b2a45a8",
+      "size": 24100
+    },
+    {
+      "path": "cool-tools/src/users.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a53879ee8712474a95902e46f7c717cc50c75973",
+      "size": 2618
+    },
+    {
+      "path": "cool-tui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef42a710587e5df46e56f1229a4a27e592609bc8"
+    },
+    {
+      "path": "cool-tui/Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c943dcb12e26de334651367ffd72043e4a717820",
+      "size": 856
+    },
+    {
+      "path": "cool-tui/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "951d16afc9d7277b14b1591b4126d485580c30a4"
+    },
+    {
+      "path": "cool-tui/src/app.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "066dca716bf041f8d839a0acbb9109bbba95f410",
+      "size": 50429
+    },
+    {
+      "path": "cool-tui/src/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e65c28b41fb754eeeacff59a744a6fe9c251435"
+    },
+    {
+      "path": "cool-tui/src/data/mod.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f5ebd27a0bc13bde624b2349e27add038c43d2",
+      "size": 13890
+    },
+    {
+      "path": "cool-tui/src/event.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3c69f82d5e72be49fb41c4e5c5ea6a3a56018d3",
+      "size": 1736
+    },
+    {
+      "path": "cool-tui/src/main.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e54a99d82d20bbc4cac955df515bfcd6d0d8c206",
+      "size": 1749
+    },
+    {
+      "path": "cool-tui/src/theme.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f2387602ec56a63c9883b9aa7ee16356fcfca0d",
+      "size": 4623
+    },
+    {
+      "path": "cool-tui/src/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a71e8cc37bafed9ce3daac30e96f78241e8eec04"
+    },
+    {
+      "path": "cool-tui/src/ui/components.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d42cedff0fb68de7e27a33c8818c9c81093636b",
+      "size": 6627
+    },
+    {
+      "path": "cool-tui/src/ui/course.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0a92e4aece335cdcac594ed3b27c7e48c78a3b3",
+      "size": 35299
+    },
+    {
+      "path": "cool-tui/src/ui/dashboard.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9faf5a72fcdef4ec900cf2d3e59dd54c89d40ef6",
+      "size": 10120
+    },
+    {
+      "path": "cool-tui/src/ui/help.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa7e66517d11547989725438633b3600e9dc5ea",
+      "size": 3666
+    },
+    {
+      "path": "cool-tui/src/ui/login.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e0a36c976e7f8f45de5074cbb36f60108c7e2fe",
+      "size": 4277
+    },
+    {
+      "path": "cool-tui/src/ui/mod.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df45a00e1f75e82834767dc40a08ef6055d32c6d",
+      "size": 6435
+    },
+    {
+      "path": "cool-tui/src/ui/search.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ca87205b7a45e88ed69df69bb73fbea82c5ae6d",
+      "size": 3729
+    },
+    {
+      "path": "demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "361fc995106568ffa28132ce3d1b807f2c22f4d9"
+    },
+    {
+      "path": "demo/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69e553655a18ce95e9bcb91c5a7ce1c27a7d9013",
+      "size": 2168
+    },
+    {
+      "path": "demo/bin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6a668ad5365eb551a7890f50652523d2ee9159e"
+    },
+    {
+      "path": "demo/bin/cool",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "51d71de47b01260488be820591782a398ab32a66",
+      "size": 687
+    },
+    {
+      "path": "demo/cli.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b20a0415144c31e457f160a2b32542c37d245e",
+      "size": 1191893
+    },
+    {
+      "path": "demo/cli.tape",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7191ace7bdfa94bd6a29f254ada2acbc692ece4",
+      "size": 1008
+    },
+    {
+      "path": "demo/mcp.cast",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eb8b8a20a194c7b2a591f90bb77e622a55c5dc1",
+      "size": 310349
+    },
+    {
+      "path": "demo/mcp.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5dfee753200178f9493320f1248f73d972c4266",
+      "size": 2694223
+    },
+    {
+      "path": "demo/record-mcp.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "42d3b3342ebad9ef1f91517a351ceeb2228e3eec",
+      "size": 2974
+    },
+    {
+      "path": "demo/record.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "45b89fe063526e87056026f8adcd608cc0c519e9",
+      "size": 512
+    },
+    {
+      "path": "demo/redact.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24eeef988a1317bf19246373c446ce95e4c7132a",
+      "size": 2148
+    },
+    {
+      "path": "demo/redact_cast.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cea610f75f3303659198e03216df806b4de15cc2",
+      "size": 1320
+    },
+    {
+      "path": "dist-workspace.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee38419032e4fea6304b2815f2c2ad1547de1100",
+      "size": 1354
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec929875fc883e81d97505909f99a48f6e5e70cc"
+    },
+    {
+      "path": "docs/TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e552de177c4355a0d4e5b43d6300cba86c252613",
+      "size": 14962
+    },
+    {
+      "path": "mcp-minimal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c02c23c1781d5c319d192495cf976b937b8c865"
+    },
+    {
+      "path": "mcp-minimal/Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a3b96e6f45e89cd05d2f31ebece81cbfb09a10b",
+      "size": 490
+    },
+    {
+      "path": "mcp-minimal/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27f2aee6f376a2986f4726da127e05056996e530"
+    },
+    {
+      "path": "mcp-minimal/src/main.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f2dd493c49e3aa78e1621c5103eb083dcd065d9",
+      "size": 1438
+    },
+    {
+      "path": "plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b56ab81065fbada4abedd7a4f32e2bdd917c74f0"
+    },
+    {
+      "path": "plugins/ntucool",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1aee14292cb80236d17f97c28eb0994cbccf3f7"
+    },
+    {
+      "path": "plugins/ntucool/.claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13bd7dbf7c9455ae5fa8d595fc8ca3f6d73b269f"
+    },
+    {
+      "path": "plugins/ntucool/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1f857b929e00e2e74e4d83a7a66f7952c0fe251",
+      "size": 636
+    },
+    {
+      "path": "plugins/ntucool/.mcp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cd5beccaace5da9462640babed17a0cb0e0a1f4",
+      "size": 96
+    },
+    {
+      "path": "plugins/ntucool/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc2d721d5d80b4ad561bc281d06e939b0662031d"
+    },
+    {
+      "path": "plugins/ntucool/commands/setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a138832546f787e0d9ec28153e108b48bb007c29",
+      "size": 4339
+    },
+    {
+      "path": "plugins/ntucool/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45f99443f5b668d5909d525404b27703e4d0868b"
+    },
+    {
+      "path": "plugins/ntucool/skills/ntucool",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b0f629af9a5dc4f6ff2da713629507265666bb8"
+    },
+    {
+      "path": "plugins/ntucool/skills/ntucool/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cabe69db971d2a296dd5eae308162a5f37e28ee8",
+      "size": 11359
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3c2de668436e7188b0ba7ab2b2039177afd1c1c"
+    },
+    {
+      "path": "scripts/claude-with-plugin.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "46c04ce850150d850cad427dc2e5aa23891d6f08",
+      "size": 68
+    },
+    {
+      "path": "scripts/mcp-call.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ecb43b72ec15dd9d7b6ae6bad4e18ed4c3b76a79",
+      "size": 1438
+    },
+    {
+      "path": "scripts/mcp-smoke.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c48ef5d80e15711d2031efafa6306b8797939d31",
+      "size": 906
+    },
+    {
+      "path": "scripts/plugin-dev.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8ea27947fc3883c8802d2b84c5f61041172c4854",
+      "size": 1452
+    }
+  ]
+}

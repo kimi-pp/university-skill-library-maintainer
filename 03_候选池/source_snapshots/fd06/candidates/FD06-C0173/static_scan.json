@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "eld: \"student_work_summary\" type: \"string\" description: \"Brief summary of the student work the feedback refers to\" - field: \"student_level\" type: \"string\" description: \"Age/year group and abilit"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "\"What was changed and why, referencing evidence\" chains_well_with: - \"gap-analysis-from-student-work\" - \"criterion-referenced-rubric-generator\" - \"self-regulation-scaffold-generator\" - \"metacognitive-prompt-library"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "ausal argument using evidence.\"* Optional (injected by context engine if available): - **Student work summary:** Brief description of the actual student work - **Student level:** Year group and ability profile - **Student"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "context engine if available): - **Student work summary:** Brief description of the actual student work - **Student level:** Year group and ability profile - **Student profiles:** Self-regulation level, language proficiency"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "y not be provided. Use whatever is available; ignore any fields marked \"not provided.\" **Student work summary:** {{student_work_summary}} — if provided, use the details of the actual work to make the rewritten feedback mo"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "g? (Most powerful for building independence.) - **Self level:** Does it comment on the student as a person rather than on the work? (No learning benefit. Remove or redirect.) 2. **The three feedback questions (Hattie & Timperley, 2007):** - **Fee"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "d this feedback be perceived as threatening to self-esteem, particularly for a struggling learner? If so, reframe to focus on the work, not the person. 5. **Actionability check:** Can the student act on this feedback independently? If the feedback requi"
+      },
+      {
+        "file": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+        "snippet": "ement (feed up). --- ## Known Limitations 1. **The rewrite requires knowing the actual student work.** Without seeing Priya's essay, the rewritten feedback uses the quotation mentioned in the original and makes reasonab"
+      }
+    ]
+  },
+  "read_errors": []
+}

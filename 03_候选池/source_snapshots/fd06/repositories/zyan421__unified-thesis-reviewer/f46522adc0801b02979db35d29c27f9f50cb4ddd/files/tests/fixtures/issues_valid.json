@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-structure-001",
+      "source": "thesis",
+      "category": "structure",
+      "severity": "fatal",
+      "scope": "document",
+      "locator": {
+        "chapter": "全文",
+        "paragraph_index": 0
+      },
+      "excerpt": "",
+      "problem": "全文缺少研究综述",
+      "suggestion": [
+        "补写独立综述章节"
+      ],
+      "group_id": "g-001",
+      "anchor_text": "全文"
+    },
+    {
+      "id": "thesis-argumentation-001",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "3.2.1",
+        "paragraph_index": 5,
+        "sentence_index": 2
+      },
+      "excerpt": "Beauchamp Fischer Childress",
+      "problem": "罗列未做比较分析",
+      "suggestion": [
+        "新增三派学说取舍小节"
+      ],
+      "group_id": "g-002",
+      "anchor_text": "Beauchamp Fischer Childress"
+    },
+    {
+      "id": "citation-citation-format-001",
+      "source": "citation",
+      "category": "citation-format",
+      "severity": "minor",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "脚注[12]",
+        "paragraph_index": 11
+      },
+      "excerpt": "(02)",
+      "problem": "期号不应前导 0",
+      "suggestion": [
+        "(02) 改为 (2)"
+      ],
+      "group_id": "g-003",
+      "anchor_text": "(02)"
+    }
+  ]
+}

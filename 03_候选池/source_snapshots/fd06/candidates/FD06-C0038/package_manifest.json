@@ -1,0 +1,98 @@
+[
+  {
+    "path": "plugin/skills/k12-lesson-planning/LICENSE",
+    "type": "blob",
+    "size": 11357,
+    "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/SKILL.md",
+    "type": "blob",
+    "size": 15445,
+    "sha": "618f97a6f050adf0cd1766ef672c11533cc95696"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/NOTICE",
+    "type": "blob",
+    "size": 294,
+    "sha": "e259f74bf0b6b8dae1d0ac26f39c8b592327f113"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/ela.md",
+    "type": "blob",
+    "size": 14388,
+    "sha": "eed91e8ee4123937b4c867c0bfc51423663d308b"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/example_lesson.json",
+    "type": "blob",
+    "size": 21310,
+    "sha": "5f9ee5b1102b04da3adbe30a9e8bd4f718f23ea6"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/learning-commons-kg.md",
+    "type": "blob",
+    "size": 10117,
+    "sha": "7effd866832e77b55dca9c56ee8261d04ab4a6a0"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/math.md",
+    "type": "blob",
+    "size": 12227,
+    "sha": "3a114ac8d3455c2814282146963c9e02688ff546"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/output.md",
+    "type": "blob",
+    "size": 15783,
+    "sha": "91b638e924c4908bc1b595c83ff653ceaef29419"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/science.md",
+    "type": "blob",
+    "size": 18495,
+    "sha": "320b7a145abf0432c714bb096a1b2d6958e4e854"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/references/social_studies.md",
+    "type": "blob",
+    "size": 12635,
+    "sha": "4c2c0c87430e62c8ea07f7113bcc265151d13349"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/scripts/lesson_common.py",
+    "type": "blob",
+    "size": 33326,
+    "sha": "c16e16589a626eb83774b4accfa8f41ac9060670"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/scripts/render_all.sh",
+    "type": "blob",
+    "size": 2122,
+    "sha": "cadbb415b1c62d1f09d4b38b73086a4d13cfba7f"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/scripts/render_documents.py",
+    "type": "blob",
+    "size": 4677,
+    "sha": "20445fc37028634e17934e1d5956c5628fe3148f"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/scripts/render_lesson_docx.py",
+    "type": "blob",
+    "size": 25982,
+    "sha": "1fc827ab31070a55853f3bdd82e891bc209e8ba7"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/scripts/render_lesson_html.py",
+    "type": "blob",
+    "size": 17148,
+    "sha": "edb7f95cd85e6d47545dab8c0cfb76781f2c66b0"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-planning/scripts/theme.css",
+    "type": "blob",
+    "size": 5293,
+    "sha": "ebe1fe761a4889e50668b3bdab25499647c6cf0a"
+  }
+]

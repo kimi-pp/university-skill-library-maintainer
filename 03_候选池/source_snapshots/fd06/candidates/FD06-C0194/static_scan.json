@@ -1,0 +1,43 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "cohort-analyst/SKILL.md",
+        "snippet": ", ability levels, class profile, differentiation, grouping, 学情分析, 学情, 摸底, 前测, 预习问卷, 课前问卷, 学生基础, 分层教学, 分组.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-11\" status: active pipeline_stage: support re"
+      },
+      {
+        "file": "cohort-analyst/SKILL.md",
+        "snippet": "`` Design a 10-minute ungraded diagnostic for week 1 of my data structures course 开学前我想摸一下学生的底，帮我设计一份前测 Here are the pre-quiz results — what does my class actually know coming in? 根据课前问卷的结果，下周的课需要怎么调整？ Build peer"
+      },
+      {
+        "file": "cohort-analyst/SKILL.md",
+        "snippet": "根据课前问卷的结果，下周的课需要怎么调整？ Build peer-instruction groups from the diagnostic results 期中了，重新分析一下学生的基础有没有变化 ``` ## Modes | Mode | Trigger intent | Output | |------|---------------|--------| | `instrument` | \"Design a"
+      },
+      {
+        "file": "cohort-analyst/agents/cohort_analyst_agent.md",
+        "snippet": "dents got item 3 wrong?\", \"list the weak students\" — decline with the pointer: that is `student-mentor` work, initiated by the professor with the evidence; this skill analyzes cohorts. No exceptions for small classes, where"
+      },
+      {
+        "file": "cohort-analyst/references/diagnostic_design_guide.md",
+        "snippet": "stigmatizing to answer.** Disability or accommodation status (that is the institution's confidential channel, not a questionnaire), mental health, financial situation, \"have you failed this course before.\" - **Anything"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "cohort-analyst/SKILL.md",
+        "snippet": "essor initiates that work with the evidence; this skill never nominates students. 6. **Data minimization.** Ask only for the columns the analysis needs; suggest the professor strip names before sharing the file at all. Th"
+      },
+      {
+        "file": "cohort-analyst/references/analytics_honesty.md",
+        "snippet": "ide any artifact. Grouping plans and any in-session working notes use pseudonyms only. **Data minimization checklist** (run at every intake): - [ ] Asked only for the columns the analysis plan needs? - [ ] Suggested the profe"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "cohort-analyst/references/diagnostic_design_guide.md",
+        "snippet": "ization, `analytics_honesty.md` §5). - **Anything stigmatizing to answer.** Disability or accommodation status (that is the institution's confidential channel, not a questionnaire), mental health, financial situation, \""
+      }
+    ]
+  },
+  "read_errors": []
+}

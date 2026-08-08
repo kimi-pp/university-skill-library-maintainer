@@ -1,0 +1,68 @@
+[
+  {
+    "path": "teaching-reflector/SKILL.md",
+    "type": "blob",
+    "size": 8633,
+    "sha": "91379b5d7eb0e0487c0a2837fb4d70a31ae69ed7"
+  },
+  {
+    "path": "teaching-reflector/agents/eval_analyst_agent.md",
+    "type": "blob",
+    "size": 3882,
+    "sha": "c8bdecc74db58d5164ffb68412ddf2d07683cba5"
+  },
+  {
+    "path": "teaching-reflector/agents/midcourse_agent.md",
+    "type": "blob",
+    "size": 3779,
+    "sha": "ad45a1bd675b34efb4841fe30240b41f006cf9cf"
+  },
+  {
+    "path": "teaching-reflector/agents/observation_prep_agent.md",
+    "type": "blob",
+    "size": 3751,
+    "sha": "875066dc0cf862c64f582ea74442e9865a818367"
+  },
+  {
+    "path": "teaching-reflector/agents/portfolio_builder_agent.md",
+    "type": "blob",
+    "size": 3735,
+    "sha": "bcd3fe8a5d7046377193b10bc264ae9b5d7b5b2f"
+  },
+  {
+    "path": "teaching-reflector/agents/sotl_consultant_agent.md",
+    "type": "blob",
+    "size": 4591,
+    "sha": "de2a4d0ed5004bb3525b47d5bc3e71dab1103779"
+  },
+  {
+    "path": "teaching-reflector/agents/statement_writer_agent.md",
+    "type": "blob",
+    "size": 4026,
+    "sha": "b90a4e7bb3052a5964a70a4725dafd2dc53b9b2f"
+  },
+  {
+    "path": "teaching-reflector/references/eval_analysis_protocol.md",
+    "type": "blob",
+    "size": 7746,
+    "sha": "0fa977c411c4e87273e9ef43c5a7d73c30db0113"
+  },
+  {
+    "path": "teaching-reflector/references/teaching_statement_guide.md",
+    "type": "blob",
+    "size": 7714,
+    "sha": "8e35f5ed10b59756019902e7dac2d64694f11e52"
+  },
+  {
+    "path": "teaching-reflector/templates/midcourse_survey_template.md",
+    "type": "blob",
+    "size": 3332,
+    "sha": "41c7bc35e76b7b42d0d81f182304c7e2738619de"
+  },
+  {
+    "path": "teaching-reflector/templates/observation_brief_template.md",
+    "type": "blob",
+    "size": 4063,
+    "sha": "fc5f7a5eff937e769677713459d1c06c77bae320"
+  }
+]

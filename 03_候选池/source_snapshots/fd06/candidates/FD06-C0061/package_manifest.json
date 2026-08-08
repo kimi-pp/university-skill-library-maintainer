@@ -1,0 +1,56 @@
+[
+  {
+    "path": "deck-studio/SKILL.md",
+    "type": "blob",
+    "size": 10182,
+    "sha": "e40ab5c3b1f3339bbbfcd056604bf147b996f21a"
+  },
+  {
+    "path": "deck-studio/agents/deck_architect_agent.md",
+    "type": "blob",
+    "size": 3876,
+    "sha": "b0a3ed2100ead47e5c096bd5367da96128d32382"
+  },
+  {
+    "path": "deck-studio/agents/figure_maker_agent.md",
+    "type": "blob",
+    "size": 3891,
+    "sha": "76ec37aa1e66d6a753c2976786607bde399dc309"
+  },
+  {
+    "path": "deck-studio/agents/renderer_agent.md",
+    "type": "blob",
+    "size": 4511,
+    "sha": "fe66a7e86da7f29e42f9f8d81bf70ad836e43350"
+  },
+  {
+    "path": "deck-studio/agents/visual_designer_agent.md",
+    "type": "blob",
+    "size": 3884,
+    "sha": "0ce2373ce60aa0131cc0406a6012a1cbc5b15d77"
+  },
+  {
+    "path": "deck-studio/references/slide_design_rules.md",
+    "type": "blob",
+    "size": 7769,
+    "sha": "ba71ea4b2713806943213b615245fb98fe1ea63f"
+  },
+  {
+    "path": "deck-studio/references/toolchain_guide.md",
+    "type": "blob",
+    "size": 7941,
+    "sha": "6b3faf7cf89fec00fc9627cdaee3da7b6fba1936"
+  },
+  {
+    "path": "deck-studio/templates/deck_source_template.md",
+    "type": "blob",
+    "size": 3947,
+    "sha": "a1c4261572ef02048ed43ca6175fa936e5f8a82a"
+  },
+  {
+    "path": "deck-studio/templates/theme_spec_template.md",
+    "type": "blob",
+    "size": 4905,
+    "sha": "d031e7219853ca8f51eb1965b2f70a44775e3dfb"
+  }
+]

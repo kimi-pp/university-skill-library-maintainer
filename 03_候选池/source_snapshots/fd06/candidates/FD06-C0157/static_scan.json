@@ -1,0 +1,25 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+        "snippet": "ency illusion.** ChatGPT produces polished, well-structured prose. When students read and edit this output, they experience processing fluency — it feels easy to understand, and therefore feels well-learned. Bjork et al. (2013"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+        "snippet": "itive accuracy. This is one of the most urgent challenges in AI-enabled education. When a student uses an AI tool to complete work, they may experience a fluency illusion: the work looks good, the answers are correct, the text is fluent — and the stu"
+      },
+      {
+        "file": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+        "snippet": "are correct, the text is fluent — and the student concludes \"I understand this.\" But the STUDENT didn't do the cognitive work; the AI did. The student's sense of understanding is calibrated to the PRODUCT (which is good) rather than to their OWN"
+      },
+      {
+        "file": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+        "snippet": "nds. **Intervention 4: Prediction-Outcome Calibration** - **What:** Before the exam, the student predicts their score on a practice essay written without AI. After the essay is marked, they compare their prediction to their actual score."
+      }
+    ]
+  },
+  "read_errors": []
+}

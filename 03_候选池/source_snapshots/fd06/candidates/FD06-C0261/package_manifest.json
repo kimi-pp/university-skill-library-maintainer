@@ -1,0 +1,20 @@
+[
+  {
+    "path": "skills/academic-review/SKILL.md",
+    "type": "blob",
+    "size": 24286,
+    "sha": "7b3bb244123b18a03b174f76166ee8e57e4ba247"
+  },
+  {
+    "path": "skills/academic-review/references/review-writing-guide.md",
+    "type": "blob",
+    "size": 29236,
+    "sha": "ce7783f9cf17df5ecaf9c2d4b4011216930d390b"
+  },
+  {
+    "path": "skills/academic-review/references/revision-response-guide.md",
+    "type": "blob",
+    "size": 14919,
+    "sha": "054ea677ded35e871259a8e9e77d8735f867aaeb"
+  }
+]

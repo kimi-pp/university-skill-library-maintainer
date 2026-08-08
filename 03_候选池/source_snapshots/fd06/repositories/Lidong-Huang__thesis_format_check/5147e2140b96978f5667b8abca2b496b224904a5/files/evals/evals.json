@@ -1,0 +1,23 @@
+{
+  "skill_name": "thesis-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "请审查我的硕士论文格式，文件是 'thesis_sample.docx'。需要检查标点符号是否统一，有无中英文混杂，汉语表达是否通顺，段落逻辑，图表编号是否连续，文献格式是否一致，随机查几篇文献是否虚假，摘要是否头重脚轻，材料与方法顺序是否合理，大题目是否与内容有脱节，子标题是否合理连续，表格小数位数是否超过2位。最后把评审意见生成一个文本文件(.txt)。",
+      "expected_output": "生成一个包含详细评审意见的文本文件(.txt)，明确指出论文中哪些部分需要修改，包括具体位置（如章节、段落、行号）和建议。评审意见应涵盖标点符号、语言表达、逻辑结构、图表编号、文献格式、参考文献真实性、摘要平衡性、方法顺序、标题与内容匹配、子标题连续性、表格小数位数等方面。",
+      "files": ["test_files/thesis_sample.docx"]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a comprehensive review of my master's thesis in Chinese. The file is 'thesis.docx'. Please check for formatting issues like punctuation consistency, mixed Chinese-English punctuation, logical flow between paragraphs, statistical expression correctness, chart title clarity, consecutive numbering of figures and tables, reference numbering, potential fake references, abstract balance, methodological order, title-content alignment, subheading coherence, and decimal places in tables. Output the review comments in a text file (.txt) with specific locations.",
+      "expected_output": "A text file (.txt) containing structured review comments with specific issue locations (sections, paragraphs, tables). The review should cover all requested aspects with concrete suggestions for improvement. Include both critical issues and positive feedback.",
+      "files": ["test_files/thesis.docx"]
+    },
+    {
+      "id": 3,
+      "prompt": "帮我看看这篇论文的格式有没有问题，这是硕士论文终稿。文件是 '论文终稿.docx'。重点检查：1. 标点符号有没有中英文混用 2. 图表标题是否自明 3. 文献是不是连续编号 4. 随机抽5篇文献网上查一下真假 5. 中文摘要是不是结果部分写得太少 6. 材料与方法部分是否符合时间顺序 7. 大题目和内容是否脱节 8. 表格小数位数超过2位的要标出来。评审意见单独生成一个文本文件(.txt)。",
+      "expected_output": "生成独立的文本文件(.txt)评审意见，针对每个检查点提供具体反馈，包括问题位置（如'图表3.2标题不明确'、'参考文献[12]可能为虚假文献'、'摘要中结果部分仅占15%'等）和修改建议。",
+      "files": ["test_files/论文终稿.docx"]
+    }
+  ]
+}

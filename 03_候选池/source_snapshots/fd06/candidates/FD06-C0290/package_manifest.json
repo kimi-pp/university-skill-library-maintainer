@@ -1,0 +1,20 @@
+[
+  {
+    "path": "canvas-course-audit/SKILL.md",
+    "type": "blob",
+    "size": 4208,
+    "sha": "07367b04e426a764fc493fb5fbdc22059e2934a7"
+  },
+  {
+    "path": "canvas-course-audit/references/audit-criteria.md",
+    "type": "blob",
+    "size": 5565,
+    "sha": "260cb3c357bfc5041a0e2f1291c99c7d87ee123b"
+  },
+  {
+    "path": "canvas-course-audit/references/example-report.md",
+    "type": "blob",
+    "size": 3173,
+    "sha": "45b11285b69dc0a08b70690e1cfa7df8a0a6231b"
+  }
+]

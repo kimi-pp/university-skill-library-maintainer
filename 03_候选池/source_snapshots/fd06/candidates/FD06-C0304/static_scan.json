@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skill-card.md",
+        "snippet": "on: Clarify source and data-handling expectations before use, and avoid providing student PII or credentials without an appropriate privacy and data-handling agreement. <br> Risk: Curriculum recommendations and as"
+      }
+    ]
+  },
+  "read_errors": []
+}

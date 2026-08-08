@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": "ps, feasibility, timestamp, version, and per-student/criterion change summary - Write the updated JSON back to the file ## Step 9: Summary and State Update Display final summary: ``` Refinement Complete =================== Adjusted: X"
+      }
+    ],
+    "lms": [
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": "ft K applied in 0.5 steps per criterion, respecting per-criterion maximums and preserving Canvas rubric validity. Optionally rewrite criterion feedback (15-20 words in the feedback language from `metadata.feedback_la"
+      },
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": ") - Exclude: - Already submitted/approved (unless `reapply=true`) - Already graded in Canvas (protected during setup) - Entries without rubric data or with invalid structures Report counts: eligible, skipped ("
+      },
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": "e highest rating whose points <= `new_points_c`; store points - Validate rubric rules. If Canvas disallows fractional criterion points: - Round to the nearest allowed step - Warn and record rounding in the audit"
+      },
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": "- Safe to run in `dry_run` repeatedly; use `--reapply` for subsequent writes - Preserves Canvas-grade safety by excluding already graded submissions ## Next Steps - Review refined assessments as needed - Run `/ass"
+      },
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": "- Review refined assessments as needed - Run `/assess:submit` to post approved grades to Canvas"
+      }
+    ],
+    "external_write": [
+      {
+        "file": ".pi/skills/assess-refine/SKILL.md",
+        "snippet": "graded submissions ## Next Steps - Review refined assessments as needed - Run `/assess:submit` to post approved grades to Canvas"
+      }
+    ]
+  },
+  "read_errors": []
+}

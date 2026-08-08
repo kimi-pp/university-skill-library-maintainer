@@ -1,0 +1,332 @@
+{
+  "repository": "GhostScientist/skills",
+  "fixed_version": "a7b17c914b2d876553b1ad0595850a679bf4b9e9",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6afbda41e3fc8b190d624216d1ad7fa6d5e6123"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40cb476f632d735645dafb2bfe29de579d57f3e8",
+      "size": 1802
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0361c3275a4049082e67f173c85c6af9a15ad8ea",
+      "size": 10763
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9c75948fabc84b6d9e8f1cea78678df6e6d9e2d",
+      "size": 2494
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebec0967447398d87503a1eb9b3d1adbef382826"
+    },
+    {
+      "path": "skills/create-watchos-version",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0867811fc281cb626613de8b9fbeff634005cc47"
+    },
+    {
+      "path": "skills/create-watchos-version/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db9edc7a9ed5431a2b7a6bdbfb4784ac61baa366",
+      "size": 5394
+    },
+    {
+      "path": "skills/create-watchos-version/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79ef8e9f3fb1239feb09c4a8f365bb5a2d35c981"
+    },
+    {
+      "path": "skills/create-watchos-version/references/api-compatibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87f97d44d6fa3abd5c0f3fc70ae0ce85d259ea07",
+      "size": 4591
+    },
+    {
+      "path": "skills/create-watchos-version/references/plan-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f87f91a0eba52b984385ffefa7c632e9653bde0",
+      "size": 8325
+    },
+    {
+      "path": "skills/create-watchos-version/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13c92330eff6420cd20331990cd0c2c05d6a1aae"
+    },
+    {
+      "path": "skills/create-watchos-version/scripts/analyze_project.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b698150c5e741e39c19551f083d2bf065ec3a9",
+      "size": 10340
+    },
+    {
+      "path": "skills/experiment-design-checklist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9e0e7498077a140247f646e6c78891aff84952e"
+    },
+    {
+      "path": "skills/experiment-design-checklist/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6e7fc49a72bb11c919f7f6cff06b30ec2c6477b",
+      "size": 6727
+    },
+    {
+      "path": "skills/hugging-face-space-deployer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b39d8eb2bb796ee89f7ad00ed905d65e4b6afefb"
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06dbd17b0f7e5f8cb8036284b8d0158075858495",
+      "size": 17580
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "690a6a028c3324f706ffaa4bee6c16fe58b2cbfe"
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/scripts/create_space.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06aa95e7604433ccd43e4132191694bedf78a0c1",
+      "size": 7654
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/scripts/deploy_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da2a456d1b5fe70001bd890080f50d54c3494648",
+      "size": 27290
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/scripts/manage_space.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a113e8095166196962e058dab5effeb11dceff74",
+      "size": 6090
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad484dcdaaf1826f574ab6efe447e54dadc5071c"
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/README_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0fc03410839b40039f258f1f8e8fa4f39a9377a",
+      "size": 509
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/README_zerogpu.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cf43c93aad1d473a4a914663f7746f59b99e216",
+      "size": 696
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/gradio_chat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71b2f68b0b078423c4022dd1df86ebc4115db5aa",
+      "size": 2720
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/gradio_image_gen.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b39adf967a821824e015d32b331953bf0deae309",
+      "size": 3170
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/gradio_lora_chat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "648fe0445cbc69e631e057aa0cf844d358225640",
+      "size": 5046
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/gradio_zerogpu_chat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fb1f2d97668ce4ff24885ff28050cd641aced18",
+      "size": 4103
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/requirements_inference_api.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f26b07c558821a79ab52fd8ee86d6db85666561d",
+      "size": 137
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/requirements_lora.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06f0adeb68800743da185c708ccf2ca1b1f17b7b",
+      "size": 143
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/requirements_zerogpu.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af3d9380f24dbb2b9153065381b5e0610733f43c",
+      "size": 150
+    },
+    {
+      "path": "skills/hugging-face-space-deployer/templates/streamlit_app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4826dd7e3e0cfd7b43e38e1cb2f9d5490b9da02e",
+      "size": 3119
+    },
+    {
+      "path": "skills/implement-paper-from-scratch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cd5fa6d82b21bfa82ae7144eb216ea49251d995"
+    },
+    {
+      "path": "skills/implement-paper-from-scratch/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4385f70b1a39f2013444f3f6b445ffeddde1930",
+      "size": 5783
+    },
+    {
+      "path": "skills/ios-app-icon-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "941c7d2138719bcb1e92a2d2818d4b6617440702"
+    },
+    {
+      "path": "skills/ios-app-icon-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2554100de22f0a16f44072ba22187074101fd13a",
+      "size": 4159
+    },
+    {
+      "path": "skills/paper-to-intuition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e0690d2ac221bdc8caab969e01a60ac836f8fce"
+    },
+    {
+      "path": "skills/paper-to-intuition/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a059e0d5ff26b438927f4af11b99f2296255bfa1",
+      "size": 4168
+    },
+    {
+      "path": "skills/research-question-refiner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89b8f6104c0b26c711d16fb5fb54e6afec259eea"
+    },
+    {
+      "path": "skills/research-question-refiner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd615e94311321efaf419925c10d98242bc91329",
+      "size": 5905
+    },
+    {
+      "path": "skills/research-taste-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f006f610cd53f40c27fb464c02c5721153f09f3"
+    },
+    {
+      "path": "skills/research-taste-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "370b41e0204db5427482509f06b3379ca3e413e7",
+      "size": 7076
+    },
+    {
+      "path": "skills/reviewer-2-simulator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7027744439b105e591d1b071df8e83b9b0bea3e0"
+    },
+    {
+      "path": "skills/reviewer-2-simulator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc072c7141efb667eb25d58512f38ce06a61290e",
+      "size": 6191
+    },
+    {
+      "path": "skills/ted-mosby",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "742c76b8cbacd4bd4e55d3dabfabf222550085f7"
+    },
+    {
+      "path": "skills/ted-mosby/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b87fa4ab1727d3f62367449d34a9b486626ac4e7",
+      "size": 9469
+    },
+    {
+      "path": "skills/turn-this-feature-into-a-blog-post",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "977b53bc261fc9f37f961a33a2735a88ae8861b5"
+    },
+    {
+      "path": "skills/turn-this-feature-into-a-blog-post/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e681d031591c3f471a36e9bfd2d1f7a0b2a4495c",
+      "size": 2836
+    },
+    {
+      "path": "template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb45b40789bacd0f6f1f07f36f6bbe0e9659f9a8"
+    },
+    {
+      "path": "template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "932fac0c89c8525ec07ede6799a9ac8756da5be7",
+      "size": 509
+    }
+  ]
+}

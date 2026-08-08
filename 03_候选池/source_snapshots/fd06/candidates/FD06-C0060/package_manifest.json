@@ -1,0 +1,50 @@
+[
+  {
+    "path": "course-publisher/SKILL.md",
+    "type": "blob",
+    "size": 8535,
+    "sha": "5edb7e0830789b45fb0c21f9ff89d6d2e217531e"
+  },
+  {
+    "path": "course-publisher/agents/announcement_writer_agent.md",
+    "type": "blob",
+    "size": 3817,
+    "sha": "ef3985b7a1df0c5b623260c20bce581543ec64e2"
+  },
+  {
+    "path": "course-publisher/agents/comms_planner_agent.md",
+    "type": "blob",
+    "size": 4007,
+    "sha": "124d0e2dfd4e01f6d831e6b0012b64d1b28cf043"
+  },
+  {
+    "path": "course-publisher/agents/lms_packager_agent.md",
+    "type": "blob",
+    "size": 3749,
+    "sha": "2c09901a55125a7b08fc71a89752d2a2985e7286"
+  },
+  {
+    "path": "course-publisher/agents/site_builder_agent.md",
+    "type": "blob",
+    "size": 3994,
+    "sha": "66a43c7dedb5c0d0e7720768faedc3efba1a2de4"
+  },
+  {
+    "path": "course-publisher/references/student_comms_guide.md",
+    "type": "blob",
+    "size": 9590,
+    "sha": "2c9f501faf08bc59efacc6e007d773ee12eefb64"
+  },
+  {
+    "path": "course-publisher/templates/course_site_structure.md",
+    "type": "blob",
+    "size": 4675,
+    "sha": "a212aec7f2a6199256631f74b73d23fd8d3d7093"
+  },
+  {
+    "path": "course-publisher/templates/weekly_email_template.md",
+    "type": "blob",
+    "size": 2892,
+    "sha": "5a3d54e38370cbe20b050dc62fc1b384e248eacf"
+  }
+]

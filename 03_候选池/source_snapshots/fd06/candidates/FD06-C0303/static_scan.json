@@ -1,0 +1,57 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "SKILL.md",
+        "snippet": "source_recommendations\": { \"videos\": [ { \"title\": \"微分中值定理直观解释\", \"url\": \"https://example.com/video1\", \"duration\": 8, \"suitable_for\": \"all\" } ], \"interactive_tools\": ["
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "} ], \"interactive_tools\": [ { \"name\": \"GeoGebra中值定理演示\", \"url\": \"https://geogebra.org/...\", \"activity\": \"拖动观察定理条件变化\" } ], \"practice_sets\": [ { \"name\": \"中值定理基"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "SKILL.md",
+        "snippet": "ash # 深度分析学生学习情况 openclaw skill calculus-learning-analytics analyze_student_profile \\ --student-id \"stu001\" \\ --analysis-depth \"deep\" \\ --include-comparison true \\ --generate-recommendations true ``` ### 示例3：生成教"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "d_score'] < threshold: at_risk.append({ 'student_id': student['id'], 'predicted_score': prediction['predicted_score'], 'risk_factors': prediction"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "# calculus-learning-analytics - 高等数学学情数据分析Skill ## 概述 基于作业批改数据的学情分析系统，构建学生能力画像、班级整体表现看板、教学建议引擎。实现从数据收集到教学决策的完整闭环。 ## 核心功能 ### 1. 多维度数据看板 - **班级概览**: 提交率、平均分、知识点掌握热力图 - **学生画像**"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "# calculus-learning-analytics - 高等数学学情数据分析Skill ## 概述 基于作业批改数据的学情分析系统，构建学生能力画像、班级整体表现看板、教学建议引擎。实现从数据收集到教学决策的完整闭环。 ## 核心功能 ### 1. 多维度数据看板 - **班级概览**: 提交率、平均分、知识点掌握热力图 - **学生画像**: 个人能力雷达图、进步趋势、薄"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "体表现看板、教学建议引擎。实现从数据收集到教学决策的完整闭环。 ## 核心功能 ### 1. 多维度数据看板 - **班级概览**: 提交率、平均分、知识点掌握热力图 - **学生画像**: 个人能力雷达图、进步趋势、薄弱点分析 - **教学洞察**: 错误模式聚类、教学效果评估、资源使用分析 ### 2. 智能分析引擎 - **能力维度建模**: 概念理解、计算能力、逻辑推理三大维度 - **知识点关联分析**:"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "### 2. 智能分析引擎 - **能力维度建模**: 概念理解、计算能力、逻辑推理三大维度 - **知识点关联分析**: 发现知识点之间的依赖关系 - **预测模型**: 预测学生未来表现和风险预警 - **个性化推荐**: 基于薄弱点的针对性练习推荐 ### 3. 教学决策支持 - **课堂重点建议**: 基于错误集中度推荐讲解重点 - **分层教学方案**: 为不同水平学生设计教学策略 - **资源优化分配**"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "- **个性化推荐**: 基于薄弱点的针对性练习推荐 ### 3. 教学决策支持 - **课堂重点建议**: 基于错误集中度推荐讲解重点 - **分层教学方案**: 为不同水平学生设计教学策略 - **资源优化分配**: 智能推荐教学资源和辅导时间 ## 工具定义 ### generate_class_dashboard 生成班级学情数据看板 **参数**： - `class_id` (string): 班级I"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "nd_chart_url\": \"https://example.com/trend.png\" } } ``` ### analyze_student_profile 深度分析学生个人学习画像 **参数**： - `student_id` (string): 学生ID - `analysis_depth` (string): 分析深度，\"basic\"、\"standard\"、\"deep\" - `include_com"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "## Description: <br> 基于作业批改数据，提供学生能力画像、班级学情看板和个性化教学建议，帮助高等数学教师分析学习情况并规划教学干预。 <br> This skill is ready for commercial/non-commercial use. <br> #"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "## Description: <br> 基于作业批改数据，提供学生能力画像、班级学情看板和个性化教学建议，帮助高等数学教师分析学习情况并规划教学干预。 <br> This skill is ready for commercial/non-commercial use. <br> ## Publish"
+      }
+    ]
+  },
+  "read_errors": []
+}

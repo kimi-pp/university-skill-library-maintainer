@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/education-automated-assessment-generation/SKILL.md",
+        "snippet": "ried difficulty and distractor quality. 4. Validate item clarity, answer correctness, and bias constraints. 5. Tag questions by competency and cognitive level. 6. Assemble assessments with balanced coverage and tim"
+      }
+    ]
+  },
+  "read_errors": []
+}

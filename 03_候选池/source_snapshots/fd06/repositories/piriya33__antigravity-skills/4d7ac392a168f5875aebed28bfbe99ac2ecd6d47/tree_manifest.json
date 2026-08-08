@@ -1,0 +1,546 @@
+{
+  "repository": "piriya33/antigravity-skills",
+  "fixed_version": "4d7ac392a168f5875aebed28bfbe99ac2ecd6d47",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "396e1bc34ece7972f630de6165b07a19fca95473",
+      "size": 131
+    },
+    {
+      "path": "AGENT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5fafeef46a93a3018fd49a0d4f5f92e3fcaf8b7",
+      "size": 3958
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d64b78095f6ede878d82cce6de504d940b52f9",
+      "size": 1753
+    },
+    {
+      "path": "app-design-stack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45787a5be57e30001b3175d442a1457ee27eb50a"
+    },
+    {
+      "path": "app-design-stack/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac907efb02adf757f33d9b68590fed24a453b004",
+      "size": 2087
+    },
+    {
+      "path": "app-design-stack/app-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ccac4395654b1f16b724d1309bded9e43f91364"
+    },
+    {
+      "path": "app-design-stack/app-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "662f3e4d6a5479ee62b4ac24ce1dd29f15e973ae",
+      "size": 3247
+    },
+    {
+      "path": "app-design-stack/app-builder/agent-coordination.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff4596655338c125e4566979c3e8e19320026a0b",
+      "size": 5626
+    },
+    {
+      "path": "app-design-stack/app-builder/feature-building.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "825c7d441e3d16b09bcd3d48e103d017f4054682",
+      "size": 1176
+    },
+    {
+      "path": "app-design-stack/app-builder/project-detection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e137fef9d615553d8dbe08f7f7f530a9c76f9a6",
+      "size": 1357
+    },
+    {
+      "path": "app-design-stack/app-builder/scaffolding.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79425380d5264937223bee846c615b295bd55e17",
+      "size": 3727
+    },
+    {
+      "path": "app-design-stack/app-builder/tech-stack.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b00c82ef573e703f12b6878b142fbc2f5a0ff24b",
+      "size": 926
+    },
+    {
+      "path": "app-design-stack/app-builder/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84427200d8d94fadd0bef8d52581e78b17872cdc"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df8efbb446de89af68ab66bd733b8fdcf059dfc9",
+      "size": 1624
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/astro-static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64be0fde56ae40be97f596c708d2333c85ce20ee"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/astro-static/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abe1f5eda2025f6257a0bbc05634af9a2cd4afaf",
+      "size": 1782
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/chrome-extension",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9225f3e60016f87a78faca8c7da8176b8c51e286"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/chrome-extension/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd566c760f7b54ad4a0572c09cc53266bee1fa2",
+      "size": 2058
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/cli-tool",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34ca2391b87356cb6ef3afc313ac3f5e6cf0b114"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/cli-tool/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6188a41e2761bf13f5cb63f3c505d430f4960698",
+      "size": 1850
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/electron-desktop",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05e39285850409831b2cc4a9508eacd6ae42ccf0"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/electron-desktop/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a434d5ae7c595c25633246066b6ab44f5f3fe0b9",
+      "size": 1911
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/express-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b6569da230f3f5227bf935f86193df31ff4e262"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/express-api/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bc974a41d50dd0be4d71edcc081485d9a1028de",
+      "size": 1842
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/flutter-app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d40bfcb684b393c140b09f44f9c1c418e07b4e1a"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/flutter-app/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06f4ccfbd6faf3a20053828e46af3668b2ac8f06",
+      "size": 1945
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/monorepo-turborepo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe742ebbcd565214b263ee79ae6d5ecbc373b39e"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/monorepo-turborepo/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff618f761082effa0cd7c05cc010dc02974ec6ba",
+      "size": 1970
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nextjs-fullstack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d021270e35cc35960a23a9a32aeb55a158cf7af7"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nextjs-fullstack/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "594a6c1c05e838e181f64afd243e9a1ea440fd5f",
+      "size": 1702
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nextjs-saas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1d3a8bb886466d27488bae79c1a3f6ab57aa1b1"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nextjs-saas/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "935a165bc5d5bf15c1c3a9c5c1341753257208ac",
+      "size": 2366
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nextjs-static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf6c5aa6a6c69a291053540fc0d9b91e15288c54"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nextjs-static/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f0a3d88c4d4a91d2c71f7e0a0d3b7b64b647364",
+      "size": 2150
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nuxt-app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "faafbfe9e71e85d18053214af491796afe44a2a7"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/nuxt-app/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e525750620c88953d0022318ae9c600f0c65e9c",
+      "size": 2238
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/python-fastapi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae8f5f126680a7c2fdfc22cb926f0f1981eff959"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/python-fastapi/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bedbdfb8ba247d2602fb57a37a2a15243577b37",
+      "size": 1868
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/react-native-app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c149962e0075cdbe131ae0148346921290eb6c1a"
+    },
+    {
+      "path": "app-design-stack/app-builder/templates/react-native-app/TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42eae4ead1506136573275d2497b3aef0231f7bc",
+      "size": 2032
+    },
+    {
+      "path": "app-design-stack/ui-ux-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e7c155db1da6a5fbf75128003830eef552709b6"
+    },
+    {
+      "path": "app-design-stack/ui-ux-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f0c38e0f1e9061d3c6eb626e2407541b0e821ee",
+      "size": 9770
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb523c9b675e6375382f7294462eadc20544ce02"
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c39a41fe2df3e1b31027804ded27c83ac016481",
+      "size": 13493
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2e3aa6d0c9b37e91220ad0861601d268be7a76a"
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts/__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffb1627e540e60c4d1b6e660a7708f7ee15367bd"
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts/__pycache__/core.cpython-314.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22094ffb0ae35ba545fc272e410855060a13bf08",
+      "size": 12630
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts/__pycache__/design_system.cpython-314.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3401d980dd47848b19b70fe17dd84062cea0753f",
+      "size": 31280
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts/core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8765caab00d8f46c751e165a73cae124aaff74",
+      "size": 10614
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts/design_system.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fa2cb725e8268cf162d7112e038f61e51ea6bb6",
+      "size": 21361
+    },
+    {
+      "path": "app-design-stack/ui-ux-pro-max/scripts/search.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00a38df94953a7e351968fe366661b6e43b3c77f",
+      "size": 3296
+    },
+    {
+      "path": "education-stack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99eebaad61b3413032f8455b089d10af29e809a0"
+    },
+    {
+      "path": "education-stack/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e704c94daf3d73f1fcc0774bc4c502526ceb8aa0",
+      "size": 1447
+    },
+    {
+      "path": "education-stack/aligning-curriculum",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e2926bd802a88fade6de43a3c0a6a2ef28e672f"
+    },
+    {
+      "path": "education-stack/aligning-curriculum/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "557a8b1322ebe329acbb2653a89186e6217f9084",
+      "size": 4913
+    },
+    {
+      "path": "education-stack/designing-classes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9edcc046c937a9caaf9cd84308982934750b8e63"
+    },
+    {
+      "path": "education-stack/designing-classes/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbb2b3cab1cae05d818a35ece02b37c708ea092c",
+      "size": 5043
+    },
+    {
+      "path": "education-stack/planning-courses",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da255ce359126f81a425be4b98d351212cf3dc01"
+    },
+    {
+      "path": "education-stack/planning-courses/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55a236918dab5ecb0b3c3f512d7d1f55814c8bd0",
+      "size": 4730
+    },
+    {
+      "path": "presentation-stack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9238d00814d737e42c8f13dee57111cd52fb3e37"
+    },
+    {
+      "path": "presentation-stack/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39d1325a54662c38f2650b186d0b05f1f5b7f828",
+      "size": 989
+    },
+    {
+      "path": "presentation-stack/presentation-architect",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97204a9e55fc43ee985663f817ddab7a32cfdb0d"
+    },
+    {
+      "path": "presentation-stack/presentation-architect/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dcf881577317a65a786489bb378b8cb8438742b",
+      "size": 4082
+    },
+    {
+      "path": "presentation-stack/presentation-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4fdc8510234444a426a71513b6f854fc3c5772b4"
+    },
+    {
+      "path": "presentation-stack/presentation-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f064be6259585ac07dcc2346767648e85d1fb811",
+      "size": 5347
+    },
+    {
+      "path": "trading-stack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58a86365440fd833a8452b582498295489ddb564"
+    },
+    {
+      "path": "trading-stack/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52fee2a58d70fd797d64ab199d57ec59a1ebb94d",
+      "size": 2345
+    },
+    {
+      "path": "trading-stack/analyzing-backtests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f7abe29fd0627b822ebf4bec218ab82fa4ef581"
+    },
+    {
+      "path": "trading-stack/analyzing-backtests/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e541b23ad3508d7ce8c1c9947f2f1c6d1afa1a48",
+      "size": 5114
+    },
+    {
+      "path": "trading-stack/coding-pinescript",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf98e63e21cf733e5a565828b28b7ef61946557a"
+    },
+    {
+      "path": "trading-stack/coding-pinescript/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d570ce4bfc6908216921322b7ba6300ae1d6933",
+      "size": 3492
+    },
+    {
+      "path": "trading-stack/coding-pinescript/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1edf7780796f3f09f18ce6d950a7275ca0726295"
+    },
+    {
+      "path": "trading-stack/coding-pinescript/resources/common-patterns.pine",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4600a0f67f092f9e11d0c1bc745e7a526df9c70e",
+      "size": 5358
+    },
+    {
+      "path": "trading-stack/coding-pinescript/resources/pinescript-v6-essentials.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "364feaeca7209554b6d2178ef67a35e57cc7dce6",
+      "size": 12152
+    },
+    {
+      "path": "trading-stack/iterating-strategies",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "274678481079aba6887ef12f98a8104b0141a75f"
+    },
+    {
+      "path": "trading-stack/iterating-strategies/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0060bdb828e220f89661bb462735967066015ed7",
+      "size": 4173
+    },
+    {
+      "path": "trading-stack/planning-trading-systems",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d02f0b4e9c1725768b95e4ab94aafe5ecec4e33f"
+    },
+    {
+      "path": "trading-stack/planning-trading-systems/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea74a4227145c4a87df6e037c09653399af89f6a",
+      "size": 3312
+    },
+    {
+      "path": "trading-stack/planning-trading-systems/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45f0b213c133d2434e865abaa6e42ef3b1741660"
+    },
+    {
+      "path": "trading-stack/planning-trading-systems/resources/strategy-spec-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6905ef75c95e87fe0e8116d0861b3c09eb05ae77",
+      "size": 1504
+    },
+    {
+      "path": "trading-stack/use-tradingview-mcp",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9040c477f9e325413d3ddf12c3b5c6457b9168d"
+    },
+    {
+      "path": "trading-stack/use-tradingview-mcp/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b900c47448d95e2a506ade0ba526a2f12a769170",
+      "size": 2182
+    }
+  ]
+}

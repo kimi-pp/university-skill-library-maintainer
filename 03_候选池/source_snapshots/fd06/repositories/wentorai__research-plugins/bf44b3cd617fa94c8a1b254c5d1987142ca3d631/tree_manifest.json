@@ -1,0 +1,6645 @@
+{
+  "repository": "wentorai/research-plugins",
+  "fixed_version": "bf44b3cd617fa94c8a1b254c5d1987142ca3d631",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0208563ddf127a6832299b706888b6d3da17a75"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ced5cd60393ef78c35f74694ba9aec6131da716"
+    },
+    {
+      "path": ".github/workflows/publish.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d94f9b4937bc201ddb158fe07a86417da7a9f58f",
+      "size": 463
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf86f8d36620e24eff597feb838752cd990ce26",
+      "size": 344
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "923fbc58fe833cac1c5671a3031730cc4117f6b0",
+      "size": 370
+    },
+    {
+      "path": "AUDIT-LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62e2e6e68caeff1450a7410ee2f46100a97aa2fa",
+      "size": 21259
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "093fe10f67d0cfdf7e11abaebd8dca492f74476b",
+      "size": 3079
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d4f4ea047467f3ad769901f052734bbbd14a843",
+      "size": 1066
+    },
+    {
+      "path": "README.en.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aaf2eb7e327235b40e249ec59192916d44c76b8",
+      "size": 9967
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "545cdd946d8be781e9d3324b5423187c34b72b2c",
+      "size": 9377
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e417d31b36fbe608c746d2a3b3b26277d856295e"
+    },
+    {
+      "path": "assets/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bebaf061fb8e1185c6bdea73bb57c36520142860",
+      "size": 5058285
+    },
+    {
+      "path": "catalog.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bd80c966691afb8b34dd886be1744b4ca4d0e5d",
+      "size": 247891
+    },
+    {
+      "path": "curated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a30fbe7133ba6371066215ca8514e90c15b82cb"
+    },
+    {
+      "path": "curated/analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f46274c82f0bd7dd2a95cc9aaa85df23370941f7"
+    },
+    {
+      "path": "curated/analysis/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83a53bd88b9803bc7c77892f0c02519e2bc8361b",
+      "size": 7342
+    },
+    {
+      "path": "curated/domains",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70499d25f832c877feb39e1384bae0dce81aa29c"
+    },
+    {
+      "path": "curated/domains/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2584055775f4c48b06af785df7084dbe9ffab483",
+      "size": 21930
+    },
+    {
+      "path": "curated/literature",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f1527f8f8ae60031123fff6c772e549ad11a210"
+    },
+    {
+      "path": "curated/literature/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14f4267aa4fb6ce801d185a413f0c0b6054a860c",
+      "size": 11943
+    },
+    {
+      "path": "curated/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf67556ad3ba400883a7af5509a0142e04749ff7"
+    },
+    {
+      "path": "curated/research/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49c2130fd4a5c5ad493b0d7715b9739f38f567e8",
+      "size": 8572
+    },
+    {
+      "path": "curated/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cce3605b0831a2f633f033ce90d08ccba12d1c19"
+    },
+    {
+      "path": "curated/tools/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af363a0c54048e2c2766ba5610d7258ef4417b53",
+      "size": 7814
+    },
+    {
+      "path": "curated/writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8ac0abecf00b7725ca3cb8ac52477420b8619c1"
+    },
+    {
+      "path": "curated/writing/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9805c97d4793946199e1c93e47d4456fe0ba440c",
+      "size": 10196
+    },
+    {
+      "path": "index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72925e0eeeac8f694f3e246a200e46b349c0fcf0",
+      "size": 3746
+    },
+    {
+      "path": "openclaw.plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce8b793f27a44da6539e9f7ef2e2f47d5d361938",
+      "size": 1436
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae249baca0d91aa7c6f38918dd89dad0649a479",
+      "size": 1352
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17e3d44c487b86a7ec19da7b89d91bafdf5fd855",
+      "size": 1320
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99349b49f47f4f4192c9c677e75de3fb9a04486d"
+    },
+    {
+      "path": "scripts/catalog.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b52508b11a1922cb90c48b19ebd28f2c52cf428e",
+      "size": 8009
+    },
+    {
+      "path": "scripts/convert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b070c2444208b9bcc8916d9337215a075589ead",
+      "size": 2608
+    },
+    {
+      "path": "scripts/fix-frontmatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3480c804f66eeb613bc8052693f3744c4878693f",
+      "size": 4161
+    },
+    {
+      "path": "scripts/fix-text-emoji.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "095886ba40febe12b669d0138fe059bd0766f609",
+      "size": 4533
+    },
+    {
+      "path": "scripts/generate-indexes.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e60c5897a015634767ddeac2abffb7fe7463292",
+      "size": 14993
+    },
+    {
+      "path": "scripts/publish-individual.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a918fc453459dff717ab2b832a0e327ef74f3bd0",
+      "size": 1918
+    },
+    {
+      "path": "scripts/triage.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69c5d7c6290491bea52789c2d5408d53aaca0793",
+      "size": 1909
+    },
+    {
+      "path": "scripts/validate.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20f7b3c26b2c1d8adf3ba5f5d323a44192958fa9",
+      "size": 15654
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8af9bd7d879e5e441022c79a040033d84e7cfbea"
+    },
+    {
+      "path": "skills/analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "302e25fb575147899dab637e2493cee2d5ab93b0"
+    },
+    {
+      "path": "skills/analysis/dataviz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a32957762a526da61d2519a36f46b7ef74c9efa"
+    },
+    {
+      "path": "skills/analysis/dataviz/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f573f8c2b9c9fed023fe4132888e1feb4cb1380a",
+      "size": 2299
+    },
+    {
+      "path": "skills/analysis/dataviz/algorithm-visualizer-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08cb5d7fb733d7a0d516af2a44d8c5855f11ed05"
+    },
+    {
+      "path": "skills/analysis/dataviz/algorithm-visualizer-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a24e3fca0ea15efdb25aebcd57fb05455e5b2a7c",
+      "size": 9604
+    },
+    {
+      "path": "skills/analysis/dataviz/bokeh-visualization-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bcc41b15f2a39fe842434191bce29e557a6bd44e"
+    },
+    {
+      "path": "skills/analysis/dataviz/bokeh-visualization-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2e21db6561b9a8cb51c51b1a6163f812ea329c0",
+      "size": 8819
+    },
+    {
+      "path": "skills/analysis/dataviz/chart-image-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31a01f5edc0cda060d2cba67aee94bfd7de3dbf2"
+    },
+    {
+      "path": "skills/analysis/dataviz/chart-image-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f919dd8de002ee48fc746efd692a0a47862f912",
+      "size": 8375
+    },
+    {
+      "path": "skills/analysis/dataviz/color-accessibility-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77ce899a6af888f9c9ab2fd290783a59efd3c375"
+    },
+    {
+      "path": "skills/analysis/dataviz/color-accessibility-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3fce0615f0445eb277840bc76b53eb5656a0d36",
+      "size": 7381
+    },
+    {
+      "path": "skills/analysis/dataviz/d3-visualization-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cfc5d10e05a1ee49252422a27247fe389898df5f"
+    },
+    {
+      "path": "skills/analysis/dataviz/d3-visualization-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c1e89de71b6bfec1aae9d8148b196d42e175f94",
+      "size": 8893
+    },
+    {
+      "path": "skills/analysis/dataviz/echarts-visualization-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c0d6a97f3127b2dd2c1d6f42c8e7166276daf5a"
+    },
+    {
+      "path": "skills/analysis/dataviz/echarts-visualization-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27281221f33dd7e1694f73578802bf0638a1ccfb",
+      "size": 7619
+    },
+    {
+      "path": "skills/analysis/dataviz/geospatial-viz-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9feef05edd50c9c558372d993ad68980901d8340"
+    },
+    {
+      "path": "skills/analysis/dataviz/geospatial-viz-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ccf1f33077a144dac61506c3b0ca5b663ea3663",
+      "size": 6369
+    },
+    {
+      "path": "skills/analysis/dataviz/interactive-viz-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50720979c63511a8f605f10c62e43b49d5149b92"
+    },
+    {
+      "path": "skills/analysis/dataviz/interactive-viz-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e17bd0953bb0f2df44622076eb4e26c5cab17ccc",
+      "size": 8369
+    },
+    {
+      "path": "skills/analysis/dataviz/metabase-analytics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81d6f769e11074b4c9f9a87519ac3bee820eb726"
+    },
+    {
+      "path": "skills/analysis/dataviz/metabase-analytics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81bf61a42f3038cf906279828fa4c21824ab7295",
+      "size": 8373
+    },
+    {
+      "path": "skills/analysis/dataviz/network-visualization-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58bed7cc08b8d6afbd5667ecb4cab8f720e94333"
+    },
+    {
+      "path": "skills/analysis/dataviz/network-visualization-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "863fd0bd8ef202a6026bd3ee21cd86e4b96418d1",
+      "size": 6256
+    },
+    {
+      "path": "skills/analysis/dataviz/plotly-interactive-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41a0384ae4047b84d92968a932216156fea15296"
+    },
+    {
+      "path": "skills/analysis/dataviz/plotly-interactive-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a2debb71fd8d02f9d011672f980c61bce79973e",
+      "size": 7481
+    },
+    {
+      "path": "skills/analysis/dataviz/publication-figures-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ce808feaeab10b85310270e6d15bd0b3eab0d02"
+    },
+    {
+      "path": "skills/analysis/dataviz/publication-figures-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5f653f836603883f4b7ccdb1f37c31f141a23ac",
+      "size": 7863
+    },
+    {
+      "path": "skills/analysis/dataviz/python-dataviz-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5a6583f8e48be1690e96820a4ac3b3d2257b853c"
+    },
+    {
+      "path": "skills/analysis/dataviz/python-dataviz-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cbed05bc3c0b592921d2f09c13c9690e5b27503",
+      "size": 7075
+    },
+    {
+      "path": "skills/analysis/dataviz/redash-analytics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bb00553de404996482ec42aa93e10028ca84a83"
+    },
+    {
+      "path": "skills/analysis/dataviz/redash-analytics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56b5180c95977940196c338c9e27dfc5d1004a61",
+      "size": 9986
+    },
+    {
+      "path": "skills/analysis/econometrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e650c2b7ae18abf9213e0d6fefaae1ee9454851"
+    },
+    {
+      "path": "skills/analysis/econometrics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea18f715dfec88d31cf8921ddc261901308ed55d",
+      "size": 1669
+    },
+    {
+      "path": "skills/analysis/econometrics/causal-inference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0649c73509a37c4f1876bdd07bb3d7349305582c"
+    },
+    {
+      "path": "skills/analysis/econometrics/causal-inference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d27b0320688f1d1d826251e40534e88f68a2bc16",
+      "size": 6930
+    },
+    {
+      "path": "skills/analysis/econometrics/econml-causal-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29d1496600c959648bac7fac6d876f43a26f2045"
+    },
+    {
+      "path": "skills/analysis/econometrics/econml-causal-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "171db90b713efcc627dd3003e4694e94808c148d",
+      "size": 7156
+    },
+    {
+      "path": "skills/analysis/econometrics/iv-regression-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "994c945625bdfedb50420ed009f3c96dd6e01936"
+    },
+    {
+      "path": "skills/analysis/econometrics/iv-regression-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d142cf5df2aaf1878f6ae729714b14bce956019b",
+      "size": 6276
+    },
+    {
+      "path": "skills/analysis/econometrics/mostly-harmless-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "467493f047963e0a8be5d9ae90d138fe86f1fa25"
+    },
+    {
+      "path": "skills/analysis/econometrics/mostly-harmless-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c7db96db31564b3b5527154373a3dfc07fd92e6",
+      "size": 8092
+    },
+    {
+      "path": "skills/analysis/econometrics/panel-data-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3b75e257519b190bf532e0eb73eef67c54a8198"
+    },
+    {
+      "path": "skills/analysis/econometrics/panel-data-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "308b0dd5593babcf45b30858251560e6e90a68b2",
+      "size": 10722
+    },
+    {
+      "path": "skills/analysis/econometrics/python-causality-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ff5b5ba2c3dae47e42bb85fe075f941c59a163b"
+    },
+    {
+      "path": "skills/analysis/econometrics/python-causality-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41d0471f423ee406f7998881c2b7e814881f8d70",
+      "size": 6955
+    },
+    {
+      "path": "skills/analysis/econometrics/robustness-checks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2bf33152e768758c5bda6d1f4695ed1f83ab88dd"
+    },
+    {
+      "path": "skills/analysis/econometrics/robustness-checks/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9b274678ecb29367cb85886eb8a9f0745ea23a",
+      "size": 6800
+    },
+    {
+      "path": "skills/analysis/econometrics/stata-analyst-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91076b48be04b268066cc91f929502b07b3a5045"
+    },
+    {
+      "path": "skills/analysis/econometrics/stata-analyst-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fcec7f871862c0c143a530e6d973c0339959b83",
+      "size": 7942
+    },
+    {
+      "path": "skills/analysis/econometrics/stata-reference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fac6553ce897ee913251047ce989a23ea843abd"
+    },
+    {
+      "path": "skills/analysis/econometrics/stata-reference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6afeb84c0a65bc899718f307f29ac07f8c4aa340",
+      "size": 7899
+    },
+    {
+      "path": "skills/analysis/econometrics/time-series-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf6732df30780f515bab202cb9b34e2226a4a16d"
+    },
+    {
+      "path": "skills/analysis/econometrics/time-series-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b01a1f5d4aeda6280f25a67066096e032cfe41c",
+      "size": 6968
+    },
+    {
+      "path": "skills/analysis/statistics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0595eab7ae4f93a5a40fe1ac3484a414c9d1be6e"
+    },
+    {
+      "path": "skills/analysis/statistics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60dad8b1d608e012d9daac0ef9f6f1d5e41b509b",
+      "size": 1732
+    },
+    {
+      "path": "skills/analysis/statistics/bayesian-statistics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3a83c1b4d2b6d290996a21da69bad6a31dac051"
+    },
+    {
+      "path": "skills/analysis/statistics/bayesian-statistics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06815ac9b4141bcdafd6e1cc78e2c7434679dc8a",
+      "size": 6810
+    },
+    {
+      "path": "skills/analysis/statistics/data-anomaly-detection",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78ab5f7b01f841c2ff081f8b0c8d2207161b3255"
+    },
+    {
+      "path": "skills/analysis/statistics/data-anomaly-detection/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3a514816f4dc377d3b544b33270cdd43c6643bd",
+      "size": 6775
+    },
+    {
+      "path": "skills/analysis/statistics/hypothesis-testing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9797a9f67bb10f8aef8659840bb220da4efb2db"
+    },
+    {
+      "path": "skills/analysis/statistics/hypothesis-testing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa52c331c3e9cb5013c7b74a3f529da804070478",
+      "size": 7982
+    },
+    {
+      "path": "skills/analysis/statistics/meta-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9595c5417d102a2a4cf54d01b4532d5d0a6ec07f"
+    },
+    {
+      "path": "skills/analysis/statistics/meta-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df02097d74c4ccb94795da2dd0eb1a8ab94b24d7",
+      "size": 6316
+    },
+    {
+      "path": "skills/analysis/statistics/ml-experiment-tracker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17449b7f84f704ceead1445df95a492070358ca2"
+    },
+    {
+      "path": "skills/analysis/statistics/ml-experiment-tracker/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ebd7312c4ea64cdc0cf42e530c0781735b5703",
+      "size": 7476
+    },
+    {
+      "path": "skills/analysis/statistics/modeling-strategy-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e54d69990bba2c51c9ce36762b81c49f59b91d9"
+    },
+    {
+      "path": "skills/analysis/statistics/modeling-strategy-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19d345af4f8d4d014b2edfa29a21f080259a4882",
+      "size": 8747
+    },
+    {
+      "path": "skills/analysis/statistics/nonparametric-tests-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18b11fd2f722bf0af6d3b46171dc9d4181208b05"
+    },
+    {
+      "path": "skills/analysis/statistics/nonparametric-tests-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feae3037f6382f9dab0843d392975baf83787240",
+      "size": 6598
+    },
+    {
+      "path": "skills/analysis/statistics/power-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28c7804102572c0a65153ec50b87feb50efa425e"
+    },
+    {
+      "path": "skills/analysis/statistics/power-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70228a7e13597d33198f90aab1af7f7e3ff41602",
+      "size": 7305
+    },
+    {
+      "path": "skills/analysis/statistics/sem-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88f67a5cc58ebd18cafa5f20eb912aedbacc3d6d"
+    },
+    {
+      "path": "skills/analysis/statistics/sem-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c56ed6126410fbde57437e0c4f9698a811645686",
+      "size": 7142
+    },
+    {
+      "path": "skills/analysis/statistics/survival-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a4350e47c9af693ab0d62a421d82023241578a9"
+    },
+    {
+      "path": "skills/analysis/statistics/survival-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5b56e40dca63168288bd7b2dd2edc28948aac93",
+      "size": 5632
+    },
+    {
+      "path": "skills/analysis/wrangling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6824588cbf53b4583ff810dac4422e6c42d0f563"
+    },
+    {
+      "path": "skills/analysis/wrangling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dfeed57938ecfd69552e4e46a3d69773135cb7d",
+      "size": 1642
+    },
+    {
+      "path": "skills/analysis/wrangling/csv-data-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7bb91383bacba631a12e8c0789addbeafc60a88a"
+    },
+    {
+      "path": "skills/analysis/wrangling/csv-data-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dabf6aae54a397afe2120229e1179c1cf81a397f",
+      "size": 6926
+    },
+    {
+      "path": "skills/analysis/wrangling/data-cleaning-pipeline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c48f3f0639c0645ea1cd435900f136f67aedcc45"
+    },
+    {
+      "path": "skills/analysis/wrangling/data-cleaning-pipeline/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2375e38b5d865b7533cfc54a7368c5f169249a2",
+      "size": 8592
+    },
+    {
+      "path": "skills/analysis/wrangling/data-cog-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdcf2471575ff5c5eaf372d60c32f320fe398ff3"
+    },
+    {
+      "path": "skills/analysis/wrangling/data-cog-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be9f2609a6d4b4006f025182035a9a51bb683d03",
+      "size": 7129
+    },
+    {
+      "path": "skills/analysis/wrangling/missing-data-handling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f925e934743749dac0ffeec28ab6ae4c94bc519"
+    },
+    {
+      "path": "skills/analysis/wrangling/missing-data-handling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "527002b3ca2c918d08ecc21b84d69593a239385a",
+      "size": 7748
+    },
+    {
+      "path": "skills/analysis/wrangling/pandas-data-wrangling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f46daa0fcaf1e6d83c35a4d8e743cd2c64ca9d23"
+    },
+    {
+      "path": "skills/analysis/wrangling/pandas-data-wrangling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a246f146aacb7f6e16aa156ca79a7cf791bb21c",
+      "size": 7807
+    },
+    {
+      "path": "skills/analysis/wrangling/questionnaire-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "af3be1c7e90bf2351b8fb25decf341fda4eebf93"
+    },
+    {
+      "path": "skills/analysis/wrangling/questionnaire-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3878d0bbc55475f1ec3d20ccf934c487d4fd3138",
+      "size": 8327
+    },
+    {
+      "path": "skills/analysis/wrangling/stata-data-cleaning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a83eff6739da6dda30a69dae7e36e92695179c19"
+    },
+    {
+      "path": "skills/analysis/wrangling/stata-data-cleaning/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ad6dca8cf1743e56319d7ffaecb72a3210ed0d6",
+      "size": 8599
+    },
+    {
+      "path": "skills/analysis/wrangling/streamline-analyst-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9c6415e40b7a627fac1cf097e77da64c6263fbd"
+    },
+    {
+      "path": "skills/analysis/wrangling/streamline-analyst-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b10a827a6b148e3b6f3ed5ad9a6d001ab64c86f9",
+      "size": 3647
+    },
+    {
+      "path": "skills/analysis/wrangling/survey-data-processing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b540a200952d78c025013a31282a6b96cbdbcfe"
+    },
+    {
+      "path": "skills/analysis/wrangling/survey-data-processing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f2121d4f5efc10bd69f1901ba371f5f28793a43",
+      "size": 9146
+    },
+    {
+      "path": "skills/analysis/wrangling/text-mining-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96dd279cf4b8edb765d3e81df4fe81cb6adf2448"
+    },
+    {
+      "path": "skills/analysis/wrangling/text-mining-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad110eedb2994ecfcca22b2ae227d1b7a319fb60",
+      "size": 6925
+    },
+    {
+      "path": "skills/domains",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0923f2c5f658061f42330112bfcd23205afb527b"
+    },
+    {
+      "path": "skills/domains/ai-ml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64ca4b35b8d3c722b261c1334e5a5493d7df610f"
+    },
+    {
+      "path": "skills/domains/ai-ml/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc5e8990049e2607118ddf1f86e9b1cabe48728e",
+      "size": 3973
+    },
+    {
+      "path": "skills/domains/ai-ml/ai-agent-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d677be057674c572ae3a3a28cae6776e2073c83"
+    },
+    {
+      "path": "skills/domains/ai-ml/ai-agent-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce115d7d1cf5ae7795e684b7bb9133acfe50f640",
+      "size": 4828
+    },
+    {
+      "path": "skills/domains/ai-ml/ai-model-benchmarking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "507cec36d0996306c27c20ad314c5e291ee4e416"
+    },
+    {
+      "path": "skills/domains/ai-ml/ai-model-benchmarking/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0bcec649c21f0c0845d80aabe97d8bc38705fd2",
+      "size": 8119
+    },
+    {
+      "path": "skills/domains/ai-ml/anomaly-detection-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fcb07d30d49f131fa506aa319590349643723da"
+    },
+    {
+      "path": "skills/domains/ai-ml/anomaly-detection-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b59d3a6d9d29af1206396ea51ddae9b2a881f201",
+      "size": 5235
+    },
+    {
+      "path": "skills/domains/ai-ml/autonomous-agents-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a22415c76243d0c2a72772e73856e08306750969"
+    },
+    {
+      "path": "skills/domains/ai-ml/autonomous-agents-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53c59575633031441a18e5f695c327e9e49ff4c5",
+      "size": 5753
+    },
+    {
+      "path": "skills/domains/ai-ml/computer-vision-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c6b796ee8f6cd9bfab0395ef83a86dae7967386"
+    },
+    {
+      "path": "skills/domains/ai-ml/computer-vision-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a22534142548ad97ef71308aa4b916eb9d823a1b",
+      "size": 6325
+    },
+    {
+      "path": "skills/domains/ai-ml/deep-learning-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd3bb956aec5a5c871d4a3262ec421c2b443f8b6"
+    },
+    {
+      "path": "skills/domains/ai-ml/deep-learning-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a943815c26d8534f488e1fbdc68898e90cb00cbe",
+      "size": 8533
+    },
+    {
+      "path": "skills/domains/ai-ml/dl-transformer-finetune",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34a7ec5c115ae5746c853c629efbc7f22ec5ee7d"
+    },
+    {
+      "path": "skills/domains/ai-ml/dl-transformer-finetune/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11eb0396bae237a5c535dde6feddce6d48803e54",
+      "size": 8714
+    },
+    {
+      "path": "skills/domains/ai-ml/domain-adaptation-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "011136c8d07ebff868f72dbec5611e00625d5f81"
+    },
+    {
+      "path": "skills/domains/ai-ml/domain-adaptation-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f0fd23befa59268134ba66a6287228bafb1e3a6",
+      "size": 5972
+    },
+    {
+      "path": "skills/domains/ai-ml/generative-ai-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a7df334ed95ca989ef357e3562323c672c22986"
+    },
+    {
+      "path": "skills/domains/ai-ml/generative-ai-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e4eb8a9deabc2727244f66d88a0fe29dccd825d",
+      "size": 7884
+    },
+    {
+      "path": "skills/domains/ai-ml/graph-learning-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fe0b3dc6bb0a196c28d1f04d8efe4629d2681fc"
+    },
+    {
+      "path": "skills/domains/ai-ml/graph-learning-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef35faa10b7ffceb98fa7c7732d80624cf31554c",
+      "size": 4152
+    },
+    {
+      "path": "skills/domains/ai-ml/huggingface-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "224ddfe633760c3f355382b751d72cc1792a2855"
+    },
+    {
+      "path": "skills/domains/ai-ml/huggingface-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4dca2e1502e642a2dca349b29e1c29eff4f725",
+      "size": 7937
+    },
+    {
+      "path": "skills/domains/ai-ml/huggingface-inference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a7dcf8a9eabff1f54f189f15e74d3e50f64fbed"
+    },
+    {
+      "path": "skills/domains/ai-ml/huggingface-inference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f25d4850a3ac4dca2419c6c548e2941625dcb4e2",
+      "size": 8425
+    },
+    {
+      "path": "skills/domains/ai-ml/keras-deep-learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4475fe1e0bc9f47f356e75740f1b760cb69c7756"
+    },
+    {
+      "path": "skills/domains/ai-ml/keras-deep-learning/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aeda99a11deeac9bf1a86b04eb3dfd4d2332724",
+      "size": 7993
+    },
+    {
+      "path": "skills/domains/ai-ml/kolmogorov-arnold-networks-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1a803f54b6c53e1f53edb30b1bfbaf7982c7885"
+    },
+    {
+      "path": "skills/domains/ai-ml/kolmogorov-arnold-networks-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efbed1e7edfc840266be73bae2f6e5d2545add6b",
+      "size": 5520
+    },
+    {
+      "path": "skills/domains/ai-ml/llm-evaluation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "653ade4df0f64e8ded39dc6049b22859fbab5e4e"
+    },
+    {
+      "path": "skills/domains/ai-ml/llm-evaluation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35d4658cccb14ee4a6090f75109fbeefefe97821",
+      "size": 6798
+    },
+    {
+      "path": "skills/domains/ai-ml/llm-from-scratch-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86f8c69b0b94e2bd1f124889e7b6a0a4c6bbab3c"
+    },
+    {
+      "path": "skills/domains/ai-ml/llm-from-scratch-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a03b325078acda1b42dd76f882b78304e7607d6",
+      "size": 6510
+    },
+    {
+      "path": "skills/domains/ai-ml/ml-pipeline-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "847a5572a038cd8d35a75dc551547cceb70d33e2"
+    },
+    {
+      "path": "skills/domains/ai-ml/ml-pipeline-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed2babde7536adf162f96c277c3fac4f20715a11",
+      "size": 9570
+    },
+    {
+      "path": "skills/domains/ai-ml/nlp-toolkit-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb3eba3457fe40a315efd920ff7008558ca98598"
+    },
+    {
+      "path": "skills/domains/ai-ml/nlp-toolkit-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67e8fca8b91cbbc116794b7d3ee539f64003cde6",
+      "size": 9320
+    },
+    {
+      "path": "skills/domains/ai-ml/npcpy-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0491808a60136f6842669e4e0b35c263beeed7d4"
+    },
+    {
+      "path": "skills/domains/ai-ml/npcpy-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9db529a0fdbcfe7fd2953f2d0110fb1605076f7",
+      "size": 3274
+    },
+    {
+      "path": "skills/domains/ai-ml/prompt-engineering-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33932b9590087b0f6f31528fd58985b993fb18e5"
+    },
+    {
+      "path": "skills/domains/ai-ml/prompt-engineering-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3853f0b96ed8bf355babfddbd0b3bddbcecc0936",
+      "size": 7910
+    },
+    {
+      "path": "skills/domains/ai-ml/pytorch-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a19cd14658f66e86aec3b5b23e031c7b61a3e093"
+    },
+    {
+      "path": "skills/domains/ai-ml/pytorch-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a292df4b1b92d10c320f04670c85d68fedd94c45",
+      "size": 9543
+    },
+    {
+      "path": "skills/domains/ai-ml/pytorch-lightning-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a176bf8e3009f108d49bfbdad2b3de79a876e0a"
+    },
+    {
+      "path": "skills/domains/ai-ml/pytorch-lightning-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5c9510db97132373fc66d74da925431aab391ff",
+      "size": 8055
+    },
+    {
+      "path": "skills/domains/ai-ml/reinforcement-learning-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39d1ac9ce3298f2c6f18dce744c798b16bf3bdee"
+    },
+    {
+      "path": "skills/domains/ai-ml/reinforcement-learning-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a144c0d690592539bf64405e6bc9d24aca5e01cf",
+      "size": 9682
+    },
+    {
+      "path": "skills/domains/ai-ml/responsible-ai-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f4461c68dec97d060dbea24b904642cb97f6bff"
+    },
+    {
+      "path": "skills/domains/ai-ml/responsible-ai-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a56483942d75012c39706e0a4b04aab74ad876e",
+      "size": 4125
+    },
+    {
+      "path": "skills/domains/ai-ml/tensorflow-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53e0274658598aab35841eced3b148adf2b16b56"
+    },
+    {
+      "path": "skills/domains/ai-ml/tensorflow-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cb5b944acd00cc446b98d4bbe412ea8ec6bb28d",
+      "size": 8073
+    },
+    {
+      "path": "skills/domains/ai-ml/transformer-architecture-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ca070ddafb485b5607ce440b3f6ac8d8ca92785"
+    },
+    {
+      "path": "skills/domains/ai-ml/transformer-architecture-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59ceceb6c291b38ad5c95a8e8ed1dcd30c08df93",
+      "size": 8438
+    },
+    {
+      "path": "skills/domains/ai-ml/vmas-simulator-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4615b9cd6b31193efe7734c0c6df3dd580093399"
+    },
+    {
+      "path": "skills/domains/ai-ml/vmas-simulator-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00fac369116e6736cc5be4fe4f6906c29df95754",
+      "size": 3844
+    },
+    {
+      "path": "skills/domains/biomedical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80518b06b87ec8f2bb76b9393377c374529f4998"
+    },
+    {
+      "path": "skills/domains/biomedical/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "816069e79f317c70b13435f976a995c1998cff32",
+      "size": 3310
+    },
+    {
+      "path": "skills/domains/biomedical/alphafold-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3749c63f252ba55a837e4fd8655d9c97bb41858"
+    },
+    {
+      "path": "skills/domains/biomedical/alphafold-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2298932bca1a4d07a5b12c87aff2c78832526616",
+      "size": 8050
+    },
+    {
+      "path": "skills/domains/biomedical/bioagents-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2bf4af148b686ef1c94cbc3875ebbeaed3c92977"
+    },
+    {
+      "path": "skills/domains/biomedical/bioagents-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d321fdff777671c02d8db76cd044964eb607ed03",
+      "size": 12529
+    },
+    {
+      "path": "skills/domains/biomedical/biothings-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68e4faf2b0f835fe289187af4dfc2208d6985271"
+    },
+    {
+      "path": "skills/domains/biomedical/biothings-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e0c0e9427335efe7303eb06b1b4683ea0dd967",
+      "size": 8901
+    },
+    {
+      "path": "skills/domains/biomedical/clawbio-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "846ea9e3cb430242f9d43a4a1ab22bf93bbb2521"
+    },
+    {
+      "path": "skills/domains/biomedical/clawbio-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f903aad6a157734a019508daba7413cc4501ae",
+      "size": 4426
+    },
+    {
+      "path": "skills/domains/biomedical/clinical-dialogue-agents-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dac1f740cfabd3182faa7d098021fea0b6d05267"
+    },
+    {
+      "path": "skills/domains/biomedical/clinical-dialogue-agents-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0068ea8b3e3410537f254e89117666dae05d1c",
+      "size": 4742
+    },
+    {
+      "path": "skills/domains/biomedical/clinical-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e50ff3806c030bf00efe0c24372a1ff3103e8c96"
+    },
+    {
+      "path": "skills/domains/biomedical/clinical-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c12e76f6962a5100a94036b36aee595a6fea850a",
+      "size": 7693
+    },
+    {
+      "path": "skills/domains/biomedical/clinicaltrials-api-v2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "605e817351abb24566742330df8536878121e2bf"
+    },
+    {
+      "path": "skills/domains/biomedical/clinicaltrials-api-v2/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "016f3d4cdb49c33c93e89cf3b24499a3764f700d",
+      "size": 8172
+    },
+    {
+      "path": "skills/domains/biomedical/clinicaltrials-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3e1f92a7e779a795a10fcad3f84d3be25c43c9a"
+    },
+    {
+      "path": "skills/domains/biomedical/clinicaltrials-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e84f0809844cdc8c610351d831b010c68e8e6ddc",
+      "size": 8257
+    },
+    {
+      "path": "skills/domains/biomedical/ena-sequence-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe80e12301d89dffb79c1aea3820deab13120d48"
+    },
+    {
+      "path": "skills/domains/biomedical/ena-sequence-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c88cd1eeab5802edc7f8c90b5c508ebf54805c28",
+      "size": 5532
+    },
+    {
+      "path": "skills/domains/biomedical/enrichr-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd569150c842c3d664d0dc750842cfa219ea214d"
+    },
+    {
+      "path": "skills/domains/biomedical/enrichr-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cda46a1c9efa336194548613eb5468bbfb5548ce",
+      "size": 8120
+    },
+    {
+      "path": "skills/domains/biomedical/ensembl-rest-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "440d36e418115b67069ddff167bacc633b0cf2c6"
+    },
+    {
+      "path": "skills/domains/biomedical/ensembl-rest-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a0aa88246acc88dea925088ac6c2ff8c62027f2",
+      "size": 7964
+    },
+    {
+      "path": "skills/domains/biomedical/epidemiology-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2c28f62a0ab3af937e05ebd95df2300a22ba8c9"
+    },
+    {
+      "path": "skills/domains/biomedical/epidemiology-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8487d3e1b8ccff323d4568f7e91d39f20d1eafb5",
+      "size": 7588
+    },
+    {
+      "path": "skills/domains/biomedical/genomas-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3c71da82e7ca4577c5b123a1f6a821027fc9978"
+    },
+    {
+      "path": "skills/domains/biomedical/genomas-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5875d0cd9df59fa6e78714f77b7fa5f1899a9f3a",
+      "size": 3835
+    },
+    {
+      "path": "skills/domains/biomedical/genomics-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "947e4ec44d61f114a8142ab83c8acd5923be546f"
+    },
+    {
+      "path": "skills/domains/biomedical/genomics-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0ff601c0b40db518d7ee496786e2d4acf17566e",
+      "size": 7424
+    },
+    {
+      "path": "skills/domains/biomedical/genotex-benchmark-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6e2ba4124f491f0d4925bcb0cdf970e3716e933"
+    },
+    {
+      "path": "skills/domains/biomedical/genotex-benchmark-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e49cb9f055df3411dad8e9357bb6cd80a1fef3b",
+      "size": 3947
+    },
+    {
+      "path": "skills/domains/biomedical/med-researcher-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec86f35a551010b775945f4ed529f2418d12e8cf"
+    },
+    {
+      "path": "skills/domains/biomedical/med-researcher-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8af7b8044bdf04602791d15b22489a63caba8b57",
+      "size": 4960
+    },
+    {
+      "path": "skills/domains/biomedical/med-researcher-r1-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1e07bbbd5aec210b60723974b8d21323524fdb1"
+    },
+    {
+      "path": "skills/domains/biomedical/med-researcher-r1-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90fb201eeda716ded20d80a67202532f721f0f35",
+      "size": 4616
+    },
+    {
+      "path": "skills/domains/biomedical/medgeclaw-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d53acb971cfed6724d8f43a9cd1a14f59dae9e94"
+    },
+    {
+      "path": "skills/domains/biomedical/medgeclaw-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdb9de4cc69bf5647a71c3428c4425341200dbae",
+      "size": 11448
+    },
+    {
+      "path": "skills/domains/biomedical/medical-data-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "752dee494c6f8cb72b5f45d26f98ca5f6ecece46"
+    },
+    {
+      "path": "skills/domains/biomedical/medical-data-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab6c0f6301d1ec22057dfc6fdc7054c838b0d5de",
+      "size": 8870
+    },
+    {
+      "path": "skills/domains/biomedical/medical-imaging-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ba95675f619b779ffdeccd4b702339deefeb40e"
+    },
+    {
+      "path": "skills/domains/biomedical/medical-imaging-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f138b939e06e7465adfffab41200b97c24e8d02d",
+      "size": 10620
+    },
+    {
+      "path": "skills/domains/biomedical/ncbi-blast-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "073dd1d5a709958da78815553566178a5ebc43ee"
+    },
+    {
+      "path": "skills/domains/biomedical/ncbi-blast-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0765609808ba1abb0f16a0ed40aef3db5e31f49",
+      "size": 6536
+    },
+    {
+      "path": "skills/domains/biomedical/ncbi-datasets-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ec0e902eddc89f825e11d4562b60a4f5a42c4c9"
+    },
+    {
+      "path": "skills/domains/biomedical/ncbi-datasets-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd862859c12a5616e60a7bc81b46ce041fb36dd4",
+      "size": 6506
+    },
+    {
+      "path": "skills/domains/biomedical/pdb-structure-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34b727718ef58996371c6bd86f47a3aec1c84e3c"
+    },
+    {
+      "path": "skills/domains/biomedical/pdb-structure-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7022ad7cba36834494d04a8d55700b129189afa7",
+      "size": 7402
+    },
+    {
+      "path": "skills/domains/biomedical/quickgo-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bff6858255ecfde3a5c8d773b20db33e07a3acf5"
+    },
+    {
+      "path": "skills/domains/biomedical/quickgo-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad1fa086db2437c575bb7e86622fb61b4e3d29f9",
+      "size": 5545
+    },
+    {
+      "path": "skills/domains/business",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c416a9f283160ce3ed16b7146b77558a61801f7"
+    },
+    {
+      "path": "skills/domains/business/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda21499cc07ea829be280745a41766af9592963",
+      "size": 1111
+    },
+    {
+      "path": "skills/domains/business/architecture-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d2c46ee4fc5e36c8dfd083f539adfdf91dbd69e"
+    },
+    {
+      "path": "skills/domains/business/architecture-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bba5a56c49c54d50ffe1e6c97fa53b65c6b6de38",
+      "size": 11136
+    },
+    {
+      "path": "skills/domains/business/innovation-management-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6041153dad58f0c7356c8dfb6026f1ecba79013e"
+    },
+    {
+      "path": "skills/domains/business/innovation-management-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "658220cf044443b097030ca6f08e7391c5852ae7",
+      "size": 9144
+    },
+    {
+      "path": "skills/domains/business/market-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5960fd9d0d82acddf1bdf07e2b144747144f8c9d"
+    },
+    {
+      "path": "skills/domains/business/market-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ad9514d8f4c655ec681ccc34265d38afc20b0a6",
+      "size": 4295
+    },
+    {
+      "path": "skills/domains/business/operations-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6d0da663151af58072a819a7297c4c2b148d743"
+    },
+    {
+      "path": "skills/domains/business/operations-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e77ffc3f254dc7c20cc6c2cac85437b5c6fa6a38",
+      "size": 8165
+    },
+    {
+      "path": "skills/domains/business/strategic-management-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1e3b94fec68da370fa4e39dab2bf49c9cd96cef"
+    },
+    {
+      "path": "skills/domains/business/strategic-management-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db0f89d4fa4119f296e62041c6212d778d820ce9",
+      "size": 5415
+    },
+    {
+      "path": "skills/domains/chemistry",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55d1dec64da2c7d1162f0d26d2c797526b921d3f"
+    },
+    {
+      "path": "skills/domains/chemistry/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ad0909b28ade02185bc316bab8548159ca46a13",
+      "size": 1550
+    },
+    {
+      "path": "skills/domains/chemistry/cactus-cheminformatics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17dbcdb08c1c54bff46535e8fe3a74df643fc117"
+    },
+    {
+      "path": "skills/domains/chemistry/cactus-cheminformatics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c68ec067c535194c6a2a6ade801332af4e6c21f",
+      "size": 2567
+    },
+    {
+      "path": "skills/domains/chemistry/catalysis-hub-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cdef6a9067fa53ff4c31006f6974187e1a2dbe6"
+    },
+    {
+      "path": "skills/domains/chemistry/catalysis-hub-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0bbe9fd1e21d51ae371f63f0276b5fc7140c18b",
+      "size": 7004
+    },
+    {
+      "path": "skills/domains/chemistry/chemeagle-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c1325b159fa9f9046f5d07931ab7e266f22a893"
+    },
+    {
+      "path": "skills/domains/chemistry/chemeagle-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6dbcb16a4296267630062bdbb7f1d8f2e6fb032",
+      "size": 4321
+    },
+    {
+      "path": "skills/domains/chemistry/chemgraph-agent-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8145a2e14f736c7f2d7fc7093d4021ec69a4d516"
+    },
+    {
+      "path": "skills/domains/chemistry/chemgraph-agent-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71a2ac4a040f350b26ed1a9a23da38ad68055231",
+      "size": 3589
+    },
+    {
+      "path": "skills/domains/chemistry/computational-chemistry-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f130a453c52a258e99651f695ee65d64e49e3e4"
+    },
+    {
+      "path": "skills/domains/chemistry/computational-chemistry-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf63d2a44294bef85b00b9fb5ca03ca28f2a34ff",
+      "size": 9146
+    },
+    {
+      "path": "skills/domains/chemistry/molecular-dynamics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8ad1467a144a4a40d22691fb96cdc39f3b1197a"
+    },
+    {
+      "path": "skills/domains/chemistry/molecular-dynamics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "006771aa3220d54e686deb3502bdadfa6ce7460a",
+      "size": 7791
+    },
+    {
+      "path": "skills/domains/chemistry/pubchem-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "49079b9d0cccc30edf8aa79b265d762106f994c6"
+    },
+    {
+      "path": "skills/domains/chemistry/pubchem-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b828a8ac8e01698b718ab59f2f32b6d24e801267",
+      "size": 7423
+    },
+    {
+      "path": "skills/domains/chemistry/retrosynthesis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3dc4a9dd26ca1fb05c388af57a2f1e310d772c8b"
+    },
+    {
+      "path": "skills/domains/chemistry/retrosynthesis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5aab1823e84a36221a076ef998e7384a87621a3",
+      "size": 7461
+    },
+    {
+      "path": "skills/domains/chemistry/spectroscopy-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11b8fd09855b77a35d653cf6590523839432e46d"
+    },
+    {
+      "path": "skills/domains/chemistry/spectroscopy-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7151c43cb119eed70ec16e2cdf8d6f960aedbc3",
+      "size": 9693
+    },
+    {
+      "path": "skills/domains/cs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e909aae82881e476fb0b17366596ae08978a6ecb"
+    },
+    {
+      "path": "skills/domains/cs/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e74ffc7a2e8913ff48fc969e63f625873c6cc7a",
+      "size": 1668
+    },
+    {
+      "path": "skills/domains/cs/ai-security-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "695dea49783a8be6c7e053e04b0a91c87e6bc405"
+    },
+    {
+      "path": "skills/domains/cs/ai-security-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e9f7f2ae1ef778b3c7437e7d14728681c567bb6",
+      "size": 3734
+    },
+    {
+      "path": "skills/domains/cs/algorithms-complexity-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "554f249583df654d06a2de70e6394635a803b8e1"
+    },
+    {
+      "path": "skills/domains/cs/algorithms-complexity-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b6254d2a537373079ec82585da661b8fb09cf91",
+      "size": 5996
+    },
+    {
+      "path": "skills/domains/cs/code-llm-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19999a9cdf674aee7fa17c92386084720e4939c6"
+    },
+    {
+      "path": "skills/domains/cs/code-llm-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba6ec69d57c9a6c24bbac5c6841c11f14efb923",
+      "size": 4700
+    },
+    {
+      "path": "skills/domains/cs/dblp-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abd70ece3fe1691109dc9b9b6f8206cfceeff0d7"
+    },
+    {
+      "path": "skills/domains/cs/dblp-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8077cd8995c0f2c0a84483b65c61b2c2331ae46",
+      "size": 5546
+    },
+    {
+      "path": "skills/domains/cs/distributed-systems-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c30dd0ae340a7480d668677d8dac547c8ea0fb3"
+    },
+    {
+      "path": "skills/domains/cs/distributed-systems-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26fe490d86bc1767fde2bbc3ed3070e1b44adcc0",
+      "size": 9141
+    },
+    {
+      "path": "skills/domains/cs/formal-verification-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8157fef6a487e25a96eca448df9ba37f3bc9b170"
+    },
+    {
+      "path": "skills/domains/cs/formal-verification-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69b9cbb7d0ca2c0c1766e5c0093e477c961310c2",
+      "size": 8525
+    },
+    {
+      "path": "skills/domains/cs/gaussian-splatting-papers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e3f549134cc262197fe561fc4c946b75db76795"
+    },
+    {
+      "path": "skills/domains/cs/gaussian-splatting-papers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d8216a90eb06d4f8d52df635e4096e321306aef",
+      "size": 5260
+    },
+    {
+      "path": "skills/domains/cs/llm-aiops-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7dbbc2019a72aed4c54e3ac2632d5478f28130d"
+    },
+    {
+      "path": "skills/domains/cs/llm-aiops-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86800baa256f51a34cfd10568897476349a07b38",
+      "size": 14923
+    },
+    {
+      "path": "skills/domains/cs/software-engineering-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e94b91ddbad571db19c4124b586c951c164e093d"
+    },
+    {
+      "path": "skills/domains/cs/software-engineering-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0040ef249c65f8f622be1fb1f461412d702ff182",
+      "size": 8019
+    },
+    {
+      "path": "skills/domains/cs/software-heritage-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "504d600f83f943cd78caa5431ba1c36b45349c39"
+    },
+    {
+      "path": "skills/domains/cs/software-heritage-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "875db0d24fba033d0a9b6f4a37b4f7de7a341a06",
+      "size": 5776
+    },
+    {
+      "path": "skills/domains/ecology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61756b73dcbd135e127b9ec1588a078c06833d91"
+    },
+    {
+      "path": "skills/domains/ecology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db2e22e8202ef04c92e38b3057504d0ec2c2f8fc",
+      "size": 1045
+    },
+    {
+      "path": "skills/domains/ecology/biodiversity-data-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98519435a9e1eb2b3b9f5a016c12b8c8c42cb795"
+    },
+    {
+      "path": "skills/domains/ecology/biodiversity-data-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e99cf53c92dca5cced331d7e6d3596a9531ad44",
+      "size": 8889
+    },
+    {
+      "path": "skills/domains/ecology/conservation-biology-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48120c3d0ca14f5cc359c8fd38bab4f47e677cee"
+    },
+    {
+      "path": "skills/domains/ecology/conservation-biology-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "167a378a6a9e5be4435d35e1a720092a5586459b",
+      "size": 7154
+    },
+    {
+      "path": "skills/domains/ecology/gbif-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb47f9bc26576b51e234a42a26dc31c38b812801"
+    },
+    {
+      "path": "skills/domains/ecology/gbif-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ce607664c02f8e51b548c2daec35e06c54787aa",
+      "size": 7522
+    },
+    {
+      "path": "skills/domains/ecology/inaturalist-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ee79c8ad553f5de4f063fb18718504fc09d62d8"
+    },
+    {
+      "path": "skills/domains/ecology/inaturalist-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "690b0af9022c31942cdfeba4ae73c951c5335aaa",
+      "size": 8007
+    },
+    {
+      "path": "skills/domains/ecology/species-distribution-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74ab2e9bf12442ed1d711508c123dc459b725578"
+    },
+    {
+      "path": "skills/domains/ecology/species-distribution-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "237121836a84e9173948c13328eba0837440223b",
+      "size": 11307
+    },
+    {
+      "path": "skills/domains/economics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "344295db93fee4b32429f49c55cb19588211d1eb"
+    },
+    {
+      "path": "skills/domains/economics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda74ecd47b8c6f29dc3f40f30e413e26daa5d81",
+      "size": 1490
+    },
+    {
+      "path": "skills/domains/economics/behavioral-economics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ae313055b33b8b760d82e2617e90fd2b4c1dec0"
+    },
+    {
+      "path": "skills/domains/economics/behavioral-economics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727cd7d2eda44e95c740c8eb9f3e540e797a46b5",
+      "size": 8915
+    },
+    {
+      "path": "skills/domains/economics/development-economics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a907a5e8f2c640891a1117d1271a9fef9f6e205"
+    },
+    {
+      "path": "skills/domains/economics/development-economics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "847a4d95dc1d7cf8facb649879b701ca55658517",
+      "size": 6766
+    },
+    {
+      "path": "skills/domains/economics/fred-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6eb7c47452e677964ffbda0be39e403068fe2f7c"
+    },
+    {
+      "path": "skills/domains/economics/fred-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17086c7eaf6820e9a45e624f94676195c3f5d5c6",
+      "size": 7827
+    },
+    {
+      "path": "skills/domains/economics/imf-data-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4ec9461a3e98fa13317c88d88a2e1bf39827853"
+    },
+    {
+      "path": "skills/domains/economics/imf-data-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0df961e5e7b58f81fcbc333dc16e4ca5862ccfcf",
+      "size": 6797
+    },
+    {
+      "path": "skills/domains/economics/nber-working-papers-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9067400896568b485f2d2ad27cbb314949040dd5"
+    },
+    {
+      "path": "skills/domains/economics/nber-working-papers-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd43933715aded82f324afab32c5622dfde08bf8",
+      "size": 5722
+    },
+    {
+      "path": "skills/domains/economics/post-labor-economics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6cff5f54fa15eb914b3d8cd719a9dc24b2339d99"
+    },
+    {
+      "path": "skills/domains/economics/post-labor-economics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f99ce33242f1e69a00d6de943665968c7f377d0c",
+      "size": 10921
+    },
+    {
+      "path": "skills/domains/economics/pricing-psychology-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b843caa36b0194fef526006a197751e51167cdee"
+    },
+    {
+      "path": "skills/domains/economics/pricing-psychology-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0146ddd51a8aa08a694be8971346b0d0e635ed98",
+      "size": 10894
+    },
+    {
+      "path": "skills/domains/economics/repec-economics-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cda48957d8909a2c8992518ef20f335198dabda1"
+    },
+    {
+      "path": "skills/domains/economics/repec-economics-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb699963481455ae5ff4d7b6e893f1c2fffb50f7",
+      "size": 5498
+    },
+    {
+      "path": "skills/domains/economics/world-bank-data-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50cbf3d7ce3aca789bf3455fb8b44de9531190ad"
+    },
+    {
+      "path": "skills/domains/economics/world-bank-data-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96697f8f36ddf0fb53699aeea72eaaa58f31e0bf",
+      "size": 7271
+    },
+    {
+      "path": "skills/domains/education",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "555ea1007aa3b9bf536ed9d26127366030329f8b"
+    },
+    {
+      "path": "skills/domains/education/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50187ec8856a308fa02ae68ef5f3c3936d7377b5",
+      "size": 1340
+    },
+    {
+      "path": "skills/domains/education/academic-study-methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c07ba77f227eb7884beddde32710b214429fa6a"
+    },
+    {
+      "path": "skills/domains/education/academic-study-methods/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af3ea0525b4c6720b5275c522ab26daf1da4231c",
+      "size": 7414
+    },
+    {
+      "path": "skills/domains/education/assessment-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2f2bd88f19799fbc21f3759e3fdab24fe19e451"
+    },
+    {
+      "path": "skills/domains/education/assessment-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d5ded1de9144450fddb0c12805bfe43ae6cdbd",
+      "size": 7631
+    },
+    {
+      "path": "skills/domains/education/curriculum-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "978a49a551aea569080683fac53e5c56b3e84d36"
+    },
+    {
+      "path": "skills/domains/education/curriculum-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbc3c39b13bd6179dfc47e58cf94451da063c2a2",
+      "size": 5233
+    },
+    {
+      "path": "skills/domains/education/educational-research-methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "343446cfebcbd42c43fbbd7dd9c432b3afd269fd"
+    },
+    {
+      "path": "skills/domains/education/educational-research-methods/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb9172f4dc976809f94315f940cc5d9168651c2e",
+      "size": 6946
+    },
+    {
+      "path": "skills/domains/education/learning-science-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "826fdad2895e8ecc30ff6bf6ec620b26c3843d49"
+    },
+    {
+      "path": "skills/domains/education/learning-science-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a90406652fae4013459ed3f239e2e6cbd753a6d6",
+      "size": 5589
+    },
+    {
+      "path": "skills/domains/education/mooc-analytics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9afa736a25ae19e855dbfdb4f8dc7f06448924f0"
+    },
+    {
+      "path": "skills/domains/education/mooc-analytics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b7471d61e788bb4c5aefbb0a0a52881090ddbee",
+      "size": 7647
+    },
+    {
+      "path": "skills/domains/education/open-syllabus-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "638c1adf1ed5ef0fbae24170f3a37ac561a8593f"
+    },
+    {
+      "path": "skills/domains/education/open-syllabus-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec7b6ff46b993356c97ecaad3b4ae446d9250033",
+      "size": 5673
+    },
+    {
+      "path": "skills/domains/finance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "702a01629464708b2f05394808b3d16b9cd893e7"
+    },
+    {
+      "path": "skills/domains/finance/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b8f210f4a691b621e13c828c67421e54c1780d5",
+      "size": 1481
+    },
+    {
+      "path": "skills/domains/finance/akshare-finance-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47c3da1c8ee2df3dfc5612a01e9ce2342a6dc930"
+    },
+    {
+      "path": "skills/domains/finance/akshare-finance-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08998f2a3615c5cfe83ec67bd2a566c3d750a966",
+      "size": 6696
+    },
+    {
+      "path": "skills/domains/finance/financial-data-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3bce9e193614b5349040e143a746ef7f00cb2bf3"
+    },
+    {
+      "path": "skills/domains/finance/financial-data-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73feb6f961b72651e098a5123fd3656658b87658",
+      "size": 5114
+    },
+    {
+      "path": "skills/domains/finance/finsight-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8930d24b85f05c9cc202c1872717faf128c8da9a"
+    },
+    {
+      "path": "skills/domains/finance/finsight-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4576740f145f4a7de3ebf635e0a2e1e7e2656d70",
+      "size": 3530
+    },
+    {
+      "path": "skills/domains/finance/options-analytics-agent-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6521a3fd505f28dbb6740160acbd7e921b838ef5"
+    },
+    {
+      "path": "skills/domains/finance/options-analytics-agent-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baa6b112f8dbbee079f1fa8dae32e026fe6797a0",
+      "size": 3131
+    },
+    {
+      "path": "skills/domains/finance/portfolio-optimization-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9851acdcc4cb8d51a1c3c1bdcf178dbab53c3691"
+    },
+    {
+      "path": "skills/domains/finance/portfolio-optimization-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e142a4cf147e7e725b319f79e5354ace87598e9",
+      "size": 9902
+    },
+    {
+      "path": "skills/domains/finance/quantitative-finance-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c2a2edb2a1a2e0133efc2983e32684a053f1d6b"
+    },
+    {
+      "path": "skills/domains/finance/quantitative-finance-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d17994983e332c012d5011770cf6d11f52df919",
+      "size": 5348
+    },
+    {
+      "path": "skills/domains/finance/risk-modeling-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba4957c67e6f30aaac639db8f918b4b61776a1f6"
+    },
+    {
+      "path": "skills/domains/finance/risk-modeling-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19840fd8f40d45ae2f12be75684d80dac511f51f",
+      "size": 8599
+    },
+    {
+      "path": "skills/domains/finance/stata-accounting-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86783f80e360667cd19e5ce881a69c4af0f94a2e"
+    },
+    {
+      "path": "skills/domains/finance/stata-accounting-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9b8398e90abfe42eca464ad6b0d898a7c520eca",
+      "size": 15998
+    },
+    {
+      "path": "skills/domains/geoscience",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8160c3268cb47a3823f189ae732ea820893d44ae"
+    },
+    {
+      "path": "skills/domains/geoscience/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8d4dbc21e618f9d29c182994a3abd6a67353aef",
+      "size": 1206
+    },
+    {
+      "path": "skills/domains/geoscience/climate-modeling-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0336589b6e4683989deee10b436ec020e8dea059"
+    },
+    {
+      "path": "skills/domains/geoscience/climate-modeling-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8689c16adde98f9fe42504403148d61948572a2",
+      "size": 7573
+    },
+    {
+      "path": "skills/domains/geoscience/climate-science-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8d25137a7e375903e5750cadabcab2c99d19515"
+    },
+    {
+      "path": "skills/domains/geoscience/climate-science-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5ccadf71a76476f22bbc226d17d2f2ae4278915",
+      "size": 5449
+    },
+    {
+      "path": "skills/domains/geoscience/gis-remote-sensing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d49bc3fdde48cdecd4cd7d7544a59e16e38769d"
+    },
+    {
+      "path": "skills/domains/geoscience/gis-remote-sensing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3e1c75c404c7b6ec0a8d9c5dbcafcf1d7343069",
+      "size": 4691
+    },
+    {
+      "path": "skills/domains/geoscience/pangaea-data-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00ab1309038ecfacf8b2f150460be635628a57b6"
+    },
+    {
+      "path": "skills/domains/geoscience/pangaea-data-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "677d2cc5df5cf6879d901a0cad91bb8531de0cdc",
+      "size": 6190
+    },
+    {
+      "path": "skills/domains/geoscience/satellite-remote-sensing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7129a29222dcca4e68cf5edb2526505a3fae2cd0"
+    },
+    {
+      "path": "skills/domains/geoscience/satellite-remote-sensing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59171b2570dfa585121ad6577cf6f7ec4ae0dcc8",
+      "size": 7144
+    },
+    {
+      "path": "skills/domains/geoscience/seismology-data-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c267e3a1f7c7cfa5c7b24a2ebb9ffc73062441a"
+    },
+    {
+      "path": "skills/domains/geoscience/seismology-data-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b7e4aa8ed4d55fe79ba1624964605ef8d260f91",
+      "size": 7105
+    },
+    {
+      "path": "skills/domains/humanities",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "565a737a7b8f0e2cbf1eb9aefcf6f69675079837"
+    },
+    {
+      "path": "skills/domains/humanities/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "046b37d28c9ef7f60c4bafa1764c8a254ea727a9",
+      "size": 1071
+    },
+    {
+      "path": "skills/domains/humanities/digital-humanities-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92c8a76c30966b84bcdb9cfea5b8ec6dbf0f1e45"
+    },
+    {
+      "path": "skills/domains/humanities/digital-humanities-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a99c00fc25323ba23ecd77fe6a7a524c4d4ba7f",
+      "size": 5592
+    },
+    {
+      "path": "skills/domains/humanities/ethical-philosophy-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43bf9436a9cdea1fa84542db008b7b5baf104f2e"
+    },
+    {
+      "path": "skills/domains/humanities/ethical-philosophy-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "239f7b146e8de4f4e06d140d672ae4f3e1d35b6f",
+      "size": 10221
+    },
+    {
+      "path": "skills/domains/humanities/history-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9bbe8a7157f11aec1557df389604bc9862731b52"
+    },
+    {
+      "path": "skills/domains/humanities/history-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42dca2ad2869ca2c0e9c1b6eb27744ea14cc5083",
+      "size": 10371
+    },
+    {
+      "path": "skills/domains/humanities/philosophy-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05ef8651e958671089f27ac04ba0ca639715b3a4"
+    },
+    {
+      "path": "skills/domains/humanities/philosophy-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4811874285c3a2e9fc9a512305cce7158621b87a",
+      "size": 5599
+    },
+    {
+      "path": "skills/domains/humanities/political-history-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7986d1994bb8a3be129dfaa7a91fb3b78cb633a"
+    },
+    {
+      "path": "skills/domains/humanities/political-history-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b59bdc43384ae11d30f5790093a1d50862ca0f0b",
+      "size": 11068
+    },
+    {
+      "path": "skills/domains/law",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fc7f46930643a156507c797e5b84fb2eacd4846"
+    },
+    {
+      "path": "skills/domains/law/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4248fa77c17d1b59cdb12c162de52c6bd298a663",
+      "size": 1511
+    },
+    {
+      "path": "skills/domains/law/caselaw-access-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9dee8b5cf2a41d67efd7d350f7840ecf9c1ace0"
+    },
+    {
+      "path": "skills/domains/law/caselaw-access-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f26215426a2306810e5c42ffb3d89d938780cec3",
+      "size": 4535
+    },
+    {
+      "path": "skills/domains/law/courtlistener-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8014588963066d0b6e3a47aa3369af267fd65e28"
+    },
+    {
+      "path": "skills/domains/law/courtlistener-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e57934687ba68e87e5a126c04f15e1152102d69f",
+      "size": 9799
+    },
+    {
+      "path": "skills/domains/law/legal-agent-skills-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3af9cb42ba9ee0ec45316b74d1e860219f93d69b"
+    },
+    {
+      "path": "skills/domains/law/legal-agent-skills-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a57080703853b250edd93e9c6370a971b08ba7bc",
+      "size": 3768
+    },
+    {
+      "path": "skills/domains/law/legal-nlp-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0178d13e444535ecc12bafaf397ac31ff3a15bf"
+    },
+    {
+      "path": "skills/domains/law/legal-nlp-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97ea1bbbcc2fe4bfb8a310192a7603189b84edec",
+      "size": 8500
+    },
+    {
+      "path": "skills/domains/law/legal-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c7d526d657a731a081f778c7c79d8aef5bc7ede"
+    },
+    {
+      "path": "skills/domains/law/legal-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f39466249f1ff59e1c9c5b2ca9fb3cea774b10a1",
+      "size": 9619
+    },
+    {
+      "path": "skills/domains/law/opencontracts-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c9e7a0a2df9980bc1774718f5f903a1f7afcbaa"
+    },
+    {
+      "path": "skills/domains/law/opencontracts-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d886129aa4b320ac1a8eccd330b0accef1401335",
+      "size": 4262
+    },
+    {
+      "path": "skills/domains/law/patent-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a87bc285383f08beafd7c1979064922f44dfec3"
+    },
+    {
+      "path": "skills/domains/law/patent-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c16b18ddc12645870b46c29bc3f9449f8296407",
+      "size": 8704
+    },
+    {
+      "path": "skills/domains/law/regulatory-compliance-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fda52946ac8b08a5102e8faf7d6eaff746120c5"
+    },
+    {
+      "path": "skills/domains/law/regulatory-compliance-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "497e636d7b7a4ae020afc9424611ce1fd2c9dfff",
+      "size": 9364
+    },
+    {
+      "path": "skills/domains/law/uk-legislation-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06d77ebaea135d26b3ae880a478ff68f8a5de5e2"
+    },
+    {
+      "path": "skills/domains/law/uk-legislation-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fa70f6c75edeb7268540d876e749ee07b787f5a",
+      "size": 7007
+    },
+    {
+      "path": "skills/domains/math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8a9a80b34bc8d3170524a11e5ae380855c570b7"
+    },
+    {
+      "path": "skills/domains/math/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d56ef062395d020aea7940286be96ea7d2e054",
+      "size": 1125
+    },
+    {
+      "path": "skills/domains/math/lean-theorem-proving-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6982872ab7c2b345221b8cb5fd5a13c1068e24b"
+    },
+    {
+      "path": "skills/domains/math/lean-theorem-proving-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92fb13c4a47ca813c16431c5308f67ad04f0831c",
+      "size": 3700
+    },
+    {
+      "path": "skills/domains/math/linear-algebra-applications",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5598c00723649fa91acdd2066ff700a8c2fcac84"
+    },
+    {
+      "path": "skills/domains/math/linear-algebra-applications/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f9be384d270f70496a065670a626068024b325",
+      "size": 6668
+    },
+    {
+      "path": "skills/domains/math/numerical-methods-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38aeffe1caf8b4996fc46a8a4c0426b7b8676bec"
+    },
+    {
+      "path": "skills/domains/math/numerical-methods-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b200d917550e8beb6916803749d3ce5ec6fd4fb",
+      "size": 6530
+    },
+    {
+      "path": "skills/domains/math/oeis-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e4b4a3f8ea1b083065088d1c810b7445368bcd6"
+    },
+    {
+      "path": "skills/domains/math/oeis-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45f7a152b051d18c7d91601aa1331971475d5d78",
+      "size": 6699
+    },
+    {
+      "path": "skills/domains/math/symbolic-computation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10ff333d3079f79795dcddffcf3d1f6f0970f0db"
+    },
+    {
+      "path": "skills/domains/math/symbolic-computation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e3f85fb100f79f0024b3d52d617bfee57f546d6",
+      "size": 6643
+    },
+    {
+      "path": "skills/domains/math/topology-data-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1fc17a5550022a2e448a9ba8a349c392c5f930c"
+    },
+    {
+      "path": "skills/domains/math/topology-data-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a491356729fe5d7d06276b0caeaaf83c14e45c63",
+      "size": 10278
+    },
+    {
+      "path": "skills/domains/pharma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "019fa7ec091f34ddd0bf8703845455578bf1e2bf"
+    },
+    {
+      "path": "skills/domains/pharma/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "916b21ccccd156a91d77c548fe1796e1c59d6f99",
+      "size": 1250
+    },
+    {
+      "path": "skills/domains/pharma/clinical-pharmacology-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82f30c835ced6bf54df78e6775b7dbd6e2c45924"
+    },
+    {
+      "path": "skills/domains/pharma/clinical-pharmacology-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dd9a48b2364fa86b6b16d18a04d4db3182e2de6",
+      "size": 6288
+    },
+    {
+      "path": "skills/domains/pharma/clinical-trial-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89842ec8390de9ca64904b6f6e9378e39910f85a"
+    },
+    {
+      "path": "skills/domains/pharma/clinical-trial-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30d5dd0c7041433fca1e9911884e8eef8e94b6f4",
+      "size": 8888
+    },
+    {
+      "path": "skills/domains/pharma/drug-development-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60ac961c65981d5476db7f75e262783e56422153"
+    },
+    {
+      "path": "skills/domains/pharma/drug-development-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b8d97351f555f4b099b9c8634d164801f55fd00",
+      "size": 6186
+    },
+    {
+      "path": "skills/domains/pharma/drug-target-interaction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e50b5c0a7ee19a4fde23404c921eaa105050643c"
+    },
+    {
+      "path": "skills/domains/pharma/drug-target-interaction/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39674dd46634d6069ae427157be19595f3ee69d9",
+      "size": 8705
+    },
+    {
+      "path": "skills/domains/pharma/madd-drug-discovery-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b9e9dde9220fa8d5ff9568baa03565688ebc6ca"
+    },
+    {
+      "path": "skills/domains/pharma/madd-drug-discovery-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b24ca292d0ea5184d9ecf3a8d200d13b7cc8d09d",
+      "size": 4362
+    },
+    {
+      "path": "skills/domains/pharma/pharmacovigilance-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a94b8b64e53dd1697037ba20b619d33379c64242"
+    },
+    {
+      "path": "skills/domains/pharma/pharmacovigilance-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b10e71c628eda10e244a8b822bda9c643f16ba5",
+      "size": 7667
+    },
+    {
+      "path": "skills/domains/physics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1499c86ea9481f2ed4d2391829bf4dc034d7f69e"
+    },
+    {
+      "path": "skills/domains/physics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c3b1d8b17d2751ce492a3e9279edc27ee802c1b",
+      "size": 1054
+    },
+    {
+      "path": "skills/domains/physics/astrophysics-data-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3598e32a0537db11d7d332cb323c317195a1cdf"
+    },
+    {
+      "path": "skills/domains/physics/astrophysics-data-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c18990a4411a1036b99b52a04fcc0d3d65ae29f6",
+      "size": 10208
+    },
+    {
+      "path": "skills/domains/physics/computational-physics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc19a9536f410346f5a32fd2dd4c94c52df4e012"
+    },
+    {
+      "path": "skills/domains/physics/computational-physics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aeedb61a9321f3e679de5ef7fa7ea6e251cc0bc",
+      "size": 9225
+    },
+    {
+      "path": "skills/domains/physics/nasa-ads-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10cc92f5a99485e7bceedc5baeac0b4e141856bb"
+    },
+    {
+      "path": "skills/domains/physics/nasa-ads-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "269e5a27c8f2d4de7f0dec0d17a5307b528e28d1",
+      "size": 7101
+    },
+    {
+      "path": "skills/domains/physics/particle-physics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f36f526b35f6bf8f37b4ce5b539c641274f23660"
+    },
+    {
+      "path": "skills/domains/physics/particle-physics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa5db1653217e444960ff2f608c1c2ae394856f",
+      "size": 9031
+    },
+    {
+      "path": "skills/domains/physics/quantum-computing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8eec38b044b8f67d2b72ece8162e8fd2b50b6588"
+    },
+    {
+      "path": "skills/domains/physics/quantum-computing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6fbde089d29f05417632cdb363a292fe1f826fa",
+      "size": 6459
+    },
+    {
+      "path": "skills/domains/social-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0b2f7fa4296642218aa399640c5640f5c43a5b9"
+    },
+    {
+      "path": "skills/domains/social-science/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6185fe719a571fa37c24199a2a78d0e74d85245",
+      "size": 1209
+    },
+    {
+      "path": "skills/domains/social-science/ipums-microdata-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fea9e8d5c8c3be3c6ad16331775a66b5d5d00535"
+    },
+    {
+      "path": "skills/domains/social-science/ipums-microdata-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9087ff606f25c8259063fce4449a2520657a0330",
+      "size": 6262
+    },
+    {
+      "path": "skills/domains/social-science/network-analysis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c80c8f13c46aaa9c4285bdf84ce95cfe392b476"
+    },
+    {
+      "path": "skills/domains/social-science/network-analysis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ea671913336007487e08cfa510250e5cfba27ac",
+      "size": 9713
+    },
+    {
+      "path": "skills/domains/social-science/psychology-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1a35ef1da19394ac33b96acec7837255a3fd2c3"
+    },
+    {
+      "path": "skills/domains/social-science/psychology-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06666beb6c074748e6624fc167c25da822095f78",
+      "size": 9644
+    },
+    {
+      "path": "skills/domains/social-science/social-research-methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "897e90c40ae01f188dfdcf194623285c0570f9a2"
+    },
+    {
+      "path": "skills/domains/social-science/social-research-methods/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56174e71180247105d5f22db811dc4940e8cf034",
+      "size": 6694
+    },
+    {
+      "path": "skills/domains/social-science/sociology-research-methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f7e80df27d06ea9b0ca4f1650ea744bd7ea1ea38"
+    },
+    {
+      "path": "skills/domains/social-science/sociology-research-methods/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f74bbb0b2881caad61cd0fbb636f8c1b146c3db9",
+      "size": 7707
+    },
+    {
+      "path": "skills/domains/social-science/survey-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05d85d70ae8de5b2be6ae5038b5a7c373e5a7ab7"
+    },
+    {
+      "path": "skills/domains/social-science/survey-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cfb2257b5baded9fc7ea4962a3cd4503bce8073",
+      "size": 6515
+    },
+    {
+      "path": "skills/literature",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "726d130fdea614460f8d693e5aa296a8bdc18bd5"
+    },
+    {
+      "path": "skills/literature/discovery",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77670b32fc54f35e8e132d2c2731e8d0adfe2711"
+    },
+    {
+      "path": "skills/literature/discovery/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5929c8890dba6e2e25ecc7cfb5b23a7d32d3423a",
+      "size": 1596
+    },
+    {
+      "path": "skills/literature/discovery/citation-alert-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d857268cf0e136e87a2fb891c1bafe81af4bcda7"
+    },
+    {
+      "path": "skills/literature/discovery/citation-alert-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "236fc1cf50b80567888951e7cd8fd2d88965462b",
+      "size": 5033
+    },
+    {
+      "path": "skills/literature/discovery/conference-proceedings-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7dc116a5ebe37bbe811cc6b8df80a1518a60314"
+    },
+    {
+      "path": "skills/literature/discovery/conference-proceedings-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e58ba4d61459ecbf757da2221e478cb75e6d70cb",
+      "size": 5126
+    },
+    {
+      "path": "skills/literature/discovery/literature-mapping-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5304f57fbe54f971c764804e0e3f03e16a7f6b2e"
+    },
+    {
+      "path": "skills/literature/discovery/literature-mapping-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ed4ee988fa4f51862a4be6eeae4e36ce90df4c8",
+      "size": 7113
+    },
+    {
+      "path": "skills/literature/discovery/paper-recommendation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3580659722673bc48de491d78119f03b0e016992"
+    },
+    {
+      "path": "skills/literature/discovery/paper-recommendation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a995290112454df2f20506097ec9e700f4b3126",
+      "size": 7101
+    },
+    {
+      "path": "skills/literature/discovery/papers-we-love-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "953b3a44036d127654b4be1916153bc7d47ef2d6"
+    },
+    {
+      "path": "skills/literature/discovery/papers-we-love-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "420b4d07c27804ce48b2d4497661e53360ed3c60",
+      "size": 5354
+    },
+    {
+      "path": "skills/literature/discovery/rss-paper-feeds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ced41f80e30c17de770de6335b67b21df5f1de12"
+    },
+    {
+      "path": "skills/literature/discovery/rss-paper-feeds/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15d5bd2861ceb85d215614aa7d630dfb2a8972c6",
+      "size": 7244
+    },
+    {
+      "path": "skills/literature/discovery/semantic-paper-radar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "343b4b54a66fb0d9080b3134d548a786a9efc8fd"
+    },
+    {
+      "path": "skills/literature/discovery/semantic-paper-radar/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d3966340271bd6d27a4af8d65b6adc914761fb",
+      "size": 6813
+    },
+    {
+      "path": "skills/literature/discovery/semantic-scholar-recs-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86b78b9a0d531e0f480e19a457f1eb8771e44425"
+    },
+    {
+      "path": "skills/literature/discovery/semantic-scholar-recs-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ab5d7ffeee9f7943951c12a5f6c62fd46d6424",
+      "size": 6374
+    },
+    {
+      "path": "skills/literature/discovery/zotero-arxiv-daily-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad7aa89200f6c714cb0c222021e53c121f83bb2a"
+    },
+    {
+      "path": "skills/literature/discovery/zotero-arxiv-daily-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7a24c7c47d34b8cc57827ac6fcea20454e33f0",
+      "size": 6839
+    },
+    {
+      "path": "skills/literature/fulltext",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb48158e512bf5721c66e27cd505063c3b1aec9a"
+    },
+    {
+      "path": "skills/literature/fulltext/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd8181b5463d015b11ca9205837cb04199e7d754",
+      "size": 2307
+    },
+    {
+      "path": "skills/literature/fulltext/arxiv-latex-source",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ce744868044cd39269056a448a99011f14717ad"
+    },
+    {
+      "path": "skills/literature/fulltext/arxiv-latex-source/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d048a01b8ea41ff9267b2bf6ab20de17f58d8d5",
+      "size": 7998
+    },
+    {
+      "path": "skills/literature/fulltext/bioc-pmc-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d0052ad01232b344f21094c9b25d5ef79e8ecc1"
+    },
+    {
+      "path": "skills/literature/fulltext/bioc-pmc-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02612cb3bdd0db541ba2929c149e4ad44d36a2d7",
+      "size": 4644
+    },
+    {
+      "path": "skills/literature/fulltext/core-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "beda3af52370176e12b11734c5d49b99e0abd04b"
+    },
+    {
+      "path": "skills/literature/fulltext/core-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09543824d3d098da1af3f3285005f9211e8b3ff3",
+      "size": 5410
+    },
+    {
+      "path": "skills/literature/fulltext/dataverse-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a11340c16c024fc13c8090c6b0c6345ae8ac9bef"
+    },
+    {
+      "path": "skills/literature/fulltext/dataverse-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "594aca084bbcf479fdea9888a947626bde8cef8a",
+      "size": 6494
+    },
+    {
+      "path": "skills/literature/fulltext/doaj-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ada438c0a9e3220392f790b8a77963a4119969bf"
+    },
+    {
+      "path": "skills/literature/fulltext/doaj-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ecff000b0b8bab4b874a46bcc41317e938b4391",
+      "size": 5833
+    },
+    {
+      "path": "skills/literature/fulltext/hal-archive-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d280e59940bd5a86eeeff8f1c0f282c773760a32"
+    },
+    {
+      "path": "skills/literature/fulltext/hal-archive-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b00133d059e96af0bf2bcbd420970241421eff96",
+      "size": 6646
+    },
+    {
+      "path": "skills/literature/fulltext/institutional-repository-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b955a14515fb9c46f42c600fdbddc440bf0b195"
+    },
+    {
+      "path": "skills/literature/fulltext/institutional-repository-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2e733f56d0bf1d743ba04788653d7275be15c6b",
+      "size": 7718
+    },
+    {
+      "path": "skills/literature/fulltext/interlibrary-loan-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b653d49af48d68eb738f7774b0efdeeae8e0f4e"
+    },
+    {
+      "path": "skills/literature/fulltext/interlibrary-loan-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c6777ee3fa8430b2be51cd058891d052591d337",
+      "size": 5583
+    },
+    {
+      "path": "skills/literature/fulltext/open-access-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "323ad3f8a74a5f460602aa78316ca327991fae73"
+    },
+    {
+      "path": "skills/literature/fulltext/open-access-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5edb1a2615b6736b62d6f07de386a04240456be2",
+      "size": 6479
+    },
+    {
+      "path": "skills/literature/fulltext/open-access-mining-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5f5885b6b32e6b0f272dac7355b3c929d43ea03"
+    },
+    {
+      "path": "skills/literature/fulltext/open-access-mining-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d0d50d3b82ecbe5bbeeb661f7c7b68214401676",
+      "size": 10390
+    },
+    {
+      "path": "skills/literature/fulltext/osf-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccda9a36c5b4a92219ee66043eb917bbbf03c5bf"
+    },
+    {
+      "path": "skills/literature/fulltext/osf-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b58ee34d8fd6f5b21899094e23f322d589c3f2c",
+      "size": 8192
+    },
+    {
+      "path": "skills/literature/fulltext/pmc-ftp-bulk-download",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1a6f6bd03ef2c866140806e1e5ed4eb26a4505f"
+    },
+    {
+      "path": "skills/literature/fulltext/pmc-ftp-bulk-download/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf5b73935dcb4b4ba541c325d6b1a85fb4fa5940",
+      "size": 6056
+    },
+    {
+      "path": "skills/literature/fulltext/pmc-oai-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8435c841fb0f0734de2520dca9b25f383353bd9a"
+    },
+    {
+      "path": "skills/literature/fulltext/pmc-oai-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa9e005bbde108cf2f3376ef277052b2f9084dd5",
+      "size": 8522
+    },
+    {
+      "path": "skills/literature/fulltext/preprint-servers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "baf05a3e1b1bc8d89e3044c23a20953de116ba59"
+    },
+    {
+      "path": "skills/literature/fulltext/preprint-servers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c765c525eee18da97b794d7568bddcb034a1f5e7",
+      "size": 5948
+    },
+    {
+      "path": "skills/literature/fulltext/unpaywall-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b184f281a5085f89892e30b03776decac887fad8"
+    },
+    {
+      "path": "skills/literature/fulltext/unpaywall-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54baf65f7f8d0adf36be60f1269af3d5b0697ffc",
+      "size": 5318
+    },
+    {
+      "path": "skills/literature/fulltext/zotero-ai-butler-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7c0136c11e2bf8569e1b7c046024f16388bf1a1"
+    },
+    {
+      "path": "skills/literature/fulltext/zotero-ai-butler-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0af6f658de28588dc8593bfad444c7ae64da9f40",
+      "size": 4607
+    },
+    {
+      "path": "skills/literature/metadata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ae53f38adfaf6550fdb0e4bf99f4a58ee2084f9"
+    },
+    {
+      "path": "skills/literature/metadata/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd89862581f0b3c1b6072794bdb1e89362cf1d17",
+      "size": 3343
+    },
+    {
+      "path": "skills/literature/metadata/academic-paper-summarizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "019d233f17e5608ad6459a1449a91246caf528fc"
+    },
+    {
+      "path": "skills/literature/metadata/academic-paper-summarizer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aec5dafe70d0b3e785e0b495f8c122a9c211609d",
+      "size": 5569
+    },
+    {
+      "path": "skills/literature/metadata/altmetrics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9902844b85ed32e1ad29b1f14ef7b13ca63c16fb"
+    },
+    {
+      "path": "skills/literature/metadata/altmetrics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bf9d6a9babf8b58cae5b1d5a74e578d39857ca2",
+      "size": 5897
+    },
+    {
+      "path": "skills/literature/metadata/bibliometrix-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e57716694d1870901798fb11f2b3eb76bd805a23"
+    },
+    {
+      "path": "skills/literature/metadata/bibliometrix-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7306f2b1bd6f537a3f29da08b8eb90aaf4323224",
+      "size": 4975
+    },
+    {
+      "path": "skills/literature/metadata/citation-network-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5ec1ce61ac37e157fc6f2e7bf836e020407c1b7"
+    },
+    {
+      "path": "skills/literature/metadata/citation-network-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47d74dd5dd56fba727584b1bf880a764006fd997",
+      "size": 9377
+    },
+    {
+      "path": "skills/literature/metadata/crossref-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f5f2eaa1292d594f0800c693b5f671eded15418"
+    },
+    {
+      "path": "skills/literature/metadata/crossref-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a941562f172afb41be75ac194c0b2ffee148749c",
+      "size": 5902
+    },
+    {
+      "path": "skills/literature/metadata/crossref-event-data-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27ab82085d13f2372c46a385cb1be66cfc3f9f02"
+    },
+    {
+      "path": "skills/literature/metadata/crossref-event-data-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e0a29e23354491988180fa4cc5e4726bef5270",
+      "size": 6040
+    },
+    {
+      "path": "skills/literature/metadata/datacite-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0358a153f77399399d93defeed66545422a05117"
+    },
+    {
+      "path": "skills/literature/metadata/datacite-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b63bdc93b673b904520864dd76945e7a5a2972f",
+      "size": 6347
+    },
+    {
+      "path": "skills/literature/metadata/doi-content-negotiation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6316bf0539ebf27f29d1290046d14e3610b9feb6"
+    },
+    {
+      "path": "skills/literature/metadata/doi-content-negotiation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d8c7d03e29f74af4976208cf11409680233feee",
+      "size": 5928
+    },
+    {
+      "path": "skills/literature/metadata/doi-resolution-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c488303d0b930139fec8e0839623033eafd4753e"
+    },
+    {
+      "path": "skills/literature/metadata/doi-resolution-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcfdb9b0943c409353865e914c4fe6333abc8c86",
+      "size": 5865
+    },
+    {
+      "path": "skills/literature/metadata/h-index-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ccaf6aceba88a96f4130b329b5fba12a955cff6"
+    },
+    {
+      "path": "skills/literature/metadata/h-index-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3cb2e7af328a0ca9f0b48d7fff405d0974afed2",
+      "size": 6294
+    },
+    {
+      "path": "skills/literature/metadata/journal-metrics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7802949e92aa48b3a4b1281d8e5fb32224bb8c69"
+    },
+    {
+      "path": "skills/literature/metadata/journal-metrics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1edb5aedf9b653ad764bed57fbcf0a8fee09f38",
+      "size": 6414
+    },
+    {
+      "path": "skills/literature/metadata/opencitations-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32a8501f45cb24356c6f3e7534a59134ae7aebec"
+    },
+    {
+      "path": "skills/literature/metadata/opencitations-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "063e3c81d6540ca25f0eaddbdb1ac934e8abfad1",
+      "size": 5960
+    },
+    {
+      "path": "skills/literature/metadata/orcid-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9d97b86b42b85fc7248ed45f451b0bff127f630"
+    },
+    {
+      "path": "skills/literature/metadata/orcid-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce22c3287984a26d59887ef513c528fd4758f512",
+      "size": 5913
+    },
+    {
+      "path": "skills/literature/metadata/orcid-integration-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "def13d580cc3eb221f1588205686bb8a88fa9660"
+    },
+    {
+      "path": "skills/literature/metadata/orcid-integration-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "783e9f6c358274eac4f474bcb2a814bd89f9838c",
+      "size": 5948
+    },
+    {
+      "path": "skills/literature/metadata/orkg-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24eab6d3afe76c20cbaf3893001badd26cc9d3e0"
+    },
+    {
+      "path": "skills/literature/metadata/orkg-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cd2ed86cb68c6cec140d3fc6cadeb29449d8164",
+      "size": 5182
+    },
+    {
+      "path": "skills/literature/metadata/plumx-metrics-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48e76ae4c99af1475f3c6f57b0abe19ba69f3261"
+    },
+    {
+      "path": "skills/literature/metadata/plumx-metrics-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d65526beb72450d5225f72054533f1f69bd7941a",
+      "size": 5548
+    },
+    {
+      "path": "skills/literature/metadata/ror-organization-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bac4de5590033d3c4865323d2ff88bd3145d6c8"
+    },
+    {
+      "path": "skills/literature/metadata/ror-organization-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2d9cab341f4a1e7f6ada20202235a869bcab4cc",
+      "size": 6450
+    },
+    {
+      "path": "skills/literature/metadata/sophosia-reference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fa8b68fe35da043c0633ef7196b494c4c6075c9"
+    },
+    {
+      "path": "skills/literature/metadata/sophosia-reference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe24130c9e64ad61fd2a85bc6c85a2d34fb97ca",
+      "size": 3298
+    },
+    {
+      "path": "skills/literature/metadata/viaf-authority-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9e06db1c10a55f981e2992069aeb490c5deaa48"
+    },
+    {
+      "path": "skills/literature/metadata/viaf-authority-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13b0f927b4398c58afdef1ae77b8e3ff8ae4fb67",
+      "size": 5835
+    },
+    {
+      "path": "skills/literature/metadata/wikidata-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c06ea763c0d07c0ea881c99393f65a229cc9b0ae"
+    },
+    {
+      "path": "skills/literature/metadata/wikidata-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18199fdce780afa950cf995a4605fb95047689f0",
+      "size": 6378
+    },
+    {
+      "path": "skills/literature/metadata/zoplicate-dedup-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20b3092d906fb0b86274a98ff472168d03d84576"
+    },
+    {
+      "path": "skills/literature/metadata/zoplicate-dedup-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad9d02e84ed943d61d2c711b27f886fc291ca90f",
+      "size": 4616
+    },
+    {
+      "path": "skills/literature/metadata/zotero-actions-tags-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "717a6cfa4c0a625a13a994973eda9e8b33be31f8"
+    },
+    {
+      "path": "skills/literature/metadata/zotero-actions-tags-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeb31c736f004f1e0fa1b843ae9d6eac9ed488ea",
+      "size": 4830
+    },
+    {
+      "path": "skills/literature/metadata/zotmoov-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf7b11c5602d90a17e05b8ebdb8f7710aa80f5d1"
+    },
+    {
+      "path": "skills/literature/metadata/zotmoov-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e7138be7ec7bb8f65a9e79103d94f3fd771c230",
+      "size": 3278
+    },
+    {
+      "path": "skills/literature/metadata/zutilo-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e946040a1359bbbb145da7a37429c08890bbc605"
+    },
+    {
+      "path": "skills/literature/metadata/zutilo-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9cdcde059342b5694f8d19753047a7dfd2d4e6b",
+      "size": 3821
+    },
+    {
+      "path": "skills/literature/search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb2f12ef29895573fe3ff1c701fe004aaba6aa48"
+    },
+    {
+      "path": "skills/literature/search/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e75da0b8e42ab4d1b8314b91ed67fd4a716f738",
+      "size": 4223
+    },
+    {
+      "path": "skills/literature/search/arxiv-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "999738991436bcd60797eccdc5354e4d435baa37"
+    },
+    {
+      "path": "skills/literature/search/arxiv-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "030aae5146d5900fa5457e6fda074d105a2aa494",
+      "size": 4932
+    },
+    {
+      "path": "skills/literature/search/arxiv-batch-reporting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ca20dfe91f262ea95617efe352e6733f5b11461"
+    },
+    {
+      "path": "skills/literature/search/arxiv-batch-reporting/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "539ada0b78def0802cc8f668c81026c30042be49",
+      "size": 5108
+    },
+    {
+      "path": "skills/literature/search/arxiv-cli-tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a553c213439b5e4fa56c5b2aa7b15ccfcd687fa7"
+    },
+    {
+      "path": "skills/literature/search/arxiv-cli-tools/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02c9c1f1787b81c0ad4d9802e8d57d8c89ff376e",
+      "size": 4605
+    },
+    {
+      "path": "skills/literature/search/arxiv-paper-processor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "204561158db25e1b3c4865cfe605c9b830a4f011"
+    },
+    {
+      "path": "skills/literature/search/arxiv-paper-processor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfbadd13457b3451b2207fd6292f6d876160f5ae",
+      "size": 5841
+    },
+    {
+      "path": "skills/literature/search/baidu-scholar-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80f4169ba927b11a0969cf8b5674e91b85d0c751"
+    },
+    {
+      "path": "skills/literature/search/baidu-scholar-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f814a8062d70cbea5ba822e095d0a25d00b52ed",
+      "size": 6234
+    },
+    {
+      "path": "skills/literature/search/base-academic-search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "448633eb9dd56a16cab77a6410e7be40b58f4b19"
+    },
+    {
+      "path": "skills/literature/search/base-academic-search/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bdf7e3ab2e19e7d6ce1a35100dee60245bd9d38",
+      "size": 6364
+    },
+    {
+      "path": "skills/literature/search/biorxiv-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "364bb2a7a38d4d83852704304b2de30a05edc239"
+    },
+    {
+      "path": "skills/literature/search/biorxiv-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73b724d86eb06f8c282abd0e4cae75b4879c195b",
+      "size": 5294
+    },
+    {
+      "path": "skills/literature/search/boolean-search-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2c6d619cb17daea40e62e07df125bc88dd389b5"
+    },
+    {
+      "path": "skills/literature/search/boolean-search-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e46a33bba4e409030e7ac96b33abb284d436b087",
+      "size": 5855
+    },
+    {
+      "path": "skills/literature/search/chatpaper-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9f607bd340a4f8812cd8ec6e4c2ea5b3ae7dc80"
+    },
+    {
+      "path": "skills/literature/search/chatpaper-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a204d608ffe6c1a7713b853c2cf1bbacb5d2b79f",
+      "size": 6110
+    },
+    {
+      "path": "skills/literature/search/citation-chaining-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f1a9d8b979680e2640a26e3dd1dedf30560e294"
+    },
+    {
+      "path": "skills/literature/search/citation-chaining-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9052f66fab78b79aa185dc3cec65528ac524aa1b",
+      "size": 6571
+    },
+    {
+      "path": "skills/literature/search/citeseerx-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "beb56a7070616bfa1fb63503b2246fea9cd6e0c4"
+    },
+    {
+      "path": "skills/literature/search/citeseerx-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d91888fb0867f19932b9f335f982468631c74167",
+      "size": 5292
+    },
+    {
+      "path": "skills/literature/search/database-comparison-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ce60be48df2ab26cbfe7e60e5790156d09b60a2"
+    },
+    {
+      "path": "skills/literature/search/database-comparison-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c182daf94f0aa24e5d56ef9d1dcee9e518fa7c8a",
+      "size": 4750
+    },
+    {
+      "path": "skills/literature/search/deep-literature-search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aeed76e6e70980f2408abd6b231b29543b2172d8"
+    },
+    {
+      "path": "skills/literature/search/deep-literature-search/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dee1aa8edb55bc5df1a88f5d818c128a43cf8fb9",
+      "size": 6929
+    },
+    {
+      "path": "skills/literature/search/eric-education-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90cc2f6bb5a8273eddb6b43203a968bee4522262"
+    },
+    {
+      "path": "skills/literature/search/eric-education-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "995273912a5d97d7410cbc50f7df4df18514571f",
+      "size": 6526
+    },
+    {
+      "path": "skills/literature/search/europe-pmc-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d81ee4326926aca50f3da87e624a41bede0c2ef"
+    },
+    {
+      "path": "skills/literature/search/europe-pmc-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92041804cc5f95a663b6d32b372f9a848e493f8a",
+      "size": 6427
+    },
+    {
+      "path": "skills/literature/search/findpapers-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a38854cfa63ec7ed172f913fcceef3b503f00d8"
+    },
+    {
+      "path": "skills/literature/search/findpapers-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b490ae5ef3f8ef22d0ad45f12d543c5420c66538",
+      "size": 4338
+    },
+    {
+      "path": "skills/literature/search/google-scholar-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c3f689e7fe1da66e43ed8bb15c9770bd5c60841"
+    },
+    {
+      "path": "skills/literature/search/google-scholar-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68ea1131587f1183416b92be23b6ae0544a106ce",
+      "size": 6454
+    },
+    {
+      "path": "skills/literature/search/ieee-xplore-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39ba2ef1d690d92f58f2d6d9a9c3ffb06b666ba5"
+    },
+    {
+      "path": "skills/literature/search/ieee-xplore-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "708cd973b01b6168447d5513ab99a9b51f44b2ae",
+      "size": 5406
+    },
+    {
+      "path": "skills/literature/search/lens-scholarly-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e81bdc422dfdc1fadd0179fc66e73e8c64f50bf5"
+    },
+    {
+      "path": "skills/literature/search/lens-scholarly-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "415507a16d3d23c4d9252244327b5f562ed9f8d5",
+      "size": 6109
+    },
+    {
+      "path": "skills/literature/search/mesh-terms-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2edf5a484d26c417fef2752b70898c6ea3489ece"
+    },
+    {
+      "path": "skills/literature/search/mesh-terms-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75d9671d516ef063326b6d58b582c7a408ebf9ee",
+      "size": 5397
+    },
+    {
+      "path": "skills/literature/search/open-library-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3417798125fcfed618a63cb6768129e75ef2689d"
+    },
+    {
+      "path": "skills/literature/search/open-library-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46187f9126116cc0db89f7a5481d117bed7ba417",
+      "size": 5541
+    },
+    {
+      "path": "skills/literature/search/open-semantic-search-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20fecf51c9d6354cbbed9bbf257a95c9049a68c8"
+    },
+    {
+      "path": "skills/literature/search/open-semantic-search-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "517079071360e96d892f71a7fdebffc3b4f2469a",
+      "size": 5407
+    },
+    {
+      "path": "skills/literature/search/openaire-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "253f754dd3923c153c5954e2368f7b49d8dfeee6"
+    },
+    {
+      "path": "skills/literature/search/openaire-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4251715e7987558141751d6bb30373f291b2109",
+      "size": 5200
+    },
+    {
+      "path": "skills/literature/search/openalex-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc46084bfabf83a71d2d376ef4c800002632a7cc"
+    },
+    {
+      "path": "skills/literature/search/openalex-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4f4d5ffca31c49ee4365f4dc5845fb2c3ebedc4",
+      "size": 6030
+    },
+    {
+      "path": "skills/literature/search/plos-open-access-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57eb2235aa428487c4ad0c0d26d02db0f9aecf47"
+    },
+    {
+      "path": "skills/literature/search/plos-open-access-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e9bc676994e6bfce495f2e1eda06bff2dd915d0",
+      "size": 6188
+    },
+    {
+      "path": "skills/literature/search/pubmed-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b57706c37cd606524baeff1196f022bfd33b4c98"
+    },
+    {
+      "path": "skills/literature/search/pubmed-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3378d51d89c2635b22e4069ffebd46f386b2d976",
+      "size": 6546
+    },
+    {
+      "path": "skills/literature/search/scielo-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "014d83df9a1088e6dcd91e89c3e5fb2f55e54065"
+    },
+    {
+      "path": "skills/literature/search/scielo-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7545f639450e961c04ffb179083494ef6b49fffb",
+      "size": 5604
+    },
+    {
+      "path": "skills/literature/search/semantic-scholar-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0dd92dee222f1d121210f74b4b1cec1552751364"
+    },
+    {
+      "path": "skills/literature/search/semantic-scholar-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e9aee26dd864d5acb7a22c587f66109839b1794",
+      "size": 5334
+    },
+    {
+      "path": "skills/literature/search/share-research-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ceaf7c3de50825e20319ac1dca2aa57368034dc"
+    },
+    {
+      "path": "skills/literature/search/share-research-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce6b11d2cd88fb0867c45416544f7f20a6c5c705",
+      "size": 3939
+    },
+    {
+      "path": "skills/literature/search/systematic-search-strategy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51dd66e73f5752b6b0f9b4881e4001fb13ae788a"
+    },
+    {
+      "path": "skills/literature/search/systematic-search-strategy/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1291eb875dfd776848c3944d6b7c48d7e598d83",
+      "size": 7322
+    },
+    {
+      "path": "skills/literature/search/worldcat-search-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "699855b426e798507bfbf1b80be69b36520d6e2a"
+    },
+    {
+      "path": "skills/literature/search/worldcat-search-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05a91e369203d4b424fc0658be1da8ad0cbb21c0",
+      "size": 6896
+    },
+    {
+      "path": "skills/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52ddeedeca33b0d65e97a223691b31439f568fb4"
+    },
+    {
+      "path": "skills/research/automation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b45b38b82522c07e9476c1897da4d854f5cc767"
+    },
+    {
+      "path": "skills/research/automation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85b1d591e7dbecaf254c7aff95358f5728603eec",
+      "size": 1734
+    },
+    {
+      "path": "skills/research/automation/ai-scientist-v2-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "338d9ff121ccd0329c02946a8d28ff1bfb87072d"
+    },
+    {
+      "path": "skills/research/automation/ai-scientist-v2-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e0e9656bda0c1430383af8a4cbd608e83c103fa",
+      "size": 9601
+    },
+    {
+      "path": "skills/research/automation/aim-experiment-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "168579b5ddfc2f56af226127d2c6323a24a025fd"
+    },
+    {
+      "path": "skills/research/automation/aim-experiment-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd79249bca1d8c57da02db8e577a0135060162d5",
+      "size": 7605
+    },
+    {
+      "path": "skills/research/automation/claude-academic-workflow-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f43450f85c33bdd11492bdec4b4dd324ea41d48e"
+    },
+    {
+      "path": "skills/research/automation/claude-academic-workflow-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c980b65137e0e2948b14d41dc8f066fcf30a2d8",
+      "size": 5949
+    },
+    {
+      "path": "skills/research/automation/data-collection-automation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e6b7983992ba14e73129a87a1a28d80a0fa7dc4"
+    },
+    {
+      "path": "skills/research/automation/data-collection-automation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47b37e0445f51963204a4040e3834d08e19781f0",
+      "size": 7286
+    },
+    {
+      "path": "skills/research/automation/datagen-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ec1a4428a5d191fc627e786a600c08b39d3843e"
+    },
+    {
+      "path": "skills/research/automation/datagen-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e72c71acbae09c24d894005d5ce16413137fea33",
+      "size": 6187
+    },
+    {
+      "path": "skills/research/automation/kedro-pipeline-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ec0055a67d032a16ed74b404ff8d0dc7e183286"
+    },
+    {
+      "path": "skills/research/automation/kedro-pipeline-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28f86198943c4c3d2784adcacd5aba49a907baba",
+      "size": 7037
+    },
+    {
+      "path": "skills/research/automation/mle-agent-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e70a67da90653c8628bba58fffe3df479d20338"
+    },
+    {
+      "path": "skills/research/automation/mle-agent-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "741268f43d7b846917156e39e1f7d76b21e11663",
+      "size": 6742
+    },
+    {
+      "path": "skills/research/automation/paper-to-agent-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3351e1c74903758523c3e9c343310a6e7cd77b3d"
+    },
+    {
+      "path": "skills/research/automation/paper-to-agent-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fb8effc84531bdbeea8902e232dbaa6223820fc",
+      "size": 5403
+    },
+    {
+      "path": "skills/research/automation/rd-agent-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4800cf12e40e74b9da126317a7170412b82a49ec"
+    },
+    {
+      "path": "skills/research/automation/rd-agent-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5291df6defc269d6916baa17f274b00a963d616",
+      "size": 7757
+    },
+    {
+      "path": "skills/research/automation/research-workflow-automation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2893dfaa8d1db65fb8df98738230b57e2af0865b"
+    },
+    {
+      "path": "skills/research/automation/research-workflow-automation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d47819bda730fbac30d1ff5edd58b59a32a8496",
+      "size": 7485
+    },
+    {
+      "path": "skills/research/deep-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bba5f93d43dc827b852badbc19d722aa06b5beab"
+    },
+    {
+      "path": "skills/research/deep-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dbdde4d0e1908c785161c6736d9a9003cd73125",
+      "size": 2142
+    },
+    {
+      "path": "skills/research/deep-research/auto-deep-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac8c3dfbea9cc70104f1b2e4d4609952fbfab68b"
+    },
+    {
+      "path": "skills/research/deep-research/auto-deep-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4ee298cb26ed9c53e456b5631dfb0495da44c71",
+      "size": 6992
+    },
+    {
+      "path": "skills/research/deep-research/deep-searcher-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a223bdba406f1ad6cacb7a2b5fd0e2d87971f264"
+    },
+    {
+      "path": "skills/research/deep-research/deep-searcher-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a34c3423a9285da427baed24afd02d4511a6b8",
+      "size": 8326
+    },
+    {
+      "path": "skills/research/deep-research/gpt-researcher-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de4fc4dd1ce9b6bb4ad93db8f650d5af3040ad2a"
+    },
+    {
+      "path": "skills/research/deep-research/gpt-researcher-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e16bdd2f26efb7ae609505893bab6c6afc6c4d2d",
+      "size": 7133
+    },
+    {
+      "path": "skills/research/deep-research/in-depth-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2249f23a2af628ee82c54e7ccdce55ef8f899a5"
+    },
+    {
+      "path": "skills/research/deep-research/in-depth-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed57791ebc547cd76745e249047bda46f7c1543",
+      "size": 7872
+    },
+    {
+      "path": "skills/research/deep-research/khoj-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aaa17a3e76c3c2455aa6d8dabdec7cf40c287049"
+    },
+    {
+      "path": "skills/research/deep-research/khoj-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed6e11b3ac157c8671236b75e23c37d0622f8f1d",
+      "size": 7478
+    },
+    {
+      "path": "skills/research/deep-research/kosmos-scientist-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a35e2d93c5248e21fe8297e95c04ffbf6b0501a"
+    },
+    {
+      "path": "skills/research/deep-research/kosmos-scientist-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e98ef53e344d3d54f4b3b753e08a307fe91d47b",
+      "size": 5632
+    },
+    {
+      "path": "skills/research/deep-research/llm-scientific-discovery-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeacf9ddb77a13588da2598d48c4d4e993be20c4"
+    },
+    {
+      "path": "skills/research/deep-research/llm-scientific-discovery-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7a606d79831e0052e94fd45f4c827ec110bcb9",
+      "size": 5872
+    },
+    {
+      "path": "skills/research/deep-research/local-deep-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa7f6a13e4f9cebc9dffa67521be858727914a60"
+    },
+    {
+      "path": "skills/research/deep-research/local-deep-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee81495b7676aa43fab57a2c9995f20f95ac03f1",
+      "size": 8049
+    },
+    {
+      "path": "skills/research/deep-research/meta-synthesis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09edd3c473b5b75938135f35d6f2b3921fee48a2"
+    },
+    {
+      "path": "skills/research/deep-research/meta-synthesis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cd807c3821ba7f3341a8f0f02cf2816e7f1a9c0",
+      "size": 6667
+    },
+    {
+      "path": "skills/research/deep-research/open-researcher-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8621e4e7639b19fb5522113db60a8081d4c95ce4"
+    },
+    {
+      "path": "skills/research/deep-research/open-researcher-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d587a926bb076511fcfd08bb58510166a28b9ce9",
+      "size": 4054
+    },
+    {
+      "path": "skills/research/deep-research/scoping-review-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7dd090a64333efc38922238e0ba7d977a205485"
+    },
+    {
+      "path": "skills/research/deep-research/scoping-review-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "254f11ac5e6ab817115ce303995f145fbcf6244a",
+      "size": 8661
+    },
+    {
+      "path": "skills/research/deep-research/systematic-review-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24304ee6b5eb459fb2ec345e783e64f7ef0fd919"
+    },
+    {
+      "path": "skills/research/deep-research/systematic-review-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea5c77ffc176efde8e3d3737f27b41a9e25b21e8",
+      "size": 8251
+    },
+    {
+      "path": "skills/research/deep-research/tongyi-deep-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "723637794884847c3f43aa7d62b97a48207e6aa4"
+    },
+    {
+      "path": "skills/research/deep-research/tongyi-deep-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f6db67e02407febbd66a9bb6d04bdaa32287b48",
+      "size": 7421
+    },
+    {
+      "path": "skills/research/funding",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a1be6b57e7caf0e3cc1e8be01e13b134f2f0e8b"
+    },
+    {
+      "path": "skills/research/funding/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c98b861df6aa39fcbbb30ef5b97d46e6f2c11604",
+      "size": 1435
+    },
+    {
+      "path": "skills/research/funding/eu-horizon-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c719064bc68d36df58ac00e64cf8400db8357178"
+    },
+    {
+      "path": "skills/research/funding/eu-horizon-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4887ae5b550348ced8029e86922700e527150bb2",
+      "size": 8682
+    },
+    {
+      "path": "skills/research/funding/figshare-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b03777de07e91e254d405af17258948ed64fb85"
+    },
+    {
+      "path": "skills/research/funding/figshare-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e67ce69d142717d1e9f72a8ec7ecaf00a167b5b",
+      "size": 7091
+    },
+    {
+      "path": "skills/research/funding/grant-budget-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6b32ee1c0fe577bc78152ba91f53c8cef6e5a42c"
+    },
+    {
+      "path": "skills/research/funding/grant-budget-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615bbc99419db4042ab7188ab99d9ea3a59e9a98",
+      "size": 9693
+    },
+    {
+      "path": "skills/research/funding/grant-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8e37b6d4cc2a8f67aa6dcf86a60448563841087"
+    },
+    {
+      "path": "skills/research/funding/grant-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e36b943a1af91493623fbcc395e81f3e590b540",
+      "size": 7594
+    },
+    {
+      "path": "skills/research/funding/nih-reporter-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00723d61872f974b9e96e2413c29512fb22aa5da"
+    },
+    {
+      "path": "skills/research/funding/nih-reporter-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b46fcaeba2ddee1f638da61305f85b05137f33a",
+      "size": 6378
+    },
+    {
+      "path": "skills/research/funding/nsf-award-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f39e0270191e769ee572ef00c73482f550cdf6f"
+    },
+    {
+      "path": "skills/research/funding/nsf-award-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5ae0f5337424be4a83b82e49bb650e4df17bf5b",
+      "size": 5633
+    },
+    {
+      "path": "skills/research/funding/nsf-grant-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c09b7370a269f2fcfa1808bdc7bbb84737f1855"
+    },
+    {
+      "path": "skills/research/funding/nsf-grant-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5af0281df169d7f4664c9b6cb72fa151e51da86",
+      "size": 7341
+    },
+    {
+      "path": "skills/research/funding/open-science-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6998e3ce50f83949ac212d1c4bebd556ed2a9a6"
+    },
+    {
+      "path": "skills/research/funding/open-science-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "708ce418321dea6abe1e1d809d98c29c580ecefa",
+      "size": 9098
+    },
+    {
+      "path": "skills/research/funding/zenodo-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01d0f7e076b3b88520a6c22b675a46e42bf34b66"
+    },
+    {
+      "path": "skills/research/funding/zenodo-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a83a0873eaa68bacf172df0046656d9b6a84656",
+      "size": 7465
+    },
+    {
+      "path": "skills/research/methodology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "439bef8d6737db8b17a47940335a010180fd84f9"
+    },
+    {
+      "path": "skills/research/methodology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e8be9ad601dae1c33cea62c1a22e095ea56a1e",
+      "size": 1986
+    },
+    {
+      "path": "skills/research/methodology/action-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc386c4ac0e5fb93333fd99b6f86d6c197639151"
+    },
+    {
+      "path": "skills/research/methodology/action-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b885fc3b7c505fbfb03dccc9ea269d9a6c58db6",
+      "size": 7714
+    },
+    {
+      "path": "skills/research/methodology/claude-scientific-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9436c045d0c1a9b3b4a477ac258461be508e9a1c"
+    },
+    {
+      "path": "skills/research/methodology/claude-scientific-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d86dc05bc61edabf949432ddb694959025d7492",
+      "size": 5465
+    },
+    {
+      "path": "skills/research/methodology/experimental-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0556f59158bcfae7ebfcb2d84de55a38edad1a5"
+    },
+    {
+      "path": "skills/research/methodology/experimental-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e02c984af4d247142247a0d46c4b5b42c3fa8f",
+      "size": 7641
+    },
+    {
+      "path": "skills/research/methodology/grad-school-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f40f5bfd7811b3e1b8b9daa63e23e3af2cdddd0"
+    },
+    {
+      "path": "skills/research/methodology/grad-school-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b82db510cdedbaeb0d51485b21e51601560c6912",
+      "size": 8489
+    },
+    {
+      "path": "skills/research/methodology/grounded-theory-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "466cf1a9b03d13bd57a9135fc7bb753562b30dcc"
+    },
+    {
+      "path": "skills/research/methodology/grounded-theory-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28a313b6d231d675ccb5237c16fc7f5e9e66c6bd",
+      "size": 7232
+    },
+    {
+      "path": "skills/research/methodology/mixed-methods-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a24f108ea431aa7ca6e614e8e1ddae27cac5377d"
+    },
+    {
+      "path": "skills/research/methodology/mixed-methods-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c5441130300e15d5de58ab8c070ea6b6f428bb2",
+      "size": 8862
+    },
+    {
+      "path": "skills/research/methodology/parsifal-slr-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac240f857bf0ac2c0bbe12fc2c74266bbda2d182"
+    },
+    {
+      "path": "skills/research/methodology/parsifal-slr-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35940f7c2218cfc787c1d960900653b77a60de7d",
+      "size": 4293
+    },
+    {
+      "path": "skills/research/methodology/qualitative-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5a329f69655eac94077a593f86b42f0d1484aa5"
+    },
+    {
+      "path": "skills/research/methodology/qualitative-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "376f36543fedd27f098f27167daca6469011c1cb",
+      "size": 8889
+    },
+    {
+      "path": "skills/research/methodology/research-paper-kb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19a51b89cf890150d7ac5e1284a8d1b626b6936d"
+    },
+    {
+      "path": "skills/research/methodology/research-paper-kb/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eef74c9ce1360a5cb1894f2a02e9b672c95ee69",
+      "size": 9678
+    },
+    {
+      "path": "skills/research/methodology/research-town-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acf90fd1df076878c582a7f280c759a8ac96ae95"
+    },
+    {
+      "path": "skills/research/methodology/research-town-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2d963f7f00d4e310ca98f318dae7c5c3c0bd118",
+      "size": 10653
+    },
+    {
+      "path": "skills/research/methodology/scientify-idea-generation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2591a1c0f85aab754bcbd7b4eb19c9af299e978"
+    },
+    {
+      "path": "skills/research/methodology/scientify-idea-generation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9160b3405a0a0f08910be714ebefb9e559f3f1b",
+      "size": 6060
+    },
+    {
+      "path": "skills/research/methodology/slr-automation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b428b86712258fe1300e199e86424fadf8e3a2b4"
+    },
+    {
+      "path": "skills/research/methodology/slr-automation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06bfbcaa11acbf6cc20eda44d1aafb129ab458fa",
+      "size": 6254
+    },
+    {
+      "path": "skills/research/paper-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c61fcc62c805dc6f7beafc0a437183e850a44d49"
+    },
+    {
+      "path": "skills/research/paper-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04a2350474f12ec2092d4af367d6d0f799e753d5",
+      "size": 1431
+    },
+    {
+      "path": "skills/research/paper-review/automated-review-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "098735690c69fc68f2dcf621bf067cbd5138afdb"
+    },
+    {
+      "path": "skills/research/paper-review/automated-review-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92f869052f6fedbc600c21b3e05db843cf29db39",
+      "size": 9614
+    },
+    {
+      "path": "skills/research/paper-review/latte-review-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acee42ea530d7f043036afc46a20c2543d905c4d"
+    },
+    {
+      "path": "skills/research/paper-review/latte-review-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27130e4ff11b0938a975f5b69c56ef71f9cd0604",
+      "size": 4597
+    },
+    {
+      "path": "skills/research/paper-review/paper-critique-framework",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0fd59ba366108a3a4ba94f289e3212c5b0713a2"
+    },
+    {
+      "path": "skills/research/paper-review/paper-critique-framework/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a28ac78d601a29c09f952d05f20bd0c723c985e1",
+      "size": 7255
+    },
+    {
+      "path": "skills/research/paper-review/paper-reading-assistant",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b033d58513e0c049b9bb2095fb2339edafb2918"
+    },
+    {
+      "path": "skills/research/paper-review/paper-reading-assistant/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e7042f9d6497e6b6e3868e9637b0996241b1b90",
+      "size": 8600
+    },
+    {
+      "path": "skills/research/paper-review/peer-review-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "445f3af27d7be60f20183b7e6ffef6e4935ba9cb"
+    },
+    {
+      "path": "skills/research/paper-review/peer-review-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a899394bf4c356b0fb7e00e1ce6757247547d7a3",
+      "size": 7809
+    },
+    {
+      "path": "skills/research/paper-review/rebuttal-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bd2252a7588bf5d7efd88a4ce867bf2ef7a93cb"
+    },
+    {
+      "path": "skills/research/paper-review/rebuttal-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe644471e900aacea15e8eeb3b8fa86f7ec13383",
+      "size": 6201
+    },
+    {
+      "path": "skills/research/paper-review/review-response-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5ef1e124997431f0f251b6cdd54a87a3f4468d4"
+    },
+    {
+      "path": "skills/research/paper-review/review-response-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ccd1b5850d141321d2b771a8944266adec4b9f",
+      "size": 9541
+    },
+    {
+      "path": "skills/research/paper-review/scientify-write-review-paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93994aea1cdf6f34da276573bbb4fdca60a8c48f"
+    },
+    {
+      "path": "skills/research/paper-review/scientify-write-review-paper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b53c5cd719162e5194ad21198cef43f58020e7ea",
+      "size": 5596
+    },
+    {
+      "path": "skills/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38101ffaa422fb217f46323d414b274eecc3aaa2"
+    },
+    {
+      "path": "skills/tools/code-exec",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aaf5a18c1ad257bc71697a32dff2c3fdae424f3c"
+    },
+    {
+      "path": "skills/tools/code-exec/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da42925aa5080fce7358b1d70d8c98620618fbe7",
+      "size": 1328
+    },
+    {
+      "path": "skills/tools/code-exec/google-colab-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c325aff6c56666a386b0ce54e52f8255c173e7d3"
+    },
+    {
+      "path": "skills/tools/code-exec/google-colab-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1067f8018521fc64d39c9534f664c578520eb4cd",
+      "size": 8262
+    },
+    {
+      "path": "skills/tools/code-exec/jupyter-notebook-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "346f132ac54a1c3dc1ecb9531f7119664fc8dda7"
+    },
+    {
+      "path": "skills/tools/code-exec/jupyter-notebook-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e83c3f50ab0e9376f8557856cb01374be276543e",
+      "size": 5307
+    },
+    {
+      "path": "skills/tools/code-exec/kaggle-api-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2166fa99679276c2948ba2f50348ad7136fa1617"
+    },
+    {
+      "path": "skills/tools/code-exec/kaggle-api-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf732c949f9f395a9d1d902ed019f0a3b4f97fb9",
+      "size": 8019
+    },
+    {
+      "path": "skills/tools/code-exec/overleaf-cli-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cea8f022a37168d3ca9c410405e1943cf89212d7"
+    },
+    {
+      "path": "skills/tools/code-exec/overleaf-cli-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84993cbb5e904ce9e20528c3f70bcaa393dbb33e",
+      "size": 7407
+    },
+    {
+      "path": "skills/tools/code-exec/python-reproducibility-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a914bfe9cf67a5c8e55cadf301e4ff154bb9e08"
+    },
+    {
+      "path": "skills/tools/code-exec/python-reproducibility-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03d63bd35c2e2e7ed89e2a0df2f14aa9e1750807",
+      "size": 8868
+    },
+    {
+      "path": "skills/tools/code-exec/r-reproducibility-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "babb52577efdb2e7bc2555ab71f53e216ffe2d9d"
+    },
+    {
+      "path": "skills/tools/code-exec/r-reproducibility-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1c19f534d9862d0e8c61ba33a4b3f5b58ce51ea",
+      "size": 6152
+    },
+    {
+      "path": "skills/tools/code-exec/sandbox-execution-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "479f559494432b688c3dbd400dabe463cce9bf2b"
+    },
+    {
+      "path": "skills/tools/code-exec/sandbox-execution-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c54418a8172d64a2f184ef6bb1e56ec207f9047a",
+      "size": 5847
+    },
+    {
+      "path": "skills/tools/diagram",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b536b532e3d657be9787de4ef10df0e0a6b05e2c"
+    },
+    {
+      "path": "skills/tools/diagram/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b476703e203339e474555dc1ad4ffe134720ed74",
+      "size": 1611
+    },
+    {
+      "path": "skills/tools/diagram/code-flow-visualizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b36ee04ecd2f84b2ce90d44299d400aca2bbb794"
+    },
+    {
+      "path": "skills/tools/diagram/code-flow-visualizer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "152e751bfd00160cc0d6f9929304d282d01663ae",
+      "size": 7598
+    },
+    {
+      "path": "skills/tools/diagram/excalidraw-diagram-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3098b76b7299320ea8ce74b31a9f6b0ac98d607a"
+    },
+    {
+      "path": "skills/tools/diagram/excalidraw-diagram-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba1f8ed9d1ca8300e63aaa8a6d6366f4337bb26a",
+      "size": 6339
+    },
+    {
+      "path": "skills/tools/diagram/json-data-visualizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "842a288f7026d04af2382e4ae3cf79b1e18d24a7"
+    },
+    {
+      "path": "skills/tools/diagram/json-data-visualizer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc484ce00ddfbb9e2ad63a3474148e63cad368b7",
+      "size": 8427
+    },
+    {
+      "path": "skills/tools/diagram/kroki-diagram-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70c66b858d75f6c201713314d3bc943110106ce4"
+    },
+    {
+      "path": "skills/tools/diagram/kroki-diagram-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b790c8ea0de61ae3846fc8b3fc97f5b3ac2eb16",
+      "size": 5542
+    },
+    {
+      "path": "skills/tools/diagram/mermaid-architect-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21754e453ee8879f77f752f54daca01af785a4ab"
+    },
+    {
+      "path": "skills/tools/diagram/mermaid-architect-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f662d759c93e3b2a56f34e3f4a17a32ca674610f",
+      "size": 7316
+    },
+    {
+      "path": "skills/tools/diagram/mermaid-diagram-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a5e013f5d961d4d5b288b24da85a1750af22b52"
+    },
+    {
+      "path": "skills/tools/diagram/mermaid-diagram-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edf0f9c23c91c13c145b1ac2cb0c2188e4d71613",
+      "size": 7778
+    },
+    {
+      "path": "skills/tools/diagram/plantuml-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1609165cf18a0491023e600ac3fe549334bb5a11"
+    },
+    {
+      "path": "skills/tools/diagram/plantuml-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea19aeedb06d5478a66dfd1d8b4570662f765d4a",
+      "size": 8304
+    },
+    {
+      "path": "skills/tools/diagram/scientific-illustration-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c20fdd741fd7d8bf461920e3399f5c8273bffe4"
+    },
+    {
+      "path": "skills/tools/diagram/scientific-illustration-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df4383b288785552fa8ca672e86bd34d8e9079a0",
+      "size": 8081
+    },
+    {
+      "path": "skills/tools/diagram/tldraw-whiteboard-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e58b31c18bc2ac30b1179fe9919e430cc44ba10"
+    },
+    {
+      "path": "skills/tools/diagram/tldraw-whiteboard-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c33758f84639d8a2aa10510fe3c08da50c03c6",
+      "size": 11070
+    },
+    {
+      "path": "skills/tools/document",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eec90dc43909abc3944e02c94cfc1addb6ed2be7"
+    },
+    {
+      "path": "skills/tools/document/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c969a8b8b181f9bd74f64cb76e04fcba9692a715",
+      "size": 1607
+    },
+    {
+      "path": "skills/tools/document/anystyle-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa0fc04c3c9df7f526d0291bcaf930662c497e94"
+    },
+    {
+      "path": "skills/tools/document/anystyle-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6290a98601c90b1198b85454394cb701dc161ee",
+      "size": 8391
+    },
+    {
+      "path": "skills/tools/document/docsgpt-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bd7891fb3bd80584dc3f38388ebfd69f6e3d682"
+    },
+    {
+      "path": "skills/tools/document/docsgpt-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d1e8680f6266a134a4f729df0a690a9778fb3d9",
+      "size": 6378
+    },
+    {
+      "path": "skills/tools/document/grobid-pdf-parsing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b41dfc319474ef443e8ad81b984d6a4f1547c1f4"
+    },
+    {
+      "path": "skills/tools/document/grobid-pdf-parsing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8b7f62f0ef805f8617757ab55bf2db0b400c27b",
+      "size": 10006
+    },
+    {
+      "path": "skills/tools/document/large-document-reader",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b166643d511f4f6489ccbcb5f3b2e92efd2b6aad"
+    },
+    {
+      "path": "skills/tools/document/large-document-reader/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e7e560000996df1a52cbc6e9afde189f995b050",
+      "size": 7820
+    },
+    {
+      "path": "skills/tools/document/markdown-academic-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42518a4d89b4468431c46494704aaaaf63d4bbd1"
+    },
+    {
+      "path": "skills/tools/document/markdown-academic-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dc2e5f4df6bc0256ba66118182c3cd01551d9be",
+      "size": 6070
+    },
+    {
+      "path": "skills/tools/document/paper-parse-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56b3321bff0e3148144e41d4aa85ac40ddf8dbb0"
+    },
+    {
+      "path": "skills/tools/document/paper-parse-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6380bb2d3004c91d96bf8b21842b70569d9546df",
+      "size": 7916
+    },
+    {
+      "path": "skills/tools/document/pdf-extraction-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fac483cbf5211b1bcd27994caea7433f76a8e316"
+    },
+    {
+      "path": "skills/tools/document/pdf-extraction-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "890f75fce8a78082e6d5bc5f299ecb7ac4e7356d",
+      "size": 10033
+    },
+    {
+      "path": "skills/tools/document/zotero-addon-market-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4312e13429ad0631d7dfee99b62db64515f65bc"
+    },
+    {
+      "path": "skills/tools/document/zotero-addon-market-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5a33579447d06929ed4ff2c76850baa719a53a0",
+      "size": 3406
+    },
+    {
+      "path": "skills/tools/document/zotero-night-theme-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c272d599eae83d3ad110bd7ed8fafe5b114154ec"
+    },
+    {
+      "path": "skills/tools/document/zotero-night-theme-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86bb3fa40267991a28499eecc8704b96b19003f5",
+      "size": 3523
+    },
+    {
+      "path": "skills/tools/document/zotero-style-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2b18666fb37981536077fca8789bde5a6b4c07f"
+    },
+    {
+      "path": "skills/tools/document/zotero-style-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f11b8e47cf2854c8fbac333be0194f571ff505a5",
+      "size": 4614
+    },
+    {
+      "path": "skills/tools/knowledge-graph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f67038b15b4801913638322abb7556d02fa702a0"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52d2ca26edd615d97f7d2864fde03c241528b34b",
+      "size": 1552
+    },
+    {
+      "path": "skills/tools/knowledge-graph/citation-network-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa637d0f8c41ac894b9a333be1d03d055fb97fa0"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/citation-network-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca04bbf6614d7a1a2f8213eaf46917413eeb19f8",
+      "size": 7953
+    },
+    {
+      "path": "skills/tools/knowledge-graph/concept-map-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b82343b9faa778bc2425742141bff12e35ab8ef"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/concept-map-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9e1e9bc7fd9e5cc25a45d78be001de5bb666b5c",
+      "size": 9457
+    },
+    {
+      "path": "skills/tools/knowledge-graph/graphiti-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eec05c0a9aa5d4e1aee321a539a828ecf0fbdaed"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/graphiti-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6929ce0c56f9a2c0e74dcc09339ae3e44bfdc7d",
+      "size": 8275
+    },
+    {
+      "path": "skills/tools/knowledge-graph/knowledge-graph-construction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60c4a092afb82735e46d5011386243816112984b"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/knowledge-graph-construction/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef73118852707a11378c561b5e8803c9ed012d28",
+      "size": 10505
+    },
+    {
+      "path": "skills/tools/knowledge-graph/notero-zotero-notion-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d820f94f4ee52ef8e5ded7596eae15a889d26bae"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/notero-zotero-notion-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4318bbbde71e2abb5e1c6e40aa990d448106eaa2",
+      "size": 4799
+    },
+    {
+      "path": "skills/tools/knowledge-graph/ontology-design-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "718352b70f37708ff584d902534b79c78f069b0d"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/ontology-design-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87ff7e5cb61655725884b334ebd7575d95c881ce",
+      "size": 6864
+    },
+    {
+      "path": "skills/tools/knowledge-graph/openspg-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a837ddee53f18effef08665e7df1f79b612e3693"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/openspg-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c811fd2cbd8d71bc234b4a6363cb34c0924361dd",
+      "size": 5508
+    },
+    {
+      "path": "skills/tools/knowledge-graph/rag-methodology-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d1a102722c70a92e8aeac6fc0f4cdfb3fe6df84"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/rag-methodology-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5b4935adf9ea48cd901807c3c79daf21c8421e4",
+      "size": 11054
+    },
+    {
+      "path": "skills/tools/knowledge-graph/zotero-markdb-connect-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9cdcbbcf5173cef9b371bd2c99741f4927198b7"
+    },
+    {
+      "path": "skills/tools/knowledge-graph/zotero-markdb-connect-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "941a5d49b99119ad3dfc55372e133fb3baad4d37",
+      "size": 4124
+    },
+    {
+      "path": "skills/tools/ocr-translate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71a946d04f5603bc56e2454dc96585a79aca05c6"
+    },
+    {
+      "path": "skills/tools/ocr-translate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baf2f290ce610b3d4c5814467e1fbf3b86ba55e3",
+      "size": 1380
+    },
+    {
+      "path": "skills/tools/ocr-translate/handwriting-recognition-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f9f8df30261338def61c0f695882953c5565726"
+    },
+    {
+      "path": "skills/tools/ocr-translate/handwriting-recognition-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47b65a39b582559392f22de947aecf556e6cf232",
+      "size": 7218
+    },
+    {
+      "path": "skills/tools/ocr-translate/latex-ocr-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62ac8ce4704ce73282f913b8f7259c15e5df8ef0"
+    },
+    {
+      "path": "skills/tools/ocr-translate/latex-ocr-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2546a2752cbff1064dae5e57ab63b060801f1f3b",
+      "size": 6286
+    },
+    {
+      "path": "skills/tools/ocr-translate/latex-translation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e1ef1fd299a60def590c694fe260fafc29f5f2e"
+    },
+    {
+      "path": "skills/tools/ocr-translate/latex-translation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7446e3acd9a5b3109f15a3b11b8bf316c0c07c45",
+      "size": 4747
+    },
+    {
+      "path": "skills/tools/ocr-translate/multilingual-research-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d83f3bef443928f68c4ca10a39fe5e0996031d6"
+    },
+    {
+      "path": "skills/tools/ocr-translate/multilingual-research-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d49618d1092ea2ab38e8810a8867c241211665a",
+      "size": 7464
+    },
+    {
+      "path": "skills/tools/ocr-translate/pdf-math-translate-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32ba2700b59091b174c7ef7915fb6e8b964e039a"
+    },
+    {
+      "path": "skills/tools/ocr-translate/pdf-math-translate-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4179ed9ec6773f3e6bd3921f302ab628a4b35c0d",
+      "size": 5903
+    },
+    {
+      "path": "skills/tools/ocr-translate/zotero-pdf-translate-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3680f7114666ca3a39ac019f59fb9338978eece9"
+    },
+    {
+      "path": "skills/tools/ocr-translate/zotero-pdf-translate-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb24719d4b631b8d0fd9802925570c92285a10f4",
+      "size": 6902
+    },
+    {
+      "path": "skills/tools/ocr-translate/zotero-pdf2zh-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeeaaf405b77881cf84f2aaff0a746c7037b2ffa"
+    },
+    {
+      "path": "skills/tools/ocr-translate/zotero-pdf2zh-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf36563b46fa4e7ddc3313806b229595362b03c9",
+      "size": 6888
+    },
+    {
+      "path": "skills/tools/scraping",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "af98a3a021b754e67d4cf801409ad0fff7715631"
+    },
+    {
+      "path": "skills/tools/scraping/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "588a7e434255474bce69955bfefa02a0c8399987",
+      "size": 1187
+    },
+    {
+      "path": "skills/tools/scraping/academic-web-scraping",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5c83e260f4885ff976a2a3370a3f6f7e344a68a"
+    },
+    {
+      "path": "skills/tools/scraping/academic-web-scraping/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fd53fbfcc6932e51e29f9bbf911f8a4709390f8",
+      "size": 11984
+    },
+    {
+      "path": "skills/tools/scraping/dataset-finder-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac24017b15dd1c36a9fb8d4e8a7cbed92ce4fec4"
+    },
+    {
+      "path": "skills/tools/scraping/dataset-finder-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd136665b618eb152a870e1636f2e6d3ab7873f",
+      "size": 8810
+    },
+    {
+      "path": "skills/tools/scraping/easy-spider-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2195178580e06e0d2b18f1904856e8b00b981dbe"
+    },
+    {
+      "path": "skills/tools/scraping/easy-spider-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "437e6b3c28a88df2fd24e461adde7df4935c0bc4",
+      "size": 9136
+    },
+    {
+      "path": "skills/tools/scraping/google-scholar-scraper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad9f1f5c48125801c66dfd2e6e7278381de28b33"
+    },
+    {
+      "path": "skills/tools/scraping/google-scholar-scraper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44cfb3d452791e26171ac49a79e33516dd85221e",
+      "size": 8397
+    },
+    {
+      "path": "skills/tools/scraping/repository-harvesting-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0a650aa78cbc0559184d42950593bac1b9d8dda"
+    },
+    {
+      "path": "skills/tools/scraping/repository-harvesting-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "263c8893bb5cf9970c369d7167c5fad74bd01ba1",
+      "size": 9787
+    },
+    {
+      "path": "skills/tools/scraping/web-scraping-ethics-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9710e7073b1e4646ebe1df29b5d256421d413503"
+    },
+    {
+      "path": "skills/tools/scraping/web-scraping-ethics-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a15ccd7dd926b38fe0a663603071295f0ccb6ff4",
+      "size": 7850
+    },
+    {
+      "path": "skills/writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0acf36fa8db8e9f20e0c085504d10d0bbc87e116"
+    },
+    {
+      "path": "skills/writing/citation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e0b81602aec4a6ab4db95ac20206ea62b653219"
+    },
+    {
+      "path": "skills/writing/citation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33d6d206fda5a03f74f098695b8557fce267167f",
+      "size": 3248
+    },
+    {
+      "path": "skills/writing/citation/academic-citation-manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d3563f5f97b17cbbef3005c735d1df34923dde2"
+    },
+    {
+      "path": "skills/writing/citation/academic-citation-manager/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e2e484d1ac2887cdfd9fb0e27d2ff5bf7271ed",
+      "size": 10957
+    },
+    {
+      "path": "skills/writing/citation/bibtex-management-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db24e77e877ccf3809615f913455f52310c3d681"
+    },
+    {
+      "path": "skills/writing/citation/bibtex-management-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b34829de12fca880e5ceb902e1c5acd94257ba24",
+      "size": 7032
+    },
+    {
+      "path": "skills/writing/citation/citation-assistant-skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2e6262c96748e196b8ed5a9ca8170d8183e12d1"
+    },
+    {
+      "path": "skills/writing/citation/citation-assistant-skill/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "225e468ca040677c3bf12f6fa47edf7486384563",
+      "size": 6455
+    },
+    {
+      "path": "skills/writing/citation/citation-style-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "634318cd591e7bd8f8e5af7fbbe334ea3f0036de"
+    },
+    {
+      "path": "skills/writing/citation/citation-style-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efa9014f0f047c36ba0d1e1598b78148df3b936f",
+      "size": 7267
+    },
+    {
+      "path": "skills/writing/citation/jabref-reference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b804cb06fdb528634139ce10231a03f1a0e11784"
+    },
+    {
+      "path": "skills/writing/citation/jabref-reference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "394d552f3ffbafa0b39a045530e9295c65ecbdcd",
+      "size": 7034
+    },
+    {
+      "path": "skills/writing/citation/jasminum-zotero-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "796d34f6576596a6ecea8266a526002471525d75"
+    },
+    {
+      "path": "skills/writing/citation/jasminum-zotero-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8cd301eb1d4d4f98642255b88a2f85e1cbe1876",
+      "size": 6577
+    },
+    {
+      "path": "skills/writing/citation/mendeley-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4edec38a00979190e4f9a53c298e75b3854ea623"
+    },
+    {
+      "path": "skills/writing/citation/mendeley-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a61456c60ff797255cf156369c58600bfab01e8",
+      "size": 6765
+    },
+    {
+      "path": "skills/writing/citation/obsidian-citation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fcc801177703129e4ffd887ddf6a9e5b9202e72"
+    },
+    {
+      "path": "skills/writing/citation/obsidian-citation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe1d35362e44e1cd7d7b34c7bac589da07e16c1f",
+      "size": 7532
+    },
+    {
+      "path": "skills/writing/citation/obsidian-zotero-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7840828f972bfd96c81f3a98432f2d88b924f94c"
+    },
+    {
+      "path": "skills/writing/citation/obsidian-zotero-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bf18d30f7946692aa0f30eaf3c4be7c804875f2",
+      "size": 6538
+    },
+    {
+      "path": "skills/writing/citation/onecite-reference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5c3f3157aaaa1ca31926c130c77eca0044a619f"
+    },
+    {
+      "path": "skills/writing/citation/onecite-reference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "205df19a8c79b87909bc5fa807d6b773cb76d10b",
+      "size": 4381
+    },
+    {
+      "path": "skills/writing/citation/papersgpt-zotero-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d675674ec2ae57c39b14cce3d364016c9e171225"
+    },
+    {
+      "path": "skills/writing/citation/papersgpt-zotero-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58620ca7b07555e9465864524861e598fb97552d",
+      "size": 6704
+    },
+    {
+      "path": "skills/writing/citation/papis-cli-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64ead87ac7099d15fa5c2b04e3e01fd176657084"
+    },
+    {
+      "path": "skills/writing/citation/papis-cli-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b679f13a945b946f2192dba694e23eec9ace811",
+      "size": 6998
+    },
+    {
+      "path": "skills/writing/citation/reference-manager-comparison",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d85db79b0051bb304f327b404f57638ea66e1d7b"
+    },
+    {
+      "path": "skills/writing/citation/reference-manager-comparison/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f789ad6c74ef80f828c194f497479b83e6e42e",
+      "size": 6354
+    },
+    {
+      "path": "skills/writing/citation/zotero-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cef3c949ad8714ec1f605c94acf4a8d6aea48980"
+    },
+    {
+      "path": "skills/writing/citation/zotero-api/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cb89e4afcb9f62486f2f04a7811814ad3fdc647",
+      "size": 8371
+    },
+    {
+      "path": "skills/writing/citation/zotero-better-bibtex-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fc8ada97724e053b56be7fcd70a802c28785811"
+    },
+    {
+      "path": "skills/writing/citation/zotero-better-bibtex-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd9f89bfa83c204a73e5f0ddd89586796788fdfd",
+      "size": 7053
+    },
+    {
+      "path": "skills/writing/citation/zotero-better-notes-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d5e8e14c68cb649bd796d24cbbcc3df97cf77ec"
+    },
+    {
+      "path": "skills/writing/citation/zotero-better-notes-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c011d619c5d0c8a1c2a3a4f3985833e6126ad152",
+      "size": 7057
+    },
+    {
+      "path": "skills/writing/citation/zotero-gpt-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e42a20bdd4e2fba5f50760d460dd7bfa3cc20552"
+    },
+    {
+      "path": "skills/writing/citation/zotero-gpt-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6adcbe3ac0242822c0d416cfad8836450a2b0faf",
+      "size": 7155
+    },
+    {
+      "path": "skills/writing/citation/zotero-mcp-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "392e646f4cb91731ec145dfb5b4f7444f04a08ed"
+    },
+    {
+      "path": "skills/writing/citation/zotero-mcp-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b68144586db276c60e472ceddd662ec467a096",
+      "size": 8417
+    },
+    {
+      "path": "skills/writing/citation/zotero-mdnotes-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db8d6cd142f7dce51b1d231d7f3b137bbdece600"
+    },
+    {
+      "path": "skills/writing/citation/zotero-mdnotes-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cafeeab2dbb7b23dfa186d57d0c667968aec239c",
+      "size": 7482
+    },
+    {
+      "path": "skills/writing/citation/zotero-reference-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9157ce60fb38b258b0fd2c95c12c4b1a65052065"
+    },
+    {
+      "path": "skills/writing/citation/zotero-reference-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7b59cdb54088b629d1e73d3900cb78e6ea03513",
+      "size": 6695
+    },
+    {
+      "path": "skills/writing/citation/zotero-scholar-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c2d7d4d559c8c4071b7b6e0c46c7595f13011ad"
+    },
+    {
+      "path": "skills/writing/citation/zotero-scholar-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b84697b7f22509c5740cc8c306eb9919947fbad",
+      "size": 9798
+    },
+    {
+      "path": "skills/writing/citation/zotfile-attachment-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9994a667099dc842b56c435cb3785fcc00290ea0"
+    },
+    {
+      "path": "skills/writing/citation/zotfile-attachment-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb1dfb2a552ba3b484628316ce1b58ad07b69d56",
+      "size": 7741
+    },
+    {
+      "path": "skills/writing/composition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccf1120b609f8d66b556a2620ca9754fca96b2f1"
+    },
+    {
+      "path": "skills/writing/composition/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730643c51a055b8a3a6d5948858306d4c0eb0f12",
+      "size": 1610
+    },
+    {
+      "path": "skills/writing/composition/abstract-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f91448496b3648d2d4ad39456d04c2956ecb3ea5"
+    },
+    {
+      "path": "skills/writing/composition/abstract-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f14cb33d1d22e53b8433df5548f92180f917001",
+      "size": 6979
+    },
+    {
+      "path": "skills/writing/composition/discussion-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afc75457ec859ae38a4f3c883a575ecc049a215f"
+    },
+    {
+      "path": "skills/writing/composition/discussion-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02654ce3e2e742b5ec5a307902d96024bc4db226",
+      "size": 7227
+    },
+    {
+      "path": "skills/writing/composition/introduction-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "beb86d4d4dfc26d046bc181cf92b0de8e7a2c479"
+    },
+    {
+      "path": "skills/writing/composition/introduction-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c11787032c1da418838d41bae8b5b5e383a6def1",
+      "size": 6837
+    },
+    {
+      "path": "skills/writing/composition/literature-review-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "465be0dbb630a752e96c62555af83a6175623446"
+    },
+    {
+      "path": "skills/writing/composition/literature-review-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe43d450002a6dfc8985689755fec039da93803c",
+      "size": 6949
+    },
+    {
+      "path": "skills/writing/composition/methods-section-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f09061e36daa8debcb5abcfd695df4888f84624a"
+    },
+    {
+      "path": "skills/writing/composition/methods-section-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3811ef0191c46c2392036bf2320b198f6ccb3408",
+      "size": 7680
+    },
+    {
+      "path": "skills/writing/composition/ml-paper-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f1714a24b6b391ebd31ebe50b77730e392829d2"
+    },
+    {
+      "path": "skills/writing/composition/ml-paper-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "362cbbe9951cb460b6e5d58a20f9a0bd0a8be098",
+      "size": 7759
+    },
+    {
+      "path": "skills/writing/composition/research-paper-writer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24594a11ceb3a3825003df4cb4b0502ed73fe459"
+    },
+    {
+      "path": "skills/writing/composition/research-paper-writer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "530f362c641cbe2cb2313b8e4419e3a435815000",
+      "size": 7536
+    },
+    {
+      "path": "skills/writing/composition/response-to-reviewers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d3517254ab8472672df60ac55c5dae652764b21"
+    },
+    {
+      "path": "skills/writing/composition/response-to-reviewers/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc5d2c8bdf0412e4c088527393a9765c4faebf05",
+      "size": 8084
+    },
+    {
+      "path": "skills/writing/composition/scientific-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb44c41880e76501aca19f1f71f7a89129b3f4da"
+    },
+    {
+      "path": "skills/writing/composition/scientific-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7c13a8936e9d69a2b8df79a7b08686076a9ee50",
+      "size": 10634
+    },
+    {
+      "path": "skills/writing/latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90253bef2c1b8f94502ed683dfcc47149eaef732"
+    },
+    {
+      "path": "skills/writing/latex/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "260b2776aadc5886eeae63cb82e46f17be6387fd",
+      "size": 1826
+    },
+    {
+      "path": "skills/writing/latex/academic-writing-latex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8da950f6ea8753b8cf67e637aa792f802899e77a"
+    },
+    {
+      "path": "skills/writing/latex/academic-writing-latex/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12b917d3bd209dcab1686f973cadfcbc2f69a3f3",
+      "size": 7355
+    },
+    {
+      "path": "skills/writing/latex/bibliography-management-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ead735065ba21823d697bfbc86525a9fdd3746f"
+    },
+    {
+      "path": "skills/writing/latex/bibliography-management-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c077067585fa1c08b3114169533f03fe482877df",
+      "size": 6177
+    },
+    {
+      "path": "skills/writing/latex/latex-drawing-collection",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8bbb758903e592bb756b67d723d060ae63d12c5"
+    },
+    {
+      "path": "skills/writing/latex/latex-drawing-collection/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbdda73c7078aa90d90ffbfeb2d702772d463ff2",
+      "size": 6338
+    },
+    {
+      "path": "skills/writing/latex/latex-drawing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e4fb839e5cbe30e90d8bab3e882c4a3e7575855"
+    },
+    {
+      "path": "skills/writing/latex/latex-drawing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41ec298f879eb56f92267871341b6c1a2b05818e",
+      "size": 7318
+    },
+    {
+      "path": "skills/writing/latex/latex-ecosystem-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aabbc9f28e8e886ed2d8a8eb0fc396064b984cff"
+    },
+    {
+      "path": "skills/writing/latex/latex-ecosystem-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23e5bb5808bd3db8b594f5989725dd1ab970c59f",
+      "size": 6851
+    },
+    {
+      "path": "skills/writing/latex/latex-templates-collection",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e81c6ab83d2e81170a37dab926b25c7441162e41"
+    },
+    {
+      "path": "skills/writing/latex/latex-templates-collection/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff23b5658a5a739788ed34b9575bc75d2527271c",
+      "size": 7355
+    },
+    {
+      "path": "skills/writing/latex/math-typesetting-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98606e225cad3a18ef7e889173a3726c321b85e1"
+    },
+    {
+      "path": "skills/writing/latex/math-typesetting-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5cf323f8479fb00b3c710b63bc8bc58c10ecce9",
+      "size": 6962
+    },
+    {
+      "path": "skills/writing/latex/md-to-pdf-academic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6567022482ca5e5e9e628af992c238f5776791d"
+    },
+    {
+      "path": "skills/writing/latex/md-to-pdf-academic/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba2d507a452d0382b7bc0a94724fab47e42c8f62",
+      "size": 7265
+    },
+    {
+      "path": "skills/writing/latex/overleaf-collaboration-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be3fb24f8e19263c4cfa0222a35d2cd97e688ea3"
+    },
+    {
+      "path": "skills/writing/latex/overleaf-collaboration-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24dc3479f5786a4d6483ec6f3f461bee595ed3d8",
+      "size": 6661
+    },
+    {
+      "path": "skills/writing/latex/tex-render-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "526d7d24dda0ebfcbe76b9f8ee80d9a2d283c85c"
+    },
+    {
+      "path": "skills/writing/latex/tex-render-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "583d7ee0f9939cd6d42bd9106bcf6d66dc7b7f5f",
+      "size": 7652
+    },
+    {
+      "path": "skills/writing/latex/tikz-diagrams-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3024d63e79911eefeac5b354d3fff43c79d2ed73"
+    },
+    {
+      "path": "skills/writing/latex/tikz-diagrams-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d003568728a88297f2a842b4c6280a1dc5fb6b9",
+      "size": 5465
+    },
+    {
+      "path": "skills/writing/polish",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1153ebbbe1c9fb8b336ee720cef474b4ecd69820"
+    },
+    {
+      "path": "skills/writing/polish/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "949fae22c63d4d49d973b63557b228a4b6175b04",
+      "size": 1596
+    },
+    {
+      "path": "skills/writing/polish/academic-tone-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee89b8b6625fa90f2f383dcac53a496f28820615"
+    },
+    {
+      "path": "skills/writing/polish/academic-tone-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "479ae4a0aef1031cae136e7d2357a7107e3fac05",
+      "size": 7729
+    },
+    {
+      "path": "skills/writing/polish/academic-translation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5056c494d3c786d9adb3f1529b7c408bd2578a55"
+    },
+    {
+      "path": "skills/writing/polish/academic-translation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fd9ca161eaae53b5e19728490f26ca44cb33858",
+      "size": 6493
+    },
+    {
+      "path": "skills/writing/polish/academic-writing-refiner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6903aaee2a00704fc201d6104163c0a6c2c3d2db"
+    },
+    {
+      "path": "skills/writing/polish/academic-writing-refiner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "309cb206060525f073bdf3887710dc0998f1b84b",
+      "size": 6965
+    },
+    {
+      "path": "skills/writing/polish/ai-writing-humanizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "470f6165237ec13f58c00630a265a08ecf21313a"
+    },
+    {
+      "path": "skills/writing/polish/ai-writing-humanizer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e322217c594f34cdf2ebfd1f45873f0120892b29",
+      "size": 6835
+    },
+    {
+      "path": "skills/writing/polish/chinese-text-humanizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "841b87fa8d440e13b671df6855bae8663e1f0c6f"
+    },
+    {
+      "path": "skills/writing/polish/chinese-text-humanizer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a9a78965c4365a974220b7bd0faa4d14487aaa9",
+      "size": 6100
+    },
+    {
+      "path": "skills/writing/polish/conciseness-editing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c65ca36038d2a10c700f2a73bd2e225ffac675b"
+    },
+    {
+      "path": "skills/writing/polish/conciseness-editing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "173b7c8b5d8708c3aebd610104aeb6ab2a4df95d",
+      "size": 8269
+    },
+    {
+      "path": "skills/writing/polish/grammar-checker-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d94ab39f09b0a69da58c437a2ce2816c01224db2"
+    },
+    {
+      "path": "skills/writing/polish/grammar-checker-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dc2c57d317c93978e535efa1d524ed5af5e4b64",
+      "size": 5934
+    },
+    {
+      "path": "skills/writing/polish/paper-polish-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2a026de8c6bc0eebcc545b81df7d74ff2327886"
+    },
+    {
+      "path": "skills/writing/polish/paper-polish-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d76974220617ab1bf37d97eef88df6f987b37997",
+      "size": 7393
+    },
+    {
+      "path": "skills/writing/polish/plagiarism-detection-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abd44b4534d2d7deda4ab12810f4f4d30fdec3cb"
+    },
+    {
+      "path": "skills/writing/polish/plagiarism-detection-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e40f8c227d57c93fd16134bd756e92e2ebdf8c46",
+      "size": 6519
+    },
+    {
+      "path": "skills/writing/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43704596a7ae7708cc1004d7d0b9ca874e5a5237"
+    },
+    {
+      "path": "skills/writing/templates/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76ad4ef840cb34fe20f985097c99e0510b4623bb",
+      "size": 1833
+    },
+    {
+      "path": "skills/writing/templates/arxiv-preprint-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1dcad3b5810ffc59d4d40a4059cc4a4ec18d7a61"
+    },
+    {
+      "path": "skills/writing/templates/arxiv-preprint-template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dffc1aaa724f7ffdd13eac6ec7591e57d2c4d59f",
+      "size": 4216
+    },
+    {
+      "path": "skills/writing/templates/beamer-presentation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb68d70b9402c6d08658252798a3939e407a238a"
+    },
+    {
+      "path": "skills/writing/templates/beamer-presentation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c05a8ea7ad3d8662e79a729be9184fdb5e9c861",
+      "size": 6949
+    },
+    {
+      "path": "skills/writing/templates/conference-paper-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0759dec6d05d0e5cd35788c7efd6984ed4ae40f0"
+    },
+    {
+      "path": "skills/writing/templates/conference-paper-template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "607394cddaebbe8e2a54f81ffc7e9e8173e27ccf",
+      "size": 6727
+    },
+    {
+      "path": "skills/writing/templates/elegant-paper-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e29195922f5138b8f38b2eacf6a08f9a09046adb"
+    },
+    {
+      "path": "skills/writing/templates/elegant-paper-template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dec10881a1beb833d2a3300f5a704925752a3f0",
+      "size": 3670
+    },
+    {
+      "path": "skills/writing/templates/graphical-abstract-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a97133b0c877f06725877b33dc59eb5883b6ad91"
+    },
+    {
+      "path": "skills/writing/templates/graphical-abstract-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e83411b0da878cf5bbb6cddc56d9eadaf1bc84d",
+      "size": 8367
+    },
+    {
+      "path": "skills/writing/templates/novathesis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "846ce26dac35e30cc9fb8ea9b843fbc07913c0cd"
+    },
+    {
+      "path": "skills/writing/templates/novathesis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca449cc45ef08e8c842bd6d560e3b8f0c9a672a",
+      "size": 7655
+    },
+    {
+      "path": "skills/writing/templates/scientific-article-pdf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61744af6ba3fa2e57443af997a018ff5543d6f16"
+    },
+    {
+      "path": "skills/writing/templates/scientific-article-pdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66c243d7441e7b29bcbaac92ac653ae87367b36a",
+      "size": 7953
+    },
+    {
+      "path": "skills/writing/templates/sjtuthesis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66ce794c14f3325043c1646d50652f36e9ecbbf9"
+    },
+    {
+      "path": "skills/writing/templates/sjtuthesis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed465fe74107402bc791be49a1c2ea18e0579bde",
+      "size": 7489
+    },
+    {
+      "path": "skills/writing/templates/thesis-template-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c696bff6321347a6ad4538ed5b448250a121bcd"
+    },
+    {
+      "path": "skills/writing/templates/thesis-template-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af2d9a89c01e1d57abe1c0fe89536f1c0f90e855",
+      "size": 5883
+    },
+    {
+      "path": "skills/writing/templates/thesis-writing-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9718c9562a99b2452e4fba4e5175e3cd60c3c645"
+    },
+    {
+      "path": "skills/writing/templates/thesis-writing-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3662e3c8116ad0d57eb54c71045e27d97c756d34",
+      "size": 8671
+    },
+    {
+      "path": "skills/writing/templates/thuthesis-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adb75bdcf63bd4ff354197f0232e13864b073ee9"
+    },
+    {
+      "path": "skills/writing/templates/thuthesis-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79f0ada1836d09971b599dbf3cb976a24f5aec63",
+      "size": 6462
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "129fff8af1e950e95d7b95e3a9049feeaf9e8e47"
+    },
+    {
+      "path": "src/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06892ddf8eda3a1ad7bea4fea5381be67cbe0a98"
+    },
+    {
+      "path": "src/tools/arxiv.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6eb2228f229b7762c72ec0e889402afe1bfd8d0",
+      "size": 7190
+    },
+    {
+      "path": "src/tools/biorxiv.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4dd7a59e4673f81d89ffc034e2e6289d47ad4d5",
+      "size": 8180
+    },
+    {
+      "path": "src/tools/crossref.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d57d54da4e72b574a097611e12aaa68fd35d4bf",
+      "size": 6638
+    },
+    {
+      "path": "src/tools/datacite.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7afec005016a1bfcbd593d9ca0081718c9cad3dd",
+      "size": 7612
+    },
+    {
+      "path": "src/tools/dblp.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7838322bcab14048cfd5800f59e6dd4a44498848",
+      "size": 4750
+    },
+    {
+      "path": "src/tools/doaj.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3a00031472f7e3c9926d9b79a838363a3738f03",
+      "size": 3365
+    },
+    {
+      "path": "src/tools/europe-pmc.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1c7574fe8a4d01db047655983bb75508f7b4764",
+      "size": 6625
+    },
+    {
+      "path": "src/tools/hal.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d62e48b2e0742968bc45e3619ae05e8235141a2",
+      "size": 4310
+    },
+    {
+      "path": "src/tools/inspire-hep.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4043a9500c26a8404ca6c3a29ee53ed21b556a0b",
+      "size": 5900
+    },
+    {
+      "path": "src/tools/openaire.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15b8e6dc15289a94a96261e06b6f89edb3e1b184",
+      "size": 6248
+    },
+    {
+      "path": "src/tools/openalex.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aff35d7dc8538480f49bfc2183433397ef1e003",
+      "size": 8017
+    },
+    {
+      "path": "src/tools/opencitations.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e31cd984f7c7666d643fcaea09655751e830614e",
+      "size": 5933
+    },
+    {
+      "path": "src/tools/orcid.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c99f1fd089d3bf7e60f55ec8aacb9e7c73b52113",
+      "size": 5242
+    },
+    {
+      "path": "src/tools/osf-preprints.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fc290dbf9c0886f8f36dcdb25b878213131fe00",
+      "size": 4153
+    },
+    {
+      "path": "src/tools/pubmed.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13c0841ffde063fbec68d7313c9d8d7f945b2b20",
+      "size": 7580
+    },
+    {
+      "path": "src/tools/ror.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6dc65667cf8e36ab79e248dae2f40b502b9196f",
+      "size": 4769
+    },
+    {
+      "path": "src/tools/unpaywall.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39dca09239264a51493fd4e3e361a9f65f673789",
+      "size": 2590
+    },
+    {
+      "path": "src/tools/util.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "778120b9f39ee4fb5ce045db5a6c02e449449f97",
+      "size": 7795
+    },
+    {
+      "path": "src/tools/zenodo.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14238d98e98ade905dedbdc5c631bccfe8635bd7",
+      "size": 6733
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34b2bbe2ba0995f60eba9d29eda75aa74d224bd5"
+    },
+    {
+      "path": "tests/test-live-api-all.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88e1882855cb9122fb1835c51c413479bcac23b0",
+      "size": 11051
+    },
+    {
+      "path": "tests/test-query-validation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c70e8e049af53b97859f360d7140da7c7ea16ae0",
+      "size": 4389
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3a2b5779681c6865aff544ed6a939dcd37e84ca",
+      "size": 401
+    },
+    {
+      "path": "types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7700fbe4663a20accc84fcccee3a16af7841b6de"
+    },
+    {
+      "path": "types/openclaw-plugin-sdk.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "284c4a5d39bb784a9fa0390c05c41c88e73d0a77",
+      "size": 712
+    }
+  ]
+}

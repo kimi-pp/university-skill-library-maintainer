@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/core/alterlab-teaching-design/SKILL.md",
+    "type": "blob",
+    "size": 21610,
+    "sha": "f13efd1c420a29db84d6f18cf3278c92b6630014"
+  },
+  {
+    "path": "skills/core/alterlab-teaching-design/evals/evals.json",
+    "type": "blob",
+    "size": 6028,
+    "sha": "524a9fc53cb800a3cdb3957a3940e2664168a6b7"
+  },
+  {
+    "path": "skills/core/alterlab-teaching-design/references/course_design_templates.md",
+    "type": "blob",
+    "size": 9081,
+    "sha": "51a247e9b19b9ebe152a267bbe7dddad4fc85043"
+  },
+  {
+    "path": "skills/core/alterlab-teaching-design/references/teaching-frameworks.md",
+    "type": "blob",
+    "size": 12257,
+    "sha": "a8385e85df49302f7e94629fbe0644d77448542f"
+  }
+]

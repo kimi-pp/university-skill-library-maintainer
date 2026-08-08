@@ -1,0 +1,50 @@
+[
+  {
+    "path": "skills/circle-time/SKILL.md",
+    "type": "blob",
+    "size": 9571,
+    "sha": "69ef0b5434a855e537409bf58f5fc82ecc86332b"
+  },
+  {
+    "path": "skills/circle-time/evals/evals.json",
+    "type": "blob",
+    "size": 3355,
+    "sha": "38252f15a9477494f454c85bd880f77acaea8c3c"
+  },
+  {
+    "path": "skills/circle-time/references/accommodations.md",
+    "type": "blob",
+    "size": 5407,
+    "sha": "ee6d75f5d862e54962af65f103d1187f33f9243a"
+  },
+  {
+    "path": "skills/circle-time/references/books.md",
+    "type": "blob",
+    "size": 5492,
+    "sha": "71fbb37349c454d5b978ef108fcf04ae3abe93ce"
+  },
+  {
+    "path": "skills/circle-time/references/finger-plays.md",
+    "type": "blob",
+    "size": 5162,
+    "sha": "286b570969a5942542482248b770778286971a78"
+  },
+  {
+    "path": "skills/circle-time/references/sel-frameworks.md",
+    "type": "blob",
+    "size": 4342,
+    "sha": "c0462a789a4cb90b156b84e05e11576382fcc3a9"
+  },
+  {
+    "path": "skills/circle-time/references/transitions.md",
+    "type": "blob",
+    "size": 4610,
+    "sha": "c8b318ec64f48a1cbc1f77f07d8a5a78b7dd2174"
+  },
+  {
+    "path": "skills/circle-time/references/tunes.md",
+    "type": "blob",
+    "size": 5748,
+    "sha": "35cf4ad2580f585488c1a563269a7df5007954cb"
+  }
+]

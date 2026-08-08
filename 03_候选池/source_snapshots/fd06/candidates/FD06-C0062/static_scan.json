@@ -1,0 +1,21 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "skills/ai-learning-science/digital-worked-example-sequence/SKILL.md",
+        "snippet": "stom web app with step-by-step reveal\" / \"Interactive PDF\" / \"Learning management system (Canvas/Moodle)\"* Optional (injected by context engine if available): - **Student level:** Year group and proficiency - **Subj"
+      },
+      {
+        "file": "skills/ai-learning-science/digital-worked-example-sequence/SKILL.md",
+        "snippet": "b app with step-by-step reveal\" / \"Interactive PDF\" / \"Learning management system (Canvas/Moodle)\"* Optional (injected by context engine if available): - **Student level:** Year group and proficiency - **Subject are"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/ai-learning-science/digital-worked-example-sequence/SKILL.md",
+        "snippet": "pears before the answer) but cannot fully prevent gaming behaviour. In classroom use, the teacher should periodically review students' self-explanation responses to check for genuine engagement. 3. **The fading schedule above is a fixed sequen"
+      }
+    ]
+  },
+  "read_errors": []
+}

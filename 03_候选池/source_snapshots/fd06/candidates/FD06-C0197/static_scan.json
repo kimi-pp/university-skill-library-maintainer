@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "--- # AGENT SKILLS STANDARD FIELDS (v2) name: gap-analysis-from-student-work description: \"Analyse student work against criteria to identify specific gaps between current performance and learning"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "NT SKILLS STANDARD FIELDS (v2) name: gap-analysis-from-student-work description: \"Analyse student work against criteria to identify specific gaps between current performance and learning objectives. Use when reviewing subm"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "rue effort: medium # EXISTING FIELDS skill_id: \"curriculum-assessment/gap-analysis-from-student-work\" skill_name: \"Gap Analysis from Student Work\" domain: \"curriculum-assessment\" version: \"1.0\" evidence_strength: \"strong"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "id: \"curriculum-assessment/gap-analysis-from-student-work\" skill_name: \"Gap Analysis from Student Work\" domain: \"curriculum-assessment\" version: \"1.0\" evidence_strength: \"strong\" evidence_sources: - \"Black & Wiliam (1998"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "_description\" type: \"string\" description: \"A description or transcript of the student's work — what they produced\" - field: \"assessment_criteria\" type: \"string\" description: \"The criteria or rubri"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "signer\" - \"kud-knowledge-type-mapper\" teacher_time: \"3 minutes\" tags: [\"gap-analysis\", \"student-work\", \"formative-assessment\", \"feedback\", \"diagnostic\"] --- # Gap Analysis from Student Work ## What This Skill Does Ana"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "student-work\", \"formative-assessment\", \"feedback\", \"diagnostic\"] --- # Gap Analysis from Student Work ## What This Skill Does Analyses a student work sample against assessment criteria, identifies specific gaps (not jus"
+      },
+      {
+        "file": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+        "snippet": "\"diagnostic\"] --- # Gap Analysis from Student Work ## What This Skill Does Analyses a student work sample against assessment criteria, identifies specific gaps (not just \"needs improvement\" but exactly WHAT is missing"
+      }
+    ]
+  },
+  "read_errors": []
+}

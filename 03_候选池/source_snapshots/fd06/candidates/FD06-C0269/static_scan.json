@@ -1,0 +1,71 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "ence to personal preferences vs. best practices - Revealing your identity if reviewing is double-blind ## Special Considerations by Manuscript Type ### Original Research Articles - Emphasize rigor, reproducibility, and n"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "ty images with proper formatting - Review and refine through multiple iterations - Ensure accessibility (colorblind-friendly, high contrast) - Save outputs in the figures/ directory **When to add schematics:** - Peer revie"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "formative? - **Completeness:** Are key findings and methods summarized appropriately? - **Accessibility:** Is the abstract comprehensible to a broad scientific audience? #### Introduction - **Context:** Is the background i"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "Stage 7: Writing Quality and Clarity Assess the manuscript's clarity, organization, and accessibility. **Structure and Organization:** - Is the manuscript logically organized? - Do sections flow coherently? - Are transit"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "lling correct? - Are sentences unnecessarily complex? - Is the passive voice overused? **Accessibility:** - Can a non-specialist understand the main findings? - Are technical terms explained? - Is the significance clear to"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "search strategy and inclusion/exclusion criteria - Verify systematic approach and lack of bias - Check for critical analysis vs. mere summarization - For meta-analyses, evaluate statistical approach and heterogenei"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "tiveness of results presentation - Strength of conclusions and implications **Design and Accessibility:** - Overall visual appeal and professionalism - Color contrast and readability - Colorblind accessibility - Consistenc"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "Strength of conclusions and implications **Design and Accessibility:** - Overall visual appeal and professionalism - Color contrast and readability - Colorblind accessibility - Consistency across slides **Timing a"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "- Overall visual appeal and professionalism - Color contrast and readability - Colorblind accessibility - Consistency across slides **Timing and Scope:** - Whether slide count matches intended duration - Appropriate level"
+      },
+      {
+        "file": "scientific-skills/peer-review/references/common_issues.md",
+        "snippet": "exploratory analyses - Use cross-validation or hold-out datasets - Correct for selection bias ### 6. Pseudoreplication **Common Problems:** - Technical replicates treated as biological replicates - Multiple meas"
+      },
+      {
+        "file": "scientific-skills/peer-review/references/common_issues.md",
+        "snippet": "Block on known confounders - Randomize sample processing order - Use blinding to minimize bias - Perform batch correction if needed - Report and adjust for baseline differences ### 9. Insufficient Replication **C"
+      },
+      {
+        "file": "scientific-skills/peer-review/references/common_issues.md",
+        "snippet": "ry analyses - Report all pre-specified outcomes ### 19. Baseline Imbalance and Selection Bias **Common Problems:** - Groups differ at baseline - Selection criteria applied differentially - Healthy volunteer bias"
+      },
+      {
+        "file": "scientific-skills/peer-review/references/common_issues.md",
+        "snippet": "Groups differ at baseline - Selection criteria applied differentially - Healthy volunteer bias - Survivorship bias - Indication bias in observational studies **How to Identify:** - Table 1 shows significant baseli"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "euthanasia methods appropriate? **Research Integrity:** - Are there concerns about data fabrication or falsification? - Is authorship appropriate and justified? - Are competing interests disclosed? - Is funding source d"
+      },
+      {
+        "file": "scientific-skills/peer-review/SKILL.md",
+        "snippet": "competing interests disclosed? - Is funding source disclosed? - Are there concerns about plagiarism or duplicate publication? ### Stage 7: Writing Quality and Clarity Assess the manuscript's clarity, organization, and"
+      }
+    ]
+  },
+  "read_errors": []
+}

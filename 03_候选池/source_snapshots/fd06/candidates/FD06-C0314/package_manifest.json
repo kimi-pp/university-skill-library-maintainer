@@ -1,0 +1,44 @@
+[
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/SKILL.md",
+    "type": "blob",
+    "size": 11927,
+    "sha": "a1c53b96634be2158104fedb8e95754e615a6065"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/evals/evals.json",
+    "type": "blob",
+    "size": 6788,
+    "sha": "ff95b63c914257a6201bfd6cd187ce5702cb3c67"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/references/disclosure_and_citation.md",
+    "type": "blob",
+    "size": 4156,
+    "sha": "62f09596cf51700aefed7d5799019bea924a765c"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/references/integrity_accessibility.md",
+    "type": "blob",
+    "size": 3919,
+    "sha": "581f3e98a4144c1cf4617f6885748b4c2f64860f"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/references/tier_framework.md",
+    "type": "blob",
+    "size": 5619,
+    "sha": "4aa0f3d0c269f91fb70460b39bc078920917ad0c"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_builder.py",
+    "type": "blob",
+    "size": 9790,
+    "sha": "36a79b78c90c1016a5e5070ae2bcd151befc64e4"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-syllabus-ai-policy/scripts/policy_lint.py",
+    "type": "blob",
+    "size": 8605,
+    "sha": "d59187610763299f2b193201799598b655c96074"
+  }
+]

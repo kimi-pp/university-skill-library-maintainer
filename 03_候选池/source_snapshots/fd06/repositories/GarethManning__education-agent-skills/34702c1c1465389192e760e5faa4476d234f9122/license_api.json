@@ -1,0 +1,25 @@
+{
+  "name": "LICENSE",
+  "path": "LICENSE",
+  "sha": "c1286baf485edf23727ab83bc756181212aff895",
+  "size": 1230,
+  "url": "https://api.github.com/repos/GarethManning/education-agent-skills/contents/LICENSE?ref=34702c1c1465389192e760e5faa4476d234f9122",
+  "html_url": "https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/LICENSE",
+  "git_url": "https://api.github.com/repos/GarethManning/education-agent-skills/git/blobs/c1286baf485edf23727ab83bc756181212aff895",
+  "download_url": "https://raw.githubusercontent.com/GarethManning/education-agent-skills/34702c1c1465389192e760e5faa4476d234f9122/LICENSE",
+  "type": "file",
+  "content": "Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbi1TaGFyZUFsaWtlIDQuMCBJ\nbnRlcm5hdGlvbmFsCgpDb3B5cmlnaHQgKGMpIDIwMjYgR2FyZXRoIE1hbm5p\nbmcKClRoZSBlZHVjYXRpb25hbCBza2lsbHMsIGRvY3VtZW50YXRpb24sIGV4\nYW1wbGVzLCBhbmQgY3VycmljdWx1bSBtYXRlcmlhbHMgaW4KdGhpcyByZXBv\nc2l0b3J5IGFyZSBsaWNlbnNlZCB1bmRlciB0aGUgQ3JlYXRpdmUgQ29tbW9u\ncwpBdHRyaWJ1dGlvbi1TaGFyZUFsaWtlIDQuMCBJbnRlcm5hdGlvbmFsIGxp\nY2VuY2UgKENDIEJZLVNBIDQuMCkuCgpZb3UgYXJlIGZyZWUgdG86CgogIFNo\nYXJlIOKAlCBjb3B5IGFuZCByZWRpc3RyaWJ1dGUgdGhlIG1hdGVyaWFsIGlu\nIGFueSBtZWRpdW0gb3IgZm9ybWF0IGZvcgogIGFueSBwdXJwb3NlLCBldmVu\nIGNvbW1lcmNpYWxseS4KCiAgQWRhcHQg4oCUIHJlbWl4LCB0cmFuc2Zvcm0s\nIGFuZCBidWlsZCB1cG9uIHRoZSBtYXRlcmlhbCBmb3IgYW55IHB1cnBvc2Us\nCiAgZXZlbiBjb21tZXJjaWFsbHkuCgpVbmRlciB0aGUgZm9sbG93aW5nIHRl\ncm1zOgoKICBBdHRyaWJ1dGlvbiDigJQgWW91IG11c3QgZ2l2ZSBhcHByb3By\naWF0ZSBjcmVkaXQsIHByb3ZpZGUgYSBsaW5rIHRvIHRoZQogIGxpY2VuY2Us\nIGFuZCBpbmRpY2F0ZSBpZiBjaGFuZ2VzIHdlcmUgbWFkZS4gWW91IG1heSBk\nbyBzbyBpbiBhbnkKICByZWFzb25hYmxlIG1hbm5lciwgYnV0IG5vdCBpbiBh\nbnkgd2F5IHRoYXQgc3VnZ2VzdHMgdGhlIGxpY2Vuc29yCiAgZW5kb3JzZXMg\neW91IG9yIHlvdXIgdXNlLgoKICBTaGFyZUFsaWtlIOKAlCBJZiB5b3UgcmVt\naXgsIHRyYW5zZm9ybSwgb3IgYnVpbGQgdXBvbiB0aGUgbWF0ZXJpYWwsIHlv\ndQogIG11c3QgZGlzdHJpYnV0ZSB5b3VyIGNvbnRyaWJ1dGlvbnMgdW5kZXIg\ndGhlIHNhbWUgbGljZW5jZSBhcyB0aGUKICBvcmlnaW5hbC4KCiAgTm8gYWRk\naXRpb25hbCByZXN0cmljdGlvbnMg4oCUIFlvdSBtYXkgbm90IGFwcGx5IGxl\nZ2FsIHRlcm1zIG9yCiAgdGVjaG5vbG9naWNhbCBtZWFzdXJlcyB0aGF0IGxl\nZ2FsbHkgcmVzdHJpY3Qgb3RoZXJzIGZyb20gZG9pbmcgYW55dGhpbmcKICB0\naGUgbGljZW5jZSBwZXJtaXRzLgoKVGhpcyBpcyBhIGh1bWFuLXJlYWRhYmxl\nIG5vdGljZS4gVGhlIGZ1bGwgbGVnYWwgdGVybXMgYXJlIGF2YWlsYWJsZSBh\ndDoKaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LXNh\nLzQuMC9sZWdhbGNvZGUK\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/GarethManning/education-agent-skills/contents/LICENSE?ref=34702c1c1465389192e760e5faa4476d234f9122",
+    "git": "https://api.github.com/repos/GarethManning/education-agent-skills/git/blobs/c1286baf485edf23727ab83bc756181212aff895",
+    "html": "https://github.com/GarethManning/education-agent-skills/blob/34702c1c1465389192e760e5faa4476d234f9122/LICENSE"
+  },
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  }
+}

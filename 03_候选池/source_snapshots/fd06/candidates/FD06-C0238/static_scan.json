@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/professional-learning/instructional-coaching-conversation-guide/SKILL.md",
+        "snippet": "bservation_data\" type: \"string\" description: \"Data from a lesson observation, student work, or video — evidence to ground the conversation\" - field: \"coaching_phase\" type: \"string\" description:"
+      },
+      {
+        "file": "skills/professional-learning/instructional-coaching-conversation-guide/SKILL.md",
+        "snippet": "ata, not opinion.** Ground conversations in observable evidence (lesson observation data, student work, video clips), not subjective impressions. \"I noticed 4 out of 25 students responded to your questions\" is data. \"Your"
+      }
+    ]
+  },
+  "read_errors": []
+}

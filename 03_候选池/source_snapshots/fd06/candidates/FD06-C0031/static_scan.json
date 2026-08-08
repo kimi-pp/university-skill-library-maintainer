@@ -1,0 +1,33 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "teaching-pipeline/SKILL.md",
+        "snippet": "age 2/3, max 3 rounds | | 4 DELIVER | weekly: `lesson-builder` `week-batch` (next week); `student-mentor` (on demand); `submission-auditor` `spec`/`audit`/`batch-audit` (on demand, when work comes in); `teaching-reflector` `midcourse` (week 4–6) | we"
+      },
+      {
+        "file": "teaching-pipeline/SKILL.md",
+        "snippet": "es the flipped spec calls for | | 2–3 | `lab-forge` | STEM courses — executable labs, per-student datasets, autograders (output feeds submission-auditor) | | 4 | `course-publisher` | Weekly loop — announcements, weekly emails, course site, LMS packaging | | 4 | `t"
+      },
+      {
+        "file": "teaching-pipeline/SKILL.md",
+        "snippet": "ef, or an item analysis | `assessment-architect` | | Feedback, a recommendation letter, a student email, office-hours prep | `student-mentor` | | Check submissions against a template/standard, batch compliance reports | `su"
+      },
+      {
+        "file": "teaching-pipeline/agents/gate_runner_agent.md",
+        "snippet": "5 python3 scripts/check_passport.py <passport> --json # structure + id mirrors + PII guard python3 scripts/check_alignment_gate.py <passport> --json # A1–D3 verbatim # Gate 3.5 python3 scripts/check_qu"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "teaching-pipeline/agents/iteration_coach_agent.md",
+        "snippet": "l-analysis themes** from teaching-reflector's Stage 5 report — themes with the report's bias caveats attached (Pedagogy Foundations §11: evaluations are evidence of student experience, not a measurement of teac"
+      },
+      {
+        "file": "teaching-pipeline/agents/passport_keeper_agent.md",
+        "snippet": "without the minimal confirmation having happened. 4. **No student data.** Names, grades, accommodation details, case notes from Stage 4 never enter the passport or any state file. If handed such content to record, re"
+      }
+    ]
+  },
+  "read_errors": []
+}

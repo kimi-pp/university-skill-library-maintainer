@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/scientific-thinking-scholar-evaluation/SKILL.md",
+        "snippet": "Are inclusion, exclusion, and preprocessing decisions documented? - Are missing data and bias risks discussed? ### 5. Analysis - Are statistical, qualitative, or computational methods appropriate? - Are baseline"
+      }
+    ]
+  },
+  "read_errors": []
+}

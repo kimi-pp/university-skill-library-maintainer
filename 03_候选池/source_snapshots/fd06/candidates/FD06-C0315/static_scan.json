@@ -1,0 +1,59 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "- Google Form: \"Exit Ticket -- Evaluating Evidence\" -- set up in advance, shared link on Google Classroom before class starts - Teacher display: annotation of editorial displayed via Google Slides, with 3 slides (claim highli"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "-- complete morning of - [ ] Open Google Form exit ticket, test submission, post link to Google Classroom -- complete 30 minutes before class - [ ] Load annotation Google Slides on teacher computer, confirm projector connecti"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "im/Evidence Organizer on your desk -- I'll collect these. Now open your Chromebook. Go to Google Classroom and find the second editorial -- same topic, different author. Read it silently for 2 minutes, then you'll write your c"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "ond editorial (same topic, weaker evidence overall) silently for 2 minutes (pre-loaded in Google Classroom as a Google Doc with read-along highlighting for IEP"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "ology, arrange desks). - **Teacher reference materials**: Note any content background the teacher should review -- a common misconception list, a key vocabulary glossary, a sample of a correct student response. ### Step 7 -- Add P"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "If the user names a state but no specific standard, note the framework and flag that the teacher should confirm specific code alignment against their pacing guide. 10. **NEVER skip the Teacher Reflection section.** Lesson plans th"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "ogle Classroom -- complete 30 minutes before class - [ ] Load annotation Google Slides on teacher computer, confirm projector connection -- complete 10 minutes before class - [ ] Post Claim Parking Lot sticky notes on whiteboard -- com"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "educator-facing - The user needs an Individualized Education Program (IEP) goal or a 504 accommodation plan -- these are legal documents requiring specialized knowledge beyond lesson planning - The user wants a complete pr"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "ts hold up simultaneously, fist-to-five confidence checks, or targeted cold-calling using equity sticks (popsicle sticks with student names). These checks create a decision point -- if fewer than 70% of students demo"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "al vocabulary lists and allow responses in home language first before English. - **Apply Universal Design for Learning (UDL) principles** across the whole lesson: provide multiple means of representation (visual diagram AND v"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "hare your answer. You have 60 seconds.\" After pairs discuss, cold-call 2-3 students using equity sticks. Accept all responses without evaluating them. Then ask: \"What would make that argument stronger? What's missing"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/lesson-plan-design/SKILL.md",
+        "snippet": "rculate in a planned pattern (start at back-left, move clockwise through the room). Carry equity sticks. Do not answer \"Is this right?\" questions -- instead respond with: \"What criterion are you applying? Walk me thr"
+      }
+    ]
+  },
+  "read_errors": []
+}

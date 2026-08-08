@@ -1,0 +1,14 @@
+[
+  {
+    "path": "course-description-analyzer/SKILL.md",
+    "type": "blob",
+    "size": 8867,
+    "sha": "4a7f30adf8a81e3bd10df30ef2d30d97ac7f4306"
+  },
+  {
+    "path": "course-description-analyzer/assets/course-description-template.md",
+    "type": "blob",
+    "size": 1583,
+    "sha": "a785b2b3bb4a883f9664feca9e576f767f6c0ace"
+  }
+]

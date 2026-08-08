@@ -1,0 +1,50 @@
+[
+  {
+    "path": "bilingual-courseware/SKILL.md",
+    "type": "blob",
+    "size": 9187,
+    "sha": "628c998d54451d8e53a202e81fd3a62ac55e7624"
+  },
+  {
+    "path": "bilingual-courseware/agents/glossary_keeper_agent.md",
+    "type": "blob",
+    "size": 3941,
+    "sha": "87b744073de00e20c12e8e0bf0470330c4904d5d"
+  },
+  {
+    "path": "bilingual-courseware/agents/parallel_sync_agent.md",
+    "type": "blob",
+    "size": 3678,
+    "sha": "5183978eafbcd4b34262c7735a8454836a578608"
+  },
+  {
+    "path": "bilingual-courseware/agents/terminology_auditor_agent.md",
+    "type": "blob",
+    "size": 4054,
+    "sha": "6c184350d124d56b8bf2df11a4586e8c7c5ba21b"
+  },
+  {
+    "path": "bilingual-courseware/agents/translator_agent.md",
+    "type": "blob",
+    "size": 4202,
+    "sha": "7b5a132b6cade4fa412be70b710740511a819b50"
+  },
+  {
+    "path": "bilingual-courseware/references/emi_conventions.md",
+    "type": "blob",
+    "size": 7598,
+    "sha": "429b4099d15f72b1e01f4fdee6ee98f46d56cc23"
+  },
+  {
+    "path": "bilingual-courseware/templates/glossary_template.md",
+    "type": "blob",
+    "size": 2757,
+    "sha": "d8f82c03e4ee519d6aff2f0cfbd5e39c31583bcb"
+  },
+  {
+    "path": "bilingual-courseware/templates/sync_register_template.md",
+    "type": "blob",
+    "size": 2245,
+    "sha": "f8072669c5a23a3166a643a7a32726b397c6a24e"
+  }
+]

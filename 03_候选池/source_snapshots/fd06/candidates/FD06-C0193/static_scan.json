@@ -1,0 +1,91 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "ta-coordinator/SKILL.md",
+        "snippet": "t-architect` | | Emailing or giving feedback to a student | `student-mentor` | | Checking student submissions against a standard | `submission-auditor` | ## Agent Team (4) | Agent | Role | |-------|------| | `onboarding_agent` | Assembles the course-specific T"
+      },
+      {
+        "file": "ta-coordinator/agents/calibration_facilitator_agent.md",
+        "snippet": "grading-open date, and the professor's candidate anchor submissions — real, anonymized student work. No candidates available (first offering, new instrument) = ask the professor to pull past-term work or write exe"
+      },
+      {
+        "file": "ta-coordinator/agents/consistency_auditor_agent.md",
+        "snippet": "y as a draft, and what happens next is theirs. - You analyze scores; you never re-grade student work or opine on what a submission deserved — that is the professor's and `submission-auditor`'s territory. - Privacy minimalism: scores and pseudonymou"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "a `student-mentor`, evidence-bound as always). ## Privacy and professionalism TAs see student work, grades, and sometimes personal circumstances. The briefing below is generic by design — FERPA (US), GDPR-derived rules"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "licy + any required TA privacy training]`. Core briefing content for the handbook: 1. **Student work and grades are confidential.** Discussed only within the teaching team, only for teaching purposes. Never with other"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "rming that someone is enrolled can be a disclosure. 4. **Examples are anonymized.** Using student work as a class example or calibration anchor requires anonymization (and, at many institutions, consent — local rule). 5"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "ons, consent — local rule). 5. **Keep records where the course keeps them.** No grades or student work on personal accounts or devices beyond what the institution's tools require. 6. **When in doubt, ask before disclosi"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": ", grades, and sometimes personal circumstances. The briefing below is generic by design — FERPA (US), GDPR-derived rules (EU), PIPL (China), and institutional policies differ, so the professor must layer the local r"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "d sometimes personal circumstances. The briefing below is generic by design — FERPA (US), GDPR-derived rules (EU), PIPL (China), and institutional policies differ, so the professor must layer the local rules on top"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "cy training]`. Core briefing content for the handbook: 1. **Student work and grades are confidential.** Discussed only within the teaching team, only for teaching purposes. Never with other students, friends, labmates"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "ta-coordinator/SKILL.md",
+        "snippet": "ation lifecycle, workload heuristics, meeting cadences, failure modes, mentoring notes, confidentiality briefing - `templates/ta_handbook_template.md` - `templates/calibration_session_template.md` - `assessment-architect/re"
+      },
+      {
+        "file": "ta-coordinator/agents/onboarding_agent.md",
+        "snippet": "orkflow and tools, calibration expectations, communication norms, week-1 checklist, confidentiality briefing (generic content from `references/ta_management_guide.md` § Privacy — jurisdictions differ, so flag inst"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "s urgent - [ ] Escalation contacts: professor's channel + response window; backup ★ - [ ] Confidentiality briefing (below) - [ ] Week-1 checklist with owners and dates - [ ] Development goals: 1–2 things this TA should be abl"
+      },
+      {
+        "file": "ta-coordinator/templates/ta_handbook_template.md",
+        "snippet": "contract) | {{[NEEDS PROFESSOR INPUT: department admin / HR / union contact]}} | | | ## Confidentiality {{confidentiality briefing — core content from references/ta_management_guide.md § Privacy and professionalism, plus:"
+      },
+      {
+        "file": "ta-coordinator/templates/ta_handbook_template.md",
+        "snippet": "DS PROFESSOR INPUT: department admin / HR / union contact]}} | | | ## Confidentiality {{confidentiality briefing — core content from references/ta_management_guide.md § Privacy and professionalism, plus: [NEEDS PROFESSOR IN"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "ta-coordinator/SKILL.md",
+        "snippet": "y estimated **hours** (not item counts), with conflict-of-interest rules and rotation for fairness and TA development | | `meeting` | \"TA meeting this week\"; recurring team sync | Agenda built from the course's actual"
+      },
+      {
+        "file": "ta-coordinator/agents/workload_allocator_agent.md",
+        "snippet": "y touches at least two duty kinds. Rotation also breaks single-grader drift patterns — fairness and pedagogy point the same way. Where infeasible (one TA speaks the lab's language), say so rather than forcing"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "Any grade change after release** | | Routine announcements the professor has approved | **Accommodation matters** — disability accommodations follow institutional procedure, not TA discretion | | | **Media, parents, or any"
+      },
+      {
+        "file": "ta-coordinator/references/ta_management_guide.md",
+        "snippet": "reviews) learns assessment design; rotation through duty types is development, not just fairness. - **Debrief incidents as cases**: a hard office-hours question or a tense student email, handled and then discussed"
+      },
+      {
+        "file": "ta-coordinator/templates/ta_handbook_template.md",
+        "snippet": "istressed students (warm handoff + institutional resources), grade changes after release, accommodation matters.}} When a situation fits neither column, that is itself an escalation — ask before acting. ## Grading workflo"
+      }
+    ]
+  },
+  "read_errors": []
+}

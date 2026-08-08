@@ -1,0 +1,35 @@
+{
+  "repository": "labarba/sciwrite",
+  "fixed_version": "64b128b88fdaadfd1eb312f42c2ae1475f91b512",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "HOW-TO-USE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6eb7e81538141c0c87e994d3d214c93efcccba9",
+      "size": 5129
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c527d5c8603248c21a4ab2ab37d5846efd04d3d3",
+      "size": 956
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc4880730d5df2a2f1c30015a8e0d9954ba44adc",
+      "size": 13642
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9015dabc39b1a445f2bb69f1ad92788dcdd31b07",
+      "size": 9826
+    }
+  ]
+}

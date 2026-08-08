@@ -1,0 +1,63 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "fetch fails: Report warning but continue (non-critical) - If `dauber/` directory missing: Create it before writing config file Begin setup now."
+      }
+    ],
+    "lms": [
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "ialize Course Workspace Guide the user through first-time course configuration, validate Canvas connectivity, and create `dauber/config.toml`. ## Task Overview Set up the local workspace for a Canvas course. This"
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "ity, and create `dauber/config.toml`. ## Task Overview Set up the local workspace for a Canvas course. This chains together config initialization, course detail retrieval, enrollment verification, and parameter fil"
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "**If missing**: Continue to Step 2. ## Step 2: Collect Course Parameters ### 2a. Test Canvas Connectivity Run a quick connectivity check: ```bash uv run dauber --test ``` If this fails, report the error and te"
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "Collect Remaining Parameters Use `AskUserQuestion` to collect fields not derivable from Canvas. Ask up to four questions across one or two rounds: 1. **Educational level**: \"What level is this course?\" - Option"
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "``` Course Setup Complete ===================== Course: {course_title} ({course_code}) Canvas ID: {canvas_course_id} Term: {term} {year} Level: {level} Feedback Language: {feedback_language} Formality: {formality}"
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "course:overview - Course status dashboard /content:publish - Publish local content to Canvas /assign:create - Create assignments with guided defaults /grade:overview - Grade distribution analysis /disc"
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "ssess:setup - Initialize rubric-based assessment grading ``` ## Error Handling - If Canvas connectivity fails: Report error, ask user to check environment variables - If course not found: Report error with avai"
+      }
+    ],
+    "external_write": [
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "onfig.toml Available workflows: /course:overview - Course status dashboard /content:publish - Publish local content to Canvas /assign:create - Create assignments with guided defaults /grade:overview - Grade distribution analysis /disc"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "d / academic)\"] 6. **Anonymize**: \"Strip student names and emails from assessment files (FERPA compliance for LLM workflows)?\" - Options: [\"Yes\", \"No\"] For non-language-learning courses, set `language_level: \"N"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "k use?\" - Options: [\"casual (tú / conversational)\", \"formal (usted / academic)\"] 6. **Anonymize**: \"Strip student names and emails from assessment files (FERPA compliance for LLM workflows)?\" - Options: [\"Yes\", \""
+      },
+      {
+        "file": ".pi/skills/course-setup/SKILL.md",
+        "snippet": "_learning = {true_or_false} language_level = \"{language_level}\" formality = \"{formality}\" anonymize = {true_or_false} ``` ## Step 3: Verify Course Access ### 3a. Fetch Enrollment Summary ```bash uv run dauber courses"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,2910 @@
+{
+  "repository": "GarethManning/education-agent-skills",
+  "fixed_version": "34702c1c1465389192e760e5faa4476d234f9122",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5974f7b51d03f557c14936412f41a25a49fa4e61"
+    },
+    {
+      "path": ".agents/plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc59d3a3a1aadf9a818d6d3d1cf2bc519648857a"
+    },
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41b67fcb482b30876bcf0683f4f48d12250c5648",
+      "size": 514
+    },
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55d8f3c37e542c9ec3b54eaaa214a1218d7fd1b3"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56823347ccc444cf51f4452eda05ff2780b7652a",
+      "size": 707
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75ec14d73a71ff109f347c5fa4ddb285906f7625",
+      "size": 1298
+    },
+    {
+      "path": ".codex-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd4e0619ea3cf0a3ffff7bfecb9a6a752430435b"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "361b6021931654dc1e8c1b7cae7bb259852de71d",
+      "size": 1382
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f385304ebf67e653a91e4b9fccfc42aee6f60d1a"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c3153e9faebcb1d9bae4db020e713e3ee4327bf"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d37a1d52166c025c55a0e33f198da23c820343f9",
+      "size": 1806
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63180f7cf08dc9d3def884bfec55a43d88c6128e",
+      "size": 128
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1583b4ef1587cf76924f4428ee6fd6cbe6d177c3",
+      "size": 1334
+    },
+    {
+      "path": "AUDIT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c947207a7f02411c45fbbe3ba7ebf5205719b976",
+      "size": 22979
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf0e3e8a2555314840e00697f189321bac2626a7",
+      "size": 1103
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b75610b5f0c52a2993e904554326af7fbd2931a",
+      "size": 3745
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ebc057b293173d0cf0835207b5160cfcc584923",
+      "size": 4211
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1286baf485edf23727ab83bc756181212aff895",
+      "size": 1230
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27073b8c12db9a18be9cc65622be440970ec83aa",
+      "size": 19744
+    },
+    {
+      "path": "STATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96f991f003f9c3ada63d3aaea4ff1e56f638e390",
+      "size": 1496
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "691f4be73cae095074d156beb60e0f25c4317228"
+    },
+    {
+      "path": "assets/education-agent-skills-icon.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdb2db0e03f640aa108890ae5d98d4e3c2f3faae",
+      "size": 728
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4abb8e724ef65731ded9b93e1d22376eb6d612c5"
+    },
+    {
+      "path": "docs/AGENT_SKILLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93674b2b098cdc9346528b21e2197a53e1d9b6fe",
+      "size": 5489
+    },
+    {
+      "path": "docs/AGENT_SKILLS_V2_SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4f2dc01d25acea6ae5161c5407b157c5b5dba21",
+      "size": 21401
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fcbfa8600f7877950de36e1b9f8744a0222d58e",
+      "size": 8732
+    },
+    {
+      "path": "docs/AWESOME_AGENT_SKILLS_PR.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0400ca95f95616044aa0a7a76bc75680bcb582c0",
+      "size": 2026
+    },
+    {
+      "path": "docs/CODEX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d743df151714cf8a3788ce840980ec54b7c8d50a",
+      "size": 4588
+    },
+    {
+      "path": "docs/EVIDENCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ebe7371b4427c85404a4fbfc31b729bb6a50de0",
+      "size": 12549
+    },
+    {
+      "path": "docs/EXCLUSIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbe3532b1c47e64d3f7a49f22c323e91d3b561e7",
+      "size": 7768
+    },
+    {
+      "path": "docs/HERMES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d31f09032a66f08eb71110e5f2737662e357bf21",
+      "size": 5933
+    },
+    {
+      "path": "docs/HOSTED_MCP_ACCESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5059065b3ebd986fbbb767032efd64b6650e7bfa",
+      "size": 5612
+    },
+    {
+      "path": "docs/IMPLEMENTATIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34058ba9f328664d9ea42e069b5f7d5da021cf05",
+      "size": 1299
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9153d95a99a99035a9ec93c2bf8fe4482a2b1d0",
+      "size": 1697
+    },
+    {
+      "path": "docs/REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a01045cc98195e0ce4490aa936b1c04d0f064cc",
+      "size": 44544
+    },
+    {
+      "path": "docs/SOCIAL_POSTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cad5c8691315fe041937f01c6a0bb6720871d2e",
+      "size": 6798
+    },
+    {
+      "path": "docs/brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5536a66d782cefea683e20a04473e5dd17e5730",
+      "size": 15301
+    },
+    {
+      "path": "docs/domain-20-builder-brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57bf65063d002a7a3b59bc30cbba9deceb3daa86",
+      "size": 27821
+    },
+    {
+      "path": "docs/migration-log.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ef7fde945e5268cdf27710ac760e152c1a9c71",
+      "size": 9236
+    },
+    {
+      "path": "llms.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b13e36777a16d4402c3d7049ca2f301e3aab868",
+      "size": 7279
+    },
+    {
+      "path": "mcp-server",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d584e45b01f8d6b0987f1dec0ea92d39db7c28f"
+    },
+    {
+      "path": "mcp-server/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66c3a81da6439c5356a0be82d997cccdf14800d",
+      "size": 42
+    },
+    {
+      "path": "mcp-server/CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ecf4594f4d7150cd6ca51977eae51bfad18fde9",
+      "size": 1217
+    },
+    {
+      "path": "mcp-server/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "822c27be8f27adac285c8c84c15dda8608381a90",
+      "size": 978
+    },
+    {
+      "path": "mcp-server/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d75df8bea35a853d4625fe64e845d9ba62deecb",
+      "size": 3325
+    },
+    {
+      "path": "mcp-server/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edbef6b70972f88b80184b1322b097ea36d11980"
+    },
+    {
+      "path": "mcp-server/api/mcp.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e47583927e17bc8d665f8dac98f1bfce2033051",
+      "size": 2279
+    },
+    {
+      "path": "mcp-server/api/oauth",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5188fb77600bd54d542d28157c1179ca620b06db"
+    },
+    {
+      "path": "mcp-server/api/oauth/authorize.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7097a2a5ea3f57c0382ee40d27c4cfe9ce9622cc",
+      "size": 2467
+    },
+    {
+      "path": "mcp-server/api/oauth/register.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a47c4ce4c178dba83f348ab891fa3c3b4039063",
+      "size": 1165
+    },
+    {
+      "path": "mcp-server/api/oauth/token.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f4e7a7e7526516e9100e74b602c1efa95a4f741",
+      "size": 1908
+    },
+    {
+      "path": "mcp-server/api/request-access.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abcfc5b0a2283bb66c30d7171a0c8605b1c5d951",
+      "size": 12495
+    },
+    {
+      "path": "mcp-server/api/well-known",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75ebdcfcaeabfe9dc5654397c5b113873219af8b"
+    },
+    {
+      "path": "mcp-server/api/well-known/oauth-authorization-server.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66bd05da95004a5903159862facd21c1b6d8f9cf",
+      "size": 470
+    },
+    {
+      "path": "mcp-server/api/well-known/oauth-protected-resource",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f68332a643fc9431e20d46b9293b1d654838dd0"
+    },
+    {
+      "path": "mcp-server/api/well-known/oauth-protected-resource/mcp.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5705a6939d5f3ca36dfcb583d7ea3040b220a97d",
+      "size": 469
+    },
+    {
+      "path": "mcp-server/favicon.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5daf3c15fb4a9687efa9a26aa3c2e2e9862100f8",
+      "size": 326891
+    },
+    {
+      "path": "mcp-server/google85ea3b3a9799232b.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc5b2f73d486062513822421d1f1bdf9cb0be201",
+      "size": 49
+    },
+    {
+      "path": "mcp-server/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d1cc36d02dc4364d4bfca7ebaf4b551b3c09e75",
+      "size": 2268
+    },
+    {
+      "path": "mcp-server/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e7ee14074b318a8d69480b4b7d097b6d0138bd8",
+      "size": 63796
+    },
+    {
+      "path": "mcp-server/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62898d3e10f9761fc8497e2fe9aafe2ca7fade75",
+      "size": 892
+    },
+    {
+      "path": "mcp-server/playwright.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "290918d29116effc9ff19fee56e6f11ee9600f97",
+      "size": 124
+    },
+    {
+      "path": "mcp-server/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bb31670801effa42b7b28f16d466d45b3799a88"
+    },
+    {
+      "path": "mcp-server/public/index.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d519080994d3bf5e1076ae4b09b997a4f5fa37c8",
+      "size": 34
+    },
+    {
+      "path": "mcp-server/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fa3b1e43ff52df314797b1f547f45c9bfeef1cd"
+    },
+    {
+      "path": "mcp-server/scripts/bundle-skills.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aea52ae2651c3d71731be06ac403de940a4e004a",
+      "size": 928
+    },
+    {
+      "path": "mcp-server/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "136b2063ff76f6f55e53d26a27a0f6edb175aa63"
+    },
+    {
+      "path": "mcp-server/src/access.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a76bd38e25328c6e2cef06fca4f6a17aa67e1d3",
+      "size": 104
+    },
+    {
+      "path": "mcp-server/src/cli.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac717bc3a9832844e46a57b5c92433ed49c562ba",
+      "size": 585
+    },
+    {
+      "path": "mcp-server/src/http-auth.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "314cb352384e3580514a80a931e2b70f1b6ad80a",
+      "size": 4088
+    },
+    {
+      "path": "mcp-server/src/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a65bf8d35c92a28015dc378ec33e038203af5a0d",
+      "size": 723
+    },
+    {
+      "path": "mcp-server/src/oauth.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64f725c0cbdb837e47171f992e6bb97692331409",
+      "size": 8717
+    },
+    {
+      "path": "mcp-server/src/server.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "734d2c7d9f4b3d3ed8c660d288197f440d338920",
+      "size": 5936
+    },
+    {
+      "path": "mcp-server/src/skill-loader.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a7fe418f1957a6bf8a595a752b66801a8a9ecd9",
+      "size": 5317
+    },
+    {
+      "path": "mcp-server/src/skills.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19da0c87ddcada68d7b5bbfdd84d86e0302b2e67",
+      "size": 1667881
+    },
+    {
+      "path": "mcp-server/src/tool-handler.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "238edf5b1fc3b95745fc9dcccf0427d026c5d836",
+      "size": 6568
+    },
+    {
+      "path": "mcp-server/src/tool-registry.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c81908c6037942689be1da59eb68fd1c31d8e83",
+      "size": 3831
+    },
+    {
+      "path": "mcp-server/src/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52bc0dc935134561c2aa628af3b762f0af5f4178",
+      "size": 939
+    },
+    {
+      "path": "mcp-server/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f77b88cbfb645a7a3782f12d04b0d5de8ac60ab"
+    },
+    {
+      "path": "mcp-server/tests/http-auth.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "270bf420ebfd924a3d8e685d698920ef1bbb7fa6",
+      "size": 5370
+    },
+    {
+      "path": "mcp-server/tests/mcp-server.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be5a7d8ce5387ee1c8ffc1670b00240210564312",
+      "size": 9141
+    },
+    {
+      "path": "mcp-server/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4c7538590f0e5ef0d9ed41124ecb0e4a7fb7a56",
+      "size": 360
+    },
+    {
+      "path": "mcp-server/vercel.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51dd959d5add5a87cd954c500eab90a8d2f8c675",
+      "size": 463
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3094fbec4503e66c7b611895f1f73c8c2175f338",
+      "size": 2786
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84de93e5def71395373d5d2f2151e13d2e656051",
+      "size": 607
+    },
+    {
+      "path": "playwright.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8282b37b55efe9a7f7744bc676f15c8ed46854a2",
+      "size": 210
+    },
+    {
+      "path": "registry.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c74b9d78be2fa254b0b2466367be5cf1737432ec",
+      "size": 206130
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "324d7319827200fde4d18284bd375b10f8c35471"
+    },
+    {
+      "path": "scripts/generate-registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "996ed9c6a502efdaab4ca21878d1d2db840c031d",
+      "size": 3757
+    },
+    {
+      "path": "scripts/validate-registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45616994bd6269ef858040ca91ee1e3d6f73f291",
+      "size": 2527
+    },
+    {
+      "path": "scripts/validate-skills.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a90652ef8bd01ab33f6331fbd22500c3df3aa8a1",
+      "size": 2914
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f341701f87b2e799977de4ce8342ce2a99bb6d18"
+    },
+    {
+      "path": "skills/ai-learning-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6f1cdf0d95a033be48ce835c4ce92c648c70e0a"
+    },
+    {
+      "path": "skills/ai-learning-science/adaptive-hint-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8db318d80d4de0a28339fc92121b1eea7e2fd8a"
+    },
+    {
+      "path": "skills/ai-learning-science/adaptive-hint-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1c3edc56d21b047ee063cc5e9c00bafeed84b8d",
+      "size": 21878
+    },
+    {
+      "path": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30078f3165f0c5f0ca6f44b551ef8ced17c22e32"
+    },
+    {
+      "path": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b541ff36629a4d2d7a15e5dd4f6883c9dc8145c",
+      "size": 25659
+    },
+    {
+      "path": "skills/ai-learning-science/ai-feedback-design-principles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d41494d1bff3927f58abe89c63f37fd16740a9ae"
+    },
+    {
+      "path": "skills/ai-learning-science/ai-feedback-design-principles/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "992b8b94e4989e081dc8daed13750551affac623",
+      "size": 23148
+    },
+    {
+      "path": "skills/ai-learning-science/cognitive-tutoring-architecture-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a9895dc5105ea16188161f60b6e49f56331651e"
+    },
+    {
+      "path": "skills/ai-learning-science/cognitive-tutoring-architecture-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0865f6549a5af1a52baba54660186a0caa72dd2e",
+      "size": 24458
+    },
+    {
+      "path": "skills/ai-learning-science/digital-worked-example-sequence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30fa98e5c31cc2f3da673d25e1b3d6c977a977ea"
+    },
+    {
+      "path": "skills/ai-learning-science/digital-worked-example-sequence/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a58ea3a3163cf94af3ce5efc6b6de8da939f5fb2",
+      "size": 21101
+    },
+    {
+      "path": "skills/ai-learning-science/erroneous-example-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7cbc78f33ea332f4d3fa43c7aad8cc82b890bbb"
+    },
+    {
+      "path": "skills/ai-learning-science/erroneous-example-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0299fc9665722bb544caf7acba76f862a03cdc6",
+      "size": 20186
+    },
+    {
+      "path": "skills/ai-learning-science/formative-assessment-loop-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17323bfc557453ec468ce7186fd4e154444099a3"
+    },
+    {
+      "path": "skills/ai-learning-science/formative-assessment-loop-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da3019b8626858be131944dfbdaa3e649a36b179",
+      "size": 28533
+    },
+    {
+      "path": "skills/ai-learning-science/individual-spacing-algorithm-explainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ba2bf5930745931a784c09ff3cd5dd159197428"
+    },
+    {
+      "path": "skills/ai-learning-science/individual-spacing-algorithm-explainer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53e29e07af0f21f4c4bb201091871fd1c9fb2f1d",
+      "size": 24375
+    },
+    {
+      "path": "skills/ai-learning-science/intelligent-tutoring-dialogue-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "515068b44e00268bfed6d711e4c806db8be356cd"
+    },
+    {
+      "path": "skills/ai-learning-science/intelligent-tutoring-dialogue-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76fd1c9039b1b2a2fb97c7e0bd38af5d9e1c8b6b",
+      "size": 27843
+    },
+    {
+      "path": "skills/ai-learning-science/learning-analytics-interpretation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b211f96c930acea3ac9d2006435e7ce4728eef38"
+    },
+    {
+      "path": "skills/ai-learning-science/learning-analytics-interpretation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "585c6be743a2e7a2bd80b049b6e3f3e9a78e42a5",
+      "size": 22653
+    },
+    {
+      "path": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7688ef2ac78f47a54259357a2c92c1a6108364a1"
+    },
+    {
+      "path": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d420ec460eaa0b440cd80ced84b4dced5fa3a4ba",
+      "size": 25813
+    },
+    {
+      "path": "skills/ai-learning-science/productive-failure-desirable-difficulty-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54475a5437d712a3f84b435459bd3f48acac07cb"
+    },
+    {
+      "path": "skills/ai-learning-science/productive-failure-desirable-difficulty-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a7b518cedd989a2875fa010ccbea922bce0c012",
+      "size": 28405
+    },
+    {
+      "path": "skills/ai-learning-science/self-explanation-prompt-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0a01b1c6456f852425fc4ba1e789a16f22e3d6b8"
+    },
+    {
+      "path": "skills/ai-learning-science/self-explanation-prompt-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2316a19a57db8f872adcc084befd17f11d2ab93",
+      "size": 22418
+    },
+    {
+      "path": "skills/ai-learning-science/worked-example-to-problem-solving-transition-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f8b7478e18bef5c3bf6dec9a0c3cec024e21d7e"
+    },
+    {
+      "path": "skills/ai-learning-science/worked-example-to-problem-solving-transition-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6018775225d9ef61c06174bd84507fd974f9079a",
+      "size": 24864
+    },
+    {
+      "path": "skills/ai-literacy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46c50cfd5b17be638ced68e5271281a8ec8bf064"
+    },
+    {
+      "path": "skills/ai-literacy/ai-expertise-interrogation-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97c3b8080439ea1815cc12c9a9bd70a5091b6158"
+    },
+    {
+      "path": "skills/ai-literacy/ai-expertise-interrogation-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5f6d471ec5fb9b4a2e49593b445b884cdcdbd6",
+      "size": 23308
+    },
+    {
+      "path": "skills/ai-literacy/ai-hallucination-fact-check-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e2dc52d3b52fa08b17df57590ca523d5493b080"
+    },
+    {
+      "path": "skills/ai-literacy/ai-hallucination-fact-check-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a2ad1e07997da302ddd73e2b82565d56f2d9bb3",
+      "size": 23581
+    },
+    {
+      "path": "skills/ai-literacy/ai-learning-boundary-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fce2af0f5572f70daa594e9dc31691699ed0800c"
+    },
+    {
+      "path": "skills/ai-literacy/ai-learning-boundary-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03966e245084b1d518e256db33ef6337e7f37646",
+      "size": 24007
+    },
+    {
+      "path": "skills/ai-literacy/ai-output-critical-audit-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a503d18c646e55dcbb515f142f8cdd1bd4ddfff2"
+    },
+    {
+      "path": "skills/ai-literacy/ai-output-critical-audit-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "284839cec1c2827b23b0ae3a4c0212c46c12c9fa",
+      "size": 23864
+    },
+    {
+      "path": "skills/ai-literacy/ai-socratic-dialogue-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "744bf11f55a1ae0906b065e116ab5ca8948bfed2"
+    },
+    {
+      "path": "skills/ai-literacy/ai-socratic-dialogue-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e58c6e54323666edf3f07da717710898e08cc2b",
+      "size": 26163
+    },
+    {
+      "path": "skills/ai-literacy/disciplinary-ai-literacy-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "171f14d19c2c3cddddeabeca99f40f2b1b23dd69"
+    },
+    {
+      "path": "skills/ai-literacy/disciplinary-ai-literacy-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "395b26a7932415fcca1f71b292bbcadcdd84cf7e",
+      "size": 24187
+    },
+    {
+      "path": "skills/ai-literacy/prompt-literacy-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1cf813a9af7fcda2e57c47a6d649b81884e312b"
+    },
+    {
+      "path": "skills/ai-literacy/prompt-literacy-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff496fae1e1d18b4c257d8261e385c81c3b93ccd",
+      "size": 22728
+    },
+    {
+      "path": "skills/curriculum-alignment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c26da23343a2661b86009ea4472463252efb4a2"
+    },
+    {
+      "path": "skills/curriculum-alignment/coverage-audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b2a536e12a6add3811dbdec1c56f891c966b29e"
+    },
+    {
+      "path": "skills/curriculum-alignment/coverage-audit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a098681a54b6ebd5e2efacc55bc4f9c0b485d7",
+      "size": 17713
+    },
+    {
+      "path": "skills/curriculum-alignment/curriculum-crosswalk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3d1aaf9c77cbd6f40666bfae77bee05ded65604"
+    },
+    {
+      "path": "skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a85862a42d091c20b603d8fc2571eea9eb3cbd5",
+      "size": 27750
+    },
+    {
+      "path": "skills/curriculum-alignment/developmental-band-translator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b76d1370ea2720e90f6ced3b200b02382fbb9013"
+    },
+    {
+      "path": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75ac8a48f6ddf887525ef4db553e4fa2e01ca71d",
+      "size": 22734
+    },
+    {
+      "path": "skills/curriculum-alignment/kud-chart-author",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08f5289c756e7c1ee4e2bd262213ba8669c68864"
+    },
+    {
+      "path": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8215a1bf892912cdef0166d54ae2a972b016ef9d",
+      "size": 36707
+    },
+    {
+      "path": "skills/curriculum-assessment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "350685da6be83c1062f9f5d2743aa1750f8738c2"
+    },
+    {
+      "path": "skills/curriculum-assessment/assessment-validity-checker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ef839ba011e1edf603ded4feca50fb175137653"
+    },
+    {
+      "path": "skills/curriculum-assessment/assessment-validity-checker/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f4bd408ae95d17ea41346991ae84ef8aafbf3f5",
+      "size": 19747
+    },
+    {
+      "path": "skills/curriculum-assessment/backwards-design-unit-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a52a46e70b20edc34ccb7f611cb7392f86a2848a"
+    },
+    {
+      "path": "skills/curriculum-assessment/backwards-design-unit-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b71799fc2a0e1b39f0fdb863fcfd492583d601d8",
+      "size": 21843
+    },
+    {
+      "path": "skills/curriculum-assessment/competency-unpacker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d113407900317b31a526a49778d1b62ac648da31"
+    },
+    {
+      "path": "skills/curriculum-assessment/competency-unpacker/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24c8653635e30fbd9f3b16c539a8b702578050db",
+      "size": 18073
+    },
+    {
+      "path": "skills/curriculum-assessment/criterion-referenced-rubric-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d45b6565f5644be7bd676504656e6a384c7ceb8"
+    },
+    {
+      "path": "skills/curriculum-assessment/criterion-referenced-rubric-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "091eef048dbb21588a53d2a31ba34ec15c0603db",
+      "size": 21248
+    },
+    {
+      "path": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1a3ac51b3a23bf708bfdf345f9793bd2b075952"
+    },
+    {
+      "path": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31828bfe7cb7d122b91974c2ef675fc39cff2630",
+      "size": 47837
+    },
+    {
+      "path": "skills/curriculum-assessment/differentiation-adapter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0ec28720d54bba2dd836872e04f7396b2466211"
+    },
+    {
+      "path": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab72cad254369c5b7572a04d961c5ddb9c6b896a",
+      "size": 18643
+    },
+    {
+      "path": "skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7bf9dd5a1661ba5f84bd1508b496c029a51febe"
+    },
+    {
+      "path": "skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c49548c3a004a9b103dc69f2d97d22f37de3971",
+      "size": 39790
+    },
+    {
+      "path": "skills/curriculum-assessment/formative-assessment-technique-selector",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7461457a95ed8c30a991480ec297ebcabb3f6aef"
+    },
+    {
+      "path": "skills/curriculum-assessment/formative-assessment-technique-selector/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48988a739803c07ab163017ece39a518a0a3838c",
+      "size": 19234
+    },
+    {
+      "path": "skills/curriculum-assessment/gap-analysis-from-student-work",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6b585f54341375f031171c2256e9c21754d3649f"
+    },
+    {
+      "path": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "283bb6a5736763553625d05cbafa6389a62abff0",
+      "size": 18833
+    },
+    {
+      "path": "skills/curriculum-assessment/kud-knowledge-type-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b4d4a44ff79618d63ea4442c8cec12716082057"
+    },
+    {
+      "path": "skills/curriculum-assessment/kud-knowledge-type-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "205431edcc217716748fb2d9f5bde87ba8135a28",
+      "size": 46043
+    },
+    {
+      "path": "skills/curriculum-assessment/learning-progression-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e01eec660beafdfac6a1baebf6073445df8d7f2d"
+    },
+    {
+      "path": "skills/curriculum-assessment/learning-progression-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7768bf6834c1f00cef3056e3971859edfd8bf27",
+      "size": 21728
+    },
+    {
+      "path": "skills/curriculum-assessment/project-brief-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa97286405d3dee7cfe630f28bb4e11f7b1710b8"
+    },
+    {
+      "path": "skills/curriculum-assessment/project-brief-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fd395c952ea1e2604fbc6c91118c09b49b51541",
+      "size": 32216
+    },
+    {
+      "path": "skills/curriculum-assessment/scope-and-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "342892ff7260fa83b894df0caaf1cda9b32ab5b0"
+    },
+    {
+      "path": "skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d646f83674f57ca592f8efee369b4b440eb45de5",
+      "size": 57603
+    },
+    {
+      "path": "skills/eal-language-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a66b02084ccf2c69166142edadbe628ad7774e2"
+    },
+    {
+      "path": "skills/eal-language-development/academic-language-sentence-frame-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26e8c2d59ecf27244b8e90958e22b838286c480e"
+    },
+    {
+      "path": "skills/eal-language-development/academic-language-sentence-frame-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7948126e8ca740896e1ac34e2616f5a472cb04d",
+      "size": 20626
+    },
+    {
+      "path": "skills/eal-language-development/language-demand-analyser",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55a1670b59f9bf15e0856320480f3f910a4b0a86"
+    },
+    {
+      "path": "skills/eal-language-development/language-demand-analyser/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be23a6c29629268d88d4d419fa2fa14c548f5000",
+      "size": 22328
+    },
+    {
+      "path": "skills/eal-language-development/scaffolded-task-modifier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93112cffc885c05938142b7cca52a9644ec2ddc0"
+    },
+    {
+      "path": "skills/eal-language-development/scaffolded-task-modifier/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e424c3760525b51a386d135e2657dcfe74e69ddf",
+      "size": 21765
+    },
+    {
+      "path": "skills/eal-language-development/sheltered-instruction-lesson-modifier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5693a7297b5bf0c3e3ccac9aff4cb0e13aa4d37d"
+    },
+    {
+      "path": "skills/eal-language-development/sheltered-instruction-lesson-modifier/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20626db713d8990574ea59e95b05abd625d827a",
+      "size": 25798
+    },
+    {
+      "path": "skills/eal-language-development/vocabulary-tiering-tool",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c93699cd48d0cdc064a7e3f657fdedc9770df5a3"
+    },
+    {
+      "path": "skills/eal-language-development/vocabulary-tiering-tool/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1f0bd7940ebc4c3fb8472fe3015787a30c4599f",
+      "size": 21219
+    },
+    {
+      "path": "skills/environmental-experiential-learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25e93ec46adb92ccd61e3ec304e448c0881efdac"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/biophilic-learning-environment-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d14bd2869c841c4fbb251a0555478cb578f3f6c1"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/biophilic-learning-environment-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9990c433ee87b2a04800312fb61500180b8cfcf",
+      "size": 24903
+    },
+    {
+      "path": "skills/environmental-experiential-learning/ecological-inquiry-anchor-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a380dfe0cc5fd36b38b1a66ad9f320e21f7a35c"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/ecological-inquiry-anchor-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2acfe17b30e50f22d05648be2c2e83a8d7a1a233",
+      "size": 24028
+    },
+    {
+      "path": "skills/environmental-experiential-learning/experiential-learning-cycle-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9ffd4c936e527a1100489e8015b0c8455295c46"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/experiential-learning-cycle-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14735241f3b4c17e87820fed3c85958df399d724",
+      "size": 23386
+    },
+    {
+      "path": "skills/environmental-experiential-learning/interdisciplinary-real-world-connection-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3cf0e334f13bf298d9a8fb9b61964fa95345a0b"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/interdisciplinary-real-world-connection-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53e816074180ff64189432cfbd47f9dda4983c3a",
+      "size": 25970
+    },
+    {
+      "path": "skills/environmental-experiential-learning/outdoor-learning-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf67e4eb2059b4a75d4759eb66ea22ad428beb1f"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/outdoor-learning-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bcf9d0c04a252a5745a5970f2c76a3dd00576c0",
+      "size": 23538
+    },
+    {
+      "path": "skills/environmental-experiential-learning/service-learning-project-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "416a7876a40ebceda2b966126eec9e262615e538"
+    },
+    {
+      "path": "skills/environmental-experiential-learning/service-learning-project-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c4aefc85272d90e966e4598a6af2fa11570b817",
+      "size": 25205
+    },
+    {
+      "path": "skills/explicit-instruction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ba802093e37cac04c55d03d085f765c60a5ec45"
+    },
+    {
+      "path": "skills/explicit-instruction/checking-for-understanding-protocol-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e36e6660ab36d68f39b6b6a520d3e9decf7a2f3"
+    },
+    {
+      "path": "skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9094af7a904079a51ddfbff39df3e359ec2a244a",
+      "size": 19216
+    },
+    {
+      "path": "skills/explicit-instruction/explicit-instruction-sequence-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e9379f23da216e52a2d381080fd85ff86daa371"
+    },
+    {
+      "path": "skills/explicit-instruction/explicit-instruction-sequence-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "864da77b57c1495fdbd0adc975fcd60423afbf07",
+      "size": 20951
+    },
+    {
+      "path": "skills/explicit-instruction/lesson-opening-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93f239eb71667eedaf003058a1563ea65466f78f"
+    },
+    {
+      "path": "skills/explicit-instruction/lesson-opening-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40b709f0d04fc88c69af2271dde69e35028945b5",
+      "size": 16170
+    },
+    {
+      "path": "skills/explicit-instruction/practice-problem-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "828eb6705807ddd2c1fa8e9fe64d348fc7c77674"
+    },
+    {
+      "path": "skills/explicit-instruction/practice-problem-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ace870ea5e6423f6e731fb0e376dc2d6364a64c8",
+      "size": 19960
+    },
+    {
+      "path": "skills/explicit-instruction/think-aloud-script-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8389171719bf71898ad9ae31d05d672dfa6b933"
+    },
+    {
+      "path": "skills/explicit-instruction/think-aloud-script-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39e44239b48d232b14b67f4539d44e1cd9709fff",
+      "size": 21140
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d43e01226069434ef30d61c63888a855f03461f1"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/cpa-sequence-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75a538b5bdfc0695a18a7277bc18931746083920"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/cpa-sequence-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44aba44d8ff8a2b03375dda90c7afbc05affae36",
+      "size": 22272
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/cross-cultural-task-validity-checker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92c67678026b7eedeb3eb495627cd305f433caff"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/cross-cultural-task-validity-checker/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0c421418df29fd764f33c2ac04588d8f13c7289",
+      "size": 27915
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/culturally-responsive-teaching-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42ed0eed7834e4df7c9862c2f5f437f86157f65b"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/culturally-responsive-teaching-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd3f6499b6c30c984e28839856dbc2f8ccf2ee87",
+      "size": 24951
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/emergent-project-design-scaffold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29b79e24b32514f98910b03536ccca67756d5e1f"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/emergent-project-design-scaffold/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e075203370f85c1444c711b16bd4a52e50a645b3",
+      "size": 26463
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/phenomenon-based-unit-anchor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ad4eaabdd5c6e1e1cc79eedb46d8a84af601d0f"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/phenomenon-based-unit-anchor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8941b52db90fb208d725e3ee162ef5c947d6883",
+      "size": 25430
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/place-based-inquiry-anchor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd3a0f63c6b23c387237290424c859e569834056"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/place-based-inquiry-anchor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f04dab72b0e3f006c57917619024a5828196160",
+      "size": 23368
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/reggio-documentation-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ab6047f5d918566aabe243092fe69c6d803f2ac"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/reggio-documentation-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8f3b6628ceb5309b8265f4246f5f54f66edacc",
+      "size": 24712
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/ubuntu-collective-knowledge-task-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fc259493dbd83474c6cb6d2c3e8245dee77e5ff"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/ubuntu-collective-knowledge-task-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb6cadea252c51d5b63b0d2386a5dd4e2cb13ca1",
+      "size": 23430
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/variation-theory-task-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "feb0bfb13203dd00c271de517d394f05ff962e43"
+    },
+    {
+      "path": "skills/global-cross-cultural-pedagogies/variation-theory-task-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7ea01926b9788c9c01ec8a28595229d61ba463d",
+      "size": 21535
+    },
+    {
+      "path": "skills/historical-thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e5e7419174e7c145937f84a333c03ba76bc3357"
+    },
+    {
+      "path": "skills/historical-thinking/central-historical-question-evaluator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d22197cdbb2845a977e11ac44fb6b8574c2cb72c"
+    },
+    {
+      "path": "skills/historical-thinking/central-historical-question-evaluator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23078ef3668ab2403f4b11923c595d25f0119c0a",
+      "size": 21091
+    },
+    {
+      "path": "skills/historical-thinking/close-reading-skill-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c792b6814bf3ae34b003710dbd323632c7a595df"
+    },
+    {
+      "path": "skills/historical-thinking/close-reading-skill-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc32ca60a5f101d22c6f3f83881d74e74d6fb5c5",
+      "size": 25945
+    },
+    {
+      "path": "skills/historical-thinking/contextualisation-skill-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c5f0d5959c9bb4fa8a9f6266e9403912ff9cf43"
+    },
+    {
+      "path": "skills/historical-thinking/contextualisation-skill-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb75a3199efd49c0beae75b7a704809d42e69d56",
+      "size": 30403
+    },
+    {
+      "path": "skills/historical-thinking/corroboration-skill-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1f725012908ead9c116f5962ccc34ec7b3e2934"
+    },
+    {
+      "path": "skills/historical-thinking/corroboration-skill-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f83cc40b63022688889b2f59ed60c45f4741c420",
+      "size": 29779
+    },
+    {
+      "path": "skills/historical-thinking/document-based-lesson-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "873fd7f83d2cd32f8f3a006341593ded1ffd4a41"
+    },
+    {
+      "path": "skills/historical-thinking/document-based-lesson-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dae5cb85e1274051ec30f08352c1a27053dd8761",
+      "size": 31301
+    },
+    {
+      "path": "skills/historical-thinking/historical-document-set-curator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db5a47c4ca6e87cb018c2e57cce849385e1b3be4"
+    },
+    {
+      "path": "skills/historical-thinking/historical-document-set-curator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da2d65a44399f1ad5f75b08a5d40205483a2a621",
+      "size": 25754
+    },
+    {
+      "path": "skills/historical-thinking/historical-source-adapter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d765731802d60cc572be0e67bc6daab071f67612"
+    },
+    {
+      "path": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f05121de8b453eb67f276a5e8203a2a52128b2f",
+      "size": 24190
+    },
+    {
+      "path": "skills/historical-thinking/historical-thinking-assessment-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ab3b4a1022c0595bae8ae2cf7021f76c6269969"
+    },
+    {
+      "path": "skills/historical-thinking/historical-thinking-assessment-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce5e5d5dd8b9c3bc7f6c4a81805130a9348fd68a",
+      "size": 28027
+    },
+    {
+      "path": "skills/historical-thinking/historical-thinking-strategy-modelling-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd4abceb46721ae0aa2bb386776e667aace065a7"
+    },
+    {
+      "path": "skills/historical-thinking/historical-thinking-strategy-modelling-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8b968ec0c5ed957454dfac9058de82d0850e996",
+      "size": 27156
+    },
+    {
+      "path": "skills/historical-thinking/sourcing-skill-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c79693ee8221e1e0818721fd9603d23f6bf4ad9"
+    },
+    {
+      "path": "skills/historical-thinking/sourcing-skill-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "571c76712505ceec3c389a54c7140ce70d6c44fd",
+      "size": 34773
+    },
+    {
+      "path": "skills/inclusive-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb614508fd81704d9ce072baaf8c4dce01f135d9"
+    },
+    {
+      "path": "skills/inclusive-design/udl-barrier-anticipator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "729d1514fe4929789a1894c4fa7a39f25aa2a7f0"
+    },
+    {
+      "path": "skills/inclusive-design/udl-barrier-anticipator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b51e61409775aa3e11d6191f0de156cde2f7162",
+      "size": 14099
+    },
+    {
+      "path": "skills/inclusive-design/udl-lesson-auditor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2f042cc52088b1aa8fffa2118c78ffdc8edd234"
+    },
+    {
+      "path": "skills/inclusive-design/udl-lesson-auditor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "950e50bc2fbd6ec71c4feab07d896c761c3076cb",
+      "size": 12881
+    },
+    {
+      "path": "skills/inclusive-design/udl-options-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e012169ce5c1e3f7d8e983e23abe394fa6b9ed1"
+    },
+    {
+      "path": "skills/inclusive-design/udl-options-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc8dd510f4ee50a93ae363caf5cae6409ce75958",
+      "size": 13646
+    },
+    {
+      "path": "skills/literacy-critical-thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fa1f0bbc988fc6ece896dceab758de46dcd6314"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/argument-structure-scaffold-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b492a608d2b17b79af97d064cd316003888c731"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/argument-structure-scaffold-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a40039e730a17edda39c02adf2a2bd73f71434c5",
+      "size": 21697
+    },
+    {
+      "path": "skills/literacy-critical-thinking/critical-thinking-task-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc6c7fd945559f5950a3201a20f5822caa1e055b"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f394388eb4fc00a9466c593c7de85305f96d21fd",
+      "size": 25384
+    },
+    {
+      "path": "skills/literacy-critical-thinking/disciplinary-writing-scaffold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20e092912fe4aaa6470b30e73ce0e1219aa4fa06"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/disciplinary-writing-scaffold/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d944aedaffd25363a348042b0ceb476aea2258a1",
+      "size": 21032
+    },
+    {
+      "path": "skills/literacy-critical-thinking/media-literacy-deconstruction-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3653dad096527418136da8e32ae89e11dc38283"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/media-literacy-deconstruction-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b435c52cfe24794df885828f01e67340081eb84c",
+      "size": 22015
+    },
+    {
+      "path": "skills/literacy-critical-thinking/reading-comprehension-strategy-selector",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fddae93be8d2a5eaf9d9ab8703b12f2f7618a0d"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/reading-comprehension-strategy-selector/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e1fc53d17911d10dc33f89ea8abf4efa2e2cc0d",
+      "size": 21311
+    },
+    {
+      "path": "skills/literacy-critical-thinking/source-credibility-evaluation-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dade9d8d33e1972eb4e7825329b9d96a4fb6543f"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/source-credibility-evaluation-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0edac49bc023e3f4b12b9bae6521ae409d1e0b53",
+      "size": 22748
+    },
+    {
+      "path": "skills/literacy-critical-thinking/text-complexity-analyser",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7281b3e1fa2ccd6cf2718f6aee9a84848c57abf"
+    },
+    {
+      "path": "skills/literacy-critical-thinking/text-complexity-analyser/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e3c55f42cc22c49f1503926217dc596d424e2d9",
+      "size": 22961
+    },
+    {
+      "path": "skills/memory-learning-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2de1cd7a63b585054fc3b4f40991cd8b232ff9e8"
+    },
+    {
+      "path": "skills/memory-learning-science/cognitive-load-analyser",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ea71765a0fd0d75c75e0d5970f74773653b55a9"
+    },
+    {
+      "path": "skills/memory-learning-science/cognitive-load-analyser/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3018f9e9af837c3db97d37a9b40009fa667b74e6",
+      "size": 18299
+    },
+    {
+      "path": "skills/memory-learning-science/dual-coding-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be81a2b2b0448b303e5889dd713f563e645c7b06"
+    },
+    {
+      "path": "skills/memory-learning-science/dual-coding-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d43294628a8a74057941e043e8be6f3606de144",
+      "size": 19197
+    },
+    {
+      "path": "skills/memory-learning-science/elaborative-interrogation-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9e844af4b93a09e79b81ec5635748e79609748f"
+    },
+    {
+      "path": "skills/memory-learning-science/elaborative-interrogation-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0fc29a31368569e0774b2255ae10591ef9ba278",
+      "size": 18128
+    },
+    {
+      "path": "skills/memory-learning-science/feedback-quality-analyser",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e96249a6f8fdf46ab92c472442cf4f6e31cbb4d1"
+    },
+    {
+      "path": "skills/memory-learning-science/feedback-quality-analyser/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a519bd8d06c4ad664d01e8cd09008be7edbddbb9",
+      "size": 18699
+    },
+    {
+      "path": "skills/memory-learning-science/interleaving-unit-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7194cd44e72d6d84976fe2b18d1fcd81f18be67"
+    },
+    {
+      "path": "skills/memory-learning-science/interleaving-unit-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58412bc8a57279191a0081ba775051b728eae302",
+      "size": 17009
+    },
+    {
+      "path": "skills/memory-learning-science/retrieval-practice-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34515765257ee3677b0c3dcc3e6e57449e506f42"
+    },
+    {
+      "path": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d9dc25a2e2e02ff2f5c07d9f9b54f8a89d9915",
+      "size": 16002
+    },
+    {
+      "path": "skills/memory-learning-science/spaced-practice-scheduler",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a67f5fc0736a02c6225588b53448efb81aa4cf0a"
+    },
+    {
+      "path": "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d35bf701e9698414b787f6e377c916e6fb7eeda",
+      "size": 17387
+    },
+    {
+      "path": "skills/memory-learning-science/worked-example-fading-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9fd19970e76ea25ced69574eda3bec5082f460f"
+    },
+    {
+      "path": "skills/memory-learning-science/worked-example-fading-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c88753417143b738a1a2d6761ac10105ff78f7",
+      "size": 18691
+    },
+    {
+      "path": "skills/montessori-alternative-approaches",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db975de5287cf68ac424496d4873b6e06327dbb1"
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/mixed-age-learning-task-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e9c8d2e9994e4b0f0a14edac5324c23915fa858"
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/mixed-age-learning-task-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f8efc0edaaa22aa4e5f7db3219e9971b423117",
+      "size": 25718
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/prepared-environment-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98205bc010e44fd5565dd9e280a3fa7229ef7694"
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/prepared-environment-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81d984ff1feab0db866f4e9d88742b1a488b1855",
+      "size": 28054
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/three-part-lesson-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d933fad90a8361e8313c194a74094e7c553a37ae"
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/three-part-lesson-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cc26cf0507b01921d9b4f52a3cd1d0e9c02ad31",
+      "size": 25207
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/uninterrupted-work-cycle-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f37653104c64179a0d2779a5c0ad045b6eaad16"
+    },
+    {
+      "path": "skills/montessori-alternative-approaches/uninterrupted-work-cycle-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68222105232e42f8047e0cdc863642d118a1d7fa",
+      "size": 30606
+    },
+    {
+      "path": "skills/original-frameworks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d4ad9d1dacb35700d96f38151d455dece56a2f8"
+    },
+    {
+      "path": "skills/original-frameworks/assessment-design-orchestrator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87cf9fc7428f79329fb78470096e95ae7bf64104"
+    },
+    {
+      "path": "skills/original-frameworks/assessment-design-orchestrator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "755e260f2a99db80b6fbe0639b2cdcef66120ca4",
+      "size": 18613
+    },
+    {
+      "path": "skills/original-frameworks/coherent-rubric-logic-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f103bbe7260e2f53a423cf6c73e482f4f1eb558"
+    },
+    {
+      "path": "skills/original-frameworks/coherent-rubric-logic-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f112499277f2affceddf25f1088f7024825849d",
+      "size": 24256
+    },
+    {
+      "path": "skills/original-frameworks/compassionate-systems-awareness-orchestrator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37ee39dafc407efe7c48e7205c63da8b0b4f2c00"
+    },
+    {
+      "path": "skills/original-frameworks/compassionate-systems-awareness-orchestrator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f568c077656b94e2df8cbbca9f3b029574de64",
+      "size": 15115
+    },
+    {
+      "path": "skills/original-frameworks/developmental-band-system-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e267e2342356e135911edd639661265d8df1075b"
+    },
+    {
+      "path": "skills/original-frameworks/developmental-band-system-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43c92fb269c4c5b7531c1edcce29da6a8130e18",
+      "size": 26953
+    },
+    {
+      "path": "skills/original-frameworks/developmental-progression-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ef5214805a5823ee07f1a8a3408d9f0830564c2"
+    },
+    {
+      "path": "skills/original-frameworks/developmental-progression-synthesis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e67373ae09c119942b971817b81b9bb3fd70f6a0",
+      "size": 33443
+    },
+    {
+      "path": "skills/original-frameworks/dilemma-navigation-for-education-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34a5da06aa74b2b77ba5408ca8c50ed314fab90b"
+    },
+    {
+      "path": "skills/original-frameworks/dilemma-navigation-for-education-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a64068253eb965f331f1c3df0de51c31c637aff9",
+      "size": 15976
+    },
+    {
+      "path": "skills/original-frameworks/dispositional-knowledge-assessment-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f52a3cdd653f547e84c2b1ea9091e1c52b46f56"
+    },
+    {
+      "path": "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81cdd804f7d2d44138a13967e8cc135f22d2a15",
+      "size": 73289
+    },
+    {
+      "path": "skills/original-frameworks/inclusive-design-orchestrator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c0ab9fb9cfbe1c41b805232cd8165f017e2d5fc"
+    },
+    {
+      "path": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78cbe3aead54ad2086f3ec727e4cb45edba1eb7d",
+      "size": 20600
+    },
+    {
+      "path": "skills/original-frameworks/learning-target-authoring-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b99670fd16c6982445396ff29d934d2ccf3ac4c9"
+    },
+    {
+      "path": "skills/original-frameworks/learning-target-authoring-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3d78589536ed5ec6bb11b53b09ee9373f57f3a3",
+      "size": 63253
+    },
+    {
+      "path": "skills/original-frameworks/multi-perspective-decision-wheel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d76dd4e0f160f149289e10312dbe5fe41218be7e"
+    },
+    {
+      "path": "skills/original-frameworks/multi-perspective-decision-wheel/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a00870442bbb7d637c57569308aa004a4ff088f3",
+      "size": 16836
+    },
+    {
+      "path": "skills/original-frameworks/place-based-curriculum-orchestrator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6283db8d86b6b3aca4e178bd597d26bb860e4295"
+    },
+    {
+      "path": "skills/original-frameworks/place-based-curriculum-orchestrator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "489ee94a79aa0197a246254eceafd24ff3fa236e",
+      "size": 13358
+    },
+    {
+      "path": "skills/original-frameworks/regenerative-project-design-orchestrator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e738c5290407a96bffcd1762563721ec07b8ba3b"
+    },
+    {
+      "path": "skills/original-frameworks/regenerative-project-design-orchestrator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e7f3e3ad8fbac62622fce5d970b26613213d80d",
+      "size": 13618
+    },
+    {
+      "path": "skills/original-frameworks/scoping-for-transformative-learning-inquiry",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67293b1eb1c5357f615537da8a62151175b9b6d2"
+    },
+    {
+      "path": "skills/original-frameworks/scoping-for-transformative-learning-inquiry/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbb8e3db297d7ed2092d3aca7de2f67602f66cb3",
+      "size": 14701
+    },
+    {
+      "path": "skills/original-frameworks/seeds-regenerative-inquiry-cycle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96f1adf6eafc7380f1121c6e6de4b2bdb2ce71d9"
+    },
+    {
+      "path": "skills/original-frameworks/seeds-regenerative-inquiry-cycle/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e4d16d0c8bbf19724fb61de54a9c9ba8e9c80f2",
+      "size": 33322
+    },
+    {
+      "path": "skills/original-frameworks/self-determined-project-design-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a4e463c3cbd499fcb862cf83dbab3994d56247f"
+    },
+    {
+      "path": "skills/original-frameworks/self-determined-project-design-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ae767bcc5b7b9d7028813fe26a45039fa4417c4",
+      "size": 35428
+    },
+    {
+      "path": "skills/original-frameworks/single-point-rubric-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed99119e514d0fb8fc6d5cc3c9a8249311abb2ea"
+    },
+    {
+      "path": "skills/original-frameworks/single-point-rubric-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1e4ac1ad1669cf2c5d8ae308c1340c705d8fe6e",
+      "size": 27991
+    },
+    {
+      "path": "skills/original-frameworks/three-horizons-learning-transition-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9bc199307dcb71b7504da4155199d9e5521b157c"
+    },
+    {
+      "path": "skills/original-frameworks/three-horizons-learning-transition-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11ac9c2e7db8609c450f28b6f014a676820b8c3d",
+      "size": 17431
+    },
+    {
+      "path": "skills/professional-learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a73cd37f6178bc87c8181467ce40748f83482a61"
+    },
+    {
+      "path": "skills/professional-learning/competency-framework-translator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78ff36a11822099436f165224e555cf789d22d20"
+    },
+    {
+      "path": "skills/professional-learning/competency-framework-translator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9fe41ef995bc00a03225cf0217adcbae2cbef5",
+      "size": 24997
+    },
+    {
+      "path": "skills/professional-learning/instructional-coaching-conversation-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec92383404ec4438806b1cf6503cae7d2d0751cb"
+    },
+    {
+      "path": "skills/professional-learning/instructional-coaching-conversation-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c085c447740acd5f35fead103ff4bb596d9d46f",
+      "size": 21696
+    },
+    {
+      "path": "skills/professional-learning/lesson-observation-protocol-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ad51414444e2f21f94e55ddeef3c53865cd08c7"
+    },
+    {
+      "path": "skills/professional-learning/lesson-observation-protocol-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ef7007fae4e48af4872ba3773de9f8699ce97f0",
+      "size": 20155
+    },
+    {
+      "path": "skills/professional-learning/lesson-study-cycle-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "204614dd8cd985cdddee8f5df6af81dbd2294eb9"
+    },
+    {
+      "path": "skills/professional-learning/lesson-study-cycle-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a395c4a128fa025c6901614705b67f83590711d0",
+      "size": 27138
+    },
+    {
+      "path": "skills/professional-learning/panel-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa4b70d16cc711816a7e582e35afc5a9a30b53d2"
+    },
+    {
+      "path": "skills/professional-learning/panel-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e425127357ce7fa92508e40ce0fdee915b9dec5",
+      "size": 60602
+    },
+    {
+      "path": "skills/professional-learning/pedagogical-content-knowledge-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58fdc00939fbe6768715f73c9c4c015c32a63008"
+    },
+    {
+      "path": "skills/professional-learning/pedagogical-content-knowledge-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41fc92bb828c93c7d9b0e89764604bda3c57a260",
+      "size": 42943
+    },
+    {
+      "path": "skills/professional-learning/professional-development-session-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c0f03015c26e79741c76524c5e949d74e35ad58"
+    },
+    {
+      "path": "skills/professional-learning/professional-development-session-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae9dd08381dbaa48bd6ab7978d47ae9760f5004a",
+      "size": 21249
+    },
+    {
+      "path": "skills/professional-learning/reflective-practice-prompt-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39cbab35dbbb22a0e0d5e12a29e0e60c18c91efc"
+    },
+    {
+      "path": "skills/professional-learning/reflective-practice-prompt-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cde9589b97bd870ac1974d52f2e8aa1d10dc82e2",
+      "size": 19504
+    },
+    {
+      "path": "skills/professional-learning/teacher-inquiry-cycle-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "074cc172576e263d9d986fa3a01c37b8e02b6623"
+    },
+    {
+      "path": "skills/professional-learning/teacher-inquiry-cycle-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01d1aa60a7c469f9726252fcef4ab502f48dfbe0",
+      "size": 20280
+    },
+    {
+      "path": "skills/professional-learning/technological-pedagogical-content-knowledge-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8f69edf5777f4e660d2da5c8b5851624ebcd12b"
+    },
+    {
+      "path": "skills/professional-learning/technological-pedagogical-content-knowledge-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a5396794938a92325b3898672f052713df62881",
+      "size": 43893
+    },
+    {
+      "path": "skills/questioning-discussion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e728cd68b058dae6bf4b6f53d10e79ec381d316f"
+    },
+    {
+      "path": "skills/questioning-discussion/dialogic-teaching-move-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29755a5f52c453228107b712e995c851e64d00b9"
+    },
+    {
+      "path": "skills/questioning-discussion/dialogic-teaching-move-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0e8f2fabe53795b299af72ea657a7c480e56d1b",
+      "size": 22755
+    },
+    {
+      "path": "skills/questioning-discussion/discussion-protocol-selector",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c93d3ee925d3907f8426420ce7760b564a715b0"
+    },
+    {
+      "path": "skills/questioning-discussion/discussion-protocol-selector/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "344b8b5845a9668293aaf50fe28f7075dd7defcd",
+      "size": 21490
+    },
+    {
+      "path": "skills/questioning-discussion/hinge-question-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d6181592ab3c02c6f46630b92bcb98272937b52"
+    },
+    {
+      "path": "skills/questioning-discussion/hinge-question-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd15d34cabc7da498ad4de2dc787cf5e6644fea1",
+      "size": 20769
+    },
+    {
+      "path": "skills/questioning-discussion/perspective-taking-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeeef3ac0d9bb8fa114200bd7123ec2b80561638"
+    },
+    {
+      "path": "skills/questioning-discussion/perspective-taking-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2e2727e21905f6164d77069cad4dcc08317aaec",
+      "size": 18165
+    },
+    {
+      "path": "skills/questioning-discussion/socratic-questioning-sequence-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c0626a6dd629ced64469f2c929ac1de5a6f2a88"
+    },
+    {
+      "path": "skills/questioning-discussion/socratic-questioning-sequence-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5911af5b9f81d2eff244306561dae23eacda339",
+      "size": 23000
+    },
+    {
+      "path": "skills/self-regulated-learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "957097fd885bc2ebfdae835a583a144f79f07830"
+    },
+    {
+      "path": "skills/self-regulated-learning/error-analysis-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e934ad1438b1e227284b8fd53dd7bb3d295c7a5"
+    },
+    {
+      "path": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b73d8bd3e3cc15e2e5fa4b4c16bcab2aa365400",
+      "size": 19343
+    },
+    {
+      "path": "skills/self-regulated-learning/goal-setting-protocol-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "574070f235412c330f2a51124c8d9bbcbadd32b3"
+    },
+    {
+      "path": "skills/self-regulated-learning/goal-setting-protocol-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77ece69dfd0ce5738587c37d054e4cafaba0ee35",
+      "size": 18776
+    },
+    {
+      "path": "skills/self-regulated-learning/metacognitive-prompt-library",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d39d9e1a1a3af40a63960e138fb00b9e5827106"
+    },
+    {
+      "path": "skills/self-regulated-learning/metacognitive-prompt-library/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83590466cc62f73796ee659055bb13f6f76c5991",
+      "size": 17138
+    },
+    {
+      "path": "skills/self-regulated-learning/self-regulation-scaffold-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "904c6aa437e7036f7362ff7605bfcd77a9d04e51"
+    },
+    {
+      "path": "skills/self-regulated-learning/self-regulation-scaffold-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55a60456efd76f0e046d8fc2d9cad7e83e15d768",
+      "size": 20710
+    },
+    {
+      "path": "skills/self-regulated-learning/study-strategy-selector",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b97c08a191e25c0007edcd62f0869268070e8964"
+    },
+    {
+      "path": "skills/self-regulated-learning/study-strategy-selector/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b87da14b359fd42f02f1a6c060216dc35c7128f",
+      "size": 21216
+    },
+    {
+      "path": "skills/student-learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19bf20ef02bc562e72700db794e1d705ce3e76f4"
+    },
+    {
+      "path": "skills/student-learning/ai-claim-checker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a332fba821ae2d119fdcc7049c2023fe3860a3c"
+    },
+    {
+      "path": "skills/student-learning/ai-claim-checker/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7b2cff54455bf5936573ba211d6f465c6dc5b4",
+      "size": 15342
+    },
+    {
+      "path": "skills/student-learning/confidence-calibration-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ee498d05581afe1b8b4b9977f3c498e8fd0d0f0"
+    },
+    {
+      "path": "skills/student-learning/confidence-calibration-check/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca3f1ebd778006956ae05c0b28ad85235924f6ef",
+      "size": 15508
+    },
+    {
+      "path": "skills/student-learning/explain-first-interrogator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e00b27a17c8ad1490c8d269165411f77e1c20424"
+    },
+    {
+      "path": "skills/student-learning/explain-first-interrogator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68ba6beb49aa030a6972c7be7ca79fa1e2a60cf4",
+      "size": 14758
+    },
+    {
+      "path": "skills/student-learning/fading-manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8773be93a26fe375f02d4abc65e934abc8b8078c"
+    },
+    {
+      "path": "skills/student-learning/fading-manager/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9126f313c2bcc499c5bba28505552a942f8979fc",
+      "size": 17772
+    },
+    {
+      "path": "skills/student-learning/productive-failure-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61e25b755fd53c2d83d972ae4c11a7ef484b4eb5"
+    },
+    {
+      "path": "skills/student-learning/productive-failure-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "149c4332bfb7462e1a1868921a180ffd6ea948c6",
+      "size": 17362
+    },
+    {
+      "path": "skills/student-learning/progressive-hint-ladder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac1eeda700b2f74d381a364d3122de7b434e80df"
+    },
+    {
+      "path": "skills/student-learning/progressive-hint-ladder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89644cbe8ac2e5b18d035c962cfed2cd92ddef0c",
+      "size": 15390
+    },
+    {
+      "path": "skills/student-learning/retrieve-first-gate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95f0657cbacdffffb4a0fc825f27c1a35da5e139"
+    },
+    {
+      "path": "skills/student-learning/retrieve-first-gate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c84b201881c93c0e7af22022b226600a71651d42",
+      "size": 15285
+    },
+    {
+      "path": "skills/student-learning/srl-session-wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd5a9c71105ab57616ee121430370dd08759dcbd"
+    },
+    {
+      "path": "skills/student-learning/srl-session-wrapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a04f750696aa2bc8c03473e8074f70214a3c30c3",
+      "size": 16453
+    },
+    {
+      "path": "skills/student-learning/stuck-and-error-diagnosis-coach",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b09887d275c6d9b8cbf976bb0ebdbc3e43704d15"
+    },
+    {
+      "path": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9f3ed3138408b3a838d0feb04c99a09b306644a",
+      "size": 15054
+    },
+    {
+      "path": "skills/student-learning/teach-back-evaluator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61f6152c841308bc257ff040b6255c84cac5c561"
+    },
+    {
+      "path": "skills/student-learning/teach-back-evaluator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af44fa959c0697011f4ad5846e9b25b0e040624b",
+      "size": 16489
+    },
+    {
+      "path": "skills/student-learning/transfer-bridge",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe2ce7eea769b3e2b2bd2c6d2af549ac9749dff4"
+    },
+    {
+      "path": "skills/student-learning/transfer-bridge/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dbb46aef0dd71b805dfffcb702102b64f1d2e70",
+      "size": 16720
+    },
+    {
+      "path": "skills/student-learning/unassisted-evidence-checkpoint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdb5e4c3e1d3e36b006be87ec90c1962cd2fb6fd"
+    },
+    {
+      "path": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f94ca8b1161d517c1121f4114c850f25c29cfc6",
+      "size": 16266
+    },
+    {
+      "path": "skills/student-learning/weekly-agency-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f26344c339098b1e2d7860e7f628d51f9d5c6eb5"
+    },
+    {
+      "path": "skills/student-learning/weekly-agency-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b20974f3810c28b9e449462c1655cf801be0f986",
+      "size": 16799
+    },
+    {
+      "path": "skills/systems-thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6937f40d6befc188f35e6e08df75b04405bf0392"
+    },
+    {
+      "path": "skills/systems-thinking/agency-circles-for-systems-action",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34f3d97fd5678ec49632da1efaa94db211afcf4f"
+    },
+    {
+      "path": "skills/systems-thinking/agency-circles-for-systems-action/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fa3167f4bb56d385bbc7779d3f0b0cfc9849370",
+      "size": 9093
+    },
+    {
+      "path": "skills/systems-thinking/aspirational-systems-iceberg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a2b5c286456ac629fa2b2bb6bd9134731148232"
+    },
+    {
+      "path": "skills/systems-thinking/aspirational-systems-iceberg/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d18f712f33e503976b8a428135a762140c8caeee",
+      "size": 10645
+    },
+    {
+      "path": "skills/systems-thinking/hexagon-complexity-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efdbe5800f107e60f430d126cefefa1b52ab89d1"
+    },
+    {
+      "path": "skills/systems-thinking/hexagon-complexity-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "841cb86fd504f5c231fd248e4483b14399981a95",
+      "size": 15965
+    },
+    {
+      "path": "skills/systems-thinking/ladder-of-inference-reflection",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f08fb1ab45cb32875aafdc11850fe70ed97c5ae8"
+    },
+    {
+      "path": "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc18f3e7989faec974fcf863bc0abb4894314cf",
+      "size": 7703
+    },
+    {
+      "path": "skills/systems-thinking/leverage-and-response-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2196d2fc7f051b7dca952f8bad9247a95398dddd"
+    },
+    {
+      "path": "skills/systems-thinking/leverage-and-response-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f98ccb40edc9c4bf9478b0ab7593ed16c0ee20",
+      "size": 12971
+    },
+    {
+      "path": "skills/systems-thinking/mental-model-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e66b0a3e3eef20e2881a5c0200a3f08d76c7e675"
+    },
+    {
+      "path": "skills/systems-thinking/mental-model-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d22a501cb04ea213a7fb9f79fa81a2a1496f49d4",
+      "size": 9090
+    },
+    {
+      "path": "skills/systems-thinking/systems-awareness-iceberg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "229501a9adb0409144b444f0cf3cf32a67ad6e5d"
+    },
+    {
+      "path": "skills/systems-thinking/systems-awareness-iceberg/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c3c861bd839c67a9aaf548d154c219d6d626182",
+      "size": 9519
+    },
+    {
+      "path": "skills/systems-thinking/systems-wellbeing-impact-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74f656aff797d73a219854fc3dc8eb43b4d659eb"
+    },
+    {
+      "path": "skills/systems-thinking/systems-wellbeing-impact-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20ee89c272d5bd64e0876e908ffabbf4a6a34c3",
+      "size": 14739
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09e7921a496054ec4e618c67ac5d95761a6f3be5"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/agency-scaffold-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e2df7f2485be84adba477512303af8a2b4fe89f"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb1a810de41421e6c7f1eb3e66715952a7b6090",
+      "size": 22575
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3f1eb634acbe78a60f2e468738bd6c0375c0581"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f75023f37e8f16829a5837165d56d9ffc0ecad",
+      "size": 17690
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30f604b9a3fd974236e16791236febe676c5d0d3"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49ddc65db6b7492973b8fc2fd67ca62b19915da7",
+      "size": 24856
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/flow-state-condition-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2e37184920aa35c8b30f878436624a394581889"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1594fa3a211d83a4e6a821c639bd196b32a93e",
+      "size": 18734
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/implementation-intention-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "423718bd5cc9f5d18d4aac1632b011aaf69401f6"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2168e2ad90a379877e879d0c8c7fd78c3ade8493",
+      "size": 18502
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e790b8895ecd561505ed86c30848da2e568f1a0"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eced855c0755f7d09df622933b7d12a3c843176",
+      "size": 22499
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/perma-based-lesson-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cbbd657f75da04b946d1e09ebef6a4e54331a18"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d527fe077f0b6cbb47542bb5eb2510f20d85bcf",
+      "size": 20499
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10bd6ab9d12e89413b406e20e78123e4b3fb62bd"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5af92004790615718afddb0ab5704828276e0fdf",
+      "size": 22168
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "479f2fee985138680cdd4f51335895d9d20900b9"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "302025abc413f0c851d1799516a00e8fdcc24659",
+      "size": 22070
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9c7f36a5e70f12e36075a775df805ed8e8f2d7d"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d4d561a016bd09d8f278a6716821ff5f5842ffd",
+      "size": 25766
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9aa95e9aec49ae7a4c8aefbd15e90729176b0f1"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd9368e90fee1bf36a1542dd4a558f0456ef0cbc",
+      "size": 26602
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a0a314bdee0347061ef1e818d5bbc52191ab596"
+    },
+    {
+      "path": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54800ac4021413447abaafeeccf3ae345fc7678f",
+      "size": 22640
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "546f920cb0ac5f0ec01ce6883d522b5eb4e3171b"
+    },
+    {
+      "path": "tests/skills-library.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed1e8a45930bb9c021a9c88a438b688507b16639",
+      "size": 8643
+    }
+  ]
+}

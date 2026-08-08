@@ -1,0 +1,51 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "rmance task (synthesis). Adjust percentages based on instructional emphasis. ### Step 3: Write the student-facing assessment document This is the artifact students receive. It must be complete, unambiguous, and usable without teacher narration. - **He"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "e without teacher narration. - **Header block:** Unit title, subject, grade level, date, student name field, total points, time allotted. Also include the allowed resources (formula sheet, diagram, notes, calculator, noth"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "o include the allowed resources (formula sheet, diagram, notes, calculator, nothing). - **Student instructions:** Write these at one grade level below the assessed grade to ensure language complexity doesn't become a confounding variable. Instructions should"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "uage\" is not. Every cell in an analytic rubric should describe observable evidence in the student's work, not evaluate the student's effort or attitude. - **Distinguish adjacent levels with specific behavioral anchors:** The"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "The key instructional signal here is: what misconception or missing piece separates this student from proficiency? Name it specifically. - **Beginning (1 / D-F level):** Significant conceptual errors or nearly absent response. Describe the"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "one written response item. 5. **Rubric descriptors must describe observable evidence in student work, not judge student character or effort.** Phrases like \"student demonstrates effort,\" \"student seems to understand,\" or"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "nimum. ### Portfolio assessment A portfolio assessment evaluates a curated collection of student work over time, not a single performance. The assessment package must specify: which artifacts are required (minimum count),"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "from the modified version -- that changes what the assessment measures and may violate a student's right to access grade-level curriculum. Accommodation notes (extended time, scribe, calculator) belong in the teacher's administration guide,"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "d? This prevents the assessment from testing material never addressed in instruction. - **Accommodation needs:** Any ELL students, IEP/504 requirements, or gifted learners who need differentiated versions? Flag this upfront"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/summative-assessment/SKILL.md",
+        "snippet": "e assessment measures and may violate a student's right to access grade-level curriculum. Accommodation notes (extended time, scribe, calculator) belong in the teacher's administration guide, not the student-facing document"
+      }
+    ]
+  },
+  "read_errors": []
+}

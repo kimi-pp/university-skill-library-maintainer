@@ -1,0 +1,43 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/education/evaluation-to-growth/SKILL.md",
+        "snippet": "t] - Coherence recommendations: [list] #### 1.3 Logos Review Assess rational and factual appeal. **Prompt**: \"Assess the rational and factual appeal of this content. Are the arguments clear, well-supported, and per"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/SKILL.md",
+        "snippet": "Review Assess rational and factual appeal. **Prompt**: \"Assess the rational and factual appeal of this content. Are the arguments clear, well-supported, and persuasive? Suggest ways to enhance the logical impact.\""
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/SKILL.md",
+        "snippet": "| | Logic Check | Internal consistency | Does it contradict itself? | | Logos | Rational appeal | Is the argument sound? | | Pathos | Emotional appeal | Does it connect? | | Ethos | Credibility | Is it trustworthy?"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/SKILL.md",
+        "snippet": "adict itself? | | Logos | Rational appeal | Is the argument sound? | | Pathos | Emotional appeal | Does it connect? | | Ethos | Credibility | Is it trustworthy? | | Blind Spots | Hidden risks | What am I not seeing?"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/references/checklist-template.md",
+        "snippet": "ctives** - [ ] 👁️ [Perspective 1] - [ ] 👁️ [Perspective 2] **Potential Biases** - [ ] 🎯 [Bias type]: [Manifestation] --- ### ☐ Shatter Points Identified **Critical Vulnerabilities** | Priority | Vulnerability"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/references/report-template.md",
+        "snippet": "Coherence Assessment**: [Overall rating and explanation] --- ### Logos Review (Rational Appeal) **Argument Clarity**: ⬤⬤⬤⬤○ [4/5] [Explanation] **Evidence Quality**: ⬤⬤⬤○○ [3/5] [Explanation] **Persuasive Streng"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/references/report-template.md",
+        "snippet": "*: ⬤⬤⬤⬤○ [4/5] [Explanation] **Recommendations** 1. [Recommendation for stronger logical appeal] 2. [Recommendation] --- ### Pathos Review (Emotional Appeal) **Current Tone**: [Descriptive characterization] **Au"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/references/report-template.md",
+        "snippet": "ation for stronger logical appeal] 2. [Recommendation] --- ### Pathos Review (Emotional Appeal) **Current Tone**: [Descriptive characterization] **Audience Connection**: ⬤⬤○○○ [2/5] [Explanation] **Engagement Le"
+      },
+      {
+        "file": "skills/education/evaluation-to-growth/references/report-template.md",
+        "snippet": "pective 1]: [Why it matters] - [Perspective 2]: [Why it matters] **Potential Biases** - [Bias type]: [How it manifests] --- ### Shatter Points **Critical Vulnerabilities** (ranked by severity) | Vulnerability"
+      }
+    ]
+  },
+  "read_errors": []
+}

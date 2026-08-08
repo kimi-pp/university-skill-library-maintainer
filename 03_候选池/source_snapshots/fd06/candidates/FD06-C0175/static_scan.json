@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": ".pi/skills/grading-overview/SKILL.md",
+        "snippet": "re distributions for one or all assignments. ## Task Overview Pull submission data from Canvas, compute statistical summaries (mean, median, range, quartiles), identify missing submissions, and present a formatted"
+      },
+      {
+        "file": ".pi/skills/grading-overview/SKILL.md",
+        "snippet": "sing submissions, and present a formatted report. Provides analytics not available in the Canvas UI. ## Step 1: Load Course Parameters Read `dauber/config.toml` to get `canvas_course_id` and `course_title`. **If m"
+      },
+      {
+        "file": ".pi/skills/grading-overview/SKILL.md",
+        "snippet": "mpted - If no submissions exist: Report \"No submissions yet\" rather than empty stats - If Canvas API rate limited: Wait briefly and retry (up to 3 attempts) Begin grade analysis now."
+      }
+    ]
+  },
+  "read_errors": []
+}

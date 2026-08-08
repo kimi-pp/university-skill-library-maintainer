@@ -1,0 +1,3080 @@
+{
+  "repository": "vishalsachdev/claude-skills",
+  "fixed_version": "92a6344c3ae6f724bc8279cafb2e2f9edd9827c9",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f59c9cb99f09fd705cb3bdfc1bc0e9158cea442c",
+      "size": 104
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8968854c27890cccb9d5fa825e4b2e340e35e424",
+      "size": 7284
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc9c815e5a1957a62119375a3d00df8f4db9a1ef",
+      "size": 1212
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db8628853c7cacf3f8fdb639bdbc8a5cf95a198d",
+      "size": 15303
+    },
+    {
+      "path": "SKILL_CREATION_GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f947e9ef63b2464c93426d1d9a5503cb1446895",
+      "size": 13036
+    },
+    {
+      "path": "advanced-text-search-matching",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a4ce07c77e394d1934fd035130aa4b69c4dc375"
+    },
+    {
+      "path": "advanced-text-search-matching/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2fc73bff24bf25324057e927d30a0105d47025e",
+      "size": 21691
+    },
+    {
+      "path": "agentic-eval-first-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c52829d217339bbd73359880ff5bef1cd9ac0d3"
+    },
+    {
+      "path": "agentic-eval-first-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf8d2e23283b061b8963d96a9ddf2523ea934601",
+      "size": 5311
+    },
+    {
+      "path": "agentic-eval-first-development/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38b026197d96c5ece806d7c0617334ef9307a1ef"
+    },
+    {
+      "path": "agentic-eval-first-development/references/golden-dataset-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e08ac0ea65691e9807ada290bfb4b59db8038f71",
+      "size": 2449
+    },
+    {
+      "path": "agentic-eval-first-development/references/scoring-rubrics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8565d55ae090799443a24029f1bdeb5742d51874",
+      "size": 2649
+    },
+    {
+      "path": "agentic-eval-first-development/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69acd46ff34feee362edee12d2d6b53add432c2a"
+    },
+    {
+      "path": "agentic-eval-first-development/scripts/normalize_scores.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4437103500bac79f92f0fa57f3cafc578515de72",
+      "size": 4229
+    },
+    {
+      "path": "agentic-validators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0754664f97d9bd437bb01dabc50e25522c6a0e8"
+    },
+    {
+      "path": "agentic-validators/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9fef648db8fa7265181b5ce57d91bd47ff9f9f",
+      "size": 3545
+    },
+    {
+      "path": "agentic-validators/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ba39566b40d956c153124f393b5faec7695408c"
+    },
+    {
+      "path": "agentic-validators/references/HOOK_RECIPES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d621055ea8da44d1f174ce9e6ffbd1c48e1e4c1",
+      "size": 555
+    },
+    {
+      "path": "agentic-validators/references/VALIDATOR_CHECKLIST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d7e18f14489a17846f0b984a1fc3f01b9db5add",
+      "size": 329
+    },
+    {
+      "path": "ai-model-cascade",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f36aa3ed5900d067d87eff343176fc0e512a37f6"
+    },
+    {
+      "path": "ai-model-cascade/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a2a3cdbc5a7b1f2450786d762c6d452bc6bf74f",
+      "size": 19657
+    },
+    {
+      "path": "badm350-canvas-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59247691a59e50af800a013dc137818244d43cc7"
+    },
+    {
+      "path": "badm350-canvas-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdfb583f58ff7aca1766778384e2f0c132886672",
+      "size": 3736
+    },
+    {
+      "path": "badm350-canvas-builder/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f65988dd3d8a35932bf664e4c5159fdfcc809f5a"
+    },
+    {
+      "path": "badm350-canvas-builder/references/assignment-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc45b110684865c1e53781b017ad0de2452451dc",
+      "size": 6491
+    },
+    {
+      "path": "badm350-canvas-builder/references/rubric-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94177931295452c7636f8eae4d0bdaf0e61ac770",
+      "size": 3586
+    },
+    {
+      "path": "badm350-canvas-builder/references/start-here-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a023b2ded89d19d2552e7c40903faf60c73ee58c",
+      "size": 8166
+    },
+    {
+      "path": "book-chapter-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0037e7e7de72bea1ed4fe6eb4ab9d1999eab6f73"
+    },
+    {
+      "path": "book-chapter-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9328c68ad55eac8deb59b4315d4042b1049b5dea",
+      "size": 16309
+    },
+    {
+      "path": "book-metrics-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93cfbbb9699c33ed22d824a0c95fc5c84ee880f2"
+    },
+    {
+      "path": "book-metrics-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f238d9215bec2bac1f445f6774133e66afc8cb0d",
+      "size": 12565
+    },
+    {
+      "path": "book-metrics-generator/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0955aa21502c3a75e6fbd730dcdb32aaae60b0ce"
+    },
+    {
+      "path": "book-metrics-generator/scripts/book-metrics-generator.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2c83c2ba0b8949e682da1bda34d798e007be05f9",
+      "size": 1227
+    },
+    {
+      "path": "book-metrics-generator/scripts/book-metrics.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ad068411a0cce392ed9232d5f2a8b8aa6e61441d",
+      "size": 19574
+    },
+    {
+      "path": "bubble-chart-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb4465e6623a2cb000554128d74a12514662a6b8"
+    },
+    {
+      "path": "bubble-chart-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4f5aeced96780bda6e19bcb6cea65d5ebd96b5a",
+      "size": 11414
+    },
+    {
+      "path": "bubble-chart-generator/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "850be93ecc043d8850cac405ff79b85f745e5b27"
+    },
+    {
+      "path": "bubble-chart-generator/assets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02b0b4943fe824e4bc817a968bf0b3adb430df9b",
+      "size": 1893
+    },
+    {
+      "path": "bubble-chart-generator/assets/template-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdbfd42a45f1b3a12e20f87d05892ba8128ee399",
+      "size": 294
+    },
+    {
+      "path": "bubble-chart-generator/assets/template-main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "752e8b6205dc783259e1229995b4459f6f480276",
+      "size": 9720
+    },
+    {
+      "path": "bubble-chart-generator/assets/template-style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c6a7eb12aa05ddd7268412c7a0b36a75547dadd",
+      "size": 2668
+    },
+    {
+      "path": "canvas-assignment-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2b640e4e7b7e4e4ea3ccb737275d06e2430921e"
+    },
+    {
+      "path": "canvas-assignment-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6927e321130432d60a573b22f7c72a002655892d",
+      "size": 4978
+    },
+    {
+      "path": "canvas-assignment-design/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac3f6a3ac811e9bc07c016d643d94575e0a5d59a"
+    },
+    {
+      "path": "canvas-assignment-design/references/examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd424d07ca3cc18a04691ea77a9e1528a83411b",
+      "size": 4312
+    },
+    {
+      "path": "canvas-course-audit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82460d9e26c1da5438a7f9d0e39e45dcaec2d230"
+    },
+    {
+      "path": "canvas-course-audit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07367b04e426a764fc493fb5fbdc22059e2934a7",
+      "size": 4208
+    },
+    {
+      "path": "canvas-course-audit/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc0e5d9a5a00d32e93f4528d371699b289f316c1"
+    },
+    {
+      "path": "canvas-course-audit/references/audit-criteria.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "260cb3c357bfc5041a0e2f1291c99c7d87ee123b",
+      "size": 5565
+    },
+    {
+      "path": "canvas-course-audit/references/example-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b11285b69dc0a08b70690e1cfa7df8a0a6231b",
+      "size": 3173
+    },
+    {
+      "path": "canvas-feedback-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd6bb29333b83fdd0644fc4ba1b573ed6dc67060"
+    },
+    {
+      "path": "canvas-feedback-template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca685edff0c3fef9de932bfbdcac9ab1557aa68d",
+      "size": 3469
+    },
+    {
+      "path": "chapter-content-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc0b861d5faea0a09bbbb7c2e4dfba91a2c3941d"
+    },
+    {
+      "path": "chapter-content-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eab8c266a8c4a64ccd5d1bb362c1c98972aee9ba",
+      "size": 13221
+    },
+    {
+      "path": "chapter-content-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a23bb91e77872c04699dbac12ec691aa107697fe"
+    },
+    {
+      "path": "chapter-content-generator/references/content-element-types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d1c82bde703c956820242957704b3f9bfe347f3",
+      "size": 18005
+    },
+    {
+      "path": "chapter-content-generator/references/math-equations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e7c8a37e404ecaf7aff3e9974b56eed373937ce",
+      "size": 2547
+    },
+    {
+      "path": "chapter-content-generator/references/reading-levels.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01a7a76fcd070c8763e192136e6f5a4ab62aa8a3",
+      "size": 11019
+    },
+    {
+      "path": "chartjs-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93ff0ebac8fe89b0b306efb5db18df78b0615038"
+    },
+    {
+      "path": "chartjs-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a25f8965523bf0c28a84450099f643a469f8fd2b",
+      "size": 17948
+    },
+    {
+      "path": "chartjs-generator/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e106598081cb52da62b6e4371b1f110c0365355c"
+    },
+    {
+      "path": "chartjs-generator/assets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6afa45e3481cc1edacf771ade994447a8e64787c",
+      "size": 10108
+    },
+    {
+      "path": "chartjs-generator/assets/template-bar.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0de94a80d7a59fce313ac24da827bf558809b9d",
+      "size": 3648
+    },
+    {
+      "path": "chartjs-generator/assets/template-bubble.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "752e8b6205dc783259e1229995b4459f6f480276",
+      "size": 9720
+    },
+    {
+      "path": "chartjs-generator/assets/template-doughnut.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e33f8774fa8b856f54cb06049ec06b079380c449",
+      "size": 3379
+    },
+    {
+      "path": "chartjs-generator/assets/template-iframe-clearn.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd5b7d1433cc4f5d8ea77468dbfe49279502713a",
+      "size": 2771
+    },
+    {
+      "path": "chartjs-generator/assets/template-iframe-main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcc8c0941dcc1c9ea88c33e21e3e04e195a75411",
+      "size": 1985
+    },
+    {
+      "path": "chartjs-generator/assets/template-iframe-style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7b636f465e361a8e5bdc41dc6623c87be607c9d",
+      "size": 2381
+    },
+    {
+      "path": "chartjs-generator/assets/template-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df40bb38c18c064cff348901787bfc9f152c3cd3",
+      "size": 3500
+    },
+    {
+      "path": "chartjs-generator/assets/template-line.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2216850fdab0210b94f915268025238bd6c32acd",
+      "size": 3976
+    },
+    {
+      "path": "chartjs-generator/assets/template-pie.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfbf36f3bbbdba20b2655a457935357d22113af9",
+      "size": 3408
+    },
+    {
+      "path": "chartjs-generator/assets/template-polar.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261224707535ab4324dd6bac4fcd180ab48e4f93",
+      "size": 3409
+    },
+    {
+      "path": "chartjs-generator/assets/template-radar.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aff055176c07dacc2e49bcd1ba40cfcd1ddb5a2",
+      "size": 3963
+    },
+    {
+      "path": "chartjs-generator/assets/template-scatter.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b93a60619c19c430f9c1a9b9847b87997bdf008",
+      "size": 4372
+    },
+    {
+      "path": "chartjs-generator/assets/template-style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9522bd49e1d36f50d92c8601ed77729fa0edd2f2",
+      "size": 2232
+    },
+    {
+      "path": "claude-md-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2eeb4699cdc4a06c05f9d702034efd0f45fbfd4"
+    },
+    {
+      "path": "claude-md-template/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dc41a585fef428c44e6b156017345a794def73b",
+      "size": 4363
+    },
+    {
+      "path": "claude-md-template/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7353409efc259360c38cf3152f73bf4f72d79b94"
+    },
+    {
+      "path": "claude-md-template/assets/CLAUDE.md.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d354ced7b8c0ba4a0407f26a2e3be53dada868ee",
+      "size": 2774
+    },
+    {
+      "path": "codebase-singularity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8355590806735ac77c7db9f3b8ae1a16ad96eaa2"
+    },
+    {
+      "path": "codebase-singularity/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ffab60214c46ca3404363ed8ff54c6d4bf8e669",
+      "size": 2638
+    },
+    {
+      "path": "codebase-singularity/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "236fd1685419e52d0ca935138fb7163d50c20b0d"
+    },
+    {
+      "path": "codebase-singularity/references/transcript.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2eb3666fda96ab24896fca024d2294a0f4a2b8f",
+      "size": 42891
+    },
+    {
+      "path": "codebase-singularity/references/video.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b91c96dfb873cab253b224a25f3b500460ee9fee",
+      "size": 497
+    },
+    {
+      "path": "codebase-singularity/references/visual-notes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b0dac1c151f0b31e3038c6105f43babaab619e3",
+      "size": 9694
+    },
+    {
+      "path": "codebase-singularity/references/visual-selection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baaf8bf0d2d39d237c4e8804f6f8844590e298bf",
+      "size": 2466
+    },
+    {
+      "path": "complex-state-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd39fae5f28c7a5ce8b1e33315db968aa3d7e74e"
+    },
+    {
+      "path": "complex-state-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df0d5e53d81baa2886232fb49cf1e619ca9426fc",
+      "size": 13438
+    },
+    {
+      "path": "concept-classifier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c31205c6139df1996f4418657e6b90251487e61e"
+    },
+    {
+      "path": "concept-classifier/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6788325e9a709bd734c6f7329758bd0cbf71e8f9",
+      "size": 9653
+    },
+    {
+      "path": "concept-classifier/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63554d0157ddd01f308e51023f714c59981ce587"
+    },
+    {
+      "path": "concept-classifier/templates/concept-classifier-template.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9ad788c1ea050092561c0080e078f2c9b24e026",
+      "size": 17258
+    },
+    {
+      "path": "concept-classifier/templates/data-template.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222b7d297c1ff5077d393aa15d8dd7dda57309ba",
+      "size": 3407
+    },
+    {
+      "path": "concept-classifier/templates/index-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c18eb782bd0cc2ba4f8abc8e7a19f117f41abe2",
+      "size": 3666
+    },
+    {
+      "path": "concept-classifier/templates/main-template.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067c60b83f1097bed45042737958487151806fe4",
+      "size": 488
+    },
+    {
+      "path": "course-description-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cd8e2e2c8fdad2bbc26796b46741898c5ee08f2"
+    },
+    {
+      "path": "course-description-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a7f30adf8a81e3bd10df30ef2d30d97ac7f4306",
+      "size": 8867
+    },
+    {
+      "path": "course-description-analyzer/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb19cba21dca1b1a47b28df0e5c9310c326e03e2"
+    },
+    {
+      "path": "course-description-analyzer/assets/course-description-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a785b2b3bb4a883f9664feca9e576f767f6c0ace",
+      "size": 1583
+    },
+    {
+      "path": "course-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95234faed80d15f5ef51624c8fccc1a5eda881c7"
+    },
+    {
+      "path": "course-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc166b7842085c97d22a5d5a5d603ce640476b46",
+      "size": 19567
+    },
+    {
+      "path": "course-generator/TRASH-FILES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d14e4b75bb0095387871b80329edad2ce1e21938",
+      "size": 313
+    },
+    {
+      "path": "course-generator/TRASH",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8fcd758df21ceed4e31357ecc053e440df366e0"
+    },
+    {
+      "path": "course-generator/TRASH/api_reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f76a920116031fcc71d2458633542bcec49ae22",
+      "size": 967
+    },
+    {
+      "path": "course-generator/TRASH/example.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "811b68c312b7d7b5d26d89d2911d85286d918d90",
+      "size": 591
+    },
+    {
+      "path": "course-generator/TRASH/example_asset.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0ac20404fd641da1fa01160917f42bdccf4c512",
+      "size": 865
+    },
+    {
+      "path": "course-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee65e47c32b09ca007d41a8b6e66a6e6a8775d84"
+    },
+    {
+      "path": "course-generator/references/output-formats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d056436df17d86a8266cd06dc4ff22073148ccfb",
+      "size": 7622
+    },
+    {
+      "path": "debugging-practices",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11c7942da7fa476a18bf936f3b7d482a4bcdde6e"
+    },
+    {
+      "path": "debugging-practices/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8234f422005234ff60b9a0aa7b35636a6c711aed",
+      "size": 8904
+    },
+    {
+      "path": "diagram-reports-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ad7740b9c690cd61b86cbe833ede2456760072d"
+    },
+    {
+      "path": "diagram-reports-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17d8b5e3b090da025fa3571a733ace342cbf60a2",
+      "size": 7691
+    },
+    {
+      "path": "diagram-reports-generator/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e2314260cc18c46362a3b92aa8eb699b7ee480e"
+    },
+    {
+      "path": "diagram-reports-generator/scripts/diagram-report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20fc211d5f8db5e6e61b530e9b4bf435cd595f85",
+      "size": 28991
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "928dd92855788ff3966f529058e5d467b3cb6bd6"
+    },
+    {
+      "path": "docs/skill-authoring-mechanics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a32f58390802579bf89f16971158a09bd5be0e20",
+      "size": 6892
+    },
+    {
+      "path": "entra-token-verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e2cc12626e1db475c3df1c93489de38930b2e77"
+    },
+    {
+      "path": "entra-token-verification/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cf379c0c2d54f1e5b49cdc5c957d5ba9d9e51d6",
+      "size": 5900
+    },
+    {
+      "path": "faq-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d564f764081e279c8f7db8855ed2db7abf8dd432"
+    },
+    {
+      "path": "faq-generator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41bc18bb437ea57ad24896b62ac6c45a7cf9abcd",
+      "size": 12266
+    },
+    {
+      "path": "faq-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac8a5488408cd79c8ac80dddc90477cfc2f33b59",
+      "size": 19426
+    },
+    {
+      "path": "faq-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83e68cca691c5744985bac0078ac1df71b31187f"
+    },
+    {
+      "path": "faq-generator/references/blooms-taxonomy-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b19bdee88abde609b19cb0031e534074a67cde2",
+      "size": 12917
+    },
+    {
+      "path": "faq-generator/references/faq-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "176379798490f8cd7f41e7a3b45f7db51cb396d5",
+      "size": 1172
+    },
+    {
+      "path": "formbuilder-admin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44f2902e0c107d067719d5c3523ec6812b2764a6"
+    },
+    {
+      "path": "formbuilder-admin/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c7ca491dee334864562dfa33763776133274f5b",
+      "size": 6303
+    },
+    {
+      "path": "formbuilder-admin/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fbc85a0f0f6062877ebaff3d9755c4a37c925c2"
+    },
+    {
+      "path": "formbuilder-admin/references/authentication-and-access.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee093df656c5de7196bb09ad4da01e97cff97f36",
+      "size": 2350
+    },
+    {
+      "path": "formbuilder-admin/references/event-sessions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b76c194556526b4984dc364696e8386526347925",
+      "size": 6833
+    },
+    {
+      "path": "formbuilder-admin/references/form-contents.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "420c4d828bc450bbd7fefc5a682a12ceec5a1abc",
+      "size": 4799
+    },
+    {
+      "path": "formbuilder-admin/references/gotchas.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34eb341e51cca0c235ad7ce9c2087c39f5f1b6bf",
+      "size": 5113
+    },
+    {
+      "path": "formbuilder-admin/references/payments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bea3be8ee5e3e5cc24ed38d6c3d2e1cab79085e6",
+      "size": 1997
+    },
+    {
+      "path": "formbuilder-admin/references/workflow-lifecycle.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ecfcef2e9de9d79694e08931ebbca908083aca3",
+      "size": 3980
+    },
+    {
+      "path": "glossary-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53587acb4223d69b11959feba6496edc0b61bd5a"
+    },
+    {
+      "path": "glossary-generator/INSTALL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dee08ba7849d6814eb2413b6d9cdc4790a1c0ee",
+      "size": 6065
+    },
+    {
+      "path": "glossary-generator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dd444cbe0a94f1787f657c8c1c505487d4e02cf",
+      "size": 7543
+    },
+    {
+      "path": "glossary-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bedc969ea7e67379d6b8ca9085d99b7279bc906",
+      "size": 11074
+    },
+    {
+      "path": "glossary-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7917075864f741fd71d4407156c4e398e6fadb9d"
+    },
+    {
+      "path": "glossary-generator/references/iso-11179-standards.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3291993812b3a0d17931954aad17be3039d9b6a",
+      "size": 8816
+    },
+    {
+      "path": "infographic-generator-p5",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "203629b0183cd83b26bab6e95c3d715cffb3e1de"
+    },
+    {
+      "path": "infographic-generator-p5/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21d094454dc071cd7412515cd0ec998dd32603dc",
+      "size": 16604
+    },
+    {
+      "path": "infographic-generator-p5/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2649121eb7ceb1a7dca0e7c6da9076b3ac1d4a3c"
+    },
+    {
+      "path": "infographic-generator-p5/assets/template-data.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e51de0b79e8994c3980cd81afeb3e56560bc2e6",
+      "size": 4196
+    },
+    {
+      "path": "infographic-generator-p5/assets/template-infographic.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c07da34b675a37d3ebe4dffc6f8116c711f5349",
+      "size": 8598
+    },
+    {
+      "path": "infographic-generator-p5/assets/template-main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "864dffdb50c04395458086d97872fa32749af5f9",
+      "size": 572
+    },
+    {
+      "path": "infographic-generator-p5/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a592f9bd528b86c833e335195f225dd2186c13fb"
+    },
+    {
+      "path": "infographic-generator-p5/references/vis-network-parameters.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4129b66cb1ee90171be5acc1c986293515ba0d21",
+      "size": 12384
+    },
+    {
+      "path": "install-learning-graph-viewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b483751f2c55020ac85a646b3085399134d340e"
+    },
+    {
+      "path": "install-learning-graph-viewer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38379c6c596bcc0e826ec177e3ef867a46949186",
+      "size": 5545
+    },
+    {
+      "path": "install-learning-graph-viewer/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5a7f9e692b00067fbeccdf8461ee6514bda75311"
+    },
+    {
+      "path": "install-learning-graph-viewer/assets/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f3a8763a96214dbf820712ced6cfac878f01f4b",
+      "size": 2914
+    },
+    {
+      "path": "install-learning-graph-viewer/assets/local.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a235abff0c5caa76f0ac5fa2dc5601d538b07ff",
+      "size": 2275
+    },
+    {
+      "path": "install-learning-graph-viewer/assets/main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afde944ce5dca43337c75ad815ccff8b330f7716",
+      "size": 1410
+    },
+    {
+      "path": "install-learning-graph-viewer/assets/script.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8652e0187517fb0c33806f397ade3bc1e7d56dba",
+      "size": 9596
+    },
+    {
+      "path": "install-skill-tracker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8144804f08e39b4bb213806ff3aafda178f393fd"
+    },
+    {
+      "path": "install-skill-tracker/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c1752db4377f4e14cf548c72a52106876640bc2",
+      "size": 19440
+    },
+    {
+      "path": "install-skill-tracker/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be588670a405c5ac02c93aa3d36efc2a57354cf3",
+      "size": 8835
+    },
+    {
+      "path": "install-skill-tracker/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cba7f901da5c84caac4301da7e757bfac574093"
+    },
+    {
+      "path": "install-skill-tracker/assets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed6420080de97730e269f79d363e448539da0e90",
+      "size": 4862
+    },
+    {
+      "path": "install-skill-tracker/assets/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd45ee44d249b1fa899c1cfb8ff623a5ecb8ad42",
+      "size": 871
+    },
+    {
+      "path": "install-skill-tracker/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1cb33c0c835fece0f5c084afe2870dec55c28ed"
+    },
+    {
+      "path": "install-skill-tracker/scripts/analyze-skills.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "374dd51c0f1aea3c4533b70073f13c6e2fb69cbf",
+      "size": 6283
+    },
+    {
+      "path": "install-skill-tracker/scripts/show-skill-tokens.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a30a1c671c4f3ed9e83c96657a65632eb8c8bb4c",
+      "size": 1349
+    },
+    {
+      "path": "install-skill-tracker/scripts/track-prompts.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fefb767d0b1203217433c4611242a19108579a1f",
+      "size": 690
+    },
+    {
+      "path": "install-skill-tracker/scripts/track-skill-end.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "646cfb47e5b5f9cb189b94c36f0f9649de4e6d14",
+      "size": 2956
+    },
+    {
+      "path": "install-skill-tracker/scripts/track-skill-start.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8299b1ed46ac318cc3c4c82e8a93cd1b1d35c22a",
+      "size": 948
+    },
+    {
+      "path": "installer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e085824680ef53883b4833aaabf521c78ef662b8"
+    },
+    {
+      "path": "installer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58b2e3e722d23a78025af1eaa902a4e72c3b8d51",
+      "size": 5836
+    },
+    {
+      "path": "installer/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5399b3bcd8feaa6788a6a1c6c7e2034b27763a0c"
+    },
+    {
+      "path": "installer/references/home-page-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcc4dee6cde55b431fe247a5fc279e2873944a9b",
+      "size": 12572
+    },
+    {
+      "path": "installer/references/learning-graph-viewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18e2571e330d558bd5d761077e705599ca2e1884",
+      "size": 34357
+    },
+    {
+      "path": "installer/references/mkdocs-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "404920c93c2df539055f9525dbebcacde9938011",
+      "size": 8845
+    },
+    {
+      "path": "installer/references/skill-tracker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "837e78a2f1b8d019e41935dc8ae2bf9dc8eb0e70",
+      "size": 11491
+    },
+    {
+      "path": "learning-design-checklist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "126104a3d086a9542bf1ce4c5d4e33ed69a0a1da"
+    },
+    {
+      "path": "learning-design-checklist/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f16cac7a215f473f19dc7563202f326bb416c08",
+      "size": 5791
+    },
+    {
+      "path": "learning-design-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c544e4fb1de1df80e5b6c431dad14b1fbbc9abc"
+    },
+    {
+      "path": "learning-design-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "655281dd727dcf18ea6cf4128aed68dc6dad614b",
+      "size": 2991
+    },
+    {
+      "path": "learning-graph-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a304e6f7b2b219a636fec81813d2f7d0e1872dc0"
+    },
+    {
+      "path": "learning-graph-generator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7c5afb3abe663b7a8004461648777bb37b5426",
+      "size": 2664
+    },
+    {
+      "path": "learning-graph-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74c8243543d339b7dd73cbf4d46ce068889ad738",
+      "size": 19138
+    },
+    {
+      "path": "learning-graph-generator/add-taxonomy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7a5d36b5a91e8fafb8dd0f3730e66be485421db",
+      "size": 4860
+    },
+    {
+      "path": "learning-graph-generator/analyze-graph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5db918977223489de49cf50dddab8035ae428a8",
+      "size": 12613
+    },
+    {
+      "path": "learning-graph-generator/csv-to-json.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa37cb9aee529e0616940879c95d918dc5b9a81",
+      "size": 10624
+    },
+    {
+      "path": "learning-graph-generator/index-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "655d838cf3df99140492a896ecc5c8c08c75fcfd",
+      "size": 4263
+    },
+    {
+      "path": "learning-graph-generator/learning-graph-schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b4ce82e782b969451313f47cf38ecb47e33f44f",
+      "size": 6351
+    },
+    {
+      "path": "learning-graph-generator/taxonomy-distribution.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72873a0029791f80429d34114686bf2f27c37d76",
+      "size": 7933
+    },
+    {
+      "path": "learning-graph-generator/test-learning-graph.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "923de710df61b2967f18e586a0517734a702c970",
+      "size": 192
+    },
+    {
+      "path": "learning-graph-generator/test-output.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a819c1330997f8f2386f7c879b39c24741f07e56",
+      "size": 1912
+    },
+    {
+      "path": "learning-graph-generator/validate-learning-graph.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f2058991173e1da5178a3bf578859b2517e0bc47",
+      "size": 5423
+    },
+    {
+      "path": "learning-graph-generator/validate-learning-graph.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bfdcc1fd113d134908ac1b4cd1027b054d763a1",
+      "size": 1544
+    },
+    {
+      "path": "learning-graph-generator/vis-network-json-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2307e1498361d537d1142e224ccecd78fb7b0c33",
+      "size": 11988
+    },
+    {
+      "path": "linkedin-announcement-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb5fed530e49c34d1dcf8fcd60a31d8694f95323"
+    },
+    {
+      "path": "linkedin-announcement-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93be718fdc48f4c84500ff26703402e07bead7e6",
+      "size": 17479
+    },
+    {
+      "path": "llm-client-golden-path",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5755d97c43bd764baa1b722113d869bf209b1d7f"
+    },
+    {
+      "path": "llm-client-golden-path/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f67490640f99a26b7b28522f1439203220189af",
+      "size": 4586
+    },
+    {
+      "path": "llm-client-golden-path/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71ac948e59da25cad6c72604581c352add659e71"
+    },
+    {
+      "path": "llm-client-golden-path/references/model-registry.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82a541d85eb1c9c1569103b7812b2a178f124d3f",
+      "size": 3926
+    },
+    {
+      "path": "llm-council",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d5ebcc269dc5c5f24b2e539248a761db67d0038"
+    },
+    {
+      "path": "llm-council/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2379926937e643aa5f48eb7944fb6956671189a9",
+      "size": 10681
+    },
+    {
+      "path": "llm-council/examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f887e753d2981f48402809891c3439a343f6e303",
+      "size": 5341
+    },
+    {
+      "path": "map-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba1d70505e9b194e2d86da2e6a9f927594532dab"
+    },
+    {
+      "path": "map-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25fc889ee9cc033c1e84abc7c3d8c2d9a7e4b958",
+      "size": 9535
+    },
+    {
+      "path": "map-generator/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "433a41279869fb578f90a44d1ad0a5fa82f7c99f"
+    },
+    {
+      "path": "map-generator/assets/template-iframe-main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36c35be18cad0212f889eff8a6004da59b8ab21d",
+      "size": 1109
+    },
+    {
+      "path": "map-generator/assets/template-iframe-style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d93e640921ea8138f00db7e01ca35ce683df76fa",
+      "size": 3479
+    },
+    {
+      "path": "map-generator/assets/template-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "903ff86346b12590e8642a577ca3d6d2c257669c",
+      "size": 5624
+    },
+    {
+      "path": "map-generator/assets/template-metadata.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29d4baf11e860de2dbbb1ba568547b2ba7c1f315",
+      "size": 930
+    },
+    {
+      "path": "map-generator/assets/template-script.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f5a389444e0d90669d15067b18eaf405e46509d",
+      "size": 4905
+    },
+    {
+      "path": "math-function-plotter-plotly",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf6c5ada835b37e36bc1e9a83725a6bf83877ed8"
+    },
+    {
+      "path": "math-function-plotter-plotly/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db0ab2547b77bd5528fcea7d96d13a1487931c2d",
+      "size": 16962
+    },
+    {
+      "path": "math-function-plotter-plotly/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c164a1ece3f56855d8a3d2a84675c6539d074a13"
+    },
+    {
+      "path": "math-function-plotter-plotly/assets/template-iframe-main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87bcc28d92463e25d6efe96725e932453d0c47dc",
+      "size": 862
+    },
+    {
+      "path": "math-function-plotter-plotly/assets/template-iframe-style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59dee05bca658452f9949c582442dd97475f4053",
+      "size": 2579
+    },
+    {
+      "path": "math-function-plotter-plotly/assets/template-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3460312713d45de46baad530e861ef418e73d669",
+      "size": 4799
+    },
+    {
+      "path": "math-function-plotter-plotly/assets/template-metadata.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "516538fcf4029958593d2ca0f466b4097c7598cf",
+      "size": 539
+    },
+    {
+      "path": "math-function-plotter-plotly/assets/template-script.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c27ff88a1cd60d7e5cac2962f066c84031c2824c",
+      "size": 4041
+    },
+    {
+      "path": "mermaid-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24fd6d8a26575a1406a0253445d73b768b47f260"
+    },
+    {
+      "path": "mermaid-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72e874bc6652ea09ebbc47ca0d38ea57e61c4ac",
+      "size": 18133
+    },
+    {
+      "path": "mermaid-generator/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b47b5711420aba0e29813174da3de65fb9e61ec"
+    },
+    {
+      "path": "mermaid-generator/assets/template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e0eb317e75f19952746bf33f205cfd53faa6092"
+    },
+    {
+      "path": "mermaid-generator/assets/template/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc13f1757233ad3ba98112f5d841aaaca73021c1",
+      "size": 844
+    },
+    {
+      "path": "mermaid-generator/assets/template/main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fea8bf36ab768cdc49b55c074ff8a49ec5549439",
+      "size": 1228
+    },
+    {
+      "path": "mermaid-generator/assets/template/metadata.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abe36165fddf3cda90d2da99164f12a004f022bc",
+      "size": 571
+    },
+    {
+      "path": "mermaid-generator/assets/template/script.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f52d7a41c3af9358e16c7e818246fb3f3ad45c9",
+      "size": 5885
+    },
+    {
+      "path": "mermaid-generator/assets/template/style-fancy.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "241964894bb47d770e2d2b0c1cdac757bfcb9e2a",
+      "size": 2574
+    },
+    {
+      "path": "mermaid-generator/assets/template/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d7fd3faad65ebeebf3e9af4da1bd366c9f95482",
+      "size": 2753
+    },
+    {
+      "path": "mermaid-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "127e51474d84a069362098493f7fdee1970421db"
+    },
+    {
+      "path": "mermaid-generator/references/mermaid-diagram-types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a29584888a4f12427ddb40ca2817f77fdfbc3b8",
+      "size": 2531
+    },
+    {
+      "path": "mermaid-generator/references/mermaid-flowchart-syntax.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "418f6789b7468a300b2e5ad2e85267f206b222ee",
+      "size": 6857
+    },
+    {
+      "path": "microsim-matcher",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c36512898efa34f0fcd0ca58afd8ba06254d3ab"
+    },
+    {
+      "path": "microsim-matcher/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "908b7a3aef2716ffc2a7154e1ecb9a5ab6afd89b",
+      "size": 7526
+    },
+    {
+      "path": "microsim-matcher/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d088558d8145905b6983bbfa8a97fca05944c04",
+      "size": 24555
+    },
+    {
+      "path": "microsim-matcher/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25ed0426174a771ecefc78c5b1318cca8f5b89f1"
+    },
+    {
+      "path": "microsim-matcher/references/matching-criteria.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c729006b9bc3fa3f0392344600f29b591ae8e8c4",
+      "size": 20722
+    },
+    {
+      "path": "microsim-matcher/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a10374d7b6e70ed752f74dd80ed021f42f35052b"
+    },
+    {
+      "path": "microsim-matcher/scripts/check-version.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7caefeecba5a99fd589fbca68550500076849697",
+      "size": 6502
+    },
+    {
+      "path": "microsim-p5",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f17a5851c1898b3f71c9c420b796c10458126ada"
+    },
+    {
+      "path": "microsim-p5/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23bdd28b21c1ff0a7d9a77264e504f1c540807fa",
+      "size": 30272
+    },
+    {
+      "path": "microsim-p5/bouncing-ball.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a53ad93b966397a7e4bddea922f43344936cec72",
+      "size": 3849
+    },
+    {
+      "path": "microsim-p5/bouncing-ball.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95de150ce5d4d3c3c2ddc917ad94beb9507f9c18",
+      "size": 22607
+    },
+    {
+      "path": "microsim-p5/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83f2d4aae13af7fa9d9b4f32b8433d1ff7addac8",
+      "size": 1339
+    },
+    {
+      "path": "microsim-p5/main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b897ae01a280a51864092f9a53479836730ac4a",
+      "size": 565
+    },
+    {
+      "path": "microsim-p5/metadata-minimal.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e461743391cb4cb1f5f3edf531b6cf967aef68cc",
+      "size": 1345
+    },
+    {
+      "path": "microsim-screen-capture",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35bec5ac75ef22cf07e018644c46fa1c627bc900"
+    },
+    {
+      "path": "microsim-screen-capture/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b657d6a796899cd95497e04b79110a293a8ca8",
+      "size": 7950
+    },
+    {
+      "path": "microsim-screen-capture/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18ddede703faf31c7dbc160908789f92146fceb5"
+    },
+    {
+      "path": "microsim-screen-capture/scripts/capture-screenshot.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7ce367fe15f8298c9b0b6238a62919889a6fe2a8",
+      "size": 2596
+    },
+    {
+      "path": "microsim-standardization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "276e52a9fe6da536de5c68b3bf1f1a7fea580ebe"
+    },
+    {
+      "path": "microsim-standardization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ace0d3e0abbb48b4f56418fba70f673a342db826",
+      "size": 12284
+    },
+    {
+      "path": "microsim-standardization/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d42957f1402f492b7a77db1b0592ee9e8207e22"
+    },
+    {
+      "path": "microsim-standardization/assets/index-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b904a90ccbf829f5cc9ef55d4a2e747398c9fe",
+      "size": 2169
+    },
+    {
+      "path": "microsim-standardization/assets/metadata-schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7e1c36597043be0b44e2de172af1780c40051b",
+      "size": 4166
+    },
+    {
+      "path": "microsim-standardization/assets/metadata-template.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8be55376fff01a148934c7bdead4402fb794a77",
+      "size": 967
+    },
+    {
+      "path": "microsim-utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f0b6e2f021b79e827a7515ef72ae958160441f7"
+    },
+    {
+      "path": "microsim-utils/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59f1d469addc303ed034d06c3f37b0409341ca2c",
+      "size": 4467
+    },
+    {
+      "path": "microsim-utils/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de33b63b28253e6729cab7c35cb1b5ec8165f507"
+    },
+    {
+      "path": "microsim-utils/references/add-icons.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eef709b45313abb09776ed92a50d7b0a75cdfc77",
+      "size": 5974
+    },
+    {
+      "path": "microsim-utils/references/index-generator.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bdc73a1ae2788cb3fc474b7eb8493797b44d45c",
+      "size": 7582
+    },
+    {
+      "path": "microsim-utils/references/screen-capture.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b657d6a796899cd95497e04b79110a293a8ca8",
+      "size": 7950
+    },
+    {
+      "path": "microsim-utils/references/standardization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e1ee1ba90d1ca5e451e4a3ee0e45b68eaf28ea0",
+      "size": 12583
+    },
+    {
+      "path": "moving-rainbow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a2f23cccae4cb069b7c733e79af6691837e0778"
+    },
+    {
+      "path": "moving-rainbow/EXAMPLES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be1eb8f9a473530b1933fabf52153ff21eb764cc",
+      "size": 6028
+    },
+    {
+      "path": "moving-rainbow/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "539a3d8ca848d31f55f1c7eb6ff474a1e6a14ca4",
+      "size": 2740
+    },
+    {
+      "path": "moving-rainbow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22171f8adc2722304f57650427f7e0c7500740fc",
+      "size": 7775
+    },
+    {
+      "path": "moving-rainbow/linkedin-post.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f31b74e7300b922620cc37aefb2b5a233058e655",
+      "size": 3087
+    },
+    {
+      "path": "moving-rainbow/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd0b199207609087c2c47d5e6a9ba3ae91a853fa"
+    },
+    {
+      "path": "moving-rainbow/references/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d734fd1d7c9632180732560132cf7b79d731966",
+      "size": 576
+    },
+    {
+      "path": "paper-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8356a0ed74ccfc04cdd82f54195586733fe731f"
+    },
+    {
+      "path": "paper-writing/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb24f4e0201dbf840b76bbe13f85f3771bc2adf4",
+      "size": 1782
+    },
+    {
+      "path": "paper-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a37ae74dfbeebd886d15c53137cb6873494839d9",
+      "size": 13056
+    },
+    {
+      "path": "paper-writing/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b03ebbf695670175ba4cd0ba49f8b667ccd6737a"
+    },
+    {
+      "path": "paper-writing/assets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8504456fd6050b138b89fcb2ee9afb936ee396f7",
+      "size": 1279
+    },
+    {
+      "path": "paper-writing/assets/conference-paper-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "350c630efc4062d09b410a88b11fc4a3e63dd23e",
+      "size": 8445
+    },
+    {
+      "path": "paper-writing/assets/research-paper-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd1b6b59f9e9a503e97bf324a3f0c9c08282d139",
+      "size": 8566
+    },
+    {
+      "path": "paper-writing/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c20aaf990276304e9564db6554e6d4376cb5ee64"
+    },
+    {
+      "path": "paper-writing/references/ELITE-PAPERS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85db71eeb4923eecdf29ca7e5b7f75422b0fb381",
+      "size": 13639
+    },
+    {
+      "path": "paper-writing/references/REFERENCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b6d9a34f3728b8f738b92b2d7a346d92234ffc6",
+      "size": 19439
+    },
+    {
+      "path": "paper-writing/references/STRUCTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bf8604a2616819039ae833d2706efa3b4aa6664",
+      "size": 20455
+    },
+    {
+      "path": "paper-writing/references/STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d09679263eb749189acc0adace26cce2a72d083",
+      "size": 17362
+    },
+    {
+      "path": "paper-writing/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5a6e93c4b6be82eec08212577dc76e50fb2cbd8"
+    },
+    {
+      "path": "paper-writing/scripts/check_paper.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a8e2e257a4a08bf4df0b807b3d8c2491db4c6583",
+      "size": 9588
+    },
+    {
+      "path": "premortem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c55fe0c1e4738e0a7684dd7cd1013cd39381504"
+    },
+    {
+      "path": "premortem/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d37ca04971629f6542dab37d51f8660d32a146",
+      "size": 6555
+    },
+    {
+      "path": "quiz-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b729ce8bb906bd5645ae986d8862e4390d8c3b6"
+    },
+    {
+      "path": "quiz-generator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74064092e90d22af3619b304ecab1ea13dd9f650",
+      "size": 11621
+    },
+    {
+      "path": "quiz-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "916c06e69728003ea27d1b3e48ea9c05e547b711",
+      "size": 23309
+    },
+    {
+      "path": "quiz-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca143fc60b2560cfdb375e02c8df4bf33f6ca92f"
+    },
+    {
+      "path": "quiz-generator/references/distractor-writing-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0b1d7b93acf9d8c914e4037018caa82f6eb903c",
+      "size": 13178
+    },
+    {
+      "path": "readme-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aecf55f8de0d350942b733cc206af466c3a857f3"
+    },
+    {
+      "path": "readme-generator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dba38cc072f67ef524b40b615c3621c3c8ef4c9",
+      "size": 4253
+    },
+    {
+      "path": "readme-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f5722e905e41340d40572139200dd55e9d5403a",
+      "size": 19297
+    },
+    {
+      "path": "readme-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4de09eb37766a324e64d9e6da680e0baac0ad92f"
+    },
+    {
+      "path": "readme-generator/references/badges.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ac4cc82b55479e158cec41a2717ce809a8c007",
+      "size": 9731
+    },
+    {
+      "path": "readme-generator/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95f380e1b4342eceaab295a24afc98d5d8beb402"
+    },
+    {
+      "path": "readme-generator/scripts/collect-site-metrics.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1672db20ab6c54efd0f46544756654e8043ba3fe",
+      "size": 12624
+    },
+    {
+      "path": "readme-generator/scripts/validate-readme.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dcf50d553f8a367587df655d1bfa4c1b82d5d212",
+      "size": 11594
+    },
+    {
+      "path": "reference-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aaddeb78e94e5acdbe6e776e51ea158ad2c631b4"
+    },
+    {
+      "path": "reference-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d8e635dea156aa1b0d9fcb9e4394bff8038290f",
+      "size": 8619
+    },
+    {
+      "path": "releases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff6b811d1b9e1e2d123ac7b58650c0312ae40162"
+    },
+    {
+      "path": "releases/paper-writing-v1.0.0.skill",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c626187c90f371c1e85f1990d23dcabb4ab0b156",
+      "size": 46902
+    },
+    {
+      "path": "remotion-best-practices",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e3055c07c119a663bc1f48bf5e0ccfdf4d57fb1"
+    },
+    {
+      "path": "remotion-best-practices/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "745e37c87dccced24ec5dc166cc22b398791085a",
+      "size": 3643
+    },
+    {
+      "path": "remotion-best-practices/rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a77f5c0ecf22c180efe6b7236fdcac5ede2618b4"
+    },
+    {
+      "path": "remotion-best-practices/rules/3d.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31fa5c677319bedb0fa5a5137ab3509c468cae24",
+      "size": 2290
+    },
+    {
+      "path": "remotion-best-practices/rules/animations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e15623f8338e4248aab377ed0a4f104b187082b",
+      "size": 790
+    },
+    {
+      "path": "remotion-best-practices/rules/assets.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04c8ad590d3fceaa4352e7beb5304b30dc684261",
+      "size": 1590
+    },
+    {
+      "path": "remotion-best-practices/rules/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "463954e4a1007fd2a4457f2b688362036b7ec0c7"
+    },
+    {
+      "path": "remotion-best-practices/rules/assets/charts-bar-chart.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1313ebf5980c9c33db23f544018fbdc5772229b1",
+      "size": 3429
+    },
+    {
+      "path": "remotion-best-practices/rules/assets/text-animations-typewriter.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89f62ea0e5e7de0529260cbe477495a3a7794a13",
+      "size": 2183
+    },
+    {
+      "path": "remotion-best-practices/rules/assets/text-animations-word-highlight.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3929c58a18d1038088f782e9a6f49f6304a5dbd",
+      "size": 2387
+    },
+    {
+      "path": "remotion-best-practices/rules/audio.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48086ec91eaa66f175b69fde1f236f1c8fd305de",
+      "size": 3822
+    },
+    {
+      "path": "remotion-best-practices/rules/calculate-metadata.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06098cad4284c2bf77d3d51c89826635041e5910",
+      "size": 2920
+    },
+    {
+      "path": "remotion-best-practices/rules/can-decode.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7146c9caf8e235aa54cf7702c48c659edbd2228",
+      "size": 1587
+    },
+    {
+      "path": "remotion-best-practices/rules/charts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a402ed530eb6fc18fe312b0d133dbbd824b7903c",
+      "size": 1751
+    },
+    {
+      "path": "remotion-best-practices/rules/compositions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b61bb1e372d659c1a510cef21c2188609c212b",
+      "size": 3445
+    },
+    {
+      "path": "remotion-best-practices/rules/display-captions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f70b702aeae5449967763ace64f34ba2d11671b",
+      "size": 3698
+    },
+    {
+      "path": "remotion-best-practices/rules/extract-frames.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46e63efc58daa3a698197018eb982824da69b8b8",
+      "size": 5496
+    },
+    {
+      "path": "remotion-best-practices/rules/fonts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c10cd83e62491fe67df7dd4b2e9f8ea662e6ed30",
+      "size": 3484
+    },
+    {
+      "path": "remotion-best-practices/rules/get-audio-duration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc57d914e6b6de06defb4d7a62e232724d0d1f15",
+      "size": 1354
+    },
+    {
+      "path": "remotion-best-practices/rules/get-video-dimensions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1b212a08863cfff3417911ec6265522950166b2",
+      "size": 1627
+    },
+    {
+      "path": "remotion-best-practices/rules/get-video-duration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92365516704262c5145a88508cd42aeae394c3c5",
+      "size": 1341
+    },
+    {
+      "path": "remotion-best-practices/rules/gifs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d067c759eab8352dca8c258cb57683fbec449d71",
+      "size": 3868
+    },
+    {
+      "path": "remotion-best-practices/rules/images.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "262bb57bfb23b072c7cf0f797f9f0d39be2a1024",
+      "size": 2783
+    },
+    {
+      "path": "remotion-best-practices/rules/import-srt-captions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b9c5bb3035babaa52fdad6569af76265f2c2d25",
+      "size": 2113
+    },
+    {
+      "path": "remotion-best-practices/rules/lottie.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d07acded4f34c155cd0d817e0e4a37157ed6aba",
+      "size": 1779
+    },
+    {
+      "path": "remotion-best-practices/rules/measuring-dom-nodes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f9d2bfa0aed95244a787ff9131b31e7ade851c0",
+      "size": 974
+    },
+    {
+      "path": "remotion-best-practices/rules/measuring-text.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bcb33ce73f1e3620cb550b1b8084419f0aaa664",
+      "size": 3000
+    },
+    {
+      "path": "remotion-best-practices/rules/sequencing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "426713763813df554450920d76e5ce454b65db74",
+      "size": 2389
+    },
+    {
+      "path": "remotion-best-practices/rules/tailwind.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2f51952e13462c6269caec3c00fdcc85912f65c",
+      "size": 422
+    },
+    {
+      "path": "remotion-best-practices/rules/text-animations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e38b1c574232a34ccdb69674ea8cad68c755ce7e",
+      "size": 700
+    },
+    {
+      "path": "remotion-best-practices/rules/timing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "464d4e29cdfddb521c378eb5c1fddf6dd9e0f4f1",
+      "size": 3939
+    },
+    {
+      "path": "remotion-best-practices/rules/transcribe-captions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b338486bc1800285461eddd76ae54d86451e800c",
+      "size": 850
+    },
+    {
+      "path": "remotion-best-practices/rules/transitions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c363cd190a829e93169a2041dcfa1cf79625868d",
+      "size": 3730
+    },
+    {
+      "path": "remotion-best-practices/rules/trimming.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20963a32d90818b4ac5ca3ae94fcf441b4b24ee",
+      "size": 1210
+    },
+    {
+      "path": "remotion-best-practices/rules/videos.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d99b31eab0bf8ba21d692751876a0453d365080",
+      "size": 3509
+    },
+    {
+      "path": "resilient-async-operations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a64a3e2a48a9e938a388a3e7762f5ba69536275e"
+    },
+    {
+      "path": "resilient-async-operations/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f59496c00baca6376057da4a45ddda989deb1f47",
+      "size": 16596
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84e97cfb527fa5dc0b497f0be26d22a75937e4b5"
+    },
+    {
+      "path": "scripts/check-drift.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7805b7df1d2918372d3df3f168d8286ed86f5bff",
+      "size": 3646
+    },
+    {
+      "path": "secure-nextjs-api-routes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19599e8d27e045a2e1246301dd0ccd57a8364f29"
+    },
+    {
+      "path": "secure-nextjs-api-routes/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fe98f07f9e188de806fb85d6e3d6e007b5e7d0b",
+      "size": 19717
+    },
+    {
+      "path": "skill-creator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7bd8fc459f09f0e14dcc2adbb4a5a58e60ea755c"
+    },
+    {
+      "path": "skill-creator/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "size": 11357
+    },
+    {
+      "path": "skill-creator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7f86598b002c99a6be96026443217b6af3c561d",
+      "size": 17837
+    },
+    {
+      "path": "skill-creator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0b8f3dd99d5b3112551a387eab669b694e39be1"
+    },
+    {
+      "path": "skill-creator/references/output-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "073ddda5f03989b1731ad29b9df7248279e9eef0",
+      "size": 1813
+    },
+    {
+      "path": "skill-creator/references/workflows.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a350c3cc81367fda7acfea9084aaa13a5d83c054",
+      "size": 818
+    },
+    {
+      "path": "skill-creator/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94e8a3bf1eb61bbd477ac09cec7835592b8ebfb7"
+    },
+    {
+      "path": "skill-creator/scripts/init_skill.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "329ad4e5a71546b2c455f8e08c98b32ecdd3c1e3",
+      "size": 10863
+    },
+    {
+      "path": "skill-creator/scripts/package_skill.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5cd36cb16e1314f2ab87d50aaedbc9f26925dac1",
+      "size": 3288
+    },
+    {
+      "path": "skill-creator/scripts/quick_validate.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d9fbeb75ee10bd8f89c0ee9b6716867125820c7e",
+      "size": 3523
+    },
+    {
+      "path": "skill-specs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57e7abe0d0e7953507d4de742b2086301baf3690"
+    },
+    {
+      "path": "skill-specs/canvas-mcp-tool-specs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff30853b933d881d740c461e86d6a3ad5cd1fa54",
+      "size": 13638
+    },
+    {
+      "path": "skill-specs/qm-accessibility-checker-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ae2cb61d80cc6f93fd7878882750da0b54ee1da",
+      "size": 10049
+    },
+    {
+      "path": "skill-specs/qm-canvas-evaluator-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "422e9f790ebe4723c74e406f9aefe5bcd5d47d35",
+      "size": 20666
+    },
+    {
+      "path": "skill-specs/qm-course-auditor-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0726b7ac395fcfe5c59d002a60a14b5d19e4509e",
+      "size": 6372
+    },
+    {
+      "path": "skill-specs/qm-course-remediator-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c3fc0c31746b42e7517b14853d7464a8ab3a5df",
+      "size": 8130
+    },
+    {
+      "path": "start-session",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a54ba599401cf813ace025d04cb5b68f0dab62b"
+    },
+    {
+      "path": "start-session/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04caa7ed33584e6bf7db2c5ed7398af9aa28de4b",
+      "size": 6785
+    },
+    {
+      "path": "supabase-fullstack-setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7b762f700d36dbf5b7fabf905380aa1a5c15d5e"
+    },
+    {
+      "path": "supabase-fullstack-setup/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a41b73c49b9f264db9ca91141ced0b932f445c",
+      "size": 15242
+    },
+    {
+      "path": "timeline-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d3b7ea8733d6f238b8d9d239a1d49b9918eaeb9"
+    },
+    {
+      "path": "timeline-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "025fa27911b46b01279e69c87f1b6e639d385176",
+      "size": 15384
+    },
+    {
+      "path": "timeline-generator/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aca87df0b3a5a369619a343697e619423fffaaaa"
+    },
+    {
+      "path": "timeline-generator/resources/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c19da81087eef435cdc0345e560f8ebe4fc93d97",
+      "size": 5268
+    },
+    {
+      "path": "timeline-generator/resources/template-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb548750a30b590a64b03d60bf74e466ccc5defc",
+      "size": 3174
+    },
+    {
+      "path": "timeline-generator/resources/template-main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b8bf734f3e7df42ca99eef123aa3a8425d0ab98",
+      "size": 11737
+    },
+    {
+      "path": "timeline-generator/resources/template-timeline.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "569e43135f45f3ef18dfb14cad96b013de9b8e63",
+      "size": 2544
+    },
+    {
+      "path": "tweet-series-extractor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54a77c8e4d73d4184080572c2c0a91979482570a"
+    },
+    {
+      "path": "tweet-series-extractor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59b9a63b011b4e434de3de83fd4f39064b094bbe",
+      "size": 3417
+    },
+    {
+      "path": "type-safe-form-validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14067508d6e5074b0cba1f0d97130af01d1e04bd"
+    },
+    {
+      "path": "type-safe-form-validation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d5397bdff50f93f69dbbd5cff2da0c274ac23b9",
+      "size": 20543
+    },
+    {
+      "path": "venn-diagram-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7940258b747d5cd3f43ec48dcc432b71540b3204"
+    },
+    {
+      "path": "venn-diagram-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db6eaf13f75781ae0b3f6c2bd442e676112ed390",
+      "size": 27074
+    },
+    {
+      "path": "venn-diagram-generator/ai-ml-dl-examplejs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb42766b130b2e15a512faa4ec722bc2875b4b0",
+      "size": 7611
+    },
+    {
+      "path": "venn-diagram-generator/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cae1677f1a7516be3cda93d15b735abb74a9694b"
+    },
+    {
+      "path": "venn-diagram-generator/assets/template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b13097a541c905881a26943804bc7bd711072538"
+    },
+    {
+      "path": "venn-diagram-generator/assets/template/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72655712c887d71e5b6a81286fdf85e62e04a92",
+      "size": 785
+    },
+    {
+      "path": "venn-diagram-generator/assets/template/main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33bd18ae836f1b0f48885469693699a4f8af0dd7",
+      "size": 1235
+    },
+    {
+      "path": "venn-diagram-generator/assets/template/metadata.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f90454284aad7336867c07c4bc4c0b1a99151a38",
+      "size": 626
+    },
+    {
+      "path": "venn-diagram-generator/assets/template/script.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2b0a09025f09ab789c1db628c5a5ee4e5b986a",
+      "size": 3217
+    },
+    {
+      "path": "venn-diagram-generator/assets/template/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc78a72b9d9254ab8c72764438d1868d1011f40",
+      "size": 3022
+    },
+    {
+      "path": "venn-diagram-generator/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "567655bccc3234e0a03e46836b98616be352cd1d"
+    },
+    {
+      "path": "venn-diagram-generator/references/venn-js-reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "607deed1462f81097241797b5ba35461a56cb447",
+      "size": 11806
+    },
+    {
+      "path": "vercel-react-best-practices",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7291ff0c75106e5bd8bcf94a1b69830612163eac"
+    },
+    {
+      "path": "vercel-react-best-practices/AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b9e99c44f3884db0e898e732e9a73d3f3bdd09",
+      "size": 65538
+    },
+    {
+      "path": "vercel-react-best-practices/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a0d51291bc94c2400dcf612817d1a4a81fffca7",
+      "size": 5441
+    },
+    {
+      "path": "vercel-react-best-practices/rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a197070b8e957ed80d519556262f30932cdd14c"
+    },
+    {
+      "path": "vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e7ade243aa6dae50d6faa5111dea0d04778ead",
+      "size": 1483
+    },
+    {
+      "path": "vercel-react-best-practices/rules/advanced-use-latest.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "483c2ef7da4690e090df98f084ba44e27b78d4df",
+      "size": 1197
+    },
+    {
+      "path": "vercel-react-best-practices/rules/async-api-routes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6feda1ef0ac06b57b33c7b5bd6a19ca88d6c8a34",
+      "size": 1125
+    },
+    {
+      "path": "vercel-react-best-practices/rules/async-defer-await.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea7082a3623e3d6439111d86c89b064f22b64447",
+      "size": 2028
+    },
+    {
+      "path": "vercel-react-best-practices/rules/async-dependencies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb90d861acdb7a010f9b21399216ffc8372daff0",
+      "size": 942
+    },
+    {
+      "path": "vercel-react-best-practices/rules/async-parallel.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64133f6c31fec81eaaabd712586337d20122e09f",
+      "size": 654
+    },
+    {
+      "path": "vercel-react-best-practices/rules/async-suspense-boundaries.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fbc05b04ed2474637b12014a77688750e78f931",
+      "size": 2510
+    },
+    {
+      "path": "vercel-react-best-practices/rules/bundle-barrel-imports.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee48f3273c8631f41dda416ce12cd65fb47e2c1d",
+      "size": 2370
+    },
+    {
+      "path": "vercel-react-best-practices/rules/bundle-conditional.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99d6fc90e31d683d2b6b71353b92d620b484b644",
+      "size": 949
+    },
+    {
+      "path": "vercel-react-best-practices/rules/bundle-defer-third-party.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db041d1510e51defeade05926ba4e6bbad1068b5",
+      "size": 920
+    },
+    {
+      "path": "vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60b62695e7a080e2020ff2242d8d841c5e3ecbc4",
+      "size": 791
+    },
+    {
+      "path": "vercel-react-best-practices/rules/bundle-preload.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7000504065472628ae614786a3faadd23b0435a7",
+      "size": 1149
+    },
+    {
+      "path": "vercel-react-best-practices/rules/client-event-listeners.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aad4ae91605d715aad8e92b76bd7fb85c91d7cdf",
+      "size": 1969
+    },
+    {
+      "path": "vercel-react-best-practices/rules/client-localstorage-schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d30a1a7d4f85b0d50a0808eaa1b382c6deb595f4",
+      "size": 1950
+    },
+    {
+      "path": "vercel-react-best-practices/rules/client-passive-event-listeners.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce39a889efb4452ec4c044555ff818301dcf7ece",
+      "size": 1644
+    },
+    {
+      "path": "vercel-react-best-practices/rules/client-swr-dedup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a430f27fd6abdc1b1b2f809b7a60114ff506790",
+      "size": 1159
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-batch-dom-css.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84b655292a110fd7d12fd5cd62c8332ccdc35918",
+      "size": 1631
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-cache-function-results.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "180f8ac8fffd7e6ee320242d59d06565d40a12f8",
+      "size": 1949
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-cache-property-access.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39eec9061b4ca820150cc8183fb73f9e0c91ce85",
+      "size": 532
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-cache-storage.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa4a30c08176aabd27b41fa44d5c1981457b675f",
+      "size": 1651
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-combine-iterations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "044d017ec3b24b53e46d638acd1d936a22ac6323",
+      "size": 753
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-early-exit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f46cb89c6cbe06e481aba0136848e3b17263ba96",
+      "size": 1133
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-hoist-regexp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dae3fefdc0a1db66badcd4875489715edcdb038b",
+      "size": 1028
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-index-maps.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d357a00b15ac67cdd638886f5197a13173a637d",
+      "size": 837
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-length-check-first.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b89573630fdc3aa10564273f390ecc7e2b1cd3e",
+      "size": 1747
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-min-max-loop.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b6656e96aecf3ae6ade52974090ae8b3e3f2bb5",
+      "size": 2290
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-set-map-lookups.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "680a4892ee291c432bf8e769a44d0f1eb102b74b",
+      "size": 532
+    },
+    {
+      "path": "vercel-react-best-practices/rules/js-tosorted-immutable.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae8b3f8aed2c7a893ceaae4cab55fa1c444b309",
+      "size": 1782
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-activity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c957a490b7c2688542766150741e85e066539251",
+      "size": 564
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "646744cbe53b213c6fa5ead54ef107510e5be89d",
+      "size": 1185
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-conditional-render.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e866f5852dac80e0822e7f7c33476f5c9fc22f1",
+      "size": 980
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-content-visibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa6656362b2c0dad9ffea788b5850843d6c0629e",
+      "size": 815
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32d2f3fcea53dadcf847231ee20c60fa2c5c3049",
+      "size": 1039
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cf0e79b69afd7564b965c09435a2c7ee79eb2bd",
+      "size": 2308
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rendering-svg-precision.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d7712860365294936a1b736d29d3eb970b91da7",
+      "size": 588
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-defer-reads.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e867c95f02fe6ed6ac2f91fdf1c0922304e0423a",
+      "size": 973
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-dependencies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47a4d92685702e3a3b07073c62a61800fa0a6d7d",
+      "size": 824
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-derived-state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5c899f6c073338bbd1b73c0275bc3e5e7d9ae7b",
+      "size": 728
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-functional-setstate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b004ef45e347503947fee397b6c3d163b0a317fb",
+      "size": 2968
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ecb350fbadff3db805b72429276e672d42736dc",
+      "size": 2016
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-memo.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8982ab612105a3b7faee1292b797338e7fb5271",
+      "size": 1148
+    },
+    {
+      "path": "vercel-react-best-practices/rules/rerender-transitions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d99f43f764232e994a49a1df89ec9d624552f439",
+      "size": 1055
+    },
+    {
+      "path": "vercel-react-best-practices/rules/server-after-nonblocking.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f5b260f5fc6d58141bc61e0a091569adb81e7e",
+      "size": 2012
+    },
+    {
+      "path": "vercel-react-best-practices/rules/server-cache-lru.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef6938aa53c55dc3c0035bd6c66838810d870260",
+      "size": 1353
+    },
+    {
+      "path": "vercel-react-best-practices/rules/server-cache-react.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87c9ca33168a321a59fbaaa84843e2f48c99751a",
+      "size": 2228
+    },
+    {
+      "path": "vercel-react-best-practices/rules/server-parallel-fetching.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1affc835a601a894fd02de08e6c9cdfd76d34b64",
+      "size": 1554
+    },
+    {
+      "path": "vercel-react-best-practices/rules/server-serialization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c5c4164c31be7f171ea2f4b3b32fe47709a651",
+      "size": 996
+    },
+    {
+      "path": "vibe-coder-sdlc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46376b45980632be6aeeb545f9e2d47c4a5f05fc"
+    },
+    {
+      "path": "vibe-coder-sdlc/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b2face32b107861f845db4eee283d3a43427197",
+      "size": 11006
+    },
+    {
+      "path": "vibe-coder-sdlc/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c122a3854554631f63c21dd4c8583b123ea8c40"
+    },
+    {
+      "path": "vibe-coder-sdlc/references/code-review-agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7727ade91eb7378b67d235275c2e3507aed5faf6",
+      "size": 8487
+    },
+    {
+      "path": "vibe-coder-sdlc/references/git-workflow-agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c9dd17dda7f28b2d1bcf5ce7b01ae5a92c525f",
+      "size": 2554
+    },
+    {
+      "path": "vibe-coder-sdlc/references/orchestrator-agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48e85e17357a33d323004e227b1428212cf346a5",
+      "size": 2955
+    },
+    {
+      "path": "vibe-coder-sdlc/references/project-manager-agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f47ef4427d5bfe6acb1b0b1b72ddeb6400aeba3d",
+      "size": 4018
+    },
+    {
+      "path": "vis-network",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6c2c34feb800d9f5f6b6f2d6f0fa1c99770b0c1"
+    },
+    {
+      "path": "vis-network/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50b8af60b9ab8e504e0f230917e4344ad97c5758",
+      "size": 2686
+    },
+    {
+      "path": "vps-deploy-golden-path",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be36ff4296bbfdcb9a058fa408360ccf24bc4ef7"
+    },
+    {
+      "path": "vps-deploy-golden-path/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9056a73d2570defec048d3f37fcb0aaf5eae7ec3",
+      "size": 4981
+    },
+    {
+      "path": "vps-deploy-golden-path/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81552792235365494b57cfc541bff15a15797dd2"
+    },
+    {
+      "path": "vps-deploy-golden-path/assets/deploy.sh.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eb3b487bba0d3ff440fa33f2f0999c562d9712b",
+      "size": 3443
+    },
+    {
+      "path": "wrap-up-session",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4416f0291c9c129eadc849962902c5a8f2c7ad62"
+    },
+    {
+      "path": "wrap-up-session/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fef05adb52129ea240d4572b57c61e046405094",
+      "size": 7154
+    },
+    {
+      "path": "write-article",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "333752560877425eafe10937833a3d39bd952103"
+    },
+    {
+      "path": "write-article/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "682465b34cfba92a717402fb8a547c787f00a9c1",
+      "size": 21221
+    },
+    {
+      "path": "write-article/article-cache.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d26d282d456a6c6aec44856ab9ed9652c83b499",
+      "size": 90388
+    },
+    {
+      "path": "write-article/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6b15813495d1b627acceec91806cc8251964737c"
+    },
+    {
+      "path": "write-article/references/reference-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ece67d3f27883e796ef214bdc0224f1153a19be3",
+      "size": 4053
+    },
+    {
+      "path": "write-article/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea7bbd00db83c376edc1a38479e976abfa85d93c"
+    },
+    {
+      "path": "write-article/scripts/update-cache.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f3ec0147978d47125422bb1efbc5206c5216ac44",
+      "size": 17082
+    }
+  ]
+}

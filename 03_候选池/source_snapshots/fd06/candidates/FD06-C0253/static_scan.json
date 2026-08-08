@@ -1,0 +1,147 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/buaa-thesis-format-checking/SKILL.md",
+        "snippet": "DF path with Chinese characters, spaces, or punctuation causes report generation failure, create an ASCII symlink/copy in the output directory and rerun against it. - If HTML generation fails after checks have completed, keep `thesis_text_extracted.jso"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "en # 执行格式检测 python3 scripts/thesis_audit_script.py --step3-json <results_path> <pdf> # 生成JSON报告 python3 scripts/thesis_audit_script.py --step3-html <results_path> <pdf> # 生成HTML报告 ``` **参数：** | 参数 | 必填 | 说明 | |--"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "> # 生成JSON报告 python3 scripts/thesis_audit_script.py --step3-html <results_path> <pdf> # 生成HTML报告 ``` **参数：** | 参数 | 必填 | 说明 | |------|------|------| | `pdf_path` | ✅ | 论文 PDF 文件路径 | | `output_dir` | ❌ | 报告输出目录（默认当前"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "↓ ┌─────────────────────────────────────────────────────┐ │ Step 3: Agent 生成 JSON 报告（脚本） │ │ 读取检测结果，生成 JSON 格式报告用于审核 │ └─────────────────────────────────────────────────────┘"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "─────────────────────────────┐ │ Step 3: Agent 生成 JSON 报告（脚本） │ │ 读取检测结果，生成 JSON 格式报告用于审核 │ └─────────────────────────────────────────────────────┘ ↓ ┌────────────────"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "──────┐ ┌─────────────┐ │ Step 5: │ │ 返回Step 2 │ │ 生成HTML报告│ │ 重新检测 │ └─────────────┘ └─────────────┘ ``` ## 输出报告 检测完成后生成： - **JSON 报告** — 机器可读的检测结果，用于审核"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+        "snippet": "nfo\": detailed_spacing_info, \"generated_at\": dt.now().isoformat() } with open(json_path, 'w', encoding='utf-8') as f: json.dump(report_data, f, ensure_ascii=False, indent=2) print(f\"📄 JSON报告已保存: {jso"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+        "snippet": "报告生成时间: {dt.now().strftime('%Y-%m-%d %H:%M:%S')}</p> </div> </body> </html>\"\"\" with open(html_path, 'w', encoding='utf-8') as f: f.write(html_content) print(f\"🌐 HTML报告已保存: {html_path}\") return html_path"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+        "snippet": "\"\"\"报告生成器 - JSON和HTML报告\"\"\" import os import json from typing import Dict, List from datetime import datetime as dt def generate_json_report("
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+        "snippet": "ct = {}, detailed_spacing_info: Dict = {}, output_dir: str = \".\" ) -> str: \"\"\"生成 JSON 格式的检测报告（用于Step 4审核）\"\"\" pdf_name = os.path.splitext(os.path.basename(pdf_path))[0] timestamp = dt.now().strftime(\"%Y%m%d"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+        "snippet": "ct = {}, detailed_spacing_info: Dict = {}, output_dir: str = \".\" ) -> str: \"\"\"生成 HTML 格式的完整检测报告\"\"\" from datetime import datetime as dt pdf_name = os.path.splitext(os.path.basename(pdf_path))[0] timestam"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/thesis_audit_script.py",
+        "snippet": "} # 保存到临时文件 text_file_path = os.path.join(output_dir, TEMP_TEXT_FILE) with open(text_file_path, 'w', encoding='utf-8') as f: json.dump(text_data, f, ensure_ascii=False, indent=2) print(f\"\\n✅ PDF文本已提取并保存到: {"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/buaa-thesis-format-checking/SKILL.md",
+        "snippet": "白页面、占位符、章节连续性、过渡段、URL位置、中英文摘要（中英文关键词）、文本对齐、字体字号、行间距、图表间距等14项检测。注意：行内文字间距过大/视觉空洞问题无法自动检测，必须人工核对PDF。 metadata: author: yylonly version: \"1.2\" allowed-tools: Bash python Read TaskCreate TaskUpdate TaskList --- #"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/SKILL.md",
+        "snippet": "-layout verification ## Cannot Auto-Detect (Manual Check Required) 以下问题无法通过文本提取自动检测，**必须人工核对PDF**： - **行内文字间距过大/视觉空洞**：正文页面文字两端对齐但内部有明显缝隙，呈现\"锯齿状\"空白区域 - **部分过渡段缺失**：仅检测二级与三级标题之间，三级与四级之间未覆盖 - **图表编号缺失或格式错误**：仅检测间距，"
+      }
+    ],
+    "file_delete": [
+      {
+        "file": "skills/buaa-thesis-format-checking/.claude/settings.local.json",
+        "snippet": "{ \"permissions\": { \"allow\": [ \"Bash(git rm:*)\", \"Bash(rm -rf .DS_Store scripts/.DS_Store scripts/__pycache__ scripts/checks/__pycache__ scripts/extractors/__pycache__ scripts/repor"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/.claude/settings.local.json",
+        "snippet": "actors/__pycache__ scripts/reports/__pycache__ scripts/*.md scripts/*.html)\", \"Bash(rm -rf .git)\", \"Bash(git init:*)\", \"Bash(git add:*)\", \"Bash(git commit -m 'Initial commit: paper-content-aud"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "行间距检测 | ⚠️ 警告 | 中文论文正文应为1.5倍行距 | ## 安装依赖 ```bash # 核心依赖 - PDF文本提取（使用 PDFMiner.six，精度更高） pip install pdfminer.six # 字体检测和详细间距分析（推荐） pip install pymupdf ``` ## 快速开始 ```bash # 完整流程（Step 1-5） python3 scripts/thesis_audit_script.py <pd"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "``bash # 核心依赖 - PDF文本提取（使用 PDFMiner.six，精度更高） pip install pdfminer.six # 字体检测和详细间距分析（推荐） pip install pymupdf ``` ## 快速开始 ```bash # 完整流程（Step 1-5） python3 scripts/thesis_audit_script.py <pdf_path> [output_dir] --type cn|en # 分"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/checks/font_line_spacing.py",
+        "snippet": "= 'unknown (PyMuPDF not available)' result['warnings'] = ['PyMuPDF 未安装，行间距检测不准确。请运行: pip install pymupdf'] warnings.append('PyMuPDF 未安装，无法准确检测行间距') return { 'result': result, 'warnings': warnings }"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/checks/fonts.py",
+        "snippet": "YMUPDF_AVAILABLE: result['warnings'].append( \"PyMuPDF 未安装，无法检测字体。请运行: pip install pymupdf\" ) return {'result': result, 'warnings': result['warnings']} try: doc = pymupdf.open(pdf_pa"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+        "snippet": "font_summary}</p> <p style=\"margin: 10px 0; color: #888; font-size: 12px;\">请安装 PyMuPDF: pip install pymupdf</p> \"\"\" # 详细间距问题表 spacing_issues_table = detailed_spacing_info.get('spacing_issues_table', []) if spacing_issu"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/buaa-thesis-format-checking/README.md",
+        "snippet": "pdf 更高（平均每页多 2% 字符） 2. **字体检测**：需要安装 PyMuPDF 进行视觉分析 3. **图像页**：纯图表页内容较少属正常现象 4. **封面占位符**：隐私保护用的 `****` 占位符属正常 ## 相关文档 - [第三章：书写规范与排版格式](./references/Chapter-3-Writing-Standard-and-Printing-Styles.md)"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "be listed on the bottom of the same page or at the end of the same article. --- ## 3.8 Confidential Dissertations / 保密论文 ### 两种标准一致 | 项目 | 规范 | |------|------| | 密级标注位置 | 封面和提名页右上角 | | 标注格式 | \"☆\" + \"保密期限\" | | 密件批准通知 |"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "论文末尾 | #### 密级分类 | 密级 | 保密期限 | |------|----------| | 秘密 (Secret) | 3年、5年、10年、永久 | | 机密 (Confidential) | 同上 | | 绝密 (Top Secret) | 同上 | #### 保密论文要求 | 要求 | 说明 | |------|------| | 定密 | 应尽量减少不必要的保密论文 | | 解密 | 技术和方法应通过申请专利保护"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "应通过申请专利保护，而非通过论文保密 | | 处理 | 不得在未分类计算机上排版、存储、打印和传输；复印和装订须在指定地点进行；作者须全程跟随 | > **English:** Confidential dissertations should be marked with the corresponding \"☆\" and \"Confidentiality Period\" on the top-right corner of the c"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "ing \"☆\" and \"Confidentiality Period\" on the top-right corner of the cover and title page. Confidential dissertations are not allowed to be typeset, stored, printed and transmitted on unclassified computers. --- ## 附录：快速检"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "Writing Standard / 书写规范 ### 3.1.1 Language / 语言 | 标准版本 | 规范 | |---------|------| | **国际学生 (Green Book)** | 论文正文、主体部分和致谢等可用英文撰写；但封面、提名页和独创性声明须用中文撰写。摘要须中英文对照。 | | **国内学生 (模板示例)** | 论文须用中文撰写（外文专业或另有规定除外）。 | > **"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "----| | **国际学生 (Green Book)** | 论文正文、主体部分和致谢等可用英文撰写；但封面、提名页和独创性声明须用中文撰写。摘要须中英文对照。 | | **国内学生 (模板示例)** | 论文须用中文撰写（外文专业或另有规定除外）。 | > **English:** For international postgraduate students, the thesis/dissertation's"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "ould be typed on both sides of paper. --- ### 3.1.3 Font Style and Size / 字体与字号 #### 国际学生标准 (Green Book) | 元素 | 字号 | 字体 | 位置 | |------|------|------|------| | 论文题目 | 按具体规定 | Times New Roman | - | | **章标题** (C"
+      },
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "谢/作者简介 | 12 pt | Times New Roman | - | | **页码** | 10.5 pt | Times New Roman | - | #### 国内学生标准 (模板示例) | 元素 | 字号 | 字体 | 位置 | |------|------|------|------| | 论文题目 | 按具体规定 | - | - | | **章标题** | 三号 | **黑体** | 居中 | |"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+        "snippet": "**English:** Confidential dissertations should be marked with the corresponding \"☆\" and \"Confidentiality Period\" on the top-right corner of the cover and title page. Confidential dissertations are not allowed to be typeset,"
+      }
+    ],
+    "process": [
+      {
+        "file": "skills/buaa-thesis-format-checking/scripts/thesis_audit_script.py",
+        "snippet": "print(\"\\n⚠️ 使用Agent模式需要通过Claude Code Agent调用\") print(\" 请使用 Agent 工具调用本脚本\") print(f\" 提示: python3 thesis_audit_script.py --step1 {pdf_path} [output_dir]\") sys.exit(1)"
+      }
+    ]
+  },
+  "read_errors": []
+}

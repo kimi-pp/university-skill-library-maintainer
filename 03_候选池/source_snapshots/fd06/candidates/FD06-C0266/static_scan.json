@@ -1,0 +1,151 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "es the five source-grounded axes. - Return exactly `3 mutually blind reviewer reports + 1 post-review synthesis` unless the user explicitly asks for another structure. - Give every reviewer only the same immutable manuscr"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "rts independently raise the same underlying concern. 8. Generate `Cross-review synthesis (post-review; not shown to reviewers)` with consensus blocking concerns, other major concerns, the minor-revision checklist, and gen"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "[text] Reviewer 2 [Same structure] Reviewer 3 [Same structure] Cross-review synthesis (post-review; not shown to reviewers) - **Consensus strengths** [text] - **Consensus blocking concerns** [items] - **Other consensus"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "at least two reports independently raise the same underlying concern. 8. Generate `Cross-review synthesis (post-review; not shown to reviewers)` with consensus blocking concerns, other major concerns, the minor-revision checklist,"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "ired correction** [text] Reviewer 2 [Same structure] Reviewer 3 [Same structure] Cross-review synthesis (post-review; not shown to reviewers) - **Consensus strengths** [text] - **Consensus blocking concerns** [items] - **Other co"
+      },
+      {
+        "file": "skills/nature-reviewer/README_EN.md",
+        "snippet": "reat an issue as consensus only when at least two reviewers raise it independently in the post-review synthesis. - Identify which readers would care about the work and why. ## Typical Requests - \"Review this introductio"
+      },
+      {
+        "file": "skills/nature-reviewer/manifest.yaml",
+        "snippet": "utually blind reviewer reports with Major Concerns, Minor Comments, Blocking flags, and a post-review synthesis path: references/report-structure.md - condition: enforcing reviewer mutual blindness or preventing"
+      },
+      {
+        "file": "skills/nature-reviewer/references/editorial criteria and processes.md",
+        "snippet": "first stage for a newly submitted Article is that the editorial staff consider whether to send it for peer-review. On submission, the manuscript is assigned to an editor covering the subject area, who seeks informal advice from scien"
+      },
+      {
+        "file": "skills/nature-reviewer/references/qa-checklist.md",
+        "snippet": "both `Major Concerns` and `Minor Comments` sections. - Confirm a `Cross-review synthesis (post-review; not shown to reviewers)` section exists. - Confirm a `Risk / unsupported claims` section exists. ## Boundary checks"
+      },
+      {
+        "file": "skills/nature-reviewer/references/qa-checklist.md",
+        "snippet": "nsus; low overlap can be legitimate difference in judgment. - Deduplicate only inside the post-review synthesis and preserve links to the original reviewer-local concern IDs. ## Final release rule - If the skill cannot"
+      },
+      {
+        "file": "skills/nature-reviewer/references/qa-checklist.md",
+        "snippet": "visibly contains both `Major Concerns` and `Minor Comments` sections. - Confirm a `Cross-review synthesis (post-review; not shown to reviewers)` section exists. - Confirm a `Risk / unsupported claims` section exists. ## Boundary c"
+      },
+      {
+        "file": "skills/nature-reviewer/references/report-structure.md",
+        "snippet": "etup` 2. `Reviewer 1` 3. `Reviewer 2` 4. `Reviewer 3` 5. `Cross-review synthesis (post-review; not shown to reviewers)` 6. `Risk / unsupported claims` ## Review setup - Include: - `Input scope` - `Assessme"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "tique, novelty/significance/technical-soundness assessment, 审稿人视角评估, 模拟审稿, 预审, 投稿前自审, 审稿意见模拟, or 帮我审一下论文. Produce evidence-grounded Major Concerns, Minor Comments, and blocking flags. For multiple reviewers,"
+      },
+      {
+        "file": "skills/nature-reviewer/README.md",
+        "snippet": "er 和可核验的证据位置。 - 交叉核对手稿内部的术语、单位、数值精度、Methods 计数和表格支撑，区分语言问题与会削弱可信度的实质矛盾。 - 不为了降低重复度而提前协调或改写审稿意见；只有至少两位 reviewer 独立提出同一问题时才在后置综合中列为共识。 - 判断哪些读者会关心这项工作，以及为什么。 ## 典型请求 - “像 Nature reviewer 一样审这篇 introduction 和 Figure"
+      },
+      {
+        "file": "skills/nature-reviewer/README.md",
+        "snippet": "- Cross-review synthesis：共识问题、分歧重点和编辑层风险。 - 带稳定编号、claim pointer、evidence pointer 和解决判据的可追溯审稿意见。 - 分级的 Major/Minor 意见、Blocking 风险和去重后的 minor revision checklist。 - 必须补强的实验、分析、叙事或图表证据清单。 - 对无证据判断的明确标记。 ## 边界 - 不会虚构具"
+      },
+      {
+        "file": "skills/nature-reviewer/README.md",
+        "snippet": "供材料和技能内官方审稿规则做保守模拟。 - 如果目标是写返修回复，优先使用 `nature-response`。 ## 相关技能 - `nature-response`：把真实审稿意见转成回复包。 - `nature-writing`：根据评审风险重建手稿叙事。 - `nature-statistics`：深入审查统计设计和报告。"
+      },
+      {
+        "file": "skills/nature-reviewer/references/role-boundaries.md",
+        "snippet": "eviewers were chosen for reasons other than those stated in the source. - Do not simulate confidential editor knowledge, hidden reviewer expertise, or access to related submissions unless the user explicitly supplied such"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "re-submission peer review from the referee perspective, not an author rebuttal. Use for reviewer reports, mock peer review, manuscript critique, novelty/significance/technical-soundness assessment, 审稿人视角评估, 模拟审稿, 预审, 投稿前自审, 审稿意见模拟, or 帮我审"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "ents but never replaces the five source-grounded axes. - Return exactly `3 mutually blind reviewer reports + 1 post-review synthesis` unless the user explicitly asks for another structure. - Give every reviewer only the same immutable manuscr"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "wer only the same immutable manuscript/source packet, the same journal criteria, and that reviewer's preassigned emphasis. Never provide another review, a shared concern ledger, a draft synthesis, or hints about what another reviewer noticed. - Run each reviewer in a gen"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "eep the output inside the same 3-reviewer `nature-reviewer` structure. - Do not claim the editor's final decision or certainty about fit to `Nature`. ## Accepted inputs The skill may receive: - full manuscript draft - abstract, su"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "fine the reviewer count and emphasis briefs before launching any reviewer. 4. Launch each reviewer in an isolated context. Pass only the immutable review packet, that reviewer's emphasis brief, the common report skeleton, and the same grounding rules. 5. Inside each isolat"
+      },
+      {
+        "file": "skills/nature-reviewer/SKILL.md",
+        "snippet": "o not invent reviewer identities, specialty roles, or selection history. - Do not let one reviewer read, cite, anticipate, agree with, or respond to another review. - Do not build or distribute a shared concern ledger before individual reports are frozen. - Do not rewrite independen"
+      },
+      {
+        "file": "skills/nature-reviewer/README.md",
+        "snippet": "tance、interdisciplinary readership、technical soundness 和 readability。 - 在相互不可见的独立上下文中生成三份 reviewer reports，全部定稿后再单独生成 cross-review synthesis。 - 标记无支撑声称、技术缺陷、证据链断点和非专业读者理解障碍。 - 将意见明确分成 `Major Concerns` 和 `Minor Comments`；对会阻断核心论证的 Major 问题标记 `Blocking"
+      },
+      {
+        "file": "skills/nature-reviewer/README_EN.md",
+        "snippet": "# `nature-reviewer` Skill [中文说明](README.md) `nature-reviewer` simulates Nature-style pre-submission review from the reviewer perspective, helping authors find risks in novelty, significance, technical soundness, and reader val"
+      },
+      {
+        "file": "skills/nature-reviewer/references/qa-checklist.md",
+        "snippet": "local concern IDs. ## Final release rule - If the skill cannot produce a grounded three-reviewer package without major invention, it should return a bounded draft review with explicit missing-information flags rather than pretending certainty. - If the skill cannot isolate reviewer contex"
+      },
+      {
+        "file": "skills/nature-reviewer/references/qa-checklist.md",
+        "snippet": "uce a grounded three-reviewer package without major invention, it should return a bounded draft review with explicit missing-information flags rather than pretending certainty. - If the skill cannot isolate reviewer contex"
+      },
+      {
+        "file": "skills/nature-reviewer/references/reviewer-workflow.md",
+        "snippet": "ed concerns, a shared interpretation, another report, or a draft synthesis. 3. Define all reviewer emphasis briefs before review begins. - Keep the source packet and report skeleton identical; vary only the declared emphasis. 4. Generate each re"
+      },
+      {
+        "file": "skills/nature-reviewer/references/role-boundaries.md",
+        "snippet": "al editorial outcomes as facts - claim authority over referee selection - replace the editor's broad-readership judgment with invented certainty ## Output behaviour rules - Each reviewer should independently assess the same manuscript/sou"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/nature-reviewer/references/domain-specific-review-gates.md",
+        "snippet": "sturbance, and product version changes; - whether maps and inventories report accuracy, bias, false positives/negatives, and spatially explicit uncertainty. Typical revision direction: add independent blocked"
+      },
+      {
+        "file": "skills/nature-reviewer/references/technical-concern-taxonomy.md",
+        "snippet": "xperimental-design` | Comparators, controls, replication units, conditions, sampling, and bias controls support the stated inference. | | `statistical-rigor` | Estimands, assumptions, uncertainty, multiplicity, pow"
+      },
+      {
+        "file": "skills/nature-reviewer/references/technical-concern-taxonomy.md",
+        "snippet": "ata-resource-quality` | Dataset completeness, provenance, documentation, quality control, accessibility, and intended reuse are credible. | | `figures-and-tables` | Visual encodings, labels, denominators, uncertainty, scale"
+      },
+      {
+        "file": "skills/nature-reviewer/references/technical-concern-taxonomy.md",
+        "snippet": "d-tables` | Visual encodings, labels, denominators, uncertainty, scale bars, legends, and accessibility accurately represent the results. | | `writing-clarity` | The argument, terminology, abstract/body consistency, and non"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "skills/nature-reviewer/references/source-basis.md",
+        "snippet": "en inferable from the manuscript - Reviewer outputs must not pretend to make the editor's acceptance decision. - Reviewer outputs may comment on whether significance seems overstated or understated, because the source explicitly"
+      }
+    ]
+  },
+  "read_errors": []
+}

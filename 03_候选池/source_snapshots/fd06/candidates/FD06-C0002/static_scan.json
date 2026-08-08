@@ -1,0 +1,159 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-pair-programming-patterns.md",
+        "snippet": "-- ### Exercise: Collaborative Build Project **Task**: Build a small project (e.g., password manager, quiz app, data analyzer) **Requirements**: 1. **Planning Phase**: Outline structure before any code (no AI"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/prompt-engineering-pedagogy.md",
+        "snippet": "ompare AI outputs at each stage **Assessment**: Give students a task (e.g., \"Create a password validator\"). Have them write: 1. Minimal prompt 2. Context-rich prompt 3. Reflection: How did AI outputs differ?"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-pair-programming-patterns.md",
+        "snippet": "ssage. Students must debug using AI with specific requirements: 1. **Initial Report**: Write a clear bug report (symptoms, expected, actual, code) 2. **Hypothesis**: Form a hypothesis before asking AI 3. **Targeted Question**: As"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/prompt-engineering-pedagogy.md",
+        "snippet": "empty list? Add error handling.\" ``` **Strategy 2: Extension** ``` Initial prompt: \"Write a function to read a file\" AI provides: [basic file reading] Follow-up: \"Now add error handling for file not found and permission denied."
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/templates/prompt-design-template.md",
+        "snippet": "h, what alternatives you want] ``` **Example - Generate**: ``` Task: Generate code Write a function that reads a JSON file and returns the data as a Python dictionary. ``` **Example - Explain**: ``` Task: Explain code Explain how this"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/templates/prompt-design-template.md",
+        "snippet": "al explanations needed] ``` **Example**: ``` I'm learning Python file I/O. Task: Write Python code to safely read a text file line by line and count word frequency. Requirements: - Handle files that don't exist (return empty dict, don't cras"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-pair-programming-patterns.md",
+        "snippet": "fy choices. --- ### Assessment: Iterative Improvement Project **Task**: Students submit code. AI reviews it. Students improve based on feedback. Repeat 3 times. **Deliverables**: - Version 1: Initial code - Review 1: AI feedback + student's evaluation - Ver"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/templates/ai-lesson-template.yml",
+        "snippet": "suggester and analyzer\" - type: \"ai_code_review\" description: \"Students submit code for AI review\" activity: | Students write code independently, then: 1. Request AI code review"
+      }
+    ],
+    "network": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+        "snippet": "Deprecated functions - Updated best practices **Example**: ``` AI might suggest: requests.get(url, verify=False) # Old pattern Better (current): requests.get(url, verify=True) # Secure default ``` 2. **Popu"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+        "snippet": "``` AI might suggest: requests.get(url, verify=False) # Old pattern Better (current): requests.get(url, verify=True) # Secure default ``` 2. **Popularity Bias**: AI favors common patterns over niche ones - Mai"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/skill-report.json",
+        "snippet": "\"line_start\": 440, \"line_end\": 440, \"snippet\": \"AI might suggest: requests.get(url, verify=False) # Old pattern\" }, { \"id\": \"network:reference/ai-tool-literacy.md:441:python-htt"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/skill-report.json",
+        "snippet": "\"line_start\": 441, \"line_end\": 441, \"snippet\": \"Better (current): requests.get(url, verify=True) # Secure default\" }, { \"id\": \"blocker:reference/ai-tool-literacy.md:281:system-r"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+        "snippet": "te code to process customer data\" → AI doesn't know your privacy policies → May violate GDPR, HIPAA, or company policy without knowing ``` **Teaching**: Students must provide context explicitly; AI cannot inf"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "Algorithm structure generated with AI assistance (Claude, 2025-01-15). Modified by [Student Name] to add edge case handling. \"\"\" # AI-generated initial implementation left, right = 0, len(arr) - 1"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "es it work this way?\" - Student must explain clearly, including AI-generated parts - If student can't explain, grade reflects lack of understanding **Purpose**: Creates accountability for understanding, not just completion. ---"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": ", they're over-reliant. --- ### Challenge 4: \"The Job Market Uses AI Anyway\" 💼 **Student Argument**: \"Everyone uses AI at work. Why not in school?\" **Response**: - True: AI is a professional tool - But: Professionals use AI from a foundation"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "gal Compliance** ``` Developer uses AI to generate data processing code. Code violates GDPR (European privacy law). Company faces fines. Who's responsible? The developer, not the AI. ``` **Lesson**: You"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+        "snippet": "ata Biases **AI reflects patterns in its training data**, which means: 1. **Recency Bias**: AI may not know recent changes - New library versions - Deprecated functions - Updated best practices"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+        "snippet": "etter (current): requests.get(url, verify=True) # Secure default ``` 2. **Popularity Bias**: AI favors common patterns over niche ones - Mainstream libraries over specialized tools - Popular languages"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+        "snippet": "ss common ones - Common approaches over domain-specific solutions 3. **Correctness Bias**: AI learns from public code, which includes bugs - Stack Overflow code snippets (not all are correct) - Open-"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "I coding assistants ethically and responsibly. It covers attribution, academic integrity, bias awareness, over-reliance prevention, and professional responsibility when using AI in software development. --- #"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "AI-assisted learning results in retained knowledge and skills. --- ### Principle 5: Bias Awareness **Core Idea**: AI reflects biases in training data. Students must recognize and mitigate these biases."
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "ining data. Students must recognize and mitigate these biases. --- #### Types of AI Bias Students Should Know **1. Correctness Bias** - AI learned from public code, including buggy code - Popular doesn't"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "te these biases. --- #### Types of AI Bias Students Should Know **1. Correctness Bias** - AI learned from public code, including buggy code - Popular doesn't mean correct **Teaching**: Show examples o"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "*: Show examples of widely-copied-but-wrong Stack Overflow answers --- **2. Recency Bias** - AI training data has cutoff date - May not know latest best practices or library versions **Teaching**: Have s"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "ve students verify AI suggestions against current documentation --- **3. Popularity Bias** - AI favors common patterns over niche solutions - Mainstream libraries over specialized tools **Teaching**: Dis"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "when specialized tools are better despite AI not suggesting them --- **4. Cultural Bias** - AI performs better with English prompts - Examples and metaphors may assume Western context - Variable naming co"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "ncourage students from other cultures to share experiences. --- **5. Representation Bias** - AI training data may underrepresent certain languages, frameworks, or paradigms - Newer or less common technologi"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "ng students to use AI coding assistants ethically and responsibly. It covers attribution, academic integrity, bias awareness, over-reliance prevention, and professional responsibility when using AI in software development. --"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "onsibility. Even if AI wrote it, the developer is accountable. --- ### Principle 2: Academic Integrity **Core Idea**: AI should enhance learning, not substitute for it. Using AI to bypass learning is cheating yourself."
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "independently - Submitting AI work as own without understanding --- #### Teaching Academic Integrity with AI **Strategy 1: The \"Can You Do This Without AI?\" Test** Periodically assess students without AI access: -"
+      },
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+        "snippet": "Using AI to complete entire assignments Consequences: - Using AI without disclosure: Academic integrity violation - Using AI for exams: Zero on exam - Repeated violations: Course failure and disciplinary action ``` **"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/scripts/assess-ai-integration.py",
+        "snippet": ".\"\"\" if yaml is None: return {\"error\": \"PyYAML not installed. Install with: pip install pyyaml\"} try: with open(filepath, \"r\") as f: data = yaml.safe_load(f) return data except"
+      }
+    ],
+    "untrusted_input_protection": [
+      {
+        "file": "skills/92bilal26/ai-collaborate-teaching/skill-report.json",
+        "snippet": "bang false positive, with no evidence of malicious commands, reconnaissance, obfuscation, prompt injection, or data exfiltration.\", \"remediation\": [], \"risk_factor_evidence\": [ { \"factor\": \"network\","
+      }
+    ]
+  },
+  "read_errors": []
+}

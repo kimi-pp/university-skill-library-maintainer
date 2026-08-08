@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/education/feedback-pedagogy/SKILL.md",
+    "type": "blob",
+    "size": 8320,
+    "sha": "cfdfc6d5319ccbe88271e1b94cfaece8aeb43a69"
+  },
+  {
+    "path": "skills/education/feedback-pedagogy/references/comment-bank.md",
+    "type": "blob",
+    "size": 7759,
+    "sha": "85c535bf1f1d30727e72796c6fcd2bee742133d4"
+  },
+  {
+    "path": "skills/education/feedback-pedagogy/references/peer-review-protocols.md",
+    "type": "blob",
+    "size": 5541,
+    "sha": "0323f649e41d42bc4b1dc48b5c3725b8a40cf0bf"
+  },
+  {
+    "path": "skills/education/feedback-pedagogy/references/rubric-templates.md",
+    "type": "blob",
+    "size": 7080,
+    "sha": "ecb72f6fc066ff30b1c4d575b6d516a31999a455"
+  }
+]

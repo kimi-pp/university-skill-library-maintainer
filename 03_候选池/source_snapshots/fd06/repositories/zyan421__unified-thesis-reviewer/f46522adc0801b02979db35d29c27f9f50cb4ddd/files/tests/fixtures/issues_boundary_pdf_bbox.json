@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-argumentation-001",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "3",
+        "paragraph_index": 2,
+        "page_number": 1,
+        "bbox": [
+          72,
+          700,
+          500,
+          720
+        ]
+      },
+      "excerpt": "pdf bbox 示例",
+      "problem": "问题",
+      "suggestion": [
+        "建议"
+      ],
+      "group_id": "g-030",
+      "anchor_text": "pdf bbox 示例"
+    }
+  ]
+}

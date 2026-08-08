@@ -1,0 +1,85 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "ox]; \"Consistency pass\" [shape=box]; \"Build index.html\" [shape=box]; \"Open folder + browser\" [shape=doublecircle]; \"Parse invocation\" -> \"Existing folder?\"; \"Existing folder?\" -> \"Output location\" [label=\"n"
+      },
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "pass\"; \"Consistency pass\" -> \"Build index.html\"; \"Build index.html\" -> \"Open folder + browser\"; } ``` **Do not skip phases.** Track progress with TaskCreate so the user sees where you are. --- ## Phase 0 — Pars"
+      },
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "ative content.** Find top articles, tutorials, conference talks, and papers on `<topic>`. WebSearch + WebFetch the highest-signal results. Return 8–15 with one-line \"why-to-read\" for each, tagged `[article|tutorial|talk"
+      },
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "xplorer.exe \"<absolute-path-to-learn-slug-folder>\"` 2. Open the index.html in the default browser: - `Bash start \"\" \"<absolute-path-to-index.html>\"` 3. Reply with a concise summary: - One paragraph: what was gen"
+      },
+      {
+        "file": "skills/teach-me/README.md",
+        "snippet": "ockquotes, figure wrappers for diagrams). 7. Opens the course folder and the HTML in your browser. ## Invocation ```text /teach-me <topic> /teach-me # asks for a topic \"teach me about X\""
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "95b8NRAg==\", \"license\": \"MIT\", \"funding\": { \"type\": \"github\", \"url\": \"https://github.com/sponsors/wooorm\" } }, \"node_modules/character-entities-html4\": { \"version\": \"2.1.0\","
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "pn8qDoZA==\", \"license\": \"MIT\", \"funding\": { \"type\": \"github\", \"url\": \"https://github.com/sponsors/wooorm\" } }, \"node_modules/character-entities-legacy\": { \"version\": \"3.0.0\","
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "wydHATVQ==\", \"license\": \"MIT\", \"funding\": { \"type\": \"github\", \"url\": \"https://github.com/sponsors/wooorm\" } }, \"node_modules/comma-separated-tokens\": { \"version\": \"2.0.3\","
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "UTbRlGZg==\", \"license\": \"MIT\", \"funding\": { \"type\": \"github\", \"url\": \"https://github.com/sponsors/wooorm\" } }, \"node_modules/dequal\": { \"version\": \"2.0.3\", \"resolved\": \"htt"
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "\"dequal\": \"^2.0.0\" }, \"funding\": { \"type\": \"github\", \"url\": \"https://github.com/sponsors/wooorm\" } }, \"node_modules/emoji-regex-xs\": { \"version\": \"1.0.0\", \"resolve"
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "\"zwitch\": \"^2.0.4\" }, \"funding\": { \"type\": \"opencollective\", \"url\": \"https://opencollective.com/unified\" } }, \"node_modules/hast-util-whitespace\": { \"version\": \"3.0.0\", \"r"
+      },
+      {
+        "file": "skills/teach-me/assets/package-lock.json",
+        "snippet": "pes/hast\": \"^3.0.0\" }, \"funding\": { \"type\": \"opencollective\", \"url\": \"https://opencollective.com/unified\" } }, \"node_modules/html-void-elements\": { \"version\": \"3.0.0\", \"res"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "efault location for future `/teach-me` runs?\"* — yes/no via `AskUserQuestion`. 5. If yes, write a memory file `teach_me_output_location.md` with frontmatter `type: user` and the path in the body. Update `MEMORY.md` with one line."
+      },
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": ", structured. After all 4 return, synthesize. ## Phase 5 — Outline and chapter picks 1. Write `<output-location>/learn-<slug>/OUTLINE.md` with this structure: ```markdown # Learning <Topic> ## Your goal (recorded) - **Cu"
+      },
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "into a final ordered chapter list `picks = [...]`. ## Phase 6 — Write WRITING_GUIDE.md Write `<output-location>/learn-<slug>/WRITING_GUIDE.md`. This file is the **shared brief for all chapter-writer agents and the consist"
+      },
+      {
+        "file": "skills/teach-me/assets/build-html.mjs",
+        "snippet": "\\{\\{[A-Z_]+\\}\\}/g, ''); const outPath = path.join(courseDir, 'index.html'); await fs.writeFile(outPath, out, 'utf8'); const stats = await fs.stat(outPath); console.log(`Wrote ${outPath} (${(stats.size / 1024)."
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "skills/teach-me/SKILL.md",
+        "snippet": "on causes: missing chapter file referenced from `course-meta.json`, Shiki not installed (`npm install` step skipped), or an unfamiliar code-fence language (the script falls back to plain `<pre><code>` for unsupported lang"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/teach-me/assets/templates/WRITING_GUIDE.template.md",
+        "snippet": "r, [\"The transient information effect\"](https://www.sciencedirect.com/science/article/abs/pii/S0959475212000369), *Learning and Instruction* 2012. - Mayer, Segmenting Principle, *Cambridge Handbook of Multimedia L"
+      }
+    ]
+  },
+  "read_errors": []
+}

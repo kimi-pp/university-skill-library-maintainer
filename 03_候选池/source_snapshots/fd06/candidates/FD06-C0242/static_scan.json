@@ -1,0 +1,29 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/professional-learning/panel-review/SKILL.md",
+        "snippet": "that a criterion is only useful if two raters would reach the same judgement on the same student work. Role 2 (dispositions theorist) draws on Claxton (2002) on dispositions as ongoing stance cultivated through practice,"
+      },
+      {
+        "file": "skills/professional-learning/panel-review/SKILL.md",
+        "snippet": "u care deeply about whether criteria are scoreable — whether two teachers, given the same student work, would reach the same judgement. When reviewing a KUD or criterion bank, your characteristic concerns are: Do criteria"
+      },
+      {
+        "file": "skills/professional-learning/panel-review/SKILL.md",
+        "snippet": "e? Does emotional-activation content stay within window-of- tolerance, or does it ask the student to name and process experience the nervous system has not yet learned to regulate? Are observation protocols for distress-adjac"
+      },
+      {
+        "file": "skills/professional-learning/panel-review/SKILL.md",
+        "snippet": "3. **Observability.** Each criterion describes something a teacher can see or assess from student work or observation; no criteria that require inference about internal states without external markers. Scored by: assessmen"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/professional-learning/panel-review/SKILL.md",
+        "snippet": "xpertise on knowledge-component modelling. The current panel's developmental neuroscience reviewer is trauma-informed-weighted; science curriculum review would want a different developmental lens. Panel library refactor is a future task. 4. **Scope-and-sequence review is"
+      }
+    ]
+  },
+  "read_errors": []
+}

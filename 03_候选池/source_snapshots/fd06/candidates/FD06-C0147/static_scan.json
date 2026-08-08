@@ -1,0 +1,27 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md",
+        "snippet": "a critical thinking task targeting specific skills like evaluating evidence, identifying bias, or analysing arguments. Use when embedding critical analysis into subject lessons.\" disable-model-invocation: false us"
+      },
+      {
+        "file": "skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md",
+        "snippet": "evidence, identifying assumptions, analysing arguments, comparing perspectives, detecting bias\" optional: - field: \"subject_area\" type: \"string\" description: \"The discipline context — critical thi"
+      },
+      {
+        "file": "skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md",
+        "snippet": "dence, identification of assumptions, analysis of competing perspectives, or detection of bias — embedded in specific subject content. Crucially, the output includes criteria for distinguishing critical from surfac"
+      },
+      {
+        "file": "skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md",
+        "snippet": "standards (clarity, accuracy, precision, relevance, depth, breadth, logic, significance, fairness). Facione (1990) led the Delphi consensus project defining critical thinking as comprising six core skills: interpretat"
+      },
+      {
+        "file": "skills/literacy-critical-thinking/critical-thinking-task-designer/SKILL.md",
+        "snippet": "dentifying unstated assumptions\" / \"Comparing two competing interpretations\" / \"Detecting bias in a source\" / \"Distinguishing correlation from causation\"* Optional (injected by context engine if available): - **Su"
+      }
+    ]
+  },
+  "read_errors": []
+}

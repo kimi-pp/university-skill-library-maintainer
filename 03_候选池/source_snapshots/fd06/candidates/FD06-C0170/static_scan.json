@@ -1,0 +1,23 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/education-interactive-assignment-grading/SKILL.md",
+        "snippet": "duce criterion-level scores with evidence-backed comments. 4. Detect edge cases requiring human review escalation. 5. Deliver instant formative feedback with revision guidance. 6. Store grades and rationale for auditabilit"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/education-interactive-assignment-grading/SKILL.md",
+        "snippet": "ctive-assignment-grading description: Grade assignments with immediate, standardized, and bias-aware feedback tied to explicit criteria. Use when scaling fair evaluation and actionable student guidance. --- # Inte"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/education-interactive-assignment-grading/index.mjs",
+        "snippet": "reasons = []; if (evaluation.percentage === 0) reasons.push('blank_submission'); if (/plagiarism|copied|exact match/i.test(submission.text ?? '')) reasons.push('suspected_plagiarism'); if (submission.format_violati"
+      }
+    ]
+  },
+  "read_errors": []
+}

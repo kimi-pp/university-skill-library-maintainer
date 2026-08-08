@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/systems-thinking/hexagon-complexity-mapper/SKILL.md",
+        "snippet": "isting_evidence\" type: \"string\" description: \"Data, stories, observations, or student work already available about this topic\" output_schema: type: \"object\" fields: - field: \"mapping_question\" typ"
+      }
+    ]
+  },
+  "read_errors": []
+}

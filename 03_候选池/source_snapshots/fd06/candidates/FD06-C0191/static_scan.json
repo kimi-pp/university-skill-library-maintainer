@@ -1,0 +1,29 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": ".pi/skills/rubrics-create/SKILL.md",
+        "snippet": "se_id} --csv {path} --format json ``` ### JSON path Run: ```bash uv run dauber rubrics create --course {canvas_course_id} --file {path} --format json ``` ### Guided path Collect rubric details interactively. **Round 1**: Ask for the rubric title"
+      },
+      {
+        "file": ".pi/skills/rubrics-create/SKILL.md",
+        "snippet": "e.g., 'Excellent: 25'):\" Repeat until user enters 'done' for the criterion description. Write the collected data to a temp file `/tmp/rubric_{canvas_course_id}.json`: ```json { \"title\": \"{title}\", \"criteria\": [ { \"description\": \"{de"
+      },
+      {
+        "file": ".pi/skills/rubrics-create/SKILL.md",
+        "snippet": "s\": {pts}}, ... ] } ] } ``` Then run: ```bash uv run dauber rubrics create --course {canvas_course_id} --file /tmp/rubric_{canvas_course_id}.json --format json ``` ## Step 4: Capture Rubric ID Parse the JSON output to extract t"
+      }
+    ],
+    "lms": [
+      {
+        "file": ".pi/skills/rubrics-create/SKILL.md",
+        "snippet": "AskUserQuestion`: - \"How would you like to provide the rubric?\" - Options: - \"I have a Canvas CSV file\" - \"I have a JSON file\" - \"Guide me through building one\" ## Step 3: Create the Rubric ### CSV path Run"
+      },
+      {
+        "file": ".pi/skills/rubrics-create/SKILL.md",
+        "snippet": "ignment_id} ``` ## Error Handling - CSV/JSON parse errors: display the error and stop - Canvas API errors: display the error message and stop - If attach fails: report error; rubric was still created (show its ID)"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,25 @@
+{
+  "name": "LICENSE",
+  "path": "LICENSE",
+  "sha": "c527d5c8603248c21a4ab2ab37d5846efd04d3d3",
+  "size": 956,
+  "url": "https://api.github.com/repos/labarba/sciwrite/contents/LICENSE?ref=64b128b88fdaadfd1eb312f42c2ae1475f91b512",
+  "html_url": "https://github.com/labarba/sciwrite/blob/64b128b88fdaadfd1eb312f42c2ae1475f91b512/LICENSE",
+  "git_url": "https://api.github.com/repos/labarba/sciwrite/git/blobs/c527d5c8603248c21a4ab2ab37d5846efd04d3d3",
+  "download_url": "https://raw.githubusercontent.com/labarba/sciwrite/64b128b88fdaadfd1eb312f42c2ae1475f91b512/LICENSE",
+  "type": "file",
+  "content": "Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiA0LjAgSW50ZXJuYXRpb25h\nbCBMaWNlbnNlIChDQyBCWSA0LjApCgpDb3B5cmlnaHQgKGMpIDIwMjYgTG9y\nZW5hIEEuIEJhcmJhCgpUaGlzIHdvcmsgaXMgbGljZW5zZWQgdW5kZXIgdGhl\nIENyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gNC4wCkludGVybmF0aW9u\nYWwgTGljZW5zZS4gVG8gdmlldyBhIGNvcHkgb2YgdGhpcyBsaWNlbnNlLCB2\naXNpdDoKCiAgICBodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5z\nZXMvYnkvNC4wLwoKWW91IGFyZSBmcmVlIHRvOgoKICAtIFNoYXJlIOKAlCBj\nb3B5IGFuZCByZWRpc3RyaWJ1dGUgdGhlIG1hdGVyaWFsIGluIGFueSBtZWRp\ndW0gb3IgZm9ybWF0CiAgICBmb3IgYW55IHB1cnBvc2UsIGV2ZW4gY29tbWVy\nY2lhbGx5LgogIC0gQWRhcHQg4oCUIHJlbWl4LCB0cmFuc2Zvcm0sIGFuZCBi\ndWlsZCB1cG9uIHRoZSBtYXRlcmlhbCBmb3IgYW55CiAgICBwdXJwb3NlLCBl\ndmVuIGNvbW1lcmNpYWxseS4KClVuZGVyIHRoZSBmb2xsb3dpbmcgdGVybXM6\nCgogIC0gQXR0cmlidXRpb24g4oCUIFlvdSBtdXN0IGdpdmUgYXBwcm9wcmlh\ndGUgY3JlZGl0LCBwcm92aWRlIGEgbGluayB0bwogICAgdGhlIGxpY2Vuc2Us\nIGFuZCBpbmRpY2F0ZSBpZiBjaGFuZ2VzIHdlcmUgbWFkZS4gWW91IG1heSBk\nbyBzbyBpbgogICAgYW55IHJlYXNvbmFibGUgbWFubmVyLCBidXQgbm90IGlu\nIGFueSB3YXkgdGhhdCBzdWdnZXN0cyB0aGUgbGljZW5zb3IKICAgIGVuZG9y\nc2VzIHlvdSBvciB5b3VyIHVzZS4KCiAgLSBObyBhZGRpdGlvbmFsIHJlc3Ry\naWN0aW9ucyDigJQgWW91IG1heSBub3QgYXBwbHkgbGVnYWwgdGVybXMgb3IK\nICAgIHRlY2hub2xvZ2ljYWwgbWVhc3VyZXMgdGhhdCBsZWdhbGx5IHJlc3Ry\naWN0IG90aGVycyBmcm9tIGRvaW5nCiAgICBhbnl0aGluZyB0aGUgbGljZW5z\nZSBwZXJtaXRzLgo=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/labarba/sciwrite/contents/LICENSE?ref=64b128b88fdaadfd1eb312f42c2ae1475f91b512",
+    "git": "https://api.github.com/repos/labarba/sciwrite/git/blobs/c527d5c8603248c21a4ab2ab37d5846efd04d3d3",
+    "html": "https://github.com/labarba/sciwrite/blob/64b128b88fdaadfd1eb312f42c2ae1475f91b512/LICENSE"
+  },
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  }
+}

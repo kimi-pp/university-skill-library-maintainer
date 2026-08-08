@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": "nt students take over. 3. **Rotating author structure (Phase 3).** No single student can write the entire report. The rotation forces different people to hold the pen, reducing the \"one person does everything\" problem. 4. **Quality"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": "our group. Ask them — and if nobody knows, flag it for your teacher.\" - **The AI does NOT write any part of the report.** It does not generate text, suggest method steps, or draw predicted graphs. - **The AI does NOT evaluate the quality"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": ".26-0.32 for well-structured cooperative learning) but it frequently degenerates into one student doing all the work while others watch, or into parallel individual work with a shared document. Dillenbourg (1999) established that genuin"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": "g.** Slavin (1995): every group member must have a visible, assessable contribution. If a student can sit passively and still get the grade, they will. Design roles, individual deliverables, or accountability mechanisms that make every student's contribution"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": "ow the AI intervenes), regulation scaffolds (supporting the group's self-regulation), and equity mechanisms (ensuring all members participate). ## Evidence Foundation Dillenbourg (1999) established the foundational"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": "supports socially shared regulation — planning, monitoring, and reflection prompts] ### Equity Mechanisms [How the design ensures balanced participation — roles, accountability, and AI monitoring] ### What the AI"
+      },
+      {
+        "file": "skills/ai-learning-science/ai-facilitated-collaborative-learning-designer/SKILL.md",
+        "snippet": "next time?\" This builds metacognitive awareness of the collaboration process itself. ### Equity Mechanisms 1. **Individual thinking before group discussion (Phase 1).** Every student arrives at the discussion with"
+      }
+    ]
+  },
+  "read_errors": []
+}

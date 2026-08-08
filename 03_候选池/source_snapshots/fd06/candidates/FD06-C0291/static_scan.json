@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "learning-design-review/SKILL.md",
+        "snippet": "lity - **3.x.x Practice** — variety, feedback, metacognition - **4.x.x UX** — navigation, accessibility, media control ### Step 4: Score | Score | Rating | Description | |-------|--------|-------------| | 5 | Exemplary |"
+      },
+      {
+        "file": "learning-design-review/SKILL.md",
+        "snippet": ") - **3.x.x** = Practice (Variety, Feedback, Metacognition) - **4.x.x** = UX (Navigation, Accessibility, Media Control) ## Notes - Always cite specific principle IDs to make feedback actionable - Prioritize by impact on l"
+      }
+    ]
+  },
+  "read_errors": []
+}

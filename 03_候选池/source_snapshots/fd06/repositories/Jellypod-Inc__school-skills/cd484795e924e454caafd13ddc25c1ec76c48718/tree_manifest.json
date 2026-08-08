@@ -1,0 +1,803 @@
+{
+  "repository": "Jellypod-Inc/school-skills",
+  "fixed_version": "cd484795e924e454caafd13ddc25c1ec76c48718",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4cb43140565d60a585aa2759d734843f18e661b7"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fae6e2bf3bcc1a74814d6c7c4b626ddf0e1d488",
+      "size": 931
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67a1c7cf4ded0146dcc0bd29d47a47a38e0e0827",
+      "size": 565
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6684a132b7263f62f5fd0989cbeb9a99ab77d868",
+      "size": 293
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad53e377659614fb5d2eef0a18d2018b79431e7a",
+      "size": 719
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0a866e0f228d7230fe1252c0b099618769e7d50",
+      "size": 1065
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77c89de9f5f0d6c909c9f59caf0357789799f5cb",
+      "size": 5343
+    },
+    {
+      "path": "bin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca2c00755ddfd68d7b6ca0bf5972a0364fd63d66"
+    },
+    {
+      "path": "bin/install.js",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "34eaa9a9bbc7614fef26bc242bd20a73d15fcba7",
+      "size": 6081
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "371f002613f1fea717d6b3fbb2ab55cdf4a00d89",
+      "size": 836
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f92361ab47146e3d3002e2a2d74dfcb43a6791c"
+    },
+    {
+      "path": "skills/arts-crafts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c3a71f3948e1d1f5aafc8bb1f02044eb1a4737f"
+    },
+    {
+      "path": "skills/arts-crafts/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e91733939c8eaafe148b3fd5020931615239c92",
+      "size": 11948
+    },
+    {
+      "path": "skills/arts-crafts/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57d91521b3847652742d69e13294c1b346cd3a4b"
+    },
+    {
+      "path": "skills/arts-crafts/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e031a5d5944b0de5a39b620e2d2383285babec3",
+      "size": 2959
+    },
+    {
+      "path": "skills/arts-crafts/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32318ef44a1595e260227ddf275e538ee387925b"
+    },
+    {
+      "path": "skills/arts-crafts/references/catalog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58eaa9203f9b96a0478360c3f9a150e69a294fa2",
+      "size": 18573
+    },
+    {
+      "path": "skills/arts-crafts/references/fine-motor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6fa3c49126ab3e1520534613f52177bb35fbd31",
+      "size": 4902
+    },
+    {
+      "path": "skills/arts-crafts/references/safety.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c3b11ce05af80497974e53711a389dfa1ba5f03",
+      "size": 4855
+    },
+    {
+      "path": "skills/arts-crafts/references/substitutions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14293533a66763164b1889fe7c839d68bad334d9",
+      "size": 5275
+    },
+    {
+      "path": "skills/circle-time",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f1dc5298cbe1f8468042c60eacf3bd8f4755bd1"
+    },
+    {
+      "path": "skills/circle-time/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69ef0b5434a855e537409bf58f5fc82ecc86332b",
+      "size": 9571
+    },
+    {
+      "path": "skills/circle-time/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c2beaf55164a02cc0dcbda7c5a4a4064c0ecb9e"
+    },
+    {
+      "path": "skills/circle-time/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38252f15a9477494f454c85bd880f77acaea8c3c",
+      "size": 3355
+    },
+    {
+      "path": "skills/circle-time/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95804bde4f81ae7bb6ae8863661ac33070f15838"
+    },
+    {
+      "path": "skills/circle-time/references/accommodations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6d75f5d862e54962af65f103d1187f33f9243a",
+      "size": 5407
+    },
+    {
+      "path": "skills/circle-time/references/books.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71fbb37349c454d5b978ef108fcf04ae3abe93ce",
+      "size": 5492
+    },
+    {
+      "path": "skills/circle-time/references/finger-plays.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "286b570969a5942542482248b770778286971a78",
+      "size": 5162
+    },
+    {
+      "path": "skills/circle-time/references/sel-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0462a789a4cb90b156b84e05e11576382fcc3a9",
+      "size": 4342
+    },
+    {
+      "path": "skills/circle-time/references/transitions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8b318ec64f48a1cbc1f77f07d8a5a78b7dd2174",
+      "size": 4610
+    },
+    {
+      "path": "skills/circle-time/references/tunes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35cf4ad2580f585488c1a563269a7df5007954cb",
+      "size": 5748
+    },
+    {
+      "path": "skills/concept-map",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6424210d4f2f9e016898295ea97a978ebef670c9"
+    },
+    {
+      "path": "skills/concept-map/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c9c21a4a9043be32deb9a27fd8a7d1436733b20",
+      "size": 9240
+    },
+    {
+      "path": "skills/concept-map/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44a9847c4f00e11e5ba747118d57ff18b1b85d09"
+    },
+    {
+      "path": "skills/concept-map/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b23c048c78befff5f91219df88ad9e4b15c92c83",
+      "size": 4191
+    },
+    {
+      "path": "skills/concept-map/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0dd95bf84927bf558c407f2ec9e47f40b2f0237f"
+    },
+    {
+      "path": "skills/concept-map/references/dot-cheatsheet.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8ef2c3e3a856c5df506c4ab63aa584a0af1884e",
+      "size": 2403
+    },
+    {
+      "path": "skills/concept-map/references/graph-type-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5f80c9c2d70391fb01321311169960e8c873549",
+      "size": 2618
+    },
+    {
+      "path": "skills/concept-map/references/markmap-syntax.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7bc458d7aa8cb82a363f464e253f9cc9dc684f0",
+      "size": 2439
+    },
+    {
+      "path": "skills/concept-map/references/mermaid-cheatsheet.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5d5767ed236c031ad6a8e5432063889da60526c",
+      "size": 2345
+    },
+    {
+      "path": "skills/concept-map/references/node-labeling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9594e165a5eac49a341dbdd49760c6eba0581fe7",
+      "size": 2630
+    },
+    {
+      "path": "skills/concept-map/references/novak-concept-maps.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e8568dab90c04cadb75b4db85ed27106f591028",
+      "size": 3476
+    },
+    {
+      "path": "skills/concept-map/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f1f4416005109ce75851c58efd1bf779bbb8b2c"
+    },
+    {
+      "path": "skills/concept-map/scripts/render.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "daf12f78c00da174633504148a037bea04cf8c5c",
+      "size": 4572
+    },
+    {
+      "path": "skills/lecture-to-study-guide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47e1b0aa22570b5450274560b1bbe6650d4ae87a"
+    },
+    {
+      "path": "skills/lecture-to-study-guide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f609217d4b56377299edd9bd82063e01339cc5d",
+      "size": 13144
+    },
+    {
+      "path": "skills/lecture-to-study-guide/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0619c325f3177e0d2fed5be12052c3d116876592"
+    },
+    {
+      "path": "skills/lecture-to-study-guide/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81e59085b933ae747b716fb594825c72b7968f1a",
+      "size": 5034
+    },
+    {
+      "path": "skills/lecture-to-study-guide/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "945d2cf434d6d272f09149f3113b71c7d5630c20"
+    },
+    {
+      "path": "skills/lecture-to-study-guide/references/input-types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "158dc772be76b5c8f81378e30c1fcb0c80481c36",
+      "size": 4967
+    },
+    {
+      "path": "skills/lecture-to-study-guide/references/output-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c86e877e2e26a889640e99fe2a1588d243da60d7",
+      "size": 3017
+    },
+    {
+      "path": "skills/lecture-to-study-guide/references/question-mix.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "084f8498130f10c46f3cddbb807b151bf800703f",
+      "size": 2889
+    },
+    {
+      "path": "skills/lecture-to-study-guide/references/study-techniques.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3f5ecd8a54ad4931fc06407faf7d06880c3b1b",
+      "size": 2849
+    },
+    {
+      "path": "skills/lecture-to-study-guide/references/term-extraction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ae7551b5116d8fdd98acfdcf9785cf4463835cc",
+      "size": 2730
+    },
+    {
+      "path": "skills/lesson-plan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db776064e9fca3457837208a5b05f56a3321fc96"
+    },
+    {
+      "path": "skills/lesson-plan/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8405c114a2374865d58c476715ff7b55fb6eef4",
+      "size": 10040
+    },
+    {
+      "path": "skills/lesson-plan/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5648e270ed3f4f6b718a34ed06bc5e699eb6eb33"
+    },
+    {
+      "path": "skills/lesson-plan/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50239d5407e2d16846595107818891f3dcd03f66",
+      "size": 4061
+    },
+    {
+      "path": "skills/lesson-plan/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04bdc1bb1c3d540ac2db554fba1b7fc04cff9a16"
+    },
+    {
+      "path": "skills/lesson-plan/references/differentiation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d511c1471d7b2618f1f0aec608a248d7a1638e4d"
+    },
+    {
+      "path": "skills/lesson-plan/references/differentiation/catalog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ecf0d0c859b21bcb2eb847e76944dd3e45d43b7",
+      "size": 4441
+    },
+    {
+      "path": "skills/lesson-plan/references/differentiation/ell-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99dc0a4daaaa7a2dda0de94b62f8297a9c5badce",
+      "size": 3161
+    },
+    {
+      "path": "skills/lesson-plan/references/differentiation/gifted-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52cc64bf554de012ea201e7439a90473a31a6db6",
+      "size": 3994
+    },
+    {
+      "path": "skills/lesson-plan/references/differentiation/sped-strategies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56fcac62241540df006a07edf7813420bea6de08",
+      "size": 3544
+    },
+    {
+      "path": "skills/lesson-plan/references/edge-cases.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c6336d528d07df8a8d0c1d2018031a7930ef7e3",
+      "size": 6067
+    },
+    {
+      "path": "skills/lesson-plan/references/grade-calibration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a33e3a0ba1d9dd43f15c8ff03bed8c3d487e232",
+      "size": 4751
+    },
+    {
+      "path": "skills/lesson-plan/references/output-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8799e4c7823f32d1e263b4986307953b4ad0bbe7",
+      "size": 3418
+    },
+    {
+      "path": "skills/lesson-plan/references/pedagogy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c288566271a38e4d7bc44b39e0c10ea235e0b16e"
+    },
+    {
+      "path": "skills/lesson-plan/references/pedagogy/5e.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89591082d1c54ffa9058150c1ed53c76708007ab",
+      "size": 3136
+    },
+    {
+      "path": "skills/lesson-plan/references/pedagogy/gradual-release.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24fcff1106d264046c93f8315c3b8d3627fb12f1",
+      "size": 3178
+    },
+    {
+      "path": "skills/lesson-plan/references/pedagogy/madeline-hunter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ab715a9423d3688a14334b0afc7064d954ef33f",
+      "size": 2088
+    },
+    {
+      "path": "skills/lesson-plan/references/pedagogy/udl.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9da57e7d407acdb05900af3ccf03debe7c8537c",
+      "size": 3925
+    },
+    {
+      "path": "skills/lesson-plan/references/standards",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f37856a8cdd55b2df1959864352a81b797829a98"
+    },
+    {
+      "path": "skills/lesson-plan/references/standards/cambridge.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f06b413bdc76de9382618906f865db625142ce9",
+      "size": 2233
+    },
+    {
+      "path": "skills/lesson-plan/references/standards/common-core-ela.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e4e3915c376e532ec765c403eed00b67d58e3d",
+      "size": 5108
+    },
+    {
+      "path": "skills/lesson-plan/references/standards/common-core-math.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "295c802a42e2ee4486b535eb8b773930e4509612",
+      "size": 4954
+    },
+    {
+      "path": "skills/lesson-plan/references/standards/ib.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c06587a098ed3638aa68c4e77b39463b067a99e",
+      "size": 3605
+    },
+    {
+      "path": "skills/lesson-plan/references/standards/ngss.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "400b322e0dcee2f43725b366a25a1cb8c053f20d",
+      "size": 4563
+    },
+    {
+      "path": "skills/lesson-plan/references/standards/state-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de65b61c76d505a1c6bc62f4099ccd90158392f3",
+      "size": 4067
+    },
+    {
+      "path": "skills/lesson-plan/references/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e4f17148ff7a6cffaf7cff9a2d99622bee80660e"
+    },
+    {
+      "path": "skills/lesson-plan/references/templates/lesson-plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "483f67705b2d992b1c9ac69edafbb7223aa7e08b",
+      "size": 3142
+    },
+    {
+      "path": "skills/lesson-plan/references/templates/multi-day-unit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ae49ca0fd8917a237b7343fc6fc4aa67c84880",
+      "size": 3008
+    },
+    {
+      "path": "skills/lesson-plan/references/templates/sub-plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f1d8affd69f8e6f2d0307563911d4b5a6abbcf4",
+      "size": 2537
+    },
+    {
+      "path": "skills/lesson-plan/references/workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69163fc94cfeb29d553ff9a60666ecbc58bfee28",
+      "size": 5425
+    },
+    {
+      "path": "skills/rubric",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d31621abf505460928c34d78aacfb864b2befaf"
+    },
+    {
+      "path": "skills/rubric/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa8b7d6d1db1d48ab1a5c54c12ec79eee30e4f57",
+      "size": 14682
+    },
+    {
+      "path": "skills/rubric/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5057aafa157c12f124a7e8dad7326e654e13f1e"
+    },
+    {
+      "path": "skills/rubric/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c565a1a86f4c72cd0d84e067ff94f219e47a7d3",
+      "size": 5553
+    },
+    {
+      "path": "skills/rubric/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc7272f3a2c4ad061055b549b5b85cfa91b84686"
+    },
+    {
+      "path": "skills/rubric/references/criterion-writing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27e27dab74675390b5e85f5735883932c666146a",
+      "size": 4304
+    },
+    {
+      "path": "skills/rubric/references/descriptor-phrasing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a81655e1e721375ddaa3fcc04bd094e2b1c84d3b",
+      "size": 5790
+    },
+    {
+      "path": "skills/rubric/references/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f9a7c0ddbb28eab1dbe3e6cd45b3da6e8d87ae3"
+    },
+    {
+      "path": "skills/rubric/references/examples/art-portfolio-6-8.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac6e74c407d32c391c7de0d43e57432933090639",
+      "size": 2838
+    },
+    {
+      "path": "skills/rubric/references/examples/coding-project-college.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4b00f20488aceee038eaf4316ce753eb7fbe2c3",
+      "size": 3526
+    },
+    {
+      "path": "skills/rubric/references/examples/grad-thesis-proposal.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95e8c64183087f8227a942dfa1a4cfe4a50efd82",
+      "size": 5527
+    },
+    {
+      "path": "skills/rubric/references/examples/group-presentation-7.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cc3ab29b4603bd21d1701c0d5c2b4bd977f8834",
+      "size": 4076
+    },
+    {
+      "path": "skills/rubric/references/examples/kindergarten-letter-formation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d48886c75f062103f12d310ace3cef34cbbbd1a",
+      "size": 1972
+    },
+    {
+      "path": "skills/rubric/references/examples/lab-report-ap-bio.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4344da30dcd157259ae736c7fbc99ff3288ce699",
+      "size": 3455
+    },
+    {
+      "path": "skills/rubric/references/examples/math-problem-set-6-8.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c77d0702b2cdb73126ce25b2e540440fbdd1521",
+      "size": 3110
+    },
+    {
+      "path": "skills/rubric/references/examples/narrative-essay-9-12.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05bd447eae69b79f81921bf78183cc43014d00d2",
+      "size": 2351
+    },
+    {
+      "path": "skills/rubric/references/frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdedc5d666466875912c144709335d72bc249f48",
+      "size": 5308
+    },
+    {
+      "path": "skills/rubric/references/standards-crosswalk.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63655a096690951493dd26e4b86bbe3d6b5cf782",
+      "size": 4974
+    },
+    {
+      "path": "skills/rubric/references/taxonomies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae557c9baf2e7790c670afdece81452eb99823e",
+      "size": 5717
+    },
+    {
+      "path": "skills/socratic-tutor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3183b600f6cbf5eea0c3d1d6e5a3f7f5b496b2f3"
+    },
+    {
+      "path": "skills/socratic-tutor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f7b5644db17e103b97bc76600fcbdf0bd23e13b",
+      "size": 11436
+    },
+    {
+      "path": "skills/socratic-tutor/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "474adde68ce3aa8eab05891826cbf439752d54c7"
+    },
+    {
+      "path": "skills/socratic-tutor/evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61a0e60f206a891888e5421bb0dd4dc94ebdab49",
+      "size": 10507
+    },
+    {
+      "path": "skills/socratic-tutor/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ade44f4078956ef7da62aed2ddf72346e2fd1990"
+    },
+    {
+      "path": "skills/socratic-tutor/references/breaking-character.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ea624dc67ba280bfbbbe0a964068bfadb46073",
+      "size": 4879
+    },
+    {
+      "path": "skills/socratic-tutor/references/grade-calibration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "906831327bb5855742f5c9e2c818ff014cde0ef5",
+      "size": 3926
+    },
+    {
+      "path": "skills/socratic-tutor/references/misconceptions-biology.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ba445c020672071d8ea3f869c0069e4fe1c64df",
+      "size": 2102
+    },
+    {
+      "path": "skills/socratic-tutor/references/misconceptions-history.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d470ace8d57abc9b5f311e894af2f6501944dc42",
+      "size": 2684
+    },
+    {
+      "path": "skills/socratic-tutor/references/misconceptions-math.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61d7abea401fb64b39e50f88a28dea174c3265ba",
+      "size": 3234
+    },
+    {
+      "path": "skills/socratic-tutor/references/misconceptions-physics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b032851eb2af2eb13777e537beac40a59f371326",
+      "size": 2703
+    },
+    {
+      "path": "skills/socratic-tutor/references/misconceptions-writing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42a12a01246c5f13cf1d0e5f8b6a353d08c5b6eb",
+      "size": 2587
+    },
+    {
+      "path": "skills/socratic-tutor/references/multi-turn-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7681820759933063f2a1791f802e3f739a39685",
+      "size": 5084
+    },
+    {
+      "path": "skills/socratic-tutor/references/scaffolding-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d54463a848c7476b3fe0509f696184456f9d7cb8",
+      "size": 3235
+    },
+    {
+      "path": "skills/socratic-tutor/references/socratic-taxonomy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c96b4f16eb42062b2dfa7d43858dce1c01b5c6e",
+      "size": 3321
+    }
+  ]
+}

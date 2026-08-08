@@ -1,0 +1,164 @@
+[
+  {
+    "path": "skills/buaa-thesis-format-checking/.claude/settings.local.json",
+    "type": "blob",
+    "size": 407,
+    "sha": "e07529470c542107c0ae867e0f403235b9f120df"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/.gitignore",
+    "type": "blob",
+    "size": 29,
+    "sha": "2348c91f7a198200e6bba5fdbb4386917bbb542b"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/README.md",
+    "type": "blob",
+    "size": 7536,
+    "sha": "30c4f9eff9f7752986d0b38c704957c7fa484238"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/SKILL.md",
+    "type": "blob",
+    "size": 4415,
+    "sha": "5a89c1a05486f9ae2f2c0da292c5899390a8163a"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/references/Chapter-3-Writing-Standard-and-Printing-Styles.md",
+    "type": "blob",
+    "size": 13979,
+    "sha": "76d20f5ae0a9e53101324861a85be2a88e82beff"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/references/English Requirements.pdf",
+    "type": "blob",
+    "size": 763799,
+    "sha": "8cc5aff95c2c07d5b4e7509c5aac1e5c909604c8"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/references/附件1：北京航空航天大学研究生学位论文撰写规范.pdf",
+    "type": "blob",
+    "size": 539529,
+    "sha": "721faa52035657749ed04731e1d9fecf3b2e04e5"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/references/附录A：学位论文部分样式模板.pdf",
+    "type": "blob",
+    "size": 562417,
+    "sha": "e3c53011ae672030a0d4ed799ea5048ccd424ec4"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/__init__.py",
+    "type": "blob",
+    "size": 1042,
+    "sha": "49bda6a3ef21dd4088175271c1957f3c2d9b313c"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/abstracts.py",
+    "type": "blob",
+    "size": 8002,
+    "sha": "4e1cc7fd6659dfdb4f7821a20aa35b5730d359a8"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/arxiv_without_doi.py",
+    "type": "blob",
+    "size": 2654,
+    "sha": "51d71aff1cb45cd9c419929b8c4db2598a1cd57c"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/blank_pages.py",
+    "type": "blob",
+    "size": 1757,
+    "sha": "d26f1adb69df1ff8b27646f5d9988b69f955502f"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/figure_pages.py",
+    "type": "blob",
+    "size": 943,
+    "sha": "78a33df2c2c2143ee557e1cec7a58a929ead4206"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/font_line_spacing.py",
+    "type": "blob",
+    "size": 14128,
+    "sha": "aaa76c8d80157597737a7fe821746f2f770af7e8"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/fonts.py",
+    "type": "blob",
+    "size": 11687,
+    "sha": "5b029553c17b26ef6f089ce425b1db94dab72553"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/incomplete_content.py",
+    "type": "blob",
+    "size": 2264,
+    "sha": "6a803b239481801843efab8a78e37a5b3c89b53d"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/low_content_pages.py",
+    "type": "blob",
+    "size": 7414,
+    "sha": "51b9f3b7a3b5d20a3b5c9df0e405ad793e88bf27"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/placeholders.py",
+    "type": "blob",
+    "size": 1698,
+    "sha": "a50be3b26d3791a131e3d4080b8653fbaf19cac3"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/section_continuity.py",
+    "type": "blob",
+    "size": 5233,
+    "sha": "cf46b7898479afee0d60ea213ddadeb5cd99a778"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/text_alignment.py",
+    "type": "blob",
+    "size": 8481,
+    "sha": "c2507d8c4ec500ff8a3fa7a2c27cc48adf71464e"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/transition_paragraphs.py",
+    "type": "blob",
+    "size": 6880,
+    "sha": "58b584eab0eee90cdc95833a0c725655f9c78ba9"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/checks/urls_in_body.py",
+    "type": "blob",
+    "size": 1678,
+    "sha": "5b2b7d858132592282f3098cea4ce1407323f498"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/extractors/__init__.py",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/extractors/content.py",
+    "type": "blob",
+    "size": 7616,
+    "sha": "1d5ee4a5cf66f5aa2d568751a99418231f55e332"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/reports/__init__.py",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/reports/generator.py",
+    "type": "blob",
+    "size": 14132,
+    "sha": "59f0790993f58c3a94785bd9cf183661ae4c865c"
+  },
+  {
+    "path": "skills/buaa-thesis-format-checking/scripts/thesis_audit_script.py",
+    "type": "blob",
+    "size": 25036,
+    "sha": "eef65683f5d74242a97226321b3d9b77e7fe6864"
+  }
+]

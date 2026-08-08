@@ -1,0 +1,50 @@
+[
+  {
+    "path": "ta-coordinator/SKILL.md",
+    "type": "blob",
+    "size": 8960,
+    "sha": "e49d0bce55b9f70b12b2cd521235826fa505d5cd"
+  },
+  {
+    "path": "ta-coordinator/agents/calibration_facilitator_agent.md",
+    "type": "blob",
+    "size": 4508,
+    "sha": "bf9592283e531d1ee0e25e577a3414017581c4b4"
+  },
+  {
+    "path": "ta-coordinator/agents/consistency_auditor_agent.md",
+    "type": "blob",
+    "size": 4681,
+    "sha": "46a82047766c398a6ae25184dbd99b38d24fc6c8"
+  },
+  {
+    "path": "ta-coordinator/agents/onboarding_agent.md",
+    "type": "blob",
+    "size": 4495,
+    "sha": "c4c49834091ba7b56de260831b3dfa0217f85cd4"
+  },
+  {
+    "path": "ta-coordinator/agents/workload_allocator_agent.md",
+    "type": "blob",
+    "size": 4186,
+    "sha": "b338a8312210f897965c201182e037bc64ab3719"
+  },
+  {
+    "path": "ta-coordinator/references/ta_management_guide.md",
+    "type": "blob",
+    "size": 11493,
+    "sha": "a5cd98725b0329803cdd2c64317eb469b58e098f"
+  },
+  {
+    "path": "ta-coordinator/templates/calibration_session_template.md",
+    "type": "blob",
+    "size": 3705,
+    "sha": "a2ec60431d9bbc7c6555fe834570e548109baa3e"
+  },
+  {
+    "path": "ta-coordinator/templates/ta_handbook_template.md",
+    "type": "blob",
+    "size": 4685,
+    "sha": "be04ad42ab7a9a2a31a328334f783c76f8cad49b"
+  }
+]

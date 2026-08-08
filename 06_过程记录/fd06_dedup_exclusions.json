@@ -1,5 +1,23 @@
 [
   {
+    "name": "Course Designer directory page",
+    "discovery_url": "https://mcpmarket.com/tools/skills/course-designer",
+    "primary_subcategory": "06-01",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "course-description-analyzer",
+    "discovery_url": "https://github.com/dmccreary/claude-skills/blob/8dd7a52fe173692b774d05eb8c41bd164aae306e/skills/course-description-analyzer/SKILL.md",
+    "primary_subcategory": "06-01",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/vishalsachdev/claude-skills/blob/92a6344c3ae6f724bc8279cafb2e2f9edd9827c9/course-description-analyzer/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
     "name": "Scholar teaching plugin directory page",
     "discovery_url": "https://www.claudepluginhub.com/plugins/data-wise-scholar",
     "primary_subcategory": "06-01",
@@ -54,6 +72,15 @@
     "evidence_level": "discovery_only_high_privacy_risk"
   },
   {
+    "name": "CEFR Language Alignment directory page",
+    "discovery_url": "https://mcpmarket.com/tools/skills/cefr-language-alignment",
+    "primary_subcategory": "06-09",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
     "name": "k12-lesson-differentiation",
     "discovery_url": "https://github.com/learning-commons-org/agent-skills/blob/c41427815356369f4d1093b44f00a4f1780b3d9e/skills/k12-lesson-differentiation/SKILL.md",
     "primary_subcategory": "06-09",
@@ -72,8 +99,26 @@
     "evidence_level": "discovery_page_upstream_unavailable"
   },
   {
+    "name": "ID8Labs peer-reviewer directory page",
+    "discovery_url": "https://playbooks.com/skills/eddiebe147/claude-settings/peer-reviewer",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "Iterative Paper Defense Skill",
+    "discovery_url": "https://gist.github.com/pjb7687/cc4ce9d56ff97fc23036196dd823da3a",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "许可证不清",
+    "plain_reason": "公开内容虽有固定修订，但没有声明复用许可证，且包含需要另行安全审查的外部命令。",
+    "retained_candidate": null,
+    "evidence_level": "fixed_revision_without_license"
+  },
+  {
     "name": "nature-reviewer",
-    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/6371cd04c89f5fca412585d1f9bf51e87a4ed3a3/skills/yuan1z0825/nature-reviewer/SKILL.md",
+    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/656be3040aef5c047555a908cd5c695d22a4a548/skills/yuan1z0825/nature-reviewer/SKILL.md",
     "primary_subcategory": "06-12",
     "exclusion_type": "实质重复",
     "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
@@ -81,8 +126,17 @@
     "evidence_level": "fixed_version_content_match"
   },
   {
+    "name": "OpenClaw peer-reviewer directory page",
+    "discovery_url": "https://playbooks.com/skills/openclaw/skills/peer-reviewer",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
     "name": "peer-review",
-    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/6371cd04c89f5fca412585d1f9bf51e87a4ed3a3/skills/davila7/peer-review/SKILL.md",
+    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/656be3040aef5c047555a908cd5c695d22a4a548/skills/davila7/peer-review/SKILL.md",
     "primary_subcategory": "06-12",
     "exclusion_type": "实质重复",
     "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
@@ -91,7 +145,7 @@
   },
   {
     "name": "peer-review",
-    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/6371cd04c89f5fca412585d1f9bf51e87a4ed3a3/skills/k-dense-ai/peer-review/SKILL.md",
+    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/656be3040aef5c047555a908cd5c695d22a4a548/skills/k-dense-ai/peer-review/SKILL.md",
     "primary_subcategory": "06-12",
     "exclusion_type": "实质重复",
     "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",

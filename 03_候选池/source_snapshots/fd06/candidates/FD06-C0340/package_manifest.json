@@ -1,0 +1,50 @@
+[
+  {
+    "path": "skills/scientific-critical-thinking/SKILL.md",
+    "type": "blob",
+    "size": 9158,
+    "sha": "de17d5b45258111e7e20f4eb1ef0a558fd2f2771"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/common_biases.md",
+    "type": "blob",
+    "size": 11093,
+    "sha": "23d67a2f7f4a43c588f689321b9b65238066729f"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/core_capabilities.md",
+    "type": "blob",
+    "size": 15984,
+    "sha": "d13eb3542565bfb802f7caed6a587191e1039c41"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/evidence_hierarchy.md",
+    "type": "blob",
+    "size": 13648,
+    "sha": "7d638eb9d25e0088e7b9ef5d41dd3c730e52a125"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/experimental_design.md",
+    "type": "blob",
+    "size": 16107,
+    "sha": "c278b2d8d24d808a876bc82a29083b14872ea4a9"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/logical_fallacies.md",
+    "type": "blob",
+    "size": 18014,
+    "sha": "7b9e7492138c21398bb43f0273b4f2caf8be73c9"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/scientific_method.md",
+    "type": "blob",
+    "size": 6100,
+    "sha": "ae43f9a0761d31324bdbb7a72a8a26b05e7b17a5"
+  },
+  {
+    "path": "skills/scientific-critical-thinking/references/statistical_pitfalls.md",
+    "type": "blob",
+    "size": 15726,
+    "sha": "727366d4c56f41898613136029cec31527fc2bb1"
+  }
+]

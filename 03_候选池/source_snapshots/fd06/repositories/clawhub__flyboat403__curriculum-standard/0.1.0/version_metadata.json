@@ -1,0 +1,100 @@
+{
+  "skill": {
+    "slug": "curriculum-standard",
+    "displayName": "Curriculum Standard"
+  },
+  "version": {
+    "version": "0.1.0",
+    "createdAt": 1783149077368,
+    "changelog": "curriculum-standard v0.1.0 初始发布\n\n- 新增自动生成符合中国职业教育规范的课程标准 DOCX 文档功能，包括全流程校验与结构化输出。\n- 支持基于人才培养方案和专业教学标准提取/匹配，自动加载教育部专业教学标准并辅助选择。\n- 完整实现布鲁姆4×6知识目标表、任务驱动能力目标、三级课程内容结构化、学业质量分级等要素。\n- 加入阶段性强制验证、输入信息补全和用户友好提示，保证生成标准文档的规范性与合规性。\n- 自动加载/引用课程标准模板与学习情境设计等资源文件，严格分阶段决策与资源调度。",
+    "changelogSource": "auto",
+    "license": "MIT-0",
+    "files": [
+      {
+        "path": "SKILL.md",
+        "size": 35581,
+        "sha256": "7baaebdb41f6d509823009154ff06b5faa237326aa6155a546038bd864a98d0c",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "skill-card.md",
+        "size": 1287,
+        "sha256": "b85e3b232167ab241b9c65bf1391f1e41ea9dcbd409d6bc1a04629e2b54e6217",
+        "contentType": "text/markdown"
+      }
+    ],
+    "security": {
+      "status": "clean",
+      "hasWarnings": true,
+      "checkedAt": 1783615568040,
+      "model": "gpt-5.5",
+      "hasScanResult": true,
+      "sha256hash": "3752afc157509be5d367d0494300c2f0291348a88bf08b44f1ca4c1631cdc4cf",
+      "virustotalUrl": "https://www.virustotal.com/gui/file/3752afc157509be5d367d0494300c2f0291348a88bf08b44f1ca4c1631cdc4cf",
+      "scanners": {
+        "vt": {
+          "status": "clean",
+          "verdict": null,
+          "normalizedStatus": "clean",
+          "analysis": null,
+          "source": "engines",
+          "checkedAt": 1783151509048
+        },
+        "skillspector": {
+          "status": "suspicious",
+          "normalizedStatus": "suspicious",
+          "score": 41,
+          "severity": "MEDIUM",
+          "recommendation": "CAUTION",
+          "issueCount": 6,
+          "checkedAt": 1783615513835
+        },
+        "llm": {
+          "status": "clean",
+          "verdict": "benign",
+          "normalizedStatus": "clean",
+          "confidence": "high",
+          "summary": "This is a curriculum-document generation skill with disclosed, purpose-aligned document parsing and optional public teaching-standard retrieval, but users should review network use and draft placeholders.",
+          "dimensions": [
+            {
+              "detail": "The workflow, inputs, and outputs coherently fit generating Chinese vocational education curriculum-standard DOCX/Markdown documents from a user-provided training plan, optional teaching standard, and templates.",
+              "label": "Purpose & Capability",
+              "name": "purpose_capability",
+              "rating": "ok"
+            },
+            {
+              "detail": "The trigger list is broad and some fallback paths allow placeholder or inferred draft content, but the skill repeatedly requires core input validation, user confirmation for key choices, and marking uncertain output.",
+              "label": "Instruction Scope",
+              "name": "instruction_scope",
+              "rating": "note"
+            },
+            {
+              "detail": "The artifact contains only SKILL.md; there are no executable install hooks, package scripts, hidden files, or automatic dependency installation instructions.",
+              "label": "Install Mechanism",
+              "name": "install_mechanism",
+              "rating": "ok"
+            },
+            {
+              "detail": "Reading uploaded documents, parsing PDFs, using DOCX conversion tools, and optionally downloading a matched public teaching-standard PDF after user confirmation are proportionate to the stated purpose, though URL allowlisting and size/type limits are not specified.",
+              "label": "Credentials",
+              "name": "environment_proportionality",
+              "rating": "note"
+            },
+            {
+              "detail": "The skill says to retain intermediate files and logs for debugging, which is disclosed but may preserve sensitive source-document content locally; it does not request credentials, background execution, privilege escalation, or external upload.",
+              "label": "Persistence & Privilege",
+              "name": "persistence_privilege",
+              "rating": "note"
+            }
+          ],
+          "guidance": "Install only if you are comfortable letting the agent read your training-plan/course files and, when you approve it, fetch a matched public teaching-standard PDF. Treat generated curriculum standards as drafts: check any placeholders, inferred sections, and retained intermediate files/logs before using the document officially.",
+          "findings": "[SDI-1] expected: The optional teaching-standard download is part of the documented fallback when the user did not provide that standard, and the workflow asks the user whether to use the matched result before download.\n[SDI-2] expected: The requests.get example supports the same user-confirmed public PDF retrieval path; it lacks hardening details, but no artifact evidence shows hidden or unrelated network access.\n[SDI-4] expected: Fallback placeholder and inferred-structure generation creates accuracy risk for an official-looking document, but the artifact requires disclosure, marking uncertain sections, and user confirmation before using inferred values.\n[SDI-4] expected: Template fallback can change output detail when the learning-scenario template cannot be read, but the workflow otherwise requires user template selection and does not show hidden capability or privilege expansion.\n[SQP-1] unexpected: Broad educational trigger terms could over-activate the skill in loosely related conversations; the explicit vocational-education scope and non-use cases mitigate this to a usability/scoping note rather than a Review-level concern.\n[SQP-2] expected: Network retrieval is not prominent in the one-line description, but it is described in the required inputs, default resources, workflow, and confirmation prompts, so it is under-disclosed rather than hidden.",
+          "agenticRiskFindings": null,
+          "riskSummary": null,
+          "model": "gpt-5.5",
+          "checkedAt": 1783615568040
+        }
+      }
+    }
+  }
+}

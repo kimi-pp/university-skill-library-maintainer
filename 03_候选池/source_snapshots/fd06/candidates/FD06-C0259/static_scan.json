@@ -1,0 +1,33 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/public/academic-paper-review/SKILL.md",
+        "snippet": ".] ... ``` ### Phase 2: Critical Analysis #### Step 2.1: Literature Context Search Use web search to understand the research landscape: ``` Search queries: - \"[paper topic] state of the art [current year]\" - \"[key me"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/public/academic-paper-review/SKILL.md",
+        "snippet": "ns (bias in datasets, dual-use implications) constructively - Maintain confidentiality of unpublished work ## Adaptation by Paper Type | Paper Type | Focus Areas | |------------|-------------| | **Empirical** | Experime"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "skills/public/academic-paper-review/SKILL.md",
+        "snippet": "tial ethical concerns (bias in datasets, dual-use implications) constructively - Maintain confidentiality of unpublished work ## Adaptation by Paper Type | Paper Type | Focus Areas | |------------|-------------| | **Empiric"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/public/academic-paper-review/SKILL.md",
+        "snippet": "n or affiliation - Evaluate the work on its own merits - Flag potential ethical concerns (bias in datasets, dual-use implications) constructively - Maintain confidentiality of unpublished work ## Adaptation by Pap"
+      },
+      {
+        "file": "skills/public/academic-paper-review/SKILL.md",
+        "snippet": "ntributions | | **Position** | Argument coherence, evidence for claims, impact potential, fairness of characterizations | ## Common Pitfalls to Avoid - ❌ Reviewing the paper you wish was written instead of the paper"
+      }
+    ]
+  },
+  "read_errors": []
+}
