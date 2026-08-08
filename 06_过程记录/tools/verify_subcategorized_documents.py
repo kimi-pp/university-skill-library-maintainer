@@ -27,6 +27,7 @@ from build_subcategorized_documents import (  # noqa: E402
     REPOSITORIES_FILE,
     _knowledge_base_target,
     _parse_only,
+    _subcategory_repository_links,
     select_manifest_items,
     validate_manifest_contract,
     validate_source_contract,
@@ -213,6 +214,18 @@ def _external_hyperlinks(document: Document) -> set[str]:
     }
 
 
+def _cell_hyperlink_targets(document: Document, cell) -> list[str]:
+    targets: list[str] = []
+    for hyperlink in cell._tc.xpath(".//w:hyperlink"):
+        relationship_id = hyperlink.get(qn("r:id"))
+        relationship = document.part.rels.get(relationship_id)
+        if relationship is None or not relationship.is_external:
+            targets.append("<missing-relationship>")
+        else:
+            targets.append(relationship.target_ref)
+    return targets
+
+
 def _audit_content(
     document: Document,
     scope: str,
@@ -296,6 +309,20 @@ def _audit_content(
                     actual_rows.append((first, row.cells[1].text.strip(), row.cells[2].text.strip()))
             if actual_rows != expected_rows:
                 issues.append(f"概览行与 taxonomy/成员数量不一致: expected={expected_rows} actual={actual_rows}")
+            if document.tables:
+                for category, row in zip(categories, document.tables[0].rows[1:]):
+                    expected_row_links = [
+                        _knowledge_base_target(category),
+                        *_subcategory_repository_links(category["code"], expected_records),
+                    ]
+                    actual_row_links = _cell_hyperlink_targets(document, row.cells[0])
+                    if actual_row_links != expected_row_links:
+                        issues.append(
+                            f"概览逐行链接不一致: {category['code']} "
+                            f"expected={expected_row_links} actual={actual_row_links}"
+                        )
+                    if any(_cell_hyperlink_targets(document, cell) for cell in row.cells[1:]):
+                        issues.append(f"概览逐行链接出现在错误列: {category['code']}")
             links = _external_hyperlinks(document)
             expected_links = {
                 *{record["repo_url"] for record in expected_records},
@@ -354,11 +381,19 @@ def verify_selected_documents(
     taxonomy: list[dict] | None = None,
     assignments: dict[str, str] | None = None,
     repositories: dict | None = None,
+    expected_total: int | None = None,
 ) -> dict[str, list[str]]:
     if taxonomy is not None:
         validate_manifest_contract(manifest, taxonomy)
     if taxonomy is not None and assignments is not None and repositories is not None:
-        validate_source_contract(records, taxonomy, assignments, repositories, project_root)
+        validate_source_contract(
+            records,
+            taxonomy,
+            assignments,
+            repositories,
+            project_root,
+            expected_total=expected_total,
+        )
     taxonomy_by_big: dict[str, list[dict]] = defaultdict(list)
     for category in taxonomy or []:
         taxonomy_by_big[category["code"][:2]].append(category)
@@ -405,6 +440,7 @@ def main(argv: list[str] | None = None) -> int:
         taxonomy=taxonomy,
         assignments=assignments,
         repositories=repositories,
+        expected_total=157,
     )
     failed = {key: issues for key, issues in results.items() if issues}
     if failed:

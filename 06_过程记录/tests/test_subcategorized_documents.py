@@ -120,6 +120,47 @@ def all_document_text(document: Document) -> str:
     return "\n".join(parts)
 
 
+def fixture_knowledge_base_markdown(category: dict, rows: list[dict]) -> str:
+    lines = [
+        f"# {category['code']} {category['name']}",
+        "",
+        "## 这类工具是做什么的",
+        "",
+        category["inclusion_focus"],
+        "",
+        "## 收录数量",
+        "",
+        f"共 {len(rows)} 项 Skill。",
+        "",
+        "## 收录条目",
+        "",
+        "| 内部编号 | 中文名称 | 主要用途 | 推荐程度 | 条目链接 |",
+        "|---|---|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(
+            f"| {row['id']} | {row['cn']} | {row['plain_purpose']} | {row['priority']} | "
+            f"[查看](<../../skills/{row['id']}_{row['name']}.md>) |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def write_fixture_knowledge_base(root: Path, category: dict, rows: list[dict]) -> Path:
+    path = (
+        root
+        / "02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories"
+        / f"{category['code']}_{category['name']}"
+        / "INDEX.md"
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(fixture_knowledge_base_markdown(category, rows), encoding="utf-8")
+    skills = path.parent.parent.parent / "skills"
+    skills.mkdir(parents=True, exist_ok=True)
+    for row in rows:
+        (skills / f"{row['id']}_{row['name']}.md").write_text("# fixture\n", encoding="utf-8")
+    return path
+
+
 class PlannedScriptsTests(unittest.TestCase):
     def test_all_three_planned_scripts_exist(self):
         """Removing any pipeline stage must make the documented workflow unusable."""
@@ -264,11 +305,22 @@ class DocumentContentTests(unittest.TestCase):
             if "w:hyperlink" in paragraph._p.xml
         ]
         self.assertEqual(
-            len(source_link_paragraphs),
-            1,
-            "概览仓库链接应紧凑排在同一段，避免少量链接被挤到孤立末页",
+            source_link_paragraphs,
+            [],
+            "来源说明不得重复导航表已经逐行给出的仓库链接",
         )
-        self.assertEqual(len(source_link_paragraphs[0]._p.findall(qn("w:hyperlink"))), 3)
+        self.assertIn("仓库已随导航表逐行列出", text)
+        navigation_link_counts = [
+            sum(len(paragraph._p.findall(qn("w:hyperlink"))) for paragraph in row.cells[0].paragraphs)
+            for row in navigation.rows[1:]
+        ]
+        self.assertEqual(navigation_link_counts, [2, 3])
+
+    def test_overview_caps_limit_examples_to_keep_the_source_section_with_content(self):
+        """A long overview must compile examples instead of creating a sparse source-only tail page."""
+        records = [fixture_record(f"GH-05-{number:04d}") for number in range(1, 8)]
+        document = self.builder.build_overview_document(OVERVIEW, records)
+        self.assertEqual(all_document_text(document).count("注意事项"), 4)
 
     def test_subcategory_has_one_plain_reader_block_and_separate_trace_block_per_skill(self):
         """Omitting a user field, mixing trace facts into advice, or losing an ID must fail."""
@@ -455,12 +507,7 @@ class VerificationAndGenerationTests(unittest.TestCase):
         repositories = {record["repo"]: {"license": "MIT"}}
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
-            kb = root / "02_知识库/functional_domains/05_编程数学数据分析和可视化/subcategories/05-05_并行计算与性能优化/INDEX.md"
-            kb.parent.mkdir(parents=True)
-            kb.write_text(
-                f"# 05-05 并行计算与性能优化\n\n{taxonomy[0]['inclusion_focus']}\n\n共 1 项 Skill。\n\n{record['id']}\n",
-                encoding="utf-8",
-            )
+            kb = write_fixture_knowledge_base(root, taxonomy[0], [record])
             self.builder.validate_source_contract(
                 [record], taxonomy, assignments, repositories, root
             )
@@ -477,6 +524,54 @@ class VerificationAndGenerationTests(unittest.TestCase):
                 self.builder.validate_source_contract(
                     [record], taxonomy, assignments, repositories, root
                 )
+
+    def test_knowledge_base_table_rejects_extra_duplicate_and_every_field_or_link_drift(self):
+        """Leaf indexes are exact structured ledgers, not bags of reassuring substrings."""
+        record = fixture_record("GH-05-0003")
+        category = OVERVIEW["subcategories"][1]
+        assignments = {record["id"]: category["code"]}
+        repositories = {record["repo"]: {"license": "MIT"}}
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            kb = write_fixture_knowledge_base(root, category, [record])
+            baseline = kb.read_text(encoding="utf-8")
+            row = next(line for line in baseline.splitlines() if line.startswith(f"| {record['id']} "))
+            extra = row.replace(record["id"], "GH-05-9999").replace(record["cn"], "额外条目")
+            mutations = {
+                "额外行": baseline.replace(row, f"{row}\n{extra}"),
+                "重复行": baseline.replace(row, f"{row}\n{row}"),
+                "中文名": baseline.replace(record["cn"], "错误中文名"),
+                "用途": baseline.replace(record["plain_purpose"], "错误用途"),
+                "推荐程度": baseline.replace(f"| {record['priority']} | [查看]", "| 低 | [查看]"),
+                "条目链接": baseline.replace(
+                    f"../../skills/{record['id']}_{record['name']}.md",
+                    f"../../skills/{record['id']}_wrong.md",
+                ),
+            }
+            for label, content in mutations.items():
+                with self.subTest(label=label):
+                    kb.write_text(content, encoding="utf-8")
+                    with self.assertRaisesRegex(ValueError, "知识库"):
+                        self.builder.validate_source_contract(
+                            [record], [category], assignments, repositories, root
+                        )
+
+    def test_assignment_contract_rejects_missing_and_extra_members(self):
+        """Assignments must be a per-category and global bijection with the plain catalog."""
+        record = fixture_record("GH-05-0003")
+        category = OVERVIEW["subcategories"][1]
+        repositories = {record["repo"]: {"license": "MIT"}}
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            write_fixture_knowledge_base(root, category, [record])
+            for label, assignments in {
+                "缺失成员": {},
+                "额外成员": {record["id"]: category["code"], "GH-05-9999": category["code"]},
+            }.items():
+                with self.subTest(label=label), self.assertRaisesRegex(ValueError, "归属台账"):
+                    self.builder.validate_source_contract(
+                        [record], [category], assignments, repositories, root
+                    )
 
     def test_overview_verifier_rejects_missing_wrong_duplicate_extra_rows_and_links(self):
         """Every overview navigation row and link must exactly match taxonomy and members."""
@@ -524,6 +619,48 @@ class VerificationAndGenerationTests(unittest.TestCase):
             )
             relationship._target = "https://example.invalid/wrong"
             self.assertTrue(any("概览链接" in issue for issue in issues_for(wrong_link)))
+
+    def test_overview_verifier_rejects_duplicate_and_row_swapped_knowledge_links(self):
+        """Per-row relationship order must catch duplicate or swapped targets with unchanged sets."""
+        records = [
+            fixture_record("GH-05-0001", subcategory_code="05-01"),
+            fixture_record("GH-05-0003"),
+        ]
+        expected_item = {"scope": "overview", "big_category_code": "05"}
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+
+            def issues_for(document):
+                path = root / "overview-row-links.docx"
+                document.save(path)
+                return self.verifier.verify_document(
+                    path,
+                    scope="overview",
+                    expected_records=records,
+                    expected_taxonomy=OVERVIEW["subcategories"],
+                    expected_item=expected_item,
+                )
+
+            duplicated = self.builder.build_overview_document(OVERVIEW, records)
+            first_cell_paragraph = duplicated.tables[0].cell(1, 0).paragraphs[0]
+            first_target = self.builder._knowledge_base_target(OVERVIEW["subcategories"][0])
+            self.builder._add_hyperlink(
+                first_cell_paragraph, "重复知识库入口", first_target, allow_relative=True
+            )
+            duplicate_issues = issues_for(duplicated)
+            self.assertTrue(any("概览逐行链接" in issue for issue in duplicate_issues), duplicate_issues)
+
+            swapped = self.builder.build_overview_document(OVERVIEW, records)
+            relationships = []
+            for row in swapped.tables[0].rows[1:3]:
+                hyperlink = row.cells[0]._tc.xpath(".//w:hyperlink")[0]
+                relationships.append(swapped.part.rels[hyperlink.get(qn("r:id"))])
+            relationships[0]._target, relationships[1]._target = (
+                relationships[1]._target,
+                relationships[0]._target,
+            )
+            swapped_issues = issues_for(swapped)
+            self.assertTrue(any("概览逐行链接" in issue for issue in swapped_issues), swapped_issues)
 
     def test_manifest_driven_generation_is_idempotent_for_overview_and_subcategory(self):
         """Repeated generation with reversed input must preserve paths, order, and bytes."""

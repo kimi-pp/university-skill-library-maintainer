@@ -406,8 +406,15 @@ def _unique_plain_values(records: Iterable[dict], field: str, *, limit: int = 6)
     return values
 
 
-def _add_plain_examples(document: Document, records: list[dict], field: str, label: str) -> None:
-    for index, value in enumerate(_unique_plain_values(records, field), start=1):
+def _add_plain_examples(
+    document: Document,
+    records: list[dict],
+    field: str,
+    label: str,
+    *,
+    limit: int = 6,
+) -> None:
+    for index, value in enumerate(_unique_plain_values(records, field, limit=limit), start=1):
         _add_labeled_paragraph(document, f"{label}{index}", value)
 
 
@@ -504,6 +511,14 @@ def _knowledge_base_target(category: dict) -> str:
     )
 
 
+def _subcategory_repository_links(code: str, records: list[dict]) -> list[str]:
+    repositories: dict[str, str] = {}
+    for record in records:
+        if record["subcategory_code"] == code:
+            repositories.setdefault(record["repo"], record["repo_url"])
+    return [repositories[name] for name in sorted(repositories)]
+
+
 def build_overview_document(big_category: dict, records: list[dict]) -> Document:
     """Return one big-category overview built from approved plain-language fields."""
     code = big_category.get("code")
@@ -546,6 +561,11 @@ def build_overview_document(big_category: dict, records: list[dict]) -> Document
             _knowledge_base_target(category),
             allow_relative=True,
         )
+        for index, repository_url in enumerate(
+            _subcategory_repository_links(category["code"], sorted_records), start=1
+        ):
+            _set_run_font(first_paragraph.add_run(" | "), color=DOCX_TOKENS["muted"])
+            _add_hyperlink(first_paragraph, f"仓库{index}", repository_url)
         _set_cell_text(row.cells[1], category["inclusion_focus"])
         _set_cell_text(row.cells[2], counts[category["code"]], align=WD_ALIGN_PARAGRAPH.CENTER)
     _repeat_table_header(table.rows[0])
@@ -558,7 +578,7 @@ def build_overview_document(big_category: dict, records: list[dict]) -> Document
     _add_plain_examples(document, sorted_records, "plain_prerequisites", "准备事项")
 
     document.add_heading("共同限制", level=1)
-    _add_plain_examples(document, sorted_records, "plain_limitations", "注意事项")
+    _add_plain_examples(document, sorted_records, "plain_limitations", "注意事项", limit=4)
 
     document.add_heading("本次核验到哪一步", level=1)
     _add_plain_examples(document, sorted_records, "plain_verification", "核验说明")
@@ -572,12 +592,11 @@ def build_overview_document(big_category: dict, records: list[dict]) -> Document
         "范围",
         f"本总览汇总 {len(sorted_records)} 项 Skill，来自 {len(repositories)} 个 GitHub 仓库；成员归属以已批准的小分类台账为准。",
     )
-    paragraph = document.add_paragraph()
-    for index, (repository, record) in enumerate(sorted(repositories.items())):
-        if index:
-            _set_run_font(paragraph.add_run("　｜　"), color="7F8C8D")
-        _set_run_font(paragraph.add_run(f"{repository}："), bold=True, color=DOCX_TOKENS["cover_title"])
-        _add_hyperlink(paragraph, "查看仓库", record["repo_url"])
+    _add_labeled_paragraph(
+        document,
+        "链接位置",
+        "每个小分类的知识库入口和相关 GitHub 仓库已随导航表逐行列出。",
+    )
     return document
 
 
@@ -739,13 +758,22 @@ def validate_source_contract(
     assignments: dict[str, str],
     repositories: dict,
     project_root: Path,
+    *,
+    expected_total: int | None = None,
 ) -> None:
     """Cross-check catalog membership and every generated knowledge-base leaf."""
     taxonomy_map = _taxonomy_by_code(taxonomy)
     sorted_records = _sorted_records(records)
     ids = [record["id"] for record in sorted_records]
+    if expected_total is not None and len(ids) != expected_total:
+        raise ValueError(f"归属台账总成员数错误: expected={expected_total} actual={len(ids)}")
     if set(assignments) != set(ids):
         raise ValueError("通俗目录与归属台账的 Skill ID 不一致")
+    assignment_groups: dict[str, list[str]] = defaultdict(list)
+    for skill_id, code in assignments.items():
+        if code not in taxonomy_map:
+            raise ValueError(f"归属台账含未知或跨类小分类: {skill_id}={code}")
+        assignment_groups[code].append(skill_id)
     grouped: dict[str, list[dict]] = defaultdict(list)
     for record in sorted_records:
         code = record["subcategory_code"]
@@ -761,6 +789,12 @@ def validate_source_contract(
         grouped[code].append(record)
     for code, category in taxonomy_map.items():
         members = grouped.get(code, [])
+        member_ids = [record["id"] for record in members]
+        if sorted(assignment_groups.get(code, [])) != member_ids:
+            raise ValueError(
+                f"归属台账小分类成员集合不一致: {code} "
+                f"expected={member_ids} actual={sorted(assignment_groups.get(code, []))}"
+            )
         if not members:
             raise ValueError(f"空小分类: {code}")
         path = (
@@ -775,14 +809,73 @@ def validate_source_contract(
         if not path.is_file():
             raise ValueError(f"知识库入口不存在: {path}")
         content = path.read_text(encoding="utf-8")
-        required = [
+        nonempty_lines = [line.strip() for line in content.splitlines() if line.strip()]
+        required_singletons = (
             f"# {code} {category['name']}",
             category["inclusion_focus"],
             f"共 {len(members)} 项 Skill。",
-            *[record["id"] for record in members],
-        ]
-        if any(value not in content for value in required):
+        )
+        if any(nonempty_lines.count(value) != 1 for value in required_singletons):
             raise ValueError(f"知识库内容与 taxonomy/成员数量不一致: {code}")
+        rows = _parse_knowledge_base_rows(content, code)
+        expected_rows = [
+            (
+                record["id"],
+                record["cn"],
+                record["plain_purpose"],
+                record["priority"],
+                f"../../skills/{record['id']}_{record['name']}.md",
+            )
+            for record in members
+        ]
+        if rows != expected_rows:
+            raise ValueError(
+                f"知识库收录表逐行不一致: {code} expected={expected_rows} actual={rows}"
+            )
+        for row in rows:
+            target = (path.parent / Path(*PurePosixPath(row[4]).parts)).resolve()
+            expected_target = (
+                path.parent / ".." / ".." / "skills" / f"{row[0]}_{next(record['name'] for record in members if record['id'] == row[0])}.md"
+            ).resolve()
+            if target != expected_target or not target.is_file():
+                raise ValueError(f"知识库条目链接不存在或指向错误文件: {code} {row[0]} {row[4]}")
+
+
+def _markdown_cells(line: str) -> list[str]:
+    stripped = line.strip()
+    if not stripped.startswith("|") or not stripped.endswith("|"):
+        raise ValueError(f"知识库 Markdown 表格行格式错误: {line!r}")
+    return [cell.strip() for cell in stripped[1:-1].split("|")]
+
+
+def _parse_knowledge_base_rows(content: str, code: str) -> list[tuple[str, str, str, str, str]]:
+    """Parse exactly one five-column leaf ledger and preserve row order/duplicates."""
+    lines = content.splitlines()
+    expected_header = ["内部编号", "中文名称", "主要用途", "推荐程度", "条目链接"]
+    header_indexes = [
+        index for index, line in enumerate(lines)
+        if line.strip().startswith("|") and _markdown_cells(line) == expected_header
+    ]
+    if len(header_indexes) != 1:
+        raise ValueError(f"知识库收录表表头数量或字段错误: {code}")
+    header_index = header_indexes[0]
+    if header_index + 1 >= len(lines):
+        raise ValueError(f"知识库收录表缺少分隔行: {code}")
+    separator = _markdown_cells(lines[header_index + 1])
+    if len(separator) != 5 or any(not re.fullmatch(r":?-{3,}:?", cell) for cell in separator):
+        raise ValueError(f"知识库收录表分隔行错误: {code}")
+    rows: list[tuple[str, str, str, str, str]] = []
+    for line in lines[header_index + 2:]:
+        if not line.strip().startswith("|"):
+            break
+        cells = _markdown_cells(line)
+        if len(cells) != 5:
+            raise ValueError(f"知识库收录表列数错误: {code}")
+        link = re.fullmatch(r"\[查看\]\(<([^<>]+)>\)", cells[4])
+        if link is None:
+            raise ValueError(f"知识库条目链接格式错误: {code} {cells[4]!r}")
+        rows.append((cells[0], cells[1], cells[2], cells[3], link.group(1)))
+    return rows
 
 
 def select_manifest_items(manifest: list[dict], only: list[str] | None) -> list[dict]:
@@ -896,7 +989,9 @@ def load_inputs() -> tuple[list[dict], list[dict], list[dict], dict]:
     if not isinstance(taxonomy, list) or not isinstance(assignments, dict):
         raise ValueError("小分类归属数据格式错误")
     validate_manifest_contract(manifest, taxonomy)
-    validate_source_contract(records, taxonomy, assignments, repositories, PROJECT_ROOT)
+    validate_source_contract(
+        records, taxonomy, assignments, repositories, PROJECT_ROOT, expected_total=157
+    )
     return records, taxonomy, manifest, repositories
 
 
