@@ -22,6 +22,14 @@ def external_hyperlinks(document: Document) -> int:
     return sum(1 for relationship in document.part.rels.values() if relationship.is_external)
 
 
+def resolve_manifest_path(stored_path: str) -> Path:
+    relative_path = Path(stored_path)
+    assert not relative_path.is_absolute(), f"Word 清单必须使用相对路径：{stored_path}"
+    resolved = (DELIVERY_ROOT / relative_path).resolve()
+    assert resolved.is_relative_to(DELIVERY_ROOT.resolve()), f"Word 清单路径超出交付目录：{stored_path}"
+    return resolved
+
+
 def verify() -> dict:
     files = sorted(DELIVERY_ROOT.rglob("*.docx"))
     assert len(MANIFEST) == len(files) == 13, f"Word 文件数应为 13，实际 {len(files)}"
@@ -30,7 +38,7 @@ def verify() -> dict:
     total_pages_unknown = True
 
     for item in MANIFEST:
-        path = Path(item["path"])
+        path = resolve_manifest_path(item["path"])
         assert path.exists(), f"缺少 Word 文件：{path}"
         document = Document(path)
         section = document.sections[0]

@@ -507,6 +507,10 @@ def build_subcategory_document(code: str, title: str, records: list[dict]) -> Do
     return document
 
 
+def manifest_path(output_path: Path) -> str:
+    return output_path.relative_to(DELIVERY_ROOT).as_posix()
+
+
 def build_documents() -> list[dict]:
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     manifest = []
@@ -518,7 +522,7 @@ def build_documents() -> list[dict]:
         output_path = spec["output_path"]
         output_path.parent.mkdir(parents=True, exist_ok=True)
         document.save(output_path)
-        manifest.append({"key": spec["key"], "title": spec["title"], "count": len(spec["records"]), "path": str(output_path)})
+        manifest.append({"key": spec["key"], "title": spec["title"], "count": len(spec["records"]), "path": manifest_path(output_path)})
         print(f"{spec['key']}: {len(spec['records'])} skills -> {output_path}")
     (DELIVERY_ROOT / "DOCUMENT_MANIFEST.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return manifest
