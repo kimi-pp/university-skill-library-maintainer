@@ -385,6 +385,15 @@ _SHORTCUT_REFERENCE_RE = re.compile(r"(?<!!)(?<!\])\[([^\]\n]+)\](?![\[\(:])")
 _INTERNAL_MARKDOWN_PARTS = frozenset({".git", ".superpowers", ".worktrees"})
 
 
+def _inside_nested_repository(root: Path, path: Path) -> bool:
+    for parent in path.parents:
+        if parent == root:
+            return False
+        if (parent / ".git").exists():
+            return True
+    return False
+
+
 def _reference_label(value: str) -> str:
     return " ".join(value.strip().casefold().split())
 
@@ -445,7 +454,7 @@ def _tracked_markdown(root: Path) -> list[Path]:
         if any(part in _INTERNAL_MARKDOWN_PARTS for part in relative_parts):
             continue
         resolved = path.resolve()
-        if resolved == root or root in resolved.parents:
+        if (resolved == root or root in resolved.parents) and not _inside_nested_repository(root, resolved):
             discovered.add(resolved)
     try:
         result = subprocess.run(
@@ -457,7 +466,7 @@ def _tracked_markdown(root: Path) -> list[Path]:
             if any(part in _INTERNAL_MARKDOWN_PARTS for part in Path(name).parts):
                 continue
             resolved = (root / Path(name)).resolve()
-            if resolved == root or root in resolved.parents:
+            if (resolved == root or root in resolved.parents) and not _inside_nested_repository(root, resolved):
                 discovered.add(resolved)
     except (OSError, subprocess.CalledProcessError, UnicodeDecodeError):
         pass

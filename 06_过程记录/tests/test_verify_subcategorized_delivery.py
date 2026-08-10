@@ -349,6 +349,11 @@ class DeliveryArchiveAndLinkTests(unittest.TestCase):
             for path in internal_paths:
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(f"内部文件：{path.name}\n", encoding="utf-8")
+
+            nested_repo_page = root / "vendor/nested-repository/README.md"
+            nested_repo_page.parent.mkdir(parents=True, exist_ok=True)
+            (nested_repo_page.parent / ".git").mkdir()
+            nested_repo_page.write_text("[外部仓库链接](missing.md)\n", encoding="utf-8")
             subprocess.run(
                 [
                     "git", "add", "--", str(tracked),
@@ -382,6 +387,7 @@ class DeliveryArchiveAndLinkTests(unittest.TestCase):
             discovered_after = self.verifier._tracked_markdown(root)
             self.assertEqual(discovered_after, expected_paths)
             self.assertEqual(inventory(discovered_after), expected_inventory)
+            self.assertNotIn(nested_repo_page.resolve(), discovered_after)
 
     def test_real_navigation_is_an_exact_projection_of_catalog_and_manifest(self):
         assignment_data = load_json(
@@ -608,7 +614,7 @@ class ProjectResultAndSafetyTests(unittest.TestCase):
                 "leaf_pages": 61,
                 "domain_indexes": 5,
                 "total_indexes": 1,
-                "markdown_files": 270,
+                "markdown_files": 272,
                 "links": 1261,
                 "local_links": 670,
             },

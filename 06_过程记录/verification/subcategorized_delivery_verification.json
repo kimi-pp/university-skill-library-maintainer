@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-08-08T22:05:06.618120+00:00",
+  "checked_at": "2026-08-10T04:26:05.514812+00:00",
   "complete": true,
   "counts": {
     "source_records": 157,
@@ -75,7 +75,7 @@
         "leaf_pages": 61,
         "domain_indexes": 5,
         "total_indexes": 1,
-        "markdown_files": 270,
+        "markdown_files": 272,
         "links": 1261,
         "local_links": 670
       }
@@ -201,5 +201,5 @@
     ],
     "boundary": "自动检查可核对结构、事实锚点、已管理术语和已知风险措辞；术语解释对不同读者是否足够自然仍需按本清单人工抽查。"
   },
-  "semantic_digest": "32fb874d7a61e3fc59b87429655425536cd3641c3d25750a43f43442a71cb186"
+  "semantic_digest": "505392bcef5fbf5e44445fe1fdc5bf56eae0e2b9c4af34cc2b5649f890a274e2"
 }
