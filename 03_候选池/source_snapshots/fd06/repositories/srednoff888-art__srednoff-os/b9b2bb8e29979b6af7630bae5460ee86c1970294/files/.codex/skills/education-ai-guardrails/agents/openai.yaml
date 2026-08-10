@@ -1,0 +1,4 @@
+interface:
+  display_name: "Education AI Guardrails"
+  short_description: "Review education AI safety risks"
+  default_prompt: "Use $education-ai-guardrails to design or review education AI workflows with privacy and human oversight guardrails."

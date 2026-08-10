@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-05-19T11:25:43+00:00",
+  "bundler": "unified-thesis-reviewer/tools/build-bundle.py",
+  "underlying_skills": {
+    "legal-thesis-reviewer": {
+      "source_path": "C:\\Users\\张庆霖\\.codex\\skills\\legal-thesis-reviewer",
+      "version": "unversioned",
+      "files_copied": {
+        "rules": 13,
+        "templates": 3,
+        "_skipped_local_only": [
+          "rules/zhangqinglin-original-extracts.md"
+        ]
+      }
+    },
+    "legal-citation-checker": {
+      "source_path": "C:\\Users\\张庆霖\\.codex\\skills\\legal-citation-checker",
+      "version": "unversioned",
+      "files_copied": {
+        "rules": 5,
+        "templates": 2
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "legal-citation-checker.rules/rules/common-errors.md",
+      "size": 16494,
+      "sha256": "5dd1cfd5750db0af7e13468980913927f893e642054d295b2da1a10c1410af66"
+    },
+    {
+      "path": "legal-citation-checker.rules/rules/comparison-table.md",
+      "size": 6562,
+      "sha256": "32e6be7e92706ee351f4fd04305838354cf77642eb727c482c800d23ce77ec25"
+    },
+    {
+      "path": "legal-citation-checker.rules/rules/gb7714-checklist.md",
+      "size": 10269,
+      "sha256": "d174e3ed8267998b8050f9dedb960620328d510b2c99270e8fe63db08dc847eb"
+    },
+    {
+      "path": "legal-citation-checker.rules/rules/manual-checklist.md",
+      "size": 16197,
+      "sha256": "7bd4e2e58f581c314aa8a13df3a5ae52e418becfda3f6d6c5b6d1871a88db7de"
+    },
+    {
+      "path": "legal-citation-checker.rules/rules/multilang-citations.md",
+      "size": 9089,
+      "sha256": "2f8525588a4ebf5bc2fa53b8675fb1bce4012119b5c559a669d4d9222eeb501d"
+    },
+    {
+      "path": "legal-citation-checker.rules/templates/interaction-prompts.md",
+      "size": 4048,
+      "sha256": "8375a6eecc570d48676edda7ac17d45191df7b7a7c9fcee9d7c1abb848bf025d"
+    },
+    {
+      "path": "legal-citation-checker.rules/templates/report-template.md",
+      "size": 2705,
+      "sha256": "26ef4a3369c1c78ff8f5c082fa233b76117ccbf8380da9f943906d9380da991f"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/academic-integrity.md",
+      "size": 6770,
+      "sha256": "2684e55690e0e1ae98bfa05c14a3f9b37fb879a69e2c520c3fd4ef62318fb12e"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/argumentation-depth.md",
+      "size": 4538,
+      "sha256": "08489304fb1bbbf7791a6aa22f17980464eebe967af4928a913428ceb13613a8"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/empirical-and-cases.md",
+      "size": 6216,
+      "sha256": "f384a23f356ea4ce7add637fd721624ef999327ca53b9fe5d9b333c27499f4d8"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/language-and-style.md",
+      "size": 5452,
+      "sha256": "8c3ece1def0f6b1f5e448d8bc53445e5a0649d867ce301e0976172f050c62879"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/legal-norms-adaptation.md",
+      "size": 7288,
+      "sha256": "a8c4c552a5e0486fea006491525ca4d3a90d4cff1ad45d4f0597e63d2a5ee11f"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/literature-review.md",
+      "size": 5683,
+      "sha256": "e3c0821edb08ea0117cd54c777f62e9fdc17acf9f3e6e30e44ef12d102692c41"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/online-verification.md",
+      "size": 9417,
+      "sha256": "16aee21b943fde824bfe771c7550c56bcdb4a20ea783f8f597c1b445a2915b67"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/phrase-bank.md",
+      "size": 16456,
+      "sha256": "b478b6720c44d2c19adbfd122065209d00785d048006b801826cc13b8de4447f"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/policy-suggestions.md",
+      "size": 5800,
+      "sha256": "ba23a9f92220df04756b112f45c28a03fa9d51470119ee2c8f44ad329c9d88ce"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/should-have-discussed.md",
+      "size": 9145,
+      "sha256": "d6a6f1e8b9ee4e6bdf98fbe7f5e134cf75bb39ea3c43546fd055dd87baeb3605"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/structure-and-logic.md",
+      "size": 3910,
+      "sha256": "feccae30a98ebbda9300b6a572efe8621509c5cdc9e897ea43000ff3d1dc28e2"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/topic-and-problem-awareness.md",
+      "size": 3899,
+      "sha256": "b7e7d96d683fa0d7157b53c015d0e4efc23193c26b5869bdd5c27d3834f8d2c9"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/rules/zhangqinglin-patterns.md",
+      "size": 41504,
+      "sha256": "497e1d3fe2effd7a05f963b40d1bd842504a48c8c103a722537f6daddc3bba11"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/templates/interaction-prompts.md",
+      "size": 6933,
+      "sha256": "3ee55ef235de2723db6b05c8323fc6d005ac72366f080c3be30b640d34fffbc4"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/templates/question-bank.md",
+      "size": 6695,
+      "sha256": "9791acd24fb22013a180cd37bece25f4bb3ae6637a035c226d511469661dafe9"
+    },
+    {
+      "path": "legal-thesis-reviewer.rules/templates/review-report-template.md",
+      "size": 6313,
+      "sha256": "b48570a4a06c3f8160997ab2cc94ed61c7504d4af8884e3dff24739484638be4"
+    }
+  ]
+}

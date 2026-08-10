@@ -1,0 +1,110 @@
+{
+  "repository": "Agents365-ai/thesis-reviewer",
+  "fixed_version": "0e963756d0ee1cefb35662b45cc5abf51cfa63fb",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d5e1062e3a061449bf4a4b5a437793f6c45a241",
+      "size": 13490
+    },
+    {
+      "path": "README_CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7683f223f564894b18850cf261f282ccf23e5d1b",
+      "size": 9903
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92e5fc34df8318df84b63a948a9d18b100eb26fe",
+      "size": 15078
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a7941bcb46e52a19e09ef05e3fd2d18a8382c04"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6897e1264a3e9abe5650868608c2685ec37685d4",
+      "size": 1494
+    },
+    {
+      "path": "checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b691ec85e324d17c7ced2ffa7b38ed7aed85c5e9",
+      "size": 18584
+    },
+    {
+      "path": "disciplines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7afab2fed41f8055f79f134d7aad5a8f9447195"
+    },
+    {
+      "path": "disciplines/chemistry.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc0863dacd6a3f42ce875b1aee6ebc1b93d14b7c",
+      "size": 2335
+    },
+    {
+      "path": "disciplines/cs-ai.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6514f9d2030fd14075cb5e211108541559044e0",
+      "size": 4392
+    },
+    {
+      "path": "disciplines/engineering.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e050532b78db486be321104575197984637de7eb",
+      "size": 1992
+    },
+    {
+      "path": "disciplines/life-sciences.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "078f0571067cc0263fd062dd517215265b11027f",
+      "size": 3205
+    },
+    {
+      "path": "disciplines/medicine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f440e118548a3b6db42f01b9b5cce000f52ecca",
+      "size": 2755
+    },
+    {
+      "path": "disciplines/physics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "618a6d78f8cf051af24223ee90c36c463c001a8c",
+      "size": 2099
+    },
+    {
+      "path": "disciplines/social-sciences.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5db54d296b27c3897fa84ea6a991d130bc494b",
+      "size": 3073
+    },
+    {
+      "path": "output-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5449cf189b78d5d1638aa4987c4b1a58bb2a6977",
+      "size": 6940
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/examprep-ai/SKILL.md",
+        "snippet": "| | 🔘 MCQ/T-F | options listed, \"true or false\", \"which of the following\" | | 💻 Coding | write a program, implement, trace output, algorithm, flowchart | | 🧪 Lab | experiment, procedure, observation, aim, apparatus, viva | **Step 3 — Build ranked t"
+      },
+      {
+        "file": "skills/examprep-ai/SKILL.md",
+        "snippet": "ecise rule that settles this type] ``` --- ## Coding Notes > Use when: student asks to write programs, trace output, implement algorithms, debug. **🟩 Easy — Syntax / Pattern recall** ``` 💻🟩 [Task] | [N]× | [X] marks ──────────────────"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/examprep-ai/SKILL.md",
+        "snippet": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ``` --- ## Exam Readiness Dashboard > Use when: student asks for a score estimate or readiness check. ``` 📊 EXAM READINESS ────────────────────────────────────────────────────── TYPE"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/examprep-ai/SKILL.md",
+        "snippet": "before adding predicted content. - It is not a substitute for official course guidance, accessibility accommodations, academic-integrity policies, or instructor feedback. - Do not request or process private student reco"
+      }
+    ]
+  },
+  "read_errors": []
+}

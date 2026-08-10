@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "Skills/review-paper-light/SKILL.md",
+        "snippet": "ase 3: Consolidate and Save After both agents return, consolidate into a single report. Save the report inside a `reviews/` subfolder of the paper's directory (create it if it does not exist) — keeping reports out of the pa"
+      }
+    ]
+  },
+  "read_errors": []
+}

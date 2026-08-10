@@ -1,0 +1,6745 @@
+{
+  "repository": "travisjneuman/.claude",
+  "fixed_version": "e74cd20465be466b0f30c19da760bc986c50177f",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99410b1951a31401768c55b72cfd5849ebbb0bba",
+      "size": 1562
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54866be252b161ce5bb02ec67a1a061b2da5edfc"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a21c74f1f7c46a90137bef6e0ce391903a6622f",
+      "size": 22
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c41d2b2ccb13de3babddd724acb54c684680dd3"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33add6ed441b58b34c6fe82fd6af92a7947f45e1",
+      "size": 500
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c6a7499fa49d053c76a5379c83fd07230b7e5d7",
+      "size": 416
+    },
+    {
+      "path": ".github/social-preview.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4ca64fecc81e34724438a3c725ffba487256b74",
+      "size": 4161
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "934cd1fb04f7a43981bbfeec8cb51d93f28bd01a",
+      "size": 6473
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d0c47e8ce4a219fbfdc275ae7e8e2b6e8e72936",
+      "size": 19713
+    },
+    {
+      "path": ".last-cleanup",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727c4a04147fec603a27bd1ab73aef4422956f6d",
+      "size": 24
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71c863794a0460a2663c66f60926ee17964ec1cb",
+      "size": 78121
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e20607717a20444f9814230023e450c0192655e",
+      "size": 11804
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2a63ace98a704c53942f368f4dffb04522e8405",
+      "size": 5038
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9617c1162ca5d921c8ebc7616212d4066c616fae",
+      "size": 1070
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddd6715d00e90ae5d60750a66b5bfd18398bcb91",
+      "size": 23500
+    },
+    {
+      "path": "_pull-all-repos.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "05f38d6381bec445ecdc9e26aba116cfc9cf552b",
+      "size": 21298
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c511b5641ce7a1417e70faef5f9f131c019e2b74"
+    },
+    {
+      "path": "agents/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "721d04a6a796de41ecff122f1116bf1828cf7d9e",
+      "size": 11255
+    },
+    {
+      "path": "agents/accessibility-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22ea666d027db0bd4fe75f6cd97bead155798c21",
+      "size": 2778
+    },
+    {
+      "path": "agents/android-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ca91fae1f9063f4e99e8385c1ca91534c6d57ca",
+      "size": 1817
+    },
+    {
+      "path": "agents/api-designer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b159975b16d4960a9a0d273078fbf067a075110d",
+      "size": 2288
+    },
+    {
+      "path": "agents/api-integration-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23a7ec98065ae4e8a6973c8e8e61f5aa9abc3718",
+      "size": 4910
+    },
+    {
+      "path": "agents/architecture-analyst.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c5d485f62146ec4456ab38701e48a947a827358",
+      "size": 1999
+    },
+    {
+      "path": "agents/audio-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4103cf11947ac4fcbed2cc811bdfe9fe0422e7b6",
+      "size": 1502
+    },
+    {
+      "path": "agents/auth-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5d88d9ef495f039e7effe411345ba8e6781c318",
+      "size": 9694
+    },
+    {
+      "path": "agents/blockchain-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "076e0366754010122ee9b4ad46d8576a2531ef22",
+      "size": 3101
+    },
+    {
+      "path": "agents/brand-strategist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9a9b0bb6eb768c364570c9c630f9e798ad963f",
+      "size": 1489
+    },
+    {
+      "path": "agents/browser-extension-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad03c8d3f1d4bf45bc5b6b3766113c02cb6d151e",
+      "size": 3042
+    },
+    {
+      "path": "agents/cli-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76f83e8b66d533c5f3be0008f351716d74c483a7",
+      "size": 5354
+    },
+    {
+      "path": "agents/cloud-architect.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0269594a2526eeec5e7ac73e6b0a6ef79107886",
+      "size": 9700
+    },
+    {
+      "path": "agents/code-explainer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70503c8859858735b5132c411eb847f1be7bcaf7",
+      "size": 1893
+    },
+    {
+      "path": "agents/compliance-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cbca809a362fa526252be60edd14a9cafa34f5b",
+      "size": 828
+    },
+    {
+      "path": "agents/cpp-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2ba1992b812b3deb866fc62fd64ba697bc0be5",
+      "size": 3198
+    },
+    {
+      "path": "agents/data-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c736d5afe472193cb90c9cb1c2ee5af223ffb9eb",
+      "size": 12354
+    },
+    {
+      "path": "agents/database-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17cd143a762059b94dccda32cd18e9f25d664079",
+      "size": 3026
+    },
+    {
+      "path": "agents/debugging-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b811bc2711f4d0dd0c81f4b698a39c753af4196d",
+      "size": 2430
+    },
+    {
+      "path": "agents/deep-code-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba99b63d0b98bf20cf4b5af3f3dc3a46937f2ce2",
+      "size": 1823
+    },
+    {
+      "path": "agents/desktop-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecea697ab1927f0d4009ce84171cc38cf0e3c61c",
+      "size": 1661
+    },
+    {
+      "path": "agents/devops-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37c0a72227fb0ff15a8672629c00dd75e53740b1",
+      "size": 3336
+    },
+    {
+      "path": "agents/devsecops-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ca106574702732fb09145e366eaa10fdd985708",
+      "size": 6135
+    },
+    {
+      "path": "agents/django-fastapi-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c48b4ab46eb27a2853165417f11ec51c4b129bb",
+      "size": 23720
+    },
+    {
+      "path": "agents/documentation-writer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d7056eafb96977432a33a84d6e5efe327daf97d",
+      "size": 1706
+    },
+    {
+      "path": "agents/e2e-test-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d4cd5f32b33393369ec52a747995fea6388b2f9",
+      "size": 11045
+    },
+    {
+      "path": "agents/email-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80d22be9444b689d2a1feff59588edfbf38c3de2",
+      "size": 9694
+    },
+    {
+      "path": "agents/embedded-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b21ba9796aa23ab80a2a7637c77791641d98b7e",
+      "size": 2902
+    },
+    {
+      "path": "agents/event-driven-architect.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b38099ff71e516384e41e565a8f84af3c0874eff",
+      "size": 2739
+    },
+    {
+      "path": "agents/flutter-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58128fe27a96210f847ac592868f01292d9e905b",
+      "size": 15081
+    },
+    {
+      "path": "agents/game-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbd71c9141bbaa9caa4157063b95e4ffffdb0f4c",
+      "size": 1470
+    },
+    {
+      "path": "agents/go-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2a71342e79154027bd0348684a91a7599a193d0",
+      "size": 13916
+    },
+    {
+      "path": "agents/graphic-designer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5211c6939f9d2f1455b5a9a9b496e9fb9c54769d",
+      "size": 1666
+    },
+    {
+      "path": "agents/graphql-architect.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "895c088b0b208af3c9b1529b5ad4a685ca3a9890",
+      "size": 1532
+    },
+    {
+      "path": "agents/gsd-advisor-researcher.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd3ef58851d53a3b8ef70d69a0398dd89de12cdd",
+      "size": 4424
+    },
+    {
+      "path": "agents/gsd-assumptions-analyzer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5531fc4a973ef723201c53042a9afcb33989c144",
+      "size": 4489
+    },
+    {
+      "path": "agents/gsd-codebase-mapper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bbc1a54502410abe7379187392a74d58a75d3a7",
+      "size": 16515
+    },
+    {
+      "path": "agents/gsd-debugger.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4b9dc221a4cae3e49719d3e778fcd4190cdabe",
+      "size": 42666
+    },
+    {
+      "path": "agents/gsd-executor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2662d751ec3c3e2c2f9d9052f64afbc68550fa33",
+      "size": 20765
+    },
+    {
+      "path": "agents/gsd-integration-checker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14e1a8c7ce118d3d0fee71f58219f7172bdec861",
+      "size": 13216
+    },
+    {
+      "path": "agents/gsd-nyquist-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31d1b68e0ffd9c1e07aea62fc0083eb70335fc1f",
+      "size": 5251
+    },
+    {
+      "path": "agents/gsd-phase-researcher.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28a7a00f3ff345cfc88c5b2f0230bf1bc2c05d1f",
+      "size": 26396
+    },
+    {
+      "path": "agents/gsd-plan-checker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea8bde5d283a0a7da097c55b87afd8371963bd6e",
+      "size": 26217
+    },
+    {
+      "path": "agents/gsd-planner.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04451b39a7923b26b7b272e61a57be8cccb81eb9",
+      "size": 45096
+    },
+    {
+      "path": "agents/gsd-project-researcher.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d58bced0926f0d3ac71a2fb841a338a2afcfb390",
+      "size": 17512
+    },
+    {
+      "path": "agents/gsd-research-synthesizer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c67913d1fa65e55602879502898db2586f0bf74e",
+      "size": 7252
+    },
+    {
+      "path": "agents/gsd-roadmapper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fccdfcc8ac4c3a854e16ac282ea9f3130f9566c8",
+      "size": 18359
+    },
+    {
+      "path": "agents/gsd-ui-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad27bbf999655a229238a7c7f6123a05228ad82",
+      "size": 14333
+    },
+    {
+      "path": "agents/gsd-ui-checker.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa6b2c975ffe640c7f297ac686c506a800d973d",
+      "size": 10394
+    },
+    {
+      "path": "agents/gsd-ui-researcher.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f4fe675ce6a1cf607f44f47249c4b19056abeb8",
+      "size": 13029
+    },
+    {
+      "path": "agents/gsd-user-profiler.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6ac1cc58e982e1e2b4a3be90d6e5fb2be51b38b",
+      "size": 8507
+    },
+    {
+      "path": "agents/gsd-verifier.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2fc9d280f14b18f06bd4eb837245d5d1497bf8e",
+      "size": 24295
+    },
+    {
+      "path": "agents/i18n-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f39a4dcde6e6170cd4100c95f8c9dc26479efa2a",
+      "size": 1487
+    },
+    {
+      "path": "agents/ios-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93a0a9e202414e7e80fc0cd440f5e27d0d155319",
+      "size": 1884
+    },
+    {
+      "path": "agents/kotlin-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ccb69dcea04f83b87f7a9e062f04aab855ecd3d",
+      "size": 6583
+    },
+    {
+      "path": "agents/macos-developer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2ea72fc234a3bc94f380817c5ccf651420ab97",
+      "size": 1503
+    },
+    {
+      "path": "agents/microservices-architect.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4880c410b60772d0c6762ec58e06f6c3787e151c",
+      "size": 1585
+    },
+    {
+      "path": "agents/migration-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed06cf0e0e094bde50a125303c4bb5465938b6ea",
+      "size": 4671
+    },
+    {
+      "path": "agents/ml-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e9a89eb15a3462421348b05650ec7038c5d134",
+      "size": 1611
+    },
+    {
+      "path": "agents/mobile-architect.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df6c00d9ad456cef05f938a2003afefce133ebd6",
+      "size": 2162
+    },
+    {
+      "path": "agents/mobile-release-manager.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "806925014ad3d070ccdc40a69aa79621025d5798",
+      "size": 12510
+    },
+    {
+      "path": "agents/monetization-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d44e00b8bb2560f205f47e1c2bd8b34ab4d78e7",
+      "size": 1394
+    },
+    {
+      "path": "agents/motion-designer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6255b775ff9e9945fccc71b6d39611b6f683019",
+      "size": 1526
+    },
+    {
+      "path": "agents/next-js-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39556a117f544766bfd6ccc78950a526243f1d73",
+      "size": 11727
+    },
+    {
+      "path": "agents/observability-engineer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3efedb462e805e006140fe6b6aa363b4ff93ec70",
+      "size": 19495
+    },
+    {
+      "path": "agents/payment-billing-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fe65391ad4577533883286c06949308510618b4",
+      "size": 11682
+    },
+    {
+      "path": "agents/performance-optimizer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed50d3315581af0f8196352736dc25effe2ca68a",
+      "size": 2041
+    },
+    {
+      "path": "agents/product-analytics-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067bf742ae08e7302b86e8f32ac26f619c357ad8",
+      "size": 12564
+    },
+    {
+      "path": "agents/product-manager.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a71d1dc592c894f5b7b6b9cc52ef40616e52f74",
+      "size": 4610
+    },
+    {
+      "path": "agents/pwa-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c51c7755bc0956f682a0d8ebf7d8d0d70c1c31df",
+      "size": 5959
+    },
+    {
+      "path": "agents/python-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "021a321861e32dcc8d85a15dfb55ba0910fc8689",
+      "size": 3199
+    },
+    {
+      "path": "agents/react-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15c119418593333160679e130f6bfcf6eae183d8",
+      "size": 3067
+    },
+    {
+      "path": "agents/realtime-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "915690c746b04a8465fcf6743dda7c5e85c3421a",
+      "size": 1438
+    },
+    {
+      "path": "agents/refactoring-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e59398f6d16f24c383af969e54d6f440dc77783",
+      "size": 2874
+    },
+    {
+      "path": "agents/rust-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e0f612f2142fb0aaec108447538dedce32ca5ac",
+      "size": 12906
+    },
+    {
+      "path": "agents/security-auditor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9abc21f2465c7297246089849239860fd179c869",
+      "size": 1818
+    },
+    {
+      "path": "agents/seo-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94251f8b1733d4cffa42fb456e679d594139f882",
+      "size": 10115
+    },
+    {
+      "path": "agents/serverless-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1979233d52d2ed27719595a42822d325d93b95a6",
+      "size": 2744
+    },
+    {
+      "path": "agents/startup-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da7e700f28082625e7ab23434d88a27ee125c92e",
+      "size": 1493
+    },
+    {
+      "path": "agents/svelte-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0fe0314ae20c6b3a5b18b05ceb9c3d9330b4bf5",
+      "size": 17176
+    },
+    {
+      "path": "agents/technical-writer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "307c03abcab0dbd848535608c43c1a186b81dac2",
+      "size": 5250
+    },
+    {
+      "path": "agents/test-generator.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abca297f276e7287114847dc16ff8656334d572f",
+      "size": 1963
+    },
+    {
+      "path": "agents/typescript-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5beb531962c2a904173e45ff38aea7bdafadf033",
+      "size": 2700
+    },
+    {
+      "path": "agents/ux-researcher.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8d1666a636d6ff9bc5c628a985a203c1781b794",
+      "size": 2736
+    },
+    {
+      "path": "agents/video-producer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1d5e09fdb0a9c80308a3aab91097591bd6da3c1",
+      "size": 1594
+    },
+    {
+      "path": "agents/vue-nuxt-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88700e8ac2b9fdb0bd2167114a872fa24bfb42df",
+      "size": 14282
+    },
+    {
+      "path": "agents/wasm-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4da9373bf79c51027489572347dbc4975dfbd153",
+      "size": 2973
+    },
+    {
+      "path": "archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cce2af33fc84d95594444d1b6ea6f0fce13d5b81"
+    },
+    {
+      "path": "archive/README-original.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5974e4be9e11636a31df0328830d6855366195f3",
+      "size": 492198
+    },
+    {
+      "path": "bin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fafbf6e94c3213c8e0f0414ced3f393c60da7f0b"
+    },
+    {
+      "path": "bin/prettier-hook.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5806cd7f1613b6f85da88856a90211f98159049f",
+      "size": 1746
+    },
+    {
+      "path": "bin/python3",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0706a7939e6e90f1d22fa998285d171f8b407732",
+      "size": 73
+    },
+    {
+      "path": "bin/python3.cmd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "327c05d1a38c958ed7f12c2a323289bd06b81e12",
+      "size": 20
+    },
+    {
+      "path": "bin/setup.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03dc62f65385a38e55f9167a53a4b673da4f20d5",
+      "size": 2925
+    },
+    {
+      "path": "bin/setup.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5270614bff736b3e13ddbd0a66375f6b86559789",
+      "size": 2959
+    },
+    {
+      "path": "cache",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ad2142d643930886a5ea6df52d8ce3f4550aa4c"
+    },
+    {
+      "path": "cache/audit-agents-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cda36732f5c468e3bfb73f0b703d8b87f889d47",
+      "size": 1000
+    },
+    {
+      "path": "cache/audit-hooks-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5f408551e9a5915be2a2b97667660eefeb9b177",
+      "size": 13772
+    },
+    {
+      "path": "cache/audit-plugins-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53bb4cc0851ce3700df4faf5b6874bd0935280a5",
+      "size": 7869
+    },
+    {
+      "path": "cache/audit-skills-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "015f490b11b704fb1d7d5258ac7c1f3fb6754687",
+      "size": 3648
+    },
+    {
+      "path": "cache/changelog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60efa102d98883dd8cc483242e901efd3c88efcb",
+      "size": 287723
+    },
+    {
+      "path": "cache/my-closed-issues.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "size": 2
+    },
+    {
+      "path": "commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df6d3573cfbea7a11bdeccd8d9d20119e6b8a1d6"
+    },
+    {
+      "path": "commands/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82707e3862bf55e9a21c9c788c57158d39bd01f7",
+      "size": 7510
+    },
+    {
+      "path": "commands/assemble-team.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f640ffb0a36104e5b646c9bd6a860b682394b00b",
+      "size": 3455
+    },
+    {
+      "path": "commands/audit-docs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef2901aa222a68545178fb9210dbef5ff8044cdb",
+      "size": 5929
+    },
+    {
+      "path": "commands/auto-claude.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c6168bd7e14b83d5a5cf5216bd3e3a2445c8693",
+      "size": 1933
+    },
+    {
+      "path": "commands/backup-config.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ae97007248a25a8c5a287cce2a0e17a3e310e7c",
+      "size": 4182
+    },
+    {
+      "path": "commands/bootstrap.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b878a950c03c11d1cc1d1d7e472d166a55a121d7",
+      "size": 5716
+    },
+    {
+      "path": "commands/changelog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11396bb71dda9de1f2379ad59495d20c7e1761d6",
+      "size": 4253
+    },
+    {
+      "path": "commands/context-stats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c3705249d4578c60ba4298a469768f233ca62b7",
+      "size": 5137
+    },
+    {
+      "path": "commands/deploy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c3a44294c99abf31fd457feb6989b219ed836b6",
+      "size": 4405
+    },
+    {
+      "path": "commands/deps-update.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1267fb9ca6e58cf1f68e3ee3a5930e0dac7a555e",
+      "size": 4692
+    },
+    {
+      "path": "commands/discover-skills.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68a10a19a62e302487c1382ca5be76f12fc9eb6e",
+      "size": 1706
+    },
+    {
+      "path": "commands/gsd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b774b0e4e77ee23c97a0bc264e66f861d2d5a5a3"
+    },
+    {
+      "path": "commands/gsd/add-backlog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a144fb975cf41c07d11f1e08d3ad3eb9e6c68618",
+      "size": 2186
+    },
+    {
+      "path": "commands/gsd/add-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2d10d21f92ff1de9b4beb12ffd4309892bfd45",
+      "size": 1145
+    },
+    {
+      "path": "commands/gsd/add-tests.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d7197b0775114e1a25cf0f5e8f9cd4c29e7c96",
+      "size": 1373
+    },
+    {
+      "path": "commands/gsd/add-todo.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a98255a168744b50bf9fcc1753597a2aae9b707",
+      "size": 1207
+    },
+    {
+      "path": "commands/gsd/audit-milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99e3e8342e3d7537a7da73da88dd0bc4a8930292",
+      "size": 1225
+    },
+    {
+      "path": "commands/gsd/audit-uat.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "673a1d3f294183c32fd2b9eeaed5e4a6f008c6a6",
+      "size": 614
+    },
+    {
+      "path": "commands/gsd/autonomous.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "926672214b0e94c435c03893d167b0cb433ac56d",
+      "size": 1532
+    },
+    {
+      "path": "commands/gsd/check-todos.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd47fcc0fb1f8907ed7ebea4a2b6ec0622e27f14",
+      "size": 1254
+    },
+    {
+      "path": "commands/gsd/cleanup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65080feba9ab9f8a8e3486aa26a0ec931101836e",
+      "size": 584
+    },
+    {
+      "path": "commands/gsd/complete-milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "167993b7c3dee55209c0e3f6a5742e8537be24b7",
+      "size": 4501
+    },
+    {
+      "path": "commands/gsd/debug.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a2a728d37bae38e5a4d0646030bdf461e2afb76",
+      "size": 4083
+    },
+    {
+      "path": "commands/gsd/discuss-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b67eaa8f870fc84e3566631abd233431d54c5ea",
+      "size": 2712
+    },
+    {
+      "path": "commands/gsd/do.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b48231afc5c64a541760fb7b82e3c38591779cd4",
+      "size": 887
+    },
+    {
+      "path": "commands/gsd/execute-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb05aea45bd844be2675018274dfcd85eacd9ae0",
+      "size": 2734
+    },
+    {
+      "path": "commands/gsd/fast.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f9872799023f45f553364ddba54c99008f069c5",
+      "size": 904
+    },
+    {
+      "path": "commands/gsd/forensics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c99e87fd147cc9955db4654c874de671d94794eb",
+      "size": 2384
+    },
+    {
+      "path": "commands/gsd/health.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b7ce755d73596ae37b6bd1e6b2289927f79815b",
+      "size": 642
+    },
+    {
+      "path": "commands/gsd/help.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91ca92e17f1d5a4182e08dd05c71976e1e80ed1b",
+      "size": 602
+    },
+    {
+      "path": "commands/gsd/insert-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59dd3fe5694f4773f226b7478b651b2f05cc449c",
+      "size": 1080
+    },
+    {
+      "path": "commands/gsd/join-discord.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06c218a4e9e1e31231989caccd645922fdab9d2a",
+      "size": 389
+    },
+    {
+      "path": "commands/gsd/list-phase-assumptions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4087d4ce6aa6e92f96126b3fc606cd875cd20da0",
+      "size": 1463
+    },
+    {
+      "path": "commands/gsd/list-workspaces.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bae12cc89801a1150beecd68147a6635c439bff",
+      "size": 610
+    },
+    {
+      "path": "commands/gsd/manager.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bca6ae270d5bf87d7b345ed68a6e6a5e9782438d",
+      "size": 1553
+    },
+    {
+      "path": "commands/gsd/map-codebase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6474ba7006e46c3a856c2aaaee5a156a435b3b10",
+      "size": 2595
+    },
+    {
+      "path": "commands/gsd/milestone-summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6930cc904c57c63e8da39f61aaf1e1fd38c2eb9",
+      "size": 1938
+    },
+    {
+      "path": "commands/gsd/new-milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf138f157b74318b5439520eb2c32ef3dea90f6",
+      "size": 1734
+    },
+    {
+      "path": "commands/gsd/new-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12a54dc46ac017cb8dcfc8bf6ba485b3dadddcb",
+      "size": 1426
+    },
+    {
+      "path": "commands/gsd/new-workspace.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34b991dd8a2aa8ef2c4952e7c5c08ce2732c17fe",
+      "size": 1802
+    },
+    {
+      "path": "commands/gsd/next.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "532f0ab862685e061ca908e95908100a3daf4ed6",
+      "size": 697
+    },
+    {
+      "path": "commands/gsd/note.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43c5e7c64530f8a2c585cef5c848b09d86c74337",
+      "size": 942
+    },
+    {
+      "path": "commands/gsd/pause-work.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eccc87dede27961e8da55b8b8221d0fe99443f0",
+      "size": 1044
+    },
+    {
+      "path": "commands/gsd/plan-milestone-gaps.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f826b6671541a6505a0038bbb9cb472c02b647c9",
+      "size": 1045
+    },
+    {
+      "path": "commands/gsd/plan-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88c6c527bbda17065268baffe967928f2bcdee8d",
+      "size": 1912
+    },
+    {
+      "path": "commands/gsd/plant-seed.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b90b7c2be72804365ba99adc87ca26f7b01a3042",
+      "size": 867
+    },
+    {
+      "path": "commands/gsd/pr-branch.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ee949d87ac522c5ce41604e2fff26ec62e89fc2",
+      "size": 774
+    },
+    {
+      "path": "commands/gsd/profile-user.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4979e24b744d6db76bf43c73da08cba554c9191",
+      "size": 1619
+    },
+    {
+      "path": "commands/gsd/progress.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd0420267d8e366dfbd92145e8f4aa102ab8687",
+      "size": 725
+    },
+    {
+      "path": "commands/gsd/quick.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08c7a561e3e16a3b6b29b2333bf1ac7f9b4d2b55",
+      "size": 1872
+    },
+    {
+      "path": "commands/gsd/reapply-patches.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91ede15307abd74aeb9d06d402f6c90d72245f89",
+      "size": 3683
+    },
+    {
+      "path": "commands/gsd/remove-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9776a536b6f861a34e82188dca0adbf0c574e3d6",
+      "size": 991
+    },
+    {
+      "path": "commands/gsd/remove-workspace.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e4d98f926c299fddbef2e924231dc492046a4a",
+      "size": 772
+    },
+    {
+      "path": "commands/gsd/research-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44f530ace15a5e0ccb76e3a7c774b43fb4af6ce3",
+      "size": 5699
+    },
+    {
+      "path": "commands/gsd/resume-work.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2f8d5c9c2b1112f0097c4d1b55799f8e22b1647",
+      "size": 1143
+    },
+    {
+      "path": "commands/gsd/review-backlog.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91de5dd835cf262b0270b335e130f8f63262c915",
+      "size": 1931
+    },
+    {
+      "path": "commands/gsd/review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3954b469165d0da123f7afcb9f0e7a9b4eb13a0",
+      "size": 1063
+    },
+    {
+      "path": "commands/gsd/session-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efea3866fa1e715e8c573bc724b7528c4c0ae26b",
+      "size": 604
+    },
+    {
+      "path": "commands/gsd/set-profile.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "321b073e8fda8bbbc7256295a693065ec5088c5c",
+      "size": 383
+    },
+    {
+      "path": "commands/gsd/settings.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cf08cd666364cf3727a9939f755c3d6acac3651",
+      "size": 1010
+    },
+    {
+      "path": "commands/gsd/ship.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15a8f870e8c595d559df66141c9acfef34d8f2a0",
+      "size": 696
+    },
+    {
+      "path": "commands/gsd/stats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86363fc8ab91f251e9b8380e613868966bbda282",
+      "size": 542
+    },
+    {
+      "path": "commands/gsd/thread.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe921184b7175d34c50df29caae523c83adc8e80",
+      "size": 3052
+    },
+    {
+      "path": "commands/gsd/ui-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "967cfdd3aa9968943d673e43e7acc46da1dfe330",
+      "size": 822
+    },
+    {
+      "path": "commands/gsd/ui-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0e2cadc05a2d243930c2cbc5f9c0e3c47fe374a",
+      "size": 764
+    },
+    {
+      "path": "commands/gsd/update.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "137e5602603c8831d7d946d6b9ce3cc3f2b08a73",
+      "size": 964
+    },
+    {
+      "path": "commands/gsd/validate-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f8cc77ee9b9743f26b07da688fc0096632d8a64",
+      "size": 879
+    },
+    {
+      "path": "commands/gsd/verify-work.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8d932f5268e8049f5f5b372d0be66f67c9a9f84",
+      "size": 1324
+    },
+    {
+      "path": "commands/gsd/workstreams.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a9191036a0f39c40b24e8738de39858fd8f47ff",
+      "size": 1990
+    },
+    {
+      "path": "commands/handoff.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d2beeea4c8846fc8d192a9953c76091b9ab2b47",
+      "size": 753
+    },
+    {
+      "path": "commands/health-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aae8d1c3c2fa84aa985f5de5aab94044cb5cecf",
+      "size": 4205
+    },
+    {
+      "path": "commands/init-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "787aacf006ba4358212cc9aa5ffb51656d3b0b0c",
+      "size": 4820
+    },
+    {
+      "path": "commands/list-skills.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45ffb93af11f19677dce7f6ce2ce2fef9e793fea",
+      "size": 8981
+    },
+    {
+      "path": "commands/log-decision.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "480cb4f5096f4624d05c375805cc5da514578436",
+      "size": 674
+    },
+    {
+      "path": "commands/migrate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8adfb7497c374a4c06e2dce944e6ceec5d7e7f7",
+      "size": 6108
+    },
+    {
+      "path": "commands/perf-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b59aa8f40b8a33fe5943880b3efad516485a7a3",
+      "size": 6264
+    },
+    {
+      "path": "commands/pull-repos.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0044d6a5a7baae8838db2d2f70e3626675e94619",
+      "size": 5172
+    },
+    {
+      "path": "commands/review-code.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18bf1c9a7cd28bb3bbe635b82c79da21f36dcd86",
+      "size": 3083
+    },
+    {
+      "path": "commands/router",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00ae7ba4c7bec40669451cc7e6e09ce15b38e13b"
+    },
+    {
+      "path": "commands/router/decision-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fab0a16e70682765b785971da8cfc4a579cab8b",
+      "size": 2196
+    },
+    {
+      "path": "commands/router/domains-business.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00f2c65b0b42a6663bbee83d684165f30fc7343c",
+      "size": 4696
+    },
+    {
+      "path": "commands/router/domains-creative.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d493a76e1a30dc67599d0d52052fd54eb3abff43",
+      "size": 3131
+    },
+    {
+      "path": "commands/router/domains-development.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcd4e1ea424203a50bd14bb160e9e249afa09428",
+      "size": 14880
+    },
+    {
+      "path": "commands/router/domains-meta.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae02ac23c5dfa3881c350fe688b3b6ab04ba0e30",
+      "size": 6541
+    },
+    {
+      "path": "commands/router/domains-scientific.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fef53b06c8507f318e0484cf1e74cd065c3e0df",
+      "size": 3208
+    },
+    {
+      "path": "commands/router/routing-logic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b1b0d52711513d5b978516e041f7e1ea987a766",
+      "size": 4119
+    },
+    {
+      "path": "commands/run.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f66bb99ee60c1e855f310c8839ea96542eee25f",
+      "size": 3682
+    },
+    {
+      "path": "commands/scaffold.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19613c4ea2ab7e4293e5cb3918e1353b2974f5b5",
+      "size": 5581
+    },
+    {
+      "path": "commands/security-scan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e3bc2088c5515472c23043e19d9042d25296e49",
+      "size": 4866
+    },
+    {
+      "path": "commands/session-log.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee0233fe9e489ef9d67c9b4caca463a14bd332e9",
+      "size": 3488
+    },
+    {
+      "path": "commands/skill-finder.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60a87fec730353a4b9884433a4e43adbe2759fa9",
+      "size": 12320
+    },
+    {
+      "path": "commands/standardize-claude-md.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "711ae8beffffe6098ad38021df88a5f8b399c4d1",
+      "size": 3412
+    },
+    {
+      "path": "commands/start-task.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f65b82dd4d1bc8746f08d32a0a993eb6bf0ff0d6",
+      "size": 3043
+    },
+    {
+      "path": "commands/test-plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7677f5083a6eb9e4ae137b5b7d1ab5d57654ce4c",
+      "size": 9772
+    },
+    {
+      "path": "commands/test-suite.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76868cd7888dbe9bbcf12d5060ca6584b9089f83",
+      "size": 5503
+    },
+    {
+      "path": "commands/update-counts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31b6a2ff293f8650858074ffd13ff4be4754d4b7",
+      "size": 948
+    },
+    {
+      "path": "commands/update-docs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec2b603a64d1e9d534613a997216bbbee14841d6",
+      "size": 943
+    },
+    {
+      "path": "counts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38ff30199accb73be35b398ebf2d9e3b13dd6b95",
+      "size": 323
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2406d4748ec5e0206571a3269f2756888425efe"
+    },
+    {
+      "path": "docs/AGENT-TEAMS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bd7dfd96e666bc9a2dfbfa6db36831e281cfeb1",
+      "size": 15901
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "148959e2129164af9eb3d317f582506696ee5654",
+      "size": 12024
+    },
+    {
+      "path": "docs/AUTO-CLAUDE-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf309179e5ba6340ed83c5acf1b6fa2b8710783b",
+      "size": 15410
+    },
+    {
+      "path": "docs/BACKUP-STRATEGIES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35ea08956e8c2b21608546680f20059c5fb7c2c9",
+      "size": 9828
+    },
+    {
+      "path": "docs/CLAUDE-CODE-RESOURCES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d81229f6f45d419c9706ef70f9550a141d6aab1",
+      "size": 16101
+    },
+    {
+      "path": "docs/CONFIGURATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e642e0cec144c8340f7a7fa662c2b06feb6e6a",
+      "size": 9473
+    },
+    {
+      "path": "docs/DOMAIN-ROUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34e5e2995390244032d673ca15330c3e530610cf",
+      "size": 9576
+    },
+    {
+      "path": "docs/FAQ.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc86c1ee52f6d5fe4a7536efe9fb63cf5ebafe03",
+      "size": 10314
+    },
+    {
+      "path": "docs/FOLDER-STRUCTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43815e43cd7996f3d6773f52a4651a114d0012e2",
+      "size": 38212
+    },
+    {
+      "path": "docs/GLOSSARY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ecba9906f79269215fee747be63db558340d841",
+      "size": 7869
+    },
+    {
+      "path": "docs/GSD-TUTORIAL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a028aba64567a86a07b2b966e5f0e1d09dc8aa04",
+      "size": 8622
+    },
+    {
+      "path": "docs/MAINTENANCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20c4bfeafee872f86f4bd1d71337baf840bec46c",
+      "size": 9143
+    },
+    {
+      "path": "docs/MARKETPLACE-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "638918e356e18c00dbd8b6fbdfc26d4c255b3dc1",
+      "size": 22810
+    },
+    {
+      "path": "docs/MCP-SERVERS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3ba6831d8cf0467c7d0331d6f0731d9f4007898",
+      "size": 18124
+    },
+    {
+      "path": "docs/NEW-DEVICE-SETUP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b057935c4d0d24c0ce86748143ac4d4b4d2e5647",
+      "size": 6684
+    },
+    {
+      "path": "docs/OPUS-4-6-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7f0d1a13b83deab3ed2c3ad3d3d40456dae24c7",
+      "size": 6467
+    },
+    {
+      "path": "docs/PLUGIN-MANAGEMENT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f261caa9af33b8bff516dc966395e97820d09e",
+      "size": 12449
+    },
+    {
+      "path": "docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28fb90d94ff669f21ea8f9061cea315fb9316404",
+      "size": 14509
+    },
+    {
+      "path": "docs/REFERENCE-URLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "432afe0ff16fe629c30eece4542b081f534b2f42",
+      "size": 12110
+    },
+    {
+      "path": "docs/RESOURCES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42f9414965a7ac999583037728e40455d8ece043",
+      "size": 9985
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f6eb62e148950ddfdcabe62bed3a527f8eb427f",
+      "size": 8958
+    },
+    {
+      "path": "docs/SETUP-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f5585fb60c30ef493cd0394a2327fd50b69af92",
+      "size": 7149
+    },
+    {
+      "path": "docs/SKILL-CREATION-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b52ab7e76b02bba84da41fd34cbb3edb6451f08",
+      "size": 11557
+    },
+    {
+      "path": "docs/SKILLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b087fdd0f878b6645379380a5da9650b122c16b",
+      "size": 9213
+    },
+    {
+      "path": "docs/WORKFLOW-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4a7edaddc48170b330cfe62bbb738641477d75e",
+      "size": 14009
+    },
+    {
+      "path": "docs/reference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d0c915335b505e1d81d3225eb53979f5c31ac75"
+    },
+    {
+      "path": "docs/reference/checklists",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c8622c1ce6b80be9ba0e8745f39c9fefda3b717"
+    },
+    {
+      "path": "docs/reference/checklists/api-development.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cde8224bcb239508f78a585ca311029316da94fa",
+      "size": 10871
+    },
+    {
+      "path": "docs/reference/checklists/automation-scripts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c4e7b672171cc7dcccd64622160407f27ed0ddf",
+      "size": 4229
+    },
+    {
+      "path": "docs/reference/checklists/database-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "602e821c83fc2243f6e129a54f0859833c4049de",
+      "size": 12965
+    },
+    {
+      "path": "docs/reference/checklists/mobile-app-deployment.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c301f779b77e0866e7395687ac8a7744622b5dc0",
+      "size": 16843
+    },
+    {
+      "path": "docs/reference/checklists/monitoring-alerting-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea1368068dde59f6b5b4950eb98e458aff4a8273",
+      "size": 22587
+    },
+    {
+      "path": "docs/reference/checklists/performance-optimization.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c44e05d2740d105f410ae70012684661986ef079",
+      "size": 15870
+    },
+    {
+      "path": "docs/reference/checklists/security-hardening.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65f96c598ee47a7ebc1b042e4342cf0d4d868797",
+      "size": 11173
+    },
+    {
+      "path": "docs/reference/checklists/static-sites.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d961d4c5f344bdcfb32138c1c0362493e195a18",
+      "size": 4828
+    },
+    {
+      "path": "docs/reference/checklists/ui-visual-changes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e1f00fa3d5d9ccd562fbeefa7289281af608c75",
+      "size": 11565
+    },
+    {
+      "path": "docs/reference/checklists/verification-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bb82fccf4c8795fecc04d097c84a1059b32f082",
+      "size": 3110
+    },
+    {
+      "path": "docs/reference/stacks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "189e9001bf4e696872b2a978be6ce44cd16788dc"
+    },
+    {
+      "path": "docs/reference/stacks/django-fastapi.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc3eb4429b9ae6326ff9a3fdf8415c5dcc0b0bf3",
+      "size": 13852
+    },
+    {
+      "path": "docs/reference/stacks/flutter-dart.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b66d823fa7ff93352e82ec49346acf0041450c2a",
+      "size": 12710
+    },
+    {
+      "path": "docs/reference/stacks/fullstack-nextjs-nestjs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a575e56437650d51f3c1aeabcee3c45b2601b4c4",
+      "size": 12123
+    },
+    {
+      "path": "docs/reference/stacks/go.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "249785869713afee9ddbe3f147847b65ffcb9d1c",
+      "size": 11166
+    },
+    {
+      "path": "docs/reference/stacks/python.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fb072009ee89ef1451cee58d93ed7499fc6ff7a",
+      "size": 9270
+    },
+    {
+      "path": "docs/reference/stacks/react-native-expo.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b68a08f8dd53b02fec410b070f2518a7f93095c3",
+      "size": 12078
+    },
+    {
+      "path": "docs/reference/stacks/react-typescript.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc01d7a1022f63ad8203f659f41208b148f07ea1",
+      "size": 10208
+    },
+    {
+      "path": "docs/reference/stacks/rust.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c0c22b63c9aed6483452519ce8ce6c328b32ced",
+      "size": 11441
+    },
+    {
+      "path": "docs/reference/stacks/svelte-sveltekit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9846597a5d0e59f973d08101f3d7b531f358122f",
+      "size": 12628
+    },
+    {
+      "path": "docs/reference/stacks/vue-nuxt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc605382a52309012fbc4fb3970204bbfe4a247",
+      "size": 11855
+    },
+    {
+      "path": "docs/reference/tooling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2367871f17332f3ca933096457e9b460f32ba5a"
+    },
+    {
+      "path": "docs/reference/tooling/external-repos.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "198884040bc6bdf6efe1955a43e83e20fc2eca5d",
+      "size": 16157
+    },
+    {
+      "path": "docs/reference/tooling/git-hooks-setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e88103f0f4a7bd16e01158c52c26942e1f123187",
+      "size": 8167
+    },
+    {
+      "path": "docs/reference/tooling/mcp-servers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e978c6e9e0606e318312c6842c87535607567573",
+      "size": 6744
+    },
+    {
+      "path": "docs/reference/tooling/troubleshooting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb0b84dcab3b04b87ed91e0122d8221b39659527",
+      "size": 14281
+    },
+    {
+      "path": "docs/reference/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "157b27d1a0c0e8d954f808242f124433860df06f"
+    },
+    {
+      "path": "docs/reference/workflows/action-policy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a3fd4b650140ff3dba5476907ae8eecb870a1d8",
+      "size": 9643
+    },
+    {
+      "path": "docs/reference/workflows/agent-teams.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "409e97a7f6af75426eb88649208c272c6bb7345e",
+      "size": 6162
+    },
+    {
+      "path": "docs/reference/workflows/context-management.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcd86be4c0e951ecc08dcb88504a4ce536d73fd3",
+      "size": 1871
+    },
+    {
+      "path": "docs/reference/workflows/deployment-cicd.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecdb0ecaa15a4f0e3be05fd78f85f6126347404a",
+      "size": 18245
+    },
+    {
+      "path": "docs/reference/workflows/post-change-documentation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd4d465d26bacd7dfb4aea243fc7f40e041affb6",
+      "size": 3366
+    },
+    {
+      "path": "docs/reference/workflows/research-methodology.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3a6410dd9b85d7dc2c8bfe1e0b8f5a5cb0412f0",
+      "size": 10635
+    },
+    {
+      "path": "docs/seddsoprg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "docs/workflow-automation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6331ac1052119986636530e90d152507326a23e4",
+      "size": 19811
+    },
+    {
+      "path": "get-shit-done",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e88bed400cdf126d4b1b9faaf4d65cd605d2437"
+    },
+    {
+      "path": "get-shit-done/VERSION",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff6d09b31dde835cbcb1c579b2eca0d5c255eeb0",
+      "size": 6
+    },
+    {
+      "path": "get-shit-done/bin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a06c8f6756a11c3f2885ba52ca39b7b94e61d1a"
+    },
+    {
+      "path": "get-shit-done/bin/gsd-tools.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65ec8bc38c70d69ecb681183a32be698c2c16c16",
+      "size": 36483
+    },
+    {
+      "path": "get-shit-done/bin/lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f174c1ffd86979cbb75e68a28353570b3f914a49"
+    },
+    {
+      "path": "get-shit-done/bin/lib/commands.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "425199ddea4ed02fc796e76d264bbab03ed605db",
+      "size": 33782
+    },
+    {
+      "path": "get-shit-done/bin/lib/config.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67fe5a6b977822cbbbed84eecd8b13186bba058d",
+      "size": 14475
+    },
+    {
+      "path": "get-shit-done/bin/lib/core.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e509e849a53263d35d355f9ee353c00f45cd5900",
+      "size": 45593
+    },
+    {
+      "path": "get-shit-done/bin/lib/frontmatter.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28690b0f5fad82bc5559155ea445259376a9abb0",
+      "size": 13749
+    },
+    {
+      "path": "get-shit-done/bin/lib/init.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ee54e42c6784d1af50eda8df5727cc44e3edf9",
+      "size": 52439
+    },
+    {
+      "path": "get-shit-done/bin/lib/milestone.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a86584d2fb3df577c077202ce9442b9436f635ab",
+      "size": 9877
+    },
+    {
+      "path": "get-shit-done/bin/lib/model-profiles.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "357456252ffe9d01c9271cf3fcdcf8436c7abfe2",
+      "size": 3316
+    },
+    {
+      "path": "get-shit-done/bin/lib/phase.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfb9d36697eeadcf30e0a19647388086e2fb000f",
+      "size": 33230
+    },
+    {
+      "path": "get-shit-done/bin/lib/profile-output.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d2add389e873e614b42de4b01928a6e511af81b",
+      "size": 41671
+    },
+    {
+      "path": "get-shit-done/bin/lib/profile-pipeline.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acfc73d6a0cfc260830d76e5230da1abb5a81bbf",
+      "size": 17637
+    },
+    {
+      "path": "get-shit-done/bin/lib/roadmap.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "693baf4f56fc27e6b103881430f2852d9b6075be",
+      "size": 12192
+    },
+    {
+      "path": "get-shit-done/bin/lib/security.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffef1fc51415ad973d88b1b0c28bfa0f1e4f912e",
+      "size": 13541
+    },
+    {
+      "path": "get-shit-done/bin/lib/state.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fe9dfa0963e69eff7fbc5beebb7533c55ce413e",
+      "size": 39676
+    },
+    {
+      "path": "get-shit-done/bin/lib/template.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd6a47785369fd74706c140a0c3447d2a0db702d",
+      "size": 7242
+    },
+    {
+      "path": "get-shit-done/bin/lib/uat.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a63495e9f32d7c20dad9bcbe882bf9e47c5bfe1",
+      "size": 10071
+    },
+    {
+      "path": "get-shit-done/bin/lib/verify.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b11a5c3a196d03c90249ec248b695c48f901ad0f",
+      "size": 34624
+    },
+    {
+      "path": "get-shit-done/bin/lib/workstream.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e209c5b736d8dde48fd975c3ce801acb3c667e",
+      "size": 16749
+    },
+    {
+      "path": "get-shit-done/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df033667bd6315a698d7611904ad62a40bdc504b"
+    },
+    {
+      "path": "get-shit-done/commands/gsd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eae6d035254fc1999ea88ed7b999de9d2fe69826"
+    },
+    {
+      "path": "get-shit-done/commands/gsd/workstreams.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a9191036a0f39c40b24e8738de39858fd8f47ff",
+      "size": 1990
+    },
+    {
+      "path": "get-shit-done/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41edc264b80658e3b8ca0d172da01ae9bd4183c7"
+    },
+    {
+      "path": "get-shit-done/references/checkpoints.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f90e99c9f6d7361ac3f8c280627f5c2c518be7",
+      "size": 29974
+    },
+    {
+      "path": "get-shit-done/references/continuation-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34b85dfc3f19e3bdca87346fb6ee72e530b531be",
+      "size": 4332
+    },
+    {
+      "path": "get-shit-done/references/decimal-phase-calculation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba5c5cbdcf54bfe8d65418749ca14d9a4ef27e43",
+      "size": 1399
+    },
+    {
+      "path": "get-shit-done/references/git-integration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82645988944c79c9548763dfd842d08e1104acbe",
+      "size": 8980
+    },
+    {
+      "path": "get-shit-done/references/git-planning-commit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56e00d5cb75cb72545b0ed9cfb5af40667a37347",
+      "size": 1424
+    },
+    {
+      "path": "get-shit-done/references/model-profile-resolution.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6677d855efb0c42adcaf521d3a3d64958233a27",
+      "size": 1207
+    },
+    {
+      "path": "get-shit-done/references/model-profiles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a366accb4d65848115a277d48d7787e30abcf1f2",
+      "size": 5545
+    },
+    {
+      "path": "get-shit-done/references/phase-argument-parsing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "193ab14c432b50da3c0da7faf0c8fbe530a49d4b",
+      "size": 1580
+    },
+    {
+      "path": "get-shit-done/references/planning-config.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8276c7611b3f1c68a6259a047afdacb518b6e3c",
+      "size": 7590
+    },
+    {
+      "path": "get-shit-done/references/questioning.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14a03db3873a70ea48655154eba8974dde13fce4",
+      "size": 6284
+    },
+    {
+      "path": "get-shit-done/references/tdd.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9bb44ea2db5e9aa46eb838d6fa469455c8321b5",
+      "size": 7682
+    },
+    {
+      "path": "get-shit-done/references/ui-brand.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d45554acd0ca00dce17c1be06cf168af34296cf",
+      "size": 4421
+    },
+    {
+      "path": "get-shit-done/references/user-profiling.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8969323bfbbaef70862d3c6705a79054fcca442a",
+      "size": 37775
+    },
+    {
+      "path": "get-shit-done/references/verification-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "836db76f25b55609646fdc05dcdcc43d78897499",
+      "size": 16552
+    },
+    {
+      "path": "get-shit-done/references/workstream-flag.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71277a3109d32227f52b509a7ed42df87cfd5ee3",
+      "size": 1743
+    },
+    {
+      "path": "get-shit-done/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0333ce1b2aacdb79b7a705e8d58214cacb5cfec"
+    },
+    {
+      "path": "get-shit-done/templates/DEBUG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63ef4b2bcf2454295eab26cc0c93efb85b0a2dac",
+      "size": 4588
+    },
+    {
+      "path": "get-shit-done/templates/UAT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd2345a98bb3af16bf8fd98a34cfcdc0f83a3d18",
+      "size": 6860
+    },
+    {
+      "path": "get-shit-done/templates/UI-SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be2c6e1426bffa67cf8e96ebbf636ef888a61f04",
+      "size": 2296
+    },
+    {
+      "path": "get-shit-done/templates/VALIDATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d569841ee36d11515ed9c786a726235c243a3ebd",
+      "size": 2059
+    },
+    {
+      "path": "get-shit-done/templates/claude-md.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "240146a28adbed0ade2967a213e1a4d0b0d466f0",
+      "size": 3450
+    },
+    {
+      "path": "get-shit-done/templates/codebase",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ab4d41e30a75e9b972319ff38b3f4fac2c7160b"
+    },
+    {
+      "path": "get-shit-done/templates/codebase/architecture.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e64b5360c8c2995382c8ae890b974759ce8cb04",
+      "size": 7268
+    },
+    {
+      "path": "get-shit-done/templates/codebase/concerns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1ffcb4202a1da91c74d5ad4d7cd5bdc39188930",
+      "size": 11269
+    },
+    {
+      "path": "get-shit-done/templates/codebase/conventions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "361283beaff8bd04459229425e50979aa16abce4",
+      "size": 8832
+    },
+    {
+      "path": "get-shit-done/templates/codebase/integrations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f8a10034771eb703c739c5e95e90837405be621",
+      "size": 8664
+    },
+    {
+      "path": "get-shit-done/templates/codebase/stack.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2006c5714643c832f9e8d98c546fe2539587e0f3",
+      "size": 4466
+    },
+    {
+      "path": "get-shit-done/templates/codebase/structure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd1af2192dcd539bb95167a5d0eed0048e077e9",
+      "size": 8136
+    },
+    {
+      "path": "get-shit-done/templates/codebase/testing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95e53902a25218acfad1a012c425cffee34014a7",
+      "size": 10993
+    },
+    {
+      "path": "get-shit-done/templates/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd147b6f4778e12a20d36dbdcd01ee200416123f",
+      "size": 988
+    },
+    {
+      "path": "get-shit-done/templates/context.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36673346d1d282a766ef384368f261317133741f",
+      "size": 9832
+    },
+    {
+      "path": "get-shit-done/templates/continue-here.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c3711d57bfa0884adbda52408dda12186b1557d",
+      "size": 1821
+    },
+    {
+      "path": "get-shit-done/templates/copilot-instructions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c52d0cbb2137c42ebc177decf33c6355844045d8",
+      "size": 644
+    },
+    {
+      "path": "get-shit-done/templates/debug-subagent-prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c90c7ce45f3df219017cfa52680ececaa8895096",
+      "size": 1802
+    },
+    {
+      "path": "get-shit-done/templates/dev-preferences.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "428b5c5b5b90a141a836407d4272259f4b939236",
+      "size": 543
+    },
+    {
+      "path": "get-shit-done/templates/discovery.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9e2bb6414c1d98f7acb9fa49279e84bcdea9936",
+      "size": 4077
+    },
+    {
+      "path": "get-shit-done/templates/discussion-log.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37cd866924b387e5aebbb71a85662efa1c474c61",
+      "size": 1818
+    },
+    {
+      "path": "get-shit-done/templates/milestone-archive.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd1997c8c819b8fa619e1aed77eb88787f87094f",
+      "size": 2803
+    },
+    {
+      "path": "get-shit-done/templates/milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "107e246d834a3c1422c9a9e0b0fa24dbd15e2a93",
+      "size": 3057
+    },
+    {
+      "path": "get-shit-done/templates/phase-prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15fbe21b1abaa48f2cb08a3add749db7aa058240",
+      "size": 18607
+    },
+    {
+      "path": "get-shit-done/templates/planner-subagent-prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcaa68d2752f1eca8241437377e91c2ac6bd6173",
+      "size": 2682
+    },
+    {
+      "path": "get-shit-done/templates/project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37a986c70e0594526b667da837741d6567b9917f",
+      "size": 5104
+    },
+    {
+      "path": "get-shit-done/templates/requirements.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d55313480fcabe858cf065a2bfbcf91522cce6ac",
+      "size": 6071
+    },
+    {
+      "path": "get-shit-done/templates/research-project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0576d6ce5605cdc370746d4970e58f28d1bfaed9"
+    },
+    {
+      "path": "get-shit-done/templates/research-project/ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d0329761f98ec196d47466f2350cf0f45605950",
+      "size": 6931
+    },
+    {
+      "path": "get-shit-done/templates/research-project/FEATURES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "431c52ba50a77342ee69328798ec0eeed0be02a1",
+      "size": 4320
+    },
+    {
+      "path": "get-shit-done/templates/research-project/PITFALLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d66e6a6c783e7bf78e6b339b1c0842d3f192a4e",
+      "size": 5511
+    },
+    {
+      "path": "get-shit-done/templates/research-project/STACK.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd663ba23f970b27b6f267dbab815a8d94cc648",
+      "size": 3092
+    },
+    {
+      "path": "get-shit-done/templates/research-project/SUMMARY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edd67ddf0c359c596dcb40fa05f36f89b4bd5064",
+      "size": 4402
+    },
+    {
+      "path": "get-shit-done/templates/research.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43ae5d0b4c7179a3a6f6b6a87d39e2774dd6bd7e",
+      "size": 16340
+    },
+    {
+      "path": "get-shit-done/templates/retrospective.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e804ca9769e3629f55b11a4a974513705f9a4b5d",
+      "size": 1255
+    },
+    {
+      "path": "get-shit-done/templates/roadmap.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d6749bf5e7ed4e2161379342671021819a989bc",
+      "size": 5666
+    },
+    {
+      "path": "get-shit-done/templates/state.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e5b5030440c6f0acc3330afee971d2e22645a60",
+      "size": 4548
+    },
+    {
+      "path": "get-shit-done/templates/summary-complex.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc8aac2d5628439fd8b4f661c571192ece2db53",
+      "size": 1308
+    },
+    {
+      "path": "get-shit-done/templates/summary-minimal.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dc1ba9e86a2a79cd4fbf721e801b4443e9ffbd6",
+      "size": 861
+    },
+    {
+      "path": "get-shit-done/templates/summary-standard.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "674f146586b97959d242af971df6f8418a921ad1",
+      "size": 1054
+    },
+    {
+      "path": "get-shit-done/templates/summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c66799b86a862d72f2f796c93f3b7debafd97e57",
+      "size": 7826
+    },
+    {
+      "path": "get-shit-done/templates/user-profile.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7af2d01ec0d30bcb183bbc2fbb7898bac4b2705c",
+      "size": 3054
+    },
+    {
+      "path": "get-shit-done/templates/user-setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "260a8552b6121f5e95e22b2f6839c37503f60eda",
+      "size": 9047
+    },
+    {
+      "path": "get-shit-done/templates/verification-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8684fe2c47a6689bcf802e364720ffb5a993f40c",
+      "size": 9641
+    },
+    {
+      "path": "get-shit-done/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c316ac47879d49c26cbaced232b73e574fddef63"
+    },
+    {
+      "path": "get-shit-done/workflows/add-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e226064134038a8a5f010398de7058d835cfc43",
+      "size": 2776
+    },
+    {
+      "path": "get-shit-done/workflows/add-tests.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e586a274c6b771a20256cfab636f00371055b05",
+      "size": 12039
+    },
+    {
+      "path": "get-shit-done/workflows/add-todo.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3226830e8521cfa37bb4daffd69ed07908f388cf",
+      "size": 4161
+    },
+    {
+      "path": "get-shit-done/workflows/audit-milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05b9974c66c048e219f5db1affa7e4c20ce92bc2",
+      "size": 12124
+    },
+    {
+      "path": "get-shit-done/workflows/audit-uat.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13e95ce791f299c655157dce04933f7cc1beb9c0",
+      "size": 2994
+    },
+    {
+      "path": "get-shit-done/workflows/autonomous.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6e1f644803a95eea46a2612847c04430bb752d1",
+      "size": 30877
+    },
+    {
+      "path": "get-shit-done/workflows/check-todos.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fe48e5cbe78c15613079bd616ab28577c93c991",
+      "size": 4590
+    },
+    {
+      "path": "get-shit-done/workflows/cleanup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea9ee880f1eb6bcac6bbddee991cac63f220438e",
+      "size": 3423
+    },
+    {
+      "path": "get-shit-done/workflows/complete-milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "365d7812ab9758a98726e646d5bddc9a52971058",
+      "size": 20840
+    },
+    {
+      "path": "get-shit-done/workflows/diagnose-issues.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea53fe26e127356e2d365b371fbe75293ffafca7",
+      "size": 7047
+    },
+    {
+      "path": "get-shit-done/workflows/discovery-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94a6296e2aa5a5bcd3bca37898332707fc7389f7",
+      "size": 8253
+    },
+    {
+      "path": "get-shit-done/workflows/discuss-phase-assumptions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3073807a909dee6f5d717c7344651045767662ae",
+      "size": 21317
+    },
+    {
+      "path": "get-shit-done/workflows/discuss-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "325c1fa5e57537bac340e091ae0173866d28cd01",
+      "size": 43600
+    },
+    {
+      "path": "get-shit-done/workflows/do.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8042fe30905ca9c5fca0c5ebe61ea65d6801906f",
+      "size": 4586
+    },
+    {
+      "path": "get-shit-done/workflows/execute-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ede9ad027651eef3cca765659d2723f8809bea5",
+      "size": 33632
+    },
+    {
+      "path": "get-shit-done/workflows/execute-plan.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fd1921762ddc52280284b1758ed4fe3e195af4e",
+      "size": 22660
+    },
+    {
+      "path": "get-shit-done/workflows/fast.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "729bcc32ec840c89089c76df3c7d31f607f7a602",
+      "size": 2683
+    },
+    {
+      "path": "get-shit-done/workflows/forensics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "645eb2f112492906deddd38b93ac2c1abb931323",
+      "size": 7412
+    },
+    {
+      "path": "get-shit-done/workflows/health.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d705d808bd8740a40dfad9d18786935f54af9be2",
+      "size": 5485
+    },
+    {
+      "path": "get-shit-done/workflows/help.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1396e5840a56ffe6dabbc6a26c8bd4def145bf99",
+      "size": 19512
+    },
+    {
+      "path": "get-shit-done/workflows/insert-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "537b5daf7b3b5a4b638f3be4d3df89785ffe3702",
+      "size": 3615
+    },
+    {
+      "path": "get-shit-done/workflows/list-phase-assumptions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3269d28300d17350a7f8c4d0c5cb8c32c3c81c44",
+      "size": 4295
+    },
+    {
+      "path": "get-shit-done/workflows/list-workspaces.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a3cbd6a0d84e5ee3dbce4e704e9cc3e2c09251c",
+      "size": 1221
+    },
+    {
+      "path": "get-shit-done/workflows/manager.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b57cc463e7731eb6cb17b73bbe508d951989c40",
+      "size": 15169
+    },
+    {
+      "path": "get-shit-done/workflows/map-codebase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "270ad090afa4b63f6035868f263f5ab960c480ae",
+      "size": 12247
+    },
+    {
+      "path": "get-shit-done/workflows/milestone-summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5ef4b37e3159f06bb76b52e63d8f2f86be873eb",
+      "size": 7328
+    },
+    {
+      "path": "get-shit-done/workflows/new-milestone.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "151b9cfd8192b641781920f4202ba4cf99ae74cb",
+      "size": 18507
+    },
+    {
+      "path": "get-shit-done/workflows/new-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a70f26f2b8770137976a747ce6a2066fc9a5060b",
+      "size": 39004
+    },
+    {
+      "path": "get-shit-done/workflows/new-workspace.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35eb3692b381cf67e55b7993b25bedd039a093fb",
+      "size": 6383
+    },
+    {
+      "path": "get-shit-done/workflows/next.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80e2f36223119b0172561896a459f72654fb5c8f",
+      "size": 3065
+    },
+    {
+      "path": "get-shit-done/workflows/node-repair.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7be3dbbcc708d30d8890f5134f154fc774701bd2",
+      "size": 4173
+    },
+    {
+      "path": "get-shit-done/workflows/note.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba6aa28f4b12bb64113e1257a0dd21885409c809",
+      "size": 6148
+    },
+    {
+      "path": "get-shit-done/workflows/pause-work.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e60ad998109a7b77aca1c06798c5a109520aaf5",
+      "size": 5077
+    },
+    {
+      "path": "get-shit-done/workflows/plan-milestone-gaps.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3997fecf1880e49d43bc74e3a94b4b888263bc7",
+      "size": 6780
+    },
+    {
+      "path": "get-shit-done/workflows/plan-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18cee07ca63ea60482aeb1195576fe6b49a97e00",
+      "size": 33248
+    },
+    {
+      "path": "get-shit-done/workflows/plant-seed.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f49e9a8889fc1589893af9d208b3e60c12e209f6",
+      "size": 3730
+    },
+    {
+      "path": "get-shit-done/workflows/pr-branch.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11697d473b756f449306621a00a2615ac9f8cddc",
+      "size": 3273
+    },
+    {
+      "path": "get-shit-done/workflows/profile-user.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98fc7472538b73798d782f4d0f2ae59dd489d9ad",
+      "size": 15880
+    },
+    {
+      "path": "get-shit-done/workflows/progress.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6725493e19abf2ad6e33912c7b4c9699abde4565",
+      "size": 13183
+    },
+    {
+      "path": "get-shit-done/workflows/quick.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89441f965db37965366e2374f570e2886389cb9e",
+      "size": 25175
+    },
+    {
+      "path": "get-shit-done/workflows/remove-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ac9028739d4eb3cecc40d73bda3e302200c5078",
+      "size": 4112
+    },
+    {
+      "path": "get-shit-done/workflows/remove-workspace.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32198674471fcbbcf7d69e60069a261b6ba3adc2",
+      "size": 2124
+    },
+    {
+      "path": "get-shit-done/workflows/research-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d212a0b9d0456284e5ffb27764ac8300c7d96bc7",
+      "size": 2270
+    },
+    {
+      "path": "get-shit-done/workflows/resume-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dc18d8f3964ae3f0fce7211833f67eab3976449",
+      "size": 10240
+    },
+    {
+      "path": "get-shit-done/workflows/review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3e324e676b246990fa8b1efe4368c09cf40d32e",
+      "size": 6163
+    },
+    {
+      "path": "get-shit-done/workflows/session-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f336edc089ef59141c505d29eed257e217f1696f",
+      "size": 4044
+    },
+    {
+      "path": "get-shit-done/workflows/settings.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c1bd59375412d7719065cb9ee8174598fe13de",
+      "size": 10390
+    },
+    {
+      "path": "get-shit-done/workflows/ship.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c29de1ffcf8d5abd91c2bfcf7b817a2be967809",
+      "size": 6067
+    },
+    {
+      "path": "get-shit-done/workflows/stats.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ca69647511fc35b8e483b8df119f64fd57031eb",
+      "size": 1566
+    },
+    {
+      "path": "get-shit-done/workflows/transition.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dd4fed053a0f4cad028be305a2a5c291399aa98",
+      "size": 16475
+    },
+    {
+      "path": "get-shit-done/workflows/ui-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "322e50aee9d148a500b2e3e87a73696f70613714",
+      "size": 9238
+    },
+    {
+      "path": "get-shit-done/workflows/ui-review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "314fd5e61e601c67a4cf6c8a1e7fbd606075e6a3",
+      "size": 4955
+    },
+    {
+      "path": "get-shit-done/workflows/update.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e5e9d3f30c299ef99329e6f2b251af50b1b81dd",
+      "size": 10093
+    },
+    {
+      "path": "get-shit-done/workflows/validate-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "590277b7506c809105866dfc3bd4faf676c6c158",
+      "size": 5438
+    },
+    {
+      "path": "get-shit-done/workflows/verify-phase.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59db27f72f0483266a2ec6ff932a8f24ea018bed",
+      "size": 10417
+    },
+    {
+      "path": "get-shit-done/workflows/verify-work.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43dc72ecdc827f878a2985017180b72fb0d4d807",
+      "size": 17656
+    },
+    {
+      "path": "gsd-file-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23675c1b16a2c893e31eaac03e8d75e6cda16e68",
+      "size": 23564
+    },
+    {
+      "path": "hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ad6a2391a366213313e447d654afbe87c0c3603"
+    },
+    {
+      "path": "hooks/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "751027e48291b2844cb05e383e7d30d83f498e50",
+      "size": 21213
+    },
+    {
+      "path": "hooks/gsd-check-update.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62b535db2a715b21b38a690844d53f0d1e934e2c",
+      "size": 4310
+    },
+    {
+      "path": "hooks/gsd-context-monitor.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a89bc596d8cd0dbf6616c15a3cebc31a4ffa0dd4",
+      "size": 6051
+    },
+    {
+      "path": "hooks/gsd-prompt-guard.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a390f59c358d0dc17a85496cb18608d837547ea0",
+      "size": 3438
+    },
+    {
+      "path": "hooks/gsd-statusline.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eb1638a4cbb71d82cf48fafdb35c77da2c2d1cd",
+      "size": 4704
+    },
+    {
+      "path": "hooks/gsd-workflow-guard.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88160535f037537444945442443c3c2e246c06ed",
+      "size": 3357
+    },
+    {
+      "path": "hooks/pre-bash-check.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "62df458512f7d70d40432580e0032445549502ec",
+      "size": 1445
+    },
+    {
+      "path": "hooks/pre-write-validate.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2e738b3a9efe6af1e646213a3060cf64f88e2b21",
+      "size": 1928
+    },
+    {
+      "path": "hooks/prompt-context.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d0622924868bdd33cc2c939aa2de40a61f104fe6",
+      "size": 1209
+    },
+    {
+      "path": "hooks/run-hook.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19bed80400eccebdac7f556a0a5a98512df7f639",
+      "size": 1776
+    },
+    {
+      "path": "hooks/secret-scan.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a5d6450369751503dd228edb79fed6a9caf168d5",
+      "size": 1618
+    },
+    {
+      "path": "hooks/session-end-repo-health.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0a2e0751d183fb1981d0f62b6ad34b0af577db7c",
+      "size": 7058
+    },
+    {
+      "path": "hooks/session-start-context.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aa3eb7e6a6cbba209f7cca5c9de38749f975600e",
+      "size": 679
+    },
+    {
+      "path": "hooks/session-start-pull.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5daf3937d1a12267f873ce10b2fa11409368b6b3",
+      "size": 1103
+    },
+    {
+      "path": "hooks/session-start-repo-health.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "781a1727524ac3437d5bf54cce10fb4e1f6da56b",
+      "size": 5887
+    },
+    {
+      "path": "hooks/session-stop-summary.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0c49b46d10c757de1b909be39a5435a6b7f74de8",
+      "size": 2627
+    },
+    {
+      "path": "hooks/statusline.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a9bff39ed08df5de378a9edfb20d3c695f78da4b",
+      "size": 772
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "729ac4d93b7f2d9be36b44525f02ff6555f9383a",
+      "size": 20
+    },
+    {
+      "path": "plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e777651b6e383f51e21f42a60cb44264b34f7c15",
+      "size": 2141
+    },
+    {
+      "path": "plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d7de31f0940e6f248ffd9f2506055194ca1da08"
+    },
+    {
+      "path": "plugins/blocklist.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f66dbecef5bf46782aeeaa3b34ff3383db029aa",
+      "size": 414
+    },
+    {
+      "path": "plugins/local",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fde68360076c34ca21a022d6d68cb2b4e8441d28"
+    },
+    {
+      "path": "plugins/local/ralph-wiggum",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4df67f8b62209bc117eb986e545805d38e155379"
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/.claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00a3969bbe594c304c7b720ebea9b612ff3f94ee"
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec19b4012acbb9770c07e8e2710066a812977dda",
+      "size": 353
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "872332ea8a79ed270c0f1b9b27e109a8ad1eca29",
+      "size": 5431
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "221301e61ccd8a01f3bf46c293de2af127445e88"
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/commands/cancel-ralph.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d192b68ddd4ff76aa42ccfd95d271f7c52831ed",
+      "size": 759
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/commands/help.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "393c662112e8e2b01b1a6eb585c2645c421e8e44",
+      "size": 3240
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/commands/ralph-loop.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af41a74caafcd76c654837200a62f6eb676087fd",
+      "size": 2065
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ded21bdb2df6a2ec8ac0dd923749a21a4950edc"
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/hooks/hooks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "733e87037c4b0539db2cc67c2dda9cf9ca047ac0",
+      "size": 341
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/hooks/stop-hook.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "232dd50db5b7b4dbbee8a7df53180979cb9641e7",
+      "size": 6968
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/hooks/stop-hook.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9aa611c1041b329a4be20545c3c4d12b26ae5727",
+      "size": 6564
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe97cf9a50ca74ba373493132072f41265b4fdf2"
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/scripts/setup-ralph-loop.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b0c894a70959a7d8915b56254254a8c3b428dce",
+      "size": 6409
+    },
+    {
+      "path": "plugins/local/ralph-wiggum/scripts/setup-ralph-loop.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e334f4b6e554f4712636d52f7968c291a045257",
+      "size": 5396
+    },
+    {
+      "path": "rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "02229e430259ad116c5429ab3d18f00b0ad5bdca"
+    },
+    {
+      "path": "rules/api-routes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0452bb257ce81a5faf8482a19d080f13cbd6fe4",
+      "size": 166
+    },
+    {
+      "path": "rules/cpp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe93ec3d5b259491a1a7f6c71272c3817cf3ac7",
+      "size": 698
+    },
+    {
+      "path": "rules/flutter-dart.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71c4debb235c79800d3b5cd99b5f9d08c4d325a6",
+      "size": 732
+    },
+    {
+      "path": "rules/go.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1293f650b0c00188a00fcb0ad59d210b0bb13a7e",
+      "size": 545
+    },
+    {
+      "path": "rules/java-kotlin.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "382ff8e5ff0c7aaf1a7b51c6272b205e69a58645",
+      "size": 578
+    },
+    {
+      "path": "rules/python.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76a0500da75d40fcd90dac2b79a7a38a3b2bc155",
+      "size": 174
+    },
+    {
+      "path": "rules/rust.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fad11cf371ffa606c6a8715388cd00bacd0a6bd2",
+      "size": 559
+    },
+    {
+      "path": "rules/swift-ios.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad953be90f84302a27e6c26a5b04cab377652055",
+      "size": 666
+    },
+    {
+      "path": "rules/typescript-react.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d8999d17ec830ca9bafc481692407a2142cdb06",
+      "size": 226
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7afcf413168261285401756a71e0dfd4e66d8bf7"
+    },
+    {
+      "path": "scripts/README-sync-scripts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46df1cc2cd3f1efb72ab416f48dc1aa34251027d",
+      "size": 3095
+    },
+    {
+      "path": "scripts/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc0bfbb8ec06182b715eb219910ef390909b9b6c",
+      "size": 5778
+    },
+    {
+      "path": "scripts/fix-marketplace-paths.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78e619fdc33ef212cc3db0f41a64149880fe3856",
+      "size": 3906
+    },
+    {
+      "path": "scripts/fix-plugin-line-endings.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6de0f4a59013c7c2345dae6f2b0e2237d36c81bb",
+      "size": 2542
+    },
+    {
+      "path": "scripts/fix-plugin-line-endings.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a72abdc79ed6f334784482079448de2a7d18382",
+      "size": 2573
+    },
+    {
+      "path": "scripts/fix-remotes.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f69696402e1037087c48412d9c74dd04d1b476a0",
+      "size": 9788
+    },
+    {
+      "path": "scripts/force-sync-repos.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fe93eddc8705effc0e1d18abf92232fef5ed6957",
+      "size": 12837
+    },
+    {
+      "path": "scripts/generate-counts.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5df8691f324c86821727d25555e45eb8390b10b9",
+      "size": 14525
+    },
+    {
+      "path": "scripts/generate-showcase-images.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3883c4b9ad1f92fd636a90355f76e05ed6100896",
+      "size": 8566
+    },
+    {
+      "path": "scripts/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ebd465f1a47db04984a02aaf02d00a7dc727bb3"
+    },
+    {
+      "path": "scripts/hooks/commit-msg.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "224f08e7c0794cb57e510465a1c71155c2c03902",
+      "size": 2041
+    },
+    {
+      "path": "scripts/hooks/pre-commit.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08253aad54f304a4dcabc548237ac26b6b0db356",
+      "size": 4271
+    },
+    {
+      "path": "scripts/hooks/pre-push.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6faa1fbf9ba328b23d767015eb82956f3c9fda98",
+      "size": 3222
+    },
+    {
+      "path": "scripts/hooks/session-start.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1a0084517ee1773772ee9fe843d299623c071363",
+      "size": 4218
+    },
+    {
+      "path": "scripts/init-marketplaces.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a5defd056e18d4be385c8b3b43aafc8f8038ad71",
+      "size": 7841
+    },
+    {
+      "path": "scripts/install.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "82efb02b6e67af5581fe3b65afe3cbc0ce6e0ac7",
+      "size": 9388
+    },
+    {
+      "path": "scripts/regenerate-index.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff65948098c4353432b3a0eb3f380216cb3c234e",
+      "size": 2991
+    },
+    {
+      "path": "scripts/setup-hooks.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5841adcb268658ea9ba1e357ed0880fcfc6ecfcd",
+      "size": 860
+    },
+    {
+      "path": "scripts/setup-new-machine.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e343c813fd5a1294817f207b50c04566e1cb8810",
+      "size": 9913
+    },
+    {
+      "path": "scripts/update-counts.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb2d23a91dec91720afe29f6555d212c5564f5d0",
+      "size": 266
+    },
+    {
+      "path": "scripts/update-external-repos.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94562c5637f4a126f2f34cfdb34ab9ec1c5b30e4",
+      "size": 1918
+    },
+    {
+      "path": "scripts/update-marketplaces.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48df2edbf034e3770ae1ec86b51add6a568bd4ec",
+      "size": 871
+    },
+    {
+      "path": "scripts/update-plugins.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa019d5a6484bf4d26940db6db4150d30b726f82",
+      "size": 3349
+    },
+    {
+      "path": "settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5207fb0c748b5c5da780de50bc06bd5088071f17",
+      "size": 8808
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a21503544ef6402f5932a7fab4feae3a4cf35e90"
+    },
+    {
+      "path": "skills/EXPERT-SKILLS-GUIDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6bd6a226edb5d63a0caaf4595c1432fa382a751",
+      "size": 24157
+    },
+    {
+      "path": "skills/MASTER_INDEX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac8644f5178d16096d0c90cca3eff5dfe896dbb2",
+      "size": 13171
+    },
+    {
+      "path": "skills/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b682057a7f9d7997f8f0f17b7067b6eb12c1e99",
+      "size": 24892
+    },
+    {
+      "path": "skills/_shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "341cb52f9043b0b2546edcf888e7cb5670ec66aa"
+    },
+    {
+      "path": "skills/_shared/CODE_REVIEW_STANDARDS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26723f6f9bf302bbe03ddadd63d6dbc1f69f4c57",
+      "size": 4476
+    },
+    {
+      "path": "skills/_shared/DESIGN_PATTERNS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fae6d23eb9b1a0e2712a1a5b74b9a8ef8700b25a",
+      "size": 5295
+    },
+    {
+      "path": "skills/_shared/UI_INSPIRATION_SOURCES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41abc652fae08b2d8d09fd56fa05267de18c6276",
+      "size": 8754
+    },
+    {
+      "path": "skills/_shared/UX_PRINCIPLES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2377acaec30d53592b19cc7d16ee1480c489537f",
+      "size": 6252
+    },
+    {
+      "path": "skills/accessibility-a11y",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dac07c97ae68720b5e67acfe6cc95957298e8b76"
+    },
+    {
+      "path": "skills/accessibility-a11y/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56ef4d15fe21929eaae44d031f8e4f049700abc7",
+      "size": 16956
+    },
+    {
+      "path": "skills/agent-teams",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41a578db47b7f7ecc287c1aee8bdba0eed8fce9a"
+    },
+    {
+      "path": "skills/agent-teams/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff884474d10112926dfb862520612bda4fb8c2af",
+      "size": 2918
+    },
+    {
+      "path": "skills/ai-ml-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70ef5baf78210c4670837f5594d152844364552f"
+    },
+    {
+      "path": "skills/ai-ml-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fccc457f3d1230b64b3307978ab4b1307c7fd90",
+      "size": 17868
+    },
+    {
+      "path": "skills/ai-policy-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fd1876ffb8375f97815418fe80f115f8d5d7dad"
+    },
+    {
+      "path": "skills/ai-policy-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c613d88243855e9d338f5095b68d19116eb49490",
+      "size": 12452
+    },
+    {
+      "path": "skills/android-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20fa610927a7a3e445e8f740091b4bfd8064b92e"
+    },
+    {
+      "path": "skills/android-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e2d6f26a81ff705e37b3baafe616c4cf3ecebf3",
+      "size": 18268
+    },
+    {
+      "path": "skills/api-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2a3a43904f9d2f879dacb935afb0edfe8b7a300"
+    },
+    {
+      "path": "skills/api-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "021398de80fd21c3afa5ba64d4d2b2dfd3593eb6",
+      "size": 9992
+    },
+    {
+      "path": "skills/application-security",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e829b72533ce848a03319f83b82e804d5bc129d"
+    },
+    {
+      "path": "skills/application-security/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9173e522133d737f8e66bf9128f14d49ce535bb0",
+      "size": 5432
+    },
+    {
+      "path": "skills/ar-vr-xr",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de83dc2048ef4dfe8181081d13a03fb268feb909"
+    },
+    {
+      "path": "skills/ar-vr-xr/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62d9e1f061a385aef12a678a4778d78830b7b794",
+      "size": 3118
+    },
+    {
+      "path": "skills/audio-production",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63cec42c549b5ff3910b2ef68b9d1f31f87db768"
+    },
+    {
+      "path": "skills/audio-production/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c02b44202e97756846858587e2b2d97c6559b48b",
+      "size": 17017
+    },
+    {
+      "path": "skills/authentication-patterns",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3bc76c8105f3a64ff2f097fd38fbd3e6e88e06c"
+    },
+    {
+      "path": "skills/authentication-patterns/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe1d35e5f38afd5b11f9bfd30af2bceabee6f01a",
+      "size": 17460
+    },
+    {
+      "path": "skills/auto-claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d433b4b930158821a967aa4302852c5d9caaf69"
+    },
+    {
+      "path": "skills/auto-claude/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e8b2c7cd1994ee85579e4f11068488ee20fea2b",
+      "size": 4194
+    },
+    {
+      "path": "skills/battle-card-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfe629c138c930dcecc22af117ba19b89bc1eed7"
+    },
+    {
+      "path": "skills/battle-card-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f3c5ab0b2eddf1c08889aaf3ffe077c0cdfb207",
+      "size": 11188
+    },
+    {
+      "path": "skills/blockchain-web3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d59d8ceeea565e6d87ceb271f91c3cf1ae2ccd70"
+    },
+    {
+      "path": "skills/blockchain-web3/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "687022e3b0b3cfc9e5d7ae14bd64dd8ce1564267",
+      "size": 2937
+    },
+    {
+      "path": "skills/brand-identity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e6bd6691b92880f9dc31872519a84a0d3581642"
+    },
+    {
+      "path": "skills/brand-identity/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7e40450c3706185285177b8d282214210e209f0",
+      "size": 17580
+    },
+    {
+      "path": "skills/business-strategy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a9714ae51f4bbab413e81fca172cdc19a43063f"
+    },
+    {
+      "path": "skills/business-strategy/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23dbd65396b26147837e8428b78956d7761c35f8",
+      "size": 11012
+    },
+    {
+      "path": "skills/business-strategy/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03b0c58542b4b94ab3bc6b0d7e0c77e451e678bd"
+    },
+    {
+      "path": "skills/business-strategy/references/corporate-strategy-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7db8c80602c99539df2addacb980cd676f5e52ca",
+      "size": 69216
+    },
+    {
+      "path": "skills/career-path-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30543628f103e40322489d81070c819239a502f9"
+    },
+    {
+      "path": "skills/career-path-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7ac37ec6acb814a2923e6538aaa9b9a37aa3bc0",
+      "size": 15836
+    },
+    {
+      "path": "skills/case-interview-practice",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52e77a8e8c49c90f5626e136c8ef39c609d84eca"
+    },
+    {
+      "path": "skills/case-interview-practice/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "199c051ff296c56c7ace13de8c00a68313c51ddb",
+      "size": 15279
+    },
+    {
+      "path": "skills/codebase-documenter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c73fde2246f4bfec48def98f8a9c6bf34004517"
+    },
+    {
+      "path": "skills/codebase-documenter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be838e689d2de0593233a85d15840ea1b1b9b87f",
+      "size": 4622
+    },
+    {
+      "path": "skills/codebase-documenter/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b51b0ee53817c38fb66e9e3e0d49fa5ae8a5250"
+    },
+    {
+      "path": "skills/codebase-documenter/assets/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a68d9ade6d7fa1bd3c4c4291949c154302408a12"
+    },
+    {
+      "path": "skills/codebase-documenter/assets/templates/API.template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "126a18b43303b2d0a72e697897abd3de449ad050",
+      "size": 13829
+    },
+    {
+      "path": "skills/codebase-documenter/assets/templates/ARCHITECTURE.template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb6082e967901800387ac63c2782e8e864572509",
+      "size": 13675
+    },
+    {
+      "path": "skills/codebase-documenter/assets/templates/CODE_COMMENTS.template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c457cc0aac2916bad8c6b9fd047172e55abc591",
+      "size": 15648
+    },
+    {
+      "path": "skills/codebase-documenter/assets/templates/README.template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7708daacb6bfcba6ae847644db0c09676a1164b",
+      "size": 5554
+    },
+    {
+      "path": "skills/codebase-documenter/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c77d49b88074f22c578e39b842c80703d551e0ab",
+      "size": 263
+    },
+    {
+      "path": "skills/codebase-documenter/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58955f6c22816ea170cd6c2f246d6d23aa37e42c",
+      "size": 229
+    },
+    {
+      "path": "skills/codebase-documenter/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b972fa27108ec607ddb8b5d95f6ced1cea648c6e"
+    },
+    {
+      "path": "skills/codebase-documenter/references/documentation_guidelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b84edce5594a140931cee884071018984664c9fa",
+      "size": 14536
+    },
+    {
+      "path": "skills/codebase-documenter/references/visual_aids_guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ce1c2fcbdd8bc58bb59c1f1c73cd2c4db38d812",
+      "size": 25299
+    },
+    {
+      "path": "skills/compliance-engineering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de95596c0f33f76725773c38719cbd4d333e7045"
+    },
+    {
+      "path": "skills/compliance-engineering/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bf150cc032acd285615397757eb01860295ca9a",
+      "size": 3972
+    },
+    {
+      "path": "skills/content-repurposer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03ec3bcfa91d9c04d0e510dda8f91b063a49a053"
+    },
+    {
+      "path": "skills/content-repurposer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5249d41d3de346d9787913c32373d16cedf1e6e0",
+      "size": 9655
+    },
+    {
+      "path": "skills/contract-redliner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "228cdd71bb25294a2769aa1f9a115f401dae27ed"
+    },
+    {
+      "path": "skills/contract-redliner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62eaad4ffb04767466ca7351b76a8e0d508b9218",
+      "size": 14908
+    },
+    {
+      "path": "skills/core-workflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14f51493ba9efaeffa853357fe43bea73e05e63f"
+    },
+    {
+      "path": "skills/core-workflow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e052162d70e6526f41c7a7ee628bb89aab9a8330",
+      "size": 9752
+    },
+    {
+      "path": "skills/course-material-creator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1aedaeda9af7e2496ddf778ddf4fd81467d3862"
+    },
+    {
+      "path": "skills/course-material-creator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d80add7a3372c901d2f103d105df787edd8cb6",
+      "size": 11101
+    },
+    {
+      "path": "skills/customer-persona-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbb341c659148ef4ef40f18017dc448fd737132b"
+    },
+    {
+      "path": "skills/customer-persona-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7786ab266fd1e6bfa2140c84214ad454d44e321f",
+      "size": 11897
+    },
+    {
+      "path": "skills/customer-success",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b6a987901004e05462cb41d24ed0cb9fc7e20e1"
+    },
+    {
+      "path": "skills/customer-success/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4063dc72b87ef21d5a9d9ac7b52d05dc37584c87",
+      "size": 14944
+    },
+    {
+      "path": "skills/data-engineering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed5c4916c78e118981276351a3740fd0a0c17e9d"
+    },
+    {
+      "path": "skills/data-engineering/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43a05d95181416c6c63747258621c5ba314181ee",
+      "size": 3370
+    },
+    {
+      "path": "skills/data-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b848e8db0ffbcce39fc20f6bd3fe836e136b880"
+    },
+    {
+      "path": "skills/data-science/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cbacb7911824b80cd8025205052329a26e90db3",
+      "size": 9138
+    },
+    {
+      "path": "skills/data-science/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "641e4b3708b449301c25bed7e1494bc483655065"
+    },
+    {
+      "path": "skills/data-science/references/data-science-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91c20ce88cf070e87ef85374f9994175c672d9bf",
+      "size": 40287
+    },
+    {
+      "path": "skills/data-science/references/ml-pipelines.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33f99151dd53a072d26831eb64dbfe460e1d0fe4",
+      "size": 2332
+    },
+    {
+      "path": "skills/data-science/references/statistical-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83df00f0fb6bfcf79f01b623ef747d5ccec51bdb",
+      "size": 2007
+    },
+    {
+      "path": "skills/database-expert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0b730c766eada79869b5d08055667216d50a74a"
+    },
+    {
+      "path": "skills/database-expert/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5692bcba60ba319c8ce99368d204f52206f30a26",
+      "size": 12877
+    },
+    {
+      "path": "skills/debate-practice-coach",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e232ac0025ed9311e5dedde4beea0c75b39e589a"
+    },
+    {
+      "path": "skills/debate-practice-coach/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d817e8f27c44680f64a1946e93fa492ebfaa578d",
+      "size": 11943
+    },
+    {
+      "path": "skills/debug-systematic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eab88a24cb6116de86800043eba55fff7ee7d5f2"
+    },
+    {
+      "path": "skills/debug-systematic/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ac6ecad695d5f54145b074bbdff65296cc21e8b",
+      "size": 5375
+    },
+    {
+      "path": "skills/devex-sdk-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1351a2574fd4b8d86f2a9e8dc6a3f43e51452902"
+    },
+    {
+      "path": "skills/devex-sdk-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c8d7d4e871ef5817620d595b629c7388cdfb75f",
+      "size": 3717
+    },
+    {
+      "path": "skills/devops-cloud",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c356ef7a2f113bb00e37e19d4cfd3dc90e968df2"
+    },
+    {
+      "path": "skills/devops-cloud/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab732fdec79eb95fa91f83f36ea9bf01e7bd5d53",
+      "size": 12096
+    },
+    {
+      "path": "skills/document-skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1e5e2e49d224795afa2b4c38af2ef4c3ee54d60"
+    },
+    {
+      "path": "skills/document-skills/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "846d415ce53eaf4a953e74365abcc12dd87ff9e1",
+      "size": 1889
+    },
+    {
+      "path": "skills/document-skills/docx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2bb035fad7d5ac87528b986c6dcb9f00cb6b5d5a"
+    },
+    {
+      "path": "skills/document-skills/docx/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/document-skills/docx/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cfc092ef252a450b636de856a29a68864c75c49",
+      "size": 10167
+    },
+    {
+      "path": "skills/document-skills/docx/docx-js.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eaea86fd8c13793b35d049fab2eb950259329a2",
+      "size": 17940
+    },
+    {
+      "path": "skills/document-skills/docx/ooxml.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa59c75c4cbd9af4333ecacfec936f93cb142284",
+      "size": 23597
+    },
+    {
+      "path": "skills/document-skills/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc5d7258e7d5a69ffc818cdc55dc6765af395315",
+      "size": 251
+    },
+    {
+      "path": "skills/document-skills/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f896049961241d66eabd7d0d782ca10710a10233",
+      "size": 221
+    },
+    {
+      "path": "skills/document-skills/pdf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66d248c9dff0fc04b8adfae9f6b27064736a570c"
+    },
+    {
+      "path": "skills/document-skills/pdf/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/document-skills/pdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "decb4a8f4c7dc561e6b94fd64867baec946319f8",
+      "size": 7432
+    },
+    {
+      "path": "skills/document-skills/pdf/forms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f70154c7ee9f1e8c5df0870a58235db51509347f",
+      "size": 9477
+    },
+    {
+      "path": "skills/document-skills/pdf/reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9c7c4ef78700ff215930a81388d12562f66b5bf",
+      "size": 16214
+    },
+    {
+      "path": "skills/document-skills/pptx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1aabeebe7d52df1c96d3ed2cef2da52fd56f3e0"
+    },
+    {
+      "path": "skills/document-skills/pptx/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/document-skills/pptx/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29bdc1e69c7752f4fb233918348486a32804bf5c",
+      "size": 25411
+    },
+    {
+      "path": "skills/document-skills/pptx/html2pptx.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b0fa72e8a67e28ccade31606f5c9691f4fb53d4",
+      "size": 20412
+    },
+    {
+      "path": "skills/document-skills/pptx/ooxml.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ac9fd80698ed63e61d437c4625904c3d12e699d",
+      "size": 10406
+    },
+    {
+      "path": "skills/document-skills/xlsx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ada043eaffc24cde999e17d866a6bd79ccdaaec8"
+    },
+    {
+      "path": "skills/document-skills/xlsx/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467
+    },
+    {
+      "path": "skills/document-skills/xlsx/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4347a38a39177dbcd3506834041cc96f1f3ccc60",
+      "size": 10614
+    },
+    {
+      "path": "skills/document-skills/xlsx/recalc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102e157b0b6392090b2ec3e602ee8fe37fe6c7a3",
+      "size": 6408
+    },
+    {
+      "path": "skills/edge-computing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31fb6a97f51a59c617f78b6f442a6cee3b9d222c"
+    },
+    {
+      "path": "skills/edge-computing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "097d552ecc39feddb3ef8e49e2f734737b8f2b02",
+      "size": 3145
+    },
+    {
+      "path": "skills/electron-desktop",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "180781f7cef4c0818787e570d42c69208c8063ae"
+    },
+    {
+      "path": "skills/electron-desktop/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9053a78df04f24b3a8b05c27813ddd950251c56e",
+      "size": 10720
+    },
+    {
+      "path": "skills/email-systems",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "529ae07025ef739aeafcdf66938de483007860a9"
+    },
+    {
+      "path": "skills/email-systems/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d4d21acfd6da31f49796d90db875cc9f8d0d305",
+      "size": 17526
+    },
+    {
+      "path": "skills/embedded-iot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c2a225f77ed6010cd6bdbf231d7663e40efc39b"
+    },
+    {
+      "path": "skills/embedded-iot/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6fa9e49e9f6ffb1e6e0a7dda2744fe180904334",
+      "size": 3331
+    },
+    {
+      "path": "skills/event-driven-architecture",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ff55b63a2d3967d411a5f0d06dcb184dac2cff7"
+    },
+    {
+      "path": "skills/event-driven-architecture/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "144bb10b7dff992ae10c33e3fb943c70539ede5c",
+      "size": 16691
+    },
+    {
+      "path": "skills/event-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bc83eb5025643ccc594603fc62196fa053ee372"
+    },
+    {
+      "path": "skills/event-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d12d197315dda50cf841828d38b16f704b596fdc",
+      "size": 14799
+    },
+    {
+      "path": "skills/finance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df6ae22d54033069ccf180dc2e89d6b1f21b4cf2"
+    },
+    {
+      "path": "skills/finance/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ba3b4562fb6b222fd8ba3bbef32c15deacb3a4a",
+      "size": 12193
+    },
+    {
+      "path": "skills/finance/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94920f30afccdb837b906ceb31c17415dc64bfc6"
+    },
+    {
+      "path": "skills/finance/references/corporate-finance-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13b3a179aa5d2b23502f2118eaf56236e8078dba",
+      "size": 100179
+    },
+    {
+      "path": "skills/finance/references/financial-modeling-master.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83fb802fb843b7f1c8e48595f7aa46f0a3c23bdc",
+      "size": 75678
+    },
+    {
+      "path": "skills/finance/references/ma-due-diligence-specialist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6670dfbca207b013f8d9e40947220f3a54ba0ec1",
+      "size": 55305
+    },
+    {
+      "path": "skills/financial-scenario-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0786aa777ab37c90384c435064e45af45327e4b"
+    },
+    {
+      "path": "skills/financial-scenario-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a1d192b075431ee3ff7c41192a97d224ad083d3",
+      "size": 10983
+    },
+    {
+      "path": "skills/flutter-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71c732c3b0a4cbf8c2d9041fd5b1458d7b2df5f4"
+    },
+    {
+      "path": "skills/flutter-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ca757691d8e4c94753d762379dd3e6d11717e60",
+      "size": 14946
+    },
+    {
+      "path": "skills/frontend-enhancer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63905664f6cb4342befdc16c0fd27c7e056ae29a"
+    },
+    {
+      "path": "skills/frontend-enhancer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c179b923ffde19277d5a1dc70fdd1aa3a76cd04",
+      "size": 6203
+    },
+    {
+      "path": "skills/frontend-enhancer/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "021bf4f424abf1ccdc3c07fa5daff2c50d282c66"
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/animations.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e2811c9bca20bfff5a9007bca3f979fa5f2d734",
+      "size": 3682
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/button-variants.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e84114507a2a5d1586a6baa687848252dec909d7",
+      "size": 2659
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/card-variants.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff0ce74620c06781778c52ff2b0483909f2cefcf",
+      "size": 3172
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/input-variants.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b7e794ec8ff3b7fd2065b08139318a897c7a95e",
+      "size": 4514
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/layout-feature-grid.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13f3912a9c294c5cb70e286566232b8bcf85e3e8",
+      "size": 3305
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/layout-hero-section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24b9fcf6b58ce797d28ba3467487305c99fe15df",
+      "size": 5784
+    },
+    {
+      "path": "skills/frontend-enhancer/assets/utils-cn.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54b843e44ebc54456fac8f259e4e48217e348aa5",
+      "size": 582
+    },
+    {
+      "path": "skills/frontend-enhancer/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab03282d6980912068c3da69ddec892d3de6b060",
+      "size": 257
+    },
+    {
+      "path": "skills/frontend-enhancer/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37eef340c0415286a950e857c7f90b5360b186cd",
+      "size": 225
+    },
+    {
+      "path": "skills/frontend-enhancer/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc4afe317b0c5b612fc8b9d43bdc99af5fe44930"
+    },
+    {
+      "path": "skills/frontend-enhancer/references/color_palettes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6222586ae005ec53168a404f1bb6e4823f33f393",
+      "size": 3934
+    },
+    {
+      "path": "skills/frontend-enhancer/references/design_principles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "706b5e860ee807c0de0ba71792f8239890782a1f",
+      "size": 4450
+    },
+    {
+      "path": "skills/fundraising-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4603bc169ac9f04d97a847f9e92a811c4596907"
+    },
+    {
+      "path": "skills/fundraising-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "960b7ef32037e65dd479c4f3e4b6e26a6ff6c143",
+      "size": 10190
+    },
+    {
+      "path": "skills/game-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bd7fd30b15214f57ad4e7516cfcc0f84cd91fe2"
+    },
+    {
+      "path": "skills/game-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c11d180400f3844490866a302e34264308682cca",
+      "size": 16130
+    },
+    {
+      "path": "skills/generic-code-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c835615b421c769465d2d4a3194bc9d8ec47bc6"
+    },
+    {
+      "path": "skills/generic-code-reviewer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b24539dfe4ed970685a35d482321be26ebe7b32",
+      "size": 4027
+    },
+    {
+      "path": "skills/generic-design-system",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3d48693bf1a146eddef81d3775e2e679eefb1bd"
+    },
+    {
+      "path": "skills/generic-design-system/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300f74fb915792c7dbedccc95fb2e657a8a384bc",
+      "size": 5768
+    },
+    {
+      "path": "skills/generic-feature-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2568f3fb50a9ddf689fe44ee731780bd74d7206"
+    },
+    {
+      "path": "skills/generic-feature-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2aa3cc00ae7b36bc484878fa634910be6253a81",
+      "size": 6623
+    },
+    {
+      "path": "skills/generic-fullstack-code-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c50abecf1ab2586f57fe86fcce35cc9d930d3e04"
+    },
+    {
+      "path": "skills/generic-fullstack-code-reviewer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b543d44af57c9ecb00c77b793a0acc6da132ff2e",
+      "size": 3631
+    },
+    {
+      "path": "skills/generic-fullstack-design-system",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e3cd011a3cd3da8a9e878ca915a297c96152777"
+    },
+    {
+      "path": "skills/generic-fullstack-design-system/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f3c80bf58659205047d7e963c81f137054ca94c",
+      "size": 3882
+    },
+    {
+      "path": "skills/generic-fullstack-feature-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5655bc0185d4771292830e2542f9cf96c7ec4114"
+    },
+    {
+      "path": "skills/generic-fullstack-feature-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2d7e81da6a7b46599740fc90a0414500dbeae84",
+      "size": 4465
+    },
+    {
+      "path": "skills/generic-fullstack-ux-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07d6975831cabd48feac5ce74d1e0edc808f10cd"
+    },
+    {
+      "path": "skills/generic-fullstack-ux-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "850e33c1b3fdeaa4550795a4174bc98dcdf23d1d",
+      "size": 5301
+    },
+    {
+      "path": "skills/generic-react-code-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68b551a214d0892115954dbbd6dfe774c88d6adc"
+    },
+    {
+      "path": "skills/generic-react-code-reviewer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "056ea1c121f71313a17bfc23f8bd68bee2d78696",
+      "size": 4663
+    },
+    {
+      "path": "skills/generic-react-design-system",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddbdc0b95bf3dcb5a3712d04508a58befe3a1fb3"
+    },
+    {
+      "path": "skills/generic-react-design-system/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33cc55b91c50aeb519b22ca1707eae3cc8e953e7",
+      "size": 5518
+    },
+    {
+      "path": "skills/generic-react-feature-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dea71fac3694b1816bb4d418dd488414ea893516"
+    },
+    {
+      "path": "skills/generic-react-feature-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53fbf89c35701b3d431bea82ee8773103b20c10a",
+      "size": 7586
+    },
+    {
+      "path": "skills/generic-react-ux-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eddf56145dbf786096782694e153f4525a6e36ea"
+    },
+    {
+      "path": "skills/generic-react-ux-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8cd8bf744899fbc79f2459ce7ee571fa93fb653",
+      "size": 8800
+    },
+    {
+      "path": "skills/generic-static-code-reviewer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "743256be883f44f4c6b0590d5c27a4e3f0b9ec2f"
+    },
+    {
+      "path": "skills/generic-static-code-reviewer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ace83fee8f70eb0655734b6f5c32ab7b8748728",
+      "size": 3238
+    },
+    {
+      "path": "skills/generic-static-design-system",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be38625314c1c0715dc530eb876d935044f24704"
+    },
+    {
+      "path": "skills/generic-static-design-system/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45984f4b4b3d08e39eddab7a3f5503e09352499f",
+      "size": 3937
+    },
+    {
+      "path": "skills/generic-static-feature-developer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28d1c946663f57a179680691bbfc83cb52584cc2"
+    },
+    {
+      "path": "skills/generic-static-feature-developer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95c765b4fe1b055288dc4340518dcd91b87eb352",
+      "size": 4237
+    },
+    {
+      "path": "skills/generic-static-ux-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a60416bbfa1348d498e20c62cb6761b0b047e934"
+    },
+    {
+      "path": "skills/generic-static-ux-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f27e7542c1d9f6bf19d2044d70c8accd255f2759",
+      "size": 3824
+    },
+    {
+      "path": "skills/generic-ux-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3b10a6c859794c43ff3bcd83508be7d37e672df"
+    },
+    {
+      "path": "skills/generic-ux-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8f328b603425e96c6f3889f9da52d99a22414e2",
+      "size": 6684
+    },
+    {
+      "path": "skills/grant-proposal-builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7833e19ab23073d60f1be1ec4881293803259301"
+    },
+    {
+      "path": "skills/grant-proposal-builder/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adec0f7eedae2d4a3c393d939172c949e2080c18",
+      "size": 20068
+    },
+    {
+      "path": "skills/graphic-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed52d5e460e3dc52365afec1c911eae3fb6178a0"
+    },
+    {
+      "path": "skills/graphic-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cee9a6f6ec4c2ba2ca2a3dec850927b01938fbef",
+      "size": 10102
+    },
+    {
+      "path": "skills/graphql-expert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e88bcfbfe6b1a4a15a4d87b5afd54a56709302cf"
+    },
+    {
+      "path": "skills/graphql-expert/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c59ad83b68ccf3705c923a37b3466c85b58247c6",
+      "size": 14799
+    },
+    {
+      "path": "skills/growth-engineering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c09c5148a50531c94817ffecd8b743de63d4407c"
+    },
+    {
+      "path": "skills/growth-engineering/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c8104dbfbda95d83b1019c1899739f6c5236592",
+      "size": 4809
+    },
+    {
+      "path": "skills/health-wellness",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7180e43fb837742fb810ea900c3b244758aef00e"
+    },
+    {
+      "path": "skills/health-wellness/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc1810c7c0125ada4c1c136d968f7148270b7f0",
+      "size": 9744
+    },
+    {
+      "path": "skills/health-wellness/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eae0be84cb0d01ff7ca7da43c5a049c671db73b9"
+    },
+    {
+      "path": "skills/health-wellness/references/fortune50-workplace-health-wellness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01609b233a0dfbc06c5092ad5162d7879abae2c6",
+      "size": 34782
+    },
+    {
+      "path": "skills/health-wellness/references/health-wellness-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdb9c599325900046651a621f3adefb1540f5af5",
+      "size": 24774
+    },
+    {
+      "path": "skills/hr-talent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "379197d598b82f4bdb3b6cbfc7236ea1952f055f"
+    },
+    {
+      "path": "skills/hr-talent/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efc58d99f9b4d379fdfc20a6d444b181c84216da",
+      "size": 12985
+    },
+    {
+      "path": "skills/hr-talent/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ed4127e39ad7544c767d64d273f75feb13d3396"
+    },
+    {
+      "path": "skills/hr-talent/references/fortune-50-hr-strategist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97fab0ad38a79579f16daf9911f2ebd5b2f12729",
+      "size": 58991
+    },
+    {
+      "path": "skills/i18n-localization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5ce673754139fb9d09203e43cd2a45b8a4b5e91"
+    },
+    {
+      "path": "skills/i18n-localization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7a10d50755bc79c155a023fff23b202680a1c4d",
+      "size": 14055
+    },
+    {
+      "path": "skills/impact-report-writer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c7c992729b6ef79359f2d33e40ef62efd681670"
+    },
+    {
+      "path": "skills/impact-report-writer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ef3ef17db53d05376406c9933e3234c5148e300",
+      "size": 8978
+    },
+    {
+      "path": "skills/innovation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b231fd352516541aa0a1eec1adcb97befce7270c"
+    },
+    {
+      "path": "skills/innovation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "024d6421189f217393d78478e8f4944861e5f0ee",
+      "size": 10822
+    },
+    {
+      "path": "skills/innovation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22b8182e6d90d4d47222198c056914b06a26db9b"
+    },
+    {
+      "path": "skills/innovation/references/corporate-venture-open-innovation-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6452433a578959764fd0594c2ad468d785172a81",
+      "size": 36987
+    },
+    {
+      "path": "skills/innovation/references/innovation-management-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50dc66fdb365745c079d89d4009577771de15db4",
+      "size": 29746
+    },
+    {
+      "path": "skills/innovation/references/innovation-processes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2ad3947e6d112a3cf0284fcd2da0676acb44f1",
+      "size": 9604
+    },
+    {
+      "path": "skills/innovation/references/ip-strategy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a056609c5c27732a899ed434a953f92d81221ae",
+      "size": 11558
+    },
+    {
+      "path": "skills/investment-memo-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41ccfbd94dbffbe721c6648acc9daed13f4273f3"
+    },
+    {
+      "path": "skills/investment-memo-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caa3848c74e294068f1f1ec80cc0448ea7c262cd",
+      "size": 10227
+    },
+    {
+      "path": "skills/ios-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c7b3f49bec68f7d6de4335dd9d91e2106f87860"
+    },
+    {
+      "path": "skills/ios-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b8a56a8ddce25c0ab05e513423b22021f46a9f4",
+      "size": 15234
+    },
+    {
+      "path": "skills/kotlin-multiplatform",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5b2759102377e67264ecfe9fd2fd44575ddf5ce"
+    },
+    {
+      "path": "skills/kotlin-multiplatform/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8756136391deb3ad37d7ee58388c762d991c27",
+      "size": 6280
+    },
+    {
+      "path": "skills/leadership",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bb14d9d702973e9aa0a5cc53e2031aafd104374"
+    },
+    {
+      "path": "skills/leadership/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300cdac299e2a310db20a6c658ba70eecb0a3ad8",
+      "size": 11498
+    },
+    {
+      "path": "skills/leadership/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c80ed9d67695d579333c0d8211c6b5ad79388a8"
+    },
+    {
+      "path": "skills/leadership/references/fortune-50-executive-leadership.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f52e618bd110fd3c045552985cd2976f4e2b7a3",
+      "size": 67459
+    },
+    {
+      "path": "skills/learning-gap-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8763b0a84d3a2c76d39cbb41112460434d028749"
+    },
+    {
+      "path": "skills/learning-gap-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38f0ad0d28c692c100ccdcfc6ed961b7eceb8daa",
+      "size": 10231
+    },
+    {
+      "path": "skills/legal-compliance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acd574568b319c89cd3e8fb89056fef625b3b947"
+    },
+    {
+      "path": "skills/legal-compliance/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39fcbd59bbc48909abc402ba569c30ba437438c9",
+      "size": 13216
+    },
+    {
+      "path": "skills/legal-compliance/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ff346df770bb25c4fa54938e41fb37278df30fc"
+    },
+    {
+      "path": "skills/legal-compliance/references/legal-compliance-excellence-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe8d3e03ecf921d5078a5dd623047dcfa38a2e7",
+      "size": 108848
+    },
+    {
+      "path": "skills/literature-review-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb56d37e6e1c7b817321c455b83d29ccb170b736"
+    },
+    {
+      "path": "skills/literature-review-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "149b56e572b7121b53a03317321630d3f98fa59a",
+      "size": 15004
+    },
+    {
+      "path": "skills/llm-app-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3efe57a4e499a4fc1796b9542581b258a7fd7d25"
+    },
+    {
+      "path": "skills/llm-app-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "264fd51d3b6e290d1ce7d1e5802da2f0d8754351",
+      "size": 20264
+    },
+    {
+      "path": "skills/low-code-platforms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73405798a2ff1f75c3e33758be81c6a5016af30a"
+    },
+    {
+      "path": "skills/low-code-platforms/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1ff3da815dcb80bf9b4783be1686f9cecbb7389",
+      "size": 3130
+    },
+    {
+      "path": "skills/macos-native",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "784fe312de3ade738ce05a701adb0d9f311bfa4b"
+    },
+    {
+      "path": "skills/macos-native/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a08cb12a2ee4b8b8b990868ac558dd526903fdb4",
+      "size": 15366
+    },
+    {
+      "path": "skills/marketing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9700ffd5c325093faa7bd7986a39e92e898f0cf2"
+    },
+    {
+      "path": "skills/marketing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6b387a9aff79ea1963722679e09ef9259d2e209",
+      "size": 12328
+    },
+    {
+      "path": "skills/microservices-architecture",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4918a13d3d907d98780eed42c09796626ce7378"
+    },
+    {
+      "path": "skills/microservices-architecture/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a823ed81b966d963eda7e73ce99cf391e8dd4d8d",
+      "size": 21222
+    },
+    {
+      "path": "skills/mobile-cicd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36a80b48385391d7647a8cd0fa53e2fb8c16a5a5"
+    },
+    {
+      "path": "skills/mobile-cicd/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46e89301c36113f24a9af9f89b6c9fa847158dea",
+      "size": 6455
+    },
+    {
+      "path": "skills/monetization-strategy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3b48a0e396cf4d123ad3d3fc0cb0acf5b106e28"
+    },
+    {
+      "path": "skills/monetization-strategy/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fab5cace3670de19b53f8aca063b6ec629aa0b0f",
+      "size": 17796
+    },
+    {
+      "path": "skills/monitoring-observability",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "baa2b717e7d7755de44c2fe8954dcf9e675d2889"
+    },
+    {
+      "path": "skills/monitoring-observability/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c88f41a471277e8fafdf69207aaa4d14c299f94",
+      "size": 15028
+    },
+    {
+      "path": "skills/newsletter-creator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c341340d5caaa7dbb2156bebe7110cf57b4089a"
+    },
+    {
+      "path": "skills/newsletter-creator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8aeb6c8a5bd843adb74666af37a07a38fdb5536",
+      "size": 11139
+    },
+    {
+      "path": "skills/onboarding-guide-creator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f42e95d896d37e4139e9a6c515fa02b094597a3"
+    },
+    {
+      "path": "skills/onboarding-guide-creator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe9ec45fd2afb405475d19459ce0c0ce72761cf5",
+      "size": 13670
+    },
+    {
+      "path": "skills/operations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96c9994d86e11d4452b43c75c1389dec17d68ab6"
+    },
+    {
+      "path": "skills/operations/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfefe539ef6edb516a3da717f6058cebccdfd116",
+      "size": 13805
+    },
+    {
+      "path": "skills/operations/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0a4073c7c7953d29b5a5e066f937cb175eb91d28"
+    },
+    {
+      "path": "skills/operations/references/operations-excellence-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0806972e284049de3debee10987568a8332da69",
+      "size": 42646
+    },
+    {
+      "path": "skills/options-comparator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ab92e8ee4bec79b436291885bd7d91571c9d509"
+    },
+    {
+      "path": "skills/options-comparator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "422453803ea52e156d623ac5594f636dfc4567d0",
+      "size": 18646
+    },
+    {
+      "path": "skills/payment-integration",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e1af088e09710646a6872e3cf1cff0b54e2157e"
+    },
+    {
+      "path": "skills/payment-integration/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09d4e471a6f7936906de752bc908e01e07bfb769",
+      "size": 15561
+    },
+    {
+      "path": "skills/performance-engineering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "391d19cd5272c68bdbfbd475b8bb0b2e8a2f9ad5"
+    },
+    {
+      "path": "skills/performance-engineering/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b34abf564314b31d8300f59d38cee742bc5bd31e",
+      "size": 16365
+    },
+    {
+      "path": "skills/podcast-producer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b778439d57a7e5000ee0e635d15fe129a7a0bb9c"
+    },
+    {
+      "path": "skills/podcast-producer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a4b61ec75135c2c9389271d60fb42a24bc98189",
+      "size": 13338
+    },
+    {
+      "path": "skills/process-flowchart-designer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a42da4a47698d2099ecedaef0c58e85999f8987"
+    },
+    {
+      "path": "skills/process-flowchart-designer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82963c817b2ff53f9ac63e48557db29477ef973d",
+      "size": 11732
+    },
+    {
+      "path": "skills/product-analytics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bcc1265e16b41e5e38626530443603a0a63869c8"
+    },
+    {
+      "path": "skills/product-analytics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1325c76fdb1bd9e8bfcd252ac242abdfbab791f7",
+      "size": 14522
+    },
+    {
+      "path": "skills/product-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7eafa925b743866ad2ee5ee52c25d15f0f2e2bd2"
+    },
+    {
+      "path": "skills/product-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4004d475afaaaba5280e5d39cb9315a9b633e50",
+      "size": 11528
+    },
+    {
+      "path": "skills/product-management/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e233c4aa372cee6743eac4cebc1cedc2e502f5f9"
+    },
+    {
+      "path": "skills/product-management/references/analytics-and-experimentation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05fe85c16a54fe49e8eb45783d2d4ccdafb8056e",
+      "size": 11164
+    },
+    {
+      "path": "skills/product-management/references/customer-research-methods.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4295868dc3086d4da185147718712adca3f1207",
+      "size": 9028
+    },
+    {
+      "path": "skills/product-management/references/product-strategy-expert.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "627c58eb19c7340b90cd9609a7627381be9f3638",
+      "size": 27086
+    },
+    {
+      "path": "skills/pwa-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eac6bc2bc171534cd90357ea39aa5d2a483b50f6"
+    },
+    {
+      "path": "skills/pwa-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dca6230c1097846301550ef4db3216b0d5ae9a35",
+      "size": 12780
+    },
+    {
+      "path": "skills/rd-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a2f26e8bd11d531859825c6a3c497707135d7fc"
+    },
+    {
+      "path": "skills/rd-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9f1bc1d75802650b7f00f4596a23c7fac926024",
+      "size": 8033
+    },
+    {
+      "path": "skills/rd-management/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95c48ff314afa24c754589d8c0d2a14248da3c3b"
+    },
+    {
+      "path": "skills/rd-management/references/ip-strategy-tech-scouting-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb17f8d711fee69cffe35992f633412ef188f679",
+      "size": 34707
+    },
+    {
+      "path": "skills/rd-management/references/rd-portfolio-management-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daddf50d10476e364ff7d0232bbc60f8fc5f13d8",
+      "size": 39357
+    },
+    {
+      "path": "skills/rd-management/references/regulatory-clinical.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2689361f2f58cedd1e27867892ac11bf82bb9f8",
+      "size": 1553
+    },
+    {
+      "path": "skills/rd-management/references/research-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b86e326792883b5d3cd7171cf806cfc1648cdb7",
+      "size": 2410
+    },
+    {
+      "path": "skills/react-native",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b80e2bbc2e0fa8f1c5dd400f87c60a55845ae3c9"
+    },
+    {
+      "path": "skills/react-native/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75bcbf154b2c530623ac05c714c16d694bfd56ce",
+      "size": 15747
+    },
+    {
+      "path": "skills/real-estate-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a250556dd5acbd11f61c3d3d3e8b7743dd0d2bf"
+    },
+    {
+      "path": "skills/real-estate-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6b3d9957f437ed07eec6906571e64056231be72",
+      "size": 12309
+    },
+    {
+      "path": "skills/recipe-card-creator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d03e58fbb7c3f124398e014e904cfb9400c9788"
+    },
+    {
+      "path": "skills/recipe-card-creator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bc2f11297f4d9e16bd4cd9d188e0b0e614a3986",
+      "size": 14549
+    },
+    {
+      "path": "skills/research-presenter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0dfc90f63a6138773fba279b2185a1aa166ea6b"
+    },
+    {
+      "path": "skills/research-presenter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0d09818968889dbe82f3dcdb88c46d0cc815d3b",
+      "size": 18048
+    },
+    {
+      "path": "skills/risk-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f293710f87cc74fbced3cacf1c98527cbf22a04"
+    },
+    {
+      "path": "skills/risk-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04a076cd9202033b9d517ad2c7f559b93f97cd86",
+      "size": 7480
+    },
+    {
+      "path": "skills/risk-management/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c25fd053d38e342019f4efd47f80af3af618fc9"
+    },
+    {
+      "path": "skills/risk-management/references/business-continuity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afed9b41d20e15fc79e95ae4ceb87c17c6077ead",
+      "size": 1739
+    },
+    {
+      "path": "skills/risk-management/references/erm-framework.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fba4ff3b343ee1758278c4f213b4d3ad3409e48e",
+      "size": 1966
+    },
+    {
+      "path": "skills/risk-management/references/fortune50-risk-management.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d54b5f72e73019e0dcc88f8170c3a09dbe7c4d9d",
+      "size": 75845
+    },
+    {
+      "path": "skills/risk-management/references/insurance-risk-transfer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12b4e0ed0d9ae8a32609f74f8ab049c23aef426e",
+      "size": 1576
+    },
+    {
+      "path": "skills/sales",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77e406dec96c2e075eed0065762b28546c245934"
+    },
+    {
+      "path": "skills/sales/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5f528ff4d342d0e418f4ac937430d8a0fb347b4",
+      "size": 8995
+    },
+    {
+      "path": "skills/sales/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6ca01291c3210f9430b207b9fbad3b3677e760c"
+    },
+    {
+      "path": "skills/sales/references/sales-enablement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f90bac9cfd3597facbd1cdabdec770eb44112b54",
+      "size": 1711
+    },
+    {
+      "path": "skills/sales/references/sales-methodologies.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "054bffd3005914487737adb777f4cfcc83faaf11",
+      "size": 2847
+    },
+    {
+      "path": "skills/security",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cabaa5083577098bdf0750f011a7d45c18f6509"
+    },
+    {
+      "path": "skills/security/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee8bcd15f03255ec614e411c91533c479ee5be57",
+      "size": 13337
+    },
+    {
+      "path": "skills/security/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93ca998b69c4766596ebbbd0a6b5040a6650841b"
+    },
+    {
+      "path": "skills/security/references/fortune50-information-security.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c661ffa17c3ca99e0918896c494c7787197a145b",
+      "size": 72827
+    },
+    {
+      "path": "skills/security/references/incident-response.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30a1d7ed67c64dcd4434c6b9908e53ed282b79e2",
+      "size": 1924
+    },
+    {
+      "path": "skills/security/references/security-frameworks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b0bc3338cb991b8d3f38bba776cf68088de811",
+      "size": 3187
+    },
+    {
+      "path": "skills/seo-analytics-auditor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b1c8f82a0c2e9cdb3079fd38cc7de8a5e5a652e"
+    },
+    {
+      "path": "skills/seo-analytics-auditor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "650eee06cbf09db82925c31f48b27b9e46f15635",
+      "size": 4815
+    },
+    {
+      "path": "skills/serverless-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a60c7e6ca4d7478c0e0f6fccc957a4ff79bef6c"
+    },
+    {
+      "path": "skills/serverless-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "664e2052b9f35821099ada652fd11be13badcc51",
+      "size": 15518
+    },
+    {
+      "path": "skills/startup-launch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3935ef526dd52c08589d107b6d3799776a8188de"
+    },
+    {
+      "path": "skills/startup-launch/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d3db32c4412b29f80d09f4bcb383720cdd9621b",
+      "size": 15288
+    },
+    {
+      "path": "skills/statistics-verifier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa2d59d59c70045ff08a27fd0c1b76cf29ec0d0e"
+    },
+    {
+      "path": "skills/statistics-verifier/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3beac901da307ed8c6261bab94e75cfbfc38172",
+      "size": 15763
+    },
+    {
+      "path": "skills/status-report-generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0335063cca89fce9f254c5ab7cb6174e2cf7157"
+    },
+    {
+      "path": "skills/status-report-generator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83759163c7dd5e12d6a20a7f975894a236ec29f5",
+      "size": 13319
+    },
+    {
+      "path": "skills/supply-chain-optimizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8eb5cdbba2927f779abf7ad2e9a76a395eb013e2"
+    },
+    {
+      "path": "skills/supply-chain-optimizer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fcd44e409a2f2efc8d13a22da1a08db92ee81ce",
+      "size": 12874
+    },
+    {
+      "path": "skills/sustainability-esg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e2267ffe10be76f84cd3447909ae43bb6cecb3b"
+    },
+    {
+      "path": "skills/sustainability-esg/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abd30f1866bf896a294a1a266fa01a374e390161",
+      "size": 6316
+    },
+    {
+      "path": "skills/sustainability-esg/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d4a6742782dcfaae59228268343a62655858329"
+    },
+    {
+      "path": "skills/sustainability-esg/references/carbon-circular-economy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "176645622de2ec424bf7bab00641118e751c8460",
+      "size": 3088
+    },
+    {
+      "path": "skills/sustainability-esg/references/esg-reporting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "898e9c709db9f679a57a6a98f7e46a1885a4ae54",
+      "size": 2851
+    },
+    {
+      "path": "skills/sustainability-esg/references/esg-sustainability-templates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d52de67e8f7fc1b38daedf82015fdaa2ef41a14a",
+      "size": 40535
+    },
+    {
+      "path": "skills/sustainability-esg/references/fortune50-esg-sustainability-strategy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a20351bca4534b2ef7c985f532b103e2d7f49233",
+      "size": 58750
+    },
+    {
+      "path": "skills/svelte-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bdd2a292eddeb07da5555049229401181c782600"
+    },
+    {
+      "path": "skills/svelte-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da58937b26ce79c1309bc9d1232fbb7d610135d1",
+      "size": 17320
+    },
+    {
+      "path": "skills/tauri-desktop",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0bc7eb0aaceb7714ea44887032a5b5d8c82b5c5d"
+    },
+    {
+      "path": "skills/tauri-desktop/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b713246c7ed6265bec928bc2854a67151891d213",
+      "size": 6272
+    },
+    {
+      "path": "skills/tdd-workflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7256a8d84f5ce6160bbfa9ad6fd938ee2d692a0c"
+    },
+    {
+      "path": "skills/tdd-workflow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "117845dcbff1acf6de2f6e543c72fca6094679ef",
+      "size": 5160
+    },
+    {
+      "path": "skills/tech-debt-analyzer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe0bd1f9dd4d8fcf11ac27d913788ba8cb5892b1"
+    },
+    {
+      "path": "skills/tech-debt-analyzer/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8edbd77c1250d3816bc25076746e998b59a25a8",
+      "size": 4734
+    },
+    {
+      "path": "skills/tech-debt-analyzer/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10a6f4d974ae3d7778fe55ba5aa39c99b754e8ab"
+    },
+    {
+      "path": "skills/tech-debt-analyzer/assets/ADR_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8907a52016f92a60541a41c704ee47838418d703",
+      "size": 2425
+    },
+    {
+      "path": "skills/tech-debt-analyzer/assets/DEBT_REGISTER_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b7ac055d60e97ab63a9c2862f6dde50df61b51e",
+      "size": 3606
+    },
+    {
+      "path": "skills/tech-debt-analyzer/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "078814f91754b0c585970d7e5cdc65ea1957907a",
+      "size": 260
+    },
+    {
+      "path": "skills/tech-debt-analyzer/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "007ca2a916c0a1f24f26934d740881c341fbc838",
+      "size": 227
+    },
+    {
+      "path": "skills/tech-debt-analyzer/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "554afda435f84772e5b3adf785738b668a987ba2"
+    },
+    {
+      "path": "skills/tech-debt-analyzer/references/debt_categories.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "132b75dc77f3a842bcbeaec5af7f3e972896aa45",
+      "size": 12330
+    },
+    {
+      "path": "skills/tech-debt-analyzer/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5eec64dcb32cfb1b9be3e84aa13b33aacd18c5a5"
+    },
+    {
+      "path": "skills/tech-debt-analyzer/scripts/analyze_dependencies.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99e1639c5aa261d27bc0b9744a2dfe809edc687d",
+      "size": 9120
+    },
+    {
+      "path": "skills/tech-debt-analyzer/scripts/detect_code_smells.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9bf4ba4928b73a6bae89086fe95417d23178e3d",
+      "size": 15061
+    },
+    {
+      "path": "skills/test-specialist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f06508213a07f098070ea2378ec59ed47d74d33d"
+    },
+    {
+      "path": "skills/test-specialist/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bba48078b4cb5098d3d84075be9332ca36d7341c",
+      "size": 14440
+    },
+    {
+      "path": "skills/test-specialist/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2519cecc1f748e7bf880a1406a7a1a3fed93cb2",
+      "size": 251
+    },
+    {
+      "path": "skills/test-specialist/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb379aadf2199a502efcd3d2e08a4540949fe8ea",
+      "size": 221
+    },
+    {
+      "path": "skills/test-specialist/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10bf4ff0f1cb7d95ad50668f45ce486f47d3cbcf"
+    },
+    {
+      "path": "skills/test-specialist/references/bug_analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20dbebbfa7ac986d58af8beb1cfde087fc5a5406",
+      "size": 13784
+    },
+    {
+      "path": "skills/test-specialist/references/testing_patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd95f48a97a90e152fba2cd6ab8679f62e2b7ca3",
+      "size": 7709
+    },
+    {
+      "path": "skills/test-specialist/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c816f0efbf521a99c6957f8149e951f611fc1857"
+    },
+    {
+      "path": "skills/test-specialist/scripts/analyze_coverage.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0ec4facf5b231162d17c1c02f317ccc435f699c",
+      "size": 4896
+    },
+    {
+      "path": "skills/test-specialist/scripts/find_untested_code.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0de9f0eb42b3d9b6352266ab453eda81488b5432",
+      "size": 6154
+    },
+    {
+      "path": "skills/travel-planner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9026ac36b9afa38fd68f44fd9328d7ffc13d7bb6"
+    },
+    {
+      "path": "skills/travel-planner/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb8d346d2c6b14111f1d5532229f39856dd69b5b",
+      "size": 11440
+    },
+    {
+      "path": "skills/ui-animation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11403ecd2a4883b0dc25e5e1951b7ef456586959"
+    },
+    {
+      "path": "skills/ui-animation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83b80710d32eec491d9110765b31ce7f0e5d778b",
+      "size": 16722
+    },
+    {
+      "path": "skills/ui-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b45c6f563bb090bd2f3ab3b7947117a0ff1d0298"
+    },
+    {
+      "path": "skills/ui-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8d9ee9c2e2e27dfa75cb38f0c482b3d8bac2e21",
+      "size": 8508
+    },
+    {
+      "path": "skills/video-production",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fdf1398f538ccf8c2b1ff239e19c1d5c5062840"
+    },
+    {
+      "path": "skills/video-production/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97b1df795166e458d124d5b52783c5dca749577b",
+      "size": 14654
+    },
+    {
+      "path": "skills/volunteer-coordinator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ad77c7d970f54c550de928530fb6792bde5e558"
+    },
+    {
+      "path": "skills/volunteer-coordinator/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cfc2947095058f76370bdf2740e0c7839d0098b",
+      "size": 16071
+    },
+    {
+      "path": "skills/vue-development",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7ac1f2ce650e80c1c97c61ac526e50523d16e16"
+    },
+    {
+      "path": "skills/vue-development/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e6b85467b277a94a480d4d6ffa934f7363d232",
+      "size": 14929
+    },
+    {
+      "path": "skills/websockets-realtime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80673a6ac35afb9234d2d25782263f752e19e430"
+    },
+    {
+      "path": "skills/websockets-realtime/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed1dbef9f5adcf995e4534542b4cb7cafc7d845a",
+      "size": 18748
+    },
+    {
+      "path": "templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6422e60d4f6960674a7ca099b37334307a3bf3b"
+    },
+    {
+      "path": "templates/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7234d95b54471b6cb95404427d3db446f57ca324",
+      "size": 6371
+    },
+    {
+      "path": "templates/agent-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f19850dd4848bd20ade7dc2518a22a7d2625e0b",
+      "size": 5519
+    },
+    {
+      "path": "templates/api-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00ab2e973ef993cf44cc6e491bb3b6f1b88e869d",
+      "size": 18629
+    },
+    {
+      "path": "templates/architecture-decision-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b74ea031ff6457e3a48163e577652e08db97c5f",
+      "size": 10562
+    },
+    {
+      "path": "templates/command-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "380d6a3e164afe4f7ad620360bdaeffbf394c575",
+      "size": 4842
+    },
+    {
+      "path": "templates/incident-response-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e671047257eb3a0c899a875dc8043c14509fcc33",
+      "size": 12278
+    },
+    {
+      "path": "templates/init.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da2389578ae9ea466633ca3385b141eeb93050b6",
+      "size": 2940
+    },
+    {
+      "path": "templates/landing-page-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fad29b6203cf92223e7836451c975443f5f13948",
+      "size": 22331
+    },
+    {
+      "path": "templates/mobile-app-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda8542b46a14e57ec62bdab5ee9049521cee85c",
+      "size": 19738
+    },
+    {
+      "path": "templates/plugin-template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6106a90066c0906607d45a6b61ff770c232723eb"
+    },
+    {
+      "path": "templates/plugin-template/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ec8cdb90eb838875a205bac54257fb5489ad238",
+      "size": 4459
+    },
+    {
+      "path": "templates/plugin-template/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "591c4216f2b4f0b0ee10d252d30a7b5fec0d510f"
+    },
+    {
+      "path": "templates/plugin-template/agents/example-agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf949a291524412150acd72164513af2f1806ea1",
+      "size": 526
+    },
+    {
+      "path": "templates/plugin-template/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "266d344e0ea31bd8a71b974a994e4ffed206be44"
+    },
+    {
+      "path": "templates/plugin-template/commands/example-command.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaf04cce1c80c90b28ed1238a1a9fac2dbe9a4c3",
+      "size": 419
+    },
+    {
+      "path": "templates/plugin-template/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ac4befe1dc7512827b8a6f19f3d6c97e1a476a1",
+      "size": 1101
+    },
+    {
+      "path": "templates/plugin-template/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c22c160d20d3f34a37e467e899852598ad1fc138"
+    },
+    {
+      "path": "templates/plugin-template/skills/example-skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9039da16cfd1e0629f84f37c75a2afa748d05d37"
+    },
+    {
+      "path": "templates/plugin-template/skills/example-skill/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca8588707c5c668e3dc501b5cdd56b64371d76b8",
+      "size": 534
+    },
+    {
+      "path": "templates/progress.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf8752615ee1549c988763ccc031f7d08be2584",
+      "size": 1902
+    },
+    {
+      "path": "templates/project-CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdb579f7c1fb00519d61fa7b7a8117ae95e26ff6",
+      "size": 4197
+    },
+    {
+      "path": "templates/release-checklist-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12bed17a6392ab97c0491255497f29c9c7c2427",
+      "size": 13740
+    },
+    {
+      "path": "templates/research-notes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8483d3897e82df350dd9ce182c9873ddb65dfe4",
+      "size": 2739
+    },
+    {
+      "path": "templates/saas-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "009a1a9dce5060f451332b4721fc1ac02b9285d9",
+      "size": 13176
+    },
+    {
+      "path": "templates/skill-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa089c85b74789a9fd07cdc5d81d34c84ea98b39",
+      "size": 3299
+    },
+    {
+      "path": "templates/task-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1d8ca2cfacd3d0af490f282b332221749168d43",
+      "size": 4468
+    },
+    {
+      "path": "templates/tests.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbaf1407a942a1a1a07eb83244acf85c0147faa6",
+      "size": 1236
+    },
+    {
+      "path": "vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da189a344b421576f2437a3d75fe563f3782e8e7"
+    },
+    {
+      "path": "vscode/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1250a054e4531db95eaeadfdf4f2547dae46b9ce",
+      "size": 4031
+    },
+    {
+      "path": "vscode/setup-vscode-settings.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a26345b8654b7c3cb83d9d67c6fa9cf4e2921df1",
+      "size": 3707
+    },
+    {
+      "path": "website",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4bc2cf3996919e3dcfeeaa8eea6397d4c4fdda4"
+    },
+    {
+      "path": "website/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ef6a520780202a1d6addd833d800ccb1ecac0bb",
+      "size": 480
+    },
+    {
+      "path": "website/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dd6e72cfcc9e4724afecc4d117fc262074b1fd4",
+      "size": 4124
+    },
+    {
+      "path": "website/eslint.config.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+      "size": 465
+    },
+    {
+      "path": "website/next.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "768c335cb30cec92ce5b1589e76175440ce2d8a8",
+      "size": 189
+    },
+    {
+      "path": "website/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af77141cc4bd161d98ab5481bd0df605d238f85e",
+      "size": 302056
+    },
+    {
+      "path": "website/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9410a29b103d9d14c80a198f128568cd77f298af",
+      "size": 1093
+    },
+    {
+      "path": "website/postcss.config.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "size": 94
+    },
+    {
+      "path": "website/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80d6877f1c56a53957c4de183bb75d43bdd02821"
+    },
+    {
+      "path": "website/public/apple-touch-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c161203cdeb58d2b8de4a9149ce46a95ce87ab46",
+      "size": 41986
+    },
+    {
+      "path": "website/public/favicon-16x16.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b51ba90fe455568389b3611697331b67a39a0b0",
+      "size": 754
+    },
+    {
+      "path": "website/public/favicon-32x32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a213ca8395912c1e2cdbbb39c36193e4708249a",
+      "size": 2285
+    },
+    {
+      "path": "website/public/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ae8ad93e7a668b12bb5c8230c89204f8502bcb2",
+      "size": 7629
+    },
+    {
+      "path": "website/public/icon-192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2250524ce0be05f43a8da2f48a5ad765b45a0fee",
+      "size": 46803
+    },
+    {
+      "path": "website/public/icon-512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe087570f6a94d3370e478650be268646f0835db",
+      "size": 245469
+    },
+    {
+      "path": "website/public/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06d9652784a3dc3095fd8d5dc0d93084f2292672"
+    },
+    {
+      "path": "website/public/images/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01e9118b27ea0501b92cb28d0d3b25cba60eb8b4",
+      "size": 156116
+    },
+    {
+      "path": "website/public/images/logo.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfd1fd20d658fbd9c8f5198928c23b29a2b03df1",
+      "size": 10514
+    },
+    {
+      "path": "website/public/og-image-backup.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f4617233b90def615e614835db85b2ce3709d72",
+      "size": 1622459
+    },
+    {
+      "path": "website/public/og-image.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61d75b9c44691f033ef3f4d50ffff3c8a0bec7c4",
+      "size": 53715
+    },
+    {
+      "path": "website/public/og-image.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d02a979c0e988632813b5d05f7ba7ad215e0cc8a",
+      "size": 113311
+    },
+    {
+      "path": "website/public/og-image.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b6f13e12e096e9a9380e0605d5b1f27b4ddd237",
+      "size": 35236
+    },
+    {
+      "path": "website/public/robots.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df1c1e8a677aeacd34213cc369fad5bd9e762978",
+      "size": 78
+    },
+    {
+      "path": "website/public/site.webmanifest",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e30ce2e5b7b32bca49b4274dbd766037ea39a51",
+      "size": 322
+    },
+    {
+      "path": "website/public/sitemap.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18a69e91bd57c0fed3abd527be4b7815046923b5",
+      "size": 1345
+    },
+    {
+      "path": "website/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "645a8a81b3653d78c629aafbf1f481d16fbf5cea"
+    },
+    {
+      "path": "website/scripts/fix-submodules.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6c2c1967fbbceb7f7df34da9c9c2c47355647c9",
+      "size": 928
+    },
+    {
+      "path": "website/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d0e3ec365b275f72d7ba11246543ebf50741719"
+    },
+    {
+      "path": "website/src/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb5c5ccea12cbe75c1d624b24167c03ef9f02e88"
+    },
+    {
+      "path": "website/src/app/HomeCards.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "290e4d7135e0e232ac37003df4b67b9689924b5a",
+      "size": 14204
+    },
+    {
+      "path": "website/src/app/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc3bf4bc36331f10bfa5d4cfdf759f9d9ef1699d"
+    },
+    {
+      "path": "website/src/app/agents/AgentsGrid.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e03812a92331b0e90041c2d494c3da283262b93",
+      "size": 3371
+    },
+    {
+      "path": "website/src/app/agents/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "666172dcf50882e0fe5a1ae6c3aaea47ca6a07de",
+      "size": 1805
+    },
+    {
+      "path": "website/src/app/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbf1a25762ca490d0e87e5f35c4a16f7ed3cd44e"
+    },
+    {
+      "path": "website/src/app/commands/CommandsList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "954e5d3f916ecd53968bfb06eb080587a7bc4458",
+      "size": 2003
+    },
+    {
+      "path": "website/src/app/commands/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "857fbe952b53d7c5b1005a8292322ad4eb3fdaeb",
+      "size": 1628
+    },
+    {
+      "path": "website/src/app/docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e4c8ef8862db072fc8fa8a0f7856e71aeab46b2"
+    },
+    {
+      "path": "website/src/app/docs/DocsList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "038523630355f0927c285d1e761f3d2435f05050",
+      "size": 4257
+    },
+    {
+      "path": "website/src/app/docs/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5cfbe4e97c775606fdc61bb9694a966c281d90b",
+      "size": 1679
+    },
+    {
+      "path": "website/src/app/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ae8ad93e7a668b12bb5c8230c89204f8502bcb2",
+      "size": 7629
+    },
+    {
+      "path": "website/src/app/globals.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56467057bf479573677085a013220358aad3aa4a",
+      "size": 6451
+    },
+    {
+      "path": "website/src/app/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c01308ab18eacc63c3d610bc4423cff0223abda0"
+    },
+    {
+      "path": "website/src/app/hooks/HooksList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c65cce2e6da8169a1020bcc5ab84d66a77c3323",
+      "size": 4028
+    },
+    {
+      "path": "website/src/app/hooks/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e9d699e365958a27a03f583bbf4e3d76c6d427a",
+      "size": 1590
+    },
+    {
+      "path": "website/src/app/layout.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8471f4770c68ac8ff0fcfcb0ba4c824ed13da34b",
+      "size": 2583
+    },
+    {
+      "path": "website/src/app/marketplaces",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "908190e054ebe01f84a90da5efabb642253a6411"
+    },
+    {
+      "path": "website/src/app/marketplaces/MarketplaceGrid.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b09f90263269bf1c3a60607a4bad4c3e19c2046",
+      "size": 3467
+    },
+    {
+      "path": "website/src/app/marketplaces/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35aec4fa73995af44660f4160db2172ca66e4f29",
+      "size": 1760
+    },
+    {
+      "path": "website/src/app/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0b65191147885526e501c251723a11f21e7b23",
+      "size": 10892
+    },
+    {
+      "path": "website/src/app/rules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b78b2b15f1f8814d1fcf4e20862572deb628ee9"
+    },
+    {
+      "path": "website/src/app/rules/RulesList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe9500d1dd2bce4cb0cf7bcfd538605967c4480f",
+      "size": 5372
+    },
+    {
+      "path": "website/src/app/rules/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f914875bc5fcce06756cdd4e8438a000ab5da80",
+      "size": 1705
+    },
+    {
+      "path": "website/src/app/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e178d48ba99ec9f2a1e6e8b9fae32a22549359c"
+    },
+    {
+      "path": "website/src/app/scripts/ScriptsList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef3adaab8fa83630f8fc85d334461db0dbb59258",
+      "size": 5213
+    },
+    {
+      "path": "website/src/app/scripts/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a193e42020918ac182faba9bc4495e388566919f",
+      "size": 1618
+    },
+    {
+      "path": "website/src/app/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4302da8aee1a88f579578f9a4a1702c85f725c8"
+    },
+    {
+      "path": "website/src/app/skills/SkillsGrid.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fab9523724b7d47167b7a7d650122c9bf1c0963e",
+      "size": 2357
+    },
+    {
+      "path": "website/src/app/skills/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92618a73f787cfad4225efbfe7a8446fc23940a4",
+      "size": 1749
+    },
+    {
+      "path": "website/src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14dde7c5c27a0780eac914328168b870bc1465fc"
+    },
+    {
+      "path": "website/src/components/3d",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39ad161de76ac490e5e20f3face19de21bacb7a7"
+    },
+    {
+      "path": "website/src/components/3d/HeroCanvas.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fe2934800c7fd97e62b0200c4c34c659fade1a1",
+      "size": 915
+    },
+    {
+      "path": "website/src/components/3d/HeroScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f10bda2d9b9e155bb42d486ee8eb3a1607427214",
+      "size": 6089
+    },
+    {
+      "path": "website/src/components/ConsoleGreeting.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "393302520e1ea8421b23a87226c2d9675d08a5cf",
+      "size": 1909
+    },
+    {
+      "path": "website/src/components/animations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8547200a93a9084b96fd25b1405c82f853bce6eb"
+    },
+    {
+      "path": "website/src/components/animations/CounterAnimation.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4017b0c0feeead2e366975b8317ce0c4d161930b",
+      "size": 1377
+    },
+    {
+      "path": "website/src/components/animations/ScrollReveal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58c4afada103608b1384a882cdc8a500a27369e9",
+      "size": 1455
+    },
+    {
+      "path": "website/src/components/animations/StaggerReveal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f6924a1e47e939886bf15c326981dea02217814",
+      "size": 1455
+    },
+    {
+      "path": "website/src/components/animations/TextReveal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56a7243af19bfee43f6389e17d472634eb6a73b0",
+      "size": 1376
+    },
+    {
+      "path": "website/src/components/layout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2dfaed9ae3ae46ab031c6f86dbf23dc91cab9e4b"
+    },
+    {
+      "path": "website/src/components/layout/Footer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70064754de8f54de7ea519e6069a0b9b15a0d3d9",
+      "size": 5878
+    },
+    {
+      "path": "website/src/components/layout/FooterWithDocs.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b552f5c996d14260d719af8ab50dfd7460d8b45",
+      "size": 422
+    },
+    {
+      "path": "website/src/components/layout/Navigation.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90875a6c4c01c91c94fea98784e030b02b3b8aca",
+      "size": 2522
+    },
+    {
+      "path": "website/src/components/terminal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32f908a48ef39ff7c817f8d046adbab7464c483d"
+    },
+    {
+      "path": "website/src/components/terminal/TerminalDemo.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0719446f9bcaca9d7854f246c255b4907895d05",
+      "size": 5081
+    },
+    {
+      "path": "website/src/components/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d11daafab16cc70bd7ce819aa148df8c36d84e7"
+    },
+    {
+      "path": "website/src/components/ui/FilterTabs.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d928b2ca96ec5e8d83b6da78ee95ed1d0cbb342",
+      "size": 1299
+    },
+    {
+      "path": "website/src/components/ui/GlowCard.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fd1a0a522ec69216890c86f226fec4e58d6fb86",
+      "size": 2014
+    },
+    {
+      "path": "website/src/components/ui/MarkdownContent.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61a6a766544259f32d762cc5fb46e897b09e0b49",
+      "size": 827
+    },
+    {
+      "path": "website/src/components/ui/Modal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ee6fec6391b3d306d7d8c99cd1edd91ab25ad0",
+      "size": 2000
+    },
+    {
+      "path": "website/src/lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edec82b06411c1882894fe5ec3497933fd8b1eda"
+    },
+    {
+      "path": "website/src/lib/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d173a1ef9d5e6956a7866820894a68a793604054"
+    },
+    {
+      "path": "website/src/lib/data/agents.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "710d46ed0c3f354ef75a77d3e2d35ce839b0d1c2",
+      "size": 4999
+    },
+    {
+      "path": "website/src/lib/data/commands.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8446c120be4e605e3ea153aa5f00dcbd7b3303d4",
+      "size": 1504
+    },
+    {
+      "path": "website/src/lib/data/counts.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d4118660c395921ea0e73aebde9cd938a59aee9",
+      "size": 3862
+    },
+    {
+      "path": "website/src/lib/data/docs.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00b5baaa2596b82f52ee28d3d240c9215e4eaa43",
+      "size": 1528
+    },
+    {
+      "path": "website/src/lib/data/frontmatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "226da80aa45ec8a51ef5f94a1d23f7da67dd69af",
+      "size": 1151
+    },
+    {
+      "path": "website/src/lib/data/hooks.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8798399673e70f33722cf5ccef45dbed38d732d",
+      "size": 3032
+    },
+    {
+      "path": "website/src/lib/data/marketplace-counts.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15d6b5dd3dde8fe1e94a3ab53a3b5d7fab1db4e8",
+      "size": 13165
+    },
+    {
+      "path": "website/src/lib/data/marketplace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dc0e385ab8877232a43e2a628924cc6e6a9fccc",
+      "size": 4627
+    },
+    {
+      "path": "website/src/lib/data/rules.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f18bf83bb11c89bbc86e5e3434cf43ca91c8087",
+      "size": 2598
+    },
+    {
+      "path": "website/src/lib/data/scripts.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5e986a58ef7e1ec342f18a900eb527efa34d260",
+      "size": 7293
+    },
+    {
+      "path": "website/src/lib/data/skills.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "436588bb9095d36b36cb43da31b50275c62ea130",
+      "size": 5560
+    },
+    {
+      "path": "website/src/lib/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da808605d34e9db7ec0286042c77364ebc9843c1"
+    },
+    {
+      "path": "website/src/lib/utils/cn.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e80065fa59cc7d284648eb860fd4cb9066f2499",
+      "size": 118
+    },
+    {
+      "path": "website/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9c65d3e0676a0169374d827f7abb97497789ef",
+      "size": 670
+    }
+  ]
+}

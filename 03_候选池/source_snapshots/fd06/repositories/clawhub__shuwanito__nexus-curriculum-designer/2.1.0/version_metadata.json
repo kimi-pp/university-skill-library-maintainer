@@ -1,0 +1,100 @@
+{
+  "skill": {
+    "slug": "nexus-curriculum-designer",
+    "displayName": "Nexus Curriculum Designer"
+  },
+  "version": {
+    "version": "2.1.0",
+    "createdAt": 1776882231542,
+    "changelog": "- Adds adaptive learning paths and competency-based assessments with UDL (Universal Design for Learning) framework.\n- Introduces Bloom's taxonomy alignment and curriculum mapping features.\n- Implements structured workflow for findings, proposals, and cross-validation across departments.\n- All outputs now include confidence scores, source citations, and detailed impact/effort scoring.\n- Updates pricing to offer per-execution, outcome-based, and volume discount options.",
+    "changelogSource": "auto",
+    "license": "MIT-0",
+    "files": [
+      {
+        "path": "SKILL.md",
+        "size": 1286,
+        "sha256": "1619898a513b71afa5b1847e98775bc20a8d62d1f1872f6c034e33043383fa26",
+        "contentType": "text/markdown"
+      },
+      {
+        "path": "skill-card.md",
+        "size": 2151,
+        "sha256": "944c82e70abf591f3db0833013077383571aaed151062d645b30df5b631ce1f8",
+        "contentType": "text/markdown"
+      }
+    ],
+    "security": {
+      "status": "clean",
+      "hasWarnings": true,
+      "checkedAt": 1780087307266,
+      "model": "gpt-5.5",
+      "hasScanResult": true,
+      "sha256hash": "1dbf6ef41b3c15f9cceb0f1dac8ae3a2c49b2356d220cc0b8adceff57e8d96a6",
+      "virustotalUrl": "https://www.virustotal.com/gui/file/1dbf6ef41b3c15f9cceb0f1dac8ae3a2c49b2356d220cc0b8adceff57e8d96a6",
+      "scanners": {
+        "vt": {
+          "status": "clean",
+          "verdict": null,
+          "normalizedStatus": "clean",
+          "analysis": null,
+          "source": "engines",
+          "checkedAt": 1780087307266
+        },
+        "skillspector": {
+          "status": "clean",
+          "normalizedStatus": "clean",
+          "score": 15,
+          "severity": "LOW",
+          "recommendation": "SAFE",
+          "issueCount": 2,
+          "checkedAt": 1779933324983
+        },
+        "llm": {
+          "status": "clean",
+          "verdict": "benign",
+          "normalizedStatus": "clean",
+          "confidence": "high",
+          "summary": "This is an instruction-only curriculum design skill with some vague research-style wording, but no code, install behavior, credential use, persistence, or hidden data handling.",
+          "dimensions": [
+            {
+              "detail": "The name, description, and capabilities align around curriculum mapping, adaptive learning paths, assessments, Bloom's taxonomy, and UDL adaptation.",
+              "label": "Purpose & Capability",
+              "name": "purpose_capability",
+              "rating": "ok"
+            },
+            {
+              "detail": "The workflow uses broad phrases such as department-specific engines, severity classifications, source citations, and cross-validation; these are under-specified but not tied to hidden tools or privileged actions.",
+              "label": "Instruction Scope",
+              "name": "instruction_scope",
+              "rating": "note"
+            },
+            {
+              "detail": "The artifact contains only SKILL.md, with no executable scripts, package install steps, fetched dependencies, or install-time mutations.",
+              "label": "Install Mechanism",
+              "name": "install_mechanism",
+              "rating": "ok"
+            },
+            {
+              "detail": "The skill does not request environment variables, credentials, local files, student records, network access, or system permissions.",
+              "label": "Credentials",
+              "name": "environment_proportionality",
+              "rating": "ok"
+            },
+            {
+              "detail": "There is no persistence mechanism, background process, privilege escalation, or modification of other skills or agent settings.",
+              "label": "Persistence & Privilege",
+              "name": "persistence_privilege",
+              "rating": "ok"
+            }
+          ],
+          "guidance": "Safe to install as a lightweight instruction skill. Before using it with real students, private curriculum materials, or institutional data, clarify what sources it will use and avoid providing student PII or credentials unless you have a separate privacy and data-handling agreement.",
+          "findings": "[SDI-4] unexpected: The generic findings and severity language is broader than a tightly scoped curriculum-design helper, but artifact evidence shows no unsafe authority, data access, or hidden behavior; treat it as a clarity issue rather than a security hold.\n[SDI-4] expected: Source citations and independent validation can fit educational design work, but the skill does not define source limits or failure behavior, so users should not assume the citations are verified unless the agent has appropriate research tools.",
+          "agenticRiskFindings": null,
+          "riskSummary": null,
+          "model": "gpt-5.5",
+          "checkedAt": 1779933350324
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/SKILL.md",
+        "snippet": "into `differentiation.json` and is re-rendered (instant) — never write layout code, hand-edit a generated document, or re-type one into another format. **Plain language with the teacher.** The machinery above is invisible to the teac"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/scripts/render_all.sh",
+        "snippet": "e: render_all.sh DIFFERENTIATION_JSON OUTPUT_DIR}\" here=\"$(cd \"$(dirname \"$0\")\" && pwd)\" mkdir -p \"$outdir\" # python-docx powers the .docx output; the .html twins render without it. If the install # can't complete"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/scripts/render_all.sh",
+        "snippet": "the failure this removes. if [ -n \"${OUTPUT_DIR:-}\" ] && [ \"$(cd \"$outdir\" && pwd)\" != \"$(mkdir -p \"$OUTPUT_DIR\" && cd \"$OUTPUT_DIR\" && pwd)\" ]; then cp -R \"$outdir\"/. \"$OUTPUT_DIR\"/ fi"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/scripts/render_documents.py",
+        "snippet": "ay in input\", file=sys.stderr) return 1 outdir = Path(args.outdir) outdir.mkdir(parents=True, exist_ok=True) written = [] for i, doc in enumerate(docs): # Sanitize the document id be"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/scripts/render_documents.py",
+        "snippet": "n_html import render as render_html path = outdir / f\"{doc_id}.html\" path.write_text(render_html(full), encoding=\"utf-8\") written.append(str(path)) if args.format in (\"docx\", \"both\"):"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/scripts/render_lesson_html.py",
+        "snippet": "data = json.loads(Path(args.input).read_text(encoding=\"utf-8\")) Path(args.output).write_text(render(data), encoding=\"utf-8\") print(f\"wrote {args.output}\") return 0 if __name__ == \"__main__\": sys.exi"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/SKILL.md",
+        "snippet": "d grade; - for each tier (below / at / above), 2–3 bullets on what changes and why; - the student work at a glance — each tier's actual tasks, enough for the teacher to skim and judge coverage; - one line on what every t"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "r | Cognitive entry point | |---|---| | Below | Supported access → scaffolded production. Student works with the grade-level text using chunked reading, pre-taught vocabulary, annotation guides, and sentence supports to reach the task. |"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "annotation guides, and sentence supports to reach the task. | | At | Standard engagement. Student reads the grade-level text and completes the task as designed. | | Above | Independent analysis / synthesis. Student reads the grade-le"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "el text and completes the task as designed. | | Above | Independent analysis / synthesis. Student reads the grade-level text and moves beyond retrieval to author's craft, evaluation, cross-text connection, or generative production. |"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "udents most need support. The test: does the scaffold leave the intellectual work to the student, or does it perform the work for the student? If the latter, it is not a scaffold. #### Scaffold density cap **Cap embedded scaffolds at 1–2 per t"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "fferent mode (e.g., visual organizer + linguistic frame). If the second scaffold asks the student to do the same mental work as the primary, drop it. ### R5 — Required pedagogical infrastructure **Every differentiated lesson must include all"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "bove-level extension must answer: **what new thinking does this require that the at-level student isn't already doing?** If you cannot name new thinking, the extension is cosmetic and should not ship. A real ELA extension requires at least one of: | Type |"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+        "snippet": "ific reteach strategy or Tier 2/3 flag if gap is persistent] ``` ### Document content — student materials (`id: worksheet_group_a` / `worksheet_group_b` / `worksheet_group_c`) No teacher notes, look-fors, or rationale. All three"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/math.md",
+        "snippet": "e \"same objective, different access\" is often sufficient, math learning is compounding: a student without the prior-grade concept cannot make sense of the current one through scaffolding alone. The prerequisite gap is typically the actual ob"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/output.md",
+        "snippet": "end labels and no tick marks, for students to partition themselves. | | `workspace` | Student writing space; `size: small|med|large` or grade-banded default. | Tabular content — data tables, \"complete the table\" tasks, row-and-column organizers — must be"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/social_studies.md",
+        "snippet": "** Only add a second if it contributes a genuinely different mode. If the second asks the student to do the same cognitive work, drop it. ### R5 — Required pedagogical infrastructure **Every differentiated lesson must include all four:** | Sect"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/scripts/lesson_common.py",
+        "snippet": "in(str(b) for b in bits if b) name_line = \"\" if meta and data.get(\"audience\") == \"student\" and re.search(r\"name\\s*:\", meta, re.I): name_line, meta = meta, \"\" return {\"eyebrow\": data.get(\"eyebrow\", \"\"), \"title\": data.get"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/learning-commons-kg.md",
+        "snippet": "s. If multiple candidates return, echo `fullOrdinalName` and `lessonName` back to the teacher to confirm. Once confirmed, call `find_materials_for_lesson(lessonIdentifier, materialSource=[\"lesson\", \"activity\"])` → extract: ("
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/learning-commons-kg.md",
+        "snippet": "If multiple candidates return, echo their `fullOrdinalName` and `lessonName` back to the teacher to confirm which lesson is meant before fetching materials. Once confirmed, call **`find_materials_for_lesson(lessonIdentifier)`**"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/math.md",
+        "snippet": "low. The same scenario, the same hook — with different supports. This is both a rigor and equity requirement. ### R3 — Teach-up via named prerequisite **Below-level scaffolds route students UP to grade-level work,"
+      },
+      {
+        "file": "plugin/skills/k12-lesson-differentiation/references/output.md",
+        "snippet": "iversally: \"You can use these sentence supports:\" — not \"Use these if you get stuck.\" ## Accessibility (also black-and-white printing) Meaning lives in the words, never in color, position, or formatting alone: point stude"
+      }
+    ]
+  },
+  "read_errors": []
+}

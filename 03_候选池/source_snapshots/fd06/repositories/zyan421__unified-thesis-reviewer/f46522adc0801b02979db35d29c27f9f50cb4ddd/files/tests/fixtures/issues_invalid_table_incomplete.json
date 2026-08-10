@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-empirical-001",
+      "source": "thesis",
+      "category": "empirical",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "4.2",
+        "paragraph_index": -1,
+        "table_index": 0,
+        "row": 2
+      },
+      "excerpt": "表格内容",
+      "problem": "样本过少",
+      "suggestion": [
+        "补充样本"
+      ],
+      "group_id": "g-001",
+      "anchor_text": "表格内容"
+    }
+  ]
+}

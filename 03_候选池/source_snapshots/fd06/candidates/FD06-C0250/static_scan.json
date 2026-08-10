@@ -1,0 +1,47 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "SKILL.md",
+        "snippet": "rategy **Key Principle: Separation of Discovery and Verification** To prevent anchoring bias (agent treating prior issues as a checklist instead of performing independent review), the injection strategy is design"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "rative mode, each chapter review is split into two sequential phases to prevent anchoring bias: **Phase A: Independent Discovery (NO historical issues visible)** Input: Thesis summary block + current chapter full"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "README.md",
+        "snippet": "according to that framework's conventions. #### Claude Code Personal install: ```bash mkdir -p ~/.claude/skills/academic-thesis-review cp -r . ~/.claude/skills/academic-thesis-review ``` Project install: ```ba"
+      },
+      {
+        "file": "README.md",
+        "snippet": "sis-review cp -r . ~/.claude/skills/academic-thesis-review ``` Project install: ```bash mkdir -p .claude/skills/academic-thesis-review cp -r . .claude/skills/academic-thesis-review ``` #### OpenClaw Suggested gl"
+      },
+      {
+        "file": "README.md",
+        "snippet": "aude/skills/academic-thesis-review ``` #### OpenClaw Suggested global install: ```bash mkdir -p ~/.openclaw/skills/academic-thesis-review cp -r . ~/.openclaw/skills/academic-thesis-review ``` #### OpenCode / com"
+      },
+      {
+        "file": "README.zh-CN.md",
+        "snippet": "录 将整个文件夹复制到目标框架的本地 skills / prompts 目录，并按该框架的约定注册使用。 #### Claude Code 个人目录安装： ```bash mkdir -p ~/.claude/skills/academic-thesis-review cp -r . ~/.claude/skills/academic-thesis-review ``` 项目内安装： ```bash mkdir -"
+      },
+      {
+        "file": "README.zh-CN.md",
+        "snippet": "ademic-thesis-review cp -r . ~/.claude/skills/academic-thesis-review ``` 项目内安装： ```bash mkdir -p .claude/skills/academic-thesis-review cp -r . .claude/skills/academic-thesis-review ``` #### OpenClaw 建议的全局安装方式："
+      },
+      {
+        "file": "README.zh-CN.md",
+        "snippet": "iew cp -r . .claude/skills/academic-thesis-review ``` #### OpenClaw 建议的全局安装方式： ```bash mkdir -p ~/.openclaw/skills/academic-thesis-review cp -r . ~/.openclaw/skills/academic-thesis-review ``` #### OpenCode / 兼容"
+      }
+    ],
+    "network": [
+      {
+        "file": "skill.json",
+        "snippet": "\"github\": \"https://github.com/wmpluto\" }, \"entry\": \"SKILL.md\", \"repository\": { \"url\": \"https://github.com/wmpluto/academic-thesis-review-skill\", \"visibility\": \"public\" }, \"homepage\": \"https://github.com/wmpl"
+      }
+    ]
+  },
+  "read_errors": []
+}

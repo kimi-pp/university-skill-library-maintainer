@@ -1,0 +1,113 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "app.py",
+        "snippet": ":.2f} GB\") # Check for API token to avoid misconfiguration if os.getenv(\"HF_API_TOKEN\"): logger.warning(\"HF_API_TOKEN detected, but this app uses local CPU inference.\")"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "app.py",
+        "snippet": "ss_callback=update_progress, max_workers=max_workers ) # Save to temporary file with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False, encoding='utf-8') as f:"
+      },
+      {
+        "file": "app.py",
+        "snippet": "_msg, exc_info=True) return None, error_msg def create_sample_json(): \"\"\"Create a sample JSON file for testing\"\"\" sample_data = { \"metadata\": { \"totalFiles\": 1, \"generatedAt\": da"
+      },
+      {
+        "file": "gradio_app.py",
+        "snippet": "ack=update_progress, max_workers=max_workers ) # Save to temporary file with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False, encoding='utf-8') as f:"
+      },
+      {
+        "file": "gradio_app.py",
+        "snippet": "ger.error(error_msg) return None, error_msg def create_sample_json(): \"\"\"Create a sample JSON file for testing\"\"\" sample_data = { \"metadata\": { \"totalFiles\": 1, \"generatedAt\": da"
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "nFile handling: command line arguments, File modes, basic file operations read, write and append. Scope and life of variables, multi-file programming.\", \"Unit IV\": \"C99 extensions. 'C' Standard Libraries: stdio.h, stdlib.h, assert.h, math.h, tim"
+      },
+      {
+        "file": "scripts/syllabus_formatter.py",
+        "snippet": "logger.info(f\"Saving formatted syllabus to: {output_file}\") with open(output_file, 'w', encoding='utf-8') as f: json.dump(syllabus_data, f, indent=2, ensure_ascii=False)"
+      }
+    ],
+    "network": [
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "MMON\": { \"1st\": { \"APC\": { \"name\": \"Applied Chemistry\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/applied_chemistry.html\", \"units\": [ { \"numbe"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "\"akash\": [] }, \"PIC\": { \"name\": \"Programming in C\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/programming_in_c.html\", \"units\": [ { \"number"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "akash\": [] }, \"CS\": { \"name\": \"Communication Skills\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/communication_skills.html\", \"units\": [ { \"nu"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "kash\": [] }, \"APP1\": { \"name\": \"Applied Physics - 1\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/applied_physics-1.html\", \"units\": [ { \"numbe"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "sh\": [] }, \"MP\": { \"name\": \"Manufacturing Processes\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/manufacturing_processes.html\", \"units\": [ {"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "\"akash\": [] }, \"ES\": { \"name\": \"Electrical Science\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/electrical_science.html\", \"units\": [ { \"numb"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "}, \"2nd\": { \"APP2\": { \"name\": \"Applied Physics - 2\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/applied_physics-2.html\", \"units\": [ { \"numbe"
+      },
+      {
+        "file": "public/Content-Meta/FifteenFourteen.json",
+        "snippet": "\": [] }, \"APM1\": { \"name\": \"Applied Mathematics - 1\", \"url\": \"https://fifteenforteen.vercel.app/html/contents/applied_mathematics-1.html\", \"units\": [ { \"n"
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "orsion, Gradient of a Scalar Field, Directional Derivative, Divergence of a Vector Field, Curl of a Vector Field, Line Integrals, Path Independence of Line Integrals, Double Integrals, Green’s Theorem in the Plane,"
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "the zipfile Module\", \"Unit IV\": \"Web Scraping: Project: MAPIT.PY with the web browser Module, Downloading Files from the Web with the requests Module, Saving Downloaded Files to the Hard Drive, HTML\""
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "Functions, Constructors, JavaScript, and objects, JavaScript own objects, the DOM and web browser environments, forms and validations. Introduction to JSP: The Anatomy of a JSP Page, JSP Processing, Declarations, Dire"
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "basic syntax of PHP, decision and looping with examples, PHP and HTML, Arrays, Functions, Browser control and detection, string, Form processing, Files, Advance Features: Cookies and Sessions.\", \"Unit IV\":"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "e challenger’, Case study: Power plants, Collegiality and loyalty, Collective bargaining, Confidentiality, Conflict of interests, Occupational crime, Human rights, Employee rights, Whistleblowing, Intellectual property rights"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "effect, junction voltages; Transistor Biasing: Need of biasing, load line concept, fixed bias, self-bias, collector to base bias, stability factors, Current Mirrors; hybrid model of BJT amplifier, small signal ana"
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "nction voltages; Transistor Biasing: Need of biasing, load line concept, fixed bias, self-bias, collector to base bias, stability factors, Current Mirrors; hybrid model of BJT amplifier, small signal analysis of CE"
+      },
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "tor Biasing: Need of biasing, load line concept, fixed bias, self-bias, collector to base bias, stability factors, Current Mirrors; hybrid model of BJT amplifier, small signal analysis of CE BJT amplifier using h p"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "public/Content-Meta/syllabus.json",
+        "snippet": "scriptive, Argumentative and Narrative, Precis writing, Visual Aids in Technical Writing, Plagiarism and Language Sensitivity in Technical Writing, Dialogue Writing, Proposals: Purpose and Types.\", \"Unit III\""
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,27 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "course-evaluations/SKILL.md",
+        "snippet": "sitives emerging after a likely course revision. That trajectory is the evidence. ### 3. Write the report --- #### Mode A template — Formative / annual review Keep prose tight; the instructor can ask follow-up questions fo"
+      },
+      {
+        "file": "course-evaluations/SKILL.md",
+        "snippet": "n notably high. ## Output format The report renders as Markdown in the chat. **Do not** create a `.docx` file unless the user explicitly asks for one. **Do not** wrap the whole report in a code block. Use one markdown table for"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "course-evaluations/SKILL.md",
+        "snippet": "e line only. --- #### Mode B template — Longitudinal review The goal is a document the instructor can use as teaching evidence in a formal review — pre-tenure or promotion. Frame everything in terms of course content, rigor, assignments, and learning experiences —"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "course-evaluations/scripts/parse_evaluations.py",
+        "snippet": "aders. Sections below 40% response rate are flagged — below this threshold self-selection bias becomes a meaningful concern. Scale history: Before Fall 2022 (no EnrollmentType column in CSV): Q3-Q12: 1=No Ba"
+      }
+    ]
+  },
+  "read_errors": []
+}

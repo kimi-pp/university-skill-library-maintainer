@@ -1,0 +1,74 @@
+[
+  {
+    "path": "skills/92bilal26/quiz-generator/SKILL.md",
+    "type": "blob",
+    "size": 6198,
+    "sha": "79a8c0ef10a830174e84a8e305957572aadf120c"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/answer-distribution.md",
+    "type": "blob",
+    "size": 8143,
+    "sha": "b1092e1c7f0f9c2f6ff5c48ca83d4e1350f681bf"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+    "type": "blob",
+    "size": 10954,
+    "sha": "f77700ba409288e97216fe42036ebbeb8b313c36"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/example-quiz.md",
+    "type": "blob",
+    "size": 9913,
+    "sha": "b3e3cc5911fb21a8eb83fed38f15ba87951a62e3"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/file-naming.md",
+    "type": "blob",
+    "size": 7516,
+    "sha": "b36435327af4ba096fd81c04d96f15a39633c105"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/generation-process.md",
+    "type": "blob",
+    "size": 12810,
+    "sha": "1527b96c5e167732dfe83f89c824d4cb6da974ba"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/option-length-validation.md",
+    "type": "blob",
+    "size": 11080,
+    "sha": "c2a380a86883fd3f810b1d82d2629e7a6907158f"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/pitfalls-and-solutions.md",
+    "type": "blob",
+    "size": 20428,
+    "sha": "0a9ec4df4cb8ff9d22431904d6f32c5645544702"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/references/quality-checklist.md",
+    "type": "blob",
+    "size": 17326,
+    "sha": "1ef05302bacc36fff326f4f1837ad2bc255cfd56"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/scripts/redistribute_answers.py",
+    "type": "blob",
+    "size": 7840,
+    "sha": "864eca070d03f7c40f7eded735def49db2ab91bb"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/scripts/redistribute_answers_v2.py",
+    "type": "blob",
+    "size": 16613,
+    "sha": "eed28fbb8a709f385a3f4b7daa362be8efe0130c"
+  },
+  {
+    "path": "skills/92bilal26/quiz-generator/skill-report.json",
+    "type": "blob",
+    "size": 55966,
+    "sha": "e51127feb059e5678d0780a12b4a9da20fd88ab2"
+  }
+]

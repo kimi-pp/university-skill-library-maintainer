@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".gitignore",
+    "type": "blob",
+    "size": 79,
+    "sha": "7082e41ff844d69c455c9bbe4252827540a83a16"
+  },
+  {
+    "path": "LICENSE",
+    "type": "blob",
+    "size": 1074,
+    "sha": "01836d57266532c82eb3347081018283a613859d"
+  },
+  {
+    "path": "README.md",
+    "type": "blob",
+    "size": 5659,
+    "sha": "5714af4549d4f3ceb1571584f2518aca9588ec95"
+  },
+  {
+    "path": "SKILL.md",
+    "type": "blob",
+    "size": 14116,
+    "sha": "a4866a66628de9aba4fb12fa81804ed9fffd2387"
+  }
+]

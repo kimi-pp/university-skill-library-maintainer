@@ -1,0 +1,68 @@
+[
+  {
+    "path": "lesson-builder/SKILL.md",
+    "type": "blob",
+    "size": 9727,
+    "sha": "2142f057494735ef6105feeaa7831683f5238cfa"
+  },
+  {
+    "path": "lesson-builder/agents/activity_designer_agent.md",
+    "type": "blob",
+    "size": 3694,
+    "sha": "c776acc376f50230218779723a9c772ebfdd7c07"
+  },
+  {
+    "path": "lesson-builder/agents/case_study_writer_agent.md",
+    "type": "blob",
+    "size": 3894,
+    "sha": "39213cc57d8e297e2e6bdc3951cee697bdd17776"
+  },
+  {
+    "path": "lesson-builder/agents/discussion_designer_agent.md",
+    "type": "blob",
+    "size": 4219,
+    "sha": "572c1031b4a62f3ab35d1c8981dd7cad143c3fb6"
+  },
+  {
+    "path": "lesson-builder/agents/lecture_writer_agent.md",
+    "type": "blob",
+    "size": 3799,
+    "sha": "036a254a8a18cb34562841c6335189cb27b9f305"
+  },
+  {
+    "path": "lesson-builder/agents/lesson_planner_agent.md",
+    "type": "blob",
+    "size": 3750,
+    "sha": "4e5f61f542ee2bb8b4ab42e253673f0a98a696fa"
+  },
+  {
+    "path": "lesson-builder/agents/slide_outliner_agent.md",
+    "type": "blob",
+    "size": 3751,
+    "sha": "a65922747ec6fe00f8b4225ae97b42a0c328c3e6"
+  },
+  {
+    "path": "lesson-builder/references/active_learning_catalog.md",
+    "type": "blob",
+    "size": 12013,
+    "sha": "7a0ab3b5ef91858727317c768ed4371c4180bfbc"
+  },
+  {
+    "path": "lesson-builder/references/lesson_anatomy.md",
+    "type": "blob",
+    "size": 5487,
+    "sha": "e179370676f20d2a560da0cb1e1413a984228a0f"
+  },
+  {
+    "path": "lesson-builder/templates/activity_sheet_template.md",
+    "type": "blob",
+    "size": 2391,
+    "sha": "fdf6e7713e506832e8f6266a2d08a270679301e1"
+  },
+  {
+    "path": "lesson-builder/templates/lesson_plan_template.md",
+    "type": "blob",
+    "size": 2134,
+    "sha": "3d8b0fc11b940f8dd5bf64c3fc1f44adb2cad502"
+  }
+]

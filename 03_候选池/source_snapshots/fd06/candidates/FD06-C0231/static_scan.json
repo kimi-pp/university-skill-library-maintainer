@@ -1,0 +1,45 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "may inadvertently reduce cognitive demand, changing what students are actually learning. Teacher review of each option against the intended goal is essential. 4. **Too many options can reduce access for some learners.** Stu"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "\" evidence_sources: - \"Rose & Meyer (2002) — Teaching Every Student in the Digital Age: Universal Design for Learning\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014)"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "ching Every Student in the Digital Age: Universal Design for Learning\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Pract"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "Universal Design for Learning Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — Universal Design for Learning in Pre-K to"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "ersal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — Universal Design for Learning in Pre-K to Grade 12 Classrooms: A Systematic Review of Research\" - \"Rao & Meo (2016) — Using Universal"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "-K to Grade 12 Classrooms: A Systematic Review of Research\" - \"Rao & Meo (2016) — Using Universal Design for Learning to Design Standards-Based Lessons\" - \"Edyburn (2010) — Would You Recognize Universal Design for Learning"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "for Learning to Design Standards-Based Lessons\" - \"Edyburn (2010) — Would You Recognize Universal Design for Learning if You Saw It?\" input_schema: required: - field: \"learning_goal\" type: \"string\" descript"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "iven a learning goal and current teaching approach, generates genuine alternatives across Universal Design for Learning's three principles: Multiple Means of Engagement, Multiple Means of Representation, and Multiple Means of"
+      },
+      {
+        "file": "skills/inclusive-design/udl-options-designer/SKILL.md",
+        "snippet": "one highest-impact change if the teacher can only do one thing. ## Evidence Foundation Universal Design for Learning is a design framework developed by CAST, grounded in three principles derived from neuroscience, cognitive"
+      }
+    ]
+  },
+  "read_errors": []
+}

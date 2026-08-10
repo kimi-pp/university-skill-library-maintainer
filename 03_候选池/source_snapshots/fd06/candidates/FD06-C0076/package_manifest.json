@@ -1,0 +1,62 @@
+[
+  {
+    "path": "skills/teach-me/README.md",
+    "type": "blob",
+    "size": 10561,
+    "sha": "2040361d7ecbff1fc7919c9f31de139fa3cf10f5"
+  },
+  {
+    "path": "skills/teach-me/SKILL.md",
+    "type": "blob",
+    "size": 30019,
+    "sha": "87baeb4a57eff5b8ea35ca26744c83db8714b3b0"
+  },
+  {
+    "path": "skills/teach-me/assets/COMPONENTS.md",
+    "type": "blob",
+    "size": 12206,
+    "sha": "e782ea57cd415c8ac5781a9e37895afa4ed490e6"
+  },
+  {
+    "path": "skills/teach-me/assets/build-html.mjs",
+    "type": "blob",
+    "size": 15352,
+    "sha": "e10b4d76562b347d50336edc13159b9492372f20"
+  },
+  {
+    "path": "skills/teach-me/assets/package-lock.json",
+    "type": "blob",
+    "size": 20948,
+    "sha": "4ac1c4cc146cc62988c23325ccebbef247a64d0d"
+  },
+  {
+    "path": "skills/teach-me/assets/package.json",
+    "type": "blob",
+    "size": 241,
+    "sha": "02da15b3f2dcd9a6990c3ba93552c652c27c2815"
+  },
+  {
+    "path": "skills/teach-me/assets/styles.css",
+    "type": "blob",
+    "size": 46638,
+    "sha": "63c22e72051d3ffa5f1108f5119f3d77deaa9054"
+  },
+  {
+    "path": "skills/teach-me/assets/templates/WRITING_GUIDE.template.md",
+    "type": "blob",
+    "size": 23762,
+    "sha": "b97b26cc56f136a02e7fadc05b0463c7a530de37"
+  },
+  {
+    "path": "skills/teach-me/assets/templates/index.template.html",
+    "type": "blob",
+    "size": 3057,
+    "sha": "9d9eff93cbc2261aad1b93268704f95dd14cf429"
+  },
+  {
+    "path": "skills/teach-me/assets/viewer.js",
+    "type": "blob",
+    "size": 32115,
+    "sha": "117354447d23b843083aa9fd3241870c832e1e42"
+  }
+]

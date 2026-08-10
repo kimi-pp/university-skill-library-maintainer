@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/systems-thinking/systems-awareness-iceberg/SKILL.md",
+        "snippet": "ence\" type: \"string\" description: \"Observations, data, stories, artefacts, or student work already available\" output_schema: type: \"object\" fields: - field: \"iceberg_map\" type: \"object\" desc"
+      },
+      {
+        "file": "skills/systems-thinking/systems-awareness-iceberg/SKILL.md",
+        "snippet": "ogical stakeholders where relevant. - **Existing evidence:** Observations, data, stories, student work, photos, notes, or artefacts. ## Prompt ```text You are facilitating a compassionate systems-thinking inquiry using t"
+      }
+    ]
+  },
+  "read_errors": []
+}

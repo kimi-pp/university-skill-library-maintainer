@@ -1,0 +1,38 @@
+[
+  {
+    "path": "teaching-pipeline/SKILL.md",
+    "type": "blob",
+    "size": 16247,
+    "sha": "cb2e21b62fb88e62b7adfb5823712e326454da1a"
+  },
+  {
+    "path": "teaching-pipeline/agents/gate_runner_agent.md",
+    "type": "blob",
+    "size": 5026,
+    "sha": "b6b44c2181af207d645f3353821060e75306ac00"
+  },
+  {
+    "path": "teaching-pipeline/agents/iteration_coach_agent.md",
+    "type": "blob",
+    "size": 3713,
+    "sha": "344635928bc7738fd1ddf6fced422e88546a6815"
+  },
+  {
+    "path": "teaching-pipeline/agents/passport_keeper_agent.md",
+    "type": "blob",
+    "size": 3824,
+    "sha": "2bdb9174cf9e59d44febd6c510bb07ed6bff6452"
+  },
+  {
+    "path": "teaching-pipeline/agents/pipeline_orchestrator_agent.md",
+    "type": "blob",
+    "size": 4039,
+    "sha": "370d065f54dc0cec215b814846382c2ca07037ca"
+  },
+  {
+    "path": "teaching-pipeline/references/pipeline_state_machine.md",
+    "type": "blob",
+    "size": 9991,
+    "sha": "dff640beff328c7edb350ef3ac0a3ebf86e0719f"
+  }
+]

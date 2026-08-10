@@ -1,0 +1,45 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "s\" type: \"object\" description: \"Which elements are auto-assessable vs require teacher judgment and why. When horizontal knowledge is present, flag whether critical thinking is being deliberately developed through e"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "pmental, described through bands rather than prerequisite chains, and assessment requires teacher judgment of enacted capability rather than testing of propositional knowledge. ## Input Schema The teacher must provide: - **C"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "ty — it exists only in enactment. Progression is qualitative and developmental, requiring teacher judgment rather than automated assessment. Competency frameworks (GreenComp, EntreComp, LifeComp) provide the most rigorous arti"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "ally hierarchical elements with clear right/wrong answers or demonstrable procedures.] **Teacher-judgment elements (require human assessment):** [List specific elements and explain why they require teacher judgment — typicall"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "ements (require human assessment):** [List specific elements and explain why they require teacher judgment — typically dispositional elements and sophisticated horizontal analysis.] **Mixed elements (partial automation possib"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "ements (partial automation possible):** [Elements where AI can assess some dimensions but teacher judgment is needed for others.] ### 6. AI Tutoring Design Implications [How should this architecture inform an intelligent tut"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "than generic, (e) assessment implications distinguish clearly between auto-assessable and teacher-judgment elements, and (f) AI tutoring implications are practical and architecture-specific. ``` ## Example Output **Scenario:"
+      },
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "ctness. AI can assess them reliably, provide immediate feedback, and adapt difficulty. **Teacher-judgment elements (require human assessment):** - Agency development (Requires observation over time — a single task cannot reve"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+        "snippet": "structures that enable social participation — making knowledge architecture a question of equity, not merely pedagogy. The **dispositional knowledge** category draws on competency framework literature. Unlike hierar"
+      }
+    ]
+  },
+  "read_errors": []
+}

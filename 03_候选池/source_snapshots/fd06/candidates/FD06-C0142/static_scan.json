@@ -1,0 +1,205 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "exam/quiz reaches the LMS quiz engine. Export with `scripts/export_lms.py` (GIFT for Moodle, QTI 2.1 for Canvas/Blackboard); render paper versions to DOCX/PDF with `scripts/render_document.py` - `templates/tes"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "the LMS quiz engine. Export with `scripts/export_lms.py` (GIFT for Moodle, QTI 2.1 for Canvas/Blackboard); render paper versions to DOCX/PDF with `scripts/render_document.py` - `templates/test_blueprint_template"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "S quiz engine. Export with `scripts/export_lms.py` (GIFT for Moodle, QTI 2.1 for Canvas/Blackboard); render paper versions to DOCX/PDF with `scripts/render_document.py` - `templates/test_blueprint_template.md` - `tem"
+      },
+      {
+        "file": "assessment-architect/references/lms_export_format.md",
+        "snippet": "JSON that `scripts/export_lms.py` consumes to produce LMS-importable artifacts (GIFT for Moodle, QTI 2.1 for Canvas/Blackboard, a Common Cartridge course package). When `item_writer_agent` builds an exam or quiz, it"
+      },
+      {
+        "file": "assessment-architect/references/lms_export_format.md",
+        "snippet": "export_lms.py` consumes to produce LMS-importable artifacts (GIFT for Moodle, QTI 2.1 for Canvas/Blackboard, a Common Cartridge course package). When `item_writer_agent` builds an exam or quiz, it emits this JSON alo"
+      },
+      {
+        "file": "assessment-architect/references/lms_export_format.md",
+        "snippet": "lms.py` consumes to produce LMS-importable artifacts (GIFT for Moodle, QTI 2.1 for Canvas/Blackboard, a Common Cartridge course package). When `item_writer_agent` builds an exam or quiz, it emits this JSON alongside the"
+      },
+      {
+        "file": "assessment-architect/references/lms_export_format.md",
+        "snippet": "ets ```bash python3 scripts/export_lms.py questions.json --to gift -o quiz.txt # Moodle import python3 scripts/export_lms.py questions.json --to qti -o quiz_qti.zip # QTI 2.1 (Canvas/Bb) python3 scripts"
+      },
+      {
+        "file": "assessment-architect/references/lms_export_format.md",
+        "snippet": "ort python3 scripts/export_lms.py questions.json --to qti -o quiz_qti.zip # QTI 2.1 (Canvas/Bb) python3 scripts/export_lms.py questions.json --to imscc -o course.imscc --syllabus syllabus.md ``` ## Honest scope"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "ercises that aren't graded | `lesson-builder` | | Writing feedback comments on a specific student's work | `student-mentor` | | Full design → materials → assessment run | `teaching-pipeline` | | Deciding whether an accommoda"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "s (not assessments) | `lesson-builder` / `deck-studio` | | Analyzing a *named* borderline student's grade case | `student-mentor` (grade-analysis is cohort aggregates only) | ## Agent Team (10) | Agent | Role | |-------|------| | `blueprint_agent` | Buil"
+      },
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "reminder (the modified materials and any filename never reference the condition or the student by name). 6. **Checkpoint.** Modified instrument + logistics note presented; this is person-affecting work (`shared/checkpoi"
+      },
+      {
+        "file": "assessment-architect/agents/grade_analyst_agent.md",
+        "snippet": "s only to the passport.** Counts, distribution shape, who-moves *tallies* — never a per-student row, name, or pseudonym in `iteration_history`. The PII lint and `cohort_analyst`'s discipline apply identically here; small cl"
+      },
+      {
+        "file": "assessment-architect/agents/grade_analyst_agent.md",
+        "snippet": "ves *tallies* — never a per-student row, name, or pseudonym in `iteration_history`. The PII lint and `cohort_analyst`'s discipline apply identically here; small classes get no exception. - **You do not set cut"
+      },
+      {
+        "file": "assessment-architect/agents/group_designer_agent.md",
+        "snippet": "genuine interdependence.** The task must *require* a group — a deliverable one strong student could do alone is an individual assignment with extra coordination cost. Build interdependence in: distinct sub-problems that must integrate, a scope no ind"
+      },
+      {
+        "file": "assessment-architect/references/grade_analysis_guide.md",
+        "snippet": "o-moves *tallies* per candidate cutoff, and any pile-up/fairness finding. **Never** a per-student row, name, or pseudonym in `iteration_history`. Per-student matters (a borderline case, a regrade) route to `student-mentor`, ini"
+      },
+      {
+        "file": "assessment-architect/references/peer_assessment_guide.md",
+        "snippet": "ponent, a contribution log, or a peer-adjusted grade) is what restores the link between a student's grade and a student's work. Peer assessment is one such mechanism; it is strongest when combined with at least one other (e.g. an individual refle"
+      },
+      {
+        "file": "assessment-architect/references/peer_assessment_guide.md",
+        "snippet": "abilities. Each factor uses behavioral-anchor descriptors, not a bare number. The form is confidential to the professor — teammates' raw ratings are never shown to the rated peer. ## Contribution-adjustment formulas The"
+      },
+      {
+        "file": "assessment-architect/references/peer_assessment_guide.md",
+        "snippet": "te factors, not the person | | **Collusion / reciprocity** | \"we all rate each other 5\" | confidential ratings; self-rating to expose calibration; instructor evidence (milestone outputs) as a cross-check | | **Retaliation"
+      },
+      {
+        "file": "assessment-architect/references/peer_assessment_guide.md",
+        "snippet": "procedure, which is `[NEEDS PROFESSOR INPUT]`, never invented here. - Peer ratings are confidential to the professor; raw ratings are never returned to the rated student."
+      },
+      {
+        "file": "assessment-architect/references/rubric_patterns.md",
+        "snippet": "ade the unstated | | **Score-first anchoring** | Levels named A/B/C/D — graders match the student to a grade, then read the descriptor | Name levels by quality words or numbers; let the grade be computed | ## TA calibration protocol Multiple graders without c"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "roup project with peer assessment Make the 1.5×-time version of the midterm for a granted accommodation ``` ## Modes | Mode | Trigger intent | Output | |------|---------------|--------| | `exam` | \"Write the midterm/final"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "-grade distribution + shape diagnostics, a what-if cutoff/curve comparator (counts only), fairness note — aggregates only; the professor sets cutoffs | | `group-assessment` | \"Design the group project + peer assessment"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "alt-format version of this exam\" | Modified assessment material for an *already-granted* accommodation, equivalent rigor preserved + logistics note | **Mode dispatch rule:** an instrument request that names no passport as"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "| Full design → materials → assessment run | `teaching-pipeline` | | Deciding whether an accommodation is granted / who is eligible | disability/accessibility office (skill operationalizes an *already-granted* one) | | Acc"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "pipeline` | | Deciding whether an accommodation is granted / who is eligible | disability/accessibility office (skill operationalizes an *already-granted* one) | | Accommodating lecture, slide, or reading materials (not ass"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "k: weighted final-grade distribution, shape diagnostics, what-if cutoff/curve comparator, fairness note — aggregates only; never sets cutoffs | | `group_designer_agent` | Designs graded group projects with genuine inte"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "ment instrument | | `accommodation_designer_agent` | Operationalizes an *already-granted* accommodation into modified assessment materials with equivalent rigor; never decides eligibility, never names the condition | ## Wo"
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "am document + logistics: version variants if requested, extra-time accommodation variant noted (Quality Gate U3), exam-day instructions, point check against blueprint 🧑"
+      },
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "--- name: accommodation_designer_agent description: \"Operationalizes an already-granted accommodation into modified assessment materials with equivalent rigor — never decides eligibility, never names the condition\" --- #"
+      },
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "ials with equivalent rigor — never decides eligibility, never names the condition\" --- # Accommodation Designer — Granted-Accommodation Operationalizer ## Role You turn an **already-granted** accommodation into the modif"
+      },
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "r decides eligibility, never names the condition\" --- # Accommodation Designer — Granted-Accommodation Operationalizer ## Role You turn an **already-granted** accommodation into the modified assessment material the profe"
+      },
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "esigner — Granted-Accommodation Operationalizer ## Role You turn an **already-granted** accommodation into the modified assessment material the professor administers: a 1.5×-time exam variant, an alternative-format versio"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "rubric, grading criteria, project brief, assignment design, question bank, item analysis, academic integrity, AI-proof, 出题, 试卷, 考试, 测验, 评分标准, 评分量表, 课程项目, 题库, 试题分析, 学术诚信.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\""
+      },
+      {
+        "file": "assessment-architect/SKILL.md",
+        "snippet": "item analysis, academic integrity, AI-proof, 出题, 试卷, 考试, 测验, 评分标准, 评分量表, 课程项目, 题库, 试题分析, 学术诚信.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\" status: active pipeline_stage: 3 related_skills:"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "te: what changed, the timing/room/proctor logistics, what the office still owns, and a confidentiality reminder (the modified materials and any filename never reference the condition or the student by name). 6. **Checkp"
+      },
+      {
+        "file": "assessment-architect/agents/accommodation_designer_agent.md",
+        "snippet": "oom level. Removing the *barrier* is the goal; lowering the *standard* is a defect. - **Confidentiality is structural.** Never name or infer the student's condition or identity in the materials, filename, or logistics not"
+      },
+      {
+        "file": "assessment-architect/agents/group_designer_agent.md",
+        "snippet": "relevant knowledge/skill) with behavioral anchors, not a 1–5 popularity scale. Specify confidentiality (ratings seen by the professor, not the rated peer) and self-rating. State **how it adjusts grades**: the contrib"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "assessment-architect/agents/integrity_auditor_agent.md",
+        "snippet": "nse sampling: ~5 min × N students\"). - Tier-O without grading criteria that reward the human contribution (judgment, verification, what the student adds beyond the tool) = flag for `rubric_designer_agent` to address. - Tie"
+      },
+      {
+        "file": "assessment-architect/references/lms_export_format.md",
+        "snippet": "a guaranteed byte-perfect import. Auto-graded scoring for essay/short-answer still needs human review, as the suite always insists."
+      },
+      {
+        "file": "assessment-architect/templates/group_project_template.md",
+        "snippet": "reviews every adjustment\"}} Peer-assessment validity caveat: {{moderate correlation with instructor judgment; multiple rounds beat one; behavioral anchors reduce bias — [VERIFY institution's cited studies]}} Estimated student"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "assessment-architect/references/grade_analysis_guide.md",
+        "snippet": "-----------|-------|--------------------------| | **Linear shift (add N points)** | every score +N | everyone equally; preserves rank and gaps | can push a ceiling cluster past 100; does nothing for a *spread* problem | | **Scale to a top anchor** | multiply so the top sco"
+      },
+      {
+        "file": "assessment-architect/templates/group_project_template.md",
+        "snippet": "— assign and record roles in milestone 1\"}} ### Milestones | Milestone | Due | What you submit | Weight / check | Feedback / peer check-in | |-----------|-----|-----------------|----------------|--------------------------| {{rows: proposal →"
+      },
+      {
+        "file": "assessment-architect/templates/project_brief_template.md",
+        "snippet": "own interview subject}} where applicable)}} ### Milestones | Milestone | Due | What you submit | Weight / check | Feedback you'll get | |-----------|-----|-----------------|----------------|---------------------| {{rows: proposal → draft/prot"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "assessment-architect/references/peer_assessment_guide.md",
+        "snippet": "ent; the formula informs, it does not decide | ## What stays with the professor - The **final grade and every adjustment** — peer assessment is an input the professor confirms, never an automated output. - **Confirmed"
+      },
+      {
+        "file": "assessment-architect/templates/group_project_template.md",
+        "snippet": "title}} — Group Project **{{course_code}} {{course_title}}** · Worth {{weight}}% of your final grade **Assigned:** {{assign_week}} · **Final due:** {{due_week_and_date}} · **Team size:** {{N}} · **Teams formed by:** {{as"
+      },
+      {
+        "file": "assessment-architect/templates/project_brief_template.md",
+        "snippet": "# {{project_title}} **{{course_code}} {{course_title}}** · Worth {{weight}}% of your final grade **Assigned:** {{assign_week}} · **Final due:** {{due_week_and_date}} · **Work mode:** {{individual | groups of N}} ##"
+      }
+    ]
+  },
+  "read_errors": []
+}

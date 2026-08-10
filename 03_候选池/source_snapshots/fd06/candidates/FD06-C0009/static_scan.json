@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "en/08-course-builder/.claude/skills/course-builder/skill.md",
+        "snippet": "e | Strategy | |-----------|----------| | Insufficient domain expertise | Supplement with web search; note \"External verification recommended\" in report | | Lab environment unclear | Default to free cloud tools (Google C"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "en/08-course-builder/.claude/skills/course-builder/skill.md",
+        "snippet": "| Retry once -> proceed without that deliverable; note in review report | | RED found in review | Send revision request -> rework -> re-validate (up to 2 cycles) | | Learning objective gap discovered | Request supplementar"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "en/08-course-builder/.claude/skills/lab-scaffolding/skill.md",
+        "snippet": "ronment | Reason | |------------|------------------------|--------| | Programming Intro | Browser IDE (Replit, Google Colab) | Start instantly without installation | | Web Development | GitHub Codespaces / Gitpod | Co"
+      }
+    ]
+  },
+  "read_errors": []
+}

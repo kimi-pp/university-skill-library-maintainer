@@ -1,0 +1,45 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "dition (\"add a visual\") that may not help anyone specifically? - Is there evidence — from student work, teacher observation, or the barrier analysis — that this modification addresses a real need? Return: ## Inclusive De"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "al-first hierarchy: barrier removal before targeted differentiation before individualised accommodation. Use when planning accessible learning.\" disable-model-invocation: false user-invocable: true effort: high # EXISTING"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "version: \"1.0\" evidence_strength: \"emerging\" evidence_sources: - \"Rose & Meyer (2002) — Universal Design for Learning: Theory and Practice\" - \"CAST (2018) — UDL Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Un"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "actice\" - \"CAST (2018) — UDL Guidelines version 2.2\" - \"Meyer, Rose & Gordon (2014) — Universal Design for Learning: Theory and Practice\" - \"Ok, Rao, Bryant & McDougall (2017) — UDL systematic review\" - \"Tomlinson (200"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "viewing\" - field: \"inclusion_challenge\" type: \"string\" description: \"What accessibility or inclusion concern is driving this request: a specific student, a known barrier, a planning check, or an assessment d"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "ctitioner-framework\", \"emerging-evidence\", \"inclusive-design\", \"udl\", \"differentiation\", \"accessibility\", \"equity\", \"barrier-removal\", \"universal-design\"] --- # Inclusive Design Orchestrator ## What This Skill Does Coord"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "rk\", \"emerging-evidence\", \"inclusive-design\", \"udl\", \"differentiation\", \"accessibility\", \"equity\", \"barrier-removal\", \"universal-design\"] --- # Inclusive Design Orchestrator ## What This Skill Does Coordinates inc"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "e targeting a specific group, and target a specific group before designing individualised accommodation. Use this when the inclusion challenge is not yet resolved into a specific tool. If you already know you need a UDL le"
+      },
+      {
+        "file": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+        "snippet": "ology. When those are needed, it says so. ## Evidence Foundation The pathways draw from Universal Design for Learning (Rose & Meyer, 2002; CAST, 2018; Meyer, Rose & Gordon, 2014; Ok, Rao, Bryant & McDougall, 2017 systematic"
+      }
+    ]
+  },
+  "read_errors": []
+}

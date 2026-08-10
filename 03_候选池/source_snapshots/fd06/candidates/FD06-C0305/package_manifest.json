@@ -1,0 +1,32 @@
+[
+  {
+    "path": "SKILL.md",
+    "size": 13890,
+    "sha256": "c753d7d6e6ce7cef18b248207090401190c89193552308cdb7c6a86d2392d45e",
+    "contentType": "text/plain"
+  },
+  {
+    "path": "references/output-template.md",
+    "size": 6294,
+    "sha256": "de13aa33fbac34cc9cda90f20b19457c575e9bccc9d90b16bfcbf8c84449983f",
+    "contentType": "text/plain"
+  },
+  {
+    "path": "references/pandoc-guide.md",
+    "size": 2474,
+    "sha256": "939686563717ccd9e771e133c8fef08d45b58d6195a4a555e5829a562a092caf",
+    "contentType": "text/plain"
+  },
+  {
+    "path": "references/scoring-standard.md",
+    "size": 5304,
+    "sha256": "753d5e88ad59aa94593d223bae0ef30ba010a12a59aec3f6e5990550eeb763a5",
+    "contentType": "text/plain"
+  },
+  {
+    "path": "skill-card.md",
+    "size": 2231,
+    "sha256": "f51d3b22519902749c7a3e89b30e2e762b406409dc5f4d2fab5c0f4ad786c9f4",
+    "contentType": "text/markdown"
+  }
+]

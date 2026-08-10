@@ -1,0 +1,38 @@
+[
+  {
+    "path": "course-generator/SKILL.md",
+    "type": "blob",
+    "size": 19567,
+    "sha": "fc166b7842085c97d22a5d5a5d603ce640476b46"
+  },
+  {
+    "path": "course-generator/TRASH-FILES.md",
+    "type": "blob",
+    "size": 313,
+    "sha": "d14e4b75bb0095387871b80329edad2ce1e21938"
+  },
+  {
+    "path": "course-generator/TRASH/api_reference.md",
+    "type": "blob",
+    "size": 967,
+    "sha": "0f76a920116031fcc71d2458633542bcec49ae22"
+  },
+  {
+    "path": "course-generator/TRASH/example.py",
+    "type": "blob",
+    "size": 591,
+    "sha": "811b68c312b7d7b5d26d89d2911d85286d918d90"
+  },
+  {
+    "path": "course-generator/TRASH/example_asset.txt",
+    "type": "blob",
+    "size": 865,
+    "sha": "d0ac20404fd641da1fa01160917f42bdccf4c512"
+  },
+  {
+    "path": "course-generator/references/output-formats.md",
+    "type": "blob",
+    "size": 7622,
+    "sha": "d056436df17d86a8266cd06dc4ff22073148ccfb"
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "er, LMS administrator, or faculty member for implementation - A user mentions terms like \"Canvas module,\" \"Moodle course shell,\" \"H5P activity,\" \"discussion board,\" \"SCORM package,\" \"asynchronous unit,\" or \"online le"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "ator, or faculty member for implementation - A user mentions terms like \"Canvas module,\" \"Moodle course shell,\" \"H5P activity,\" \"discussion board,\" \"SCORM package,\" \"asynchronous unit,\" or \"online learning experience"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "ether synchronous means scheduled sessions or optional live office hours. - **Platform:** Canvas, Moodle, Blackboard Ultra, Brightspace (D2L), Google Classroom, Teachable, or custom LMS. Platform choice affects which"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "nchronous means scheduled sessions or optional live office hours. - **Platform:** Canvas, Moodle, Blackboard Ultra, Brightspace (D2L), Google Classroom, Teachable, or custom LMS. Platform choice affects which native"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "s means scheduled sessions or optional live office hours. - **Platform:** Canvas, Moodle, Blackboard Ultra, Brightspace (D2L), Google Classroom, Teachable, or custom LMS. Platform choice affects which native tools are av"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "sessions or optional live office hours. - **Platform:** Canvas, Moodle, Blackboard Ultra, Brightspace (D2L), Google Classroom, Teachable, or custom LMS. Platform choice affects which native tools are available (e.g., Canv"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "l live office hours. - **Platform:** Canvas, Moodle, Blackboard Ultra, Brightspace (D2L), Google Classroom, Teachable, or custom LMS. Platform choice affects which native tools are available (e.g., Canvas SpeedGrader and Outco"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "Teachable, or custom LMS. Platform choice affects which native tools are available (e.g., Canvas SpeedGrader and Outcomes alignment, Moodle's Lesson activity, Brightspace's Release Conditions). - **Enrollment size:**"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "ion and retention rates. - Respond to discussion forums within 24-48 hours of the initial post deadline. Do not grade discussions silently -- post 2-3 substantive replies that model the type of analysis you expect, name-drop well-reasone"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "oritize competing stakeholder claims in a conflict scenario | Create | Discussion initial post + Assignment conclusion | --- ### Weekly Overview Announcement Script > In Module 6, we examined how companies relate to the natu"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "s. - Respond to discussion forums within 24-48 hours of the initial post deadline. Do not grade discussions silently -- post 2-3 substantive replies that model the type of analysis you expect, name-drop well-reasoned student posts, and ask foll"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "- **Estimated hours per week:** Accreditation standards specify approximately 3 hours of student work per credit hour per week. A 3-credit course in a 15-week semester = ~9 hours/week. Confirm the target. - **Assessment c"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "check:** Every assessment item has a defined feedback mechanism (automated, rubric-based instructor feedback, or peer review protocol) - **Accessibility check:** All media and documents meet WCAG 2.1 requirements - **Integrity check:** The summ"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "m] - Description: [Exactly what students do] - Feedback mechanism: [Immediate automated / instructor review / peer] --- #### Lesson [#]: [Title] [Same structure repeated] --- ### Discussion Forum **Forum title:** [Title] *"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "ve is instructional noise. Present the alignment table in the module design output so the instructor can see and verify the connections. 9. **Never ignore academic integrity design.** For every summative assessment, specify at least one f"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "udience:** Prior knowledge level, age range or career stage, technical comfort, any known accessibility needs, motivation context (required vs. elective, intrinsic vs. extrinsic) - **Module scope:** Which module number this"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "sive video watching produces minimal learning. - Every video must have a text transcript (accessibility) and closed captions reviewed for accuracy (auto-generated captions average 80% accuracy; corrected captions are requir"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "rses, do not assign the same readings as the in-person version without evaluating digital accessibility. Check that PDFs are OCR-searchable and screen-reader compatible. **Interactive and practice elements:** - H5P (built"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "es, drafts) alongside final submissions. Proctoring software is a last resort and creates equity concerns for students without reliable webcams or private spaces. - Every subjective assessment (paper, project, discus"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "ed image uploads, structured templates, and collaborative documents. ### Step 7: Specify Accessibility, Technical, and Logistics Requirements These are non-negotiable compliance and quality requirements, not optional add-"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "s These are non-negotiable compliance and quality requirements, not optional add-ons. **Accessibility requirements (WCAG 2.1 Level AA minimum):** - All videos: accurate closed captions + downloadable transcripts - All ima"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "back mechanism (automated, rubric-based instructor feedback, or peer review protocol) - **Accessibility check:** All media and documents meet WCAG 2.1 requirements - **Integrity check:** The summative assessment design is r"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "X days of deadline] | Rubric + written comments | Learning-oriented feedback | --- ### Accessibility Checklist - [ ] All videos have corrected closed captions - [ ] All videos have downloadable text transcripts - [ ] Al"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "yze a case, solve a novel problem, produce a product, evaluate competing arguments. - For academic integrity in asynchronous courses: use open-book/open-note design with prompts that require integration and synthesis; assign uni"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "pe, or performance criteria] - **Prompt:** > [Full assignment prompt in final form] - **Academic integrity design:** [Specific features that make this assignment resistant to contract cheating or AI generation without engageme"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "le design output so the instructor can see and verify the connections. 9. **Never ignore academic integrity design.** For every summative assessment, specify at least one feature that makes generic or recycled responses inadequ"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "deliverables, not afterthoughts. 12. **Do not recommend proctoring software as a primary academic integrity strategy.** Proctoring software creates significant equity barriers (private space, webcam, high-speed connection requi"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/online-course-design/SKILL.md",
+        "snippet": "lder-facing decisions. Module 8 will apply these concepts to whistleblowing and corporate misconduct. **Duration:** 1 week, approximately 9 hours estimated total student time **Delivery Mode:** Fully asynchronous (no liv"
+      }
+    ]
+  },
+  "read_errors": []
+}

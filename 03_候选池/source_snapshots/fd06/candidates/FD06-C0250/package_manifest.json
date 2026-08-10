@@ -1,0 +1,38 @@
+[
+  {
+    "path": ".gitignore",
+    "type": "blob",
+    "size": 128,
+    "sha": "bb88aba9b81994d6a3c3c7263f597436a5315e8d"
+  },
+  {
+    "path": "LICENSE",
+    "type": "blob",
+    "size": 1064,
+    "sha": "6443f24fb00389efe6ee8387d03714b41898d82b"
+  },
+  {
+    "path": "README.md",
+    "type": "blob",
+    "size": 6549,
+    "sha": "be0aa86fe7a031e5f55b9f3e4be20af38f285c8d"
+  },
+  {
+    "path": "README.zh-CN.md",
+    "type": "blob",
+    "size": 5905,
+    "sha": "6d9bd3cd4cfd18d35089fcb31ea7cc51802ae3be"
+  },
+  {
+    "path": "SKILL.md",
+    "type": "blob",
+    "size": 30608,
+    "sha": "9645b2710b103071552b30f1bd86fa795db1a7cf"
+  },
+  {
+    "path": "skill.json",
+    "type": "blob",
+    "size": 945,
+    "sha": "6f16e705e6106821ae6a733eb9036db61f702045"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "`** in your project root with `KAHOOT_TOKEN` - **Token**: Run `login` to authenticate via browser (auto-detects login, browser closes automatically). Use `login --browser msedge` for SSO via Edge. - **Quiz JSON**: A `"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "`KAHOOT_TOKEN` - **Token**: Run `login` to authenticate via browser (auto-detects login, browser closes automatically). Use `login --browser msedge` for SSO via Edge. - **Quiz JSON**: A `.json` file with quiz definit"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "authenticate via browser (auto-detects login, browser closes automatically). Use `login --browser msedge` for SSO via Edge. - **Quiz JSON**: A `.json` file with quiz definition (see format below) ## Workflow ### Pha"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "nd ask which command to run. ### Phase 2: Execute **`login`**: Execute directly — opens browser for authentication. **Read-only** (`preview`, `list`): Execute directly. ```bash NODE_PATH=\"${CLAUDE_PLUGIN_DATA}/nod"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "quiz.json> --live ``` **`host`**: Execute directly — opens the game lobby in the default browser. Accepts a quiz UUID, Kahoot URL, or a quiz JSON file. ```bash NODE_PATH=\"${CLAUDE_PLUGIN_DATA}/node_modules\" node \"${"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "Command | Arguments | Description | |---------|-----------|-------------| | `login` | `[--browser msedge\\|chrome]` | Open browser, login, save token to .env (auto-closes) | | `preview` | `<quiz.json>` | Validate and s"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "n | |---------|-----------|-------------| | `login` | `[--browser msedge\\|chrome]` | Open browser, login, save token to .env (auto-closes) | | `preview` | `<quiz.json>` | Validate and show quiz structure (no API call)"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "| List all own Kahoots | | `host` | `<uuid\\|url\\|quiz.json>` | Open game lobby in default browser | ## Quiz JSON Format ```json { \"title\": \"My Quiz\", \"description\": \"Optional description\", \"language\": \"en\","
+      }
+    ],
+    "lms": [
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "--- name: kahoot description: \"Create, manage, and host Kahoot quizzes from JSON definitions. Use /kahoot-skill:kahoot to create, previe"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "--- name: kahoot description: \"Create, manage, and host Kahoot quizzes from JSON definitions. Use /kahoot-skill:kahoot to create, preview, list, or host quizzes.\" argument-hint: \"[co"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "kahoot description: \"Create, manage, and host Kahoot quizzes from JSON definitions. Use /kahoot-skill:kahoot to create, preview, list, or host quizzes.\" argument-hint: \"[command] [args...]\" disable-model-invocation:"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "iption: \"Create, manage, and host Kahoot quizzes from JSON definitions. Use /kahoot-skill:kahoot to create, preview, list, or host quizzes.\" argument-hint: \"[command] [args...]\" disable-model-invocation: true --- #"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "host quizzes.\" argument-hint: \"[command] [args...]\" disable-model-invocation: true --- # Kahoot Skill — Quiz Management & Hosting Create, manage, and host Kahoot quizzes from JSON definitions via the `kahoot-creato"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "nvocation: true --- # Kahoot Skill — Quiz Management & Hosting Create, manage, and host Kahoot quizzes from JSON definitions via the `kahoot-creator.js` CLI. ## When This Skill Activates - Explicit: `/kahoot-skil"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "agement & Hosting Create, manage, and host Kahoot quizzes from JSON definitions via the `kahoot-creator.js` CLI. ## When This Skill Activates - Explicit: `/kahoot-skill:kahoot`, `/kahoot-skill:kahoot list` ## Pre"
+      },
+      {
+        "file": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+        "snippet": "definitions via the `kahoot-creator.js` CLI. ## When This Skill Activates - Explicit: `/kahoot-skill:kahoot`, `/kahoot-skill:kahoot list` ## Prerequisites - **`.env`** in your project root with `KAHOOT_TOKEN` - *"
+      }
+    ]
+  },
+  "read_errors": []
+}

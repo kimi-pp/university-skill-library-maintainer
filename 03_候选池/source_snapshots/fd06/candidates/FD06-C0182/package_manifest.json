@@ -1,0 +1,98 @@
+[
+  {
+    "path": "student-mentor/SKILL.md",
+    "type": "blob",
+    "size": 12940,
+    "sha": "93e14f97f2a3894d8db043cc094fae071286fae1"
+  },
+  {
+    "path": "student-mentor/agents/communication_coach_agent.md",
+    "type": "blob",
+    "size": 4149,
+    "sha": "268263c22b7180d31bc20731f52b72ddd8ec669b"
+  },
+  {
+    "path": "student-mentor/agents/feedback_writer_agent.md",
+    "type": "blob",
+    "size": 3862,
+    "sha": "2c69f7ff2e5887a57dfc8633d719a4644c7a3ff2"
+  },
+  {
+    "path": "student-mentor/agents/integrity_case_agent.md",
+    "type": "blob",
+    "size": 4961,
+    "sha": "17b4789f8ec4e35da36629d2a42d2148d1da6afc"
+  },
+  {
+    "path": "student-mentor/agents/intervention_advisor_agent.md",
+    "type": "blob",
+    "size": 3797,
+    "sha": "d3b0f69c0f447fa35c95b6e9dd28ad2d27236426"
+  },
+  {
+    "path": "student-mentor/agents/mentoring_planner_agent.md",
+    "type": "blob",
+    "size": 4435,
+    "sha": "ae41a881e8e423e6f27e2585bb277f6a21a6bf4b"
+  },
+  {
+    "path": "student-mentor/agents/recommendation_writer_agent.md",
+    "type": "blob",
+    "size": 4488,
+    "sha": "fdf3aef5e6e146155393272a3bbf4419f08bee4e"
+  },
+  {
+    "path": "student-mentor/references/feedback_principles.md",
+    "type": "blob",
+    "size": 6668,
+    "sha": "fb35d1d4629a35160815f05b5b4097bcc01a7160"
+  },
+  {
+    "path": "student-mentor/references/integrity_process_guide.md",
+    "type": "blob",
+    "size": 4959,
+    "sha": "77e22361600b6919f14ca21b0c1114d8c1552d03"
+  },
+  {
+    "path": "student-mentor/references/recommendation_letter_guide.md",
+    "type": "blob",
+    "size": 6227,
+    "sha": "25944ef92a0b662a870e97e95a3e12ffd47fd323"
+  },
+  {
+    "path": "student-mentor/templates/feedback_comments_template.md",
+    "type": "blob",
+    "size": 1344,
+    "sha": "e7e16c2d7d7439f1623a64d202c53659af5f6751"
+  },
+  {
+    "path": "student-mentor/templates/intake_record_template.md",
+    "type": "blob",
+    "size": 1680,
+    "sha": "41673a7ebe6363fec9d44e31269261f2778dd0a4"
+  },
+  {
+    "path": "student-mentor/templates/integrity_case_template.md",
+    "type": "blob",
+    "size": 4685,
+    "sha": "44a521a8dd0108dd6c752c3878cdaa3fdaea1438"
+  },
+  {
+    "path": "student-mentor/templates/intervention_outreach_template.md",
+    "type": "blob",
+    "size": 3393,
+    "sha": "7704438076b446db8fe7a3f13feafe14588b8837"
+  },
+  {
+    "path": "student-mentor/templates/mentoring_expectations_template.md",
+    "type": "blob",
+    "size": 4264,
+    "sha": "35144708e01aac1bcd6f05e1fe8cc358ba0a40be"
+  },
+  {
+    "path": "student-mentor/templates/recommendation_letter_template.md",
+    "type": "blob",
+    "size": 2077,
+    "sha": "80cd0ac804a03d3b39ac5c74c48801f5fa1a4f43"
+  }
+]

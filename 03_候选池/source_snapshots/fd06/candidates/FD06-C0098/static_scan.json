@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/historical-thinking/contextualisation-skill-builder/SKILL.md",
+        "snippet": "riod (e.g., a World War I recruitment poster). Without the two-step bridge scaffold, they write a contextualisation paragraph: \"This document was created in [year]. At this time, [relevant context]. This context helps explain why the document [specific feature]"
+      }
+    ]
+  },
+  "read_errors": []
+}

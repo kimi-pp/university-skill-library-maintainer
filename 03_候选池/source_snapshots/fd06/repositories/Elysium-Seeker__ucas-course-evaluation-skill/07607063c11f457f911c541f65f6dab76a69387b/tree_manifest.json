@@ -1,0 +1,87 @@
+{
+  "repository": "Elysium-Seeker/ucas-course-evaluation-skill",
+  "fixed_version": "07607063c11f457f911c541f65f6dab76a69387b",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "size": 19
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73ae4a052d111b28a3668b8bfef9ac3aac208811",
+      "size": 133
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4552c4e681ef0741546a609e076d11488062a5a2",
+      "size": 1071
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f28b4eacdcd81aa441192f10a6fd9be8053cb8b",
+      "size": 4258
+    },
+    {
+      "path": "ucas-course-evaluation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee9b63fd9755af8fe754d312af8f5f0a8d3bd679"
+    },
+    {
+      "path": "ucas-course-evaluation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "584b3217cdfa064027d0b3f845b46ba7de0a4e81",
+      "size": 4650
+    },
+    {
+      "path": "ucas-course-evaluation/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96d3a69454c9d65665bd8266e0221f03d7f9b9e7"
+    },
+    {
+      "path": "ucas-course-evaluation/agents/openai.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8edd7923a8446c6f5038da04f245f98a5e502ce9",
+      "size": 266
+    },
+    {
+      "path": "ucas-course-evaluation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39bf217217466c6f70ca8ff5179f23c86c357831"
+    },
+    {
+      "path": "ucas-course-evaluation/references/ucas-evaluation-workflow.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a3775136785dcd25de240286d0c598c5c7bc92c",
+      "size": 2663
+    },
+    {
+      "path": "ucas-course-evaluation/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "412ed96cd28fc8ad76ff236276802ed47987e6c0"
+    },
+    {
+      "path": "ucas-course-evaluation/scripts/ucas_eval_cdp.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9da160814d815c4e00d0bbf3877f789acac1eb8c",
+      "size": 15939
+    }
+  ]
+}

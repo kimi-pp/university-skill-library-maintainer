@@ -1,0 +1,69 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "teaching-reflector/SKILL.md",
+        "snippet": ", teaching philosophy, SoTL, scholarship of teaching, improve my course, what went wrong, 学生评教, 教学评价, 期中反馈, 同行听课, 教学档案, 教学理念, 教学陈述, 教学研究, 课程改进.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\" status:"
+      },
+      {
+        "file": "teaching-reflector/SKILL.md",
+        "snippet": "k Start ``` Here are my course evals for CS 201 — what should I actually change? 帮我分析这学期的学生评教结果 Design a mid-semester feedback survey for my seminar — it's week 5 A colleague is observing my lecture next Tuesday"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "teaching-reflector/SKILL.md",
+        "snippet": "n for university professors. 6-agent team covering student-evaluation analysis (thematic, bias-caveated), mid-semester feedback, peer-observation prep, teaching portfolio assembly, teaching statement writing, and S"
+      },
+      {
+        "file": "teaching-reflector/SKILL.md",
+        "snippet": "with prevalence counts and exemplar quotes; reads scalars as distributions with mandatory bias caveats; splits actionable from non-actionable | | `midcourse_agent` | Designs a 3–5 question mid-semester instrument,"
+      },
+      {
+        "file": "teaching-reflector/SKILL.md",
+        "snippet": "evalence counts + exemplar quotes · scalar section with explicit bias/noise caveats (§11 block) · actionable vs non-actionable split · 2–3"
+      },
+      {
+        "file": "teaching-reflector/SKILL.md",
+        "snippet": "portfolio evidence — see `references/teaching_statement_guide.md`). ## Iron rules 1. **Bias caveats are mandatory, not optional politeness.** Every `eval-analysis` report carries the §11 caveat block (`refere"
+      },
+      {
+        "file": "teaching-reflector/agents/eval_analyst_agent.md",
+        "snippet": "ription: \"Thematically codes student-evaluation comments and reads scalars with mandatory bias and noise caveats\" --- # Eval Analyst — Thematic Coder With Statistical Honesty ## Role You turn raw evaluation data"
+      },
+      {
+        "file": "teaching-reflector/agents/eval_analyst_agent.md",
+        "snippet": "a statistician second — comments carry the usable signal; scalars mostly carry noise plus bias (Pedagogy Foundations §11). You report what the data shows, what it cannot show, and which findings deserve action. ##"
+      },
+      {
+        "file": "teaching-reflector/references/eval_analysis_protocol.md",
+        "snippet": "view; offer it without pressure either way. Rationale: these comments are documented bias channels (§11), not teaching evidence — but their *count* is reportable context, especially for personnel-file frami"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "teaching-reflector/agents/eval_analyst_agent.md",
+        "snippet": "Follow `references/eval_analysis_protocol.md` exactly. In brief: 1. **Hygiene first** — de-identify; filter abusive/discriminatory comments to a count + category (never repeated in full; professor can request the raw"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "teaching-reflector/agents/sotl_consultant_agent.md",
+        "snippet": "ore any design is drafted: **classroom research with intent to publish typically requires human-subjects review** — often expedited or exempt for normal educational practice, but that determination belongs to the IRB, not to us. Im"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "teaching-reflector/references/teaching_statement_guide.md",
+        "snippet": "the portfolio narrative read as different authors Run the audit again after any late edit to either document."
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "teaching-reflector/references/teaching_statement_guide.md",
+        "snippet": "me…\") that the professor can't place | If unverifiable by the professor it cannot ship — fabrication risk is career-level (Iron Rule 4) | Use only quotes/events the professor can locate; otherwise cut | | Quoting eval av"
+      }
+    ]
+  },
+  "read_errors": []
+}

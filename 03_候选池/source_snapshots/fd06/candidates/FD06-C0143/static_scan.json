@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/92bilal26/assessment-builder/reference/rubric-guidelines.md",
+        "snippet": "criterion 2. Explanation of score (which descriptor matched) 3. Specific examples from student work 4. Suggestions for improvement **Example Feedback**: ``` Correctness: 30/40 (Good) Your function works correctly"
+      },
+      {
+        "file": "skills/92bilal26/assessment-builder/templates/rubric-template.yml",
+        "snippet": "feedback_template: | Criterion: Score (Level) [Specific feedback with examples from student work] [Suggestions for improvement]"
+      }
+    ]
+  },
+  "read_errors": []
+}

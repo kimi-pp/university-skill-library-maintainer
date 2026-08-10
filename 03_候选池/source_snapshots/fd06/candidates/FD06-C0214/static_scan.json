@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/ai-learning-science/intelligent-tutoring-dialogue-designer/SKILL.md",
+        "snippet": "t the ground first.\" Is that a fair summary of your position? *[Explicit commitment — the student's prediction is now on the record, setting up the conflict]* **Student:** Yeah, that's what I think. **Tutor:** Good. Now I want you to imagine a diffe"
+      },
+      {
+        "file": "skills/ai-learning-science/intelligent-tutoring-dialogue-designer/SKILL.md",
+        "snippet": "ction, then asks the STUDENT to explain the discrepancy. The tutor does not explain — the student must do the cognitive work of reconciling their prediction with the evidence. This is the highest-engagement dialogue pattern in the ICAP framewor"
+      }
+    ]
+  },
+  "read_errors": []
+}

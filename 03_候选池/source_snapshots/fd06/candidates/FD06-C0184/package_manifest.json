@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+    "type": "blob",
+    "size": 17602,
+    "sha": "f0ac93190a3a821f5d4db28c0fa503d016a37157"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references/dataset_rules.md",
+    "type": "blob",
+    "size": 5875,
+    "sha": "91375fe5db6cefe377d26c98958b1ca226b2bc9d"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references/feedback_rubric.md",
+    "type": "blob",
+    "size": 9178,
+    "sha": "e03a57df1edd218e7bda55c0475068d901754c0d"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references/tone_and_format.md",
+    "type": "blob",
+    "size": 5163,
+    "sha": "22774901e6c2a2858a84a90304341adc035f00d7"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/check_notebook_static.py",
+    "type": "blob",
+    "size": 16585,
+    "sha": "a5bb234f1ecc8db52dae1bee9851170bf848d600"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inspect_datasets.py",
+    "type": "blob",
+    "size": 10359,
+    "sha": "63fd5b7006e6b64233f7f5c4902c38cfd4e5b002"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+    "type": "blob",
+    "size": 11930,
+    "sha": "583ec2a8041cf440fe8d4bab356a7a2a23267b81"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/locate_student_submission.py",
+    "type": "blob",
+    "size": 11730,
+    "sha": "43772e1f257e0ec768bcf098f59f37a616481ee9"
+  }
+]

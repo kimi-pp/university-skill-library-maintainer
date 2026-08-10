@@ -1,0 +1,49 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "the root cause of student mistakes and misconceptions. Use when error patterns appear in student work and targeted feedback is needed.\" disable-model-invocation: false user-invocable: true effort: medium # EXISTING FIELD"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "nt_work_sample\" type: \"string\" description: \"Description or transcript of the student work containing errors\" - field: \"task_description\" type: \"string\" description: \"What the student was asked"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "heir own errors\" chains_well_with: - \"feedback-quality-analyser\" - \"gap-analysis-from-student-work\" - \"metacognitive-prompt-library\" - \"worked-example-fading-designer\" teacher_time: \"4 minutes\" tags: [\"error-analys"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "t each of these can be explicitly taught. ## Input Schema The teacher must provide: - **Student work sample:** The work containing errors — described or transcribed. *e.g. \"Student wrote: 3/4 + 2/3 = 5/7. They added numerators and denomina"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "thinking and guide instruction. Your task is to analyse the following student errors: **Student work:** {{student_work_sample}} **Task:** {{task_description}} **Subject:** {{subject_area}} The following optional context"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "-teach\" but how to re-teach] ### Student Self-Analysis Guide [Scaffolded prompts for the student to analyse their own work] ### Prevention Strategy [How to prevent this error in future instruction — what to emphasise, what examples to use]"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "ddress the root cause, not just the surface error. ``` ## Example Output **Scenario:** *Student work: \"Question: Simplify 4x + 3 + 2x - 5. Student answer: 6x - 15. Working shown: 4x + 2x = 6x (correct so far), then 3 - 5"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "-teaching to the whole class, not individual error analysis. Chain with Gap Analysis from Student Work for class-level analysis. 3. **Error analysis takes time, and time is the scarcest resource in teaching.** Detailed an"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "verify. 4. **Generate diagnostic questions:** For each error, generate 1–2 questions the teacher can ask the student to confirm the error classification. \"Can you explain why you added the numerators?\" distinguishes a conceptual error (the student"
+      },
+      {
+        "file": "skills/self-regulated-learning/error-analysis-protocol/SKILL.md",
+        "snippet": "t the student likely believes or is doing wrong] ### Diagnostic Questions [Questions the teacher can ask the student to confirm the error classification and uncover the student's thinking] ### Targeted Response Plan For each error: - **Error type"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/original-frameworks/three-horizons-learning-transition-mapper/SKILL.md",
+        "snippet": "ield: \"existing_evidence\" type: \"string\" description: \"Data, observations, or student work already available about the current situation\" - field: \"h3_seeds\" type: \"string\" description: \"Pockets"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/original-frameworks/three-horizons-learning-transition-mapper/SKILL.md",
+        "snippet": "vertical axis. Examples: ecological health, student wellbeing, learning depth, belonging, fairness, community resilience\" optional: - field: \"student_level\" type: \"string\" description: \"Year group or"
+      }
+    ]
+  },
+  "read_errors": []
+}

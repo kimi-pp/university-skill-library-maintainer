@@ -1,0 +1,27 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+        "snippet": "s type: object description: Counts of items per school band, ambiguity flags, teacher review flags, and low-confidence tags. For rapid quality scanning. - field: skill_flags type: array descriptio"
+      },
+      {
+        "file": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+        "snippet": "ption: Any skill-level warnings (missing age range, CASEL-style frameworks requiring full teacher review, source-voice preservation warnings if any rewriting was detected). chains_well_with: - curriculum-crosswalk - kud-"
+      },
+      {
+        "file": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+        "snippet": "where the skill maps by developmental descriptor rather than age and flags every item for teacher review. # Evidence Foundation **Wiggins & McTighe (2005, 2011)** — Understanding by Design establishes KUD (Know / Understan"
+      },
+      {
+        "file": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+        "snippet": "6. **Emit summary counts and skill flags.** Count items per school band, ambiguity flags, teacher-review flags, and low-confidence tags. Emit a skill flag for any source where >50% of items are ambiguous (signals a structura"
+      },
+      {
+        "file": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+        "snippet": "work-specific determinations. Content tagged this way should be treated as a scaffold for teacher review, not a validated mapping. **The skill assumes harness-validated input.** It does not re-validate the source decomposit"
+      }
+    ]
+  },
+  "read_errors": []
+}

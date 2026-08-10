@@ -1,0 +1,20 @@
+[
+  {
+    "path": "package.json",
+    "size": 287,
+    "sha256": "c05ab02490aebf7211ab3e4d3d730122d729f74042fd0bbce3b4cd3fab704ffd",
+    "contentType": "application/json"
+  },
+  {
+    "path": "SKILL.md",
+    "size": 7522,
+    "sha256": "7b5bc6e274ed83ca2328f965fd7bd30cc5d93da67de96934221f2403b9f9a381",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "skill-card.md",
+    "size": 2350,
+    "sha256": "5ef2d1c44f1d66760806e4160cfd6aca0c1bd14483af30fd4b6e3415fab9efb5",
+    "contentType": "text/markdown"
+  }
+]

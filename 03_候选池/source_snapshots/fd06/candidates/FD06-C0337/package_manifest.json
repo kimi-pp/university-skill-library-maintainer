@@ -1,0 +1,122 @@
+[
+  {
+    "path": "skills/core/alterlab-paper-reviewer/SKILL.md",
+    "type": "blob",
+    "size": 21377,
+    "sha": "c57456add6ac8e8439c0e3d772cc12df1a36fb6c"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+    "type": "blob",
+    "size": 8728,
+    "sha": "816422ec8b01575d008b54b93099f7210ef310e4"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/domain_reviewer_agent.md",
+    "type": "blob",
+    "size": 9185,
+    "sha": "1ff92e412f3c9adece2d5db6822be7380618fa47"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/editorial_synthesizer_agent.md",
+    "type": "blob",
+    "size": 11382,
+    "sha": "59d1e82ad906c6a21a6f9033e1be0d6a4807a147"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/eic_agent.md",
+    "type": "blob",
+    "size": 5853,
+    "sha": "749fa7f5f7799f29be9241e7b735c04a41eb83c6"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/field_analyst_agent.md",
+    "type": "blob",
+    "size": 9613,
+    "sha": "cde40d023f74dc7f4590b3d5857510a28d92fa39"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/methodology_reviewer_agent.md",
+    "type": "blob",
+    "size": 10657,
+    "sha": "09a0467529fcde4605ace7921e84ef34826cef32"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/agents/perspective_reviewer_agent.md",
+    "type": "blob",
+    "size": 11758,
+    "sha": "e31d2d609593dbd312410465d9b3b91d686f6356"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/commands/review-paper.md",
+    "type": "blob",
+    "size": 1579,
+    "sha": "b25c190cf67256aa0e0b6378d78a7adb7aadb75c"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/evals/evals.json",
+    "type": "blob",
+    "size": 6678,
+    "sha": "457e49d3abc88adb4eb03d98a5e77e622da37600"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/examples/hei_paper_review_example.md",
+    "type": "blob",
+    "size": 26417,
+    "sha": "dc865142bd9e6f938fdadc3f5077d2e23f8791b3"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/examples/interdisciplinary_review_example.md",
+    "type": "blob",
+    "size": 19174,
+    "sha": "490cdf3769386d8b0ad5d040ad233c461a92ae34"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/references/editorial_decision_standards.md",
+    "type": "blob",
+    "size": 9230,
+    "sha": "e4506070fc1c2a8f51401862c8bc680855e0973c"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/references/quality_rubrics.md",
+    "type": "blob",
+    "size": 6846,
+    "sha": "ef4f976b8ef65173be7b1867cf7247ee5f32395c"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/references/review_criteria_framework.md",
+    "type": "blob",
+    "size": 9751,
+    "sha": "f30607b9fb86a5c454cdcbf90fc42c3946996705"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/references/statistical_reporting_standards.md",
+    "type": "blob",
+    "size": 22703,
+    "sha": "5b2c5b6ab586e367bf373a3b584c62f65d9dca07"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/references/top_journals_by_field.md",
+    "type": "blob",
+    "size": 11322,
+    "sha": "6ad6f74d5f4b3e841ad60eb963cd0b755f729512"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/templates/editorial_decision_template.md",
+    "type": "blob",
+    "size": 6453,
+    "sha": "67bead6d2babf6342d96442dc877cbe07ebc6856"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/templates/peer_review_report_template.md",
+    "type": "blob",
+    "size": 7479,
+    "sha": "6a79af40677fc9a92a53cd6f1bbf019b20fdb18c"
+  },
+  {
+    "path": "skills/core/alterlab-paper-reviewer/templates/revision_response_template.md",
+    "type": "blob",
+    "size": 7020,
+    "sha": "1e5e358112469f9c2b24b47bffdb1847623ea41f"
+  }
+]

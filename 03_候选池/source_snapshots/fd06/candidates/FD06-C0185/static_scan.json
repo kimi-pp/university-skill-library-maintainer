@@ -1,0 +1,101 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "erministic, shared with all graders) For each notebook, **secret-gate first** (grep for `os.environ`, `getenv`, `HF_TOKEN`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `load_dotenv`, hard-coded `hf_*`/`sk-*`); if it needs se"
+      }
+    ],
+    "file_write": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "Message again) and re-run — never ship a grade built on flagged input. 2. **Assemble and write the output files** into the locator's `feedback_dir` (`students_work/class_<YY>/<lastname_t>/final_assignment/`), per `refer"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": ">/<lastname_t>/final_assignment/`), per `references/grade_output_template.md`. **Never overwrite an existing file** — stamp every output with a single runtime timestamp so prior grade runs and the formative feedback skill's dra"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/record_grade.py",
+        "snippet": ")) sheet.addElement(tr) doc.spreadsheet.addElement(sheet) ods_path.parent.mkdir(parents=True, exist_ok=True) doc.save(str(ods_path)) def main(argv: list[str]) -> int: ap = argparse.Argument"
+      }
+    ],
+    "file_delete": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "name '*venv' -o -name 'site-packages' -o -name '__pycache__' \\) \\ -prune -print -exec rm -rf {} + ``` Run this **only inside the student's dated download folder** (never on `students_work/` broadly). If anything"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "--- name: uoa-py-course-final-assignment-grade description: Use this skill to GRADE a student's COMPLETE Python-course final assignment and produce a suggested numeric grade with per-notebook, per-criterion justification. Trigger on requests like \"grade <"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "ic grade with per-notebook, per-criterion justification. Trigger on requests like \"grade <student>'s final assignment\", \"score this submission\", \"what grade should this assignment get\", \"grade the eClass submission for <student>\", \"run the grading panel on <stud"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "the final reconciled verdict. If an earlier formative draft-feedback file exists for the student (from uoa-py-course-final-assignment-feedback), the arbiter also folds it in as a FOURTH equal-weight voice — validated cell-by-cell against the final submi"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "eClass (use automation_infrastructure/eclass/download_submissions.py); or to edit/fix the student's notebooks. One submission per invocation. If the input is ambiguous (multiple students match, no notebooks, a .rar that can't be extracted), ask"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "to grade before proceeding. --- # Final-assignment grading panel You are grading **one student's complete final assignment** and producing a **suggested numeric grade** with accurate, criterion-level justification. The output is a set of Mark"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "every \"How to apply\" line that is still relevant to this run. ### Phase 0a — Locate the student's submission If the user gave an explicit path (a `.zip`/folder/`.ipynb`), skip to 0b with that path. Otherwise resolve the one stu"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "/class_<YY>/`: ```bash $PY \"$FBSKILL/scripts/locate_student_submission.py\" --year 2026 \"<student query>\" > \"$WORK/located.json\" ``` Act on `located.json` exactly as the feedback skill does: `is_extracted` → read that folder; `needs_"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "$PY \"$GSKILL/scripts/audit_grades_recorded.py\" --year <YYYY> ``` Exit `0` = every student with grade-summary files on disk is also in both stores (`missing`/`db_ods_drift` empty). Exit `3` = at least one student is gr"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/AUTOIMPROVE.md",
+        "snippet": "udent's notebooks — to the **repo root**. On a public repo, one `git add -A` would leak student work, and gitleaks would NOT catch it (it scans for secrets, not PII). - **Stopgap (maintainer):** `/exec_*.txt` added to `."
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/AUTOIMPROVE.md",
+        "snippet": ".md files (grade + feedback) now carry a **PII guard** block at the workdir definition: student-derived transient files go to `$WORK` in `/tmp`, never to the repo root or any tracked path; writers that cannot use `/tmp` (some subagent sandboxes) mu"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/AUTOIMPROVE.md",
+        "snippet": "o bundled venv; ONE June draft-feedback file used as the arbiter's fourth voice. **This student had grade/feedback files on disk from a June (feedback-validation-era) run but had NEVER been recorded to the DB/ODS** — the tr"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/AUTOIMPROVE.md",
+        "snippet": "es, mark its entry `absorbed` — the log is a queue, not a second rulebook. - **No student PII.** No names, no slugs, no dataset details that identify a person. Identify a cycle by its run timestamp only; the map"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "ute_grade.py (criterion sums → nearest-0.5 notebook grades → weighted total → nearest-0.5 final grade; regression 0.25 / clustering 0.25 / classification 0.50). It writes timestamped per-notebook `<prefix>_<category>_feed"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/references/grading_rubric.md",
+        "snippet": "e the initiative positively. Surface it so the instructor sees the basis for grading. ## Final grade mechanics (handled by `compute_grade.py`, stated here for transparency) - Within a notebook: the 13 criterion scores a"
+      }
+    ],
+    "human_review": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+        "snippet": "me** with the instructor in the loop. After the Phase-F report, **stop and wait** for the instructor's review — never roll on to another student in the same breath. 1. **Instructor reviews** the written files and may push back:"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-grade/references/grade_output_template.md",
+        "snippet": "or-facing) ```markdown # Assignment grade summary — <prefix> > AI-suggested, not final. Instructor + tutor review and may adjust. Total course grade also > includes practice exercises and class participation. **Suggested total assig"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-structure-001",
+      "source": "thesis",
+      "category": "structure",
+      "severity": "fatal",
+      "scope": "document",
+      "locator": {
+        "chapter": "全文",
+        "paragraph_index": 0
+      },
+      "excerpt": "",
+      "problem": "全文无独立研究综述章节,绪论仅列出立法沿革与若干零散学者观点,不具备综述式结构与分歧梳理",
+      "suggestion": [
+        "在绪论与第一章之间增设独立的'国内外研究现状'一节,按议题组织,呈现学术分歧与未解难题",
+        "梳理至少三派学说(合同说、信义说、风险分担说)的代表文献并点出本文立场"
+      ],
+      "group_id": "g-001",
+      "anchor_text": "全文"
+    },
+    {
+      "id": "thesis-structure-002",
+      "source": "thesis",
+      "category": "structure",
+      "severity": "major",
+      "scope": "chapter",
+      "locator": {
+        "chapter": "2",
+        "paragraph_index": 0
+      },
+      "excerpt": "",
+      "problem": "第二章整章为'知情同意制度的概念与特征'的综合介绍,但实质内容与绪论重复严重,未推进至本文核心论题",
+      "suggestion": [
+        "合并第二章与绪论的概念部分为一节,将释出的篇幅用于第三章'知情同意的权利基础'讨论",
+        "删去第二章 §2.3 中对立法史的重复叙述,改以一张时间线表格替代"
+      ],
+      "group_id": "g-002",
+      "anchor_text": "2"
+    },
+    {
+      "id": "thesis-argumentation-001",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "3.2.1",
+        "paragraph_index": 5,
+        "sentence_index": 2
+      },
+      "excerpt": "Beauchamp、Fischer、Childress 三位学者均认为同意应具备充分知情",
+      "problem": "本段仅罗列三位学者观点,未作比较也未说明本文采哪一派,呈罗列式而非综述式",
+      "suggestion": [
+        "新增一小节'三派学说的分歧与取舍',明确本文立场",
+        "补一句'本文采 Beauchamp-Childress 的信义—自治双重进路'或同等明确表态"
+      ],
+      "group_id": "g-003",
+      "anchor_text": "Beauchamp、Fischer、Childress 三位学者均认为同意应具备充分知情"
+    },
+    {
+      "id": "thesis-argumentation-002",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "minor",
+      "scope": "sentence",
+      "locator": {
+        "chapter": "3.2.1",
+        "paragraph_index": 5,
+        "sentence_index": 4,
+        "char_offset_in_paragraph": 186
+      },
+      "excerpt": "'合法利益'原则与'知情同意'不冲突",
+      "problem": "'合法利益'为 GDPR 特有术语,在我国《个人信息保护法》文义下不存在该原则,此处混用两法域",
+      "suggestion": [
+        "改为'该观点在 GDPR 框架下成立,但在《个人信息保护法》第 13 条列举主义下不能类推'"
+      ],
+      "group_id": "g-003",
+      "anchor_text": "'合法利益'原则与'知情同意'不冲突"
+    },
+    {
+      "id": "thesis-literature-review-001",
+      "source": "thesis",
+      "category": "literature-review",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "2.1",
+        "paragraph_index": 2
+      },
+      "excerpt": "王利明教授认为知情同意属于人格权范畴",
+      "problem": "对王利明观点的概括仅一句,未与葛云松、朱庆育等学者的财产权进路形成对比",
+      "suggestion": [
+        "补充葛云松《论个人信息的权利属性》(2021) 的财产权说简评",
+        "以至少三段形成学说争鸣,而非单句罗列"
+      ],
+      "group_id": "g-004",
+      "anchor_text": "王利明教授认为知情同意属于人格权范畴"
+    },
+    {
+      "id": "thesis-empirical-001",
+      "source": "thesis",
+      "category": "empirical",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "4.2",
+        "paragraph_index": -1,
+        "table_index": 0,
+        "row": 2,
+        "col": 1,
+        "paragraph_index_in_cell": 0
+      },
+      "excerpt": "样本量 N=127,涵盖 12 家互联网平台",
+      "problem": "样本量偏小且集中于头部平台,未覆盖中小平台与政务类 App,代表性存疑",
+      "suggestion": [
+        "补充至少 30 家中小平台样本,或说明本文只聚焦头部平台的方法论取舍",
+        "在表格下方注明抽样方法(随机/便利/分层)"
+      ],
+      "group_id": "g-005",
+      "anchor_text": "样本量 N=127,涵盖 12 家互联网平台"
+    },
+    {
+      "id": "thesis-legal-norms-001",
+      "source": "thesis",
+      "category": "legal-norms",
+      "severity": "fatal",
+      "scope": "sentence",
+      "locator": {
+        "chapter": "4.3.2",
+        "paragraph_index": 1,
+        "sentence_index": 0,
+        "char_offset_in_paragraph": 0
+      },
+      "excerpt": "《个人信息保护法》第 13 条规定可基于合法利益处理个人信息",
+      "problem": "常识性错误:第 13 条未将'合法利益'纳入合法性基础,该条仅列同意、合同、法定义务等六项",
+      "suggestion": [
+        "核对《个人信息保护法》第 13 条原文,删除'合法利益'表述",
+        "若确需讨论合法利益,改为对比 GDPR 第 6 条(1)(f) 而非直接援引我国法"
+      ],
+      "group_id": "g-006",
+      "anchor_text": "《个人信息保护法》第 13 条规定可基于合法利益处理个人信息"
+    },
+    {
+      "id": "thesis-language-001",
+      "source": "thesis",
+      "category": "language",
+      "severity": "minor",
+      "scope": "sentence",
+      "locator": {
+        "chapter": "5.1",
+        "paragraph_index": 4,
+        "sentence_index": 1
+      },
+      "excerpt": "法治建设需要完善的法制作为支撑",
+      "problem": "'法治'与'法制'混用,'法治建设'应搭配'法律制度'或'规范体系',不宜紧接'法制'",
+      "suggestion": [
+        "改为'法治建设需要完善的法律制度作为支撑'",
+        "全文通检'法治/法制'使用,避免同义反复或概念混淆"
+      ],
+      "group_id": "g-007",
+      "anchor_text": "法治建设需要完善的法制作为支撑"
+    },
+    {
+      "id": "thesis-policy-001",
+      "source": "thesis",
+      "category": "policy",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "6",
+        "paragraph_index": 2
+      },
+      "excerpt": "应加强立法,完善配套制度,强化监管执法",
+      "problem": "对策建议过于宏观,属'车轱辘话',未落到具体规范设计或具体机关职责",
+      "suggestion": [
+        "将'加强立法'细化为:在《个人信息保护法实施条例》中增设第 X 条,规定分层同意的最低信息披露清单",
+        "将'强化监管执法'细化为:明确网信办与市场监管总局在知情同意审查中的职责分工"
+      ],
+      "group_id": "g-008",
+      "anchor_text": "应加强立法,完善配套制度,强化监管执法"
+    },
+    {
+      "id": "thesis-academic-integrity-001",
+      "source": "thesis",
+      "category": "academic-integrity",
+      "severity": "fatal",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "参考文献",
+        "paragraph_index": 38
+      },
+      "excerpt": "李某某.论知情同意的信义基础[J].法学前沿,2023,(4):88-102",
+      "problem": "经联网核实,《法学前沿》2023 年第 4 期不存在本文所列篇目;作者、期号、页码组合无法匹配到任何真实期刊论文",
+      "suggestion": [
+        "核对原始文献;若确实引用错误,删除该条并在正文删除对应引注",
+        "若文献存在但刊名不对,更正为正确刊名(如《法学论坛》)并重新核实页码"
+      ],
+      "group_id": "g-009",
+      "anchor_text": "李某某.论知情同意的信义基础[J].法学前沿,2023,(4):88-102"
+    },
+    {
+      "id": "thesis-argumentation-003",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "major",
+      "scope": "span",
+      "locator": {
+        "chapter": "3.3",
+        "paragraph_index": 8
+      },
+      "excerpt": "综上,我国亦应采用 GDPR 的分层同意框架",
+      "problem": "从 §3.3 第 8 段到第 11 段连续四段未回应'我国地方监管能力差异'这一潜在反对意见,论证呈单线推进",
+      "suggestion": [
+        "在第 11 段末新增一段'反对观点与回应',至少列举两种反对意见并逐一回应",
+        "参考陈景辉教授 2022 年《法律移植中的本土性检验》的反思框架"
+      ],
+      "group_id": "g-010",
+      "anchor_text": "综上,我国亦应采用 GDPR 的分层同意框架"
+    },
+    {
+      "id": "citation-citation-format-001",
+      "source": "citation",
+      "category": "citation-format",
+      "severity": "minor",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "脚注[12]",
+        "paragraph_index": 11
+      },
+      "excerpt": "中国法学,2023,(02):45-62",
+      "problem": "GB/T 7714—2015 期号不应前导 0;应为 (2) 而非 (02)",
+      "suggestion": [
+        "把脚注 [12] 以及同刊其他脚注的期号 (02) 统一改为 (2)"
+      ],
+      "group_id": "g-011",
+      "anchor_text": "中国法学,2023,(02):45-62"
+    },
+    {
+      "id": "citation-citation-format-002",
+      "source": "citation",
+      "category": "citation-format",
+      "severity": "minor",
+      "scope": "sentence",
+      "locator": {
+        "chapter": "脚注[24]",
+        "paragraph_index": 23,
+        "sentence_index": 0
+      },
+      "excerpt": "王利明著,民法学,法律出版社 2020",
+      "problem": "《法学引注手册》规定书名应用书名号《》,且'法律出版社'后缺版次与页码",
+      "suggestion": [
+        "改为'王利明:《民法学》(第 3 版),法律出版社 2020 年版,第 XX 页'",
+        "核对版次;若系第 3 版则保留,若为第 4 版需更新"
+      ],
+      "group_id": "g-012",
+      "anchor_text": "王利明著,民法学,法律出版社 2020"
+    },
+    {
+      "id": "citation-citation-missing-info-001",
+      "source": "citation",
+      "category": "citation-missing-info",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "脚注[17]",
+        "paragraph_index": 16
+      },
+      "excerpt": "葛云松.论个人信息的权利属性[J].中外法学",
+      "problem": "脚注 [17] 缺期号、页码与年份,按《法学引注手册》属于信息不完整的严重缺失",
+      "suggestion": [
+        "补全为'葛云松:《论个人信息的权利属性》,载《中外法学》2021 年第 3 期,第 XX 页'",
+        "若引用多处该文,应采用页码差异的多次脚注而非单脚注指多处"
+      ],
+      "group_id": "g-013",
+      "anchor_text": "葛云松.论个人信息的权利属性[J].中外法学"
+    },
+    {
+      "id": "citation-citation-missing-info-002",
+      "source": "citation",
+      "category": "citation-missing-info",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "参考文献[24]",
+        "paragraph_index": 60
+      },
+      "excerpt": "王利明.民法学.法律出版社,2020",
+      "problem": "参考文献列表的第 24 条同样缺版次、页码与分卷信息,与脚注 [24] 存在同一文献双标不一致",
+      "suggestion": [
+        "参考文献第 24 条改为'王利明.民法学(第 3 版)[M].北京:法律出版社,2020.'并与脚注统一",
+        "全文通检脚注与参考文献的一致性(建议复核 §3.2 与 §4.1 引用的所有书籍)"
+      ],
+      "group_id": "g-014",
+      "anchor_text": "王利明.民法学.法律出版社,2020"
+    },
+    {
+      "id": "citation-citation-format-003",
+      "source": "citation",
+      "category": "citation-format",
+      "severity": "minor",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "脚注[48]",
+        "paragraph_index": 47,
+        "page_number": 12,
+        "bbox": [
+          72.0,
+          520.0,
+          420.0,
+          534.0
+        ]
+      },
+      "excerpt": "https://example.com/paper?id=..",
+      "problem": "URL 尾部出现省略号'..',为占位或截断,非真实 URL;且未附访问日期",
+      "suggestion": [
+        "补全 URL 到完整形式,并附访问日期,如'最后访问日期:2024 年 6 月 10 日'",
+        "若原 URL 已失效,检索镜像站或归档快照(如 web.archive.org)作为备用链接"
+      ],
+      "group_id": "g-015",
+      "anchor_text": "https://example.com/paper?id=.."
+    }
+  ]
+}

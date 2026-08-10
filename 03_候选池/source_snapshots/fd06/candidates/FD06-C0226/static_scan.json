@@ -1,0 +1,63 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "ot personalization. - Recommend more data collection without considering student privacy (FERPA, COPPA, state student data privacy laws). - Assume algorithmic recommendations are inherently better than teacher judgm"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "cher assignment), branching logic (what triggers a path change -- mastery, failure, time, teacher override), path types (linear, branching, fully adaptive, hybrid), remediation pathways (how far back does the system go when pr"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "rates, time-to-mastery by path configuration, learner satisfaction with path experience, teacher override frequency (high override rates suggest poor path quality), path comparison analytics (which paths produce better outcomes for similar learners)."
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "udent data privacy laws). - Assume algorithmic recommendations are inherently better than teacher judgment -- the best systems combine both. - Skip bias analysis in recommendation engines -- algorithms can systematically under"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "======================================= Step 5.1 -- Recommendation Algorithms Evaluate: recommendation types (next content item, practice activity, review item, enrichment resource, peer collaboration), algorithm approach (collaborative filtering, content-based, knowledge-b"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "sian, IRT, threshold-based), knowledge graph prerequisite accuracy, recommendation engine fairness and bias, spaced repetition and interleaving, WCAG 2.1 AA and Section 508 accessibility compliance, IEP/504 accommodati"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "reshold-based), knowledge graph prerequisite accuracy, recommendation engine fairness and bias, spaced repetition and interleaving, WCAG 2.1 AA and Section 508 accessibility compliance, IEP/504 accommodation implem"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "engine fairness and bias, spaced repetition and interleaving, WCAG 2.1 AA and Section 508 accessibility compliance, IEP/504 accommodation implementation, xAPI/SCORM/LTI data integration, or teacher/student/admin analytics d"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "epetition and interleaving, WCAG 2.1 AA and Section 508 accessibility compliance, IEP/504 accommodation implementation, xAPI/SCORM/LTI data integration, or teacher/student/admin analytics dashboards. Covers platforms like K"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "ning path algorithms, mastery detection, knowledge graph quality, recommendation engines, accessibility compliance, and learning analytics dashboards, then produce a comprehensive analysis. TARGET: $ARGUMENTS If arguments"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "etection false positive rate\", \"knowledge graph prerequisite validation\", \"recommendation bias by demographics\", \"WCAG accessibility for interactive content\", \"adaptive item selection (CAT)\", \"teacher dashboard int"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": ", \"knowledge graph prerequisite validation\", \"recommendation bias by demographics\", \"WCAG accessibility for interactive content\", \"adaptive item selection (CAT)\", \"teacher dashboard intervention alerts\"). If no arguments, r"
+      },
+      {
+        "file": "analysis/student-personalization/SKILL.md",
+        "snippet": "ces Evaluate: transparency of recommendation logic (can educators understand and audit), bias detection (do recommendations differ systematically by student demographics), engagement vs. learning optimization (are"
+      }
+    ]
+  },
+  "read_errors": []
+}

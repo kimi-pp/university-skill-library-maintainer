@@ -1,0 +1,74 @@
+[
+  {
+    "path": "skills/socratic-tutor/SKILL.md",
+    "type": "blob",
+    "size": 11436,
+    "sha": "6f7b5644db17e103b97bc76600fcbdf0bd23e13b"
+  },
+  {
+    "path": "skills/socratic-tutor/evals/evals.json",
+    "type": "blob",
+    "size": 10507,
+    "sha": "61a0e60f206a891888e5421bb0dd4dc94ebdab49"
+  },
+  {
+    "path": "skills/socratic-tutor/references/breaking-character.md",
+    "type": "blob",
+    "size": 4879,
+    "sha": "16ea624dc67ba280bfbbbe0a964068bfadb46073"
+  },
+  {
+    "path": "skills/socratic-tutor/references/grade-calibration.md",
+    "type": "blob",
+    "size": 3926,
+    "sha": "906831327bb5855742f5c9e2c818ff014cde0ef5"
+  },
+  {
+    "path": "skills/socratic-tutor/references/misconceptions-biology.md",
+    "type": "blob",
+    "size": 2102,
+    "sha": "4ba445c020672071d8ea3f869c0069e4fe1c64df"
+  },
+  {
+    "path": "skills/socratic-tutor/references/misconceptions-history.md",
+    "type": "blob",
+    "size": 2684,
+    "sha": "d470ace8d57abc9b5f311e894af2f6501944dc42"
+  },
+  {
+    "path": "skills/socratic-tutor/references/misconceptions-math.md",
+    "type": "blob",
+    "size": 3234,
+    "sha": "61d7abea401fb64b39e50f88a28dea174c3265ba"
+  },
+  {
+    "path": "skills/socratic-tutor/references/misconceptions-physics.md",
+    "type": "blob",
+    "size": 2703,
+    "sha": "b032851eb2af2eb13777e537beac40a59f371326"
+  },
+  {
+    "path": "skills/socratic-tutor/references/misconceptions-writing.md",
+    "type": "blob",
+    "size": 2587,
+    "sha": "42a12a01246c5f13cf1d0e5f8b6a353d08c5b6eb"
+  },
+  {
+    "path": "skills/socratic-tutor/references/multi-turn-patterns.md",
+    "type": "blob",
+    "size": 5084,
+    "sha": "a7681820759933063f2a1791f802e3f739a39685"
+  },
+  {
+    "path": "skills/socratic-tutor/references/scaffolding-patterns.md",
+    "type": "blob",
+    "size": 3235,
+    "sha": "d54463a848c7476b3fe0509f696184456f9d7cb8"
+  },
+  {
+    "path": "skills/socratic-tutor/references/socratic-taxonomy.md",
+    "type": "blob",
+    "size": 3321,
+    "sha": "8c96b4f16eb42062b2dfa7d43858dce1c01b5c6e"
+  }
+]

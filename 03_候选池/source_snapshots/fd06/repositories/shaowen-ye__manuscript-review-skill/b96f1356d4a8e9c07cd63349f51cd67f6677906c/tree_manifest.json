@@ -1,0 +1,82 @@
+{
+  "repository": "shaowen-ye/manuscript-review-skill",
+  "fixed_version": "b96f1356d4a8e9c07cd63349f51cd67f6677906c",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43556b0fbefbc851364abb9c1c9ddf7bab61b9e0",
+      "size": 31
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a535592aff5f8ffa1a006221261872b8bc2dc49",
+      "size": 2673
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76a4746408a78525a4602cb0da66ca39c4399e9b",
+      "size": 1067
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0c83bd8f5c39793933f5a42c3754d1fa5b0e907",
+      "size": 10212
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed14264c74dd17c9f7b029cf0a51f78fc5391098",
+      "size": 14891
+    },
+    {
+      "path": "references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bef6872ce6f2242fc1a80130724b6fa9c9629d5"
+    },
+    {
+      "path": "references/agent-profiles.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1e61f5ce21f0d87d2eb9526ae367c0af58b9e19",
+      "size": 25100
+    },
+    {
+      "path": "references/docx-js-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "600eaf9461b9a3215b8476058aeac9d06760e6f7",
+      "size": 5650
+    },
+    {
+      "path": "template",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53e4af8d0f83d24afa3800907f6bcf7f5acbd3be"
+    },
+    {
+      "path": "template/scaffold.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5210f5f555f2baf7cbc68333f91c14c1ab0bf495",
+      "size": 15170
+    },
+    {
+      "path": "中文说明.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52f56c8d6f76dbaf32bf8efc51880508264d8db0",
+      "size": 24432
+    }
+  ]
+}

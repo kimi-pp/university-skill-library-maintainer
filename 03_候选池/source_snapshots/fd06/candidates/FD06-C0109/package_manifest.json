@@ -1,0 +1,56 @@
+[
+  {
+    "path": "lab-forge/SKILL.md",
+    "type": "blob",
+    "size": 10617,
+    "sha": "c2787641567e44c85790c6425c760b1e8c908815"
+  },
+  {
+    "path": "lab-forge/agents/autograder_agent.md",
+    "type": "blob",
+    "size": 4698,
+    "sha": "c7c8b809ee1a27d23215ac82302e64b71faf9028"
+  },
+  {
+    "path": "lab-forge/agents/dataset_smith_agent.md",
+    "type": "blob",
+    "size": 4491,
+    "sha": "5c97aacb792e8e81cf9101fe136a6b1439ee1669"
+  },
+  {
+    "path": "lab-forge/agents/lab_designer_agent.md",
+    "type": "blob",
+    "size": 4211,
+    "sha": "53c1a89c518c6e59c44557ffae6473d82f791a75"
+  },
+  {
+    "path": "lab-forge/agents/solution_verifier_agent.md",
+    "type": "blob",
+    "size": 4705,
+    "sha": "f5ac7923000203792340319ad7f34b3d6502c40b"
+  },
+  {
+    "path": "lab-forge/agents/starter_code_agent.md",
+    "type": "blob",
+    "size": 4191,
+    "sha": "7c6935d34a205cb569619d08ca6685d63808a5d6"
+  },
+  {
+    "path": "lab-forge/references/autograder_patterns.md",
+    "type": "blob",
+    "size": 7394,
+    "sha": "8a5ea0910ad0d1a037567c29cd5c6209b3711a3a"
+  },
+  {
+    "path": "lab-forge/references/synthetic_data_patterns.md",
+    "type": "blob",
+    "size": 7262,
+    "sha": "c77fde56b7a86575f11b1ccbad8647390e6ae3de"
+  },
+  {
+    "path": "lab-forge/templates/lab_handout_template.md",
+    "type": "blob",
+    "size": 4305,
+    "sha": "7c116514f8b1c8569bf1cd4351e1e182bb347997"
+  }
+]

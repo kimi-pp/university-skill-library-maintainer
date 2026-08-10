@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-argumentation-001",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "major",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "3.2.1",
+        "paragraph_index": 5
+      },
+      "excerpt": "a",
+      "problem": "a",
+      "suggestion": [
+        "a"
+      ],
+      "group_id": "g-007",
+      "anchor_text": "a"
+    },
+    {
+      "id": "thesis-argumentation-002",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "minor",
+      "scope": "paragraph",
+      "locator": {
+        "chapter": "3.2.1",
+        "paragraph_index": 5
+      },
+      "excerpt": "b",
+      "problem": "b",
+      "suggestion": [
+        "b"
+      ],
+      "group_id": "g-009",
+      "anchor_text": "b"
+    }
+  ]
+}

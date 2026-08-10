@@ -1,0 +1,971 @@
+{
+  "repository": "francojc/dauber",
+  "fixed_version": "cc790c4041f97cf8bb986a0f34e142083c477366",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aca307fd9897d1ebf5fb058d506d015f942884fe"
+    },
+    {
+      "path": ".claude/commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfe34ae458bb25586d53a96b0d098ab1ff67af0f"
+    },
+    {
+      "path": ".claude/commands/assess",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb097843ccb83cce0b503e26fc2037d869e63136"
+    },
+    {
+      "path": ".claude/commands/assess/ai-pass.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08431bcae7448874c4ea17da217998768cad4f4",
+      "size": 8789
+    },
+    {
+      "path": ".claude/commands/assess/refine.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d04f6fa4d91c0e009c28f4682bb4ae155c196fc9",
+      "size": 10523
+    },
+    {
+      "path": ".claude/commands/assess/setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "154d95b5f99b1d38f821cd1a68eccf55e787d459",
+      "size": 6780
+    },
+    {
+      "path": ".claude/commands/assess/submit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f2b71043375b296d7fec9e97c3014b9699f0b1a",
+      "size": 5536
+    },
+    {
+      "path": ".claude/commands/assignments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d09acabe19352b357a7c345e9df7ad65569efb4"
+    },
+    {
+      "path": ".claude/commands/assignments/create.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b139dc8630e2de9cec3b8f31228a7eff7949c90",
+      "size": 3883
+    },
+    {
+      "path": ".claude/commands/content",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c81c580948bae2c64c1c6348dcc09a36aa83e8ad"
+    },
+    {
+      "path": ".claude/commands/content/publish.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea009ba091ac158144d19977215efa785810f7db",
+      "size": 4668
+    },
+    {
+      "path": ".claude/commands/course",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddb5ec33a82bbc26531cd722a7a2afd1fc9b710a"
+    },
+    {
+      "path": ".claude/commands/course/overview.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4834b92862a4b8b682fe7e524d8170ac1d454480",
+      "size": 2979
+    },
+    {
+      "path": ".claude/commands/course/setup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d07de9502807ca6a2a6bd94ea70b396e71c8105",
+      "size": 5138
+    },
+    {
+      "path": ".claude/commands/discuss",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13ee5d7e8e63239485769269ea7df738a69c9808"
+    },
+    {
+      "path": ".claude/commands/discuss/announce.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c8b6ad75688f457d1d5886197895f65bf59b3d",
+      "size": 4414
+    },
+    {
+      "path": ".claude/commands/grading",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "229a265b2d9cb7ba7ed9e13a7dcbf7f9ad84aacf"
+    },
+    {
+      "path": ".claude/commands/grading/overview.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "696c96028d057525443b08d7081e56201ea01f0f",
+      "size": 4244
+    },
+    {
+      "path": ".claude/commands/rubrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e6d1e30f7a6f171456682c504cc8b41c0a18d89"
+    },
+    {
+      "path": ".claude/commands/rubrics/create.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c4f5e1f271bcec0a84c3bbdb126125aa723835d",
+      "size": 2738
+    },
+    {
+      "path": ".claude/settings.local.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8588cef5338f678f69c6a282f9b8cfcfde08bca3",
+      "size": 110
+    },
+    {
+      "path": ".envrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3550a30f2de389e537ee40ca5e64a77dc185c79b",
+      "size": 10
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a5367b9dfcc01043160aadc49bba777cd6eb884"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16c7ddbfe8b1f2084372cefbd5e53e62b1b3b962"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c30f2267b6e398e87e85d8c1e40960c9d848682",
+      "size": 2041
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5a9a55eb9e604f3505fd69a8d5b5bbf704961e8",
+      "size": 291
+    },
+    {
+      "path": ".pi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e4d806c7469f2733af4a0ed92847ffee996e330"
+    },
+    {
+      "path": ".pi/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17a02913214c99ddaa5722472cd9e1febcd0a60c"
+    },
+    {
+      "path": ".pi/skills/assess-ai-pass",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b6febd40a158b25dc5ba59e8b807aec7ad3e667"
+    },
+    {
+      "path": ".pi/skills/assess-ai-pass/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d24de84580953a7f772fdd83bb358a675b4cb21f",
+      "size": 8498
+    },
+    {
+      "path": ".pi/skills/assess-refine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00602fe596bdf160f061ae9e68033d348bd4c763"
+    },
+    {
+      "path": ".pi/skills/assess-refine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07c7bc1782df5e17684ea85b053771de1ff738c8",
+      "size": 8996
+    },
+    {
+      "path": ".pi/skills/assess-setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4f5e9aa9c4b0a22a321b974d903e8caac176e9c"
+    },
+    {
+      "path": ".pi/skills/assess-setup/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6727010bf320c11081ea8c803b44f74264a7bee8",
+      "size": 6784
+    },
+    {
+      "path": ".pi/skills/assess-submit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1450f049058a3a5a812cb190b4dde5f816c9fec"
+    },
+    {
+      "path": ".pi/skills/assess-submit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c665436bc9af2a67925f19d8394df5a95abcbef",
+      "size": 5306
+    },
+    {
+      "path": ".pi/skills/assignments-create",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "728d4a841cde220b496c99723368a2d8dce0daa2"
+    },
+    {
+      "path": ".pi/skills/assignments-create/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "479a58f00661218965be272bb54076ef8e303f15",
+      "size": 3865
+    },
+    {
+      "path": ".pi/skills/content-publish",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad0cd4a510130367431262fe1cf5350a25f6dd2f"
+    },
+    {
+      "path": ".pi/skills/content-publish/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0616d45820d073dc0d4fb726ef7c7d6b16304bae",
+      "size": 4492
+    },
+    {
+      "path": ".pi/skills/course-overview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9152ded4a229fa9c6292f5ddc180139922593a9a"
+    },
+    {
+      "path": ".pi/skills/course-overview/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12499eee9ff6dbf8a77840c6a90bde949e6e29eb",
+      "size": 2969
+    },
+    {
+      "path": ".pi/skills/course-setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b76d8e182b2ae1abd168ed8a596e956a49b1c0f5"
+    },
+    {
+      "path": ".pi/skills/course-setup/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75a5bc1671a0914ba56dfea8a8279de9f41c0221",
+      "size": 5101
+    },
+    {
+      "path": ".pi/skills/discuss-announce",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81ddb51a11118fd991eaef4d6448689ad7643943"
+    },
+    {
+      "path": ".pi/skills/discuss-announce/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9481bc7136fd403288cbffac6957a265e6340f06",
+      "size": 4262
+    },
+    {
+      "path": ".pi/skills/grading-overview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbad195d914a9b8cd80dbf80e5ae19e3f86a70a9"
+    },
+    {
+      "path": ".pi/skills/grading-overview/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9e0fa10047c4c245b3ab9820ae7dce09571b3d4",
+      "size": 4062
+    },
+    {
+      "path": ".pi/skills/rubrics-create",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b443d6ff3fc831afdbc280295094585c5f3e9316"
+    },
+    {
+      "path": ".pi/skills/rubrics-create/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9cbd8377796ebe5a07118e99dedc07d03bbba9",
+      "size": 2716
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d0ac1ba7f3ef2d6b57e202a60705d5d73932406",
+      "size": 3198
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "882ea06383a8dcad0397981453e7d87bc3172641",
+      "size": 9722
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f50c8ca3848d28c8d5c10ee8bcad96a85b37f3e9",
+      "size": 1070
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da8f20b56e3f327db5dfb145603d7d95b6f32122",
+      "size": 16075
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c288793deedaea664393e4fa2b08f0594865bde4"
+    },
+    {
+      "path": "docs/import_rubric_template.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f332a464c224b21a01a3fc7a98d3b0a2bd46961a",
+      "size": 482
+    },
+    {
+      "path": "flake.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21cf7ce6281a774cc1fd43b995a173a8e367582f",
+      "size": 1499
+    },
+    {
+      "path": "flake.nix",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6a146224e0b5799df615a433c54ee0d690600e2",
+      "size": 612
+    },
+    {
+      "path": "justfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0277b94ba3df78260abbb6fc8134c172796bcd9",
+      "size": 4499
+    },
+    {
+      "path": "logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2560e431c5c85c09f947680109dd26698546e2a1"
+    },
+    {
+      "path": "logs/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "logs/brainstorm-2026-02-25.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b04a2afd41b2ef71241b1d078ebfdc177806f291",
+      "size": 1362
+    },
+    {
+      "path": "logs/weekly-review-2026-02-22.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f99a5c9d6e704a7c7eed0fb9b1d3e2c3bd051fe4",
+      "size": 2367
+    },
+    {
+      "path": "logs/weekly-review-2026-03-18.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8fb8222efb0696ccac17f304eaace16cafceabc",
+      "size": 2379
+    },
+    {
+      "path": "logs/weekly-review-2026-04-06.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aed24918ca60cf6d1acbad1e63277ff12d9b377",
+      "size": 2587
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4836ddc2b116dc466386bc79b511000ed43bd9a",
+      "size": 1863
+    },
+    {
+      "path": "specs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4878542c00099871f0b8ecd4bbd6b549ac7d082e"
+    },
+    {
+      "path": "specs/implementation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea6ff29a69cd06bec362d7dedb31d6c522425dbc",
+      "size": 23889
+    },
+    {
+      "path": "specs/planning.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c233c9b3aa46838f12d5b20e335a01eff767464",
+      "size": 13771
+    },
+    {
+      "path": "specs/progress.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3edce11215a22a184686a16555ed81dae0c24ee0",
+      "size": 13782
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10a2b9999418444798faeba6e32f9f1b6e48d29c"
+    },
+    {
+      "path": "src/dauber",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74e87d3ecdc7732fd6b35a335744c216310564ad"
+    },
+    {
+      "path": "src/dauber/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c11f861afbe7abb68881200b40f9ef2c5f08ad1f",
+      "size": 22
+    },
+    {
+      "path": "src/dauber/cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fcf74a9d3fc61fb115c1e3693bf8cbe4de6deaac"
+    },
+    {
+      "path": "src/dauber/cli/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "src/dauber/cli/_async.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b87ee4fb1fd77e95c2f8d8891132ce40dbe13ab",
+      "size": 270
+    },
+    {
+      "path": "src/dauber/cli/_config_defaults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3761bf148d4cd2e5a66229821bb223e0336fbf37",
+      "size": 2479
+    },
+    {
+      "path": "src/dauber/cli/_context.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed1700a21d106f2409e280e3c7a87361f9133118",
+      "size": 1442
+    },
+    {
+      "path": "src/dauber/cli/_output.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "292a5d6f29a85aa565570dae65711b655bb7c60b",
+      "size": 1792
+    },
+    {
+      "path": "src/dauber/cli/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e9ebc6b8079adf5b4c0d73059f4ce6ea3fb2172",
+      "size": 3292
+    },
+    {
+      "path": "src/dauber/cli/assessments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abdfb077efca09bf36b762d05b7d10c43ccff7b2",
+      "size": 9508
+    },
+    {
+      "path": "src/dauber/cli/assignments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a669e253a9c154e3abf855b2d5104d502a5fe32",
+      "size": 4836
+    },
+    {
+      "path": "src/dauber/cli/commands.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4acd2722eaec746592a469814db5c23ffc75ea89",
+      "size": 5233
+    },
+    {
+      "path": "src/dauber/cli/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "430e42ea8a5f4580384b897d915127603a8ef16c",
+      "size": 4360
+    },
+    {
+      "path": "src/dauber/cli/courses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23d69b80ec6dc231516585d4db318041e28d1256",
+      "size": 2655
+    },
+    {
+      "path": "src/dauber/cli/discussions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccb05cbc879a1c8aae8735b7c84c0194fb7048f8",
+      "size": 4918
+    },
+    {
+      "path": "src/dauber/cli/grading.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad08809004a41618fee1c6987766ec1bf7dcea2b",
+      "size": 5706
+    },
+    {
+      "path": "src/dauber/cli/modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f65b7a2c9fbf64439bde6934b0be3d9a09ad2818",
+      "size": 12510
+    },
+    {
+      "path": "src/dauber/cli/pages.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a35b17feaf45840397472c2aaa30c6acceff97fc",
+      "size": 5637
+    },
+    {
+      "path": "src/dauber/cli/rubrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6154188df38f751696796f0af20bb680d8d85427",
+      "size": 6221
+    },
+    {
+      "path": "src/dauber/core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "305d5bcc62b28d7c21396efa8925ea51d3110727"
+    },
+    {
+      "path": "src/dauber/core/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "src/dauber/core/cache.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d91372564fa847ec95ea566d6abe4c471afe3ecc",
+      "size": 2288
+    },
+    {
+      "path": "src/dauber/core/client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b488f84a8d58447f7bb39fd28ad5213daac187",
+      "size": 5128
+    },
+    {
+      "path": "src/dauber/core/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da81b7c06739d2016ad14028b6fdd06033d81a1d",
+      "size": 1193
+    },
+    {
+      "path": "src/dauber/core/config_files.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d7f45a544cb40837ec09db2ae857dc4496ff3ae",
+      "size": 3898
+    },
+    {
+      "path": "src/dauber/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59a52e4c211442780ac75e053569139c3e6fc33d"
+    },
+    {
+      "path": "src/dauber/services/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "601f834c245a0a944af0bba56702e0b7f561d30c",
+      "size": 261
+    },
+    {
+      "path": "src/dauber/services/assessments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4276996e298b7254295436339186082d35f7865c",
+      "size": 16263
+    },
+    {
+      "path": "src/dauber/services/assignments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8508ac272700d1b2fd3a00319e4ebd0e919d6186",
+      "size": 5181
+    },
+    {
+      "path": "src/dauber/services/courses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0378afa72b45effffb0fecdba118cf9bbf742b8b",
+      "size": 3522
+    },
+    {
+      "path": "src/dauber/services/discussions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b35392e45a0f2cef42fce3653d0761de30cbdc2",
+      "size": 4844
+    },
+    {
+      "path": "src/dauber/services/grading.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0e9dcb8aab52c44b22d27b680502730e35e3b38",
+      "size": 4526
+    },
+    {
+      "path": "src/dauber/services/modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c5b8d6ccc5c13b937db41b6d581fb5adc1da9bd",
+      "size": 9565
+    },
+    {
+      "path": "src/dauber/services/pages.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c33ae33394a541127c90abce4b93d7b40b25bced",
+      "size": 5116
+    },
+    {
+      "path": "src/dauber/services/rubrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a525f40ab653e6bf268a321c5e26ee8e808d42",
+      "size": 9908
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0df1b6354fe82dd147b27ade9dcde0c34d07b27"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7eb9c90d38f00c5fc582739ca766f96ad8010364"
+    },
+    {
+      "path": "tests/cli/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/cli/test_assessments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1da73bba1950618244a67578ce9ed5f3fa512ec7",
+      "size": 11224
+    },
+    {
+      "path": "tests/cli/test_assignments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ad687907707bbd87d92c21ba8559fce2d004c89",
+      "size": 4728
+    },
+    {
+      "path": "tests/cli/test_commands.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e796ad42edc964f719154956dbf9be05c7c07be1",
+      "size": 7323
+    },
+    {
+      "path": "tests/cli/test_config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29cba7123ff88d67bb5b090489bad59cf91e3471",
+      "size": 7734
+    },
+    {
+      "path": "tests/cli/test_config_defaults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "595c627cbc3b511b4e6c3e573fd7f450cb099b34",
+      "size": 5825
+    },
+    {
+      "path": "tests/cli/test_courses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a0fcc34de326e2238579990aa3b6f007e39cac",
+      "size": 4499
+    },
+    {
+      "path": "tests/cli/test_discussions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0adc3ce4a1912357b9243cfc9ca40e0b766274be",
+      "size": 5609
+    },
+    {
+      "path": "tests/cli/test_grading.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94feac05ffd21a24c2ff3c236cba6177cabbd7a6",
+      "size": 7888
+    },
+    {
+      "path": "tests/cli/test_modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ee95b854195e92632630a875ba029c064221c54",
+      "size": 9284
+    },
+    {
+      "path": "tests/cli/test_output.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eb27d33d6e31c099a661831bec22ba5c69f6771",
+      "size": 2126
+    },
+    {
+      "path": "tests/cli/test_pages.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbb93aa57766aa7c9293f4f1442d9b0bec87c800",
+      "size": 5035
+    },
+    {
+      "path": "tests/cli/test_rubrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9ac11334145f8695a16ced0d4082c332f7985b0",
+      "size": 7657
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84e5dd89a641e1921b3717e4c8edb62f514b40d9",
+      "size": 289
+    },
+    {
+      "path": "tests/core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a61585b78d2cd063a452a16613b304d9bd30079f"
+    },
+    {
+      "path": "tests/core/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/core/test_cache.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "138ab75f49689a057317625ecf4bb2e711244952",
+      "size": 2113
+    },
+    {
+      "path": "tests/core/test_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c209833fef197f12777dafee673009a8d5ff00e6",
+      "size": 6196
+    },
+    {
+      "path": "tests/core/test_config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08256d4587856769f39004d22a54e48e542ae8d3",
+      "size": 894
+    },
+    {
+      "path": "tests/core/test_config_files.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5b9e3dc3c303b26d1b1690420c29c7608c816d",
+      "size": 3830
+    },
+    {
+      "path": "tests/integration",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e83971943bfc7f204f310e0d5a9b73f126d90e8"
+    },
+    {
+      "path": "tests/integration/test_canvas_connectivity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afb2fb7b3cd726fe3b5b9f0b47a0d301988fc420",
+      "size": 1086
+    },
+    {
+      "path": "tests/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86cfd73b22355f2c1051a9512606ff31865fc9c5"
+    },
+    {
+      "path": "tests/services/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/services/test_assessments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5ca08fad260d8e70fec38bcf7758bd96bdbbeab",
+      "size": 18773
+    },
+    {
+      "path": "tests/services/test_assignments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f75a47152f96f888ae969501558098a958e124cf",
+      "size": 6235
+    },
+    {
+      "path": "tests/services/test_courses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "938e89a2bf1eb0d21ced114c49ec9834d1a9d37e",
+      "size": 4651
+    },
+    {
+      "path": "tests/services/test_discussions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc947cad05f33ab454ea168278813483691e3f20",
+      "size": 6630
+    },
+    {
+      "path": "tests/services/test_grading.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa02c8d6e6c2a3f5c4dfae1f6ec480dfb8c47f02",
+      "size": 6256
+    },
+    {
+      "path": "tests/services/test_modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bff4066ae1939a5ec796b33cf64fae811c0521f",
+      "size": 9827
+    },
+    {
+      "path": "tests/services/test_pages.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50e00722e8b0c2274704e4342d962f28bd7a94be",
+      "size": 6161
+    },
+    {
+      "path": "tests/services/test_rubrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7da38715e7ad998d7a383d9d5f0b0ebbf4123e",
+      "size": 8432
+    },
+    {
+      "path": "tests/test_smoke.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67d75d721eaafe5de8b1732c3227f4ebe3a46b67",
+      "size": 523
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "260afcb968048bc25e83bcc1c9d9fb11fc29b455",
+      "size": 137084
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/rubric/SKILL.md",
+        "snippet": "ade this essay assignment\" / \"help me grade…\" - \"Build a scoring guide for [project].\" - \"Write an analytic rubric for a lab report.\" - \"Holistic rubric for a 6th-grade narrative.\" - \"4-point mastery rubric for…\" - \"Rubric aligned to DOK\" / \"aligned t"
+      }
+    ],
+    "lms": [
+      {
+        "file": "skills/rubric/SKILL.md",
+        "snippet": "r refinements.** \"Simplify for students?\", \"Re-weight?\", \"Swap criterion X for Y?\", \"Emit Google Classroom CSV?\" ## Outputs Default outputs (every run): 1. **Markdown table** — criteria as rows, levels as columns, full desc"
+      },
+      {
+        "file": "skills/rubric/SKILL.md",
+        "snippet": ", level_N_label, level_N_descriptor, level_N_points, criterion_total`. On request: 3. **Google Classroom CSV** — flat schema (one row per criterion x level): `criterion_title, criterion_description, level_title, level_points"
+      },
+      {
+        "file": "skills/rubric/SKILL.md",
+        "snippet": "`` Followed by refinement offer: \"Want a student-facing version with 'I can' phrasing? A Google Classroom CSV?\" ## References (loaded on demand) - `references/taxonomies.md` — Bloom's (revised 2001), Webb's DOK, SOLO. Verb"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/rubric/SKILL.md",
+        "snippet": "down, plain-language \"I can\" phrasing, self-check column. 5. **Exemplar column** — sample student work pinned to each level (opt-in; watermarked \"AI-generated exemplar\"). Write files to `./rubric-<slug>-<timestamp>.<ext>`"
+      },
+      {
+        "file": "skills/rubric/SKILL.md",
+        "snippet": "rubric with more than 6 criteria (rater reliability collapses). - Do not grade submitted student work — this skill builds rubrics, it does not score. Offer to hand off."
+      },
+      {
+        "file": "skills/rubric/references/criterion-writing.md",
+        "snippet": "on B, merge them or redraw the boundary. Overlap is the #1 cause of double-counting. 4. **Student-friendly name on the student version.** Teacher name: \"Use of textual evidence with inline citations.\" Student name: \"Backing up claims with quotes.\" 5. **3-6 criteria maxi"
+      },
+      {
+        "file": "skills/rubric/references/criterion-writing.md",
+        "snippet": "on the student version.** Teacher name: \"Use of textual evidence with inline citations.\" Student name: \"Backing up claims with quotes.\" 5. **3-6 criteria maximum.** Rater-reliability research (Jonsson & Svingby, 2007; Bro"
+      },
+      {
+        "file": "skills/rubric/references/criterion-writing.md",
+        "snippet": "** 25/25/25/25 · 40/30/20/10 · 30/30/20/20 · 20/20/20/20/20 · 30/25/25/20. ## Teacher-vs-student name pairings | Teacher-facing (taxonomy-heavy) | Student-facing (plain-language \"I can…\") | |---|---| | Claim & Thesis | I"
+      },
+      {
+        "file": "skills/rubric/references/frameworks.md",
+        "snippet": "/criterion), the Exemplary column across all 4 criteria = 100; the Beginning column = 24. Student's earned score = sum of one cell per row. ## Which framework should I pick? ``` User specified levels count? ├── 3 levels"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/rubric/references/criterion-writing.md",
+        "snippet": "lity\"** — too vague; this is what the whole rubric measures. - **Any negation** — \"avoids plagiarism\" → make it positive: \"attributes all sources with citations.\" - **Compliance items masquerading as quality** — \"Submitt"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/rubric/references/examples/grad-thesis-proposal.md",
+        "snippet": "ic (4 levels) total_points: none (qualitative) --- # Rubric: Graduate Thesis Proposal **Assignment:** Submit a 15-25 page thesis proposal outlining your research question, situating it in the scholarly literature, describing you"
+      }
+    ]
+  },
+  "read_errors": []
+}

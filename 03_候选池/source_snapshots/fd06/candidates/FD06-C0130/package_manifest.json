@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/socratic-teaching-scaffolds/SKILL.md",
+    "type": "blob",
+    "size": 9604,
+    "sha": "68d061918ce33449b6962788e5bfa2b6e6a9c3ac"
+  },
+  {
+    "path": "skills/socratic-teaching-scaffolds/resources/evaluators/rubric_socratic_teaching_scaffolds.json",
+    "type": "blob",
+    "size": 19779,
+    "sha": "49f81ba5d6289279adbe937b5ee5c7f4dfe46ff1"
+  },
+  {
+    "path": "skills/socratic-teaching-scaffolds/resources/methodology.md",
+    "type": "blob",
+    "size": 16076,
+    "sha": "ffb85076231fc2802d8c98e8aa271cc58feff828"
+  },
+  {
+    "path": "skills/socratic-teaching-scaffolds/resources/template.md",
+    "type": "blob",
+    "size": 12087,
+    "sha": "d856a40df2219e5c7779463523e3641eb3ec8b76"
+  }
+]

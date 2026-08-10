@@ -1,0 +1,25 @@
+{
+  "name": "LICENSE",
+  "path": "LICENSE",
+  "sha": "7cd17a191e34124982f4df9173f9737140186fe3",
+  "size": 620,
+  "url": "https://api.github.com/repos/brycewang-stanford/Auto-Empirical-Research-Skills/contents/LICENSE?ref=595d8a62265e0636a1b8dd56a8eb01849835e62c",
+  "html_url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/blob/595d8a62265e0636a1b8dd56a8eb01849835e62c/LICENSE",
+  "git_url": "https://api.github.com/repos/brycewang-stanford/Auto-Empirical-Research-Skills/git/blobs/7cd17a191e34124982f4df9173f9737140186fe3",
+  "download_url": "https://raw.githubusercontent.com/brycewang-stanford/Auto-Empirical-Research-Skills/595d8a62265e0636a1b8dd56a8eb01849835e62c/LICENSE",
+  "type": "file",
+  "content": "Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbi1TaGFyZUFsaWtlIDQuMCBJ\nbnRlcm5hdGlvbmFsCgpDb3B5cmlnaHQgKGMpIDIwMjYgQ29QYXBlci5BSQoK\nWW91IGFyZSBmcmVlIHRvOgogIFNoYXJlIC0gY29weSBhbmQgcmVkaXN0cmli\ndXRlIHRoZSBtYXRlcmlhbCBpbiBhbnkgbWVkaXVtIG9yIGZvcm1hdAogIEFk\nYXB0IC0gcmVtaXgsIHRyYW5zZm9ybSwgYW5kIGJ1aWxkIHVwb24gdGhlIG1h\ndGVyaWFsIGZvciBhbnkgcHVycG9zZQoKVW5kZXIgdGhlIGZvbGxvd2luZyB0\nZXJtczoKICBBdHRyaWJ1dGlvbiAtIFlvdSBtdXN0IGdpdmUgYXBwcm9wcmlh\ndGUgY3JlZGl0LCBwcm92aWRlIGEgbGluayB0byB0aGUgbGljZW5zZSwKICBh\nbmQgaW5kaWNhdGUgaWYgY2hhbmdlcyB3ZXJlIG1hZGUuCiAgU2hhcmVBbGlr\nZSAtIElmIHlvdSByZW1peCwgdHJhbnNmb3JtLCBvciBidWlsZCB1cG9uIHRo\nZSBtYXRlcmlhbCwgeW91IG11c3QKICBkaXN0cmlidXRlIHlvdXIgY29udHJp\nYnV0aW9ucyB1bmRlciB0aGUgc2FtZSBsaWNlbnNlIGFzIHRoZSBvcmlnaW5h\nbC4KCkZ1bGwgbGljZW5zZSB0ZXh0OiBodHRwczovL2NyZWF0aXZlY29tbW9u\ncy5vcmcvbGljZW5zZXMvYnktc2EvNC4wL2xlZ2FsY29kZQo=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/brycewang-stanford/Auto-Empirical-Research-Skills/contents/LICENSE?ref=595d8a62265e0636a1b8dd56a8eb01849835e62c",
+    "git": "https://api.github.com/repos/brycewang-stanford/Auto-Empirical-Research-Skills/git/blobs/7cd17a191e34124982f4df9173f9737140186fe3",
+    "html": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/blob/595d8a62265e0636a1b8dd56a8eb01849835e62c/LICENSE"
+  },
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "HOW-TO-USE.md",
+        "snippet": "ures/ └── references.bib ``` Commands to set this up: ```bash cd /path/to/my-manuscript mkdir -p .claude/skills/manuscript-review cp /path/to/SKILL.md .claude/skills/manuscript-review/SKILL.md ``` This makes the"
+      },
+      {
+        "file": "HOW-TO-USE.md",
+        "snippet": "all your projects) Place it in your home directory's `.claude/skills/` folder: ```bash mkdir -p ~/.claude/skills/manuscript-review cp /path/to/SKILL.md ~/.claude/skills/manuscript-review/SKILL.md ``` This makes"
+      },
+      {
+        "file": "README.md",
+        "snippet": "ustomize** (the toolbox icon), then go to **Skills**. 3. Click the **+** button, then **+ Create skill**, and upload the ZIP file. 4. The skill will appear in your Skills list. Make sure its toggle is turned on. 5. Start any conversation and ask Cla"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "HOW-TO-USE.md",
+        "snippet": "ting. Think of it as teaching Claude Code the editorial standards of a demanding journal reviewer — once, in a file — so that every review it performs on your manuscript follows the same rigorous protocol. ## Setup: Where to Put the File ### Option A — Pro"
+      }
+    ],
+    "network": [
+      {
+        "file": "README.md",
+        "snippet": "de The creation of this skill illustrates a three-tool workflow that combined an agentic browser, a synthesis engine, and a skill-authoring assistant. **Step 1: Extracting video URLs with an agentic browser.** The s"
+      },
+      {
+        "file": "README.md",
+        "snippet": "engine, and a skill-authoring assistant. **Step 1: Extracting video URLs with an agentic browser.** The source material is a [YouTube playlist](https://www.youtube.com/playlist?list=PLVc-QdfGfSl2Ntc6CvIP83Nj_uHTSdNSw"
+      },
+      {
+        "file": "README.md",
+        "snippet": "o's share menu 30 times, I opened the playlist in [Comet](https://comet.page) (an agentic browser by Perplexity) and instructed it to extract every URL, stripping the tracking parameters. In under a minute, the agent"
+      },
+      {
+        "file": "README.md",
+        "snippet": "instructions for an AI tool. Three different AI tools, each doing what it does best. The browser agent handled the mechanical extraction. NotebookLM handled the synthesis of 30 video transcripts into a coherent docum"
+      }
+    ]
+  },
+  "read_errors": []
+}

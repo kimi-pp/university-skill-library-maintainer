@@ -1,0 +1,33 @@
+{
+  "hits": {
+    "remote_install": [
+      {
+        "file": "SKILL.md",
+        "snippet": "js script using the `docx` library and execute via bash_tool. Install if needed: ```bash npm install -g docx ``` Save to `/mnt/user-data/outputs/peer-review-[short-title].docx`. #### Report structure **Header block**"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "SKILL.md",
+        "snippet": "contains or what Consensus returned in this session. Reviewers sign their names (or their confidentiality) to this work — a fabricated missing citation or a hallucinated claim check can embarrass the reviewer and mislead the"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "README.md",
+        "snippet": "r-review-assistant zip -r peer-review-assistant.skill SKILL.md references/ ``` ## Usage Upload or paste the manuscript, then ask for a review, or directly call the skill with `/peer-review-assistant`. The skill reads the paper, runs the searches, and delivers"
+      },
+      {
+        "file": "README.md",
+        "snippet": "key citations\" - \"Are the methods in this paper current?\" - \"Critique this draft before I submit my review\" - \"Find what this paper missed\" --- ## Example queries **1. AI model for clinical prediction** > \"I'm reviewing thi"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "README.md",
+        "snippet": "per is missing key citations\" - \"Are the methods in this paper current?\" - \"Critique this draft before I submit my review\" - \"Find what this paper missed\" --- ## Example queries **1. AI model for clinical prediction** > \"I'm reviewing thi"
+      }
+    ]
+  },
+  "read_errors": []
+}

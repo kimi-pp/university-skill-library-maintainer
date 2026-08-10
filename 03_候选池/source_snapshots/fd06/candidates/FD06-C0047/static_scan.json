@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/professional-learning/pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "stakes topics (medical information, scientific accuracy that affects student safety), the teacher should verify their content knowledge independently before relying on the skill's diagnosis. 2. **The misconceptions database is onl"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/professional-learning/pedagogical-content-knowledge-developer/SKILL.md",
+        "snippet": "of which has distinct development pathways. This skill uses the three-type framework for accessibility and consistency with the rest of the skills library, which means some PCK nuance is lost. 5. **This skill diagnoses an"
+      }
+    ]
+  },
+  "read_errors": []
+}

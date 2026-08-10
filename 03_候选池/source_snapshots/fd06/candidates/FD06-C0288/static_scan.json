@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/synthesise-reviews/SKILL.md",
+        "snippet": "ical (C*), Major (M*), Minor (m*) issue details from the detailed sections **From domain-reviewer DOMAIN-REVIEW.md:** - Parse each Lens section's issue table (columns: #, Issue, Severity, Location) - Map: CRITICAL → Critical, MAJOR"
+      }
+    ]
+  },
+  "read_errors": []
+}

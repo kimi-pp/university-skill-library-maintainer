@@ -1,0 +1,31 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/classroom-activity/SKILL.md",
+        "snippet": "Write what students do AND what the teacher does simultaneously. The teacher's job during student work time is not \"facilitate\" -- specify whether the teacher circulates to troubleshoot, listens for target vocabulary, sele"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/classroom-activity/SKILL.md",
+        "snippet": "and Grouping ([X] min) **Grouping method:** [Exactly how groups are formed] **What each student receives:** [What is in their hands before work begins] **Roles assigned (if applicable):** - [Role 1 -- e.g., Recorder]: [Specific responsibility] - [Role 2 -- e.g.,"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/classroom-activity/SKILL.md",
+        "snippet": "een). If a color is completely eliminated, it stays eliminated -- no new squares added. - Teacher: Circulate to verify Data Recorders are counting correctly. Prompt: \"If you have 4 blue survivors, how many blue prey should be in Generatio"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/classroom-activity/SKILL.md",
+        "snippet": "ced students should not have to wait for teacher attention to access deeper work. This is Universal Design for Learning (UDL) applied to activity design. --- ## Edge Cases ### Very Short Time Window (Under 15 Minutes) When"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/classroom-activity/SKILL.md",
+        "snippet": "ling features or responses in chat. - **Group work in hybrid settings requires deliberate equity design.** Remote students are systematically disadvantaged in hybrid small-group activities unless assigned to all-remo"
+      }
+    ]
+  },
+  "read_errors": []
+}

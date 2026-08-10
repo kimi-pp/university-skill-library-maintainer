@@ -1,0 +1,41 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "course-generator/SKILL.md",
+        "snippet": "nt ``` **For JS-heavy pages** (Maven, Coursera, Udemy, course platforms): ``` Use Chrome browser automation: 1. mcp__claude-in-chrome__tabs_context_mcp (get/create tab) 2. mcp__claude-in-chrome__navigate to URL 3. mc"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "course-generator/SKILL.md",
+        "snippet": "ver assigned concepts - [ ] MicroSims reference specific concepts ### Assembly Steps 1. Create directory structure per Output Structure 2. Write each file to appropriate location 3. Generate mkdocs.yml with navigation 4. Run `mkdocs build` to ve"
+      },
+      {
+        "file": "course-generator/SKILL.md",
+        "snippet": "cific concepts ### Assembly Steps 1. Create directory structure per Output Structure 2. Write each file to appropriate location 3. Generate mkdocs.yml with navigation 4. Run `mkdocs build` to verify no broken links 5. Repor"
+      }
+    ],
+    "lms": [
+      {
+        "file": "course-generator/SKILL.md",
+        "snippet": "id? - Approximate total hours for completion? - Any specific platform constraints? (Canvas, MkDocs, other) 3. DEPTH & SCOPE - Full course or condensed version? - Which topics to emphasize or skip? - I"
+      },
+      {
+        "file": "course-generator/SKILL.md",
+        "snippet": "hey see [specific result], which demonstrates [principle/insight]. ### Technical Notes - Canvas: Responsive, min 400px width - Frame rate: 30fps (or specify if different) - Library: p5.js - Mobile: Touch-friendly co"
+      },
+      {
+        "file": "course-generator/references/output-formats.md",
+        "snippet": "[does action], they see [result], which demonstrates [principle]. ## Technical Notes - Canvas size: Responsive, min 400px width - Frame rate: 30fps - Libraries: p5.js - Mobile: Touch-friendly controls ## Assessme"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "course-generator/SKILL.md",
+        "snippet": "ude-in-chrome__computer action=wait duration=3 4. mcp__claude-in-chrome__read_page to get accessibility tree 5. Click \"expand\" buttons for syllabus/curriculum sections 6. mcp__claude-in-chrome__get_page_text or screenshot a"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,87 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "the user to run `/ntucool:setup` and wait, OR - Run the install step yourself (a single `curl … | sh`, see `commands/setup.md`), then have the user type `! cool login` (interactive — Bash tool can't drive the passw"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "les_get_metadata(file_id)` returns Canvas's internal `url` field — this needs a logged-in browser, not usable from an MCP context. - `files_fetch(file_id)` returns a `file://` URI (in stdio mode) pointing at a server-"
+      }
+    ],
+    "credential": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "st ntucool tool call The plugin manifest can't install the `cool` binary or prompt for a password, so the first interaction in any session must verify setup. Do this *once* per conversation, before any ntucool tool/CL"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "tup.md`), then have the user type `! cool login` (interactive — Bash tool can't drive the password prompt). After setup completes, resume the user's original task without making them re-ask. ### Why the gate matters"
+      }
+    ],
+    "process": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "— \"find me X\", \"what's due\", reading content into the conversation. - **CLI**: suggest a shell command when the action is auth, bulk, or destructive: - Auth lifecycle: `cool login`, `cool logout --purge` — CLI-only by de"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "the user to run `/ntucool:setup` and wait, OR - Run the install step yourself (a single `curl … | sh`, see `commands/setup.md`), then have the user type `! cool login` (interactive — Bash tool can't drive the password pr"
+      }
+    ],
+    "lms": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "--- name: ntucool description: NTU COOL (cool.ntu.edu.tw) — National Taiwan University's Canvas LMS. Use when working with NTU course mat"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "--- name: ntucool description: NTU COOL (cool.ntu.edu.tw) — National Taiwan University's Canvas LMS. Use when working with NTU course materials, assignments, g"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "--- name: ntucool description: NTU COOL (cool.ntu.edu.tw) — National Taiwan University's Canvas LMS. Use when working with NTU course materials, assignments, grades, announcements, or PDFs. Provides the `cool` CLI a"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "Provides the `cool` CLI and its `cool mcp` MCP server. NTU-only (ADFS SAML auth). --- # ntucool NTU COOL is National Taiwan University's Canvas LMS instance at `https://cool.ntu.edu.tw`. This skill covers the `cool"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "the `cool` CLI and its `cool mcp` MCP server. NTU-only (ADFS SAML auth). --- # ntucool NTU COOL is National Taiwan University's Canvas LMS instance at `https://cool.ntu.edu.tw`. This skill covers the `cool` CLI and"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "rver. NTU-only (ADFS SAML auth). --- # ntucool NTU COOL is National Taiwan University's Canvas LMS instance at `https://cool.ntu.edu.tw`. This skill covers the `cool` CLI and its `cool mcp` MCP server, distributed"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "s the `cool` CLI and its `cool mcp` MCP server, distributed at <https://github.com/kc0506/ntucool>. **Scope**: NTU students working with their own enrolments — list/search courses, find PDFs, read assignments, check"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "ind PDFs, read assignments, check grades and submissions. Not for admins. Not for non-NTU Canvas instances (login is hardcoded to NTU's ADFS SAML SSO). ## Setup gate — run BEFORE the first ntucool tool call The plu"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "ist/info` | Assignment list / detail (see `cool assignment --help`). | | `cool assignment submit <files…\\|--text> -c <course> -a <id>` | Submit an assignment. Prints a preflight + risk summary; confirms interactively (`--i-understand` skips). **Irreversible — creates a graded"
+      },
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "ssignment list/info` | Assignment list / detail (see `cool assignment --help`). | | `cool assignment submit <files…\\|--text> -c <course> -a <id>` | Submit an assignment. Prints a preflight + risk summary; confirms interactively (`--i-understand` skips). **Irreversible — cre"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "plugins/ntucool/skills/ntucool/SKILL.md",
+        "snippet": "turns much less — even when you pass your own id, Canvas hides `login_id` and `email` for student-level sessions at the `/users/:id` endpoint, not just for other users. So use `whoami` for your own contact info; reserve `users_get` for resolving teach"
+      }
+    ]
+  },
+  "read_errors": []
+}

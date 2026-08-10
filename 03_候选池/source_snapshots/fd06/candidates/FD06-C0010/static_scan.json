@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "course-description-analyzer/SKILL.md",
+        "snippet": "g the goal of generating 200 concepts ### 2.5 Course Description Assessment Report Use `mkdir -p docs/learning-graph` to create a `learning-graph` directory in the docs directory. Generate a comprehensive quality"
+      },
+      {
+        "file": "course-description-analyzer/SKILL.md",
+        "snippet": "e from `assets/course-description-template.md` and populate it with the user's responses. Create the file at `/docs/course-description.md`. Ensure the generated file includes: - Clear course title - Target audience specifica"
+      }
+    ]
+  },
+  "read_errors": []
+}

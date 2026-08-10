@@ -1,0 +1,81 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "nstrated successfully) and the top 2 growth areas (skills most students need to develop). Write this as a single summary document the educator can share with the class as a whole. This reduces the cognitive load of individual feedback by addressing"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "Be specific, be brief, be actionable. --- ## Example **Input from educator:** \"Can you write feedback for a 9th grade student's lab report on osmosis? The student correctly conducted the experiment and recorded data accurately, but the analysis section is we"
+      }
+    ],
+    "lms": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "orm (not bullet points) with a maximum of 150 words per student. - For LMS comment boxes (Google Classroom, Canvas, Schoology), keep total feedback under 400 words and use plain text formatting without markdown headers. ---"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "ints) with a maximum of 150 words per student. - For LMS comment boxes (Google Classroom, Canvas, Schoology), keep total feedback under 400 words and use plain text formatting without markdown headers. --- ## Outpu"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "th a maximum of 150 words per student. - For LMS comment boxes (Google Classroom, Canvas, Schoology), keep total feedback under 400 words and use plain text formatting without markdown headers. --- ## Output Format T"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "------|-------------|-----------| | SBI (Situation-Behavior-Impact) | Individual detailed feedback, secondary and post-secondary, revision-oriented | Location + Observable Action + Effect | | Glow and Grow | K-5, quick formative feedback,"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "edback frameworks for educators. Produces specific, growth-oriented feedback comments for student work -- not generic praise or criticism templates. Use when an educator asks to write feedback on student work, create fee"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "t generic praise or criticism templates. Use when an educator asks to write feedback on student work, create feedback comments, provide constructive criticism, or design a feedback protocol for assignments. Do NOT use"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "Question-Suggestion, TAG, Glow-and-Grow, Standards-Referenced) and needs help translating student work into that framework - An instructor needs feedback that is explicitly revision-oriented -- the student will receive fee"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "that framework - An instructor needs feedback that is explicitly revision-oriented -- the student will receive feedback before the final grade and has an opportunity to act on it - A teacher is writing end-of-term narrative comments for report cards or progress"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "educator does not know the objectives, ask what they hoped students would learn. - **The student work itself:** Either the full text/description of the work, or a detailed description of what the student did and did not d"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "lf:** Either the full text/description of the work, or a detailed description of what the student did and did not do. The more specific the work description, the more specific the feedback. - **Feedback purpose:** Is this feedback for revision (student will revise"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "ed from your first claim to your second.\" **Behavior:** The exact, observable action the student performed in the work. - Use verifiable language: \"You wrote,\" \"You cited,\" \"You used,\" \"You solved,\" \"You defined,\" \"You omitted,\" \"You rest"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "used,\" \"You solved,\" \"You defined,\" \"You omitted,\" \"You restated.\" - Quote directly from student work when possible -- this is the most powerful specificity tool available. A student reading their own words back with an e"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "back that is explicitly revision-oriented -- the student will receive feedback before the final grade and has an opportunity to act on it - A teacher is writing end-of-term narrative comments for report cards or progress"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/student-feedback/SKILL.md",
+        "snippet": "ence in the feedback itself.** Feedback is about the work, not the student's diagnosis or accommodation plan. --- ### Converting a Rubric Score Into Narrative Feedback When an educator has already scored student work on"
+      }
+    ]
+  },
+  "read_errors": []
+}

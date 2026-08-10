@@ -1,0 +1,175 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/92bilal26/quiz-generator/references/answer-distribution.md",
+        "snippet": "c's] Problem: Students may avoid c after seeing pattern ``` ### ❌ Pattern 4: Positional Bias by Topic ``` All Lesson 1 questions: correct answer is a All Lesson 2 questions: correct answer is b All Lesson 3 quest"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/answer-distribution.md",
+        "snippet": "[ ] Answers appear randomly shuffled (no alphabetical or reverse patterns) **Positional Bias Checks:** - [ ] Correct answer not clustered by lesson/topic - [ ] Each lesson has mixed answer positions - [ ] No sing"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "# Bias Detection Checklist - Answer Distribution Verification (v4.0) **PURPOSE:** Catch answer bias BEFORE submission. This c"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "Detection Checklist - Answer Distribution Verification (v4.0) **PURPOSE:** Catch answer bias BEFORE submission. This checklist detects when correct answers are not evenly distributed across indices 0-3, which all"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "ponent file. Use this to verify the distribution is acceptable. --- ## The Problem: Why Bias Detection Matters ### Real-World Example (The Bias You're Fixing) **Observed Problem:** - Quiz shows 18 questions to"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "acceptable. --- ## The Problem: Why Bias Detection Matters ### Real-World Example (The Bias You're Fixing) **Observed Problem:** - Quiz shows 18 questions to user - 15 questions have correct answer as option B"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "stions, this becomes statistically obvious - Even if someone tries to randomize mentally, bias creeps in **SOLUTION:** Systematic verification before submission catches this 100% of the time. --- ## Quick Verifi"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "rect answer B) --- ## Failure Examples (What to Watch For) ### ❌ FAIL Example 1: Heavy Bias Toward One Index ``` Count by index: Index 0: 5 times Index 1: 30 times ← EXTREME BIAS Index 2: 10 times Index 3: 5 ti"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "y Bias Toward One Index ``` Count by index: Index 0: 5 times Index 1: 30 times ← EXTREME BIAS Index 2: 10 times Index 3: 5 times Problem: Student can achieve 60% accuracy by always selecting B Status: REJECT - Fi"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "└─ All between 12-13? │ ├─ YES → Continue to pattern check │ └─ NO → STOP. Bias detected. Fix before submitting. │ ├─ STEP 2: Pattern check (Section 2) │ └─ Any 3+ consecutive same? Any rep"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/option-length-validation.md",
+        "snippet": "*Result:** Test measures reading strategy, not understanding **Example 2: Longest Option Bias** ``` 50-question quiz results: - Longest option is correct in 35 questions (70%) - Shortest option is correct in 3 que"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/option-length-validation.md",
+        "snippet": "rd range ✓ No questions failed length check ✓ Length-correctness correlation verified: NO BIAS DETECTED DISTRIBUTION ANALYSIS: - Shortest option correct in 12 questions (24%) - Longest option correct in 13 questio"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/92bilal26/quiz-generator/references/bias-detection-checklist.md",
+        "snippet": "ons have correct answers as A, C, or D **Result:** ``` Student Strategy: \"Always pick B\" Student Score: 15/18 = 83% But student only understood ~20% of material! The quiz failed to assess understanding. ``` ### Why This"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/92bilal26/quiz-generator/references/generation-process.md",
+        "snippet": "(definition, memorization) - \"Which file stores configuration?\" (memorization) - \"What is OAuth?\" (terminology) - \"List three CLI commands\" (pure recall) **Distractor Design:** For each of the 50 questions, create"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/pitfalls-and-solutions.md",
+        "snippet": "` ❌ \"What is the MCP protocol acronym?\" ❌ \"Which file stores configuration?\" ❌ \"What does OAuth stand for?\" ❌ \"List three CLI commands\" ``` **Issue:** These test \"What is X?\" (memorization), not \"Why does X work th"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/pitfalls-and-solutions.md",
+        "snippet": "olated?\" ✅ \"Why does this code fail to authenticate, and what does the error reveal about OAuth flow?\" ✅ \"In this debugging scenario, which command would help diagnose the root cause?\" ✅ \"What tradeoff does this des"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/scripts/redistribute_answers_v2.py",
+        "snippet": "wers. Usage: python redistribute_answers_v2.py <quiz_file_path> <sequence_letter> [--api-key <key>] Example: python redistribute_answers_v2.py chapter_02_quiz.md C \"\"\" import re import sys import json impor"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/92bilal26/quiz-generator/references/generation-process.md",
+        "snippet": "must address all 4 options explicitly --- ## Stage 7: Format Quiz Component **Goal:** Create valid markdown file with Quiz component JSX. **File Structure:** ```markdown --- sidebar_position: X # e.g., 06 (lessons + 1) title: \"Ch"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/option-length-validation.md",
+        "snippet": "- ## Validation Procedure (Step-by-Step) ### Phase 1: Count Words for All 50 Questions Create a validation spreadsheet: ``` Q# | Correct | A (words) | B (words) | C (words) | D (words) | Min-Max | Pass? | Notes ----|---------|----------"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/scripts/redistribute_answers.py",
+        "snippet": "[:q_start + len('questions={[')] + new_array + content[q_end:] # Write back with open(file_path, 'w', encoding='utf-8') as f: f.write(new_content) # Verification print(f\"\\nVerification:\") print(f\"* T"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/scripts/redistribute_answers_v2.py",
+        "snippet": "[:q_start + len('questions={[')] + new_array + content[q_end:] # Write back with open(file_path, 'w', encoding='utf-8') as f: f.write(new_content) # Final report print(f\"\\n=== FINAL REPORT ===\") prin"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "wers_v2.py\", \"line_start\": 419, \"line_end\": 419, \"snippet\": \"with open(file_path, 'w', encoding='utf-8') as f:\" }, { \"id\": \"sensitive:scripts/redistribute_answers_v2.py:431:certificate-"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "answers.py\", \"line_start\": 220, \"line_end\": 220, \"snippet\": \"with open(file_path, 'w', encoding='utf-8') as f:\" }, { \"id\": \"sensitive:scripts/redistribute_answers.py:226:certificate-key"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "ngs\": [ { \"title\": \"Python file write/append\", \"description\": \"with open(file_path, 'w', encoding='utf-8') as f:\", \"locations\": [ { \"file\": \"scripts/redistribute_answers_v2.py\","
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "}, { \"title\": \"Python file write/append\", \"description\": \"with open(file_path, 'w', encoding='utf-8') as f:\", \"locations\": [ { \"file\": \"scripts/redistribute_answers.py\","
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "he word keys in distribution reporting. I confirmed that the local redistribution scripts overwrite the user-supplied quiz file, and SKILL.md instructs agents to run those scripts through Bash. No prompt injection, data exfiltration, or network be"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "ss.md\", \"line_start\": 235, \"line_end\": 235, \"snippet\": \"**Goal:** Create valid markdown file with Quiz component JSX.\" }, { \"id\": \"blocker:references/generation-process.md:287:system-reconnais"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "\"confidence\": 0.86, \"reason\": \"The script opens the user-supplied quiz path in write mode and rewrites the file. This is intended behavior, but it can overwrite local files if the wrong path is supplied.\", \"severity\": \"medi"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "\": 0.86, \"confidence_reasoning\": \"The script opens the user-supplied quiz path in write mode and rewrites the file. This is intended behavior, but it can overwrite local files if the wrong path is supplied.\" }, { \""
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/92bilal26/quiz-generator/references/option-length-validation.md",
+        "snippet": "ocumented validation in quiz file header or separate validation report - [ ] Submitted to human review with validation report attached --- ## Why This Matters From educational measurement research (Haladyna et al., 2002"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/quality-checklist.md",
+        "snippet": "] Markdown renders without errors - [ ] Quiz component would work in Docusaurus --- ## Human Review Needed After completing all checks above, the following require human review: ### Content Review - [ ] Spot-check 3-5"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/quality-checklist.md",
+        "snippet": "us --- ## Human Review Needed After completing all checks above, the following require human review: ### Content Review - [ ] Spot-check 3-5 questions for technical accuracy - [ ] Verify distractor plausibility and mis"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/quality-checklist.md",
+        "snippet": "verify responsive design ### Final Approval - [ ] All validation checks passed - [ ] All human review items completed - [ ] Component displays and functions correctly - [ ] Quiz ready for student use --- ## Validation F"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/references/quality-checklist.md",
+        "snippet": "tax valid 5. ✅ YAML frontmatter complete **If all critical checks pass:** Quiz ready for human review **If ANY critical check fails:** Fix immediately before proceeding (critical checks are non-negotiable for v4.0) ---"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "iles, not plain static quizzes.\", \"Option length and explanation quality still need human review.\", \"Redistribution scripts overwrite the target quiz file when run.\" ], \"use_cases\": [ { \"t"
+      }
+    ],
+    "process": [
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "e cited SKILL.md range instructs the agent to run the local redistribution script through Bash. The command executes community code that mutates files, so the command-use risk is real but scoped.\", \"severity\": \"medium\""
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "e cited SKILL.md range instructs the agent to run the local redistribution script through Bash. The command executes community code that mutates files, so the command-use risk is real but scoped.\" }, { \"titl"
+      },
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "e cited SKILL.md range instructs the agent to run the local redistribution script through Bash. The command executes community code that mutates files, so the command-use risk is real but scoped.\" } ], \"low_findin"
+      }
+    ],
+    "untrusted_input_protection": [
+      {
+        "file": "skills/92bilal26/quiz-generator/skill-report.json",
+        "snippet": "r-supplied quiz file, and SKILL.md instructs agents to run those scripts through Bash. No prompt injection, data exfiltration, or network behavior was found.\", \"remediation\": [ { \"issue\": \"Redistribution scri"
+      }
+    ]
+  },
+  "read_errors": []
+}

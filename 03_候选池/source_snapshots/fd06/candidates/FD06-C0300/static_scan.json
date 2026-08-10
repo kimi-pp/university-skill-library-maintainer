@@ -1,0 +1,105 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "README.md",
+        "snippet": "http\"], \"env\": { \"AGENTDOCS_URL\": \"https://your-instance.uplo.ai\", \"API_KEY\": \"your-api-key\", \"DEFAULT_PACKS\": \"education\" } } } } ``` ## What You Get - **5 industry schemas"
+      },
+      {
+        "file": "README.md",
+        "snippet": "nv\": { \"AGENTDOCS_URL\": \"https://your-instance.uplo.ai\", \"API_KEY\": \"your-api-key\", \"DEFAULT_PACKS\": \"education\" } } } } ``` ## What You Get - **5 industry schemas** — pre-built e"
+      },
+      {
+        "file": "skill.json",
+        "snippet": "ue, \"description\": \"Your UPLO instance URL (e.g., https://app.uplo.ai)\" }, \"api_key\": { \"type\": \"string\", \"required\": true, \"secret\": true, \"description\": \"Your UPLO MCP token\""
+      },
+      {
+        "file": "skill.json",
+        "snippet": "\"--http\" ], \"env\": { \"AGENTDOCS_URL\": \"${config.agentdocs_url}\", \"API_KEY\": \"${config.api_key}\", \"DEFAULT_PACKS\": \"education\" }, \"transport\": \"http\", \"url\": \"${config.agentdoc"
+      },
+      {
+        "file": "skill.json",
+        "snippet": "\"env\": { \"AGENTDOCS_URL\": \"${config.agentdocs_url}\", \"API_KEY\": \"${config.api_key}\", \"DEFAULT_PACKS\": \"education\" }, \"transport\": \"http\", \"url\": \"${config.agentdocs_url}/mcp\" }, \""
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "README.md",
+        "snippet": "to your Claude Desktop config: ```json { \"mcpServers\": { \"uplo-education\": { \"command\": \"npx\", \"args\": [\"-y\", \"@agentdocs1/mcp-server\", \"--http\"], \"env\": { \"AGENTDOCS_URL\": \"https://your-instance.uplo.ai\","
+      },
+      {
+        "file": "skill.json",
+        "snippet": "\"secret\": true, \"description\": \"Your UPLO MCP token\" } }, \"mcp\": { \"command\": \"npx\", \"args\": [ \"-y\", \"@agentdocs1/mcp-server\", \"--http\" ], \"env\": { \"AGENTDOCS_URL\": \"${config.agentdocs_url}\","
+      }
+    ],
+    "external_write": [
+      {
+        "file": "README.md",
+        "snippet": "c priorities and directives | | `find_knowledge_owner` | Find subject matter experts | | `propose_update` | Suggest knowledge base updates | | `report_knowledge_gap` | Flag missing information | | `flag_outdated` | Mark stal"
+      },
+      {
+        "file": "README.md",
+        "snippet": "| Find subject matter experts | | `propose_update` | Suggest knowledge base updates | | `report_knowledge_gap` | Flag missing information | | `flag_outdated` | Mark stale entries | ## Schema Packs - **Education** — 5 schemas #"
+      },
+      {
+        "file": "README.md",
+        "snippet": "Suggest knowledge base updates | | `report_knowledge_gap` | Flag missing information | | `flag_outdated` | Mark stale entries | ## Schema Packs - **Education** — 5 schemas ## Related Skills - [UPLO Knowledge Management"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "get allocation process strategic priorities resource request institutional plan\" ``` ``` log_conversation summary=\"Compiled Standard 5 evidence: assessment cycle documentation, budget-strategy alignment records, and instituti"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "e approval workflow\" ``` Flag any outdated curriculum maps found during the review: ``` flag_outdated entry_id=\"<old-curriculum-map-entry-id>\" reason=\"Biology curriculum map from 2021 does not reflect new genomics concent"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "anagement). Essential for accreditation self-studies and new administrator onboarding. **flag_outdated** — Academic catalogs, curriculum maps, and policy manuals are updated on annual cycles but the old versions persist in"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "cument referencing a discontinued program or a superseded policy, flag it immediately. **propose_update** — When assessment data reveals that a program learning outcome is no longer aligned with current curriculum offerings"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "README.md",
+        "snippet": "s, images, and 1,400 more via Docling + Tika - **Classification tiers** — public/internal/confidential/restricted access control - **Benchmark proven** — 96% accuracy vs 53% for raw context at scale ## MCP Tools Available"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "n\" may all refer to the same process. Try multiple terms if initial results are sparse. - FERPA restrictions apply to any query that might return individually identifiable student data. Your clearance level controls"
+      },
+      {
+        "file": "identity-patch.md",
+        "snippet": "evidence or approaching review dates. Student-identifiable information is protected under FERPA — strictly respect classification tiers. Identify the responsible department chair, assessment coordinator, or accredit"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "w, and audit processes. <br> Risk: Education records and classification tiers may include FERPA-sensitive or restricted information. <br> Mitigation: Enforce the institution's FERPA, classification, and role-based a"
+      },
+      {
+        "file": "skill-card.md",
+        "snippet": "ude FERPA-sensitive or restricted information. <br> Mitigation: Enforce the institution's FERPA, classification, and role-based access controls before deployment and during use. <br> ## Reference(s): <br> - [ClawH"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "identity-patch.md",
+        "snippet": "logies, institutional research data and enrollment analytics, academic policies (grading, academic integrity, accommodations), faculty workload and credentialing requirements, and program review and continuous improvement docume"
+      }
+    ],
+    "network": [
+      {
+        "file": "skill.json",
+        "snippet": "rl}\", \"API_KEY\": \"${config.api_key}\", \"DEFAULT_PACKS\": \"education\" }, \"transport\": \"http\", \"url\": \"${config.agentdocs_url}/mcp\" }, \"capabilities\": [ \"search_knowledge\", \"search_with_context\","
+      },
+      {
+        "file": "skill.json",
+        "snippet": "{config.api_key}\", \"DEFAULT_PACKS\": \"education\" }, \"transport\": \"http\", \"url\": \"${config.agentdocs_url}/mcp\" }, \"capabilities\": [ \"search_knowledge\", \"search_with_context\", \"get_policy\", \"export_org_context\""
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,55 @@
+{
+  "repository": "BESSER-PEARL/research-agent-skills",
+  "fixed_version": "03d3c49ac1698c9d29cc4c0f5e8eeca17210bd51",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e39dc4aba0c15f9cff9f0eb010c34bb359aee78",
+      "size": 40
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6298d6aa723136735ca8bba98c890356e12793c",
+      "size": 1069
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "463c90f89685db1cd39f95b81c307af84a3290a1",
+      "size": 3015
+    },
+    {
+      "path": "research-paper-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6cbe2f7e4ccd21600656acfdd65343b43a1f338"
+    },
+    {
+      "path": "research-paper-review/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "226277bab710b20eaf7a009ef98bd763d9598ae3",
+      "size": 3981
+    },
+    {
+      "path": "research-paper-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab7d49300caa1c31df7d6508a9807927b5b00e38",
+      "size": 9408
+    },
+    {
+      "path": "research-paper-review/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "154416b0b50d1b34768dcfd823229281c007bf49",
+      "size": 536
+    }
+  ]
+}

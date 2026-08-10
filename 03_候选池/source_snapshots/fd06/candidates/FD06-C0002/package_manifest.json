@@ -1,0 +1,62 @@
+[
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/SKILL.md",
+    "type": "blob",
+    "size": 7764,
+    "sha": "f6c994334fed7a97ac8733bfd26549274bdae795"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/reference/ai-pair-programming-patterns.md",
+    "type": "blob",
+    "size": 19694,
+    "sha": "cc3d8ddbe5a97622d8e2f935b0980fee64ffe6eb"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/reference/ai-tool-literacy.md",
+    "type": "blob",
+    "size": 19367,
+    "sha": "409925c893ae6f660722d9a376171e604a3fdd4d"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/reference/ethical-ai-use.md",
+    "type": "blob",
+    "size": 19649,
+    "sha": "9ada34e4c97fe458ef154d90fdfa1a3c40b2d8d6"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/reference/prompt-engineering-pedagogy.md",
+    "type": "blob",
+    "size": 17196,
+    "sha": "16c8015577379f04b79b765ff4b146bfae5fd22b"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/scripts/assess-ai-integration.py",
+    "type": "blob",
+    "size": 13389,
+    "sha": "dd36818a66d4a150443ee8bc772e2246d2754f01"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/scripts/validate-prompts.py",
+    "type": "blob",
+    "size": 14070,
+    "sha": "6c33696d2319b076a85f4f324b2975152192785f"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/skill-report.json",
+    "type": "blob",
+    "size": 50674,
+    "sha": "4f6943288d319722a8db69a9cb736248bdbe7076"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/templates/ai-lesson-template.yml",
+    "type": "blob",
+    "size": 13484,
+    "sha": "5281eaa8a02d94ddafe19a6df7d4d8e81dd959be"
+  },
+  {
+    "path": "skills/92bilal26/ai-collaborate-teaching/templates/prompt-design-template.md",
+    "type": "blob",
+    "size": 12752,
+    "sha": "3584983469af99c919336528fd2d203ad7171a84"
+  }
+]

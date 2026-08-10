@@ -1,0 +1,47 @@
+{
+  "repository": "pengkangzhen/academic-review-skill",
+  "fixed_version": "c5a26d9711d455305f1a87229bd5210d0a0d3b4c",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2902559e44dc077366a54e266818f4bae17b01b7",
+      "size": 127
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e20a68e2f7532270b296c2693af82a2b8a5ce96",
+      "size": 1077
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1797a58ddf03fc5a8d4608663b2ebe7e5b52631",
+      "size": 4656
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a33759c5df76cfdb76310b357401ccb4a5d87983"
+    },
+    {
+      "path": "skills/academic-reviewer-or",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5b401e1b9497aabf0835048fe38d2fbbdf78847"
+    },
+    {
+      "path": "skills/academic-reviewer-or/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83f6881a2522e61150d8032dce90e42c412e8ffc",
+      "size": 26507
+    }
+  ]
+}

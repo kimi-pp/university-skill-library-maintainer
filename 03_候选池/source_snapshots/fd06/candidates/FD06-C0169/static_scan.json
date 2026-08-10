@@ -1,0 +1,231 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "README.md",
+        "snippet": "--- title: Canvas Discussion Grader With Feedback emoji: 🌍 colorFrom: indigo colorTo: green sdk: gradio sdk_version: 3.36.1 app_file: app"
+      },
+      {
+        "file": "app.py",
+        "snippet": "s_discussions from utils import reset_folder load_dotenv() pickle_file = \"vector_stores/canvas-discussions.pkl\" index_file = \"vector_stores/canvas-discussions.index\" grading_model = 'gpt-4' qa_model = 'gpt-4' llm"
+      },
+      {
+        "file": "app.py",
+        "snippet": "otenv() pickle_file = \"vector_stores/canvas-discussions.pkl\" index_file = \"vector_stores/canvas-discussions.index\" grading_model = 'gpt-4' qa_model = 'gpt-4' llm = ChatOpenAI(model_name=qa_model, temperature=0, ve"
+      },
+      {
+        "file": "app.py",
+        "snippet": "cussions(url, canvas_api_key) grader = Grader(grading_model) response = \"Ingested canvas data successfully\" history = history + [(text, response)] return history, disabled, disabled, disabled, enabled"
+      },
+      {
+        "file": "app.py",
+        "snippet": "istory): global grader_qa history = [(None, 'Get feedback on your canvas discussions. Add your discussion url and get your discussions graded in instantly.')] return get_grading_status(his"
+      },
+      {
+        "file": "app.py",
+        "snippet": "= Grader(qa_model) if len(history) == 1: history = history + [(None, 'Canvas data is already ingested. You can grade discussions now')] enable_fields(False, False, False, True, True, False"
+      },
+      {
+        "file": "app.py",
+        "snippet": "story = [(None, 'Data reset successfully')] url.placeholder = [(None, 'Enter your Canvas Discussion URL')] canvas_api_key.placeholder = [(None, 'Enter your Canvas API Key')] return history, en"
+      },
+      {
+        "file": "app.py",
+        "snippet": "er your Canvas Discussion URL')] canvas_api_key.placeholder = [(None, 'Enter your Canvas API Key')] return history, enabled, enabled, enabled, disabled, disabled, disabled, disabled, disabled, disable"
+      },
+      {
+        "file": "app.py",
+        "snippet": "_csv(file_path) return df with gr.Blocks() as demo: gr.Markdown(f\"<h2><center>{'Canvas Discussion Grading With Feedback'}</center></h2>\") with gr.Row(): url = gr.Textbox( label"
+      },
+      {
+        "file": "csv_agent.py",
+        "snippet": "file): self.llm = llm self.file = file self.summary_index_name = \"canvas-discussions-summary\" self.folder_path = \"vector_stores/\" self.summary_index_file = \"vector_stores/canva"
+      },
+      {
+        "file": "csv_agent.py",
+        "snippet": "self.folder_path = \"vector_stores/\" self.summary_index_file = \"vector_stores/canvas-discussions-summary.faiss\" self.summary_pickle_file = \"vector_stores/canvas-discussions-summary.pkl\" se"
+      },
+      {
+        "file": "csv_agent.py",
+        "snippet": "tores/canvas-discussions-summary.faiss\" self.summary_pickle_file = \"vector_stores/canvas-discussions-summary.pkl\" self.summary_docs = utils.get_csv_files(self.file, source_column='student_name')"
+      }
+    ],
+    "credential": [
+      {
+        "file": "app.py",
+        "snippet": "Canvas Discussion URL')] canvas_api_key.placeholder = [(None, 'Enter your Canvas API Key')] return history, enabled, enabled, enabled, disabled, disabled, disabled, disabled, disabled, disabled, disab"
+      },
+      {
+        "file": "app.py",
+        "snippet": "Discussion URL\" ) canvas_api_key = gr.Textbox( label=\"Canvas API Key\", placeholder=\"Enter your Canvas API Key\", type=\"password\" ) submit = gr.Button(value=\"Subm"
+      },
+      {
+        "file": "app.py",
+        "snippet": "r.Textbox( label=\"Canvas API Key\", placeholder=\"Enter your Canvas API Key\", type=\"password\" ) submit = gr.Button(value=\"Submit\", variant=\"secondary\", ) with gr.Row():"
+      },
+      {
+        "file": "app.py",
+        "snippet": "label=\"Canvas API Key\", placeholder=\"Enter your Canvas API Key\", type=\"password\" ) submit = gr.Button(value=\"Submit\", variant=\"secondary\", ) with gr.Row(): table = gr.Data"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "def __init__(self, model): print(\"Setting up environment for grading\") os.environ[\"LANGCHAIN_TRACING\"] = \"true\" self.title = None self.model = model self.rubric_file = 'docs/rub"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": ".extend(entries) return individual_entries def ingest_canvas_discussions(input_url, access_token): global base_url, rubric, message match = re.match(r'https://canvas.illinois.edu/courses/(\\d+)/discussion_topi"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": "se_url = 'https://canvas.illinois.edu' headers = { 'Authorization': f'Bearer {access_token}' } discussion_url = f'{base_url}/api/v1/courses/{course_id}/discussion_topics/{discussion_topic_id}/view'"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "app.py",
+        "snippet": "e in output folder if os.path.isdir('output'): shutil.rmtree('output') os.mkdir('output') if os.path.isdir('vector_stores'): shutil.rmtree('vector_stores') os.mkdir('vector_stores')"
+      },
+      {
+        "file": "app.py",
+        "snippet": "ut') if os.path.isdir('vector_stores'): shutil.rmtree('vector_stores') os.mkdir('vector_stores') # get current path path = os.path.join(\"output\", os.path.basename(file.name)) # Copy the u"
+      },
+      {
+        "file": "app.py",
+        "snippet": ") sources = [] # for document in response['source_documents']: # sources.append(str(document.metadata)) source = ','.join(set(sources)) # response = response['answer'] + '\\nSources: ' + str(len(sources))"
+      },
+      {
+        "file": "app.py",
+        "snippet": "*.csv\", \"w\") as zipObj: # for idx, file in enumerate(files): # zipObj.write(file.name, file.name.split(\"/\")[-1]) # return \"outputfiles.zip\" print(grader.csv) return grader.csv, gr.update(visible=True"
+      },
+      {
+        "file": "app.py",
+        "snippet": "ading_results(file, history): global grader, grader_qa # Delete output folder and save the file in output folder if os.path.isdir('output'): shutil.rmtree('output') os.mkdir('output') if os.path.isdir('vec"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "lder if os.path.exists('output'): shutil.rmtree('output') os.mkdir('output') now = datetime.now() # current date and time date_time = now.strftime(\"%m-%d-%Y_%H-%M-%S\")"
+      },
+      {
+        "file": "grader.py",
+        "snippet": ") sanitized_file_name = os.path.join('output', sanitized_file_name) with open(sanitized_file_name, 'w', newline='') as csvfile: writer = csv.DictWriter(csvfile, fieldnames=self.fieldnames) writer.wr"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "e filename created in create_csv method self.csv = self.create_csv() with open(self.csv, 'a', newline='') as csvfile: writer = csv.DictWriter(csvfile, fieldnames=self.fieldnames) rows = [o"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "output: self.ToolArgsSchema = self.parser.parse(result) self.outputs.append(output) if self.model == 'gpt-4': await asyncio.sleep(3) # Add a delay between each batch"
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "stores/\", index_name=\"canvas-discussions\") # # Save index to pickle file # # with open(pickle_file, \"wb\") as f: # # pickle.dump(search_index, f) # return search_index # # # def search_index_from_docs(source_chunk"
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "ocal(search_index, folder_path=\"vector_stores/\", index_name=\"canvas-discussions\") # # Save index to pickle file # # with open(pickle_file, \"wb\") as f: # # pickle.dump(search_index, f) # return search_index # # # def"
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "# print(result) # # for document in result['source_documents']: # sources.append(\"\\n\" + str(document.metadata)) # print(sources) # # source = ',\\n'.join(set(sources)) # return result['answer'] + '\\nSOURCE"
+      }
+    ],
+    "file_delete": [
+      {
+        "file": "app.py",
+        "snippet": "canvas_api_key.placeholder = \"Data already ingested\" def reset_data(): # Use shutil.rmtree() to delete output, docs, and vector_stores folders, reset grader and grader_qa, and get_grading_status, reset and retu"
+      },
+      {
+        "file": "app.py",
+        "snippet": "output folder and save the file in output folder if os.path.isdir('output'): shutil.rmtree('output') os.mkdir('output') if os.path.isdir('vector_stores'): shutil.rmtree('vector_stores') os.m"
+      },
+      {
+        "file": "app.py",
+        "snippet": "il.rmtree('output') os.mkdir('output') if os.path.isdir('vector_stores'): shutil.rmtree('vector_stores') os.mkdir('vector_stores') # get current path path = os.path.join(\"output\", os.path.basenam"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "# remove existing csvs in output folder if os.path.exists('output'): shutil.rmtree('output') os.mkdir('output') now = datetime.now() # current date and time date_time = now.str"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": "if os.path.exists('docs'): #delete the folder shutil.rmtree('docs') # Create the docs folder os.makedirs('docs') with open(rubric_file, 'w') a"
+      },
+      {
+        "file": "utils.py",
+        "snippet": "and all its contents, donot return until done if os.path.isdir(destination): shutil.rmtree(destination) while os.path.isdir(destination): time.sleep(4) os.mkdir(destination) while no"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "app.py",
+        "snippet": "ight=100) #reset = gr.ClearButton(value=\"Reset\", components=[url, canvas_api_key, submit, table, grade, download]) reset = gr.ClearButton(value=\"Reset\") chatbot = gr.Chatbot([], label=\"Chat with grading result"
+      },
+      {
+        "file": "app.py",
+        "snippet": "ick(ingest, inputs=[url, canvas_api_key, chatbot], outputs=[chatbot, url, canvas_api_key, submit, grade], postprocess=False).then( bot, chatbot, chatbot ) grade.click(start_grading, inputs="
+      },
+      {
+        "file": "app.py",
+        "snippet": "tbot ) reset.click(reset_data, inputs=[], outputs=[chatbot, url, canvas_api_key, submit, table, grade, download, txt, file, upload, ask]).success( bot, chatbot, chatbot) upload.upload(upload_grading_results,"
+      },
+      {
+        "file": "app.py",
+        "snippet": "reset.click(reset_data, inputs=[], outputs=[chatbot, url, canvas_api_key, submit, table, grade, download, txt, file, upload, ask]).success( bot, chatbot, chatbot) upload.upload(upload_grading_results, inputs=[upload, chatbot], out"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "grader.py",
+        "snippet": "d( description=\"The developmental feedback from Grader's point of view to the student, some examples are: 'Great work, ...', 'Although, your submission is relevant to the question, it doesn't answer the question entirely...'. Give custom"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "{self.rubric_text} -------------------- I will be able to identify each student by name, their key interests, key features pertinent to the discussion intruction and rubric. I will be able to summari"
+      },
+      {
+        "file": "grader.py",
+        "snippet": "m the grading scheme. {self.rubric_text} I will be able to identify each student by name, identify their key interests, key features of the responses pertinent to the discussion intruction and rubric."
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "ed question: What was the score for this student for the discussion? Answer: This student received a score of 10/10 for the discussion. Question: How many students received a full score?/How many students did not recei"
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "ore?/How many students did not receive a full score? Rephrased question: Did this student receive a full score? Answer: This student received a full score./This student did not receive a full score. Question: How m"
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "? Rephrased question: Did this student receive a full score? Answer: This student received a full score./This student did not receive a full score. Question: How many students lost marks in X category of the rubric?"
+      },
+      {
+        "file": "grader_qa.py",
+        "snippet": "is student receive a full score? Answer: This student received a full score./This student did not receive a full score. Question: How many students lost marks in X category of the rubric? Rephrased question: Did this stude"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": "id = entry['parent_id'] user_id = entry['user_id'] name = next((f\"Student {counter}\" for p in participants if p['id'] == user_id), None) message = entry['message'] replies = [] if 'replies' in entry:"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": "me, 'a+') as f: if entry.parent_id == None: f.write(f'<h1><b>Student Post: {entry.name}</b></h1>') f.write(entry.message) f.write('<hr>') else: f."
+      }
+    ],
+    "network": [
+      {
+        "file": "ingest.py",
+        "snippet": "/groups/{group_id}/discussion_topics/{topic_id}/view' group_discussion_response = requests.get(group_discussion_url, headers=headers) if group_discussion_response.ok: group_discussion_data = gro"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": "iscussion(discussion_url, headers): individual_entries = [] discussion_response = requests.get(discussion_url, headers=headers) if discussion_response.ok: discussion_data = discussion_response.json()"
+      },
+      {
+        "file": "ingest.py",
+        "snippet": "1/courses/{course_id}/discussion_topics/{discussion_topic_id}' instruction_response = requests.get(instruction_url, headers=headers) if instruction_response.ok: instruction_data = instruction_response.json("
+      }
+    ]
+  },
+  "read_errors": []
+}

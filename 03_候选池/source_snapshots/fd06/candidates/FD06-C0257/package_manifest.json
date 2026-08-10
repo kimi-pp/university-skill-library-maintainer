@@ -1,0 +1,80 @@
+[
+  {
+    "path": "README.md",
+    "type": "blob",
+    "size": 13490,
+    "sha": "3d5e1062e3a061449bf4a4b5a437793f6c45a241"
+  },
+  {
+    "path": "README_CN.md",
+    "type": "blob",
+    "size": 9903,
+    "sha": "7683f223f564894b18850cf261f282ccf23e5d1b"
+  },
+  {
+    "path": "SKILL.md",
+    "type": "blob",
+    "size": 15078,
+    "sha": "92e5fc34df8318df84b63a948a9d18b100eb26fe"
+  },
+  {
+    "path": "agents/openai.yaml",
+    "type": "blob",
+    "size": 1494,
+    "sha": "6897e1264a3e9abe5650868608c2685ec37685d4"
+  },
+  {
+    "path": "checklist.md",
+    "type": "blob",
+    "size": 18584,
+    "sha": "b691ec85e324d17c7ced2ffa7b38ed7aed85c5e9"
+  },
+  {
+    "path": "disciplines/chemistry.md",
+    "type": "blob",
+    "size": 2335,
+    "sha": "dc0863dacd6a3f42ce875b1aee6ebc1b93d14b7c"
+  },
+  {
+    "path": "disciplines/cs-ai.md",
+    "type": "blob",
+    "size": 4392,
+    "sha": "d6514f9d2030fd14075cb5e211108541559044e0"
+  },
+  {
+    "path": "disciplines/engineering.md",
+    "type": "blob",
+    "size": 1992,
+    "sha": "e050532b78db486be321104575197984637de7eb"
+  },
+  {
+    "path": "disciplines/life-sciences.md",
+    "type": "blob",
+    "size": 3205,
+    "sha": "078f0571067cc0263fd062dd517215265b11027f"
+  },
+  {
+    "path": "disciplines/medicine.md",
+    "type": "blob",
+    "size": 2755,
+    "sha": "7f440e118548a3b6db42f01b9b5cce000f52ecca"
+  },
+  {
+    "path": "disciplines/physics.md",
+    "type": "blob",
+    "size": 2099,
+    "sha": "618a6d78f8cf051af24223ee90c36c463c001a8c"
+  },
+  {
+    "path": "disciplines/social-sciences.md",
+    "type": "blob",
+    "size": 3073,
+    "sha": "4e5db54d296b27c3897fa84ea6a991d130bc494b"
+  },
+  {
+    "path": "output-template.md",
+    "type": "blob",
+    "size": 6940,
+    "sha": "5449cf189b78d5d1638aa4987c4b1a58bb2a6977"
+  }
+]

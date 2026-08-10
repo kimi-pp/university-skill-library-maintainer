@@ -1,0 +1,169 @@
+{
+  "hits": {
+    "remote_install": [
+      {
+        "file": "skills/buaa-thesis-content-checking/SKILL.md",
+        "snippet": "updf pdfplumber pypdf # Optional only for API-backed automatic LLM extraction: python3 -m pip install anthropic ``` ## References - CCF list: `references/CCF-List.md`"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/README.md",
+        "snippet": "赖 ```bash pip install pypdf pdfplumber PyMuPDF ``` Optional for LLM extraction: ```bash pip install anthropic export ANTHROPIC_API_KEY=\"your-key\" ``` ## Project Structure / 项目结构 ``` paper-content-audit/ ├── SKILL.md"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/check_deps.py",
+        "snippet": "run:\") for display_name, import_name in missing: print(f\" python3 -m pip install {import_name}\") return 1 if args.yes: response = \"yes\" elif not sys.stdin.isatty(): print(\"Non-interac"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/check_deps.py",
+        "snippet": "lly:\") for display_name, import_name in missing: print(f\" python3 -m pip install {import_name}\") return 1 else: response = input(\"Would you like to install them now? [Y/n]: \").strip().lower()"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/check_deps.py",
+        "snippet": "for display_name, import_name in missing: print(f\" python3 -m pip install {import_name}\") return 1 else: print(\"Skipping installation.\") print(\"To install manually, run:\")"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/check_deps.py",
+        "snippet": "run:\") for display_name, import_name in missing: print(f\" python3 -m pip install {import_name}\") return 1 if __name__ == \"__main__\": sys.exit(main())"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/buaa-thesis-content-checking/README.md",
+        "snippet": "un with text content python3 scripts/paper_audit_script.py --text \"论文全文内容...\" # Run with API key for LLM enhancement export ANTHROPIC_API_KEY=\"your-api-key\" python3 scripts/paper_audit_script.py paper.pdf ``` ## Usa"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/README.md",
+        "snippet": "--text \"论文全文内容...\" # Run with API key for LLM enhancement export ANTHROPIC_API_KEY=\"your-api-key\" python3 scripts/paper_audit_script.py paper.pdf ``` ## Usage Scenarios / 使用场景 | Chinese | English | |---------|-----"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/README.md",
+        "snippet": "se academic papers 2. **LLM Analysis**: Claude Code terminal can analyze directly without API key 3. **Fallback**: Enhanced heuristic extraction when LLM unavailable 4. **Report Language**: Reports can be generated in"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "ict, List, Optional class LLMExtractor: \"\"\"使用LLM提取论文关键内容\"\"\" def __init__(self, api_key: str = None, model: str = \"claude-sonnet-4-20250514\"): self.api_key = api_key self.model = model"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "_init__(self, api_key: str = None, model: str = \"claude-sonnet-4-20250514\"): self.api_key = api_key self.model = model self.extracted_data = {} def extract_all(self, paper_text: str, paper"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "lf, api_key: str = None, model: str = \"claude-sonnet-4-20250514\"): self.api_key = api_key self.model = model self.extracted_data = {} def extract_all(self, paper_text: str, paper_title: st"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "print(\"请运行: pip install anthropic\", file=sys.stderr) return None api_key = self.api_key if not api_key: # 尝试从环境变量获取 import os api_key = os.environ.g"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "install anthropic\", file=sys.stderr) return None api_key = self.api_key if not api_key: # 尝试从环境变量获取 import os api_key = os.environ.get('ANTHROPIC_A"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "le=sys.stderr) return None api_key = self.api_key if not api_key: # 尝试从环境变量获取 import os api_key = os.environ.get('ANTHROPIC_API_KEY') if no"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "api_key if not api_key: # 尝试从环境变量获取 import os api_key = os.environ.get('ANTHROPIC_API_KEY') if not api_key: print(\"警告: 未设置ANTHROPIC_API_KEY环境变量，LLM提取功能不"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/extractors/llm_extractor.py",
+        "snippet": "import os api_key = os.environ.get('ANTHROPIC_API_KEY') if not api_key: print(\"警告: 未设置ANTHROPIC_API_KEY环境变量，LLM提取功能不可用\", file=sys.stderr) print(\"将使用简化的文本分析代替。\", file="
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "print(\"使用LLM提取论文关键信息 / Extracting Key Information with LLM\") print(\"=\" * 60) api_key = os.environ.get('ANTHROPIC_API_KEY') llm_data = extract_with_llm(full_text, paper_title, api_key=api_key) # 检"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/buaa-thesis-content-checking/README.md",
+        "snippet": "y experiment completeness | ## Output / 输出 The skill generates **4 report formats**: 技能生成**4种报告格式**： 1. **Markdown报告** - `paper_audit_report_YYYY-MM-DD_HHMMSS.md` 2. **HTML基础报告** - `paper_audit_report_YYYYMMDD_HHMM"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/evals/evals.json",
+        "snippet": "\"prompt\": \"帮我审核一下这篇论文的主要贡献和创新点，以及实验是否和baseline做了充分对比。\", \"expected_output\": \"应该生成完整的论文内容审核报告，包含贡献声明列表、创新性分析、baseline对比、实验完整性评估\", \"files\": [], \"assertions\": [ \"Output contains main contribution"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "# 保存文本到文件 output_file = os.path.join(output_dir, \"paper_text_extracted.txt\") with open(output_file, 'w', encoding='utf-8') as f: f.write(f\"论文标题: {paper_title}\\n\") f.write(\"=\" * 60 + \"\\n\") f.write(ful"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "t_data_path = os.path.join(output_dir, f\"audit_data_for_agent_{timestamp}.json\") with open(audit_data_path, 'w', encoding='utf-8') as f: json.dump(full_audit_data, f, ensure_ascii=False, indent=2) print(f\"\\n📊 审核数据已保存到:"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "pic API密钥（用于LLM提取） 功能： 1. 使用Python提取PDF文本内容 2. 使用LLM提取论文中的：解决的问题、创新点、评估内容 3. 生成结构化审核报告（HTML/Markdown） \"\"\" import sys import os import re from typing import Dict, List, Optional, Any # 添加 scripts 目录到路径 sys"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "dit(pdf_path: str = None, text: str = None, output_dir: str = \".\") -> dict: \"\"\"运行完整审核并生成报告\"\"\" # 1. 提取论文内容（使用Python PDF提取器） print(\"\\n\" + \"=\" * 60) print(\"开始论文内容审核 / Starting Paper Content Audit\")"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "build_audit_data(llm_data, content_by_page, full_text, paper_title, extractor) # 4. 生成报告 print(\"\\n\" + \"=\" * 60) print(\"生成报告 / Generating Report\") print(\"=\" * 60) report_path = generate_html_r"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": ", full_text, paper_title, extractor) # 4. 生成报告 print(\"\\n\" + \"=\" * 60) print(\"生成报告 / Generating Report\") print(\"=\" * 60) report_path = generate_html_report( full_audit_data=full_audit_d"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "提取方法: {extractor.extraction_method}\") print(f\" 文本长度: {len(full_text)} 字符\") # 保存文本到文件 output_file = os.path.join(output_dir, \"paper_text_extracted.txt\") with open(output_file, 'w', encoding='utf-8'"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/paper_audit_script.py",
+        "snippet": "n_step3(llm_data: dict, output_dir: str = \".\"): \"\"\"Task 3: 保存审核数据，供后续Claude Code Agent生成报告使用\"\"\" print(\"\\n\" + \"=\" * 60) print(\"Task 3: 保存审核数据\") print(\"=\" * 60) if not llm_data: print(\"错误"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/generator.py",
+        "snippet": "oin(output_dir, f\"paper_audit_report_{dt.now().strftime('%Y%m%d_%H%M%S')}.html\") with open(html_path, 'w', encoding='utf-8') as f: f.write(html) print(f\"🌐 HTML报告已保存: {html_path}\") return html_path def _buil"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/generator.py",
+        "snippet": "= os.path.join(output_dir, f\"paper_audit_supplementary_report_{timestamp}.html\") with open(supp_path, 'w', encoding='utf-8') as f: f.write(html) print(f\"📋 补充报告已保存: {supp_path}\") return supp_path def generat"
+      }
+    ],
+    "process": [
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/check_deps.py",
+        "snippet": "g python3 -m pip.\"\"\" print(f\"Installing {package_name}...\") try: result = subprocess.run( [sys.executable, \"-m\", \"pip\", \"install\", package_name, \"--quiet\"], capture_output=True,"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/check_deps.py",
+        "snippet": "✗ Failed to install {package_name}: {result.stderr}\") return False except subprocess.TimeoutExpired: print(f\" ✗ Installation timed out for {package_name}\") return False except Exceptio"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/checks/baseline_comparison.py",
+        "snippet": "or kw in stat_keywords): has_statistical_significance = True # 检查对比是否公平（相同数据集、相同设置） if all(kw in experiment_section.lower() for kw in ['same', 'dataset', 'setting']): has_"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/generator.py",
+        "snippet": "ss=\"score-grid\"> {scores_grid if scores_grid else ' <div class=\"score-item\"><span>暂无评分数据</span></div>'} </div> </div> <!-- 约束检查 --> <div class=\"section\"> <h2>⚠️ 约束检查</h2> <div class=\"constr"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/generator.py",
+        "snippet": "lt', '') md += f\"- **{dimension}**: {result}\\n\" else: md += \"- 暂无评分数据\\n\" # 总结 md += f\"\"\" --- ## 📝 总结 ### ✅ 优点 \"\"\" strengths = summary.get('strengths', []) if strength"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/generator.py",
+        "snippet": "lt', '') md += f\"- **{dimension}**: {result}\\n\" else: md += \"- 暂无评分数据\\n\" # ========== 六、总结 ========== md += f\"\"\" --- ## 六、总结 ### ✅ 优点 \"\"\" strengths = summary.get('strength"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/generator.py",
+        "snippet": "f\"- **{dimension} / {tr(dimension)}**: {emoji} {result}\\n\" else: md += \"- 暂无评分数据 / No scoring data\\n\" # 总结 md += f\"\"\" --- ## 八、总结 / Summary ### ✅ {tr('优点')} / Strengths \"\"\" strength"
+      },
+      {
+        "file": "skills/buaa-thesis-content-checking/scripts/reports/template_filler.py",
+        "snippet": "\"\"\"构建评分网格\"\"\" if not scores: return ' <div class=\"score-item\"><span>暂无评分数据</span></div>' grid = \"\" for s in scores: dimension = s.get('dimension', '') result = s.get('r"
+      }
+    ]
+  },
+  "read_errors": []
+}

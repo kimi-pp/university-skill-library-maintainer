@@ -1,0 +1,44 @@
+[
+  {
+    "path": ".gitattributes",
+    "type": "file",
+    "size": 1477,
+    "oid": "c7d9f3332a950355d5a77d85000f05e6f45435ea"
+  },
+  {
+    "path": ".gitignore",
+    "type": "file",
+    "size": 3078,
+    "oid": "68bc17f9ff2104a9d7b6777058bb4c343ca72609"
+  },
+  {
+    "path": "LICENSE",
+    "type": "file",
+    "size": 11357,
+    "oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+  },
+  {
+    "path": "README.md",
+    "type": "file",
+    "size": 232,
+    "oid": "e2039eee907ea7c2fd07cc83da09229502cf0b63"
+  },
+  {
+    "path": "app.py",
+    "type": "file",
+    "size": 2187,
+    "oid": "fdb33d57e6816c10cad33992721d001b4e48d06f"
+  },
+  {
+    "path": "requirements.txt",
+    "type": "file",
+    "size": 48,
+    "oid": "9ed9f6c836daa19539754b6656a929c4742482ae"
+  },
+  {
+    "path": "rubrics/act_rubric.json",
+    "type": "file",
+    "size": 11354,
+    "oid": "61ea3cbd4e3f3007e2e6434bffad615ab3b65c73"
+  }
+]

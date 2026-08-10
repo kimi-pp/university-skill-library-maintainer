@@ -1,0 +1,91 @@
+{
+  "hits": {
+    "process": [
+      {
+        "file": "SKILL.md",
+        "snippet": ") has unconditional access to `python3 {skill_dir}/scripts/arxiv_search.py \"<query>\"` via Bash. The script returns `[arxiv_id] (year) Title / Authors / Summary` rows, capped at 8 results, sorted by relevance (or `--sort date`"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "//github.com/poldrack/ai-peer-review ai-peer-review review <paper.pdf> ``` Run that as a Bash command and let it produce its own outputs. This skill's subagent path is a Claude-only substitute, not a replacement. ## Inst"
+      },
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "af_idx = random.randrange(n) if args.alignment_critic else -1 procs: list[tuple[str, subprocess.Popen | None, object, Path | None]] = [] start = time.time() spawn_count = 0 for i, code in enumerate(codena"
+      },
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "domain=args.domain, ) out_fh = open(out_path, \"w\") proc = subprocess.Popen( [ \"claude\", \"--dangerously-skip-permissions\", \"--mode"
+      },
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "\"--model\", args.model, \"-p\", ], stdin=subprocess.PIPE, stdout=out_fh, stderr=subprocess.PIPE, text=True, ) proc.stdin"
+      },
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "], stdin=subprocess.PIPE, stdout=out_fh, stderr=subprocess.PIPE, text=True, ) proc.stdin.write(prompt) proc.stdin.close() elapsed = tim"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "SKILL.md",
+        "snippet": "y asks for that and has the package installed: ```bash pip install ai-peer-review # or: pip install git+https://github.com/poldrack/ai-peer-review ai-peer-review review <paper.pdf> ``` Run that as a Bash command and let it"
+      },
+      {
+        "file": "scripts/arxiv_search.py",
+        "snippet": "rt arxiv except ImportError: return \"Error: arxiv package not installed. Run: pip install arxiv\" sort_map = { \"relevance\": arxiv.SortCriterion.Relevance, \"date\": arxiv.SortCriterion.SubmittedDate,"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "SKILL.md",
+        "snippet": "w. Triggers on phrases like \"peer review this paper\", \"critique this PDF\", \"review like a reviewer would\", \"meta-review this manuscript\", \"act as reviewer 2\". --- # Paper Peer Review Multi-reviewer peer review of an academic paper. Model"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "uld\", \"meta-review this manuscript\", \"act as reviewer 2\". --- # Paper Peer Review Multi-reviewer peer review of an academic paper. Models the workflow of [poldrack/ai-peer-review](https://github.com/poldrack/ai-peer-review) but"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "_time)`, not `sum(reviewer_time)`. - Each child reads its prompt from stdin (paper_text + reviewer instructions), writes its review to `<output_dir>/review_<codename>.md` directly. - Each child is a full Claude Code instance with tool access (Bash, ar"
+      },
+      {
+        "file": "README.md",
+        "snippet": "eer-review-skill A [Claude Code](https://claude.com/claude-code) skill that runs a multi-reviewer peer review of an academic paper. Drop a PDF in, get back N independent reviews + a synthesized meta-review + a CSV table of which"
+      },
+      {
+        "file": "prompts/reviewer.md",
+        "snippet": "You are an expert reviewer in the field of {domain}. You have been asked to provide a peer review for the research paper attached below. Your reviewer codename is **{reviewer_id}**. You will not see other reviewers'"
+      },
+      {
+        "file": "scripts/arxiv_search.py",
+        "snippet": "\"\"\"arXiv search helper for paper-review reviewers. Used by reviewer subagents to verify novelty claims and surface missing prior art when their assigned LENS / AXIS is novelty-related. Returns verifiable arX"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "prompts/reviewer.md",
+        "snippet": "its ID (e.g., `[2310.12345]`). Never cite a paper you did not see in the search output — fabrication remains forbidden. - **No meta-commentary about the tool.** Don't write \"I searched arXiv and found…\" framing in your r"
+      },
+      {
+        "file": "prompts/reviewer_alignment_forum.md",
+        "snippet": "its ID (e.g., `[2403.01234]`). Never cite a paper you did not see in the search output — fabrication remains forbidden. - **No meta-commentary about the tool.** Don't say \"I searched arXiv…\" — integrate findings into the"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "eviewers)) codenames = NATO[:n] output_dir = Path(args.output_dir) output_dir.mkdir(parents=True, exist_ok=True) skill_dir = str(Path(args.skill_dir).resolve()) paper_text = Path(args.paper_text_"
+      },
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "skill_dir=skill_dir, domain=args.domain, ) out_fh = open(out_path, \"w\") proc = subprocess.Popen( [ \"claude\", \"--dangerously-skip-permissio"
+      },
+      {
+        "file": "scripts/spawn_reviewers.py",
+        "snippet": "ts() and not args.overwrite: print(f\"[spawn_reviewers] skip {code} (exists, --overwrite not set)\", file=sys.stderr, flush=True) procs.append((code, None, None, None)) continue # Stagger spawn"
+      }
+    ]
+  },
+  "read_errors": []
+}

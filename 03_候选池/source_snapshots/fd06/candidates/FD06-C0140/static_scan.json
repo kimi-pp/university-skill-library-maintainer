@@ -1,0 +1,107 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "--- name: assess-setup description: Initialize Canvas assignment grading workflow and create assessment JSON file --- # Assessment Setup - Initialize Grading Workflow Initialize the grading workflow for Canvas assignment {{assignme"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "itialize the grading workflow for Canvas assignment {{assignment_id}}. ## Task Overview Create the assessment JSON file with all student submissions and rubric structure, ready for AI evaluation. ## Step 1: Validate dauber/config.toml Ch"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "he current repository. **If missing**: Use `AskUserQuestion` to collect all fields, then create the file: ```toml course_title = \"Exploring the Hispanic World\" course_code = \"SPA-212-T\" canvas_course_id = 79384 term = \"Spri"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "nvalid: Report error and ask user to verify - If no submissions found: Report warning but create file anyway - If rubric not found: Report error - assignment must have rubric for this workflow - If file already exists: As"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "ent must have rubric for this workflow - If file already exists: Ask user if they want to overwrite or use existing file ## Important Notes - Supports `online_upload` submission types with automatic text extraction from DOCX and PDF files"
+      }
+    ],
+    "process": [
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "dauber CLI, then construct the assessment file. ### 2a. Run dauber assess setup Use the Bash tool to run the dauber CLI: ```bash uv run dauber assess setup {canvas_course_id} {assignment_id} \\ --course-name \"{course_title"
+      }
+    ],
+    "lms": [
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "--- name: assess-setup description: Initialize Canvas assignment grading workflow and create assessment JSON file --- # Assessment Setup - Initialize Grading Workflow Init"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "-- # Assessment Setup - Initialize Grading Workflow Initialize the grading workflow for Canvas assignment {{assignment_id}}. ## Task Overview Create the assessment JSON file with all student submissions and rubri"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "xtract values for downstream use**: - `canvas_course_id` becomes the `course_id` for all Canvas API calls - Map `feedback_language` to language code: \"Spanish\" → `\"es\"`, \"English\" → `\"en\"` - `level` carries through"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "to metadata for agent context ## Step 2: Generate Assessment Structure Fetch data from Canvas using the dauber CLI, then construct the assessment file. ### 2a. Run dauber assess setup Use the Bash tool to run th"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "sion types with automatic text extraction from DOCX and PDF files (redirects followed for Canvas → S3 attachment URLs) - Supports `online_text_entry` submission types - Supports `discussion_topic` submission types —"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "from the assessment JSON. The numeric `user_id` is retained for grade submission back to Canvas - Creates fresh assessment file each time (timestamped to avoid conflicts) - Preserves all rubric details for AI evalua"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "\"` - `feedback_language` accepts full names (\"Spanish\", \"English\") - `anonymize` controls FERPA-compliant PII stripping: when `true`, student names and emails are blanked in the assessment JSON. The numeric `user_id"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "anguage` accepts full names (\"Spanish\", \"English\") - `anonymize` controls FERPA-compliant PII stripping: when `true`, student names and emails are blanked in the assessment JSON. The numeric `user_id` is retained"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "cludes already-graded submissions by default** to prevent overwriting existing grades - **FERPA COMPLIANCE: Enrollment filtering enabled** - Only includes submissions from students enrolled in the specified course,"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "specified course, preventing cross-section contamination in cross-listed assignments - **FERPA COMPLIANCE: PII anonymization** - When `anonymize: true` in dauber/config.toml, student names and emails are stripped f"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "preventing cross-section contamination in cross-listed assignments - **FERPA COMPLIANCE: PII anonymization** - When `anonymize: true` in dauber/config.toml, student names and emails are stripped from the assessme"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "\" language_learning = true language_level = \"ACTFL Intermediate Mid\" formality = \"casual\" anonymize = true ``` Notes on field values: - `level` specifies the educational setting: \"undergraduate\", \"graduate\", \"professi"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "evel` should be `\"NA\"` - `feedback_language` accepts full names (\"Spanish\", \"English\") - `anonymize` controls FERPA-compliant PII stripping: when `true`, student names and emails are blanked in the assessment JSON. The"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "anguage-level \"{language_level}\" \\ --formality \"{formality}\" \\ --exclude-graded \\ --anonymize \\ --format json ``` Notes: - `{canvas_course_id}` comes from `dauber/config.toml` - `{assignment_id}` is the argume"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "--language-learning` if `language_learning: true` in dauber/config.toml - Only include `--anonymize` if `anonymize: true` in dauber/config.toml - `--feedback-language` uses the mapped code (\"es\" or \"en\") - `--exclude-gr"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "ning` if `language_learning: true` in dauber/config.toml - Only include `--anonymize` if `anonymize: true` in dauber/config.toml - `--feedback-language` uses the mapped code (\"es\" or \"en\") - `--exclude-graded` skips alr"
+      },
+      {
+        "file": ".pi/skills/assess-setup/SKILL.md",
+        "snippet": "ntamination in cross-listed assignments - **FERPA COMPLIANCE: PII anonymization** - When `anonymize: true` in dauber/config.toml, student names and emails are stripped from the assessment JSON. The numeric `user_id` is"
+      }
+    ]
+  },
+  "read_errors": []
+}

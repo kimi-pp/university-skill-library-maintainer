@@ -1,0 +1,3448 @@
+{
+  "repository": "nexu-io/html-anything",
+  "fixed_version": "779fce327024612eba752fe42e1267a3918f7640",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "828855e60c4a9eb01f3ebf98a3de2f0fe56dc80a"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2f4cd97c856c0867b9cfebf5355867269d907c5"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77a7a777f1d8603c740e09c1c9b6da7feeff116b",
+      "size": 1064
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9b5542a4b6976607dce1fe48a8283562e8702f5",
+      "size": 668
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d10219621661012d7cbbbf98085337f59c97db2",
+      "size": 1420
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "size": 11
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6dada2913067a9ee472267b5ed3be652faccfb3",
+      "size": 14506
+    },
+    {
+      "path": "CONTRIBUTING.zh-CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f7f3943611f723b599acfa177b6f3b9c3332720",
+      "size": 13730
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358
+    },
+    {
+      "path": "PROGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e17f2655e7e1450a506a7df230d074c2b9508905",
+      "size": 19745
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3b043196541a87ef82d54f82c365ec6319a9a00",
+      "size": 48042
+    },
+    {
+      "path": "README.zh-CN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00f0f2c3fd6b656a962460373a176c6f43dfb1db",
+      "size": 35346
+    },
+    {
+      "path": "cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e67110c9b13db6cf906b53b8291f4711f761a376"
+    },
+    {
+      "path": "cli/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "763301fc0025d020fbc9fb3a0781097e8e036d9c",
+      "size": 19
+    },
+    {
+      "path": "cli/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eff9f2fff3bf3fdf9cd83a01f3d4ae8c77de6a6",
+      "size": 8957
+    },
+    {
+      "path": "cli/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a5eae3e22653369f0d5795daaca9734f682e256",
+      "size": 477
+    },
+    {
+      "path": "cli/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1ff2c089d624986fa1e8e122a57ce5bae3e85fc"
+    },
+    {
+      "path": "cli/src/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "741fcf22302f1ae4359fcf2a9cdee387a2960de6"
+    },
+    {
+      "path": "cli/src/__tests__/agents-detect.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee6d659df4378237666c03df45f35e15fbb5cba",
+      "size": 10494
+    },
+    {
+      "path": "cli/src/__tests__/agents-invoke.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cfad7d204983200567bb7c6bee778ebf950fd18",
+      "size": 16481
+    },
+    {
+      "path": "cli/src/__tests__/collision-resolve.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c5aebda522a0b12a1566482bded0fd33e272f8f",
+      "size": 1603
+    },
+    {
+      "path": "cli/src/__tests__/extract-html.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91ec0bff14af2928cfe5b43a643b22753c051c40",
+      "size": 1722
+    },
+    {
+      "path": "cli/src/__tests__/index.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bdb54dc708f55650a60102d96e279c19daa9fc2",
+      "size": 13802
+    },
+    {
+      "path": "cli/src/__tests__/prompt.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6d0c93f6416c9b2600d473ef7bec3f08bd79dfd",
+      "size": 3611
+    },
+    {
+      "path": "cli/src/__tests__/skills-matcher.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b8474c7d4476e937735b7e07a71c1c3af4e57a4",
+      "size": 16277
+    },
+    {
+      "path": "cli/src/agents-detect.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b86b0fd82c9745ad88a81f5483a61bde2ed0abc4",
+      "size": 10641
+    },
+    {
+      "path": "cli/src/agents-invoke.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2416e6343355eb0f794eb50b41d3df15467dd347",
+      "size": 22102
+    },
+    {
+      "path": "cli/src/collision-resolve.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed685655ae4ceccc4556c8441393f458c3d476f4",
+      "size": 1100
+    },
+    {
+      "path": "cli/src/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "550b6eec7e6f1a9a16c248181fd7b41230ee8dea",
+      "size": 1099
+    },
+    {
+      "path": "cli/src/extract-html.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "704ea7266aebd5a4a9cae642cc8b0f11cc0c458f",
+      "size": 1001
+    },
+    {
+      "path": "cli/src/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46b90142b7f56714faa03098180e42fadb0cd95e",
+      "size": 27821
+    },
+    {
+      "path": "cli/src/prompt-assemble.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c6c9f9e4e944465a30c6363493cad70584b5c59",
+      "size": 3677
+    },
+    {
+      "path": "cli/src/prompt.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aaf31507cda3cbe3995194589cd6399237e9162",
+      "size": 938
+    },
+    {
+      "path": "cli/src/run.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f64cd16fe3a4df8b564a0d490f84325a4bfda71f",
+      "size": 83
+    },
+    {
+      "path": "cli/src/skills-loader.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22faf60f13888610bf2f750fadc5d8716968d57e",
+      "size": 5608
+    },
+    {
+      "path": "cli/src/skills-matcher.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4c9df13a11b41ef90e9d8ac883ace00d73c6c01",
+      "size": 13216
+    },
+    {
+      "path": "cli/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8624f184faa00353c5102cb8f0a9e0ee7bf08794",
+      "size": 453
+    },
+    {
+      "path": "cli/vitest.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae847ff6d9cdd6c3e1300cfa6584201c8e3edfef",
+      "size": 131
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6950d54827171c4a252791c890cc8f6b0d7ed7b1"
+    },
+    {
+      "path": "docs/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9dff397626f630eb72db0e236034ac6d7e255964"
+    },
+    {
+      "path": "docs/assets/banner.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4177e5064d3c3f414aedff70efadc536878bfac9",
+      "size": 2050971
+    },
+    {
+      "path": "docs/cover.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e402804bdecbafd6c0213032483e1c7d0043e7de",
+      "size": 15128
+    },
+    {
+      "path": "docs/pr-assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8710d072068a0fb5f20228707996e10ca12c4a6"
+    },
+    {
+      "path": "docs/pr-assets/history-versions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "943038099945208ea4db7c6d7dca192ebc9d7e7a"
+    },
+    {
+      "path": "docs/pr-assets/history-versions/empty-state-en.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a79d0901dc80be98c4c730f1e2a6de5cf8566cb1",
+      "size": 638704
+    },
+    {
+      "path": "docs/pr-assets/history-versions/empty-state-zh-cn.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e20fe91d339ae8d71efc2cc824bdeda6ddb48ffd",
+      "size": 633481
+    },
+    {
+      "path": "docs/pr-assets/history-versions/large-html-visual-compare.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb8ed368f068b6121e6e5a1b453dd1a4c909cf49",
+      "size": 632304
+    },
+    {
+      "path": "docs/pr-assets/history-versions/v1-v2-visual-compare.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48fb37d1aeee0fb12c16a0dcb60bcc5bc57f96e3",
+      "size": 399081
+    },
+    {
+      "path": "docs/screenshots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c540bb7950ee858432b62e81b1a568ccb1bc10f"
+    },
+    {
+      "path": "docs/screenshots/01-entry-view.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e67bb56124577d3c7c4663d23795d1edfcef2a9e",
+      "size": 819170
+    },
+    {
+      "path": "docs/screenshots/02-template-picker.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6c2d07a30eb1133f5a0e8b6b1946fe87f615379",
+      "size": 925823
+    },
+    {
+      "path": "docs/screenshots/03-streaming.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fdee83432f52ea8335ca7ccddb85a5d4a093234",
+      "size": 599503
+    },
+    {
+      "path": "docs/screenshots/04-export.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93d267853c0665936c49614ff0eed91958a2dd47",
+      "size": 556875
+    },
+    {
+      "path": "docs/screenshots/05-deck-mode.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceba9e56212105f23a765c1af7f8f0a0410b9484",
+      "size": 447794
+    },
+    {
+      "path": "docs/screenshots/06-hyperframes.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d24ea8ca7a7a2341bb34e05634a90aa3a3ee04cc",
+      "size": 853440
+    },
+    {
+      "path": "docs/screenshots/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24e542e296a8832bb92fbfd1d17aa88be753a399"
+    },
+    {
+      "path": "docs/screenshots/skills/deck-guizang-editorial.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c5fe054268b8c304b456e6cde0daf96b506e844",
+      "size": 485872
+    },
+    {
+      "path": "docs/screenshots/skills/deck-swiss-international.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b090fb4a25b4e27e4899436644905009d2e02c6",
+      "size": 498903
+    },
+    {
+      "path": "docs/screenshots/skills/doc-kami-parchment.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de496116fe108f01c8752e0df62f9aa4337c9910",
+      "size": 591722
+    },
+    {
+      "path": "docs/screenshots/skills/frame-glitch-title.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f5a8d37f774fd9c7189bd0a37f4b6c006ef74c7",
+      "size": 1100908
+    },
+    {
+      "path": "docs/screenshots/skills/frame-logo-outro.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79e84cd0e58d155544433f536ff76a03f0bf034b",
+      "size": 1527425
+    },
+    {
+      "path": "docs/screenshots/skills/magazine-poster.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6107eb36ebdd0455a72e612b4689758623d0ff2c",
+      "size": 717220
+    },
+    {
+      "path": "docs/screenshots/skills/vfx-text-cursor.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7967b1ecf64ca95eb0611a18b8926554611c438",
+      "size": 1208633
+    },
+    {
+      "path": "docs/screenshots/skills/video-hyperframes.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61fbfd8677241714a4e949628062f02c0e17f6ca",
+      "size": 394799
+    },
+    {
+      "path": "e2e",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3617bf7a4419c123c8d937653cca48b0b74f785"
+    },
+    {
+      "path": "e2e/AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a7f6be5e0ccdb5c56ab54495c93841dd331a461",
+      "size": 1002
+    },
+    {
+      "path": "e2e/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1807ce6aae40de6ed7d580f9f4c27ed412bfe4cc",
+      "size": 464
+    },
+    {
+      "path": "e2e/playwright.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0231e1a86e41518b91a37ad1bb4d6ddc0d469d4d",
+      "size": 1174
+    },
+    {
+      "path": "e2e/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "710c538b5c4a1ee7fa6b010a5baf30d517d617bc"
+    },
+    {
+      "path": "e2e/scripts/playwright.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd9b8fbbb24883e697cd9c2ef5492f6cdffa20a0",
+      "size": 1463
+    },
+    {
+      "path": "e2e/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d9ed351f57fa93264fe33d3dfb83a33ae7dedf3",
+      "size": 640
+    },
+    {
+      "path": "e2e/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ea323b92cebcc412ab7952ea3ef16554c817300"
+    },
+    {
+      "path": "e2e/ui/deploy-control.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "816c58a2353e23cdb4fe24891f4f8ba1d28b26fa",
+      "size": 2767
+    },
+    {
+      "path": "e2e/ui/export-menu.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c568f2030100b08af343fda18e32a50113eb049b",
+      "size": 5922
+    },
+    {
+      "path": "e2e/ui/host-validation.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "128353f1e77e2cf9bb825da6c07645c4362496b4",
+      "size": 5431
+    },
+    {
+      "path": "next",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7554d1b46bf3d406d5c1ede015e94f008e261d0e"
+    },
+    {
+      "path": "next/next.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9ffa3083ad279ecf95fd8eae59cb253e9a539c4",
+      "size": 133
+    },
+    {
+      "path": "next/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a23001d2d7186b0323cc1940e828d41d19b8016d",
+      "size": 1114
+    },
+    {
+      "path": "next/postcss.config.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "size": 94
+    },
+    {
+      "path": "next/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c88f389de09f418da376598c42e8788d4fb6d172"
+    },
+    {
+      "path": "next/public/file.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "size": 391
+    },
+    {
+      "path": "next/public/globe.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "size": 1035
+    },
+    {
+      "path": "next/public/next.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5174b28c565c285e3e312ec5178be64fbeca8398",
+      "size": 1375
+    },
+    {
+      "path": "next/public/vercel.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77053960334e2e34dc584dea8019925c3b4ccca9",
+      "size": 128
+    },
+    {
+      "path": "next/public/window.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "size": 385
+    },
+    {
+      "path": "next/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "506ad8ded51e624a0e7828c92f9dfaaebe264bb6"
+    },
+    {
+      "path": "next/src/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce5aae16d0e29c249d7d4d53a653b8b13467ed66"
+    },
+    {
+      "path": "next/src/app/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ee3a9c1eb1951331cef54755f3dab06198bb02a"
+    },
+    {
+      "path": "next/src/app/api/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6afef23edd9904d44168befcbb1959fad7063e2e"
+    },
+    {
+      "path": "next/src/app/api/agents/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72be062e417dd48974c61805f7e32652f384e495",
+      "size": 553
+    },
+    {
+      "path": "next/src/app/api/convert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef96224750ec946a80d0c3e295c9902a74b75d2c"
+    },
+    {
+      "path": "next/src/app/api/convert/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00dbd5c51e2b26b155c127ef3d6bd9d0a619158c",
+      "size": 4961
+    },
+    {
+      "path": "next/src/app/api/deploy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c34698f4fd7ab3e0332628d225e5652941dcf0e3"
+    },
+    {
+      "path": "next/src/app/api/deploy/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cde8ed6070c6d19ea5e59bc9ab673706881af04b"
+    },
+    {
+      "path": "next/src/app/api/deploy/config/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35d9e9e471eec1e8b889c627ca6d1036e41cbc04",
+      "size": 2659
+    },
+    {
+      "path": "next/src/app/api/deploy/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "593a747eb87981faa6a8d7794e0eee6954568e05",
+      "size": 3441
+    },
+    {
+      "path": "next/src/app/api/draft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b31fb0bb4991b2cb5968188e46946881ad81a1a9"
+    },
+    {
+      "path": "next/src/app/api/draft/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "806f5a6e4781c924a2d50c1dc2075758285b0792",
+      "size": 3357
+    },
+    {
+      "path": "next/src/app/api/marketplace",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d049577e4242b8518940004de00e035a8f84e92e"
+    },
+    {
+      "path": "next/src/app/api/marketplace/_lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f04ecf6eb3f9c104226994a1652c5d59c9ac60e3"
+    },
+    {
+      "path": "next/src/app/api/marketplace/_lib/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbff675582886118f8f4cdae3284cea1f40e55f3"
+    },
+    {
+      "path": "next/src/app/api/marketplace/_lib/__tests__/host-guard.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba2ca7f422e122510dfbbc5310f207c13a7714df",
+      "size": 2853
+    },
+    {
+      "path": "next/src/app/api/marketplace/_lib/host-guard.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3abd70dde17989ae544fbe47755a7cc87022d5ed",
+      "size": 2943
+    },
+    {
+      "path": "next/src/app/api/marketplace/install",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "623d21fd5ace702a5bf6c92ba26bcc3e90cf8f27"
+    },
+    {
+      "path": "next/src/app/api/marketplace/install/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7375409f3ddd681047e24cce16122970bc56b0f8",
+      "size": 1232
+    },
+    {
+      "path": "next/src/app/api/marketplace/packages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c2be5abf53da8d5e7ee597afc29781a1e3caea7"
+    },
+    {
+      "path": "next/src/app/api/marketplace/packages/[id]",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f04a8cebcf544a401a7b2d21772ffb7ae2af9c3b"
+    },
+    {
+      "path": "next/src/app/api/marketplace/packages/[id]/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af1ff76555328b3c863d847ccc1cc4b8578a7b93",
+      "size": 851
+    },
+    {
+      "path": "next/src/app/api/marketplace/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "449dc5bd561bd9ff1ca64a5a9e63d0d5a55d4c35",
+      "size": 889
+    },
+    {
+      "path": "next/src/app/api/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "999e746e1cb5d4b05c07dc5e84d19f269cea8667"
+    },
+    {
+      "path": "next/src/app/api/templates/[id]",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e97dc0c39bbadbed0ba79ae4cee357f19f92ad3"
+    },
+    {
+      "path": "next/src/app/api/templates/[id]/example",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d92d77c869de39a868ca3def01a162c2f6532724"
+    },
+    {
+      "path": "next/src/app/api/templates/[id]/example/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b01dc72eb512809fa849d50f5881b714abd84b69",
+      "size": 1011
+    },
+    {
+      "path": "next/src/app/api/templates/[id]/preview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a80bed2039c44aa5002b93e54b135e29842c49a"
+    },
+    {
+      "path": "next/src/app/api/templates/[id]/preview/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b74d8462add9aba0d7f7057271899f1663ba1ad",
+      "size": 1050
+    },
+    {
+      "path": "next/src/app/api/templates/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78ddda23c2e3b8072e3fda158ec963ce2cbd1908",
+      "size": 595
+    },
+    {
+      "path": "next/src/app/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718d6fea4835ec2d246af9800eddb7ffb276240c",
+      "size": 25931
+    },
+    {
+      "path": "next/src/app/globals.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8199840c4f2f7ced8664965c771f06570e72e0f",
+      "size": 6049
+    },
+    {
+      "path": "next/src/app/layout.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1fa5565684885d7b5b3bb6bbcf54cd10df4e0c1",
+      "size": 1022
+    },
+    {
+      "path": "next/src/app/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ff012bac4f7db80d83a5487898a9966e277e16",
+      "size": 4261
+    },
+    {
+      "path": "next/src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2cba91d98f0793f04c73324c5e4d92856ed449a"
+    },
+    {
+      "path": "next/src/components/ai-prompt-bar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f95495a03eb7650bf9f63f3aa6f5f4540b73b2bb",
+      "size": 4043
+    },
+    {
+      "path": "next/src/components/convert-chip.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21d3b9d55bd4fd5f463efe6f6dd84cb6271c9f93",
+      "size": 3973
+    },
+    {
+      "path": "next/src/components/deck-viewer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51006f342b258c3924a1b754010ccfb0e77a7e4e",
+      "size": 11325
+    },
+    {
+      "path": "next/src/components/deploy-control.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb2517e1e17fa8d54f76bce664f3fefabaacdf6",
+      "size": 12044
+    },
+    {
+      "path": "next/src/components/drafts-menu.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d96c42b16814de0735850158ca0b4bc1e31b9df4",
+      "size": 4600
+    },
+    {
+      "path": "next/src/components/editor-pane.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e8747040f84aa5bcb7af7393880b5671d68e810",
+      "size": 8061
+    },
+    {
+      "path": "next/src/components/export-menu.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3131d7e1757e8ea534854090f1d14e4b1d9b7e13",
+      "size": 7643
+    },
+    {
+      "path": "next/src/components/formats-gallery.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22dce0b53b71f5397b6c6ba0288697d3df5c85c1",
+      "size": 17444
+    },
+    {
+      "path": "next/src/components/history-pane.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba66ea8ca285b21029d77c87a434afb576e2ebf",
+      "size": 15892
+    },
+    {
+      "path": "next/src/components/layout-mode-toggle.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7ed4bbcd916bcf2a0b57ee975df8ff0e588f7cc",
+      "size": 2449
+    },
+    {
+      "path": "next/src/components/preview-pane.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d11adf9d2e10cf516dabd9a64c3079c567150307",
+      "size": 23186
+    },
+    {
+      "path": "next/src/components/samples-gallery.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "847ccf9faebcc13ab7b14854abe38677313f77f7",
+      "size": 10835
+    },
+    {
+      "path": "next/src/components/settings-modal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75060ef52cb5e0fbd530ff8965d61e9456de939d",
+      "size": 35931
+    },
+    {
+      "path": "next/src/components/tasks-sidebar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a4999107a32ad6965e15a99f986e96be3ad52fe",
+      "size": 15759
+    },
+    {
+      "path": "next/src/components/template-picker.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7218a609b648ff9eb23b90418526ffb3f952a1db",
+      "size": 23864
+    },
+    {
+      "path": "next/src/components/toolbar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba941ebc21fd7a5cc08b51eed3bfa0ce459ec458",
+      "size": 9061
+    },
+    {
+      "path": "next/src/components/welcome-modal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61a65c41992a868a2dfaac159ff70628c70adfc4",
+      "size": 16278
+    },
+    {
+      "path": "next/src/lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "386a8f2404e32344f7b53565c3a74346bde2403d"
+    },
+    {
+      "path": "next/src/lib/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "299f20c1b87032c48fd80ed75fa228c2abe72b6c"
+    },
+    {
+      "path": "next/src/lib/__tests__/extract-html.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96892ae2a237799caf845ff2e1446fba19550da4",
+      "size": 953
+    },
+    {
+      "path": "next/src/lib/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a94f1a89ce53d0b72ec783e1778ed2f6b8279aa"
+    },
+    {
+      "path": "next/src/lib/agents/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2766b9d89774e220af332124eea15e30777fa758"
+    },
+    {
+      "path": "next/src/lib/agents/__tests__/argv.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "449277d9a41d68c304e8b3ac1a34aef4a4de48ad",
+      "size": 4906
+    },
+    {
+      "path": "next/src/lib/agents/argv.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f92b6b599f0a54d189e9bf929a3231a0f1d70233",
+      "size": 19499
+    },
+    {
+      "path": "next/src/lib/agents/detect.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "215868f52ea4b42a3d1db3b94b03cbf2379ffcd0",
+      "size": 14935
+    },
+    {
+      "path": "next/src/lib/agents/invoke.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22d11d91a0659432ebec4d575445212f69310a0d",
+      "size": 12461
+    },
+    {
+      "path": "next/src/lib/deck.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "877a96a4e1304c0e83873ec909956c235bd90d97",
+      "size": 4556
+    },
+    {
+      "path": "next/src/lib/deploy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6cec6bba5db5605dd7166f891bfcd3b8badf4be"
+    },
+    {
+      "path": "next/src/lib/deploy/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f41160cfb9c212b225e46e438fd9e533c5e8272",
+      "size": 8844
+    },
+    {
+      "path": "next/src/lib/deploy/url-check.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51140f18eb52692eff6069ea11c80244ae5d55fd",
+      "size": 5741
+    },
+    {
+      "path": "next/src/lib/deploy/vercel.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e1a84b1f47322b1553499b9dbd59b2676f06dd2",
+      "size": 7868
+    },
+    {
+      "path": "next/src/lib/drafts.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cecfd0c66a029cbae3ef89c3c967a665ad9eb9d8",
+      "size": 2683
+    },
+    {
+      "path": "next/src/lib/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86960776307aaacc235cc1e126e0f0dcbad4513e"
+    },
+    {
+      "path": "next/src/lib/export/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b3ea2665aaff70fe9221fd10dd8fc0f9975fd6f"
+    },
+    {
+      "path": "next/src/lib/export/__tests__/bilibili.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d3be03ff221890c3d9b451583c49c26e2c6c9b9",
+      "size": 6096
+    },
+    {
+      "path": "next/src/lib/export/__tests__/markdown-roundtrip.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2377f32d2a50188f09b74a1d8e7ade7fe2aa23e",
+      "size": 13921
+    },
+    {
+      "path": "next/src/lib/export/__tests__/mastodon.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cf71f54b2233d1d15dd872e81165171159863de",
+      "size": 3352
+    },
+    {
+      "path": "next/src/lib/export/__tests__/notion.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bad5156c58c08f5717a404c4306b09ca7d4bd33",
+      "size": 3720
+    },
+    {
+      "path": "next/src/lib/export/bilibili.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5aa0f0b346c548b28d8af786425dd6c1cf8e537",
+      "size": 4421
+    },
+    {
+      "path": "next/src/lib/export/bluesky.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "384140d75f3d58d62f087cd827a04622b71ca5e1",
+      "size": 1106
+    },
+    {
+      "path": "next/src/lib/export/clipboard.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bee5b40b96d43486b3099cd90815d77435c34fe",
+      "size": 2597
+    },
+    {
+      "path": "next/src/lib/export/deck.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e2898f83effca7992193debee590d496e5664b1",
+      "size": 7001
+    },
+    {
+      "path": "next/src/lib/export/download.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1958b0610f5459449f1e996384491a83cc462a4",
+      "size": 461
+    },
+    {
+      "path": "next/src/lib/export/image.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93c1c773034128d53d2549e16b007df7a73d013e",
+      "size": 7833
+    },
+    {
+      "path": "next/src/lib/export/markdown-roundtrip.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94e44e911ecd59a8a7e6904f3042ed5ead9a9244",
+      "size": 11664
+    },
+    {
+      "path": "next/src/lib/export/mastodon.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e75ddf58103736ea1bc189bf790239431d567f0",
+      "size": 2253
+    },
+    {
+      "path": "next/src/lib/export/notion.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7333ab78d2845af51df4b0f88decaa5318fdfc71",
+      "size": 3802
+    },
+    {
+      "path": "next/src/lib/export/remotion.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caeac75200371e27e693f5f2bc1666d9c6c117b5",
+      "size": 13945
+    },
+    {
+      "path": "next/src/lib/export/wechat.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "876450814abfb928f122bed99c6de15392eb27a9",
+      "size": 1862
+    },
+    {
+      "path": "next/src/lib/export/zhihu.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eb075256ee6f2a6653755caf7c779d353e2bda1",
+      "size": 975
+    },
+    {
+      "path": "next/src/lib/extract-html.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d23664f8cc01154b4c36f3a1966695989cacacc",
+      "size": 2101
+    },
+    {
+      "path": "next/src/lib/history",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81c73ec11a33dee6a572966177e458a6d4b95550"
+    },
+    {
+      "path": "next/src/lib/history/db.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6780cfbb15d8559b9fa2bba78570ec108213d56",
+      "size": 4610
+    },
+    {
+      "path": "next/src/lib/history/db.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22688ae7a258f1221c32a52638555bb2eb05f5a8",
+      "size": 5913
+    },
+    {
+      "path": "next/src/lib/history/is-current.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fba01490095245281e1f7688c51d363b86503f1",
+      "size": 2136
+    },
+    {
+      "path": "next/src/lib/history/is-current.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4fb21c9394c21914572cfe475c679cf0e84f764",
+      "size": 673
+    },
+    {
+      "path": "next/src/lib/hyperframes.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80defdb0c8952efaf9c9e340fb05afa911efeded",
+      "size": 903
+    },
+    {
+      "path": "next/src/lib/hyperframes.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2787e337c63d9de3502078273b7439a6a411c2b",
+      "size": 5662
+    },
+    {
+      "path": "next/src/lib/i18n.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "683e5f13de18ab2ae068fc49f47c41276634033d",
+      "size": 48358
+    },
+    {
+      "path": "next/src/lib/parsers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d3803dc91430de3d600e3c6d9a4a5315d1cbd70"
+    },
+    {
+      "path": "next/src/lib/parsers/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c75de68aae9c02c1dff60147ec55ff70fb42b5fe"
+    },
+    {
+      "path": "next/src/lib/parsers/__tests__/auto.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a324975575b6758acd2dfee9ed452f1185341e4",
+      "size": 639
+    },
+    {
+      "path": "next/src/lib/parsers/__tests__/file.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "986a061583bd1ffe2eed727674c17ce841342b4e",
+      "size": 2922
+    },
+    {
+      "path": "next/src/lib/parsers/auto.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33935be2544266bedeed1c0991948858c3f33cfd",
+      "size": 4774
+    },
+    {
+      "path": "next/src/lib/parsers/file.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e81a455a4775309e5eed7319c0b5315f46acca5",
+      "size": 4077
+    },
+    {
+      "path": "next/src/lib/security",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38ccd9f02bb6f5542c3e0f143d2860f4c60dd90d"
+    },
+    {
+      "path": "next/src/lib/security/host-validation.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "810601a8453c1dc0f63e53b54d1529a3d365e3e9",
+      "size": 6340
+    },
+    {
+      "path": "next/src/lib/security/host-validation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c92892d0a0bf9531149184857a70a57d31303e5",
+      "size": 5177
+    },
+    {
+      "path": "next/src/lib/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9153319070050989e584ccd4d4d09c3e1c8a1f72"
+    },
+    {
+      "path": "next/src/lib/skills/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b484bb065d3e201f1ee50340812bda0078cec50d"
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/api.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "993a60f0e24e048708b64a3afbf0ad232d5e8574",
+      "size": 8159
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/cross-device.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d4a8538ffdcfc89143fbdfb19cb459044f0b131",
+      "size": 5695
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/install-rejections.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "617fb05242ed4dcdfc1cc71d9504ad49e1052a1e",
+      "size": 8889
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/install.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce5766c30d5750131027dc5a36a5c43658c32033",
+      "size": 8179
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/loader-merge.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5553fc1882f27c19f90aca7eea5aa114150991d8",
+      "size": 2984
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/paths.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b0d21a48be54436048f4cf0c4b77302010266ed",
+      "size": 1593
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/preflight.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11554e2d65d1ab0f026c849d371156fa86c43140",
+      "size": 7319
+    },
+    {
+      "path": "next/src/lib/skills/__tests__/spec.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22577179c7119de5c4147c343ff0802ac6612cfc",
+      "size": 1592
+    },
+    {
+      "path": "next/src/lib/skills/install.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "276ac4340ad154d3a2262399e640067ccfd83225",
+      "size": 18652
+    },
+    {
+      "path": "next/src/lib/skills/paths.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2095b6dfd0bc7cb7b81a730ae36750b0515747ae",
+      "size": 1925
+    },
+    {
+      "path": "next/src/lib/skills/registry.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b5878a14c91a92512057f5e13d1c21cb38d87d2",
+      "size": 4279
+    },
+    {
+      "path": "next/src/lib/store.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "162ab4430b7443fbe5b37f045b29ea905d1679a2",
+      "size": 22481
+    },
+    {
+      "path": "next/src/lib/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0db9adcf75b1c9409aff74acab777555b413211"
+    },
+    {
+      "path": "next/src/lib/templates/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d864ec3a7bf38e3b7196bdfb1587e857559e025"
+    },
+    {
+      "path": "next/src/lib/templates/__tests__/refresh.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af679d98917d1fcf1d0b8e7ea72834bf9ee78249",
+      "size": 7620
+    },
+    {
+      "path": "next/src/lib/templates/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e215cd77fa9239dc705709a6401062e1586de6ea",
+      "size": 5331
+    },
+    {
+      "path": "next/src/lib/templates/loader.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ec03fde6e9f108051f7afd0f47339036ae49b25",
+      "size": 9371
+    },
+    {
+      "path": "next/src/lib/templates/scenarios.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0dde3136b90c7d51499cd5b8a326df42093ccee",
+      "size": 1825
+    },
+    {
+      "path": "next/src/lib/templates/shared.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165a566ae2cc142b7f20d5243b752ce41440b23c",
+      "size": 4131
+    },
+    {
+      "path": "next/src/lib/templates/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aeae436027721c9922b6283332b8c0cafe661740"
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-magazine",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9545f0ea862fabb99951d93e87d134e817199066"
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-magazine/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b023be9e0856138f425988d4d80f4497a386c8ee",
+      "size": 1399
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-magazine/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f7f56ba57576d22e02874892f027a1f76aece7a",
+      "size": 7130
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-magazine/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1ea1393ed40098d5829e1fdbf79bec268c0ef2b",
+      "size": 2097
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-sketchnote-editorial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ff6540b065500fb6680eae423ef432f78401136"
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-sketchnote-editorial/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93637a03aebeea790440b84d2c400f3f3b0c15d3",
+      "size": 11873
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-sketchnote-editorial/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a974f6b89325776637ddaa9c5e06545aa85d445",
+      "size": 23776
+    },
+    {
+      "path": "next/src/lib/templates/skills/article-sketchnote-editorial/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51cc1a68e11288ecd2da50f636f923932582ce5c",
+      "size": 882
+    },
+    {
+      "path": "next/src/lib/templates/skills/blog-post",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5dd4c08ab826f828c407e9814306b03482c5e9a"
+    },
+    {
+      "path": "next/src/lib/templates/skills/blog-post/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e6e9c084a644f41b4daf79ae81f0402d673e25f",
+      "size": 807
+    },
+    {
+      "path": "next/src/lib/templates/skills/blog-post/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8e1e46dc63a6ec949426cbfe8a62126ef4315d9",
+      "size": 6738
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-twitter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75b27041c2c32b03b9d85f7f7defc4674a684c75"
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-twitter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b331e40dfef094512cf70d3d7c9bd5bf7152cda",
+      "size": 945
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-twitter/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "032cdc15484d8b9cf815ed372a76af9e947867b4",
+      "size": 3648
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-twitter/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "836e7c36960744bc630e02bda9228db7c37fafb0",
+      "size": 119
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-xiaohongshu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23f8f43380aa4fcc0f6edb0c5223c3f188a8d0d9"
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-xiaohongshu/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "158852cb4880d0567040f97db3581d6dab4e5a70",
+      "size": 1405
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-xiaohongshu/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c0f67f075b2aaab7ef054c86993165155cbb8de",
+      "size": 5669
+    },
+    {
+      "path": "next/src/lib/templates/skills/card-xiaohongshu/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e950efc2b9430f0c205549f51f141cedfa1e403",
+      "size": 945
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "402a6a66fea05bb9000d07d43038903226697409"
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f574c8ea9051d087710a56757c614dfdcae7d5a2",
+      "size": 3508
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03099b1190521154a54fcc7fa37387f95115197a"
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/assets/analyst-dossier.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "956136d7941d4b3eb971492c36a7171f188f2fea",
+      "size": 3795
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/assets/radar-map.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74949fc8dc40573cb36ba563b6eb63f0da1cf878",
+      "size": 5133
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/assets/war-room-grid.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0622f5edbfa956eb01d8362d37c175d09e37e985",
+      "size": 7227
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0622f5edbfa956eb01d8362d37c175d09e37e985",
+      "size": 7227
+    },
+    {
+      "path": "next/src/lib/templates/skills/competitive-teardown/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6bd2b93ca1e77051243c2f383808e91064d8e35",
+      "size": 2055
+    },
+    {
+      "path": "next/src/lib/templates/skills/dashboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "206ff17234061344eaf12e35cf4444133a0be200"
+    },
+    {
+      "path": "next/src/lib/templates/skills/dashboard/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe994d13364783546f8ab605be81c428d1dc8b1",
+      "size": 579
+    },
+    {
+      "path": "next/src/lib/templates/skills/dashboard/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "499f329c59326fbe7d55a4d9917c7ee65761e9d7",
+      "size": 6652
+    },
+    {
+      "path": "next/src/lib/templates/skills/data-report",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70a1855dcac21418122eb10ed49fe9f61c9ca4df"
+    },
+    {
+      "path": "next/src/lib/templates/skills/data-report/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c79637de7c6eb86f4343bcdeadb43bfb495d24fa",
+      "size": 1693
+    },
+    {
+      "path": "next/src/lib/templates/skills/data-report/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c19f7d1913653a089ffd3e9bdf0410a1bf5c09f",
+      "size": 10528
+    },
+    {
+      "path": "next/src/lib/templates/skills/data-report/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76c17529cb131e4870fa28c860b85d463f28355f",
+      "size": 599
+    },
+    {
+      "path": "next/src/lib/templates/skills/dating-web",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edf560663c605b5b247a471ec04c7b76470e61d8"
+    },
+    {
+      "path": "next/src/lib/templates/skills/dating-web/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1796666b7d4fbba09611418a8afcf2208c102f28",
+      "size": 581
+    },
+    {
+      "path": "next/src/lib/templates/skills/dating-web/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8ba20dd6fbd5d09a3e1d47dad14a6c0a015e102",
+      "size": 12405
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb504ff2bb4410b2d1ec7037e12b4ffed16d0d78"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-blueprint/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53c9827be06720082682f4bed23d26eedde64e49",
+      "size": 665
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-blueprint/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a98629c285a2b77de4289b8998af4d71fae5fac9",
+      "size": 26146
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-course-module",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb08b885518c74699a302254a0b667e720cd3220"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-course-module/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5943a78588542f732c1737df224fd48766df36f4",
+      "size": 646
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-course-module/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf681aaa7fa5d6b05a1a30c47b42a71514d0f1db",
+      "size": 31788
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-dir-key-nav",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e304b6944a09d6e46a4a2383e95f21b2d591d77"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-dir-key-nav/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05fcf0d4d4475346645de51ff57e287a9a5e281a",
+      "size": 753
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-dir-key-nav/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5384acb702a674d656327b52db7681a553b3c8f4",
+      "size": 20321
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-graphify-dark",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4980b476bef77b57a9aba2438b4bfd33d6264e5b"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-graphify-dark/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aeb015a1d92cd59f112f50a55f23bc4b25d5278",
+      "size": 593
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-graphify-dark/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a134d2f211778f23285dea1c136973888cbece3",
+      "size": 25588
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-guizang-editorial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44f25a11e3620532fe385a23a4a315b8214f46e0"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-guizang-editorial/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd193ad564b6e3253837a2c83ca8b010a587373a",
+      "size": 3605
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-guizang-editorial/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cebe6c1dcc72c006d4364ad74639030856fa0286",
+      "size": 4942
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-guizang-editorial/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06b09c9cbbe494bbea5ff624e1fa115a5118f425",
+      "size": 368
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-hermes-cyber",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55367e246bf9f00e9348f1da7f01fbe20f4b8804"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-hermes-cyber/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40ff9438ebf07e1b8209ea2115a1a68e6e317208",
+      "size": 674
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-hermes-cyber/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f304747f53f307154045846a60791115b07ef32",
+      "size": 26898
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-ljg-present",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55803d0cfb677a6a0b5f92e9d94fd56b93e99a12"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-ljg-present/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e388d46b9214dad3ddaa823d9dd192d387d18746",
+      "size": 13388
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-ljg-present/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "940acabf496523d67d5da2f534e23e33d551c284",
+      "size": 7512
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-ljg-present/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b64bd42f5f012b60c3c876a19baa17e35e493e",
+      "size": 294
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-magazine-web",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4cf62031a05eca89f05cf7ea07c92030d4dc9ba"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-magazine-web/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9318c0024b67f99f44a562e06d28f9d7f376fcd4",
+      "size": 758
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-magazine-web/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6281a05fe1799ee6124738aea4ce8e1913a1435f",
+      "size": 33037
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-obsidian-claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4b5fdf615bff6af45ca43df80223c676a2a3033"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-obsidian-claude/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32274c77efade0a8735617683d9f1721782a7051",
+      "size": 673
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-obsidian-claude/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa3d69d8c507942aa07c9fc5fe47019f82d2511",
+      "size": 23224
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-open-slide-canvas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d91f04e23fb2aa1bb68820fc624f11e302c422e"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-open-slide-canvas/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0decf37ffadbbebd7cf7a498b542b3298537f5d",
+      "size": 2930
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-open-slide-canvas/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3408242bb9b0de2d334e7ba268febe5b7d9bd14",
+      "size": 2317
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-open-slide-canvas/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaea86bf1b1050ff884ce0d7ba9e9ee331781791",
+      "size": 192
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-pitch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d69bcd27b6d892ce09649b02b0273ef5bdcf03e7"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-pitch/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0610dd326cf92083434bd0f68ee0469c95aac6a7",
+      "size": 650
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-pitch/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "269dd53ecbc428b016b8b290ce8d9f9224d05931",
+      "size": 28988
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-presenter-mode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89740f8a39a2b8773ae6a43a2f8cc65a640de717"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-presenter-mode/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a97f82d956c0b1f5a8db3085890cd402c82de530",
+      "size": 687
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-presenter-mode/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "844676d831db939755f234171350570eb97dfe36",
+      "size": 37604
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-product-launch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24ed9a5c9b4bfd15beeb34b2188c058d5d5da1f2"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-product-launch/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24284df572d34d27a7b07ce34aede9a3939748f0",
+      "size": 623
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-product-launch/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b65531fdc44da17ab945c18bdcd19fa3ea180c23",
+      "size": 27910
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-replit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ea257cb5b06df5a16b198c206bde97350584813"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-replit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fd369287837bd5500de60e3dcbe23184795240c",
+      "size": 1074
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-replit/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c65bf6700c380cd9ae8d26e819009d1734570e33",
+      "size": 5051
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-replit/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5f40047f936f2487b94affc25a60b2437856d12",
+      "size": 380
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-safety-alert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55d84bb397d7fb8d3b04caf8bdac5c5ca5c4da2c"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-safety-alert/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0349ef4056a879217b2080a66e38babd060754ac",
+      "size": 705
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-safety-alert/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b11342314b6588ef8b5de7e7be73a53389b22358",
+      "size": 27352
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-simple",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10031a6a69320069816667df0b65e6f4d4662aac"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-simple/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a626e0929e41ca7b547c9cab4a5762446cb57297",
+      "size": 651
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-simple/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb9284632962578bdd64e74db72540f3152c7cb7",
+      "size": 7489
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-swiss-international",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "607ed4533d094633f5a3910bf1e2640c8e6d5fb0"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-swiss-international/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb447c68e2455240a75d0867a046e7445c5b253",
+      "size": 4865
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-swiss-international/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "887a0ec3a5969317117cf70922d764aa29aa4f24",
+      "size": 6131
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-swiss-international/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20495b72cd10eb7a81b426795fd9dda93bafdce2",
+      "size": 331
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-tech-sharing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9c577ba4a66c239730a3285672cb8bc6cbdddf5"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-tech-sharing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72fd9ec932af04f99dbb21d6880518d2ee839a81",
+      "size": 597
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-tech-sharing/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ca265baf8ac82339d490074db98eb534b91ce8f",
+      "size": 30407
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-pastel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f05325bd4a511247302df11d86831d0cde91f17f"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-pastel/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "704a01268872f1d2601277846cb463ef6a4742c8",
+      "size": 660
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-pastel/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5de4965af6e7fdc15eebc528fdcbd74f96ce073b",
+      "size": 24370
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-post",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca5e3883a3112a98af2ce5bdb5953d6d18fe8d5b"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-post/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "979601fa6e31d4d007429810f6d34b5974cae3d1",
+      "size": 696
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-post/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5094469868a6cdb649ff6932e7c92ef072b5d2b",
+      "size": 29255
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-white",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b89ac19d9ebcce07fc4e73f1bbebc0a57d9a0f54"
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-white/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7aa8789c8dcc0b168e88c38370f5ae932ebe3f3b",
+      "size": 651
+    },
+    {
+      "path": "next/src/lib/templates/skills/deck-xhs-white/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb26219708948e9a2b071f8619fe41cd19b097f9",
+      "size": 25980
+    },
+    {
+      "path": "next/src/lib/templates/skills/digital-eguide",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "123f0b6f5dd2934b4a1184912552924302443990"
+    },
+    {
+      "path": "next/src/lib/templates/skills/digital-eguide/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c0a748f2c197d9eab004f1bba9d37b16f784c9",
+      "size": 699
+    },
+    {
+      "path": "next/src/lib/templates/skills/digital-eguide/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0991fc218eb2351098eeb37892ebe9dd93276da",
+      "size": 11651
+    },
+    {
+      "path": "next/src/lib/templates/skills/doc-kami-parchment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c68615f7c6f21a72cedd4ddf2ff640e97544b96c"
+    },
+    {
+      "path": "next/src/lib/templates/skills/doc-kami-parchment/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2fe50ddc91327204163b7dcb3899ba58e7ff306",
+      "size": 3675
+    },
+    {
+      "path": "next/src/lib/templates/skills/doc-kami-parchment/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e08432450ceb72b7aaeeca0b417021ed7a1887d1",
+      "size": 4279
+    },
+    {
+      "path": "next/src/lib/templates/skills/doc-kami-parchment/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63b4017e072f311db4bf7a2b3c78fd0189225ccb",
+      "size": 1110
+    },
+    {
+      "path": "next/src/lib/templates/skills/docs-page",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "857837e4e493f79ceffbff9403c793a0d06f9613"
+    },
+    {
+      "path": "next/src/lib/templates/skills/docs-page/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86bd2bff0bec8ab76964c6843262f89b862b3b0d",
+      "size": 638
+    },
+    {
+      "path": "next/src/lib/templates/skills/docs-page/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871f6b26bd7748d16ded80053042560f79d3afbb",
+      "size": 6861
+    },
+    {
+      "path": "next/src/lib/templates/skills/email-marketing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acbf68bcd3ec4323673e3733fd4192d71a4c8182"
+    },
+    {
+      "path": "next/src/lib/templates/skills/email-marketing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63cf5e647470a84c046cb659e4b5b612d13501c6",
+      "size": 731
+    },
+    {
+      "path": "next/src/lib/templates/skills/email-marketing/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ccc4a2e397ef972f9b8f9f8db8beccb1c6155cc",
+      "size": 9879
+    },
+    {
+      "path": "next/src/lib/templates/skills/eng-runbook",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "784b6d3dec2381d864f506c93b5bd80b13384dd1"
+    },
+    {
+      "path": "next/src/lib/templates/skills/eng-runbook/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de640fa80e89e04fbd45217234dc8c734d273bba",
+      "size": 645
+    },
+    {
+      "path": "next/src/lib/templates/skills/eng-runbook/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4a3e21e5409e62a20271e516df2d34f1166b5a1",
+      "size": 13852
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43c6cc29de283cbde05580ebbb523cf20dc4d8bc"
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c261b70d070bb165050edf959bd13f538ac8095",
+      "size": 3004
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39dda466e551c0c07e0f185b3d7eb7fe829ee8d6"
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/assets/board-memo.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1830125a2ad90e2e856a174215be9f91526e4bd9",
+      "size": 6107
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/assets/board-paper.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ba14c1e814f1e4ceb93c5b50687266cd682fd8a",
+      "size": 3568
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/assets/decision-command.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a604bf846727abed9e53a3394b1b2d10be15562",
+      "size": 3797
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1830125a2ad90e2e856a174215be9f91526e4bd9",
+      "size": 6107
+    },
+    {
+      "path": "next/src/lib/templates/skills/exec-briefing-memo/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d3dece88a0fd2f0338489488a9cb5b7df0b1df3",
+      "size": 1674
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd4490d74bcc1365a36abe3ad74ea8607eb1e43e"
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d26843dd53692b21889ae5fd48aa82491c4dda7",
+      "size": 3066
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9147793116d1dca30f6d544ee4b72d68fd17b960"
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/assets/growth-console.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "925f3f2bbcccc5d1590281867344b935224b6caf",
+      "size": 3804
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/assets/lab-notebook.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "961381ff92f7193631fa35654d1cd4a4363779e6",
+      "size": 3510
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/assets/product-readout.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "444c8649a9f6e60912bbd61d47fadbec63e22f63",
+      "size": 6386
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "444c8649a9f6e60912bbd61d47fadbec63e22f63",
+      "size": 6386
+    },
+    {
+      "path": "next/src/lib/templates/skills/experiment-readout/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e699f26008ede21823bfbd1b805fb3bd57876eb",
+      "size": 1400
+    },
+    {
+      "path": "next/src/lib/templates/skills/finance-report",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73830c79541fbd3b99488ea8b29ed8f9a4791c2c"
+    },
+    {
+      "path": "next/src/lib/templates/skills/finance-report/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "255b5963a97bf1a2bb12a8d7faefda28316e4e93",
+      "size": 639
+    },
+    {
+      "path": "next/src/lib/templates/skills/finance-report/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5f06bcb133a13589494e3dbe95c8545c46f8428",
+      "size": 13166
+    },
+    {
+      "path": "next/src/lib/templates/skills/flowai-team-dashboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a417806d6a1fd8fc3cf00f98cc2f933d054f8cde"
+    },
+    {
+      "path": "next/src/lib/templates/skills/flowai-team-dashboard/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e718a869d2b09dda9b55774249644a9e5fe6a91",
+      "size": 751
+    },
+    {
+      "path": "next/src/lib/templates/skills/flowai-team-dashboard/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af16c1e2caa267921c0ab44e5e0d268483b1e1e7",
+      "size": 454
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-data-chart-nyt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4c11f72d2b4ede3a613a00d9aef9f1d3c9778ed"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-data-chart-nyt/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6996cd39ee51b02a4bfa36655f59ddc8bfee92c9",
+      "size": 2853
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-data-chart-nyt/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "012a526d88323117563b8cbb9e7985252dd3795c",
+      "size": 5203
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-data-chart-nyt/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4dc55683adbe3ceb0194d625d598632e821c58a",
+      "size": 388
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-flowchart-sticky",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b525c4d05c89f25d1528d92e15746cb0035d3509"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-flowchart-sticky/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f87725310288ffbd337feddf8b9a9dadcc8f58b3",
+      "size": 2704
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-flowchart-sticky/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7127cd8acaeff981f3e5a1b358a08d8d8a37bf63",
+      "size": 5913
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-flowchart-sticky/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9461866c1492aa38af219d6c998a0eaa11fd9054",
+      "size": 580
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-glitch-title",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb5674f49417676c92934815b47455ab037c0119"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-glitch-title/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb12ebfb22573cac44df041b93e6ac2fd9b6442d",
+      "size": 2653
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-glitch-title/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8880f58281b3195bec123cc3a0fc2dc36b247a0",
+      "size": 4939
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-glitch-title/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4c11a09ec7acc2bd2a0604c4f1b9d07bee5d326",
+      "size": 221
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-light-leak-cinema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ddc9e1ff4dd2b06c5373310303a7127a1574443"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-light-leak-cinema/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84bc310e92afd4e39e80738ca43aafff7b49f58b",
+      "size": 2958
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-light-leak-cinema/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdda599a5b6f517600c67179a63b1a7fe6b12720",
+      "size": 3803
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-light-leak-cinema/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0218fc30a69d34594072a5bcd7bfa733313a8958",
+      "size": 224
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-liquid-bg-hero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b81e3f6b40254bd3c865dc2c8e819347342205d"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-liquid-bg-hero/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8287c2b83df435965535a6f3cbab5e50ab1ac3c",
+      "size": 3020
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-liquid-bg-hero/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "558f8f8019f1af374d30f6a7f8fecd40afc81db4",
+      "size": 3644
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-liquid-bg-hero/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb63bf66e085a15a5835957ee8f235b597faeb08",
+      "size": 205
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-logo-outro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f620f15a1502896479065873b81b1a7d6b79a45f"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-logo-outro/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae544312f42dc2c332bb4211df6f7fd4771defe",
+      "size": 2835
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-logo-outro/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4a7d3826cb6cce5a98a7188af874ac75d1383b1",
+      "size": 3729
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-logo-outro/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b276477dbee9d060fca5722d3075fedb24bc3bad",
+      "size": 194
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-macos-notification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb7783dc767b65db65198085d506751c3df58297"
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-macos-notification/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a182b249d611c0df04884dfb9d704bc5880be238",
+      "size": 2822
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-macos-notification/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f40a5ab4cc67a148d494eb5226966810c86edd70",
+      "size": 3421
+    },
+    {
+      "path": "next/src/lib/templates/skills/frame-macos-notification/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e29b7ff4ce8c1d358c642943fc7d2a306d600fc5",
+      "size": 237
+    },
+    {
+      "path": "next/src/lib/templates/skills/gamified-app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7123f0890623f390e3c680399c5469f79fb79bf7"
+    },
+    {
+      "path": "next/src/lib/templates/skills/gamified-app/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10b0b3ef4c643dd7311386d3dc2eccf5c28526d9",
+      "size": 645
+    },
+    {
+      "path": "next/src/lib/templates/skills/gamified-app/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "089e60f53a75b0652b3e487ed9be75dcc2992e11",
+      "size": 16468
+    },
+    {
+      "path": "next/src/lib/templates/skills/hr-onboarding",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adc18197e90a5d6aba84f365dda19374bb1bd27a"
+    },
+    {
+      "path": "next/src/lib/templates/skills/hr-onboarding/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0766fe66e3e6227d708a9d193d9a897c57f471a",
+      "size": 587
+    },
+    {
+      "path": "next/src/lib/templates/skills/hr-onboarding/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fe31f7d7a5c5419c395a3a9b0a7e3949423a23d",
+      "size": 14193
+    },
+    {
+      "path": "next/src/lib/templates/skills/info-funnel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e06228ef6e7c02106312bc1097538c25dc756812"
+    },
+    {
+      "path": "next/src/lib/templates/skills/info-funnel/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d1ec4b0ba412cb3828f2e4b82fff1174baf0cfe",
+      "size": 6970
+    },
+    {
+      "path": "next/src/lib/templates/skills/info-funnel/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a0f54055e751ced27c4d41342219e116669f43",
+      "size": 6798
+    },
+    {
+      "path": "next/src/lib/templates/skills/info-funnel/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f24b523c7ef063b24ee05f757207decb9c36b641",
+      "size": 648
+    },
+    {
+      "path": "next/src/lib/templates/skills/invoice",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f4eae218711c440b019790be2ead3fcb572f77c"
+    },
+    {
+      "path": "next/src/lib/templates/skills/invoice/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a30ddd756bd0ce3c4cf06523f20d6ae2b83e7d",
+      "size": 612
+    },
+    {
+      "path": "next/src/lib/templates/skills/invoice/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e6748b06df01917288adf7c9f05138eb6fccbd7",
+      "size": 10912
+    },
+    {
+      "path": "next/src/lib/templates/skills/kanban-board",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b798781b42ffe7c4d186d32b6940595b1c9f2a37"
+    },
+    {
+      "path": "next/src/lib/templates/skills/kanban-board/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "babfa37df09b30aae19879079ce7dc67ba063730",
+      "size": 645
+    },
+    {
+      "path": "next/src/lib/templates/skills/kanban-board/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4416d3263054a7a51def8689dcf799a8d7acffe",
+      "size": 16509
+    },
+    {
+      "path": "next/src/lib/templates/skills/live-dashboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "174cd7da614aed5e501e8f6ce29454eef744f8c6"
+    },
+    {
+      "path": "next/src/lib/templates/skills/live-dashboard/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdd508e3fb3a4ca3b95e48751b8eaaba88e8de83",
+      "size": 722
+    },
+    {
+      "path": "next/src/lib/templates/skills/live-dashboard/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "227d72f62123ff4470246199ff3934ab5cdfca58",
+      "size": 37327
+    },
+    {
+      "path": "next/src/lib/templates/skills/magazine-poster",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fd388f747d2b57f46aadf40b9afa82f5cf5b561"
+    },
+    {
+      "path": "next/src/lib/templates/skills/magazine-poster/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e757f92b3ff4bb1fe7c790dfa6a545b95a401963",
+      "size": 849
+    },
+    {
+      "path": "next/src/lib/templates/skills/magazine-poster/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cd4329af9d10ba989626dc877a3ed204c4007b9",
+      "size": 8538
+    },
+    {
+      "path": "next/src/lib/templates/skills/meeting-notes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c39d6fd09de924b3c08e0dfed4660871f9ac57f"
+    },
+    {
+      "path": "next/src/lib/templates/skills/meeting-notes/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf607a361a23a9465350009f93365a07d7b6c30d",
+      "size": 534
+    },
+    {
+      "path": "next/src/lib/templates/skills/meeting-notes/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d63e54eb71b4923e320c005258c99f859cebc34",
+      "size": 11995
+    },
+    {
+      "path": "next/src/lib/templates/skills/mobile-app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5dd04ec42377d7642eb947be32d8365d4eaa9247"
+    },
+    {
+      "path": "next/src/lib/templates/skills/mobile-app/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3371b7f811ca7bada232bd6a09bd282a4c36065f",
+      "size": 650
+    },
+    {
+      "path": "next/src/lib/templates/skills/mobile-app/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "386c460b42d816b5e39631a146a7c10acfafb2ed",
+      "size": 6249
+    },
+    {
+      "path": "next/src/lib/templates/skills/mobile-onboarding",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c05ef25e6929068363da788d54274949016dc907"
+    },
+    {
+      "path": "next/src/lib/templates/skills/mobile-onboarding/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb6f9b401b7dec53ef10d1420f29fe6e07b79ef4",
+      "size": 551
+    },
+    {
+      "path": "next/src/lib/templates/skills/mobile-onboarding/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dc47a2fe727837d9bb3064989919acb9bbbb3f8",
+      "size": 8899
+    },
+    {
+      "path": "next/src/lib/templates/skills/mockup-device-3d",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abd90aa655f78b482ee4b9583d7b4d435ee119fb"
+    },
+    {
+      "path": "next/src/lib/templates/skills/mockup-device-3d/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a055c6b327c7e85bd1656d060057fde06bda87b",
+      "size": 3304
+    },
+    {
+      "path": "next/src/lib/templates/skills/mockup-device-3d/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0021337f3f61dbecaf09cbfff84c89f32526d9cd",
+      "size": 8958
+    },
+    {
+      "path": "next/src/lib/templates/skills/mockup-device-3d/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6c8092320b5bfbd27c5d72f9e5d198e8fb89405",
+      "size": 434
+    },
+    {
+      "path": "next/src/lib/templates/skills/motion-frames",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f7a520dad9d00b546b63069f7e7d9cc62bd3e78"
+    },
+    {
+      "path": "next/src/lib/templates/skills/motion-frames/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7320ec5c8d572de9e2688d6c152f2ace25241016",
+      "size": 688
+    },
+    {
+      "path": "next/src/lib/templates/skills/motion-frames/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36edc0ae6fdc2d66a61089407c6c41740c8e0f69",
+      "size": 8402
+    },
+    {
+      "path": "next/src/lib/templates/skills/pm-spec",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b5531d3bd934d7700fb150f89bacd6cbd858872"
+    },
+    {
+      "path": "next/src/lib/templates/skills/pm-spec/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bb357c798dbc7f47b53295c7a88a321b855b197",
+      "size": 608
+    },
+    {
+      "path": "next/src/lib/templates/skills/pm-spec/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d646722c267acfa67bad6cc622847007510d2ba",
+      "size": 14291
+    },
+    {
+      "path": "next/src/lib/templates/skills/poster-hero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b857c284b16421847fbe7b9fda3ec6570c693a27"
+    },
+    {
+      "path": "next/src/lib/templates/skills/poster-hero/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e54baf09e6728a492bb9cbbf2f614b2896b6083",
+      "size": 1076
+    },
+    {
+      "path": "next/src/lib/templates/skills/poster-hero/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efd0c3d25454489f748c813732a1b20bd7fff1ec",
+      "size": 5743
+    },
+    {
+      "path": "next/src/lib/templates/skills/poster-hero/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "392575251ce912c07f912b0e36b6f5e5d1a5f998",
+      "size": 329
+    },
+    {
+      "path": "next/src/lib/templates/skills/ppt-keynote",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2f61e6289e5b0de784eb0b34bde34a0b093be11"
+    },
+    {
+      "path": "next/src/lib/templates/skills/ppt-keynote/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc3f5cc514a34d5edb30df4ed72ee82c970bf4c7",
+      "size": 1245
+    },
+    {
+      "path": "next/src/lib/templates/skills/ppt-keynote/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "020fe655721a6f77cb7ae33444f48bee362cd89e",
+      "size": 7237
+    },
+    {
+      "path": "next/src/lib/templates/skills/ppt-keynote/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "595bb9f6a1db178379b8f9279b43b51eae58d032",
+      "size": 823
+    },
+    {
+      "path": "next/src/lib/templates/skills/pricing-page",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77b773bb15c129a068d3c74044d9918079030f55"
+    },
+    {
+      "path": "next/src/lib/templates/skills/pricing-page/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a00b8b650a78502d97b99b4f854f8dfae2bb49",
+      "size": 541
+    },
+    {
+      "path": "next/src/lib/templates/skills/pricing-page/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3086a6dc3f88f4f3d08b6710984472f5b603d7cd",
+      "size": 7117
+    },
+    {
+      "path": "next/src/lib/templates/skills/prototype-web",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2126b43ec123222a633000d646c2f2db685b867"
+    },
+    {
+      "path": "next/src/lib/templates/skills/prototype-web/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f2a9a202d18fdde1b39f4b8d055105bdd14e46b",
+      "size": 1226
+    },
+    {
+      "path": "next/src/lib/templates/skills/prototype-web/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82d8d2703fb195037c49f8582bb56260066f0ac2",
+      "size": 13472
+    },
+    {
+      "path": "next/src/lib/templates/skills/prototype-web/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08ad9e04fbcae68df1e1c5b670c7c1f6d0f2de2e",
+      "size": 651
+    },
+    {
+      "path": "next/src/lib/templates/skills/resume-modern",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20ebfba6528d5ab9acff3a65aae84b8616afbd74"
+    },
+    {
+      "path": "next/src/lib/templates/skills/resume-modern/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "577b0335dc00f435d4a2b29792196a0f52a48b83",
+      "size": 1192
+    },
+    {
+      "path": "next/src/lib/templates/skills/resume-modern/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac38b3c3c83c9b3583b9607e44dae37712f17c45",
+      "size": 7712
+    },
+    {
+      "path": "next/src/lib/templates/skills/resume-modern/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d2fdd0b665c975525edb4e4f4bafa231c03b1d8",
+      "size": 1634
+    },
+    {
+      "path": "next/src/lib/templates/skills/saas-landing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bc878509ca57a9b2ec5ba9b48429b913b27f391"
+    },
+    {
+      "path": "next/src/lib/templates/skills/saas-landing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e1d5d4273a00e77290677f855d908fc36bbbe75",
+      "size": 871
+    },
+    {
+      "path": "next/src/lib/templates/skills/saas-landing/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57704cd5b01a96e338f5de2f404a12269b5a14d1",
+      "size": 7659
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-carousel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ae122fdc97e204ad8ef6438ad12949baab387ef"
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-carousel/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f023e5e521af7adb6a6f33165f3f086a0efa376",
+      "size": 745
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-carousel/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "494a80a56d326e78e27c9ea1eaaf5a5c5e13ada2",
+      "size": 10020
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-media-dashboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2ea229af983f2215b34d790640ddf8205b4781b"
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-media-dashboard/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2abc07ed2eabadf54777f76fb72739156c6f9480",
+      "size": 674
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-media-dashboard/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12e8ccedda77600c092e46e25ba6cb07cce4e15",
+      "size": 51846
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-media-matrix",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "833a1d73376780768430997642369d7ab6d638ed"
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-media-matrix/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac7e0145691b7d2e124fd04b6e76f5280ffa651",
+      "size": 776
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-media-matrix/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3db6432b71b3b9d176dbb2ce897add43611b5a3",
+      "size": 63478
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-reddit-card",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78c0589c3f5dfcbc4a9c2e9218fba36ff0c3c8a1"
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-reddit-card/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45a2eb7eed9e2f16b0904f57826022ed39851708",
+      "size": 2482
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-reddit-card/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dec62ac6926483d13cc77614ef8548e6ab128e5",
+      "size": 3865
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-reddit-card/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afdd817cb837021957bf6f2c52d5555669747455",
+      "size": 456
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-spotify-card",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04587d554d81d7dfb465ed9bf716333256416637"
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-spotify-card/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96446a97123e8a8fd0564240a98e3ba439014372",
+      "size": 2667
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-spotify-card/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efc3923d8e187857ad0a303e3f3479875aa262cd",
+      "size": 4467
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-spotify-card/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d536887227288bb710c6e6b1e17c46a72de7f37",
+      "size": 342
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-x-post-card",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df462ac0a71216c56c788988fbb870697cd782d2"
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-x-post-card/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eade4f9ba71b9c42d64e18d08ed4db1bc808c0a6",
+      "size": 2576
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-x-post-card/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "799f8fa54ebde2d146f159840d4fd22e0f2e3992",
+      "size": 4418
+    },
+    {
+      "path": "next/src/lib/templates/skills/social-x-post-card/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06441e3bd4f903c4082aa5711ff7d736a1216f62",
+      "size": 333
+    },
+    {
+      "path": "next/src/lib/templates/skills/sprite-animation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff251b6b75d1cee057813c23dd832c5f0af02f5e"
+    },
+    {
+      "path": "next/src/lib/templates/skills/sprite-animation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0107bf3ae307e7b448d3b1b684cc4076ddb002b0",
+      "size": 749
+    },
+    {
+      "path": "next/src/lib/templates/skills/sprite-animation/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "238340ac2007d70662372bafeee1044d009491dc",
+      "size": 13511
+    },
+    {
+      "path": "next/src/lib/templates/skills/team-okrs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e4a8563faba0a36c9ac1e6a5247151479f93064c"
+    },
+    {
+      "path": "next/src/lib/templates/skills/team-okrs/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30a8619cac8717883c92f0fed1154ff92edfb37c",
+      "size": 556
+    },
+    {
+      "path": "next/src/lib/templates/skills/team-okrs/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e6fb8242850673a86ee9a25000dfcf937512322",
+      "size": 12051
+    },
+    {
+      "path": "next/src/lib/templates/skills/vfx-text-cursor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ab379e75428564aa0ddd44c5523fa69b9caa1b0b"
+    },
+    {
+      "path": "next/src/lib/templates/skills/vfx-text-cursor/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b79bb8cc43a8d1bc9e7f243605ebf7e04d110e2",
+      "size": 2640
+    },
+    {
+      "path": "next/src/lib/templates/skills/vfx-text-cursor/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e31126f1b9ced3cc89803d067e1aab0dc6f435c5",
+      "size": 3549
+    },
+    {
+      "path": "next/src/lib/templates/skills/vfx-text-cursor/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f50b0543470109ef7510ace81950362676018a2",
+      "size": 225
+    },
+    {
+      "path": "next/src/lib/templates/skills/video-hyperframes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de0e4b4a0334dab0d6e81b6cb7213389995a063f"
+    },
+    {
+      "path": "next/src/lib/templates/skills/video-hyperframes/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e43b910741359791684ccbe0d277acf9b85e0a6",
+      "size": 1716
+    },
+    {
+      "path": "next/src/lib/templates/skills/video-hyperframes/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5659ecbc2abab902573210fff5fe6dfb5f7b9197",
+      "size": 7061
+    },
+    {
+      "path": "next/src/lib/templates/skills/video-hyperframes/example.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59372029484111b05e6c629637f6bf658380ea55",
+      "size": 491
+    },
+    {
+      "path": "next/src/lib/templates/skills/waitlist-page",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "520f3e11a3aece41f2148dc09627d832a0250265"
+    },
+    {
+      "path": "next/src/lib/templates/skills/waitlist-page/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deb514883b01a29e607213e95f013eee7e45cd08",
+      "size": 776
+    },
+    {
+      "path": "next/src/lib/templates/skills/waitlist-page/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dd97563e2fde9125a9f111fa01b7d8a7854e9ab",
+      "size": 12540
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-brutalist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e40cec6c3cd51aff01f290e265aa1f15ded3b9b5"
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-brutalist/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8724b43eb37a9bf88899ec6ccb74095e846dc89",
+      "size": 651
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-brutalist/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f125830b20eddbdb07470c226247fd4343895dba",
+      "size": 21458
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-editorial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "594bbf0221380961a165bfc98a5e0e16d4075a0f"
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-editorial/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e3e9a468428af240db0b4d578c62e186e3e2330",
+      "size": 567
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-editorial/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59cd8f6db027459f23abb14b133980db26907ea5",
+      "size": 18228
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-soft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88afac1a8134c3c9dba222bd4463459c022eb750"
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-soft/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5cd617188418369d9e7c0cb7c806e6ae5c3ae30",
+      "size": 594
+    },
+    {
+      "path": "next/src/lib/templates/skills/web-proto-soft/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acff2e16cd6d16cf69c72d026e3722cc3ffb5b29",
+      "size": 24206
+    },
+    {
+      "path": "next/src/lib/templates/skills/weekly-update",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23fba3e5ba27a8c8728c641ced73d02f311a7d15"
+    },
+    {
+      "path": "next/src/lib/templates/skills/weekly-update/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dfabbb73c7095c83d98cb5e6143eb3e67bec5aa",
+      "size": 674
+    },
+    {
+      "path": "next/src/lib/templates/skills/weekly-update/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "368de4fdb3ba5067a09de9bc00e5d5f764cc5216",
+      "size": 16514
+    },
+    {
+      "path": "next/src/lib/templates/skills/wireframe-sketch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d066c7abec8819752c2b07f31cea9030d7639f5"
+    },
+    {
+      "path": "next/src/lib/templates/skills/wireframe-sketch/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d378fb6768d2533ef2f0c4cddd218c3c7c8ecc2",
+      "size": 674
+    },
+    {
+      "path": "next/src/lib/templates/skills/wireframe-sketch/example.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6316e219653ecfec4b27ea28692ad0562161cf7e",
+      "size": 15563
+    },
+    {
+      "path": "next/src/lib/use-autosave.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "756a9c0d05a4d2267f9f42a080b4aceb4a55d7e1",
+      "size": 2833
+    },
+    {
+      "path": "next/src/lib/use-convert.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c82abad69ccf6dc3243c8b7e9a2028884e63058e",
+      "size": 11620
+    },
+    {
+      "path": "next/src/lib/use-deploy.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06fb7c92082f75c031a5ae0a3198b002669d22ea",
+      "size": 3128
+    },
+    {
+      "path": "next/src/lib/use-draft.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "510264c9e12383262a86c9d414a832819c96ffae",
+      "size": 5086
+    },
+    {
+      "path": "next/src/lib/use-upload.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49f6871adc5c1081291b0ea766d7013e23027d5a",
+      "size": 2524
+    },
+    {
+      "path": "next/src/middleware.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aa6552a83766904075efe6d17e174b6213b48bb",
+      "size": 2093
+    },
+    {
+      "path": "next/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9c65d3e0676a0169374d827f7abb97497789ef",
+      "size": 670
+    },
+    {
+      "path": "next/vitest.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b438f1a8fc20e365a5a7af7b95ebb75e146e385f",
+      "size": 285
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718b8f5ef19ac03ca571289b94559e3a7c3539de",
+      "size": 194
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d17d5282d8625aeaa11906c8e4b16d0e40dae3",
+      "size": 80579
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9086f3319392fa3714d4c24cb76e536dc24a732f",
+      "size": 90
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "444cb12b77f22d76ab087a13da66643ca8e6e223"
+    },
+    {
+      "path": "scripts/guard.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bacc4212e06b3e2bbedcdb359663d6077f76b76c",
+      "size": 7253
+    }
+  ]
+}

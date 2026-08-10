@@ -1,0 +1,2806 @@
+{
+  "repository": "xjtulyc/awesome-rosetta-skills",
+  "fixed_version": "6cffda43d7cd6c07c563e2f2e24a88a615bcf003",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fd24de726073aa38cccdca1dafbc1a5ccd3fccf"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3e09b2aa4ec6b8138d722697435971862cfdc53"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/new-skill.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec091aefda4a0eb060b0783617b84bbd937c2296",
+      "size": 977
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/skill-update.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5604ab13963eaace2ad606e898f7f703c09b7e17",
+      "size": 860
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4fd201d38a8974a0352cc3c403ee4d9cef38212",
+      "size": 1157
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c9e8ac3314be9ad4746e5273e1090b21b058328"
+    },
+    {
+      "path": ".github/workflows/validate-skills.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cddf0709ebca1b948c94948b0159d261173a7b6c",
+      "size": 10463
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91a5b31babc28a6a1a503a5603e62a682f53e2ad",
+      "size": 688
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "731c15202302ac00474e2b01a8a844bb13d8dba6",
+      "size": 820
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13f5dd9e39835f834c293d602651748b647e7a60",
+      "size": 9572
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3683584777b1290269d812ecbf3694fab1815521",
+      "size": 5856
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93c1d447dcfb7f3bffb7b652535361a577e083ec",
+      "size": 1318
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a7e059a61f8d84d9b2cd52674503188a855e065",
+      "size": 20786
+    },
+    {
+      "path": "README_ZH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b8ae59ec3eefe14884abb64ac67dd0d9effb3d2",
+      "size": 20603
+    },
+    {
+      "path": "SKILL_STANDARD.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65872d18ccf357f43ab0d1db1581785b6c0592cb",
+      "size": 10896
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc33a9e5ca4bf0f2da73a3413b6785966e1fa273"
+    },
+    {
+      "path": "assets/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "assets/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4483618a3d0257ac624f5dfcef2802514a130564",
+      "size": 154373
+    },
+    {
+      "path": "assets/rosetta_bar_priority_en.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e03af4dd13ae61a01d56ec8bfa329931f77f895e",
+      "size": 218640
+    },
+    {
+      "path": "assets/rosetta_bar_priority_zh.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ccc11676e54ec588295d2b9ea4bbe5161d4d60b",
+      "size": 210538
+    },
+    {
+      "path": "assets/rosetta_ecosystem_en.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c70e9943a2a48102fe7d2bdc08402cc97d00378",
+      "size": 204060
+    },
+    {
+      "path": "assets/rosetta_ecosystem_zh.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3efb785a9d88ccc555b14f0ea482f2658be8c02f",
+      "size": 208056
+    },
+    {
+      "path": "assets/rosetta_radar_en.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "400e45f4051b373419b9f4440ed2219aef4049c3",
+      "size": 459166
+    },
+    {
+      "path": "assets/rosetta_radar_zh.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b19d4178678569df81ef4d770b73d3f9d0119bba",
+      "size": 429165
+    },
+    {
+      "path": "assets/rosetta_roadmap_en.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21cb21bf1102a3ab7f929892e8f42c472ee9151",
+      "size": 276623
+    },
+    {
+      "path": "assets/rosetta_roadmap_zh.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2f09a728a00febd19a2f58f7677c0c2b014256c",
+      "size": 272737
+    },
+    {
+      "path": "external",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "02944cd1993915847268f7ddab70ae6618658eea"
+    },
+    {
+      "path": "external/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "external/kdense-scientific",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "1ab5f05d715ce564ddcc7a597ff5a51cdcf98622"
+    },
+    {
+      "path": "external/kdense-writer",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "6d2a87ed05d2ce202f77ad79c7bd225baeef224c"
+    },
+    {
+      "path": "external/orchestra-ai-research",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "e3d093bf0dde9ec79a1832dcde091d31c8824830"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b8e26483e98cba46af1f4324a8c9f1cae088662"
+    },
+    {
+      "path": "scripts/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "scripts/check_compat.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9ac97da55f58e482c669471013b5f2d199aeb70",
+      "size": 4894
+    },
+    {
+      "path": "scripts/generate_index.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4217bc351fa4bde1e1034cfd06183725668e6a51",
+      "size": 8654
+    },
+    {
+      "path": "scripts/install.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4e8b7883b411179f4fc6c9f8a8d3c8a9ae26308",
+      "size": 7198
+    },
+    {
+      "path": "scripts/validate_skill.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe5ff16b2138c690588994c5f3621ec5bb28b136",
+      "size": 16802
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2bfacfc35cfed3b326314eadda606353d6c90a6"
+    },
+    {
+      "path": "skills/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/00-universal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c420916147a2fd81c8c560305a60de6c238a6c39"
+    },
+    {
+      "path": "skills/00-universal/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/00-universal/data-visualization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e4962f3507a68c98a906e50dc303faac17b3077"
+    },
+    {
+      "path": "skills/00-universal/data-visualization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aa66e6a4ed022ec1a41acaf627cf9858ceb8672",
+      "size": 18378
+    },
+    {
+      "path": "skills/00-universal/experimental-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2306a114562afe3b3f3f2dea1eb7d3a0b3f2fa3"
+    },
+    {
+      "path": "skills/00-universal/experimental-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f5143dc3ca0a97bb02412c2d0e7b1113d7b53f1",
+      "size": 20374
+    },
+    {
+      "path": "skills/00-universal/grant-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e9fbf23036117ad75750deec13f6feb0add8797"
+    },
+    {
+      "path": "skills/00-universal/grant-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1e9b2637e3ca0612c51f2cfafa140fb697bd0fb",
+      "size": 30008
+    },
+    {
+      "path": "skills/00-universal/literature-search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ae9b30a78bcb4c72fdfd3de85b635a7e100e6c1"
+    },
+    {
+      "path": "skills/00-universal/literature-search/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f254cbee55ab52aa89f6e93cc85a64cfa5d62b7e",
+      "size": 20456
+    },
+    {
+      "path": "skills/00-universal/meta-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7fdd3a21aa1e27d16928087b316148220629456"
+    },
+    {
+      "path": "skills/00-universal/meta-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8d2f1ba913f09c7b071f5ab6fb4944d883e0189",
+      "size": 20836
+    },
+    {
+      "path": "skills/00-universal/ml-for-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87de769229b7bd48740f04153473b003fe2c1427"
+    },
+    {
+      "path": "skills/00-universal/ml-for-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05d29b8e4f179ebb9c29da504eba7e82cdcee00",
+      "size": 29443
+    },
+    {
+      "path": "skills/00-universal/open-data-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2176526385171fe38406f9ec01dd31df6cbcf5fb"
+    },
+    {
+      "path": "skills/00-universal/open-data-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f64154c74ad2a5e1dace6386ef9612eea3d5d7b5",
+      "size": 20859
+    },
+    {
+      "path": "skills/00-universal/preregistration-workflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93b01617ef5b377228d466f21ab4f68d8d49d875"
+    },
+    {
+      "path": "skills/00-universal/preregistration-workflow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d365bf88a0fce098e1be8650d162f0bc339f442",
+      "size": 21311
+    },
+    {
+      "path": "skills/00-universal/rebuttal-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "355b98a172b89e669d04ec0960c43b747e985e94"
+    },
+    {
+      "path": "skills/00-universal/rebuttal-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecb16e29e4f49fef1cf16b2a324e67540c0b587e",
+      "size": 32369
+    },
+    {
+      "path": "skills/00-universal/reproducible-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "032dd701fefa19cb14fa78b6f4cf8ca138a2094f"
+    },
+    {
+      "path": "skills/00-universal/reproducible-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d5fead5605acd354c83c499e0de4499ba25744",
+      "size": 15306
+    },
+    {
+      "path": "skills/00-universal/research-data-management",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f99fd0266da33c8bd8fbf18d0b89d9754d732926"
+    },
+    {
+      "path": "skills/00-universal/research-data-management/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2215faa960d0ee824278864d7796771495404318",
+      "size": 30272
+    },
+    {
+      "path": "skills/00-universal/scientometrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8abd3c279aa73c566f22a46217892b9fa00c437"
+    },
+    {
+      "path": "skills/00-universal/scientometrics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5418666e3288b217808159e9037e203877e2a48",
+      "size": 27451
+    },
+    {
+      "path": "skills/00-universal/statistical-testing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e48ccb9ed112658295c85dda14210f8fc7fd2f4a"
+    },
+    {
+      "path": "skills/00-universal/statistical-testing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc857819277a2e706849f71deb53bf45235497fe",
+      "size": 18623
+    },
+    {
+      "path": "skills/00-universal/survey-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "921e9db7f5a559e9073e0cd8c9d6defde1f654a9"
+    },
+    {
+      "path": "skills/00-universal/survey-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a19843488669d67773b4b6c187cc84e962bb210",
+      "size": 28078
+    },
+    {
+      "path": "skills/00-universal/systematic-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3f4a6a40063e31cf21cee580d0ca9ed8d713d96"
+    },
+    {
+      "path": "skills/00-universal/systematic-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b329da43c76b41334a73dfaaf83ba92b86bcf871",
+      "size": 25813
+    },
+    {
+      "path": "skills/00-universal/version-control-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e618515606e6a097c590f91736ff0b9a60a2557d"
+    },
+    {
+      "path": "skills/00-universal/version-control-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30acf2e14ef9258d9f65a8c7a04e512423b20a01",
+      "size": 24088
+    },
+    {
+      "path": "skills/01-physics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5412846ac6c036eb67ca321641a16fb1d1df9db7"
+    },
+    {
+      "path": "skills/01-physics/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/01-physics/astropy-astronomy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05fec14ed6be42b96c292e84f9e7aa618bb64bae"
+    },
+    {
+      "path": "skills/01-physics/astropy-astronomy/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84af6a7f10aee0caf13c7c6f39c873f60ae722b9",
+      "size": 23545
+    },
+    {
+      "path": "skills/01-physics/fenics-fem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b396e2047f8ad895a251035de81fd925e746cba"
+    },
+    {
+      "path": "skills/01-physics/fenics-fem/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a163f9202f38f76af24df982de079d0015516f08",
+      "size": 19488
+    },
+    {
+      "path": "skills/01-physics/lammps-md",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df1c8228b86e9ef47acba8d3a45f6c74ff6ea5ac"
+    },
+    {
+      "path": "skills/01-physics/lammps-md/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c6ac9b92e0b8d9d44fcf180fc151ff17be35c0",
+      "size": 22686
+    },
+    {
+      "path": "skills/01-physics/mayavi-3d-viz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "334a954b20d3effb617b83e0f6f215ecdf0d9716"
+    },
+    {
+      "path": "skills/01-physics/mayavi-3d-viz/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c70d80f5eb2c73037a1d293b1236b86fbf61505",
+      "size": 13933
+    },
+    {
+      "path": "skills/01-physics/monte-carlo-physics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04d3c098aa8e2ce2c01b2f9b470c281a4e351178"
+    },
+    {
+      "path": "skills/01-physics/monte-carlo-physics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdbf656df44ee129eee4aa9d6672601e7395570c",
+      "size": 17789
+    },
+    {
+      "path": "skills/01-physics/obspy-seismology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd4bbb6a7cda526fcaa673e628c55b1d0050ad8c"
+    },
+    {
+      "path": "skills/01-physics/obspy-seismology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e3d79ce0d6bd3e06086d31b7a020f0fd5ab058",
+      "size": 26874
+    },
+    {
+      "path": "skills/01-physics/pytorch-physics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd8995ca959c2cea64deda72096d3aeb5a4ac99a"
+    },
+    {
+      "path": "skills/01-physics/pytorch-physics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "609dd24d71b518fbafde40ff7d079b00ad23da25",
+      "size": 31309
+    },
+    {
+      "path": "skills/01-physics/qiskit-quantum",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "170f68ff2b4b1ccec47e09743965e4d24b03b6c4"
+    },
+    {
+      "path": "skills/01-physics/qiskit-quantum/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fddab4db63acd5898363e3aec47f7a7942a1a9d",
+      "size": 19492
+    },
+    {
+      "path": "skills/01-physics/scipy-numerical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58e8e6b2eb0b3fde8e24d7a1abbfcc00675bc919"
+    },
+    {
+      "path": "skills/01-physics/scipy-numerical/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e8950613fa4c2770dee4bedb5d50b77ad2ab774",
+      "size": 27814
+    },
+    {
+      "path": "skills/01-physics/sympy-symbolic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5237a173339d351438ed8a33dd305a84815996a2"
+    },
+    {
+      "path": "skills/01-physics/sympy-symbolic/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42c6731b67b6276c4eabe8c64ebd5e71a7c9c31e",
+      "size": 25503
+    },
+    {
+      "path": "skills/01-physics/xarray-netcdf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fdf2b9c4e7412ae7e5f81ac2da8a20ee4566b96"
+    },
+    {
+      "path": "skills/01-physics/xarray-netcdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a6f3473c440740335ad1efa11c49a4e818c77d6",
+      "size": 28267
+    },
+    {
+      "path": "skills/02-chemistry",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b15f6a68d20dbddeb0d56697b79ad8137adfd88"
+    },
+    {
+      "path": "skills/02-chemistry/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/02-chemistry/ase-atomistic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3adfadbd94a8510e86c753ebcf2a49cdb9a3b35d"
+    },
+    {
+      "path": "skills/02-chemistry/ase-atomistic/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2719ddcc5462b74602b097a149063c1cee6849d",
+      "size": 33241
+    },
+    {
+      "path": "skills/02-chemistry/chembl-bioactivity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5d7d4d407c78c6a0322e831dd53bd0a6fa691d3"
+    },
+    {
+      "path": "skills/02-chemistry/chembl-bioactivity/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a9b6fec4c0d92f7c160a16a6d6e73921e1c4aed",
+      "size": 14169
+    },
+    {
+      "path": "skills/02-chemistry/mdanalysis-trajectory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18f48002aab17d2a423a8c27899edd3398ab0e29"
+    },
+    {
+      "path": "skills/02-chemistry/mdanalysis-trajectory/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ddbc8bbcf5d538671d1c8c01f1637d2d8c5f14f",
+      "size": 23845
+    },
+    {
+      "path": "skills/02-chemistry/nmr-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a1d6a7272a907e3403b8717f010e479fe367884"
+    },
+    {
+      "path": "skills/02-chemistry/nmr-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd66ad3915586e981168f5c2a5ebd1fc0335678",
+      "size": 26459
+    },
+    {
+      "path": "skills/02-chemistry/openbabel-conversion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c595b9e9229c8b10bef6bb389f811734b220e21"
+    },
+    {
+      "path": "skills/02-chemistry/openbabel-conversion/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a025fd2fccc4004f4314ed87779d3870d9c92fdb",
+      "size": 13171
+    },
+    {
+      "path": "skills/02-chemistry/pymatgen-materials",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7f85a771789a68a9ebaff47bb5735cfbf4c6697"
+    },
+    {
+      "path": "skills/02-chemistry/pymatgen-materials/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92ffb4aa9c69afd90e314c0207ad7275fc720023",
+      "size": 23901
+    },
+    {
+      "path": "skills/02-chemistry/pyscf-quantum-chem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75ff1e2c1c4c1f612e1553f7668fb22fd5642a1a"
+    },
+    {
+      "path": "skills/02-chemistry/pyscf-quantum-chem/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1c912033ef85700000ae2a69cc39fbad2af85f0",
+      "size": 20839
+    },
+    {
+      "path": "skills/02-chemistry/rdkit-cheminformatics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ac7b5eda743d5ac08f09dc3936ace67c7611392"
+    },
+    {
+      "path": "skills/02-chemistry/rdkit-cheminformatics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16a435c65b97e4c3ed623d16ea0955255d43de16",
+      "size": 26638
+    },
+    {
+      "path": "skills/03-mathematics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7150f813c6b0ef27f00b31e7bb5f887858c5f219"
+    },
+    {
+      "path": "skills/03-mathematics/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/03-mathematics/bayesian-stats",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8119133ab2f45a4c272c37bcd4377f68afab8ec1"
+    },
+    {
+      "path": "skills/03-mathematics/bayesian-stats/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34b9a911e02eaf6c870cc750597fb3c440ec245e",
+      "size": 20562
+    },
+    {
+      "path": "skills/03-mathematics/causal-inference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "558b5708fa575ced37c8b8ff03de7b50a4d2fe51"
+    },
+    {
+      "path": "skills/03-mathematics/causal-inference/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab3a3b3d3e0edd145cf68c3063a69b7810d8f898",
+      "size": 34097
+    },
+    {
+      "path": "skills/03-mathematics/network-analysis-math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0447d94d9abda8449a60c7381d6c932144b8ef73"
+    },
+    {
+      "path": "skills/03-mathematics/network-analysis-math/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f2aaf33816e9284bad09ec4f455476ee6251ad1",
+      "size": 14423
+    },
+    {
+      "path": "skills/03-mathematics/numerical-linear-algebra",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46763a7e71ce6a0f3a09fbd5164ad180e6514dec"
+    },
+    {
+      "path": "skills/03-mathematics/numerical-linear-algebra/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e149fe9b2f5038d5478d1204f67b8a3ae9444de7",
+      "size": 13236
+    },
+    {
+      "path": "skills/03-mathematics/optimization-or",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5bcde5b726db0ce6d2c2e66626a794b945ce4be"
+    },
+    {
+      "path": "skills/03-mathematics/optimization-or/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30bebfb2f02b90505f908f3078993cfffd4ee5eb",
+      "size": 21542
+    },
+    {
+      "path": "skills/03-mathematics/survival-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68147c1f79e3df17859c9886a519cc19df36572f"
+    },
+    {
+      "path": "skills/03-mathematics/survival-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a872bc6d6f696306a284f02399f44e2fa1f0470",
+      "size": 19320
+    },
+    {
+      "path": "skills/03-mathematics/time-series-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17a5b4f1c0014405bbe85eef6c77f8d30a3d3aab"
+    },
+    {
+      "path": "skills/03-mathematics/time-series-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbe7170ceb8ba1e36053a9c3d77e190b93c69397",
+      "size": 18909
+    },
+    {
+      "path": "skills/03-mathematics/topological-data-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "765bbed8735491e65ec6ec9c525f01b378809193"
+    },
+    {
+      "path": "skills/03-mathematics/topological-data-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40637d038a6ebeeff45e90351077000e379759c7",
+      "size": 24808
+    },
+    {
+      "path": "skills/04-earth-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65b855432bd0bdbdc7515bc6c93e337ca47322f5"
+    },
+    {
+      "path": "skills/04-earth-science/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/04-earth-science/air-quality-openaq",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0477b9d7f0af5dcccd44cc718b9575af46ed05bc"
+    },
+    {
+      "path": "skills/04-earth-science/air-quality-openaq/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96f6be95ff9abd9e193366a4c79636d59b87d0f2",
+      "size": 15945
+    },
+    {
+      "path": "skills/04-earth-science/climate-trends",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "548fb27abb0e2fb764187835e1d92f97848410f8"
+    },
+    {
+      "path": "skills/04-earth-science/climate-trends/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d054bddf6b773bbf97980be3451b8668ce8191a9",
+      "size": 14922
+    },
+    {
+      "path": "skills/04-earth-science/era5-climate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ab1f1a5e803785f373f5082c759e7785eca13dd"
+    },
+    {
+      "path": "skills/04-earth-science/era5-climate/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b942e27e781f6a4a64fab3ea290b6b7b2849e02",
+      "size": 23214
+    },
+    {
+      "path": "skills/04-earth-science/gbif-biodiversity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "774e3f1ca9716667a7cc93f3673b6073bdb2e4d0"
+    },
+    {
+      "path": "skills/04-earth-science/gbif-biodiversity/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da61d904d33e489c62ba508f858fb25ad05b78b2",
+      "size": 19723
+    },
+    {
+      "path": "skills/04-earth-science/geopandas-gis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3adbe82435f03683dc84ca7259dd720a5c10888"
+    },
+    {
+      "path": "skills/04-earth-science/geopandas-gis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fce1cc3fae50eea5191cacd31626b2c159fa76f",
+      "size": 24949
+    },
+    {
+      "path": "skills/04-earth-science/hydrology-pysheds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bca31fa8eb558dd420ae74a93a10ea071886cdc"
+    },
+    {
+      "path": "skills/04-earth-science/hydrology-pysheds/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27769f47730b55ed032e615bfb65f5ff157dafe4",
+      "size": 14395
+    },
+    {
+      "path": "skills/04-earth-science/metpy-atmosphere",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de5218242a927175a147f82ee93ca034d02360f9"
+    },
+    {
+      "path": "skills/04-earth-science/metpy-atmosphere/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94e99f28f37020c6042409d2709e952aff953851",
+      "size": 35928
+    },
+    {
+      "path": "skills/04-earth-science/obspy-seismology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea97b60a30e45eb9c778f8572bae89c1f1c12c6e"
+    },
+    {
+      "path": "skills/04-earth-science/obspy-seismology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81cbe3b815220292e0014b50bd34bff2c3500a2e",
+      "size": 17803
+    },
+    {
+      "path": "skills/04-earth-science/ocean-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a95b343077c83cc0962bc77ecd23edf635573340"
+    },
+    {
+      "path": "skills/04-earth-science/ocean-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc0dd1f70cc1b9f8e7c17e45dc16a7c02355bed1",
+      "size": 16859
+    },
+    {
+      "path": "skills/04-earth-science/rioxarray-remote-sensing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "323818b3cf9f187ddc2a672299bb611e0379edd1"
+    },
+    {
+      "path": "skills/04-earth-science/rioxarray-remote-sensing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30decd5ed38158f41d301b80c24f6ad31ce77bec",
+      "size": 25964
+    },
+    {
+      "path": "skills/04-earth-science/satellite-imagery",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cc49aca0642b5aabc6af8f58ccc37fbbfb7eae7"
+    },
+    {
+      "path": "skills/04-earth-science/satellite-imagery/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45f07e0abf92ef774dfe42f7e589fa160e1438e9",
+      "size": 13212
+    },
+    {
+      "path": "skills/05-neuroscience",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc496c710c06ab76957c3988c091b9f2c12e7788"
+    },
+    {
+      "path": "skills/05-neuroscience/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/05-neuroscience/bids-neuroimaging",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3c87a909eea3768b55e4e85caff25127152473a"
+    },
+    {
+      "path": "skills/05-neuroscience/bids-neuroimaging/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a40f55c6ac2717791f6079dd5c4064512db000e",
+      "size": 27635
+    },
+    {
+      "path": "skills/05-neuroscience/brian2-simulation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20eebded379e9ea57108e7bee118762c806d29b4"
+    },
+    {
+      "path": "skills/05-neuroscience/brian2-simulation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d9037df23466e2c57cae313ef009535e036b547",
+      "size": 13664
+    },
+    {
+      "path": "skills/05-neuroscience/connectome-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e90af2c1c5508db87c846f7fc1db12fdba000548"
+    },
+    {
+      "path": "skills/05-neuroscience/connectome-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0be4b267746b4a8bd9bcb36ff6b9eef7eb86aaac",
+      "size": 14408
+    },
+    {
+      "path": "skills/05-neuroscience/mne-eeg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9b1ed682d9aaa1cb6a7f0395601d29dbce314b4"
+    },
+    {
+      "path": "skills/05-neuroscience/mne-eeg/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb2d2c7c20e92a3c58d226c285fcb843c314c77e",
+      "size": 27983
+    },
+    {
+      "path": "skills/05-neuroscience/nilearn-fmri",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bdf7f12a155b82984f9c0377572a35cf74c33ed2"
+    },
+    {
+      "path": "skills/05-neuroscience/nilearn-fmri/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebc53a2541a9052ba352b573ea1323e113256211",
+      "size": 24725
+    },
+    {
+      "path": "skills/05-neuroscience/psychopy-neuro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6c66dee2fbabf14cefd1086393c2acd56f1cdde"
+    },
+    {
+      "path": "skills/05-neuroscience/psychopy-neuro/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b240e98c74b716f067dc94afe0a02b0e00f50d",
+      "size": 15835
+    },
+    {
+      "path": "skills/05-neuroscience/spike-sorting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69fcbe112aafba43ba701baa39671d31963026b5"
+    },
+    {
+      "path": "skills/05-neuroscience/spike-sorting/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b6f53ce71f28ca1f69b86b4784c7359ef631f92",
+      "size": 26738
+    },
+    {
+      "path": "skills/06-engineering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7670d5332a9d95d13c72db9b763a04b0a4db6b00"
+    },
+    {
+      "path": "skills/06-engineering/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/06-engineering/cantera-combustion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5e6c1d18a981aeee1754103e8eca2365ce2f402"
+    },
+    {
+      "path": "skills/06-engineering/cantera-combustion/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54879045280722b6e3b3f56cf780f4382ce57ee7",
+      "size": 13390
+    },
+    {
+      "path": "skills/06-engineering/control-systems",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "151c7a01104e0e6962ec95bd434a289a0386c013"
+    },
+    {
+      "path": "skills/06-engineering/control-systems/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77caae3bf4bc750e0fe716b5298e0810d68c7351",
+      "size": 24355
+    },
+    {
+      "path": "skills/06-engineering/finite-element-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11b9c5d8db44e17c406ba3ef93c8e9db5effe7bf"
+    },
+    {
+      "path": "skills/06-engineering/finite-element-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b6156a6faa39c5b71d19d167d6c339df5521913",
+      "size": 17162
+    },
+    {
+      "path": "skills/06-engineering/openfoam-cfd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ccd699ba0725f738ed82de4fd260dce5fcf5579"
+    },
+    {
+      "path": "skills/06-engineering/openfoam-cfd/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20744d6e277dcea262f430c7159b10cb662c8c0b",
+      "size": 31137
+    },
+    {
+      "path": "skills/06-engineering/reliability-engineering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8c69d8e5d5014dad11c91964a32a6b6cd46a4b3"
+    },
+    {
+      "path": "skills/06-engineering/reliability-engineering/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8bb548419181d701cb02e7fbcff5c47e3560fe6",
+      "size": 21429
+    },
+    {
+      "path": "skills/06-engineering/robotics-ros2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c43255089016e4ce48caab9969c81bfd88ffdde"
+    },
+    {
+      "path": "skills/06-engineering/robotics-ros2/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "272cce3245deec292749b6a1b6bdd5b99f9ef54f",
+      "size": 37306
+    },
+    {
+      "path": "skills/06-engineering/signal-processing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc9f59b3366e2312e13aaa5f0c6f184028f9f67b"
+    },
+    {
+      "path": "skills/06-engineering/signal-processing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d76d6b316fd23c3b455b44f79420476b753fd2ab",
+      "size": 21503
+    },
+    {
+      "path": "skills/06-engineering/simpy-discrete-event",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "964a8201fbd41ba633fb323c1893612f4aa447bc"
+    },
+    {
+      "path": "skills/06-engineering/simpy-discrete-event/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17a9946fa9afa59fab4a58e618f6ce3221a4acae",
+      "size": 15095
+    },
+    {
+      "path": "skills/07-economics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9f3c1e67ab0edfa29ad47542a9d4c24e0fc5a1c"
+    },
+    {
+      "path": "skills/07-economics/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/07-economics/development-economics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "789654ac93d65a27418ba6a0341318bad8259faa"
+    },
+    {
+      "path": "skills/07-economics/development-economics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3a9bab6fbeb51e6149227963ff34bf28097168",
+      "size": 21970
+    },
+    {
+      "path": "skills/07-economics/did-causal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1785bfc30798755eb79122b335fb5f5b57f84a7a"
+    },
+    {
+      "path": "skills/07-economics/did-causal/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaa616a288eeb1273d4793344c6ebf53b4faffe5",
+      "size": 20157
+    },
+    {
+      "path": "skills/07-economics/economic-forecasting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edfdc22cf9e67989db6632868613f28e04f6d81c"
+    },
+    {
+      "path": "skills/07-economics/economic-forecasting/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea4560fb0ecc806926e5189bdbbd8af994e2a0c8",
+      "size": 21864
+    },
+    {
+      "path": "skills/07-economics/fred-macro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4fdb214866830f38457b3d49bb32c06a0209e577"
+    },
+    {
+      "path": "skills/07-economics/fred-macro/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d64552fa97e0ff8bf6f0ea55f4d8a35bab38acda",
+      "size": 17818
+    },
+    {
+      "path": "skills/07-economics/iv-2sls",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e6501beb848eb0cbfef2d75b3658da35b7b18a7"
+    },
+    {
+      "path": "skills/07-economics/iv-2sls/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8db0a98866a43c3dd2d445346348878ed2e5cfed",
+      "size": 27124
+    },
+    {
+      "path": "skills/07-economics/labor-economics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63723d1c1adce6a66f87540e0d5b28a3d9bee872"
+    },
+    {
+      "path": "skills/07-economics/labor-economics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe5192868db18129118922e11493fabb72e7ec7",
+      "size": 20540
+    },
+    {
+      "path": "skills/07-economics/ml-econometrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c38daa7b4d046ade62d5f130993f8a7c7e1efae0"
+    },
+    {
+      "path": "skills/07-economics/ml-econometrics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ece95b866b475a64a899effcc9f0ddd32cfb7530",
+      "size": 19220
+    },
+    {
+      "path": "skills/07-economics/ols-regression",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d93b3ba0289d9b44ea2158b9d7994e979cb0e4f2"
+    },
+    {
+      "path": "skills/07-economics/ols-regression/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe6218dc5af84db49c17fd398b55b4b5f139a534",
+      "size": 28668
+    },
+    {
+      "path": "skills/07-economics/panel-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35bc5354dc791d8e6787b3ce3f9e4792df70f4b9"
+    },
+    {
+      "path": "skills/07-economics/panel-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c4fd9ea8605820d05cdf821f4a39e1018bf9c49",
+      "size": 18292
+    },
+    {
+      "path": "skills/07-economics/rdd-design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a854bbe74fc943cef37fcd32988d88b9d3921b2"
+    },
+    {
+      "path": "skills/07-economics/rdd-design/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4915a2ad79bd3c64ba3f317b1331ec867940de7b",
+      "size": 27559
+    },
+    {
+      "path": "skills/07-economics/synthetic-control",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3755d2802012710e80ab4b0d8175ce2d1812340"
+    },
+    {
+      "path": "skills/07-economics/synthetic-control/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a8508476a30a1174ff320c1295e62170c787463",
+      "size": 26301
+    },
+    {
+      "path": "skills/07-economics/time-series-econometrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c468919100441d6a118dc41669a2e09dd8848fa5"
+    },
+    {
+      "path": "skills/07-economics/time-series-econometrics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d93396513fe321bb7fa73b39cbc84f5a3be0a350",
+      "size": 20856
+    },
+    {
+      "path": "skills/08-finance-academic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b40f0f242035e46eadeadfe796a068872a82ccb5"
+    },
+    {
+      "path": "skills/08-finance-academic/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/08-finance-academic/event-study",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e2c29b781a4e6f19bc3d2a6c8656884c2bef6b2"
+    },
+    {
+      "path": "skills/08-finance-academic/event-study/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c0c57cd42ae0a90a050835d7e438d4fb25d19f",
+      "size": 18390
+    },
+    {
+      "path": "skills/08-finance-academic/factor-models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "971b219520cb9ad8ad32804911943561f35d23e2"
+    },
+    {
+      "path": "skills/08-finance-academic/factor-models/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "967ae785f15de3c245ec5a2888ded6b9af704d1a",
+      "size": 20980
+    },
+    {
+      "path": "skills/08-finance-academic/financial-time-series",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f7a1d916afa6b863b41c30a8c9cbf683b917f54"
+    },
+    {
+      "path": "skills/08-finance-academic/financial-time-series/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5b467c78c52f2096ce501c5fff53a6def4f76ca",
+      "size": 17440
+    },
+    {
+      "path": "skills/08-finance-academic/fixed-income",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e6edae6b063e1b0eb9cf2bfdc31c9ee5276f4e6"
+    },
+    {
+      "path": "skills/08-finance-academic/fixed-income/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "716fd1e164c9b10a0ed98567fbae961d2ad08a7c",
+      "size": 18160
+    },
+    {
+      "path": "skills/08-finance-academic/options-pricing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d8c03cd9a90064e040e3ba8db08f673ea02071e"
+    },
+    {
+      "path": "skills/08-finance-academic/options-pricing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "482843751f012bae540e21a0f38dd89abb5e7b51",
+      "size": 20954
+    },
+    {
+      "path": "skills/08-finance-academic/portfolio-optimization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e5159bd740c6faf1b78423e711c22c803bfa240"
+    },
+    {
+      "path": "skills/08-finance-academic/portfolio-optimization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06d2266751f7b24560f41d971f0856f2beb7d60",
+      "size": 20472
+    },
+    {
+      "path": "skills/08-finance-academic/wrds-data-access",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2199e52e8c13cef6fb43050bcf90c667b5aa8368"
+    },
+    {
+      "path": "skills/08-finance-academic/wrds-data-access/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4684a88a50042ba45d2a46f0a5aa2ae9617471b0",
+      "size": 19749
+    },
+    {
+      "path": "skills/09-political-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8fc622ee4f93b3e4668279f5b1045984024bcb9"
+    },
+    {
+      "path": "skills/09-political-science/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/09-political-science/comparative-politics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43a31e6bde0c9aa1da67658af367e7a65a44b320"
+    },
+    {
+      "path": "skills/09-political-science/comparative-politics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3543e99589f9ab699c43b8f2765b5c96d1595ccd",
+      "size": 20390
+    },
+    {
+      "path": "skills/09-political-science/conflict-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e228a9c4708e34edb3a2511e7008934e4eff2006"
+    },
+    {
+      "path": "skills/09-political-science/conflict-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "503e58fa96f6e11ef41d2417e79f01591061e6a6",
+      "size": 21720
+    },
+    {
+      "path": "skills/09-political-science/conjoint-experiment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8e8d70ceb7a44f55ea1d2a05419d4fe87e90944"
+    },
+    {
+      "path": "skills/09-political-science/conjoint-experiment/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cac03c5f0f33009833cb54573ad14870ff6532fc",
+      "size": 23063
+    },
+    {
+      "path": "skills/09-political-science/electoral-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fa7586648763528fcbf94d97689e4a2cdcc116f"
+    },
+    {
+      "path": "skills/09-political-science/electoral-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f130b936c6fd6aa1100e9276a6d3f4a245312bc9",
+      "size": 21352
+    },
+    {
+      "path": "skills/09-political-science/ir-gravity-model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "581800bfd80bf56bd7fdd9295ea9fedfb41a40dc"
+    },
+    {
+      "path": "skills/09-political-science/ir-gravity-model/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d0278cfae43b3bf4f73778fb703e5e7078c11b1",
+      "size": 22932
+    },
+    {
+      "path": "skills/09-political-science/survey-analysis-polisci",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f708bcc0e2ebce1cafedeea1f68c92ebb6cd8d93"
+    },
+    {
+      "path": "skills/09-political-science/survey-analysis-polisci/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "998655d3fdc25ecdf3a90e455878d5ff1a30b236",
+      "size": 24501
+    },
+    {
+      "path": "skills/09-political-science/text-as-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f2a92cbfcd39873e504a729277f3b720ffdda4f"
+    },
+    {
+      "path": "skills/09-political-science/text-as-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "720f797ac47200a66c1952e3e4bbc78b3bc11501",
+      "size": 24874
+    },
+    {
+      "path": "skills/09-political-science/vdem-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5147db22ae3fcfb20c56ccca92be9a6ececc4b74"
+    },
+    {
+      "path": "skills/09-political-science/vdem-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e97ebbf0a4ceca969db4511e37d202dcfbcb8875",
+      "size": 21057
+    },
+    {
+      "path": "skills/10-sociology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebe1888b677439e01b44cebdb109f4b8afdb9752"
+    },
+    {
+      "path": "skills/10-sociology/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/10-sociology/agent-based-social",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33f8022492fd9384d55200a1160aeea9c03c9384"
+    },
+    {
+      "path": "skills/10-sociology/agent-based-social/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce6e6b30235a51acfa17cc2cf6c666a528bf074",
+      "size": 21381
+    },
+    {
+      "path": "skills/10-sociology/computational-sociology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8cda387ee2588709d3902ccf3cd99d2e922dc37"
+    },
+    {
+      "path": "skills/10-sociology/computational-sociology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dab7cbbda3a93998252157d8c97487613e0cd320",
+      "size": 30319
+    },
+    {
+      "path": "skills/10-sociology/demographic-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4986a23f3deb61197dc8ac2282b327836b15507"
+    },
+    {
+      "path": "skills/10-sociology/demographic-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2be8a6320a486d28f49f9894713c829d10d136d",
+      "size": 21160
+    },
+    {
+      "path": "skills/10-sociology/inequality-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "524a4d422fac9b0719d81057c45ab2b0743ee616"
+    },
+    {
+      "path": "skills/10-sociology/inequality-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0513e284ff3e4b97f4e3024d080cbf0faccf66d1",
+      "size": 18082
+    },
+    {
+      "path": "skills/10-sociology/qualitative-digital",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60c3d64447e533d5048a6f1a5b9ef70e85c6bb92"
+    },
+    {
+      "path": "skills/10-sociology/qualitative-digital/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca13f16e9e20737197b5f1ba53082d29ceccad63",
+      "size": 21118
+    },
+    {
+      "path": "skills/10-sociology/social-network-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52560c93dbf752f6fc881ddfc6e7466c24f7f53f"
+    },
+    {
+      "path": "skills/10-sociology/social-network-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a264e63fbbef250e6163f31eee5bb9f6224d585d",
+      "size": 25664
+    },
+    {
+      "path": "skills/10-sociology/stratification-mobility",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "173c9aa380fe71564a8c529390455c3faaaf03c9"
+    },
+    {
+      "path": "skills/10-sociology/stratification-mobility/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d02736cef7ee1c12092e27aaf8b74ae38d55d110",
+      "size": 18961
+    },
+    {
+      "path": "skills/11-psychology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65eaf2ab1e49d55e88e1f63d171c9139b843b90b"
+    },
+    {
+      "path": "skills/11-psychology/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/11-psychology/clinical-assessment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53df7f82fbb7bdf647ecfbe65e8cd8dd77268208"
+    },
+    {
+      "path": "skills/11-psychology/clinical-assessment/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d131c4f5815e625a8022b4c9b985b2e47cdb15a",
+      "size": 22996
+    },
+    {
+      "path": "skills/11-psychology/eye-tracking-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39f49252ba0f8d75e322e75f55d32c5f142b51f9"
+    },
+    {
+      "path": "skills/11-psychology/eye-tracking-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf83a63a5048063016e154539b53c42794474f10",
+      "size": 22577
+    },
+    {
+      "path": "skills/11-psychology/meta-analysis-psych",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6272a7e7a39fec7a5a0b4983f5eaac5bdef0568e"
+    },
+    {
+      "path": "skills/11-psychology/meta-analysis-psych/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb2e475f0daccf3de28d0d6e055a4cd4f1c837bd",
+      "size": 21323
+    },
+    {
+      "path": "skills/11-psychology/multilevel-modeling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "067c9adfc2eb63f65c36c225c0f535977d15d1ba"
+    },
+    {
+      "path": "skills/11-psychology/multilevel-modeling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd16b15b27708b57365dc1cb5ddc43712d94df0d",
+      "size": 21238
+    },
+    {
+      "path": "skills/11-psychology/power-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4515aa5c1ae22e9c59b1c908523d4723df5c524"
+    },
+    {
+      "path": "skills/11-psychology/power-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebeaf2a8ab88e899c90933a7e31ec31b1f02450a",
+      "size": 29524
+    },
+    {
+      "path": "skills/11-psychology/psychometrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00db7081e80bbd566c15c9a5bb500d3855b8367e"
+    },
+    {
+      "path": "skills/11-psychology/psychometrics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a99dd3778efd3db041743ae2e86ac99e32479db",
+      "size": 28325
+    },
+    {
+      "path": "skills/11-psychology/psychopy-experiment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec5cd3b8c58ff0579a07b493c9be1de7f31faa44"
+    },
+    {
+      "path": "skills/11-psychology/psychopy-experiment/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f46a8c31889c9f535d44e93ffcde43eb05b92a8",
+      "size": 21864
+    },
+    {
+      "path": "skills/11-psychology/reaction-time-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62c825af618fd5f9aaa4cc64f0d22b1ff5fb3bde"
+    },
+    {
+      "path": "skills/11-psychology/reaction-time-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5252912ea1464e4228d3c5ca020ceb6914f814e1",
+      "size": 26591
+    },
+    {
+      "path": "skills/12-linguistics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38676def299b7984ebd2d259601e95aec80ecd2a"
+    },
+    {
+      "path": "skills/12-linguistics/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/12-linguistics/computational-pragmatics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c644505fee1aa01e6963f14b980dda2b223b6064"
+    },
+    {
+      "path": "skills/12-linguistics/computational-pragmatics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8a14db0e10f723d4d31c12cb4f62eb13abb2f63",
+      "size": 21712
+    },
+    {
+      "path": "skills/12-linguistics/corpus-linguistics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92d051db9621c7f9e744ea199d896329f30f85e1"
+    },
+    {
+      "path": "skills/12-linguistics/corpus-linguistics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f6734d83c2b657673c95d181f73df4f9e6ba92f",
+      "size": 30399
+    },
+    {
+      "path": "skills/12-linguistics/historical-linguistics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f22c5a4e1a359b865f3fdc3cb0ad10386bc4cc3"
+    },
+    {
+      "path": "skills/12-linguistics/historical-linguistics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4379ddee6918d63d5d2a70ca913cf17f5947238b",
+      "size": 17374
+    },
+    {
+      "path": "skills/12-linguistics/phonetics-praat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78fdc402490373b126b249753822a1b0450ce50f"
+    },
+    {
+      "path": "skills/12-linguistics/phonetics-praat/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a67666936d1aff2aefc916c2a4adeecf11a4c166",
+      "size": 20855
+    },
+    {
+      "path": "skills/12-linguistics/spacy-nlp-pipeline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3d8a0bc8435657279e96d7f67df1e78398d13ff"
+    },
+    {
+      "path": "skills/12-linguistics/spacy-nlp-pipeline/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eee13aaad5d3487256d9454c70726be9f4de5295",
+      "size": 19379
+    },
+    {
+      "path": "skills/12-linguistics/typology-wals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e466a927e0ffe83c744cc21462a1b275f4e166e4"
+    },
+    {
+      "path": "skills/12-linguistics/typology-wals/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbbd8fae4446b0a1f0400d64877440b5a29662c",
+      "size": 18012
+    },
+    {
+      "path": "skills/13-history",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8ba602caeb58e481415a42e7911d26698067e09"
+    },
+    {
+      "path": "skills/13-history/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/13-history/digital-archives",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf431fc3e33bc5c2e7b6b7360d5770ff4a87236e"
+    },
+    {
+      "path": "skills/13-history/digital-archives/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa63af439fc48f17972e0e17ebcb10566ca41615",
+      "size": 24841
+    },
+    {
+      "path": "skills/13-history/historical-gis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cef4caac41e9e94545f21b11d9ab7e866b310f61"
+    },
+    {
+      "path": "skills/13-history/historical-gis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d7fda764a1c3eadfba89493b382cca0654b4030",
+      "size": 16604
+    },
+    {
+      "path": "skills/13-history/historical-network",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "907ca33a5e59bd8549897b12706e577382ec0e0e"
+    },
+    {
+      "path": "skills/13-history/historical-network/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78613b9ea6c21990c3ccf811d75583fb2dea2929",
+      "size": 20946
+    },
+    {
+      "path": "skills/13-history/historical-ocr",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a398da32618aef167ec28c327ea618a4cefd362"
+    },
+    {
+      "path": "skills/13-history/historical-ocr/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91310ee4c4e6adb11608d1b0578c7b5d60fe271e",
+      "size": 20073
+    },
+    {
+      "path": "skills/13-history/oral-history-tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6783af61103f04d77f5961eb14703eb0320041ee"
+    },
+    {
+      "path": "skills/13-history/oral-history-tools/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a05a923fb3bbe4b80272cb24e8f0c93fcdab266",
+      "size": 19941
+    },
+    {
+      "path": "skills/13-history/tei-xml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75e1099259a578985bb59ab0f4bdcd1584144aec"
+    },
+    {
+      "path": "skills/13-history/tei-xml/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42bcf90f54045fa81b49135c8771b725e04b0fb",
+      "size": 18894
+    },
+    {
+      "path": "skills/14-philosophy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "12f0f8fbc9dc0e78541cb407780d969018c0a0bd"
+    },
+    {
+      "path": "skills/14-philosophy/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/14-philosophy/argument-mapping",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69e7fe5c6a934d96d999aeec1ca7d3bee1851e5a"
+    },
+    {
+      "path": "skills/14-philosophy/argument-mapping/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "811e83e7b60f42421b9c02299cb964f573eb7bf3",
+      "size": 23247
+    },
+    {
+      "path": "skills/14-philosophy/ethics-ai-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa19ce02b5fb76a0a5b7e35fdc425d9f0a8eb4c2"
+    },
+    {
+      "path": "skills/14-philosophy/ethics-ai-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aae0dbae393421fbd6f02c7f459c9efb6c24b16",
+      "size": 21360
+    },
+    {
+      "path": "skills/14-philosophy/formal-logic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa4efc0f68dc1db0339f24ac8f07d752543a76c1"
+    },
+    {
+      "path": "skills/14-philosophy/formal-logic/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc1a3fa507fac814984ce4a2307c71256062ec9",
+      "size": 18868
+    },
+    {
+      "path": "skills/14-philosophy/sep-literature",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c233cce9ccfbe502d77e60633926eee0447f603"
+    },
+    {
+      "path": "skills/14-philosophy/sep-literature/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5f42be4e5806e6fc205f8ccf958413e1767802c",
+      "size": 28050
+    },
+    {
+      "path": "skills/15-archaeology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5899b7889826fff7c38903956cc3ef09531ea957"
+    },
+    {
+      "path": "skills/15-archaeology/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/15-archaeology/archaeological-gis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39153ea9419d54a8788dad00b1acc3c89f911779"
+    },
+    {
+      "path": "skills/15-archaeology/archaeological-gis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ecab6552a8925fbed8a713d01655cf08004c53",
+      "size": 18835
+    },
+    {
+      "path": "skills/15-archaeology/artifact-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d29d7f63498a376390728cf76fa75b52413c951"
+    },
+    {
+      "path": "skills/15-archaeology/artifact-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a442427150380e5ae4ffaf87ff060b457d9dc3c",
+      "size": 20136
+    },
+    {
+      "path": "skills/15-archaeology/photogrammetry-3d",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84a50369d579145279f2c196e5e4222fbe45fb78"
+    },
+    {
+      "path": "skills/15-archaeology/photogrammetry-3d/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a0e642aa1a15e388923362cc5ab8f1cf00b0bf8",
+      "size": 17917
+    },
+    {
+      "path": "skills/15-archaeology/radiocarbon-dating",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3171f57bc30c6606c70173f05d21038fac8cf10"
+    },
+    {
+      "path": "skills/15-archaeology/radiocarbon-dating/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5a1f061994e48fee6ae2c8184b9f2db3664fa33",
+      "size": 24746
+    },
+    {
+      "path": "skills/16-art-music",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2d5b63fa4f6946e8a47d15a81e67c4ac681bf08"
+    },
+    {
+      "path": "skills/16-art-music/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/16-art-music/iiif-digital-collections",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abdc7204f58036e263852857ac04be6197a12749"
+    },
+    {
+      "path": "skills/16-art-music/iiif-digital-collections/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f96c5cbf1948a3324dd58dadf85cb167c174e491",
+      "size": 24747
+    },
+    {
+      "path": "skills/16-art-music/image-analysis-art",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2cef802a7f85abb7aa2dd415a06dcbdaa8280c4"
+    },
+    {
+      "path": "skills/16-art-music/image-analysis-art/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c37f0ed8a4a44c99ccb1784d0e87837ec468a397",
+      "size": 22227
+    },
+    {
+      "path": "skills/16-art-music/librosa-audio",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f3970823db461ca310e761964822069baa8e0bd"
+    },
+    {
+      "path": "skills/16-art-music/librosa-audio/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c61a53dd04561727cfcd25600535d25d903baa5f",
+      "size": 16580
+    },
+    {
+      "path": "skills/16-art-music/music21-score",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "843ceb4bb073ff0b7c2b66b10cd0cd76fe724c06"
+    },
+    {
+      "path": "skills/16-art-music/music21-score/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17cd725e76f89f13352073b1d5e365986b5de72e",
+      "size": 21355
+    },
+    {
+      "path": "skills/17-public-health",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8bee104a8662b40a1942bd6b58ac2b02cecf07c4"
+    },
+    {
+      "path": "skills/17-public-health/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/17-public-health/epi-modeling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf2e7a950ddb51a32802a6ea66d56498f911a9ea"
+    },
+    {
+      "path": "skills/17-public-health/epi-modeling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95f79157d0ca239d74d86950a705ebcd56f25d98",
+      "size": 29303
+    },
+    {
+      "path": "skills/17-public-health/global-health-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64d2c10e095e68149cc91b627d52ba1a8e1d79a1"
+    },
+    {
+      "path": "skills/17-public-health/global-health-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20745f097ce34b595d57fce029f497d249b8ee8c",
+      "size": 31944
+    },
+    {
+      "path": "skills/17-public-health/health-economics-eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0e0d9426d494ef7fce76f8dda1473d44eae70c3"
+    },
+    {
+      "path": "skills/17-public-health/health-economics-eval/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e183c8b63267f830b4cff157af3fa9bafb378b",
+      "size": 21213
+    },
+    {
+      "path": "skills/17-public-health/spatial-epidemiology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84de76c9bee124e44942dcbf8ef5257e38b9d8a8"
+    },
+    {
+      "path": "skills/17-public-health/spatial-epidemiology/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "478a737e03a228e31a7da0b0dccaf1d30a466823",
+      "size": 21195
+    },
+    {
+      "path": "skills/17-public-health/survival-epi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "555ddf08e3738f5b41aaa27583d01c419ff00d2f"
+    },
+    {
+      "path": "skills/17-public-health/survival-epi/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a5e71194a544d69c16c81ce9046228bd880243",
+      "size": 20754
+    },
+    {
+      "path": "skills/17-public-health/systematic-review-epi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d601cb1300d687bbc3f0cbfc229450d67eab24e"
+    },
+    {
+      "path": "skills/17-public-health/systematic-review-epi/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a06988e4c1950033e8937dc2815276f02fa00df2",
+      "size": 18465
+    },
+    {
+      "path": "skills/18-urban-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c30bfcf65ed9bfcf1d9b7535a941757e03cf629d"
+    },
+    {
+      "path": "skills/18-urban-science/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/18-urban-science/housing-market",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69ce26ccdc71e8fe6ddf3f6d5b259f62f7a8c07c"
+    },
+    {
+      "path": "skills/18-urban-science/housing-market/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a5e17fd1c74cfb5ccdcfdc4f48961d89fc3d1ad",
+      "size": 26822
+    },
+    {
+      "path": "skills/18-urban-science/mobility-trajectories",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed03aff42b541d658978118fb5770679cde1415f"
+    },
+    {
+      "path": "skills/18-urban-science/mobility-trajectories/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9a95bd32d614ee2369fd7cc5ab31569ee6de803",
+      "size": 21968
+    },
+    {
+      "path": "skills/18-urban-science/osmnx-urban",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95bde73fcaa4f0ce408b36dbbd42bbaaaf0e4093"
+    },
+    {
+      "path": "skills/18-urban-science/osmnx-urban/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0c9fb0d78f596011605a2bef9853ffb55881e31",
+      "size": 29681
+    },
+    {
+      "path": "skills/18-urban-science/regional-economics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e548b95b1012858251132c8d78ff9b506a11d628"
+    },
+    {
+      "path": "skills/18-urban-science/regional-economics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "788d99f213dc7023ac4a1ddb25bbe390da94bc2c",
+      "size": 25488
+    },
+    {
+      "path": "skills/18-urban-science/urban-remote-sensing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "def52a743c6890d3c449cb27dc830f334c57a86f"
+    },
+    {
+      "path": "skills/18-urban-science/urban-remote-sensing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e69a98a9208f44ee486df4a9a65127bb88db06",
+      "size": 18147
+    },
+    {
+      "path": "skills/19-agriculture",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "570778547445f29170c4684b84ff215293c5d899"
+    },
+    {
+      "path": "skills/19-agriculture/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/19-agriculture/agri-remote-sensing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "272115cdad9dcf51d5a0e3522164843644ffb51d"
+    },
+    {
+      "path": "skills/19-agriculture/agri-remote-sensing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71bd6a6d1ec4242f1d575f0773fb4d997a081fee",
+      "size": 18652
+    },
+    {
+      "path": "skills/19-agriculture/crop-modeling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cecc90e0dd9aed7351b7a616ab022557dd681dc4"
+    },
+    {
+      "path": "skills/19-agriculture/crop-modeling/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d91ff760a2809bfca35c41fa00de7ec82d4a1c6",
+      "size": 23554
+    },
+    {
+      "path": "skills/19-agriculture/food-systems-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6cf0e590ee9733ceb51aa7f57898b2db91ae752"
+    },
+    {
+      "path": "skills/19-agriculture/food-systems-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f63e6964b154534657442702b9d3a96133dddd96",
+      "size": 15823
+    },
+    {
+      "path": "skills/19-agriculture/soil-data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c30561400ed1f52cc2f2523237e72156c4f51e00"
+    },
+    {
+      "path": "skills/19-agriculture/soil-data/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02b56eda3f7a04087e5a9b5110267494ffd31b8a",
+      "size": 21370
+    },
+    {
+      "path": "skills/20-education",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d4e01f67645639d82f9f621c395f9950333ad59"
+    },
+    {
+      "path": "skills/20-education/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/20-education/edm-learning-analytics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "583d4f8ee9243a5501de13ada66a97d6b09f8cc1"
+    },
+    {
+      "path": "skills/20-education/edm-learning-analytics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff2ada6246ab69432c064c23484f4a401fa02e0",
+      "size": 18763
+    },
+    {
+      "path": "skills/20-education/irt-psychometrics-edu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "715c6c66972f10b05a47c393c57be89e1dfc0f77"
+    },
+    {
+      "path": "skills/20-education/irt-psychometrics-edu/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b33e798624062e554b5b8b6b513cd53ceac2e515",
+      "size": 18493
+    },
+    {
+      "path": "skills/20-education/learning-experiment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f8ae3f0fd1006b5e8ac2fbe820f423f2eb7edf0"
+    },
+    {
+      "path": "skills/20-education/learning-experiment/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3973c205de037a8a47b143cdae9a78c159bdbce2",
+      "size": 28140
+    },
+    {
+      "path": "skills/20-education/pisa-international",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "526a1c86b24c98012599a840bff36c6001b2dbd8"
+    },
+    {
+      "path": "skills/20-education/pisa-international/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae95f07764f46395f718b2c1a9860f9145b89b0a",
+      "size": 14895
+    },
+    {
+      "path": "skills/21-library-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54046d78244561be5bdded2500c55aca07e5f510"
+    },
+    {
+      "path": "skills/21-library-science/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/21-library-science/knowledge-graph-sparql",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f5f21f711b1bfc76f976533c585fcf7aa7cfe41"
+    },
+    {
+      "path": "skills/21-library-science/knowledge-graph-sparql/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b1245a5b339e4478c444f36657bbc0dd4dfd50",
+      "size": 22863
+    },
+    {
+      "path": "skills/21-library-science/openalx-bibliometrics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95389dd7ee7ff3c379fe4a86a1930546156bf94e"
+    },
+    {
+      "path": "skills/21-library-science/openalx-bibliometrics/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d52ea0ba2183d4426be4677b3bc5d033115ea0d2",
+      "size": 23783
+    },
+    {
+      "path": "skills/21-library-science/patent-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1e8ebdd4b848d1bd15b40bec5f414944bf687fd"
+    },
+    {
+      "path": "skills/21-library-science/patent-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33210665f527a8d006bad82b47c092da848bd71f",
+      "size": 23948
+    },
+    {
+      "path": "skills/21-library-science/research-impact",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "212bdcb3ffd4f3ca841169653cc8daa9bb395856"
+    },
+    {
+      "path": "skills/21-library-science/research-impact/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bfe2de86c65b07715ab52baebc1fbf330468b39",
+      "size": 25358
+    },
+    {
+      "path": "skills/21-library-science/topic-modeling-lit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef7e2ac8a91c91186c774cdeb017334800b1aaea"
+    },
+    {
+      "path": "skills/21-library-science/topic-modeling-lit/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02d5fb3f5b77166c40af8d1b03dce7c23dd752bc",
+      "size": 18529
+    },
+    {
+      "path": "skills/22-interdisciplinary",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "170573523acd9371ffb95ead5c911d8824480039"
+    },
+    {
+      "path": "skills/22-interdisciplinary/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/22-interdisciplinary/complexity-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2999043892d2fcd216161ecd62aa33a5c645750d"
+    },
+    {
+      "path": "skills/22-interdisciplinary/complexity-science/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64cd1f57b3665ef948830769b819df81df89ace1",
+      "size": 23233
+    },
+    {
+      "path": "skills/22-interdisciplinary/mixed-methods-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "896be96bcd70eec433abe475181b614066cfab13"
+    },
+    {
+      "path": "skills/22-interdisciplinary/mixed-methods-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff46999b6a30a84443420211a1ac8db56f1cea72",
+      "size": 29974
+    },
+    {
+      "path": "skills/22-interdisciplinary/science-of-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "977908e9b0ec7d2df1afe03ac7c8d853277a23a8"
+    },
+    {
+      "path": "skills/22-interdisciplinary/science-of-science/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b074622ccece3bec26c507505fe1384bf15f4ae",
+      "size": 27703
+    },
+    {
+      "path": "skills/22-interdisciplinary/text-mining-science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "509e2f60ac00d3454e37ff92687f0ae5a45d1e31"
+    },
+    {
+      "path": "skills/22-interdisciplinary/text-mining-science/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6947fbbb221a3b0bf26a605e94b966f2cd7d40a9",
+      "size": 27524
+    },
+    {
+      "path": "skills/23-research-workflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5e416f5dd28f1090bd892f0383b848afc468ec7"
+    },
+    {
+      "path": "skills/23-research-workflow/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "skills/23-research-workflow/containerization-research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdbef99aa7a89269363d1faf48de19aa08bef183"
+    },
+    {
+      "path": "skills/23-research-workflow/containerization-research/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42ae74e4b26c8fcf7325f511fa2e4c6327b46663",
+      "size": 18195
+    },
+    {
+      "path": "skills/23-research-workflow/data-version-control",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a457ab690223876c3689aadc1716dca5af1466e7"
+    },
+    {
+      "path": "skills/23-research-workflow/data-version-control/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0343fcafc97f805ddf3e370d49b14cb4bde9e781",
+      "size": 23742
+    },
+    {
+      "path": "skills/23-research-workflow/latex-workflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32bb14d23dd85d2aa6620738e5f56d6f280fdded"
+    },
+    {
+      "path": "skills/23-research-workflow/latex-workflow/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d32aa2c05b15b2c71b3fc7790b32d034c464d794",
+      "size": 23972
+    },
+    {
+      "path": "skills/23-research-workflow/python-package-dev",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d5c482c81b06430db22ee0ab6c168a0e2583eda"
+    },
+    {
+      "path": "skills/23-research-workflow/python-package-dev/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b50cc6e2fb38c1c926f495e6f4365fbca881ae41",
+      "size": 24662
+    },
+    {
+      "path": "skills/23-research-workflow/quarto-reporting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8c73b6bea646f02cd290facfeecacb3b93d6969"
+    },
+    {
+      "path": "skills/23-research-workflow/quarto-reporting/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9005e8ca509c1df37bb84ed0c7928ec79b5231f",
+      "size": 19353
+    },
+    {
+      "path": "skills/23-research-workflow/r-package-dev",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e73615bc41bd8a5e5105fe634f5dd4ccf5bc52b0"
+    },
+    {
+      "path": "skills/23-research-workflow/r-package-dev/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abbb68c0a9b69a14909d898aceb02d32848eae81",
+      "size": 18777
+    },
+    {
+      "path": "templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c25e817b06e63f717c4cee77d9449d323ef469b1"
+    },
+    {
+      "path": "templates/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "templates/SKILL_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88a6d012c83b75d95864e283e70e9bbbf5c20f86",
+      "size": 8634
+    },
+    {
+      "path": "templates/WORKFLOW_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf29d839e4d4774b912f36ec76ddb5382f0cd63a",
+      "size": 6893
+    }
+  ]
+}

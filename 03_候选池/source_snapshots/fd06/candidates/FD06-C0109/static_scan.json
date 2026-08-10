@@ -1,0 +1,85 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "ding criteria themselves | `assessment-architect` `project-brief` / `rubric` | | Checking student submissions against a standard | `submission-auditor` | | In-class ungraded exercises and activities | `lesson-builder` | | Full design → materials → assessment run"
+      },
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "ode_agent` | Builds scaffold repos that run as shipped: stubs with full contracts, fenced student-work zones, pinned dependencies, tested cold-start README | | `autograder_agent` | Builds visible + hidden test suites with"
+      },
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "set for students, synthetic data, starter code, autograder, solution notebook, Jupyter, 实验作业, 编程作业, 数据集, 实验数据, 起始代码, 自动评分, 自动批改, 参考答案.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\" status: active"
+      },
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "r students, synthetic data, starter code, autograder, solution notebook, Jupyter, 实验作业, 编程作业, 数据集, 实验数据, 起始代码, 自动评分, 自动批改, 参考答案.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\" status: active pipel"
+      },
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "``` Build the Week 6 regression lab for STAT 210 — it's A3 in the passport 给我的机器学习课做一个编程作业：起始代码 + 自动评分 Generate a per-student dataset for the ANOVA lab — 45 students, same difficulty each Write the autograder f"
+      },
+      {
+        "file": "lab-forge/agents/autograder_agent.md",
+        "snippet": "lder ## Role You turn the submission contract into executable grading: tests that score student work the same way every time, for every student, with feedback that teaches without giving answers away. An autograder is a"
+      },
+      {
+        "file": "lab-forge/agents/autograder_agent.md",
+        "snippet": "— a scaffold that passes hidden tests means those tests measure the scaffold, not the student; fix the tests or the scaffold). Record both runs in the verification record. 6. **Write feedback strings** that are actionable but leak-proof: name the vio"
+      },
+      {
+        "file": "lab-forge/agents/dataset_smith_agent.md",
+        "snippet": "cation. 4. **Implement per-student variation** when the arc calls for it: a documented student-id → seed mapping (professor-side only), parameter jitter inside the ranges the pattern library marks difficulty-preser"
+      },
+      {
+        "file": "lab-forge/agents/starter_code_agent.md",
+        "snippet": "ting harness, test runner) is marked \"do not modify — graded against the original\"; student-work zones are marked with TODO markers that are consistent and greppable (one marker convention, stated in the README: `"
+      },
+      {
+        "file": "lab-forge/references/autograder_patterns.md",
+        "snippet": "erified solution (must pass) and the unmodified starter (must score ~0) before it touches student work, deterministic in its verdicts, and incapable of leaking ground truth through its feedback. ## Visible / hidden test s"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "data, starter code, autograder, solution notebook, Jupyter, 实验作业, 编程作业, 数据集, 实验数据, 起始代码, 自动评分, 自动批改, 参考答案.\" metadata: version: \"1.0.0\" last_updated: \"2026-06-10\" status: active pipeline_stage: 2 related_"
+      },
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "d the Week 6 regression lab for STAT 210 — it's A3 in the passport 给我的机器学习课做一个编程作业：起始代码 + 自动评分 Generate a per-student dataset for the ANOVA lab — 45 students, same difficulty each Write the autograder for this assi"
+      },
+      {
+        "file": "lab-forge/templates/lab_handout_template.md",
+        "snippet": "title}} **Course:** {{course_code}} · **Due:** {{due_date}} · **Weight:** {{weight}}% of final grade **Assessment ID:** {{passport_assessment_id}} · **Work mode:** {{individual_or_team}} ## Purpose {{TILT purpose: whic"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "s, test names, and error messages, the three places they most often leak. 4. **Variant fairness.** Per-student variation is an integrity feature (`shared/ai_era_integrity.md`, resilience pattern 3) and a fairness"
+      },
+      {
+        "file": "lab-forge/SKILL.md",
+        "snippet": "ion is an integrity feature (`shared/ai_era_integrity.md`, resilience pattern 3) and a fairness risk. Every variant set ships with an equivalence argument — same concepts, same required method, same step count"
+      },
+      {
+        "file": "lab-forge/agents/autograder_agent.md",
+        "snippet": "etwork dependence in graded tests. Same submission, same score, every run — that is the fairness property submission-auditor and the professor rely on. - **Anti-gaming checks are honest, not adversarial theater**:"
+      },
+      {
+        "file": "lab-forge/references/synthetic_data_patterns.md",
+        "snippet": "others don't (e.g., one student's p = .04 vs another's p = .2 on the same question is a fairness defect unless the lab is explicitly about sampling variability — in which case all students get that experience by de"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "lab-forge/references/synthetic_data_patterns.md",
+        "snippet": "ed on the generated data,* recovers it. Generation without recoverability verification is fabrication with extra steps. ## Planted-effect designs | Pattern | What you plant | Calibration knobs | Recoverability check | |"
+      }
+    ]
+  },
+  "read_errors": []
+}

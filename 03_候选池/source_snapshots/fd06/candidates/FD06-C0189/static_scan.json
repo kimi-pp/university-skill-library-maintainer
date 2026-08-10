@@ -1,0 +1,67 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "rstanding | **Scoring**: Post A [4, 5, 3, 2] = 3.5 avg. Post B [5, 4, 5, 4] = 4.5 avg. **Feedback for Post A**: \"Strong clarity (5) and good accuracy (4), but needs more practical examples (3) and offers less original insight"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "p but don't capture everything, use thoughtfully → Rubrics are tools not replacements for human judgment. Use to structure thinking, not mechanize decisions. **Inputs required:** - **Artifact type** (what are we evaluating"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "sistently, compare alternatives objectively, set acceptance thresholds, reduce subjective bias, or when user mentions rubric, scoring criteria, quality standards, evaluation framework, inter-rater reliability, or g"
+      },
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "ack to supplement - **Example**: Design critique (list criteria like \"Visual hierarchy\", \"Accessibility\", note \"+Clear focal point, -Poor contrast\") **Pattern 4: Checklist (Binary)** - **Structure**: List of yes/no items,"
+      },
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "n X, but evaluators penalize for missing X - document all criteria - ❌ **Central tendency bias**: Reviewers avoid extremes (always score 3/5) - use even-number scales (1-4) to force choice - ❌ **Halo effect**: High"
+      },
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "Scale design principles, descriptor writing techniques, inter-rater reliability testing, bias mitigation - **[resources/evaluators/rubric_evaluation_rubrics.json](resources/evaluators/rubric_evaluation_rubrics.jso"
+      },
+      {
+        "file": "skills/evaluation-rubrics/SKILL.md",
+        "snippet": "eral purpose, most common | Allows neutral, familiar, good granularity | Central tendency bias (everyone gets 3) | | **1-10** | Need fine gradations, large sample | Maximum differentiation, statistical analysis | F"
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "pensatory trade-offs acknowledged, scoring calculation clear\" }, { \"name\": \"Bias Mitigation\", \"1\": \"No acknowledgment of potential biases (halo, leniency, central tendency, anchoring), no mitiga"
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "ses (halo, leniency, central tendency, anchoring), no mitigation strategies\", \"3\": \"Bias types mentioned, some mitigation (e.g., randomize order, blind scoring), training mentioned\", \"5\": \"Comprehensive"
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "on (e.g., randomize order, blind scoring), training mentioned\", \"5\": \"Comprehensive bias mitigation: Halo (vertical scoring, blind scoring), central tendency (even-number scale or anchors), leniency/severity"
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "ion), order effects (randomization), explicit reviewer training, audit plan for detecting bias\" }, { \"name\": \"Usability\", \"1\": \"Rubric overly complex (takes >30 min to score one item), no guidan"
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "arity, Timeliness)\", \"Design critique (3 criteria: Visual hierarchy, Consistency, Accessibility basics)\" ] }, \"Standard Rubric\": { \"target_score\": 4.0, \"description\": \"5-7 criteria, 4-5 sca"
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "n sessions (3-5 samples), IRR measurement (Kappa ≥0.70), anchors at all levels\", \"Bias Mitigation (≥3): Acknowledge key biases (halo, central tendency), basic mitigation (randomize, calibration)\", \""
+      },
+      {
+        "file": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+        "snippet": "g or thresholds, justified by context, compensatory vs. non-compensatory clear\", \"Bias Mitigation (≥5): Comprehensive mitigation for all bias types, reviewer training program, audit plan, normalization proc"
+      }
+    ]
+  },
+  "read_errors": []
+}

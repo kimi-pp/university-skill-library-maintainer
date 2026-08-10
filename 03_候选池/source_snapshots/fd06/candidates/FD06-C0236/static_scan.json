@@ -1,0 +1,97 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/constitution-checklist.md",
+        "snippet": "y of all claims and code **Verdict**: ⬜ Pass / ⬜ Partial / ⬜ Fail --- ### Principle 8: Accessibility and Inclusivity (No Gatekeeping) 🔴 **Requirement**: Content welcoming and accessible to diverse learners. - [ ] No as"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/constitution-checklist.md",
+        "snippet": "rnatives provided if applicable **Evidence Required**: Review for inclusive language and accessibility **Verdict**: ⬜ Pass / ⬜ Partial / ⬜ Fail --- ### Principle 9: Show-Then-Explain Pedagogy **Requirement**: Teaching"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/constitution-checklist.md",
+        "snippet": "uage**: No gatekeeping terms; diverse examples; gender-neutral; free alternatives - [ ] **Accessibility**: Clear terminology with definitions; multiple explanation styles; content breaks; appropriate pacing - [ ] **Bias & R"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/constitution-checklist.md",
+        "snippet": "with definitions; multiple explanation styles; content breaks; appropriate pacing - [ ] **Bias & Representation**: Diverse perspectives; no stereotypes; inclusive references - [ ] **Technical Accuracy**: All claims"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/constitution-checklist.md",
+        "snippet": "nal Polish**: No hype; realistic assessment of opportunities/risks; balanced tone - [ ] **Accessibility**: Concepts explained with analogies; no jargon gatekeeping; 15-30 min reading time **Evidence Required**: Review narr"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/constitution-checklist.md",
+        "snippet": "ture): ⬜ Pass / ⬜ Fail - Principle 7 (Technical Accuracy): ⬜ Pass / ⬜ Fail - Principle 8 (Accessibility): ⬜ Pass / ⬜ Fail - Book Gaps (ALL Chapters): ⬜ Pass / ⬜ Fail - ALWAYS Rules: ⬜ Pass / ⬜ Fail - NEVER Rules: ⬜ Pass / ⬜"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/evaluation-template.md",
+        "snippet": "ture): ✅ Pass / ❌ Fail - Principle 7 (Technical Accuracy): ✅ Pass / ❌ Fail - Principle 8 (Accessibility): ✅ Pass / ❌ Fail - Book Gaps Checklist: ✅ Pass / ❌ Fail - ALWAYS/NEVER Rules: ✅ Pass / ❌ Fail - Domain Skills Applicat"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/rubric-details.md",
+        "snippet": "t being patronizing - Enthusiasm for topic evident - Appropriate balance of formality and accessibility **Inclusive Language:** - No gatekeeping language (\"simple,\" \"just,\" \"obviously,\" \"merely\") - Assumes no prior knowled"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/rubric-details.md",
+        "snippet": "nt serious writing quality issues - List passages requiring major revision - Note lack of accessibility --- ## Category 4: Structure & Organization (15% weight) ### Excellent (90-100%) **Document Structure:** - Clear YAM"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/rubric-details.md",
+        "snippet": "owed 7. **Output Style Compliance** - Content follows required output style template 8. **Accessibility Requirements** - Accessibility standards met (alt text, readability, etc.) 9. **Technical Requirements** - Technical sp"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/references/rubric-details.md",
+        "snippet": "ce** - Content follows required output style template 8. **Accessibility Requirements** - Accessibility standards met (alt text, readability, etc.) 9. **Technical Requirements** - Technical specifications and dependencies s"
+      }
+    ],
+    "process": [
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:65:ruby-shell-backtick-execution\", \"v"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:75:ruby-shell-backtick-execution\", \"v"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:86:ruby-shell-backtick-execution\", \"v"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:96:ruby-shell-backtick-execution\", \"v"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:98:ruby-shell-backtick-execution\", \"v"
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:110:ruby-shell-backtick-execution\", \""
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:123:ruby-shell-backtick-execution\", \""
+      },
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "a Markdown code fence around formulas or report instructions. There is no Ruby execution, shell interpreter use, or dynamic command construction.\" }, { \"id\": \"external_commands:SKILL.md:137:ruby-shell-backtick-execution\", \""
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "estion\": \"Can it review partial drafts?\", \"answer\": \"Yes. Use a spot check or mid-draft review when the content is not complete.\" }, { \"question\": \"Does it replace a human editor?\", \"ans"
+      }
+    ],
+    "untrusted_input_protection": [
+      {
+        "file": "skills/92bilal26/content-evaluation-framework/skill-report.json",
+        "snippet": "s are Markdown fences, inline paths, readability metrics, and checklist text. No semantic prompt injection, data exfiltration, or hidden unsafe intent was found.\", \"remediation\": [], \"risk_factor_evidence\": [ {"
+      }
+    ]
+  },
+  "read_errors": []
+}

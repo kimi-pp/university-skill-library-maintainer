@@ -1,0 +1,55 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/socratic-tutor/SKILL.md",
+        "snippet": "is lightweight; it is not a mode switch. ## Workflow (per turn) 1. **Assess.** Read the student's question + attempted work. Infer: subject, grade level, apparent understanding (misconception vs. procedural gap vs. conceptual gap vs. anxiety). See `references/grade-"
+      },
+      {
+        "file": "skills/socratic-tutor/references/breaking-character.md",
+        "snippet": "er a crisis signal.** Even one tutoring question post-crisis is too many. - **Shaming the student** who asked for the answer. Name the tradeoff once, gently, then respect the choice. - **Refusing to help** on suspected-assignment content. Help them t"
+      },
+      {
+        "file": "skills/socratic-tutor/references/socratic-taxonomy.md",
+        "snippet": "tic - Student vague → clarifying. - Student confident but wrong → probing assumptions. - Student asserting without work → probing evidence. - Student stuck on one approach → probing perspective. - Student derived a partial answer → probing"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/socratic-tutor/evals/evals.json",
+        "snippet": "ubjective rubric is graded 1-5 on three axes by a Claude-as-judge pass with an option for human rater override. Simulated student responses come from a fixed Claude system prompt seeded with the turn-by-turn script below.\", \"s"
+      },
+      {
+        "file": "skills/socratic-tutor/evals/evals.json",
+        "snippet": "\": \"Any eval flagged by the Claude judge with a score under 4 on any axis is surfaced for human review. Human rater fills the same 1-5 rubric and their score is authoritative.\" }, \"evals\": [ { \"id\": \"algebra-"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/socratic-tutor/references/grade-calibration.md",
+        "snippet": "Verbal reasoning, drawings. Not written work. | | Wait time | Long. Don't rush. | | Mode bias | Heavy `tutor`. Skip `hint-ladder` in favor of direct small hints. | **Tone example:** \"Wow, you noticed something bi"
+      },
+      {
+        "file": "skills/socratic-tutor/references/grade-calibration.md",
+        "snippet": "eric. | | Expected output | Short written steps, drawings | | Wait time | Medium | | Mode bias | `tutor` default, `hint-ladder` available | **Tone example:** \"Good — you spotted the pattern. What would happen if t"
+      },
+      {
+        "file": "skills/socratic-tutor/references/grade-calibration.md",
+        "snippet": "on *why* | | Expected output | Written work, explanations | | Wait time | Medium | | Mode bias | Full tri-mode | **Tone example:** \"Right — and notice *why* that works. What changes if we flip the inequality?\" ##"
+      },
+      {
+        "file": "skills/socratic-tutor/references/grade-calibration.md",
+        "snippet": "| Expected output | Full written work, proofs, arguments | | Wait time | Normal | | Mode bias | Full tri-mode; recap richer | **Tone example:** \"That's the right move. But can you construct a counterexample? When"
+      },
+      {
+        "file": "skills/socratic-tutor/references/grade-calibration.md",
+        "snippet": "on | Minimal. Assumed. | | Expected output | Rigorous arguments, proper notation | | Mode bias | Faster mode switches; student may self-regulate | **Tone example:** \"Sketch the proof. Which step is load-bearing?\""
+      },
+      {
+        "file": "skills/socratic-tutor/references/grade-calibration.md",
+        "snippet": "Collaborative. | | Socratic frame | Lighter — use direct explanation more often | | Mode bias | Faster switches. Student can drive. | | Affirmation | Conversational, not pedagogical | **Tone example:** \"Yeah — an"
+      }
+    ]
+  },
+  "read_errors": []
+}

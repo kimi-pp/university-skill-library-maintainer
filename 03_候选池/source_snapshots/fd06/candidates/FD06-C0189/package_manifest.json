@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/evaluation-rubrics/SKILL.md",
+    "type": "blob",
+    "size": 11677,
+    "sha": "2cb0b48bbd5d8af5b185be0aaa7f1f37f108ec99"
+  },
+  {
+    "path": "skills/evaluation-rubrics/resources/evaluators/rubric_evaluation_rubrics.json",
+    "type": "blob",
+    "size": 18898,
+    "sha": "8dbf7080bcf9f598fbfa07c1f6fb4dcd7e480b00"
+  },
+  {
+    "path": "skills/evaluation-rubrics/resources/methodology.md",
+    "type": "blob",
+    "size": 17505,
+    "sha": "e8c892a01ae67cdf49ad768decbb1df332b967f6"
+  },
+  {
+    "path": "skills/evaluation-rubrics/resources/template.md",
+    "type": "blob",
+    "size": 13759,
+    "sha": "44246a059006c0be6c37877a448b9fbed0cf85d5"
+  }
+]

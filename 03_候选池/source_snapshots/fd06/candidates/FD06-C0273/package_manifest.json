@@ -1,0 +1,38 @@
+[
+  {
+    "path": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+    "type": "blob",
+    "size": 9677,
+    "sha": "2f2c45006f9d97636594245a6f8db0262ecb5c97"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review-response-drafter/peer-review-response-drafter_audit_result_v1.json",
+    "type": "blob",
+    "size": 12240,
+    "sha": "0edc07ce2d748b96d574bce8317b0e6ed12ff17e"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review-response-drafter/references/response_templates.md",
+    "type": "blob",
+    "size": 7196,
+    "sha": "3d56964ef70e86f7331f2f6388d262a4b00838f9"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review-response-drafter/references/tone_guide.md",
+    "type": "blob",
+    "size": 4855,
+    "sha": "9fe3e72b721c1fb708eb18d3b8927728db6c1384"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review-response-drafter/requirements.txt",
+    "type": "blob",
+    "size": 17,
+    "sha": "9305cd48d1bb63dce3da2c7b0672f303318883bf"
+  },
+  {
+    "path": "scientific-skills/Academic Writing/peer-review-response-drafter/scripts/main.py",
+    "type": "blob",
+    "size": 15487,
+    "sha": "ea7844999ca57fc8f83333fecc3a845d3a1b30ed"
+  }
+]

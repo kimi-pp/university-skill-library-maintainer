@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/academic-reviewer-or/SKILL.md",
+        "snippet": "onvergence analysis, complexity discussion, or theoretical justification? - **Comparison fairness**: Are benchmarks state-of-the-art and fairly implemented? - **Reproducibility**: Is the algorithm described with suff"
+      }
+    ]
+  },
+  "read_errors": []
+}

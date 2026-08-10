@@ -1,0 +1,67 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "Design for Learning (UDL) and differentiated instruction (DI) frameworks. Produces three learner-profile adaptations (advanced, on-grade, support-needed) of a single lesson for educators. Use when an educator asks to differentiate a lesson, adapt instruc"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "h first (use `lesson-plan-design`) - The request is for feedback written to an individual student about their specific work (use `student-feedback`) - A student (not an educator) is asking for a personalized study plan or adapted materials for"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "2] **Assessment:** - Criteria: [Specific criteria with point values] - Format: [How the student submits or presents their work] - Total points: [X] **Early-Finisher Extension:** [What Tier 3 students do if they complete the activity before time"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "d activity), must not require teacher attention to launch, and must produce something the student can share during closure. Name it, describe it in two to three sentences, and ensure it is self-directed. 11. **Progress monitoring must occur at lea"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "ion data, design with three representative profiles and note that tier placement requires teacher judgment - If the teacher can only provide topic and grade level (minimum viable input), proceed but flag that adaptations will"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "questions like \"rate your confidence with this skill from 1-4\") to guide the choice; (c) teacher override capability for clear mismatches; and (d) a mid-activity check-in for students who chose a level that is clearly too hig"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "ion description: | Creates differentiated lesson adaptations for diverse learners using Universal Design for Learning (UDL) and differentiated instruction (DI) frameworks. Produces three learner-profile adaptations (advanced"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "in the same lesson - An instructor explicitly references differentiated instruction (DI), Universal Design for Learning (UDL), tiered assignments, scaffolded activities, learning menus, RAFT tasks, cubing, or flexible grouping"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "(use `study-plan`) - The user is asking for a formal IEP document, a 504 plan, or a legal accommodation plan -- these require licensed specialists and are outside the scope of instructional skill - The request is purely abo"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "hook is the fastest re-engagement tool for both - Check that the lesson meets minimum UDL accessibility thresholds: all written materials at or near grade-level reading (with below-grade alternatives for Tier 1), all diagra"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "structures modeled, comparison tasks that leverage bilingual cognitive advantages - **IEP Accommodation Overlays:** Identify which accommodations are legally required (extended time, reduced distractors, read-aloud, scribe,"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "ier 2 academically but require Tier 1 scaffolding for instructions only -- note these as \"accommodation overlays\" rather than full tier changes ### Step 7: Write Teacher Implementation Notes The differentiation guide is o"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "f applicable):** - [Language scaffold 1 by WIDA level] - [Language scaffold 2] **IEP/504 Accommodation Overlays (if applicable):** - [Accommodation 1 -- e.g., extended time: allow 15 additional minutes beyond class period]"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/differentiated-instruction/SKILL.md",
+        "snippet": "DA level] - [Language scaffold 2] **IEP/504 Accommodation Overlays (if applicable):** - [Accommodation 1 -- e.g., extended time: allow 15 additional minutes beyond class period] - [Accommodation 2] **Assessment:** - Crite"
+      }
+    ]
+  },
+  "read_errors": []
+}

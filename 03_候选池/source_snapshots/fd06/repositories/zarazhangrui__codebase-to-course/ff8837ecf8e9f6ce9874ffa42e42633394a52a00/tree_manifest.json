@@ -1,0 +1,104 @@
+{
+  "repository": "zarazhangrui/codebase-to-course",
+  "fixed_version": "ff8837ecf8e9f6ce9874ffa42e42633394a52a00",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d541233ca193c20016c544fe60b27e404f1b7c",
+      "size": 18
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acc3149ede81d164ba20b708a23cdd87e4285587",
+      "size": 4333
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aedeb5b3a6372b6f4a479df46b6854f2ea93e2d1",
+      "size": 17701
+    },
+    {
+      "path": "references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f46a3f5517088f8af152f215623a7b2bfd0aa022"
+    },
+    {
+      "path": "references/_base.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda8573807a23d11eec57b6b29ff3268822b893a",
+      "size": 2238
+    },
+    {
+      "path": "references/_footer.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e879109008b30c9a486b706b8a3c9a96ff278878",
+      "size": 27
+    },
+    {
+      "path": "references/build.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c28776921e1b3a93fa378d88eafee23c84c38edd",
+      "size": 210
+    },
+    {
+      "path": "references/content-philosophy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79fae1a2d90c0ee4f339d5bf29f0a2ff6f28ff4d",
+      "size": 9047
+    },
+    {
+      "path": "references/design-system.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cb13aed3584656cc85a48b4db4c906150b0bb90",
+      "size": 12661
+    },
+    {
+      "path": "references/gotchas.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69c1fc37b800ea4394e52ef84d8c7f890a33906",
+      "size": 3052
+    },
+    {
+      "path": "references/interactive-elements.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62ef6169e22cf74afb30fc6ab2b8a908be9487bf",
+      "size": 32424
+    },
+    {
+      "path": "references/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7150a694ee7ace9d597bc0068257f1b88eec4564",
+      "size": 19539
+    },
+    {
+      "path": "references/module-brief-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce570ae8e79a7801bec3dacf6b0b74c6786e3b1d",
+      "size": 2580
+    },
+    {
+      "path": "references/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "544669c8c5478b0e764b107f5c9345a4a03956f8",
+      "size": 34781
+    }
+  ]
+}

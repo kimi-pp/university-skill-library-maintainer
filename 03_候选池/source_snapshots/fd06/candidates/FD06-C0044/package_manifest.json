@@ -1,0 +1,140 @@
+[
+  {
+    "path": "skills/lesson-plan/SKILL.md",
+    "type": "blob",
+    "size": 10040,
+    "sha": "b8405c114a2374865d58c476715ff7b55fb6eef4"
+  },
+  {
+    "path": "skills/lesson-plan/evals/evals.json",
+    "type": "blob",
+    "size": 4061,
+    "sha": "50239d5407e2d16846595107818891f3dcd03f66"
+  },
+  {
+    "path": "skills/lesson-plan/references/differentiation/catalog.md",
+    "type": "blob",
+    "size": 4441,
+    "sha": "7ecf0d0c859b21bcb2eb847e76944dd3e45d43b7"
+  },
+  {
+    "path": "skills/lesson-plan/references/differentiation/ell-strategies.md",
+    "type": "blob",
+    "size": 3161,
+    "sha": "99dc0a4daaaa7a2dda0de94b62f8297a9c5badce"
+  },
+  {
+    "path": "skills/lesson-plan/references/differentiation/gifted-strategies.md",
+    "type": "blob",
+    "size": 3994,
+    "sha": "52cc64bf554de012ea201e7439a90473a31a6db6"
+  },
+  {
+    "path": "skills/lesson-plan/references/differentiation/sped-strategies.md",
+    "type": "blob",
+    "size": 3544,
+    "sha": "56fcac62241540df006a07edf7813420bea6de08"
+  },
+  {
+    "path": "skills/lesson-plan/references/edge-cases.md",
+    "type": "blob",
+    "size": 6067,
+    "sha": "1c6336d528d07df8a8d0c1d2018031a7930ef7e3"
+  },
+  {
+    "path": "skills/lesson-plan/references/grade-calibration.md",
+    "type": "blob",
+    "size": 4751,
+    "sha": "6a33e3a0ba1d9dd43f15c8ff03bed8c3d487e232"
+  },
+  {
+    "path": "skills/lesson-plan/references/output-contract.md",
+    "type": "blob",
+    "size": 3418,
+    "sha": "8799e4c7823f32d1e263b4986307953b4ad0bbe7"
+  },
+  {
+    "path": "skills/lesson-plan/references/pedagogy/5e.md",
+    "type": "blob",
+    "size": 3136,
+    "sha": "89591082d1c54ffa9058150c1ed53c76708007ab"
+  },
+  {
+    "path": "skills/lesson-plan/references/pedagogy/gradual-release.md",
+    "type": "blob",
+    "size": 3178,
+    "sha": "24fcff1106d264046c93f8315c3b8d3627fb12f1"
+  },
+  {
+    "path": "skills/lesson-plan/references/pedagogy/madeline-hunter.md",
+    "type": "blob",
+    "size": 2088,
+    "sha": "3ab715a9423d3688a14334b0afc7064d954ef33f"
+  },
+  {
+    "path": "skills/lesson-plan/references/pedagogy/udl.md",
+    "type": "blob",
+    "size": 3925,
+    "sha": "c9da57e7d407acdb05900af3ccf03debe7c8537c"
+  },
+  {
+    "path": "skills/lesson-plan/references/standards/cambridge.md",
+    "type": "blob",
+    "size": 2233,
+    "sha": "9f06b413bdc76de9382618906f865db625142ce9"
+  },
+  {
+    "path": "skills/lesson-plan/references/standards/common-core-ela.md",
+    "type": "blob",
+    "size": 5108,
+    "sha": "10e4e3915c376e532ec765c403eed00b67d58e3d"
+  },
+  {
+    "path": "skills/lesson-plan/references/standards/common-core-math.md",
+    "type": "blob",
+    "size": 4954,
+    "sha": "295c802a42e2ee4486b535eb8b773930e4509612"
+  },
+  {
+    "path": "skills/lesson-plan/references/standards/ib.md",
+    "type": "blob",
+    "size": 3605,
+    "sha": "7c06587a098ed3638aa68c4e77b39463b067a99e"
+  },
+  {
+    "path": "skills/lesson-plan/references/standards/ngss.md",
+    "type": "blob",
+    "size": 4563,
+    "sha": "400b322e0dcee2f43725b366a25a1cb8c053f20d"
+  },
+  {
+    "path": "skills/lesson-plan/references/standards/state-frameworks.md",
+    "type": "blob",
+    "size": 4067,
+    "sha": "de65b61c76d505a1c6bc62f4099ccd90158392f3"
+  },
+  {
+    "path": "skills/lesson-plan/references/templates/lesson-plan.md",
+    "type": "blob",
+    "size": 3142,
+    "sha": "483f67705b2d992b1c9ac69edafbb7223aa7e08b"
+  },
+  {
+    "path": "skills/lesson-plan/references/templates/multi-day-unit.md",
+    "type": "blob",
+    "size": 3008,
+    "sha": "e8ae49ca0fd8917a237b7343fc6fc4aa67c84880"
+  },
+  {
+    "path": "skills/lesson-plan/references/templates/sub-plan.md",
+    "type": "blob",
+    "size": 2537,
+    "sha": "7f1d8affd69f8e6f2d0307563911d4b5a6abbcf4"
+  },
+  {
+    "path": "skills/lesson-plan/references/workflow.md",
+    "type": "blob",
+    "size": 5425,
+    "sha": "69163fc94cfeb29d553ff9a60666ecbc58bfee28"
+  }
+]

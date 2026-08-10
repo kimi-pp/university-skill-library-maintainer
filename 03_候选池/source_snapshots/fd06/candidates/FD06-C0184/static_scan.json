@@ -1,0 +1,97 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "tebook (gently) For each submitted notebook, **secret-gate first** (grep the source for `os.environ`, `getenv`, `HF_TOKEN`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `load_dotenv`, hard-coded `hf_*`/`sk-*`); if it needs se"
+      }
+    ],
+    "file_write": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "draft → run deterministic mechanical checks → execute the notebooks → editorial pass → write **one consolidated feedback file** with per-section readiness flags and a missing-items checklist. - **Is NOT** — a grader (see the hard rule), the di"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "list (don't demand the three standard notebooks) and acknowledge the choice positively. Write the file to `<student-folder>/final_assignment/<prefix>_assignment_draft_feedback_<DATE>.md` (create the `final_assignment/` sub"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+        "snippet": "name!r}\") continue if member.is_dir(): target.mkdir(parents=True, exist_ok=True) continue target.parent.mkdir(parents=True, exist_ok=True)"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+        "snippet": "get.mkdir(parents=True, exist_ok=True) continue target.parent.mkdir(parents=True, exist_ok=True) with zf.open(member) as src, open(target, \"wb\") as dst: shutil"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+        "snippet": "nd input_path.suffix.lower() == \".zip\": dest = workdir / \"extracted\" dest.mkdir(parents=True, exist_ok=True) safe_extract_zip(input_path, dest, warnings) return dest if input_path"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+        "snippet": "type=Path) args = ap.parse_args(argv) warnings: list[str] = [] args.workdir.mkdir(parents=True, exist_ok=True) try: scan_root = materialize(args.input, args.workdir, warnings) except ("
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+        "snippet": "continue target.parent.mkdir(parents=True, exist_ok=True) with zf.open(member) as src, open(target, \"wb\") as dst: shutil.copyfileobj(src, dst) if skipped_env: warnings.append( f\"Skippe"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "ever a grade. Trigger on requests like \"give feedback on this assignment draft\", \"review <student>'s final assignment submission\", \"feedback on the eClass submission for <student>\", \"the student submitted an early draft, what should they improve\","
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "eClass (use automation_infrastructure/eclass/download_submissions.py); or to edit/fix the student's notebooks. One submission per invocation. If the input is ambiguous (multiple students match, no notebooks, a .rar that can't be extracted), ask"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "n file in the **instructor's voice**, in **English**, that helps the student improve. The student may have submitted **any part** of the assignment — one notebook, or one notebook half-finished. Give feedback on what *is* there; route what's missing to a checklist at"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "he **two-digit** class year (e.g. `class_26` for 2026). - `<lastname_t>` is the canonical student slug — surname + first-name initial(s), e.g. `argyriou_t` (a multi-part first name adds an initial each: `surname_a_b`). It is the same scheme"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "ts/inventory_submission.py` does the actual extract-or-read: always point it at the **one student's** submission, never at a folder holding several students. ## Boundaries & safety - **One submission per invocation.** For a batch,"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "ause it is the whole point.) ## Output One consolidated file, written into the **same** student folder the submission lives in: ``` students_work/class_<YY>/<lastname_t>/final_assignment/<prefix>_assignment_draft_feedback_<YYYY-MM-DD>.m"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "tor (= the student's `final_assignment/`). For an explicit emailed path with no obvious student folder, write next to the submission; if unsure where the student folder is, ask. - It sits alongside the downloaded submission, but never collides with i"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "r any tracked path** (a stray `exec_*.txt` at > the root is one `git add -A` from leaking student work on a public repo; gitleaks scans for > secrets, not PII). Writers that cannot use `/tmp` (some subagent sandboxes) must"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/references/feedback_rubric.md",
+        "snippet": "do not synthesise a feedback section for it. - Recognise the **work-data alternative**: a student may use a single work-related dataset and implement only the relevant algorithms (or different, more appropriate ones) — this is allowed"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/references/tone_and_format.md",
+        "snippet": "missing sections in prose — flag ◻️ and route to the missing-items list. - Don't echo the student's name or notebook contents anywhere except inside the feedback file itself (it's gitignored PII). - Don't pad. If a section"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/references/tone_and_format.md",
+        "snippet": "xable thing, and cross-link a `FileNotFoundError` to the relative-path guidance. - If the student declared the **work-data alternative** at the top of a notebook, adapt: don't demand the three standard notebooks, and acknowledge the ch"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/references/tone_and_format.md",
+        "snippet": "e or notebook contents anywhere except inside the feedback file itself (it's gitignored PII). - Don't pad. If a section is genuinely fine, say so in a line and move on. ## Canonical feedback-file template ```m"
+      }
+    ],
+    "human_review": [
+      {
+        "file": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+        "snippet": "how to improve, never a grade. Trigger on requests like \"give feedback on this assignment draft\", \"review <student>'s final assignment submission\", \"feedback on the eClass submission for <student>\", \"the student submitted an"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,197 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "SKILL.md",
+        "snippet": "md\"]; cross [label=\"Phase 1 Step 2b: 跨章检查\\n一致性验证\"]; draft [label=\"Phase 1 Step 3: 生成初版报告\\n按 output-template.md\"]; interact [label=\"Phase 2: 交互式精修\\n逐章讨论 / 调整 / 补充\"]; final [label=\"生成最终评审意见书\" shape=doub"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "-结果对应 | 🟢/🔴 | {详情} | | 引用-文献一致性 | 🟢/🔴 | {详情} | | 图表编号连续性 | 🟢/🔴 | {详情} | ``` ### Step 3 — 生成初版评审报告 **读取 `output-template.md` 获取评审意见书模板。** 将 Step 1 和 Step 2 的所有分析结果，按模板格式汇总为完整的评审意见书。 关键要求： - 所有占位符必须替换为实际内容 - \"具体位置\"列尽"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "所有占位符必须替换为实际内容 - \"具体位置\"列尽量精确 - 修改优先级建议（第四部分）从各章评审中提取所有 🔴 和 🟡 条目，去重合并 - 总结部分需给出修改的优先顺序建议 保存初版报告为 `{filename}-review-draft.md`（与论文同目录）。 输出提示： > \"初版评审报告已生成并保存至 `{path}`。\" 随后自动进入 Phase 2。 ## Phase 2：交互式精修 向用户展示操作菜单"
+      },
+      {
+        "file": "README.md",
+        "snippet": "move opinions └─ User says \"完成精修\" to finalize │ ▼ [Final] Merge all changes → save final review report as Markdown ``` ## Review Dimensions ### 1. Academic Quality Abstract, introduction/literature review, materials & me"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "构完整性、研究问题、全局印象） ├─ Step 2: 逐章 + 全局分析（170+ 检查项） ├─ Step 2b: 跨章一致性检查 └─ Step 3: 生成初版评审报告 │ ▼ [Phase 2: 交互式精修] ├─ 逐章讨论具体问题 ├─ 追问、调整意见、补充遗漏 └─ 用户说\"完成精修\"生成最终版 │ ▼ [最终输出] 合并修改 → 保存最终评审"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "sis.docx ``` 或英文： ``` Review this master's thesis: /path/to/thesis.docx ``` 技能将自动转换、分析并生成结构化评审报告。 ## 触发关键词 - 中文：论文评审、学位论文、审阅论文、论文修改意见、硕士论文、博士论文、毕业论文 - 英文：thesis review、dissertation review、thesis feedback、PhD thesis"
+      },
+      {
+        "file": "output-template.md",
+        "snippet": "# 评审意见书输出模板 本模板供 Phase 1 Step 3（生成评审报告）和最终输出使用。生成时替换所有 `{...}` 占位符为实际内容。 --- ## 模板正文 ``` # {学术/专业}{硕士/博士}学位论文评审意见书 ## 论文基本信息 | 项目 | 内容 | |------|------| | 论文题目"
+      },
+      {
+        "file": "output-template.md",
+        "snippet": "和建设性。} {博士论文额外补充：对论文达到博士学位水平的整体判断，以及距离答辩还需重点加强的方面。} ``` --- ## 使用说明 1. Phase 1 Step 3 生成初版报告时，按此模板填充所有章节 2. Phase 2 交互精修时，在初版报告基础上修改 3. 最终版保存时，确保模板中所有 `{...}` 占位符已被替换为实际内容 4. 严重程度标记必须一致使用：🔴 严重问题 / 🟡 需改进 / 🟢 良好 5."
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "SKILL.md",
+        "snippet": ":\"Agents365-ai\",\"version\":\"3.0.0\"} --- # 学位论文评审 ## 概述 系统化评审各学科硕士和博士学位论文。以导师视角提供建设性反馈，帮助学生在提交前改进论文质量。 **支持学科领域：** - 生命科学（生物学、生物医学、生态学、农学） - 医学（临床医学、基础医学、公共卫生、药学） - 计算机科学与人工智能（CS、AI、ML、软件工程） - 工学（机械、电气、化工、土木、材料"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "优点**：不要只挑问题，好的地方要明确标注 🟢 4. **区分严重程度**：🔴 仅用于真正影响论文核心质量的问题，不要滥用 5. **导师视角**：语气应兼具严谨和关怀，目标是帮助学生成长 6. **学科专业性**：根据论文所属学科，重点关注该学科特有的方法论要求、数据规范、术语规范和评审惯例（参见 `disciplines/` 目录下的学科专项检查清单） 7. **学位层次适配**：博士论文需更高标准——创新性必须体现"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "标准合规**：格式规范以 GB/T 7713.1-2006 为基准，参考文献以 GB/T 7714-2015 为基准，量和单位以 GB 3100-3102-93 为基准 9. **盲审风险意识**：从盲审评审专家的角度审视论文，预警可能导致退回或大修的问题（选题、创新性、学术性、规范性、写作水平）"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "范以 GB/T 7713.1-2006 为基准，参考文献以 GB/T 7714-2015 为基准，量和单位以 GB 3100-3102-93 为基准 9. **盲审风险意识**：从盲审评审专家的角度审视论文，预警可能导致退回或大修的问题（选题、创新性、学术性、规范性、写作水平）"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "# 学位论文评审 (Thesis Reviewer) [English](README.md) 系统化评审各学科硕士和博士学位论文的 AI 编程助手技能。**导师**和**学生**均可使用——导师用于生成结构化评审反馈，学生用于提交前自查、提前发现盲审风险。 ### 适用对象 | 角色 | 使用场景 | |------|----------| | **导师/副导师** | 为学生生成结构化评审意见书，170+"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "wer) [English](README.md) 系统化评审各学科硕士和博士学位论文的 AI 编程助手技能。**导师**和**学生**均可使用——导师用于生成结构化评审反馈，学生用于提交前自查、提前发现盲审风险。 ### 适用对象 | 角色 | 使用场景 | |------|----------| | **导师/副导师** | 为学生生成结构化评审意见书，170+ 检查项确保不遗漏 | | **学生** | 提"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "](README.md) 系统化评审各学科硕士和博士学位论文的 AI 编程助手技能。**导师**和**学生**均可使用——导师用于生成结构化评审反馈，学生用于提交前自查、提前发现盲审风险。 ### 适用对象 | 角色 | 使用场景 | |------|----------| | **导师/副导师** | 为学生生成结构化评审意见书，170+ 检查项确保不遗漏 | | **学生** | 提交前自查——提前发现盲审风险"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "成结构化评审反馈，学生用于提交前自查、提前发现盲审风险。 ### 适用对象 | 角色 | 使用场景 | |------|----------| | **导师/副导师** | 为学生生成结构化评审意见书，170+ 检查项确保不遗漏 | | **学生** | 提交前自查——提前发现盲审风险，在导师和评审专家看到之前修复问题 | | **答辩委员** | 快速评估论文质量，辅助出具评审意见 | ## 功能特点 | 功能"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "适用对象 | 角色 | 使用场景 | |------|----------| | **导师/副导师** | 为学生生成结构化评审意见书，170+ 检查项确保不遗漏 | | **学生** | 提交前自查——提前发现盲审风险，在导师和评审专家看到之前修复问题 | | **答辩委员** | 快速评估论文质量，辅助出具评审意见 | ## 功能特点 | 功能 | 说明 | |------|------| | 全学科覆盖 |"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "| |------|----------| | **导师/副导师** | 为学生生成结构化评审意见书，170+ 检查项确保不遗漏 | | **学生** | 提交前自查——提前发现盲审风险，在导师和评审专家看到之前修复问题 | | **答辩委员** | 快速评估论文质量，辅助出具评审意见 | ## 功能特点 | 功能 | 说明 | |------|------| | 全学科覆盖 | 7 个学科专项模块 + 通用评审框"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "交互式精修 | | 170+ 检查项 | 通用 149 项 + 学科专项 22-34 项 | | 博士专项评审 | 原创贡献评价、独立研究能力、研究体系系统性、学术成果 | | 盲审风险预警 | 模拟盲审评审维度（选题/创新性/学术性/规范性/写作），预判风险 | | 结构化输出 | 正式评审意见书格式，可直接交给学生 | | 严重程度标记 | 🔴 严重 / 🟡 需改进 / 🟢 良好，清晰的优先级 | | 国家标准对齐"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "170+ 检查项 | 通用 149 项 + 学科专项 22-34 项 | | 博士专项评审 | 原创贡献评价、独立研究能力、研究体系系统性、学术成果 | | 盲审风险预警 | 模拟盲审评审维度（选题/创新性/学术性/规范性/写作），预判风险 | | 结构化输出 | 正式评审意见书格式，可直接交给学生 | | 严重程度标记 | 🔴 严重 / 🟡 需改进 / 🟢 良好，清晰的优先级 | | 国家标准对齐 | 依据 GB/T"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "SKILL.md",
+        "snippet": "章节 | 变更内容 | 理由 | |------|------|------|----------|------| | 1 | 调整 | 第3章 | 🔴→🟡 \"对照组设置\" | 导师判断：有对照但不够完善 | | 2 | 补充 | 第4章 | 新增 🟡 \"缺少误差线\" | 导师发现遗漏 | | 3 | 删除 | 第2章 | 移除 \"文献综述不全面\" | 导师认为已覆盖核心文献 | ``` ## 最终输出 当用户选择\"完"
+      },
+      {
+        "file": "README.md",
+        "snippet": "# Thesis Reviewer — Systematic Thesis Review for All Disciplines [中文文档](README_CN.md) An AI coding agent skill for systematically reviewing master's and doctoral"
+      },
+      {
+        "file": "README.md",
+        "snippet": "checklist items) ├─ Step 2b: Cross-chapter consistency checks └─ Step 3: Generate draft review report │ ▼ [Phase 2: Interactive Refinement] ├─ Discuss specific chapters in depth ├─ Ask follow-up que"
+      },
+      {
+        "file": "README.md",
+        "snippet": "-----------| | `{filename}-converted.md` | Converted Markdown text | | `{filename}-review-draft.md` | Phase 1 draft review report | | `{filename}-review-final.md` | Final review report | ## Files - `SKILL.md` — main skill instructions, load"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "SKILL.md",
+        "snippet": "Full-spectrum review: academic quality, writing quality, formatting, data analysis, and academic integrity. Adapts review standards based on degree level and discipline. license: MIT homepage: https://github.com/Agents365-ai"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "贯性、论证严密性、语言表达） 3. 格式规范（GB/T 7713.1 结构完整性、图表规范、参考文献 GB/T 7714） 4. 数据与结果（数据呈现、统计分析、图表质量） 5. 学术诚信与规范（引用规范、数据真实性、独创性声明） **严重程度标记：** - 🔴 严重问题：必须修改，影响论文核心质量 - 🟡 需改进：建议修改，提升论文整体水平 - 🟢 良好：该方面表现良好，值得肯定 **输出语言：** 简体中文 ##"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "表达）— 需通读全文才能评判 - 维度三：格式规范（论文结构完整性、页面设置、图表规范、参考文献、公式编排等） - 维度四：数据与结果（统计分析、图表质量、可重复性） - 维度五：学术诚信（学术不端检查、引用规范） - 跨章检查（研究问题↔结果、方法↔数据、引用↔文献列表一致性等） 每分析完一章，向用户输出该章的分析结果，格式： ``` ### 第 N 章：{章节标题} **本章概要**：{概括} | 标记 | 问题/"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "需通读全文才能评判 - 维度三：格式规范（论文结构完整性、页面设置、图表规范、参考文献、公式编排等） - 维度四：数据与结果（统计分析、图表质量、可重复性） - 维度五：学术诚信（学术不端检查、引用规范） - 跨章检查（研究问题↔结果、方法↔数据、引用↔文献列表一致性等） 每分析完一章，向用户输出该章的分析结果，格式： ``` ### 第 N 章：{章节标题} **本章概要**：{概括} | 标记 | 问题/意见 |"
+      },
+      {
+        "file": "README.md",
+        "snippet": "imensions**: academic quality, writing quality, formatting (GB/T 7713.1), data & results, academic integrity - **Two-phase workflow**: Phase 1 auto deep analysis → Phase 2 interactive refinement - **149 universal checklist items"
+      },
+      {
+        "file": "README.md",
+        "snippet": "on, figure quality (axis labels, legends, color-blind friendly), reproducibility. ### 5. Academic Integrity Plagiarism detection, image manipulation, data fabrication, citation ethics, originality declaration completeness. ###"
+      },
+      {
+        "file": "README.md",
+        "snippet": "(axis labels, legends, color-blind friendly), reproducibility. ### 5. Academic Integrity Plagiarism detection, image manipulation, data fabrication, citation ethics, originality declaration completeness. ### Discipline"
+      },
+      {
+        "file": "README.md",
+        "snippet": "eproducibility. ### 5. Academic Integrity Plagiarism detection, image manipulation, data fabrication, citation ethics, originality declaration completeness. ### Discipline-Specific Modules | Module | Covers | |--------"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "| 学术/专业学位 | 区分学术学位与专业学位的不同评审要求（依据 2025 学位法） | | 五维评审 | 学术质量、写作质量、格式规范（GB/T 7713.1）、数据与结果、学术诚信 | | 两阶段流程 | Phase 1 自动深度分析 → Phase 2 交互式精修 | | 170+ 检查项 | 通用 149 项 + 学科专项 22-34 项 | | 博士专项评审 | 原创贡献评价、独立研究能力、研究体系系统性、学术"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "### 4. 数据与结果 图表类型选择、误差线/置信区间、统计检验方法（参数/非参数）、p 值标注、多重比较校正、图表质量（坐标轴、图例、色盲友好）、可重复性。 ### 5. 学术诚信 抄袭检测、图片不当处理、数据可疑、引用规范、独创性声明完整性。 ### 学科专项模块 | 模块 | 覆盖内容 | |------|----------| | **生命科学** | 实验设计（对照、重复）、试剂/仪器记录、生物学命名（基"
+      },
+      {
+        "file": "README_CN.md",
+        "snippet": "4. 数据与结果 图表类型选择、误差线/置信区间、统计检验方法（参数/非参数）、p 值标注、多重比较校正、图表质量（坐标轴、图例、色盲友好）、可重复性。 ### 5. 学术诚信 抄袭检测、图片不当处理、数据可疑、引用规范、独创性声明完整性。 ### 学科专项模块 | 模块 | 覆盖内容 | |------|----------| | **生命科学** | 实验设计（对照、重复）、试剂/仪器记录、生物学命名（基因斜体"
+      },
+      {
+        "file": "agents/openai.yaml",
+        "snippet": "review across 5 dimensions (academic quality, writing, formatting per GB/T 7713.1, data, academic integrity) - 149 universal checklist items plus 22-34 discipline-specific supplements (170+ per review) - PhD-specific evalua"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "disciplines/cs-ai.md",
+        "snippet": "# 社会影响与伦理（CS/AI 专项） - [ ] 是否讨论了研究的社会影响和伦理考量（broader impact）？ - [ ] 如涉及 AI 系统，是否分析了公平性/偏见（fairness / bias）问题？ - [ ] 是否评估了研究的潜在负面应用或滥用风险？ - [ ] 是否报告了计算开销（GPU 类型和小时数、训练成本）？ - [ ] 是否说明了计算资源的环境成本/碳足迹（如适用）？ ## 子方向专项（根据论文方向"
+      },
+      {
+        "file": "disciplines/cs-ai.md",
+        "snippet": "S/AI 专项） - [ ] 是否讨论了研究的社会影响和伦理考量（broader impact）？ - [ ] 如涉及 AI 系统，是否分析了公平性/偏见（fairness / bias）问题？ - [ ] 是否评估了研究的潜在负面应用或滥用风险？ - [ ] 是否报告了计算开销（GPU 类型和小时数、训练成本）？ - [ ] 是否说明了计算资源的环境成本/碳足迹（如适用）？ ## 子方向专项（根据论文方向选择适用项）"
+      },
+      {
+        "file": "disciplines/cs-ai.md",
+        "snippet": "的时间复杂度和空间复杂度是否分析？ - [ ] 模型架构图是否清晰、完整？ - [ ] 是否与相关的 baseline 方法进行了充分比较？ - [ ] baseline 选择是否公平合理（包含最新 SOTA 方法）？ - [ ] 消融实验（ablation study）是否充分验证了各模块的贡献？ ### 实验设计 - [ ] 数据集选择是否恰当？是否使用了该领域公认的 benchmark 数据集？ - [ ] 数据"
+      },
+      {
+        "file": "disciplines/cs-ai.md",
+        "snippet": "型的失败案例（failure cases / error analysis）？ - [ ] 模型的鲁棒性是否测试（对抗样本、分布偏移、噪声数据）？ - [ ] AI 系统是否考虑了公平性/偏见分析（如适用）？ - [ ] 安全性评估是否充分（如涉及安全关键应用）？ ## 代码与数据可重复性 - [ ] 源代码是否开源或承诺开源？是否提供了 GitHub 仓库链接？ - [ ] 是否提供了完整的环境配置文件（requi"
+      },
+      {
+        "file": "disciplines/cs-ai.md",
+        "snippet": "术语）？ ## 社会影响与伦理（CS/AI 专项） - [ ] 是否讨论了研究的社会影响和伦理考量（broader impact）？ - [ ] 如涉及 AI 系统，是否分析了公平性/偏见（fairness / bias）问题？ - [ ] 是否评估了研究的潜在负面应用或滥用风险？ - [ ] 是否报告了计算开销（GPU 类型和小时数、训练成本）？ - [ ] 是否说明了计算资源的环境成本/碳足迹（如适用）？ ##"
+      },
+      {
+        "file": "disciplines/cs-ai.md",
+        "snippet": "ator agreement）？ - [ ] 是否声明了 LLM 的使用方式（如用于数据增强、评估等）？ ### 计算机视觉 - [ ] 是否分析了数据集的偏见（类别不平衡、场景偏差等）？ - [ ] 数据增强策略是否清晰说明？ - [ ] 可视化结果是否有定性分析和解释？ ### 系统与应用 - [ ] 可扩展性分析是否充分（数据量/用户量增长时的性能表现）？ - [ ] 是否考虑了实际部署中的工程约束（延迟、内存"
+      },
+      {
+        "file": "disciplines/social-sciences.md",
+        "snippet": "- [ ] 论证是否避免了循环论证？ - [ ] 价值判断与事实判断是否区分清晰？ - [ ] 研究结论是否注意了外部效度（推广性）的限制？ - [ ] 问卷调查是否考虑了共同方法偏差（CMB）并进行了检验（Harman 单因素检验等）？ - [ ] 缺失数据的处理方法是否说明（列表删除、多重插补等）？ - [ ] 定性研究是否报告了编码者间信度（inter-coder reliability）？ - [ ] 定性研究是"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "disciplines/medicine.md",
+        "snippet": "[ ] 多因素分析是否控制了混杂因素？ - [ ] Meta 分析是否评估了异质性（I²统计量）和发表偏倚（漏斗图）？ ## 医学伦理与规范 - [ ] 患者隐私是否得到保护（匿名化/去标识化）？ - [ ] 涉及人类遗传资源的研究是否获得科技部批准？ - [ ] 药物/器械临床试验是否获得 NMPA 批件（如适用）？ - [ ] 是否声明了利益冲突？ - [ ] 中药方剂是否给出了完整的组方和剂量？ ## 医学术语"
+      },
+      {
+        "file": "disciplines/medicine.md",
+        "snippet": "多因素分析是否控制了混杂因素？ - [ ] Meta 分析是否评估了异质性（I²统计量）和发表偏倚（漏斗图）？ ## 医学伦理与规范 - [ ] 患者隐私是否得到保护（匿名化/去标识化）？ - [ ] 涉及人类遗传资源的研究是否获得科技部批准？ - [ ] 药物/器械临床试验是否获得 NMPA 批件（如适用）？ - [ ] 是否声明了利益冲突？ - [ ] 中药方剂是否给出了完整的组方和剂量？ ## 医学术语规范"
+      }
+    ]
+  },
+  "read_errors": []
+}

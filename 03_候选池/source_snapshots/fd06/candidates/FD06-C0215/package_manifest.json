@@ -1,0 +1,98 @@
+[
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/LICENSE",
+    "type": "blob",
+    "size": 11357,
+    "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/SKILL.md",
+    "type": "blob",
+    "size": 15904,
+    "sha": "ead6c5c2e8a27bd8ab6cc111e1785ba65fd20de1"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/NOTICE",
+    "type": "blob",
+    "size": 294,
+    "sha": "e259f74bf0b6b8dae1d0ac26f39c8b592327f113"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/ela.md",
+    "type": "blob",
+    "size": 26557,
+    "sha": "a706352223b58861b16b30edaa9cdc90a0986908"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/example_differentiation.json",
+    "type": "blob",
+    "size": 15459,
+    "sha": "5370906eb79934ff78d40ffc097635a54864347c"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/learning-commons-kg.md",
+    "type": "blob",
+    "size": 12899,
+    "sha": "438038982738f23891dc92b1eda1f2b2f6211455"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/math.md",
+    "type": "blob",
+    "size": 20215,
+    "sha": "0dd76fa27ab58b14f5dc745d2134bc5fbab1be0f"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/output.md",
+    "type": "blob",
+    "size": 16132,
+    "sha": "72182d9c9735746cab4a29f88e716718c63eb176"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/science.md",
+    "type": "blob",
+    "size": 23692,
+    "sha": "7237e98788536b5ad46da22cd942369c926185c3"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/references/social_studies.md",
+    "type": "blob",
+    "size": 22789,
+    "sha": "f0c34b1cd1d81d3b9a0c56cd6d983b052871c0b2"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/scripts/lesson_common.py",
+    "type": "blob",
+    "size": 33326,
+    "sha": "c16e16589a626eb83774b4accfa8f41ac9060670"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/scripts/render_all.sh",
+    "type": "blob",
+    "size": 2127,
+    "sha": "0bd6b8bb830b0d41ce7a95ebdac631512ec401ef"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/scripts/render_documents.py",
+    "type": "blob",
+    "size": 4677,
+    "sha": "20445fc37028634e17934e1d5956c5628fe3148f"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/scripts/render_lesson_docx.py",
+    "type": "blob",
+    "size": 25982,
+    "sha": "1fc827ab31070a55853f3bdd82e891bc209e8ba7"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/scripts/render_lesson_html.py",
+    "type": "blob",
+    "size": 17148,
+    "sha": "edb7f95cd85e6d47545dab8c0cfb76781f2c66b0"
+  },
+  {
+    "path": "plugin/skills/k12-lesson-differentiation/scripts/theme.css",
+    "type": "blob",
+    "size": 5293,
+    "sha": "ebe1fe761a4889e50668b3bdab25499647c6cf0a"
+  }
+]

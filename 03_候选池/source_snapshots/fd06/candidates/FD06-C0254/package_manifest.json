@@ -1,0 +1,32 @@
+[
+  {
+    "path": ".gitignore",
+    "type": "blob",
+    "size": 35,
+    "sha": "039528085e838115c23f75ecbc5dc1c1e7776fc5"
+  },
+  {
+    "path": "README.md",
+    "type": "blob",
+    "size": 3889,
+    "sha": "c6ec510972e11e9b66e2a1e7b79194ab47b61dc9"
+  },
+  {
+    "path": "SKILL.md",
+    "type": "blob",
+    "size": 7331,
+    "sha": "adf8f6da00c83b5324c671c19a5bab6abf5da925"
+  },
+  {
+    "path": "agents/openai.yaml",
+    "type": "blob",
+    "size": 246,
+    "sha": "7915242526c52cf95072d2b58f0cb7dc48281ccf"
+  },
+  {
+    "path": "references/general-context.md",
+    "type": "blob",
+    "size": 20759,
+    "sha": "459263e5ef39b7f643d9b96dc8f60fb3052ee846"
+  }
+]

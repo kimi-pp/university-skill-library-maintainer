@@ -1,0 +1,21 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "skills/historical-thinking/historical-thinking-assessment-designer/SKILL.md",
+        "snippet": "st Thanksgiving 1621\"* Source note: \"J.L.G. Ferris, *The First Thanksgiving 1621*, oil on canvas, painted c. 1912–1915, published 1932.\" **Question:** \"Does this painting help historians understand the relationship"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/historical-thinking/historical-thinking-assessment-designer/SKILL.md",
+        "snippet": "nt-technique-selector\" - \"criterion-referenced-rubric-generator\" - \"gap-analysis-from-student-work\" - \"historical-source-adapter\" teacher_time: \"4 minutes\" tags: [\"assessment\", \"historical-thinking\", \"formative-asses"
+      },
+      {
+        "file": "skills/historical-thinking/historical-thinking-assessment-designer/SKILL.md",
+        "snippet": "e about student thinking than multiple choice, but they also measure writing ability.** A student who thinks historically but writes poorly may score lower than their historical thinking warrants. Teachers should supplement written assessments with observation during d"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/experiential-kolb-teaching/SKILL.md",
+        "snippet": "with a retrieval check. Enforces desirable-difficulty discipline: never summarize for the learner, never name the concept before they have reconstructed its mechanism. Use when tutoring a genomics/ML module, designing a Kolb sess"
+      },
+      {
+        "file": "skills/experiential-kolb-teaching/SKILL.md",
+        "snippet": "se. 3. **Withhold and ladder (AC).** Climb the Bloom ladder until the mechanism is in the learner's words. Name the concept *only after* they've reconstructed it. 4. **Route the claim.** Learner drafts the evergreen note via [[zett"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "path": "skills/abstraction-concrete-examples/SKILL.md",
+    "type": "blob",
+    "size": 4591,
+    "sha": "476510570df52128c5cd124168f49a07a5858ae8"
+  },
+  {
+    "path": "skills/abstraction-concrete-examples/resources/evaluators/rubric_abstraction_concrete_examples.json",
+    "type": "blob",
+    "size": 5188,
+    "sha": "0b7e136124aaee519e2d62d2cdf2e338e246642c"
+  },
+  {
+    "path": "skills/abstraction-concrete-examples/resources/examples/api-design.md",
+    "type": "blob",
+    "size": 4945,
+    "sha": "f37c20a62b114c81b0799ad43890594d6996a104"
+  },
+  {
+    "path": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+    "type": "blob",
+    "size": 8593,
+    "sha": "c8809979e606f9e386ad7d06c93c051e1d613dff"
+  },
+  {
+    "path": "skills/abstraction-concrete-examples/resources/methodology.md",
+    "type": "blob",
+    "size": 11832,
+    "sha": "a27bc796b473ddaafc763bf693ab2576e20c3935"
+  },
+  {
+    "path": "skills/abstraction-concrete-examples/resources/template.md",
+    "type": "blob",
+    "size": 7070,
+    "sha": "46a5adc4f4a99775c3e627155639f4105cef43d0"
+  }
+]

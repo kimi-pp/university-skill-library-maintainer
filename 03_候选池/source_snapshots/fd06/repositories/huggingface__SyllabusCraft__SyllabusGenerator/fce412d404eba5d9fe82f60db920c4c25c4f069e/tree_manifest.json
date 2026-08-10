@@ -1,0 +1,42 @@
+{
+  "repository": "SyllabusCraft/SyllabusGenerator",
+  "fixed_version": "fce412d404eba5d9fe82f60db920c4c25c4f069e",
+  "tree": [
+    {
+      "type": "directory",
+      "oid": "4064ed240087e51a8d5d1cc4ad728a413644e636",
+      "size": 0,
+      "path": "src"
+    },
+    {
+      "type": "file",
+      "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519,
+      "path": ".gitattributes"
+    },
+    {
+      "type": "file",
+      "oid": "88a3d42894d90412f1143120fbca9d7f419e92bf",
+      "size": 456,
+      "path": "Dockerfile"
+    },
+    {
+      "type": "file",
+      "oid": "d76be5034e63e3a68c04f15198a104bebfd8ce1a",
+      "size": 459,
+      "path": "README.md"
+    },
+    {
+      "type": "file",
+      "oid": "28d994e22f8dd432b51df193562052e315ad95f7",
+      "size": 23,
+      "path": "requirements.txt"
+    },
+    {
+      "type": "file",
+      "oid": "99d0b84662681e7d21a08fcce44908344fa86f80",
+      "size": 1125,
+      "path": "src/streamlit_app.py"
+    }
+  ]
+}

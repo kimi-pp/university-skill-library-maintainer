@@ -1,0 +1,165 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "ing-semester student support for university professors. 5-agent team covering feedback on student work (Hattie & Timperley structured, single or batch), struggling-student intervention plans, recommendation letters with bi"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "drafts only, evidence-bound, professor verifies before sending. Triggers on: feedback on student work, grade comments, struggling student, recommendation letter, reference letter, student email, office hours, advising, mentoring"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "tudent work, grade comments, struggling student, recommendation letter, reference letter, student email, office hours, advising, mentoring, thesis student, difficult conversation, 学生反馈, 批改, 评语, 推荐信, 学生邮件, 答疑, 指导学生, 研究生指导, 师"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "tus → next step); batch runs build a comment bank from recurring patterns | | `struggling-student` | A student is missing work, sliding, disengaging | Evidence-based intervention plan + outreach email draft from `templates/intervention_outreach_t"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "e interview → letter draft grounded only in intake answers, with bias-language check | | `student-email` | Grade disputes, integrity concerns, extension requests, bad news | Difficult-communication draft: acknowledge → facts → decis"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "| | `feedback_writer_agent` | Structures comments per Pedagogy Foundations §8; quotes the student's actual work; calibrates tone to stakes; runs batch fairness checks | | `intervention_advisor_agent` | Assembles what the evidence s"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "idence-bound.** Every evaluative claim traces to material the professor provided — the student's work, the professor's notes, the gradebook record. Agents never invent anecdotes, qualities, ratings, or comparisons. Gaps are marked `[NEEDS PROFESSOR INPUT: ...]"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "they confirm it. ## Workflow (`feedback` mode) ``` Phase 0 INTAKE — collect: the student work, the rubric (invite assessment-architect output if it exists), and the professor's actual judgme"
+      },
+      {
+        "file": "student-mentor/agents/communication_coach_agent.md",
+        "snippet": "Procedural language only; the case office owns the process — no verdict language ever | | FERPA-like privacy: parents, employers, other students asking about a student | Default refusal template; records-office cons"
+      },
+      {
+        "file": "student-mentor/agents/feedback_writer_agent.md",
+        "snippet": "Writer — Judgment-to-Comment Structurer ## Role You turn the professor's assessment of student work into feedback that produces learning. The professor supplies the judgment (margin notes, rubric scores, gut reads); you"
+      },
+      {
+        "file": "student-mentor/agents/feedback_writer_agent.md",
+        "snippet": "eleton, never a finished comment. Every individual comment still quotes or cites *that student's* work. If you cannot point to where the pattern appears in this submission, the bank entry does not apply. 3. **Fairness c"
+      },
+      {
+        "file": "student-mentor/agents/feedback_writer_agent.md",
+        "snippet": "ucture carries the evidence-quoting requirement (every comment locates the thing in the student's work) and ends with the non-removable verify-before-release block, so the guard ships *inside* the artifact rather than"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "invented anecdotes, qualities, ratings, or comparisons — ever, in any mode. 2. **Final human pass.** Every artifact carries the non-removable verify-before-sending reminder. The professor's personal verification is the last gate, not this skill. 3. **Drafts only.**"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "red, single or batch), struggling-student intervention plans, recommendation letters with bias-aware language checks, difficult student communications, office-hours preparation, and grad-student/advisee mentoring p"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "reference letter\" | Intake interview → letter draft grounded only in intake answers, with bias-language check | | `student-email` | Grade disputes, integrity concerns, extension requests, bad news | Difficult-commu"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "y Foundations §8; quotes the student's actual work; calibrates tone to stakes; runs batch fairness checks | | `intervention_advisor_agent` | Assembles what the evidence shows (and doesn't), drafts invitation-tone outre"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "n_writer_agent` | Runs the intake interview first; drafts only from intake answers; flags bias-pattern language; offers the decline-gracefully alternative when evidence is thin | | `communication_coach_agent` | Dif"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "nk entry pasted without grounding is flagged, not shipped Phase 3 FAIRNESS — same rubric level ⇒ same severity of comment across students; outliers surfaced at the chec"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "6. **The judgment is the professor's.** The skill sharpens expression, structure, and fairness. Any change that shifts the substance of an assessment — softer, harsher, more confident — is flagged at the checkpo"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "ed bad→good rewrites - `references/recommendation_letter_guide.md` — intake question set; bias-pattern table; decline-gracefully scripts; logistics checklist - `references/integrity_process_guide.md` — the generi"
+      },
+      {
+        "file": "student-mentor/agents/communication_coach_agent.md",
+        "snippet": "T: ...]`): | Territory | Flag | |-----------|------| | Student alleges discrimination or bias in grading | Draft nothing substantive; acknowledge receipt + consult chair/equity office first | | Formal integrity pr"
+      },
+      {
+        "file": "student-mentor/agents/communication_coach_agent.md",
+        "snippet": "ation or bias in grading | Draft nothing substantive; acknowledge receipt + consult chair/equity office first | | Formal integrity proceedings (beyond initial concern) | Procedural language only; the case office owns"
+      },
+      {
+        "file": "student-mentor/agents/feedback_writer_agent.md",
+        "snippet": "ment (margin notes, rubric scores, gut reads); you supply the structure, specificity, and fairness discipline. You are a writing partner for the professor's evaluation — **you do not grade, and you do not adjust grades"
+      },
+      {
+        "file": "student-mentor/agents/feedback_writer_agent.md",
+        "snippet": "t to where the pattern appears in this submission, the bank entry does not apply. 3. **Fairness check (mandatory before checkpoint):** same rubric level ⇒ same severity of comment. Scan the batch: if two students"
+      },
+      {
+        "file": "student-mentor/agents/feedback_writer_agent.md",
+        "snippet": ".md` (+ `comment_bank.md` in batch runs); present at a 🧑 checkpoint with tone-shift and fairness flags listed first."
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "ate work, regrades, AI use) | `course-designer` | | Designing AI-resilient assessments so misconduct is harder (prevention, not a live case) | `assessment-architect` (`integrity-check`) | | Deciding guilt, choosing a san"
+      },
+      {
+        "file": "student-mentor/SKILL.md",
+        "snippet": "ble fiction. A recommendation letter with an invented anecdote is not a draft; it is a fabrication with the professor's name on it. 2. **Final human pass.** Every artifact ends with a one-line reminder that the prof"
+      },
+      {
+        "file": "student-mentor/agents/integrity_case_agent.md",
+        "snippet": "t a professor at the single most exposed point in this whole suite: they suspect academic misconduct on a specific student's work and every other mode bounces them here. You do **four** things and refuse a fifth. You hel"
+      },
+      {
+        "file": "student-mentor/agents/integrity_case_agent.md",
+        "snippet": ", never invented specifics, never a fabricated match. - You never estimate probability of misconduct, never assign guilt, never recommend or rank sanctions — if asked, you restate this boundary and route to the office."
+      },
+      {
+        "file": "student-mentor/agents/recommendation_writer_agent.md",
+        "snippet": "nted. This converts \"don't fabricate\" from a rule you must remember into a form where a fabrication is a *visibly blank source cell*. - Built **only** from intake answers. Every anecdote, quality, and comparison in the"
+      },
+      {
+        "file": "student-mentor/templates/intake_record_template.md",
+        "snippet": "comparison that appears in the letter must trace to a row here. A claim with no row is a fabrication — this record exists so a fabrication shows up as a *blank source cell*, not as fluent prose nobody can check. **Relat"
+      },
+      {
+        "file": "student-mentor/templates/intake_record_template.md",
+        "snippet": "must trace to a row here. A claim with no row is a fabrication — this record exists so a fabrication shows up as a *blank source cell*, not as fluent prose nobody can check. **Relationship:** {{how the professor knows t"
+      },
+      {
+        "file": "student-mentor/templates/integrity_case_template.md",
+        "snippet": "and, or unverifiable}} **What this record does NOT establish:** intent, a cause, or that misconduct occurred. Those are for the student to respond to and the institution to adjudicate. ## Part 2 — Student meeting-invit"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "student-mentor/agents/recommendation_writer_agent.md",
+        "snippet": ". **Destination:** target program/job, what they select for, deadline, format, portal, confidentiality waiver status. 5. **Reservations:** anything the professor would not want to be asked about under oath. ## Phase 2 — H"
+      },
+      {
+        "file": "student-mentor/agents/recommendation_writer_agent.md",
+        "snippet": "ake every one a choice rather than an accident. ## Rules - Draft, never send or upload. Confidentiality-waiver and portal logistics are `[NEEDS PROFESSOR INPUT: ...]` items. - Privacy minimalism: full legal name only when"
+      },
+      {
+        "file": "student-mentor/references/recommendation_letter_guide.md",
+        "snippet": "] Submission route: portal link / email / sealed paper — `[NEEDS PROFESSOR INPUT]` - [ ] Confidentiality waiver: signed/waived? (changes candor calculus; the professor should know before drafting) — `[NEEDS PROFESSOR I"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "student-mentor/templates/intervention_outreach_template.md",
+        "snippet": "> In-session identifier only ({{student_initials}}); replace with the student's name at > export. Nothing in this document enters the Course Passport. --- ## Part 1 — Outreach email draft (invitation tone) **Subject:** Checking in — {{cour"
+      }
+    ]
+  },
+  "read_errors": []
+}

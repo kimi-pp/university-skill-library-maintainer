@@ -1,0 +1,53 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": ", not extra评语. #### HTML Requirements The HTML must be self-contained and readable in a browser without external network assets. Use embedded CSS and, when useful, inline SVG or CSS-only visuals. Include: - Title"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "aims. If the content script cannot generate its full automatic report because an LLM SDK/API key is unavailable or a script fallback fails, use `content_check/paper_text_extracted.txt` as the authoritative extracted"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "ese-language BUAA theses. ## Workflow ### 0. Prepare a Safe Workspace For each thesis, create a dedicated output directory. When evaluating multiple PDFs in parallel, give each worker an exclusive directory and never share intermedi"
+      },
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "hat only minor revisions are recommended. ### 5. Produce Markdown and HTML Deliverables Create an output directory for the review artifacts. Use a deterministic naming pattern when possible: ```text buaa_thesis_review_YYYYM"
+      },
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "hesis-checking description: 北航学位论文综合评审技能。用于对北京航空航天大学硕士、博士论文或本科毕业设计PDF进行”格式检查 + 内容审核 + 学术评语生成 + Markdown/HTML报告交付”的串联评审。当用户要求论文评阅意见、学术评语、论文不足与修改建议、北航论文综合检查、thesis checking、论文格式与内容同时审核、生成机器可读Markdown和给人看的图文并茂HTML时使用。该技能必须先使用 buaa-th"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "机器可读Markdown和给人看的图文并茂HTML时使用。该技能必须先使用 buaa-thesis-format-checking，再核对其可能的误报（特别是行内文字间距过大问题需人工核对），随后使用 buaa-thesis-content-checking，最后生成两块核心中文评语并同时交付Markdown与HTML。注意：行内文字间距过大/视觉空洞问题无法自动检测，格式检查后必须人工核对PDF页面。 --- # BUA"
+      },
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "aa-thesis-content-checking，最后生成两块核心中文评语并同时交付Markdown与HTML。注意：行内文字间距过大/视觉空洞问题无法自动检测，格式检查后必须人工核对PDF页面。 --- # BUAA Thesis Checking ## Overview Use this skill to compose a final thesis review opinion from two existi"
+      },
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "直接查看提取文本中是否存在摘要段落。 - 关键词检测可能失败：如果”关键词：”和实际关键词内容在不同行，可能匹配失败。 IMPORTANT额外格式检查项（自动化脚本无法检测，必须人工核对）: - **行内文字间距过大/视觉空洞**: 检查正文页面是否存在行内文字间距明显不均、形成视觉空白区域的问题（表现为文字两端对齐但内部有明显缝隙）。这需要打开PDF直接查看，不能依赖文本提取。如果发现此类问题，应在修改意见中指出”正文"
+      },
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": "```markdown # 北航学位论文综合评审意见 ## 元数据 - 论文文件: ... - 论文类型: cn|en - 评审时间: ... - 格式检查: 已执行，并已人工核对候选问题 - 内容审核: 已执行 ## 学术评语 ... ## 不足、问题与修改意见 ... ## 证据摘要 - 新见解/贡献: ... - 技术难度与工作量依据: ... - 已核实的格式/写作问题: ... - 不确定或需人"
+      },
+      {
+        "file": "skills/buaa-thesis-checking/SKILL.md",
+        "snippet": ". ## 不足、问题与修改意见 ... ## 证据摘要 - 新见解/贡献: ... - 技术难度与工作量依据: ... - 已核实的格式/写作问题: ... - 不确定或需人工复核事项: ... ``` `学术评语` and `不足、问题与修改意见` remain the only two substantive review-opinion blocks. `元数据` and `证据摘要` are support"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,300 @@
+{
+  "repository": "ms732/ScholarAgent",
+  "fixed_version": "2ed9fbf4747cc7d6952f45e05835c14729bc2861",
+  "tree": [
+    {
+      "type": "directory",
+      "oid": "05d9c2a9e1e4dd8eb042fa063f795d08e7f4125a",
+      "size": 0,
+      "path": ".github"
+    },
+    {
+      "type": "directory",
+      "oid": "e4504db78a80b3b7daf2753c98a09462cd221ff5",
+      "size": 0,
+      "path": ".github/workflows"
+    },
+    {
+      "type": "directory",
+      "oid": "3c6a80c1de7323ea0add26b0d595e18115ad67e4",
+      "size": 0,
+      "path": ".streamlit"
+    },
+    {
+      "type": "directory",
+      "oid": "225c6409559d0040d41e5635e139dc2a3d59b41e",
+      "size": 0,
+      "path": "core"
+    },
+    {
+      "type": "directory",
+      "oid": "b6b1e5e499b9ceeb2ee391752bdaa86a96f22f46",
+      "size": 0,
+      "path": "docs"
+    },
+    {
+      "type": "directory",
+      "oid": "2f072d6b7bd34daa3bbde9546ac77ae84dbb6466",
+      "size": 0,
+      "path": "docs/superpowers"
+    },
+    {
+      "type": "directory",
+      "oid": "fa105c878745ff5700c37c5128a08a43aba546d6",
+      "size": 0,
+      "path": "docs/superpowers/specs"
+    },
+    {
+      "type": "directory",
+      "oid": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "size": 0,
+      "path": "static"
+    },
+    {
+      "type": "directory",
+      "oid": "1462f92e1affe4b8769559adacb7327eaf7896f7",
+      "size": 0,
+      "path": "tests"
+    },
+    {
+      "type": "directory",
+      "oid": "f67b38dbb33b4fb873884c86745e1fdda7688429",
+      "size": 0,
+      "path": "tools"
+    },
+    {
+      "type": "directory",
+      "oid": "f353dff4e6db1ea8334743eb8dbddfba9d773bfd",
+      "size": 0,
+      "path": "utils"
+    },
+    {
+      "type": "file",
+      "oid": "9f956a013b5dd0085bb7278b66f121f50a09274a",
+      "size": 174,
+      "path": ".dockerignore"
+    },
+    {
+      "type": "file",
+      "oid": "df42afde813fdc8fbdc2497303071c3aa7f70801",
+      "size": 36,
+      "path": ".env.example"
+    },
+    {
+      "type": "file",
+      "oid": "c3d4c04e92d9dd53a732558ad677c735ed68d25b",
+      "size": 518,
+      "path": ".github/workflows/ci.yml"
+    },
+    {
+      "type": "file",
+      "oid": "59dafb9c4c7aede86d5c2e2c46664f19f203ff59",
+      "size": 1554,
+      "path": ".github/workflows/sync-to-hf.yml"
+    },
+    {
+      "type": "file",
+      "oid": "4bbee687b1e53784f99e79cbed1bba021e568f44",
+      "size": 221,
+      "path": ".gitignore"
+    },
+    {
+      "type": "file",
+      "oid": "53fa2dfd2e4dbef42893b78ea1a989068bb93b89",
+      "size": 381,
+      "path": ".streamlit/config.toml"
+    },
+    {
+      "type": "file",
+      "oid": "9e4ee980a5b2548601e0f212bf3c74821dc539f4",
+      "size": 1300,
+      "path": "Dockerfile"
+    },
+    {
+      "type": "file",
+      "oid": "877b0e511488fe6abbe64b2728b921d915d547a5",
+      "size": 10590,
+      "path": "README.md"
+    },
+    {
+      "type": "file",
+      "oid": "ee2fd99807eb19fcb5b0b15496014ae6530fc2f3",
+      "size": 39521,
+      "path": "app.py"
+    },
+    {
+      "type": "file",
+      "oid": "1429e0281e190f35ee2b9b9f8cb1ed7cceae1fab",
+      "size": 4088,
+      "path": "config.py"
+    },
+    {
+      "type": "file",
+      "oid": "55cf1f3fd9ac00f12f0092cee94a53d0bc32a923",
+      "size": 82,
+      "path": "core/__init__.py"
+    },
+    {
+      "type": "file",
+      "oid": "2033430afee7da2f7c43224da108bd53aec7ecc6",
+      "size": 10481,
+      "path": "core/agent.py"
+    },
+    {
+      "type": "file",
+      "oid": "8ee2799ae9c1c0eb0f6ae01982de5a9db0aff7cf",
+      "size": 4492,
+      "path": "core/exporter.py"
+    },
+    {
+      "type": "file",
+      "oid": "a976324d3a5ffba0fea00088f1a8e52d248ce0a9",
+      "size": 4809,
+      "path": "core/paper_fetcher.py"
+    },
+    {
+      "type": "file",
+      "oid": "f80ff5321fdbefa670b7b0a49dc7918f82674a4b",
+      "size": 9058,
+      "path": "core/pdf_parser.py"
+    },
+    {
+      "type": "file",
+      "oid": "649fb448b58d900db36367f8fb99f98d659ee852",
+      "size": 4650,
+      "path": "core/rag_chain.py"
+    },
+    {
+      "type": "file",
+      "oid": "e7ff37c280210eefb7236b2d01226b8b2ec682fd",
+      "size": 1811,
+      "path": "core/reranker.py"
+    },
+    {
+      "type": "file",
+      "oid": "3386e0ef6574bf43d45f1353fe2afc4aa5ce58c1",
+      "size": 15138,
+      "path": "core/reviewer.py"
+    },
+    {
+      "type": "file",
+      "oid": "9c506afc7430c894fe5a04c3aea6385dfea01f0d",
+      "size": 4189,
+      "path": "core/uploader.py"
+    },
+    {
+      "type": "file",
+      "oid": "2c8bc129b6448ead7f51be4c6c2ce8fb7b689e18",
+      "size": 9039,
+      "path": "core/vector_store.py"
+    },
+    {
+      "type": "file",
+      "oid": "91a36c49f416c4ea5055c57682374c1f5e272ab7",
+      "size": 4882,
+      "path": "docs/superpowers/specs/2026-06-28-paper-upload-review-design.md"
+    },
+    {
+      "type": "file",
+      "oid": "cd3cf3ec929ebf5fc8d5e65d878f99f0e1d5094f",
+      "size": 16,
+      "path": "packages.txt"
+    },
+    {
+      "type": "file",
+      "oid": "cf8e3c55da1e663c9dcb5d05aecdb332c8b0a762",
+      "size": 246,
+      "path": "pyproject.toml"
+    },
+    {
+      "type": "file",
+      "oid": "7537e046e2376456ed70f02e688cca674854ea02",
+      "size": 46,
+      "path": "requirements-dev.txt"
+    },
+    {
+      "type": "file",
+      "oid": "964ecd7f11d41b6d7b7ae91f569126637ce3dad6",
+      "size": 543,
+      "path": "requirements.txt"
+    },
+    {
+      "type": "file",
+      "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "path": "static/.gitkeep"
+    },
+    {
+      "type": "file",
+      "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "path": "tests/__init__.py"
+    },
+    {
+      "type": "file",
+      "oid": "70cac6c98d45125d678943ed1c5f74ce9151f881",
+      "size": 1254,
+      "path": "tests/test_agent_sources.py"
+    },
+    {
+      "type": "file",
+      "oid": "2849de524eb6a3434f41a9dd0b523c330748716b",
+      "size": 900,
+      "path": "tests/test_helpers.py"
+    },
+    {
+      "type": "file",
+      "oid": "b0335fdf9b19e6bb2914f0f9bc1ea5afe397c65e",
+      "size": 942,
+      "path": "tests/test_pdf_parser.py"
+    },
+    {
+      "type": "file",
+      "oid": "5613887e27e182e5c5fa2b7ac7beba99f83680ca",
+      "size": 1246,
+      "path": "tests/test_reviewer.py"
+    },
+    {
+      "type": "file",
+      "oid": "e91d63fbebc97bb47659a61431df38e6a4fdfcb2",
+      "size": 356,
+      "path": "tools/__init__.py"
+    },
+    {
+      "type": "file",
+      "oid": "e567f5dfd8dc241e311a68d9a4f16f921645e674",
+      "size": 2312,
+      "path": "tools/compare_tool.py"
+    },
+    {
+      "type": "file",
+      "oid": "fd3d39624f61c29df7d5863080781ae8106b8d11",
+      "size": 2138,
+      "path": "tools/extract_tool.py"
+    },
+    {
+      "type": "file",
+      "oid": "1fd89530ad8d8c939779382782e547474d6ed149",
+      "size": 2284,
+      "path": "tools/qa_tool.py"
+    },
+    {
+      "type": "file",
+      "oid": "b7499d398c7d013c854e43cf7ff9908c595144c4",
+      "size": 1604,
+      "path": "tools/search_tool.py"
+    },
+    {
+      "type": "file",
+      "oid": "a0df75a140b0a6636ae0b7855f4660c8b386c2b7",
+      "size": 209,
+      "path": "utils/__init__.py"
+    },
+    {
+      "type": "file",
+      "oid": "7e0a5297c2bcbaf01ed10785643ae55e631637b2",
+      "size": 4193,
+      "path": "utils/helpers.py"
+    }
+  ]
+}

@@ -1,0 +1,1617 @@
+{
+  "repository": "AlemTuzlak/skills",
+  "fixed_version": "7a6c6dbb104244f02d8e584b6efc94013cc67c37",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5a0436feedd034934aa993bfcb9fa580508c624"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8e1554f4253f3d1a30c9a38684def0c6a037587",
+      "size": 244
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ab72b27e21adcd4feb0eb8a31e86c3c0c6fd394",
+      "size": 602
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac617faedfd0d078cfb15206e10bbee86b5c7069",
+      "size": 20
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63b8ffbf7f46d94e58fb08d8d406e9752d2b1b90",
+      "size": 2685
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca931eb5e0f057855e88b3683ccaf149a50a66cf",
+      "size": 377
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d3561b6f48e08295932bc5218028f1065d85400",
+      "size": 19849
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "276feed307c8f1ccabb7c2d3896c954bf48914a5"
+    },
+    {
+      "path": "skills/accessible-html",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3089176f45dc140bf69b2954f5a15919882b408"
+    },
+    {
+      "path": "skills/accessible-html/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc440edc2d1d7513756d01cacc4049076367242c",
+      "size": 4663
+    },
+    {
+      "path": "skills/accessible-html/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b0a5f838df1d022cb8dc0703ddaf7f0f0e312b3",
+      "size": 14999
+    },
+    {
+      "path": "skills/accessible-html/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "322e827dde2c3e2c7c7323f0764cbf3adb8297dc"
+    },
+    {
+      "path": "skills/accessible-html/hooks/a11y-guard.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "379c59d49f1fac308b074dbb8368858ea7f4648a",
+      "size": 6677
+    },
+    {
+      "path": "skills/accessible-html/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ab94aabda53b419b28eb2e9b66a3543dc4f473b"
+    },
+    {
+      "path": "skills/accessible-html/references/audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "781fdb75aef18981a3c17cf7441cb9f968149637",
+      "size": 9686
+    },
+    {
+      "path": "skills/accessible-html/references/components.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623b573a36276277b1310482ec9f75ccdcb99fdf",
+      "size": 15206
+    },
+    {
+      "path": "skills/accessible-html/references/keyboard-and-focus.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c778df157efc0e2e8b0fd8a97b5c821a1a9ed090",
+      "size": 12387
+    },
+    {
+      "path": "skills/accessible-html/references/visual-and-motion.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c748ce192821f3d1ef57f82f6830bbe524116b1",
+      "size": 9518
+    },
+    {
+      "path": "skills/architecture-impact",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f37aad9af7ff913f989b11cfead96ce5adf07d2"
+    },
+    {
+      "path": "skills/architecture-impact/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "283b5c1a842e2d34b1a71f9727b1693b4b539436",
+      "size": 1706
+    },
+    {
+      "path": "skills/architecture-impact/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c74e6cfaece25caf676c4d695a765bcafd08d6f1",
+      "size": 15867
+    },
+    {
+      "path": "skills/blog-post",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b36eba9e5cce623b7707cdaea1ed588309c806b6"
+    },
+    {
+      "path": "skills/blog-post/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a14d1b9caf967997e0f5ba32a494e9678543bd7",
+      "size": 1918
+    },
+    {
+      "path": "skills/blog-post/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c901f70bf9fcf402e94fa2f7621bb0cbd1fdb2e",
+      "size": 13999
+    },
+    {
+      "path": "skills/changelog",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73253fee81e3b6967fd16664a6f6cf58c78f0fd1"
+    },
+    {
+      "path": "skills/changelog/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32d7529118455bcfde833b1e65809aab04588928",
+      "size": 1897
+    },
+    {
+      "path": "skills/changelog/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1beb7b88fed82fbc6e72a7015b1e71d39d83509",
+      "size": 8010
+    },
+    {
+      "path": "skills/docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2156e86d36e7ffddc308f830508a3be8d8a0bd12"
+    },
+    {
+      "path": "skills/docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b2c68ddb158bba3dfaf768d5ec67b6d4e0d7deb",
+      "size": 1629
+    },
+    {
+      "path": "skills/docs/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f44085bf3be2fafef75587e09d1861f995024751",
+      "size": 15759
+    },
+    {
+      "path": "skills/epic-workshop",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdc1d2a40da5ff4e239ef256c0637b8189878879"
+    },
+    {
+      "path": "skills/epic-workshop/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc5ee55fda43e41bedcd6e0d5161a4c604982a18",
+      "size": 2052
+    },
+    {
+      "path": "skills/epic-workshop/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53c1f017f34056137f2add208919c5b03c47a46c",
+      "size": 18093
+    },
+    {
+      "path": "skills/hyperframes-video",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e21157cfe869fb4e9d44299e83f7d1c994fe824"
+    },
+    {
+      "path": "skills/hyperframes-video/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aeb600d048905601f81b835718dd5b0b66b2fdf",
+      "size": 3585
+    },
+    {
+      "path": "skills/hyperframes-video/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae2fdf052694d6fe36e449e3ff64af3a23ba194c",
+      "size": 107713
+    },
+    {
+      "path": "skills/hyperframes-video/brand-detection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e23ab5cfe82be997e6e6cf59781ba93e5bb3478e",
+      "size": 3242
+    },
+    {
+      "path": "skills/hyperframes-video/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a107e3ca842012b79bade7867acd96e4a7145530"
+    },
+    {
+      "path": "skills/hyperframes-video/hooks/hook-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c6d03bc76ca0edbe39ff09db984001ed96bc06c",
+      "size": 3977
+    },
+    {
+      "path": "skills/hyperframes-video/hooks/hook-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "721c3ce9323593f9404bdea5634ce46c838acbe7",
+      "size": 2560
+    },
+    {
+      "path": "skills/hyperframes-video/patterns",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e77d3112233132c85d5f471805940d008ce3400f"
+    },
+    {
+      "path": "skills/hyperframes-video/patterns/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22dd064b45c96c2d87afa5e1f1736700ef612e46",
+      "size": 1113
+    },
+    {
+      "path": "skills/hyperframes-video/patterns/api-library-feature.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b61dbc744d96a4f35659ac21a53287e0dbbee93",
+      "size": 1652
+    },
+    {
+      "path": "skills/hyperframes-video/patterns/bug-fix.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba57dc28f933103a9626619b527f5bc9cd3cfc59",
+      "size": 1233
+    },
+    {
+      "path": "skills/hyperframes-video/patterns/generic-fallback.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f2e21904b739052fb6112f4f0337befe6ebfae",
+      "size": 931
+    },
+    {
+      "path": "skills/hyperframes-video/patterns/performance-win.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c5413fcfcd69923f80d7f359050abe6d2f49df",
+      "size": 1315
+    },
+    {
+      "path": "skills/hyperframes-video/patterns/ui-feature.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24e4353d5e8fcd98940fee747b0400c858642fe7",
+      "size": 1305
+    },
+    {
+      "path": "skills/hyperframes-video/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ef5fbb58d0a85c6586cf65f85a37d47964ceaff"
+    },
+    {
+      "path": "skills/hyperframes-video/references/visual-motifs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a70b155501e10afa82c09c321d83e0bcf2face72",
+      "size": 7328
+    },
+    {
+      "path": "skills/hyperframes-video/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5cf7f2fcbe0bb0dcfcb0d568bda8b9da91b5f88"
+    },
+    {
+      "path": "skills/hyperframes-video/templates/project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "770b49d7602ac9b1104cb3fc83afc81efeb203ac"
+    },
+    {
+      "path": "skills/hyperframes-video/templates/project/DESIGN.md.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a765f1e9f3921bb1316fc2c90a8c4aee6e25a002",
+      "size": 1143
+    },
+    {
+      "path": "skills/hyperframes-video/templates/project/index.html.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4570eaeb094497040985162fa1432a3d9c87f4e1",
+      "size": 1083
+    },
+    {
+      "path": "skills/hyperframes-video/templates/project/shiki-theme.json.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caff9f232b11f6761e218083fc15830ce85fbc84",
+      "size": 1425
+    },
+    {
+      "path": "skills/hyperframes-video/templates/project/styles.css.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4d140c3c99958d5d689075762ad2e0ffca83c62",
+      "size": 6064
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c1ae804ea524b1d50795aed2905b6275ddb8680"
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/BeforeAfter.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "469323f9cebed879be499bf1d7d7dd0fa3a1c91b",
+      "size": 3979
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/BulletList.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d6c3b9caf489b7bac8c1618d2da2d2fd83bd0f2",
+      "size": 3093
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/CTAEndScreen.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29ea356b34f4bbcf42299255ca346e9ed404948c",
+      "size": 2034
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/CodeSnippet.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd38fac3b0f675a8f9c5e8da25db7587c01e9d84",
+      "size": 3222
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/HookTitle.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54b28d55a3433829af7eaa323f19cb975aa6785f",
+      "size": 2030
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/LibrarySwap.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "656e2325057f8fafb10c59ff9f4f58767788adf2",
+      "size": 4068
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/MetricCompare.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bfcc77acf54dcc7917e4bed4367015ce21906ed",
+      "size": 4879
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/ProblemSetup.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f11db810c7af78de600a4283b011ed93b820d31a",
+      "size": 2640
+    },
+    {
+      "path": "skills/hyperframes-video/templates/scenes/UIShowcase.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be47dcd3845cfbd97a292b89a740de2141d1f8fe",
+      "size": 3045
+    },
+    {
+      "path": "skills/marketing-brief",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1042beca04a21b2c31316495a0c689b23de84a4"
+    },
+    {
+      "path": "skills/marketing-brief/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cf1f9cf39f914e111fe1242175a1300f9169702",
+      "size": 1990
+    },
+    {
+      "path": "skills/marketing-brief/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f1e4b476037400ee41ea5f1353af4a327a0b578",
+      "size": 9059
+    },
+    {
+      "path": "skills/marketing-pipeline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0d88c86d2ef1927f6c3f2e1f238546c8cd58451"
+    },
+    {
+      "path": "skills/marketing-pipeline/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7909f50e7711954ba80bb83f4a4fa1fdf110713b",
+      "size": 2247
+    },
+    {
+      "path": "skills/marketing-pipeline/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b34338a689f15533b4fe000a005315b7983294bf",
+      "size": 6204
+    },
+    {
+      "path": "skills/newsletter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9024ed8779f6c7372efa30ce4eb0c85e5648f7ad"
+    },
+    {
+      "path": "skills/newsletter/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed0747104043f778eac2bbfe02cceec3b1c244a",
+      "size": 1946
+    },
+    {
+      "path": "skills/newsletter/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e8ebdc7c248a39f3a7a7aad28bf0ee8d6aac336",
+      "size": 9447
+    },
+    {
+      "path": "skills/presentation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed7fc54804f0b2368cb101fcb3dc76891cceee29"
+    },
+    {
+      "path": "skills/presentation/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "252b60f3c344555fca8c99d345b7839abf52b8ee",
+      "size": 2652
+    },
+    {
+      "path": "skills/presentation/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9d0bc1a8bdb19738134032ecdfe33f6aa9f3c6",
+      "size": 8645
+    },
+    {
+      "path": "skills/presentation/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bab5a601fee5dada312178c226765b6e54f48ac5"
+    },
+    {
+      "path": "skills/presentation/assets/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc7b57ba9ec134615eb109f58c7dc2402e6cc3ba",
+      "size": 65260
+    },
+    {
+      "path": "skills/presentation/assets/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d47e2ab62336c45458f8735cc61295a01087b0b",
+      "size": 413
+    },
+    {
+      "path": "skills/presentation/assets/render-asset.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52917ab3c28aa849d602af0e05366cc66a5ea003",
+      "size": 5425
+    },
+    {
+      "path": "skills/presentation/assets/test-render-asset.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2482b7ee8f1a7f5cb81c5f21cb265781d8d0dd83",
+      "size": 1173
+    },
+    {
+      "path": "skills/presentation/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45cd1aa3e5d2b1cc2e5a3018c5d7502edf982a97"
+    },
+    {
+      "path": "skills/presentation/references/assets.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a597f69c392f845b09bee3705bff56f8236e7ab",
+      "size": 2938
+    },
+    {
+      "path": "skills/presentation/references/interview.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ba03f617a8eadf08b056976771db0169272d08e",
+      "size": 4426
+    },
+    {
+      "path": "skills/presentation/references/presentation-craft.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c2ea162454f312b70aea08caee245360de8b191",
+      "size": 9075
+    },
+    {
+      "path": "skills/presentation/references/research-grounding.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42af54d7c3e4fbb42735a68ac9a7fc78ce716254",
+      "size": 4415
+    },
+    {
+      "path": "skills/presentation/references/slidev-cheatsheet.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8482799b6431f2bb4b3524d1068c6b6703fc3f27",
+      "size": 6113
+    },
+    {
+      "path": "skills/presentation/references/technical-craft.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9664dcfbe14520ff4dfb024f0058ee338ee6fd0",
+      "size": 6203
+    },
+    {
+      "path": "skills/presentation/references/verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da556b2c55ef1c8b632632a3c8efb7d14e64bd7f",
+      "size": 2795
+    },
+    {
+      "path": "skills/produce-video",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b26e754dc0e6d4fef809b0ee5e0fa8b3c7b5980d"
+    },
+    {
+      "path": "skills/produce-video/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ece21b12ecb8a939cb27f4452696899b9751fb",
+      "size": 111
+    },
+    {
+      "path": "skills/produce-video/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ee59026026ebc35654ebe97cdd75e590ca22976",
+      "size": 15979
+    },
+    {
+      "path": "skills/produce-video/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b61d31f49deba4d57422e4cc1a5dfd00f1b9595e"
+    },
+    {
+      "path": "skills/produce-video/references/frame-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d6d277d00a90b3d2a0a0de95004faff84283ea2",
+      "size": 2023
+    },
+    {
+      "path": "skills/produce-video/references/framing-safe-zones.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ff0d8a466839dc106ac1063c0f1dd36082f2b2f",
+      "size": 2376
+    },
+    {
+      "path": "skills/produce-video/references/mistake-detection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42c48b9cb62b104e7b6522b4aa9ade4f60e7dbe3",
+      "size": 6406
+    },
+    {
+      "path": "skills/produce-video/references/overlay-triggers.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "747ea40a862b439effb559aae83bffdc0eb679ec",
+      "size": 5045
+    },
+    {
+      "path": "skills/produce-video/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "902833e0555ccc09569bd9cd3e0f9901612b8caa"
+    },
+    {
+      "path": "skills/produce-video/scripts/bake-cuts.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d21a816fc82364f51d284fdc827712b0034e364",
+      "size": 4709
+    },
+    {
+      "path": "skills/produce-video/scripts/bake-cuts.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b0c075b9f8ab66fd06466d9adc0ccd9a9edfd50",
+      "size": 743
+    },
+    {
+      "path": "skills/produce-video/scripts/desilence.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43e44a111a56edfcfb8fef5df4bad76a1549276e",
+      "size": 4522
+    },
+    {
+      "path": "skills/produce-video/scripts/desilence.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4093ee1c9408f6a942e9015d01149f5065d3e4f0",
+      "size": 878
+    },
+    {
+      "path": "skills/produce-video/scripts/extract-frame.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9525d2df68226b217db276729f40ff4413e8fcc7",
+      "size": 1434
+    },
+    {
+      "path": "skills/produce-video/scripts/extract-frame.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "909ed73aea7d08017416c9251175dbe3603a8c92",
+      "size": 501
+    },
+    {
+      "path": "skills/produce-video/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1904b557a70a7c1ecd73a559d16b012b47b17da"
+    },
+    {
+      "path": "skills/produce-video/templates/overlays",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f09aa885334bef829057ef2d5ad2c286e06a9cb6"
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/CodeSnippet.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cce9ac4cbbe607a379e10fea0a3564c1cd127ff4",
+      "size": 7957
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/Comparison.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43c6cca42f2dc4d359f281d11ebbacbe4808886",
+      "size": 6117
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/Diagram.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af5d24f9d62a5abae901ba5c1d8ec9d28e0e7cea",
+      "size": 5879
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/ImageEmbed.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c26479eac151e17e0c23dbf89a0c115e50fc0ecd",
+      "size": 4949
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/ListSteps.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b64ba56cbd0e3c76517921e5ba582078acd82c8",
+      "size": 5345
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/OnScreenHighlight.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13ca81ba8d293170f8725ef1c5dd6cb10fb70b06",
+      "size": 4889
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/PunchInZoom.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aad8892f1cb675655b097f2f8d437e3243ac204",
+      "size": 5097
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/SectionLabel.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda077bf6fbcef5481ffde880de2f7148555fd07",
+      "size": 4635
+    },
+    {
+      "path": "skills/produce-video/templates/overlays/WordHighlight.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbb7f0fde7eed47fbe5553b812db9a205f8fb512",
+      "size": 6592
+    },
+    {
+      "path": "skills/produce-video/templates/project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2278fe09ac562e6de03341c9a2c0e6d38a3ff1d"
+    },
+    {
+      "path": "skills/produce-video/templates/project/DESIGN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57d89da724c87da988e12362d0ebfb6b3f5a7e49",
+      "size": 1595
+    },
+    {
+      "path": "skills/produce-video/templates/project/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "507066a8f4e12f5cafd2d5bca9e4ee7a2e649726",
+      "size": 798
+    },
+    {
+      "path": "skills/remotion-video",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "389452473806a693bc32f59b801b727b406de103"
+    },
+    {
+      "path": "skills/remotion-video/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c247e1712742597e4b91f0bd2e69fddfc57aeb7e",
+      "size": 2603
+    },
+    {
+      "path": "skills/remotion-video/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0646efe3d1a8f3c5a7a0344e019b8bbb76c65861",
+      "size": 98060
+    },
+    {
+      "path": "skills/remotion-video/brand-detection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b6365f290e01b8e022a39cb35237fa46425112c",
+      "size": 3157
+    },
+    {
+      "path": "skills/remotion-video/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "376cfb4e6ddb83078f0da98f901a369e5f687ed5"
+    },
+    {
+      "path": "skills/remotion-video/hooks/hook-patterns.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c6d03bc76ca0edbe39ff09db984001ed96bc06c",
+      "size": 3977
+    },
+    {
+      "path": "skills/remotion-video/hooks/hook-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45808d8ecfcda060ba67a4df7e337fea9154f4ff",
+      "size": 2536
+    },
+    {
+      "path": "skills/remotion-video/patterns",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e77d3112233132c85d5f471805940d008ce3400f"
+    },
+    {
+      "path": "skills/remotion-video/patterns/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22dd064b45c96c2d87afa5e1f1736700ef612e46",
+      "size": 1113
+    },
+    {
+      "path": "skills/remotion-video/patterns/api-library-feature.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b61dbc744d96a4f35659ac21a53287e0dbbee93",
+      "size": 1652
+    },
+    {
+      "path": "skills/remotion-video/patterns/bug-fix.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba57dc28f933103a9626619b527f5bc9cd3cfc59",
+      "size": 1233
+    },
+    {
+      "path": "skills/remotion-video/patterns/generic-fallback.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f2e21904b739052fb6112f4f0337befe6ebfae",
+      "size": 931
+    },
+    {
+      "path": "skills/remotion-video/patterns/performance-win.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c5413fcfcd69923f80d7f359050abe6d2f49df",
+      "size": 1315
+    },
+    {
+      "path": "skills/remotion-video/patterns/ui-feature.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24e4353d5e8fcd98940fee747b0400c858642fe7",
+      "size": 1305
+    },
+    {
+      "path": "skills/remotion-video/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "753309e64efa069a0119ad97b9e15abee500af83"
+    },
+    {
+      "path": "skills/remotion-video/references/visual-motifs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cba8161e286916637ecae7cb9f487ae7866ffb52",
+      "size": 7316
+    },
+    {
+      "path": "skills/remotion-video/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9796c3388ac69797efd1718e21ff29ae9a0f6749"
+    },
+    {
+      "path": "skills/remotion-video/templates/project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb97c41e0a94e75ed3cecf1bb26997ccab706379"
+    },
+    {
+      "path": "skills/remotion-video/templates/project/Main.tsx.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12376860a45b2e06f96ac68855b1b1da17f24b40",
+      "size": 2493
+    },
+    {
+      "path": "skills/remotion-video/templates/project/Root.tsx.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7410b7fb21672b187181b5d6672fdbc999cdd9",
+      "size": 777
+    },
+    {
+      "path": "skills/remotion-video/templates/project/brand.ts.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29814b4d3970ae36e8235d5076efaef434474606",
+      "size": 761
+    },
+    {
+      "path": "skills/remotion-video/templates/project/fonts.ts.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a064863f27f60b6bba1a3e683e6306489207a1e",
+      "size": 195
+    },
+    {
+      "path": "skills/remotion-video/templates/project/highlight.tsx.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec5449ea1a78be4469a9bb5460872650d2a52fcb",
+      "size": 802
+    },
+    {
+      "path": "skills/remotion-video/templates/project/highlighted-code.tsx.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d58572647ae7e82056cc2dda832c0453d8868394",
+      "size": 4734
+    },
+    {
+      "path": "skills/remotion-video/templates/project/index.ts.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70d1108784c64fcb6b351d6536c55776f3d09070",
+      "size": 127
+    },
+    {
+      "path": "skills/remotion-video/templates/project/package.json.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cebeab1897d06b8f99c39abb56f2ede53abdc8b2",
+      "size": 904
+    },
+    {
+      "path": "skills/remotion-video/templates/project/remotion.config.ts.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c72007f69ecad53385a76836cc09efaad6c786d",
+      "size": 261
+    },
+    {
+      "path": "skills/remotion-video/templates/project/scene-background.tsx.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ab0457e798857f25e231e166e1d48a9441526d",
+      "size": 3405
+    },
+    {
+      "path": "skills/remotion-video/templates/project/shiki-theme.ts.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c93a55c33afd5da7e98dcba1eec8b68a4af3cfea",
+      "size": 4434
+    },
+    {
+      "path": "skills/remotion-video/templates/project/story-types.ts.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca3d753f3d6d3febceef30d336cc5a73efe693ca",
+      "size": 5876
+    },
+    {
+      "path": "skills/remotion-video/templates/project/tsconfig.json.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4713708854b6df2cbb5489a9ee97bd0eeb0eae54",
+      "size": 446
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f5a28a8e1f4b56cbb81c662f46bd5ac43274f1f"
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/BeforeAfter.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0dddec561ca7d2f8e6c8267f2537ba48cc1f314",
+      "size": 5837
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/BulletList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1d1d1cceb09a325993f00c8d7b7531e4f0a63b0",
+      "size": 3532
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/CTAEndScreen.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "959e47c96e4ca09c8f924714917154f9b9cf78be",
+      "size": 4155
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/CodeSnippet.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac0907c414cd4c931fb9d3b255fcab898e02c5b1",
+      "size": 3619
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/HookTitle.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a96ddde4b9e0215efddb91c9bdf01b1b6ddc7ed",
+      "size": 1665
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/LibrarySwap.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c95b23b998c47632df57ccba3b738d22670ed3f7",
+      "size": 3564
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/MetricCompare.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1117da82e59e6fb19deb2bc94738b297262db3d1",
+      "size": 2976
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/ProblemSetup.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3adb9de94927f6779e0fadca9feab45b1a3c02d0",
+      "size": 2682
+    },
+    {
+      "path": "skills/remotion-video/templates/scenes/UIShowcase.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f994603bbd560adfa222d8297f36973b075ee1",
+      "size": 6278
+    },
+    {
+      "path": "skills/rfc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fc867a750e03b9aff247de8cf28c61d45ba79ab"
+    },
+    {
+      "path": "skills/rfc/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f972ec634e5ce534b55081e055778b3053ba86bb",
+      "size": 1723
+    },
+    {
+      "path": "skills/rfc/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdcb9110d01bc82f6e1931e57b984fd0b880370b",
+      "size": 12799
+    },
+    {
+      "path": "skills/social-copy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9146f6ad99acc8c6e2ef944ac3bb268374ec736"
+    },
+    {
+      "path": "skills/social-copy/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2321f3968589e9bc2d52d229cfc0829f24df3674",
+      "size": 1898
+    },
+    {
+      "path": "skills/social-copy/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d50fe2a34ec90f39554de132b2071cd46de1555a",
+      "size": 12342
+    },
+    {
+      "path": "skills/social-copy/platforms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4234215d8c26810d9a600dc0fb5edb9b481b9e23"
+    },
+    {
+      "path": "skills/social-copy/platforms/linkedin.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad4c59609e62465d260f38473536e908d2663cb5",
+      "size": 3629
+    },
+    {
+      "path": "skills/social-copy/platforms/twitter-x.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a26f554220ce4020909116b1e330ab3666896258",
+      "size": 2183
+    },
+    {
+      "path": "skills/tanstack-branding",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d609486ae46976dda1ad17da50a156cbe6780136"
+    },
+    {
+      "path": "skills/tanstack-branding/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "298c540940021060bd2e527f1bcca7cd710d162f",
+      "size": 4844
+    },
+    {
+      "path": "skills/tanstack-branding/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df615d504024597f31510dfd3e4a5631ecf52508",
+      "size": 6572
+    },
+    {
+      "path": "skills/tanstack-branding/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3046b26b60dfadfdac002dccf619ce24706e6290"
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7eb49e1a90d4cc6b6cf8129f7cb028849e3bcaf"
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/BricolageGrotesque-Bold.ttf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2465b48adfcdd6ae84276f10f7938a6c8e6b8b",
+      "size": 82204
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/Inter-Black.ttf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e56c69d3c332469aff559b371e589621180e04d",
+      "size": 67904
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/Inter-ExtraBold.ttf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a9a1bcb9e098e00ecc5c041037f74ed209a4bf6",
+      "size": 327324
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/Inter-Regular.ttf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "399a6e0c3f49ee302979e0e1679817123c942a0f",
+      "size": 324820
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/Inter-latin-ext.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0125fa05c1b9bd6d9679c949dc58ec26ab71aaf",
+      "size": 133336
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/Inter-latin.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0d0e2e5c6bc11bf3696f830d73b4f7077cc33a4",
+      "size": 72920
+    },
+    {
+      "path": "skills/tanstack-branding/assets/fonts/OFL-Bricolage-Grotesque.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dfd4fe06651e7993ba12f7c2f031c1af0011bd8",
+      "size": 4402
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95da9a6bd81cbe44018df5816f6bdd88dd1bc2a0"
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-emblem-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f429755078fc9e3e42d78916f25880acd3026513",
+      "size": 1668
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-emblem-charcoal-256.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fd9af58edb7ab3b0a75ccd4ca51ddd84d1f3d55",
+      "size": 8649
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-emblem-charcoal.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1c1eedf2549486decf1a330796cc954225f5718",
+      "size": 1668
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-emblem-cream-256.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2efd75be2e9ca1ff678b90da2790b90326b90c1d",
+      "size": 9036
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-emblem-cream.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce610b729ef935b5399c39e2f5717d526df20544",
+      "size": 1668
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-emblem-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "345d52f1598d78d2fadd8305cd934c7b39a7e928",
+      "size": 1668
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-landscape-black-640.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "867a0fbbb0dfeb57a9b6fa04faabf77ee74d81b2",
+      "size": 9712
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-landscape-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a048f79eea59c562503ebf80d43bfaf145443b30",
+      "size": 4796
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-landscape-charcoal.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04682e9589c65b62f41d44e5b7d87f5a6c7107af",
+      "size": 4796
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-landscape-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ad4162f5ddb2572f0ff24b581a8e603fbbb90e",
+      "size": 4793
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-stacked-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "816042af29d63241760ee8288f137098359bcbba",
+      "size": 4816
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-stacked-charcoal.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3fcd4eeffdb38db0cb38bae0032a43eb9c62639",
+      "size": 4816
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-stacked-cream.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3ed7ec4c086351052bd49d370634dc0dc9b758c",
+      "size": 4816
+    },
+    {
+      "path": "skills/tanstack-branding/assets/logos/tanstack-stacked-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46fc6bbbaf60699f516053d90b44fb1e5701b177",
+      "size": 4813
+    },
+    {
+      "path": "skills/tanstack-branding/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68477a153be64c4beac13e106314cc0d32fcae48"
+    },
+    {
+      "path": "skills/tanstack-branding/references/layout-and-type.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06fa2ca03e4199cae2fce5fd6afc7188b84a65d1",
+      "size": 5173
+    },
+    {
+      "path": "skills/tanstack-branding/references/logos-and-assets.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "783468f21a7b8f65cc26364d5ffe07cef0cecaf5",
+      "size": 5590
+    },
+    {
+      "path": "skills/tanstack-branding/references/palette.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2b82eb8f16f1de7e668542bea6f33eb960d6199",
+      "size": 6625
+    },
+    {
+      "path": "skills/teach-me",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5843dcfbe4f5e5a939a925594ecdfc7ec48511e"
+    },
+    {
+      "path": "skills/teach-me/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2040361d7ecbff1fc7919c9f31de139fa3cf10f5",
+      "size": 10561
+    },
+    {
+      "path": "skills/teach-me/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87baeb4a57eff5b8ea35ca26744c83db8714b3b0",
+      "size": 30019
+    },
+    {
+      "path": "skills/teach-me/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a79a0dc7e62d0cf38f920a852459087264b8cf2"
+    },
+    {
+      "path": "skills/teach-me/assets/COMPONENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e782ea57cd415c8ac5781a9e37895afa4ed490e6",
+      "size": 12206
+    },
+    {
+      "path": "skills/teach-me/assets/build-html.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10b4d76562b347d50336edc13159b9492372f20",
+      "size": 15352
+    },
+    {
+      "path": "skills/teach-me/assets/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ac1c4cc146cc62988c23325ccebbef247a64d0d",
+      "size": 20948
+    },
+    {
+      "path": "skills/teach-me/assets/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02da15b3f2dcd9a6990c3ba93552c652c27c2815",
+      "size": 241
+    },
+    {
+      "path": "skills/teach-me/assets/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63c22e72051d3ffa5f1108f5119f3d77deaa9054",
+      "size": 46638
+    },
+    {
+      "path": "skills/teach-me/assets/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9b4f6f43b3fe31c2059ee70fa2e79709e395add"
+    },
+    {
+      "path": "skills/teach-me/assets/templates/WRITING_GUIDE.template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b97b26cc56f136a02e7fadc05b0463c7a530de37",
+      "size": 23762
+    },
+    {
+      "path": "skills/teach-me/assets/templates/index.template.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d9eff93cbc2261aad1b93268704f95dd14cf429",
+      "size": 3057
+    },
+    {
+      "path": "skills/teach-me/assets/viewer.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "117354447d23b843083aa9fd3241870c832e1e42",
+      "size": 32115
+    },
+    {
+      "path": "skills/transcribe-video",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "560611671618a04bd44f9e7cbc70256e1650482d"
+    },
+    {
+      "path": "skills/transcribe-video/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165b89b691cd96c3763fc5f3e0f74d8897a5dc86",
+      "size": 232
+    },
+    {
+      "path": "skills/transcribe-video/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3853cd3a4183a3e63967788ecb1f8103d4486cf",
+      "size": 3092
+    },
+    {
+      "path": "skills/transcribe-video/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c81d4c325c22a60b2a14c8a9b3c97320f587629"
+    },
+    {
+      "path": "skills/transcribe-video/assets/whisper-service",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1066c5fd689e3e01ef6c4257894890a9ec85eea3"
+    },
+    {
+      "path": "skills/transcribe-video/assets/whisper-service/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22fc913bca26498d272771127d6b2693ef3b084e",
+      "size": 1792
+    },
+    {
+      "path": "skills/transcribe-video/assets/whisper-service/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "641e399ee4aee245c793a47084d5f3118c4a6449",
+      "size": 7289
+    },
+    {
+      "path": "skills/transcribe-video/assets/whisper-service/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97be35b15819b54d897bdb6f8bf2daebc9784b30",
+      "size": 85
+    },
+    {
+      "path": "skills/transcribe-video/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f0883c730daee2e982224affd45219beb277ba3"
+    },
+    {
+      "path": "skills/transcribe-video/references/docker-lifecycle.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8539ba621d8af694eaa51f7da2a7a5b245db8082",
+      "size": 1549
+    },
+    {
+      "path": "skills/transcribe-video/references/provenance.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b32930c34d34b4207bc7e03b42822e65c3239e2",
+      "size": 1437
+    },
+    {
+      "path": "skills/transcribe-video/references/whisper-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b74b3aabfe1329cc57d9a54bcac9fb568aac3ff1",
+      "size": 1345
+    },
+    {
+      "path": "skills/transcribe-video/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1df417e2fb1718f2288a0acf416e7aa86f6923f"
+    },
+    {
+      "path": "skills/transcribe-video/scripts/argparse.test.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "570f6d91eb25550c10bb7b151a218f6c9c2da0dd",
+      "size": 864
+    },
+    {
+      "path": "skills/transcribe-video/scripts/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7028ad14b8be21683d0f91aa12de1dc071e04c4e"
+    },
+    {
+      "path": "skills/transcribe-video/scripts/fixtures/whisper-ojf-sample.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05b6dc283a88c5c0a63fe4f2125b4599f983494a",
+      "size": 6315
+    },
+    {
+      "path": "skills/transcribe-video/scripts/test_parse_full_json.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d865cb7d3bfa04a6e98ef4cf16f93468d114313f",
+      "size": 1241
+    },
+    {
+      "path": "skills/transcribe-video/scripts/transcribe.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4191c52268be528b14829ab03b5b7d96ccd5db80",
+      "size": 7779
+    },
+    {
+      "path": "skills/upgrade-dependencies",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bab6b481db3b0cf3cc182b892cd74f85509cd96"
+    },
+    {
+      "path": "skills/upgrade-dependencies/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47413e3d82fc24989cfb976a9e5f9565622cc7cb",
+      "size": 7343
+    },
+    {
+      "path": "skills/video-script",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0a8e97c21dd960d9cb80ee46b7451457c97e6f5"
+    },
+    {
+      "path": "skills/video-script/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0583cf0e8f5526e9cd0b1b21e2a665de1c46219a",
+      "size": 1789
+    },
+    {
+      "path": "skills/video-script/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2c07192a465f39cefe5867727ed27884a8233a",
+      "size": 10940
+    },
+    {
+      "path": "skills/youtube-copy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0916851413c7fde148e4e2698a5c43423f332e2"
+    },
+    {
+      "path": "skills/youtube-copy/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "372bfe0c2446d4930e402a50c626a3ac20fec145",
+      "size": 5307
+    }
+  ]
+}

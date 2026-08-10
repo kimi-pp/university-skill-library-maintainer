@@ -1,0 +1,326 @@
+[
+  {
+    "path": "skills/pre-submission-report/SKILL.md",
+    "type": "blob",
+    "size": 28659,
+    "sha": "b5359df54e9dc444729dd22b591338a51c7b6959"
+  },
+  {
+    "path": "agents/artifact-coherence-auditor.md",
+    "type": "blob",
+    "size": 12156,
+    "sha": "9af26fb6935c1414a834a98251eeee1baaf03638"
+  },
+  {
+    "path": "agents/blindspot.md",
+    "type": "blob",
+    "size": 19377,
+    "sha": "fa679f639ea460c50030c66cce934e8b4c946ad9"
+  },
+  {
+    "path": "agents/claim-verify.md",
+    "type": "blob",
+    "size": 20924,
+    "sha": "e73008a1b56ee47e71f2fc587e287d126d4880be"
+  },
+  {
+    "path": "agents/code-paper-auditor.md",
+    "type": "blob",
+    "size": 15918,
+    "sha": "d81c5c64221070e896748084e808c7c497b36ec3"
+  },
+  {
+    "path": "agents/domain-reviewer.md",
+    "type": "blob",
+    "size": 26503,
+    "sha": "4875f7271f39faab62a191bcc25d4ca80fc7c429"
+  },
+  {
+    "path": "agents/paper-critic.md",
+    "type": "blob",
+    "size": 39516,
+    "sha": "875694c56796ede7a74899d00f45705bc6b06a6d"
+  },
+  {
+    "path": "agents/referee2-reviewer.md",
+    "type": "blob",
+    "size": 41374,
+    "sha": "71e1dc1784a0404b42b4a1166c3a7f9e2edef771"
+  },
+  {
+    "path": "agents/reproducibility-auditor.md",
+    "type": "blob",
+    "size": 15495,
+    "sha": "249e294e49a5bd1061e909149be59e609bdd4e78"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/audit-checklists.md",
+    "type": "blob",
+    "size": 16119,
+    "sha": "ff07d1327d5ee938dadd77cc4842367f6b852d4e"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/council-mode.md",
+    "type": "blob",
+    "size": 768,
+    "sha": "37f09dc895d16a9e5db5996624b6ea34c75836db"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/deep-mode.md",
+    "type": "blob",
+    "size": 4661,
+    "sha": "1979c7fe375e646ca41ad4c62569192388b5f76a"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/grounded-mode.md",
+    "type": "blob",
+    "size": 8787,
+    "sha": "e38dc9baedfa80c68b7bd5c67285708b44da46b2"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/json-schema.md",
+    "type": "blob",
+    "size": 4363,
+    "sha": "8298a1281eb2d635e1d41254f52818ce900fdb38"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/causal-inference.md",
+    "type": "blob",
+    "size": 3074,
+    "sha": "38d3432c780838a1a8df3d3e3fa5662a8d1ce5b7"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/computational-simulation.md",
+    "type": "blob",
+    "size": 2975,
+    "sha": "9ffcfc6e2f35fe37fdee9996ec9b68818b0ac18d"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/content-analysis.md",
+    "type": "blob",
+    "size": 3504,
+    "sha": "ee1e142bd02bcfe801835ffd25aafdf25779e196"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/cross-cutting.md",
+    "type": "blob",
+    "size": 2581,
+    "sha": "990f55b15f95be0b3f4e168aa2b33409036ced34"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/experiments.md",
+    "type": "blob",
+    "size": 2922,
+    "sha": "1e3010b1a6384fcc466b1ec723b361d7462ea088"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/mcdm.md",
+    "type": "blob",
+    "size": 3903,
+    "sha": "3f6262bee41e3d6b4c1c6f835385cf821a04f219"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/ml-nlp.md",
+    "type": "blob",
+    "size": 3559,
+    "sha": "6906a453b397149a981ebcf16584123ff955b2da"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/survey-psychometrics.md",
+    "type": "blob",
+    "size": 3452,
+    "sha": "5764cc2ded78a9055ff54117a8da526fb39d08fb"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/report-template.md",
+    "type": "blob",
+    "size": 12071,
+    "sha": "8a98c7b03604c1b372c02a1c0829e58dc8f511ab"
+  },
+  {
+    "path": "skills/latex/SKILL.md",
+    "type": "blob",
+    "size": 18713,
+    "sha": "addbd0785c7a689f7dfd65c39de689e74534036b"
+  },
+  {
+    "path": "skills/latex/references/known-errors.md",
+    "type": "blob",
+    "size": 7463,
+    "sha": "a035960507d3c0a6cbcd357696fbbaaf41bf71c9"
+  },
+  {
+    "path": "skills/latex/references/latex-configs.md",
+    "type": "blob",
+    "size": 4313,
+    "sha": "c09d73b395c2586687b0e47a64388210d05b666a"
+  },
+  {
+    "path": "skills/latex/references/quality-rubric.md",
+    "type": "blob",
+    "size": 3729,
+    "sha": "6f16e06dbbd653c5759f303b02a8c028700f6b25"
+  },
+  {
+    "path": "skills/latex/references/source-pathologies.md",
+    "type": "blob",
+    "size": 10095,
+    "sha": "469b774166c7cf45b6dcaaa9e4ed685bd882dcf1"
+  },
+  {
+    "path": "skills/latex/references/templates.md",
+    "type": "blob",
+    "size": 1694,
+    "sha": "cc2e8e6ba94dad8c594170b2ce6a72413fac9b3d"
+  },
+  {
+    "path": "skills/latex/templates/build-config/.latexmkrc",
+    "type": "blob",
+    "size": 17981,
+    "sha": "98e3dbbb52677f655fefac50d92a8362608831e4"
+  },
+  {
+    "path": "skills/latex/templates/build-config/README.md",
+    "type": "blob",
+    "size": 3871,
+    "sha": "486ac051d751a2654a170dace13e47787be10779"
+  },
+  {
+    "path": "skills/latex/templates/build-config/vscode-settings.json",
+    "type": "blob",
+    "size": 436,
+    "sha": "1a7d0f512880894121fa4c96e414b5b80d88c33f"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/.gitignore",
+    "type": "blob",
+    "size": 212,
+    "sha": "5407c09a0303cff0720116e68ec84dc0cb6549ad"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/.latexmkrc",
+    "type": "blob",
+    "size": 17981,
+    "sha": "98e3dbbb52677f655fefac50d92a8362608831e4"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/README.md",
+    "type": "blob",
+    "size": 5238,
+    "sha": "4573615e187e2a4878e3458cc610f05f7d8a3ca1"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/biblatex-preamble.tex",
+    "type": "blob",
+    "size": 3904,
+    "sha": "fc8c1d09b14860a84182073f09be65bfbca501f8"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/citation-placeholders.tex",
+    "type": "blob",
+    "size": 1036,
+    "sha": "caca89cf6fcee5981ba1e308a245ad72fca806a3"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/flonat-bib.sty",
+    "type": "blob",
+    "size": 8997,
+    "sha": "0e81197666ac11c1a04108e55921241d9b051a24"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/flonat-math.sty",
+    "type": "blob",
+    "size": 5974,
+    "sha": "027ff0d578c1ae2a0e5b6e41fc5b33c3b9e429a3"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/flonat-rev.sty",
+    "type": "blob",
+    "size": 3069,
+    "sha": "b70925cfb9213eef7355903048b671a06e9a07d5"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/flonat-wp.sty",
+    "type": "blob",
+    "size": 3150,
+    "sha": "524a13a1d09cfea4b0c63b128ae956f1dfd94533"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/main.pdf",
+    "type": "blob",
+    "size": 23906,
+    "sha": "1a29943c1c9b7cff71fcdb7a1e20777bd0528a23"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/main.tex",
+    "type": "blob",
+    "size": 1819,
+    "sha": "5e2ad9b5dd158572d4ab050e01393174384f0199"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/paperpile.bib",
+    "type": "blob",
+    "size": 0,
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/sections/conclusion.tex",
+    "type": "blob",
+    "size": 48,
+    "sha": "a58ff6ad3ce7df43dacf983b60531b3db4bff355"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/sections/data.tex",
+    "type": "blob",
+    "size": 55,
+    "sha": "008d06696f1fd46f953cb6ab78a350d35171dae9"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/sections/discussion.tex",
+    "type": "blob",
+    "size": 48,
+    "sha": "8a1c8db127d50c1c1e545f1afba51314b0db7e55"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/sections/introduction.tex",
+    "type": "blob",
+    "size": 52,
+    "sha": "9097bce6ed52f2750c5e0d2e8674c26289060a8b"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/sections/literature.tex",
+    "type": "blob",
+    "size": 55,
+    "sha": "2dd444e3378ae58fff2ebde5358aa3acb91099e7"
+  },
+  {
+    "path": "skills/latex/templates/working-paper/sections/results.tex",
+    "type": "blob",
+    "size": 44,
+    "sha": "5f01ff94697a90b1fab8cef647a286b593193e6f"
+  },
+  {
+    "path": "skills/verify-math/SKILL.md",
+    "type": "blob",
+    "size": 8024,
+    "sha": "da3d066a6b03b1e872fb1f39236a03d8771b5212"
+  },
+  {
+    "path": "skills/verify-math/scripts/extract_block.py",
+    "type": "blob",
+    "size": 5528,
+    "sha": "3da74d09f4c6dc8b0dab60593cf1380ac7d275dd"
+  },
+  {
+    "path": "skills/venue-guidelines-compliance/SKILL.md",
+    "type": "blob",
+    "size": 11233,
+    "sha": "2662d7931d99fcc1b02acec849f400fc75f0c71e"
+  },
+  {
+    "path": "skills/venue-guidelines-compliance/agents/openai.yaml",
+    "type": "blob",
+    "size": 243,
+    "sha": "ec066001cc86c11b0da8509ecc734a4ddacf9b40"
+  }
+]

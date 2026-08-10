@@ -1,0 +1,41 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "ation of every change made — what was cut, what was simplified, what was glossed — so the teacher can verify that the adaptation preserves analytical value\" - field: \"preserved_features\" type: \"array\" description"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "_time: \"3 minutes\" tags: [\"source-adaptation\", \"historical-thinking\", \"primary-sources\", \"accessibility\", \"disciplinary-literacy\", \"differentiation\", \"DIG\"] --- # Historical Source Adapter ## What This Skill Does Adapts"
+      },
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "intended historical thinking skills. The central tension in source adaptation is between accessibility and authenticity. A source simplified into modern paraphrase is easy to read but analytically dead — if the author's wo"
+      },
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "urriculum. The 83 Document-Based Lessons used primary sources that had been \"modified for accessibility\" — adapted for the reading level of urban 11th-grade students, many of whom read below the 25th percentile. Crucially,"
+      },
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "s. ## Evidence Foundation Reisman (2012) demonstrated that primary sources modified for accessibility can produce significant gains in historical thinking. Treatment students, including those reading below the 25th percen"
+      },
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "rparts on historical thinking (ηp² = .17) and factual knowledge (ηp² = .22) suggests that accessibility modifications do not compromise analytical value when done carefully. Wineburg, Martin, and Monte-Sano (2011) provided"
+      },
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "rian curriculum (Reisman, 2012; Wineburg, Martin & Monte-Sano, 2011) modified sources for accessibility while preserving their analytical value for historical thinking. You understand the central tension in source adaptatio"
+      },
+      {
+        "file": "skills/historical-thinking/historical-source-adapter/SKILL.md",
+        "snippet": "l value for historical thinking. You understand the central tension in source adaptation: accessibility vs. authenticity. Your goal is the middle ground — a document students can read with effort that retains the features n"
+      }
+    ]
+  },
+  "read_errors": []
+}

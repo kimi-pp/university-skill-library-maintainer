@@ -1,0 +1,2732 @@
+{
+  "repository": "argythana/uoa_py_course",
+  "fixed_version": "3b18f2e80a611bea067f34ec12598a48f16da915",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "caae72102926c8b2563ca780d96f1c25b0b136cd"
+    },
+    {
+      "path": ".claude/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2a83791d0ed1fab5ef49ae40cbde921cd8229cf"
+    },
+    {
+      "path": ".claude/skills/uoa-post-linkedin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f0ef70c28682355ece59f93a5305ef433fe6178"
+    },
+    {
+      "path": ".claude/skills/uoa-post-linkedin/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4667e6615ebd7555bc629c257ae56d12cb753a0e",
+      "size": 6345
+    },
+    {
+      "path": ".claude/skills/uoa-post-linkedin/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "beeafc79555dc053281fe9aecc3a73505bda28ce"
+    },
+    {
+      "path": ".claude/skills/uoa-post-linkedin/references/post_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d5782ce7c9dc9c1b43e155204629d3030be33fe",
+      "size": 911
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-create-excellent-lecture",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e8324f34a0908799eb28914debe05bbe0752277"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b95b37968cff8aac054a627d626f61728c5e09bb",
+      "size": 57721
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f18e8806d8d87d7f7632154fc705e549aa623277"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0ac93190a3a821f5d4db28c0fa503d016a37157",
+      "size": 17602
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0d47c1208a9c581a400516621203c1508ea1867"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references/dataset_rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91375fe5db6cefe377d26c98958b1ca226b2bc9d",
+      "size": 5875
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references/feedback_rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e03a57df1edd218e7bda55c0475068d901754c0d",
+      "size": 9178
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/references/tone_and_format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22774901e6c2a2858a84a90304341adc035f00d7",
+      "size": 5163
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f7892cad7baa26aff5929aff4dc5afbd05d7712"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/check_notebook_static.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5bb234f1ecc8db52dae1bee9851170bf848d600",
+      "size": 16585
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inspect_datasets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63fd5b7006e6b64233f7f5c4902c38cfd4e5b002",
+      "size": 10359
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/inventory_submission.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "583ec2a8041cf440fe8d4bab356a7a2a23267b81",
+      "size": 11930
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-feedback/scripts/locate_student_submission.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43772e1f257e0ec768bcf098f59f37a616481ee9",
+      "size": 11730
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a19642bbde6f258e57f46ba9ab91fec35129fb4b"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/AUTOIMPROVE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfabd47323deca252abddc46cc2cdbe30c5a8c93",
+      "size": 22792
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e318a6762dccb6a790f1baef7168d0dc42a5734",
+      "size": 32771
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0245edc9d169ca2db7e5ed26b15059656ba54fb8"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/references/grade_output_template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c30392ef9cd5b9b5f4adebe6dd1c74a7432e6df4",
+      "size": 6716
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/references/grading_rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6b383ff2c09e6c387edb8dd7cfcfe307819cf04",
+      "size": 12429
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69634672b35997378030af22fe88a17f5daf3579"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/audit_grades_recorded.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53499a45554a4b50d9f3ad20da6b54bd080f5b73",
+      "size": 7892
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/compute_grade.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f536c7d6dfce7692ea9e09c360c6c299a9b053b6",
+      "size": 7547
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/record_grade.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a917a6bf162e2a29f2aa4a667040f6a31ab675b0",
+      "size": 6979
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-lecture-eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df52299ec7860e0e86555b3e5e2d987b6d4b847b"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-lecture-eval/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4a7ab67f6af0bda73703a2403247cf012aa7f4d",
+      "size": 62029
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-lecture-outline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a3e802db1e283f94f470952a5ef010125f0b4c6"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-lecture-outline/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aec2ee4780f795c4182aa9d116d18c6e59b39d7",
+      "size": 24373
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-update-lecture-post-teaching",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "269a1fa135e8ee46bfd82f855e7e3c2096955f70"
+    },
+    {
+      "path": ".claude/skills/uoa-py-course-update-lecture-post-teaching/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bbefd512264e1946313c7bee1618c055620a813",
+      "size": 16969
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e901e553cfff65c3fb2a9c9c28240564fa96644e",
+      "size": 1512
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f97853ad51121ad62cbb827c22e1eecdb04e535",
+      "size": 1177
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5daacafa4ca43c5f5bdec09489c3964d64ba6b8",
+      "size": 9699
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0aa6c666e3f6e76aa4593c6cf27f07f377e447c",
+      "size": 9948
+    },
+    {
+      "path": "automation_infrastructure",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77cef4e20c86c9546fdfb3b8dda1fa699aebf09b"
+    },
+    {
+      "path": "automation_infrastructure/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "237ea7c0c0251e4479b6d0fcc359501f314dd2ac",
+      "size": 12143
+    },
+    {
+      "path": "automation_infrastructure/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "automation_infrastructure/eclass",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08c68a8c704f7ca58e5e3a3ac2a747096b05da03"
+    },
+    {
+      "path": "automation_infrastructure/eclass/FINDINGS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "743a62434686b1ef1445e0edfd11e4f37241d37e",
+      "size": 12695
+    },
+    {
+      "path": "automation_infrastructure/eclass/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "automation_infrastructure/eclass/db.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5d39d28b1d7a8aab4fd5714ea5744f5c022a895",
+      "size": 8193
+    },
+    {
+      "path": "automation_infrastructure/eclass/download_submissions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a985e717475b7086f7ee47edb1275466abd61925",
+      "size": 24313
+    },
+    {
+      "path": "automation_infrastructure/eclass/extract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecb9325a7ed85d83d90ba8d267cdc2bdc5036517",
+      "size": 7921
+    },
+    {
+      "path": "automation_infrastructure/eclass/recon",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19322627a84e9f9501284ea99c0fd86ff07ca519"
+    },
+    {
+      "path": "automation_infrastructure/eclass/recon/01_login_probe.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dd397513d2016dec84667d3b1703272d3c39012",
+      "size": 3289
+    },
+    {
+      "path": "automation_infrastructure/eclass/recon/02_cas_login.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5c0de057492cd1c32ee24bbaec7c4720f4690a3",
+      "size": 5024
+    },
+    {
+      "path": "automation_infrastructure/eclass/recon/03_course_modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66c4ecc51fc93b2b0bc0928224b5323ff8b2346",
+      "size": 3916
+    },
+    {
+      "path": "automation_infrastructure/eclass/refresh_db.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c14dd25cb6885332ef3e5884c63cb2cb57c277be",
+      "size": 4590
+    },
+    {
+      "path": "automation_infrastructure/eclass/schema.sql",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e56fb1c71dad44b3a85499d735396fa896d33b9f",
+      "size": 4650
+    },
+    {
+      "path": "automation_infrastructure/eclass/scrapers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7412903d8b32f50017ec88c923247bddb357a93e"
+    },
+    {
+      "path": "automation_infrastructure/eclass/scrapers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "automation_infrastructure/eclass/scrapers/users.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c63dacae393e1209ef9375af816f19c598791a7a",
+      "size": 5928
+    },
+    {
+      "path": "automation_infrastructure/eclass/scrapers/work.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a3880d89ff07452508ede2e2b63a628e0f98eb4",
+      "size": 12891
+    },
+    {
+      "path": "automation_infrastructure/eclass/session.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6934dcc7422a5c1c7fd0a04745f7673a3d7fe82c",
+      "size": 3738
+    },
+    {
+      "path": "automation_infrastructure/mail_replies",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0601008f6e5ca0a18681a4f6668e2465da68bc99"
+    },
+    {
+      "path": "automation_infrastructure/mail_replies/note_on_feedback_and_grade.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee896c463e46a9ed3b6aa015929e896db56495c0",
+      "size": 343
+    },
+    {
+      "path": "automation_infrastructure/roster_slugs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "014eb3b766d8c2ec94b7becc2eb1ff1c28d13828",
+      "size": 8208
+    },
+    {
+      "path": "automation_infrastructure/scaffold_student_dirs.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2112a1c03e2f9cb31dfdd9a7f49bdb9979a05873",
+      "size": 5151
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c0fb411bec7d83c94be448431d2d30195dc2150"
+    },
+    {
+      "path": "data/grades_factors.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c44a18723ae620607d1035064d4e351bc840c2",
+      "size": 11138
+    },
+    {
+      "path": "data/har_test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8973afbe6cd9afd11187e1bca3570f6d13d9d53",
+      "size": 19324796
+    },
+    {
+      "path": "data/har_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "502a7121ce4001e3524407bc6c7aabc4c017513d",
+      "size": 48138764
+    },
+    {
+      "path": "data/heart.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08b546268bd762707fcebd7be4bf78c8a6e5ced8",
+      "size": 11328
+    },
+    {
+      "path": "data/kaggle_survey_2020_responses.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "992b36efa7d502189aaf9af0f96dce30d1be7e30",
+      "size": 25431748
+    },
+    {
+      "path": "data/mall_customers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cacaebd3dd8e9cdcd9ec86b8110a42a92b552e9",
+      "size": 3972
+    },
+    {
+      "path": "data/temp_to_coffee.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8345005c8e29c875890acbe695ab26b11756618c",
+      "size": 163
+    },
+    {
+      "path": "data/wpp_2024.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b281c150178ed80a7534dd4665266a1b4b278b5",
+      "size": 104733268
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "968e9091ed95b0b4af8e29ecd97aaff64e34ecd6"
+    },
+    {
+      "path": "docs/Lectures_outline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e06aa8821fd2156ad1be735275bc30ae096182c",
+      "size": 10327
+    },
+    {
+      "path": "docs/Suggested_books_python.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e5f8c1dbb97322a31a6f4f8a97a1f8d82982d5d",
+      "size": 805
+    },
+    {
+      "path": "docs/Suggested_books_python.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02c9e4d0741cb0a2e9b470aefba02936863ba61b",
+      "size": 10690
+    },
+    {
+      "path": "docs/course_update_plan_with_claude.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abd7ad20714ea1b95cb0f543e4987021624b9fe8",
+      "size": 5055
+    },
+    {
+      "path": "final_assignment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3911379a5126eace918b32bb6fc85719a9e63d27"
+    },
+    {
+      "path": "final_assignment/FAQ_final_assignment.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb91fa5873307f821066de6c6f25bd1f0a58dd7d",
+      "size": 5298
+    },
+    {
+      "path": "final_assignment/advanced_optional_assignment.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4e38f785a81b885e81d70902df074a882259543",
+      "size": 16250
+    },
+    {
+      "path": "final_assignment/advanced_optional_example",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6364968f01976a4a650806d6d86bf2441962b1f3"
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d1ea88653e143898c3e2ca1b09fdfdfb91d0a1",
+      "size": 3408
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66d495f5d9b30b172848559028949bb0d3f28153",
+      "size": 7251
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/heart_disease_sample.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35beff75dfd9cba0405c8eaedffc6e808419103c",
+      "size": 217342
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/model.joblib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "332b5181c7ad343f73b2c6fb010600abb24d3ec0",
+      "size": 968319
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/model_comparison.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cc0628f2ae1243a6daa2bd46bd2e279af1a6c76",
+      "size": 193
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "487a9fe539379fbb52f0fdc5dfee8d8191f5526e",
+      "size": 41
+    },
+    {
+      "path": "final_assignment/advanced_optional_example/train_and_save_model.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30852863bc3cc58fed8536c8b6e75a929c59ea57",
+      "size": 10406
+    },
+    {
+      "path": "final_assignment/data_selection_guidelines.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70dc7f55a24b0aa2319ebc8de1197e7e6ed0d11e",
+      "size": 6618
+    },
+    {
+      "path": "final_assignment/final_assignment_python.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "630ed34cf21658b85fd09992f02ad22d7db9d129",
+      "size": 12094
+    },
+    {
+      "path": "final_assignment/final_assignment_python_DEPRECATED.docx",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0017fcb5dd5cc10bba62852649e16b0876496a5a",
+      "size": 15880
+    },
+    {
+      "path": "final_assignment/final_assignment_python_DEPRECATED.odt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37488df1723cc927a1a66ba506dcc3ced0975220",
+      "size": 54367
+    },
+    {
+      "path": "final_assignment/grade_feedback.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2855a28bb75a73d8b232861442d4e3171711a741",
+      "size": 1679
+    },
+    {
+      "path": "final_assignment/submission_requirements.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "340a0d4647cf1e7db7ed30748a7b27d5cd363571",
+      "size": 8495
+    },
+    {
+      "path": "instructions_guides",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a63b59fa5eef2e2482dbb1fdb1aac1cb9076ef5a"
+    },
+    {
+      "path": "instructions_guides/lecture_01",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc6cfd36db0332916a34ae11e8ae24351bd45b86"
+    },
+    {
+      "path": "instructions_guides/lecture_01/instruct_01a_install_python.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58c1e7c183e8a6c9d9735411fd0a08103551746",
+      "size": 2008
+    },
+    {
+      "path": "instructions_guides/lecture_01/instruct_01b_run_python.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69864f2a515e8b486bd6bf641ecac2ab3468aa3",
+      "size": 4292
+    },
+    {
+      "path": "instructions_guides/lecture_01/instruct_01c_create_run_script.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6007da20a3ae53f5acce35bb33cae45d74cea1db",
+      "size": 3252
+    },
+    {
+      "path": "instructions_guides/lecture_01/instruct_01d_IDEs_AI_copilot.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc2da4d93ff9e21ed89a1f1f9011dd76e51944c4",
+      "size": 275076
+    },
+    {
+      "path": "instructions_guides/lecture_01/instruct_01d_IDEs_AI_copilot.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32262ecd227293e57d4a047dbcd26f936ba07e39",
+      "size": 4386
+    },
+    {
+      "path": "instructions_guides/lecture_02",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8b0726c7fa2bdc64e2759e4bee7bf2c384c503d"
+    },
+    {
+      "path": "instructions_guides/lecture_02/instruct_02_function_parameters_arguments.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e5dde8f166d3dad845dbb1428bf420652be2f7b",
+      "size": 7911
+    },
+    {
+      "path": "instructions_guides/lecture_02/instruct_02_function_parameters_arguments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc2d23d1a8e90426ab32b98880ff10e0371aa20d",
+      "size": 6715
+    },
+    {
+      "path": "instructions_guides/lecture_03",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "357310b9c4376fbaca52b1a1f0bec4d8449daae9"
+    },
+    {
+      "path": "instructions_guides/lecture_03/NOT_NEEDED_with_Pycharm_simple_activate_venv.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b043d41e4aef9926c38a0fa4ee638b3d292645f",
+      "size": 1287
+    },
+    {
+      "path": "instructions_guides/lecture_03/instruct_03a_cli_basic_commands.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04357ad0a4cddb447688e27ae730a614f07236b4",
+      "size": 2553
+    },
+    {
+      "path": "instructions_guides/lecture_03/instruct_03b_path_cwd_location.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33f53dc43b29518d021c1aefb88850a0ac814596",
+      "size": 2679
+    },
+    {
+      "path": "instructions_guides/lecture_03/instruct_03c_pip_venv.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fae172604a54eebbb866d080281552476ef2ca6",
+      "size": 285499
+    },
+    {
+      "path": "instructions_guides/lecture_03/instruct_03c_pip_venv.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4beaab923ba1f28684bd36357f1885848b08e332",
+      "size": 10331
+    },
+    {
+      "path": "instructions_guides/lecture_03/instruct_03d_jupyterlab.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "018d8457e6c5e722f55a05fba875f458c8cfa9b4",
+      "size": 279147
+    },
+    {
+      "path": "instructions_guides/lecture_03/instruct_03d_jupyterlab.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "909122d2c1418d481cddc39d249697c41d932c66",
+      "size": 6798
+    },
+    {
+      "path": "instructions_guides/lecture_04",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73262301c2be4779d6c2a169c7d5b3b7f0c4b050"
+    },
+    {
+      "path": "instructions_guides/lecture_04/guide_lecture_04_markdown_colab_kaggle.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a9ef15bc85618a942a4311004bdba2aef61484f",
+      "size": 279794
+    },
+    {
+      "path": "instructions_guides/lecture_15",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69d8ea481d7138eba7b14e7e44a70e5fab07c126"
+    },
+    {
+      "path": "instructions_guides/lecture_15/python_dev_tools.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "449f9297fff67488fb2b803767437073964dd10d",
+      "size": 276765
+    },
+    {
+      "path": "instructions_guides/lecture_15/python_dev_tools.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aafb930936c1762d85eb9f14670d5fc5a897b277",
+      "size": 4667
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e6d8735b1439b3391fb6b7265d8c9e5e2e486bf"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fa550430e2799e437ca135a93f091dd1fad5931"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "469a23fc7b9b635b81064750f28cd3503ad8f5cb"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/practice_exercises/lec_01_exercises.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cdb6758e279c8cabee7ac145e4c4c6ee31c958e",
+      "size": 2041
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/practice_exercises/lec_01_exercises_solutions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "064b2ae422a2cfbd65d23ec3bbb1755f46cb7c9b",
+      "size": 3333
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6592c1c8411fe976391801bea52aa6d09721068"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/goals_01.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07ea1c6c5794c391901e8aadd6be07cdc7d43f0c",
+      "size": 1239
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/instruct_01a_install_python.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58c1e7c183e8a6c9d9735411fd0a08103551746",
+      "size": 2008
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/instruct_01b_run_python.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69864f2a515e8b486bd6bf641ecac2ab3468aa3",
+      "size": 4292
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/instruct_01c_create_run_script.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6007da20a3ae53f5acce35bb33cae45d74cea1db",
+      "size": 3252
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/instruct_01d_IDEs_AI_copilot.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc2da4d93ff9e21ed89a1f1f9011dd76e51944c4",
+      "size": 275076
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/instruct_01d_IDEs_AI_copilot.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32262ecd227293e57d4a047dbcd26f936ba07e39",
+      "size": 4386
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/lec_01a_operations_print_help.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef5d55537858990bdaca825b5abd437509a2a1fc",
+      "size": 1095
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/lec_01b_syntax_style_pemdas.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8a8fcc31b533e08750ced6e795591eed1e9f3ae",
+      "size": 5016
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_01_install_open_run/reading_material/read_agents_intro.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "884f616fb521538bbf6e265fadaa7b4ee4552ec0",
+      "size": 12041
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a94b13cce024fb8d236316c19f44cb5929d128d"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "894bcef7050f4bc0dda09134ca56c68825319338"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/practice_exercises/practice_lec_02.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb71abf5212f9d750c5caee12453a3672992398e",
+      "size": 1968
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22dc6edcffe118fd78186b6356f1f04265b55a0f"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/goals_02.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9670215c68459c002ef1b545e9d0009348533698",
+      "size": 1426
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/lec_02a_types_assignments_numeric_operations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31377b839fea5e68089d8c90703f7117c495c6b9",
+      "size": 5180
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/lec_02b_strings_basic_operations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b2a3b7f7b0badde67b91ce0d8133b6376ab39c",
+      "size": 2963
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/lec_02c_built-in_functions_intro.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97d840b51b72540ddf693cb60b734de7650934f5",
+      "size": 5587
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/lec_02d_bonus_print_syntax_format.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0577afc3b5901789144095524f43ffe7396f1b03",
+      "size": 3251
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/read_agents_tokens_model_selection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d0fc38c8c25e147dfe71d51464c0a83737b99b1",
+      "size": 7704
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/read_py_function_parameters_arguments.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e218e0f52ccfb7d2d36a08b17e5fc1be77fb860e",
+      "size": 21411
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_02_built-in_types_functions/reading_material/read_py_function_parameters_arguments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faecb193f569c73e8d3b6660b0526fc4e933c000",
+      "size": 9446
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f02ea7bfb6b6165b4cd4bed210e40e5cd8d17414"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d951546c4b9dfe2f46c2b76bab2b02a73c6972f"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/practice_exercises/practice_lec_03.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "197f4eb1604b1fe23721082a0a6624ee1926057b",
+      "size": 1699
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d532506b40a7f93c364a02df688b8d090e19aaea"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/goals_03.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b6b30f7421c118efb5b4ca3f0144404581f7604",
+      "size": 1107
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/instruct_03a_cli_basic_commands.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04357ad0a4cddb447688e27ae730a614f07236b4",
+      "size": 2553
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/instruct_03b_path_cwd_location.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33f53dc43b29518d021c1aefb88850a0ac814596",
+      "size": 2679
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/instruct_03c_pip_venv.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fae172604a54eebbb866d080281552476ef2ca6",
+      "size": 285499
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/instruct_03c_pip_venv.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f06ea419dcda4d291f1b5a775e16194061d394f9",
+      "size": 10341
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/instruct_03d_jupyterlab.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "018d8457e6c5e722f55a05fba875f458c8cfa9b4",
+      "size": 279147
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/instruct_03d_jupyterlab.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64a2c8a7acac9f3a45c4a680e40335b5813f8ced",
+      "size": 6798
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_03_cwd_path_pip_venv_imports/reading_material/lec_03e_import_built_in_modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00eade68d0dbfd30031044600bb1513afd087d26",
+      "size": 2999
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c65c57b97f471721106c7df1b62f5984c9bc68c"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5759aba2180605bd1059aa3f3b54014aac3bceff"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/practice_exercises/index_slice_list_exercise.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d37857d8bdf00086ee35b2b3fb017b56d30b078",
+      "size": 1770
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/practice_exercises/index_slice_practice.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b7586542ad286d16630f74c56cdf854c2f835ff",
+      "size": 5810
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "347dc233c1ca2b8dcab131a0837cea3cd4d3724c"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/reading_material/goals_04.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f524235e093cf98a57be4fdc72d5168e64fd117a",
+      "size": 835
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/reading_material/guide_lecture_04_markdown_colab_kaggle.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a9ef15bc85618a942a4311004bdba2aef61484f",
+      "size": 279794
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/reading_material/lec_04a_index_slice_str.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12431a7be0115031b0e7bc88ba88d101f6483c7f",
+      "size": 29834
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/reading_material/lec_04b_index_slice_list_tuple_set.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35e028cc0675a4136e0cfdeef1e1ee46d343a56d",
+      "size": 42512
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_04_index_slice_str_list_dict/reading_material/lec_04c_dictionaries.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc4abd9fd46d7af8eb1fe5703f5e195a659a007",
+      "size": 47493
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4e0f036531b4ecac3203238e5aad3957b645b7f"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d53664818949a44c5a5da70b675824d29cf6173b"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/practice_exercises/practice_lec_05a_boolean.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5576ab84e751468fe8747d7e3451c1f42295f1e0",
+      "size": 4907
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/practice_exercises/practice_lec_05b_while_loop.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2527b542234bcbff778f066eaf32629a95705e8",
+      "size": 3882
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/practice_exercises/practice_lec_05c_if_condition.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7be81ec1e60810e8946874f887a594efcc7140cd",
+      "size": 4351
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/practice_exercises/practice_lec_05d_for_loop.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03e70d6b526732fc43389b4e6d8ee5adb5a1efbe",
+      "size": 4412
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/practice_exercises/practice_lec_05e_guessing_game.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ef594f353ebf7dbd86c299a71a7ed4bc5e0942e",
+      "size": 1754
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "039114e0bd979fc42cc66b5d517cb10b928c7256"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material/explain_print.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c019252d438e232701e7cde9f289f609cc9213c",
+      "size": 37
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material/goals_05.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58294a5f1c683599c025058b9f131f189114d9c8",
+      "size": 956
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material/lec_05a_boolean.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5417b479807807a788bb52ef01dd10a054bc679d",
+      "size": 48357
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material/lec_05b_while_loop.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dedc08e510e2aed0b2d7f0c9c0d03e205212f98",
+      "size": 17137
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material/lec_05c_if_condition.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e8e99df94b0a5dc73513f2248ac01a657bc0604",
+      "size": 18152
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_05_boolean_conditions_control_statements/reading_material/lec_05d_for_loop.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11202bae080be99f2ad29cf8a65e8a9a008d3135",
+      "size": 16063
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cf71d1c49110fdf8d10f93594d6cf667f662cc2"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8de3a25f8222cf4016a27774974369547ecef2b5"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/practice_exercises/practice_lec_06.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d16830019773d4866a1e15a2a5621be782baf5b6",
+      "size": 4225
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d113402eedccf688c7283039533e05afd9c502b"
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/function_parameters_arguments.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b05ecce8eb501d38468a8b44f3200a01e7c1d578",
+      "size": 30116
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/goals_06.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "874281f94a2fecd2c54878c9a618a5fbe464e343",
+      "size": 1228
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/grades_factors.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c44a18723ae620607d1035064d4e351bc840c2",
+      "size": 11138
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/hypot_module.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2a2cbf2487736e5a616b19e9afbd03d737da6a4",
+      "size": 1374
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/lec_06a_custom_functions_demo.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e40f2dcd8f234313ed12bc7491c275a0f67331f",
+      "size": 78547
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/lec_06b_define_functions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80c5134dee65c910aa6d476741a235a15e56b967",
+      "size": 38553
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/lec_06c_stand_alone_scripts.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "516f7b8d03c19eeb3067caf6e07be4318e442124",
+      "size": 7852
+    },
+    {
+      "path": "lectures_01_06_fundamentals_for_data_science/lecture_06_define_functions/reading_material/lec_06d_user_modules_scripts.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f25b3dfdd08b7ddffe042588a99ca8afe7f618c4",
+      "size": 14264
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5dbdfdfa08d9a193257aa486bb19ec7f99878363"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c280867892ab0da620d0c85714e1c436b77cebb"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97c04af450724a0d97a362edb3759bfbf1f0a9be"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/practice_exercises/practice_lec_07a_join_dfs.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3cd87c80d2ffd0af53406524d8cef050e74b9a7",
+      "size": 6288
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/practice_exercises/practice_lec_07a_join_dfs_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2524dbc455ab504a75fa3c30a20a55292ca58d",
+      "size": 10646
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/practice_exercises/practice_lec_07b_advanced_polars.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68830f32c58798a4ecc0a2b2a50ba01a181de275",
+      "size": 479
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f511bf08658774f28938b83796583071e0318da5"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material/goals_07.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38da804c5a46232dd2d200214b2cab11c65aca83",
+      "size": 795
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material/lec_07a_pandas_df_index_slice.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30a342710a1d77525f8f6afd531f4a635631baf4",
+      "size": 270397
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material/lec_07b_pandas_methods.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4db503943b78520cf551bce3bd6a83bc8b9298da",
+      "size": 314708
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material/lec_07c_updated_informed_data_management_modules.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "918bca0209e8eb4e459e66af1b41ad1ebbbada71",
+      "size": 25612
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material/predict_heart_disease_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "894ab434865f32ef9b813a6efa9279635791ee6a",
+      "size": 31664227
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_07_pandas/reading_material/temp_to_coffee.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8345005c8e29c875890acbe695ab26b11756618c",
+      "size": 163
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee722f174f57f52c5f7a3f97034999f6dafcfa61"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fc84a5cde77a01c5c89625ed232e619fbe9d312"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/archive/lec_08e_auto_EDA_DRAFT_2025.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9be1c59abb8e2e57bbdd0ebde08ba541213f35c6",
+      "size": 5850
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67b83d6cfecb496f9ed45107463000bb0af5a878"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/practice_exercises/lec_08_exercises.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0fe94015c0b1930b720ff43e0a028b1fada22a3",
+      "size": 16559
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/practice_exercises/lec_08_exercises_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ea45ade90e7f4d40612ade545615a0ee7ccc944",
+      "size": 28079
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55f1776dd73d0d78756d8cff7a496e490ff9216e"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef29535a464f68c73a03664c4e014aafd21cb937"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d35ca5bec886387724ee66791389c222c4b3af35"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease/cat_var_plots.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e00c62addda29a80f5f5efefdd88a9bb0b18cc1",
+      "size": 146886
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease/distplots_cats.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b511cf662aab123326ef87b90ce5fd15be38583",
+      "size": 89381
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease/distplots_nums.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cafb3434a94b77733887a97572e163fa8e3e77d",
+      "size": 25360
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease/heatmaps.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5932d8f20b3b5c719f6808e8250e1f8352f77a5",
+      "size": 28888
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease/scatterplots.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5113c8be3d2a02fc1f50578d8de4e5867dd924f4",
+      "size": 364042
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/AutoViz_Plots/Heart Disease/violinplots.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28462cbf6db3eb8b1552eefbf70700b6b0633702",
+      "size": 71973
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/app_dash.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58b04e17421b289e4bf44d3e6bd66866c29aa87",
+      "size": 1580
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/app_gradio.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d18dde60db13b4b2eba18b2b1fedc14f84a3d214",
+      "size": 1751
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/app_streamlit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f93a3f7dfa4fee02035457614c2ae4d6bb3ecffd",
+      "size": 1746
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/app_taipy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bb43df85ec3927c38f7c021545045b57b1f945c",
+      "size": 1713
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/gapminder_1952-2007.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d84e85ffe42e328e824327e02724be0bbcf5b57",
+      "size": 4995780
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/gapminder_2007.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "090464b3717b429692e80a4a09716d1d40057fc8",
+      "size": 4865813
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/goals_08.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41bc3f49d2290cc7053b3f7921f09cc0a24ea745",
+      "size": 2587
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/heart_disease_sweetviz.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5980adcc50aed6475541a289429d865061e86927",
+      "size": 1261909
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08a_interactive_plots.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e3468417ba615abd5f09fddddb0b026144cba3a",
+      "size": 2042427
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08b_static_plots.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc53d848f0baba09e7b254293607a23d6c543ef9",
+      "size": 526451
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08c_more_interactive_plots.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d99490f7fc5f3dfd80131c07dbe31428d26e7a7",
+      "size": 1099314
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08d_example_EDA_iris.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3114a9f33dbe3be5ac431bc25552181cfb5cea5c",
+      "size": 1646222
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08e_example_EDA_heart_disease.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ddfbcceb90165aff6214e5ab14255a5dec349ce",
+      "size": 52687491
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08f_auto_EDA.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f681b0e151e3dd7c6182cee9bec486a2bb4564",
+      "size": 4334308
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/lec_08g_web_app_frameworks.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e910ed557d1c976003ec3acba2d42b754d0548f",
+      "size": 26227
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/please_no",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25b67ec44ec1c8ce04c6aae0092409ab29312be6"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/please_no/scatter_discrete.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29373a84de4b181eba1e4b8cd3b98e85aeade87e",
+      "size": 24091
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_08_EDA_plots/reading_material/predict_heart_disease_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "894ab434865f32ef9b813a6efa9279635791ee6a",
+      "size": 31664227
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56068841d264929f298620b187a582361ee97430"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d39e0843ab429780baa6c8e86c88ee00facac5eb"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/practice_exercises/lec_09_exercises.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1fb4d7da652a13180593a3e8cf04d50cd9d6020",
+      "size": 19609
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/practice_exercises/lec_09_exercises_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cea6b59921f54b14753b99ac8db1de680b4379e4",
+      "size": 17787
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "384e3f4089eda03174d211e5fd93ff9b1aa479cb"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "429226dad46d91e2bf426bb1def7ed9c049b1599",
+      "size": 12167
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/goals_09.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08bd161c82e2d85f6f39a6ba1c7ad211c0b04228",
+      "size": 5985
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/lec_09a_kmeans_clustering.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5f10928ad018588b2d2049102f189b4ff9f36d9",
+      "size": 1075900
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/lec_09b_kmeans_assumptions_caveats.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf4aea7bef548d051708f7e62dfef619a0a20b9a",
+      "size": 1767784
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/lec_09c_gradio_app_huggingface_deploy.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b5ce5bcb833e658d560166364be53f2eef11aca",
+      "size": 85315
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/lec_09d_kmeans_other_parameters.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "372da7a26e25e664502f85b9cf14cb3661067e50",
+      "size": 33021
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/lec_09e_kmeans_step_by_step_animations.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa5fe4a4bdf767208925409bab0d1853886fc60",
+      "size": 1997627
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/lec_09f_other_clustering_algos.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "301604fde2a96f9a2bbbeeeaaa70bd35aadfd16a",
+      "size": 5952
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/mall_customers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cacaebd3dd8e9cdcd9ec86b8110a42a92b552e9",
+      "size": 3972
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/read_agents_clustering_workflows.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0a6c2920fd5cc680985d2236e4a24f18670ecda",
+      "size": 8501
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/read_train_test_split_in_clustering.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7aa84d5df6a2de08264eaec351d89bc7b24d64",
+      "size": 6770
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7fc3b629ce2d92e8f75ec1e2f4985518aea1c41",
+      "size": 33
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_09_clustering_deploy_hf_app/reading_material/three_dim_customers.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c40e99108f58b690582a6c7de1b7b0d5c80b2d8e",
+      "size": 3631607
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "606a3baa1f3d4b7ccd9347673b3a5be519db5390"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d3e13b5afe68dfa7abf9a6ccfd1a0ee316b9991"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/practice_exercises/lec_10_exercises.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56558bb6938f7d43e59a08788ff0e9690eb6ead5",
+      "size": 20495
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/practice_exercises/lec_10_exercises_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dddb770322052ffa27ad144701c8321c8d24f96",
+      "size": 26520
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "605c052f9e95e7e43baf6b6e9b9377b965fff8c0"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/goals_10.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9a2fc87a53da17518ca3495475e6a5e9956427d",
+      "size": 7315
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/lec_10a_knn_classification.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8800c3d2f0a6f5b17685b3114713ad2c830fb1d4",
+      "size": 1272270
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/lec_10b_knn_assumptions_caveats.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e112876699c56ac4d2e0a87573aef20b5da9a84",
+      "size": 173459
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/lec_10c_knn_decision_boundaries.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27a1f09d74d9851148f8a36d82f54b178743cabe",
+      "size": 547668
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/lec_10d_knn_other_parameters.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "899cbf41d4e4ba8eec6d98d8261334fad1eedf26",
+      "size": 36698
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/lec_10e_knn_vs_other_classifiers.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3713ccb87478b2ed2d5d2b882b6243a05d35c571",
+      "size": 8235
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/lec_10f_knn_regression_teaser.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7eff96ab5756425ea74852ae7ad8281ebae5b45c",
+      "size": 6152
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_10_knn_train_test_split/reading_material/read_agents_knn_workflows.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8180b85a24bb48912dcf1b4c01b57dbbb0739fae",
+      "size": 14917
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cdec12ed2163426c45023a85a021f67dec3478b"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/lecture_archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b97d5ea0956489e0955ebd208ca749d94b3b4f83"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/lecture_archive/lec_11_handbuilt_draft.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e29d0b1c6c0b54df1a8a82cb2414efcb2264ba4",
+      "size": 757171
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "451cd6feab65e68ac79d997ada8ec79a079ac6db"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/practice_exercises/lec_11_exercises.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33de977cbcfadae1000165d629e7c61cd36718f2",
+      "size": 18980
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/practice_exercises/lec_11_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3a28e3bb105fd16cb3dc27a2b12b396b12193e1",
+      "size": 40128
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "390478535aca06e7d0b3c7a2a2baf3fb13681ca6"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/goals_11.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54d5ab95602a0f5a7045f80265e4913767295b1f",
+      "size": 9576
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/grades_factors.xlsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c44a18723ae620607d1035064d4e351bc840c2",
+      "size": 11138
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/lec_11a_simple_lin_regression.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c56e86b8d3decf604be10a5ab5c454b4e13c6d10",
+      "size": 119736
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/lec_11b_linear_regression_assumptions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4398eeca6f1aafe6caed7dfc88669ad523ebe79",
+      "size": 694868
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/lec_11c_multiple_linear_regression.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79aaf2deae6dd883fa28f4a72beaa965f7a38e64",
+      "size": 202686
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/lec_11d_advanced_linear_model_coeff_interpretation.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba6b0bab3c470677a38c9fa30764fef96fc36b14",
+      "size": 225540
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/lec_11e_polynomial_regression.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f85400dbac7d1da457941d55b65e76b4e1dce8b",
+      "size": 591441
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/lec_11f_regression_advanced_topics.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a72d45b0441e97536af691afbd0b4e16f7e96d7b",
+      "size": 48411
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/read_agents_regression_workflows.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fea816d7fa12f974cd0fb1a143638af0bdc0711",
+      "size": 20020
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_11_regression_linear_polynomial/reading_material/temp_to_coffee.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8345005c8e29c875890acbe695ab26b11756618c",
+      "size": 163
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "379a91531aa54603dc87a43285f52bc228d7a44e"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/lecture_archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8e667540f10d13dc6e3f2117903986f3d7a3363"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/lecture_archive/goals_12_predecessor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db9e14a1f631e1f77f5a97513d94e2eb4419afe9",
+      "size": 872
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/lecture_archive/lec_12a_logistic_regression_handbuilt_draft.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e0d55bf19f770dca24f9b0bd27fda8bafd28b7d",
+      "size": 354972
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/lecture_archive/lec_12b_naive_bayes_handbuilt_draft.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c922f7fb1f04bd8788776cdad1be55234ad7f0",
+      "size": 94205
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/lecture_archive/lec_12c_SVM_handbuilt_draft.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e3e28adf228c463732c83157d01264f19ad6a3a",
+      "size": 48599
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "847558751d711cb6be7d5fbbb7ccae30e769e45c"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/practice_exercises/lec_12_exercises.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbaa710a03022d3dfaee5c3e827723e6133587c3",
+      "size": 12637
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/practice_exercises/lec_12_exercises_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dd9a5afd68b6919ecea9632ef3db8653782c830",
+      "size": 19782
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20e5cb69835f6f194033b45d9101c2ffa4846b5f"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/goals_12.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "400718ae56fe05ec7013f79a1f9de74b8d0c1165",
+      "size": 12332
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/lec_12a_logistic_regression_intuition.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f00793f75606c6681ac799f2f4d9ce58d7572ce8",
+      "size": 354103
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/lec_12b_logit_probit_values_predictions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa809a008992df4a84b6e79df6c39cfab387bab1",
+      "size": 68201
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/lec_12c_logistic_regression_assumptions_caveats.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d200a7704992e900d1aadd7fb73e5cdd170d58ca",
+      "size": 217080
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/lec_12d_logistic_regression_hyperparameters.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63d6429fef2b60cf7262f3b10ba892e6f4abc85a",
+      "size": 108957
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/lec_12e_naive_bayes.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8337a537c991453ebc2c4617d399623c31f9591",
+      "size": 29419
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/lec_12f_SVM.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c77b332c2eeebc7b40a3e61f67dd17518adaed2",
+      "size": 600961
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/predict_heart_disease_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "894ab434865f32ef9b813a6efa9279635791ee6a",
+      "size": 31664227
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_12_logistic_regression_naive_bayes_svm/reading_material/read_agents_classification_workflows.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60ef0d4d03e96f95868e2e988c5dec8f08b93a95",
+      "size": 16347
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "faed3a556b76bc122bdd4db5e34e9aecf5c37221"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fd725cc60d54c4b3bca8c2aca13586ca9e674bb",
+      "size": 497
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7356b594e814b9c434f0fac15a91289b41a1ba0b"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/best_model.joblib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39eb706cfe9f9790761753174a58473c7fd30631",
+      "size": 3346975
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/goals_13_predecessor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0d5a01655696fa87b1d078cb84e15ef93448d51",
+      "size": 1107
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/hyper_param_grids_pipelines.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e28894853d35bdfcf53d6f06fe6a6ee9ed4080",
+      "size": 10840
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/lec_10e_REFACTOR_to_comparing_classifiers.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87eb5fe35bb57ec617dfc8bfde3c6aa879f386a4",
+      "size": 74593
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/lec_13a_simple_pipeline.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60768878f3a1e270d06db41fa39b632a03fd0202",
+      "size": 876801
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/lec_13b_model_selection_stacking.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07c1bbac8149c20df8e10eb36e493b7d73b68eb0",
+      "size": 199747
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/lec_13c_select_proper_performance_metric.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ff404f7780638bead39dc2bebe333808954ce78",
+      "size": 9155
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/lecture_15b_model_selection_stacking_OLD_NN_links.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fed490fd7792f39ed4e09cbc4a18006d7aeef75f",
+      "size": 198603
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/mlflow_basics.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/model_selection.ipynb",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50ccd97fa9316345089aa00d0295a3716ded8bc3",
+      "size": 163526
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/lecture_archive/plot_stack_predictors.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "885b96763ae109a48406e61d3424b18e0d5a3314",
+      "size": 370211
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/practice_exercises",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ede6d11861d01121ec2e1b9c1aaa15f926e2a154"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/practice_exercises/lec_13_exercises.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "456414b533e17c0997b2fefc192a667f437fe824",
+      "size": 23931
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/practice_exercises/lec_13_exercises_solutions.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87cbbba55c4c4994531fc60c7b193997eef69bfb",
+      "size": 35975
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0aadf2fae74a66d5f49a6f54b445564d518f0f9"
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/goals_13.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e5e8f23e22defa943b610bbd090e84be80670df",
+      "size": 6153
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13a_gridsearchcv_hyperparameter_tuning.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d425ffa3cf72299ca2f08c6358c5c4f78768f83",
+      "size": 118168
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13b_pipelines_preprocessing_models.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a975b077aabc334ed32b0444c1bf407c65eaadda",
+      "size": 241968
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13c_mlflow_tracking_basics.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3210d61359831e64c0740efd571b6a015e5e683b",
+      "size": 71362
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13d_mlflow_evaluation_registry.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c03ba29dd1caee346d904a8b4a4c46e0d961af2",
+      "size": 32361
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13e_mlflow_logging_sweeps.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "130ea3958e45e652315a28e7b2eb4c07e069bc9e",
+      "size": 96000
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13f_mlflow_model_serving.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c780577f9939ad5ac7bb77b97c3f75306fee5c6",
+      "size": 25281
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/lec_13g_automl_autogluon.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2833ddf6f9c1f9b46be82f96557eed39fad0c042",
+      "size": 23688
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/predict_heart_disease_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "894ab434865f32ef9b813a6efa9279635791ee6a",
+      "size": 31664227
+    },
+    {
+      "path": "lectures_07_13_pandas_plots_scikit/lecture_13_pipelines_gridsearch_mlflow/reading_material/read_agents_automation_mlops.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99d0da807d13833163ed4feeb2a87314673b7fe7",
+      "size": 14950
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b43e743e15a2e76103f28f032213ab7be6da9359"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_15_pytorch_step_by_step",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b364a12abab11de21708135affae4af2c485e814"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_15_pytorch_step_by_step/Notes.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa3289320fcc8eed177ecfd96e8f91b80e55a79",
+      "size": 1651
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_15_pytorch_step_by_step/goals_15.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0507d8360906293bae00e914fe07967e9e55df0",
+      "size": 710
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_15_pytorch_step_by_step/lec_15a_pytorch_data_tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "124beb7cdbc7037890333ce07b91f95c9b45ad7d",
+      "size": 84971
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_15_pytorch_step_by_step/lec_15b_pytorch_cifar10_tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9db26f0976bfff74791dbb95b857e5349715723",
+      "size": 213033
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1d6014581bb5654991581c6d0745792d49f18c5"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization/goals_16.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dc4b6d5bf911f73d0a878eca82d64678198534a",
+      "size": 642
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization/learning_rate_animation.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f278183b487e6f7a3b605aab328f75fc312b61",
+      "size": 8623010
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization/learning_rate_animation_2.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97535ef4abbae9a381ffee015da5e6a0b3b488ed",
+      "size": 4328991
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization/lec_16a_lecture_links.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7611d53a2e46c47274b8887674de36f6224ce8c",
+      "size": 1012
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization/lec_16b_pytorch_params_optimization.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "168f96cf6e0835d0e60f682af99f5579041be6bf",
+      "size": 410580
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/lecture_16_params_optimization/optimizer_comparison.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85c3e82e2ce892353079b7c3a5831dd29164f22e",
+      "size": 159697
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "765bc75a1d248fddfd363dbda5bfff6460a3625e"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f38b9b198c45a80e3d8e0a9c3c8cf18485008eb"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/lecture_12_intro_tf.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b311d2f94e9a5b69930573c09edf728816c5dae",
+      "size": 46212
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/lecture_12_pytorch_intro-Copy1.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e27a909886002e2f718c0dbf4da066ac82ee9401",
+      "size": 7791
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/lecture_12_pytorch_intro.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40b6cde2b7019e0a5309584dff726f418510fa8e",
+      "size": 33376
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a70586c2a40436ecc38ed2c1c3f1e21aaef3fc7a"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd63291de29dcd247cd32a2dd99e6b57b2dc2779"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/oracle.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16f5050eebc6c5d16e038a71f2f5f61319f65d45",
+      "size": 5645
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c5c136f67ba3d01df2852964def5633f24ede89"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_0/build_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21d00efefb917d41f60735ebd770dc7c9d17d54",
+      "size": 28
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_0/checkpoint.weights.h5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4f154205dc79277c20cccb872f04f226aa39a06",
+      "size": 3062624
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_0/trial.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e08e875c6aa666182da2afb1b6c042fff52481de",
+      "size": 5220
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb84d5b6005f021f618850196ade6e5d695abe63"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_1/build_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21d00efefb917d41f60735ebd770dc7c9d17d54",
+      "size": 28
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_1/checkpoint.weights.h5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b72af5f6d498fd0646049e8608cd36368a9d29c9",
+      "size": 9830928
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_1/trial.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27e4befd2f9deb839af22eb6b214fd769f8f8d39",
+      "size": 5239
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2194dadbf2118fecf05b0c00e00062ecf6954874"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_2/build_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21d00efefb917d41f60735ebd770dc7c9d17d54",
+      "size": 28
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_2/checkpoint.weights.h5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54f5c0fcee08cde464d897a96d3388679b257187",
+      "size": 25467096
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_2/trial.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871041e3cbd3669b1cf9c52109f443c22546682e",
+      "size": 5242
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40a5a73c6b294a844188aba75cac3be32fedaf88"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_3/build_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21d00efefb917d41f60735ebd770dc7c9d17d54",
+      "size": 28
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_3/checkpoint.weights.h5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "652adf3e588f1b1e67efc5c83097bb6837be05f0",
+      "size": 11753520
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_3/trial.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fa0f3422a0f8ee312dbd37796d2dcfb4d953517",
+      "size": 5239
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f00c3d27d0d15e38b0197d5e5ed9a12acfe144d0"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_4/build_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21d00efefb917d41f60735ebd770dc7c9d17d54",
+      "size": 28
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_4/checkpoint.weights.h5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04dbeaaa11f305967039e8248256b4741c4c678f",
+      "size": 10957784
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/trial_4/trial.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a0fb06101337747c96c042b3776884eac8b01f2",
+      "size": 5234
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_13_tensorflow_intro/project/Human_activity_recognition/tuner0.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "size": 2
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_14_pytorch_locally",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59c3b85d0d61943100652f9cc8611ed4d653db31"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_14_pytorch_locally/cifar_net.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49095500707c68ee499e2468d0487b40b6ba7980",
+      "size": 251604
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_14_pytorch_locally/demo_pytorch_cifar10.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c82af4375f525c15333ee173431babdbce1076d6",
+      "size": 216956
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_14_pytorch_locally/guide_14a_pytorch_install.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8dc3ea5fc67512c370bb0f1a1b68cac6157b4cf",
+      "size": 3836
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_14_pytorch_locally/lecture_14_pytorch_intro.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "861fa52e14e90fcf8bc0f2a87ce3d5f10a731b1c",
+      "size": 32808
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_14_pytorch_locally/lecture_14c_quickstart_tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33eee5aad81b1f033d6f9347dc6c94d336015cd0",
+      "size": 45649
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_15_YOLO_pytorch_cloud",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "181ba47c619ee589b3b33a663212938ece29137c"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_15_YOLO_pytorch_cloud/V2_train_yolov10_object_detection_on_custom_dataset.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0c69672c074b66e4e80cc3ce507128d98a8a518",
+      "size": 1694886
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_15_YOLO_pytorch_cloud/lecture_13_Yolo_intro.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7bfd6a4d3c0261a9431e4e86f3a92dc3374125b",
+      "size": 3999
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_15_YOLO_pytorch_cloud/train_yolov10_object_detection_on_custom_dataset.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29c4e295cc11802dcc7d2bd2f73500363e468c32",
+      "size": 2609717
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_16_intro_LLMS",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d845ae48a802554a600c1791ca2602dc867a9b67"
+    },
+    {
+      "path": "lectures_14_16_nns_pytorch/notebooks_2024/lecture_16_intro_LLMS/lecture_15a_intro_to_LLMs.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e71a4d51455fb297dc3d10cc50daff4a534b8e7",
+      "size": 9647
+    },
+    {
+      "path": "lectures_17_20_on_demand",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3074ab39513b7454bcacb4e46ec5a1fec3a11002"
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd488a64f8c1cbd0da752562aa0d7e94efd5022b"
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/draft_for_2025_feature_reduction_with_Lasso.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f8563bbb5714ea14c91590ea3abc9edb3690f0a",
+      "size": 13175
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/draft_for_2025_preprocess_features.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6b1314c9590733ee77ec832fc13c70964ab20a2",
+      "size": 5721
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/qa_scaling_crossval_naive_bayes_knn.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddbbf2ffdf969eae1ad73fcee369d53fb7b42bce",
+      "size": 32226
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/qa_scaling_crossval_naive_bayes_knn.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da0c3a0a48d30325c06f561f35a510d724d71554",
+      "size": 19675
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/read_lazy_learning_knn.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3296f576dbdd0af5cd8df19e759d43218c3fd6e2",
+      "size": 10349
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/read_train_test_split_in_clustering.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7aa84d5df6a2de08264eaec351d89bc7b24d64",
+      "size": 6770
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxx_data_preprocess_engineer/train_test_validation_split.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1c8bf95b3c16ff6c85cfd540fd661c3090470a5",
+      "size": 29067
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxxx_python_APIs_fastAPI",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1c68727eb11656f0fdb5e6f8bcda4419e39bfaa"
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxxx_python_APIs_fastAPI/APIs_reviews.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d79c0837597977180aa824431ca6cf380bd0cb80",
+      "size": 6740
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxxx_python_to_DBs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d643249689eb65962bbf20403f7a703d9364966"
+    },
+    {
+      "path": "lectures_17_20_on_demand/lecture_xxxx_python_to_DBs/lecture_xx_database_interaction.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f296ea2da54aa1405751410d81a33194c7c100d9",
+      "size": 1442
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea3ec336b7eb26a67eff3c524ee275528cdbf504",
+      "size": 1784
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "effcf8d34e1469d1bd3d9c9d5c4b18875a8e1fc9",
+      "size": 19008
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4382553f56a08845ab368728af48c6b25b6dcb18",
+      "size": 832257
+    }
+  ]
+}

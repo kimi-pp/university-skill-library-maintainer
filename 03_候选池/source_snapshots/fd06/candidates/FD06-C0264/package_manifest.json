@@ -1,0 +1,56 @@
+[
+  {
+    "path": ".gitignore",
+    "type": "blob",
+    "size": 31,
+    "sha": "43556b0fbefbc851364abb9c1c9ddf7bab61b9e0"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "type": "blob",
+    "size": 2673,
+    "sha": "9a535592aff5f8ffa1a006221261872b8bc2dc49"
+  },
+  {
+    "path": "LICENSE",
+    "type": "blob",
+    "size": 1067,
+    "sha": "76a4746408a78525a4602cb0da66ca39c4399e9b"
+  },
+  {
+    "path": "README.md",
+    "type": "blob",
+    "size": 10212,
+    "sha": "e0c83bd8f5c39793933f5a42c3754d1fa5b0e907"
+  },
+  {
+    "path": "SKILL.md",
+    "type": "blob",
+    "size": 14891,
+    "sha": "ed14264c74dd17c9f7b029cf0a51f78fc5391098"
+  },
+  {
+    "path": "references/agent-profiles.md",
+    "type": "blob",
+    "size": 25100,
+    "sha": "d1e61f5ce21f0d87d2eb9526ae367c0af58b9e19"
+  },
+  {
+    "path": "references/docx-js-api.md",
+    "type": "blob",
+    "size": 5650,
+    "sha": "600eaf9461b9a3215b8476058aeac9d06760e6f7"
+  },
+  {
+    "path": "template/scaffold.js",
+    "type": "blob",
+    "size": 15170,
+    "sha": "5210f5f555f2baf7cbc68333f91c14c1ab0bf495"
+  },
+  {
+    "path": "中文说明.md",
+    "type": "blob",
+    "size": 24432,
+    "sha": "52f56c8d6f76dbaf32bf8efc51880508264d8db0"
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "path": "skills/nature-reviewer/README.md",
+    "type": "blob",
+    "size": 3114,
+    "sha": "d57e697810bbe9d880c3e5b7dded111b29574d7e"
+  },
+  {
+    "path": "skills/nature-reviewer/README_EN.md",
+    "type": "blob",
+    "size": 3543,
+    "sha": "af1be07986968192144553f097b21f4a96cbca38"
+  },
+  {
+    "path": "skills/nature-reviewer/SKILL.md",
+    "type": "blob",
+    "size": 11745,
+    "sha": "44d0e57bc8de245980dbb77c2044e6d305a33744"
+  },
+  {
+    "path": "skills/nature-reviewer/agents/openai.yaml",
+    "type": "blob",
+    "size": 253,
+    "sha": "621b71a5614fe9a834ee6b6704f586c37486824c"
+  },
+  {
+    "path": "skills/nature-reviewer/manifest.yaml",
+    "type": "blob",
+    "size": 2526,
+    "sha": "317ecd88dd574519ef58d36a92b64b37016b8818"
+  },
+  {
+    "path": "skills/nature-reviewer/references/domain-specific-review-gates.md",
+    "type": "blob",
+    "size": 10432,
+    "sha": "dd44ab713c5ba910025f4aaa180f5ab4a3ef1f22"
+  },
+  {
+    "path": "skills/nature-reviewer/references/editorial criteria and processes.md",
+    "type": "blob",
+    "size": 4391,
+    "sha": "211f1d455069e74502412d1a386e675641327a39"
+  },
+  {
+    "path": "skills/nature-reviewer/references/qa-checklist.md",
+    "type": "blob",
+    "size": 6509,
+    "sha": "ed7e34f90651560b39d3298b03e3b66a3996cde2"
+  },
+  {
+    "path": "skills/nature-reviewer/references/report-structure.md",
+    "type": "blob",
+    "size": 5718,
+    "sha": "9d86196f51116fb78a8416ba47903357fef9c1ed"
+  },
+  {
+    "path": "skills/nature-reviewer/references/review-axes.md",
+    "type": "blob",
+    "size": 3439,
+    "sha": "a7f8feabeacabc212816a73cac9219449c65b7c5"
+  },
+  {
+    "path": "skills/nature-reviewer/references/reviewer-workflow.md",
+    "type": "blob",
+    "size": 6478,
+    "sha": "f1acd259a3af6e97487a1398acabb97844c3e7ce"
+  },
+  {
+    "path": "skills/nature-reviewer/references/role-boundaries.md",
+    "type": "blob",
+    "size": 3421,
+    "sha": "a37906c3158896f833797768ab9268b0b862cbfb"
+  },
+  {
+    "path": "skills/nature-reviewer/references/source-basis.md",
+    "type": "blob",
+    "size": 5473,
+    "sha": "1b44dcb64e99501d53bf9b2d49fe94f2abd385e5"
+  },
+  {
+    "path": "skills/nature-reviewer/references/technical-concern-taxonomy.md",
+    "type": "blob",
+    "size": 6421,
+    "sha": "3f3d55a233b095af8baa62a0cd7891d49738c8ee"
+  },
+  {
+    "path": "skills/nature-reviewer/tests/punctuation-style.md",
+    "type": "blob",
+    "size": 1812,
+    "sha": "b2d7fded943660cc2c102cd0dbc300210b2a5a06"
+  },
+  {
+    "path": "skills/nature-reviewer/tests/reviewer-independence.md",
+    "type": "blob",
+    "size": 2738,
+    "sha": "12a8f045c6f72ac17ba8c6fa9cb596bb354082c5"
+  },
+  {
+    "path": "skills/nature-reviewer/tests/severity-tiering.md",
+    "type": "blob",
+    "size": 2738,
+    "sha": "aaeb598e7a3d08880972e19f8b389948eccd37a9"
+  },
+  {
+    "path": "skills/nature-reviewer/tests/test_reviewer_instruction_contracts.py",
+    "type": "blob",
+    "size": 1229,
+    "sha": "7c6a88007431aa01e76c61b5d153c8ac8440be36"
+  },
+  {
+    "path": "skills/nature-reviewer/tests/traceable-review.md",
+    "type": "blob",
+    "size": 1746,
+    "sha": "b7744ec3c64a0cfeab210003b29404e92a5c400c"
+  }
+]

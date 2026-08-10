@@ -1,0 +1,35 @@
+{
+  "repository": "stephenturner/skill-peer-review-assistant",
+  "fixed_version": "ef30b0f9790eb419bbfe25906472b727dbd69de3",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7082e41ff844d69c455c9bbe4252827540a83a16",
+      "size": 79
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01836d57266532c82eb3347081018283a613859d",
+      "size": 1074
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5714af4549d4f3ceb1571584f2518aca9588ec95",
+      "size": 5659
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4866a66628de9aba4fb12fa81804ed9fffd2387",
+      "size": 14116
+    }
+  ]
+}

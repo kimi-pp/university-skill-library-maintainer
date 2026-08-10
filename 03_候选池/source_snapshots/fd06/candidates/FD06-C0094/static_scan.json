@@ -1,0 +1,19 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/circle-time/SKILL.md",
+        "snippet": "es/transitions.md` for one-line transition cues between every adjacent segment. 8. If any accommodation is flagged, load `references/accommodations.md` and apply substitutions inline (not as footnotes). 9. Assemble the mark"
+      },
+      {
+        "file": "skills/circle-time/references/accommodations.md",
+        "snippet": "** never skip or reorder segments on a sensory-sensitive day; the structure itself is the accommodation. - **Lighting:** avoid flickering fluorescents for the sensory-sensitive child; lamp-lit circle corner is ideal. - **Fo"
+      },
+      {
+        "file": "skills/circle-time/references/accommodations.md",
+        "snippet": "(sensory > mobility > language > neutrality), then add the others. Never drop a required accommodation to make a \"cuter\" plan. ## Large-group pacing (≥16) - Prefer whole-group call-and-response over individual shares. -"
+      }
+    ]
+  },
+  "read_errors": []
+}

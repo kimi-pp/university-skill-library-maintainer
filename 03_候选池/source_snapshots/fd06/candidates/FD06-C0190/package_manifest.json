@@ -1,0 +1,92 @@
+[
+  {
+    "path": "skills/rubric/SKILL.md",
+    "type": "blob",
+    "size": 14682,
+    "sha": "aa8b7d6d1db1d48ab1a5c54c12ec79eee30e4f57"
+  },
+  {
+    "path": "skills/rubric/evals/evals.json",
+    "type": "blob",
+    "size": 5553,
+    "sha": "3c565a1a86f4c72cd0d84e067ff94f219e47a7d3"
+  },
+  {
+    "path": "skills/rubric/references/criterion-writing.md",
+    "type": "blob",
+    "size": 4304,
+    "sha": "27e27dab74675390b5e85f5735883932c666146a"
+  },
+  {
+    "path": "skills/rubric/references/descriptor-phrasing.md",
+    "type": "blob",
+    "size": 5790,
+    "sha": "a81655e1e721375ddaa3fcc04bd094e2b1c84d3b"
+  },
+  {
+    "path": "skills/rubric/references/examples/art-portfolio-6-8.md",
+    "type": "blob",
+    "size": 2838,
+    "sha": "ac6e74c407d32c391c7de0d43e57432933090639"
+  },
+  {
+    "path": "skills/rubric/references/examples/coding-project-college.md",
+    "type": "blob",
+    "size": 3526,
+    "sha": "c4b00f20488aceee038eaf4316ce753eb7fbe2c3"
+  },
+  {
+    "path": "skills/rubric/references/examples/grad-thesis-proposal.md",
+    "type": "blob",
+    "size": 5527,
+    "sha": "95e8c64183087f8227a942dfa1a4cfe4a50efd82"
+  },
+  {
+    "path": "skills/rubric/references/examples/group-presentation-7.md",
+    "type": "blob",
+    "size": 4076,
+    "sha": "5cc3ab29b4603bd21d1701c0d5c2b4bd977f8834"
+  },
+  {
+    "path": "skills/rubric/references/examples/kindergarten-letter-formation.md",
+    "type": "blob",
+    "size": 1972,
+    "sha": "2d48886c75f062103f12d310ace3cef34cbbbd1a"
+  },
+  {
+    "path": "skills/rubric/references/examples/lab-report-ap-bio.md",
+    "type": "blob",
+    "size": 3455,
+    "sha": "4344da30dcd157259ae736c7fbc99ff3288ce699"
+  },
+  {
+    "path": "skills/rubric/references/examples/math-problem-set-6-8.md",
+    "type": "blob",
+    "size": 3110,
+    "sha": "7c77d0702b2cdb73126ce25b2e540440fbdd1521"
+  },
+  {
+    "path": "skills/rubric/references/examples/narrative-essay-9-12.md",
+    "type": "blob",
+    "size": 2351,
+    "sha": "05bd447eae69b79f81921bf78183cc43014d00d2"
+  },
+  {
+    "path": "skills/rubric/references/frameworks.md",
+    "type": "blob",
+    "size": 5308,
+    "sha": "fdedc5d666466875912c144709335d72bc249f48"
+  },
+  {
+    "path": "skills/rubric/references/standards-crosswalk.md",
+    "type": "blob",
+    "size": 4974,
+    "sha": "63655a096690951493dd26e4b86bbe3d6b5cf782"
+  },
+  {
+    "path": "skills/rubric/references/taxonomies.md",
+    "type": "blob",
+    "size": 5717,
+    "sha": "6ae557c9baf2e7790c670afdece81452eb99823e"
+  }
+]

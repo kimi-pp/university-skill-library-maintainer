@@ -1,0 +1,14 @@
+[
+  {
+    "path": "SKILL.md",
+    "size": 35581,
+    "sha256": "7baaebdb41f6d509823009154ff06b5faa237326aa6155a546038bd864a98d0c",
+    "contentType": "text/plain"
+  },
+  {
+    "path": "skill-card.md",
+    "size": 1287,
+    "sha256": "b85e3b232167ab241b9c65bf1391f1e41ea9dcbd409d6bc1a04629e2b54e6217",
+    "contentType": "text/markdown"
+  }
+]

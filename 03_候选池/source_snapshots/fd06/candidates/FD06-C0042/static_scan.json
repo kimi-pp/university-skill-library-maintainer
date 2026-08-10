@@ -1,0 +1,37 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/yunshu0909/lesson-builder/SKILL.md",
+        "snippet": "、关键总结 ↓ 完成完整课件 ``` **课件包括：** - 开场（为什么学这节课、课程整体节奏） - 每个模块的详细内容（理论 + 案例 + 演示 + 收口句） - 总结和作业 - 可选：补充指南（工具使用、注册流程等） **产物：** 1个完整课件文档（飞书云文档格式） --- ## 关键优化点（基于实践改进） ### ✅ 更早做\"全局框架确认\" 不等到最后才问\"对不对\"，而是一开始就确认： - 这节"
+      },
+      {
+        "file": "skills/yunshu0909/lesson-builder/SKILL.md",
+        "snippet": "程大纲 **可能更适合 course-designer 的场景：** - 🤔 全新的课程，需要从零梳理画像和目标 - 🤔 需要非常细致的节奏控场方案 - 🤔 需要详细的演示卡片和作业设计 --- 开始吧！告诉我你要准备什么课程 👇"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/yunshu0909/lesson-builder/skill-report.json",
+        "snippet": "mprovements, and expand approved sections.\" }, { \"question\": \"Does it create slide files?\", \"answer\": \"No. It writes lesson content and document structure, but it does not create final slide des"
+      },
+      {
+        "file": "skills/yunshu0909/lesson-builder/skill-report.json",
+        "snippet": ", \"answer\": \"No. It writes lesson content and document structure, but it does not create final slide design files.\" }, { \"question\": \"Does it support different collaboration speeds?\", \"answer\""
+      }
+    ],
+    "process": [
+      {
+        "file": "skills/yunshu0909/lesson-builder/skill-report.json",
+        "snippet": "agram and later introduces another prose workflow example. No Ruby backtick expression or shell command is present.\" }, { \"id\": \"external_commands:SKILL.md:105:ruby-shell-backtick-execution\", \"ve"
+      }
+    ],
+    "untrusted_input_protection": [
+      {
+        "file": "skills/yunshu0909/lesson-builder/skill-report.json",
+        "snippet": "y heuristic is also a false positive because SKILL.md is readable Chinese Markdown and no prompt injection or malicious intent was found.\", \"remediation\": [], \"risk_factor_evidence\": [ { \"factor\": \"extern"
+      }
+    ]
+  },
+  "read_errors": []
+}

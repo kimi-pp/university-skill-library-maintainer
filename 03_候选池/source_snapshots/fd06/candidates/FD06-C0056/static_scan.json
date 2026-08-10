@@ -1,0 +1,55 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/api-design.md",
+        "snippet": "tions:** - Using JSON (could be XML, Protocol Buffers, etc.) - Token-based auth (could be OAuth, API keys, etc.) - Synchronous operations (could be async/webhooks) **Gaps:** - Real-time updates not covered (WebSock"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/methodology.md",
+        "snippet": "throw RangeError`\" - \"Button #submit-btn has tabindex=0 and aria-label='Submit form'\" - \"Password must be 8-72 chars, including: a-z, A-Z, 0-9, !@#$%\" ## Validating Transitions ### Connection Tests For each adjacen"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "anels improves decisions Standards to follow: - EEOC guidelines for non-discrimination - GDPR/privacy compliance for candidate data - Industry best practices (e.g., SHRM) ### Level 1 (Most Abstract): Universal Pr"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "re interviews - Create standardized questions for each competency - Train interviewers on bias and evaluation - Use panel of diverse interviewers - Evaluate on job-specific skills, not proxies - Aggregate independe"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "come ### Level 2: Framework & Research **Apply evidence-based hiring practices to reduce bias and improve predictive validity** Research-backed principles: - Structured interviews outperform unstructured (Schmidt"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "predict performance than credentials - Multiple independent evaluators reduce individual bias - Job analysis identifies actual success criteria - Standardization enables fair comparisons - Cognitive diversity in h"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "and respectfully\"** Core values: - Meritocracy: Select based on ability to do the job - Equity: Provide equal opportunity regardless of background - Predictive validity: Assessments should predict actual job perfor"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "→ L1**: Evidence-based practices are how we operationalize the abstract values of merit, equity, and predictive validity. ## Edge Cases & Boundary Testing ### Case 1: Candidate has unconventional background - **Ab"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "iewers are available except one - **Abstract principle (L1)**: Multiple evaluators reduce bias - **Standard process (L3)**: Panel of diverse interviewers - **Edge case**: Only senior engineers available this week,"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "nvolved; separate \"good referral\" from \"strong candidate\" ### Case 4: Candidate requests accommodation - **Abstract principle (L1)**: Treat people with dignity and respect - **Standard process (L4)**: 45-min technical inte"
+      },
+      {
+        "file": "skills/abstraction-concrete-examples/resources/examples/hiring-process.md",
+        "snippet": "te has dyslexia, requests written questions in advance - **Tension**: Standardization vs. accessibility - **Resolution**: Accommodation maintains what we're testing (problem-solving) while removing irrelevant barrier (readi"
+      }
+    ]
+  },
+  "read_errors": []
+}

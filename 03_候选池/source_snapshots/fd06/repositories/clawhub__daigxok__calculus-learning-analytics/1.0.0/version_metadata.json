@@ -1,0 +1,100 @@
+{
+  "skill": {
+    "slug": "calculus-learning-analytics",
+    "displayName": "高等数学学情数据分析Skill"
+  },
+  "version": {
+    "version": "1.0.0",
+    "createdAt": 1776307955313,
+    "changelog": "初始版本：班级数据看板、学生能力画像、教学建议生成",
+    "changelogSource": "user",
+    "license": "MIT-0",
+    "files": [
+      {
+        "path": "SKILL.md",
+        "size": 15653,
+        "sha256": "5c8011fd2d91ce1d1acf1264337aace5911cc55d2bef33625efff72886ecf429",
+        "contentType": "text/markdown"
+      },
+      {
+        "path": "skill-card.md",
+        "size": 2189,
+        "sha256": "f774d4bb635616b0ee757898bedd7a3cc4c1d1e7cb783b5fb19352e38538c63d",
+        "contentType": "text/markdown"
+      }
+    ],
+    "security": {
+      "status": "suspicious",
+      "hasWarnings": true,
+      "checkedAt": 1780090444213,
+      "model": "gpt-5.5",
+      "hasScanResult": true,
+      "sha256hash": "21361ffe514a47cda640cf85685a26eaccd3e1ebf207ddbdc84e0b15b248fbeb",
+      "virustotalUrl": "https://www.virustotal.com/gui/file/21361ffe514a47cda640cf85685a26eaccd3e1ebf207ddbdc84e0b15b248fbeb",
+      "scanners": {
+        "vt": {
+          "status": "clean",
+          "verdict": null,
+          "normalizedStatus": "clean",
+          "analysis": null,
+          "source": "engines",
+          "checkedAt": 1780090444213
+        },
+        "skillspector": {
+          "status": "clean",
+          "normalizedStatus": "clean",
+          "score": 20,
+          "severity": "LOW",
+          "recommendation": "SAFE",
+          "issueCount": 2,
+          "checkedAt": 1779964204672
+        },
+        "llm": {
+          "status": "suspicious",
+          "verdict": "suspicious",
+          "normalizedStatus": "suspicious",
+          "confidence": "high",
+          "summary": "This education analytics skill is coherent, but it handles identifiable student profiles, rankings, and risk predictions without enough privacy or access-control guidance.",
+          "dimensions": [
+            {
+              "detail": "The capability fits the stated purpose of class dashboards, student learning profiles, teaching recommendations, and performance prediction, but those outputs are sensitive education records and profiling data.",
+              "label": "Purpose & Capability",
+              "name": "purpose_capability",
+              "rating": "note"
+            },
+            {
+              "detail": "The skill shows outputs with student ID, name, class, score history, weak topics, behavioral trends, ranks, percentiles, and at-risk predictions, but does not define consent, minimization, authorization, sharing limits, or safeguards against high-stakes misuse.",
+              "label": "Instruction Scope",
+              "name": "instruction_scope",
+              "rating": "concern"
+            },
+            {
+              "detail": "The artifact is a single markdown skill with no executable installer, package install step, shell automation, or hidden runtime component.",
+              "label": "Install Mechanism",
+              "name": "install_mechanism",
+              "rating": "ok"
+            },
+            {
+              "detail": "Processing identifiable student analytics is proportionate to the purpose only with strong governance; the artifact does not set boundaries for who may run reports, export them, or view individual risk and ranking data.",
+              "label": "Credentials",
+              "name": "environment_proportionality",
+              "rating": "concern"
+            },
+            {
+              "detail": "No privilege escalation, background worker, or broad local access is shown; however, it includes a cache concept for student profiles and predictions without retention, deletion, or access-control instructions.",
+              "label": "Persistence & Privilege",
+              "name": "persistence_privilege",
+              "rating": "note"
+            }
+          ],
+          "guidance": "Install only if you will use it under an approved educational data policy. Avoid unnecessary identifiers, restrict individual reports to authorized educators, do not share rankings or risk flags broadly, and define retention, deletion, export, and audit practices before using real student data.",
+          "findings": "[SQP-2] expected: Student learning analytics is expected for this skill, but the concern is supported because the artifact lacks privacy, consent, minimization, retention, and access-control guidance for sensitive student records.\n[SQP-2] expected: Individual profile output is purpose-aligned, but it directly includes identifiers, class-relative rankings, weak topics, trends, and recommendations without masking or role-based disclosure boundaries.",
+          "agenticRiskFindings": null,
+          "riskSummary": null,
+          "model": "gpt-5.5",
+          "checkedAt": 1779964277967
+        }
+      }
+    }
+  }
+}

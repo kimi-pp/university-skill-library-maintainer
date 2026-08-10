@@ -1,0 +1,293 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "or use only the bundled local CLIs, whose reports do not echo manuscript text. Never: - Send unpublished manuscript, supplement, review, or editorial text to an external service without specific publisher/author authorization and venue permission - Upload"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "t not: - Claim to be the assigned reviewer, editor, journal, funder, or decision-maker - Submit a review or contact authors, editors, institutions, or third parties without authorization - Invent manuscript content, experime"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "es: - [Nature Portfolio](https://www.nature.com/nature-portfolio/editorial-policies/peer-review) asks reviewers not to upload manuscripts to generative-AI tools and asks for transparent declaration when AI supported claim evaluation. - [BMJ](htt"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "t an accountable human reviewer with a rigorous, fair, actionable assessment. Treat every unpublished submission and review as confidential. ## Mandatory safety boundary Before reading or analyzing unpublished content:"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "a rigorous, fair, actionable assessment. Treat every unpublished submission and review as confidential. ## Mandatory safety boundary Before reading or analyzing unpublished content: 1. Confirm the user is authorized by"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "on and review as confidential. ## Mandatory safety boundary Before reading or analyzing unpublished content: 1. Confirm the user is authorized by the publisher, editor, author, or other material owner. 2. Check the tar"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "e only the bundled local CLIs, whose reports do not echo manuscript text. Never: - Send unpublished manuscript, supplement, review, or editorial text to an external service without specific publisher/author authorizatio"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "nal service without specific publisher/author authorization and venue permission - Upload confidential content to a public model, search engine, citation service, grammar tool, plagiarism checker, or image service - Reuse"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "only what the controlling policy authorizes. Record deletion or retention without copying confidential content into the record. Read `references/ethical_review_practice.md` before handling confidential material. ## Human"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "al content into the record. Read `references/ethical_review_practice.md` before handling confidential material. ## Human accountability Label generated text as a working draft. The accountable human must: - Read the co"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "certainty. Do not accuse authors or investigate them. Route credible concerns through the confidential editor channel under venue policy. ### 8. Review figures, tables, and citations For figures and tables, assess: - Co"
+      },
+      {
+        "file": "skills/peer-review/assets/review_scaffold_template.md",
+        "snippet": "ailable materials, analyses not independently reproduced, and unresolved uncertainty.] # Confidential comments to editor > Keep this channel separate from comments to authors. Follow the venue policy. Do not place ordina"
+      },
+      {
+        "file": "skills/peer-review/assets/source_ledger.csv",
+        "snippet": "s://authors.bmj.com/policies/ai-use,2026-07-23,illustrative_policy,Example only; protects unpublished material and requires declaration for review-language assistance SRC-JAMA-POLICY,JAMA Network,Guidance for Authors Peer"
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "vidence should be described neutrally and routed through the journal process, normally in confidential editor notes. ## Claim–evidence alignment Check each central claim against the design, analysis, result, and uncertai"
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "ransparent secondary analyses If a concern cannot safely be raised with authors, use the confidential editor channel. State the evidence and uncertainty; do not investigate people, contact institutions, or reveal the manu"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": ", and required actionability fields. It emits line numbers and rule IDs, not review text. Human tone and scientific review remain mandatory. Before handoff: - Verify all locations and evidence. - Remove unsupported or speculative criticism."
+      },
+      {
+        "file": "skills/peer-review/assets/review_scaffold_template.md",
+        "snippet": "# Peer-review working draft — {{REVIEW_ID}} > Private working document. Human review, policy checks, and factual verification are required. Do not submit this scaffold with unresolved placeholders. Do not"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "controls the individual assignment. ## Role boundary This skill supports an accountable human preparing a review draft or structured assessment. It must not: - Claim to be the assigned reviewer, editor, journal, funder, or decision"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "quests for specialist review Ordinary scientific criticism should not appear only in the editor channel. Do not write a harsher private review that contradicts the author-facing report. The bundled scaffold keeps these channels visibly separate. ## Suspected in"
+      },
+      {
+        "file": "skills/peer-review/references/tool_reference.md",
+        "snippet": "uted analysis that need provenance Lexical lint has false positives and false negatives. Human review remains required. ## Private output examples All JSON-reporting CLIs accept: ```bash -o local-report.json ``` To re"
+      },
+      {
+        "file": "skills/peer-review/scripts/lint_review.py",
+        "snippet": "tific validity, verify whether statements are true, \" \"or replace accountable human review. Findings contain line numbers \" \"and rule IDs, not review or manuscript text.\" ), } def buil"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "e publisher, editor, author, or other material owner. 2. Check the target venue’s review, confidentiality, co-review, retention, and AI/tool policies. 3. Record conflicts, competence limits, requested scope, and specialist-re"
+      },
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "## References and assets - `references/ethical_review_practice.md` — COPE/ICMJE duties, confidentiality, AI, channels - `references/reporting_standards.md` — current major guidelines and verified domain standards - `referen"
+      },
+      {
+        "file": "skills/peer-review/assets/review_scaffold_template.md",
+        "snippet": "ext is not embedded by the generator. - Reconfirm conflicts, competence limits, tool use, confidentiality, and deletion or retention obligations before submission. # Comments to authors ## Evidence-bounded summary [Write a"
+      },
+      {
+        "file": "skills/peer-review/assets/review_scaffold_template.md",
+        "snippet": "s] - Assistance or tools used and required disclosure: [State policy-compliant details] - Confidentiality or retention issue: [State any unresolved process concern] ## Editorial-process or integrity concerns [Describe only"
+      },
+      {
+        "file": "skills/peer-review/assets/review_scaffold_template.md",
+        "snippet": "## Editorial-process or integrity concerns [Describe only substantiated process, ethics, confidentiality, or integrity concerns and their evidence locations. Avoid accusations and avoid an editorial outcome.]"
+      },
+      {
+        "file": "skills/peer-review/assets/source_ledger.csv",
+        "snippet": "elines-peer-reviewers,2026-07-23,current_official,\"Core duties for competence, conflicts, confidentiality, timeliness, conduct, and bounded requests\" SRC-COPE-PEER,COPE,Peer review core practice and resources,Current page; fi"
+      },
+      {
+        "file": "skills/peer-review/assets/source_ledger.csv",
+        "snippet": "ponsibilities-in-the-submission-and-peer-peview-process.html,2026-07-23,current_official,\"Confidentiality, deletion, assistance disclosure, conflicts, constructive review, and editor responsibility\" SRC-ICMJE-AI,ICMJE,Use of"
+      },
+      {
+        "file": "skills/peer-review/assets/source_ledger.csv",
+        "snippet": "ers.html,2026-07-23,current_official,\"Follow journal policy, request permission, preserve confidentiality, disclose use, and validate output\" SRC-EQUATOR,EQUATOR Network,Library for health research reporting,Current database,"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "nd anonymity expectations - Whether co-review is allowed and how contributors are named - Confidentiality and retention requirements - Required author-facing and editor-only fields - AI and tool policy - Citation, image-integ"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "the target venue. Use `scripts/validate_review_intake.py` before substantive review. ## Confidentiality and data handling An unpublished manuscript, its supplements, review comments, and editorial correspondence are privil"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "the contribution to the editor as required. The invited reviewer remains responsible for confidentiality and the submitted report. ### No reuse Do not: - Appropriate ideas, methods, code, data, or language before publicat"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "ewers must follow the journal’s AI policy or request permission before using AI, maintain confidentiality, disclose use, and remain responsible for output that may be incorrect, incomplete, or biased. For any permitted assis"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "rds.md`. **Critical distinction:** reporting completeness is not design quality, risk of bias, validity, or merit. Never convert missing items into an automatic score or publication judgment. ### 4. Map claims to"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "idelines/stard/\", \"notes\": \"For diagnostic accuracy studies. Use a separate risk-of-bias tool for design/conduct appraisal.\" }, { \"id\": \"STARD-AI-2025\", \"name\": \"STARD-AI\", \"version\""
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "g rather than outcome-driven screening? - Could adjustment introduce collider or mediator bias? - Are time-varying treatment, censoring, immortal time, or informative observation processes relevant? - Are negative"
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "rnal evaluation - Model and preprocessing availability, versioning, and human oversight - Fairness analyses tied to intended use, not demographic metrics without context TRIPOD+AI applies to regression and machine-lea"
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "ndividual data or distribution display when summary graphics conceal relevant structure - Accessibility and redundant encoding beyond color alone - Consistency among text, tables, figures, and supplements - Sample sizes and"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "ulation about competence or motives - Language policing unrelated to scientific clarity - Bias based on identity, institution, location, seniority, language, or reputation - Accusations when the evidence supports o"
+      },
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "tudy. It is not, by itself: - A method for designing or conducting the study - A risk-of-bias tool - A statistical reanalysis - A measure of truth, importance, novelty, or manuscript merit - A publication recommen"
+      },
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "the appropriate extension for scoping, diagnostic, individual-participant-data, network, equity, harms, or other specialized reviews PRISMA explicitly does not assess review conduct or methodological quality. Use a"
+      },
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "not assess review conduct or methodological quality. Use appropriate methods and risk-of-bias tools separately. Official sources: [PRISMA 2020 resources](https://www.prisma-statement.org/prisma-2020) and the [pri"
+      },
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "MR, and domain-specific extensions STROBE helps identify whether selection, measurement, bias, confounding, missing data, sensitivity analyses, and generalizability are reported. It does not establish that those m"
+      },
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "es estimating diagnostic accuracy against a reference standard Separately assess risk of bias and applicability with a suitable tool such as the current QUADAS family when relevant. STARD’s official implementation"
+      },
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "ication tasks Check dataset practices, index-test specification, evaluation, algorithmic bias and fairness, applicability, and generalizability. If the primary aim is development or evaluation of a multivariable p"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/peer-review/SKILL.md",
+        "snippet": "ad confidential content to a public model, search engine, citation service, grammar tool, plagiarism checker, or image service - Reuse content for training, benchmarking, product improvement, or unrelated research - Read"
+      },
+      {
+        "file": "skills/peer-review/assets/review_scaffold_template.md",
+        "snippet": ", figures, tables, and citations [Record specific, evidence-backed issues. Do not allege misconduct; route credible integrity concerns through the journal process.] ## Limitations of this review [State competence limi"
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "y a manuscript location, supplied artifact, or applicable method principle. Do not infer misconduct, poor quality, or manuscript merit from a missing reporting item. Separate: - **Not reported:** the manuscript does no"
+      },
+      {
+        "file": "skills/peer-review/references/common_issues.md",
+        "snippet": "erred to the editor under the journal’s image-integrity process. Do not accuse authors of fabrication. ## Ethics, welfare, privacy, and integrity Check what is applicable: - Ethics committee or institutional review and"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "blic or external generative-AI systems - Search engines or web research tools - Citation, plagiarism, grammar, translation, or image services - Unapproved collaborators - Cloud storage or telemetry outside the authorized"
+      },
+      {
+        "file": "skills/peer-review/references/ethical_review_practice.md",
+        "snippet": "te. ## Suspected integrity problems Reviewers identify concerns; they do not adjudicate misconduct. 1. Preserve confidentiality. 2. Record the exact location and observable discrepancy. 3. Describe uncertainty and pla"
+      }
+    ],
+    "network": [
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "atures\": [], \"domains\": [ \"all\" ], \"main_item_count\": 21, \"url\": \"https://arriveguidelines.org/arrive-guidelines\", \"notes\": \"Use Essential 10 and Recommended Set; reporting supports apprai"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "res\": [], \"domains\": [ \"health\" ], \"main_item_count\": 13, \"url\": \"https://www.care-statement.org/checklist\", \"notes\": \"Confirm informed consent and privacy requirements with the target ven"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "res\": [], \"domains\": [ \"health\" ], \"main_item_count\": 28, \"url\": \"https://www.ispor.org/heor-resources/good-practices/cheers\", \"notes\": \"For economic evaluations of health interventions; u"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "\"domains\": [ \"health\", \"all\" ], \"main_item_count\": 30, \"url\": \"https://www.consort-spirit.org/\", \"notes\": \"Supersedes CONSORT 2010. Check design-specific extensions; CONSORT is not a qu"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "], \"domains\": [ \"health\" ], \"main_item_count\": null, \"url\": \"https://www.equator-network.org/reporting-guidelines/consort-artificial-intelligence/\", \"notes\": \"Use with CONSORT 2025 fo"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "res\": [], \"domains\": [ \"health\" ], \"main_item_count\": 32, \"url\": \"https://www.equator-network.org/reporting-guidelines/coreq/\", \"notes\": \"For interviews and focus groups; consider SRQR for"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "atures\": [], \"domains\": [ \"all\" ], \"main_item_count\": 27, \"url\": \"https://www.prisma-statement.org/prisma-2020\", \"notes\": \"Use the relevant extension for scoping, diagnostic, individual-pa"
+      },
+      {
+        "file": "skills/peer-review/assets/reporting_guidelines.json",
+        "snippet": "ures\": [], \"domains\": [ \"all\" ], \"main_item_count\": null, \"url\": \"https://www.equator-network.org/reporting-guidelines/prisma-protocols/\", \"notes\": \"Use for systematic review protocols rat"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "skills/peer-review/references/reporting_standards.md",
+        "snippet": "script merit - A publication recommendation Checklist completion must never be converted automatically into a quality score. A fully reported study can have serious design problems; an incompletely reported study may be impossible to assess. R"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/peer-review/references/security_validation.md",
+        "snippet": "i-file collection/transmission chain - Environment harvesting in both schematic scripts - API-key transmission to an external model service - Full environment propagation to a subprocess - Repeated costly model/image"
+      },
+      {
+        "file": "skills/peer-review/references/security_validation.md",
+        "snippet": "ject network libraries, executable serialization, dynamic code execution, and environment credential access. - Added confidentiality, no-reuse, authorization, conflict, competence, AI-policy, disclosure, and deletion/ret"
+      },
+      {
+        "file": "skills/peer-review/references/security_validation.md",
+        "snippet": "nstrain bundled tools to local standard-library processing with no network, model, image, credential, or environment access. 2. **Broad description** — accepted as a scoped capability description. The mandatory authoriza"
+      },
+      {
+        "file": "skills/peer-review/references/security_validation.md",
+        "snippet": "s; tests cover oversize rejection. None of the LOW findings permits data transmission or credential access. No CRITICAL or HIGH issue remains. ## Reproduction ```bash PYTHONDONTWRITEBYTECODE=1 python3 -m unittest disc"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/peer-review/scripts/_common.py",
+        "snippet": "put: str | Path | None, *, force: bool = False ) -> None: \"\"\"Print JSON or atomically write it to an explicitly selected local file.\"\"\" serialized = json.dumps(data, indent=2, sort_keys=True, ensure_ascii=False) + \"\\n\" if output is None:"
+      },
+      {
+        "file": "skills/peer-review/scripts/lint_review.py",
+        "snippet": "if author_lines and editor_lines and author_lines[0] >= editor_lines[0]: errors.append(issue(\"CHANNEL_ORDER_INVALID\", \"document\")) author_start = author_lines[0] if len(author_lines) == 1 else None editor_start = editor_lines[0] if len(ed"
+      },
+      {
+        "file": "skills/peer-review/scripts/lint_review.py",
+        "snippet": "NNEL\", subject)) blocks = _comment_blocks(lines) if not blocks: warnings.append(issue(\"NO_STRUCTURED_COMMENTS_FOUND\", \"document\")) comment_summaries: list[dict[str, Any]] = [] for block in blocks: fields: dict[str, tuple[str, int]]"
+      }
+    ]
+  },
+  "read_errors": []
+}

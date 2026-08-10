@@ -1,0 +1,146 @@
+[
+  {
+    "path": "skills/peer-review/SKILL.md",
+    "type": "blob",
+    "size": 11639,
+    "sha": "2826f8521dbcae7deea4bcee63b0e9a416a2dd87"
+  },
+  {
+    "path": "skills/peer-review/assets/citation_references_template.csv",
+    "type": "blob",
+    "size": 196,
+    "sha": "ccefdaa806184717cd79e2dd06888bda58984253"
+  },
+  {
+    "path": "skills/peer-review/assets/claim_evidence_matrix_template.csv",
+    "type": "blob",
+    "size": 745,
+    "sha": "df23fb265562c2ffe5fce0d817fc603aaeee4c7b"
+  },
+  {
+    "path": "skills/peer-review/assets/reporting_checklist_template.csv",
+    "type": "blob",
+    "size": 968,
+    "sha": "76505756718804dc5fdef6d70c4fae39752e4069"
+  },
+  {
+    "path": "skills/peer-review/assets/reporting_guidelines.json",
+    "type": "blob",
+    "size": 13446,
+    "sha": "1d45f29d333630ecf5489a25daeedcc7054d9fb3"
+  },
+  {
+    "path": "skills/peer-review/assets/review_intake_template.json",
+    "type": "blob",
+    "size": 1290,
+    "sha": "a10888476849895bc335677ad987e14738b20cfe"
+  },
+  {
+    "path": "skills/peer-review/assets/review_scaffold_template.md",
+    "type": "blob",
+    "size": 3025,
+    "sha": "dfbae11925ae96be6d6106987435f9774a43eba2"
+  },
+  {
+    "path": "skills/peer-review/assets/source_ledger.csv",
+    "type": "blob",
+    "size": 9147,
+    "sha": "f27ba6f6f1009ea7a90aa639a67a494441a48ba2"
+  },
+  {
+    "path": "skills/peer-review/assets/statistical_reproducibility_template.json",
+    "type": "blob",
+    "size": 7281,
+    "sha": "943a30fef1fefad979e9828573d6d76771001399"
+  },
+  {
+    "path": "skills/peer-review/assets/study_profile_template.json",
+    "type": "blob",
+    "size": 197,
+    "sha": "cce8e5f4e0a67795862ea17e4f30c80c8a44c82c"
+  },
+  {
+    "path": "skills/peer-review/references/common_issues.md",
+    "type": "blob",
+    "size": 13999,
+    "sha": "f04f8b849f179b2f69e3f247526d0ba8cfc5bfb2"
+  },
+  {
+    "path": "skills/peer-review/references/ethical_review_practice.md",
+    "type": "blob",
+    "size": 11131,
+    "sha": "c0211caab2d98e7a699354c46961a14734df8ce3"
+  },
+  {
+    "path": "skills/peer-review/references/reporting_standards.md",
+    "type": "blob",
+    "size": 14032,
+    "sha": "f155b2d20243c5aecd6e4de3aa73e20d679d12e6"
+  },
+  {
+    "path": "skills/peer-review/references/security_validation.md",
+    "type": "blob",
+    "size": 3547,
+    "sha": "928c04f56a021aba104226546cd5eb2f58142cd9"
+  },
+  {
+    "path": "skills/peer-review/references/statistical_reproducibility.md",
+    "type": "blob",
+    "size": 11712,
+    "sha": "17f73cf259395b005d705beec2c6a8631dc8de7e"
+  },
+  {
+    "path": "skills/peer-review/references/tool_reference.md",
+    "type": "blob",
+    "size": 7781,
+    "sha": "d9b156b11a892703cbb53b1a7e02b463ee1f43f8"
+  },
+  {
+    "path": "skills/peer-review/scripts/_common.py",
+    "type": "blob",
+    "size": 13896,
+    "sha": "3f8aa2152ea785ea34933c4c6555e0e4ec85fee0"
+  },
+  {
+    "path": "skills/peer-review/scripts/audit_citations.py",
+    "type": "blob",
+    "size": 7097,
+    "sha": "1a7d3ec1ed8eccd075793f16d9f7c35504b2751e"
+  },
+  {
+    "path": "skills/peer-review/scripts/audit_statistics_reproducibility.py",
+    "type": "blob",
+    "size": 10455,
+    "sha": "931d2145d64d1ffd1393c78492076ea23281240c"
+  },
+  {
+    "path": "skills/peer-review/scripts/generate_review_scaffold.py",
+    "type": "blob",
+    "size": 2634,
+    "sha": "0951a39062a3cbc92bf43bb21d8ccaae74ab81c4"
+  },
+  {
+    "path": "skills/peer-review/scripts/lint_review.py",
+    "type": "blob",
+    "size": 9085,
+    "sha": "ff2fe89818097e88eec15316f7808ef1056b4607"
+  },
+  {
+    "path": "skills/peer-review/scripts/select_reporting_guidelines.py",
+    "type": "blob",
+    "size": 13594,
+    "sha": "af1e99d369e60de14cd35c7c4a652272888f6ccd"
+  },
+  {
+    "path": "skills/peer-review/scripts/validate_claim_evidence.py",
+    "type": "blob",
+    "size": 7083,
+    "sha": "f506aaf5074f278eed5257db3ac5f3649258de16"
+  },
+  {
+    "path": "skills/peer-review/scripts/validate_review_intake.py",
+    "type": "blob",
+    "size": 14466,
+    "sha": "c0c229fa0b13079f68b858887904bd4a4061f9f5"
+  }
+]

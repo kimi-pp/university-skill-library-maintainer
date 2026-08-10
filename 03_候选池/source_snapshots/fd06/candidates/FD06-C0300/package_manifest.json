@@ -1,0 +1,32 @@
+[
+  {
+    "path": "README.md",
+    "size": 2747,
+    "sha256": "d6735b1a21cc9bfd2252f105d0ba0cb8b35abd9589f71640d01a78f4bff68de3",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "SKILL.md",
+    "size": 6715,
+    "sha256": "5db6bbe35d27fd97f95b0bae2c4c9780836cb16981162014386b9132ed8a929d",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "identity-patch.md",
+    "size": 1832,
+    "sha256": "b88b8d5a3ded94bb9955822d69d75a292033bfbb268c40e74ac17d995671283f",
+    "contentType": "text/markdown"
+  },
+  {
+    "path": "skill.json",
+    "size": 1264,
+    "sha256": "56894f1ec7f0a880e40a5409c2fca74b30a3613b62a9ced9fa7a235b2ff0a965",
+    "contentType": "application/json"
+  },
+  {
+    "path": "skill-card.md",
+    "size": 2389,
+    "sha256": "145a01a025fedf238365addc65ae721338f62cbc61e1b7b9765af295d09ef989",
+    "contentType": "text/markdown"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+        "snippet": "nner\" - \"competency-unpacker\" - \"learning-progression-builder\" - \"gap-analysis-from-student-work\" teacher_time: \"15 minutes\" tags: [\"scope-and-sequence\", \"curriculum-coherence\", \"vertical-coherence\", \"learning-progre"
+      },
+      {
+        "file": "skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+        "snippet": "given current knowledge — it should be reviewed and revised at least annually using real student outcome data. The gap-analysis-from-student-work skill is the natural tool for feeding that data back into sequence revision. 6. **If no prerequisite_map is supplied,"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+        "snippet": "ationale, confidence (high/medium/low). Flagged as inferred — requires subject expert and teacher review before treating as authoritative.\" - field: \"sequencing_constraints\" type: \"array\" description: \"Distin"
+      },
+      {
+        "file": "skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+        "snippet": ": \"array\" description: \"LTs where the recommended ordering is a soft preference and teacher judgement should drive the final decision. Includes all T3 dispositional LTs where experiential readiness is context-dependent.\" - field: \"prerequisite_viola"
+      }
+    ]
+  },
+  "read_errors": []
+}

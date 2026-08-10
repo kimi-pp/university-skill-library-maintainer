@@ -1,0 +1,117 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "scaffold.json ``` The scaffold does not read source documents or draft findings. ### 8. Human review and release Before releasing an organizational report, a qualified accountable human committee must verify: - constru"
+      },
+      {
+        "file": "skills/scholar-evaluation/references/local_tooling.md",
+        "snippet": "improvement options; - minimized quality-assurance statuses; and - fixed limitations and human-review fields. It does not draft findings from source documents or issue a decision. ## Exit behavior - exit `0`: requested"
+      },
+      {
+        "file": "skills/scholar-evaluation/scripts/_common.py",
+        "snippet": "CRIPTIVE DEVELOPMENTAL ASSESSMENT ONLY — NOT A DECISION \" \"RECOMMENDATION — QUALIFIED HUMAN REVIEW REQUIRED\" ) PROHIBITED_USES = { \"admissions\", \"awards\", \"discipline\", \"funding\", \"hiring\", \"pro"
+      },
+      {
+        "file": "skills/scholar-evaluation/scripts/_common.py",
+        "snippet": "= \"2.0\" NOTICE = ( \"DESCRIPTIVE DEVELOPMENTAL ASSESSMENT ONLY — NOT A DECISION \" \"RECOMMENDATION — QUALIFIED HUMAN REVIEW REQUIRED\" ) PROHIBITED_USES = { \"admissions\", \"awards\", \"discipline\", \"funding\", \"hiring\", \"pro"
+      },
+      {
+        "file": "skills/scholar-evaluation/scripts/generate_report_scaffold.py",
+        "snippet": "#!/usr/bin/env python3 \"\"\"Generate a minimized local JSON scaffold for qualified human review.\"\"\" from __future__ import annotations import argparse from pathlib import Path from typing import Any import _commo"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "cuments its construct, provenance, rater quality, uncertainty, traceability, sensitivity, fairness, accessibility, privacy, and human governance. ## Hard safety boundary Never use this skill to automate, recommend, m"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "s construct, provenance, rater quality, uncertainty, traceability, sensitivity, fairness, accessibility, privacy, and human governance. ## Hard safety boundary Never use this skill to automate, recommend, materially influ"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "ation and data classification; - accountable committee owner; - conflicts and recusals; - accessibility and accommodation process; - appeal or correction route; and - data purpose, access, retention, and deletion. Stop on"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "ssification; - accountable committee owner; - conflicts and recusals; - accessibility and accommodation process; - appeal or correction route; and - data purpose, access, retention, and deletion. Stop on a prohibited decis"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "e committee owner; - conflicts and recusals; - accessibility and accommodation process; - appeal or correction route; and - data purpose, access, retention, and deletion. Stop on a prohibited decision context or unn"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "bric_template.json`, then obtain qualified disciplinary, assessment-methods, stakeholder, accessibility, privacy, and fairness review. The template deliberately records content validity as `not_established`. Do not change"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "tain qualified disciplinary, assessment-methods, stakeholder, accessibility, privacy, and fairness review. The template deliberately records content validity as `not_established`. Do not change that status without doc"
+      },
+      {
+        "file": "skills/scholar-evaluation/SKILL.md",
+        "snippet": "and uncertainty; - weight sensitivity and order instability; - disciplinary and subgroup bias review; - conflicts and recusals; - accessibility and accommodations; - privacy, minimization, retention, and output co"
+      },
+      {
+        "file": "skills/scholar-evaluation/assets/process_checklist_template.json",
+        "snippet": "s\": { \"process_confirmed\": false, \"process_ref\": \"\", \"notice_ref\": \"\" }, \"accessibility\": { \"accommodations_process_confirmed\": false, \"accessible_materials_confirmed\": false, \"process_ref\": \"\""
+      },
+      {
+        "file": "skills/scholar-evaluation/assets/process_checklist_template.json",
+        "snippet": "d\": false, \"weight_sensitivity_reviewed\": false, \"quality_record_ref\": \"\" }, \"fairness\": { \"stakeholder_review_completed\": false, \"disciplinary_context_reviewed\": false, \"subgroup_bias_review_co"
+      },
+      {
+        "file": "skills/scholar-evaluation/assets/rubric_template.json",
+        "snippet": "al_required\": true, \"appeal_process_required\": true, \"appeal_process_ref\": \"LOCAL-APPEAL-PROCESS-REQUIRED\", \"accessibility_accommodations_required\": true, \"accessibility_process_ref\": \"LOCAL-ACCESSIBI"
+      },
+      {
+        "file": "skills/scholar-evaluation/assets/rubric_template.json",
+        "snippet": "\"accessibility_accommodations_required\": true, \"accessibility_process_ref\": \"LOCAL-ACCESSIBILITY-PROCESS-REQUIRED\", \"data_protection_review_required\": true, \"data_protection_process_ref\": \"LOCAL-DATA-PROTECTI"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/scholar-evaluation/references/local_tooling.md",
+        "snippet": "fields; - uses fixed schemas and never executes supplied text; - has no network, model, credential, environment-file, dynamic-code, executable-serialization, or child-process behavior; - writes only minimized JSON re"
+      },
+      {
+        "file": "skills/scholar-evaluation/references/security_validation.md",
+        "snippet": "four CRITICAL cross-file, environment, and network-exfiltration findings; - three MEDIUM credential, prompt, and environment-harvesting findings; and - three LOW cross-skill, command, and resource-use findings. The aff"
+      },
+      {
+        "file": "skills/scholar-evaluation/references/security_validation.md",
+        "snippet": "Remediation - Deleted both schematic-generation scripts. - Removed all network requests, API-key handling, environment access, environment-file loading, third-party model behavior, image handling, child-process e"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/scholar-evaluation/references/security_validation.md",
+        "snippet": "rect behavioral scan is clean. The residual findings neither permit data transmission nor create a missing-file fallback. The generated root `SECURITY.md` snapshot was intentionally not edited in this scoped refresh. ## Reproducti"
+      },
+      {
+        "file": "skills/scholar-evaluation/scripts/_common.py",
+        "snippet": "tput.parent.is_dir(): raise ValidationError(\"OUTPUT_PARENT_NOT_FOUND\") output.write_text(rendered, encoding=\"utf-8\") def failure_report(error: ValidationError) -> dict[str, Any]: return { \"schem"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/scholar-evaluation/references/source_ledger.md",
+        "snippet": "journal- and publication-based measures, especially Journal Impact Factor and h-index; publish criteria; train assessors; review and evaluate criteria, tools, and processes. - **Use here:** qualitative-first process, rubric provenance, rater trai"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/scholar-evaluation/references/source_ledger.md",
+        "snippet": "ion Commissioner's Office, [purpose limitation](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/purpose-limitation) and ["
+      },
+      {
+        "file": "skills/scholar-evaluation/references/source_ledger.md",
+        "snippet": "les/purpose-limitation) and [data minimisation](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation). - **Cur"
+      }
+    ]
+  },
+  "read_errors": []
+}

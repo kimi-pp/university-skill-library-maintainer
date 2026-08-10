@@ -1,0 +1,2099 @@
+{
+  "repository": "MattArtzAnthro/AI-Anthropology-Toolkit",
+  "fixed_version": "271f47d5c64e6fdfe39846441787e3db1c7284a4",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee69599bcd04715398fc3cec1d6454bc97949f9e"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f7d92683f321930cb92168a433acaa42c81369b",
+      "size": 923
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aea86c879d479b194668489afd5bf1fc037db0a9",
+      "size": 588
+    },
+    {
+      "path": ".gemini",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "137f70d78f072680df7fae9f4eada533c6feb4c2"
+    },
+    {
+      "path": ".gemini/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "699bcb3dcda01d157e0b137684427a37ac3a2ca3",
+      "size": 194
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b48628f0a06a93f72405da8ab82205603e4a4d3"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd4250ab413152ff954a130e364a431c6326a6ce"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ea42b08adf890287522b06af3311f69ad67d91c",
+      "size": 838
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76891f1630c5a38c6e7afe18a80acd34bdabbc8",
+      "size": 170
+    },
+    {
+      "path": ".mcp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b41a5a2d1e610689adeec82b7eab87bafc37b7b",
+      "size": 195
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f3d758d48441cedd9dcfae5cb5dc94550b89cb8",
+      "size": 226
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6310ccd7961d63f082eb45ede191dd9d72b4a3ba",
+      "size": 4481
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4d055ba4a628459e78c4664730d6a9fe998d8db",
+      "size": 58584
+    },
+    {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2fe34d5dd2304a101b5a8a0ccfc3da60c34cbe8",
+      "size": 433
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db3c5485db00748d63316f77cfb898dccd95ce17",
+      "size": 8057
+    },
+    {
+      "path": "GEMINI.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6310ccd7961d63f082eb45ede191dd9d72b4a3ba",
+      "size": 4481
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ecc88cfc4b1cff608ed640efe913c9dd97935c3",
+      "size": 4563
+    },
+    {
+      "path": "MANIFEST.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "109abd01e55dd4686e1e4bb149bed83aae8411d5",
+      "size": 83
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b346ff8243fbc9ec06668741ab2a5d870c769180",
+      "size": 29532
+    },
+    {
+      "path": "RELEASING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fb9c132e59eb678ba9a2f9fc6610ada46b3c452",
+      "size": 5995
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27f473c211bcb545a11bc09c215ad9bd179aeca3"
+    },
+    {
+      "path": "agents/analysis-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23023a0ce8da0ab2b65136173073a026c8252120",
+      "size": 11447
+    },
+    {
+      "path": "agents/career-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e104223df88e1acfc3cfbf7ac48e270eda4223ce",
+      "size": 7622
+    },
+    {
+      "path": "agents/dissemination-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5abad0dd65a7e4def94f917c20d54c4556553e0c",
+      "size": 7446
+    },
+    {
+      "path": "agents/ethics-reviewer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e801a25f3a20633ef743fb22b064a95d573a5d0",
+      "size": 7074
+    },
+    {
+      "path": "agents/fieldwork-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb0c38e6ab17d2a74475412bb693aec1fa23220d",
+      "size": 7253
+    },
+    {
+      "path": "agents/proposal-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "507508e41bb05761439c54a0f0d2567e813e6962",
+      "size": 7416
+    },
+    {
+      "path": "agents/research-design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de1533f4da93e8daaa1715526f18e48007d36a72",
+      "size": 8172
+    },
+    {
+      "path": "agents/tool-builder.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91d05a0718304229fb81c3a0f8e299913b561d8d",
+      "size": 9787
+    },
+    {
+      "path": "agents/writing-advisor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6443bc8183d01c48e85821d143bdd0f6c30a3fca",
+      "size": 12611
+    },
+    {
+      "path": "commands",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "832b6c68919d94140de6a7c538bb72cd344227fa"
+    },
+    {
+      "path": "commands/build-tool.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6df9bd15e8adaa084557eebedd60e0b4273c103",
+      "size": 3078
+    },
+    {
+      "path": "commands/new-project.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "956f7fe82fc4c97a794b9ba2243ad98c15e62883",
+      "size": 5900
+    },
+    {
+      "path": "commands/skills.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e90e916af0b9192c3a311a176c35bb92c267c48a",
+      "size": 7831
+    },
+    {
+      "path": "commands/test-claim.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9336aeb4f5372cfa2c92a6760474c7386bdf918",
+      "size": 3060
+    },
+    {
+      "path": "notebooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ce5d879293748da2348b2103b7567c9da85c79f"
+    },
+    {
+      "path": "notebooks/Academic_Literature_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa37ba62f9f3784b83b63f50df9fb9dc26426b15",
+      "size": 20027
+    },
+    {
+      "path": "notebooks/Audio_Transcription_Whisper.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a17bed33a698b7fb892808369f3c31d57eb2af7a",
+      "size": 53842
+    },
+    {
+      "path": "notebooks/BLS_Labor_Statistics_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1987b2495edd7e1b36ad935f2e80ddc6e445128f",
+      "size": 35367
+    },
+    {
+      "path": "notebooks/Coding_and_Thematic_Analysis.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd4e6d20c57af02aac57f0881d6c168fcca6a79e",
+      "size": 419419
+    },
+    {
+      "path": "notebooks/CrossRef_Reference_Verifier.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31ca3b880e8fc23da910274a85a8fe0348479280",
+      "size": 48290
+    },
+    {
+      "path": "notebooks/Google_Books_Ngram_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ea019884c9cc340283f91e7b4539329c9277941",
+      "size": 33728
+    },
+    {
+      "path": "notebooks/Google_News_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "124ad32eb081aec480b7e1f386c4463d19a885d3",
+      "size": 27292
+    },
+    {
+      "path": "notebooks/Google_Patents_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83c99170f9a841050d309bf29b004a192a834566",
+      "size": 19514
+    },
+    {
+      "path": "notebooks/Google_Scholar_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9923e73d4b72618bef07fbc64f90e7e2b826ba2d",
+      "size": 21180
+    },
+    {
+      "path": "notebooks/Google_Trends_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d0645e171529d7cca38ecc3530a57986247e285",
+      "size": 29775
+    },
+    {
+      "path": "notebooks/Interview_Transcript_Semantic_Chunker.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa2c7847426ec33e61019e15532d975750121e53",
+      "size": 50107
+    },
+    {
+      "path": "notebooks/Multimodal_Embedding_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f49e6e9a010fb1ea136ff6a529793f68c7393cc",
+      "size": 76866
+    },
+    {
+      "path": "notebooks/Named_Entity_Recognition_GLiNER2.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfab4a4f4b5191094c834b4d3d7fcb1c78c94bdf",
+      "size": 54381
+    },
+    {
+      "path": "notebooks/Podcast_RSS_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48e29c7921b7ba379f40987f94f8831f74a2f602",
+      "size": 18502
+    },
+    {
+      "path": "notebooks/PubMed_Literature_Harvester.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc8889d243f7d8fcf0654950a72cbc1f539be3ff",
+      "size": 40052
+    },
+    {
+      "path": "notebooks/Qualitative_Codebook_Builder.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b72bfde1a13792c0a4f3ca62c9c5e2de888424f7",
+      "size": 180473
+    },
+    {
+      "path": "notebooks/Text_Network_Analysis.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d5aeed0393531771323d6cf1ed4142e053d76d1",
+      "size": 88238
+    },
+    {
+      "path": "notebooks/Topic_Modeling_BERTopic.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb1e0ab5771aae0845d3c485e7f001dd0ba82620",
+      "size": 84528
+    },
+    {
+      "path": "notebooks/UN_Data_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38543eb5c62076f4d62f30b52147ffc17c6b02e8",
+      "size": 37137
+    },
+    {
+      "path": "notebooks/Visual_Analysis_Image_Annotation.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76a1983ab8581352aed5d6a5cf09498f590ca567",
+      "size": 53276
+    },
+    {
+      "path": "notebooks/World_Bank_Data_Explorer.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e877e92111b9913a9fd7cd1785a37c72b860848",
+      "size": 35867
+    },
+    {
+      "path": "notebooks/YouTube_Transcript_Fetcher.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8be565d68faae9d95872c1d593210cfb9db27cb",
+      "size": 23695
+    },
+    {
+      "path": "notebooks/YouTube_Video_Search.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "118c881cb8e9b19ccc3c3dca677984f21628fa6f",
+      "size": 18445
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1538578f10863e9d4727dff5c5c15e49ac9a749f",
+      "size": 1621
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee139e04258fd8198e3bf5e9c8af90dfeb4e7dbb"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "scripts/release.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14489f52ed6dd096b1620b2965d41418c69c8730",
+      "size": 12938
+    },
+    {
+      "path": "skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0e216efedcbfa88b0da43086d84823bbe1b8482"
+    },
+    {
+      "path": "skills/DESIGN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "185fef94e3d2e5d2f67d193952e9936883fc3063",
+      "size": 22155
+    },
+    {
+      "path": "skills/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9833b87f6e5095829c83a62bf07308264a42c380",
+      "size": 4289
+    },
+    {
+      "path": "skills/academic-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9831fb26c05d190c3f67754dc73653221a449570"
+    },
+    {
+      "path": "skills/academic-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b3bb244123b18a03b174f76166ee8e57e4ba247",
+      "size": 24286
+    },
+    {
+      "path": "skills/academic-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81f4ccb049e2b41589b3109ae37a923df1a54952"
+    },
+    {
+      "path": "skills/academic-review/references/review-writing-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce7783f9cf17df5ecaf9c2d4b4011216930d390b",
+      "size": 29236
+    },
+    {
+      "path": "skills/academic-review/references/revision-response-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "054ea677ded35e871259a8e9e77d8735f867aaeb",
+      "size": 14919
+    },
+    {
+      "path": "skills/applied-practice",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27e543e266328482a8657e2e40d28e845275ad58"
+    },
+    {
+      "path": "skills/applied-practice/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7f06d213bde9f8198f99c9eb49545fc27c74aaf",
+      "size": 12354
+    },
+    {
+      "path": "skills/applied-practice/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a63a4dd540faba9c204d56a29702de8fdd049241"
+    },
+    {
+      "path": "skills/applied-practice/references/deliverables-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14f4f146b88f8484f4a65e581b3f19f1eb30649d",
+      "size": 5783
+    },
+    {
+      "path": "skills/applied-practice/references/engagement-scoping-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30370b1b47e6e13deb61bc1af632656ed3b55f49",
+      "size": 5497
+    },
+    {
+      "path": "skills/applied-practice/references/translation-and-facilitation-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b93101508fb8544458e71ecb6e809042f6d1a6",
+      "size": 6245
+    },
+    {
+      "path": "skills/career-statements",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e01af88a3237b552a12841c27bc38692c0a058a"
+    },
+    {
+      "path": "skills/career-statements/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c7dfb7715f90fc9b481f4ee230f1e0137a6eeb9",
+      "size": 20155
+    },
+    {
+      "path": "skills/career-statements/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21c8ebe84b8bb52848469d4df419a8728437fec9"
+    },
+    {
+      "path": "skills/career-statements/references/diversity-statement-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7c224cb4ae32ed1abf9e7281e261be1f11ae3ed",
+      "size": 21414
+    },
+    {
+      "path": "skills/career-statements/references/research-statement-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6907951568657f8393121f61ea723c7f042d7174",
+      "size": 26026
+    },
+    {
+      "path": "skills/career-statements/references/teaching-statement-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95d529e5793bfc5458dd28226d00601853f6b94a",
+      "size": 21791
+    },
+    {
+      "path": "skills/conference-materials",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e4a0e05e78c978d4dc0f725c844245f407647b1"
+    },
+    {
+      "path": "skills/conference-materials/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a51f7caa55a42c617ac1a4f2f01898e9cf3b1e25",
+      "size": 21994
+    },
+    {
+      "path": "skills/conference-materials/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ab2c258c6da8b53f56246f87751fc3251ee0efc"
+    },
+    {
+      "path": "skills/conference-materials/references/abstract-writing-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62585e70bb48a4881739a0e61e9d40fa907d6592",
+      "size": 22631
+    },
+    {
+      "path": "skills/conference-materials/references/presentation-design-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8833927681a5b5e8cbe964b1ea86c51558cb503",
+      "size": 24784
+    },
+    {
+      "path": "skills/digital-computational-methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d650cf6e36f3d269bda979613fcab425095b4fce"
+    },
+    {
+      "path": "skills/digital-computational-methods/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1874ed1c8e0a70a7af0960aa0f9af296e6517b92",
+      "size": 12221
+    },
+    {
+      "path": "skills/digital-computational-methods/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc4e16a870b859b97204ac90046591129c83313a"
+    },
+    {
+      "path": "skills/digital-computational-methods/references/computational-methods-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22ccca89fd6cbaf0e999b9f5e3e7caec5fd075f2",
+      "size": 6407
+    },
+    {
+      "path": "skills/digital-computational-methods/references/digital-fieldwork-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf1326cb25b3ed8d8c32d9c95fa5b783ddd5c2bd",
+      "size": 5172
+    },
+    {
+      "path": "skills/digital-computational-methods/references/relationship-framework.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2d4137911b54985dca5504492829110591ccc97",
+      "size": 9893
+    },
+    {
+      "path": "skills/dissertation-prospectus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1ebe1135d9407df1f7b7b309b0d4804c83daf00"
+    },
+    {
+      "path": "skills/dissertation-prospectus/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc723326d60f9631a163f91e7afe68328a01943",
+      "size": 11580
+    },
+    {
+      "path": "skills/dissertation-prospectus/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a3091f7c3844daf5287143539b54b4d1fbb664a"
+    },
+    {
+      "path": "skills/dissertation-prospectus/references/prospectus-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43e826ab70c94f99dda526493d616099f6c96ea3",
+      "size": 27530
+    },
+    {
+      "path": "skills/ethnographic-generalization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bba02122d9c63ea19e9c6201a6d7aa4e10f8504e"
+    },
+    {
+      "path": "skills/ethnographic-generalization/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aef02fbc126bd7801967cbd2d314b41f25c87daf",
+      "size": 19727
+    },
+    {
+      "path": "skills/ethnographic-generalization/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df30261396d35b4ee714b9d0e37c4821f621dc81"
+    },
+    {
+      "path": "skills/ethnographic-generalization/references/generalization-types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31453edd354decf74a9881feec34f83885ea1b2d",
+      "size": 10872
+    },
+    {
+      "path": "skills/ethnographic-generalization/references/scope-and-claims.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2054949fd5f387146af4fac9896e0653e3d2f642",
+      "size": 9318
+    },
+    {
+      "path": "skills/ethnographic-generalization/references/warrant-building.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c12a3954378d29409c520a139c9f09039f2d45f6",
+      "size": 9106
+    },
+    {
+      "path": "skills/fieldwork-methods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4319e2e0d929fbb434f2ce8fbdeeea65521636f"
+    },
+    {
+      "path": "skills/fieldwork-methods/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2ed12822e4a5673edc9db976e191f0c2d1e9b9c",
+      "size": 29833
+    },
+    {
+      "path": "skills/fieldwork-methods/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf804ba37946113108638480be09598f8d6a1099"
+    },
+    {
+      "path": "skills/fieldwork-methods/references/data-collection-methods-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5810aa1b40d99345c5ea3d4e38fb310e9e962b68",
+      "size": 33376
+    },
+    {
+      "path": "skills/fieldwork-methods/references/data-management-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f22c7b2557790c9cf20daafe9456864d8994633b",
+      "size": 17675
+    },
+    {
+      "path": "skills/fieldwork-methods/references/protocol-design-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72b85cb6e52568c9e7a74831fd4f8d274fbd4c76",
+      "size": 40154
+    },
+    {
+      "path": "skills/grant-proposal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "226b09d14ce4731a442f1741011a5e6260378656"
+    },
+    {
+      "path": "skills/grant-proposal/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06fc696a13e95122f8cf96192484ec9a4ee33aae",
+      "size": 25345
+    },
+    {
+      "path": "skills/grant-proposal/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c8aec03072c5751eebbeb2cb0b6da6bd87da529"
+    },
+    {
+      "path": "skills/grant-proposal/references/fulbright.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fbef6e60efa3451fd00b2bda22c0050d612f281",
+      "size": 14120
+    },
+    {
+      "path": "skills/grant-proposal/references/nsf-cultural-anthro.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c10f9cbd9d4ac839b09bd712488862b6f6b40f29",
+      "size": 16007
+    },
+    {
+      "path": "skills/grant-proposal/references/wenner-gren.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "846bfb7e79964f7463520b1922dd987e4855026c",
+      "size": 16151
+    },
+    {
+      "path": "skills/informed-consent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e668ad6761697724547a06e9cd32b33f324902e3"
+    },
+    {
+      "path": "skills/informed-consent/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d3c536e6d5b166f25662e92107b01ff3fa74a5d",
+      "size": 20954
+    },
+    {
+      "path": "skills/informed-consent/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e14a47e70babfc14de7745213ac29edd47afa3f"
+    },
+    {
+      "path": "skills/informed-consent/references/consent-design-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99768a018691e39d918d3b517761a68e8cadf74a",
+      "size": 20500
+    },
+    {
+      "path": "skills/informed-consent/references/consent-templates-and-examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59fcfbbc7d0ad0ee4947b3c791918305ffb54e0f",
+      "size": 19554
+    },
+    {
+      "path": "skills/irb-protocol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0177d9878833cf85436d3055742feb3c0ce9d656"
+    },
+    {
+      "path": "skills/irb-protocol/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b4b8f7cf92197cee9b883668bfc15ca9aa9b90",
+      "size": 17757
+    },
+    {
+      "path": "skills/irb-protocol/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7dc4a3958671d152b9ff160d78409d5da8b8e941"
+    },
+    {
+      "path": "skills/irb-protocol/references/irb-protocol-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37db628b108231e79f3a3c2ac9c361bd66a8a3f8",
+      "size": 17120
+    },
+    {
+      "path": "skills/irb-protocol/references/irb-templates-and-examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b4866dd4ecf9b0d8a90e133c06e0f4254d5b2c",
+      "size": 14679
+    },
+    {
+      "path": "skills/job-materials",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd4bb63f886cca328f4855c3a72aeb7bddac70b3"
+    },
+    {
+      "path": "skills/job-materials/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aedc91cc784bbe9d721eba1183051fae8ecdbb8",
+      "size": 29587
+    },
+    {
+      "path": "skills/job-materials/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6cb0aa118f86f9f1d316eef7715db0dc088199a3"
+    },
+    {
+      "path": "skills/job-materials/references/cover-letter-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc2bcb523636541ff122c438356be7f05eacc230",
+      "size": 24920
+    },
+    {
+      "path": "skills/job-materials/references/cv-design-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989a5e20ca38781e7c36bc7abd2c29f933f13991",
+      "size": 20378
+    },
+    {
+      "path": "skills/job-materials/references/job-talk-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78d3389d8456e95d7e57a42f9dc2bd78b98a1b88",
+      "size": 26545
+    },
+    {
+      "path": "skills/literature-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a895c28a65496c9b0733a3e018faab6608b28aad"
+    },
+    {
+      "path": "skills/literature-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1638451c12631c55bdc547a21f5bf53c82b542fd",
+      "size": 11538
+    },
+    {
+      "path": "skills/literature-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee0b3d9a24fa3d8574393869dde66f138d586f98"
+    },
+    {
+      "path": "skills/literature-review/references/framework-construction-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfd2a6caa4abf1c9f3ee8c86f81b769687dd6e00",
+      "size": 7382
+    },
+    {
+      "path": "skills/literature-review/references/screening-and-synthesis-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0e7e22b7a852654c354c4abd5ee1301d9a58b2b",
+      "size": 6432
+    },
+    {
+      "path": "skills/literature-review/references/search-and-review-types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0708e2f15aa624b489dd621469136de767efc826",
+      "size": 5416
+    },
+    {
+      "path": "skills/manuscript-markup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39e9f722ffc4ff9ff765ee985a3a74301e7de2c7"
+    },
+    {
+      "path": "skills/manuscript-markup/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e70c5ddf44cdc7bcc64ead39e1413d10d27f5f30",
+      "size": 13967
+    },
+    {
+      "path": "skills/manuscript-markup/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a9c303e525fb7060ab63b43d18992001555a515"
+    },
+    {
+      "path": "skills/manuscript-markup/references/comment-sorting.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab66082b66a31cea4bd48a38879a2595d6341039",
+      "size": 6004
+    },
+    {
+      "path": "skills/manuscript-markup/references/editor-letter.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11a7012a38e1100156e62539494f95b85f2ddd75",
+      "size": 5622
+    },
+    {
+      "path": "skills/manuscript-markup/references/markup-extraction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66a88d05c05770e0c1bb99baa2d038dcb5bcd329",
+      "size": 6118
+    },
+    {
+      "path": "skills/methodology-selection",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22f5bed0e9805cdef1cb65c4236a06e715d290b3"
+    },
+    {
+      "path": "skills/methodology-selection/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "663d876b03f59858323d010f72e4c39da0c1b51f",
+      "size": 19595
+    },
+    {
+      "path": "skills/methodology-selection/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6190679618f699209b2e0377951979a81ae3e3a7"
+    },
+    {
+      "path": "skills/methodology-selection/references/method-modules.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d40cd3894bd4c70a37ce844e45cbd75e268d0898",
+      "size": 13063
+    },
+    {
+      "path": "skills/methodology-selection/references/method-stance-compatibility.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de22fe9b3e63962622c5bcc37678fe42767e3c07",
+      "size": 19849
+    },
+    {
+      "path": "skills/methodology-selection/references/methodology-selection-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5260f2e86f2d1627d88b61cbcba7f369d53c80a2",
+      "size": 11799
+    },
+    {
+      "path": "skills/paper-planning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb5c8f5edc0a8c3b92471068f3950be53633750a"
+    },
+    {
+      "path": "skills/paper-planning/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bf5182f35a1f40930ab419b395a08ad156398ec",
+      "size": 9831
+    },
+    {
+      "path": "skills/paper-planning/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e4310d9ff77fa9f47f5f420d53746a93957ee9d"
+    },
+    {
+      "path": "skills/paper-planning/references/argument-sequencing.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "212acc8b2b4e9dd906cfb789c464196366f5172d",
+      "size": 8940
+    },
+    {
+      "path": "skills/paper-planning/references/interrogation-vectors.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "057c8b131c55f79c9e3cdeb3ce6f877f45b460b5",
+      "size": 7274
+    },
+    {
+      "path": "skills/paper-planning/references/thesis-and-niche.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab2087d09bd16919fb6db02fe723c4c918b2ac27",
+      "size": 9486
+    },
+    {
+      "path": "skills/proof-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd728e59a6dfbbfae78ffe7697a5a0432e9c1088"
+    },
+    {
+      "path": "skills/proof-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b02e180fe3b94a83679067104118042be8e47ab",
+      "size": 17183
+    },
+    {
+      "path": "skills/proof-review/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "950d4b8edd8c019309d4ac27a74b77a7d914a364"
+    },
+    {
+      "path": "skills/proof-review/references/citation-and-reference-audit.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b909e466b3008a0b41e35ed5e000010d5683de2d",
+      "size": 5217
+    },
+    {
+      "path": "skills/proof-review/references/comparison-method.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "586271559c76ff68557d3d7faa03cb4e78942205",
+      "size": 10506
+    },
+    {
+      "path": "skills/proof-review/references/ethnographic-integrity.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b14a78eea743ead832f719282dafab2b8f53ab7e",
+      "size": 9174
+    },
+    {
+      "path": "skills/proof-review/references/proof-report-format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89e8919f8b62a2c080a9c1404635cdd3f915ff1b",
+      "size": 6642
+    },
+    {
+      "path": "skills/public-engagement",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7542c6caa52c0452392652062a9fb1c2dbce89de"
+    },
+    {
+      "path": "skills/public-engagement/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab820036b1aef01b3f2605c8fed4f1c28a4ee5cf",
+      "size": 25437
+    },
+    {
+      "path": "skills/public-engagement/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f625ab6f03ff02944c8e57249568428434b79161"
+    },
+    {
+      "path": "skills/public-engagement/references/community-engagement-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "832f8766d4417a9ac3374134dc3ee97a94712fa5",
+      "size": 18246
+    },
+    {
+      "path": "skills/public-engagement/references/media-preparation-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d61603e93e1ec9be87feff27a0b248d48d473ee3",
+      "size": 20240
+    },
+    {
+      "path": "skills/public-engagement/references/public-writing-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9a2b9627fd83400da06d16e43709921c45eb19a",
+      "size": 20337
+    },
+    {
+      "path": "skills/qualitative-analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "369ad4399fb304791123afe78eeade4065f653f0"
+    },
+    {
+      "path": "skills/qualitative-analysis/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd034b2d75603f9ff6bbda62894e62bca3c5f042",
+      "size": 17969
+    },
+    {
+      "path": "skills/qualitative-analysis/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9071d56434f12586c5429d695a8213d05d78a14f"
+    },
+    {
+      "path": "skills/qualitative-analysis/references/coding-workflow-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4586d07fe563a0849875224b1f9af13b7307823c",
+      "size": 10877
+    },
+    {
+      "path": "skills/qualitative-analysis/references/mcp-workflow-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd3c5ec9a1dd5ac2f734a5638a38ab8d21f1b378",
+      "size": 3656
+    },
+    {
+      "path": "skills/qualitative-analysis/references/notebook-pipeline-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7e4b5ee53d796b2702c6be33d8bafdc79b5b145",
+      "size": 5936
+    },
+    {
+      "path": "skills/repeated-work",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91755dbae83d78920b39c2cb77954d1a24e60489"
+    },
+    {
+      "path": "skills/repeated-work/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d601e0ae702df37e363bebbec9274d870a1fdd7",
+      "size": 10684
+    },
+    {
+      "path": "skills/repeated-work/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21ab780e46efdebf6362e671321dc86a31ba2703"
+    },
+    {
+      "path": "skills/repeated-work/references/asset-kinds.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c34d2d1c1638b843d47f7b549582ce508d6d7a27",
+      "size": 4532
+    },
+    {
+      "path": "skills/repeated-work/references/decision-tests.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be602daa42e9b1fbd0797ff183724507afc24ac8",
+      "size": 5539
+    },
+    {
+      "path": "skills/research-plan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c3068afca4c1149757f431ff80c0af8249a4dea"
+    },
+    {
+      "path": "skills/research-plan/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acef32c1a68b7b3a2a5d3204501989dc0f486721",
+      "size": 16917
+    },
+    {
+      "path": "skills/research-plan/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9f9baf2fd9c0cc23f8a5f1a79651c3859935cec"
+    },
+    {
+      "path": "skills/research-plan/references/research-plan-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b90a450e5c359ccf8866cc5ff13b5ef34b4dffb",
+      "size": 15281
+    },
+    {
+      "path": "skills/research-question",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f989260d4497b92c0bdb5d155c0b22bb446d4c0"
+    },
+    {
+      "path": "skills/research-question/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7f3234befa11b3214671c45c3f8d418aaae8c6",
+      "size": 18292
+    },
+    {
+      "path": "skills/research-question/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "136545077df179b20f6b94ca54f1d67bd697f67d"
+    },
+    {
+      "path": "skills/research-question/references/evaluation-rubric.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c2b4a30d851400d3b1700c51ab820b8fbf5496e",
+      "size": 11560
+    },
+    {
+      "path": "skills/research-question/references/genre-conventions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e4b71755032b7b337ce1d0e91cdafb27359cf2",
+      "size": 9566
+    },
+    {
+      "path": "skills/research-question/references/question-grammar.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e524054975b7a924a713ad71961cb7d11fe7533",
+      "size": 10045
+    },
+    {
+      "path": "skills/research-writing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1d1805f326a5257d0e0a2db1366a21db7056977"
+    },
+    {
+      "path": "skills/research-writing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e260766f51f56c3c0683cab36fa1912153a4b98",
+      "size": 21464
+    },
+    {
+      "path": "skills/research-writing/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf48b06fa069dc57797a88e71783d7b7029916f5"
+    },
+    {
+      "path": "skills/research-writing/references/anonymization-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a84ca5d1f12587d363cbe23282b1a83145815cde",
+      "size": 7582
+    },
+    {
+      "path": "skills/research-writing/references/article-architecture-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6713cf169c47c988a481ea8bca4d5f7103eb34b0",
+      "size": 29213
+    },
+    {
+      "path": "skills/research-writing/references/subfield-conventions-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "110ecc7769a395653e3dfc7ed2f98328d4fc1655",
+      "size": 44957
+    },
+    {
+      "path": "skills/research-writing/references/writing-craft-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3883a4c56ac178b7e478c0ad872fd2d1671fcd9e",
+      "size": 30856
+    },
+    {
+      "path": "skills/rival-interpretations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe7de9aa9e58b8b7c6a3f22a476ed51ee1edca2c"
+    },
+    {
+      "path": "skills/rival-interpretations/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "534da5ac0dbfe113ead9ca0292d9ed6b33e7482d",
+      "size": 14380
+    },
+    {
+      "path": "skills/rival-interpretations/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4d3664545da5db869451b64e64af0ae67cc5260"
+    },
+    {
+      "path": "skills/rival-interpretations/references/adjudication.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71fc5a50ea151bfd4f5b38bf29e5afe7ccdb6682",
+      "size": 5765
+    },
+    {
+      "path": "skills/rival-interpretations/references/reading-brief.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ccae619a870d1d17ff1229f1f1170266d307057",
+      "size": 5280
+    },
+    {
+      "path": "skills/rival-interpretations/references/roster-selection.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21a8f99a8bff96d7def85d4c6fdadcd08eab87a8",
+      "size": 5413
+    },
+    {
+      "path": "skills/teaching-materials",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a6336fff4b6bde2c25db6b5a66e8b96e0e425fe"
+    },
+    {
+      "path": "skills/teaching-materials/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c17dfd7d2c401845ad0ac19b16a31bb26e57225",
+      "size": 30653
+    },
+    {
+      "path": "skills/teaching-materials/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b6affdf92ad4075512902aa7c5d83b4184016ae"
+    },
+    {
+      "path": "skills/teaching-materials/references/assignment-design-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "943e6495a7f3bff5585a605bcd84eda3cb3a22f9",
+      "size": 30293
+    },
+    {
+      "path": "skills/teaching-materials/references/lesson-planning-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6707db375c26b8cd639a95098b3d842894fb5ad8",
+      "size": 22531
+    },
+    {
+      "path": "skills/teaching-materials/references/syllabus-design-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "646101696d8ad537213459edbd665cc38dcf4d07",
+      "size": 20033
+    },
+    {
+      "path": "skills/tool-building",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e916331845827fd4ac0ec6446c784f4697b4b66d"
+    },
+    {
+      "path": "skills/tool-building/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2f13b93c8fee3b6873d6bb471c5d9f33c2b2096",
+      "size": 19467
+    },
+    {
+      "path": "skills/tool-building/references",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8442e892a6c5f89ccc222b58d121bc1f11751ec1"
+    },
+    {
+      "path": "skills/tool-building/references/elicitation-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0330ed83ad4d55cdf4ffd5ac90d4a3e1a54eec6",
+      "size": 7067
+    },
+    {
+      "path": "skills/tool-building/references/profile-mcp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39db56510ef9aa1cf0162cd8569a0364d45ea3b5",
+      "size": 4714
+    },
+    {
+      "path": "skills/tool-building/references/profile-skills-agents.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3a9af96ac1d7e92bae5ee1202199f01e5da7f90",
+      "size": 5305
+    },
+    {
+      "path": "skills/tool-building/references/repair-discipline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6743c0b58ec63df3fb8d979dbdbc8ea527b9ff87",
+      "size": 6146
+    },
+    {
+      "path": "skills/tool-building/references/spec-pack-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd3f55ea5ee26f9374dfcd377c7cdad67025ce64",
+      "size": 6979
+    },
+    {
+      "path": "skills/tool-building/references/unstated-commitments.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "beaed96d310e75742a871f2305f54157fe2310c9",
+      "size": 7418
+    },
+    {
+      "path": "skills/tool-building/references/verification-modes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dcc9aa9bee9ab2965e9d7da4ab555414befec36",
+      "size": 8090
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b450083b06f6e2967bbb5d9c5b8c7dccfeb7ef3"
+    },
+    {
+      "path": "src/ai_anthro_toolkit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6452acc6113de8146619fbeaa4e5f11ac3efebc"
+    },
+    {
+      "path": "src/ai_anthro_toolkit/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b8411834ec16f42509ef9f1b33c48b8ca717ce1",
+      "size": 107
+    },
+    {
+      "path": "src/ai_anthro_toolkit/catalog.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4c67925af204fc87a02d4437b0bc0066e449732",
+      "size": 6833
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8becfa6d92e9c24d0b3537a733aa3eb0d1433103"
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2401e80970957881fc1a3a306762bc1269fc384",
+      "size": 2154
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fc1e8f1cfea3eb7c7358fd4d682777828ddfa2e",
+      "size": 133
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf1109b8e547514fd753e5fe16e1c1e8257300f",
+      "size": 8294
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/codebook_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "134c8742ab87ca3e307db7895ab165fb88c735d6",
+      "size": 6903
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/coded_data_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f98c608d43c232e11a32a8dd2296a530a3d1f01",
+      "size": 9980
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/generated.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f81ebacb4d71eb84a472d2d6501475f8a7d6ebb",
+      "size": 12947
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/mutate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73db8b2a4128309a12681c241b900e3a1b1455bc",
+      "size": 6807
+    },
+    {
+      "path": "src/ai_anthro_toolkit/checks/registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb5a2220fb4b37c69c6d2f0ba26ef7ad5018870",
+      "size": 8457
+    },
+    {
+      "path": "src/ai_anthro_toolkit/chunking.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bca51191be963689dce2ec62e61eaa99fdb1d8b",
+      "size": 10306
+    },
+    {
+      "path": "src/ai_anthro_toolkit/codebook.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22bd43b729c86a1833a9a424277bbae5080e1e3e",
+      "size": 41981
+    },
+    {
+      "path": "src/ai_anthro_toolkit/coding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c4e05754c895273e948ec0dfa4092fa0d32f786",
+      "size": 20442
+    },
+    {
+      "path": "src/ai_anthro_toolkit/crosslens.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bce4a08e6218ca1095066487e2dfbab9f569a92",
+      "size": 7218
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dab30edf07c2f9150d21232e19441f194f50c948"
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bab20e1ee6a63da1f1b11ee647d524d62a418d0",
+      "size": 792
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/crossref.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7d2880684977802ed7fd071f3f31948e98033ee",
+      "size": 2558
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/googlenews.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2e141c5a39f280a3b4f6ffabe735c1f4f7dcba1",
+      "size": 3300
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/ngram.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee34e45885d8910930db62938148135d504b25a4",
+      "size": 2895
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/openalex.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cc6bcdc24e0056845f2d009a24c41565189b5e3",
+      "size": 4951
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/patents.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c3fca1c1c98d1f74189ffe4a924c249b381c228",
+      "size": 3034
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/podcast.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44c34b37d858a568fb30275390216c692d82f808",
+      "size": 2565
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/pubmed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "603ff7076ecc266b3bd231683d56bf46f8e244cc",
+      "size": 2379
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/scholar.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab03c56b89b7fa6f28c04a2a583dab80480a34bf",
+      "size": 4134
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/trends.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35ec9c95656de0b7e0e12ece1503800b920a004e",
+      "size": 4147
+    },
+    {
+      "path": "src/ai_anthro_toolkit/datasources/youtube.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d94d79d21e8463641ecda91cfbe06baee0ecc3a3",
+      "size": 6810
+    },
+    {
+      "path": "src/ai_anthro_toolkit/doctor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "978169161601c0429a4d3ba8cb0f315abb21a466",
+      "size": 4323
+    },
+    {
+      "path": "src/ai_anthro_toolkit/jobs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72540fb9881b508b82f6e7ec6ed2493de9e00bc5",
+      "size": 2512
+    },
+    {
+      "path": "src/ai_anthro_toolkit/lenses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da3ad6b9f4508fcf2aaccf81c230e2275872cda4",
+      "size": 28118
+    },
+    {
+      "path": "src/ai_anthro_toolkit/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9655f27352080f10bbec69b5214c517de6989b6d",
+      "size": 2884
+    },
+    {
+      "path": "src/ai_anthro_toolkit/markup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "476eff1fc54b099baa5b65a5871e8d6640a705fd",
+      "size": 11004
+    },
+    {
+      "path": "src/ai_anthro_toolkit/mcp",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92df33515b016e33d9448392ed8f59b8f316d72f"
+    },
+    {
+      "path": "src/ai_anthro_toolkit/mcp/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0749cb6fce83e13837b13ce47af68537ce285c0",
+      "size": 71
+    },
+    {
+      "path": "src/ai_anthro_toolkit/mcp/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2a0622ac9ef07e6868e67f932aa2ca71d4ae335",
+      "size": 54
+    },
+    {
+      "path": "src/ai_anthro_toolkit/mcp/server.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d97fa2d2c837d11657f4cd3920ef170bbbc545e",
+      "size": 39897
+    },
+    {
+      "path": "src/ai_anthro_toolkit/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e5a950c20d19b472a942a3d8a84279bbd7623a6",
+      "size": 1759
+    },
+    {
+      "path": "src/ai_anthro_toolkit/themes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "320759b5631315fee54e085d6293eddf2112b31f",
+      "size": 17175
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2ce9fb1e4e9808d5c259477852fd00f5328fed9"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44a23da78eae7f5cd375f77aa7abfb5ea5be6dc2"
+    },
+    {
+      "path": "tests/evals/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1ce0afe4dcbb252a45bfd1315ed45ff552b5688",
+      "size": 3730
+    },
+    {
+      "path": "tests/evals/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/evals/floor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19923bb1e695688459063822a98382c822e27c21",
+      "size": 4204
+    },
+    {
+      "path": "tests/evals/judge.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d01e91224b9401cc29acc93145595ea1190491f7",
+      "size": 9252
+    },
+    {
+      "path": "tests/evals/stance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4c45913400b5b066adc1aba7a10516ac84746c4",
+      "size": 7366
+    },
+    {
+      "path": "tests/evals/test_floor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2888a48d79f45735a162aa668949d98e6c00296",
+      "size": 5765
+    },
+    {
+      "path": "tests/evals/test_gate_holding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4bff8437cc1b76602546290c1e42839568c9489",
+      "size": 17288
+    },
+    {
+      "path": "tests/evals/test_isolation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4689874397531c009ca3c27407875178636cd93",
+      "size": 4602
+    },
+    {
+      "path": "tests/evals/test_judge_anchors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c32f2db8c888edd6724ecb93102de6cae6f644f6",
+      "size": 8303
+    },
+    {
+      "path": "tests/evals/test_judge_contract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc74e9a1f1cf8735df2cfde81b27c7da796d75d0",
+      "size": 8911
+    },
+    {
+      "path": "tests/evals/test_stance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718344b816dea8cea76c9bbbf643eb5215dc3d4b",
+      "size": 4933
+    },
+    {
+      "path": "tests/evals/test_working_principle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9e1f1cfe697dfff089650902cc0265e4bec2175",
+      "size": 7464
+    },
+    {
+      "path": "tests/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56d4b9b7a58b36ea66410dca4caeed09b8097ba9"
+    },
+    {
+      "path": "tests/fixtures/spec_packs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7adb436a464b52f5b6ce19d8a4e13e04b958745f"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/complete",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0e06cee9690ac0744eaec755e9dcfdd0fa1e4fd"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/complete/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67fb98d34e46f58293c1018bcf9d558d8a01433f",
+      "size": 2049
+    },
+    {
+      "path": "tests/fixtures/spec_packs/critical_open_question",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c777741b2ed251ba728286f9715a265b3ba0a29a"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/critical_open_question/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1785a5f9a79d3bdb258149edf7f7b9dc8fc0f2",
+      "size": 1983
+    },
+    {
+      "path": "tests/fixtures/spec_packs/interpretive_claims_pass_fail",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ceb966200189590167bb8920e7e703752c68e2d"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/interpretive_claims_pass_fail/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94a5232315ccc0bdc770710c037da789c2f0a447",
+      "size": 1741
+    },
+    {
+      "path": "tests/fixtures/spec_packs/missing_scope_out",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d6cf352d3061c1c1985819e77d867e3a7f462d9"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/missing_scope_out/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2340f0f3a32479b794022c30738c034f83828c1b",
+      "size": 1778
+    },
+    {
+      "path": "tests/fixtures/spec_packs/missing_verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4163549a24792740221dfa69c02d902420a9d39f"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/missing_verification/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "447842949d7374b7eee78be4740db73c6228e7f2",
+      "size": 1935
+    },
+    {
+      "path": "tests/fixtures/spec_packs/no_mode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd73ad19482e145b22f64a9548a813449a8cb064"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/no_mode/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "298795e7af02c9c86eb905df16243d4cc1803673",
+      "size": 2036
+    },
+    {
+      "path": "tests/fixtures/spec_packs/recited",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "602753415d41afef1c34ce54ab4f03dffa9bd701"
+    },
+    {
+      "path": "tests/fixtures/spec_packs/recited/SPEC.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c68c143686b8d488e1a64217e114dfe51cd0074",
+      "size": 1766
+    },
+    {
+      "path": "tests/package",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c076c2a5a402b8f819447243c6410ad99251bce"
+    },
+    {
+      "path": "tests/package/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "tests/package/test_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70e1d09d48c2c69fca9dfe9e7767126b3ea162dc",
+      "size": 18185
+    },
+    {
+      "path": "tests/package/test_chunking.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98db32da09ba06a6a4b8e070c8a0bd8336b92f6a",
+      "size": 6693
+    },
+    {
+      "path": "tests/package/test_codebook.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cc68efa66e4c88858a580ac5d4ea4e304e9ff6e",
+      "size": 16770
+    },
+    {
+      "path": "tests/package/test_coding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59da234d14d6eaa680e89a93ab848a01f80c2d81",
+      "size": 18973
+    },
+    {
+      "path": "tests/package/test_consistency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ede58d3f4a12c794cc2bb8dbfccf8e01d9f18b51",
+      "size": 7157
+    },
+    {
+      "path": "tests/package/test_datasources_collectors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fb25344054db227fd46c1b08ae6c5f624aee3a1",
+      "size": 5464
+    },
+    {
+      "path": "tests/package/test_datasources_scrapers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09996d1c60d12527b9729f6cc9ac75a79f381381",
+      "size": 4164
+    },
+    {
+      "path": "tests/package/test_datasources_youtube.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7955be2d17411ee2e24a80ad969633708c8b7533",
+      "size": 3416
+    },
+    {
+      "path": "tests/package/test_doctor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "009711bc1ff0215c7bc7375fa10c23b000953486",
+      "size": 2872
+    },
+    {
+      "path": "tests/package/test_generated_checks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37ca1af29b68e8543796e89f5e8e9838b51ee3b0",
+      "size": 8646
+    },
+    {
+      "path": "tests/package/test_markup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0431ce594c8ecc63f22018a30bb2811aca0bb3a",
+      "size": 10812
+    },
+    {
+      "path": "tests/package/test_mutations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21d72d30e0574380aecb4504c3ef8df154b15dfe",
+      "size": 9271
+    },
+    {
+      "path": "tests/package/test_package.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07e9ec4a4be89469ac48bbb7d9f940a99dc78e61",
+      "size": 5977
+    },
+    {
+      "path": "tests/package/test_server_pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a1e351bb64e3333d9fd292fd382feb818b9b2f5",
+      "size": 13919
+    },
+    {
+      "path": "tests/test_release.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f06664dc3a6ff8c1be790aaccf4bd83f9bb6b9",
+      "size": 7479
+    },
+    {
+      "path": "tests/test_repo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dc2287d1d1b1d89684f1a6255dbdbe0f3130121",
+      "size": 53794
+    },
+    {
+      "path": "tests/test_skill_routing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73ab2c4486f047ea76297b4fabec963b0e189cee",
+      "size": 11203
+    },
+    {
+      "path": "tests/test_spec_pack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6827310fa145d63d023f674cf90d87def130c19",
+      "size": 9797
+    }
+  ]
+}

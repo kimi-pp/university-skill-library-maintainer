@@ -1,0 +1,43 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "udents)\") ax.set_xlabel(\"Week\") ax.set_ylabel(\"P(still enrolled)\") plt.tight_layout() plt.savefig(\"/tmp/dropout_survival.png\", dpi=150) plt.show() ``` ### Example B — Knowledge Tracing for a Mathematics Curriculum `"
+      },
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "x) plt.suptitle(\"BKT Knowledge State — Student s000\", fontsize=13) plt.tight_layout() plt.savefig(\"/tmp/bkt_knowledge_state.png\", dpi=150) plt.show() # Learning curve analysis for 'fractions' lc = compute_learning_cu"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "it-learn lifelines matplotlib # Optional: pyBKT for a production-grade BKT implementation pip install pyBKT ``` --- ## 1. Loading and Preparing LMS Logs Moodle exports a CSV with columns such as `Time`, `User full name`, `Ev"
+      }
+    ],
+    "lms": [
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "rade BKT implementation pip install pyBKT ``` --- ## 1. Loading and Preparing LMS Logs Moodle exports a CSV with columns such as `Time`, `User full name`, `Event name`, `Component`. Canvas exports a similar struc"
+      },
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "exports a CSV with columns such as `Time`, `User full name`, `Event name`, `Component`. Canvas exports a similar structure. ```python import pandas as pd import numpy as np def load_lms_logs( path: str, t"
+      },
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "\"Event name\", component_col: str = \"Component\", ) -> pd.DataFrame: \"\"\" Load a Moodle/Canvas CSV event log and normalise column names. Returns a DataFrame with columns: timestamp, user_id, event, comp"
+      },
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "name\", component_col: str = \"Component\", ) -> pd.DataFrame: \"\"\" Load a Moodle/Canvas CSV event log and normalise column names. Returns a DataFrame with columns: timestamp, user_id, event, component."
+      },
+      {
+        "file": "skills/20-education/edm-learning-analytics/SKILL.md",
+        "snippet": "mport roc_auc_score from sklearn.preprocessing import StandardScaler # Suppose we have a Moodle log exported as CSV # df_logs = load_lms_logs(\"/data/moodle_course_2024.csv\") # Simulate a feature table (replace with"
+      }
+    ]
+  },
+  "read_errors": []
+}

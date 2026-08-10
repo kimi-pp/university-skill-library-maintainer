@@ -1,0 +1,37 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "skills/course-material-creator/SKILL.md",
+        "snippet": "e real-world scenario, propose solutions | | **Gallery Walk** | 15-20 min | Peer review | Post work around room, students circulate and comment | | **Muddiest Point** | 3-5 min | Checking understanding | Students write what confused them most | | **Minute Paper**"
+      },
+      {
+        "file": "skills/course-material-creator/SKILL.md",
+        "snippet": "s [ ] Evaluation forms [ ] Supplies (markers, sticky notes, etc.) POST-WORKSHOP: - Send follow-up email with resources - Share slide deck and recordings - Collect and review evaluations - Schedule follow-up session (i"
+      },
+      {
+        "file": "skills/course-material-creator/SKILL.md",
+        "snippet": "| Analyze real-world scenario, propose solutions | | **Gallery Walk** | 15-20 min | Peer review | Post work around room, students circulate and comment | | **Muddiest Point** | 3-5 min | Checking understanding | Students w"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "skills/course-material-creator/SKILL.md",
+        "snippet": "Description] | [Description] SCORING: Total points: ___ / [Max] Weight: ___% of final grade ``` ## Reading List Curation ### Reading Selection Framework ``` READING LIST CURATION: FOR EACH READING, EVALUATE:"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/course-material-creator/SKILL.md",
+        "snippet": "EACH READING, EVALUATE: Relevance: Does it directly support learning objectives? Accessibility: Is the reading level appropriate? Recency: Is the information current? (or intentionally historical?) Divers"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/course-material-creator/SKILL.md",
+        "snippet": "N: [Topic] — Final project due POLICIES: Late work: [Policy] Attendance: [Policy] Academic integrity: [Policy] Accommodations: [Statement] ``` ### Learning Objective Verbs (Bloom's Taxonomy) | Level | Verbs | Example"
+      }
+    ]
+  },
+  "read_errors": []
+}

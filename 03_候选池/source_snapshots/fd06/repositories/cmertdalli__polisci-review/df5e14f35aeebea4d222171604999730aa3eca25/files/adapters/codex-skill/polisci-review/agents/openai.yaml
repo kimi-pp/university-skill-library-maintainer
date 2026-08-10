@@ -1,0 +1,7 @@
+interface:
+  display_name: "PoliSci Review"
+  short_description: "Political science pre-submission audit"
+  default_prompt: "Use $polisci-review to review a political science manuscript for APSR, AJPS, JOP, BJPS, PA, InternationalSecurity, JCR, CPS, or a leading field journal."
+
+policy:
+  allow_implicit_invocation: false

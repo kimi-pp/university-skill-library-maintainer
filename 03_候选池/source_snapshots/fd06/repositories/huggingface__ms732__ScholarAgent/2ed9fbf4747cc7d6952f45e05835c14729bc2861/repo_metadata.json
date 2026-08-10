@@ -1,0 +1,168 @@
+{
+  "_id": "6a4387ae652adf78ce1e66a3",
+  "id": "ms732/ScholarAgent",
+  "sdk": "docker",
+  "likes": 0,
+  "tags": [
+    "docker",
+    "region:us"
+  ],
+  "private": false,
+  "author": "ms732",
+  "sha": "2ed9fbf4747cc7d6952f45e05835c14729bc2861",
+  "lastModified": "2026-07-13T17:23:45.000Z",
+  "cardData": {
+    "title": "ScholarAgent",
+    "emoji": "📚",
+    "colorFrom": "indigo",
+    "colorTo": "blue",
+    "sdk": "docker",
+    "app_port": 8501,
+    "pinned": false,
+    "license": "mit"
+  },
+  "subdomain": "ms732-scholaragent",
+  "gated": false,
+  "disabled": false,
+  "host": "https://ms732-scholaragent.hf.space",
+  "models": [
+    "cross-encoder/ms-marco-MiniLM-L6-v2"
+  ],
+  "runtime": {
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "gcTimeout": 172800,
+    "replicas": {
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "ms732-scholaragent.hf.space",
+        "stage": "READY"
+      }
+    ]
+  },
+  "region": "us",
+  "siblings": [
+    {
+      "rfilename": ".dockerignore"
+    },
+    {
+      "rfilename": ".env.example"
+    },
+    {
+      "rfilename": ".github/workflows/ci.yml"
+    },
+    {
+      "rfilename": ".github/workflows/sync-to-hf.yml"
+    },
+    {
+      "rfilename": ".gitignore"
+    },
+    {
+      "rfilename": ".streamlit/config.toml"
+    },
+    {
+      "rfilename": "Dockerfile"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "app.py"
+    },
+    {
+      "rfilename": "config.py"
+    },
+    {
+      "rfilename": "core/__init__.py"
+    },
+    {
+      "rfilename": "core/agent.py"
+    },
+    {
+      "rfilename": "core/exporter.py"
+    },
+    {
+      "rfilename": "core/paper_fetcher.py"
+    },
+    {
+      "rfilename": "core/pdf_parser.py"
+    },
+    {
+      "rfilename": "core/rag_chain.py"
+    },
+    {
+      "rfilename": "core/reranker.py"
+    },
+    {
+      "rfilename": "core/reviewer.py"
+    },
+    {
+      "rfilename": "core/uploader.py"
+    },
+    {
+      "rfilename": "core/vector_store.py"
+    },
+    {
+      "rfilename": "docs/superpowers/specs/2026-06-28-paper-upload-review-design.md"
+    },
+    {
+      "rfilename": "packages.txt"
+    },
+    {
+      "rfilename": "pyproject.toml"
+    },
+    {
+      "rfilename": "requirements-dev.txt"
+    },
+    {
+      "rfilename": "requirements.txt"
+    },
+    {
+      "rfilename": "static/.gitkeep"
+    },
+    {
+      "rfilename": "tests/__init__.py"
+    },
+    {
+      "rfilename": "tests/test_agent_sources.py"
+    },
+    {
+      "rfilename": "tests/test_helpers.py"
+    },
+    {
+      "rfilename": "tests/test_pdf_parser.py"
+    },
+    {
+      "rfilename": "tests/test_reviewer.py"
+    },
+    {
+      "rfilename": "tools/__init__.py"
+    },
+    {
+      "rfilename": "tools/compare_tool.py"
+    },
+    {
+      "rfilename": "tools/extract_tool.py"
+    },
+    {
+      "rfilename": "tools/qa_tool.py"
+    },
+    {
+      "rfilename": "tools/search_tool.py"
+    },
+    {
+      "rfilename": "utils/__init__.py"
+    },
+    {
+      "rfilename": "utils/helpers.py"
+    }
+  ],
+  "createdAt": "2026-06-30T09:09:02.000Z",
+  "usedStorage": 0
+}

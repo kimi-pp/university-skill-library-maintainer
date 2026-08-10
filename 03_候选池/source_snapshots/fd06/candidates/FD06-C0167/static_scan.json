@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md",
+        "snippet": "roblem: [problem]. Take as long as you need. Show all your working. When you've finished, submit it and I'll review.\" --- STEP 3 — NO HELP DURING THE ATTEMPT: During the attempt, if the learner asks for help or a hint: First reques"
+      },
+      {
+        "file": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md",
+        "snippet": ": left side has 4 Fe and 6 O, right side has 4 Fe and 6 O. I think that's right? **AI:** Submit that — and I'll review it. *[Learner submits]* **AI:** Let's check it together. Left side: 4 Fe, 3×2 = 6 O. Right side: 2×2 = 4 Fe, 2×3 = 6"
+      }
+    ]
+  },
+  "read_errors": []
+}

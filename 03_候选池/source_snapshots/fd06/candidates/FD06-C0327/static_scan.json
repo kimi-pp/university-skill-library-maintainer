@@ -1,0 +1,73 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "coring. Every descriptor must be written so that two independent raters, reading the same student work, would assign the same score. **Performance level naming conventions:** - 4-level: Exemplary / Proficient / Developing / Beginning (clearest for mo"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "ports, remove it or it may be legally indefensible for high-stakes assessments. - Would a student who achieved all the learning objectives score at Proficient or Exemplary? If not, the criteria do not reflect the objectives. - Are the highest-weighted criteria the"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "usions. Every descriptor must state what a rater can see, count, quote, or measure in the student work. Violating this rule produces a rubric that cannot be used reliably. 2. **Descriptors within a criterion must shift on"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "produces grade inflation, or does not differentiate between high and low performance - An educator is designing a performance task, portfolio review, or capstone project and needs criteria for evaluating complex, multidimensional work that cannot be scored by a simple"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "alculate Totals Point distribution is a policy decision with real consequences for grade fairness. Do it deliberately. **Two calculation methods:** *Method 1 -- Weighted multiplier:* Each criterion has a base score"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "ch applies. - Are all descriptors written in parallel structure within each criterion? **Bias check:** - Do any descriptors privilege particular cultural contexts, communication styles, or background knowledge? (E"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "vocabulary. Mismatching register undermines the rubric's instructional value and creates equity concerns for English language learners and students with reading disabilities. 9. **Never include a criterion that can"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "cial comments. ### Rubrics for English Language Learners and Students with Disabilities (Accommodation Contexts) When the educator indicates the rubric will be used with English language learners (ELLs) or students with di"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "ia state \"Standard Academic English is the target register; consult student's IEP/504 for accommodation guidance before scoring this criterion.\" ### Very Short Assignments (1-Page Response, Exit Ticket, Journal Entry) Shor"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "the makeup presentation, not the poster alone. If a student cannot present due to an IEP accommodation, consult the IEP for alternative evidence of understanding. **Late posters:** Score all criteria on content quality. A"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "poorly.\" The Beginning level (1) covers poor attempts. Reserve 0 for missing components, academic integrity violations, or entirely off-topic submissions. - **Missing components:** If the assignment requires specific elements ("
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "Handle lateness in the gradebook separately. State this explicitly in scoring notes. - **Academic integrity:** Note that plagiarized sections cannot receive criterion scores; specify what happens when only a portion of the work"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "c.] **Zero policy:** Score of 0 is reserved for [missing component / entirely off-topic / academic integrity violation]. A poor attempt earns a 1 (Beginning), not a 0. **Late work:** Score rubric criteria on quality only. Apply"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "ion) is absent -- does it cap the criterion score or affect a specific criterion only?] **Academic integrity:** [State policy for plagiarized or AI-generated sections] --- ### Calibration Notes *(for use when multiple raters w"
+      },
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/rubric-creation/SKILL.md",
+        "snippet": "websites without scientific authorship do not qualify as credible scientific sources. **Academic integrity:** Copied text that is not attributed to a source cannot earn higher than a 2 (Developing) on the Source Quality criter"
+      }
+    ]
+  },
+  "read_errors": []
+}

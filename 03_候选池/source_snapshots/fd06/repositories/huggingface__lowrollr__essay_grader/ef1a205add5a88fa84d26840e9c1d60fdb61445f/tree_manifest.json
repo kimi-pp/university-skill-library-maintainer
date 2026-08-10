@@ -1,0 +1,54 @@
+{
+  "repository": "lowrollr/essay_grader",
+  "fixed_version": "ef1a205add5a88fa84d26840e9c1d60fdb61445f",
+  "tree": [
+    {
+      "type": "directory",
+      "oid": "c4ba9e58aa154040a915771b198bad27f6aae92a",
+      "size": 0,
+      "path": "rubrics"
+    },
+    {
+      "type": "file",
+      "oid": "c7d9f3332a950355d5a77d85000f05e6f45435ea",
+      "size": 1477,
+      "path": ".gitattributes"
+    },
+    {
+      "type": "file",
+      "oid": "68bc17f9ff2104a9d7b6777058bb4c343ca72609",
+      "size": 3078,
+      "path": ".gitignore"
+    },
+    {
+      "type": "file",
+      "oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "path": "LICENSE"
+    },
+    {
+      "type": "file",
+      "oid": "e2039eee907ea7c2fd07cc83da09229502cf0b63",
+      "size": 232,
+      "path": "README.md"
+    },
+    {
+      "type": "file",
+      "oid": "fdb33d57e6816c10cad33992721d001b4e48d06f",
+      "size": 2187,
+      "path": "app.py"
+    },
+    {
+      "type": "file",
+      "oid": "9ed9f6c836daa19539754b6656a929c4742482ae",
+      "size": 48,
+      "path": "requirements.txt"
+    },
+    {
+      "type": "file",
+      "oid": "61ea3cbd4e3f3007e2e6434bffad615ab3b65c73",
+      "size": 11354,
+      "path": "rubrics/act_rubric.json"
+    }
+  ]
+}

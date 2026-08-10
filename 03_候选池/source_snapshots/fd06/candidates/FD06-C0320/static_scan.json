@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/professional-workshop-design/SKILL.md",
+        "snippet": "sing a structured lens), Evaluate (compare options and make a defensible recommendation), Create (produce a draft plan, document, or approach). - If the business driver is behavioral change on the job, the workshop outcome must include at least one"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "src/process/resources/skills-library/bodies/skills/education/professional-workshop-design/SKILL.md",
+        "snippet": "than skill development. **The topic is sensitive or carries emotional weight (conflict, bias, mental health, performance issues):** Sensitive topics require two specific design adjustments. First, the opening lea"
+      }
+    ]
+  },
+  "read_errors": []
+}

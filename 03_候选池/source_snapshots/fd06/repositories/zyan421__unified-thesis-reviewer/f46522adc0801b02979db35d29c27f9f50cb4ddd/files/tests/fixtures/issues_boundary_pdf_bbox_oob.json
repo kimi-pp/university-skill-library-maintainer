@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-language-001",
+      "source": "thesis",
+      "category": "language",
+      "severity": "minor",
+      "scope": "sentence",
+      "locator": {
+        "chapter": "5.1",
+        "paragraph_index": 3,
+        "page_number": 1,
+        "bbox": [
+          10000,
+          10000,
+          20000,
+          20000
+        ]
+      },
+      "excerpt": "越界 bbox",
+      "problem": "越界问题",
+      "suggestion": [
+        "测试 clip 正确性"
+      ],
+      "group_id": "g-040",
+      "anchor_text": "越界 bbox"
+    }
+  ]
+}

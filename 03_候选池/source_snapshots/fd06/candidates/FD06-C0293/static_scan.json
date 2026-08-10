@@ -1,0 +1,209 @@
+{
+  "hits": {
+    "credential": [
+      {
+        "file": ".github/workflows/sync-to-hf.yml",
+        "snippet": "env: HF_TOKEN: ${{ secrets.HF_TOKEN }} run: | if [ -z \"$HF_TOKEN\" ]; then echo \"::error::HF_TOKEN secret is not set. Add it in repo Settings → Secrets → Actions.\""
+      },
+      {
+        "file": ".github/workflows/sync-to-hf.yml",
+        "snippet": "the Space's main branch. git push --force \\ \"https://${HF_USERNAME}:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}\" \\ hf-deploy:main"
+      },
+      {
+        "file": "README.md",
+        "snippet": "n/activate # 3. Install dependencies pip install -r requirements.txt # 4. Add your Groq API key cp .env.example .env # then edit .env and set GROQ_API_KEY=gsk_your_actual_key_here # 5. Run the app streamlit run app"
+      },
+      {
+        "file": "README.md",
+        "snippet": "_KEY=gsk_your_actual_key_here # 5. Run the app streamlit run app.py ``` Get a free Groq API key at [console.groq.com](https://console.groq.com). > **Note:** the in-app PDF viewer relies on Streamlit static file ser"
+      },
+      {
+        "file": "app.py",
+        "snippet": "act text from '{truncate(file.name, 30)}'. It may be \" \"empty, corrupted, password-protected, or a scanned image with no \" \"text layer. Skipping.\" ) continue"
+      },
+      {
+        "file": "app.py",
+        "snippet": "st.error( \"**GROQ_API_KEY is not set.**\\n\\n\" \"Add your Groq API key to a `.env` file in the project root:\\n\\n\" \"```\\nGROQ_API_KEY=gsk_your_actual_key_here\\n```\\n\\n\""
+      },
+      {
+        "file": "config.py",
+        "snippet": ": # noqa: BLE001 pass # Fall back to environment variable (local) return os.getenv(key) # API Keys GROQ_API_KEY = get_secret(\"GROQ_API_KEY\") # Model Config # llama-3.1-8b-instant is far more reliable"
+      },
+      {
+        "file": "core/agent.py",
+        "snippet": "Streamlit secrets.\" ) from langchain_groq import ChatGroq llm = ChatGroq(api_key=GROQ_API_KEY, model=LLM_MODEL, temperature=LLM_TEMPERATURE) return llm.bind_tools(tools) def build_agent(vector_s"
+      },
+      {
+        "file": "core/pdf_parser.py",
+        "snippet": "return \"\" try: # Many PDFs are flagged encrypted with an empty owner password; try that. if getattr(doc, \"needs_pass\", False): doc.authenticate(\"\") if getattr(doc, \"need"
+      },
+      {
+        "file": "core/pdf_parser.py",
+        "snippet": "e(\"\") if getattr(doc, \"needs_pass\", False): logger.warning(\"PDF %s is password-protected; cannot extract text\", pdf_path) return \"\" pages = [page.get_text(\"text\") for page in doc"
+      },
+      {
+        "file": "core/rag_chain.py",
+        "snippet": "treamlit secrets.\" ) from langchain_groq import ChatGroq return ChatGroq(api_key=GROQ_API_KEY, model=LLM_MODEL, temperature=LLM_TEMPERATURE) def build_rag_prompt(query: str, context_chunks: list[dic"
+      },
+      {
+        "file": "core/reviewer.py",
+        "snippet": "treamlit secrets.\" ) from langchain_groq import ChatGroq return ChatGroq(api_key=GROQ_API_KEY, model=LLM_MODEL, temperature=LLM_TEMPERATURE) def select_representative_text(text: str, char_budget: in"
+      }
+    ],
+    "file_delete": [
+      {
+        "file": ".github/workflows/sync-to-hf.yml",
+        "snippet": "hub.com\" # Remove binaries HF rejects (screenshots are GitHub-only). rm -rf docs/images # Build one clean commit with no prior (binary) history. git checkout --orphan hf-depl"
+      },
+      {
+        "file": "Dockerfile",
+        "snippet": "update \\ && apt-get install -y --no-install-recommends build-essential curl \\ && rm -rf /var/lib/apt/lists/* # Model/cache locations under the (writable) app dir. Hugging Face Spaces give # containers a res"
+      }
+    ],
+    "network": [
+      {
+        "file": "Dockerfile",
+        "snippet": "FROM python:3.11-slim WORKDIR /app # System deps: build tools for some wheels + curl for the healthcheck. RUN apt-get update \\ && apt-get install -y --no-install-recommends build-essential curl \\ &"
+      },
+      {
+        "file": "Dockerfile",
+        "snippet": "k. RUN apt-get update \\ && apt-get install -y --no-install-recommends build-essential curl \\ && rm -rf /var/lib/apt/lists/* # Model/cache locations under the (writable) app dir. Hugging Face Spaces give # c"
+      },
+      {
+        "file": "Dockerfile",
+        "snippet": "a /app/static EXPOSE 8501 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \\ CMD curl --fail http://localhost:8501/_stcore/health || exit 1 ENTRYPOINT [\"streamlit\", \"run\", \"app.py\", \\ \"--server"
+      },
+      {
+        "file": "app.py",
+        "snippet": "e_files=True, ) num_related = st.sidebar.number_input( \"Related papers to fetch (each)\", min_value=0, max_value=6, value=UPLOAD_RELATED_DEFAULT, step=1, help=\"Fe"
+      },
+      {
+        "file": "app.py",
+        "snippet": "_icon=\"📚\", layout=\"wide\", ) def get_session_id() -> str: \"\"\"Return a stable per-browser-session id (created once per session).\"\"\" if \"session_id\" not in st.session_state: st.session_state[\"sessio"
+      },
+      {
+        "file": "app.py",
+        "snippet": "r, file_bytes: bytes) -> str: \"\"\"Copy a PDF into the Streamlit static dir so it has a browser URL. Args: paper_id: Synthetic upload id, used as the file name. file_bytes: Raw PDF bytes. R"
+      },
+      {
+        "file": "config.py",
+        "snippet": "orage PAPERS_DIR = \"./data/papers\" STATIC_DIR = \"./static\" # served by Streamlit for in-browser PDF viewing # Retrieval TOP_K_RESULTS = 5 # number of chunks to retrieve (lower = fewer tokens/call) SIMILARI"
+      },
+      {
+        "file": "core/paper_fetcher.py",
+        "snippet": "ocal_path for attempt in range(1, _MAX_RETRIES + 1): try: import urllib.request req = urllib.request.Request(pdf_url, headers={\"User-Agent\": \"ScholarAgent/1.0\"}) with urllib."
+      },
+      {
+        "file": "core/paper_fetcher.py",
+        "snippet": "e(1, _MAX_RETRIES + 1): try: import urllib.request req = urllib.request.Request(pdf_url, headers={\"User-Agent\": \"ScholarAgent/1.0\"}) with urllib.request.urlopen(req, timeout=_DOWN"
+      },
+      {
+        "file": "core/paper_fetcher.py",
+        "snippet": "lib.request.Request(pdf_url, headers={\"User-Agent\": \"ScholarAgent/1.0\"}) with urllib.request.urlopen(req, timeout=_DOWNLOAD_TIMEOUT) as response: data = response.read() if not data:"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "Dockerfile",
+        "snippet": "on. COPY . . # Pre-create writable runtime dirs (HF Spaces filesystem is ephemeral). RUN mkdir -p /app/.cache /app/chroma_db /app/data/papers /app/static \\ && chmod -R 777 /app/.cache /app/chroma_db /app/data /"
+      },
+      {
+        "file": "app.py",
+        "snippet": "e per process).\"\"\" import chromadb from config import CHROMA_PERSIST_DIR os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True) return chromadb.PersistentClient(path=CHROMA_PERSIST_DIR) @st.cache_resource(s"
+      },
+      {
+        "file": "app.py",
+        "snippet": "Returns: The relative static URL (``app/static/<paper_id>.pdf``). \"\"\" os.makedirs(STATIC_DIR, exist_ok=True) dest = os.path.join(STATIC_DIR, f\"{paper_id}.pdf\") try: if not (os.path.exis"
+      },
+      {
+        "file": "app.py",
+        "snippet": "not (os.path.exists(dest) and os.path.getsize(dest) == len(file_bytes)): with open(dest, \"wb\") as fh: fh.write(file_bytes) except Exception as exc: # noqa: BLE001 logger.error(\"Failed"
+      },
+      {
+        "file": "config.py",
+        "snippet": "the corpus # Ensure runtime directories exist (Streamlit Cloud has ephemeral storage) os.makedirs(PAPERS_DIR, exist_ok=True) os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True) os.makedirs(STATIC_DIR, exist_ok=True)"
+      },
+      {
+        "file": "config.py",
+        "snippet": "s exist (Streamlit Cloud has ephemeral storage) os.makedirs(PAPERS_DIR, exist_ok=True) os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True) os.makedirs(STATIC_DIR, exist_ok=True)"
+      },
+      {
+        "file": "config.py",
+        "snippet": "os.makedirs(PAPERS_DIR, exist_ok=True) os.makedirs(CHROMA_PERSIST_DIR, exist_ok=True) os.makedirs(STATIC_DIR, exist_ok=True)"
+      },
+      {
+        "file": "core/exporter.py",
+        "snippet": "lines.append(f\"| {m['source']} | {finding} |\") lines.append(\"\") lines.append(review.get(\"report\", \"\")) return \"\\n\".join(lines) def _sanitize(text: str) -> str: \"\"\"Replace non-latin-1 characters so the PDF"
+      },
+      {
+        "file": "core/paper_fetcher.py",
+        "snippet": "to the PDF. Returns: The local file path, or None on failure. \"\"\" os.makedirs(PAPERS_DIR, exist_ok=True) # arxiv ids may contain '/', sanitise for a flat filename safe_id = arxiv_id.replace"
+      },
+      {
+        "file": "core/paper_fetcher.py",
+        "snippet": "if not data: raise ValueError(\"Empty response body\") with open(local_path, \"wb\") as fh: fh.write(data) logger.info(\"Downloaded paper %s -> %s\", arxiv_id, local_path)"
+      },
+      {
+        "file": "core/uploader.py",
+        "snippet": "if the PDF could not be read. \"\"\" if not file_bytes: return None os.makedirs(PAPERS_DIR, exist_ok=True) short_hash = hashlib.sha1(file_bytes).hexdigest()[:10] paper_id = f\"upload_{short_ha"
+      },
+      {
+        "file": "core/uploader.py",
+        "snippet": "th.exists(local_path) and os.path.getsize(local_path) > 0): try: with open(local_path, \"wb\") as fh: fh.write(file_bytes) except Exception as exc: # noqa: BLE001 logger.error("
+      }
+    ],
+    "external_write": [
+      {
+        "file": "README.md",
+        "snippet": "> Point it at a topic → it builds a knowledge base → ask anything across all papers. > Or upload your own paper and get a grounded improvement review. 🔗 **[Live Demo](https://scholar-agent-ai-research.streamlit.app/)** | 📖 [How it works](#architecture) ![Python](http"
+      },
+      {
+        "file": "README.md",
+        "snippet": "des when to fetch more papers, compare methodologies, and extract metrics. You can also **upload your own paper** and get a structured, grounded review against related work. --- ## 📸 Screenshots **Chat — agentic Q&A across your papers** ![Chat](docs/images/demo.png)"
+      },
+      {
+        "file": "README.md",
+        "snippet": "— agentic Q&A across your papers** ![Chat](docs/images/demo.png) **My Paper & Review — upload a PDF, get a grounded review** ![My Paper & Review](docs/images/review.png) **Compare — side-by-side comparison + metrics matrix** ![Compare](doc"
+      },
+      {
+        "file": "README.md",
+        "snippet": "etches more papers when needed - 📊 **Cross-paper comparison** and metric extraction - 📤 **Upload your own paper(s)** → one-click **Analyze** → structured review (summary, strengths, gaps, missing related work, methodology notes, concrete improvement suggestions) - 🔀 **Compare tab"
+      },
+      {
+        "file": "README.md",
+        "snippet": "s **Chat — agentic Q&A across your papers** ![Chat](docs/images/demo.png) **My Paper & Review — upload a PDF, get a grounded review** ![My Paper & Review](docs/images/review.png) **Compare — side-by-side comparison + met"
+      },
+      {
+        "file": "app.py",
+        "snippet": "or_store, topic, int(num_papers)) st.rerun() st.sidebar.divider() # --- Upload & Review your own paper(s) --- st.sidebar.subheader(\"📤 Upload Your Paper(s)\") uploaded = st.sidebar.file_uploader("
+      },
+      {
+        "file": "app.py",
+        "snippet": "bar.subheader(\"📤 Upload Your Paper(s)\") uploaded = st.sidebar.file_uploader( \"Upload one or more PDFs to review\", type=[\"pdf\"], key=\"paper_upload\", accept_multiple_files=True, ) num_related = st.side"
+      },
+      {
+        "file": "app.py",
+        "snippet": "t at a topic → it builds a knowledge base → ask anything across \" \"all papers. Or upload your own paper for a grounded improvement review.</p></div>\", unsafe_allow_html=True, ) if not GROQ_API_KEY: st.error( \"**GROQ_API_"
+      },
+      {
+        "file": "app.py",
+        "snippet": "er(review: dict) -> None: \"\"\"Render the uploaded paper's PDF inline.\"\"\" _show_pdf(review.get(\"local_path\"), review.get(\"title\", \"paper\"), key=\"upload\") def render_review_tab() -> None: \"\"\"Render the 'My Paper & Review' tab: selector, PDF, review, metrics, export."
+      },
+      {
+        "file": "config.py",
+        "snippet": "/day guard) ANALYZE_LIMIT_PER_SESSION = 2 # max paper analyses/min for a single user # Upload & Review UPLOAD_RELATED_DEFAULT = 3 # related arxiv papers fetched per analysis REVIEW_PAPER_CHAR_BUDGET = 6000 # cap on u"
+      },
+      {
+        "file": "docs/superpowers/specs/2026-06-28-paper-upload-review-design.md",
+        "snippet": "# Design — Upload & Review Your Own Paper **Date:** 2026-06-28 **Feature:** Let a user upload their own research paper (PDF), ingest it, auto-fet"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "README.md",
+        "snippet": "ng of retrieved chunks │ ├── uploader.py # ingest user-uploaded PDFs │ ├── reviewer.py # fetch related work + structured review + metrics │ └── exporter.py # export reviews to Markdown / PDF ├── tools/ │ ├── search_tool.py #"
+      }
+    ]
+  },
+  "read_errors": []
+}

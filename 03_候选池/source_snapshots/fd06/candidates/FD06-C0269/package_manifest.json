@@ -1,0 +1,20 @@
+[
+  {
+    "path": "scientific-skills/peer-review/SKILL.md",
+    "type": "blob",
+    "size": 23120,
+    "sha": "d651955794147b5ec8b270f06b460f26b1b16838"
+  },
+  {
+    "path": "scientific-skills/peer-review/references/common_issues.md",
+    "type": "blob",
+    "size": 19321,
+    "sha": "ec648c2059270cfb8dea887ad2e4b5b8e51d0fa5"
+  },
+  {
+    "path": "scientific-skills/peer-review/references/reporting_standards.md",
+    "type": "blob",
+    "size": 10200,
+    "sha": "0d995b9d0c9ef2575330dc98c9beae656135d65f"
+  }
+]

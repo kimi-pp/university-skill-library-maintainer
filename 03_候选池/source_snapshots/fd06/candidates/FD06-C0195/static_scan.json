@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "external_write": [
+      {
+        "file": "skills/student-learning/confidence-calibration-check/SKILL.md",
+        "snippet": "I saw: [specifics]. Overall: [accuracy level].\" --- STEP 3 — AFTER FEEDBACK: Ask for a post-feedback confidence rating: \"Now that you've seen how that went, what number would you give your confidence? Has it changed?\" R"
+      }
+    ]
+  },
+  "read_errors": []
+}

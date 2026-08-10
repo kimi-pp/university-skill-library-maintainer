@@ -1,0 +1,57 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        "snippet": "ctual accuracy of responses; human review required for technical content - **Safety**: No external API calls; processes text locally ## References - `references/response_templates.md` - Common response patterns - `refere"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        "snippet": "--| | Code Execution | Python/R scripts executed locally | Medium | | Network Access | No external API calls | Low | | File System Access | Read input files, write output files | Medium | | Instruction Tampering | Standard"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        "snippet": "mple run plan: 1. Confirm the user input, output path, and any required config values. 2. Edit the in-file `CONFIG` block or documented parameters if the script uses fixed settings. 3. Run `python scripts/main.py` with the val"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        "snippet": "| Network Access | No external API calls | Low | | File System Access | Read input files, write output files | Medium | | Instruction Tampering | Standard prompt guidelines | Low | | Data Exposure | Output files saved to w"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/scripts/main.py",
+        "snippet": "to file? (filename or 'n'): \").strip() if save and save.lower() != 'n': with open(save, 'w') as f: f.write(letter) print(f\"Saved to {save}\") def main(): parser = argparse.ArgumentParser"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/scripts/main.py",
+        "snippet": "just_tone(letter, tone_map[args.tone]) # Output if args.output: with open(args.output, 'w') as f: f.write(letter) print(f\"Response letter saved to {args.output}\") else: print(let"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/scripts/main.py",
+        "snippet": "RATED RESPONSE LETTER:\") print(\"=\" * 60) print(letter) # Save option save = input(\"\\nSave to file? (filename or 'n'): \").strip() if save and save.lower() != 'n': with open(save, 'w') as f: f.wr"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        "snippet": "d handling of criticism - **Limitations**: Does not verify factual accuracy of responses; human review required for technical content - **Safety**: No external API calls; processes text locally ## References - `reference"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/peer-review-response-drafter_audit_result_v1.json",
+        "snippet": "is 83.6/100\", \"Assertions and command execution outcomes are recorded per input for human review\" ], \"recommendations\": [ { \"priority\": \"P1\", \"title\": \"Stabilize executable path and fallback"
+      },
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/scripts/main.py",
+        "snippet": "aved to {save}\") def main(): parser = argparse.ArgumentParser( description=\"Draft professional peer review response letters\" ) parser.add_argument( \"--input\", \"-i\", help=\"Input file containing reviewer"
+      }
+    ],
+    "untrusted_input_protection": [
+      {
+        "file": "scientific-skills/Academic Writing/peer-review-response-drafter/SKILL.md",
+        "snippet": "horized file system access (../) - [ ] Output does not expose sensitive information - [ ] Prompt injection protections in place - [ ] Input file paths validated (no ../ traversal) - [ ] Output directory restricted to workspace"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,23 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/curriculum-assessment/project-brief-designer/SKILL.md",
+        "snippet": "es:** {{available_resources}} — if not provided, assume standard classroom resources with internet access but no specialist equipment. **Curriculum framework:** {{curriculum_framework}} — if not provided, align to the stated"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/curriculum-assessment/project-brief-designer/SKILL.md",
+        "snippet": "ication skill: audience awareness | 15 minutes modelling + 30 minutes revision | | 8 | — (student presentations and final submission) | Assessment and celebration | — | **Total explicit instruction time:** Approximately 120 minutes across 8 lessons. T"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/curriculum-assessment/project-brief-designer/SKILL.md",
+        "snippet": "also removes a socioeconomic barrier (access to colour printing, design software) and an equity barrier (students with dyslexia or fine motor difficulties are not penalised). 4. **The project requires explicit inst"
+      }
+    ]
+  },
+  "read_errors": []
+}

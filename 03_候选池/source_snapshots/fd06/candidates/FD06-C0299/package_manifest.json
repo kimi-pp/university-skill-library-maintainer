@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/education/evaluation-to-growth/SKILL.md",
+    "type": "blob",
+    "size": 7996,
+    "sha": "a407d29f16337b1abb82bd3321870753df713a2a"
+  },
+  {
+    "path": "skills/education/evaluation-to-growth/references/checklist-template.md",
+    "type": "blob",
+    "size": 4894,
+    "sha": "fda6cacb1eab9bbf169e33c931068446f3bbc344"
+  },
+  {
+    "path": "skills/education/evaluation-to-growth/references/inline-template.md",
+    "type": "blob",
+    "size": 5741,
+    "sha": "3d94523f741733ccb518989325bcd585552af2d7"
+  },
+  {
+    "path": "skills/education/evaluation-to-growth/references/report-template.md",
+    "type": "blob",
+    "size": 4560,
+    "sha": "301b5eee305a442af9805fa526329ee57cb6dfe7"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "skills/education/enc1101-curriculum-designer/SKILL.md",
+    "type": "blob",
+    "size": 5256,
+    "sha": "55b852f63a98e4f15d3e510ff3327acbbc783e64"
+  },
+  {
+    "path": "skills/education/enc1101-curriculum-designer/references/peer-review-guides.md",
+    "type": "blob",
+    "size": 4715,
+    "sha": "50c580e11bc208b9bceb503ff344736f9dca0d9d"
+  },
+  {
+    "path": "skills/education/enc1101-curriculum-designer/references/rubric-templates.md",
+    "type": "blob",
+    "size": 5532,
+    "sha": "43eddb6354a6182de1b099e465166501d73a50db"
+  },
+  {
+    "path": "skills/education/enc1101-curriculum-designer/references/wpa-outcomes.md",
+    "type": "blob",
+    "size": 3064,
+    "sha": "124d24a56dbe152442332b1dee5d697de25f6158"
+  }
+]

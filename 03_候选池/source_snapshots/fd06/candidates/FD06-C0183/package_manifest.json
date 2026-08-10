@@ -1,0 +1,50 @@
+[
+  {
+    "path": "submission-auditor/SKILL.md",
+    "type": "blob",
+    "size": 9211,
+    "sha": "46adb631687ec846990cf3399476a8aeaaee9353"
+  },
+  {
+    "path": "submission-auditor/agents/content_auditor_agent.md",
+    "type": "blob",
+    "size": 3103,
+    "sha": "868742fdb5a49d42c77a8ecf906fc44d9095fd7e"
+  },
+  {
+    "path": "submission-auditor/agents/format_auditor_agent.md",
+    "type": "blob",
+    "size": 2734,
+    "sha": "aa34ff7f3457a9ee07f20ff5bbb9d4bddd578e7b"
+  },
+  {
+    "path": "submission-auditor/agents/report_writer_agent.md",
+    "type": "blob",
+    "size": 3465,
+    "sha": "317f217fb217033854680712cd99fa789455156e"
+  },
+  {
+    "path": "submission-auditor/agents/spec_compiler_agent.md",
+    "type": "blob",
+    "size": 3061,
+    "sha": "0c034d362de19c4a67fe6544037e687d8af6bf0f"
+  },
+  {
+    "path": "submission-auditor/references/spec_design_guide.md",
+    "type": "blob",
+    "size": 4657,
+    "sha": "c8935b1b59146b9b46d219416ff3c6df8ebde34a"
+  },
+  {
+    "path": "submission-auditor/templates/feedback_report_template.md",
+    "type": "blob",
+    "size": 1433,
+    "sha": "d35649067dda4ef6f85a1eb0d3603699b2b6acf1"
+  },
+  {
+    "path": "submission-auditor/templates/submission_spec_template.md",
+    "type": "blob",
+    "size": 2028,
+    "sha": "da0ce07f993c658bd08d8888347d9c3505b28ec3"
+  }
+]

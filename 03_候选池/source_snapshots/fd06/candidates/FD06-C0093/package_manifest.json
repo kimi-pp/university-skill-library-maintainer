@@ -1,0 +1,32 @@
+[
+  {
+    "path": "skills/chain-roleplay-debate-synthesis/SKILL.md",
+    "type": "blob",
+    "size": 12382,
+    "sha": "d834c9ab15b0cfa1250e21e57862fc10cc3ad772"
+  },
+  {
+    "path": "skills/chain-roleplay-debate-synthesis/resources/evaluators/rubric_chain_roleplay_debate_synthesis.json",
+    "type": "blob",
+    "size": 13591,
+    "sha": "e0988273512013a27ccbc921d0070739de79e0fd"
+  },
+  {
+    "path": "skills/chain-roleplay-debate-synthesis/resources/examples/build-vs-buy-crm.md",
+    "type": "blob",
+    "size": 31225,
+    "sha": "d8ac8bd192cce5581aa34c73ed5824b7f8bb100a"
+  },
+  {
+    "path": "skills/chain-roleplay-debate-synthesis/resources/methodology.md",
+    "type": "blob",
+    "size": 12715,
+    "sha": "2501b752de9cc1b9a10de756a452028d3d7ed6e5"
+  },
+  {
+    "path": "skills/chain-roleplay-debate-synthesis/resources/template.md",
+    "type": "blob",
+    "size": 8434,
+    "sha": "8cc3501da5446191b4d6efd1f1003974acf8e28b"
+  }
+]

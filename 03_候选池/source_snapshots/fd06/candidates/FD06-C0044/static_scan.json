@@ -1,0 +1,55 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/lesson-plan/SKILL.md",
+        "snippet": "e hours\" | College | | \"dissertation,\" \"my students' IRB,\" \"cohort\" | Grad | | \"my ELL/EB student,\" \"newcomer,\" \"WIDA\" | pair with grade + add ELL strategies | | \"homeschool,\" \"my own kid\" | use grade number; add home-friendly mods | If confidence is stil"
+      },
+      {
+        "file": "skills/lesson-plan/references/differentiation/sped-strategies.md",
+        "snippet": "n or abbreviations only. 4. Never list a disability diagnosis in the plan itself (HIPAA / FERPA); refer to accommodations only. Example output: > **SPED / IEP-504** > - Graphic organizer provided pre-populated wit"
+      },
+      {
+        "file": "skills/lesson-plan/references/grade-calibration.md",
+        "snippet": "ion Rules Calibrates tone, vocabulary, session structure, and activity complexity to the student's grade band. ## K-2 (ages 5-8) - **Active block length:** 5-10 min max per segment. No single teacher-led block over 8 min."
+      },
+      {
+        "file": "skills/lesson-plan/references/templates/sub-plan.md",
+        "snippet": "OISE_EXPECTATION}} (e.g., \"Level 1 voices — whisper only\" for independent work). - **If a student refuses to work:** Document the name and behavior. Do not argue. Offer a choice: do the work now or during lunch. - **Phones:** Collect at the door / away i"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/lesson-plan/SKILL.md",
+        "snippet": "se.md` — **default** — Fisher & Frey. - `references/pedagogy/udl.md` — **always apply** — Universal Design for Learning lens. - `references/pedagogy/5e.md` — auto-override for Science. - `references/pedagogy/madeline-hunter.md"
+      },
+      {
+        "file": "skills/lesson-plan/references/differentiation/catalog.md",
+        "snippet": "respect for special interests. | | Twice-exceptional (gifted + SPED) | Strengths-based + accommodation. Open-ended + scaffolded. | ## Quality check Before finalizing the Differentiation section, verify: - [ ] At least 2"
+      },
+      {
+        "file": "skills/lesson-plan/references/differentiation/sped-strategies.md",
+        "snippet": "2. Include the phrase \"per student IEP / 504 Plan\" or similar once. 3. Use plain-English accommodation names, not jargon or abbreviations only. 4. Never list a disability diagnosis in the plan itself (HIPAA / FERPA); refer"
+      },
+      {
+        "file": "skills/lesson-plan/references/pedagogy/udl.md",
+        "snippet": "# Universal Design for Learning (UDL) **Source:** CAST (Center for Applied Special Technology). UDL Guidelines 3.0 (2024). **One-line su"
+      },
+      {
+        "file": "skills/lesson-plan/references/standards/ib.md",
+        "snippet": "ral Expression - Scientific and Technical Innovation - Globalization and Sustainability - Fairness and Development And **Key Concepts** (16 total, vary by subject group) + **Related Concepts** (subject-specific). Eac"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/lesson-plan/references/edge-cases.md",
+        "snippet": "** acknowledge the framework, describe the topic + grade + objective descriptively, add a Teacher Notes bullet: *\"Specific standard codes not bundled in this skill. Verify with [SEA / ministry URL].\"* ## Ambiguous grade / mixed-grade requests - **\"High school\"** (no specific grade) → defa"
+      },
+      {
+        "file": "skills/lesson-plan/references/pedagogy/5e.md",
+        "snippet": "Elaborate | Independent Practice | | Evaluate | Formative Assessment + Closure | Note in Teacher Notes: *\"Pedagogy override: 5E used instead of Gradual Release — aligns with NGSS three-dimensional learning.\"* ## Grade-band calibration - **K-"
+      }
+    ]
+  },
+  "read_errors": []
+}

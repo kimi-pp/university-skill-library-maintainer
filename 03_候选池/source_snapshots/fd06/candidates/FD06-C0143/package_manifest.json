@@ -1,0 +1,50 @@
+[
+  {
+    "path": "skills/92bilal26/assessment-builder/SKILL.md",
+    "type": "blob",
+    "size": 17916,
+    "sha": "0e3f13e4fced026c11e440482542a3c1781d44b2"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/reference/blooms-assessment-alignment.md",
+    "type": "blob",
+    "size": 6759,
+    "sha": "97d5965c9f2f081d7f6a39d1fb60dee894306e7f"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/reference/distractor-design.md",
+    "type": "blob",
+    "size": 6756,
+    "sha": "6967b5f4af44c02dc0a44a5110de70b9dfea4593"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/reference/question-types.md",
+    "type": "blob",
+    "size": 7161,
+    "sha": "98e1c43d1d8fbd1ef5d1b8219abb0e8ca7a0d780"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/reference/rubric-guidelines.md",
+    "type": "blob",
+    "size": 7553,
+    "sha": "8dd35e4b706393e9e89fc0cead04cb368ba6fabe"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/scripts/validate-assessment.py",
+    "type": "blob",
+    "size": 7552,
+    "sha": "2a3d43363ef432a2ffc9409133f6bc5ec7385c99"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/templates/assessment-template.yml",
+    "type": "blob",
+    "size": 1828,
+    "sha": "d8f992145e68a4e3ac03c4d0798caf47f3eb0d36"
+  },
+  {
+    "path": "skills/92bilal26/assessment-builder/templates/rubric-template.yml",
+    "type": "blob",
+    "size": 4147,
+    "sha": "37af7d9ecc1f5c6b399e645e408e4de5f4918e92"
+  }
+]

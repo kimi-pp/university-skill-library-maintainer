@@ -1,0 +1,37 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "lternative response option:** If writing is the primary barrier (not analysis), offer the student the choice to record their paragraph verbally (voice recording or dictation to a scribe) instead of writing it. The analytical demand is ide"
+      },
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "not on preferences. 3. **Adapted tasks can inadvertently signal low expectations.** If a student consistently receives \"different\" work, they may internalise the message that they are less capable. The implementation notes address this, but the teacher mu"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "Diverse Classrooms\" - \"Rose & Meyer (2002) — Teaching Every Student in the Digital Age: Universal Design for Learning\" - \"Vygotsky (1978) — Mind in Society: the zone of proximal development\" - \"Hattie (2009) — Visible Le"
+      },
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "ie (2009) — Visible Learning: differentiation and responsive teaching\" - \"CAST (2018) — Universal Design for Learning Guidelines version 2.2\" input_schema: required: - field: \"original_task\" type: \"string\""
+      },
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "ng style (which is excluded from this library as debunked). Rose & Meyer (2002) developed Universal Design for Learning (UDL), arguing that curricula should be designed from the outset to be accessible to all learners through"
+      },
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "ep knowledge of Tomlinson's (2001, 2014) differentiation framework, Rose & Meyer's (2002) Universal Design for Learning principles, and CAST's (2018) UDL guidelines. You understand that effective differentiation modifies the R"
+      },
+      {
+        "file": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+        "snippet": "pport (like glasses for someone who needs them), not as reduced expectations. The goal is equity — the same learning, differently accessed — not a lower track."
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,264 @@
+{
+  "repository": "Lidong-Huang/thesis_format_check",
+  "fixed_version": "5147e2140b96978f5667b8abca2b496b224904a5",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11777975cc8006e528e0b311e5221927ff8ac695",
+      "size": 4669
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48b525bf6ccd4f17c74dc4d502b28852fb6f945c",
+      "size": 6881
+    },
+    {
+      "path": "__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bdcf3d0206fa30f1cc7dc99913cd240d4e680e1e"
+    },
+    {
+      "path": "__pycache__/thesis_review.cpython-313.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76b5d32c1c831c6803b9f5f5441966e2f453ef54",
+      "size": 30314
+    },
+    {
+      "path": "__pycache__/thesis_review_txt.cpython-313.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa77f8ec0e6c6e2fe61b281cfba4af9dbabb323a",
+      "size": 30935
+    },
+    {
+      "path": "enhanced_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57088343c34a0440a7fc3215454e6340d0a3efd5",
+      "size": 26151
+    },
+    {
+      "path": "evals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "217adf3373d56b7d684634412d5bbd8a6ab640e3"
+    },
+    {
+      "path": "evals/evals.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2b029405dbac6c786d2cd3a4b6194618b45f2f6",
+      "size": 2869
+    },
+    {
+      "path": "run_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd6a56dd7132b64b46188dfa06d1755d6044e1f2",
+      "size": 2175
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41c53359b7f6784ccdbb87b3ca94aff3b773e685"
+    },
+    {
+      "path": "scripts/generate_test_docx.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd58ff6720f220fc0bdb8af9f7718fcbd5b190cc",
+      "size": 9177
+    },
+    {
+      "path": "test_comprehensive.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eff5b14cd629bd92acded06c2f4c9bf90d4cb11",
+      "size": 2814
+    },
+    {
+      "path": "test_files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e71d13b530b5f0baa56d2ea14a794d854885916"
+    },
+    {
+      "path": "test_files/thesis.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d48b87c1687fc797d7356d02d2c05075d00df110",
+      "size": 36863
+    },
+    {
+      "path": "test_files/thesis_sample.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "418666bab25688b60f2bc7fba63cbde808858925",
+      "size": 39153
+    },
+    {
+      "path": "test_files/论文终稿.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39b8ac8e1c1713265433002da6b7b336a29f46c8",
+      "size": 36799
+    },
+    {
+      "path": "thesis-review-workspace",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e98de58fdb93d163f77d9389c1594f930dd5da8"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee92a59d66419c6b46a68ede432422843a45cfc8"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1/eval-comprehensive-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cb48a8ad9c1a8c8acad2e39777eec159e6336b8"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1/eval-comprehensive-review/with_skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "706c2839ee06c1e9b39d4cee37550139b8fab7a6"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1/eval-comprehensive-review/with_skill/outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6e772a8c16fc3bc6c7f1519123b817715268fa7"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1/eval-comprehensive-review/with_skill/outputs/sample_thesis_review_20260413_145347.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e414e80e4c7c49599a0be859036a1a2eaace0a4",
+      "size": 38081
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1/eval-comprehensive-review/with_skill/outputs/thesis_review_20260413_145214.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2abcb0210d28220937929114e4a501c0a46d8f3e",
+      "size": 37427
+    },
+    {
+      "path": "thesis-review-workspace/iteration-1/eval-comprehensive-review/with_skill/outputs/thesis_review_20260413_145247.docx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "434e6148040063f0b33785c782f637592531e217",
+      "size": 37427
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "174c06296b7dbfe92300c1d1b88786a8f2278a04"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-comprehensive-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b18b196712672bc594641ffaa4c66dc76e2ccc5"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-comprehensive-review/with_skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09d961210a613ec43b2c96b4e8522c2387c541eb"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-comprehensive-review/with_skill/outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2629d7c6260e13355d8dcb5363963f72e1dff2b8"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-comprehensive-review/with_skill/outputs/thesis_review_20260413_161336.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0632759aed9a783aa9992f6f5f6a91d7fad96e05",
+      "size": 1672
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-comprehensive-review/with_skill/outputs/thesis_review_20260413_161622.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e4becac52ed2a8f5e4b1d3dcd328bd0f33c951d",
+      "size": 1672
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-focused-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "044bf2d3a0eb5379d05a532789d7d0d8642cd0ce"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-focused-check/with_skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95b86305148cd6612fc58fcc451d83b792970845"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-focused-check/with_skill/outputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0760b551979c983295cb0e335edf9cc1650c5ea9"
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-focused-check/with_skill/outputs/论文终稿_增强评审_20260413_163510.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f68a3e1fa1fe7a4e3d7df2e4bb57f65abdf318",
+      "size": 2138
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-focused-check/with_skill/outputs/论文终稿_评审意见_20260413_162921.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347898f6976904aa1559ed1ea51aa07be82246a6",
+      "size": 1509
+    },
+    {
+      "path": "thesis-review-workspace/iteration-2/eval-focused-check/with_skill/outputs/论文评审总结报告.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c837241e490d5a6f6f116062204594fd8f5b808",
+      "size": 3937
+    },
+    {
+      "path": "thesis_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a551df556dee667ec647ebcdf602caa782e8695a",
+      "size": 26522
+    },
+    {
+      "path": "thesis_review_txt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a37c90ee7a184d6531f3ccc477a10e8f757a1193",
+      "size": 26717
+    },
+    {
+      "path": "verify_task.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "786822243800a1dfd793454d152cf4e8d39a26d4",
+      "size": 5993
+    }
+  ]
+}

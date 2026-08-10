@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md",
+        "snippet": "-practice-scheduler\" - \"formative-assessment-technique-selector\" - \"gap-analysis-from-student-work\" - \"cognitive-load-analyser\" teacher_time: \"3 minutes\" tags: [\"retrieval\", \"memory\", \"assessment\", \"spaced-practice\","
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md",
+        "snippet": "metable gaps, holidays, assessment windows) may make the recommended spacing impractical. Teacher judgment on timing is always necessary."
+      }
+    ]
+  },
+  "read_errors": []
+}

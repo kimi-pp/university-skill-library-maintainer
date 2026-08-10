@@ -1,0 +1,11 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "adapters/codex-skill/polisci-review/SKILL.md",
+        "snippet": "when omitted. 4. Apply the selected journal persona and the 9-module audit structure. 5. Write two output files in the main manuscript directory when a manuscript path is available; otherwise write them in the current working"
+      }
+    ]
+  },
+  "read_errors": []
+}

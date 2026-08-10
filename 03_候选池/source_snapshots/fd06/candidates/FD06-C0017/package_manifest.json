@@ -1,0 +1,14 @@
+[
+  {
+    "path": "skills/curriculum-generator/SKILL.md",
+    "type": "blob",
+    "size": 2937,
+    "sha": "ea145edc7bc420e921d8d8fa796788996acae08f"
+  },
+  {
+    "path": "skills/curriculum-generator/index.mjs",
+    "type": "blob",
+    "size": 3089,
+    "sha": "2ce763b584b55a1ed5392169d615e92621a5f149"
+  }
+]

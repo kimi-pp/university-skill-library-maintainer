@@ -1,0 +1,38 @@
+[
+  {
+    "path": "skills/faculty-life/alterlab-accreditation-aol/SKILL.md",
+    "type": "blob",
+    "size": 12759,
+    "sha": "9b2219194be8e7f9af244d70dd27baa592332c94"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-accreditation-aol/evals/evals.json",
+    "type": "blob",
+    "size": 6814,
+    "sha": "8e4659912c0edc88fc6bccb7e5159d2170584f65"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-accreditation-aol/references/accreditor_standards.md",
+    "type": "blob",
+    "size": 9519,
+    "sha": "88d127443eb0accadde0ede5af583df4d44d4687"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-accreditation-aol/references/aol_templates.md",
+    "type": "blob",
+    "size": 5901,
+    "sha": "8f4ec6d692d7109390038a1e25e4db9c5c297cd4"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-accreditation-aol/references/closing_the_loop.md",
+    "type": "blob",
+    "size": 4968,
+    "sha": "be07eef124778febd990e601892699648daf74b4"
+  },
+  {
+    "path": "skills/faculty-life/alterlab-accreditation-aol/scripts/aol_matrix.py",
+    "type": "blob",
+    "size": 7542,
+    "sha": "7dafb208a791490183c94e1a6faa4355fde5acf8"
+  }
+]

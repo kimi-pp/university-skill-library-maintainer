@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/review-paper/SKILL.md",
+        "snippet": "erves recognition - Do NOT fabricate details or citations — flag uncertainty explicitly - Save the report to the session log or `/plan` folder"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/review-paper/SKILL.md",
+        "snippet": "-- ## Output Format ```markdown # Referee Report: [Paper Title] **Date:** YYYY-MM-DD **Reviewer:** review-paper skill **Track:** [Economics / Political Science] **Recommendation:** [Strong Accept / Accept / Minor R&R / Major"
+      }
+    ]
+  },
+  "read_errors": []
+}

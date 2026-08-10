@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "library/specializations/domains/social-sciences-humanities/education/skills/elearning-storyboarding/SKILL.md",
+        "snippet": "Balance media elements - Design meaningful interactions - Provide clear feedback - Ensure accessibility ## Integration Points ### Related Processes - E-Learning Course Authoring - SAM Model Implementation - SCORM/xAPI Dev"
+      },
+      {
+        "file": "library/specializations/domains/social-sciences-humanities/education/skills/elearning-storyboarding/SKILL.md",
+        "snippet": "## Collaborating Skills - multimedia-learning-design - lms-configuration-administration - accessibility-compliance-auditing ## References - Allen Interactions SAM model - E-learning storyboard templates - Instructional de"
+      }
+    ]
+  },
+  "read_errors": []
+}

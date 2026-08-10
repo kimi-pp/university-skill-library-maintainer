@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-structure-001",
+      "source": "thesis",
+      "category": "structure",
+      "severity": "fatal",
+      "scope": "document",
+      "locator": {
+        "chapter": "全文",
+        "paragraph_index": 0
+      },
+      "excerpt": "",
+      "problem": "a",
+      "suggestion": [
+        "x"
+      ],
+      "group_id": "g-001",
+      "anchor_text": "全文"
+    },
+    {
+      "id": "thesis-structure-001",
+      "source": "thesis",
+      "category": "structure",
+      "severity": "major",
+      "scope": "document",
+      "locator": {
+        "chapter": "2",
+        "paragraph_index": 5
+      },
+      "excerpt": "",
+      "problem": "b",
+      "suggestion": [
+        "y"
+      ],
+      "group_id": "g-002",
+      "anchor_text": "2"
+    }
+  ]
+}

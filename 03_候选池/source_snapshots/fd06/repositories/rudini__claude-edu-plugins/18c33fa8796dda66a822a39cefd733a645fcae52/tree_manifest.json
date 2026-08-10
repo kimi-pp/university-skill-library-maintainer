@@ -1,0 +1,485 @@
+{
+  "repository": "rudini/claude-edu-plugins",
+  "fixed_version": "18c33fa8796dda66a822a39cefd733a645fcae52",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb2071a5ca4c2c13b0f6b5e3657e4f9e1822b5ff"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3dc1087c95f5b3b102bc3116a3e4b0778cc7d4d",
+      "size": 768
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52b2a5e7c2e0d5d16cec6a3a734f164933b15b5f"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60a8dc51dd603001e339ee2d55bf310b7d9424f2",
+      "size": 62
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9f3bcbfebf4311e450660ebb83c9e0ce88f890c",
+      "size": 101
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a000cfe4c434a065e6a6d9a03a1722fdc827c4b",
+      "size": 1068
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "000d217f76872d14aede44a14c0655a6cec00e5d",
+      "size": 5588
+    },
+    {
+      "path": "USAGE_OTHER_TOOLS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc04b5e0a9112b3ecd40a5f252aaec929b97e2b7",
+      "size": 15351
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b5663538bdee2999014fb118503ddc2ad2c813",
+      "size": 4176
+    },
+    {
+      "path": "favicon.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b219d8416833d312c668ded5a2c44960424838b2",
+      "size": 266
+    },
+    {
+      "path": "google11dc77ad6e81f269.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aaaee5146887e7f122772d2ff7447ab8543725a",
+      "size": 53
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a9520f9a60ff656e051ae5e1ed6a5b0b00ee3ff",
+      "size": 106471
+    },
+    {
+      "path": "kahoot-demo-poster.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73f82a5eb91a9a904a64a8749b01e164208ee54b",
+      "size": 52453
+    },
+    {
+      "path": "kahoot-demo.mp4",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66c0f089deae98eaf5126a3cb6f9ec7fe75e2a4",
+      "size": 4048286
+    },
+    {
+      "path": "minecraft-quiz.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62b594d2216ebbd16cc66099b35156e37a1fdf30",
+      "size": 3385
+    },
+    {
+      "path": "og-image.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b76e9124fc43549a486b23d4471677bb3a4c1d8",
+      "size": 70579
+    },
+    {
+      "path": "plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19e84c4cccca0fb5e083596e616ff326d5b46dcf"
+    },
+    {
+      "path": "plugins/kahoot-skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0f0d80f9fb6eeae88bfcc62a39403046d96c260"
+    },
+    {
+      "path": "plugins/kahoot-skill/.claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "040e929dcddba6c5142b92e994ac229212fab77e"
+    },
+    {
+      "path": "plugins/kahoot-skill/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f440f6b59a6ed85d208ff447a2e6fd1e54f3854",
+      "size": 344
+    },
+    {
+      "path": "plugins/kahoot-skill/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa75cb363a280ea2a7b0e173acc40b8ba759804",
+      "size": 163
+    },
+    {
+      "path": "plugins/kahoot-skill/hooks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe4f64258d54cb2ae8999e68c244d7ee492a4cd",
+      "size": 640
+    },
+    {
+      "path": "plugins/kahoot-skill/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98ca0b744290c0571aa49d11e6709459526ce33d",
+      "size": 124
+    },
+    {
+      "path": "plugins/kahoot-skill/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b8024cc972ea013574b9594a2fd9196b63111ab"
+    },
+    {
+      "path": "plugins/kahoot-skill/scripts/kahoot-creator.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8585b2c8708126ecbb38d7ffbaa3ab88cf14c1c7",
+      "size": 17062
+    },
+    {
+      "path": "plugins/kahoot-skill/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5391f957deda74bfdd45caf64f52ef68dd2b8c48"
+    },
+    {
+      "path": "plugins/kahoot-skill/skills/kahoot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dfbea38954edf91372ca0332e68958479469f2c2"
+    },
+    {
+      "path": "plugins/kahoot-skill/skills/kahoot/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c2b34126f6fce29c0c771b9afdde924ed5fa79f",
+      "size": 3344
+    },
+    {
+      "path": "plugins/mcp-server",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca2c4dae91e9aeea8ca780a469182e195dc0a90b"
+    },
+    {
+      "path": "plugins/mcp-server/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2658d7d1b31848c3b71960543cb0368e56cd4c7",
+      "size": 14
+    },
+    {
+      "path": "plugins/mcp-server/mcp-edu-server.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459cd80ac9b1402bc445774b6e30297d35098121",
+      "size": 22378
+    },
+    {
+      "path": "plugins/mcp-server/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08d0847e746440cf0d6da5de4a72e084906942dc",
+      "size": 433
+    },
+    {
+      "path": "plugins/moodle-skill",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6720df95e59ff87bc00c25c0c107e9db7a2b161"
+    },
+    {
+      "path": "plugins/moodle-skill/.claude-plugin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69cecb624473a4c6146c387096f829743e353d80"
+    },
+    {
+      "path": "plugins/moodle-skill/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "753a53181cf842fc4a9d551054c33b6236dccf37",
+      "size": 358
+    },
+    {
+      "path": "plugins/moodle-skill/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05df27dff3a592ea4be3f3177dcbcae5c7fb7735",
+      "size": 153
+    },
+    {
+      "path": "plugins/moodle-skill/hooks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe4f64258d54cb2ae8999e68c244d7ee492a4cd",
+      "size": 640
+    },
+    {
+      "path": "plugins/moodle-skill/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15c80f03810be8b1566376dcda026b6a190a9b1c",
+      "size": 339
+    },
+    {
+      "path": "plugins/moodle-skill/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e47019d56c898fb820fd4c1770d7509a17464956"
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcb926c0b0ee598f47120f62cc49b0a864877fae"
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/__tests__/download-course.test.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "150dec33cf103659f44d0d01e36d46c361ad386d",
+      "size": 6605
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/assign-grading.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f7fdc78dbc752d670a22e5fc471f014959d910f",
+      "size": 16318
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/download-course.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8efadd57d5c76d9a0c330ef582636ad0c75afeaa",
+      "size": 22059
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/execute-upload.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90c0f770685c31b302c375a593131ad0e0838b0a",
+      "size": 9327
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/gift-parser.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ca28c8c0ed4d9dced9340c324c5e72ed18cb48f",
+      "size": 10345
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/grade-essay.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77f78a9140b6d9f5dcf85589250bb98327df2539",
+      "size": 22047
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/moodle-updater.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3b8b0a9f688daf10d2f73cf0213ef3c9363c2a",
+      "size": 81620
+    },
+    {
+      "path": "plugins/moodle-skill/scripts/upload-course.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5144c8afd21d76201dcb7af8f428caac7ac8b10",
+      "size": 6751
+    },
+    {
+      "path": "plugins/moodle-skill/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e73a26c8646b291ae92d96e46482db5ca26ac85"
+    },
+    {
+      "path": "plugins/moodle-skill/skills/moodle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29d7cd7f37e16352d759ec647494d8f07bba7f9a"
+    },
+    {
+      "path": "plugins/moodle-skill/skills/moodle/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c1051612db286a8edc37b690e8c796d08347a20",
+      "size": 8833
+    },
+    {
+      "path": "robots.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1dc1f9c55bf8a0b39c205a2883f6606a77119e2",
+      "size": 89
+    },
+    {
+      "path": "sitemap.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7769325f58e964e366f14ff9fefa6de6301d8816",
+      "size": 286
+    },
+    {
+      "path": "video",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e603ae4d960dfb0be46b98d20ee894810092f2a6"
+    },
+    {
+      "path": "video/capture-screenshots.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b397cd1bd6182ab0dac4d5977b6dfccc42ba36cf",
+      "size": 1882
+    },
+    {
+      "path": "video/out",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6868098d93f91123e1835b3e8d69adac01975dc2"
+    },
+    {
+      "path": "video/out/kahoot-demo.mp4",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66c0f089deae98eaf5126a3cb6f9ec7fe75e2a4",
+      "size": 4048286
+    },
+    {
+      "path": "video/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7981d8a3fce5228f6f02b8ff45d4989b812e60a",
+      "size": 601
+    },
+    {
+      "path": "video/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "213cd4739f4a9bbe525054e3772ee540658e5348"
+    },
+    {
+      "path": "video/src/KahootDemo.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fdd1c6c9737ada117ae83cc3cd76937398336cc",
+      "size": 1986
+    },
+    {
+      "path": "video/src/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc1c484f4faa2d4ff0ed15ced8e2a95d5b444f22",
+      "size": 307
+    },
+    {
+      "path": "video/src/root.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c938ea8a73710f0a2dd8910644cc7ffdab14c9a",
+      "size": 110
+    },
+    {
+      "path": "video/src/scenes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d89080e920d266937ceb7a0861441df96fbef63"
+    },
+    {
+      "path": "video/src/scenes/GameLobbyScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31b750127e1305ab870b789f64a0a46ecb0e4268",
+      "size": 4332
+    },
+    {
+      "path": "video/src/scenes/GamePlayScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c5c8345f5f833efc8cfe8da23dc126a5817aa59",
+      "size": 7943
+    },
+    {
+      "path": "video/src/scenes/IntroScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3920dcac05dc0036101fe3194aae45ef024cfcab",
+      "size": 3934
+    },
+    {
+      "path": "video/src/scenes/OutroScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62beaa6eb075c829522b1bc819e6e80ca365bae8",
+      "size": 4170
+    },
+    {
+      "path": "video/src/scenes/QuizCreatedScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e81bf4e97564c776d5b1ad2a442c8addc9005a2",
+      "size": 4877
+    },
+    {
+      "path": "video/src/scenes/TerminalScene.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c6cac82f85007fd3c910e1b6309367f3afda36b",
+      "size": 10060
+    },
+    {
+      "path": "video/test-responsive.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bedd5d3d844afd660e14eb95c44495df55fe3e79",
+      "size": 1299
+    },
+    {
+      "path": "video/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66f2d99e23418634304ce1299df5ee420e771467",
+      "size": 258
+    }
+  ]
+}

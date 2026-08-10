@@ -1,0 +1,47 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "is not yet refactored. All operations are reversible via git. 1. **Create subfolders.** `mkdir -p reading_material/ practice_exercises/` inside the lecture folder. 2. **Destructive moves (now authorised).** For eac"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "import nbformat nb_obj = nbformat.from_dict(nb) nbformat.validator.normalize(nb_obj) PATH.write_text(nbformat.writes(nb_obj) + \"\\n\") ``` Don't ship raw-JSON-`dumps` notebooks. They work today but the warning is loud and"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "tier on every applicable category. The point of the skill is to ship the lecture, not to write a report. The skill is interactive at the maintainer-decision points (destructive moves, industry-use selection, dataset choice"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "ecture-outlines/lecture_<NN>_*/goals_<NN>.md` into `reading_material/goals_<NN>.md`. Use `Write` (this is a fresh file inside the lecture folder, not a git move). No content authoring happens in this phase. Just structure. ### Phase 4 —"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "t-statistics, p-values, F-statistic, AIC/BIC, and residual diagnostics. If your job is to write a statistics report, this is the library.` > *After* — sentence framing, then a bulleted enumeration of the table's components, then the p"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "-values, > - F-statistic, > - AIC/BIC, > - residual diagnostics. > > If your job is to *write a statistics report*, this is the library. > ``` **When prose IS the right answer**: definitions, single-sentence aphorisms (\"**The math i"
+      }
+    ],
+    "external_write": [
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "ing voice before next semester\"). - A single \"next steps\" sentence: typically \"commit and push\" or \"review notebooks in JupyterLab once before next class\". The skill does not auto-commit. Git operations beyond `git rm` / `git"
+      },
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "a classification example. 6. **Checkpoint cadence.** Ask whether the maintainer wants to review after each content piece, after the mandatory core, or push through to the end. The default is \"push through, eval at end\" — fastest path. For high-stakes lectures (e.g., final as"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": ".claude/skills/uoa-py-course-create-excellent-lecture/SKILL.md",
+        "snippet": "oa-py-course-lecture-outline` first, then this skill once the outline is approved); grade student work (use `final_assignment/grade_feedback.prompt.md`); rewrite arbitrary files outside `lectures_*/`; or edit `docs/Lecture"
+      }
+    ]
+  },
+  "read_errors": []
+}

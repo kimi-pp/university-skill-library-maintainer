@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-assessment/learning-progression-builder/SKILL.md",
+        "snippet": "t does the word 'raging' have on the reader? What does it make you think or feel?\" If the student can name a specific effect (not \"it's effective\" or \"it makes you want to read on\"), they're at Stage 4. **Stage 5: Developed A"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/curriculum-assessment/learning-progression-builder/SKILL.md",
+        "snippet": "in a different order. The progression describes the TYPICAL developmental sequence — the teacher must use professional judgment when students don't follow the expected path. 2. **The progression describes skill development in ONE domain.** A stud"
+      }
+    ]
+  },
+  "read_errors": []
+}

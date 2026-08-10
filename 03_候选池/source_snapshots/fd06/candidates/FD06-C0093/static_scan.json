@@ -1,0 +1,29 @@
+{
+  "hits": {
+    "fairness": [
+      {
+        "file": "skills/chain-roleplay-debate-synthesis/SKILL.md",
+        "snippet": "ions - **Talking past each other**: Roles argue different points rather than engaging - **Appeal to authority**: \"Because the CEO said so\" rather than reasoning - **False dichotomies**: \"Either we do X or we fail\" wi"
+      },
+      {
+        "file": "skills/chain-roleplay-debate-synthesis/resources/examples/build-vs-buy-crm.md",
+        "snippet": "### Debate Transcript (Point-Counterpoint) **VP Sales Opening Case:** Look, I get the appeal of building our perfect CRM, but we cannot afford to wait 12-18 months. Our sales team is losing deals *right now* beca"
+      },
+      {
+        "file": "skills/chain-roleplay-debate-synthesis/resources/methodology.md",
+        "snippet": "ail\" **Fix**: Challenge dichotomy, explore spectrum, introduce alternatives, reframe ### Appeal to Authority **Symptoms**: \"CEO wants X, so we do X\" **Fix**: Ask for underlying reasoning, question applicability, exa"
+      },
+      {
+        "file": "skills/chain-roleplay-debate-synthesis/resources/methodology.md",
+        "snippet": "ze anti-patterns**: Premature consensus, dominant voice, talking past, false dichotomies, appeal to authority, strawmen, analysis paralysis 4. **Synthesize under uncertainty**: Conditional strategies, reversible dec"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/chain-roleplay-debate-synthesis/resources/examples/build-vs-buy-crm.md",
+        "snippet": "**Month 3**: Formal decision gate review (continue build or pivot to SaaS) - **Month 6**: Post-launch review (did we hit success metrics?) - **Month 12**: ROI review (productivity gains vs. investment) **Escalation conditions:*"
+      }
+    ]
+  },
+  "read_errors": []
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/AUTOIMPROVE.md",
+    "type": "blob",
+    "size": 22792,
+    "sha": "dfabd47323deca252abddc46cc2cdbe30c5a8c93"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/SKILL.md",
+    "type": "blob",
+    "size": 32771,
+    "sha": "1e318a6762dccb6a790f1baef7168d0dc42a5734"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/references/grade_output_template.md",
+    "type": "blob",
+    "size": 6716,
+    "sha": "c30392ef9cd5b9b5f4adebe6dd1c74a7432e6df4"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/references/grading_rubric.md",
+    "type": "blob",
+    "size": 12429,
+    "sha": "f6b383ff2c09e6c387edb8dd7cfcfe307819cf04"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/audit_grades_recorded.py",
+    "type": "blob",
+    "size": 7892,
+    "sha": "53499a45554a4b50d9f3ad20da6b54bd080f5b73"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/compute_grade.py",
+    "type": "blob",
+    "size": 7547,
+    "sha": "f536c7d6dfce7692ea9e09c360c6c299a9b053b6"
+  },
+  {
+    "path": ".claude/skills/uoa-py-course-final-assignment-grade/scripts/record_grade.py",
+    "type": "blob",
+    "size": 6979,
+    "sha": "a917a6bf162e2a29f2aa4a667040f6a31ab675b0"
+  }
+]

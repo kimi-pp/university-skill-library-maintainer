@@ -1,0 +1,25 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/professional-learning/teacher-inquiry-cycle-designer/SKILL.md",
+        "snippet": "ring\" description: \"What data the teacher already has or can collect — test scores, student work, surveys, observations\" - field: \"collaboration\" type: \"string\" description: \"Whether the teacher is wo"
+      },
+      {
+        "file": "skills/professional-learning/teacher-inquiry-cycle-designer/SKILL.md",
+        "snippet": "university researcher. Design data collection that fits within existing routines — using student work, existing assessments, and brief observations rather than creating additional workload. - **Baseline before interventio"
+      },
+      {
+        "file": "skills/professional-learning/teacher-inquiry-cycle-designer/SKILL.md",
+        "snippet": "ed? - **Multiple sources of evidence.** No single data source is sufficient. Triangulate: student work + teacher observation + student voice. If all three point in the same direction, the finding is trustworthy. - **Honest"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/professional-learning/teacher-inquiry-cycle-designer/SKILL.md",
+        "snippet": "** You want the intervention to work (you believe in retrieval practice), which creates a bias. Be honest with yourself: if the data doesn't show improvement, resist the temptation to explain it away. Negative find"
+      }
+    ]
+  },
+  "read_errors": []
+}

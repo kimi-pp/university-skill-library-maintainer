@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/environmental-experiential-learning/service-learning-project-designer/SKILL.md",
+        "snippet": "How is it organised? Students clean the data: identify missing entries, categorise items, create a usable spreadsheet. This is REAL data handling — the kind of data work that professionals do and that textbook exercises never include. *"
+      },
+      {
+        "file": "skills/environmental-experiential-learning/service-learning-project-designer/SKILL.md",
+        "snippet": "ean the data, calculate key statistics, create appropriate graphs, identify patterns, and write a brief report. This tests TRANSFER — can they apply the skills learned through the food bank project to a new context? **Civic devel"
+      }
+    ]
+  },
+  "read_errors": []
+}

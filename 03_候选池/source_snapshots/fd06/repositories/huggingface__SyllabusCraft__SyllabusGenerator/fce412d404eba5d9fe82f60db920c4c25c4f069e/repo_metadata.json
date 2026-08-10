@@ -1,0 +1,70 @@
+{
+  "_id": "687de37da8ca0fb33e20de9c",
+  "id": "SyllabusCraft/SyllabusGenerator",
+  "sdk": "docker",
+  "likes": 0,
+  "tags": [
+    "docker",
+    "streamlit",
+    "region:us"
+  ],
+  "private": false,
+  "author": "SyllabusCraft",
+  "sha": "fce412d404eba5d9fe82f60db920c4c25c4f069e",
+  "lastModified": "2025-07-21T06:51:43.000Z",
+  "cardData": {
+    "title": "SyllabusGenerator",
+    "emoji": "🚀",
+    "colorFrom": "red",
+    "colorTo": "red",
+    "sdk": "docker",
+    "app_port": 8501,
+    "tags": [
+      "streamlit"
+    ],
+    "pinned": false,
+    "short_description": "Generate detailed and structured course syllabi in seconds u"
+  },
+  "subdomain": "syllabuscraft-syllabusgenerator",
+  "gated": false,
+  "disabled": false,
+  "host": "https://syllabuscraft-syllabusgenerator.hf.space",
+  "runtime": {
+    "stage": "SLEEPING",
+    "hardware": {
+      "current": null,
+      "requested": "cpu-basic"
+    },
+    "gcTimeout": 172800,
+    "replicas": {
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "syllabuscraft-syllabusgenerator.hf.space",
+        "stage": "READY"
+      }
+    ]
+  },
+  "region": "us",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "Dockerfile"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "requirements.txt"
+    },
+    {
+      "rfilename": "src/streamlit_app.py"
+    }
+  ],
+  "createdAt": "2025-07-21T06:51:41.000Z",
+  "usedStorage": 0
+}

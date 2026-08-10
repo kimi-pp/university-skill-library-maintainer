@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.example.edu/schemas/fd06_catalog.schema.json",
+  "title": "FD06课程设计教学材料与教学评估正式技能目录",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "skill_id",
+      "name",
+      "primary_subcategory",
+      "secondary_tags",
+      "plain_function",
+      "audience",
+      "when_to_use",
+      "inputs",
+      "outputs",
+      "limitations",
+      "sensitive_data",
+      "adoption_level",
+      "security_grade",
+      "security_plain",
+      "verification_depth",
+      "canonical_url",
+      "fixed_version",
+      "verified_at",
+      "license",
+      "maintainer",
+      "network_behavior",
+      "credential_behavior",
+      "file_behavior",
+      "evidence_paths"
+    ],
+    "properties": {
+      "skill_id": {"type": "string", "pattern": "^FD-06-[0-9]{4}$"},
+      "name": {"type": "string", "minLength": 1},
+      "primary_subcategory": {
+        "enum": ["06-01", "06-02", "06-03", "06-04", "06-05", "06-06", "06-07", "06-08", "06-09", "06-10", "06-11", "06-12"]
+      },
+      "secondary_tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+      "plain_function": {"type": "string", "minLength": 1},
+      "audience": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+      "when_to_use": {"type": "string", "minLength": 1},
+      "inputs": {"type": "string", "minLength": 1},
+      "outputs": {"type": "string", "minLength": 1},
+      "limitations": {"type": "string", "minLength": 1},
+      "sensitive_data": {"type": "string", "minLength": 1},
+      "adoption_level": {"enum": ["可直接使用", "需要少量调整", "需要重新改造"]},
+      "security_grade": {"enum": ["SA", "SB", "SB-A"]},
+      "security_plain": {"type": "string", "minLength": 1},
+      "verification_depth": {"type": "string", "minLength": 1},
+      "canonical_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+      "fixed_version": {"type": "string", "minLength": 1},
+      "verified_at": {"type": "string", "format": "date"},
+      "license": {"type": "string", "minLength": 1},
+      "maintainer": {"type": "string", "minLength": 1},
+      "network_behavior": {"type": "string", "minLength": 1},
+      "credential_behavior": {"type": "string", "minLength": 1},
+      "file_behavior": {"type": "string", "minLength": 1},
+      "evidence_paths": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true}
+      ,"detailed_function": {"type": "string", "minLength": 1}
+      ,"candidate_id": {"type": "string", "pattern": "^FD06-C[0-9]{4}$"}
+      ,"subcategory_name": {"type": "string", "minLength": 1}
+      ,"source_kind": {"enum": ["github", "huggingface_space", "clawhub_registry"]}
+      ,"source_label": {"type": "string", "minLength": 1}
+      ,"source_shape": {"type": "string", "minLength": 1}
+      ,"repository": {"type": "string", "minLength": 1}
+      ,"package_file_count": {"type": "integer", "minimum": 1}
+      ,"adaptation_requirements": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      ,"human_review": {"type": "string", "minLength": 1}
+      ,"fairness_accessibility": {"type": "string", "minLength": 1}
+      ,"untrusted_input": {"type": "string", "minLength": 1}
+      ,"academic_integrity": {"type": "string", "minLength": 1}
+    }
+  }
+}

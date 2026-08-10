@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "Skills/review-paper/SKILL.md",
+        "snippet": "ailable agent results are collected, consolidate them into a single structured report. **Save location**: save the report inside a `reviews/` subfolder of the paper's directory (create it if it does not exist). Keeping reports out of the pap"
+      },
+      {
+        "file": "Skills/review-paper/SKILL.md",
+        "snippet": "-DD].md` already exists. If it does, append `-v2` (or `-v3`, etc.) to avoid overwriting. Save the report to: `reviews/PRE_SUBMISSION_REVIEW_[YYYY-MM-DD].md` where `[YYYY-MM-DD]` is today's date. **Report structure:** ```"
+      }
+    ]
+  },
+  "read_errors": []
+}

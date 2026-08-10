@@ -1,0 +1,77 @@
+{
+  "hits": {
+    "lms": [
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": "oster` | \"Make a poster for…\" — conference, showcase, course advertisement | Single large-canvas poster source + rendered file | **Mode dispatch rule:** \"make slides\" with no existing outline → check for a lesson-bu"
+      },
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": ", then Phases 2–4 on the existing content; `poster` swaps the slide sequence for a single-canvas layout but keeps figure and render discipline unchanged. ## Iron rules 1. **Source of truth is the source.** The mark"
+      },
+      {
+        "file": "deck-studio/agents/renderer_agent.md",
+        "snippet": "pages, per the guide's per-toolchain handout commands; `poster` mode — single large-canvas build (Marp custom size / LaTeX poster class), same verification. Each variant is its own verified build, not a rena"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": ", student handouts, and academic posters. Detects installed toolchains honestly; enforces accessibility minimums. Triggers on: make slides, PPT, PowerPoint, slide deck, beamer, presentation, lecture slides, poster, render m"
+      },
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": "ll brings real toolchains, a consistent course-wide theme, code-generated figures, and an accessibility floor that is enforced rather than suggested. > **Prime rule:** never fake a render. The markdown/spec source is alway"
+      },
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": "ide count matches source, and opens it for the professor; then the accessibility pass per references/slide_design_rules.md (font floor, contrast, palette,"
+      },
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": "violations flagged, never silently fixed 🧑 checkpoint: rendered artifact path + accessibility findings + every decision made (splits, derived titles, figure choices). Confirmed → passport w"
+      },
+      {
+        "file": "deck-studio/SKILL.md",
+        "snippet": "produce. A claimed render with no verified file on disk is a defect, not a draft. 3. **Accessibility minimums are enforced, not advisory** (Quality Gate U1 made executable): 24pt body-text floor for projection, contra"
+      },
+      {
+        "file": "deck-studio/agents/renderer_agent.md",
+        "snippet": "or can rebuild with the same one-liner — which you print with every successful build. - Accessibility pass runs *after* a successful build (rendered output is what students see): font floor, contrast, alt text present i"
+      },
+      {
+        "file": "deck-studio/agents/visual_designer_agent.md",
+        "snippet": "entation is derived from it. 6. **Fill `templates/theme_spec_template.md`** including the accessibility checklist and change history, and present at checkpoint with the decisions you made for the professor surfaced: f"
+      },
+      {
+        "file": "deck-studio/references/slide_design_rules.md",
+        "snippet": "derives from the cognitive-load and multimedia evidence (Pedagogy Foundations §9) or the accessibility baseline (§7 / Quality Gate U1). Agents apply these silently in artifacts and cite the check id (R1, R2…) when flagging"
+      },
+      {
+        "file": "deck-studio/references/toolchain_guide.md",
+        "snippet": "e institutional master) are flagged at the theme checkpoint — institutional template vs accessibility floor is the professor's call to make, on the record. - **Handout:** PowerPoint's handout printing (say so), or a gen"
+      },
+      {
+        "file": "deck-studio/templates/theme_spec_template.md",
+        "snippet": "cision: {{logged decision}}}} - **What the build script controls vs inherits:** {{ }} ## Accessibility checklist (confirmed at theme checkpoint) - [ ] All body/title pairs ≥4.5:1 / ≥3:1 (R7) — ratios in the token table -"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "deck-studio/references/toolchain_guide.md",
+        "snippet": "e) as a separate build. | Limitation | Consequence | |------------|-------------| | PPTX export is rendered images per slide | Not editable in PowerPoint — never offer it as \"editable PPTX\" | | No .potx template support | Institutional-template"
+      },
+      {
+        "file": "deck-studio/templates/deck_source_template.md",
+        "snippet": "markdown: builds directly with Marp, converts cleanly via pandoc for PPTX/Beamer routes. Edit THIS file and re-render; never edit the binary alone. Conventions are explained in comments like this one; delete comments in rea"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "deck-studio/references/toolchain_guide.md",
+        "snippet": "- **Detect:** `python3 -c \"import pptx; print(pptx.__version__)\"` - **Install (macOS):** `pip3 install python-pptx` - **Build:** a generated build script (`decks/build_W<N>.py`) that opens the institutional template, walks the deck s"
+      }
+    ]
+  },
+  "read_errors": []
+}

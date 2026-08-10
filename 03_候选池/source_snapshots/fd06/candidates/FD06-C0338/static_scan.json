@@ -1,0 +1,91 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "ence to personal preferences vs. best practices - Revealing your identity if reviewing is double-blind ## Special Considerations by Manuscript Type ### Original Research Articles - Emphasize rigor, reproducibility, and n"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "iance (CONSORT/STROBE/PRISMA), and gives constructive feedback. Use when writing a formal reviewer report, responding to a journal/grant review invitation, or revising a manuscript against reviewer criteria. For evaluating claims/evidence quality prefer alterlab-"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "reproducibility, ethics, and reporting standards, then deliver a structured, constructive reviewer report. Apply this skill for manuscript and grant review across disciplines. ## When to Use This Skill This skill should be used when: - Conducting peer review of scientific"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "formative? - **Completeness:** Are key findings and methods summarized appropriately? - **Accessibility:** Is the abstract comprehensible to a broad scientific audience? #### Introduction - **Context:** Is the background i"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "Stage 7: Writing Quality and Clarity Assess the manuscript's clarity, organization, and accessibility. **Structure and Organization:** - Is the manuscript logically organized? - Do sections flow coherently? - Are transit"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "lling correct? - Are sentences unnecessarily complex? - Is the passive voice overused? **Accessibility:** - Can a non-specialist understand the main findings? - Are technical terms explained? - Is the significance clear to"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "search strategy and inclusion/exclusion criteria - Verify systematic approach and lack of bias - Check for critical analysis vs. mere summarization - For meta-analyses, evaluate statistical approach and heterogenei"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/evals/evals.json",
+        "snippet": "defers to alterlab-scientific-thinking. The ask is evidence-quality grading (GRADE) plus bias/confounder/causal-inference assessment, not a constructive submittable reviewer report.\", \"assertions\": ["
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/evals/evals.json",
+        "snippet": "ific-thinking\" }, { \"type\": \"behavior\", \"value\": \"Recognizes evidence-grading and bias/causal-inference analysis as alterlab-scientific-thinking territory and defers rather than producing a peer-review repo"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+        "snippet": "exploratory analyses - Use cross-validation or hold-out datasets - Correct for selection bias ### 6. Pseudoreplication **Common Problems:** - Technical replicates treated as biological replicates - Multiple meas"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+        "snippet": "Block on known confounders - Randomize sample processing order - Use blinding to minimize bias - Perform batch correction if needed - Report and adjust for baseline differences ### 9. Insufficient Replication **C"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+        "snippet": "ry analyses - Report all pre-specified outcomes ### 19. Baseline Imbalance and Selection Bias **Common Problems:** - Groups differ at baseline - Selection criteria applied differentially - Healthy volunteer bias"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+        "snippet": "Groups differ at baseline - Selection criteria applied differentially - Healthy volunteer bias - Survivorship bias - Indication bias in observational studies **How to Identify:** - Table 1 shows significant baseli"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+        "snippet": "eline - Selection criteria applied differentially - Healthy volunteer bias - Survivorship bias - Indication bias in observational studies **How to Identify:** - Table 1 shows significant baseline differences - Inc"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/references/common_issues.md",
+        "snippet": "criteria applied differentially - Healthy volunteer bias - Survivorship bias - Indication bias in observational studies **How to Identify:** - Table 1 shows significant baseline differences - Inclusion criteria di"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "euthanasia methods appropriate? **Research Integrity:** - Are there concerns about data fabrication or falsification? - Is authorship appropriate and justified? - Are competing interests disclosed? - Is funding source d"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/SKILL.md",
+        "snippet": "competing interests disclosed? - Is funding source disclosed? - Are there concerns about plagiarism or duplicate publication? ### Stage 7: Writing Quality and Clarity Assess the manuscript's clarity, organization, and"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/evals/evals.json",
+        "snippet": "ts.\" } ] }, { \"id\": \"grant-proposal-review\", \"prompt\": \"Help me write a formal reviewer report for this grant proposal — assess the experimental design rigor and significance and give the applicant constructive fee"
+      },
+      {
+        "file": "skills/writing-tools/alterlab-peer-review/evals/evals.json",
+        "snippet": "\" } ] }, { \"id\": \"near-miss-evidence-grading\", \"prompt\": \"Don't write a reviewer report — I just want to grade the certainty of evidence in this RCT using GRADE and flag any confounders or causal-inference f"
+      }
+    ]
+  },
+  "read_errors": []
+}

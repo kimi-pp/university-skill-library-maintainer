@@ -1,0 +1,25 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+        "snippet": "nd-sequence-designer - curriculum-knowledge-architecture-designer - gap-analysis-from-student-work teacher_time: 30 minutes tags: - curriculum-alignment - crosswalk - framework-comparison - Webb-alignment - P"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+        "snippet": "flags type: array description: Array of ambiguous theme groupings flagged for human review. Each entry includes — theme label, source topics grouped under it, rationale for the grouping decision. Surfaces inter"
+      },
+      {
+        "file": "skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+        "snippet": "rix comparability, but these may represent genuinely distinct learning goals. Flagged for human review.\" }, { \"theme\": \"Digital Wellbeing\", \"source_topics_grouped\": [ \"REAL School: 'Students can evaluate"
+      },
+      {
+        "file": "skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+        "snippet": "not an authoritative classification. `theme_grouping_flags` surfaces uncertain cases for human review rather than hiding them. Use the `theme_taxonomy` input for consistent row labels across repeated runs on changing inpu"
+      }
+    ]
+  },
+  "read_errors": []
+}

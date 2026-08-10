@@ -1,0 +1,17 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/ai-literacy/ai-learning-boundary-mapper/SKILL.md",
+        "snippet": "main cause of WWII, using at least three named historians' arguments\" / \"Year 9 Science: write a lab report for the rates of reaction experiment — method, results, analysis, conclusion\" / \"Year 12 English: comparative essay on"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/ai-literacy/ai-learning-boundary-mapper/SKILL.md",
+        "snippet": "AI use is either genuinely harmless or educationally visible. 3. **Boundary-setting has equity implications.** Students who cannot afford private tutors may rely on AI as a cognitive scaffold in ways that parallel"
+      }
+    ]
+  },
+  "read_errors": []
+}

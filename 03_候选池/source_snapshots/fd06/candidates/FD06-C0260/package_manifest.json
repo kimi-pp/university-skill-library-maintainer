@@ -1,0 +1,164 @@
+[
+  {
+    "path": "academic-paper-reviewer/SKILL.md",
+    "type": "blob",
+    "size": 34167,
+    "sha": "16fbb7d1c42fd9e206aeb402feca19b13d073276"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/devils_advocate_reviewer_agent.md",
+    "type": "blob",
+    "size": 39292,
+    "sha": "28b46cb3975e16813925d5db4bf47d0745a733d8"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/domain_reviewer_agent.md",
+    "type": "blob",
+    "size": 29620,
+    "sha": "cd74eb596a2a9e5b65b03e79837550fad6e31143"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/editorial_synthesizer_agent.md",
+    "type": "blob",
+    "size": 38559,
+    "sha": "91cc280d4b8d03d567453b53a0ffe1a15c68babd"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/eic_agent.md",
+    "type": "blob",
+    "size": 25195,
+    "sha": "fb95bc342396f5013d15deccb1709d205ca537cf"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/field_analyst_agent.md",
+    "type": "blob",
+    "size": 9749,
+    "sha": "783d32c5cf4db20a5d23f7751c6890f1d29cd40c"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/methodology_reviewer_agent.md",
+    "type": "blob",
+    "size": 41365,
+    "sha": "21d2887d1dbf4d6e74fdcd698e20b5919a580de5"
+  },
+  {
+    "path": "academic-paper-reviewer/agents/perspective_reviewer_agent.md",
+    "type": "blob",
+    "size": 29859,
+    "sha": "80a07fa2b6a815ff4e26108451a9fb02b187ea9f"
+  },
+  {
+    "path": "academic-paper-reviewer/examples/hei_paper_review_example.md",
+    "type": "blob",
+    "size": 32999,
+    "sha": "4c2fad09c5eea61de4a4289225c86c358ea0a093"
+  },
+  {
+    "path": "academic-paper-reviewer/examples/interdisciplinary_review_example.md",
+    "type": "blob",
+    "size": 26640,
+    "sha": "8d12eb0e492413feba76f7e5f475166ee81cc4d4"
+  },
+  {
+    "path": "academic-paper-reviewer/examples/subclaim_decomposition_example.md",
+    "type": "blob",
+    "size": 8258,
+    "sha": "753a1a5a8d34b6b3ba99e9e0e675817d6c867034"
+  },
+  {
+    "path": "academic-paper-reviewer/references/calibration_mode_protocol.md",
+    "type": "blob",
+    "size": 30318,
+    "sha": "6eaa578cd70ea362cb57d7bc40773314ec51e614"
+  },
+  {
+    "path": "academic-paper-reviewer/references/changelog.md",
+    "type": "blob",
+    "size": 976,
+    "sha": "6bb61570ac2fafa2639f06231f6d62007bd03ee3"
+  },
+  {
+    "path": "academic-paper-reviewer/references/editorial_decision_standards.md",
+    "type": "blob",
+    "size": 12890,
+    "sha": "0d2a3c82fb0caba8551fe4a9ab578e9ee8dc99ec"
+  },
+  {
+    "path": "academic-paper-reviewer/references/guided_mode_protocol.md",
+    "type": "blob",
+    "size": 2036,
+    "sha": "dc045b1ea3a88ff171431acde4288abd9aedea82"
+  },
+  {
+    "path": "academic-paper-reviewer/references/integration_guide.md",
+    "type": "blob",
+    "size": 680,
+    "sha": "a356c37346c117f8bf45c1a024925e667499e211"
+  },
+  {
+    "path": "academic-paper-reviewer/references/quality_rubrics.md",
+    "type": "blob",
+    "size": 7811,
+    "sha": "3ddd4a0666d05a712541ea8e7106a55589c711da"
+  },
+  {
+    "path": "academic-paper-reviewer/references/re_review_mode_protocol.md",
+    "type": "blob",
+    "size": 53261,
+    "sha": "80085bf88b30f615805210b3cc761005b8e601f1"
+  },
+  {
+    "path": "academic-paper-reviewer/references/review_criteria_framework.md",
+    "type": "blob",
+    "size": 10188,
+    "sha": "2c3c2fea016287d035e3614c59ffa690791bdd1e"
+  },
+  {
+    "path": "academic-paper-reviewer/references/review_quality_thinking.md",
+    "type": "blob",
+    "size": 3270,
+    "sha": "ba75c634f558405d2cefc9426833fb85138abfe4"
+  },
+  {
+    "path": "academic-paper-reviewer/references/reviewer_sprint_prompt_source.md",
+    "type": "blob",
+    "size": 45228,
+    "sha": "c8e55186f2ce4e9f47e8dbac8a4d6d3e1afdac88"
+  },
+  {
+    "path": "academic-paper-reviewer/references/sprint_contract_protocol.md",
+    "type": "blob",
+    "size": 31307,
+    "sha": "66273c56b840230f68f7e3786cf6b88e35e6b577"
+  },
+  {
+    "path": "academic-paper-reviewer/references/statistical_reporting_standards.md",
+    "type": "blob",
+    "size": 30484,
+    "sha": "5c6f6072f9f7806b98c5ad920bcba3eae02acf8b"
+  },
+  {
+    "path": "academic-paper-reviewer/references/top_journals_by_field.md",
+    "type": "blob",
+    "size": 12916,
+    "sha": "21e698b3e0ecc07857a820454b12a885f4158fd2"
+  },
+  {
+    "path": "academic-paper-reviewer/templates/editorial_decision_template.md",
+    "type": "blob",
+    "size": 9843,
+    "sha": "f835ff6014f322dd46569966543d0983b85059e6"
+  },
+  {
+    "path": "academic-paper-reviewer/templates/peer_review_report_template.md",
+    "type": "blob",
+    "size": 14456,
+    "sha": "5223e0c3ea2ee30605e80f92f67772e1db6daa32"
+  },
+  {
+    "path": "academic-paper-reviewer/templates/revision_response_template.md",
+    "type": "blob",
+    "size": 7595,
+    "sha": "119b9dfba3542e31fd50b7099168e137327bab24"
+  }
+]

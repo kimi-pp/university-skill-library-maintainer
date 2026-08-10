@@ -1,0 +1,119 @@
+{
+  "repository": "claesbackman/AI-research-feedback",
+  "fixed_version": "d39b192304121836cd2587a625fa7b7c0ed11963",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe0770424b2a19faf507a501ebfc23be8f54e7b",
+      "size": 66
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bfa56b71cc9a598d5e30b73ce133a2dc838ea36",
+      "size": 3198
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c58abb1175b815ed93c8bd94c93ebb79a55fdeb1",
+      "size": 1069
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55fe4eadfaf72e5ec638cfc28046cb62f22c1086",
+      "size": 16169
+    },
+    {
+      "path": "Skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b841fdc8bffda3b356ed27bb09603b1f865f6fe"
+    },
+    {
+      "path": "Skills/explain-diff",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2ff876462bd287125f7e74d51b5620025cf3082"
+    },
+    {
+      "path": "Skills/explain-diff/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4992188fe1e9e215dca8ba43421691a92165c47f",
+      "size": 8295
+    },
+    {
+      "path": "Skills/review-grant",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d526bb39cbb25f7d707c50227c47a53a79554be"
+    },
+    {
+      "path": "Skills/review-grant/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c7a24e1b3d9fd11fd048e6b63483843753457ee",
+      "size": 22522
+    },
+    {
+      "path": "Skills/review-pap",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "705c625175fdc9af8cf681eb7ac7f08d23ab0ad4"
+    },
+    {
+      "path": "Skills/review-pap/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e656bf0f5ae6fe8e32bc66c64176e40d9b80730",
+      "size": 25857
+    },
+    {
+      "path": "Skills/review-paper-code",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d6c6da53e9045f7c0ceb0e5963b118dc2aa7605"
+    },
+    {
+      "path": "Skills/review-paper-code/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fedf23e18f9bcf60f9dffba19bbb7e30cbe42d12",
+      "size": 12277
+    },
+    {
+      "path": "Skills/review-paper-light",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7233b3f6e55c9aefe38e39b1d342318bc3cd3c2c"
+    },
+    {
+      "path": "Skills/review-paper-light/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7d86f0b7fddfbbf111103933156d45aa6a5a27",
+      "size": 9316
+    },
+    {
+      "path": "Skills/review-paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05235f071dce3c73a20cc0baf152403ed5c8d368"
+    },
+    {
+      "path": "Skills/review-paper/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2953b477c30bc56fa53d0fd80628d6998ca25980",
+      "size": 38126
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "hits": {
+    "remote_install": [
+      {
+        "file": "research/syllabus/skills/syllabus/SKILL.md",
+        "snippet": "p, alert user, share collected so far | | `docx` package not installed | Script attempts `npm install`; if still failing, fail with clear message | | DOCX validation fails | Unpack XML, log issue, ask user to retry | | Sy"
+      },
+      {
+        "file": "research/syllabus/skills/syllabus/scripts/generate_reading_list.js",
+        "snippet": "try next } } console.error('error: cannot find `docx` npm package. Install with: npm install docx'); process.exit(2); } const docx = loadDocx(); const { Document, Paragraph, TextRun, Packer, AlignmentType, H"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "research/syllabus/skills/syllabus/references/applied_domain_weaving.md",
+        "snippet": "imization warehouse analytics\" | | HCI | \"user interface design\" | \"user interface design accessibility\" | ### Business / Social Sciences | Topic | Generic search | Applied-domain search | |---|---|---| | Game theory | \"N"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "research/syllabus/skills/syllabus/scripts/citation_tracker.py",
+        "snippet": "g=\"utf-8\")) def save_session(name: str, data: Dict[str, Any]) -> None: SESSIONS_DIR.mkdir(parents=True, exist_ok=True) session_path(name).write_text(json.dumps(data, indent=2), encoding=\"utf-8\") def now_"
+      },
+      {
+        "file": "research/syllabus/skills/syllabus/scripts/citation_tracker.py",
+        "snippet": "Any]) -> None: SESSIONS_DIR.mkdir(parents=True, exist_ok=True) session_path(name).write_text(json.dumps(data, indent=2), encoding=\"utf-8\") def now_iso() -> str: return datetime.now(timezone.utc).isoformat()"
+      },
+      {
+        "file": "research/syllabus/skills/syllabus/scripts/citation_tracker.py",
+        "snippet": "\": result = action_close(args.session) else: SESSIONS_DIR.mkdir(parents=True, exist_ok=True) result = [{\"session\": p.stem, \"data\": json.loads(p.read_text(encoding=\"utf-8\")"
+      }
+    ],
+    "credential": [
+      {
+        "file": "research/syllabus/skills/syllabus/scripts/generate_reading_list.js",
+        "snippet": "'/usr/local/lib/node_modules/docx', // Global macOS / brew path.join(process.env.HOME || '', '.npm-global', 'lib', 'node_modules', 'docx'), ]; for (const candidate of candidates) { try {"
+      }
+    ]
+  },
+  "read_errors": []
+}

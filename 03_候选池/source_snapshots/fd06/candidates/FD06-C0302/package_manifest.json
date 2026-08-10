@@ -1,0 +1,14 @@
+[
+  {
+    "path": "next/src/lib/templates/skills/deck-course-module/SKILL.md",
+    "type": "blob",
+    "size": 646,
+    "sha": "5943a78588542f732c1737df224fd48766df36f4"
+  },
+  {
+    "path": "next/src/lib/templates/skills/deck-course-module/example.html",
+    "type": "blob",
+    "size": 31788,
+    "sha": "cf681aaa7fa5d6b05a1a30c47b42a71514d0f1db"
+  }
+]

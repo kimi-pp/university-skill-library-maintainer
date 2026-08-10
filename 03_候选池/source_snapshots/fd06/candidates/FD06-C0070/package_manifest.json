@@ -1,0 +1,44 @@
+[
+  {
+    "path": "skills/lecture-to-study-guide/SKILL.md",
+    "type": "blob",
+    "size": 13144,
+    "sha": "2f609217d4b56377299edd9bd82063e01339cc5d"
+  },
+  {
+    "path": "skills/lecture-to-study-guide/evals/evals.json",
+    "type": "blob",
+    "size": 5034,
+    "sha": "81e59085b933ae747b716fb594825c72b7968f1a"
+  },
+  {
+    "path": "skills/lecture-to-study-guide/references/input-types.md",
+    "type": "blob",
+    "size": 4967,
+    "sha": "158dc772be76b5c8f81378e30c1fcb0c80481c36"
+  },
+  {
+    "path": "skills/lecture-to-study-guide/references/output-format.md",
+    "type": "blob",
+    "size": 3017,
+    "sha": "c86e877e2e26a889640e99fe2a1588d243da60d7"
+  },
+  {
+    "path": "skills/lecture-to-study-guide/references/question-mix.md",
+    "type": "blob",
+    "size": 2889,
+    "sha": "084f8498130f10c46f3cddbb807b151bf800703f"
+  },
+  {
+    "path": "skills/lecture-to-study-guide/references/study-techniques.md",
+    "type": "blob",
+    "size": 2849,
+    "sha": "cb3f5ecd8a54ad4931fc06407faf7d06880c3b1b"
+  },
+  {
+    "path": "skills/lecture-to-study-guide/references/term-extraction.md",
+    "type": "blob",
+    "size": 2730,
+    "sha": "0ae7551b5116d8fdd98acfdcf9785cf4463835cc"
+  }
+]

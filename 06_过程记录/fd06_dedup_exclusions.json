@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Course Designer directory page",
+    "discovery_url": "https://mcpmarket.com/tools/skills/course-designer",
+    "primary_subcategory": "06-01",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "course-description-analyzer",
+    "discovery_url": "https://github.com/dmccreary/claude-skills/blob/8dd7a52fe173692b774d05eb8c41bd164aae306e/skills/course-description-analyzer/SKILL.md",
+    "primary_subcategory": "06-01",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/vishalsachdev/claude-skills/blob/92a6344c3ae6f724bc8279cafb2e2f9edd9827c9/course-description-analyzer/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "Scholar teaching plugin directory page",
+    "discovery_url": "https://www.claudepluginhub.com/plugins/data-wise-scholar",
+    "primary_subcategory": "06-01",
+    "exclusion_type": "无法固定版本",
+    "plain_reason": "目录页所指原始仓库当前无法访问，不能确认实际文件和版本。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "teaching-suite",
+    "discovery_url": "https://github.com/YujxZJCN/teaching-skills-codex/blob/9c065d5c5f90a01e24c953fdf1f87c2f7ab55c34/skills/teaching-suite/SKILL.md",
+    "primary_subcategory": "06-01",
+    "exclusion_type": "实质重复",
+    "plain_reason": "这是十五个原始教学技能的合并构建产物；正式库保留各原始技能，不把合并包再计一次。",
+    "retained_candidate": "https://github.com/YujxZJCN/teaching-skills",
+    "evidence_level": "fixed_version_source_identified"
+  },
+  {
+    "name": "k12-lesson-planning",
+    "discovery_url": "https://github.com/learning-commons-org/agent-skills/blob/c41427815356369f4d1093b44f00a4f1780b3d9e/skills/k12-lesson-planning/SKILL.md",
+    "primary_subcategory": "06-02",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/anthropics/k12-teacher-skills/blob/6fc400329540e068516bd34aa78120d89e5e4e8b/plugin/skills/k12-lesson-planning/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "Learning Assessor",
+    "discovery_url": "https://mcpmarket.com/tools/skills/learning-assessor-1",
+    "primary_subcategory": "06-05",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_only"
+  },
+  {
+    "name": "Claude Edu Plugins public project page",
+    "discovery_url": "https://rudini.github.io/claude-edu-plugins/",
+    "primary_subcategory": "06-06",
+    "exclusion_type": "实质重复",
+    "plain_reason": "项目介绍页与已经记录的原始仓库是同一套功能，不重复计为一个技能。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_with_versioned_upstream"
+  },
+  {
+    "name": "Homework Grading Workflow directory page",
+    "discovery_url": "https://mcpmarket.com/tools/skills/homework-grading-workflow",
+    "primary_subcategory": "06-06",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_only_high_privacy_risk"
+  },
+  {
+    "name": "CEFR Language Alignment directory page",
+    "discovery_url": "https://mcpmarket.com/tools/skills/cefr-language-alignment",
+    "primary_subcategory": "06-09",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "k12-lesson-differentiation",
+    "discovery_url": "https://github.com/learning-commons-org/agent-skills/blob/c41427815356369f4d1093b44f00a4f1780b3d9e/skills/k12-lesson-differentiation/SKILL.md",
+    "primary_subcategory": "06-09",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/anthropics/k12-teacher-skills/blob/6fc400329540e068516bd34aa78120d89e5e4e8b/plugin/skills/k12-lesson-differentiation/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "Gemini CLI Academic Paper Reviewer directory page",
+    "discovery_url": "https://skillsmp.com/creators/davideriboli/gemini-cli-academic-research-skills/academic-paper-reviewer",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "ID8Labs peer-reviewer directory page",
+    "discovery_url": "https://playbooks.com/skills/eddiebe147/claude-settings/peer-reviewer",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "Iterative Paper Defense Skill",
+    "discovery_url": "https://gist.github.com/pjb7687/cc4ce9d56ff97fc23036196dd823da3a",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "许可证不清",
+    "plain_reason": "公开内容虽有固定修订，但没有声明复用许可证，且包含需要另行安全审查的外部命令。",
+    "retained_candidate": null,
+    "evidence_level": "fixed_revision_without_license"
+  },
+  {
+    "name": "nature-reviewer",
+    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/656be3040aef5c047555a908cd5c695d22a4a548/skills/yuan1z0825/nature-reviewer/SKILL.md",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/Yuan1z0825/nature-skills/blob/adb7b8a5a7d72ed6fe9f71e085785e9972dd8db2/skills/nature-reviewer/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "OpenClaw peer-reviewer directory page",
+    "discovery_url": "https://playbooks.com/skills/openclaw/skills/peer-reviewer",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "无法确认上游",
+    "plain_reason": "市场页没有提供当前可访问并可固定版本的原始技能包。",
+    "retained_candidate": null,
+    "evidence_level": "discovery_page_upstream_unavailable"
+  },
+  {
+    "name": "peer-review",
+    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/656be3040aef5c047555a908cd5c695d22a4a548/skills/davila7/peer-review/SKILL.md",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/TobiasBlask/open-paper-machine/blob/160df4d13d266411f0850c4de7ecdbd93e8b40be/scientific-skills/peer-review/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "peer-review",
+    "discovery_url": "https://github.com/aiskillstore/marketplace/blob/656be3040aef5c047555a908cd5c695d22a4a548/skills/k-dense-ai/peer-review/SKILL.md",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/991bd993aca4e90891d1f9908ba82ef45d77b6f0/skills/peer-review/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "polisci-review",
+    "discovery_url": "https://github.com/cmertdalli/polisci-review/blob/df5e14f35aeebea4d222171604999730aa3eca25/adapters/claude-skill/polisci-review/SKILL.md",
+    "primary_subcategory": "06-12",
+    "exclusion_type": "实质重复",
+    "plain_reason": "该入口与保留对象属于同一技能的相同正文、合作发布、生态适配或市场转载，只保留较接近原始上游的入口。",
+    "retained_candidate": "https://github.com/cmertdalli/polisci-review/blob/df5e14f35aeebea4d222171604999730aa3eca25/adapters/codex-skill/polisci-review/SKILL.md",
+    "evidence_level": "fixed_version_content_match"
+  },
+  {
+    "name": "Awesome Academic Skills 索引",
+    "discovery_url": "https://github.com/O0000-code/awesome-academic-skills",
+    "primary_subcategory": null,
+    "exclusion_type": "发现索引",
+    "plain_reason": "这是帮助寻找候选的公开索引，不是要直接采用的技能。",
+    "retained_candidate": null,
+    "evidence_level": "curated_discovery_index_only"
+  },
+  {
+    "name": "Codeberg 教育技能组合检索",
+    "discovery_url": "https://codeberg.org/explore/repos?q=agent+skill+education",
+    "primary_subcategory": null,
+    "exclusion_type": "搜索路径",
+    "plain_reason": "这是一条平台搜索入口，不是可以固定版本并审查的技能包。",
+    "retained_candidate": null,
+    "evidence_level": "search_path_access_limited"
+  },
+  {
+    "name": "Gitee 教育技能组合检索",
+    "discovery_url": "https://search.gitee.com/?q=SKILL.md%20%E6%95%99%E5%AD%A6",
+    "primary_subcategory": null,
+    "exclusion_type": "搜索路径",
+    "plain_reason": "这是一条平台搜索入口，不是可以固定版本并审查的技能包。",
+    "retained_candidate": null,
+    "evidence_level": "search_path_no_formal_candidate_yet"
+  },
+  {
+    "name": "GitLab 教育技能组合检索",
+    "discovery_url": "https://gitlab.com/search?search=SKILL.md%20education&nav_source=navbar",
+    "primary_subcategory": null,
+    "exclusion_type": "搜索路径",
+    "plain_reason": "这是一条平台搜索入口，不是可以固定版本并审查的技能包。",
+    "retained_candidate": null,
+    "evidence_level": "search_path_no_formal_candidate_yet"
+  },
+  {
+    "name": "teach",
+    "discovery_url": "https://github.com/sickn33/agentic-awesome-skills/blob/75c558b7ea89a023877b96eac74ced7aa1ee93f6/skills/teach/SKILL.md",
+    "primary_subcategory": null,
+    "exclusion_type": "偏离范围",
+    "plain_reason": "主要功能不属于本轮十二个小分类。",
+    "retained_candidate": null,
+    "evidence_level": "fixed_version_source_identified"
+  }
+]

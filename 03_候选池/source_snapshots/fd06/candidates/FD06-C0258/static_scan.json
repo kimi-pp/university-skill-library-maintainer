@@ -1,0 +1,431 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "SKILL.md",
+        "snippet": "is-reviewer（九大维度深度审查）与 legal-citation-checker（引注格式校对），输出统一 Markdown 报告 + 结构化 issues.json，并生成嵌入式批注文档（docx 的 Word 批注 / pdf 的嵌入式高亮批注），任何阅读器直接打开可见。v2.7 强化项：严重度判定标尺（反向举证原则）、批注挂载位置原则、PDF anchor 空格容错搜索、实战案例库 version: 2.7.0 key"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "snippet": "次发布的总体定位 v2.0-v2.5 在多轮实测中暴露了**两大类系统性问题**： 1. **批注定位严重错位**——v2.0 在含 `<w:sdt>` 容器（如 Word 自动生成的目录字段）的 docx 文档上，批注命中率仅 15%（如 6 条批注挤在湘大封面标题） 2. **审查过度偏向形式问题**——v2.5 实测刘梓璇论文形式问题占 60%，实质性问题（思想性硬伤、论证缺陷、自相矛盾、研究承诺失约）仅占 15% v2.6 针对性修复，并"
+      },
+      {
+        "file": "README.md",
+        "snippet": "``` 重启 Codex 后，Skill 会按 `SKILL.md` front matter 自动被发现。触发时可以直接说： - “帮我对这篇论文做一站式严格审查” - “生成统一审查报告和带批注的修订稿” - “按盲审标准全面检查这篇法学论文” ### 从 Release ZIP 安装 也可以从 GitHub Releases 下载 `unified-thesis-reviewer-v2.7.0.zip`，解压后把目录"
+      },
+      {
+        "file": "RELEASE_NOTES_v2.7.0.md",
+        "snippet": "nified-thesis-reviewer` 的 v2.7.0 发布版，一个面向法学论文未定稿检查的“一站式” Codex/Agent Skill。 ## 主要能力 - 统一生成论文深度审查报告、引注校对结果和结构化 `issues.json` - 支持 PDF 嵌入式批注与 DOCX Word 批注 - 对法律名称、案号、学术文献等高风险事项执行联网核实 - 自动生成引用交叉对比表 - 随仓库提供底层 `legal-thesis"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/phrase-bank.md",
+        "snippet": "# 典型批评话术库 & 正面肯定话术库 > 本文件汇总张庆霖老师 31 份评阅书中反复出现的典型句式，供 skill 生成报告时复用，以保持风格一致。所有句式均可带占位符使用。 --- ## 一、批评话术库（80 条，按 10 大类分组） ### A. 选题与问题意识类 - A01. 选题过大，缺乏问题意识。 - A02. 以《[选题]》作为[学位阶段]论"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/templates/interaction-prompts.md",
+        "snippet": "端、重大法律过时、主题偏离、常识错误） > 3. 九大维度逐项检查 > 4. 联网核实可查证事实（如当前环境有联网工具） > 5. 识别\"应讨论而未讨论\"的题中应有之义 > 6. 生成完整审查报告 > 7. 闭环交互 > > 我现在开始第 1 步：解析您上传的文档。 --- **用户粘贴了片段**： > 收到片段。请问您希望我： > （A）仅对粘贴的片段做审查 > （B）我尝试从片段识别上下文，提示您补齐必要的章节 > （C）"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/templates/review-report-template.md",
+        "snippet": "# 法学论文审查报告模板 > 本模板用于生成最终的审查报告。请按填充后的顺序输出到用户。报告正文的每一个\"问题条目\"都应按\"定位—问题—依据—建议\"四段式呈现。 --- # 《[论文题目]》审查报告 > 审查基于湘潭大学法学学部张庆霖老师 31 份评阅书提炼的规则库进行 > 审查日期：[YYYY-MM-DD] >"
+      },
+      {
+        "file": "rules/docx-annotation.md",
+        "snippet": "*文档首段**：章节结构也无法识别时，挂到 `document.xml` 的第一段（`paragraph_index=0`） 3. **永远不丢**：两级降级都无法成功时，仍把问题写入 `comments.xml`，挂到文档首段，批注正文顶部加 `⚠️ 精确定位失败...` 降级批注正文前缀格式： ``` ⚠️ 精确定位失败, 挂到本章开头: <原批注正文> ⚠️ 精确定位失败, 挂到文档开头: <原批注正文> ⚠️ 嵌套表格定位失败, 挂到外层章节开头:"
+      },
+      {
+        "file": "rules/error-handling.md",
+        "snippet": "sues.json` 最终版（保留草稿供调试，或写为 `issues.json.draft`） - 在 MD 报告末尾**附加显著标注块**： > ⚠️ 结构化清单未生成，批注文档不可用 > > **失败原因（前 5 条）**： > - issues[12]: id 格式不合法：`thesis_structure_012`（应为 `thesis-structure-012`） > -"
+      },
+      {
+        "file": "rules/error-handling.md",
+        "snippet": "说\"请检查后重试\"。 ### 4.4 版权合规不让步 错误路径中不得临时放宽版权要求——即便是为了给用户一个\"完整交付\"，也不把 GB/T 7714 原文、《法学引注手册》原文写入错误日志或 MD 报告。"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "白名单的工具名（如 `crawl`、`scrape`、`lookup`、`api_call`、`query_web`），Agent 可在具体任务中临时判定为联网工具可用，但不要把它写入本文件以免白名单泛滥。白名单的稳定性 > 覆盖率。 --- ## §3 6 平台对照表 下表列出各主要平台的典型联网工具名，说明如何命中 §2 的关键字。**具体工具名未来可能变化**——本表只作示例，不作硬编码依据。 | 平台 | 典型"
+      },
+      {
+        "file": "rules/pdf-annotation.md",
+        "snippet": "me 都打不开\"**，直接暴露了方案问题。 --- ## §2 v2 新主路径：嵌入式批注 pdf `tools/annotate-pdf.py`（v2 新增）**直接把批注写入原 pdf 的副本**，输出 `.annotated.pdf`。 ### §2.1 核心优势 - 任何 pdf 阅读器（WPS / Chrome / Preview / Adobe / Foxit / Firefox）**打开即见**，零配置 - 单个 pdf 文"
+      }
+    ],
+    "remote_install": [
+      {
+        "file": "SKILL.md",
+        "snippet": "| 安装位置 | PyMuPDF 可用性 | |---|---|---| | Kiro | `.kiro/skills/unified-thesis-reviewer/` | 需 pip install | | Claude Code | `.claude/skills/unified-thesis-reviewer/` | 需 pip install | | Hermes | 注入 system prompt | 视宿主环境 | | Ope"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "eviewer/` | 需 pip install | | Claude Code | `.claude/skills/unified-thesis-reviewer/` | 需 pip install | | Hermes | 注入 system prompt | 视宿主环境 | | OpenClaw | `/skills/unified-thesis-reviewer/` | 视宿主环境 | | Coze | 知识库 + 插件 | Coz"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "| | OpenClaw | `/skills/unified-thesis-reviewer/` | 视宿主环境 | | Coze | 知识库 + 插件 | Coze 插件内 pip install | | IMA | zip 解压 | 需本机 pip install | 命令行入口（任何具备 Python 3.8+ 的环境）： ```bash # v2 pdf 批注（推荐） python3 tools/annotate-pdf.py"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "esis-reviewer/` | 视宿主环境 | | Coze | 知识库 + 插件 | Coze 插件内 pip install | | IMA | zip 解压 | 需本机 pip install | 命令行入口（任何具备 Python 3.8+ 的环境）： ```bash # v2 pdf 批注（推荐） python3 tools/annotate-pdf.py 原.pdf issues.json 输出.annotated.pdf"
+      },
+      {
+        "file": "tools/annotate-pdf.py",
+        "snippet": "法： python3 annotate-pdf.py <原.pdf> <issues.json> <输出.annotated.pdf> 依赖： PyMuPDF (pip install PyMuPDF) \"\"\" from __future__ import annotations import argparse import json import re import sys from pathlib import Path try:"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "SKILL.md",
+        "snippet": "rsion: 2.7.0 keywords: - 统一审查 - 一站式 - 一站式审查 - 全面审查 - 综合审查 - 综合审阅 - 严格审查 - 盲审式全面检查 - 带批注的修订稿 - 批注版 - 一次性检查 - 论文未定稿检查 - 论文深度审查 - 引注校对 - 实质性审查 - 思想性硬伤 - OOXML 样式核查 - thesis all-in"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "- 用户明确要 XFDF → `{原名}.xfdf`（v1 备用路径保留） --- ## 何时激活 - 用户明确要求\"全面审查 / 一站式 / 综合审查 / 严格审查 / 盲审式检查\" - 用户要求\"同时查论文内容和引注格式\" - 用户上传论文并说\"给我一份带批注的修订稿 / 批注版\" - 关键词命中 front-matter keywords **与底层 skill 分工**： - 仅要求引注格式校对 → 直"
+      },
+      {
+        "file": "README.md",
+        "snippet": "会按 `SKILL.md` front matter 自动被发现。触发时可以直接说： - “帮我对这篇论文做一站式严格审查” - “生成统一审查报告和带批注的修订稿” - “按盲审标准全面检查这篇法学论文” ### 从 Release ZIP 安装 也可以从 GitHub Releases 下载 `unified-thesis-reviewer-v2.7.0.zip`，解压后把目录放到： ```text ~/."
+      },
+      {
+        "file": "_bundled/legal-citation-checker.rules/rules/common-errors.md",
+        "snippet": "*： ``` [7] 李启佳. 信息化时代……[J]. 文化学刊, 2023(10). 刘冰洋. 论数字经济时代个人行踪信息的法律保护…… ← 缺序号！ [8] 叶雄彪. 个人信息侵权……[J]. 齐鲁学刊, 2023(6). ``` **后果**：正文脚注引用 [N] 后，序号错位导致整张参考文献表对应错误。 **建议输出**： > 🚨 **严重**：参考文献 [X] 和 [Y] 之间的 \"【作者名】……\" 条"
+      },
+      {
+        "file": "_bundled/legal-citation-checker.rules/rules/common-errors.md",
+        "snippet": "链接以 `.html` 或 `.htm` 结尾但路径中有异常（如 `/pfnl/.html`、`/website/wenshu/.html`） - 链接包含中文字符（`&way=个人信息保护`） - 链接长度异常短（< 30 字符但不是主页） - 链接中混有空格或换行符 **建议输出**： > 🚨 该网址 `https://example.com/pfnl/.html` 路径不完整，疑似占位符或复制时截断。请作者核对完整"
+      },
+      {
+        "file": "_bundled/legal-citation-checker.rules/rules/manual-checklist.md",
+        "snippet": "### 6.2 案例名称规则 - 民事/行政：`×××（原告）诉×××（被告）×××（案由）案` - 刑事：`×××（被告人）×××（指控罪名）案` - 当事人原则上用真名；隐私保护用化名或隐名 `（化名）` - 一方有多人用\"等\"或\"等×人\" - 案由从简，一般不写\"纠纷\"；可省略审级 ### 6.3 案例来源 - 指导案例：`最高人民法院指导案例24号（2014年）` - 公报案例：`载《最高人民法院公报》"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "ll 产出的审查报告**可以作为**导师、答辩委员会、学术诚信委员会进一步调查的参考材料 - 报告中可附上\"**建议进一步调查的线索清单**\"，但**不代替**学校正式的查重报告、盲审定性 - 查重报告（如知网查重）与本 skill 的审查是**互补**关系：查重发现的是**文字相似度**，本 skill 发现的是**改写式抄袭、伪注、方法造假**等查重软件不容易发现的问题 ## 常用批评话术 - \"涉嫌伪造文献。\""
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/argumentation-depth.md",
+        "snippet": "己的主张？ ### A2 \"应讨论而未讨论\"项清单 按选题主题扫描以下问题是否得到讨论： - [ ] 与核心概念存在**邻近但不同的兄弟概念**（如行政推定 vs 刑事推定、个人信息 vs 隐私、权利 vs 权力），是否区分讨论？ - [ ] 与研究对象直接相关的**最近 2 年新立法 / 司法解释 / 指导性案例**是否涉及？ - [ ] 选题中暗含的**原则性问题**是否被讨论？（如\"律师帮助权\"是否宪法性权利的必"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/argumentation-depth.md",
+        "snippet": "## A2 \"应讨论而未讨论\"项清单 按选题主题扫描以下问题是否得到讨论： - [ ] 与核心概念存在**邻近但不同的兄弟概念**（如行政推定 vs 刑事推定、个人信息 vs 隐私、权利 vs 权力），是否区分讨论？ - [ ] 与研究对象直接相关的**最近 2 年新立法 / 司法解释 / 指导性案例**是否涉及？ - [ ] 选题中暗含的**原则性问题**是否被讨论？（如\"律师帮助权\"是否宪法性权利的必要性论证）"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/legal-norms-adaptation.md",
+        "snippet": "竞争法》 | 新《反不正当竞争法》 | 2019 修正 / 2025.6.17 二次修订 | | 旧《未成年人保护法》 | 新《未成年人保护法》 | 2021.6.1 | | 旧《个人信息保护法》前的相关规则 | 《个人信息保护法》 | 2021.11.1 | | 旧《数据安全法》前的相关规则 | 《数据安全法》 | 2021.9.1 | | 旧《法律援助条例》 | 《法律援助法》 | 2022.1.1 | | 旧《刑事诉讼"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/legal-norms-adaptation.md",
+        "snippet": "| 2019 修正 / 2025.6.17 二次修订 | | 旧《未成年人保护法》 | 新《未成年人保护法》 | 2021.6.1 | | 旧《个人信息保护法》前的相关规则 | 《个人信息保护法》 | 2021.11.1 | | 旧《数据安全法》前的相关规则 | 《数据安全法》 | 2021.9.1 | | 旧《法律援助条例》 | 《法律援助法》 | 2022.1.1 | | 旧《刑事诉讼法》 | 2018 年修正版（已有配"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/legal-norms-adaptation.md",
+        "snippet": "1）—— 涉及公共数据类论文 - 《银行保险机构数据安全管理办法（公开征求意见稿）》（金融监管总局 2024.3.22）—— 涉及保险数据合规类论文 - 《数据出境安全评估办法》《个人信息出境标准合同办法》《促进和规范数据跨境流动规定》—— 涉及数据跨境类论文 - 《中医药标准化行动计划(2024—2026年)》—— 涉及中医医疗过错类论文 - 《河南省矛盾纠纷多元预防化解条例》（2022.4.1）—— 涉及河南省基层治理类"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "file": "SKILL.md",
+        "snippet": "用机械对比**：新增 `tools/citation-crossref.py` 自动生成\"脱钩作者表\"（v2.6 起取消\"幽灵引用表\"），替代 Agent 主观判断 - **U9 匿名化选项**：节点 E 允许用户选择是否对作者/单位/指导教师占位符化 - **U10 证据卡格式**：每条 issue 在报告中必须附\"证据来源\"标签（联网核实 / 原文核对 / 文本分析 / 规则依据 / 实质性硬伤 / OOXML 分析）"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "**§6 联网核实**（v2 强化）：高优先级 15 项强制执行，每条 ≥ 2 次搜索，多源交叉验证 **§7 合并输出 + 节点 E（v2 新增）**： - 节点 E：是否匿名化报告 - 输出 MD 报告（9+1 章节）+ issues.json + positions.json + crossref.json **§8 节点 D**： - pdf → 生成 `.annotated.pdf`（默认走 `annot"
+      },
+      {
+        "file": "SKILL.md",
+        "snippet": "分 | | D | 合并完成后 | 生成 `.annotated.pdf` / `.annotated.docx`（v2 默认） | | E | 节点 D 前（v2 新增） | 不匿名化 | 详见 `templates/interaction-prompts.md`。 --- ## 总原则 1. **不重写已有规则库**：深度审查与引注校对规则继承自底层 skill 2. **永不静默丢问题**：任何失败路径都保留"
+      },
+      {
+        "file": "CHANGELOG.md",
+        "snippet": "integrity-guard.md`**：假阳性守门条款。致命指控必须证据链闭环，自动推进模式下 fatal 自动降级 major（除非联网确证） - **交互节点 E**：是否匿名化报告（在 `templates/interaction-prompts.md` §E） - **issues.json schema `anchor_text` 字段**：v2 必填，供 pdf 批注定位精确文本锚点 - **报告章节 ⑩"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/language-and-style.md",
+        "snippet": "词翻译错误、语序生硬、主谓不一致） - [ ] 英文标题、关键词的翻译是否规范？ - [ ] 专有名词（如国外期刊名、数据库名、外国立法）的英文是否采用官方名称？ ### W4 匿名化 - [ ] 论文引用的裁判文书当事人是否已匿名化（按\"陶某\"\"赵某伟\"等方式）？ - [ ] 匿名化是否彻底——同一段中是否同时出现了匿名和真名？ - [ ] 涉及公众人物（官员、知名学者）的称呼是否规范？ ### W5 术语使用的准"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/language-and-style.md",
+        "snippet": "标题、关键词的翻译是否规范？ - [ ] 专有名词（如国外期刊名、数据库名、外国立法）的英文是否采用官方名称？ ### W4 匿名化 - [ ] 论文引用的裁判文书当事人是否已匿名化（按\"陶某\"\"赵某伟\"等方式）？ - [ ] 匿名化是否彻底——同一段中是否同时出现了匿名和真名？ - [ ] 涉及公众人物（官员、知名学者）的称呼是否规范？ ### W5 术语使用的准确性 - [ ] \"适用\"一词是否被滥用（一段话中"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/language-and-style.md",
+        "snippet": "如国外期刊名、数据库名、外国立法）的英文是否采用官方名称？ ### W4 匿名化 - [ ] 论文引用的裁判文书当事人是否已匿名化（按\"陶某\"\"赵某伟\"等方式）？ - [ ] 匿名化是否彻底——同一段中是否同时出现了匿名和真名？ - [ ] 涉及公众人物（官员、知名学者）的称呼是否规范？ ### W5 术语使用的准确性 - [ ] \"适用\"一词是否被滥用（一段话中出现 3 次以上即警报）？ - [ ] \"法治\"与\""
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/language-and-style.md",
+        "snippet": "- \"英文摘要明显是机翻的。\" - \"俯拾皆是的语法错误，反映出作者的语言文字功底有待提升。\" - \"作者对'适用'一词的理解有偏差，总是滥用'适用'或'适用性'一词。\" - \"匿名化处理不彻底。\" - \"写完后未通读校对，存在低级错误。\" - \"学术论文不是越长越好。\" ## 写作实操建议 - **逐字符通读法**：打印纸质版后用笔逐字符通读一遍，找到 90% 以上的低级错误 - **TTS 辅助**：用朗读软件把"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/phrase-bank.md",
+        "snippet": "学术论文不是越长越好，作为硕士论文，本文的篇幅过长、重复内容太多，建议删繁就简、理顺思路、精炼表达。 - G06. 作者对\"[某词]\"的理解有偏差，总是滥用该词。 - G07. 匿名化处理不彻底。 - G08. \"台湾\"与\"祖国大陆(或大陆)\"为对应概念，\"香港、澳门\"与\"内地\"为对应概念，作者明显弄混了。 ### H. 对策建议类 - H01. 对策空泛。 - H02. 内容过于原则化、通用化。 - H03. 这些"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/zhangqinglin-patterns.md",
+        "snippet": "科·先行数据库的翻译是'WACCO First·Legal Information Database'，而其官方英文名称为'Wolters Kluwer'\" ### Z-W-4 匿名化不彻底 - **张老师典型表述**： - \"'陶某'匿名化处理不彻底，出现了'陶兴红出借、出租银行卡5张以上'的信息\" ### Z-W-5 术语滥用（\"适用\"综合症） - **张老师典型表述**： - \"作者对'适用'一词的理"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/zhangqinglin-patterns.md",
+        "snippet": "formation Database'，而其官方英文名称为'Wolters Kluwer'\" ### Z-W-4 匿名化不彻底 - **张老师典型表述**： - \"'陶某'匿名化处理不彻底，出现了'陶兴红出借、出租银行卡5张以上'的信息\" ### Z-W-5 术语滥用（\"适用\"综合症） - **张老师典型表述**： - \"作者对'适用'一词的理解有偏差，总是滥用'适用'或'适用性'一词\" - \"仅在 1"
+      },
+      {
+        "file": "rules/orchestration-flow.md",
+        "snippet": "tation-crossref.py` 自动生成脚注/参考文献对比表 - **§6 联网核实改为强制执行**（U4）：不再默认降级，必须逐条尝试 - **§7 节点 E 增加\"是否匿名化\"交互**（U9） - **pdf 批注主路径**切换到 `tools/annotate-pdf.py`（U1），XFDF 降级为备选 --- ## §0 时间基准（v2 新增） **触发**：用户新消息到达，主工作流启动前 **做"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "SKILL.md",
+        "snippet": "**论文深度审查**（九大维度，由 `legal-thesis-reviewer` 承担）：选题 / 结构 / 论证 / 文献综述 / 实证 / 规范适用 / 语言 / 对策 / 学术不端线索 2. **引注格式校对**（按 GB/T 7714 或《法学引注手册》，由 `legal-citation-checker` 承担） 3. **引用交叉对比**（v2 新增，`tools/citation-crossref.py`）："
+      },
+      {
+        "file": "README.md",
+        "snippet": "注问题合并成一份统一报告的场景 ## 一次审查会输出什么 - **统一审查报告**：9+1 章节 Markdown，覆盖选题、结构、论证、文献综述、实证、规范适用、语言、对策、学术不端线索和引注格式。 - **结构化问题清单**：`issues.json`，含 severity、evidence、anchor_text、page/bbox 等字段，供后续批注工具使用。 - **嵌入式批注 PDF**：PDF 输入时生成"
+      },
+      {
+        "file": "README.md",
+        "snippet": "超长论文建议按章拆分审查。 - 联网核实依赖 Agent 环境可用的搜索/浏览工具；不可联网时会在报告中说明降级。 - 本 Skill 是审阅辅助工具，不替代导师、评审专家或正式学术不端检测系统的最终判断。 ## 许可 本项目采用 Apache License 2.0。详见 [`LICENSE`](./LICENSE) 和 [`LICENSE-NOTICE.md`](./LICENSE-NOTICE.md)。"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "# 维度 ⑨ 学术不端线索识别（checklist） > 关联主规则库 `zhangqinglin-patterns.md` 第十章（Z-I-1 至 Z-I-9） > > ⚠️ **重要原则**：本 skill 只识别\"线索\"，不做最终定性。对任何可疑问题，使"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "似\"\"存在 X 线索\"\"建议校方进一步核查\"等表述，**不直接宣告\"剽窃\"\"造假\"**。定性权归学术规范主管机构。 ## 一、无需联网即可发现的线索 ### 1.1 伪注 / 伪造文献的内部自证线索 - [ ] 正文引用了某某学者的观点，但参考文献表中没有该学者的文献？ - [ ] 参考文献表中的某文献在正文中从未被援引？ - [ ] 外文文献的作者姓名、期刊名拼写不符合英文学术习惯？（如全半角乱用、大小写错乱）"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "火线》的研究） - [ ] 某类文献突然密集出现在参考文献表某一段（5 条以上连续无关文献） - [ ] 外文文献的篇名、期刊名出现罕见拼写错误组合 ### 1.3 大面积改写式抄袭的内部线索 - [ ] 某章/某节的专业术语密度、学术风格、论证节奏与本文其他部分显著不同？ - [ ] 某章/某节的章节编号风格与本文其他部分不同？（如本文是\"（一）\"小节制，某章突然是\"1.1\"小节制） - [ ] 某章/某节引用的文"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "键统计数据 / 政府公开数据** ## 三、处理流程 ### 3.1 发现单一可疑线索时 - 在审查报告\"九大维度\"的相应维度中标记（如 Z-I-2 伪注） - 不单独开设\"学术不端\"段落 ### 3.2 发现 ≥ 2 处可疑线索时 - 在审查报告开头的\"⛔ 致命问题\"段落单独列出，使用以下表述： > ⚠️ **学术诚信风险提示** > > 本次审查发现以下**与学术规范冲突的线索**，其严重程度已超"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "-2 伪注） - 不单独开设\"学术不端\"段落 ### 3.2 发现 ≥ 2 处可疑线索时 - 在审查报告开头的\"⛔ 致命问题\"段落单独列出，使用以下表述： > ⚠️ **学术诚信风险提示** > > 本次审查发现以下**与学术规范冲突的线索**，其严重程度已超出一般格式问题范畴。**审查者不直接定性为学术不端**，但建议作者逐一核实、修改，并在必要时由所在院校学术规范主管机构做进一步核查： > >"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "出，使用以下表述： > ⚠️ **学术诚信风险提示** > > 本次审查发现以下**与学术规范冲突的线索**，其严重程度已超出一般格式问题范畴。**审查者不直接定性为学术不端**，但建议作者逐一核实、修改，并在必要时由所在院校学术规范主管机构做进一步核查： > > 1. [具体线索 1] > 2. [具体线索 2] > ... > > 参考依据：《高等学校预防与处理学术不端行为办法》（教"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "要时由所在院校学术规范主管机构做进一步核查： > > 1. [具体线索 1] > 2. [具体线索 2] > ... > > 参考依据：《高等学校预防与处理学术不端行为办法》（教育部令第 40 号）第 X 条。 ### 3.3 发现大面积改写式抄袭的强线索时 - 仍不直接定性 - 建议作者：\"请作者提供写作过程中的主要参考来源和引用记录，以供进一步核对。\" - 在报告中说明：\"第 X 章与 Y 学"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "> 2. [具体线索 2] > ... > > 参考依据：《高等学校预防与处理学术不端行为办法》（教育部令第 40 号）第 X 条。 ### 3.3 发现大面积改写式抄袭的强线索时 - 仍不直接定性 - 建议作者：\"请作者提供写作过程中的主要参考来源和引用记录，以供进一步核对。\" - 在报告中说明：\"第 X 章与 Y 学位论文（需核实）存在高度相似的章节结构和论证脉络，建议作者主动说明借鉴来源并完整标注。"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/empirical-and-cases.md",
+        "snippet": "？（否则命中 Z-S-6 \"两张皮\"） - [ ] 所得的统计数字是否真的支撑作者的论点？（例如\"50% 参与率\"的计算是否站得住脚） ### E7 核查案例与裁判文书的真实性（学术不端红线） - [ ] 论文标注的案号是否对应真实存在的裁判文书？（需联网核实） - [ ] 论文复述的裁判主文、判决要旨是否与裁判文书原文一致？ - [ ] 论文中的当事人姓名、公司名称是否与裁判文书中的一致？ - [ ] 论文中的\"最高法"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "CHANGELOG.md",
+        "snippet": "2、胡文仲 27/27、谢佳谕 19/19）后表现良好，但在第四次硕士论文 PDF 审查中暴露了**v2.6 的盲区**——这些盲区不是工具层的，而是 Agent 判断层面的系统性偏差： 1. **严重度判定缺乏标尺**：把\"同段两脚注引同一文献同一页\"这种本身合规的现象定为致命级指控 2. **批注挂载位置原则缺失**：把\"独创性问题\"挂在文献综述、把\"全文级问题\"挂在不相关的具体段落 3. **PDF anchor"
+      },
+      {
+        "file": "README.md",
+        "snippet": "、案号、学术文献等高风险事项执行联网核实，失败时降级说明。 ## v2.7.0 关键升级 v2.7.0 是在 v2.6 多轮真实论文测试后的修复发布，重点处理 Agent 判断偏差和 PDF anchor 定位问题。 - **严重度判定标尺**：新增 fatal / major / minor 判定规则，并引入“反向举证原则”，避免把可合理解释的问题误判为致命问题。 - **批注挂载位置原则**：全文级问题挂在读者"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/academic-integrity.md",
+        "snippet": "[ ] 论文引用的同一案件的案号、法院、当事人前后不一致？ - [ ] 正文某案号对应的注释标注的是另一个案件的案号？ - [ ] 对当事人姓名、公司名称的拼写存在细微但系统性的偏差（故意微改以避开检索）？ ## 二、需要联网核实的线索（必检项，若有联网工具） 详见 `online-verification.md`，此处仅列出联网必核的**五类对象**： 1. **法律名称 / 条文号 / 条文内容** 2. *"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/language-and-style.md",
+        "snippet": "接下来逐字符通读全文，修正不通顺、不准确的表述。\" - \"英文摘要明显是机翻的。\" - \"俯拾皆是的语法错误，反映出作者的语言文字功底有待提升。\" - \"作者对'适用'一词的理解有偏差，总是滥用'适用'或'适用性'一词。\" - \"匿名化处理不彻底。\" - \"写完后未通读校对，存在低级错误。\" - \"学术论文不是越长越好。\" ## 写作实操建议 - **逐字符通读法**：打印纸质版后用笔逐字符通读一遍，找到 90% 以"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/phrase-bank.md",
+        "snippet": "成就一篇硕士学位论文。 - A05. 《[标题 A]》与《[标题 A 的变体]》是两个相关但有区别的题目，而这篇论文实际上写成了后者。 - A06. 对研究对象和研究任务的理解存在偏差。 - A07. 选题大了，文章内容就会因为过于求全而会失之于散乱，不聚焦，什么都可以往里装。 - A08. 作为一篇专门以[X 地域]为视阈的硕士论文，虽然不可能全文只谈[X 地域]，但是至少大多数篇幅、大多数的原因分析、大多数的对策内容"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/phrase-bank.md",
+        "snippet": "读校对，存在低级错误。 - G05. 学术论文不是越长越好，作为硕士论文，本文的篇幅过长、重复内容太多，建议删繁就简、理顺思路、精炼表达。 - G06. 作者对\"[某词]\"的理解有偏差，总是滥用该词。 - G07. 匿名化处理不彻底。 - G08. \"台湾\"与\"祖国大陆(或大陆)\"为对应概念，\"香港、澳门\"与\"内地\"为对应概念，作者明显弄混了。 ### H. 对策建议类 - H01. 对策空泛。 - H02. 内容过"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/zhangqinglin-patterns.md",
+        "snippet": "；把\"立法空白/无专门立法\"本身当作核心问题。 ### Z-T-3 研究对象不清晰 / 研究任务认知错误 - **张老师典型表述**： - \"对研究对象和研究任务的理解存在偏差\" - \"作者对于论文要解决什么样的问题、要完成什么样的任务，认识不正确\" - \"论文事实上是在'围绕……的适用与规制展开研究'，这与论文题目是不一致的\" - \"《X研究》与《论X——以Y为视角》是两个相关但有区别的题目，而这篇"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/zhangqinglin-patterns.md",
+        "snippet": "处理不彻底，出现了'陶兴红出借、出租银行卡5张以上'的信息\" ### Z-W-5 术语滥用（\"适用\"综合症） - **张老师典型表述**： - \"作者对'适用'一词的理解有偏差，总是滥用'适用'或'适用性'一词\" - \"仅在 1 个小节中，竟然出现 15 次'适用'；仅在 1 句话中，竟然出现 3 次'适用'\" - \"请作者在答辩时回答：到底什么叫'适用'？\" ### Z-W-6 冗长、啰嗦、文气过于夸"
+      },
+      {
+        "file": "rules/substantive-review.md",
+        "snippet": "本清单逐项检视 实质性问题包括以下类别： - `argumentation`（论证缺陷、自相矛盾、反驳缺位） - `empirical`（实证方法论缺陷、数据可重现性问题、样本偏差） - `literature-review`（综述不完整、未对话前序研究） - `legal-norms`（法律规范理解错误、比较法误读） - `academic-integrity`（伪造引用、张冠李戴） 形式问题（仅作辅助）： -"
+      },
+      {
+        "file": "tests/real-samples-report.md",
+        "snippet": "raph_index=0`（指向\"第二章\"），但 minimal.docx 里第二章实际在 `paragraph_index=4`。注入脚本自动降级到章节首段，虽然没丢问题，但定位偏差。 **通用规则**：issues.json 的生成者（Agent）必须**在采集时同步记录段号**，不能凭记忆推断。`rules/input-collection.md` §5 已要求反馈\"章节数 / 脚注数\"等元信息，但未明确要求**"
+      }
+    ],
+    "process": [
+      {
+        "file": "README.md",
+        "snippet": "odex/skills git clone https://github.com/zyan421/unified-thesis-reviewer.git ``` Windows PowerShell 示例： ```powershell cd $env:USERPROFILE\\.codex\\skills git clone https://github.com/zyan421/unified-thesis-reviewer.git `"
+      },
+      {
+        "file": "README.md",
+        "snippet": "ne https://github.com/zyan421/unified-thesis-reviewer.git ``` Windows PowerShell 示例： ```powershell cd $env:USERPROFILE\\.codex\\skills git clone https://github.com/zyan421/unified-thesis-reviewer.git ``` 重启 Codex 后，Skil"
+      },
+      {
+        "file": "RELEASE_NOTES_v2.7.0.md",
+        "snippet": "odex/skills git clone https://github.com/zyan421/unified-thesis-reviewer.git ``` Windows PowerShell： ```powershell cd $env:USERPROFILE\\.codex\\skills git clone https://github.com/zyan421/unified-thesis-reviewer.git ```"
+      },
+      {
+        "file": "RELEASE_NOTES_v2.7.0.md",
+        "snippet": "clone https://github.com/zyan421/unified-thesis-reviewer.git ``` Windows PowerShell： ```powershell cd $env:USERPROFILE\\.codex\\skills git clone https://github.com/zyan421/unified-thesis-reviewer.git ``` 也可以下载本 Release"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/policy-suggestions.md",
+        "snippet": "谁来做？做什么？怎么做？做到什么程度？** - [ ] 是否仅停留在\"应当 X\"这一层，而没写\"具体如何 X\"？ - [ ] 对新制度的设计是否包含：制度目的、适用范围、启动条件、运行程序、监督机制、救济途径？ - [ ] 是否考虑了实施中的现实障碍（地方保护、部门协调、成本、数据安全、平衡公私利益）？ ### P3 \"学术包工头\"测试（自己不研究、给别人派活儿） - [ ] 对策章是否充斥\"X 省应……\"\"国家应……\""
+      },
+      {
+        "file": "tests/README.md",
+        "snippet": "造最小合法 docx │ ├── build_minimal_pdf.py # 构造最小合法 pdf │ ├── minimal.docx # 运行 build 脚本后生成 │ ├── minimal.pdf # 同上 │ ├── issues_valid.json │ ├── issues_invalid_*.json │ └── issues_boundary"
+      },
+      {
+        "file": "tests/real-samples-report.md",
+        "snippet": "## v1 阶段（MD 报告 + issues.json 生成） 该阶段由 Agent 在 UI 侧按 `rules/orchestration-flow.md` 的 7 步流程执行，**脚本不直接参与**。本报告列出验证要点： - [x] **采集能力**：`tools/extract-docx.py` 对 `minimal.docx` 提取成功（见 T1.4 已跑过 py_compile） - [x] **issues.j"
+      },
+      {
+        "file": "tests/test_annotate_pdf.py",
+        "snippet": "t_script_exists_and_compiles(self): self.assertTrue(SCRIPT.is_file()) r = subprocess.run( [sys.executable, \"-m\", \"py_compile\", str(SCRIPT)], capture_output=True, text=True,"
+      },
+      {
+        "file": "tests/test_annotate_pdf.py",
+        "snippet": "self.assertEqual(r.returncode, 0, r.stderr) def test_help(self): r = subprocess.run( [sys.executable, str(SCRIPT), \"--help\"], capture_output=True, text=True, )"
+      },
+      {
+        "file": "tests/test_annotate_pdf.py",
+        "snippet": "ij.write_text(json.dumps(issues, ensure_ascii=False), encoding=\"utf-8\") r = subprocess.run( [sys.executable, str(SCRIPT), str(self.src_pdf), str(ij), str(out)], capture_output"
+      },
+      {
+        "file": "tests/test_annotate_pdf.py",
+        "snippet": "write_text(json.dumps(bad_issues, ensure_ascii=False), encoding=\"utf-8\") r = subprocess.run( [sys.executable, str(SCRIPT), str(self.src_pdf), str(ij), str(out)], capture_output"
+      },
+      {
+        "file": "tests/test_annotate_pdf.py",
+        "snippet": "TemporaryDirectory() as td: out = Path(td) / \"positions.json\" r = subprocess.run( [sys.executable, str(script), str(self.src_pdf), str(out)], capture_output=True, te"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "README.md",
+        "snippet": "需要先解除密码。 - 超长论文建议按章拆分审查。 - 联网核实依赖 Agent 环境可用的搜索/浏览工具；不可联网时会在报告中说明降级。 - 本 Skill 是审阅辅助工具，不替代导师、评审专家或正式学术不端检测系统的最终判断。 ## 许可 本项目采用 Apache License 2.0。详见 [`LICENSE`](./LICENSE) 和 [`LICENSE-NOTICE.md`](./LICENSE-NOTICE.md)。"
+      },
+      {
+        "file": "_bundled/manifest.json",
+        "snippet": "a006491525ca4d3a90d4cff1ad45d4f0597e63d2a5ee11f\" }, { \"path\": \"legal-thesis-reviewer.rules/rules/literature-review.md\", \"size\": 5683, \"sha256\": \"e3c0821edb08ea0117cd54c777f62e9fdc17acf9f3e6e30e44ef12d102692c41\" },"
+      },
+      {
+        "file": "_bundled/manifest.json",
+        "snippet": "180cd37bece25f4bb3ae6637a035c226d511469661dafe9\" }, { \"path\": \"legal-thesis-reviewer.rules/templates/review-report-template.md\", \"size\": 6313, \"sha256\": \"b48570a4a06c3f8160997ab2cc94ed61c7504d4af8884e3dff24739484638"
+      },
+      {
+        "file": "rules/online-verification-unified.md",
+        "snippet": "| 原因 | 含义 | 处理 | |---|---|---| | timeout | 工具超时 | 尝试别的关键词 | | no-result | 返回 0 条 | 疑似伪注，但需人工复核 | | noisy | 返回结果与查询无关 | 换关键词再试 | | tool-error | 工具异常 | 切换到其他联网工具 | | permission-denied | 需付费订阅的数据库（如 Westlaw） | 建议用户在机构"
+      },
+      {
+        "file": "rules/report-merging.md",
+        "snippet": "A / B / C / D | ... | - A：基本无问题或轻微建议 - B：有改进空间但不影响整体质量 - C：需重要修改 - D：需根本性重写或核实 **由用户 / 导师综合这 9 个维度独立判断整体是否达标**。本 skill 不做总体定性。 ``` --- ## § 9 合并执行顺序 1. 收 TR 产物 2. 收 CC 产物 3. 读 citation-crossref.json（§⑩ 材料） 4. 读 pdf-posi"
+      },
+      {
+        "file": "templates/unified-report-template.md",
+        "snippet": "*： - **A**：基本无问题或仅轻微建议 - **B**：有改进空间但不影响整体质量 - **C**：需要重要修改 - **D**：需根本性重写或紧急核实 **由用户 / 导师综合这 9 个维度的评分独立判断整体是否达标。本 skill 不做总体定性。** --- ## ⑧ 修改优先级 Top 10 <!-- TOP10 按 rules/report-merging.md §3 打分规则生成(含 v2 新增的 evidence_boost"
+      }
+    ],
+    "network": [
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/online-verification.md",
+        "snippet": "、联网工具识别 在开始核实前，先做工具可用性扫描。**任何一种**以下工具的存在都应视为\"具备联网能力\"： ### 1.1 原生工具名（可能出现在不同平台的不同名字） - `web_search` / `remote_web_search` / `search_web` / `google_search` / `bing_search` / `baidu_search` - `web_fetch` / `fetch_url` /"
+      },
+      {
+        "file": "_bundled/legal-thesis-reviewer.rules/rules/online-verification.md",
+        "snippet": "页码：第 18 页第 2 段 ② 原文复述 论文原文写道：\"《反电信网络诈骗法》第 25 条将'应当知道'作为主观认知的认定标准\" ③ 联网核实结果 - 工具：web_search - 查询：《中华人民共和国反电信网络诈骗法》第二十五条 - 检索到的真实情况： * 《反电信网络诈骗法》第 25 条规定的是涉诈异常账户和可疑交易监测、核查、报告义务 * 该条完全未涉及\"应当知道\"的主观认"
+      },
+      {
+        "file": "rules/issues-schema.md",
+        "snippet": "\" - \"建议核对原始判决/原始文献后再做决定\" ### 标签使用规范 每条 `problem` 字段开头应使用方括号标签明确证据来源： - `[联网核实]` —— 已通过 web_search 或 web_fetch 验证，必须附搜索结论 - `[原文核对]` —— 已读取论文具体段/表/脚注，必须有具体引述 - `[文本分析]` —— 基于文本扫描（如笔误检测），无需外部证据 - `[OOXML分析]` —— 基于 OOXML"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "次判断\"这个工具能否访问外网\"；若不能，从候选列表剔除 | | `read_file` | — | 非联网 | | `execute_bash` | — | 非联网（除非其本身去 curl 访问外网，但此时应优先使用专门的 fetch 工具） | | `list_directory` | — | 非联网 | | `fs_write` | — | 非联网 | 关于 `grep_search` 的特殊说明：少数平台会把它命名为可"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "12 项关键字任一命中即视为联网工具可用（子串匹配，不区分大小写）： | # | 关键字 | 说明 | |---|---|---| | 1 | `search` | 通用搜索（web_search、remote_web_search、brave_search、google_search 等） | | 2 | `web` | 通用 web 访问（web_fetch、web_browse、web_lookup 等） | | 3 | `b"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "接器 | | 11 | `威科先行` | 威科先行法律信息库连接器 | | 12 | `法律检索` | 通用法律检索插件 / 法律数据库连接器 | 扩展规则：若未来出现明显属于\"联网\"语义但不在白名单的工具名（如 `crawl`、`scrape`、`lookup`、`api_call`、`query_web`），Agent 可在具体任务中临时判定为联网工具可用，但不要把它写入本文件以免白名单泛滥。白名单的稳定性 > 覆"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "化**——本表只作示例，不作硬编码依据。 | 平台 | 典型工具名 | 命中的关键字 | 备注 | |---|---|---|---| | **Claude Code** | `web_search`、`web_fetch` | web / search / fetch | 原生内置，联网能力最稳定 | | **Kiro** | `remote_web_search`、`web_fetch`、`grep_search`（本地）| we"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "ch | OpenClaw 的插件生态较丰富，常同时有搜索与抓取工具 | | **Coze** | 插件市场的搜索 / 浏览插件（名字通常含 `search_engine` / `browser` / `web`） | search / web / browse | Coze 插件的命名通常含语义词根 | | **MCP 标准** | `brave_search` / `google_search` / `scholar_sear"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "结果\"。 --- ## §5 示例判定表 以下是若干工具名的判定样例，展示匹配规则的一致性： | 工具名 | 命中的关键字 | 判定 | |---|---|---| | `web_search` | web、search | 联网 | | `Web_Fetch` | web、fetch | 联网（不区分大小写） | | `remote_web_search` | web、search | 联网 | | `brave_search"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "若干工具名的判定样例，展示匹配规则的一致性： | 工具名 | 命中的关键字 | 判定 | |---|---|---| | `web_search` | web、search | 联网 | | `Web_Fetch` | web、fetch | 联网（不区分大小写） | | `remote_web_search` | web、search | 联网 | | `brave_search` | search | 联网 | |"
+      },
+      {
+        "file": "rules/network-tool-discovery.md",
+        "snippet": "中的关键字 | 判定 | |---|---|---| | `web_search` | web、search | 联网 | | `Web_Fetch` | web、fetch | 联网（不区分大小写） | | `remote_web_search` | web、search | 联网 | | `brave_search` | search | 联网 | | `google_scholar` | google、schola"
+      },
+      {
+        "file": "rules/report-merging.md",
+        "snippet": "uard.md`）| | ③ | 论文深度审查结论（九大维度） | 仅 TR | | ④ | 引注格式校对结论 | 仅 CC | | ⑤ | 联网核实结果（四步式） | TR + 联网 | | ⑥ | 遗漏但应讨论的问题清单 | TR | | ⑦ | **分维度评分表**（v2 替代 v1\"整体评价\"） | TR + CC 综合 | | ⑧ | 修改优先级 Top 10 | TR + CC | | ⑨ | 答辩质询问题（"
+      }
+    ],
+    "file_delete": [
+      {
+        "file": "rules/docx-annotation.md",
+        "snippet": "ewer 回报失败 issue id 清单： ```python ok, errors = verify_invariants(dst_path) if not ok: os.remove(dst_path) raise AnnotationError(f\"回读校验失败, 已删除副本:\\n\" + \"\\n\".join(errors)) ``` 目的：**绝不让用户拿到一个\"看起来像 docx 但打开会报错\"的文件**"
+      },
+      {
+        "file": "rules/docx-annotation.md",
+        "snippet": "ap` | | 白名单 part 全量保留 | `write_annotated_docx` | | 回读三不变式通过才保留副本 | `verify_invariants` + `os.remove` | 脚本应在关键步骤有明确日志（stderr），便于故障排查。 与本文件协同的其他规则文件： - `rules/issues-schema.md`：定义 issues.json 的字段契约，本文件所有 `locator.*` 字段"
+      },
+      {
+        "file": "tools/build-bundle.py",
+        "snippet": "st: Path) -> None: \"\"\"清空 bundle 目录；保留父目录以避免重建时出现权限问题。\"\"\" if dst.exists(): shutil.rmtree(dst) dst.mkdir(parents=True, exist_ok=True) def copy_subdir(src_skill: Path, dst_sub: Path, subdir: str) -> tuple"
+      },
+      {
+        "file": "tools/build-bundle.py",
+        "snippet": "-------------------------------------- # def clean_bundle_dir(dst: Path) -> None: \"\"\"清空 bundle 目录；保留父目录以避免重建时出现权限问题。\"\"\" if dst.exists(): shutil.rmtree(dst) dst.mkdir(parents=True, exist_ok=True) def copy_s"
+      },
+      {
+        "file": "tools/generate-xfdf.py",
+        "snippet": "s = readback_verify_xfdf(dst_xfdf, mounted_count) if not ok: try: os.remove(dst_xfdf) except OSError: pass raise XfdfReadbackError( \"readback verification"
+      },
+      {
+        "file": "tools/inject-docx-comments.py",
+        "snippet": "ok, verify_errors = readback_verify(dst_docx) if not ok: try: os.remove(dst_docx) except OSError: pass raise ReadbackError( \"readback invariants failed"
+      },
+      {
+        "file": "tools/make-dist.py",
+        "snippet": "-> int: \"\"\"复制 skill 文件到 repo_dir，排除白名单指定的目录/文件。\"\"\" if repo_dir.exists(): shutil.rmtree(repo_dir) repo_dir.mkdir(parents=True, exist_ok=True) count = 0 for src in skill_root.rglob(\"*\"):"
+      }
+    ],
+    "auto_decision": [
+      {
+        "file": "rules/size-tier.md",
+        "snippet": "并到报告开头的\"⛔ 致命问题\"段落 - 修改优先级 Top 10 跨章综合打分，不按章截断 - 答辩质询问题按全篇综合，不按章罗列 ### 2.4 分章的用户感知 - 分章**自动启用**时（中档）→ 用户看不到章节边界，仅通过进度反馈感知（§3） - 分章**询问后启用**时（大档）→ 用户已知情；报告开头额外一行\"已按 N 章分次处理后合并\" --- ## §3 进度反馈示例 每完成一个九大维度的主维度或一个章节时，输出一条进度反馈。以下为至少 3 条标"
+      }
+    ]
+  },
+  "read_errors": []
+}

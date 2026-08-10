@@ -1,0 +1,95 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "lterLab Academic Skills suite.\" license: MIT allowed-tools: Read Write Edit Bash WebFetch WebSearch compatibility: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or accoun"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "h WebSearch compatibility: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or account required metadata: skill-author: AlterLab version: \"1.0.0\" last_updated: \"2026-0"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "patibility: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or account required metadata: skill-author: AlterLab version: \"1.0.0\" last_updated: \"2026-03-18\" --- # Teach"
+      }
+    ],
+    "credential": [
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "y: Uses built-in Claude tools only (Read/Write/Edit/Bash/WebFetch/WebSearch); no external API key or account required metadata: skill-author: AlterLab version: \"1.0.0\" last_updated: \"2026-03-18\" --- # Teaching"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "r` | | Reviewing a research paper | `alterlab-paper-reviewer` | | Statistical analysis of student/grade data | a `data-science/` skill (e.g. `alterlab-statistical-analysis`) | | Creating presentation slides | `alterlab-pptx"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": ". Share the course design rationale with students. 7. **Iterate based on evidence.** Use student feedback, grade distributions, and your own reflections to revise. Teaching design is never finished. 8. **Balance workload.** Use a c"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "gue rubrics | Written in a hurry without calibration | Pilot rubrics with colleagues; use student work samples to test criteria | | Inaccessible materials | Default to PDF scans, image-heavy slides | Check accessibility be"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "ing scale, course policies (attendance, late work, integrity, technology, communication), accessibility and diversity/inclusion statements, and a weekly schedule. Full copy-paste-ready syllabus template with every componen"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "round, identity, ability, or prior preparation, have equitable opportunities to learn. **Universal Design for Learning (UDL) — Three Principles:** | Principle | Guideline | Implementation Examples | |-----------|-----------|"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "menus: \"Choose 3 of 5 options to demonstrate CLO2\" - Use specifications grading to reduce bias in subjective evaluation - Provide exemplars of strong, adequate, and weak work - Allow revision and resubmission on ma"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "st criteria | | Inaccessible materials | Default to PDF scans, image-heavy slides | Check accessibility before posting; use LMS accessibility checker | | Ignoring student feedback | \"Students don't know what's good for them"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "| Default to PDF scans, image-heavy slides | Check accessibility before posting; use LMS accessibility checker | | Ignoring student feedback | \"Students don't know what's good for them\" | Distinguish preference feedback fr"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/SKILL.md",
+        "snippet": "et and Higher Education*, 2(2-3), 87-105. - Meyer, A., Rose, D. H., & Gordon, D. (2014). *Universal design for learning: Theory and practice*. CAST Professional Publishing. - Nilson, L. B. (2016). *Teaching at its best: A rese"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/evals/evals.json",
+        "snippet": "y framework (social, cognitive, teaching presence), and uses the online module design and accessibility checklist.\", \"assertions\": [ { \"type\": \"should_trigger\", \"value\": true },"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/evals/evals.json",
+        "snippet": "cognitive, teaching) with at least one concrete module-design move for each, and includes accessibility provisions (e.g. captions/transcripts) in the online module structure.\" } ] }, { \"id\": \"td-"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/evals/evals.json",
+        "snippet": "sessments more inclusive for students with diverse prior knowledge and disabilities using Universal Design for Learning?\", \"expected_output\": \"Invokes alterlab-teaching-design: applies UDL's three principles (engagement,"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/references/course_design_templates.md",
+        "snippet": "ons) - Academic integrity statement - Technology policy - Communication expectations ### Accessibility Statement [Institution's disability services information] [Your commitment to accommodations] [How to request accommoda"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/references/teaching-frameworks.md",
+        "snippet": "ould students need to learn for them to continue learning after the course? | --- ## 5. Universal Design for Learning (CAST) > **Version note:** CAST released **UDL Guidelines 3.0** on 2024-07-30, superseding 2.2. The three"
+      },
+      {
+        "file": "skills/core/alterlab-teaching-design/references/teaching-frameworks.md",
+        "snippet": "erlying guidelines/checkpoints and added an explicit focus on removing barriers rooted in bias and exclusion. The numbered checkpoints listed here follow the **2.2** structure; confirm the current labels at https:/"
+      }
+    ],
+    "academic_integrity": [
+      {
+        "file": "skills/core/alterlab-teaching-design/references/course_design_templates.md",
+        "snippet": "urse Policies - Attendance and participation - Late work policy (with grace provisions) - Academic integrity statement - Technology policy - Communication expectations ### Accessibility Statement [Institution's disability servi"
+      }
+    ]
+  },
+  "read_errors": []
+}

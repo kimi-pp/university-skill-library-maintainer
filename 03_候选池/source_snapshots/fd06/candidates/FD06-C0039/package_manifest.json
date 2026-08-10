@@ -1,0 +1,110 @@
+[
+  {
+    "path": ".gitattributes",
+    "type": "file",
+    "size": 1519,
+    "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b"
+  },
+  {
+    "path": ".gitignore",
+    "type": "file",
+    "size": 8,
+    "oid": "f7ab38c0ba4a1ed101b61946a2f0aa98a3796788"
+  },
+  {
+    "path": "README.md",
+    "type": "file",
+    "size": 493,
+    "oid": "444ed8413415d22f5b3f1c53c6dfc731e7564b7f"
+  },
+  {
+    "path": "__pycache__/script_search_api.cpython-310.pyc",
+    "type": "file",
+    "size": 8432,
+    "oid": "c8542c48d11b8b04fdbffcd63976cfbf870fb774"
+  },
+  {
+    "path": "app.py",
+    "type": "file",
+    "size": 21994,
+    "oid": "2d94d0d180e24cf54369f481dddd430216f27a0d"
+  },
+  {
+    "path": "gradio_app.py",
+    "type": "file",
+    "size": 21232,
+    "oid": "8eefe0659256419004168f27c02647569e0caa9c"
+  },
+  {
+    "path": "model/__pycache__/analyzer.cpython-310.pyc",
+    "type": "file",
+    "size": 7506,
+    "oid": "479df432b862e3399b27a0a270d45e9b25939da4"
+  },
+  {
+    "path": "model/analyzer.py",
+    "type": "file",
+    "size": 9956,
+    "oid": "e8d03b802063527aeb572a2760964a5486babbb7"
+  },
+  {
+    "path": "public/Content-Meta/Dotnotes.json",
+    "type": "file",
+    "size": 3025238,
+    "oid": "8d546d10b4eca1285741e5aa02c51d17640b3692"
+  },
+  {
+    "path": "public/Content-Meta/FifteenFourteen.json",
+    "type": "file",
+    "size": 45992,
+    "oid": "7c37a0fa79f9be760d66a70d6b98c780562cc3c5"
+  },
+  {
+    "path": "public/Content-Meta/StudyX.json",
+    "type": "file",
+    "size": 3001656,
+    "oid": "89b97f82332234c9dee4b590c13e844c04bc50d9"
+  },
+  {
+    "path": "public/Content-Meta/UnifiedContent.json",
+    "type": "file",
+    "size": 6439017,
+    "oid": "b896dbd552e81829643e71fa5f9dbb828e43a454"
+  },
+  {
+    "path": "public/Content-Meta/syllabus.json",
+    "type": "file",
+    "size": 650118,
+    "oid": "6d37919be5de3483d2418e69dbdcbd69aa82031f"
+  },
+  {
+    "path": "public/Content-Meta/videos.json",
+    "type": "file",
+    "size": 365438,
+    "oid": "da86daf6e705104da758a91adadd280233fd39bb"
+  },
+  {
+    "path": "requirements.txt",
+    "type": "file",
+    "size": 145,
+    "oid": "3e49cef4cdd88d4ab73332d705877ba6c5dba37a"
+  },
+  {
+    "path": "script_search_api.py",
+    "type": "file",
+    "size": 9438,
+    "oid": "1c0ffaadd3d49b7716e3857aed63c958baf9f637"
+  },
+  {
+    "path": "scripts/requirements.txt",
+    "type": "file",
+    "size": 59,
+    "oid": "5123bf6686c05d1a689581af1976ed38e78a764f"
+  },
+  {
+    "path": "scripts/syllabus_formatter.py",
+    "type": "file",
+    "size": 17640,
+    "oid": "3e23bbfdaf7170bee9979c46acae6cf86ddeea4e"
+  }
+]

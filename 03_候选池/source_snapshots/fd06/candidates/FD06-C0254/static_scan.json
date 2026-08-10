@@ -1,0 +1,43 @@
+{
+  "hits": {
+    "human_review": [
+      {
+        "file": "SKILL.md",
+        "snippet": "ology, claim scope, method, design, evaluation, related work, discussion, conclusion, and supervisor/reviewer feedback. Use when Codex is asked to review a CS thesis chapter or section, improve thesis prose, triage thesis feedback, design or audit RQs and contributions, co"
+      },
+      {
+        "file": "README.md",
+        "snippet": "load skills if your session supports reloads. Example prompt: ```text Use the cs-thesis-reviewer skill to review this thesis introduction for RQ alignment, claim scope, and chapter flow. ``` ## Install for Codex Codex can use this"
+      },
+      {
+        "file": "agents/openai.yaml",
+        "snippet": "hort_description: \"Review and improve CS master theses\" default_prompt: \"Use $cs-thesis-reviewer to review this CS master thesis chapter for structure, evidence boundaries, and writing risks.\""
+      },
+      {
+        "file": "references/general-context.md",
+        "snippet": "y, parallel computing, and adjacent master's theses. - Thesis planning, chapter revision, supervisor/reviewer feedback triage, and pre-defense self-review. - Agent or skill workflows that need a general thesis-quality layer before project-specific terminology and evidence a"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "README.md",
+        "snippet": "this as a standalone skill by placing the repository under `~/.claude/skills/`. ```bash mkdir -p ~/.claude/skills git clone https://github.com/1carusalwayswa/cs-thesis-reviewer.git ~/.claude/skills/cs-thesis-revie"
+      },
+      {
+        "file": "README.md",
+        "snippet": "eviewer ``` If you already cloned the repository elsewhere, symlink it instead: ```bash mkdir -p ~/.claude/skills ln -s /path/to/cs-thesis-reviewer ~/.claude/skills/cs-thesis-reviewer ``` Then restart Claude Code"
+      },
+      {
+        "file": "README.md",
+        "snippet": "y under `$CODEX_HOME/skills`. If `CODEX_HOME` is not set, use `~/.codex/skills`. ```bash mkdir -p \"${CODEX_HOME:-$HOME/.codex}/skills\" git clone https://github.com/1carusalwayswa/cs-thesis-reviewer.git \"${CODEX_HOM"
+      }
+    ],
+    "network": [
+      {
+        "file": "references/general-context.md",
+        "snippet": "acing reproducibility: - hardware / software / OS / library versions; - cluster, device, browser, dataset, or participant setting; - network, runtime, compiler, model, or toolchain conditions; - public artifact locat"
+      }
+    ]
+  },
+  "read_errors": []
+}

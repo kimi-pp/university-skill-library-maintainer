@@ -1,0 +1,21 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md",
+        "snippet": "lling (asking students who haven't volunteered, with thinking time), show call (selecting student work for whole-class analysis), and standardised formats that allow quick scanning of all student responses. Christodoulou ("
+      },
+      {
+        "file": "skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md",
+        "snippet": "l, finger vote, mini-whiteboard flash) - After guided practice: show call (project one student's work for class analysis) - End of lesson: exit ticket (5-minute written task that diagnoses readiness for next lesson)"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md",
+        "snippet": "trongest complement because it cannot be gamed. 3. **The response decision tree requires teacher judgment in real time.** The tree provides guidance, but the teacher must make rapid decisions about whether to re-teach, how lo"
+      }
+    ]
+  },
+  "read_errors": []
+}

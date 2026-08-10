@@ -1,0 +1,39 @@
+{
+  "hits": {
+    "network": [
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": "rt. Use absolute local links when the output is meant for the Codex desktop app or local browser preview. ## Evidence Discipline - Cite page/section evidence when available. - Separate paper evidence from reviewer"
+      }
+    ],
+    "file_write": [
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": "discussion - Presentation ## Review Workflow ### 0. Prepare Workspace For each paper, create a dedicated output directory. When evaluating multiple papers in parallel, give each worker an exclusive directory and never share interme"
+      },
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": "ructions. Put those in `主要不足`, `修改建议`, and `摘要判断`. ## Output Requirements ### Markdown Create a concise, parseable Markdown file: ```markdown # ICSE SEET论文评审意见 ## 元数据 - 论文文件: ... - 作者: ... - 作者单位: ... - 目标标准: ICSE SEET YYYY - 论文类别: Research Pape"
+      },
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": "## 证据摘要 - 教育场景与对象: ... - 贡献-证据链: ... - 可复现/可迁移材料: ... - 需要人工复核或外部材料: ... ``` ### HTML Create a self-contained HTML report next to the Markdown file. Include: - Title area with paper title, authors if available, affiliations if available, c"
+      },
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": "kdown和给人看的图文并茂HTML时使用。该技能强调先判定论文类型，再按ICSE SEET对应类别标准做证据化评审，将主要不足从逐项标准风险中提炼，并分章输出主要优点、主要不足、修改建议、正式评语、评分/结果和可视化报告。 --- # ICSE SEET Review ## Overview Use this skill to review software engineering education and training papers in t"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": ": - paper title; - authors and affiliations when available; - inferred paper category; - recommendation, score, review result, and confidence; - one concise basis sentence; - links to each paper's HTML and Markdown report. Use absolute l"
+      },
+      {
+        "file": "skills/icse-seet-review/SKILL.md",
+        "snippet": "改建议 1. ... ## 给作者的正式评语 ... ## 证据摘要 - 教育场景与对象: ... - 贡献-证据链: ... - 可复现/可迁移材料: ... - 需要人工复核或外部材料: ... ``` ### HTML Create a self-contained HTML report next to the Markdown file. Include: - Title area with pa"
+      }
+    ]
+  },
+  "read_errors": []
+}

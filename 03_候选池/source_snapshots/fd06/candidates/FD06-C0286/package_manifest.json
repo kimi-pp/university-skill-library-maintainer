@@ -1,0 +1,98 @@
+[
+  {
+    "path": "agents/referee2-reviewer.md",
+    "type": "blob",
+    "size": 41374,
+    "sha": "71e1dc1784a0404b42b4a1166c3a7f9e2edef771"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/audit-checklists.md",
+    "type": "blob",
+    "size": 16119,
+    "sha": "ff07d1327d5ee938dadd77cc4842367f6b852d4e"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/council-mode.md",
+    "type": "blob",
+    "size": 768,
+    "sha": "37f09dc895d16a9e5db5996624b6ea34c75836db"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/deep-mode.md",
+    "type": "blob",
+    "size": 4661,
+    "sha": "1979c7fe375e646ca41ad4c62569192388b5f76a"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/grounded-mode.md",
+    "type": "blob",
+    "size": 8787,
+    "sha": "e38dc9baedfa80c68b7bd5c67285708b44da46b2"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/json-schema.md",
+    "type": "blob",
+    "size": 4363,
+    "sha": "8298a1281eb2d635e1d41254f52818ce900fdb38"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/causal-inference.md",
+    "type": "blob",
+    "size": 3074,
+    "sha": "38d3432c780838a1a8df3d3e3fa5662a8d1ce5b7"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/computational-simulation.md",
+    "type": "blob",
+    "size": 2975,
+    "sha": "9ffcfc6e2f35fe37fdee9996ec9b68818b0ac18d"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/content-analysis.md",
+    "type": "blob",
+    "size": 3504,
+    "sha": "ee1e142bd02bcfe801835ffd25aafdf25779e196"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/cross-cutting.md",
+    "type": "blob",
+    "size": 2581,
+    "sha": "990f55b15f95be0b3f4e168aa2b33409036ced34"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/experiments.md",
+    "type": "blob",
+    "size": 2922,
+    "sha": "1e3010b1a6384fcc466b1ec723b361d7462ea088"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/mcdm.md",
+    "type": "blob",
+    "size": 3903,
+    "sha": "3f6262bee41e3d6b4c1c6f835385cf821a04f219"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/ml-nlp.md",
+    "type": "blob",
+    "size": 3559,
+    "sha": "6906a453b397149a981ebcf16584123ff955b2da"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/methods/survey-psychometrics.md",
+    "type": "blob",
+    "size": 3452,
+    "sha": "5764cc2ded78a9055ff54117a8da526fb39d08fb"
+  },
+  {
+    "path": "agents/references/referee2-reviewer/report-template.md",
+    "type": "blob",
+    "size": 12071,
+    "sha": "8a98c7b03604c1b372c02a1c0829e58dc8f511ab"
+  },
+  {
+    "path": "skills/_shared/audit-integrity.md",
+    "type": "blob",
+    "size": 1303,
+    "sha": "f8f2eca6a863674112e1a5cf9f45ee999a6885c5"
+  }
+]

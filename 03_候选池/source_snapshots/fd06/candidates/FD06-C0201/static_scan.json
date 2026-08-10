@@ -1,0 +1,15 @@
+{
+  "hits": {
+    "sensitive": [
+      {
+        "file": "skills/ai-learning-science/adaptive-hint-sequence-designer/SKILL.md",
+        "snippet": "ficity, and ensuring that each hint level provides just enough information to unstick the student without bypassing the cognitive work that produces learning. ## Evidence Foundation VanLehn (2011) conducted the most comprehensive meta-analysis of tutor"
+      },
+      {
+        "file": "skills/ai-learning-science/adaptive-hint-sequence-designer/SKILL.md",
+        "snippet": "ecific step) to BOTTOM-OUT (revealing the step with self-explanation). At each level, the student retains some cognitive work: - **Level 1 (Strategic):** \"Here's the GOAL\" — the student must figure out the approach - **Level 2 (Conceptual):** \""
+      }
+    ]
+  },
+  "read_errors": []
+}

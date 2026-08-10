@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#1B2A4A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F7FA"
+textColor = "#1A1A1A"
+font = "sans serif"
+
+[server]
+maxUploadSize = 50
+enableStaticServing = true
+# Disable the source watcher: not needed in production, and it otherwise floods
+# logs by poking transformers' optional image modules (which want torchvision).
+fileWatcherType = "none"

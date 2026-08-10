@@ -1,0 +1,47 @@
+{
+  "hits": {
+    "file_write": [
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "ndicating sections that require completion before submission.\" --- ## Step 6: COMPILE & SAVE Output ### Output File: `simulated_reviews.md` Save the complete output to `simulated_reviews.md` with this structure: ```m"
+      },
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "ission.\" --- ## Step 6: COMPILE & SAVE Output ### Output File: `simulated_reviews.md` Save the complete output to `simulated_reviews.md` with this structure: ```markdown # Simulated Peer Review **Paper:** [title] **Source review"
+      }
+    ],
+    "external_write": [
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "directly into `/respond-reviewers`, creating a pre-submission quality loop: write -> self-review -> revise -> submit. ## When to Activate - User says \"review my paper\", \"simulate a peer review\", \"give me reviewer feedback\" - User says"
+      }
+    ],
+    "sensitive": [
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "--- name: peer-review-engine description: > Activate when the user wants to simulate a double-blind peer review of their paper before submission or before sharing with co-authors. Reads the current draft (draft.md o"
+      },
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "cover weaknesses is before reviewers do. This engine generates two independent, simulated double-blind peer reviews that mimic the rigor, tone, and structure of top-tier IS/CS conference reviews (ICIS, ECIS, HICSS) and jou"
+      }
+    ],
+    "human_review": [
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "view → implement changes | Output feeds into `review-engine` via `/respond-reviewers` | | Reviewer flags citation concerns | Recommend running `/verify-citations` (verification-engine) | | Reviewer requests additional literature | Recommend running `/search-papers` (lite"
+      }
+    ],
+    "fairness": [
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "thors should clarify...\", \"It is unclear how...\", \"A stronger approach would be to...\" **Bias tendencies (realistic):** - Favors quantitative evidence and structured protocols - Skeptical of purely conceptual pape"
+      },
+      {
+        "file": "skills/peer-review-engine/SKILL.md",
+        "snippet": "by...\", \"I am not convinced that...\", \"The authors need to more clearly articulate...\" **Bias tendencies (realistic):** - Values clear, crisp contribution statements - Skeptical of papers that use theory as window"
+      }
+    ]
+  },
+  "read_errors": []
+}

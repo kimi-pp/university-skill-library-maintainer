@@ -1,0 +1,26 @@
+[
+  {
+    "path": "ucas-course-evaluation/SKILL.md",
+    "type": "blob",
+    "size": 4650,
+    "sha": "584b3217cdfa064027d0b3f845b46ba7de0a4e81"
+  },
+  {
+    "path": "ucas-course-evaluation/agents/openai.yaml",
+    "type": "blob",
+    "size": 266,
+    "sha": "8edd7923a8446c6f5038da04f245f98a5e502ce9"
+  },
+  {
+    "path": "ucas-course-evaluation/references/ucas-evaluation-workflow.md",
+    "type": "blob",
+    "size": 2663,
+    "sha": "7a3775136785dcd25de240286d0c598c5c7bc92c"
+  },
+  {
+    "path": "ucas-course-evaluation/scripts/ucas_eval_cdp.js",
+    "type": "blob",
+    "size": 15939,
+    "sha": "9da160814d815c4e00d0bbf3877f789acac1eb8c"
+  }
+]

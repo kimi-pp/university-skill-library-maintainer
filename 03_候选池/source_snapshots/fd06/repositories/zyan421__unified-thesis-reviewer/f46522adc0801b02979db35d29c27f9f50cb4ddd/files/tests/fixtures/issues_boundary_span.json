@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "issues": [
+    {
+      "id": "thesis-argumentation-001",
+      "source": "thesis",
+      "category": "argumentation",
+      "severity": "major",
+      "scope": "span",
+      "locator": {
+        "chapter": "3.3",
+        "paragraph_index": 8
+      },
+      "excerpt": "连续四段单线推进",
+      "problem": "未回应反对意见",
+      "suggestion": [
+        "新增反对观点与回应段"
+      ],
+      "group_id": "g-020",
+      "anchor_text": "连续四段单线推进"
+    }
+  ]
+}
