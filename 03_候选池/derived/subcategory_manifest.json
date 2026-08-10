@@ -1,0 +1,1038 @@
+[
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/00_大分类总览.docx",
+    "format": "docx",
+    "scope": "overview",
+    "big_category_code": "01"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/00_大分类总览.xlsx",
+    "format": "xlsx",
+    "scope": "overview",
+    "big_category_code": "01"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/00_大分类总览.docx",
+    "format": "docx",
+    "scope": "overview",
+    "big_category_code": "02"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/00_大分类总览.xlsx",
+    "format": "xlsx",
+    "scope": "overview",
+    "big_category_code": "02"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/00_大分类总览.docx",
+    "format": "docx",
+    "scope": "overview",
+    "big_category_code": "03"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/00_大分类总览.xlsx",
+    "format": "xlsx",
+    "scope": "overview",
+    "big_category_code": "03"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/00_大分类总览.docx",
+    "format": "docx",
+    "scope": "overview",
+    "big_category_code": "04"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/00_大分类总览.xlsx",
+    "format": "xlsx",
+    "scope": "overview",
+    "big_category_code": "04"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.docx",
+    "format": "docx",
+    "scope": "overview",
+    "big_category_code": "05"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/00_大分类总览.xlsx",
+    "format": "xlsx",
+    "scope": "overview",
+    "big_category_code": "05"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-01_论文整体规划与流程管理/01-01_论文整体规划与流程管理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-01",
+    "subcategory_name": "论文整体规划与流程管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-01_论文整体规划与流程管理/01-01_论文整体规划与流程管理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-01",
+    "subcategory_name": "论文整体规划与流程管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-02_论文结构与章节写作/01-02_论文结构与章节写作_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-02",
+    "subcategory_name": "论文结构与章节写作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-02_论文结构与章节写作/01-02_论文结构与章节写作_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-02",
+    "subcategory_name": "论文结构与章节写作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-03_摘要、关键词与篇幅压缩/01-03_摘要、关键词与篇幅压缩_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-03",
+    "subcategory_name": "摘要、关键词与篇幅压缩"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-03_摘要、关键词与篇幅压缩/01-03_摘要、关键词与篇幅压缩_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-03",
+    "subcategory_name": "摘要、关键词与篇幅压缩"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-04_学术语言润色与表达改进/01-04_学术语言润色与表达改进_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-04",
+    "subcategory_name": "学术语言润色与表达改进"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-04_学术语言润色与表达改进/01-04_学术语言润色与表达改进_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-04",
+    "subcategory_name": "学术语言润色与表达改进"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-05_引用、参考文献与文献库管理/01-05_引用、参考文献与文献库管理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-05",
+    "subcategory_name": "引用、参考文献与文献库管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-05_引用、参考文献与文献库管理/01-05_引用、参考文献与文献库管理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-05",
+    "subcategory_name": "引用、参考文献与文献库管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-06_LaTeX 排版与在线协作/01-06_LaTeX 排版与在线协作_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-06",
+    "subcategory_name": "LaTeX 排版与在线协作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-06_LaTeX 排版与在线协作/01-06_LaTeX 排版与在线协作_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-06",
+    "subcategory_name": "LaTeX 排版与在线协作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-07_投稿要求、模板与进度安排/01-07_投稿要求、模板与进度安排_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-07",
+    "subcategory_name": "投稿要求、模板与进度安排"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-07_投稿要求、模板与进度安排/01-07_投稿要求、模板与进度安排_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-07",
+    "subcategory_name": "投稿要求、模板与进度安排"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-08_终稿、版权与出版前检查/01-08_终稿、版权与出版前检查_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-08",
+    "subcategory_name": "终稿、版权与出版前检查"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-08_终稿、版权与出版前检查/01-08_终稿、版权与出版前检查_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-08",
+    "subcategory_name": "终稿、版权与出版前检查"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-09_同行评审、审稿回复与修改/01-09_同行评审、审稿回复与修改_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-09",
+    "subcategory_name": "同行评审、审稿回复与修改"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/01_学术写作引用与出版/01-09_同行评审、审稿回复与修改/01-09_同行评审、审稿回复与修改_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "01",
+    "subcategory_code": "01-09",
+    "subcategory_name": "同行评审、审稿回复与修改"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-01_Word 文档制作与修改/02-01_Word 文档制作与修改_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-01",
+    "subcategory_name": "Word 文档制作与修改"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-01_Word 文档制作与修改/02-01_Word 文档制作与修改_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-01",
+    "subcategory_name": "Word 文档制作与修改"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-02_Excel 表格制作与分析/02-02_Excel 表格制作与分析_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-02",
+    "subcategory_name": "Excel 表格制作与分析"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-02_Excel 表格制作与分析/02-02_Excel 表格制作与分析_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-02",
+    "subcategory_name": "Excel 表格制作与分析"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-03_PowerPoint 与学术演示制作/02-03_PowerPoint 与学术演示制作_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-03",
+    "subcategory_name": "PowerPoint 与学术演示制作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-03_PowerPoint 与学术演示制作/02-03_PowerPoint 与学术演示制作_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-03",
+    "subcategory_name": "PowerPoint 与学术演示制作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-04_PDF 读取、整理与生成/02-04_PDF 读取、整理与生成_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-04",
+    "subcategory_name": "PDF 读取、整理与生成"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-04_PDF 读取、整理与生成/02-04_PDF 读取、整理与生成_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-04",
+    "subcategory_name": "PDF 读取、整理与生成"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-05_文档共创与需求梳理/02-05_文档共创与需求梳理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-05",
+    "subcategory_name": "文档共创与需求梳理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-05_文档共创与需求梳理/02-05_文档共创与需求梳理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-05",
+    "subcategory_name": "文档共创与需求梳理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-06_Office 与 Markdown 互转/02-06_Office 与 Markdown 互转_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-06",
+    "subcategory_name": "Office 与 Markdown 互转"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-06_Office 与 Markdown 互转/02-06_Office 与 Markdown 互转_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-06",
+    "subcategory_name": "Office 与 Markdown 互转"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-07_多格式批量转换与导出/02-07_多格式批量转换与导出_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-07",
+    "subcategory_name": "多格式批量转换与导出"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-07_多格式批量转换与导出/02-07_多格式批量转换与导出_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-07",
+    "subcategory_name": "多格式批量转换与导出"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-08_Office 综合处理与流程自动化/02-08_Office 综合处理与流程自动化_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-08",
+    "subcategory_name": "Office 综合处理与流程自动化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-08_Office 综合处理与流程自动化/02-08_Office 综合处理与流程自动化_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-08",
+    "subcategory_name": "Office 综合处理与流程自动化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-09_文档无障碍检查与修复/02-09_文档无障碍检查与修复_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-09",
+    "subcategory_name": "文档无障碍检查与修复"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/02_文档表格演示文稿与办公自动化/02-09_文档无障碍检查与修复/02-09_文档无障碍检查与修复_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "02",
+    "subcategory_code": "02-09",
+    "subcategory_name": "文档无障碍检查与修复"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-01_多数据库综合查找/03-01_多数据库综合查找_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-01",
+    "subcategory_name": "多数据库综合查找"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-01_多数据库综合查找/03-01_多数据库综合查找_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-01",
+    "subcategory_name": "多数据库综合查找"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-02_特定学术数据库查找/03-02_特定学术数据库查找_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-02",
+    "subcategory_name": "特定学术数据库查找"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-02_特定学术数据库查找/03-02_特定学术数据库查找_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-02",
+    "subcategory_name": "特定学术数据库查找"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-03_论文全文与开放资源获取/03-03_论文全文与开放资源获取_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-03",
+    "subcategory_name": "论文全文与开放资源获取"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-03_论文全文与开放资源获取/03-03_论文全文与开放资源获取_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-03",
+    "subcategory_name": "论文全文与开放资源获取"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-04_个人或团队文献库与研究笔记/03-04_个人或团队文献库与研究笔记_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-04",
+    "subcategory_name": "个人或团队文献库与研究笔记"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-04_个人或团队文献库与研究笔记/03-04_个人或团队文献库与研究笔记_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-04",
+    "subcategory_name": "个人或团队文献库与研究笔记"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-05_论文阅读、提炼与批判性分析/03-05_论文阅读、提炼与批判性分析_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-05",
+    "subcategory_name": "论文阅读、提炼与批判性分析"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-05_论文阅读、提炼与批判性分析/03-05_论文阅读、提炼与批判性分析_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-05",
+    "subcategory_name": "论文阅读、提炼与批判性分析"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-06_研究问题与假设形成/03-06_研究问题与假设形成_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-06",
+    "subcategory_name": "研究问题与假设形成"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-06_研究问题与假设形成/03-06_研究问题与假设形成_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-06",
+    "subcategory_name": "研究问题与假设形成"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-07_深度调研与证据材料整理/03-07_深度调研与证据材料整理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-07",
+    "subcategory_name": "深度调研与证据材料整理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-07_深度调研与证据材料整理/03-07_深度调研与证据材料整理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-07",
+    "subcategory_name": "深度调研与证据材料整理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-08_主题性文献梳理与综述写作/03-08_主题性文献梳理与综述写作_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-08",
+    "subcategory_name": "主题性文献梳理与综述写作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-08_主题性文献梳理与综述写作/03-08_主题性文献梳理与综述写作_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-08",
+    "subcategory_name": "主题性文献梳理与综述写作"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-09_系统综述流程与文献筛选/03-09_系统综述流程与文献筛选_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-09",
+    "subcategory_name": "系统综述流程与文献筛选"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-09_系统综述流程与文献筛选/03-09_系统综述流程与文献筛选_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-09",
+    "subcategory_name": "系统综述流程与文献筛选"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-10_Meta 分析与定量证据综合/03-10_Meta 分析与定量证据综合_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-10",
+    "subcategory_name": "Meta 分析与定量证据综合"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-10_Meta 分析与定量证据综合/03-10_Meta 分析与定量证据综合_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-10",
+    "subcategory_name": "Meta 分析与定量证据综合"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-11_学术成果评价与反馈/03-11_学术成果评价与反馈_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-11",
+    "subcategory_name": "学术成果评价与反馈"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/03_文献检索与学术研究/03-11_学术成果评价与反馈/03-11_学术成果评价与反馈_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "03",
+    "subcategory_code": "03-11",
+    "subcategory_name": "学术成果评价与反馈"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-01_基础信息素养与研究入门/04-01_基础信息素养与研究入门_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-01",
+    "subcategory_name": "基础信息素养与研究入门"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-01_基础信息素养与研究入门/04-01_基础信息素养与研究入门_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-01",
+    "subcategory_name": "基础信息素养与研究入门"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-02_信息来源判断与史料分析/04-02_信息来源判断与史料分析_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-02",
+    "subcategory_name": "信息来源判断与史料分析"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-02_信息来源判断与史料分析/04-02_信息来源判断与史料分析_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-02",
+    "subcategory_name": "信息来源判断与史料分析"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-03_媒体与新闻素养教育/04-03_媒体与新闻素养教育_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-03",
+    "subcategory_name": "媒体与新闻素养教育"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-03_媒体与新闻素养教育/04-03_媒体与新闻素养教育_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-03",
+    "subcategory_name": "媒体与新闻素养教育"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-04_事实核查与证据验证/04-04_事实核查与证据验证_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-04",
+    "subcategory_name": "事实核查与证据验证"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-04_事实核查与证据验证/04-04_事实核查与证据验证_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-04",
+    "subcategory_name": "事实核查与证据验证"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-05_数据素养教育/04-05_数据素养教育_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-05",
+    "subcategory_name": "数据素养教育"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-05_数据素养教育/04-05_数据素养教育_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-05",
+    "subcategory_name": "数据素养教育"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-06_图书馆服务、活动与推广/04-06_图书馆服务、活动与推广_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-06",
+    "subcategory_name": "图书馆服务、活动与推广"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-06_图书馆服务、活动与推广/04-06_图书馆服务、活动与推广_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-06",
+    "subcategory_name": "图书馆服务、活动与推广"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-07_数字图书馆与技术建设/04-07_数字图书馆与技术建设_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-07",
+    "subcategory_name": "数字图书馆与技术建设"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-07_数字图书馆与技术建设/04-07_数字图书馆与技术建设_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-07",
+    "subcategory_name": "数字图书馆与技术建设"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-08_信息来源台账与书目管理/04-08_信息来源台账与书目管理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-08",
+    "subcategory_name": "信息来源台账与书目管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-08_信息来源台账与书目管理/04-08_信息来源台账与书目管理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-08",
+    "subcategory_name": "信息来源台账与书目管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-09_馆藏目录、机构知识库与开放资源发现/04-09_馆藏目录、机构知识库与开放资源发现_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-09",
+    "subcategory_name": "馆藏目录、机构知识库与开放资源发现"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-09_馆藏目录、机构知识库与开放资源发现/04-09_馆藏目录、机构知识库与开放资源发现_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-09",
+    "subcategory_name": "馆藏目录、机构知识库与开放资源发现"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-10_元数据、术语与数据规范/04-10_元数据、术语与数据规范_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-10",
+    "subcategory_name": "元数据、术语与数据规范"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-10_元数据、术语与数据规范/04-10_元数据、术语与数据规范_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-10",
+    "subcategory_name": "元数据、术语与数据规范"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-11_开放科学与科研数据管理/04-11_开放科学与科研数据管理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-11",
+    "subcategory_name": "开放科学与科研数据管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-11_开放科学与科研数据管理/04-11_开放科学与科研数据管理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-11",
+    "subcategory_name": "开放科学与科研数据管理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-12_个人文献库与实验记录系统集成/04-12_个人文献库与实验记录系统集成_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-12",
+    "subcategory_name": "个人文献库与实验记录系统集成"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/04_图书馆与信息素养/04-12_个人文献库与实验记录系统集成/04-12_个人文献库与实验记录系统集成_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "04",
+    "subcategory_code": "04-12",
+    "subcategory_name": "个人文献库与实验记录系统集成"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-01_计算设备与资源规划/05-01_计算设备与资源规划_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-01",
+    "subcategory_name": "计算设备与资源规划"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-01_计算设备与资源规划/05-01_计算设备与资源规划_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-01",
+    "subcategory_name": "计算设备与资源规划"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-02_数据检查、清理与质量控制/05-02_数据检查、清理与质量控制_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-02",
+    "subcategory_name": "数据检查、清理与质量控制"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-02_数据检查、清理与质量控制/05-02_数据检查、清理与质量控制_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-02",
+    "subcategory_name": "数据检查、清理与质量控制"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-03_表格与大型数据处理/05-03_表格与大型数据处理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-03",
+    "subcategory_name": "表格与大型数据处理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-03_表格与大型数据处理/05-03_表格与大型数据处理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-03",
+    "subcategory_name": "表格与大型数据处理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-04_数据存储、数据库与查询优化/05-04_数据存储、数据库与查询优化_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-04",
+    "subcategory_name": "数据存储、数据库与查询优化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-04_数据存储、数据库与查询优化/05-04_数据存储、数据库与查询优化_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-04",
+    "subcategory_name": "数据存储、数据库与查询优化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-05_并行计算与性能优化/05-05_并行计算与性能优化_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-05",
+    "subcategory_name": "并行计算与性能优化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-05_并行计算与性能优化/05-05_并行计算与性能优化_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-05",
+    "subcategory_name": "并行计算与性能优化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-06_基础统计分析与结果报告/05-06_基础统计分析与结果报告_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-06",
+    "subcategory_name": "基础统计分析与结果报告"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-06_基础统计分析与结果报告/05-06_基础统计分析与结果报告_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-06",
+    "subcategory_name": "基础统计分析与结果报告"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-07_回归、时间序列与统计建模/05-07_回归、时间序列与统计建模_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-07",
+    "subcategory_name": "回归、时间序列与统计建模"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-07_回归、时间序列与统计建模/05-07_回归、时间序列与统计建模_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-07",
+    "subcategory_name": "回归、时间序列与统计建模"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-08_贝叶斯分析、因果分析与实验设计/05-08_贝叶斯分析、因果分析与实验设计_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-08",
+    "subcategory_name": "贝叶斯分析、因果分析与实验设计"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-08_贝叶斯分析、因果分析与实验设计/05-08_贝叶斯分析、因果分析与实验设计_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-08",
+    "subcategory_name": "贝叶斯分析、因果分析与实验设计"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-09_机器学习建模、解释与评估/05-09_机器学习建模、解释与评估_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-09",
+    "subcategory_name": "机器学习建模、解释与评估"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-09_机器学习建模、解释与评估/05-09_机器学习建模、解释与评估_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-09",
+    "subcategory_name": "机器学习建模、解释与评估"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-10_深度学习与大语言模型应用/05-10_深度学习与大语言模型应用_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-10",
+    "subcategory_name": "深度学习与大语言模型应用"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-10_深度学习与大语言模型应用/05-10_深度学习与大语言模型应用_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-10",
+    "subcategory_name": "深度学习与大语言模型应用"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-11_数学计算、单位与误差/05-11_数学计算、单位与误差_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-11",
+    "subcategory_name": "数学计算、单位与误差"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-11_数学计算、单位与误差/05-11_数学计算、单位与误差_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-11",
+    "subcategory_name": "数学计算、单位与误差"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-12_仿真与多目标优化/05-12_仿真与多目标优化_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-12",
+    "subcategory_name": "仿真与多目标优化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-12_仿真与多目标优化/05-12_仿真与多目标优化_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-12",
+    "subcategory_name": "仿真与多目标优化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-13_形式化数学证明/05-13_形式化数学证明_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-13",
+    "subcategory_name": "形式化数学证明"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-13_形式化数学证明/05-13_形式化数学证明_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-13",
+    "subcategory_name": "形式化数学证明"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-14_基础绘图与科学图表/05-14_基础绘图与科学图表_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-14",
+    "subcategory_name": "基础绘图与科学图表"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-14_基础绘图与科学图表/05-14_基础绘图与科学图表_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-14",
+    "subcategory_name": "基础绘图与科学图表"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-15_地图、网络与交互式可视化/05-15_地图、网络与交互式可视化_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-15",
+    "subcategory_name": "地图、网络与交互式可视化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-15_地图、网络与交互式可视化/05-15_地图、网络与交互式可视化_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-15",
+    "subcategory_name": "地图、网络与交互式可视化"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-16_数据故事与分析结果表达/05-16_数据故事与分析结果表达_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-16",
+    "subcategory_name": "数据故事与分析结果表达"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-16_数据故事与分析结果表达/05-16_数据故事与分析结果表达_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-16",
+    "subcategory_name": "数据故事与分析结果表达"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-17_调试与错误处理/05-17_调试与错误处理_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-17",
+    "subcategory_name": "调试与错误处理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-17_调试与错误处理/05-17_调试与错误处理_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-17",
+    "subcategory_name": "调试与错误处理"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-18_软件测试/05-18_软件测试_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-18",
+    "subcategory_name": "软件测试"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-18_软件测试/05-18_软件测试_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-18",
+    "subcategory_name": "软件测试"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-19_代码审查、代码规范与项目结构/05-19_代码审查、代码规范与项目结构_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-19",
+    "subcategory_name": "代码审查、代码规范与项目结构"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-19_代码审查、代码规范与项目结构/05-19_代码审查、代码规范与项目结构_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-19",
+    "subcategory_name": "代码审查、代码规范与项目结构"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-20_数据处理流程与机器学习工程/05-20_数据处理流程与机器学习工程_GitHub技能调研.docx",
+    "format": "docx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-20",
+    "subcategory_name": "数据处理流程与机器学习工程"
+  },
+  {
+    "path": "05_交付物/通俗细分版_2026-08-07/05_编程数学数据分析和可视化/05-20_数据处理流程与机器学习工程/05-20_数据处理流程与机器学习工程_GitHub技能调研.xlsx",
+    "format": "xlsx",
+    "scope": "subcategory",
+    "big_category_code": "05",
+    "subcategory_code": "05-20",
+    "subcategory_name": "数据处理流程与机器学习工程"
+  }
+]
