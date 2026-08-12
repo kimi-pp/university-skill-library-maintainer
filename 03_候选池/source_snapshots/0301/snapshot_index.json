@@ -1,0 +1,375 @@
+{
+  "discipline": "0301 法学类",
+  "verified_at": "2026-08-12",
+  "records": [
+    {
+      "name": "法规案例检索",
+      "platform": "GitHub",
+      "fixed_version": "5e39b9c30cc66ece89ff64cdafbeddde80c6b507",
+      "entry": "skills/legal/法规案例检索/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/pa1nrui1__legal-skills/5e39b9c30cc66ece89ff64cdafbeddde80c6b507/files/skills/legal/法规案例检索/SKILL.md",
+      "package_files": 9,
+      "script_files": 0,
+      "sha256": "11d839d840535c59bfb21293ecbfda2fd93c66cbaceb12d3e05841fc5520f844",
+      "static_scan": {
+        "text_files": 9,
+        "binary_files": 0,
+        "domains": [
+          "law.wkinfo.com.cn"
+        ],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "case-brief-drafter",
+      "platform": "ClawHub",
+      "fixed_version": "0.5.1",
+      "entry": "SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/clawhub/case-brief-drafter/0.5.1/files/SKILL.md",
+      "package_files": 4,
+      "script_files": 0,
+      "sha256": "f4fca9745e6b8f57a66867e55153ad6b19a95d7315b6957bdaaf41672575166f",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [
+          "github.com"
+        ],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "初步法律分析",
+      "platform": "GitHub",
+      "fixed_version": "5e39b9c30cc66ece89ff64cdafbeddde80c6b507",
+      "entry": "skills/legal/初步法律分析/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/pa1nrui1__legal-skills/5e39b9c30cc66ece89ff64cdafbeddde80c6b507/files/skills/legal/初步法律分析/SKILL.md",
+      "package_files": 8,
+      "script_files": 0,
+      "sha256": "13ba29734f5ffa76c23a54fe7dd820a062b2c6a4413df2b66d794af712cc9200",
+      "static_scan": {
+        "text_files": 8,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "Chinese-Legal-Citation-skill",
+      "platform": "GitHub",
+      "fixed_version": "9d95f75e8d2c70046f7394389faa31c327f00a8b",
+      "entry": "CLAUDE.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/StefanCHEN2026__Chinese-Legal-Citation-skill/9d95f75e8d2c70046f7394389faa31c327f00a8b/files/CLAUDE.md",
+      "package_files": 20,
+      "script_files": 3,
+      "sha256": "0a0ca992b1cf4e6b55e01a53036e1a69a887e1d9feeb935f23426cd7358a3f72",
+      "static_scan": {
+        "text_files": 18,
+        "binary_files": 2,
+        "domains": [
+          "`",
+          "doi.org",
+          "example.com",
+          "example.com。",
+          "example.com（2023年5月10日访问）。",
+          "example.com，2023年5月10日最后访问。",
+          "github.com",
+          "lawcite.cn]",
+          "schemas.microsoft.com",
+          "schemas.openxmlformats.org",
+          "weibo.com",
+          "www.oxfordlawforum.com",
+          "www.scio.gov.cn",
+          "www.w3.org",
+          "×××",
+          "×××）"
+        ],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [
+            "scripts/docx_parser.py:189: Path(args.output).write_text(output, encoding='utf-8')"
+          ],
+          "delete": [],
+          "remote_install": [
+            "AGENTS.md:45: pip install python-docx lxml",
+            "CLAUDE.md:42: pip install python-docx lxml",
+            "README.md:36: pip install -r requirements.txt",
+            "scripts/docx_parser.py:6: 依赖：pip install python-docx lxml",
+            "scripts/docx_parser.py:20: print(\"错误：需要安装 lxml 库。请运行: pip install lxml\")",
+            "scripts/docx_parser.py:26: print(\"错误：需要安装 python-docx 库。请运行: pip install python-docx\")",
+            "scripts/docx_revisor.py:11: 依赖：pip install python-docx lxml",
+            "scripts/docx_revisor.py:27: print(\"错误：需要安装 lxml 库。请运行: pip install lxml\")"
+          ],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "legal-contract-review-playbook",
+      "platform": "ClawHub",
+      "fixed_version": "1.0.1",
+      "entry": "SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/clawhub/legal-contract-review-playbook/1.0.1/files/SKILL.md",
+      "package_files": 6,
+      "script_files": 0,
+      "sha256": "1e2f469a523b7a17a7637cc7758b1eb164d3a90b3170015e725400a16fcd5c07",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "legal-redline-tools",
+      "platform": "GitHub",
+      "fixed_version": "1dbc70ddfdf594fc4699c31b9077d15e74be56a0",
+      "entry": "skill.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/evolsb__legal-redline-tools/1dbc70ddfdf594fc4699c31b9077d15e74be56a0/files/skill.md",
+      "package_files": 28,
+      "script_files": 18,
+      "sha256": "12047e5e9c7c04bba4103df186996dac18eb5c1e28bcef71f04bb321cb36f369",
+      "static_scan": {
+        "text_files": 23,
+        "binary_files": 5,
+        "domains": [
+          "ctsheehan.com",
+          "github.com",
+          "img.shields.io",
+          "lxml.de",
+          "opensource.org",
+          "py-pdf.github.io",
+          "python-docx.readthedocs.io",
+          "www.python.org"
+        ],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [
+            "legal_redline/apply.py:453: doc.save(output_path)",
+            "legal_redline/cli.py:213: with open(args.markdown, \"w\") as f:",
+            "legal_redline/cli.py:214: f.write(md)",
+            "legal_redline/cli.py:226: with open(args.output, \"w\") as f:",
+            "legal_redline/cli.py:246: with open(args.output, \"w\") as f:",
+            "legal_redline/cli.py:284: with open(args.output, \"w\") as f:",
+            "legal_redline/cli.py:309: with open(args.output, \"w\") as f:",
+            "legal_redline/cli.py:310: f.write(report)"
+          ],
+          "delete": [],
+          "remote_install": [
+            "README.md:88: pip install -e .",
+            "README.md:94: pip install git+https://github.com/evolsb/legal-redline-tools.git",
+            "README.md:235: pip install git+https://github.com/evolsb/legal-redline-tools.git"
+          ],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "法律文书出稿前审查",
+      "platform": "GitHub",
+      "fixed_version": "5e39b9c30cc66ece89ff64cdafbeddde80c6b507",
+      "entry": "skills/legal/法律文书出稿前审查/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/pa1nrui1__legal-skills/5e39b9c30cc66ece89ff64cdafbeddde80c6b507/files/skills/legal/法律文书出稿前审查/SKILL.md",
+      "package_files": 2,
+      "script_files": 1,
+      "sha256": "bf640737ced6bd09d7f5cac49a3bb38387c7c82594d09e336caa3b189d59b7f6",
+      "static_scan": {
+        "text_files": 2,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [
+            "skills/legal/法律文书出稿前审查/scripts/preflight_check.py:299: path.write_text(text, encoding=\"utf-8\")",
+            "skills/legal/法律文书出稿前审查/scripts/preflight_check.py:553: report_path.write_text(\"\\n\".join(lines) + \"\\n\", encoding=\"utf-8\")"
+          ],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "legal-evidence-mapping-mctmilk",
+      "platform": "ClawHub",
+      "fixed_version": "1.0.0",
+      "entry": "SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/clawhub/legal-evidence-mapping-mctmilk/1.0.0/files/SKILL.md",
+      "package_files": 2,
+      "script_files": 0,
+      "sha256": "c04ab3258e67a9aa8a8737b522bf0e6392431c637981b9930e80c533fb6e18d6",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "劳动争议证据体系",
+      "platform": "GitHub",
+      "fixed_version": "5e39b9c30cc66ece89ff64cdafbeddde80c6b507",
+      "entry": "skills/legal/劳动争议证据体系/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/pa1nrui1__legal-skills/5e39b9c30cc66ece89ff64cdafbeddde80c6b507/files/skills/legal/劳动争议证据体系/SKILL.md",
+      "package_files": 6,
+      "script_files": 0,
+      "sha256": "7e601d249c63375a73916d90447b902e83648e61814dddb4cd82683f63602d37",
+      "static_scan": {
+        "text_files": 6,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "庭前准备",
+      "platform": "GitHub",
+      "fixed_version": "5e39b9c30cc66ece89ff64cdafbeddde80c6b507",
+      "entry": "skills/legal/庭前准备/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/pa1nrui1__legal-skills/5e39b9c30cc66ece89ff64cdafbeddde80c6b507/files/skills/legal/庭前准备/SKILL.md",
+      "package_files": 9,
+      "script_files": 0,
+      "sha256": "b346095f908832099f384b2fe144a5fda0798f02e62c7d00e85c43d7d7a5b347",
+      "static_scan": {
+        "text_files": 9,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "legal-regulatory-compliance-mapper",
+      "platform": "ClawHub",
+      "fixed_version": "1.1.1",
+      "entry": "SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/clawhub/legal-regulatory-compliance-mapper/1.1.1/files/SKILL.md",
+      "package_files": 6,
+      "script_files": 0,
+      "sha256": "2e96fe48ec81e87f17a723644e40641e622be920897ba283b2f01bda79f77713",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "产品法务",
+      "platform": "GitHub",
+      "fixed_version": "5e39b9c30cc66ece89ff64cdafbeddde80c6b507",
+      "entry": "skills/legal/产品法务/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0301/github/pa1nrui1__legal-skills/5e39b9c30cc66ece89ff64cdafbeddde80c6b507/files/skills/legal/产品法务/SKILL.md",
+      "package_files": 7,
+      "script_files": 0,
+      "sha256": "43a024aa1f10b0a4b143d0df2005060213f73dc445faf9f390ffa62005e43821",
+      "static_scan": {
+        "text_files": 7,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    }
+  ]
+}

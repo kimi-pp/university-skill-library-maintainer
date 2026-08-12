@@ -1,0 +1,356 @@
+{
+  "discipline": "1304 美术学类",
+  "verified_at": "2026-08-12",
+  "records": [
+    {
+      "name": "curatorial-research",
+      "platform": "GitHub",
+      "fixed_version": "120926cf0f706e1fc4b7eda5e196aa40aa804e68",
+      "entry": "library/specializations/domains/social-sciences-humanities/arts-culture/skills/curatorial-research/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/a5c-ai__babysitter/120926cf0f706e1fc4b7eda5e196aa40aa804e68/files/library/specializations/domains/social-sciences-humanities/arts-culture/skills/curatorial-research/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "77cfca6a9030bb673379efb584602384fbbdb00a332644a178460dd35c27d884",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "collection-documentation",
+      "platform": "GitHub",
+      "fixed_version": "120926cf0f706e1fc4b7eda5e196aa40aa804e68",
+      "entry": "library/specializations/domains/social-sciences-humanities/arts-culture/skills/collection-documentation/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/a5c-ai__babysitter/120926cf0f706e1fc4b7eda5e196aa40aa804e68/files/library/specializations/domains/social-sciences-humanities/arts-culture/skills/collection-documentation/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "df6fcace1ad70eaef26a758377f6e500b407f9263beff133f4d499fa91359ee9",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "conservation-assessment",
+      "platform": "GitHub",
+      "fixed_version": "120926cf0f706e1fc4b7eda5e196aa40aa804e68",
+      "entry": "library/specializations/domains/social-sciences-humanities/arts-culture/skills/conservation-assessment/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/a5c-ai__babysitter/120926cf0f706e1fc4b7eda5e196aa40aa804e68/files/library/specializations/domains/social-sciences-humanities/arts-culture/skills/conservation-assessment/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "bb60aad6b2d6c4e8b5a4f30bde987ce5787ed1ac3e018e6f733cf6f41d669699",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "calligraphy-instructor",
+      "platform": "GitHub",
+      "fixed_version": "61fe4f2bb47d6b61505b1b78c2b8ae5fd1ca38dd",
+      "entry": "skills/persona/education/calligraphy-instructor/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/theneoai__awesome-skills/61fe4f2bb47d6b61505b1b78c2b8ae5fd1ca38dd/files/skills/persona/education/calligraphy-instructor/SKILL.md",
+      "package_files": 10,
+      "script_files": 0,
+      "sha256": "6fcaccf6550570105d8a85103addd3a094cc951b834ddc57fe28d1e249e62526",
+      "static_scan": {
+        "text_files": 10,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "curatorial-narrative-modules",
+      "platform": "GitHub",
+      "fixed_version": "5680aa2b4521a757e436b65615904acb24d3276f",
+      "entry": "curatorial-narrative-modules/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/wuyaojunkylin__research-digital-curation-skills/5680aa2b4521a757e436b65615904acb24d3276f/files/curatorial-narrative-modules/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "df8e41ba615f48f8d540456c898bb9b29bd7d93c875e045a73e404609ab6201e",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "curatorial-topic-framing",
+      "platform": "GitHub",
+      "fixed_version": "5680aa2b4521a757e436b65615904acb24d3276f",
+      "entry": "curatorial-topic-framing/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/wuyaojunkylin__research-digital-curation-skills/5680aa2b4521a757e436b65615904acb24d3276f/files/curatorial-topic-framing/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "247155b06bd2ab0abf76c967e5e88c7866bb7dd0c280e92db7ad5fc8ecc29fa3",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "exhibition-design",
+      "platform": "GitHub",
+      "fixed_version": "120926cf0f706e1fc4b7eda5e196aa40aa804e68",
+      "entry": "library/specializations/domains/social-sciences-humanities/arts-culture/skills/exhibition-design/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/a5c-ai__babysitter/120926cf0f706e1fc4b7eda5e196aa40aa804e68/files/library/specializations/domains/social-sciences-humanities/arts-culture/skills/exhibition-design/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "e367838c21b48ef9b09ea11be7a226b493e81774b1b1e33230d3686f269a9f77",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "interpretive-writing",
+      "platform": "GitHub",
+      "fixed_version": "120926cf0f706e1fc4b7eda5e196aa40aa804e68",
+      "entry": "library/specializations/domains/social-sciences-humanities/arts-culture/skills/interpretive-writing/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/a5c-ai__babysitter/120926cf0f706e1fc4b7eda5e196aa40aa804e68/files/library/specializations/domains/social-sciences-humanities/arts-culture/skills/interpretive-writing/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "4cfed1fac2ab3256debedd6c0aa2127308ed40c836ac5b92793e1f986807cc20",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "research-digital-curation-workflow",
+      "platform": "GitHub",
+      "fixed_version": "5680aa2b4521a757e436b65615904acb24d3276f",
+      "entry": "research-digital-curation-workflow/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/wuyaojunkylin__research-digital-curation-skills/5680aa2b4521a757e436b65615904acb24d3276f/files/research-digital-curation-workflow/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "d566f691a2d3c5b05c304e6c0221b623e3dbc27112529853667ea143ffe1380f",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "research-to-curatorial-copy",
+      "platform": "GitHub",
+      "fixed_version": "5680aa2b4521a757e436b65615904acb24d3276f",
+      "entry": "research-to-curatorial-copy/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/wuyaojunkylin__research-digital-curation-skills/5680aa2b4521a757e436b65615904acb24d3276f/files/research-to-curatorial-copy/SKILL.md",
+      "package_files": 1,
+      "script_files": 0,
+      "sha256": "bfac5b6a25c262aa17531188984ade1ca7a00026918ce3ef8c62937fc9eed854",
+      "static_scan": {
+        "text_files": 1,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "museum-art",
+      "platform": "GitHub",
+      "fixed_version": "19471473a34a29a042c0d7738ce573cc2dcee119",
+      "entry": "skills/museum-art/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/1304/github/huytieu__COG-second-brain/19471473a34a29a042c0d7738ce573cc2dcee119/files/skills/museum-art/SKILL.md",
+      "package_files": 10,
+      "script_files": 0,
+      "sha256": "696f91435245225bcd8fbdb99ffa02eb9be4263b98c6c7d2231e0f29a996f845",
+      "static_scan": {
+        "text_files": 10,
+        "binary_files": 0,
+        "domains": [
+          "americanart.si.edu",
+          "api.artic.edu",
+          "api.data.gov",
+          "api.dp.la",
+          "api.europeana.eu",
+          "api.harvardartmuseums.org",
+          "api.nga.gov",
+          "api.repository.library.nyc",
+          "api.si.edu",
+          "api.smk.dk",
+          "api.wellcomecollection.org",
+          "archive.org",
+          "collectionapi.metmuseum.org",
+          "commons.wikimedia.org",
+          "creativecommons.org",
+          "data.getty.edu",
+          "data.rijksmuseum.nl",
+          "edan.si.edu",
+          "github.com",
+          "id.rijksmuseum.nl",
+          "ids.si.edu",
+          "iiif.micr.io",
+          "iip-thumb.smk.dk",
+          "iip.smk.dk",
+          "images.metmuseum.org",
+          "lux.collections.yale.edu",
+          "media.getty.edu",
+          "media.getty.edu`",
+          "metmuseum.github.io",
+          "openaccess-api.clevelandart.org",
+          "openaccess-cdn.clevelandart.org",
+          "raw.githubusercontent.com",
+          "smithsonian-open-access.s3-us-west-2.amazonaws.com",
+          "www.artic.edu",
+          "www.cidoc-crm.org",
+          "www.clevelandart.org",
+          "www.getty.edu",
+          "www.metmuseum.org",
+          "www.parismuseescollections.paris.fr",
+          "www.si.edu",
+          "www.smk.dk"
+        ],
+        "hits": {
+          "outbound_code": [
+            "skills/museum-art/SKILL.md:26: - **Exception - Art Institute of Chicago images:** the JSON API (`api.artic.edu`) is fine, but the image host `www.artic.edu/iiif/...` 403s scripted/curl fetches via a Cloudflare b",
+            "skills/museum-art/references/_synthesis.md:14: | 6 | **Art Institute of Chicago** | Yes, no key | CC0 | `GET /artworks/search?query[term][is_public_domain]=true&fields=...,image_id` → build `https://www.artic.edu/iiif/2/{image_",
+            "skills/museum-art/references/artic.md:67: - **IIIF image URL: correct per official docs, but NOT independently confirmed as a working binary download by this research pass.** Direct `curl`/WebFetch requests to `www.artic.e",
+            "skills/museum-art/references/getty.md:91: **exampleImageUrl** (full resolution — verified with `curl -I`: `HTTP/2 200`, `content-type: image/jpeg`, `content-disposition: inline; filename=\"8c255d80-7382-46db-9fa8-892c0d3724",
+            "skills/museum-art/references/getty.md:107: - https://data.getty.edu/museum/collection/docs/ (API docs, scraped via curl on `_payload.json`)",
+            "skills/museum-art/references/met.md:64: Verified live via curl — returns real JSON:",
+            "skills/museum-art/references/met.md:77: `curl -sI` on this URL returned `HTTP/2 200`, `content-type: image/jpeg`, `content-length: 8291194` (~8.3MB) — confirmed real, downloadable, full-resolution JPEG.",
+            "skills/museum-art/references/nga.md:77: - `curl -I` (HEAD) on `full/full/0/default.jpg` and `full/max/0/default.jpg` — both HTTP 200, image/jpeg, multi-MB content-length, i.e. genuinely full resolution, not a redirect or"
+          ],
+          "credentials": [
+            "skills/museum-art/SKILL.md:74: - **Smithsonian** (needs free `api.data.gov` key; `DEMO_KEY` works at 30 req/hr): `GET https://api.si.edu/openaccess/api/v1.0/search?q=<term> AND online_media_type:Images&api_key=K",
+            "skills/museum-art/SKILL.md:79: - **Harvard Art Museums** (free key): `https://api.harvardartmuseums.org/object?apikey=<KEY>&q=<term>`.",
+            "skills/museum-art/SKILL.md:83: - **DPLA** (free key): `https://api.dp.la/v2/items?q=<term>&api_key=<KEY>`; federated US collections.",
+            "skills/museum-art/references/_synthesis.md:16: | 8 | **Smithsonian** | **No** — needs `api_key` (free instant signup, or shared `DEMO_KEY` at 30 req/hr) | CC0 | `GET /search?q=X AND online_media_type:Images&api_key=KEY` → `medi",
+            "skills/museum-art/references/_synthesis.md:16: | 8 | **Smithsonian** | **No** — needs `api_key` (free instant signup, or shared `DEMO_KEY` at 30 req/hr) | CC0 | `GET /search?q=X AND online_media_type:Images&api_key=KEY` → `medi",
+            "skills/museum-art/references/_synthesis.md:39: - **Europeana API** — `https://api.europeana.eu/record/v2/search.json?wskey=<KEY>&query=<term>` — aggregates 50M+ items from thousands of European cultural institutions in one sche",
+            "skills/museum-art/references/_synthesis.md:40: - **Harvard Art Museums API** — `https://api.harvardartmuseums.org/object?apikey=<KEY>&q=<term>` — **requires a free key** (instant signup). Strong for teaching-collection-style We",
+            "skills/museum-art/references/_synthesis.md:46: - **DPLA (Digital Public Library of America)** — `https://api.dp.la/v2/items?q=<term>&api_key=<KEY>` — **requires a free key**. Aggregates US libraries/archives/museums (including "
+          ],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [
+            "skills/museum-art/SKILL.md:11: - Blog post hero images, section breaks, mood imagery (the blog-publish image step).",
+            "skills/museum-art/SKILL.md:95: - Feeds **blog-publish**, **social-media-kit**, **weekly-ai-slide**, deck and essay work at their image-sourcing step.",
+            "skills/museum-art/references/smithsonian.md:25: - Rate limits: `DEMO_KEY` = 30 requests/hour/IP; a registered personal key = 1,000 requests/hour. (Per api.data.gov standard tiers; Smithsonian doesn't publish a separate limit.)"
+          ],
+          "prompt_bypass": []
+        }
+      }
+    }
+  ]
+}

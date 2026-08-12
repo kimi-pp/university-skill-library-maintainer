@@ -1,0 +1,118 @@
+{
+  "version": "1.0.1",
+  "createdAt": 1781927203589,
+  "changelog": "- Added detailed usage scenarios, including practical contract review examples and a Chinese-language scenario.\n- Introduced tags in the skill metadata for improved categorization and discoverability.\n- Expanded example outputs to include clause analysis, stakeholder summaries, playbooks, and risk ratings.\n- No logic or functional changes; package remains descriptive-only with clear legal-information disclaimers.",
+  "changelogSource": "auto",
+  "license": "MIT-0",
+  "files": [
+    {
+      "path": "ACCEPTANCE.md",
+      "size": 796,
+      "sha256": "e4c7960b4e08abc0a85894d64d44d516dd0a53b0023a1a5663809a0da49d031a",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "README.md",
+      "size": 1215,
+      "sha256": "d89e561a27c10d46edfc3b4d7e1d8c9f7d278b4c4aa84a23029c302a0e70e8e9",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 5520,
+      "sha256": "1e2f469a523b7a17a7637cc7758b1eb164d3a90b3170015e725400a16fcd5c07",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "_meta.json",
+      "size": 149,
+      "sha256": "8fc0812f394aafe25e7179454cca2cd7dbed86b8deed886f49bfbc2c224cca03",
+      "contentType": "application/json"
+    },
+    {
+      "path": "skill.json",
+      "size": 794,
+      "sha256": "8c9a104fea64b753eeffa67e5ac1fad095c74d6af3ece37b8f7801cacf32a6f6",
+      "contentType": "application/json"
+    },
+    {
+      "path": "skill-card.md",
+      "size": 2411,
+      "sha256": "10b6cdcf7d0a9989d94328e4d39c64dc8bd7312ea7b99aa6c49759e595ed1896",
+      "contentType": "text/markdown"
+    }
+  ],
+  "security": {
+    "status": "clean",
+    "hasWarnings": true,
+    "checkedAt": 1781969558815,
+    "model": "gpt-5.5",
+    "hasScanResult": true,
+    "sha256hash": "954c664404cea9f9b77a66ddaf8d859ca020f5801a8cca003b546be8686d304a",
+    "virustotalUrl": "https://www.virustotal.com/gui/file/954c664404cea9f9b77a66ddaf8d859ca020f5801a8cca003b546be8686d304a",
+    "scanners": {
+      "vt": {
+        "status": "clean",
+        "verdict": null,
+        "normalizedStatus": "clean",
+        "analysis": null,
+        "source": "engines",
+        "checkedAt": 1781927507438
+      },
+      "skillspector": {
+        "status": "clean",
+        "normalizedStatus": "clean",
+        "score": 0,
+        "severity": "LOW",
+        "recommendation": "SAFE",
+        "issueCount": 0,
+        "checkedAt": 1781969481502
+      },
+      "llm": {
+        "status": "clean",
+        "verdict": "benign",
+        "normalizedStatus": "clean",
+        "confidence": "high",
+        "summary": "The artifacts describe ClawHub maintainer and developer workflow skills with sensitive actions disclosed and gated by user confirmation, authentication, and audit-oriented checks.",
+        "dimensions": [
+          {
+            "detail": "Capabilities include code review helpers, Convex setup/migration guidance, documentation review, and ClawHub staff moderation/email workflows. The high-impact staff actions are consistent with the stated maintainer purpose and are explicitly described.",
+            "label": "Purpose & Capability",
+            "name": "purpose_capability",
+            "rating": "note"
+          },
+          {
+            "detail": "The instructions repeatedly require explicit targets, reasons, dry runs, signoff, verification, and use of authenticated/admin CLI surfaces for writes. I did not find hidden prompt overrides, deceptive instructions, or unrelated data handling.",
+            "label": "Instruction Scope",
+            "name": "instruction_scope",
+            "rating": "ok"
+          },
+          {
+            "detail": "No automatic installer, autorun hook, or persistence setup was found. The repository contains multiple .agents skills and a helper script for autoreview, so users should understand which skill they are installing or invoking.",
+            "label": "Install Mechanism",
+            "name": "install_mechanism",
+            "rating": "note"
+          },
+          {
+            "detail": "The skills expect access to local repos, GitHub/Convex/OpenAI or model CLIs, and ClawHub admin credentials for staff workflows. That access is sensitive but proportionate to the disclosed development and moderation purposes.",
+            "label": "Credentials",
+            "name": "environment_proportionality",
+            "rating": "note"
+          },
+          {
+            "detail": "High-privilege operations such as user bans, package transfers, production migrations, and email sending are disclosed and gated by explicit confirmation or signoff. No stealth persistence, credential harvesting, or background execution was evident.",
+            "label": "Persistence & Privilege",
+            "name": "persistence_privilege",
+            "rating": "note"
+          }
+        ],
+        "guidance": "Install or use these skills only if you are working on ClawHub or Convex workflows and are comfortable with the referenced tools. The staff moderation and correspondence skills should be used only by authorized ClawHub operators because they can affect users, packages, skills, and outgoing email when run with admin credentials.",
+        "findings": "[SkillSpector.clean] expected: SkillSpector reported no issues; artifact review did not uncover material concerns contradicting that clean result.\n[VirusTotal.clean] expected: VirusTotal telemetry reported 0 malicious and 0 suspicious detections; this was treated as supporting telemetry, not the sole basis for the verdict.",
+        "agenticRiskFindings": null,
+        "riskSummary": null,
+        "model": "gpt-5.5",
+        "checkedAt": 1781969558815
+      }
+    }
+  }
+}

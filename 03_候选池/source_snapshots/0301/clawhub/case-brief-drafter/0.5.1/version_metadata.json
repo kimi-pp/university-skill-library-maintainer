@@ -1,0 +1,106 @@
+{
+  "version": "0.5.1",
+  "createdAt": 1779961746404,
+  "changelog": "Version 0.5.1",
+  "changelogSource": "user",
+  "license": "MIT-0",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "size": 691,
+      "sha256": "68fdce80bb587a57cf3087e9d4ed2e046eed014ccd25c2707df5275db6b6a1ef",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "README.md",
+      "size": 1819,
+      "sha256": "8c7b09d589ad86ec215d28392698151e93c7b1db138648b458acfb6614ea07b3",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 10254,
+      "sha256": "f4fca9745e6b8f57a66867e55153ad6b19a95d7315b6957bdaaf41672575166f",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "skill-card.md",
+      "size": 2288,
+      "sha256": "f0e41a69f73af0263dfedad16b13bd5ea7944f257ce9937078ff13bd86229b96",
+      "contentType": "text/markdown"
+    }
+  ],
+  "security": {
+    "status": "clean",
+    "hasWarnings": true,
+    "checkedAt": 1779962012470,
+    "model": "gpt-5.5",
+    "hasScanResult": true,
+    "sha256hash": "ebd2b0c70b4a152eaa9772f8d14c6c8f6e4469cc0e94c202ac26a4c2567bab4e",
+    "virustotalUrl": "https://www.virustotal.com/gui/file/ebd2b0c70b4a152eaa9772f8d14c6c8f6e4469cc0e94c202ac26a4c2567bab4e",
+    "scanners": {
+      "vt": {
+        "status": "clean",
+        "verdict": null,
+        "normalizedStatus": "clean",
+        "analysis": null,
+        "source": "engines",
+        "checkedAt": 1779961965701
+      },
+      "skillspector": {
+        "status": "clean",
+        "normalizedStatus": "clean",
+        "score": 0,
+        "severity": "LOW",
+        "recommendation": "SAFE",
+        "issueCount": 0,
+        "checkedAt": 1779961976564
+      },
+      "llm": {
+        "status": "clean",
+        "verdict": "benign",
+        "normalizedStatus": "clean",
+        "confidence": "high",
+        "summary": "This skill is a straightforward legal case-briefing prompt with no code execution, credential use, persistence, or hidden data handling.",
+        "dimensions": [
+          {
+            "detail": "The stated purpose, README, and SKILL instructions align: collect a judicial opinion, confirm source details, and draft an IRAC case brief while flagging uncertainty.",
+            "label": "Purpose & Capability",
+            "name": "purpose_capability",
+            "rating": "ok"
+          },
+          {
+            "detail": "Runtime instructions are bounded to user-supplied case material, require confirmation before drafting, prohibit invented facts or legal advice, and include accuracy checks.",
+            "label": "Instruction Scope",
+            "name": "instruction_scope",
+            "rating": "ok"
+          },
+          {
+            "detail": "The artifact contains only Markdown files, no executable scripts, no dependencies, and hashes match the metadata.",
+            "label": "Install Mechanism",
+            "name": "install_mechanism",
+            "rating": "ok"
+          },
+          {
+            "detail": "The skill may process legal opinions and matter-reading context, which can include sensitive information, but this is disclosed and proportionate to the drafting purpose.",
+            "label": "Credentials",
+            "name": "environment_proportionality",
+            "rating": "note"
+          },
+          {
+            "detail": "No persistence, background execution, local file access, credential access, network calls, or privilege requests are present; the only external link is a feedback issue/PR link.",
+            "label": "Persistence & Privilege",
+            "name": "persistence_privilege",
+            "rating": "ok"
+          }
+        ],
+        "guidance": "Safe to install for drafting study or work case briefs from supplied opinions. Users should still avoid pasting confidential client-identifying details unless necessary, verify quotations and citations against the official reporter, and remember the output is not legal advice.",
+        "findings": "[SkillSpector clean report] expected: SkillSpector reported no issues and the artifact review found no conflicting behavior.\n[Static scan clean report] expected: Static scan reported no findings; manual inspection found only Markdown instructions and no executable components.\n[VirusTotal clean telemetry] expected: VirusTotal showed no malicious or suspicious engine detections, consistent with the artifact evidence.",
+        "agenticRiskFindings": null,
+        "riskSummary": null,
+        "model": "gpt-5.5",
+        "checkedAt": 1779962012470
+      }
+    }
+  }
+}

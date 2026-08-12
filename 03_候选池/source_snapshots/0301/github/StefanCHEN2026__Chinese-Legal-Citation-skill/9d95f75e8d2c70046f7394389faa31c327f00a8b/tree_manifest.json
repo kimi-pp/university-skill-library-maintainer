@@ -1,0 +1,176 @@
+[
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "67482b4750aa8dc20daef0adc0f1377d30518089",
+    "size": 506,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/67482b4750aa8dc20daef0adc0f1377d30518089"
+  },
+  {
+    "path": "AGENTS.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1dc40ba8d17228539bf6a56a8e2daf3dfb99811a",
+    "size": 8062,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/1dc40ba8d17228539bf6a56a8e2daf3dfb99811a"
+  },
+  {
+    "path": "CLAUDE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50b920b18757f480a8c7e625b6d27f314813abce",
+    "size": 10157,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/50b920b18757f480a8c7e625b6d27f314813abce"
+  },
+  {
+    "path": "CORRECTIONS_SCHEMA.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "94e31337767625192c4136f27739e2209241b75c",
+    "size": 5910,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/94e31337767625192c4136f27739e2209241b75c"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "74b9aa18172dceb918ad7824b7b1416dfa9e7cb4",
+    "size": 1093,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/74b9aa18172dceb918ad7824b7b1416dfa9e7cb4"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ee94676a87550e1a0f10041ebd36f1e54c649cd3",
+    "size": 4940,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/ee94676a87550e1a0f10041ebd36f1e54c649cd3"
+  },
+  {
+    "path": "references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a2a29be0d69d530a2319813d74d2d2e283cfa034",
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/trees/a2a29be0d69d530a2319813d74d2d2e283cfa034"
+  },
+  {
+    "path": "references/reference-index.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "caa62e5a5c179e30eb8be1d591f1bb36823bd88c",
+    "size": 3344,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/caa62e5a5c179e30eb8be1d591f1bb36823bd88c"
+  },
+  {
+    "path": "references/rules-chinese-articles.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "31e21a1b7a84df279f53ef049ad132724b6198f5",
+    "size": 9177,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/31e21a1b7a84df279f53ef049ad132724b6198f5"
+  },
+  {
+    "path": "references/rules-chinese-books.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3985d613d5128579225b3aa05c553682a47f60fc",
+    "size": 13124,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/3985d613d5128579225b3aa05c553682a47f60fc"
+  },
+  {
+    "path": "references/rules-chinese-cases.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6864bbdb538fbe9c99761a828c22a40d879e8737",
+    "size": 14431,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/6864bbdb538fbe9c99761a828c22a40d879e8737"
+  },
+  {
+    "path": "references/rules-chinese-internet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "95ff1ba4cbe5a05a19a3b5d8f6b78c8c7c32a240",
+    "size": 9124,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/95ff1ba4cbe5a05a19a3b5d8f6b78c8c7c32a240"
+  },
+  {
+    "path": "references/rules-chinese-legal.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1dcae520012ab8edb7055ad77ad68468ffdc9a1e",
+    "size": 17560,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/1dcae520012ab8edb7055ad77ad68468ffdc9a1e"
+  },
+  {
+    "path": "references/rules-chinese-unpublished.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "772eb00ed20f6dea648372f9b7fbbdfe97301c83",
+    "size": 5790,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/772eb00ed20f6dea648372f9b7fbbdfe97301c83"
+  },
+  {
+    "path": "references/rules-english.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ad2e4e886ef51661e248aa9547878db66c725bdb",
+    "size": 21706,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/ad2e4e886ef51661e248aa9547878db66c725bdb"
+  },
+  {
+    "path": "references/rules-general.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bdab23e46f3a339b21b33b916d123c2974fbe579",
+    "size": 9245,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/bdab23e46f3a339b21b33b916d123c2974fbe579"
+  },
+  {
+    "path": "references/rules-repeated-citation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "da316d536bea4af4e09852619d5ba16d27e4e56b",
+    "size": 15131,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/da316d536bea4af4e09852619d5ba16d27e4e56b"
+  },
+  {
+    "path": "requirements.txt",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d3a4ef5dbb1ed489ea67a46a46b61059764184ef",
+    "size": 32,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/d3a4ef5dbb1ed489ea67a46a46b61059764184ef"
+  },
+  {
+    "path": "scripts",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ecc90e1fa5a8f6cf4a41a158852fd634a75f695a",
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/trees/ecc90e1fa5a8f6cf4a41a158852fd634a75f695a"
+  },
+  {
+    "path": "scripts/citation_checker.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a79f962e434b028404246ca768eb92e0f47051d2",
+    "size": 19345,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/a79f962e434b028404246ca768eb92e0f47051d2"
+  },
+  {
+    "path": "scripts/docx_parser.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3ad50748e2a9ff35623923a0a0ea4e250680f692",
+    "size": 6760,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/3ad50748e2a9ff35623923a0a0ea4e250680f692"
+  },
+  {
+    "path": "scripts/docx_revisor.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e23050c5191e3e7b0a38b545945c842409f2e865",
+    "size": 29234,
+    "url": "https://api.github.com/repos/StefanCHEN2026/Chinese-Legal-Citation-skill/git/blobs/e23050c5191e3e7b0a38b545945c842409f2e865"
+  }
+]
