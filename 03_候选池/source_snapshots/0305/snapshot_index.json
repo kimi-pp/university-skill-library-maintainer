@@ -1,0 +1,73 @@
+{
+  "discipline": "0305 马克思主义理论类",
+  "verified_at": "2026-08-12",
+  "records": [
+    {
+      "name": "marx-capital-complete",
+      "platform": "GitHub",
+      "fixed_version": "9a57fcd01528c5caac68130a2144a046a3b3a2c8",
+      "entry": "skills/marx-capital-complete/SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0305/github/x8k__ethical-ai-skills/9a57fcd01528c5caac68130a2144a046a3b3a2c8/files/skills/marx-capital-complete/SKILL.md",
+      "package_files": 64,
+      "script_files": 0,
+      "sha256": "c12341ae215b54b1221a3728c1971d51673685e4a8fc682de61b8204823bb0ce",
+      "static_scan": {
+        "text_files": 64,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [
+            "skills/marx-capital-complete/SKILL.md:121: | [vol1-ch26](chapters/vol1-ch26-primitive-secret.md) | The Secret of Primitive Accumulation | Historical Process Overview |",
+            "skills/marx-capital-complete/SKILL.md:121: | [vol1-ch26](chapters/vol1-ch26-primitive-secret.md) | The Secret of Primitive Accumulation | Historical Process Overview |",
+            "skills/marx-capital-complete/chapters/vol1-ch01-commodities.md:43: - **The secret**: The value-relation between products of labor appears as a social relation between the products themselves",
+            "skills/marx-capital-complete/chapters/vol1-ch01-commodities.md:102: 2. **Master the dual character**: Every commodity is both a use-value (qualitative) and a bearer of value (quantitative). This duality is the key to understanding capitalist produc",
+            "skills/marx-capital-complete/chapters/vol1-ch04-general-formula.md:29: - **The secret**: The surplus in M' comes from the C phase — the commodity purchased (labor-power) creates more value than it costs",
+            "skills/marx-capital-complete/chapters/vol1-ch05-contradictions.md:124: 7. **The contradiction reveals the secret**: The impossibility of creating surplus-value in circulation forces us to look at the production process, where the real explanation lies",
+            "skills/marx-capital-complete/chapters/vol1-ch26-primitive-secret.md:1: # Chapter 26: The Secret of Primitive Accumulation",
+            "skills/marx-capital-complete/chapters/vol1-ch27-agricultural-expropriation.md:94: - **Ch26**: The Secret of Primitive Accumulation (theoretical framework)"
+          ],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "karlmarx-skill",
+      "platform": "GitHub",
+      "fixed_version": "59f201137d96a59e68f36c2f469e04a957d3b280",
+      "entry": "SKILL.md",
+      "snapshot": "03_候选池/source_snapshots/0305/github/baojiachen0214__karlmarx-skill/59f201137d96a59e68f36c2f469e04a957d3b280/files/SKILL.md",
+      "package_files": 73,
+      "script_files": 0,
+      "sha256": "13f94c920d8d95d199d31b17d7e3539a609d0dd0b4ab6210036830d5767d1622",
+      "static_scan": {
+        "text_files": 70,
+        "binary_files": 3,
+        "domains": [
+          "img.shields.io"
+        ],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [
+            "references/methods/ideology_critique.md:46: Ideology critique should explain how misleading beliefs can be socially functional **without** assuming secret centralized manipulation."
+          ],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [
+            "docs/PUBLISHING_NOTES.md:13: 1. publish the repository privately"
+          ],
+          "prompt_bypass": []
+        }
+      }
+    }
+  ]
+}

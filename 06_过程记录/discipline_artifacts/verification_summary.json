@@ -1,0 +1,41 @@
+{
+  "0301": {
+    "raw_rows": 30,
+    "knowledge_base_skills": 12,
+    "data_audit": "PASS",
+    "path": "05_交付物/0301_法学类_学科专属技能调研/0301_法学类_学科专属技能调研.docx",
+    "size": 48975,
+    "paragraphs": 278,
+    "tables": 18,
+    "formal_skills": 12,
+    "hyperlinks_minimum": 12,
+    "structural_audit": "PASS",
+    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。"
+  },
+  "0305": {
+    "raw_rows": 14,
+    "knowledge_base_skills": 2,
+    "data_audit": "PASS",
+    "path": "05_交付物/0305_马克思主义理论类_学科专属技能调研/0305_马克思主义理论类_学科专属技能调研.docx",
+    "size": 43491,
+    "paragraphs": 81,
+    "tables": 9,
+    "formal_skills": 2,
+    "hyperlinks_minimum": 2,
+    "structural_audit": "PASS",
+    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。"
+  },
+  "1304": {
+    "raw_rows": 22,
+    "knowledge_base_skills": 11,
+    "data_audit": "PASS",
+    "path": "05_交付物/1304_美术学类_学科专属技能调研/1304_美术学类_学科专属技能调研.docx",
+    "size": 48594,
+    "paragraphs": 256,
+    "tables": 17,
+    "formal_skills": 11,
+    "hyperlinks_minimum": 11,
+    "structural_audit": "PASS",
+    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。"
+  }
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ca0973f8fe283e3fbca710c2b5ac5233228abdb",
+    "size": 11,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/5ca0973f8fe283e3fbca710c2b5ac5233228abdb"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2ff3ce13234ec79396c422324f1113b91515fb24",
+    "size": 1065,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/2ff3ce13234ec79396c422324f1113b91515fb24"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "972ca4263244a2bdf6303634539227ed6a4ced65",
+    "size": 2565,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/972ca4263244a2bdf6303634539227ed6a4ced65"
+  },
+  {
+    "path": "curatorial-log-method-recovery",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8ec07c38b94cadaadceefb5717f1e9cbbe818c6b",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/8ec07c38b94cadaadceefb5717f1e9cbbe818c6b"
+  },
+  {
+    "path": "curatorial-log-method-recovery/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a2ba73c85ce7a02f94eaf375053f770ab1aab057",
+    "size": 1663,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/a2ba73c85ce7a02f94eaf375053f770ab1aab057"
+  },
+  {
+    "path": "curatorial-narrative-modules",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "57ed1aa0ae907072a2c501794875647e56eba7d5",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/57ed1aa0ae907072a2c501794875647e56eba7d5"
+  },
+  {
+    "path": "curatorial-narrative-modules/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9fb27ef372aa0e55366c2edc808b088bf5019183",
+    "size": 1801,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/9fb27ef372aa0e55366c2edc808b088bf5019183"
+  },
+  {
+    "path": "curatorial-prototype-standardization",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2d3ebb3e9459496b3f68de0dfcc2d47bc1adc468",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/2d3ebb3e9459496b3f68de0dfcc2d47bc1adc468"
+  },
+  {
+    "path": "curatorial-prototype-standardization/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50511f6d5f7edc957a00d1d17bc2b011982f9fea",
+    "size": 2111,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/50511f6d5f7edc957a00d1d17bc2b011982f9fea"
+  },
+  {
+    "path": "curatorial-topic-framing",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b61d8faf345d287aeadf1c93dadf5a8aebe9b043",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/b61d8faf345d287aeadf1c93dadf5a8aebe9b043"
+  },
+  {
+    "path": "curatorial-topic-framing/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bbe40771499e3eee9e50fd14265f05beae570aac",
+    "size": 2176,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/bbe40771499e3eee9e50fd14265f05beae570aac"
+  },
+  {
+    "path": "curatorial-visual-language",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b6bb0e37f4c38079dbe269c1ec1022ce1ad42b08",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/b6bb0e37f4c38079dbe269c1ec1022ce1ad42b08"
+  },
+  {
+    "path": "curatorial-visual-language/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "32b6f1cb485fc0349658ee105dd7dcb2126eb59e",
+    "size": 2278,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/32b6f1cb485fc0349658ee105dd7dcb2126eb59e"
+  },
+  {
+    "path": "research-digital-curation-workflow",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b4522f38a70c132b592782d4ec227acf3284279e",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/b4522f38a70c132b592782d4ec227acf3284279e"
+  },
+  {
+    "path": "research-digital-curation-workflow/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7c180ad0c3bb52d9f5c3ea17c23436db11651214",
+    "size": 2427,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/7c180ad0c3bb52d9f5c3ea17c23436db11651214"
+  },
+  {
+    "path": "research-to-curatorial-copy",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f2f32d24eafb5fc1bac01b21c6390112baf8d7dc",
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/trees/f2f32d24eafb5fc1bac01b21c6390112baf8d7dc"
+  },
+  {
+    "path": "research-to-curatorial-copy/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03cbcd395dc4f2b25f84b9eee51ceccba8d1a69d",
+    "size": 2025,
+    "url": "https://api.github.com/repos/wuyaojunkylin/research-digital-curation-skills/git/blobs/03cbcd395dc4f2b25f84b9eee51ceccba8d1a69d"
+  }
+]

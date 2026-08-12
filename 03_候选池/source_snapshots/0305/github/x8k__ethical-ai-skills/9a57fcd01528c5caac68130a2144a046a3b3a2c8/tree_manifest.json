@@ -1,0 +1,3571 @@
+[
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f82ee461bd843a4f9ea414c350d47ea23aa719a9",
+    "size": 26,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f82ee461bd843a4f9ea414c350d47ea23aa719a9"
+  },
+  {
+    "path": "CONTENT_LICENSE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37fbfb03c0ac0298f5dd8244ce7c322df5dcaee3",
+    "size": 3770,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/37fbfb03c0ac0298f5dd8244ce7c322df5dcaee3"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "46391cd2345f8b193f21a88fdd0c684b35d420d4",
+    "size": 1063,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/46391cd2345f8b193f21a88fdd0c684b35d420d4"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "61fd5307ae5bb6a12721a75f6097179b5eb8bbad",
+    "size": 31766,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/61fd5307ae5bb6a12721a75f6097179b5eb8bbad"
+  },
+  {
+    "path": "analysis",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "analysis/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "master",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b15f6593b86eabbffd3394df69f42763360102af",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/b15f6593b86eabbffd3394df69f42763360102af"
+  },
+  {
+    "path": "master/index.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9e2474c870c0d17bfbd045c8568244d31f70426f",
+    "size": 85360,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9e2474c870c0d17bfbd045c8568244d31f70426f"
+  },
+  {
+    "path": "master/knowledge-graph.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "30f9e2ba57dfcd44ec72f6785357482ecf9467d3",
+    "size": 90679,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/30f9e2ba57dfcd44ec72f6785357482ecf9467d3"
+  },
+  {
+    "path": "setup.sh",
+    "mode": "100755",
+    "type": "blob",
+    "sha": "ae3c236e3644da26d130527b711e01f959a63c80",
+    "size": 15024,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ae3c236e3644da26d130527b711e01f959a63c80"
+  },
+  {
+    "path": "skills",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "67832b0fe0dcf905172dc33cbfe36862599d238b",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/67832b0fe0dcf905172dc33cbfe36862599d238b"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "1bfcfa3e34e726aeb99853d85e94a2d97b6529d1",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/1bfcfa3e34e726aeb99853d85e94a2d97b6529d1"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1113cbb911cc1dd6eec0837498e4b7cb5d69e271",
+    "size": 44187,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1113cbb911cc1dd6eec0837498e4b7cb5d69e271"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "22fab9bcc748646574365dde854e6a590242ff66",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/22fab9bcc748646574365dde854e6a590242ff66"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/preamble.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6a671e323a9902ac2fcf77198449830d298da707",
+    "size": 2587,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6a671e323a9902ac2fcf77198449830d298da707"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-01-art-01.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "690143070559fdd8de6d3de8051b2aa9cf040973",
+    "size": 4008,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/690143070559fdd8de6d3de8051b2aa9cf040973"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-01-art-02.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8155cdc0db1c3c4c31fc19f27feb398b26425284",
+    "size": 4068,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/8155cdc0db1c3c4c31fc19f27feb398b26425284"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-01-art-03.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3b08a6f92ae4099a1d67215ba7d1c860e84924ef",
+    "size": 4513,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3b08a6f92ae4099a1d67215ba7d1c860e84924ef"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-01-art-04.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1a8963cf66815e903878d66d2a2a88ca51158b1e",
+    "size": 4281,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1a8963cf66815e903878d66d2a2a88ca51158b1e"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-01-art-05.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "982656d2b9f8d925d6f9486c7224ed184f40fefd",
+    "size": 4909,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/982656d2b9f8d925d6f9486c7224ed184f40fefd"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-01-fundamental-rights.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b201bf12e2b1d1b4e55fd5ad26abd5d2cc6ecb73",
+    "size": 6483,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b201bf12e2b1d1b4e55fd5ad26abd5d2cc6ecb73"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-02-federation-lander.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c28ad4591c2c366548bd31f3b0fb56375d9edc85",
+    "size": 7649,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c28ad4591c2c366548bd31f3b0fb56375d9edc85"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-03-bundestag.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2cf5a147437aea6b3df1225f5c2c02f65619f6ad",
+    "size": 5029,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2cf5a147437aea6b3df1225f5c2c02f65619f6ad"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-04-bundesrat.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e3b7541c759fadc52b02439e1ed693600025214e",
+    "size": 3579,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e3b7541c759fadc52b02439e1ed693600025214e"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-05-federal-president.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "77345fdcf6e0e00fac818947fc0bb8735e418f15",
+    "size": 5819,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/77345fdcf6e0e00fac818947fc0bb8735e418f15"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-06-federal-government.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3b9c55c3de53d2a21767b2637f409c979c4de125",
+    "size": 5470,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3b9c55c3de53d2a21767b2637f409c979c4de125"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-07-legislation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7de3ea0ca1a0a8fc5d173d999a7e6a9269a0164b",
+    "size": 9191,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7de3ea0ca1a0a8fc5d173d999a7e6a9269a0164b"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-08-administration.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07349b848126d99dbe94744b90805d7b523603a2",
+    "size": 8326,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/07349b848126d99dbe94744b90805d7b523603a2"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-08a-joint-tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff5b1de3a9f7190d40c4b631e310971fe2c8b33a",
+    "size": 3960,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ff5b1de3a9f7190d40c4b631e310971fe2c8b33a"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-09-judiciary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a057b363bb5f906ce60a2c81d2e03d2e8f13060f",
+    "size": 8075,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a057b363bb5f906ce60a2c81d2e03d2e8f13060f"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-10-finances.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "616bc2ac60bf2c071ed0c16e90531771cc9b3c4c",
+    "size": 10781,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/616bc2ac60bf2c071ed0c16e90531771cc9b3c4c"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-10a-defense-state.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e933a961a161225356a605355353d2571626f45f",
+    "size": 12224,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e933a961a161225356a605355353d2571626f45f"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/chapters/section-11-transitional.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f87cb790645eef262c3bb1466329a8928bccd57e",
+    "size": 16207,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f87cb790645eef262c3bb1466329a8928bccd57e"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eb814b5e295c7ac31ae0bb003328fb8adbbdb82d",
+    "size": 22327,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/eb814b5e295c7ac31ae0bb003328fb8adbbdb82d"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "40123af139e7c508d2c1fe092eaf3635e47a06f1",
+    "size": 18467,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/40123af139e7c508d2c1fe092eaf3635e47a06f1"
+  },
+  {
+    "path": "skills/basic-law-for-the-federal-republic-of-germany/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "780bfadcbe3c6d508836c760a2d7c17fd7539dd5",
+    "size": 22788,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/780bfadcbe3c6d508836c760a2d7c17fd7539dd5"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2b6ea2d229a9befb08ca3bfe3bfb633893bf7fd1",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/2b6ea2d229a9befb08ca3bfe3bfb633893bf7fd1"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "528e7b77085b36ec6f0a8a646193c4d3dcc495ae",
+    "size": 11519,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/528e7b77085b36ec6f0a8a646193c4d3dcc495ae"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f97119e8642e3bbd8647ad84f88cd2ecb9645fb6",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/f97119e8642e3bbd8647ad84f88cd2ecb9645fb6"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch00-preface.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9082bd9a7cc89129a78aaec8a89654259eceac98",
+    "size": 3272,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9082bd9a7cc89129a78aaec8a89654259eceac98"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch01-principle-of-utility.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aec91ae80b7e9d70feb068239e8bcf380bf64e83",
+    "size": 3385,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/aec91ae80b7e9d70feb068239e8bcf380bf64e83"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch02-principles-adverse-to-utility.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "df391e65d57928af194749bfd0faffe3714b4d09",
+    "size": 3684,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/df391e65d57928af194749bfd0faffe3714b4d09"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch03-four-sanctions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1895600c4612650d74f83abca8ba388ccec9905",
+    "size": 3431,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e1895600c4612650d74f83abca8ba388ccec9905"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch04-value-of-pleasure-pain.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5c630079443788074ee6563b3879e1829d91a693",
+    "size": 3602,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5c630079443788074ee6563b3879e1829d91a693"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch05-pleasures-and-pains.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c73126bb3f524b5bd4e4116a73c06aeb25af598d",
+    "size": 3868,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c73126bb3f524b5bd4e4116a73c06aeb25af598d"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch06-circumstances-influencing-sensibility.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "11f09f774c79a2cf6f81c7fb5232e32b3e62cd1e",
+    "size": 4154,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/11f09f774c79a2cf6f81c7fb5232e32b3e62cd1e"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch07-human-actions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "65f0e7507f3823f2c3265a3f8a6825c99949bba9",
+    "size": 4173,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/65f0e7507f3823f2c3265a3f8a6825c99949bba9"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch08-intentionality.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b512c48f23d74442270eba7dac2bd700ca0fc923",
+    "size": 4175,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b512c48f23d74442270eba7dac2bd700ca0fc923"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch09-consciousness.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "205cc59fd2a630d880a94ea44bda84c7931f2b35",
+    "size": 3827,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/205cc59fd2a630d880a94ea44bda84c7931f2b35"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch10-motives.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "010998f28dc14c49de6d120b7d73ae4abfd3346b",
+    "size": 1276,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/010998f28dc14c49de6d120b7d73ae4abfd3346b"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch11-human-dispositions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2546b585d5c7cb766742e761635ef772acb39d95",
+    "size": 1249,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2546b585d5c7cb766742e761635ef772acb39d95"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch12-consequences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "23ff8076b7e9783bcdb9a45eb5c2e4f9162ed799",
+    "size": 1227,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/23ff8076b7e9783bcdb9a45eb5c2e4f9162ed799"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch13-cases-unmeet-for-punishment.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1d4da1b871e825e9a18b341290c768c404cdeb20",
+    "size": 1339,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1d4da1b871e825e9a18b341290c768c404cdeb20"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch14-proportion-punishments-offences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d7af83ec60f2f5f4e8f601e10a5f4c5c6123c047",
+    "size": 1268,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d7af83ec60f2f5f4e8f601e10a5f4c5c6123c047"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch15-properties-of-punishment.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "629535a1b99bc107ba2484d3f5018f466c88ee4d",
+    "size": 1261,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/629535a1b99bc107ba2484d3f5018f466c88ee4d"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch16-division-of-offences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72664307ab79cda3048d3cff00c3d7d338a1cbca",
+    "size": 1177,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/72664307ab79cda3048d3cff00c3d7d338a1cbca"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/chapters/ch17-limits-penal-jurisprudence.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fdefbf50f0baedd69f8171b37d615a9e5dc0acb1",
+    "size": 1289,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fdefbf50f0baedd69f8171b37d615a9e5dc0acb1"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e0d77b05e4cda9f5e97888fbd814983676c5d70e",
+    "size": 6284,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e0d77b05e4cda9f5e97888fbd814983676c5d70e"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a18dc28aa25385bd3d586dec29c84cf07062020",
+    "size": 7304,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0a18dc28aa25385bd3d586dec29c84cf07062020"
+  },
+  {
+    "path": "skills/bentham-principles-of-morals-and-legislation/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2d9bf572a8030bf17eb915f1013ccd189b8fe554",
+    "size": 10108,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2d9bf572a8030bf17eb915f1013ccd189b8fe554"
+  },
+  {
+    "path": "skills/constitution-of-france",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "63eb2cd2e28ab3860296de0bddaddfa087072a4e",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/63eb2cd2e28ab3860296de0bddaddfa087072a4e"
+  },
+  {
+    "path": "skills/constitution-of-france/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0c0251f2e35e6f03e191701001b19f40a659940b",
+    "size": 20788,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0c0251f2e35e6f03e191701001b19f40a659940b"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "eb3f93b238a4e27c3c7cfbce92004a830df4feb5",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/eb3f93b238a4e27c3c7cfbce92004a830df4feb5"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/preamble.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "02b2d0f93b969fd9d0f3d5db076d67de1af147fd",
+    "size": 6077,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/02b2d0f93b969fd9d0f3d5db076d67de1af147fd"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-01-sovereignty.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b970cf2d44b63cbfb4341f05dd5125844ace0521",
+    "size": 4444,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b970cf2d44b63cbfb4341f05dd5125844ace0521"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-02-president.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "94e66eaecbff76f0cd2bf4f9ffde6e2fc825507b",
+    "size": 7346,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/94e66eaecbff76f0cd2bf4f9ffde6e2fc825507b"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-03-government.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e7146da85071f7fa6b78d396bd862eb877df1c00",
+    "size": 3576,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e7146da85071f7fa6b78d396bd862eb877df1c00"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-04-parliament.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f757fec7a9b038e810e0437d487a98edd8dcc163",
+    "size": 4959,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f757fec7a9b038e810e0437d487a98edd8dcc163"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-05-relations.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "26ef12bddb710c4e894eed62eb00f3f0e265e6ac",
+    "size": 6963,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/26ef12bddb710c4e894eed62eb00f3f0e265e6ac"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-06-treaties.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7ed5253f9061b3aa95b3e76a31b4d0986e93c96a",
+    "size": 3461,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7ed5253f9061b3aa95b3e76a31b4d0986e93c96a"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-07-constitutional-council.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0ea5dbfa8e4627990c43cf07678165b03b21045",
+    "size": 4747,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c0ea5dbfa8e4627990c43cf07678165b03b21045"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-08-judiciary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0411c583a4ba9835b19babbfccfaabe8a8676303",
+    "size": 3452,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0411c583a4ba9835b19babbfccfaabe8a8676303"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-09-high-court.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b6c7bf890abdd672350cc3b999590e3743188a60",
+    "size": 2404,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b6c7bf890abdd672350cc3b999590e3743188a60"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-10-ministerial-responsibility.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "619aab72d3ade7f67babb077abbc8622fdaa8e92",
+    "size": 2912,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/619aab72d3ade7f67babb077abbc8622fdaa8e92"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-11-economic-social-council.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0ce981ca9edc91f92c159ef979ce501fd4d9b604",
+    "size": 2551,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0ce981ca9edc91f92c159ef979ce501fd4d9b604"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-12-territorial-collectivities.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dd86b055063ed8a2278b264011dd7f7629a4bc4a",
+    "size": 4165,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dd86b055063ed8a2278b264011dd7f7629a4bc4a"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-13-new-caledonia.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dee8816e2def9d6ecefd77c5a125c04b21f0e422",
+    "size": 3209,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dee8816e2def9d6ecefd77c5a125c04b21f0e422"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-14-association.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2f539e53a9ca1cf89d9d8c98c9afd4ee604f7836",
+    "size": 2160,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2f539e53a9ca1cf89d9d8c98c9afd4ee604f7836"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-15-european-union.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9542ea89cd5bbe46e79b0c4161605ecf94b11e2e",
+    "size": 2901,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9542ea89cd5bbe46e79b0c4161605ecf94b11e2e"
+  },
+  {
+    "path": "skills/constitution-of-france/chapters/title-16-amendment.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aed90f768b758762cb01983ff2b05d7740fa8d8e",
+    "size": 3107,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/aed90f768b758762cb01983ff2b05d7740fa8d8e"
+  },
+  {
+    "path": "skills/constitution-of-france/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5aface9b5b0b5de3de79e760627aa43df006bba7",
+    "size": 16309,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5aface9b5b0b5de3de79e760627aa43df006bba7"
+  },
+  {
+    "path": "skills/constitution-of-france/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03d1966eba30609e253884a71cc242b3e182fd6d",
+    "size": 11189,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/03d1966eba30609e253884a71cc242b3e182fd6d"
+  },
+  {
+    "path": "skills/constitution-of-france/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cd650ca0389b263142dd3ca1af54e6dc0eabc6f5",
+    "size": 19836,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cd650ca0389b263142dd3ca1af54e6dc0eabc6f5"
+  },
+  {
+    "path": "skills/constitution-of-italy",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "025a04d7a37dd3ca73847ebc42757fba63e664e4",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/025a04d7a37dd3ca73847ebc42757fba63e664e4"
+  },
+  {
+    "path": "skills/constitution-of-italy/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43f688b48b6d4d81592199bf125b956202830475",
+    "size": 25412,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/43f688b48b6d4d81592199bf125b956202830475"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4a5d3c85e58939ed1f487fce2a336f144e3b6c1d",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/4a5d3c85e58939ed1f487fce2a336f144e3b6c1d"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-01-rights.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "962279c2bf6e4048f1d5490b2cf4d93d024bbc4c",
+    "size": 5730,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/962279c2bf6e4048f1d5490b2cf4d93d024bbc4c"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-02-title-01.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4a00a27c7fae252cd7440ad15f6cc4e82edd0baa",
+    "size": 4061,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4a00a27c7fae252cd7440ad15f6cc4e82edd0baa"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-02-title-02.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7220195516097dade9ab4666f039c029b06a6b02",
+    "size": 3380,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7220195516097dade9ab4666f039c029b06a6b02"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-02-title-03.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0b2a825c4907758acd1e557ff7609537c68b7555",
+    "size": 3692,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0b2a825c4907758acd1e557ff7609537c68b7555"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-02-title-04.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d664b3af19745fb9b80acbbbf204aff948f8cd18",
+    "size": 3611,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d664b3af19745fb9b80acbbbf204aff948f8cd18"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-02-title-05.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fffbb97e3594f2b0372d322aca7a36e94a134196",
+    "size": 4448,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fffbb97e3594f2b0372d322aca7a36e94a134196"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/part-02-title-06.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "82120427a823bbe164e1e24541b4ee3e833758b8",
+    "size": 3672,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/82120427a823bbe164e1e24541b4ee3e833758b8"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/principles.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "29b8a2b9d6c9672753c12e4ddd3818ffe7877ac4",
+    "size": 3236,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/29b8a2b9d6c9672753c12e4ddd3818ffe7877ac4"
+  },
+  {
+    "path": "skills/constitution-of-italy/chapters/transitional.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "53106245c9d5d95ba1be6cbd424339e8918a38e8",
+    "size": 1488,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/53106245c9d5d95ba1be6cbd424339e8918a38e8"
+  },
+  {
+    "path": "skills/constitution-of-italy/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d43cf26a384957695e1d948e2cbd39186856fc92",
+    "size": 17537,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d43cf26a384957695e1d948e2cbd39186856fc92"
+  },
+  {
+    "path": "skills/constitution-of-italy/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2a8ff1d57c2c46c9145c5e81a4fa1b03d618936",
+    "size": 6698,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b2a8ff1d57c2c46c9145c5e81a4fa1b03d618936"
+  },
+  {
+    "path": "skills/constitution-of-italy/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "db9447083a16d99b6e319abaca0ad365a9eccb65",
+    "size": 25445,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/db9447083a16d99b6e319abaca0ad365a9eccb65"
+  },
+  {
+    "path": "skills/constitution-of-spain",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "9c55bd7c02e0bfe432f4ecbfd7d7c3d33465529e",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/9c55bd7c02e0bfe432f4ecbfd7d7c3d33465529e"
+  },
+  {
+    "path": "skills/constitution-of-spain/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "89245fd4056faa4cd5e1637f2db29eec94921db2",
+    "size": 32272,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/89245fd4056faa4cd5e1637f2db29eec94921db2"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5785019d24d17a44a90152c6324e4c362c20969f",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/5785019d24d17a44a90152c6324e4c362c20969f"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-00-principles.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9577bfea9674489d08632ca2c9a74c1ffd713914",
+    "size": 6469,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9577bfea9674489d08632ca2c9a74c1ffd713914"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-01-rights.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43ff36309e0a4017ecb3f20fdb8278f1ed47821b",
+    "size": 14608,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/43ff36309e0a4017ecb3f20fdb8278f1ed47821b"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-02-crown.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ba968b4cfa005f4673429f50f99d76abd9cd1055",
+    "size": 8187,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ba968b4cfa005f4673429f50f99d76abd9cd1055"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-03-cortes-generales.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2a0115b6258a138c01263b35f58f690f07d786be",
+    "size": 2098,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2a0115b6258a138c01263b35f58f690f07d786be"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-04-government.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97fad33fdafa22ac371c6e509421ded6644e691b",
+    "size": 2163,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/97fad33fdafa22ac371c6e509421ded6644e691b"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-05-government-cortes.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "533d8691267ca9a00f60e329f21c77a32dff5c59",
+    "size": 1859,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/533d8691267ca9a00f60e329f21c77a32dff5c59"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-06-judicial.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "05e2181606f77257cbd37ab47208eb19e29f765b",
+    "size": 2034,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/05e2181606f77257cbd37ab47208eb19e29f765b"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-07-economy.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3952935841b82e2d80f2d34e387d5e5406213814",
+    "size": 1887,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3952935841b82e2d80f2d34e387d5e5406213814"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-08-territorial.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bbc8a842e1266ef2c0f4d6dca459f11e06c7dab2",
+    "size": 2475,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/bbc8a842e1266ef2c0f4d6dca459f11e06c7dab2"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-09-constitutional-court.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d6a99750e60595894190a5e99c01782e9496de9",
+    "size": 2356,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6d6a99750e60595894190a5e99c01782e9496de9"
+  },
+  {
+    "path": "skills/constitution-of-spain/chapters/part-10-amendment.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "61839f9afa317ccb4ee05a20c0029e5c6cd27957",
+    "size": 2425,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/61839f9afa317ccb4ee05a20c0029e5c6cd27957"
+  },
+  {
+    "path": "skills/constitution-of-spain/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "966cbe07ce9201e91d540b2eff18b9480f9a7d69",
+    "size": 20176,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/966cbe07ce9201e91d540b2eff18b9480f9a7d69"
+  },
+  {
+    "path": "skills/constitution-of-spain/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f5ec74399ced7d79d663536781e43cc9e17622b6",
+    "size": 8193,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f5ec74399ced7d79d663536781e43cc9e17622b6"
+  },
+  {
+    "path": "skills/constitution-of-spain/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "600ce04dd931269d32ee1ede2e1ffddd2a71d245",
+    "size": 8152,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/600ce04dd931269d32ee1ede2e1ffddd2a71d245"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e09e9e71c3904befe4cdb59facde03681e867a05",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/e09e9e71c3904befe4cdb59facde03681e867a05"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c668c81baca517e3e86329ed7d1a18761d23ab4f",
+    "size": 9410,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c668c81baca517e3e86329ed7d1a18761d23ab4f"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6af621ed1ac72939760464c8f893c3d72e76fd2f",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/6af621ed1ac72939760464c8f893c3d72e76fd2f"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-01.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "511f7456b4bf468bf2c0fba340660311232cbdda",
+    "size": 2372,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/511f7456b4bf468bf2c0fba340660311232cbdda"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-02.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a3148e2f123c6bd4a9ae63f0baceaa865f876073",
+    "size": 815,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a3148e2f123c6bd4a9ae63f0baceaa865f876073"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-03.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9a33c21e23e1691939853526cb916130be09064d",
+    "size": 799,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9a33c21e23e1691939853526cb916130be09064d"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-04.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0d81ac03594045289ecaa228defb07cd1de4ff41",
+    "size": 822,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0d81ac03594045289ecaa228defb07cd1de4ff41"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-05.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "15d7e270da98b7c0694904426670f4ccc61f9acc",
+    "size": 816,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/15d7e270da98b7c0694904426670f4ccc61f9acc"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-06.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "85bd7a107c7bafc76e70c84255bb5f336aafc6dc",
+    "size": 788,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/85bd7a107c7bafc76e70c84255bb5f336aafc6dc"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-07.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "55bc707da45bfc235c43358aa0392841725cdd24",
+    "size": 747,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/55bc707da45bfc235c43358aa0392841725cdd24"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-08.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "83486dc2f5bb3ee778c4e10d88f5f3eeb9d47fde",
+    "size": 780,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/83486dc2f5bb3ee778c4e10d88f5f3eeb9d47fde"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-09.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2c444555c7c2e4114366a99b31ed7de08d33afca",
+    "size": 645,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2c444555c7c2e4114366a99b31ed7de08d33afca"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-10.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "36176f9a3122b693d076f8b7bcd82394af127b58",
+    "size": 823,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/36176f9a3122b693d076f8b7bcd82394af127b58"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-11.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0ad8dcde523a33350de378aef999c582cd4c6b10",
+    "size": 743,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0ad8dcde523a33350de378aef999c582cd4c6b10"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-12.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dbcdcdaa69450a9efa66455134a74d4e781694cc",
+    "size": 747,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dbcdcdaa69450a9efa66455134a74d4e781694cc"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-13.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "39d5a2d0e78d574c3900b66965ae5d00ebda1f35",
+    "size": 880,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/39d5a2d0e78d574c3900b66965ae5d00ebda1f35"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-14.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bee8eb0e538c337bee1715b23f91204c6c1a7837",
+    "size": 937,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/bee8eb0e538c337bee1715b23f91204c6c1a7837"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-15.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "36ce9311ed568be3fe22ed5d670b56374d9c0e87",
+    "size": 724,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/36ce9311ed568be3fe22ed5d670b56374d9c0e87"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-16.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a0617727722e9311de6cd71cc867dbef51981a4f",
+    "size": 828,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a0617727722e9311de6cd71cc867dbef51981a4f"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/articolo-17.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "38a2af19eb38a6bef1aa8c833127b34704582f9e",
+    "size": 890,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/38a2af19eb38a6bef1aa8c833127b34704582f9e"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/chapters/preambolo.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ccb1057f06fc3d5bb1cf5319a9eeba433b602f6",
+    "size": 4033,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5ccb1057f06fc3d5bb1cf5319a9eeba433b602f6"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "20808b18c8aa070da4fe2f500b15f62a250a3e6d",
+    "size": 7983,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/20808b18c8aa070da4fe2f500b15f62a250a3e6d"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4bafddfbab90e3cb0a5cedd4d619e594bff024a0",
+    "size": 5936,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4bafddfbab90e3cb0a5cedd4d619e594bff024a0"
+  },
+  {
+    "path": "skills/de-gouges-dichiarazione-donna-cittadina/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dcc4152eb96a9b3b9375c9503599f04cbd0513b7",
+    "size": 7031,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dcc4152eb96a9b3b9375c9503599f04cbd0513b7"
+  },
+  {
+    "path": "skills/gilman-women-and-economics",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f83f973443a8444c2bcb10a55be7e7b3d0f2408b",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/f83f973443a8444c2bcb10a55be7e7b3d0f2408b"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "55dc1f0fb2f2029293806d7777b625eca520d4fc",
+    "size": 9238,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/55dc1f0fb2f2029293806d7777b625eca520d4fc"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6190f72e6e7cdb65c999d294c088763ed45595f6",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/6190f72e6e7cdb65c999d294c088763ed45595f6"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch01-economics-and-human-evolution.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "373995efbc18fa86c5f4ba1f1d24788012b2cbc0",
+    "size": 4696,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/373995efbc18fa86c5f4ba1f1d24788012b2cbc0"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch02-the-sex-relation-as-social-pathology.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07b6f30e9fb4d9272c8ca3f7e415c314388a626b",
+    "size": 4252,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/07b6f30e9fb4d9272c8ca3f7e415c314388a626b"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch03-excessive-sex-distinction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f6e722d81fcff1d30cf607d0a82e3a333f90c8d3",
+    "size": 4245,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f6e722d81fcff1d30cf607d0a82e3a333f90c8d3"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch04-the-economic-relation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f34007308bc337213b5cbc9e988c24542b040d5f",
+    "size": 1733,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f34007308bc337213b5cbc9e988c24542b040d5f"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch05-the-facts-stated.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9827fe11eed99127b7878c12214399cef1ecc280",
+    "size": 1405,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9827fe11eed99127b7878c12214399cef1ecc280"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch06-peculiar-combination.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "104c37a9586d79d6a004b5d01070a56f5f001e54",
+    "size": 1744,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/104c37a9586d79d6a004b5d01070a56f5f001e54"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch07-the-established-condition.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bbacab73ac41281371c4115178dc5797565dc6f8",
+    "size": 1655,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/bbacab73ac41281371c4115178dc5797565dc6f8"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch08-possibility-of-change.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5a6fa9cba0ac59eb27c45915f1b3be1fc49e8f21",
+    "size": 1766,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5a6fa9cba0ac59eb27c45915f1b3be1fc49e8f21"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch09-the-subjection-of-women.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b6a6a243a10bee9115ce6b782a09bb0179cba221",
+    "size": 1465,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b6a6a243a10bee9115ce6b782a09bb0179cba221"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch10-superior-maternity.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a029300e22b8a192a5c1cc95c001a9abf1914f20",
+    "size": 1736,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a029300e22b8a192a5c1cc95c001a9abf1914f20"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch11-social-division.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4d06fb2d36a43b9b483527534bba8bafd59647f9",
+    "size": 1535,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4d06fb2d36a43b9b483527534bba8bafd59647f9"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch12-self-conscious-creatures.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cee44ac96844b249403ba6f89c7abbf2aa392d2f",
+    "size": 1527,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cee44ac96844b249403ba6f89c7abbf2aa392d2f"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch13-reconstructing-social-positions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0e905e79b5d335736d3f07305943d2a5b67506ce",
+    "size": 1552,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0e905e79b5d335736d3f07305943d2a5b67506ce"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch14-changing-conceptions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3e0c4e58ee0451c6310d027765efe2b1585598b",
+    "size": 1424,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f3e0c4e58ee0451c6310d027765efe2b1585598b"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/chapters/ch15-conclusion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07c5948b992f718e3a935572647785a31d96bc91",
+    "size": 1819,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/07c5948b992f718e3a935572647785a31d96bc91"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "715392f4aa450442a1437ceefb2ef469135fa4b8",
+    "size": 4436,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/715392f4aa450442a1437ceefb2ef469135fa4b8"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "364b3946d1f66a1a42e127e6606c47ef29877d96",
+    "size": 8365,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/364b3946d1f66a1a42e127e6606c47ef29877d96"
+  },
+  {
+    "path": "skills/gilman-women-and-economics/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "38db780b63be173adb6990761436120d4b627e5d",
+    "size": 5156,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/38db780b63be173adb6990761436120d4b627e5d"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a088a5bba68b4ce5143970533eb1e98f889452ab",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/a088a5bba68b4ce5143970533eb1e98f889452ab"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a8894a2cc4f95c5af9efd62cbd3ecb3b573e5dac",
+    "size": 13252,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a8894a2cc4f95c5af9efd62cbd3ecb3b573e5dac"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "374b6d16a23a9529f61e3e5038593871cb101c09",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/374b6d16a23a9529f61e3e5038593871cb101c09"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/chapters/preface.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "063793c67271001bd2772c65a9b4b840d69c5d11",
+    "size": 6308,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/063793c67271001bd2772c65a9b4b840d69c5d11"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/chapters/sec01-good-will.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2d53cc318525900cb5e5acb326c3f0824094d4fc",
+    "size": 10769,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2d53cc318525900cb5e5acb326c3f0824094d4fc"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/chapters/sec02-categorical-imperative.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f63f83d68ff5d5a24c7f5481469e67ec30f0c442",
+    "size": 16823,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f63f83d68ff5d5a24c7f5481469e67ec30f0c442"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/chapters/sec03-autonomy.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d1ef47cf920643635dd8a54563cae681f7d0c870",
+    "size": 18719,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d1ef47cf920643635dd8a54563cae681f7d0c870"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "30d4b10a19eb6a94bb018c78c42dc4620668a12e",
+    "size": 20650,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/30d4b10a19eb6a94bb018c78c42dc4620668a12e"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2d369c645ee90d5bb5392c190f4e5ba66b335dbd",
+    "size": 15531,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2d369c645ee90d5bb5392c190f4e5ba66b335dbd"
+  },
+  {
+    "path": "skills/kant-groundwork-of-the-metaphysics-of-morals/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "128184c86c56e6f6597c22d217344e5ccc41ccae",
+    "size": 17102,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/128184c86c56e6f6597c22d217344e5ccc41ccae"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e7d762a864bca13dff57bce818ecf6da135b5023",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/e7d762a864bca13dff57bce818ecf6da135b5023"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5e3b67d42b4546c49f597cb6312d3578fd2f1d9",
+    "size": 7805,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c5e3b67d42b4546c49f597cb6312d3578fd2f1d9"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4174e20ebf060eca1153acd4627575455bc0b069",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/4174e20ebf060eca1153acd4627575455bc0b069"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch00-introduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "504b39bb8856a76614244cf4acadc8b7977478bc",
+    "size": 4498,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/504b39bb8856a76614244cf4acadc8b7977478bc"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch01-mutual-aid-animals.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0f132b007b61f7247baa140eb1ed2fa388783acc",
+    "size": 5075,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0f132b007b61f7247baa140eb1ed2fa388783acc"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch02-mutual-aid-animals-continued.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "12cb00fd4fe8cee9db81f7dcbbade5a91f6dbb35",
+    "size": 2249,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/12cb00fd4fe8cee9db81f7dcbbade5a91f6dbb35"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch03-mutual-aid-savages.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7da778b3c84f54737205b8ca1c2cb2cae42dbdc3",
+    "size": 2249,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7da778b3c84f54737205b8ca1c2cb2cae42dbdc3"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch04-mutual-aid-barbarians.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ec3ec7616b8d422f9877f05291bbaa78d1d2b7cb",
+    "size": 2464,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ec3ec7616b8d422f9877f05291bbaa78d1d2b7cb"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch05-mutual-aid-medieval-city.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "82bdf57aa44a5dbb1c53f06c5708759c27c18402",
+    "size": 2454,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/82bdf57aa44a5dbb1c53f06c5708759c27c18402"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch06-mutual-aid-medieval-city-continued.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aaa2f2303f1854a9f6e8195aab81e4f0e188305a",
+    "size": 2447,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/aaa2f2303f1854a9f6e8195aab81e4f0e188305a"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch07-mutual-aid-ourselves.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7061771848dea1426b8a633940668bdafd4a1d7d",
+    "size": 2507,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7061771848dea1426b8a633940668bdafd4a1d7d"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch08-mutual-aid-ourselves-continued.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2f808e4426c87bf6d495fd1c6730656f3527e6a7",
+    "size": 2498,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2f808e4426c87bf6d495fd1c6730656f3527e6a7"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch09-conclusion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bb1c5305d411ab7c8b8d5cc9e8cd5e7dfa69187d",
+    "size": 3159,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/bb1c5305d411ab7c8b8d5cc9e8cd5e7dfa69187d"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/chapters/ch10-appendix.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2547865efa51507f69325cfaee10dd342cada9ab",
+    "size": 2267,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2547865efa51507f69325cfaee10dd342cada9ab"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "48914593df82926a22baa00a22e034afebf37191",
+    "size": 5000,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/48914593df82926a22baa00a22e034afebf37191"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "089c415230626dc7d14f9cc95a12ab335caf8a4f",
+    "size": 5259,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/089c415230626dc7d14f9cc95a12ab335caf8a4f"
+  },
+  {
+    "path": "skills/kropotkin-mutual-aid/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b642a0aea24f18f3b6c777b5061aa7ca89c0d8c5",
+    "size": 5330,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b642a0aea24f18f3b6c777b5061aa7ca89c0d8c5"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2593614ad37ec4a49576d2695182e9399fdbf8a1",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/2593614ad37ec4a49576d2695182e9399fdbf8a1"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3e76eadcb263bac8db7538077ab8ff5eaeb59b25",
+    "size": 7897,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3e76eadcb263bac8db7538077ab8ff5eaeb59b25"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "07cc4b608dc4f75d6078831b9bd1d7d4ab51ddae",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/07cc4b608dc4f75d6078831b9bd1d7d4ab51ddae"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo/chapters/ch07-quando-la-marginalita-non-basta.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3fc0c701f404c5d51c5ac93c120809adafd3efa2",
+    "size": 6209,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3fc0c701f404c5d51c5ac93c120809adafd3efa2"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7fcbbbf514a1cc49cf8864ba146b40583cb94dd6",
+    "size": 4779,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7fcbbbf514a1cc49cf8864ba146b40583cb94dd6"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "711a18dbb2abc127a0d324af2293578df9fe98fd",
+    "size": 6327,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/711a18dbb2abc127a0d324af2293578df9fe98fd"
+  },
+  {
+    "path": "skills/lombardo-nobile-populismo-cognitivo/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "447492eaac58f21da6d63452f8cd1d8c5515a58e",
+    "size": 6604,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/447492eaac58f21da6d63452f8cd1d8c5515a58e"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "050793c219677d050b4f91644b743062d7978c37",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/050793c219677d050b4f91644b743062d7978c37"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c472c1e1a768981980a841fe60ec1afdeb1fd940",
+    "size": 9089,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c472c1e1a768981980a841fe60ec1afdeb1fd940"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "05ce08b42a25be887f2aec241fd588480981bd68",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/05ce08b42a25be887f2aec241fd588480981bd68"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch00-presentazione.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43c44d9c3f3607dcd115f1591ab8cf8dd5c02735",
+    "size": 2895,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/43c44d9c3f3607dcd115f1591ab8cf8dd5c02735"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch01-democrazia-ateniese.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cb7816aa544a5af4e1660a6561fe324d4217f661",
+    "size": 4038,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cb7816aa544a5af4e1660a6561fe324d4217f661"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch02-democrazia-modernita.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "69126c8de0477f6a75c4030dd510cb4f5169c7b6",
+    "size": 3746,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/69126c8de0477f6a75c4030dd510cb4f5169c7b6"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch03-ottocento.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2ff941ef899a00191f201fc98932f42c78b3c6c3",
+    "size": 3586,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2ff941ef899a00191f201fc98932f42c78b3c6c3"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch04-novecento.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8b1a8eaec697cc471168224e5f02433e3b7017ab",
+    "size": 3803,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/8b1a8eaec697cc471168224e5f02433e3b7017ab"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch05-democrazia-costituzionale.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "65f52b8bc94f5c746fb127209d3d7f283a16741f",
+    "size": 3348,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/65f52b8bc94f5c746fb127209d3d7f283a16741f"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch06-crisi-e-trasformazioni.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dfed0b8cda746b4fca8eab051cccfb4af1fbcdf8",
+    "size": 3951,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dfed0b8cda746b4fca8eab051cccfb4af1fbcdf8"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/chapters/ch07-conclusioni.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fe33b4a05851938d358d8ce1a17ae79b753bc312",
+    "size": 4093,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fe33b4a05851938d358d8ce1a17ae79b753bc312"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2456b5d8d88ee5c0de7203a8bcf1130be468c2b",
+    "size": 4326,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b2456b5d8d88ee5c0de7203a8bcf1130be468c2b"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7f8ca89eadb7c1491c5fb48a8518cd603f3474d2",
+    "size": 6192,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7f8ca89eadb7c1491c5fb48a8518cd603f3474d2"
+  },
+  {
+    "path": "skills/marchettoni-breve-storia-della-democrazia/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c574a55c0e79484b2a582b141ad63ad84d1c0051",
+    "size": 7123,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c574a55c0e79484b2a582b141ad63ad84d1c0051"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2cc5f541c42ef6ee610e6058e2a0c15575596613",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/2cc5f541c42ef6ee610e6058e2a0c15575596613"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0d15c9309967cb76fa32f028947ac084c1e4f749",
+    "size": 10158,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0d15c9309967cb76fa32f028947ac084c1e4f749"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "dd7cb3a4670ef05ec2e4239fde58afd38b723cd4",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/dd7cb3a4670ef05ec2e4239fde58afd38b723cd4"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch01-della-nobilta-delle-donne.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d5254fe0c72df0ac0f023f2fee2d03ec305d7571",
+    "size": 2085,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d5254fe0c72df0ac0f023f2fee2d03ec305d7571"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch02-delle-donne-magnifiche.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "45ae0b287d8876bf4d257f8cd3ac05d8faac38e1",
+    "size": 1824,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/45ae0b287d8876bf4d257f8cd3ac05d8faac38e1"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch03-delle-donne-nellarte-militare.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "568e36781af4777999343a3e7a86fedb65f6455f",
+    "size": 1956,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/568e36781af4777999343a3e7a86fedb65f6455f"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch04-delle-cagioni-dalle-quali-dipende-la-nobiltà.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "026f32ea559bf3e6cc7dce70371194e89a0c6cf9",
+    "size": 562,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/026f32ea559bf3e6cc7dce70371194e89a0c6cf9"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch05-della-natura-e-della-essenza-delle-donne.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ee0b40ea9d56d20f1fd8fb713f05a15dfbc2db00",
+    "size": 557,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ee0b40ea9d56d20f1fd8fb713f05a15dfbc2db00"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch06-delle-donne-forti.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff321efdba46efee7f72238384f81bb543fdedf3",
+    "size": 534,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ff321efdba46efee7f72238384f81bb543fdedf3"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch07-delle-ragioni-tratte-dalle-opere-della-natura.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eeaf5950d55bb0fd49fadda06f7127a1e6377eb0",
+    "size": 562,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/eeaf5950d55bb0fd49fadda06f7127a1e6377eb0"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch08-delle-donne-dotte.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "76ddb9a9b7599a221b75fd1c48d45a28c74471dd",
+    "size": 534,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/76ddb9a9b7599a221b75fd1c48d45a28c74471dd"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch09-delle-belle-e-ornate-opere-delle-donne.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "511e512f9dc2c09f4c8be5fd4a6a3eef792024b2",
+    "size": 555,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/511e512f9dc2c09f4c8be5fd4a6a3eef792024b2"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch10-delle-nobili-attioni-delle-donne.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1ae30e4c21cd3e21143fc0a5dea39452c6e6f33",
+    "size": 550,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e1ae30e4c21cd3e21143fc0a5dea39452c6e6f33"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch11-degli-uomini-di-gran-fortuna.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "165e6a5a8175c7a4d7fcb49dc6dc01483cd4ca98",
+    "size": 546,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/165e6a5a8175c7a4d7fcb49dc6dc01483cd4ca98"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch12-degli-uomini-amanti-del-lusso.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "354f4a0d5636801b6cb16047ae017e6c51231cbf",
+    "size": 547,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/354f4a0d5636801b6cb16047ae017e6c51231cbf"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch13-degli-uomini-ingordi.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fb77460005807e2561e3c54c1aaf629513ae0c3c",
+    "size": 538,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fb77460005807e2561e3c54c1aaf629513ae0c3c"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch14-degli-uomini-arrabbiati-e-furiosi.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ccb2c65d61a543d10f0090d6e028fd316c68b2cf",
+    "size": 551,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ccb2c65d61a543d10f0090d6e028fd316c68b2cf"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch15-degli-uomini-omicidi-e-micidiali.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a024fe73c1a739eb12dc84dbd6a95ba2a764de2e",
+    "size": 550,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a024fe73c1a739eb12dc84dbd6a95ba2a764de2e"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch16-degli-uomini-ladri.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "216f20651c6034141d5c22b51c7da8bfb5aca18a",
+    "size": 536,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/216f20651c6034141d5c22b51c7da8bfb5aca18a"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch17-degli-uomini-fraudolenti.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e27d9409e56a0e1069d6efef8b0f8306cb499e3c",
+    "size": 542,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e27d9409e56a0e1069d6efef8b0f8306cb499e3c"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch18-degli-uomini-minatori-e-mendicanti.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "86163d36a8c73c16584102baa1495a0c0c4ec075",
+    "size": 552,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/86163d36a8c73c16584102baa1495a0c0c4ec075"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch19-degli-uomini-volubili.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "49c6e12c89fc02f6e2d95595ce13ad73dd7dad8e",
+    "size": 539,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/49c6e12c89fc02f6e2d95595ce13ad73dd7dad8e"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch20-degli-uomini-ipocriti.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "033dd06c2690627daba940ccc5adbab7c5ef90c6",
+    "size": 539,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/033dd06c2690627daba940ccc5adbab7c5ef90c6"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch21-degli-uomini-crudeli.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "acea498092ba9a35673ce483c1ead007275958cf",
+    "size": 538,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/acea498092ba9a35673ce483c1ead007275958cf"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch22-degli-uomini-maligni-e-che-diffamano.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "211a736ac0c0e61da2d9c5c48dfd9037b2f7e0f2",
+    "size": 554,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/211a736ac0c0e61da2d9c5c48dfd9037b2f7e0f2"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch23-degli-uomini-ignoranti.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ab324f52132fbe516c98266128273451de649734",
+    "size": 540,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ab324f52132fbe516c98266128273451de649734"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch24-degli-uomini-eroici.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b3bb6fe53cff83e515aa35268ed7ca8089f10e0c",
+    "size": 537,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b3bb6fe53cff83e515aa35268ed7ca8089f10e0c"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch25-degli-uomini-giocatori.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "536a31ad3eab090843c1c2deec2d6169908b7c96",
+    "size": 540,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/536a31ad3eab090843c1c2deec2d6169908b7c96"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch26-degli-uomini-colpatori.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ea95653a4bfffbb162b37d4b1cbefbdd23ad44ce",
+    "size": 540,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ea95653a4bfffbb162b37d4b1cbefbdd23ad44ce"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch27-degli-uomini-pigri.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7dbabfc6457038a1d1b17b0f5d119437df1313c7",
+    "size": 536,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7dbabfc6457038a1d1b17b0f5d119437df1313c7"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch28-degli-uomini-pazzerelli.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f71b1120a6cfa565468de073265505d22894766d",
+    "size": 541,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f71b1120a6cfa565468de073265505d22894766d"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch29-degli-uomini-fornicatori.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a320f9e0697a0f04149c6e48f0c6f5abbd8d8b0",
+    "size": 542,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0a320f9e0697a0f04149c6e48f0c6f5abbd8d8b0"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch30-degli-uomini-eretici.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eeb5f803dc18992f0fa0ce320fafdd8b16bb6258",
+    "size": 538,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/eeb5f803dc18992f0fa0ce320fafdd8b16bb6258"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch31-degli-uomini-inventori-di-nuove-sette.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fdce3f52b79ebc35566b84de3a3c281058de498e",
+    "size": 555,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fdce3f52b79ebc35566b84de3a3c281058de498e"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch32-degli-uomini-gloriosi.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f43cde32cf275c3ab5cdf1fcea13cdde3349dc41",
+    "size": 539,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f43cde32cf275c3ab5cdf1fcea13cdde3349dc41"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch33-degli-uomini-padri-e-vociferi.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8fda4a82eedfdee120b3addd5230cb38d0ba9536",
+    "size": 547,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/8fda4a82eedfdee120b3addd5230cb38d0ba9536"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch34-degli-uomini-incostanti.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73a159ede564bbb7ce3a6cb87210c5be872adcdd",
+    "size": 541,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/73a159ede564bbb7ce3a6cb87210c5be872adcdd"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/chapters/ch35-conclusione.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fd46d46807e8bf70c196e5c1c1797b68b965b64a",
+    "size": 529,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fd46d46807e8bf70c196e5c1c1797b68b965b64a"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e32833a5c95e4eb0ac61c075cc667bad0666c776",
+    "size": 5497,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e32833a5c95e4eb0ac61c075cc667bad0666c776"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b55d811c8084a9eee933cdce0a1e715432e78bc5",
+    "size": 4605,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b55d811c8084a9eee933cdce0a1e715432e78bc5"
+  },
+  {
+    "path": "skills/marinella-nobilta-delle-donne/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f0e60fde02818ceaec7f78f9441607548028e743",
+    "size": 5850,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f0e60fde02818ceaec7f78f9441607548028e743"
+  },
+  {
+    "path": "skills/marx-capital-complete",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5fc0c48ca6eed85218a0667b2ce604b7c3df1460",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/5fc0c48ca6eed85218a0667b2ce604b7c3df1460"
+  },
+  {
+    "path": "skills/marx-capital-complete/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c89fab26c0174b872c5978f7357c39dcf2c47569",
+    "size": 19628,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c89fab26c0174b872c5978f7357c39dcf2c47569"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "789318d5610d6a6d2197d72422c5e9aef0c99fc2",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/789318d5610d6a6d2197d72422c5e9aef0c99fc2"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch01-commodities.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0eef3ae6cfb28bdf9371c25730f317d100150bdf",
+    "size": 8684,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0eef3ae6cfb28bdf9371c25730f317d100150bdf"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch02-exchange.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c00c13ffc42e49f184a8b53a61bcddfbdbc60f67",
+    "size": 7291,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c00c13ffc42e49f184a8b53a61bcddfbdbc60f67"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch03-money.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ef260d0ef76b609174a5bc6bd3da179bfcf96d76",
+    "size": 9332,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ef260d0ef76b609174a5bc6bd3da179bfcf96d76"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch04-general-formula.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d1ff338d96e051fb0872a1a1a6342fe70eaac4fa",
+    "size": 8571,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d1ff338d96e051fb0872a1a1a6342fe70eaac4fa"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch05-contradictions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9dbfdebafef2decaaf8087b227a20067bffd470a",
+    "size": 9752,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9dbfdebafef2decaaf8087b227a20067bffd470a"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch06-labour-power.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "96e408c391b500ddba3eba7242061d1bddd1feec",
+    "size": 11209,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/96e408c391b500ddba3eba7242061d1bddd1feec"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch07-labour-process.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a824b81a10bcc1401930f124585a9eb428aef2cf",
+    "size": 10633,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a824b81a10bcc1401930f124585a9eb428aef2cf"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch08-capital-types.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ad497d3ff70c58d7b176aa2464a7b9ebd66526da",
+    "size": 2964,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ad497d3ff70c58d7b176aa2464a7b9ebd66526da"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch09-surplus-rate.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "417b010822dc7a8e6979131a87153318f4ddc747",
+    "size": 5196,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/417b010822dc7a8e6979131a87153318f4ddc747"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch10-working-day.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2af5452ceb705ebfef84dbe04be3d10a49c05af4",
+    "size": 4810,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2af5452ceb705ebfef84dbe04be3d10a49c05af4"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch11-rate-mass.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ecaf84dcc5b28bc2c0304917186125429ff14af2",
+    "size": 2660,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ecaf84dcc5b28bc2c0304917186125429ff14af2"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch12-relative-surplus.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fedddcf5a9b15f1e54b44d44c5ba14f96d5a065d",
+    "size": 2857,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fedddcf5a9b15f1e54b44d44c5ba14f96d5a065d"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch13-cooperation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dc3cd7c90e1902793b139eaa491d87616d2a418c",
+    "size": 4226,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dc3cd7c90e1902793b139eaa491d87616d2a418c"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch14-manufacture.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3beb1cb05ee32145b43e2979505076092619beb7",
+    "size": 3900,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3beb1cb05ee32145b43e2979505076092619beb7"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch15-machinery.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4b11784ffa2390d199f7f13a6881bf07544429c2",
+    "size": 5530,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4b11784ffa2390d199f7f13a6881bf07544429c2"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch16-absolute-relative.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "be5edd53eb84d88f89a46bafbd0cb0e42ece80eb",
+    "size": 4441,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/be5edd53eb84d88f89a46bafbd0cb0e42ece80eb"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch17-magnitude-changes.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "891d09c8136aec61bc42f4700837a54112845ea7",
+    "size": 3762,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/891d09c8136aec61bc42f4700837a54112845ea7"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch18-rate-formulas.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ef19f0ad3e6a4a416c9d79d0d373c018c0b1828e",
+    "size": 3237,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ef19f0ad3e6a4a416c9d79d0d373c018c0b1828e"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch19-wage-transformation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b806206537aba4a758096579dae82d76560c5894",
+    "size": 4088,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b806206537aba4a758096579dae82d76560c5894"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch20-time-wages.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6cdd12967b2dce79d42776f80763abaf07a5d9c5",
+    "size": 3370,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6cdd12967b2dce79d42776f80763abaf07a5d9c5"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch21-piece-wages.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5125f33852079ebabba74d9749dfd589ed469d6e",
+    "size": 3377,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5125f33852079ebabba74d9749dfd589ed469d6e"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch22-wage-differences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dd520a4dcaf530c6ddf97dd049102340f56fd833",
+    "size": 4045,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dd520a4dcaf530c6ddf97dd049102340f56fd833"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch23-reproduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d9500050bb2baa0fefa5b6faac52431b6f8e8899",
+    "size": 4419,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d9500050bb2baa0fefa5b6faac52431b6f8e8899"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch24-surplus-conversion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e64cc8f65f9dfb68427dddcbb5e9f0a7e94e6e8b",
+    "size": 4546,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e64cc8f65f9dfb68427dddcbb5e9f0a7e94e6e8b"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch25-accumulation-law.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "162bacf5f846c6f9266c77609e2783a3e65b8747",
+    "size": 6682,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/162bacf5f846c6f9266c77609e2783a3e65b8747"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch26-primitive-secret.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2e978fb3a02af4964924e24d8525acd5c8818bc3",
+    "size": 4277,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2e978fb3a02af4964924e24d8525acd5c8818bc3"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch27-agricultural-expropriation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4d570a1a263ecc683af7f0656f56e63b3bf3bfaf",
+    "size": 8522,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4d570a1a263ecc683af7f0656f56e63b3bf3bfaf"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch28-bloody-legislation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d6cdf1a2a888978f68cb67ffb589ba47d85d7bb2",
+    "size": 12315,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d6cdf1a2a888978f68cb67ffb589ba47d85d7bb2"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch29-capitalist-farmer.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5296dc29e36668740fbc3d1ab4b2db35becfa1f7",
+    "size": 7492,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5296dc29e36668740fbc3d1ab4b2db35becfa1f7"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch30-agricultural-revolution.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bfaa5d00cd8626f8c7478a8a7b848901b7b8cbe3",
+    "size": 10147,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/bfaa5d00cd8626f8c7478a8a7b848901b7b8cbe3"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch31-industrial-capitalist.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "46011dc085f77071459a4cb307e9ed6e0266a0c5",
+    "size": 16261,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/46011dc085f77071459a4cb307e9ed6e0266a0c5"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch32-historical-tendency.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "54c6f9b13ed6da7b8a024e999b826a5a1dfd9cf0",
+    "size": 9948,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/54c6f9b13ed6da7b8a024e999b826a5a1dfd9cf0"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol1-ch33-colonisation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cbe6abcb659c6c4442adb28f248b51e179d17e73",
+    "size": 16666,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cbe6abcb659c6c4442adb28f248b51e179d17e73"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch01-money-circuit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e9c7b536ae244a558e61230d381c9a21ecb962f9",
+    "size": 6939,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e9c7b536ae244a558e61230d381c9a21ecb962f9"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch02-productive-circuit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2c20a8a33850ee32ff989053d991db9f4b634e94",
+    "size": 8341,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2c20a8a33850ee32ff989053d991db9f4b634e94"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch03-commodity-circuit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e17dd6ccec4b6e20cfa6b84a256c336d5d3f522a",
+    "size": 8184,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e17dd6ccec4b6e20cfa6b84a256c336d5d3f522a"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch04-three-formulas.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2f0c93abcd1791e0e3ecb02b03d075ee417937d5",
+    "size": 11373,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2f0c93abcd1791e0e3ecb02b03d075ee417937d5"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch05-circulation-time.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "183c7c3192d2508c4fde98046cde6b3c5460fd4d",
+    "size": 9804,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/183c7c3192d2508c4fde98046cde6b3c5460fd4d"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch06-circulation-costs.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a86874f4e90dbe26730f3d502d49b59668b77c2b",
+    "size": 9095,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a86874f4e90dbe26730f3d502d49b59668b77c2b"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch07-turnover-time.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "86d702bb4e2c98bda3f320a362622bf5920cceaa",
+    "size": 6853,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/86d702bb4e2c98bda3f320a362622bf5920cceaa"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch08-fixed-capital.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "de5e94846746749e7494d61f456e13c7763efb61",
+    "size": 10691,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/de5e94846746749e7494d61f456e13c7763efb61"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch09-total-turnover.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6220404d9cf3c2eef23632fb726f025006141671",
+    "size": 9188,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6220404d9cf3c2eef23632fb726f025006141671"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch10-fixed-circulating-theories.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fbbd48fc30fae03f45053a0f83ae4228cb2aa402",
+    "size": 9834,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fbbd48fc30fae03f45053a0f83ae4228cb2aa402"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch11-ricardo-theories.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "be6a36d3f0eab335ffb69deb9dde76d003e442c3",
+    "size": 10768,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/be6a36d3f0eab335ffb69deb9dde76d003e442c3"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch12-working-period.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d3b7a1bd963848738754e61c5c583ff8e24fdd35",
+    "size": 9594,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d3b7a1bd963848738754e61c5c583ff8e24fdd35"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch13-production-time.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7e23cbb39be5ccea4fb61600c4f40074cd0f0972",
+    "size": 9777,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7e23cbb39be5ccea4fb61600c4f40074cd0f0972"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch14-circulation-time.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "177af8c5853bec6cb58b0c15b59dc52bb18296e6",
+    "size": 8996,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/177af8c5853bec6cb58b0c15b59dc52bb18296e6"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch15-turnover-magnitude.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1b958bf1e9f05e6cca9e68f34ff9d2eea2c8117c",
+    "size": 9436,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1b958bf1e9f05e6cca9e68f34ff9d2eea2c8117c"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch16-turnover-variable.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8cdff829833f6a9df4c0aec14ed8ab81118c15be",
+    "size": 8959,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/8cdff829833f6a9df4c0aec14ed8ab81118c15be"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch17-surplus-circulation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "99806f909b1570f6de84acc024230de0bc4c0bae",
+    "size": 10687,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/99806f909b1570f6de84acc024230de0bc4c0bae"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch18-introduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6ba51f4e1bf1e8f328c975e71fbe063883f8ce07",
+    "size": 12151,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6ba51f4e1bf1e8f328c975e71fbe063883f8ce07"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch19-former-presentations.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "76f4506db2b4ef74e83ba3fcdc636d4bc80e663d",
+    "size": 12521,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/76f4506db2b4ef74e83ba3fcdc636d4bc80e663d"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch20-simple-reproduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b043ad0d62af33e5d0c6bf817103b60af3378701",
+    "size": 22052,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b043ad0d62af33e5d0c6bf817103b60af3378701"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol2-ch21-accumulation-extended.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9f0055b53f5411db142f20c0d4f1888232fab867",
+    "size": 20349,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9f0055b53f5411db142f20c0d4f1888232fab867"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol3-ch01-cost-price-profit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b16c2a754bb684bdaeb9372de715947c44c008f4",
+    "size": 12117,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b16c2a754bb684bdaeb9372de715947c44c008f4"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol3-ch02-rate-of-profit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4a9e2612ecc793f4c56d4db9f46025c0271ecd94",
+    "size": 12269,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4a9e2612ecc793f4c56d4db9f46025c0271ecd94"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol3-ch03-rate-profit-surplus-value.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ef3e4f561b6355bd7dff175c300a6900a522a303",
+    "size": 15300,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ef3e4f561b6355bd7dff175c300a6900a522a303"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol3-ch04-turnover-rate-profit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7661e247cadd0d14b4b5a64f28e1a23798a5aee0",
+    "size": 13140,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7661e247cadd0d14b4b5a64f28e1a23798a5aee0"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol3-ch05-economy-constant-capital.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b5160e944c76554c2d5e14a2c9f3285441dbe3c6",
+    "size": 25783,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b5160e944c76554c2d5e14a2c9f3285441dbe3c6"
+  },
+  {
+    "path": "skills/marx-capital-complete/chapters/vol3-ch06-price-fluctuation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fd08cbcbf86ebabe36ea79b326c7874cf744106b",
+    "size": 21125,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fd08cbcbf86ebabe36ea79b326c7874cf744106b"
+  },
+  {
+    "path": "skills/marx-capital-complete/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07ada3a5408d827642d35b87e4384a0afd664552",
+    "size": 11642,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/07ada3a5408d827642d35b87e4384a0afd664552"
+  },
+  {
+    "path": "skills/marx-capital-complete/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ca704fc33f602b6b3e9271d138737549645de97b",
+    "size": 7920,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ca704fc33f602b6b3e9271d138737549645de97b"
+  },
+  {
+    "path": "skills/marx-capital-complete/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3831d1c9182aadf01195f4a2cf6d7068bed8d200",
+    "size": 15457,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3831d1c9182aadf01195f4a2cf6d7068bed8d200"
+  },
+  {
+    "path": "skills/mill-subjection-of-women",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a95e4c8825392b8b60c4570adca7374b51cbc682",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/a95e4c8825392b8b60c4570adca7374b51cbc682"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e5ac2d73d34d5c1915533b28e94eff0e53cdbba9",
+    "size": 6938,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e5ac2d73d34d5c1915533b28e94eff0e53cdbba9"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a5456ff6158cf5e6a5b90b79f6b301c02d3dcdea",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/a5456ff6158cf5e6a5b90b79f6b301c02d3dcdea"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/chapters/ch01-the-case-against-subjection.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "98221b32fbb424b1cd16cfd8615e1e5d40dcf9d6",
+    "size": 2413,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/98221b32fbb424b1cd16cfd8615e1e5d40dcf9d6"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/chapters/ch02-marriage-as-institution.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ee9aa00132264d2d7523eb8516f20406a1a417eb",
+    "size": 2423,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ee9aa00132264d2d7523eb8516f20406a1a417eb"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/chapters/ch03-occupational-exclusion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "254d43cc01816e84f40b2f20e0a10b01942a571a",
+    "size": 2493,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/254d43cc01816e84f40b2f20e0a10b01942a571a"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/chapters/ch04-the-benefits-of-freedom.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c2b3cc7c57887cba883c9af49ca652f6723ce740",
+    "size": 2591,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c2b3cc7c57887cba883c9af49ca652f6723ce740"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5c5f7b8918746b3c2ae7815adbd28228c286ad73",
+    "size": 6692,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5c5f7b8918746b3c2ae7815adbd28228c286ad73"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "15fa6dbada2121edab9e08a397da8312ac07591e",
+    "size": 4776,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/15fa6dbada2121edab9e08a397da8312ac07591e"
+  },
+  {
+    "path": "skills/mill-subjection-of-women/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e2479b1c3593b937a8306133b52780fdc55cbaa9",
+    "size": 6403,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e2479b1c3593b937a8306133b52780fdc55cbaa9"
+  },
+  {
+    "path": "skills/more-utopia",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "91fe55d03ad6ac65e74023b11da1d81fc15ae38f",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/91fe55d03ad6ac65e74023b11da1d81fc15ae38f"
+  },
+  {
+    "path": "skills/more-utopia/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3eb15ddcaabd3ff44270a2719bee7860eb918e8f",
+    "size": 10400,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3eb15ddcaabd3ff44270a2719bee7860eb918e8f"
+  },
+  {
+    "path": "skills/more-utopia/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e3010127aded2f09c962b1a068751c68ba50b59b",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/e3010127aded2f09c962b1a068751c68ba50b59b"
+  },
+  {
+    "path": "skills/more-utopia/chapters/bk01-dialogue.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ec2036090ff5bbcdc63e07786e90a12ee6b1cc04",
+    "size": 10005,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ec2036090ff5bbcdc63e07786e90a12ee6b1cc04"
+  },
+  {
+    "path": "skills/more-utopia/chapters/bk02-the-island.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "faf653e31214654f5f118afe006df893d05b20be",
+    "size": 19545,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/faf653e31214654f5f118afe006df893d05b20be"
+  },
+  {
+    "path": "skills/more-utopia/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ab5d930ea7d077fce2205995e1067b648821a08",
+    "size": 45533,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1ab5d930ea7d077fce2205995e1067b648821a08"
+  },
+  {
+    "path": "skills/more-utopia/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a4a4c709b03058a5e588699247578a26930f18e0",
+    "size": 20895,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a4a4c709b03058a5e588699247578a26930f18e0"
+  },
+  {
+    "path": "skills/more-utopia/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e74a5220a3ff5ae5a22cfad66f24cef70577274d",
+    "size": 22024,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e74a5220a3ff5ae5a22cfad66f24cef70577274d"
+  },
+  {
+    "path": "skills/plato-the-republic",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "80404699004f580bfd2b1bce2239916c446fef6f",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/80404699004f580bfd2b1bce2239916c446fef6f"
+  },
+  {
+    "path": "skills/plato-the-republic/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e75a0ecfa25e38af1639b91e9b408a58776eccff",
+    "size": 9939,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e75a0ecfa25e38af1639b91e9b408a58776eccff"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8333628ee3dd3474a412cb8b378f239a0c786ff3",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/8333628ee3dd3474a412cb8b378f239a0c786ff3"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk01-introduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aefbcb5ff002f8a598fb0271058839c10962baf4",
+    "size": 4604,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/aefbcb5ff002f8a598fb0271058839c10962baf4"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk02-ideal-city.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c58279c54255ebce5351bd0360e3d3924daffdcb",
+    "size": 5518,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c58279c54255ebce5351bd0360e3d3924daffdcb"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk03-education.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "20daeec2bca6e9d70f38e8b983cdff89fc552720",
+    "size": 6138,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/20daeec2bca6e9d70f38e8b983cdff89fc552720"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk04-justice.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "60267611d452086874b6a2150d0d6e44c34cac1f",
+    "size": 5007,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/60267611d452086874b6a2150d0d6e44c34cac1f"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk05-philosophers.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "572779764b6008bbddba8390267cb4370af88a4b",
+    "size": 6262,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/572779764b6008bbddba8390267cb4370af88a4b"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk06-the-good.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0d3dd2435606f6ecc208eefa7686a3b2dfe2fa07",
+    "size": 6435,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/0d3dd2435606f6ecc208eefa7686a3b2dfe2fa07"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk07-cave.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c49726c9f7dfd1b8db339636084220affc6b7d8",
+    "size": 7489,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9c49726c9f7dfd1b8db339636084220affc6b7d8"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk08-degenerate-states.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8e7f6a863c3a58eb9dbfe98af9900f82a6de1d6f",
+    "size": 7463,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/8e7f6a863c3a58eb9dbfe98af9900f82a6de1d6f"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk09-tyrant.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "750052a3703c0c2a503e0b713bb25799381b0fb2",
+    "size": 8721,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/750052a3703c0c2a503e0b713bb25799381b0fb2"
+  },
+  {
+    "path": "skills/plato-the-republic/chapters/bk10-poetry.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aacbfdf608bf43e545ba4958bbe3ba64eb61bbfb",
+    "size": 8739,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/aacbfdf608bf43e545ba4958bbe3ba64eb61bbfb"
+  },
+  {
+    "path": "skills/plato-the-republic/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "81ddeff9b04b6c96b757264741d655b5a1d7b5db",
+    "size": 16037,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/81ddeff9b04b6c96b757264741d655b5a1d7b5db"
+  },
+  {
+    "path": "skills/plato-the-republic/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1460b0494b6df4a2fcdc1a2126a8624e7cc805d7",
+    "size": 13100,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1460b0494b6df4a2fcdc1a2126a8624e7cc805d7"
+  },
+  {
+    "path": "skills/plato-the-republic/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f8796a588a35ddea751fd85f5b5aebe6af2cce9e",
+    "size": 16784,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f8796a588a35ddea751fd85f5b5aebe6af2cce9e"
+  },
+  {
+    "path": "skills/proudhon-property",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5720490fd59b65e1722e55146e6caa16f094b744",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/5720490fd59b65e1722e55146e6caa16f094b744"
+  },
+  {
+    "path": "skills/proudhon-property/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e3c0ec0185b2afb2d6dcf25de1fd96a34c0f1d55",
+    "size": 10459,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e3c0ec0185b2afb2d6dcf25de1fd96a34c0f1d55"
+  },
+  {
+    "path": "skills/proudhon-property/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "09b26d59ee074541f7997d15451a39bb1a43f46d",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/09b26d59ee074541f7997d15451a39bb1a43f46d"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch01-economic-science.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f95c2f96c85ea962ef405b4f1e277afda92f7cb1",
+    "size": 2098,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f95c2f96c85ea962ef405b4f1e277afda92f7cb1"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch02-value.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d41cf2679277e7b7166aa7da8844155d914dc3b4",
+    "size": 2270,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d41cf2679277e7b7166aa7da8844155d914dc3b4"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch03-division-labour.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1dc73a9ba3994e6a482f948d3a7f3c4251ff2b01",
+    "size": 2475,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1dc73a9ba3994e6a482f948d3a7f3c4251ff2b01"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch04-machinery.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "541e9b0048304bbd107c11c50cd971fd7c9ed279",
+    "size": 2502,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/541e9b0048304bbd107c11c50cd971fd7c9ed279"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch05-competition.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "95a66ac7e21af51f7b4a0c0d19a3d3871eea86b1",
+    "size": 2528,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/95a66ac7e21af51f7b4a0c0d19a3d3871eea86b1"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch06-monopoly.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e8b154a4fe7cbe1cca1b26003a54a657e30bc6f8",
+    "size": 2426,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e8b154a4fe7cbe1cca1b26003a54a657e30bc6f8"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch07-police-taxation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "693db94e3d8a8f05711a56b1a7d4e123de6a10fd",
+    "size": 2321,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/693db94e3d8a8f05711a56b1a7d4e123de6a10fd"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch10-credit.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e9fa0370aed15a530b1bc5c11bbe027c37d37710",
+    "size": 2492,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e9fa0370aed15a530b1bc5c11bbe027c37d37710"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/contradictions-ch11-property.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1a074eba5dc2bb7ae1fb8621581df7bd6662cb14",
+    "size": 2475,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1a074eba5dc2bb7ae1fb8621581df7bd6662cb14"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/federative-ch01-principle.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f33c97dc4ca6ef36fd84a4f02762574b8b4f8dc",
+    "size": 2484,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4f33c97dc4ca6ef36fd84a4f02762574b8b4f8dc"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/federative-ch02-revolution.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b7bd968ddf3554bdcd91cae1b2e9652f4c0d24da",
+    "size": 2639,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b7bd968ddf3554bdcd91cae1b2e9652f4c0d24da"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/federative-ch03-capacity.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f317a58024e8eaae18347af8e9a3111e3056188c",
+    "size": 2366,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f317a58024e8eaae18347af8e9a3111e3056188c"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/justice-ch01-principle.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a516ceafd60f2e0cc0aff4e24fd2439101f2c2f2",
+    "size": 2342,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a516ceafd60f2e0cc0aff4e24fd2439101f2c2f2"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/property-ch01-method.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a53c330ad436a247b2f6569ab8f04f7bf06ce6f6",
+    "size": 2312,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a53c330ad436a247b2f6569ab8f04f7bf06ce6f6"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/property-ch02-property-natural-right.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "835a04b8fbdedd934db40e8c957d2ed786b1f807",
+    "size": 2260,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/835a04b8fbdedd934db40e8c957d2ed786b1f807"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/property-ch03-labour.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c265197c01b68e861dcd6d7be7cbabf8d93b00fb",
+    "size": 2388,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c265197c01b68e861dcd6d7be7cbabf8d93b00fb"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/property-ch04-property-impossible.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a329f9dc3154f6d435467d57ef10afe547fe0001",
+    "size": 2344,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a329f9dc3154f6d435467d57ef10afe547fe0001"
+  },
+  {
+    "path": "skills/proudhon-property/chapters/property-ch05-justice.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cd60ae46208e5ebe60869ee3d29b9e5fa7337e1f",
+    "size": 2198,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cd60ae46208e5ebe60869ee3d29b9e5fa7337e1f"
+  },
+  {
+    "path": "skills/proudhon-property/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "555d159f999437b251dc430ec6d9981bc3c17e30",
+    "size": 7295,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/555d159f999437b251dc430ec6d9981bc3c17e30"
+  },
+  {
+    "path": "skills/proudhon-property/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "614d1b977a815ac5a85bcb803f42291b3a5b9fca",
+    "size": 6097,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/614d1b977a815ac5a85bcb803f42291b3a5b9fca"
+  },
+  {
+    "path": "skills/proudhon-property/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97abdcd33ec953bd5819467feac73ab7eb3b819e",
+    "size": 6794,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/97abdcd33ec953bd5819467feac73ab7eb3b819e"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "577432d6113d8e1a231a6f8a7cf88adbcec0abc7",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/577432d6113d8e1a231a6f8a7cf88adbcec0abc7"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e0848747d0311de0d2f18f3ea27b803e17b631f1",
+    "size": 8216,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e0848747d0311de0d2f18f3ea27b803e17b631f1"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b2c592d362e4bd55a1c8c4f3f6dd02b1f5f92407",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/b2c592d362e4bd55a1c8c4f3f6dd02b1f5f92407"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch00-introduzione.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7c58dd5d0d7285b904f840d4a6d32c15c32b96be",
+    "size": 2993,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7c58dd5d0d7285b904f840d4a6d32c15c32b96be"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch01-risorse-educative-aperte.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b3214157d92f3c07f403189e522c6c043febf122",
+    "size": 3646,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b3214157d92f3c07f403189e522c6c043febf122"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch02-collaborazione-scuola.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9adda5633d8b8f324c11d88c14529855cc0a5f14",
+    "size": 4093,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9adda5633d8b8f324c11d88c14529855cc0a5f14"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch03-formazione-lim.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eb245b6d028cc9ef06bee774b39217a75133e00c",
+    "size": 4140,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/eb245b6d028cc9ef06bee774b39217a75133e00c"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch04-produzione-collaborativa.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c1b54af9b87e89784830b15c25ccf99ff7f909c",
+    "size": 3843,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4c1b54af9b87e89784830b15c25ccf99ff7f909c"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch05-amelis-progetto-prodotto.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4799b558e9b9cb663a30c9381f54d062b8f72608",
+    "size": 4333,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4799b558e9b9cb663a30c9381f54d062b8f72608"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch06-risorse-amelis.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5e3b90129310508d68f3fdcfe5afdba084ba8a4",
+    "size": 5170,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c5e3b90129310508d68f3fdcfe5afdba084ba8a4"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/chapters/ch07-conclusioni.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7848f5da8aedd6f084ea73d2c4f94a02e527afef",
+    "size": 5121,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7848f5da8aedd6f084ea73d2c4f94a02e527afef"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cd441e43388b2912a091dd3f3cd00a75d27ab877",
+    "size": 2894,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cd441e43388b2912a091dd3f3cd00a75d27ab877"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "488aaea93ff89cea3f8d06490263694fd835df42",
+    "size": 6132,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/488aaea93ff89cea3f8d06490263694fd835df42"
+  },
+  {
+    "path": "skills/ranieri-risorse-educative-aperte/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "730fde7726393757a017d35e40a8d8110c6b1de5",
+    "size": 5018,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/730fde7726393757a017d35e40a8d8110c6b1de5"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "7789cb7b5af90c627ffc1b425616f6a97f64802d",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/7789cb7b5af90c627ffc1b425616f6a97f64802d"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2826ec3413c5527e35b838f0e6c119835ce18ce",
+    "size": 10961,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/b2826ec3413c5527e35b838f0e6c119835ce18ce"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ca03bf966247790fc8ef47042ce69f6ba830bd73",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/ca03bf966247790fc8ef47042ce69f6ba830bd73"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch00-introduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "385bce636b68114c4ff460bd25534edabcc8095b",
+    "size": 4071,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/385bce636b68114c4ff460bd25534edabcc8095b"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch00-preface.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e91f365e91eb5dd7231c655fb434d76f7753bfdf",
+    "size": 2790,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e91f365e91eb5dd7231c655fb434d76f7753bfdf"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch01-preceding-causes.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7688a5e47a3fa98e8cce306586d2a8a623e44103",
+    "size": 5226,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7688a5e47a3fa98e8cce306586d2a8a623e44103"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch02-woman-newspapers.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dabe5d4674d625805afa337d2c505a92e32b10ee",
+    "size": 2342,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dabe5d4674d625805afa337d2c505a92e32b10ee"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch03-anti-slavery-convention.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cc34e5f7f7e772cf2b2272558d13214bbaf9ed89",
+    "size": 2864,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/cc34e5f7f7e772cf2b2272558d13214bbaf9ed89"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch04-new-york.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5d401d64348d7c666872fe1d58f7d5c6da50bdd",
+    "size": 3821,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c5d401d64348d7c666872fe1d58f7d5c6da50bdd"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch05-collins-reminiscences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4a29436ae2c482aa1a7b82d38e2c1ae247dd71f3",
+    "size": 968,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4a29436ae2c482aa1a7b82d38e2c1ae247dd71f3"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch06-ohio.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2013c4a7d64903e2d1050f444d3e47bf15c5faac",
+    "size": 814,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2013c4a7d64903e2d1050f444d3e47bf15c5faac"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch07-nichols-reminiscences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1d6038e5394686ac2358e2c24e42095f7f7134b",
+    "size": 823,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/e1d6038e5394686ac2358e2c24e42095f7f7134b"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch08-massachusetts.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "da6634f4a0cd2d789067635fc350f811f2365a5d",
+    "size": 689,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/da6634f4a0cd2d789067635fc350f811f2365a5d"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch09-indiana-wisconsin.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4aee5d42e305455b5d36751bfa845a3fe398891",
+    "size": 534,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c4aee5d42e305455b5d36751bfa845a3fe398891"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch10-pennsylvania.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8acad3cb67193e90033412cd247b5511c4dfb221",
+    "size": 648,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/8acad3cb67193e90033412cd247b5511c4dfb221"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch11-lucretia-mott.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f9f45deff0ac244d34187e632d2a629ad090ed9c",
+    "size": 554,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f9f45deff0ac244d34187e632d2a629ad090ed9c"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch12-new-jersey.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7c674b78b352cc3fbe62c98945f65fc014739d57",
+    "size": 585,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7c674b78b352cc3fbe62c98945f65fc014739d57"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch13-stanton-reminiscences.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "94e37e07265be11146c098924df064c98a2479cd",
+    "size": 637,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/94e37e07265be11146c098924df064c98a2479cd"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch14-new-york-2.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "36d30cf2c189f49a3cde1585d4762ff3dfb810f1",
+    "size": 684,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/36d30cf2c189f49a3cde1585d4762ff3dfb810f1"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch15-woman-church-state.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "28f4c9a5d353e5c84fec62b72e8fe4d9dd89c193",
+    "size": 4661,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/28f4c9a5d353e5c84fec62b72e8fe4d9dd89c193"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/chapters/ch16-appendix.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5a2d54286d2c37951639becd04856af9ee49c472",
+    "size": 378,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5a2d54286d2c37951639becd04856af9ee49c472"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5a55e0fd666e01b497109c5d9bab68d7d9b5ff0",
+    "size": 7490,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c5a55e0fd666e01b497109c5d9bab68d7d9b5ff0"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0184eac2938873d620cad0d6482997b96972a96",
+    "size": 6343,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c0184eac2938873d620cad0d6482997b96972a96"
+  },
+  {
+    "path": "skills/stanton-anthony-gage-history-woman-suffrage-vol1/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "92ca88763f2093fbda869bf69f0a32c7fcb40ace",
+    "size": 8667,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/92ca88763f2093fbda869bf69f0a32c7fcb40ace"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "841c309270f4100fe7a97836a45b8fa3f3205b2a",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/841c309270f4100fe7a97836a45b8fa3f3205b2a"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1b62d9dd3657df00166204d03677b760378532cc",
+    "size": 7359,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1b62d9dd3657df00166204d03677b760378532cc"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "29d1fd4d25c9182a669dd8d9ae2aada794206ed0",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/29d1fd4d25c9182a669dd8d9ae2aada794206ed0"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec01-introduction-and-context.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "29a68183ee34107821964b32b609edc2053e5f71",
+    "size": 2619,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/29a68183ee34107821964b32b609edc2053e5f71"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec02-resolutions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97223211a36a0f165ef515ca06e35e821abf1de1",
+    "size": 2392,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/97223211a36a0f165ef515ca06e35e821abf1de1"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec03-principal-demands.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "59469a983b955242fa1aa6743cb4b992e7c56b8a",
+    "size": 2141,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/59469a983b955242fa1aa6743cb4b992e7c56b8a"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec04-argument-from-justice.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9f09bff13807dc1ba4c7ba9b48447d2d3e1cad0f",
+    "size": 2464,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/9f09bff13807dc1ba4c7ba9b48447d2d3e1cad0f"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec05-argument-from-expediency.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3737025e9e550ede50f1dd60c1a36cc51392e487",
+    "size": 2249,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/3737025e9e550ede50f1dd60c1a36cc51392e487"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec06-refutation-of-objections.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ad7625669e3ccd1fe54c5e9f58b07a5ddc97f60",
+    "size": 3230,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5ad7625669e3ccd1fe54c5e9f58b07a5ddc97f60"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec07-historical-examples.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d6372562fe54643e5bea524e269896f1bcba86d",
+    "size": 3550,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6d6372562fe54643e5bea524e269896f1bcba86d"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/chapters/sec08-conclusion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dffacba75969281ccab3a9eef9a9c7bbbe4e014c",
+    "size": 2415,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/dffacba75969281ccab3a9eef9a9c7bbbe4e014c"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eff93ed815c9bed94044403f084c8954d1bc5d84",
+    "size": 5395,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/eff93ed815c9bed94044403f084c8954d1bc5d84"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1eb7e630e648837d03a6cd1a476c5b134e3b5d41",
+    "size": 5327,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/1eb7e630e648837d03a6cd1a476c5b134e3b5d41"
+  },
+  {
+    "path": "skills/taylor-mill-enfranchisement-of-women/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fb62961c8c028c7d35be92c1699ca7b419039ab0",
+    "size": 6455,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/fb62961c8c028c7d35be92c1699ca7b419039ab0"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5fa9f0ac6c6a4cfdc53bcb14663f2a66aeba6bd0",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/5fa9f0ac6c6a4cfdc53bcb14663f2a66aeba6bd0"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "119b32e1a20fe8d8f19dbefcd64bb3b64c4de0cc",
+    "size": 9327,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/119b32e1a20fe8d8f19dbefcd64bb3b64c4de0cc"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e6b97db3d30f3aed50bb14eecc4485175531d51a",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/e6b97db3d30f3aed50bb14eecc4485175531d51a"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch01-introduction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f841465d0742559e81c914661e4b8b8415c3040e",
+    "size": 3366,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/f841465d0742559e81c914661e4b8b8415c3040e"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch02-sexual-character.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff1487b78c4230a55b00fd63a7a7db30e3219e2f",
+    "size": 3065,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ff1487b78c4230a55b00fd63a7a7db30e3219e2f"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch03-same-subject-continued.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50a4bfc9272e017fc2d3b5ce8f312f51322d1de7",
+    "size": 3215,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/50a4bfc9272e017fc2d3b5ce8f312f51322d1de7"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch04-state-of-degradation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "273919286f48cb6ef91b4f3e26479d31ae2f9415",
+    "size": 3117,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/273919286f48cb6ef91b4f3e26479d31ae2f9415"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch05-morality-undermined.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d288a1442308cf994974abb2cb6dc2e844c2f74f",
+    "size": 3197,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d288a1442308cf994974abb2cb6dc2e844c2f74f"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch06-unnatural-distinctions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d7a81c2c94aa1cd27a9ca9934a17e20671a843cc",
+    "size": 3109,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/d7a81c2c94aa1cd27a9ca9934a17e20671a843cc"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch07-national-education.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c2557b51d1ba19fa1c5fb36b6042d9c0dd5f1837",
+    "size": 2862,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/c2557b51d1ba19fa1c5fb36b6042d9c0dd5f1837"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch08-folly-of-ignorance.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "921caa554f5da875577387469c4287b1524c6d09",
+    "size": 3135,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/921caa554f5da875577387469c4287b1524c6d09"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/chapters/ch09-concluding-reflections.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "00fc4edd7fb79bf6942870fe2c390e910962d857",
+    "size": 3343,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/00fc4edd7fb79bf6942870fe2c390e910962d857"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37f330d3786c984045c3ae9ae435fa3e57eeadaf",
+    "size": 8729,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/37f330d3786c984045c3ae9ae435fa3e57eeadaf"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5bb23b364ae4d39c0a95a53c9af783f24eccbc7a",
+    "size": 7875,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/5bb23b364ae4d39c0a95a53c9af783f24eccbc7a"
+  },
+  {
+    "path": "skills/wollstonecraft-rights-woman/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d324548168948c0efe262bcad2e9736b477e654",
+    "size": 8556,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/6d324548168948c0efe262bcad2e9736b477e654"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "37f8cfe222474f0d7f69189152f38d655a37a96a",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/37f8cfe222474f0d7f69189152f38d655a37a96a"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "806ab0eff10f419c6028db1b93f446eb997ac8cd",
+    "size": 8459,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/806ab0eff10f419c6028db1b93f446eb997ac8cd"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "29129f9ae9e7fd4e711a3efaa014ad59f1e9035f",
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/trees/29129f9ae9e7fd4e711a3efaa014ad59f1e9035f"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters/ch01-one.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4483ebaabe66158a8d1149d75b2c0de21d0ddce3",
+    "size": 4337,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/4483ebaabe66158a8d1149d75b2c0de21d0ddce3"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters/ch02-two.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ec839ccaa72e36f204f3686f546e5ae60e8415f1",
+    "size": 5999,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/ec839ccaa72e36f204f3686f546e5ae60e8415f1"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters/ch03-three.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "647af7720efb043195123cff1b4001d529166ab5",
+    "size": 6173,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/647af7720efb043195123cff1b4001d529166ab5"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters/ch04-four.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7f82ce4aaad989b2d2bc4d520c9165ef8c466514",
+    "size": 5691,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/7f82ce4aaad989b2d2bc4d520c9165ef8c466514"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters/ch05-five.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "759bedb2380dcf15c1a2d0e316868eb826b4f204",
+    "size": 5615,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/759bedb2380dcf15c1a2d0e316868eb826b4f204"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/chapters/ch06-six.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a919fb96eddaf2ad7a2a50f67f6edfd2d8b4a12e",
+    "size": 4926,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a919fb96eddaf2ad7a2a50f67f6edfd2d8b4a12e"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/cheatsheet.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2af5a75254527ef3f583f9c2718ee8d5958a60ec",
+    "size": 6914,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/2af5a75254527ef3f583f9c2718ee8d5958a60ec"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/glossary.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "39486fb4e5e51f3cad55020e2edef00dc7c4624f",
+    "size": 4204,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/39486fb4e5e51f3cad55020e2edef00dc7c4624f"
+  },
+  {
+    "path": "skills/woolf-room-of-ones-own/patterns.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a53b093909daddb9f4eeac1a2395523f362e17fe",
+    "size": 7784,
+    "url": "https://api.github.com/repos/x8k/ethical-ai-skills/git/blobs/a53b093909daddb9f4eeac1a2395523f362e17fe"
+  }
+]

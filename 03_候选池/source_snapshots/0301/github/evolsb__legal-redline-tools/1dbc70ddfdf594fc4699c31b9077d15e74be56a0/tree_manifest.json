@@ -1,0 +1,254 @@
+[
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efaf373cd7f2bffb71e53e5e4e1e315190676700",
+    "size": 4704,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/efaf373cd7f2bffb71e53e5e4e1e315190676700"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff4ebdced14b2d016de130d577783bd29cb602a3",
+    "size": 1808,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/ff4ebdced14b2d016de130d577783bd29cb602a3"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b297574d429a210712402df18d3abea49a7f9353",
+    "size": 1070,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/b297574d429a210712402df18d3abea49a7f9353"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0ec2492acc0c0cd1dca0a42d3ea27ff4975e82e5",
+    "size": 12710,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/0ec2492acc0c0cd1dca0a42d3ea27ff4975e82e5"
+  },
+  {
+    "path": "assets",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "0e4054f71fbb682976f4d76e279636dcbee2047e",
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/trees/0e4054f71fbb682976f4d76e279636dcbee2047e"
+  },
+  {
+    "path": "assets/memo-pdf.png",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72f14a1857493e46ec5b7cd73cf9832c950abd61",
+    "size": 180303,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/72f14a1857493e46ec5b7cd73cf9832c950abd61"
+  },
+  {
+    "path": "assets/redline-pdf.png",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "596a5617320877c8f58ad49a911420b0f192e1c0",
+    "size": 208854,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/596a5617320877c8f58ad49a911420b0f192e1c0"
+  },
+  {
+    "path": "assets/summary-pdf.png",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8a6a91e3ced369aff6372db635c350a88a88e614",
+    "size": 157568,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/8a6a91e3ced369aff6372db635c350a88a88e614"
+  },
+  {
+    "path": "examples",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6f282dfce2ee906eb22a37800bd82ade56fa96b4",
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/trees/6f282dfce2ee906eb22a37800bd82ade56fa96b4"
+  },
+  {
+    "path": "examples/sample-redlines.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7b8e6fae83cff9ced6844619e8c344a0f9f08947",
+    "size": 1592,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/7b8e6fae83cff9ced6844619e8c344a0f9f08947"
+  },
+  {
+    "path": "legal_redline",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4ce7addb2c9c6375cb2a55fb31300107aa1afb2f",
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/trees/4ce7addb2c9c6375cb2a55fb31300107aa1afb2f"
+  },
+  {
+    "path": "legal_redline/__init__.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "05dcb4fbbd755c84db9c918948ea59b426fb11b2",
+    "size": 573,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/05dcb4fbbd755c84db9c918948ea59b426fb11b2"
+  },
+  {
+    "path": "legal_redline/apply.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bd3b859777a6d7c6b39cd9a5f1cf306d7b45e09e",
+    "size": 15558,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/bd3b859777a6d7c6b39cd9a5f1cf306d7b45e09e"
+  },
+  {
+    "path": "legal_redline/cli.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ad4259eb2a2f2e8df2108e7ca57378b4d35f551e",
+    "size": 11358,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/ad4259eb2a2f2e8df2108e7ca57378b4d35f551e"
+  },
+  {
+    "path": "legal_redline/compare.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "540bb486f6c5cb29b539a4cf1956fa93ed86ead9",
+    "size": 8226,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/540bb486f6c5cb29b539a4cf1956fa93ed86ead9"
+  },
+  {
+    "path": "legal_redline/diff.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7d1d80b1f4d614ac8529c694efe5322c32745238",
+    "size": 5835,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/7d1d80b1f4d614ac8529c694efe5322c32745238"
+  },
+  {
+    "path": "legal_redline/markdown.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "566ee913235e1b273be15c5b6b1bec9fae2aa05a",
+    "size": 4040,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/566ee913235e1b273be15c5b6b1bec9fae2aa05a"
+  },
+  {
+    "path": "legal_redline/memo.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "465eb5e12cd875081e6b09d5109624d841fc0840",
+    "size": 8477,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/465eb5e12cd875081e6b09d5109624d841fc0840"
+  },
+  {
+    "path": "legal_redline/remap.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bbb39adf121dc2ffeabbfb086439448c5c136c8f",
+    "size": 4803,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/bbb39adf121dc2ffeabbfb086439448c5c136c8f"
+  },
+  {
+    "path": "legal_redline/render.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "386be9729a1451db40b5842ddff94ee87d6902d1",
+    "size": 20226,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/386be9729a1451db40b5842ddff94ee87d6902d1"
+  },
+  {
+    "path": "legal_redline/scan.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a9876717f3dfd3e7b9b7456008ad6379b7ef030c",
+    "size": 4324,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/a9876717f3dfd3e7b9b7456008ad6379b7ef030c"
+  },
+  {
+    "path": "legal_redline/summary.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "16e2dcc7aab4d81333b298ac81574190c144c560",
+    "size": 9569,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/16e2dcc7aab4d81333b298ac81574190c144c560"
+  },
+  {
+    "path": "pyproject.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "13c9fc8ff93dc3893a045170b4c1380fe0c86cb3",
+    "size": 1295,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/13c9fc8ff93dc3893a045170b4c1380fe0c86cb3"
+  },
+  {
+    "path": "skill.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "29b971fab264528345d16ef7fbcdc0ccb35d776d",
+    "size": 6365,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/29b971fab264528345d16ef7fbcdc0ccb35d776d"
+  },
+  {
+    "path": "tests",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "9b4568d9767759bd8895ec493c60a75fcc51648c",
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/trees/9b4568d9767759bd8895ec493c60a75fcc51648c"
+  },
+  {
+    "path": "tests/__init__.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "tests/conftest.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5056a931485c634dda544ace752a65a7e68f569e",
+    "size": 3537,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/5056a931485c634dda544ace752a65a7e68f569e"
+  },
+  {
+    "path": "tests/test_apply.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9f842d3bb69c0972565c583b9e753d428ac73a00",
+    "size": 8820,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/9f842d3bb69c0972565c583b9e753d428ac73a00"
+  },
+  {
+    "path": "tests/test_compare.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e6ea97ea41b776332e3ae09c267eb61abd87ed52",
+    "size": 2779,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/e6ea97ea41b776332e3ae09c267eb61abd87ed52"
+  },
+  {
+    "path": "tests/test_normalize.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "daacbbb62ac177a32435dbc040c3a5f19a65b7f7",
+    "size": 3230,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/daacbbb62ac177a32435dbc040c3a5f19a65b7f7"
+  },
+  {
+    "path": "tests/test_remap.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1e7d623f89c4434b3c4b6d5ec96e7ea2310f47f",
+    "size": 3707,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/e1e7d623f89c4434b3c4b6d5ec96e7ea2310f47f"
+  },
+  {
+    "path": "tests/test_summary.py",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc122995e2285fae0e9eff77f6c3e3f68494f409",
+    "size": 2942,
+    "url": "https://api.github.com/repos/evolsb/legal-redline-tools/git/blobs/fc122995e2285fae0e9eff77f6c3e3f68494f409"
+  }
+]

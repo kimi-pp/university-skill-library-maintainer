@@ -1,0 +1,2868 @@
+[
+  {
+    "path": ".agents",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "89d1935ca86375900a133dca641f0bcf00b728b7",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/89d1935ca86375900a133dca641f0bcf00b728b7"
+  },
+  {
+    "path": ".agents/agents",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "7640b6edf5cca8a368473932eaad66ad04a59052",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/7640b6edf5cca8a368473932eaad66ad04a59052"
+  },
+  {
+    "path": ".agents/agents/brief-people-updater.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fb6bf4fbd23cca90db493d51f94d213d7afecf55",
+    "size": 361,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/fb6bf4fbd23cca90db493d51f94d213d7afecf55"
+  },
+  {
+    "path": ".agents/agents/fix-agent.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "406c8c600180851bcb54fc929047217fd9227261",
+    "size": 353,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/406c8c600180851bcb54fc929047217fd9227261"
+  },
+  {
+    "path": ".agents/agents/harvest-curator.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "610d1783977e2bf3644e94ae1634ecef77d3bc24",
+    "size": 482,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/610d1783977e2bf3644e94ae1634ecef77d3bc24"
+  },
+  {
+    "path": ".agents/agents/integration-verifier.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c01e8a144d55328d8f3a86a37198f37632fd0fda",
+    "size": 302,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c01e8a144d55328d8f3a86a37198f37632fd0fda"
+  },
+  {
+    "path": ".agents/agents/task-verifier.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c50bb4b6a419e7b78b069c17aaf53048749748eb",
+    "size": 354,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c50bb4b6a419e7b78b069c17aaf53048749748eb"
+  },
+  {
+    "path": ".agents/agents/worker-data-collector.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "85a3b4e70daaa1c97b8e5c017b7adf9d49fd5904",
+    "size": 367,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/85a3b4e70daaa1c97b8e5c017b7adf9d49fd5904"
+  },
+  {
+    "path": ".agents/agents/worker-executor.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "84d8ca1cae7d2546ad2a3da6ab228b570a7e821d",
+    "size": 343,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/84d8ca1cae7d2546ad2a3da6ab228b570a7e821d"
+  },
+  {
+    "path": ".agents/agents/worker-file-ops.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3d8bc7c3972e1197c65abc87c1438e28cca3994b",
+    "size": 333,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3d8bc7c3972e1197c65abc87c1438e28cca3994b"
+  },
+  {
+    "path": ".agents/agents/worker-publisher.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b7713eb32eb8a4dd09f91a89f779263c4899a78b",
+    "size": 357,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b7713eb32eb8a4dd09f91a89f779263c4899a78b"
+  },
+  {
+    "path": ".agents/agents/worker-researcher.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8240c1747feadd1edb4471a3887a19b8cfcf52a6",
+    "size": 367,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8240c1747feadd1edb4471a3887a19b8cfcf52a6"
+  },
+  {
+    "path": ".agents/rules",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "cc9a0e5d68ad8e374391ea2b1ac2ca665566fa32",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/cc9a0e5d68ad8e374391ea2b1ac2ca665566fa32"
+  },
+  {
+    "path": ".agents/rules/cog.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c42575a06988afb23c7a4a2efe10b3a8b97ead16",
+    "size": 475,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c42575a06988afb23c7a4a2efe10b3a8b97ead16"
+  },
+  {
+    "path": ".agents/skills",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "1dda46db0b3f6a1846bbf3128aeda79a10ac08cc",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/1dda46db0b3f6a1846bbf3128aeda79a10ac08cc"
+  },
+  {
+    "path": ".agents/skills/auto-research",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "726d377e5412fdf23d7acd0a527766bc28134670",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/726d377e5412fdf23d7acd0a527766bc28134670"
+  },
+  {
+    "path": ".agents/skills/auto-research/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c7342d20127536d00b010577ed98c8890aead643",
+    "size": 523,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c7342d20127536d00b010577ed98c8890aead643"
+  },
+  {
+    "path": ".agents/skills/braindump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e53cd033cd3d981d2cd7f79c6891430027ed4d74",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/e53cd033cd3d981d2cd7f79c6891430027ed4d74"
+  },
+  {
+    "path": ".agents/skills/braindump/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b19e748dacc7554f01f11e03335a0a60e91eea83",
+    "size": 461,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b19e748dacc7554f01f11e03335a0a60e91eea83"
+  },
+  {
+    "path": ".agents/skills/closed-loop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "0f2e55237bbce581c424c69c7051a650217465d0",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/0f2e55237bbce581c424c69c7051a650217465d0"
+  },
+  {
+    "path": ".agents/skills/closed-loop/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ba2109e4087e4b1cac787eebcf340ba91bd43a82",
+    "size": 571,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ba2109e4087e4b1cac787eebcf340ba91bd43a82"
+  },
+  {
+    "path": ".agents/skills/comprehensive-analysis",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "7623f930ee7d6aabe77e77064ddfaee9e604122d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/7623f930ee7d6aabe77e77064ddfaee9e604122d"
+  },
+  {
+    "path": ".agents/skills/comprehensive-analysis/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c1f735242fe853b481e3c32db640d4c090685ff6",
+    "size": 482,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c1f735242fe853b481e3c32db640d4c090685ff6"
+  },
+  {
+    "path": ".agents/skills/content-factory",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d8de16db04c58725bdcdbee838ccd152f85f08ad",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d8de16db04c58725bdcdbee838ccd152f85f08ad"
+  },
+  {
+    "path": ".agents/skills/content-factory/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "86bb44d8b398078535da137d77faaa9f0fd86935",
+    "size": 593,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/86bb44d8b398078535da137d77faaa9f0fd86935"
+  },
+  {
+    "path": ".agents/skills/create-user-story",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "9c8bf82078f7fbbeb0825ea9084a09399d826ede",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/9c8bf82078f7fbbeb0825ea9084a09399d826ede"
+  },
+  {
+    "path": ".agents/skills/create-user-story/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73370834169cf87d101673326855da0c491a6c6e",
+    "size": 469,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/73370834169cf87d101673326855da0c491a6c6e"
+  },
+  {
+    "path": ".agents/skills/daily-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "763d4ed8ae10d326801e47e095dc7e3e7fb9f864",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/763d4ed8ae10d326801e47e095dc7e3e7fb9f864"
+  },
+  {
+    "path": ".agents/skills/daily-brief/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d97304f45564ac9bdf00254c199dae977b6939ee",
+    "size": 448,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d97304f45564ac9bdf00254c199dae977b6939ee"
+  },
+  {
+    "path": ".agents/skills/daily-journal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6d76291b7c70e9958fa2655d68bcd41d781e0b33",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/6d76291b7c70e9958fa2655d68bcd41d781e0b33"
+  },
+  {
+    "path": ".agents/skills/daily-journal/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ab65374d1c550edafbdd0500ce5de55b39a12462",
+    "size": 821,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ab65374d1c550edafbdd0500ce5de55b39a12462"
+  },
+  {
+    "path": ".agents/skills/data-forms",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "7768e62817b0ec8ab8e6266b0142b1389a7d82d2",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/7768e62817b0ec8ab8e6266b0142b1389a7d82d2"
+  },
+  {
+    "path": ".agents/skills/data-forms/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ef5209c97fc16a6528e5586b64cde72f71ea7292",
+    "size": 953,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ef5209c97fc16a6528e5586b64cde72f71ea7292"
+  },
+  {
+    "path": ".agents/skills/editorial-illustrations",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "16bcc1e1e0eeb48e735efff3ba895f2efb40f78f",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/16bcc1e1e0eeb48e735efff3ba895f2efb40f78f"
+  },
+  {
+    "path": ".agents/skills/editorial-illustrations/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "368c7d8ab9a2a188c2717d7a064d943ee4623efd",
+    "size": 1146,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/368c7d8ab9a2a188c2717d7a064d943ee4623efd"
+  },
+  {
+    "path": ".agents/skills/export-open-issues",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "7e532e8f15d0132773f39c6934fe16d1491d1f2b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/7e532e8f15d0132773f39c6934fe16d1491d1f2b"
+  },
+  {
+    "path": ".agents/skills/export-open-issues/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b88f5e13af75f3b14e6aba196f6720997abcfa7b",
+    "size": 465,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b88f5e13af75f3b14e6aba196f6720997abcfa7b"
+  },
+  {
+    "path": ".agents/skills/generate-prd",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4dc806976fe2a190e9cddca751131140a5017bfd",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4dc806976fe2a190e9cddca751131140a5017bfd"
+  },
+  {
+    "path": ".agents/skills/generate-prd/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "829900756b1c6646cd0be2d1ed690e6e0c9b76ad",
+    "size": 461,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/829900756b1c6646cd0be2d1ed690e6e0c9b76ad"
+  },
+  {
+    "path": ".agents/skills/generate-release-notes",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "084d552da452b882fcd74c99ef0decdc9d1c3e75",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/084d552da452b882fcd74c99ef0decdc9d1c3e75"
+  },
+  {
+    "path": ".agents/skills/generate-release-notes/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6ded90895e46f2b6c18e32df3cff717e36a61fe9",
+    "size": 494,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6ded90895e46f2b6c18e32df3cff717e36a61fe9"
+  },
+  {
+    "path": ".agents/skills/harvest",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4fa1e5a1db03f414b6ab240ea078af84f599e588",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4fa1e5a1db03f414b6ab240ea078af84f599e588"
+  },
+  {
+    "path": ".agents/skills/harvest/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "673f736e5a130e4a95707a0ad704eb2dcbed3de4",
+    "size": 592,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/673f736e5a130e4a95707a0ad704eb2dcbed3de4"
+  },
+  {
+    "path": ".agents/skills/knowledge-consolidation",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "000dff5cc10d505be480e48ca28d52ff5731dc11",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/000dff5cc10d505be480e48ca28d52ff5731dc11"
+  },
+  {
+    "path": ".agents/skills/knowledge-consolidation/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17979813c8a6ffd7229c20097367625d2fbfcfd0",
+    "size": 453,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/17979813c8a6ffd7229c20097367625d2fbfcfd0"
+  },
+  {
+    "path": ".agents/skills/loop-engineering",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "85a21f1de299e5bace70c1b759bbc308c1e41615",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/85a21f1de299e5bace70c1b759bbc308c1e41615"
+  },
+  {
+    "path": ".agents/skills/loop-engineering/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "938de4e6faa14b2af6ea42fb80978f9675060c57",
+    "size": 644,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/938de4e6faa14b2af6ea42fb80978f9675060c57"
+  },
+  {
+    "path": ".agents/skills/meeting-transcript",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "12a3ec7fc67f0d4bdd8ab970be753ca7abd3d273",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/12a3ec7fc67f0d4bdd8ab970be753ca7abd3d273"
+  },
+  {
+    "path": ".agents/skills/meeting-transcript/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e668ea2b10da7b2f2dac190f795226a66cc2a154",
+    "size": 499,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e668ea2b10da7b2f2dac190f795226a66cc2a154"
+  },
+  {
+    "path": ".agents/skills/memory-hygiene",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "9f951688f0ad19d2289e5913bf48f6a4b1352808",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/9f951688f0ad19d2289e5913bf48f6a4b1352808"
+  },
+  {
+    "path": ".agents/skills/memory-hygiene/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c1bdf4d19d18304b994e6f216534f7ad8dbbeab",
+    "size": 579,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4c1bdf4d19d18304b994e6f216534f7ad8dbbeab"
+  },
+  {
+    "path": ".agents/skills/museum-art",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8431a8f90ae88c47b2a7528268847f9181bcc4dd",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/8431a8f90ae88c47b2a7528268847f9181bcc4dd"
+  },
+  {
+    "path": ".agents/skills/museum-art/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d0bd22ba7077be1a796053751acbab05270f1a63",
+    "size": 745,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d0bd22ba7077be1a796053751acbab05270f1a63"
+  },
+  {
+    "path": ".agents/skills/no-ai-slop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "25889e258912c73c51181105383d4d822278d1ae",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/25889e258912c73c51181105383d4d822278d1ae"
+  },
+  {
+    "path": ".agents/skills/no-ai-slop/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3bf4b3461251f5dfeecb5a91b80b04fa65afbb60",
+    "size": 621,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3bf4b3461251f5dfeecb5a91b80b04fa65afbb60"
+  },
+  {
+    "path": ".agents/skills/onboarding",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "65218b9168f2bf60143399c079d3c5e7663b8be0",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/65218b9168f2bf60143399c079d3c5e7663b8be0"
+  },
+  {
+    "path": ".agents/skills/onboarding/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cefd9f39d01ee932334d5973f989257abd9b43be",
+    "size": 474,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/cefd9f39d01ee932334d5973f989257abd9b43be"
+  },
+  {
+    "path": ".agents/skills/product-ui-taste",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "67fe3560e315576f7c66a6e1daba41aa097b8b63",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/67fe3560e315576f7c66a6e1daba41aa097b8b63"
+  },
+  {
+    "path": ".agents/skills/product-ui-taste/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ad9dba2e0a2f9629bf4662a2954c7500fd6fc8da",
+    "size": 851,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ad9dba2e0a2f9629bf4662a2954c7500fd6fc8da"
+  },
+  {
+    "path": ".agents/skills/publish-to-confluence",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a64f04e473fb1e200899d7ad75402f4fc72b6bb0",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/a64f04e473fb1e200899d7ad75402f4fc72b6bb0"
+  },
+  {
+    "path": ".agents/skills/publish-to-confluence/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8d4761811a83f608748c8e541aa78d04803e87b9",
+    "size": 472,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8d4761811a83f608748c8e541aa78d04803e87b9"
+  },
+  {
+    "path": ".agents/skills/retro",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "41a02a4a39ac469764263dbec9e2b5e01240f7be",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/41a02a4a39ac469764263dbec9e2b5e01240f7be"
+  },
+  {
+    "path": ".agents/skills/retro/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d6d953bb867adf12ba1f342f54dbc44f1dfbe013",
+    "size": 549,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d6d953bb867adf12ba1f342f54dbc44f1dfbe013"
+  },
+  {
+    "path": ".agents/skills/review-cockpit",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a548b68998bcca90b687b1df39aa04dffb8e4ec0",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/a548b68998bcca90b687b1df39aa04dffb8e4ec0"
+  },
+  {
+    "path": ".agents/skills/review-cockpit/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "63d13390220df18c352a76ecb0b314f85d9805f1",
+    "size": 939,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/63d13390220df18c352a76ecb0b314f85d9805f1"
+  },
+  {
+    "path": ".agents/skills/scout",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "163a80124b3e1f37efcd75c9dc35cc9b8e52923c",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/163a80124b3e1f37efcd75c9dc35cc9b8e52923c"
+  },
+  {
+    "path": ".agents/skills/scout/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c8d612a69c2394e12db59be532cb7e7823b5c8ad",
+    "size": 435,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c8d612a69c2394e12db59be532cb7e7823b5c8ad"
+  },
+  {
+    "path": ".agents/skills/taste-skill",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "03e813b897cf14c9b12c1c679c3ad1ef2ed045f7",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/03e813b897cf14c9b12c1c679c3ad1ef2ed045f7"
+  },
+  {
+    "path": ".agents/skills/taste-skill/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "78d7e8cd3b5372eae4ac8974dc88e7f5e2cf0e91",
+    "size": 626,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/78d7e8cd3b5372eae4ac8974dc88e7f5e2cf0e91"
+  },
+  {
+    "path": ".agents/skills/team-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2a328e07bac29c9c3feda207f35ac83d0a0027c8",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/2a328e07bac29c9c3feda207f35ac83d0a0027c8"
+  },
+  {
+    "path": ".agents/skills/team-brief/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d4ff1366543476e9f9ae2a77746234aa5bee9d18",
+    "size": 501,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d4ff1366543476e9f9ae2a77746234aa5bee9d18"
+  },
+  {
+    "path": ".agents/skills/ultragoal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "649524f56bd40702c1348a865d52d307cc931fc9",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/649524f56bd40702c1348a865d52d307cc931fc9"
+  },
+  {
+    "path": ".agents/skills/ultragoal/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bcf018afce4716d20e9755717c88b3f8d0c9ce1f",
+    "size": 662,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/bcf018afce4716d20e9755717c88b3f8d0c9ce1f"
+  },
+  {
+    "path": ".agents/skills/update-cog",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "34e7f54372ac5198d85324c42ba04892e03cbec6",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/34e7f54372ac5198d85324c42ba04892e03cbec6"
+  },
+  {
+    "path": ".agents/skills/update-cog/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "626ef2da17062c99b58bce54c8d4259fb73e2a2d",
+    "size": 463,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/626ef2da17062c99b58bce54c8d4259fb73e2a2d"
+  },
+  {
+    "path": ".agents/skills/update-knowledge-base",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5df61f593ac5baf1a4b96ebeaa7c80d8856cec00",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5df61f593ac5baf1a4b96ebeaa7c80d8856cec00"
+  },
+  {
+    "path": ".agents/skills/update-knowledge-base/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9467da2d871bb11c116e77363c437abcf4831a30",
+    "size": 488,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/9467da2d871bb11c116e77363c437abcf4831a30"
+  },
+  {
+    "path": ".agents/skills/url-dump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "acf9c02c622dadc2103b868e7b751703465c28bc",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/acf9c02c622dadc2103b868e7b751703465c28bc"
+  },
+  {
+    "path": ".agents/skills/url-dump/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "64449218baf7b132e9bc1d4342ec9b1e06397102",
+    "size": 457,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/64449218baf7b132e9bc1d4342ec9b1e06397102"
+  },
+  {
+    "path": ".agents/skills/weekly-checkin",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4fdd5cba83a6a97780095f98cbda8e6b16adfd0b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4fdd5cba83a6a97780095f98cbda8e6b16adfd0b"
+  },
+  {
+    "path": ".agents/skills/weekly-checkin/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "424c46093612c5ba8fd4ef093f8f541e63f17a7e",
+    "size": 435,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/424c46093612c5ba8fd4ef093f8f541e63f17a7e"
+  },
+  {
+    "path": ".claude-plugin",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "1f6fdab12bcd133c44475cb5c9a764eac4b2ab8a",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/1f6fdab12bcd133c44475cb5c9a764eac4b2ab8a"
+  },
+  {
+    "path": ".claude-plugin/plugin.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "363ba1abd078ce33d033bb9fd89b71666beb3b14",
+    "size": 14194,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/363ba1abd078ce33d033bb9fd89b71666beb3b14"
+  },
+  {
+    "path": ".claude",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d58b826db67dc0400fc4b88743eab7227bc94e77",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d58b826db67dc0400fc4b88743eab7227bc94e77"
+  },
+  {
+    "path": ".claude/IMPLEMENTATION-TODO.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4a6ba11c298be848c70964763b4d5bd1d6ea9737",
+    "size": 25341,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4a6ba11c298be848c70964763b4d5bd1d6ea9737"
+  },
+  {
+    "path": ".claude/SKILLS-MIGRATION-PLAN.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2e52066db9d4eb948f35afc6d24b502ff2e6c88",
+    "size": 13415,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b2e52066db9d4eb948f35afc6d24b502ff2e6c88"
+  },
+  {
+    "path": ".claude/agents",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "77c632e9bf0e416835751d1a4806bc606aa941ba",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/77c632e9bf0e416835751d1a4806bc606aa941ba"
+  },
+  {
+    "path": ".claude/agents/brief-people-updater.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b5e48e5dba1b8ad8c486e237393adb8095935a91",
+    "size": 1372,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b5e48e5dba1b8ad8c486e237393adb8095935a91"
+  },
+  {
+    "path": ".claude/agents/fix-agent.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a359f1525d7464385deb810e3feb5913ccd3a5b3",
+    "size": 1215,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a359f1525d7464385deb810e3feb5913ccd3a5b3"
+  },
+  {
+    "path": ".claude/agents/harvest-curator.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dd369e2b7089b60256f9f45b49a146cdcd810d32",
+    "size": 1218,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/dd369e2b7089b60256f9f45b49a146cdcd810d32"
+  },
+  {
+    "path": ".claude/agents/integration-verifier.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f5be2cd917eed53cb656b26dbbcc397c99a7889c",
+    "size": 1320,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/f5be2cd917eed53cb656b26dbbcc397c99a7889c"
+  },
+  {
+    "path": ".claude/agents/task-verifier.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b39ffb1bbd952e3cc1fbf74b53b309ebd1b47d82",
+    "size": 2529,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b39ffb1bbd952e3cc1fbf74b53b309ebd1b47d82"
+  },
+  {
+    "path": ".claude/agents/worker-data-collector.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "64f9ad0fc2924b71f17851e0f9fba74938565b78",
+    "size": 1304,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/64f9ad0fc2924b71f17851e0f9fba74938565b78"
+  },
+  {
+    "path": ".claude/agents/worker-executor.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6805b202d4cdeeed3be0120110f1f64dbe35b502",
+    "size": 1176,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6805b202d4cdeeed3be0120110f1f64dbe35b502"
+  },
+  {
+    "path": ".claude/agents/worker-file-ops.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c707651c8f81c412f352d743e08894dcf4e62197",
+    "size": 1070,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c707651c8f81c412f352d743e08894dcf4e62197"
+  },
+  {
+    "path": ".claude/agents/worker-publisher.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e37e48f41b8d1e9b86fcc055b92ea285a803a632",
+    "size": 1151,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e37e48f41b8d1e9b86fcc055b92ea285a803a632"
+  },
+  {
+    "path": ".claude/agents/worker-researcher.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aad2a421aaece2b331680b40cd8e389cc68372ea",
+    "size": 1122,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/aad2a421aaece2b331680b40cd8e389cc68372ea"
+  },
+  {
+    "path": ".claude/lib",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2705f4379b9236983e181affe3bddc804569a257",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/2705f4379b9236983e181affe3bddc804569a257"
+  },
+  {
+    "path": ".claude/lib/checkpoint.sh",
+    "mode": "100755",
+    "type": "blob",
+    "sha": "5fe3585cde1f6b277de5608aa7eaa9f73a8d4dcb",
+    "size": 1596,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5fe3585cde1f6b277de5608aa7eaa9f73a8d4dcb"
+  },
+  {
+    "path": ".claude/lib/lane-classify.sh",
+    "mode": "100755",
+    "type": "blob",
+    "sha": "b7f55c141e87ee57bba1bc3a1abc6794f9efbb33",
+    "size": 1659,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b7f55c141e87ee57bba1bc3a1abc6794f9efbb33"
+  },
+  {
+    "path": ".claude/roles",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "98de7a9f3e60999637429d8de43fc7b4fca55d7d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/98de7a9f3e60999637429d8de43fc7b4fca55d7d"
+  },
+  {
+    "path": ".claude/roles/_template.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6a6887666313a31a166fdddcc00bda5b3a7b2e5e",
+    "size": 810,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6a6887666313a31a166fdddcc00bda5b3a7b2e5e"
+  },
+  {
+    "path": ".claude/roles/designer.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07064dc15bb757011ae3ff79c93f1b0d1b4fd732",
+    "size": 1434,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/07064dc15bb757011ae3ff79c93f1b0d1b4fd732"
+  },
+  {
+    "path": ".claude/roles/engineer.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1d53b8a6f35b6d4149a28d6781e903d90c84546d",
+    "size": 1222,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1d53b8a6f35b6d4149a28d6781e903d90c84546d"
+  },
+  {
+    "path": ".claude/roles/engineering-lead.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8d41f9f1b20e5f6b9934ec131286ca3fec7ab786",
+    "size": 2106,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8d41f9f1b20e5f6b9934ec131286ca3fec7ab786"
+  },
+  {
+    "path": ".claude/roles/founder.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aa48069b9c14945c9d28b6f8da1d4fc6566d7635",
+    "size": 2268,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/aa48069b9c14945c9d28b6f8da1d4fc6566d7635"
+  },
+  {
+    "path": ".claude/roles/marketer.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "196684ccdfcedbfa0adeb60a7e856c0c939600d7",
+    "size": 1552,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/196684ccdfcedbfa0adeb60a7e856c0c939600d7"
+  },
+  {
+    "path": ".claude/roles/product-manager.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c550070e468faef63ea6851e4632388b963c5def",
+    "size": 2258,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c550070e468faef63ea6851e4632388b963c5def"
+  },
+  {
+    "path": ".claude/skills",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b9961b029fa735ccc75295bef2452f6395356339",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/b9961b029fa735ccc75295bef2452f6395356339"
+  },
+  {
+    "path": ".claude/skills/auto-research",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d0bb3738ae731f17849a6042375f3502e3c2d7d8",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d0bb3738ae731f17849a6042375f3502e3c2d7d8"
+  },
+  {
+    "path": ".claude/skills/auto-research/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "978af3ec087c11b43fa48f0724c9f2a067cb9c90",
+    "size": 11747,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/978af3ec087c11b43fa48f0724c9f2a067cb9c90"
+  },
+  {
+    "path": ".claude/skills/braindump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5783a455c76a61777fc6ca4e98a38502489e5378",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5783a455c76a61777fc6ca4e98a38502489e5378"
+  },
+  {
+    "path": ".claude/skills/braindump/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8557505cb25bcba20f7168024ae90a4ee5354d60",
+    "size": 12617,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8557505cb25bcba20f7168024ae90a4ee5354d60"
+  },
+  {
+    "path": ".claude/skills/closed-loop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f028717e758bf6c13e4ea6ae42e960f4082eb82c",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f028717e758bf6c13e4ea6ae42e960f4082eb82c"
+  },
+  {
+    "path": ".claude/skills/closed-loop/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2717dad095427649cd91782f550a5bb759af5b09",
+    "size": 4236,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/2717dad095427649cd91782f550a5bb759af5b09"
+  },
+  {
+    "path": ".claude/skills/comprehensive-analysis",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "32ff8b096e2d864647ce16a90bbf24c1fa152a82",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/32ff8b096e2d864647ce16a90bbf24c1fa152a82"
+  },
+  {
+    "path": ".claude/skills/comprehensive-analysis/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d244d67bc8a974bb4b088c062249f117be6ddbc0",
+    "size": 14656,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d244d67bc8a974bb4b088c062249f117be6ddbc0"
+  },
+  {
+    "path": ".claude/skills/content-factory",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4a53c160934c0bd67db03ad55bdab82c007861a8",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4a53c160934c0bd67db03ad55bdab82c007861a8"
+  },
+  {
+    "path": ".claude/skills/content-factory/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3aec37614ce474f484a79c3f1e32a45c787cf869",
+    "size": 6270,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3aec37614ce474f484a79c3f1e32a45c787cf869"
+  },
+  {
+    "path": ".claude/skills/create-user-story",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5c28a9db36ce154064da113a1f6a901fd477d740",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5c28a9db36ce154064da113a1f6a901fd477d740"
+  },
+  {
+    "path": ".claude/skills/create-user-story/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e22a66f4ecde4ea9b270313c67e4d02f95cb6d0d",
+    "size": 7903,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e22a66f4ecde4ea9b270313c67e4d02f95cb6d0d"
+  },
+  {
+    "path": ".claude/skills/daily-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f58d61186c10fd1eab6a1e4563015103c66f0459",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f58d61186c10fd1eab6a1e4563015103c66f0459"
+  },
+  {
+    "path": ".claude/skills/daily-brief/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8dfe5602e3e446493ffd11860977b11f0d94770b",
+    "size": 16536,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8dfe5602e3e446493ffd11860977b11f0d94770b"
+  },
+  {
+    "path": ".claude/skills/daily-journal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "bf757402bee0f4a2e20855068db1531fa95ce04b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/bf757402bee0f4a2e20855068db1531fa95ce04b"
+  },
+  {
+    "path": ".claude/skills/daily-journal/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f895ca66db2e59112965ae436e24a1c66eb847c",
+    "size": 4965,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6f895ca66db2e59112965ae436e24a1c66eb847c"
+  },
+  {
+    "path": ".claude/skills/data-forms",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5ea9601c70e565b3fdeb81fe837ad51c2af66ac5",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5ea9601c70e565b3fdeb81fe837ad51c2af66ac5"
+  },
+  {
+    "path": ".claude/skills/data-forms/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c304bbc4aa6547b53bbc236919971d0a03f3715",
+    "size": 7033,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4c304bbc4aa6547b53bbc236919971d0a03f3715"
+  },
+  {
+    "path": ".claude/skills/data-forms/references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "86adda3edc7a61b61b35acf47b1b10afd42e3f61",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/86adda3edc7a61b61b35acf47b1b10afd42e3f61"
+  },
+  {
+    "path": ".claude/skills/data-forms/references/forms.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4ed73015ddb212021ebb9e280ec2d63fe6a80801",
+    "size": 29137,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4ed73015ddb212021ebb9e280ec2d63fe6a80801"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "536ccdefc18278a0a300b1a93ecc7223537b8007",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/536ccdefc18278a0a300b1a93ecc7223537b8007"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dce135c6be3608091b96f6b1ed6995cea28a0d25",
+    "size": 9719,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/dce135c6be3608091b96f6b1ed6995cea28a0d25"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/assets",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "597e81f7076471df6e9b9d528c6b752fc47fa4c9",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/597e81f7076471df6e9b9d528c6b752fc47fa4c9"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/assets/gallery.html",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "33c59a7f3930928b4c6b47f07da8013e9ed176ac",
+    "size": 24774,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/33c59a7f3930928b4c6b47f07da8013e9ed176ac"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "78245b3f56456bb2e4b44eb0ddf829bf87e6cd99",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/78245b3f56456bb2e4b44eb0ddf829bf87e6cd99"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/references/design-system.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8339b5f75f4952e2f0f4dc7e6f9b92eb973738a8",
+    "size": 9779,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8339b5f75f4952e2f0f4dc7e6f9b92eb973738a8"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/references/elements.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6327b4675d9f1953289e099803da48475ff9aea7",
+    "size": 8362,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6327b4675d9f1953289e099803da48475ff9aea7"
+  },
+  {
+    "path": ".claude/skills/editorial-illustrations/references/worked-examples.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37a37c308b7a783f7fe07925b0a2e29f4bc82300",
+    "size": 13926,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/37a37c308b7a783f7fe07925b0a2e29f4bc82300"
+  },
+  {
+    "path": ".claude/skills/export-open-issues",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "99c0cd676732e2aea74a79dcb85399354e6efa39",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/99c0cd676732e2aea74a79dcb85399354e6efa39"
+  },
+  {
+    "path": ".claude/skills/export-open-issues/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5705ad7cb21e1ec35a2be2653edc74d8b947e370",
+    "size": 8871,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5705ad7cb21e1ec35a2be2653edc74d8b947e370"
+  },
+  {
+    "path": ".claude/skills/generate-prd",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4bd505d6105513a60ba51aeeedd79fa06d6f9e7d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4bd505d6105513a60ba51aeeedd79fa06d6f9e7d"
+  },
+  {
+    "path": ".claude/skills/generate-prd/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f80424869b194ca34759ea192f426f259e330e79",
+    "size": 9466,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/f80424869b194ca34759ea192f426f259e330e79"
+  },
+  {
+    "path": ".claude/skills/generate-release-notes",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6c725c2e9e389039677d3c7b27fabc776cebb6e1",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/6c725c2e9e389039677d3c7b27fabc776cebb6e1"
+  },
+  {
+    "path": ".claude/skills/generate-release-notes/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ed4f3bb9d033c8164f895d842129730834b8eca",
+    "size": 10167,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5ed4f3bb9d033c8164f895d842129730834b8eca"
+  },
+  {
+    "path": ".claude/skills/harvest",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "dd8eded985d18768898410242943f069e8514650",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/dd8eded985d18768898410242943f069e8514650"
+  },
+  {
+    "path": ".claude/skills/harvest/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8ab58110f3c62bf91d1a24a365eaad1b940cd31b",
+    "size": 2403,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8ab58110f3c62bf91d1a24a365eaad1b940cd31b"
+  },
+  {
+    "path": ".claude/skills/knowledge-consolidation",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f65079d617e59b49e5d9cb8bbe2247356d4e4081",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f65079d617e59b49e5d9cb8bbe2247356d4e4081"
+  },
+  {
+    "path": ".claude/skills/knowledge-consolidation/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "916737c7310f40a1d35c42664cd882bbfffa2418",
+    "size": 22880,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/916737c7310f40a1d35c42664cd882bbfffa2418"
+  },
+  {
+    "path": ".claude/skills/loop-engineering",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "117a5aa166ae8c9cb6ae737b1f839a23ca5765be",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/117a5aa166ae8c9cb6ae737b1f839a23ca5765be"
+  },
+  {
+    "path": ".claude/skills/loop-engineering/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e01f0ff71948b5bef0ab99405a940445dd2c472e",
+    "size": 6271,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e01f0ff71948b5bef0ab99405a940445dd2c472e"
+  },
+  {
+    "path": ".claude/skills/meeting-transcript",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ffef1752d655a5b84dc06375ab6e2a2d6ad186f0",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/ffef1752d655a5b84dc06375ab6e2a2d6ad186f0"
+  },
+  {
+    "path": ".claude/skills/meeting-transcript/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1d189eeec7c59de3898ddb87af2d04536e27953a",
+    "size": 9124,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1d189eeec7c59de3898ddb87af2d04536e27953a"
+  },
+  {
+    "path": ".claude/skills/memory-hygiene",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b36f7aadfadeb739a81cf823c9c81cd36d91b394",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/b36f7aadfadeb739a81cf823c9c81cd36d91b394"
+  },
+  {
+    "path": ".claude/skills/memory-hygiene/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03dfcbfab37157ecf83da77fe04ee9233a7fa5bd",
+    "size": 4874,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/03dfcbfab37157ecf83da77fe04ee9233a7fa5bd"
+  },
+  {
+    "path": ".claude/skills/museum-art",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "468b34d20a3baa87543fb867a92d7668d57fb806",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/468b34d20a3baa87543fb867a92d7668d57fb806"
+  },
+  {
+    "path": ".claude/skills/museum-art/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8e02c262b7f3831eaced9a09be5e95533b11178d",
+    "size": 10474,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8e02c262b7f3831eaced9a09be5e95533b11178d"
+  },
+  {
+    "path": ".claude/skills/museum-art/references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8f11d51996fdec635e81a685fc6a1e33d9dd53b2",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/8f11d51996fdec635e81a685fc6a1e33d9dd53b2"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/_synthesis.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "96ea1f4d6933b5fc6dd6b0432682e353eedc2f0d",
+    "size": 9389,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/96ea1f4d6933b5fc6dd6b0432682e353eedc2f0d"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/artic.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0cf6dd761de406c44eef442a0de4df86256bb5c3",
+    "size": 6317,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/0cf6dd761de406c44eef442a0de4df86256bb5c3"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/cleveland.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7cf3b9c90b7948a41b4354bf492bfb05c1ffda74",
+    "size": 5681,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/7cf3b9c90b7948a41b4354bf492bfb05c1ffda74"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/getty.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3f14dc33a321f820e505c09b6a3b1e4cf67f6f3c",
+    "size": 10173,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3f14dc33a321f820e505c09b6a3b1e4cf67f6f3c"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/met.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c682cb5114f69a2f95089492001d0d06ee56992",
+    "size": 6397,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4c682cb5114f69a2f95089492001d0d06ee56992"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/nga.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37e2ebeb719f634652f4e7b38391e62c1f5d8e91",
+    "size": 8255,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/37e2ebeb719f634652f4e7b38391e62c1f5d8e91"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/rijksmuseum.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b333bd4688ae383e0a7993bc605f7edd28619348",
+    "size": 7889,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b333bd4688ae383e0a7993bc605f7edd28619348"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/smithsonian.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a0a308cff0a2f22cbf3949cd141cc6a455d08887",
+    "size": 7594,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a0a308cff0a2f22cbf3949cd141cc6a455d08887"
+  },
+  {
+    "path": ".claude/skills/museum-art/references/smk.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "00e3620979923434ccfdd0eede6176cf33dd19e0",
+    "size": 7677,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/00e3620979923434ccfdd0eede6176cf33dd19e0"
+  },
+  {
+    "path": ".claude/skills/no-ai-slop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "84b13149effabd87bd072dd028aad8ac0388f47d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/84b13149effabd87bd072dd028aad8ac0388f47d"
+  },
+  {
+    "path": ".claude/skills/no-ai-slop/LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "644ebee1944d0e7d03c66a25977ff0a8a8e1c7ae",
+    "size": 1067,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/644ebee1944d0e7d03c66a25977ff0a8a8e1c7ae"
+  },
+  {
+    "path": ".claude/skills/no-ai-slop/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e44511a1d4fc632522be736453c404ec4ef1b0a2",
+    "size": 9901,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e44511a1d4fc632522be736453c404ec4ef1b0a2"
+  },
+  {
+    "path": ".claude/skills/no-ai-slop/SOURCE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "141ca85da8a65041a434c3cf26912fc703230056",
+    "size": 715,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/141ca85da8a65041a434c3cf26912fc703230056"
+  },
+  {
+    "path": ".claude/skills/no-ai-slop/eval.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a72a95ea6539d3ac2fef1cc278cb95809fbc3517",
+    "size": 3077,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a72a95ea6539d3ac2fef1cc278cb95809fbc3517"
+  },
+  {
+    "path": ".claude/skills/onboarding",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "13e86b67e411d94e5f28188ccc86dc2ae9b0b4e7",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/13e86b67e411d94e5f28188ccc86dc2ae9b0b4e7"
+  },
+  {
+    "path": ".claude/skills/onboarding/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5803157a9f272bc33266e5eae0e01892b42f938e",
+    "size": 19763,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5803157a9f272bc33266e5eae0e01892b42f938e"
+  },
+  {
+    "path": ".claude/skills/product-ui-taste",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "3158da3e0b2f36e98d77ceaa1bfb34f2ef9dc899",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/3158da3e0b2f36e98d77ceaa1bfb34f2ef9dc899"
+  },
+  {
+    "path": ".claude/skills/product-ui-taste/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5b59260e8ecfae9a019648b7d038614cea1c914",
+    "size": 60117,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c5b59260e8ecfae9a019648b7d038614cea1c914"
+  },
+  {
+    "path": ".claude/skills/publish-to-confluence",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "65f5e589692b662bdbf418ff1f41e7850c2fb2ab",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/65f5e589692b662bdbf418ff1f41e7850c2fb2ab"
+  },
+  {
+    "path": ".claude/skills/publish-to-confluence/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2bd6c220eff3085722eabc6109562adb1089930",
+    "size": 7761,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b2bd6c220eff3085722eabc6109562adb1089930"
+  },
+  {
+    "path": ".claude/skills/retro",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "accd2ec52695863b5d165b313bdf101b1d716c30",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/accd2ec52695863b5d165b313bdf101b1d716c30"
+  },
+  {
+    "path": ".claude/skills/retro/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a1dcfd4bda94a87a785d159b75148fc40fe0de4",
+    "size": 2305,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/0a1dcfd4bda94a87a785d159b75148fc40fe0de4"
+  },
+  {
+    "path": ".claude/skills/review-cockpit",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4eaba12e7e25115f060f10fff9889574ab0b2a0c",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4eaba12e7e25115f060f10fff9889574ab0b2a0c"
+  },
+  {
+    "path": ".claude/skills/review-cockpit/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "78d4a48dacf458b872c71263f067388962981614",
+    "size": 5828,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/78d4a48dacf458b872c71263f067388962981614"
+  },
+  {
+    "path": ".claude/skills/scout",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "07ab4857ab552b76fee6754d6eaa74095d67ca35",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/07ab4857ab552b76fee6754d6eaa74095d67ca35"
+  },
+  {
+    "path": ".claude/skills/scout/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1f0bb683fe422a5d26ecf25bdeb648b0c9658a3a",
+    "size": 7298,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1f0bb683fe422a5d26ecf25bdeb648b0c9658a3a"
+  },
+  {
+    "path": ".claude/skills/taste-skill",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a6ae9630bcce348a57a9f0a8582d82d46b85a299",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/a6ae9630bcce348a57a9f0a8582d82d46b85a299"
+  },
+  {
+    "path": ".claude/skills/taste-skill/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9b80a8eb8e50519751df6a72c152fcdc8dbb83af",
+    "size": 87650,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/9b80a8eb8e50519751df6a72c152fcdc8dbb83af"
+  },
+  {
+    "path": ".claude/skills/team-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "807ee02f9235db9adea5adf26c45e47dee9438e7",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/807ee02f9235db9adea5adf26c45e47dee9438e7"
+  },
+  {
+    "path": ".claude/skills/team-brief/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1e2ee9b62fdf746b2378b6e71823582e88a9226f",
+    "size": 48102,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1e2ee9b62fdf746b2378b6e71823582e88a9226f"
+  },
+  {
+    "path": ".claude/skills/ultragoal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4251ef319d80e85c6a26e7c5c3cd9ac7160fe627",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4251ef319d80e85c6a26e7c5c3cd9ac7160fe627"
+  },
+  {
+    "path": ".claude/skills/ultragoal/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f4c8ac775bdd52c4e4fcd2e303e13ea1f8235ea",
+    "size": 8617,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4f4c8ac775bdd52c4e4fcd2e303e13ea1f8235ea"
+  },
+  {
+    "path": ".claude/skills/update-cog",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6c1b2361200c944d79ecc60c361f9b5b5b7b0f03",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/6c1b2361200c944d79ecc60c361f9b5b5b7b0f03"
+  },
+  {
+    "path": ".claude/skills/update-cog/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3f62bde5f03a3ab337a4319885e90fb3fc56998",
+    "size": 3522,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/f3f62bde5f03a3ab337a4319885e90fb3fc56998"
+  },
+  {
+    "path": ".claude/skills/update-knowledge-base",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a81803cf509e7373c0e31495cf4f4a770549cb12",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/a81803cf509e7373c0e31495cf4f4a770549cb12"
+  },
+  {
+    "path": ".claude/skills/update-knowledge-base/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3353de361fb7a15a4048b9b84f7eba25e703c13a",
+    "size": 11043,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3353de361fb7a15a4048b9b84f7eba25e703c13a"
+  },
+  {
+    "path": ".claude/skills/url-dump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "1126429c8c37b9d9d59f68e2adf59899e67cc67b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/1126429c8c37b9d9d59f68e2adf59899e67cc67b"
+  },
+  {
+    "path": ".claude/skills/url-dump/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "068817cab15ea407b4042537041ef7f21a1caebc",
+    "size": 14483,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/068817cab15ea407b4042537041ef7f21a1caebc"
+  },
+  {
+    "path": ".claude/skills/weekly-checkin",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "60c559fff0f0e99292dc1aabc1f32b56f646da73",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/60c559fff0f0e99292dc1aabc1f32b56f646da73"
+  },
+  {
+    "path": ".claude/skills/weekly-checkin/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed816e6ef891fcf292ecb4e81cd38cb9c3b40839",
+    "size": 13865,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ed816e6ef891fcf292ecb4e81cd38cb9c3b40839"
+  },
+  {
+    "path": ".cursor-plugin",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "823a5ed04d7ef512abdc976033d1bd2e4b85ec77",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/823a5ed04d7ef512abdc976033d1bd2e4b85ec77"
+  },
+  {
+    "path": ".cursor-plugin/plugin.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "64993093011ed8dc6154e9ab385b1ec739da3e04",
+    "size": 9426,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/64993093011ed8dc6154e9ab385b1ec739da3e04"
+  },
+  {
+    "path": ".cursorrules",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d18eba4251263f2c81ce9f29983ce554f598e3d5",
+    "size": 1954,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d18eba4251263f2c81ce9f29983ce554f598e3d5"
+  },
+  {
+    "path": ".gemini",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "532d0e1337138bf453d1a6bbf5bb6dff444995cd",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/532d0e1337138bf453d1a6bbf5bb6dff444995cd"
+  },
+  {
+    "path": ".gemini/commands",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "667ef34e6bef38ac761ad7995ed51f31f46edcf8",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/667ef34e6bef38ac761ad7995ed51f31f46edcf8"
+  },
+  {
+    "path": ".gemini/commands/braindump.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efe75842aa50f14c8d637cf7c33d87afaf425c56",
+    "size": 245,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/efe75842aa50f14c8d637cf7c33d87afaf425c56"
+  },
+  {
+    "path": ".gemini/commands/daily-brief.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7b13d489459014f9aab2e9d01a5a759221d2f196",
+    "size": 232,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/7b13d489459014f9aab2e9d01a5a759221d2f196"
+  },
+  {
+    "path": ".gemini/commands/knowledge-consolidation.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0b19674d674b0355b3c348a0d11414dbd4e119c",
+    "size": 240,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c0b19674d674b0355b3c348a0d11414dbd4e119c"
+  },
+  {
+    "path": ".gemini/commands/onboarding.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3ca27ddeb9ea0f62d72f749657c985ba5cc16ab7",
+    "size": 216,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3ca27ddeb9ea0f62d72f749657c985ba5cc16ab7"
+  },
+  {
+    "path": ".gemini/commands/update-cog.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e501be96c58cd4b78e439c00adaa21126b033039",
+    "size": 222,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e501be96c58cd4b78e439c00adaa21126b033039"
+  },
+  {
+    "path": ".gemini/commands/url-dump.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "26d57a1567a26ddda16d7e62ec620d11e4033e9a",
+    "size": 220,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/26d57a1567a26ddda16d7e62ec620d11e4033e9a"
+  },
+  {
+    "path": ".gemini/commands/weekly-checkin.toml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6e2e4783b9b2ef6c3af5d049e35dbdcb1b7637e4",
+    "size": 223,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6e2e4783b9b2ef6c3af5d049e35dbdcb1b7637e4"
+  },
+  {
+    "path": ".gemini/skills",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f41d9a2a232c525586f0a950dbfd189eff2ec327",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f41d9a2a232c525586f0a950dbfd189eff2ec327"
+  },
+  {
+    "path": ".gemini/skills/braindump.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f77d9d1fdecda2486ec4bf75494cd29ede3b3b0",
+    "size": 1682,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4f77d9d1fdecda2486ec4bf75494cd29ede3b3b0"
+  },
+  {
+    "path": ".gemini/skills/daily-brief.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "48be6950825e55d2e0498fc8d47c6bcaa6672972",
+    "size": 1659,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/48be6950825e55d2e0498fc8d47c6bcaa6672972"
+  },
+  {
+    "path": ".gemini/skills/knowledge-consolidation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6bf1c5d108b671649c1f321f556412911196955c",
+    "size": 1580,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6bf1c5d108b671649c1f321f556412911196955c"
+  },
+  {
+    "path": ".gemini/skills/onboarding.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "acf504a67c3996ecc41ac92649fdec5044ddb71e",
+    "size": 2220,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/acf504a67c3996ecc41ac92649fdec5044ddb71e"
+  },
+  {
+    "path": ".gemini/skills/update-cog.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ab74a97ee3f200fb8e0b93c733bdb6e86cb2dc28",
+    "size": 2082,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ab74a97ee3f200fb8e0b93c733bdb6e86cb2dc28"
+  },
+  {
+    "path": ".gemini/skills/url-dump.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "34f7f1c45b4bf8bc0d1c221e0e42b31844cc8de1",
+    "size": 1501,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/34f7f1c45b4bf8bc0d1c221e0e42b31844cc8de1"
+  },
+  {
+    "path": ".gemini/skills/weekly-checkin.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b8a68ec9ad27a267a7a1aa1a0483659dd89ae83c",
+    "size": 1575,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b8a68ec9ad27a267a7a1aa1a0483659dd89ae83c"
+  },
+  {
+    "path": ".github",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e6af9682837ceb894d532a1597712b4dfce343d6",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/e6af9682837ceb894d532a1597712b4dfce343d6"
+  },
+  {
+    "path": ".github/FUNDING.yml",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4322f3908cb2a1c956ca4b6bdab8935f2d4f9c74",
+    "size": 102,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4322f3908cb2a1c956ca4b6bdab8935f2d4f9c74"
+  },
+  {
+    "path": ".github/MARKETPLACE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "076d867b45937ee5d42fc99a45a2d299d437731d",
+    "size": 4157,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/076d867b45937ee5d42fc99a45a2d299d437731d"
+  },
+  {
+    "path": ".github/PR-AWESOME-CLAUDE-CODE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dfddce5449f488870510fb3d57078aa5d19d11f3",
+    "size": 5414,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/dfddce5449f488870510fb3d57078aa5d19d11f3"
+  },
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "68f7f392a80e6480141a94087f6061ecc33d336e",
+    "size": 1215,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/68f7f392a80e6480141a94087f6061ecc33d336e"
+  },
+  {
+    "path": ".kiro",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "9770bd76fed43b66efadda8bf23a41c0368a45c4",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/9770bd76fed43b66efadda8bf23a41c0368a45c4"
+  },
+  {
+    "path": ".kiro/powers",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "40b9cff0c21f9e49a0a411345c46cdf8fdc289e5",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/40b9cff0c21f9e49a0a411345c46cdf8fdc289e5"
+  },
+  {
+    "path": ".kiro/powers/cog-braindump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b9979eedfcacc1b7d6430b796cdb98de8a9cccf2",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/b9979eedfcacc1b7d6430b796cdb98de8a9cccf2"
+  },
+  {
+    "path": ".kiro/powers/cog-braindump/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a9df019cfb64e93ec28413687f2dc5fb2b9bb2b",
+    "size": 3674,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/0a9df019cfb64e93ec28413687f2dc5fb2b9bb2b"
+  },
+  {
+    "path": ".kiro/powers/cog-daily-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "cd4c38e6f794aa21533388ef3d499ca1afea7281",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/cd4c38e6f794aa21533388ef3d499ca1afea7281"
+  },
+  {
+    "path": ".kiro/powers/cog-daily-brief/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "67c033871a6b016d83799260719560037887b1d0",
+    "size": 3369,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/67c033871a6b016d83799260719560037887b1d0"
+  },
+  {
+    "path": ".kiro/powers/cog-knowledge-consolidation",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "73acf3d0e7da808665f3fbe5261140c65eca7547",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/73acf3d0e7da808665f3fbe5261140c65eca7547"
+  },
+  {
+    "path": ".kiro/powers/cog-knowledge-consolidation/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a7673f7f8396f56f62a8350f4cdbf9d819c686d",
+    "size": 3772,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/0a7673f7f8396f56f62a8350f4cdbf9d819c686d"
+  },
+  {
+    "path": ".kiro/powers/cog-onboarding",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "aa81dd4eb87683b474e733515c0c01116a583227",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/aa81dd4eb87683b474e733515c0c01116a583227"
+  },
+  {
+    "path": ".kiro/powers/cog-onboarding/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5796ff56ea106bfa905c1c10bf4587c460d04d35",
+    "size": 4438,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5796ff56ea106bfa905c1c10bf4587c460d04d35"
+  },
+  {
+    "path": ".kiro/powers/cog-update",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "97c23048bae2c787debc874631e01dc99d8d1ad6",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/97c23048bae2c787debc874631e01dc99d8d1ad6"
+  },
+  {
+    "path": ".kiro/powers/cog-update/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc36b159715c4ecc6c8a84acb93d38124d852ac0",
+    "size": 2148,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/fc36b159715c4ecc6c8a84acb93d38124d852ac0"
+  },
+  {
+    "path": ".kiro/powers/cog-url-dump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b98c6d7cac99bfa176cb4f1cd9b1c0a450fa296b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/b98c6d7cac99bfa176cb4f1cd9b1c0a450fa296b"
+  },
+  {
+    "path": ".kiro/powers/cog-url-dump/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ec8c2673c540360a2b8b5c88c4ea5ff1e40394c3",
+    "size": 4136,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ec8c2673c540360a2b8b5c88c4ea5ff1e40394c3"
+  },
+  {
+    "path": ".kiro/powers/cog-weekly-checkin",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "0e65e368cbccaec91c76913efd0cb143e716c07d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/0e65e368cbccaec91c76913efd0cb143e716c07d"
+  },
+  {
+    "path": ".kiro/powers/cog-weekly-checkin/POWER.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "60fc23da21a6ef3cdb4c5108a8689897fcc4a139",
+    "size": 3836,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/60fc23da21a6ef3cdb4c5108a8689897fcc4a139"
+  },
+  {
+    "path": "00-inbox",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "00-inbox/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "01-daily",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "c45d6ec53e8f66dd57376f7a36190a5155efe95a",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/c45d6ec53e8f66dd57376f7a36190a5155efe95a"
+  },
+  {
+    "path": "01-daily/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "01-daily/briefs",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "01-daily/briefs/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "01-daily/checkins",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "01-daily/checkins/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "02-personal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e5d7a23014733c8e192399913dc0f6c75373f9bf",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/e5d7a23014733c8e192399913dc0f6c75373f9bf"
+  },
+  {
+    "path": "02-personal/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "02-personal/braindumps",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "02-personal/braindumps/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "03-professional",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e5d7a23014733c8e192399913dc0f6c75373f9bf",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/e5d7a23014733c8e192399913dc0f6c75373f9bf"
+  },
+  {
+    "path": "03-professional/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "03-professional/braindumps",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "03-professional/braindumps/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "04-projects",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "04-projects/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "05-knowledge",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e9e8970d63dea996b602bd6a12444d45875db1e6",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/e9e8970d63dea996b602bd6a12444d45875db1e6"
+  },
+  {
+    "path": "05-knowledge/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "05-knowledge/booklets",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "05-knowledge/booklets/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "05-knowledge/consolidated",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "05-knowledge/consolidated/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "05-knowledge/patterns",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "05-knowledge/patterns/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "05-knowledge/people",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4c0980114766aaade453f6d0fac4898549386323",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4c0980114766aaade453f6d0fac4898549386323"
+  },
+  {
+    "path": "05-knowledge/people/README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "472ac308b204f4d5b8b92d574214a3c554520dd7",
+    "size": 3044,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/472ac308b204f4d5b8b92d574214a3c554520dd7"
+  },
+  {
+    "path": "05-knowledge/timeline",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+  },
+  {
+    "path": "05-knowledge/timeline/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "06-templates",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4046a90b67a4ee45131f1c906ce1f86dd38e2d71",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4046a90b67a4ee45131f1c906ce1f86dd38e2d71"
+  },
+  {
+    "path": "06-templates/.gitkeep",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "size": 0,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "06-templates/people-profile-template.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d17f886b484930b379f1d886e5c0683c5b7671b3",
+    "size": 1286,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d17f886b484930b379f1d886e5c0683c5b7671b3"
+  },
+  {
+    "path": "AGENTS.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d8ddbbaf1d083c2d53854c6730b4808597d56682",
+    "size": 46355,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d8ddbbaf1d083c2d53854c6730b4808597d56682"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "92b75be02382c4dabd44ac3831fb68b793054503",
+    "size": 48150,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/92b75be02382c4dabd44ac3831fb68b793054503"
+  },
+  {
+    "path": "CLAUDE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9baf37ed9da8c0ed6427766d9dafe7194b11845c",
+    "size": 17345,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/9baf37ed9da8c0ed6427766d9dafe7194b11845c"
+  },
+  {
+    "path": "COG-VERSION",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "30291cba2230c12b0d038717f8b0502836e4dd28",
+    "size": 7,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/30291cba2230c12b0d038717f8b0502836e4dd28"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a3281f96dde0579a9c10be794acafef2cf587818",
+    "size": 7754,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a3281f96dde0579a9c10be794acafef2cf587818"
+  },
+  {
+    "path": "GEMINI.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a720b33198f43d5657fa015b487610e785b40a78",
+    "size": 1996,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a720b33198f43d5657fa015b487610e785b40a78"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2ca3f1be61cc9665c9fd9f73376d227e76bb95e2",
+    "size": 1065,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/2ca3f1be61cc9665c9fd9f73376d227e76bb95e2"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97180c18b58e8a46dbf60c46ff53cd8aac79b566",
+    "size": 20954,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/97180c18b58e8a46dbf60c46ff53cd8aac79b566"
+  },
+  {
+    "path": "SETUP.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aad6baa8e16fcc7c8e0fb22d8e0793a9c3d78e8a",
+    "size": 16410,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/aad6baa8e16fcc7c8e0fb22d8e0793a9c3d78e8a"
+  },
+  {
+    "path": "WORKFLOW.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b06afb7e9956401e9af6ce5db9ec4d529b1aa132",
+    "size": 8522,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b06afb7e9956401e9af6ce5db9ec4d529b1aa132"
+  },
+  {
+    "path": "cog-update.sh",
+    "mode": "100755",
+    "type": "blob",
+    "sha": "fa68046ae2c6f6976e86ca4202d66a4d907b28cd",
+    "size": 17461,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/fa68046ae2c6f6976e86ca4202d66a4d907b28cd"
+  },
+  {
+    "path": "docs",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "0247bd04aab07e749ba7422a56658c56febcd3f1",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/0247bd04aab07e749ba7422a56658c56febcd3f1"
+  },
+  {
+    "path": "docs/AGENT-SUPPORT.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17b77e0ccc6c6095099734c6f99471f109c36909",
+    "size": 3420,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/17b77e0ccc6c6095099734c6f99471f109c36909"
+  },
+  {
+    "path": "docs/SKILL-DISTILLATION.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ba4f57529d76ae10d58564686fb4a2c29910c4f4",
+    "size": 4710,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ba4f57529d76ae10d58564686fb4a2c29910c4f4"
+  },
+  {
+    "path": "marketplace-entry.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9cbce94e8d35594602b23251e4d7ae7c93a2c8da",
+    "size": 1349,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/9cbce94e8d35594602b23251e4d7ae7c93a2c8da"
+  },
+  {
+    "path": "plugin.json",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f87822993fcae1aacd5e1f7c97a1aaad3797654",
+    "size": 1296,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4f87822993fcae1aacd5e1f7c97a1aaad3797654"
+  },
+  {
+    "path": "scripts",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "91e36cf7858e4a8381322aaca3f338a1ca5b9a1f",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/91e36cf7858e4a8381322aaca3f338a1ca5b9a1f"
+  },
+  {
+    "path": "scripts/build-agent-plugin.sh",
+    "mode": "100755",
+    "type": "blob",
+    "sha": "00fb4de9268718c2ecef99959b6dafd26a151d5e",
+    "size": 1053,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/00fb4de9268718c2ecef99959b6dafd26a151d5e"
+  },
+  {
+    "path": "scripts/validate-agent-surface.sh",
+    "mode": "100755",
+    "type": "blob",
+    "sha": "b02be2243da9495d0cea44e481408c4bb11fc796",
+    "size": 5180,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b02be2243da9495d0cea44e481408c4bb11fc796"
+  },
+  {
+    "path": "skills",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b9961b029fa735ccc75295bef2452f6395356339",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/b9961b029fa735ccc75295bef2452f6395356339"
+  },
+  {
+    "path": "skills/auto-research",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "d0bb3738ae731f17849a6042375f3502e3c2d7d8",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/d0bb3738ae731f17849a6042375f3502e3c2d7d8"
+  },
+  {
+    "path": "skills/auto-research/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "978af3ec087c11b43fa48f0724c9f2a067cb9c90",
+    "size": 11747,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/978af3ec087c11b43fa48f0724c9f2a067cb9c90"
+  },
+  {
+    "path": "skills/braindump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5783a455c76a61777fc6ca4e98a38502489e5378",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5783a455c76a61777fc6ca4e98a38502489e5378"
+  },
+  {
+    "path": "skills/braindump/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8557505cb25bcba20f7168024ae90a4ee5354d60",
+    "size": 12617,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8557505cb25bcba20f7168024ae90a4ee5354d60"
+  },
+  {
+    "path": "skills/closed-loop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f028717e758bf6c13e4ea6ae42e960f4082eb82c",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f028717e758bf6c13e4ea6ae42e960f4082eb82c"
+  },
+  {
+    "path": "skills/closed-loop/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2717dad095427649cd91782f550a5bb759af5b09",
+    "size": 4236,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/2717dad095427649cd91782f550a5bb759af5b09"
+  },
+  {
+    "path": "skills/comprehensive-analysis",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "32ff8b096e2d864647ce16a90bbf24c1fa152a82",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/32ff8b096e2d864647ce16a90bbf24c1fa152a82"
+  },
+  {
+    "path": "skills/comprehensive-analysis/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d244d67bc8a974bb4b088c062249f117be6ddbc0",
+    "size": 14656,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/d244d67bc8a974bb4b088c062249f117be6ddbc0"
+  },
+  {
+    "path": "skills/content-factory",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4a53c160934c0bd67db03ad55bdab82c007861a8",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4a53c160934c0bd67db03ad55bdab82c007861a8"
+  },
+  {
+    "path": "skills/content-factory/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3aec37614ce474f484a79c3f1e32a45c787cf869",
+    "size": 6270,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3aec37614ce474f484a79c3f1e32a45c787cf869"
+  },
+  {
+    "path": "skills/create-user-story",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5c28a9db36ce154064da113a1f6a901fd477d740",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5c28a9db36ce154064da113a1f6a901fd477d740"
+  },
+  {
+    "path": "skills/create-user-story/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e22a66f4ecde4ea9b270313c67e4d02f95cb6d0d",
+    "size": 7903,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e22a66f4ecde4ea9b270313c67e4d02f95cb6d0d"
+  },
+  {
+    "path": "skills/daily-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f58d61186c10fd1eab6a1e4563015103c66f0459",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f58d61186c10fd1eab6a1e4563015103c66f0459"
+  },
+  {
+    "path": "skills/daily-brief/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8dfe5602e3e446493ffd11860977b11f0d94770b",
+    "size": 16536,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8dfe5602e3e446493ffd11860977b11f0d94770b"
+  },
+  {
+    "path": "skills/daily-journal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "bf757402bee0f4a2e20855068db1531fa95ce04b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/bf757402bee0f4a2e20855068db1531fa95ce04b"
+  },
+  {
+    "path": "skills/daily-journal/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f895ca66db2e59112965ae436e24a1c66eb847c",
+    "size": 4965,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6f895ca66db2e59112965ae436e24a1c66eb847c"
+  },
+  {
+    "path": "skills/data-forms",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5ea9601c70e565b3fdeb81fe837ad51c2af66ac5",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/5ea9601c70e565b3fdeb81fe837ad51c2af66ac5"
+  },
+  {
+    "path": "skills/data-forms/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c304bbc4aa6547b53bbc236919971d0a03f3715",
+    "size": 7033,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4c304bbc4aa6547b53bbc236919971d0a03f3715"
+  },
+  {
+    "path": "skills/data-forms/references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "86adda3edc7a61b61b35acf47b1b10afd42e3f61",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/86adda3edc7a61b61b35acf47b1b10afd42e3f61"
+  },
+  {
+    "path": "skills/data-forms/references/forms.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4ed73015ddb212021ebb9e280ec2d63fe6a80801",
+    "size": 29137,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4ed73015ddb212021ebb9e280ec2d63fe6a80801"
+  },
+  {
+    "path": "skills/editorial-illustrations",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "536ccdefc18278a0a300b1a93ecc7223537b8007",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/536ccdefc18278a0a300b1a93ecc7223537b8007"
+  },
+  {
+    "path": "skills/editorial-illustrations/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dce135c6be3608091b96f6b1ed6995cea28a0d25",
+    "size": 9719,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/dce135c6be3608091b96f6b1ed6995cea28a0d25"
+  },
+  {
+    "path": "skills/editorial-illustrations/assets",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "597e81f7076471df6e9b9d528c6b752fc47fa4c9",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/597e81f7076471df6e9b9d528c6b752fc47fa4c9"
+  },
+  {
+    "path": "skills/editorial-illustrations/assets/gallery.html",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "33c59a7f3930928b4c6b47f07da8013e9ed176ac",
+    "size": 24774,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/33c59a7f3930928b4c6b47f07da8013e9ed176ac"
+  },
+  {
+    "path": "skills/editorial-illustrations/references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "78245b3f56456bb2e4b44eb0ddf829bf87e6cd99",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/78245b3f56456bb2e4b44eb0ddf829bf87e6cd99"
+  },
+  {
+    "path": "skills/editorial-illustrations/references/design-system.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8339b5f75f4952e2f0f4dc7e6f9b92eb973738a8",
+    "size": 9779,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8339b5f75f4952e2f0f4dc7e6f9b92eb973738a8"
+  },
+  {
+    "path": "skills/editorial-illustrations/references/elements.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6327b4675d9f1953289e099803da48475ff9aea7",
+    "size": 8362,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/6327b4675d9f1953289e099803da48475ff9aea7"
+  },
+  {
+    "path": "skills/editorial-illustrations/references/worked-examples.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37a37c308b7a783f7fe07925b0a2e29f4bc82300",
+    "size": 13926,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/37a37c308b7a783f7fe07925b0a2e29f4bc82300"
+  },
+  {
+    "path": "skills/export-open-issues",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "99c0cd676732e2aea74a79dcb85399354e6efa39",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/99c0cd676732e2aea74a79dcb85399354e6efa39"
+  },
+  {
+    "path": "skills/export-open-issues/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5705ad7cb21e1ec35a2be2653edc74d8b947e370",
+    "size": 8871,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5705ad7cb21e1ec35a2be2653edc74d8b947e370"
+  },
+  {
+    "path": "skills/generate-prd",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4bd505d6105513a60ba51aeeedd79fa06d6f9e7d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4bd505d6105513a60ba51aeeedd79fa06d6f9e7d"
+  },
+  {
+    "path": "skills/generate-prd/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f80424869b194ca34759ea192f426f259e330e79",
+    "size": 9466,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/f80424869b194ca34759ea192f426f259e330e79"
+  },
+  {
+    "path": "skills/generate-release-notes",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6c725c2e9e389039677d3c7b27fabc776cebb6e1",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/6c725c2e9e389039677d3c7b27fabc776cebb6e1"
+  },
+  {
+    "path": "skills/generate-release-notes/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ed4f3bb9d033c8164f895d842129730834b8eca",
+    "size": 10167,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5ed4f3bb9d033c8164f895d842129730834b8eca"
+  },
+  {
+    "path": "skills/harvest",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "dd8eded985d18768898410242943f069e8514650",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/dd8eded985d18768898410242943f069e8514650"
+  },
+  {
+    "path": "skills/harvest/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8ab58110f3c62bf91d1a24a365eaad1b940cd31b",
+    "size": 2403,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8ab58110f3c62bf91d1a24a365eaad1b940cd31b"
+  },
+  {
+    "path": "skills/knowledge-consolidation",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f65079d617e59b49e5d9cb8bbe2247356d4e4081",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/f65079d617e59b49e5d9cb8bbe2247356d4e4081"
+  },
+  {
+    "path": "skills/knowledge-consolidation/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "916737c7310f40a1d35c42664cd882bbfffa2418",
+    "size": 22880,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/916737c7310f40a1d35c42664cd882bbfffa2418"
+  },
+  {
+    "path": "skills/loop-engineering",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "117a5aa166ae8c9cb6ae737b1f839a23ca5765be",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/117a5aa166ae8c9cb6ae737b1f839a23ca5765be"
+  },
+  {
+    "path": "skills/loop-engineering/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e01f0ff71948b5bef0ab99405a940445dd2c472e",
+    "size": 6271,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e01f0ff71948b5bef0ab99405a940445dd2c472e"
+  },
+  {
+    "path": "skills/meeting-transcript",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ffef1752d655a5b84dc06375ab6e2a2d6ad186f0",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/ffef1752d655a5b84dc06375ab6e2a2d6ad186f0"
+  },
+  {
+    "path": "skills/meeting-transcript/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1d189eeec7c59de3898ddb87af2d04536e27953a",
+    "size": 9124,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1d189eeec7c59de3898ddb87af2d04536e27953a"
+  },
+  {
+    "path": "skills/memory-hygiene",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b36f7aadfadeb739a81cf823c9c81cd36d91b394",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/b36f7aadfadeb739a81cf823c9c81cd36d91b394"
+  },
+  {
+    "path": "skills/memory-hygiene/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03dfcbfab37157ecf83da77fe04ee9233a7fa5bd",
+    "size": 4874,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/03dfcbfab37157ecf83da77fe04ee9233a7fa5bd"
+  },
+  {
+    "path": "skills/museum-art",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "468b34d20a3baa87543fb867a92d7668d57fb806",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/468b34d20a3baa87543fb867a92d7668d57fb806"
+  },
+  {
+    "path": "skills/museum-art/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8e02c262b7f3831eaced9a09be5e95533b11178d",
+    "size": 10474,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/8e02c262b7f3831eaced9a09be5e95533b11178d"
+  },
+  {
+    "path": "skills/museum-art/references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8f11d51996fdec635e81a685fc6a1e33d9dd53b2",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/8f11d51996fdec635e81a685fc6a1e33d9dd53b2"
+  },
+  {
+    "path": "skills/museum-art/references/_synthesis.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "96ea1f4d6933b5fc6dd6b0432682e353eedc2f0d",
+    "size": 9389,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/96ea1f4d6933b5fc6dd6b0432682e353eedc2f0d"
+  },
+  {
+    "path": "skills/museum-art/references/artic.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0cf6dd761de406c44eef442a0de4df86256bb5c3",
+    "size": 6317,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/0cf6dd761de406c44eef442a0de4df86256bb5c3"
+  },
+  {
+    "path": "skills/museum-art/references/cleveland.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7cf3b9c90b7948a41b4354bf492bfb05c1ffda74",
+    "size": 5681,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/7cf3b9c90b7948a41b4354bf492bfb05c1ffda74"
+  },
+  {
+    "path": "skills/museum-art/references/getty.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3f14dc33a321f820e505c09b6a3b1e4cf67f6f3c",
+    "size": 10173,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3f14dc33a321f820e505c09b6a3b1e4cf67f6f3c"
+  },
+  {
+    "path": "skills/museum-art/references/met.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c682cb5114f69a2f95089492001d0d06ee56992",
+    "size": 6397,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4c682cb5114f69a2f95089492001d0d06ee56992"
+  },
+  {
+    "path": "skills/museum-art/references/nga.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "37e2ebeb719f634652f4e7b38391e62c1f5d8e91",
+    "size": 8255,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/37e2ebeb719f634652f4e7b38391e62c1f5d8e91"
+  },
+  {
+    "path": "skills/museum-art/references/rijksmuseum.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b333bd4688ae383e0a7993bc605f7edd28619348",
+    "size": 7889,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b333bd4688ae383e0a7993bc605f7edd28619348"
+  },
+  {
+    "path": "skills/museum-art/references/smithsonian.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a0a308cff0a2f22cbf3949cd141cc6a455d08887",
+    "size": 7594,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a0a308cff0a2f22cbf3949cd141cc6a455d08887"
+  },
+  {
+    "path": "skills/museum-art/references/smk.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "00e3620979923434ccfdd0eede6176cf33dd19e0",
+    "size": 7677,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/00e3620979923434ccfdd0eede6176cf33dd19e0"
+  },
+  {
+    "path": "skills/no-ai-slop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "84b13149effabd87bd072dd028aad8ac0388f47d",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/84b13149effabd87bd072dd028aad8ac0388f47d"
+  },
+  {
+    "path": "skills/no-ai-slop/LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "644ebee1944d0e7d03c66a25977ff0a8a8e1c7ae",
+    "size": 1067,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/644ebee1944d0e7d03c66a25977ff0a8a8e1c7ae"
+  },
+  {
+    "path": "skills/no-ai-slop/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e44511a1d4fc632522be736453c404ec4ef1b0a2",
+    "size": 9901,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/e44511a1d4fc632522be736453c404ec4ef1b0a2"
+  },
+  {
+    "path": "skills/no-ai-slop/SOURCE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "141ca85da8a65041a434c3cf26912fc703230056",
+    "size": 715,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/141ca85da8a65041a434c3cf26912fc703230056"
+  },
+  {
+    "path": "skills/no-ai-slop/eval.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a72a95ea6539d3ac2fef1cc278cb95809fbc3517",
+    "size": 3077,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/a72a95ea6539d3ac2fef1cc278cb95809fbc3517"
+  },
+  {
+    "path": "skills/onboarding",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "13e86b67e411d94e5f28188ccc86dc2ae9b0b4e7",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/13e86b67e411d94e5f28188ccc86dc2ae9b0b4e7"
+  },
+  {
+    "path": "skills/onboarding/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5803157a9f272bc33266e5eae0e01892b42f938e",
+    "size": 19763,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/5803157a9f272bc33266e5eae0e01892b42f938e"
+  },
+  {
+    "path": "skills/product-ui-taste",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "3158da3e0b2f36e98d77ceaa1bfb34f2ef9dc899",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/3158da3e0b2f36e98d77ceaa1bfb34f2ef9dc899"
+  },
+  {
+    "path": "skills/product-ui-taste/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5b59260e8ecfae9a019648b7d038614cea1c914",
+    "size": 60117,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/c5b59260e8ecfae9a019648b7d038614cea1c914"
+  },
+  {
+    "path": "skills/publish-to-confluence",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "65f5e589692b662bdbf418ff1f41e7850c2fb2ab",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/65f5e589692b662bdbf418ff1f41e7850c2fb2ab"
+  },
+  {
+    "path": "skills/publish-to-confluence/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2bd6c220eff3085722eabc6109562adb1089930",
+    "size": 7761,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/b2bd6c220eff3085722eabc6109562adb1089930"
+  },
+  {
+    "path": "skills/retro",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "accd2ec52695863b5d165b313bdf101b1d716c30",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/accd2ec52695863b5d165b313bdf101b1d716c30"
+  },
+  {
+    "path": "skills/retro/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a1dcfd4bda94a87a785d159b75148fc40fe0de4",
+    "size": 2305,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/0a1dcfd4bda94a87a785d159b75148fc40fe0de4"
+  },
+  {
+    "path": "skills/review-cockpit",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4eaba12e7e25115f060f10fff9889574ab0b2a0c",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4eaba12e7e25115f060f10fff9889574ab0b2a0c"
+  },
+  {
+    "path": "skills/review-cockpit/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "78d4a48dacf458b872c71263f067388962981614",
+    "size": 5828,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/78d4a48dacf458b872c71263f067388962981614"
+  },
+  {
+    "path": "skills/scout",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "07ab4857ab552b76fee6754d6eaa74095d67ca35",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/07ab4857ab552b76fee6754d6eaa74095d67ca35"
+  },
+  {
+    "path": "skills/scout/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1f0bb683fe422a5d26ecf25bdeb648b0c9658a3a",
+    "size": 7298,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1f0bb683fe422a5d26ecf25bdeb648b0c9658a3a"
+  },
+  {
+    "path": "skills/taste-skill",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a6ae9630bcce348a57a9f0a8582d82d46b85a299",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/a6ae9630bcce348a57a9f0a8582d82d46b85a299"
+  },
+  {
+    "path": "skills/taste-skill/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9b80a8eb8e50519751df6a72c152fcdc8dbb83af",
+    "size": 87650,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/9b80a8eb8e50519751df6a72c152fcdc8dbb83af"
+  },
+  {
+    "path": "skills/team-brief",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "807ee02f9235db9adea5adf26c45e47dee9438e7",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/807ee02f9235db9adea5adf26c45e47dee9438e7"
+  },
+  {
+    "path": "skills/team-brief/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1e2ee9b62fdf746b2378b6e71823582e88a9226f",
+    "size": 48102,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/1e2ee9b62fdf746b2378b6e71823582e88a9226f"
+  },
+  {
+    "path": "skills/ultragoal",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4251ef319d80e85c6a26e7c5c3cd9ac7160fe627",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/4251ef319d80e85c6a26e7c5c3cd9ac7160fe627"
+  },
+  {
+    "path": "skills/ultragoal/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f4c8ac775bdd52c4e4fcd2e303e13ea1f8235ea",
+    "size": 8617,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/4f4c8ac775bdd52c4e4fcd2e303e13ea1f8235ea"
+  },
+  {
+    "path": "skills/update-cog",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "6c1b2361200c944d79ecc60c361f9b5b5b7b0f03",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/6c1b2361200c944d79ecc60c361f9b5b5b7b0f03"
+  },
+  {
+    "path": "skills/update-cog/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3f62bde5f03a3ab337a4319885e90fb3fc56998",
+    "size": 3522,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/f3f62bde5f03a3ab337a4319885e90fb3fc56998"
+  },
+  {
+    "path": "skills/update-knowledge-base",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a81803cf509e7373c0e31495cf4f4a770549cb12",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/a81803cf509e7373c0e31495cf4f4a770549cb12"
+  },
+  {
+    "path": "skills/update-knowledge-base/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3353de361fb7a15a4048b9b84f7eba25e703c13a",
+    "size": 11043,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/3353de361fb7a15a4048b9b84f7eba25e703c13a"
+  },
+  {
+    "path": "skills/url-dump",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "1126429c8c37b9d9d59f68e2adf59899e67cc67b",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/1126429c8c37b9d9d59f68e2adf59899e67cc67b"
+  },
+  {
+    "path": "skills/url-dump/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "068817cab15ea407b4042537041ef7f21a1caebc",
+    "size": 14483,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/068817cab15ea407b4042537041ef7f21a1caebc"
+  },
+  {
+    "path": "skills/weekly-checkin",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "60c559fff0f0e99292dc1aabc1f32b56f646da73",
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/trees/60c559fff0f0e99292dc1aabc1f32b56f646da73"
+  },
+  {
+    "path": "skills/weekly-checkin/SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed816e6ef891fcf292ecb4e81cd38cb9c3b40839",
+    "size": 13865,
+    "url": "https://api.github.com/repos/huytieu/COG-second-brain/git/blobs/ed816e6ef891fcf292ecb4e81cd38cb9c3b40839"
+  }
+]

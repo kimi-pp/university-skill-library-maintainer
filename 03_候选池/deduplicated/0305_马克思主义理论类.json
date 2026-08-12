@@ -1,0 +1,164 @@
+{
+  "discipline": "0305 马克思主义理论类",
+  "audit_date": "2026-08-12",
+  "candidate_count": 2,
+  "records": [
+    {
+      "name": "marx-capital-complete",
+      "cn_name": "《资本论》分卷分章阅读索引",
+      "category": "0305-01",
+      "purpose": "按卷、章和主题定位《资本论》相关内容，并提供概念表、章节索引和应用框架。",
+      "inputs": "要查找的卷章、概念或政治经济学问题。",
+      "outputs": "章节定位、概念定义、关联章节和阅读路径。",
+      "limits": "这是整理后的英文知识库，不是权威中文译本；个别简化表述与卷四编排需回到可靠版本核对。",
+      "platform": "GitHub",
+      "repo_key": "marx-capital",
+      "repo": "x8k/ethical-ai-skills",
+      "path": "skills/marx-capital-complete/SKILL.md",
+      "canonical_url": "https://github.com/x8k/ethical-ai-skills/blob/9a57fcd01528c5caac68130a2144a046a3b3a2c8/skills/marx-capital-complete/SKILL.md",
+      "repo_url": "https://github.com/x8k/ethical-ai-skills",
+      "fixed_version": "9a57fcd01528c5caac68130a2144a046a3b3a2c8",
+      "license": "MIT；内容另见 CONTENT_LICENSE.md 的公有领域与开放许可说明",
+      "stars": 0,
+      "last_update": "2026-06-07",
+      "security_grade": "SA",
+      "difficulty": "A",
+      "majors": [
+        "030501 科学社会主义",
+        "030502 中国共产党历史",
+        "030503 思想政治教育",
+        "030504T 马克思主义理论"
+      ],
+      "network_behavior": "未见主动联网；说明中的参考链接不等于执行网络请求。",
+      "credential_behavior": "未见账号或密钥要求。",
+      "file_behavior": "按说明读取用户明确提供的材料并生成草案；无随包可执行载荷。",
+      "quality": 2,
+      "priority": "高",
+      "chinese_support": false,
+      "higher_ed_scenario": false,
+      "authority_source": false,
+      "id": "DISC-0305-0001",
+      "discipline": "0305 马克思主义理论类",
+      "category_name": "经典文献",
+      "roles": "学生、教学人员、科研人员",
+      "verification_status": "全部通过（未实测）",
+      "verification_depth": "已阅读说明、清点固定版本包内容并完成静态数据流推演；候选未安装、未运行。",
+      "verified_at": "2026-08-12",
+      "readiness": "可直接使用",
+      "adoption_plain": "调整少",
+      "api_reachability": "无需 API",
+      "maintenance": "活跃",
+      "cross_discipline_reuse": "门类内",
+      "alternative": "未找到同等学科专属且证据更强的开源替代；可退回人工清单与权威来源核验。",
+      "security_plain": "低风险说明型；仍须人工复核内容，不自动提交或替代专业判断。",
+      "evidence_paths": [
+        "03_候选池/source_snapshots/0305/github/x8k__ethical-ai-skills/9a57fcd01528c5caac68130a2144a046a3b3a2c8/files/skills/marx-capital-complete/SKILL.md",
+        "03_候选池/source_snapshots/0305/snapshot_index.json"
+      ],
+      "package_files": 64,
+      "script_files": 0,
+      "static_scan": {
+        "text_files": 64,
+        "binary_files": 0,
+        "domains": [],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [
+            "skills/marx-capital-complete/SKILL.md:121: | [vol1-ch26](chapters/vol1-ch26-primitive-secret.md) | The Secret of Primitive Accumulation | Historical Process Overview |",
+            "skills/marx-capital-complete/SKILL.md:121: | [vol1-ch26](chapters/vol1-ch26-primitive-secret.md) | The Secret of Primitive Accumulation | Historical Process Overview |",
+            "skills/marx-capital-complete/chapters/vol1-ch01-commodities.md:43: - **The secret**: The value-relation between products of labor appears as a social relation between the products themselves",
+            "skills/marx-capital-complete/chapters/vol1-ch01-commodities.md:102: 2. **Master the dual character**: Every commodity is both a use-value (qualitative) and a bearer of value (quantitative). This duality is the key to understanding capitalist produc",
+            "skills/marx-capital-complete/chapters/vol1-ch04-general-formula.md:29: - **The secret**: The surplus in M' comes from the C phase — the commodity purchased (labor-power) creates more value than it costs",
+            "skills/marx-capital-complete/chapters/vol1-ch05-contradictions.md:124: 7. **The contradiction reveals the secret**: The impossibility of creating surplus-value in circulation forces us to look at the production process, where the real explanation lies",
+            "skills/marx-capital-complete/chapters/vol1-ch26-primitive-secret.md:1: # Chapter 26: The Secret of Primitive Accumulation",
+            "skills/marx-capital-complete/chapters/vol1-ch27-agricultural-expropriation.md:94: - **Ch26**: The Secret of Primitive Accumulation (theoretical framework)"
+          ],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [],
+          "prompt_bypass": []
+        }
+      }
+    },
+    {
+      "name": "karlmarx-skill",
+      "cn_name": "马克思主义结构分析框架",
+      "category": "0305-06",
+      "purpose": "用矛盾、总体、历史化、意识形态批判和实践反馈五组步骤分析复杂社会与组织问题。",
+      "inputs": "社会现象、制度安排、历史背景、相关数据和需要比较的其他解释。",
+      "outputs": "表层现象、结构机制、主要矛盾、历史条件、竞争解释、确定性和可检验行动。",
+      "limits": "它是方法应用而非原著解释；现代场景属于延伸分析，必须标明证据、争议和不确定性。",
+      "platform": "GitHub",
+      "repo_key": "karlmarx-method",
+      "repo": "baojiachen0214/karlmarx-skill",
+      "path": "SKILL.md",
+      "canonical_url": "https://github.com/baojiachen0214/karlmarx-skill/blob/59f201137d96a59e68f36c2f469e04a957d3b280/SKILL.md",
+      "repo_url": "https://github.com/baojiachen0214/karlmarx-skill",
+      "fixed_version": "59f201137d96a59e68f36c2f469e04a957d3b280",
+      "license": "MIT",
+      "stars": 20,
+      "last_update": "2026-04-05",
+      "security_grade": "SA",
+      "difficulty": "A",
+      "majors": [
+        "030501 科学社会主义",
+        "030502 中国共产党历史",
+        "030503 思想政治教育",
+        "030504T 马克思主义理论"
+      ],
+      "network_behavior": "未见主动联网；说明中的参考链接不等于执行网络请求。",
+      "credential_behavior": "未见账号或密钥要求。",
+      "file_behavior": "按说明读取用户明确提供的材料并生成草案；无随包可执行载荷。",
+      "quality": 3,
+      "priority": "高",
+      "chinese_support": true,
+      "higher_ed_scenario": false,
+      "authority_source": false,
+      "id": "DISC-0305-0002",
+      "discipline": "0305 马克思主义理论类",
+      "category_name": "社会分析",
+      "roles": "学生、教学人员、科研人员",
+      "verification_status": "全部通过（未实测）",
+      "verification_depth": "已阅读说明、清点固定版本包内容并完成静态数据流推演；候选未安装、未运行。",
+      "verified_at": "2026-08-12",
+      "readiness": "可直接使用",
+      "adoption_plain": "调整少",
+      "api_reachability": "无需 API",
+      "maintenance": "活跃",
+      "cross_discipline_reuse": "门类内",
+      "alternative": "未找到同等学科专属且证据更强的开源替代；可退回人工清单与权威来源核验。",
+      "security_plain": "低风险说明型；仍须人工复核内容，不自动提交或替代专业判断。",
+      "evidence_paths": [
+        "03_候选池/source_snapshots/0305/github/baojiachen0214__karlmarx-skill/59f201137d96a59e68f36c2f469e04a957d3b280/files/SKILL.md",
+        "03_候选池/source_snapshots/0305/snapshot_index.json"
+      ],
+      "package_files": 73,
+      "script_files": 0,
+      "static_scan": {
+        "text_files": 70,
+        "binary_files": 3,
+        "domains": [
+          "img.shields.io"
+        ],
+        "hits": {
+          "outbound_code": [],
+          "credentials": [
+            "references/methods/ideology_critique.md:46: Ideology critique should explain how misleading beliefs can be socially functional **without** assuming secret centralized manipulation."
+          ],
+          "process": [],
+          "dynamic_execution": [],
+          "write": [],
+          "delete": [],
+          "remote_install": [],
+          "external_state": [
+            "docs/PUBLISHING_NOTES.md:13: 1. publish the repository privately"
+          ],
+          "prompt_bypass": []
+        }
+      }
+    }
+  ]
+}

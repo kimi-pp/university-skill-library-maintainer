@@ -1,0 +1,663 @@
+[
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1986c79285685577068d55d7d2813c2556e88f86",
+    "size": 85,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/1986c79285685577068d55d7d2813c2556e88f86"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "311a1e491d49419285ff81e9cb1a6778290fab64",
+    "size": 831,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/311a1e491d49419285ff81e9cb1a6778290fab64"
+  },
+  {
+    "path": "LICENSE",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "14fac913ccf80234b1848540089a3bbcb6e5283d",
+    "size": 1056,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/14fac913ccf80234b1848540089a3bbcb6e5283d"
+  },
+  {
+    "path": "README.de.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a7c21ae5cef450547c393d5918555f7078e7db08",
+    "size": 3349,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/a7c21ae5cef450547c393d5918555f7078e7db08"
+  },
+  {
+    "path": "README.en.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ebcb2d199f6ee6acf0c1afb824057430f70a0b9d",
+    "size": 2639,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/ebcb2d199f6ee6acf0c1afb824057430f70a0b9d"
+  },
+  {
+    "path": "README.es.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "11d368e2dc64d2f7b1045e5869cf2c689f81d139",
+    "size": 3341,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/11d368e2dc64d2f7b1045e5869cf2c689f81d139"
+  },
+  {
+    "path": "README.fr.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e3e9d992986d99ce404d2179e98a61e3f632f9d9",
+    "size": 3437,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/e3e9d992986d99ce404d2179e98a61e3f632f9d9"
+  },
+  {
+    "path": "README.it.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9ec89fde850397a77d6ab92d08e737ba6e1dbbec",
+    "size": 3320,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/9ec89fde850397a77d6ab92d08e737ba6e1dbbec"
+  },
+  {
+    "path": "README.ja.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a09c7483bbe61f3b8b1966e093054a0bf81ba901",
+    "size": 3423,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/a09c7483bbe61f3b8b1966e093054a0bf81ba901"
+  },
+  {
+    "path": "README.ko.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f11aaf4b867dfb2de9451552be3f75455b734929",
+    "size": 3397,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/f11aaf4b867dfb2de9451552be3f75455b734929"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "074510559fd9f215420da8ca1617ffffa0e65c18",
+    "size": 2966,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/074510559fd9f215420da8ca1617ffffa0e65c18"
+  },
+  {
+    "path": "README.pt.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "551cf46dcb618bfd4474201e0e17a9ea6203b7cf",
+    "size": 3268,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/551cf46dcb618bfd4474201e0e17a9ea6203b7cf"
+  },
+  {
+    "path": "README.ru.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ac51b07986e629e6cae49a7fd2c803201eb92225",
+    "size": 5019,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/ac51b07986e629e6cae49a7fd2c803201eb92225"
+  },
+  {
+    "path": "README.zh.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1781b2309bc8664d8dd9754c376a40547dd1ab96",
+    "size": 2558,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/1781b2309bc8664d8dd9754c376a40547dd1ab96"
+  },
+  {
+    "path": "SKILL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a00b29e266801aa32a22fa5abb3342776432947f",
+    "size": 10330,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/a00b29e266801aa32a22fa5abb3342776432947f"
+  },
+  {
+    "path": "benchmarks",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "c00f2ec92c26575ea3a170e8e0400335b3168720",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/c00f2ec92c26575ea3a170e8e0400335b3168720"
+  },
+  {
+    "path": "benchmarks/benchmark_suite.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5278947726fc196842daba71af42d2ea2f08c93a",
+    "size": 656,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/5278947726fc196842daba71af42d2ea2f08c93a"
+  },
+  {
+    "path": "benchmarks/scoring_rubric.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "95b2c74915edd2bcbd47099ec8dbaa1dbe0e4125",
+    "size": 345,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/95b2c74915edd2bcbd47099ec8dbaa1dbe0e4125"
+  },
+  {
+    "path": "docs",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5994b078748fc7db1ed5e58be53d382fab185086",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/5994b078748fc7db1ed5e58be53d382fab185086"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73587a5958f01d32bed91ed111633bc422581665",
+    "size": 1008,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/73587a5958f01d32bed91ed111633bc422581665"
+  },
+  {
+    "path": "docs/PHILOSOPHICAL_COVERAGE.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "745e2d0850bbd1af9dbe6ee9f89275f6e504b3bf",
+    "size": 1160,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/745e2d0850bbd1af9dbe6ee9f89275f6e504b3bf"
+  },
+  {
+    "path": "docs/PUBLISHING_NOTES.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9eddb5ab481c10af6ba20cb11cf46b77c0dda22f",
+    "size": 630,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/9eddb5ab481c10af6ba20cb11cf46b77c0dda22f"
+  },
+  {
+    "path": "docs/QUICKSTART_GPT.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "629669b09141163e32ebd573306cdc4ff1c82037",
+    "size": 971,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/629669b09141163e32ebd573306cdc4ff1c82037"
+  },
+  {
+    "path": "docs/QUICKSTART_LOCAL.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "15cf0532935dc7855fe3c6384aa2c51f2977d794",
+    "size": 644,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/15cf0532935dc7855fe3c6384aa2c51f2977d794"
+  },
+  {
+    "path": "docs/SKILL_INDEX.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "809998818432a814b04984ba3b253e697d17cfad",
+    "size": 5136,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/809998818432a814b04984ba3b253e697d17cfad"
+  },
+  {
+    "path": "examples",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "5758853009092f21d230f8de4848fd1e870a3f8d",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/5758853009092f21d230f8de4848fd1e870a3f8d"
+  },
+  {
+    "path": "examples/ai_rollout_governance.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "06606799042aa034171b4f27b72f314ccbb06f10",
+    "size": 694,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/06606799042aa034171b4f27b72f314ccbb06f10"
+  },
+  {
+    "path": "examples/product_growth_stall.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2eddf3d1d334aa91822c8c27424628c21d9cfaf2",
+    "size": 603,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/2eddf3d1d334aa91822c8c27424628c21d9cfaf2"
+  },
+  {
+    "path": "examples/team_dysfunction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "589d1f04790ac0800a8fb4ec7b5e0700e9aedd7c",
+    "size": 672,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/589d1f04790ac0800a8fb4ec7b5e0700e9aedd7c"
+  },
+  {
+    "path": "logo.png",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5b939c010a6ea1a4b8685f335f5558c479ce303c",
+    "size": 131636,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/5b939c010a6ea1a4b8685f335f5558c479ce303c"
+  },
+  {
+    "path": "references",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "603f10b3f70610a64e821d132f76a3202c10de48",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/603f10b3f70610a64e821d132f76a3202c10de48"
+  },
+  {
+    "path": "references/cases",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "dd79994743bebc4c0d112743d6bf4987cc94df97",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/dd79994743bebc4c0d112743d6bf4987cc94df97"
+  },
+  {
+    "path": "references/cases/before_after_pairs.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8f73a6ba7d05a4dd48929cf741f63aa578a7a7c2",
+    "size": 1238,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/8f73a6ba7d05a4dd48929cf741f63aa578a7a7c2"
+  },
+  {
+    "path": "references/cases/benchmark_tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "51293969220fafc6247b2c5620af34e9d0b19a87",
+    "size": 1510,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/51293969220fafc6247b2c5620af34e9d0b19a87"
+  },
+  {
+    "path": "references/cases/failed.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "40fce434faa267d76b215ba5d38749288ba0d1ac",
+    "size": 1077,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/40fce434faa267d76b215ba5d38749288ba0d1ac"
+  },
+  {
+    "path": "references/cases/general_worked_examples.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "194920c9ec8c14e90442f8e79171da30542c80ec",
+    "size": 2078,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/194920c9ec8c14e90442f8e79171da30542c80ec"
+  },
+  {
+    "path": "references/cases/successful.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f75d0927768de52e4293b054be63b574ea0ac2b3",
+    "size": 698,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/f75d0927768de52e4293b054be63b574ea0ac2b3"
+  },
+  {
+    "path": "references/comparisons",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "898cc815095945ce6255e75985d351d37095924c",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/898cc815095945ce6255e75985d351d37095924c"
+  },
+  {
+    "path": "references/comparisons/comparison_mode.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0d7da607180d36d2df153f55704db5f3845747d3",
+    "size": 2651,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/0d7da607180d36d2df153f55704db5f3845747d3"
+  },
+  {
+    "path": "references/concepts",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "12a1987ab8437442c28cbb5c2cf5e8c567e6c191",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/12a1987ab8437442c28cbb5c2cf5e8c567e6c191"
+  },
+  {
+    "path": "references/concepts/alienation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ebb0f33246c7140f31c7146012a8a423ebb9b508",
+    "size": 1557,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/ebb0f33246c7140f31c7146012a8a423ebb9b508"
+  },
+  {
+    "path": "references/concepts/contradiction.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c43b1341f4431740bec698c3b197623ca08576a6",
+    "size": 1742,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/c43b1341f4431740bec698c3b197623ca08576a6"
+  },
+  {
+    "path": "references/concepts/dialectics.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e3120f0721be1c64032512e7ac0145434b2a7f71",
+    "size": 1597,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/e3120f0721be1c64032512e7ac0145434b2a7f71"
+  },
+  {
+    "path": "references/concepts/historical_materialism.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dbc8d25b36d9369c5569f069340dcca82803ded4",
+    "size": 1680,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/dbc8d25b36d9369c5569f069340dcca82803ded4"
+  },
+  {
+    "path": "references/concepts/ideology.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07b92dba52b7c9c7705833c48dd4c58c73a1dee0",
+    "size": 1677,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/07b92dba52b7c9c7705833c48dd4c58c73a1dee0"
+  },
+  {
+    "path": "references/concepts/praxis.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "613dce00d3de4b307064cbbb9a815910ac627b45",
+    "size": 1378,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/613dce00d3de4b307064cbbb9a815910ac627b45"
+  },
+  {
+    "path": "references/concepts/surplus_value.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "390ae4c3fe95ad069bacc4acac3e718caf4fb59d",
+    "size": 1534,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/390ae4c3fe95ad069bacc4acac3e718caf4fb59d"
+  },
+  {
+    "path": "references/foundations",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b16efa562ec7d260d55665f9f94a9e60ccd1a94d",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/b16efa562ec7d260d55665f9f94a9e60ccd1a94d"
+  },
+  {
+    "path": "references/foundations/abstraction_and_concretion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "982b7fb21b65744c6c95a3ea2987cba94bed1fb9",
+    "size": 1983,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/982b7fb21b65744c6c95a3ea2987cba94bed1fb9"
+  },
+  {
+    "path": "references/foundations/cause_and_effect.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "350709e59daa111a41a1e7352602605fa8bfead3",
+    "size": 1798,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/350709e59daa111a41a1e7352602605fa8bfead3"
+  },
+  {
+    "path": "references/foundations/content_and_form.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b8e47676e0a3ae954f1be9414c65fdf6d961b009",
+    "size": 2112,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/b8e47676e0a3ae954f1be9414c65fdf6d961b009"
+  },
+  {
+    "path": "references/foundations/development_and_change.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6fd40b5fff4664bd00368a862fb9ff8e6f6c6edb",
+    "size": 1807,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/6fd40b5fff4664bd00368a862fb9ff8e6f6c6edb"
+  },
+  {
+    "path": "references/foundations/essence_and_appearance.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dba8aa9adec57a31caaa5fa0024bbac16c4580bf",
+    "size": 1928,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/dba8aa9adec57a31caaa5fa0024bbac16c4580bf"
+  },
+  {
+    "path": "references/foundations/foundational_layer_overview.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b46017a86e2d605e481dbd139dd0778eeba3d8c7",
+    "size": 3370,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/b46017a86e2d605e481dbd139dd0778eeba3d8c7"
+  },
+  {
+    "path": "references/foundations/freedom_and_necessity.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "296fb72c3794e8560576f25651490a02f3972079",
+    "size": 1923,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/296fb72c3794e8560576f25651490a02f3972079"
+  },
+  {
+    "path": "references/foundations/mediation_and_levels.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "104103bbcc9849b3447309f775d3ed2cbe74499f",
+    "size": 1863,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/104103bbcc9849b3447309f775d3ed2cbe74499f"
+  },
+  {
+    "path": "references/foundations/movement_and_rest.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "859f28ae44d0c5269f5357f4d2f49daa0b4a920e",
+    "size": 2151,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/859f28ae44d0c5269f5357f4d2f49daa0b4a920e"
+  },
+  {
+    "path": "references/foundations/necessity_and_contingency.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0f96969fc9faa7cf323fa25a99c3bc7fa3bebde5",
+    "size": 1884,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/0f96969fc9faa7cf323fa25a99c3bc7fa3bebde5"
+  },
+  {
+    "path": "references/foundations/negation_and_transformation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "08c5d79a2d179a2fa9d6adbfb7eb5df842686772",
+    "size": 2084,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/08c5d79a2d179a2fa9d6adbfb7eb5df842686772"
+  },
+  {
+    "path": "references/foundations/possibility_and_actuality.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "46faef03e774c9f711de64e569c9199ca43e9f09",
+    "size": 2025,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/46faef03e774c9f711de64e569c9199ca43e9f09"
+  },
+  {
+    "path": "references/foundations/practice_as_criterion.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "abd96e77ed61807b17e208eac2d6584f9419dd47",
+    "size": 1764,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/abd96e77ed61807b17e208eac2d6584f9419dd47"
+  },
+  {
+    "path": "references/foundations/quantity_and_quality.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "08911b7c49a7844675d782e30e4bfa88b4ee7643",
+    "size": 1914,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/08911b7c49a7844675d782e30e4bfa88b4ee7643"
+  },
+  {
+    "path": "references/foundations/relation_and_totality.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c73e8741b41c82db4a0c89c8767f6786f7a6f361",
+    "size": 1951,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/c73e8741b41c82db4a0c89c8767f6786f7a6f361"
+  },
+  {
+    "path": "references/foundations/universality_and_particularity.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ff40dbcc39fa308fa64266980ad23cb2731257e3",
+    "size": 1735,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/ff40dbcc39fa308fa64266980ad23cb2731257e3"
+  },
+  {
+    "path": "references/methods",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "7be121096e690c090be4885d55d6378c75fd037b",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/7be121096e690c090be4885d55d6378c75fd037b"
+  },
+  {
+    "path": "references/methods/certainty_rubric.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ac4464fec2d80f66d4089d2d14cb8905c024fbd0",
+    "size": 1228,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/ac4464fec2d80f66d4089d2d14cb8905c024fbd0"
+  },
+  {
+    "path": "references/methods/concrete_analysis_of_concrete_conditions.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "524eb97adeeb42fdb3d527ca01584fc84c35dd08",
+    "size": 1657,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/524eb97adeeb42fdb3d527ca01584fc84c35dd08"
+  },
+  {
+    "path": "references/methods/contradiction_analysis.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c0ac609312b7d48a1e5d55662050191c2ac1490",
+    "size": 1124,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/4c0ac609312b7d48a1e5d55662050191c2ac1490"
+  },
+  {
+    "path": "references/methods/domain_translation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "755f103afc339d4ca45e7cf933c07f775ccd985d",
+    "size": 1249,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/755f103afc339d4ca45e7cf933c07f775ccd985d"
+  },
+  {
+    "path": "references/methods/foundational_moves_selector.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1830bb070dff31daef5b6fbc433856f4da4ec221",
+    "size": 3399,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/1830bb070dff31daef5b6fbc433856f4da4ec221"
+  },
+  {
+    "path": "references/methods/general_problem_router.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "db4c909102dc88c8f02327ff0e56b4d5d00baa60",
+    "size": 3279,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/db4c909102dc88c8f02327ff0e56b4d5d00baa60"
+  },
+  {
+    "path": "references/methods/historicization_protocol.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d8da545473ee7adcbcb9634b5df1c3c1246a9df",
+    "size": 1023,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/6d8da545473ee7adcbcb9634b5df1c3c1246a9df"
+  },
+  {
+    "path": "references/methods/ideology_critique.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f40ba0a4f053610bf13ef3b4cc2e25afaef4d9f7",
+    "size": 1079,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/f40ba0a4f053610bf13ef3b4cc2e25afaef4d9f7"
+  },
+  {
+    "path": "references/methods/non_applicability_and_misuse.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4b77cc3ef31dec3b8419ead9833d7209e3a32744",
+    "size": 1294,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/4b77cc3ef31dec3b8419ead9833d7209e3a32744"
+  },
+  {
+    "path": "references/methods/plain_language_style_guide.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1bfbbf5f0a6e3df837f90c39a8797e987c7365b9",
+    "size": 1026,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/1bfbbf5f0a6e3df837f90c39a8797e987c7365b9"
+  },
+  {
+    "path": "references/methods/praxis_loop.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "269e149d67be9fc723cf3d05c951f62659891f70",
+    "size": 878,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/269e149d67be9fc723cf3d05c951f62659891f70"
+  },
+  {
+    "path": "references/methods/runtime_answer_contract.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9d1b8fb62079f40cf1df4592e4c7bdf6d64e9d18",
+    "size": 2313,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/9d1b8fb62079f40cf1df4592e4c7bdf6d64e9d18"
+  },
+  {
+    "path": "references/methods/totality_analysis.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f5d111c2b1ac62c55fa40ea2fb477520bd011cc3",
+    "size": 1025,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/f5d111c2b1ac62c55fa40ea2fb477520bd011cc3"
+  },
+  {
+    "path": "references/sources",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "cb583cea6f23db7fd009b77e21d2bcace4815d40",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/cb583cea6f23db7fd009b77e21d2bcace4815d40"
+  },
+  {
+    "path": "references/sources/academic_orientation.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0c44259196b8641b4280706eb7f1fb6592568b95",
+    "size": 1266,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/0c44259196b8641b4280706eb7f1fb6592568b95"
+  },
+  {
+    "path": "references/sources/source_note_convention.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e9ea571cf92a1b06b91813a7dca4d685c950ce20",
+    "size": 2019,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/e9ea571cf92a1b06b91813a7dca4d685c950ce20"
+  },
+  {
+    "path": "references/validation",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ea7009245950836c876a6ee57b2217580813754c",
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/trees/ea7009245950836c876a6ee57b2217580813754c"
+  },
+  {
+    "path": "references/validation/evaluation_rubric.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ccce05ab94bbd4e1656c1183550d61c0f33c244a",
+    "size": 911,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/ccce05ab94bbd4e1656c1183550d61c0f33c244a"
+  },
+  {
+    "path": "references/validation/validation_protocol.md",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8c2e4af36984d1d25fcf7340aeb9ce39c8a9989d",
+    "size": 1501,
+    "url": "https://api.github.com/repos/baojiachen0214/karlmarx-skill/git/blobs/8c2e4af36984d1d25fcf7340aeb9ce39c8a9989d"
+  }
+]

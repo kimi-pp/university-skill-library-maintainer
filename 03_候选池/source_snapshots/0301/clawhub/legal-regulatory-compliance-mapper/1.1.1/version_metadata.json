@@ -1,0 +1,118 @@
+{
+  "version": "1.1.1",
+  "createdAt": 1782393857804,
+  "changelog": "Add required compliance matrix columns, verification gaps, and stronger no-invented-citation boundaries.",
+  "changelogSource": "user",
+  "license": "MIT-0",
+  "files": [
+    {
+      "path": "ACCEPTANCE.md",
+      "size": 796,
+      "sha256": "e4c7960b4e08abc0a85894d64d44d516dd0a53b0023a1a5663809a0da49d031a",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "README.md",
+      "size": 1252,
+      "sha256": "a361799a82a32f5a372da31cf00ce12f9ff7b0853a539b02b1a63525a45e9e9f",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 7146,
+      "sha256": "2e96fe48ec81e87f17a723644e40641e622be920897ba283b2f01bda79f77713",
+      "contentType": "text/markdown"
+    },
+    {
+      "path": "_meta.json",
+      "size": 154,
+      "sha256": "8673d2b0899730632843cef4d7e063be7ae8a9d9d9e1186c9e3aa69526ce58fe",
+      "contentType": "application/json"
+    },
+    {
+      "path": "skill.json",
+      "size": 860,
+      "sha256": "77b0a6d639ee86f1e6e6336ff0a1fb0fe792739364824ca5d15dd32293ef1220",
+      "contentType": "application/json"
+    },
+    {
+      "path": "skill-card.md",
+      "size": 2394,
+      "sha256": "1329e8b2902484832db0b42ff3eece6573f7bd889ffc83d8a9a977f411baf0da",
+      "contentType": "text/markdown"
+    }
+  ],
+  "security": {
+    "status": "clean",
+    "hasWarnings": true,
+    "checkedAt": 1782395777695,
+    "model": "gpt-5.5",
+    "hasScanResult": true,
+    "sha256hash": "2437f21924782126b25c91dfd6c01844c510d194844bca2d5c1b88b32770d3ca",
+    "virustotalUrl": "https://www.virustotal.com/gui/file/2437f21924782126b25c91dfd6c01844c510d194844bca2d5c1b88b32770d3ca",
+    "scanners": {
+      "vt": {
+        "status": "clean",
+        "verdict": null,
+        "normalizedStatus": "clean",
+        "analysis": null,
+        "source": "engines",
+        "checkedAt": 1782394009203
+      },
+      "skillspector": {
+        "status": "clean",
+        "normalizedStatus": "clean",
+        "score": 9,
+        "severity": "LOW",
+        "recommendation": "SAFE",
+        "issueCount": 1,
+        "checkedAt": 1782395738253
+      },
+      "llm": {
+        "status": "clean",
+        "verdict": "benign",
+        "normalizedStatus": "clean",
+        "confidence": "high",
+        "summary": "This is a document-only compliance mapping skill with clear legal disclaimers, but users should verify its jurisdiction-specific examples with qualified counsel.",
+        "dimensions": [
+          {
+            "detail": "The artifacts consistently describe an informational legal workflow helper for compliance matrices, checklists, controls, evidence tracking, and review planning.",
+            "label": "Purpose & Capability",
+            "name": "purpose_capability",
+            "rating": "ok"
+          },
+          {
+            "detail": "The skill repeatedly says not to provide legal advice or invent legal authorities, but several usage examples include concrete regulators, licenses, deadlines, and timelines without sources or explicit placeholder framing.",
+            "label": "Instruction Scope",
+            "name": "instruction_scope",
+            "rating": "note"
+          },
+          {
+            "detail": "The package contains only markdown and JSON files; no handlers, scripts, binaries, install hooks, network calls, or command execution were found.",
+            "label": "Install Mechanism",
+            "name": "install_mechanism",
+            "rating": "ok"
+          },
+          {
+            "detail": "A descriptive skill requiring no API access, external database access, credentials, or local file access is proportionate to its stated purpose.",
+            "label": "Credentials",
+            "name": "environment_proportionality",
+            "rating": "ok"
+          },
+          {
+            "detail": "No persistence mechanism, privilege request, background process, credential handling, or mutation authority is present.",
+            "label": "Persistence & Privilege",
+            "name": "persistence_privilege",
+            "rating": "ok"
+          }
+        ],
+        "guidance": "Install only if you want a structured planning aid, not authoritative legal advice. Treat all jurisdiction-specific obligations, deadlines, regulator names, licenses, and timelines as examples or drafts until verified against current authoritative sources and reviewed by qualified counsel.",
+        "findings": "[SDI-4] unexpected: The concern is artifact-supported: the examples provide specific legal and regulatory details despite the skill's own verification-gap rule. This is a legal-quality and reliance risk, not evidence of hidden execution, exfiltration, persistence, or malicious behavior.",
+        "agenticRiskFindings": null,
+        "riskSummary": null,
+        "model": "gpt-5.5",
+        "checkedAt": 1782395777695
+      }
+    }
+  }
+}
