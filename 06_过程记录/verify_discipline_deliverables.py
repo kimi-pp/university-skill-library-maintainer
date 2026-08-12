@@ -112,6 +112,9 @@ def audit_docx(code: str, name: str, records: list[dict]) -> dict:
         "hyperlinks_minimum": len({record["canonical_url"] for record in records}),
         "structural_audit": "PASS",
         "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。",
+        "spreadsheet_expected_path": f"05_交付物/{code}_{name}_学科专属技能调研/{code}_{name}_学科专属技能调研.xlsx",
+        "spreadsheet_expected_sheets": ["使用说明", "AI技能清单", "专业覆盖", "专业映射", "能力分类", "来源清单", "检索覆盖", "安全准入", "规则说明"],
+        "spreadsheet_audit": "BLOCKED：工作区提供的 @oai/artifact-tool 组件目录为空；按表格规范未使用其他库替代。",
     }
 
 

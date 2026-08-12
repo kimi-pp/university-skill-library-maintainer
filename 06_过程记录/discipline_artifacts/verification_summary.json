@@ -10,7 +10,20 @@
     "formal_skills": 12,
     "hyperlinks_minimum": 12,
     "structural_audit": "PASS",
-    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。"
+    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。",
+    "spreadsheet_expected_path": "05_交付物/0301_法学类_学科专属技能调研/0301_法学类_学科专属技能调研.xlsx",
+    "spreadsheet_expected_sheets": [
+      "使用说明",
+      "AI技能清单",
+      "专业覆盖",
+      "专业映射",
+      "能力分类",
+      "来源清单",
+      "检索覆盖",
+      "安全准入",
+      "规则说明"
+    ],
+    "spreadsheet_audit": "BLOCKED：工作区提供的 @oai/artifact-tool 组件目录为空；按表格规范未使用其他库替代。"
   },
   "0305": {
     "raw_rows": 14,
@@ -23,7 +36,20 @@
     "formal_skills": 2,
     "hyperlinks_minimum": 2,
     "structural_audit": "PASS",
-    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。"
+    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。",
+    "spreadsheet_expected_path": "05_交付物/0305_马克思主义理论类_学科专属技能调研/0305_马克思主义理论类_学科专属技能调研.xlsx",
+    "spreadsheet_expected_sheets": [
+      "使用说明",
+      "AI技能清单",
+      "专业覆盖",
+      "专业映射",
+      "能力分类",
+      "来源清单",
+      "检索覆盖",
+      "安全准入",
+      "规则说明"
+    ],
+    "spreadsheet_audit": "BLOCKED：工作区提供的 @oai/artifact-tool 组件目录为空；按表格规范未使用其他库替代。"
   },
   "1304": {
     "raw_rows": 22,
@@ -36,6 +62,19 @@
     "formal_skills": 11,
     "hyperlinks_minimum": 11,
     "structural_audit": "PASS",
-    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。"
+    "visual_render_audit": "BLOCKED：LibreOffice 未安装；Word 后台导出在打开阶段停滞，已终止独立后台实例。",
+    "spreadsheet_expected_path": "05_交付物/1304_美术学类_学科专属技能调研/1304_美术学类_学科专属技能调研.xlsx",
+    "spreadsheet_expected_sheets": [
+      "使用说明",
+      "AI技能清单",
+      "专业覆盖",
+      "专业映射",
+      "能力分类",
+      "来源清单",
+      "检索覆盖",
+      "安全准入",
+      "规则说明"
+    ],
+    "spreadsheet_audit": "BLOCKED：工作区提供的 @oai/artifact-tool 组件目录为空；按表格规范未使用其他库替代。"
   }
 }
