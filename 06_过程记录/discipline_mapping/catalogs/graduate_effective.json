@@ -1,0 +1,3985 @@
+{
+  "exceptions": [],
+  "metadata": {
+    "exception_count": 0,
+    "record_count": 184,
+    "source_ids": [
+      "graduate_2022_pdf",
+      "graduate_2025_correspondence"
+    ]
+  },
+  "records": [
+    {
+      "category_code": "01",
+      "category_name": "哲学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0101",
+      "object_name": "哲学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0201",
+      "object_name": "理论经济学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0202",
+      "object_name": "应用经济学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0301",
+      "object_name": "法学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0302",
+      "object_name": "政治学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0303",
+      "object_name": "社会学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0304",
+      "object_name": "民族学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0305",
+      "object_name": "马克思主义理论",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0306",
+      "object_name": "公安学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0307",
+      "object_name": "中共党史党建学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0308",
+      "object_name": "纪检监察学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0401",
+      "object_name": "教育学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授教育学、理学学位"
+      ],
+      "object_code": "0402",
+      "object_name": "心理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0403",
+      "object_name": "体育学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "05",
+      "category_name": "文学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0501",
+      "object_name": "中国语言文学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "05",
+      "category_name": "文学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0502",
+      "object_name": "外国语言文学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "05",
+      "category_name": "文学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0503",
+      "object_name": "新闻传播学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "06",
+      "category_name": "历史学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0601",
+      "object_name": "考古学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "06",
+      "category_name": "历史学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0602",
+      "object_name": "中国史",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "06",
+      "category_name": "历史学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0603",
+      "object_name": "世界史",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0701",
+      "object_name": "数学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0702",
+      "object_name": "物理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0703",
+      "object_name": "化学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0704",
+      "object_name": "天文学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0705",
+      "object_name": "地理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0706",
+      "object_name": "大气科学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0707",
+      "object_name": "海洋科学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0708",
+      "object_name": "地球物理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0709",
+      "object_name": "地质学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0710",
+      "object_name": "生物学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0711",
+      "object_name": "系统科学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授理学、工学、农学、医学学位"
+      ],
+      "object_code": "0712",
+      "object_name": "科学技术史",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0713",
+      "object_name": "生态学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授理学、经济学学位"
+      ],
+      "object_code": "0714",
+      "object_name": "统计学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、理学学位"
+      ],
+      "object_code": "0801",
+      "object_name": "力学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0802",
+      "object_name": "机械工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0803",
+      "object_name": "光学工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0804",
+      "object_name": "仪器科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、理学学位"
+      ],
+      "object_code": "0805",
+      "object_name": "材料科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0806",
+      "object_name": "冶金工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0807",
+      "object_name": "动力工程及工程热物理",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0808",
+      "object_name": "电气工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、理学学位"
+      ],
+      "object_code": "0809",
+      "object_name": "电子科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0810",
+      "object_name": "信息与通信工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0811",
+      "object_name": "控制科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、理学学位"
+      ],
+      "object_code": "0812",
+      "object_name": "计算机科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0813",
+      "object_name": "建筑学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0814",
+      "object_name": "土木工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0815",
+      "object_name": "水利工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0816",
+      "object_name": "测绘科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0817",
+      "object_name": "化学工程与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0818",
+      "object_name": "地质资源与地质工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0819",
+      "object_name": "矿业工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0820",
+      "object_name": "石油与天然气工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0821",
+      "object_name": "纺织科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0822",
+      "object_name": "轻工技术与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0823",
+      "object_name": "交通运输工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0824",
+      "object_name": "船舶与海洋工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0825",
+      "object_name": "航空宇航科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0826",
+      "object_name": "兵器科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0827",
+      "object_name": "核科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0828",
+      "object_name": "农业工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0829",
+      "object_name": "林业工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、理学、农学学位"
+      ],
+      "object_code": "0830",
+      "object_name": "环境科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、理学、医学学位"
+      ],
+      "object_code": "0831",
+      "object_name": "生物医学工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、农学学位"
+      ],
+      "object_code": "0832",
+      "object_name": "食品科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0833",
+      "object_name": "城乡规划学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0835",
+      "object_name": "软件工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0836",
+      "object_name": "生物工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、管理学学位"
+      ],
+      "object_code": "0837",
+      "object_name": "安全科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0838",
+      "object_name": "公安技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0839",
+      "object_name": "网络空间安全",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0901",
+      "object_name": "作物学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0902",
+      "object_name": "园艺学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0903",
+      "object_name": "农业资源与环境",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0904",
+      "object_name": "植物保护",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0905",
+      "object_name": "畜牧学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0906",
+      "object_name": "兽医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0907",
+      "object_name": "林学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0908",
+      "object_name": "水产",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0909",
+      "object_name": "草学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0910",
+      "object_name": "水土保持与荒漠化防治学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授医学、理学学位"
+      ],
+      "object_code": "1001",
+      "object_name": "基础医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "同时设专业学位类别，代码为 1051"
+      ],
+      "object_code": "1002",
+      "object_name": "临床医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "同时设专业学位类别，代码为 1052"
+      ],
+      "object_code": "1003",
+      "object_name": "口腔医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授医学、理学学位"
+      ],
+      "object_code": "1004",
+      "object_name": "公共卫生与预防医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1005",
+      "object_name": "中医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1006",
+      "object_name": "中西医结合",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授医学、理学学位，同时设专业学位类别， 代码为 1055"
+      ],
+      "object_code": "1007",
+      "object_name": "药学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授医学、理学学位"
+      ],
+      "object_code": "1008",
+      "object_name": "中药学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1009",
+      "object_name": "特种医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授医学、理学学位"
+      ],
+      "object_code": "1011",
+      "object_name": "护理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1012",
+      "object_name": "法医学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1101",
+      "object_name": "军事思想与军事历史",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1102",
+      "object_name": "战略学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1103",
+      "object_name": "联合作战学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1104",
+      "object_name": "军兵种作战学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1105",
+      "object_name": "军队指挥学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1106",
+      "object_name": "军队政治工作学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1107",
+      "object_name": "军事后勤学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1108",
+      "object_name": "军事装备学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1109",
+      "object_name": "军事管理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1110",
+      "object_name": "军事训练学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1111",
+      "object_name": "军事智能",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授管理学、工学学位"
+      ],
+      "object_code": "1201",
+      "object_name": "管理科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1202",
+      "object_name": "工商管理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [
+        {
+          "category_name": "管理学",
+          "code": "1202",
+          "name": "工商管理",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1203",
+      "object_name": "农林经济管理",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1204",
+      "object_name": "公共管理学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [
+        {
+          "category_name": "管理学",
+          "code": "1204",
+          "name": "公共管理",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1205",
+      "object_name": "信息资源管理",
+      "object_type": "学术学位一级学科",
+      "previous_names": [
+        {
+          "category_name": "管理学",
+          "code": "1205",
+          "name": "图书情报与档案管理",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "含音乐、舞蹈、戏剧与影视、戏曲与曲艺、 美术与书法、设计等历史、理论和评论研究"
+      ],
+      "object_code": "1301",
+      "object_name": "艺术学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1301",
+          "name": "艺术学理论",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "1302",
+          "name": "音乐与舞蹈学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "1303",
+          "name": "戏剧与影视学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "1304",
+          "name": "美术学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授理学、工学学位"
+      ],
+      "object_code": "1401",
+      "object_name": "集成电路科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授法学、工学、管理学、军事学学位"
+      ],
+      "object_code": "1402",
+      "object_name": "国家安全学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授工学、艺术学学位"
+      ],
+      "object_code": "1403",
+      "object_name": "设计学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1305",
+          "name": "设计学",
+          "relation_type": "move",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授理学、工学学位"
+      ],
+      "object_code": "1404",
+      "object_name": "遥感科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授理学、工学学位"
+      ],
+      "object_code": "1405",
+      "object_name": "智能科学与技术",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授理学、工学学位"
+      ],
+      "object_code": "1406",
+      "object_name": "纳米科学与工程",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "可授经济学、法学、文学、历史学学位"
+      ],
+      "object_code": "1407",
+      "object_name": "区域国别学",
+      "object_type": "学术学位一级学科",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "01",
+      "category_name": "哲学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0151",
+      "object_name": "应用伦理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0251",
+      "object_name": "金融",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0252",
+      "object_name": "应用统计",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0253",
+      "object_name": "税务",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0254",
+      "object_name": "国际商务",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0255",
+      "object_name": "保险",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0256",
+      "object_name": "资产评估",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "02",
+      "category_name": "经济学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0258",
+      "object_name": "数字经济",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0351",
+      "object_name": "法律",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0352",
+      "object_name": "社会工作",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0353",
+      "object_name": "警务",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0354",
+      "object_name": "知识产权",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "03",
+      "category_name": "法学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0355",
+      "object_name": "国际事务",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0451",
+      "object_name": "教育",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0452",
+      "object_name": "体育",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0453",
+      "object_name": "国际中文教育",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "教育学",
+          "code": "0453",
+          "name": "汉语国际教育",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "04",
+      "category_name": "教育学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0454",
+      "object_name": "应用心理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "05",
+      "category_name": "文学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0551",
+      "object_name": "翻译",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "05",
+      "category_name": "文学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0552",
+      "object_name": "新闻与传播",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "05",
+      "category_name": "文学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0553",
+      "object_name": "出版",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "06",
+      "category_name": "历史学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0651",
+      "object_name": "博物馆",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "历史学",
+          "code": "0651",
+          "name": "文物与博物馆",
+          "relation_type": "split",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "07",
+      "category_name": "理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0751",
+      "object_name": "气象",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0851",
+      "object_name": "建筑",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "0851",
+          "name": "建筑学",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0853",
+      "object_name": "城乡规划",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "0853",
+          "name": "城市规划",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0854",
+      "object_name": "电子信息",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085202",
+          "name": "光学工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085203",
+          "name": "仪器仪表工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085208",
+          "name": "电子与通信工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085209",
+          "name": "集成电路工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085210",
+          "name": "控制工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085211",
+          "name": "计算机技术",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085212",
+          "name": "软件工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085224",
+          "name": "安全工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085227",
+          "name": "农业工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085230",
+          "name": "生物医学工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085271",
+          "name": "电子与信息",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0855",
+      "object_name": "机械",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085201",
+          "name": "机械工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085210",
+          "name": "控制工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085223",
+          "name": "船舶与海洋工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085225",
+          "name": "兵器工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085227",
+          "name": "农业工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085230",
+          "name": "生物医学工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085232",
+          "name": "航空工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085233",
+          "name": "航天工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085234",
+          "name": "车辆工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085237",
+          "name": "工业设计工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085271",
+          "name": "电子与信息",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085272",
+          "name": "先进制造",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0856",
+      "object_name": "材料与化工",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085204",
+          "name": "材料工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085205",
+          "name": "冶金工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085216",
+          "name": "化学工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085220",
+          "name": "纺织工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085221",
+          "name": "轻工技术与工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085228",
+          "name": "林业工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085271",
+          "name": "电子与信息",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085273",
+          "name": "生物与医药",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0857",
+      "object_name": "资源与环境",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085215",
+          "name": "测绘工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085217",
+          "name": "地质工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085218",
+          "name": "矿业工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085219",
+          "name": "石油与天然气工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085224",
+          "name": "安全工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085229",
+          "name": "环境工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085273",
+          "name": "生物与医药",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085274",
+          "name": "能源与环保",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0858",
+      "object_name": "能源动力",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085206",
+          "name": "动力工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085207",
+          "name": "电气工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085219",
+          "name": "石油与天然气工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085226",
+          "name": "核能与核技术工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085232",
+          "name": "航空工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085233",
+          "name": "航天工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085272",
+          "name": "先进制造",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085274",
+          "name": "能源与环保",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0859",
+      "object_name": "土木水利",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085213",
+          "name": "建筑与土木工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085214",
+          "name": "水利工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085215",
+          "name": "测绘工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085223",
+          "name": "船舶与海洋工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085227",
+          "name": "农业工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085274",
+          "name": "能源与环保",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0860",
+      "object_name": "生物与医药",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085221",
+          "name": "轻工技术与工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085231",
+          "name": "食品工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085235",
+          "name": "制药工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085238",
+          "name": "生物工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085273",
+          "name": "生物与医药",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0861",
+      "object_name": "交通运输",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085208",
+          "name": "电子与通信工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085210",
+          "name": "控制工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085222",
+          "name": "交通运输工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085271",
+          "name": "电子与信息",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085272",
+          "name": "先进制造",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085274",
+          "name": "能源与环保",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "08",
+      "category_name": "工学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0862",
+      "object_name": "风景园林",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "0834",
+          "name": "风景园林学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "农学",
+          "code": "0953",
+          "name": "风景园林",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0951",
+      "object_name": "农业",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "农学",
+          "code": "0951",
+          "name": "农业推广",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0952",
+      "object_name": "兽医",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "0954",
+      "object_name": "林业",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "09",
+      "category_name": "农学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "0955",
+      "object_name": "食品与营养",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "由1002条目注释明确列出"
+      ],
+      "object_code": "1051",
+      "object_name": "临床医学",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "由1003条目注释明确列出"
+      ],
+      "object_code": "1052",
+      "object_name": "口腔医学",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1053",
+      "object_name": "公共卫生",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1054",
+      "object_name": "护理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [
+        "由1007条目注释明确列出"
+      ],
+      "object_code": "1055",
+      "object_name": "药学",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1056",
+      "object_name": "中药",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "医学",
+          "code": "1056",
+          "name": "中药学",
+          "relation_type": "rename",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1057",
+      "object_name": "中医",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1058",
+      "object_name": "医学技术",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "医学",
+          "code": "1010",
+          "name": "医学技术",
+          "relation_type": "move",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "10",
+      "category_name": "医学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1059",
+      "object_name": "针灸",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1152",
+      "object_name": "联合作战指挥",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1153",
+      "object_name": "军兵种作战指挥",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1154",
+      "object_name": "作战指挥保障",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1155",
+      "object_name": "战时政治工作",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1156",
+      "object_name": "后勤与装备保障",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "11",
+      "category_name": "军事学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1157",
+      "object_name": "军事训练与管理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1251",
+      "object_name": "工商管理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1252",
+      "object_name": "公共管理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1253",
+      "object_name": "会计",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1254",
+      "object_name": "旅游管理",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1255",
+      "object_name": "图书情报",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1256",
+      "object_name": "工程管理",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "工学",
+          "code": "085236",
+          "name": "工业工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085239",
+          "name": "项目管理",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "工学",
+          "code": "085240",
+          "name": "物流工程",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "12",
+      "category_name": "管理学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1257",
+      "object_name": "审计",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "经济学",
+          "code": "0257",
+          "name": "审计",
+          "relation_type": "move",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1352",
+      "object_name": "音乐",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1302",
+          "name": "音乐与舞蹈学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135101",
+          "name": "音乐",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1353",
+      "object_name": "舞蹈",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1302",
+          "name": "音乐与舞蹈学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135106",
+          "name": "舞蹈",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1354",
+      "object_name": "戏剧与影视",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1303",
+          "name": "戏剧与影视学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135102",
+          "name": "戏剧",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135104",
+          "name": "电影",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135105",
+          "name": "广播电视",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1355",
+      "object_name": "戏曲与曲艺",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1303",
+          "name": "戏剧与影视学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135103",
+          "name": "戏曲",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1356",
+      "object_name": "美术与书法",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "1304",
+          "name": "美术学",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        },
+        {
+          "category_name": "艺术学",
+          "code": "135107",
+          "name": "美术",
+          "relation_type": "merge",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "13",
+      "category_name": "艺术学",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1357",
+      "object_name": "设计",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "艺术学",
+          "code": "135108",
+          "name": "艺术设计",
+          "relation_type": "move",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "博士",
+        "硕士"
+      ],
+      "notes": [],
+      "object_code": "1451",
+      "object_name": "文物",
+      "object_type": "专业学位类别",
+      "previous_names": [
+        {
+          "category_name": "历史学",
+          "code": "0651",
+          "name": "文物与博物馆",
+          "relation_type": "split",
+          "source_id": "graduate_2025_correspondence"
+        }
+      ],
+      "source_ids": [
+        "graduate_2022_pdf",
+        "graduate_2025_correspondence"
+      ],
+      "status": "current"
+    },
+    {
+      "category_code": "14",
+      "category_name": "交叉学科",
+      "degree_levels": [
+        "硕士"
+      ],
+      "notes": [
+        "仅授硕士专业学位"
+      ],
+      "object_code": "1452",
+      "object_name": "密码",
+      "object_type": "专业学位类别",
+      "previous_names": [],
+      "source_ids": [
+        "graduate_2022_pdf"
+      ],
+      "status": "current"
+    }
+  ]
+}
