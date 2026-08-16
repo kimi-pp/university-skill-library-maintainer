@@ -127,60 +127,44 @@ assert.throws(
   /军事学/,
 );
 
-assert.doesNotThrow(() => validateBundle(
-  { mappings: [ordinaryMapping, militaryMapping] },
-  undergraduateByCode,
-  graduateByKey,
-));
+assert.doesNotThrow(() => validateBundle(bundleWithCatalogs([ordinaryMapping, militaryMapping])));
 assert.throws(
-  () => validateBundle(
-    { mappings: [ordinaryMapping, { ...ordinaryMapping, mapping_id: "MAP-DUPLICATE" }] },
-    undergraduateByCode,
-    graduateByKey,
-  ),
+  () => validateBundle(bundleWithCatalogs([ordinaryMapping, { ...ordinaryMapping, mapping_id: "MAP-DUPLICATE" }])),
   /重复|duplicate/i,
 );
 assert.throws(
-  () => validateBundle(
-    { mappings: [ordinaryMapping, {
-      ...ordinaryMapping,
-      mapping_id: "MAP-080901-A-0812-SECOND",
-      graduate_code: "0812",
-      relation_basis: ["关键技术体系"],
-    }] },
-    undergraduateByCode,
-    graduateByKey,
-  ),
+  () => validateBundle(bundleWithCatalogs([ordinaryMapping, {
+    ...ordinaryMapping,
+    mapping_id: "MAP-080901-A-0812-SECOND",
+    graduate_code: "0812",
+    relation_basis: ["关键技术体系"],
+  }])),
   /重复|duplicate/i,
 );
 assert.throws(
-  () => validateBundle(
-    { mappings: [ordinaryMapping, {
-      ...ordinaryMapping,
-      mapping_id: "MAP-080901-A-0809",
-      graduate_code: "0809",
-      graduate_type: "学术学位一级学科",
-    }] },
-    undergraduateByCode,
-    graduateByKey,
-  ),
+  () => validateBundle(bundleWithCatalogs([ordinaryMapping, {
+    ...ordinaryMapping,
+    mapping_id: "MAP-080901-A-0809",
+    graduate_code: "0809",
+    graduate_type: "学术学位一级学科",
+  }])),
   /主映射|primary/i,
 );
 assert.throws(
-  () => validateBundle(
-    { mappings: [{ ...ordinaryMapping, relation_level: "强相关" }] },
-    undergraduateByCode,
-    graduateByKey,
-  ),
+  () => validateBundle(bundleWithCatalogs([{ ...ordinaryMapping, relation_level: "强相关" }])),
   /主映射|primary/i,
 );
 assert.throws(
-  () => validateBundle(
-    { mappings: [{ ...militaryMapping, skills_behavior: "扩展检索" }] },
-    undergraduateByCode,
-    graduateByKey,
-  ),
+  () => validateBundle(bundleWithCatalogs([{ ...militaryMapping, skills_behavior: "扩展检索" }])),
   /军事学/,
 );
+
+function bundleWithCatalogs(mappings) {
+  return {
+    undergraduate: [...undergraduateByCode.values()],
+    graduate: [...graduateByKey.values()],
+    mappings,
+  };
+}
 
 console.log("discipline mapping schema tests passed");
