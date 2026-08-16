@@ -95,20 +95,17 @@ export function validateMappingRecord(record, ugByCode, gradByKey) {
  * Validates bundle-level uniqueness. Relationship identity is the pair of catalog
  * endpoints; relation level is an attribute of that relationship, not an extra key.
  */
-export function validateBundle(bundle) {
+export function validateBundle(bundle, ugByCode, gradByKey) {
   if (!bundle || typeof bundle !== "object" || Array.isArray(bundle)) fail("bundle 必须是对象");
   if (!Array.isArray(bundle.mappings)) fail("bundle.mappings 必须是数组");
+  requireMap(ugByCode, "ugByCode");
+  requireMap(gradByKey, "gradByKey");
 
   const mappingIds = new Set();
   const relationshipKeys = new Set();
   const primaryKeys = new Set();
   for (const record of bundle.mappings) {
-    if (!record || typeof record !== "object" || Array.isArray(record)) fail("bundle.mappings 必须只包含对象");
-    requireNonEmptyString(record.mapping_id, "mapping_id");
-    requireNonEmptyString(record.undergraduate_code, "undergraduate_code");
-    requireNonEmptyString(record.graduate_type, "graduate_type");
-    requireNonEmptyString(record.graduate_code, "graduate_code");
-    if (typeof record.is_primary !== "boolean") fail("is_primary 必须为布尔值");
+    validateMappingRecord(record, ugByCode, gradByKey);
 
     if (mappingIds.has(record.mapping_id)) fail(`mapping_id 重复：${record.mapping_id}`);
     mappingIds.add(record.mapping_id);

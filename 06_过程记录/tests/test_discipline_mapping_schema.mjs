@@ -23,6 +23,12 @@ const graduateByKey = new Map([
     object_type: "学术学位一级学科",
     category_code: "08",
   }],
+  ["学术学位一级学科|0809", {
+    object_code: "0809",
+    object_name: "电子科学与技术",
+    object_type: "学术学位一级学科",
+    category_code: "08",
+  }],
   ["专业学位类别|0854", {
     object_code: "0854",
     object_name: "电子信息",
@@ -121,28 +127,60 @@ assert.throws(
   /军事学/,
 );
 
-assert.doesNotThrow(() => validateBundle({ mappings: [ordinaryMapping, militaryMapping] }));
+assert.doesNotThrow(() => validateBundle(
+  { mappings: [ordinaryMapping, militaryMapping] },
+  undergraduateByCode,
+  graduateByKey,
+));
 assert.throws(
-  () => validateBundle({ mappings: [ordinaryMapping, { ...ordinaryMapping, mapping_id: "MAP-DUPLICATE" }] }),
+  () => validateBundle(
+    { mappings: [ordinaryMapping, { ...ordinaryMapping, mapping_id: "MAP-DUPLICATE" }] },
+    undergraduateByCode,
+    graduateByKey,
+  ),
   /重复|duplicate/i,
 );
 assert.throws(
-  () => validateBundle({ mappings: [ordinaryMapping, {
-    ...ordinaryMapping,
-    mapping_id: "MAP-080901-A-0812-SECOND",
-    graduate_code: "0812",
-    relation_basis: ["关键技术体系"],
-  }] }),
+  () => validateBundle(
+    { mappings: [ordinaryMapping, {
+      ...ordinaryMapping,
+      mapping_id: "MAP-080901-A-0812-SECOND",
+      graduate_code: "0812",
+      relation_basis: ["关键技术体系"],
+    }] },
+    undergraduateByCode,
+    graduateByKey,
+  ),
   /重复|duplicate/i,
 );
 assert.throws(
-  () => validateBundle({ mappings: [ordinaryMapping, {
-    ...ordinaryMapping,
-    mapping_id: "MAP-080901-A-0854",
-    graduate_code: "0854",
-    graduate_type: "学术学位一级学科",
-  }] }),
+  () => validateBundle(
+    { mappings: [ordinaryMapping, {
+      ...ordinaryMapping,
+      mapping_id: "MAP-080901-A-0809",
+      graduate_code: "0809",
+      graduate_type: "学术学位一级学科",
+    }] },
+    undergraduateByCode,
+    graduateByKey,
+  ),
   /主映射|primary/i,
+);
+assert.throws(
+  () => validateBundle(
+    { mappings: [{ ...ordinaryMapping, relation_level: "强相关" }] },
+    undergraduateByCode,
+    graduateByKey,
+  ),
+  /主映射|primary/i,
+);
+assert.throws(
+  () => validateBundle(
+    { mappings: [{ ...militaryMapping, skills_behavior: "扩展检索" }] },
+    undergraduateByCode,
+    graduateByKey,
+  ),
+  /军事学/,
 );
 
 console.log("discipline mapping schema tests passed");
