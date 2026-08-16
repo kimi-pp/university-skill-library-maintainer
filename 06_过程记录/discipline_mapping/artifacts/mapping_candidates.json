@@ -3,15 +3,15 @@
     "record_count": 1868,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
-    "override_major_count": 32,
+    "override_major_count": 39,
     "generation_method_counts": {
       "军事学目录参考": 9,
-      "专业级例外": 66,
-      "专业类规则继承": 1793
+      "专业级例外": 73,
+      "专业类规则继承": 1786
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 183,
-      "高置信度候选": 1676,
+      "存在歧义，建议学科专家复核": 191,
+      "高置信度候选": 1668,
       "军事学限制": 9
     }
   },
@@ -1593,7 +1593,7 @@
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
@@ -1605,17 +1605,17 @@
       "undergraduate_code": "030201",
       "graduate_type": "专业学位类别",
       "graduate_code": "0355",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
+        "跨学科应用关系",
         "典型职业或行业场景"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
-      "skills_behavior": "默认标签",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -1629,7 +1629,7 @@
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
@@ -1644,15 +1644,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究对象",
+        "培养出口"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "国际政治专业以国家间政治、全球议题和涉外事务为主要对象，培养出口直接衔接国际事务专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030203-A-0302",
@@ -1665,7 +1665,7 @@
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
@@ -1683,12 +1683,12 @@
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "外交学专业面向外交、外事和国际沟通实践，其职业训练直接衔接国际事务专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030204T-A-0302",
@@ -1701,7 +1701,7 @@
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
@@ -1716,15 +1716,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究对象",
+        "培养出口"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "国际事务与国际关系专业以国际治理和跨国事务为核心，培养对象与国际事务专业学位直接一致。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030205T-A-0302",
@@ -1737,7 +1737,7 @@
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
@@ -1749,17 +1749,17 @@
       "undergraduate_code": "030205T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0355",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
+        "跨学科应用关系",
         "典型职业或行业场景"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
-      "skills_behavior": "默认标签",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -1773,7 +1773,7 @@
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
@@ -1791,12 +1791,12 @@
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。",
+      "rationale": "国际组织与全球治理专业面向国际组织运行和全球公共治理实践，直接衔接国际事务专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030301-A-0303",
@@ -8883,7 +8883,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -8898,15 +8898,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学专业以中国历史、史料和历史解释为主要培养主干，直接衔接中国史一级学科。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-060101-A-0603",
@@ -8919,7 +8919,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -8937,7 +8937,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -8949,17 +8949,17 @@
       "undergraduate_code": "060102",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -8967,53 +8967,53 @@
       "undergraduate_code": "060102",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0603",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "跨学科应用关系"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "扩展检索",
+      "rationale": "世界史专业以世界各区域和跨区域历史进程为主要研究对象，直接衔接世界史一级学科。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-060103-A-0601",
       "undergraduate_code": "060103",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0601",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
+        "主要研究对象",
+        "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "扩展检索",
+      "rationale": "考古学专业以物质遗存、田野调查和考古解释为核心，直接衔接考古学一级学科。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-060103-A-0602",
       "undergraduate_code": "060103",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9027,7 +9027,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9045,7 +9045,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9057,17 +9057,17 @@
       "undergraduate_code": "060104",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9081,7 +9081,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9099,7 +9099,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9111,17 +9111,17 @@
       "undergraduate_code": "060105T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9135,7 +9135,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9153,7 +9153,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9165,17 +9165,17 @@
       "undergraduate_code": "060106T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9189,7 +9189,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9207,7 +9207,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9219,17 +9219,17 @@
       "undergraduate_code": "060107T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9243,7 +9243,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9261,7 +9261,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9273,17 +9273,17 @@
       "undergraduate_code": "060108T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9297,7 +9297,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9315,7 +9315,7 @@
         "主要研究或实践方法",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
@@ -9327,17 +9327,17 @@
       "undergraduate_code": "060109T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0602",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究或实践方法"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
-      "skills_behavior": "默认标签",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -9351,7 +9351,7 @@
         "核心知识基础",
         "跨学科应用关系"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。",
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",

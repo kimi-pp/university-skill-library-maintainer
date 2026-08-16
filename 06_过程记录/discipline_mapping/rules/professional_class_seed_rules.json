@@ -47,9 +47,9 @@
     {
       "class_code": "0302", "class_name": "政治学类",
       "academic_primary": {"code": "0302", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
-      "professional_primary": {"code": "0355", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
-      "other_targets": [],
-      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。"
+      "professional_primary": null,
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "0355", "level": "强相关", "basis": ["跨学科应用关系", "典型职业或行业场景"]}],
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学；国际事务专业学位只对具备涉外治理和国际组织培养出口的具体专业构成直接衔接，类级仅保留强相关候选。"
     },
     {
       "class_code": "0303", "class_name": "社会学类",
@@ -116,13 +116,14 @@
     },
     {
       "class_code": "0601", "class_name": "历史学类",
-      "academic_primary": {"code": "0602", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "academic_primary": null,
       "professional_primary": null,
       "other_targets": [
         {"graduate_type": "学术学位一级学科", "code": "0601", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"]},
+        {"graduate_type": "学术学位一级学科", "code": "0602", "level": "强相关", "basis": ["核心知识基础", "主要研究或实践方法"]},
         {"graduate_type": "学术学位一级学科", "code": "0603", "level": "强相关", "basis": ["核心知识基础", "跨学科应用关系"]}
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。"
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。"
     },
     {
       "class_code": "0701", "class_name": "数学类",

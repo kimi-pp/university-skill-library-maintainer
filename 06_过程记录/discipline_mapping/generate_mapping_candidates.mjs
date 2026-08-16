@@ -219,6 +219,10 @@ function applyOverrides({ major, targets, actions, graduateByKey }) {
   for (const action of additions) {
     const graduateType = action.target?.graduate_type;
     validateTarget(action.target, `${major.major_code}.add.target`, graduateType, graduateByKey);
+    const key = endpoint(graduateType, action.target.code);
+    if (targets.has(key)) {
+      fail(`${major.major_code}.add 目标已存在 ${key}；请使用 replace_primary 或 downgrade 修改已有关系`);
+    }
     const isPrimary = action.target.level === MAIN_RELATION;
     if (isPrimary) {
       const existingPrimary = [...targets.values()].find(
@@ -329,6 +333,8 @@ export function generateCandidates({ undergraduate, graduate, classRules, overri
       if (!rule) fail(`本科专业 ${major.major_code} 缺少专业类规则 ${major.class_code}`);
       if (rule.class_name !== major.class_name) fail(`${major.class_code} 的规则名称与本科目录不一致`);
       targets = seedFromClassRule(major, rule, graduateByKey);
+    } else if (!Object.hasOwn(overrides.major_overrides, major.major_code)) {
+      fail(`未设置专业类的本科专业 ${major.major_code} 必须提供显式专业级例外或零映射决定`);
     }
 
     targets = applyOverrides({

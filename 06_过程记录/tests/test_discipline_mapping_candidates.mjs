@@ -108,11 +108,54 @@ function targets(majorName) {
     .map((candidate) => `${candidate.graduate_type}|${candidate.graduate_code}|${candidate.relation_level}`);
 }
 
+function primaryAcademicTargets(majorName) {
+  const code = undergraduate.find((record) => record.major_name === majorName).major_code;
+  return candidates
+    .filter((candidate) => candidate.undergraduate_code === code
+      && candidate.graduate_type === academicType
+      && candidate.is_primary)
+    .map((candidate) => candidate.graduate_code);
+}
+
+function primaryProfessionalTargets(majorName) {
+  const code = undergraduate.find((record) => record.major_name === majorName).major_code;
+  return candidates
+    .filter((candidate) => candidate.undergraduate_code === code
+      && candidate.graduate_type === professionalType
+      && candidate.is_primary)
+    .map((candidate) => candidate.graduate_code);
+}
+
 assert.ok(targets("哲学").some((target) => target.startsWith(`${academicType}|0101|`)));
 assert.ok(targets("法学").some((target) => target.startsWith(`${professionalType}|0351|`)));
 assert.ok(targets("计算机科学与技术").some((target) => target.startsWith(`${academicType}|0812|`)));
 assert.ok(targets("临床医学").some((target) => target.startsWith(`${professionalType}|1051|`)));
 assert.ok(targets("艺术设计学").some((target) => target.includes("1403")));
+assert.deepEqual(primaryAcademicTargets("历史学"), ["0602"]);
+assert.deepEqual(primaryAcademicTargets("世界史"), ["0603"]);
+assert.deepEqual(primaryAcademicTargets("考古学"), ["0601"]);
+assert.deepEqual(
+  candidates
+    .filter((candidate) => candidate.graduate_type === academicType
+      && candidate.graduate_code === "0602"
+      && candidate.is_primary)
+    .map((candidate) => candidate.undergraduate_code),
+  ["060101"],
+);
+assert.deepEqual(primaryProfessionalTargets("政治学与行政学"), []);
+assert.deepEqual(primaryProfessionalTargets("政治学、经济学与哲学"), []);
+assert.deepEqual(primaryProfessionalTargets("国际政治"), ["0355"]);
+assert.deepEqual(primaryProfessionalTargets("外交学"), ["0355"]);
+assert.deepEqual(primaryProfessionalTargets("国际事务与国际关系"), ["0355"]);
+assert.deepEqual(primaryProfessionalTargets("国际组织与全球治理"), ["0355"]);
+assert.deepEqual(
+  candidates
+    .filter((candidate) => candidate.graduate_type === professionalType
+      && candidate.graduate_code === "0355"
+      && candidate.is_primary)
+    .map((candidate) => candidate.undergraduate_code),
+  ["030202", "030203", "030204T", "030206TK"],
+);
 assert.ok(candidates.every((candidate) => candidate.review_status !== "已依据规则复核"));
 assert.ok(candidates.every((candidate) => graduateKeys.has(`${candidate.graduate_type}|${candidate.graduate_code}`)));
 assert.ok(candidates.every((candidate) => candidate.mapping_id === `MAP-${candidate.undergraduate_code}-${candidate.graduate_type === academicType ? "A" : "P"}-${candidate.graduate_code}`));
@@ -240,6 +283,41 @@ assert.throws(
     overrides: { supported_actions: syntheticOverrides.supported_actions, major_overrides: {} },
   }),
   /9999|研究生目录|graduate/i,
+);
+
+assert.throws(
+  () => generateCandidates({
+    undergraduate: [{
+      ...undergraduateRecord("140099T", "未决交叉专业", null),
+      class_name: null,
+    }],
+    graduate: [],
+    classRules: { class_rules: [] },
+    overrides: { supported_actions: syntheticOverrides.supported_actions, major_overrides: {} },
+  }),
+  /专业类.*(例外|决定)|null-class.*(override|decision)/i,
+);
+
+assert.throws(
+  () => generateCandidates({
+    undergraduate: [undergraduateRecord("X00104", "重复新增专业", "X001")],
+    graduate: syntheticGraduate,
+    classRules: syntheticClassRules,
+    overrides: {
+      supported_actions: syntheticOverrides.supported_actions,
+      major_overrides: {
+        X00104: [{
+          action: "add",
+          target: {
+            ...target("0101", "强相关"),
+            graduate_type: academicType,
+            rationale: "新增动作不得覆盖已有端点。",
+          },
+        }],
+      },
+    },
+  }),
+  /add.*(已存在|existing)|0101.*(已存在|existing)/i,
 );
 
 function target(code, level) {
