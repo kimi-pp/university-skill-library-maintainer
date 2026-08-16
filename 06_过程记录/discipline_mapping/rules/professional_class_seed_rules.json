@@ -1,0 +1,668 @@
+{
+  "schema_version": "1.0",
+  "scope": "2026年普通高等学校本科专业目录中92个实际设置的专业类",
+  "class_rules": [
+    {
+      "class_code": "0101", "class_name": "哲学类",
+      "academic_primary": {"code": "0101", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "哲学类以哲学基本问题、思想传统与论证方法为共同知识主干，直接衔接哲学一级学科；应用伦理只适用于部分专业，不作为全类专业学位主映射。"
+    },
+    {
+      "class_code": "0201", "class_name": "经济学类",
+      "academic_primary": {"code": "0202", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [{"graduate_type": "学术学位一级学科", "code": "0201", "level": "其他核心对应", "basis": ["核心知识基础", "主要研究对象"]}],
+      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。"
+    },
+    {
+      "class_code": "0202", "class_name": "财政学类",
+      "academic_primary": {"code": "0202", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0253", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "财政学类围绕公共财政、税收制度与财政政策展开，学术上归入应用经济学，职业培养与税务专业学位的业务场景直接衔接。"
+    },
+    {
+      "class_code": "0203", "class_name": "金融学类",
+      "academic_primary": {"code": "0202", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0251", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "金融学类共享金融市场、资产定价与风险管理知识，学术上衔接应用经济学，专业实践主要进入金融领域；保险等细分出口留待专业级调整。"
+    },
+    {
+      "class_code": "0204", "class_name": "经济与贸易类",
+      "academic_primary": {"code": "0202", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究对象"]},
+      "professional_primary": {"code": "0254", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "经济与贸易类以国际贸易、开放经济和跨境经营为共同对象，学术上属于应用经济学范畴，实践培养与国际商务专业学位直接衔接。"
+    },
+    {
+      "class_code": "0301", "class_name": "法学类",
+      "academic_primary": {"code": "0301", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0351", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。"
+    },
+    {
+      "class_code": "0302", "class_name": "政治学类",
+      "academic_primary": {"code": "0302", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0355", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "政治学类研究政治制度、国际关系与公共事务，学术上直接衔接政治学，国际事务专业学位覆盖其主要国际治理与涉外实践出口。"
+    },
+    {
+      "class_code": "0303", "class_name": "社会学类",
+      "academic_primary": {"code": "0303", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0352", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "社会学类共享社会结构、群体与社会调查方法，直接衔接社会学一级学科；社会服务和社会治理实践与社会工作专业学位高度相关。"
+    },
+    {
+      "class_code": "0304", "class_name": "民族学类",
+      "academic_primary": {"code": "0304", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "民族学类聚焦民族、文化与社会关系，直接衔接民族学一级学科；现行专业学位目录没有覆盖全类的直接类别，因此专业主映射留空。"
+    },
+    {
+      "class_code": "0305", "class_name": "马克思主义理论类",
+      "academic_primary": {"code": "0305", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究对象"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "马克思主义理论类以马克思主义基本理论及其中国化研究为共同知识基础，直接衔接马克思主义理论一级学科；不存在覆盖全类的专业学位类别。"
+    },
+    {
+      "class_code": "0306", "class_name": "公安学类",
+      "academic_primary": {"code": "0306", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0353", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "公安学类围绕治安、侦查、公安管理和执法实务，学术上衔接公安学，职业培养与警务专业学位直接对应。"
+    },
+    {
+      "class_code": "0401", "class_name": "教育学类",
+      "academic_primary": {"code": "0401", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0451", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "教育学类共享教育理论、课程教学与教育研究方法，直接衔接教育学一级学科和以学校及教育服务实践为核心的教育专业学位。"
+    },
+    {
+      "class_code": "0402", "class_name": "体育学类",
+      "academic_primary": {"code": "0403", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0452", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "体育学类以运动训练、体育教育和人体运动科学为共同基础，直接衔接体育学一级学科及体育专业学位。"
+    },
+    {
+      "class_code": "0501", "class_name": "中国语言文学类",
+      "academic_primary": {"code": "0501", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "中国语言文学类共同研究汉语言、文学与文献，直接衔接中国语言文学一级学科；国际中文教育等出口只覆盖部分专业，故不设全类专业主映射。"
+    },
+    {
+      "class_code": "0502", "class_name": "外国语言文学类",
+      "academic_primary": {"code": "0502", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0551", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"]},
+      "other_targets": [],
+      "rationale": "外国语言文学类共享外语能力、语言文化与跨文化研究基础，学术上衔接外国语言文学，翻译专业学位覆盖其主要语言实践出口。"
+    },
+    {
+      "class_code": "0503", "class_name": "新闻传播学类",
+      "academic_primary": {"code": "0503", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0552", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "新闻传播学类共同研究信息传播、媒体与公共沟通，直接衔接新闻传播学和新闻与传播专业学位；出版方向由专业级例外补充。"
+    },
+    {
+      "class_code": "0601", "class_name": "历史学类",
+      "academic_primary": {"code": "0602", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [
+        {"graduate_type": "学术学位一级学科", "code": "0601", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"]},
+        {"graduate_type": "学术学位一级学科", "code": "0603", "level": "强相关", "basis": ["核心知识基础", "跨学科应用关系"]}
+      ],
+      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，中国史作为类级起始主映射，考古学与世界史按共同方法保留强相关候选，具体专业需后续裁定。"
+    },
+    {
+      "class_code": "0701", "class_name": "数学类",
+      "academic_primary": {"code": "0701", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "数学类共享分析、代数、几何、计算与建模基础，直接衔接数学一级学科；数据和统计类职业出口仅适用于部分专业，故专业主映射留空。"
+    },
+    {
+      "class_code": "0702", "class_name": "物理学类",
+      "academic_primary": {"code": "0702", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "物理学类以物质、能量及其相互作用规律和实验方法为共同核心，直接衔接物理学一级学科；全类没有单一专业学位出口。"
+    },
+    {
+      "class_code": "0703", "class_name": "化学类",
+      "academic_primary": {"code": "0703", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "0856", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"]}],
+      "rationale": "化学类共享物质组成、结构、反应与分析实验体系，直接衔接化学一级学科；材料与化工是应用出口，但不足以作为全类专业主映射。"
+    },
+    {
+      "class_code": "0704", "class_name": "天文学类",
+      "academic_primary": {"code": "0704", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "天文学类以天体和宇宙演化为研究对象，采用观测与理论计算方法，直接衔接天文学一级学科；无覆盖全类的专业学位类别。"
+    },
+    {
+      "class_code": "0705", "class_name": "地理科学类",
+      "academic_primary": {"code": "0705", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "地理科学类共同研究自然与人文空间过程并使用空间分析方法，直接衔接地理学一级学科；规划和遥感出口应按具体专业判断。"
+    },
+    {
+      "class_code": "0706", "class_name": "大气科学类",
+      "academic_primary": {"code": "0706", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0751", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "大气科学类围绕大气过程、观测预报和气候系统，直接衔接大气科学一级学科及气象专业学位。"
+    },
+    {
+      "class_code": "0707", "class_name": "海洋科学类",
+      "academic_primary": {"code": "0707", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "0857", "level": "强相关", "basis": ["跨学科应用关系", "典型职业或行业场景"]}],
+      "rationale": "海洋科学类研究海洋物理、化学、生物与资源环境过程，直接衔接海洋科学；资源与环境仅是应用候选，军事海洋学另按专业级军事目录规则处理。"
+    },
+    {
+      "class_code": "0708", "class_name": "地球物理学类",
+      "academic_primary": {"code": "0708", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "地球物理学类以物理方法探测地球及空间环境，直接衔接地球物理学，工程探测、防灾和资源环境实践与资源与环境专业学位相连。"
+    },
+    {
+      "class_code": "0709", "class_name": "地质学类",
+      "academic_primary": {"code": "0709", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "地质学类研究地球物质、结构与演化，学术上衔接地质学，资源勘查、环境地质和灾害治理出口与资源与环境专业学位直接相关。"
+    },
+    {
+      "class_code": "0710", "class_name": "生物科学类",
+      "academic_primary": {"code": "0710", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [{"graduate_type": "学术学位一级学科", "code": "0713", "level": "强相关", "basis": ["主要研究对象", "跨学科应用关系"]}],
+      "rationale": "生物科学类共享生命过程、遗传进化和实验生物学基础，直接衔接生物学；生态学与部分类内专业研究对象交叠，但不替代全类主映射。"
+    },
+    {
+      "class_code": "0711", "class_name": "心理学类",
+      "academic_primary": {"code": "0402", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0454", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "心理学类研究认知、情绪与行为并采用实验和测量方法，直接衔接心理学一级学科及应用心理专业学位。"
+    },
+    {
+      "class_code": "0712", "class_name": "统计学类",
+      "academic_primary": {"code": "0714", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0252", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "统计学类以概率统计、数据建模和推断方法为共同核心，直接衔接统计学一级学科和应用统计专业学位。"
+    },
+    {
+      "class_code": "0801", "class_name": "力学类",
+      "academic_primary": {"code": "0801", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "0855", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [],
+      "rationale": "力学类以固体、流体和工程系统受力行为为核心，直接衔接力学一级学科，并通过工程分析与设计出口衔接机械专业学位。"
+    },
+    {
+      "class_code": "0802", "class_name": "机械类",
+      "academic_primary": {"code": "0802", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0855", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "机械类共同覆盖机械设计、制造、机电系统与装备，直接衔接机械工程一级学科和机械专业学位。"
+    },
+    {
+      "class_code": "0803", "class_name": "仪器类",
+      "academic_primary": {"code": "0804", "level": "主映射/核心对应", "basis": ["关键技术体系", "核心知识基础"]},
+      "professional_primary": {"code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "0855", "level": "强相关", "basis": ["跨学科应用关系", "典型职业或行业场景"]}],
+      "rationale": "仪器类以测量、传感、精密仪器和测试系统为共同技术体系，学术上衔接仪器科学与技术，电子信息为主要专业出口，机械作为装备侧强相关候选。"
+    },
+    {
+      "class_code": "0804", "class_name": "材料类",
+      "academic_primary": {"code": "0805", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0856", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [{"graduate_type": "学术学位一级学科", "code": "0806", "level": "其他核心对应", "basis": ["主要研究对象", "关键技术体系"]}],
+      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。"
+    },
+    {
+      "class_code": "0805", "class_name": "能源动力类",
+      "academic_primary": {"code": "0807", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0858", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "能源动力类共同研究能量转换、热过程与动力系统，直接衔接动力工程及工程热物理和能源动力专业学位。"
+    },
+    {
+      "class_code": "0806", "class_name": "电气类",
+      "academic_primary": {"code": "0808", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0858", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "电气类以电能生产、传输、控制和电气装备为共同核心，直接衔接电气工程一级学科及能源动力专业学位。"
+    },
+    {
+      "class_code": "0807", "class_name": "电子信息类",
+      "academic_primary": null,
+      "professional_primary": {"code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [
+        {"graduate_type": "学术学位一级学科", "code": "0809", "level": "其他核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+        {"graduate_type": "学术学位一级学科", "code": "0810", "level": "其他核心对应", "basis": ["核心知识基础", "关键技术体系"]}
+      ],
+      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。"
+    },
+    {
+      "class_code": "0808", "class_name": "自动化类",
+      "academic_primary": {"code": "0811", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [],
+      "rationale": "自动化类以控制理论、检测、系统集成和智能控制为共同技术主干，直接衔接控制科学与工程和电子信息专业学位。"
+    },
+    {
+      "class_code": "0809", "class_name": "计算机类",
+      "academic_primary": {"code": "0812", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0854", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [{"graduate_type": "学术学位一级学科", "code": "0835", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"]}],
+      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。"
+    },
+    {
+      "class_code": "0810", "class_name": "土木类",
+      "academic_primary": {"code": "0814", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0859", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "土木类围绕结构、岩土、市政与建造工程，直接衔接土木工程一级学科及土木水利专业学位。"
+    },
+    {
+      "class_code": "0811", "class_name": "水利类",
+      "academic_primary": {"code": "0815", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0859", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "水利类共同研究水资源、水工结构和水利系统，直接衔接水利工程一级学科及土木水利专业学位。"
+    },
+    {
+      "class_code": "0812", "class_name": "测绘类",
+      "academic_primary": {"code": "0816", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "关键技术体系"]},
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [{"graduate_type": "学术学位一级学科", "code": "1404", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"]}],
+      "rationale": "测绘类共享测量、导航、遥感和地理空间信息技术，直接衔接测绘科学与技术及资源与环境；遥感科学与技术是方法体系交叉的强相关候选。"
+    },
+    {
+      "class_code": "0813", "class_name": "化工与制药类",
+      "academic_primary": {"code": "0817", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0856", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "0860", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"]}],
+      "rationale": "化工与制药类共享反应、分离、过程设计与工程放大基础，主要衔接化学工程与技术和材料与化工；制药方向与生物与医药形成强相关。"
+    },
+    {
+      "class_code": "0814", "class_name": "地质类",
+      "academic_primary": {"code": "0818", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "地质类以资源勘查、工程地质和地下水等工程问题为核心，直接衔接地质资源与地质工程及资源与环境专业学位。"
+    },
+    {
+      "class_code": "0815", "class_name": "矿业类",
+      "academic_primary": null,
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [
+        {"graduate_type": "学术学位一级学科", "code": "0819", "level": "其他核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+        {"graduate_type": "学术学位一级学科", "code": "0820", "level": "其他核心对应", "basis": ["主要研究对象", "关键技术体系"]}
+      ],
+      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。"
+    },
+    {
+      "class_code": "0816", "class_name": "纺织类",
+      "academic_primary": {"code": "0821", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0856", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "纺织类共享纤维、纺织材料、加工与服装工程知识，直接衔接纺织科学与工程，产业实践归入材料与化工专业学位。"
+    },
+    {
+      "class_code": "0817", "class_name": "轻工类",
+      "academic_primary": {"code": "0822", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0856", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "轻工类覆盖轻化、包装、印刷和日用化学品等加工技术，直接衔接轻工技术与工程，并与材料与化工专业实践相连。"
+    },
+    {
+      "class_code": "0818", "class_name": "交通运输类",
+      "academic_primary": {"code": "0823", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0861", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "交通运输类共同研究运输系统、交通工程、载运组织与安全，直接衔接交通运输工程及交通运输专业学位。"
+    },
+    {
+      "class_code": "0819", "class_name": "海洋工程类",
+      "academic_primary": {"code": "0824", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0855", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [],
+      "rationale": "海洋工程类以船舶、海洋结构物、海洋装备和开发系统为核心，学术上衔接船舶与海洋工程，工程实践与机械专业学位相连。"
+    },
+    {
+      "class_code": "0820", "class_name": "航空航天类",
+      "academic_primary": {"code": "0825", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0855", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [],
+      "rationale": "航空航天类覆盖飞行器设计、制造、动力、控制与保障，直接衔接航空宇航科学与技术，工程培养与机械专业学位衔接。"
+    },
+    {
+      "class_code": "0821", "class_name": "兵器类",
+      "academic_primary": {"code": "0826", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0855", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [{"graduate_type": "学术学位一级学科", "code": "1108", "level": "强相关", "basis": ["典型职业或行业场景", "跨学科应用关系"]}],
+      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。"
+    },
+    {
+      "class_code": "0822", "class_name": "核工程类",
+      "academic_primary": {"code": "0827", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0858", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "核工程类共享核物理基础、核反应堆、辐射防护和核燃料技术，直接衔接核科学与技术及能源动力专业学位。"
+    },
+    {
+      "class_code": "0823", "class_name": "农业工程类",
+      "academic_primary": {"code": "0828", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0951", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "农业工程类以农业机械、电气化、水土工程和智能装备为共同对象，直接衔接农业工程，主要行业培养出口归入农业专业学位。"
+    },
+    {
+      "class_code": "0824", "class_name": "林业工程类",
+      "academic_primary": {"code": "0829", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0856", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [],
+      "rationale": "林业工程类共同覆盖森林工程、木材与林产化工技术，直接衔接林业工程，材料加工与化工实践衔接材料与化工专业学位。"
+    },
+    {
+      "class_code": "0825", "class_name": "环境科学与工程类",
+      "academic_primary": {"code": "0830", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "环境科学与工程类围绕污染控制、环境过程、生态治理和资源循环，直接衔接环境科学与工程及资源与环境专业学位。"
+    },
+    {
+      "class_code": "0826", "class_name": "生物医学工程类",
+      "academic_primary": {"code": "0831", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": null,
+      "other_targets": [
+        {"graduate_type": "专业学位类别", "code": "0854", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"]},
+        {"graduate_type": "专业学位类别", "code": "0860", "level": "强相关", "basis": ["主要研究对象", "跨学科应用关系"]}
+      ],
+      "rationale": "生物医学工程类以工程方法解决医学测量、器械、康复和健康技术问题，直接衔接生物医学工程；电子信息和生物与医药分别覆盖技术与应用侧，均不足以作为全类唯一专业主映射。"
+    },
+    {
+      "class_code": "0827", "class_name": "食品科学与工程类",
+      "academic_primary": {"code": "0832", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0955", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "食品科学与工程类共享食品加工、质量安全、营养和工程技术，直接衔接食品科学与工程及食品与营养专业学位。"
+    },
+    {
+      "class_code": "0828", "class_name": "建筑类",
+      "academic_primary": null,
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "建筑类同时包含建筑、城乡规划和风景园林三个不同培养体系，现行研究生目录也分设相应对象，因此不制造全类主映射，改由每个本科专业显式决定。"
+    },
+    {
+      "class_code": "0829", "class_name": "安全科学与工程类",
+      "academic_primary": {"code": "0837", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "安全科学与工程类共同研究风险辨识、事故预防、应急与职业安全，直接衔接安全科学与工程及资源与环境专业学位。"
+    },
+    {
+      "class_code": "0830", "class_name": "生物工程类",
+      "academic_primary": {"code": "0836", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"]},
+      "professional_primary": {"code": "0860", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "生物工程类共享生物过程、工程放大、合成与制造技术，直接衔接生物工程一级学科及生物与医药专业学位。"
+    },
+    {
+      "class_code": "0831", "class_name": "公安技术类",
+      "academic_primary": {"code": "0838", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "0353", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "公安技术类以刑事技术、消防、安全防范和公安信息技术为核心，直接衔接公安技术，职业培养出口与警务专业学位对应。"
+    },
+    {
+      "class_code": "0901", "class_name": "植物生产类",
+      "academic_primary": null,
+      "professional_primary": {"code": "0951", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "植物生产类横跨作物、园艺和植物保护等学术体系，但共享农业生产与技术服务出口，因此只设农业专业学位主映射，学术主映射留待专业级裁定。"
+    },
+    {
+      "class_code": "0902", "class_name": "自然保护与环境生态类",
+      "academic_primary": {"code": "0903", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0951", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [
+        {"graduate_type": "学术学位一级学科", "code": "0910", "level": "强相关", "basis": ["主要研究对象", "跨学科应用关系"]},
+        {"graduate_type": "学术学位一级学科", "code": "0713", "level": "强相关", "basis": ["主要研究对象", "主要研究或实践方法"]}
+      ],
+      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。"
+    },
+    {
+      "class_code": "0903", "class_name": "动物生产类",
+      "academic_primary": {"code": "0905", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0951", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "动物生产类共同研究动物遗传育种、营养和生产管理，直接衔接畜牧学，产业实践归入农业专业学位。"
+    },
+    {
+      "class_code": "0904", "class_name": "动物医学类",
+      "academic_primary": {"code": "0906", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0952", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "动物医学类以动物疾病诊疗、防控和公共卫生为共同核心，直接衔接兽医学一级学科及兽医专业学位。"
+    },
+    {
+      "class_code": "0905", "class_name": "林学类",
+      "academic_primary": {"code": "0907", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0954", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "林学类共同研究森林培育、保护、经营和园林植物，直接衔接林学一级学科及林业专业学位。"
+    },
+    {
+      "class_code": "0906", "class_name": "水产类",
+      "academic_primary": {"code": "0908", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0951", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "水产类以水生生物养殖、渔业资源和水生动物健康为核心，直接衔接水产一级学科，产业培养出口归入农业专业学位。"
+    },
+    {
+      "class_code": "0907", "class_name": "草学类",
+      "academic_primary": {"code": "0909", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "0951", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "草学类研究草地资源、牧草生产和草坪工程，直接衔接草学一级学科，生产与管理实践归入农业专业学位。"
+    },
+    {
+      "class_code": "1001", "class_name": "基础医学类",
+      "academic_primary": {"code": "1001", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "基础医学类共同研究人体结构、功能、疾病机制和医学实验方法，直接衔接基础医学一级学科；不以临床执业出口制造专业学位映射。"
+    },
+    {
+      "class_code": "1002", "class_name": "临床医学类",
+      "academic_primary": {"code": "1002", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "1051", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "临床医学类以人体疾病诊断、治疗和临床实践为共同核心，直接衔接临床医学一级学科及临床医学专业学位。"
+    },
+    {
+      "class_code": "1003", "class_name": "口腔医学类",
+      "academic_primary": {"code": "1003", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "1052", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "口腔医学类以口腔颌面疾病、诊疗和修复为核心，直接衔接口腔医学一级学科及口腔医学专业学位。"
+    },
+    {
+      "class_code": "1004", "class_name": "公共卫生与预防医学类",
+      "academic_primary": {"code": "1004", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1053", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "公共卫生与预防医学类以人群健康、疾病预防和卫生治理为共同对象，直接衔接公共卫生与预防医学及公共卫生专业学位。"
+    },
+    {
+      "class_code": "1005", "class_name": "中医学类",
+      "academic_primary": {"code": "1005", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1057", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "1059", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"]}],
+      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。"
+    },
+    {
+      "class_code": "1006", "class_name": "中西医结合类",
+      "academic_primary": {"code": "1006", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1057", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "中西医结合类综合中医与现代医学理论和临床方法，学术上直接衔接中西医结合，职业培养主要衔接中医专业学位。"
+    },
+    {
+      "class_code": "1007", "class_name": "药学类",
+      "academic_primary": {"code": "1007", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "1055", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "药学类共同研究药物发现、制剂、分析、作用与管理，直接衔接药学一级学科及药学专业学位。"
+    },
+    {
+      "class_code": "1008", "class_name": "中药学类",
+      "academic_primary": {"code": "1008", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "1056", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "中药学类以中药资源、鉴定、炮制、制剂和质量评价为共同核心，直接衔接中药学一级学科及中药专业学位。"
+    },
+    {
+      "class_code": "1009", "class_name": "法医学类",
+      "academic_primary": {"code": "1012", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "法医学类以医学证据、死亡与损伤鉴定及法医技术为核心，直接衔接法医学一级学科；现行专业学位目录无直接对应类别。"
+    },
+    {
+      "class_code": "1010", "class_name": "医学技术类",
+      "academic_primary": null,
+      "professional_primary": {"code": "1058", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"]},
+      "other_targets": [],
+      "rationale": "医学技术类横跨检验、影像、康复、眼视光和智能医学技术，学术基础分散，但共同职业技术出口直接衔接医学技术专业学位。"
+    },
+    {
+      "class_code": "1011", "class_name": "护理学类",
+      "academic_primary": {"code": "1011", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1054", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "护理学类以整体护理、临床照护和健康管理为共同核心，直接衔接护理学一级学科及护理专业学位。"
+    },
+    {
+      "class_code": "1201", "class_name": "管理科学与工程类",
+      "academic_primary": {"code": "1201", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "管理科学与工程类共享系统分析、决策优化、信息管理和工程管理方法，直接衔接管理科学与工程；类内职业出口差异较大，不设统一专业主映射。"
+    },
+    {
+      "class_code": "1202", "class_name": "工商管理类",
+      "academic_primary": {"code": "1202", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "1251", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "工商管理类共同研究企业经营、组织、市场和财务管理，直接衔接工商管理学及工商管理专业学位；会计、审计等专门出口留待专业级细化。"
+    },
+    {
+      "class_code": "1203", "class_name": "农业经济管理类",
+      "academic_primary": {"code": "1203", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "0951", "level": "强相关", "basis": ["典型职业或行业场景", "跨学科应用关系"]}],
+      "rationale": "农业经济管理类聚焦农业农村经济、组织与政策，直接衔接农林经济管理；农业专业学位共享乡村实践场景，但不替代管理类专业主映射。"
+    },
+    {
+      "class_code": "1204", "class_name": "公共管理类",
+      "academic_primary": {"code": "1204", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1252", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "公共管理类以政府、公共组织、公共政策与治理为共同对象，直接衔接公共管理学和公共管理专业学位。"
+    },
+    {
+      "class_code": "1205", "class_name": "图书情报与档案管理类",
+      "academic_primary": {"code": "1205", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"]},
+      "professional_primary": {"code": "1255", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "图书情报与档案管理类围绕信息资源组织、保存、检索与服务，直接衔接信息资源管理及图书情报专业学位。"
+    },
+    {
+      "class_code": "1206", "class_name": "物流管理与工程类",
+      "academic_primary": {"code": "1201", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "关键技术体系"]},
+      "professional_primary": {"code": "1256", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "物流管理与工程类共享供应链系统、运筹优化和物流工程方法，学术上衔接管理科学与工程，实践培养衔接工程管理专业学位。"
+    },
+    {
+      "class_code": "1207", "class_name": "工业工程类",
+      "academic_primary": {"code": "1201", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "关键技术体系"]},
+      "professional_primary": {"code": "1256", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "工业工程类以生产系统优化、质量、标准和人机协同为核心，学术上衔接管理科学与工程，工程实践衔接工程管理专业学位。"
+    },
+    {
+      "class_code": "1208", "class_name": "电子商务类",
+      "academic_primary": {"code": "1202", "level": "主映射/核心对应", "basis": ["主要研究对象", "跨学科应用关系"]},
+      "professional_primary": {"code": "1251", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "电子商务类以数字化交易、平台运营和网络商业为共同对象，主要衔接工商管理学及工商管理专业学位，技术侧关系留待专业级扩展。"
+    },
+    {
+      "class_code": "1209", "class_name": "旅游管理类",
+      "academic_primary": {"code": "1202", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": {"code": "1254", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "旅游管理类共同研究旅游、酒店、会展与文旅服务经营，学术上衔接工商管理学，实践培养直接衔接旅游管理专业学位。"
+    },
+    {
+      "class_code": "1301", "class_name": "艺术学理论类",
+      "academic_primary": {"code": "1301", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"]},
+      "professional_primary": null,
+      "other_targets": [],
+      "rationale": "艺术学理论类以艺术史、艺术理论、管理和文化遗产研究为共同基础，直接衔接艺术学一级学科；实践门类分散，专业主映射留空。"
+    },
+    {
+      "class_code": "1302", "class_name": "音乐与舞蹈学类",
+      "academic_primary": {"code": "1301", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": null,
+      "other_targets": [
+        {"graduate_type": "专业学位类别", "code": "1352", "level": "强相关", "basis": ["主要研究或实践方法", "培养出口"]},
+        {"graduate_type": "专业学位类别", "code": "1353", "level": "强相关", "basis": ["主要研究或实践方法", "培养出口"]}
+      ],
+      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。"
+    },
+    {
+      "class_code": "1303", "class_name": "戏剧与影视学类",
+      "academic_primary": {"code": "1301", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1354", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [{"graduate_type": "专业学位类别", "code": "1355", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"]}],
+      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。"
+    },
+    {
+      "class_code": "1304", "class_name": "美术学类",
+      "academic_primary": {"code": "1301", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1356", "level": "主映射/核心对应", "basis": ["培养出口", "主要研究或实践方法"]},
+      "other_targets": [],
+      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。"
+    },
+    {
+      "class_code": "1305", "class_name": "设计学类",
+      "academic_primary": {"code": "1403", "level": "主映射/核心对应", "basis": ["核心知识基础", "主要研究或实践方法"]},
+      "professional_primary": {"code": "1357", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"]},
+      "other_targets": [],
+      "rationale": "设计学类共享设计理论、用户与情境研究、创意表达和设计实践，直接衔接设计学一级学科及设计专业学位。"
+    }
+  ]
+}

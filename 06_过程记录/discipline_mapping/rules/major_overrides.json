@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "supported_actions": ["add", "remove", "replace_primary", "downgrade", "confirmed_zero"],
+  "major_overrides": {
+    "030102T": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0354", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "知识产权专业的制度知识与职业训练直接衔接知识产权专业学位，替代法学类通用的法律专业主映射。"}
+      }
+    ],
+    "030108TK": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "0308", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"], "rationale": "纪检监察专业以监督执纪、监察制度与廉政治理为核心，直接衔接纪检监察学。"}
+      },
+      {
+        "action": "remove",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0351",
+        "rationale": "纪检监察的主要培养出口并非通用法律职业训练，不继承法学类的法律专业学位主映射。"
+      }
+    ],
+    "050103": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0453", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "汉语国际教育专业的语言教学、跨文化传播与教师实践直接衔接国际中文教育专业学位。"}
+      }
+    ],
+    "050305": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0553", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "编辑出版学以内容策划、编辑加工和出版传播为主要职业体系，出版专业学位比新闻与传播更直接。"}
+      }
+    ],
+    "070704T": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "学术学位一级学科", "code": "1104", "level": "强相关", "basis": ["主要研究对象", "典型职业或行业场景"], "rationale": "军事海洋学与海上军兵种作战环境研究存在目录层关系；该军事学目标仅作受限目录参考，不参与Skills标签或检索。"}
+      }
+    ],
+    "080404": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "0806", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "冶金工程专业以金属提取、冶金过程和冶金装备为核心，冶金工程一级学科比材料科学与工程更直接。"}
+      }
+    ],
+    "080704": [
+      {
+        "action": "remove",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0810",
+        "rationale": "微电子科学与工程的核心是半导体材料、器件与集成电路，不继承电子信息类的通信学科候选。"
+      },
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "0809", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "微电子科学与工程直接衔接电子科学与技术一级学科。"}
+      }
+    ],
+    "080904K": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "0839", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "信息安全专业以密码、系统与网络安全为核心，网络空间安全比计算机科学与技术更直接。"}
+      }
+    ],
+    "081602": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0856",
+        "relation_level": "强相关",
+        "rationale": "服装设计与工程保留纺织材料与工程基础，但材料与化工不覆盖其全部设计培养出口，因此由主映射降为强相关。"
+      },
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "1357", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "服装造型、用户需求和设计表达与设计专业学位形成跨学科实践关系。"}
+      }
+    ],
+    "082801": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0813", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"], "rationale": "建筑学专业以建筑设计、建成环境和建筑理论为核心，直接衔接建筑学一级学科。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0851", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "建筑设计与注册建筑实践直接衔接建筑专业学位。"}}
+    ],
+    "082802": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0833", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"], "rationale": "城乡规划专业以国土空间、城市与区域规划为核心，直接衔接城乡规划学。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0853", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "城乡规划编制、实施和治理实践直接衔接城乡规划专业学位。"}}
+    ],
+    "082803": [
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0862", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "风景园林专业的景观规划、设计和生态营造实践直接衔接风景园林专业学位。"}}
+    ],
+    "082804T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0813", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "历史建筑保护工程以建筑理论、测绘、修缮与再利用技术为核心，主要衔接建筑学。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0851", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "历史建筑保护的设计与工程实践归入建筑专业培养出口。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0601", "level": "延伸相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "历史建筑调查与保护借用考古记录和文化遗产研究方法，形成延伸关系。"}}
+    ],
+    "082805T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0833", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"], "rationale": "人居环境科学与技术以城乡空间、人居系统和环境品质为主要对象，直接衔接城乡规划学。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0853", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "人居环境规划、治理和更新实践直接衔接城乡规划专业学位。"}}
+    ],
+    "082806T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0833", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"], "rationale": "城市设计以城市空间形态、公共空间和更新策略为核心，直接衔接城乡规划学。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0853", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "城市设计实践属于城乡规划编制和实施的重要出口。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1403", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "城市空间设计与设计学共享用户、情境和视觉表达方法，但研究对象不同，保留强相关关系。"}}
+    ],
+    "082807T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0813", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "智慧建筑与建造以建筑设计、数字建造和建筑系统集成为核心，主要衔接建筑学。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0851", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "数字化建筑设计与建造实践直接衔接建筑专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0814", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"], "rationale": "智能建造技术与土木工程的施工、结构和工程管理体系形成强相关关系。"}}
+    ],
+    "082808T": [
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0862", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "智慧景观营造的景观规划、数字设计与生态建造实践直接衔接风景园林专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1403", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "智慧景观与设计学共享设计研究和数字表达方法，但以景观环境为专门对象，保留强相关关系。"}}
+    ],
+    "140001TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0811", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "未来机器人专业以感知、控制、规划和机器人系统集成为核心，直接衔接控制科学与工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "机器人软硬件系统开发是电子信息专业学位的重要工程出口。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1405", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"], "rationale": "机器感知、学习与自主决策同智能科学与技术形成强相关交叉。"}}
+    ],
+    "140002TK": [
+      {"action": "confirmed_zero", "rationale": "交叉工程是跨领域组织方式，专业名称本身不足以确定单一研究对象或知识体系；在获得培养方案前明确不生成直接候选。"}
+    ],
+    "140003TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0825", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "低空技术与工程围绕低空飞行器、运行环境与工程系统，主要衔接航空宇航科学与技术。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0861", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "低空交通运行、组织与安全实践直接衔接交通运输专业学位。"}}
+    ],
+    "140004TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1401", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "集成电路科学与工程本科专业与同名交叉学科在器件、电路、设计和制造知识体系上直接衔接。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "集成电路设计、工艺和工程应用直接衔接电子信息专业学位。"}}
+    ],
+    "140005T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0830", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"], "rationale": "碳中和科学与工程以温室气体核算、减排、固碳和环境治理为主要对象，主要衔接环境科学与工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "碳管理、环境治理和资源循环实践直接衔接资源与环境专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0807", "level": "强相关", "basis": ["关键技术体系", "跨学科应用关系"], "rationale": "能源系统低碳转型与动力工程及工程热物理共享能量转换技术体系。"}}
+    ],
+    "140006T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0833", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"], "rationale": "智慧城市与空间规划以城市空间、规划治理和数字化决策为核心，直接衔接城乡规划学。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0853", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "智慧规划编制、实施和城市治理实践直接衔接城乡规划专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1201", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "城市数据分析、系统建模和决策优化与管理科学与工程形成方法交叉。"}}
+    ],
+    "140007T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0831", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "智能医学工程以医学信号、设备、算法和临床工程为核心，直接衔接生物医学工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "医学智能系统和设备的软件硬件研发直接衔接电子信息专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "1058", "level": "强相关", "basis": ["典型职业或行业场景", "跨学科应用关系"], "rationale": "临床医学技术应用场景与医学技术专业学位形成强相关关系。"}}
+    ],
+    "140008T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0812", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "生物医药数据科学以数据结构、算法、机器学习和计算分析为主要技术基础，主要衔接计算机科学与技术。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0860", "level": "主映射/核心对应", "basis": ["主要研究对象", "培养出口"], "rationale": "数据方法服务于药物、生物技术和医学研发，应用出口直接衔接生物与医药专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0714", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "生物医药数据推断与统计学共享建模、试验设计和不确定性分析方法。"}}
+    ],
+    "140009T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0831", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "智能影像工程围绕医学成像设备、图像处理和诊断辅助系统，直接衔接生物医学工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "成像算法、嵌入式系统和智能软件研发直接衔接电子信息专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "1058", "level": "强相关", "basis": ["典型职业或行业场景", "跨学科应用关系"], "rationale": "医学影像技术应用与医学技术专业学位共享临床技术场景。"}}
+    ],
+    "140010TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0831", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "医工学以工程原理、医学需求和健康技术系统为共同核心，主要衔接生物医学工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "医学工程中的传感、计算和智能系统研发直接衔接电子信息专业学位。"}}
+    ],
+    "140011TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0831", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "医疗器械与装备工程以诊疗设备、医用传感和临床工程系统为对象，直接衔接生物医学工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "医疗器械的电子、信息和智能系统研发直接衔接电子信息专业学位。"}}
+    ],
+    "140012TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1405", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "具身智能以感知、认知、学习、行动和物理交互为核心，直接衔接智能科学与技术。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "具身智能系统的算法、软件与硬件集成直接衔接电子信息专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0811", "level": "其他核心对应", "basis": ["关键技术体系", "主要研究或实践方法"], "rationale": "机器人控制、状态估计和自主系统方法与控制科学与工程形成其他核心对应。"}}
+    ],
+    "140013TK": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1405", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "脑机科学与技术以神经信号解码、智能交互和学习算法为核心，主要衔接智能科学与技术。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "脑机接口设备、信号处理和交互系统研发直接衔接电子信息专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0831", "level": "强相关", "basis": ["主要研究对象", "跨学科应用关系"], "rationale": "神经工程、康复和医疗接口场景与生物医学工程形成强相关关系。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0710", "level": "强相关", "basis": ["主要研究对象", "跨学科应用关系"], "rationale": "神经系统机理和实验研究与生物学形成对象层交叉。"}}
+    ],
+    "140014T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0812", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "工业互联网以网络化软件平台、工业数据和计算系统为基础，主要衔接计算机科学与技术。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "工业网络、平台和智能应用工程直接衔接电子信息专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "1201", "level": "强相关", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "工业系统优化、运营决策和数字化管理与管理科学与工程形成方法交叉。"}}
+    ],
+    "140015T": [
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0818", "level": "主映射/核心对应", "basis": ["主要研究对象", "关键技术体系"], "rationale": "深地科学与工程以深部地质结构、资源探测和地下工程为核心，主要衔接地质资源与地质工程。"}},
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0857", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "深地探测、资源开发和地质安全实践直接衔接资源与环境专业学位。"}},
+      {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0709", "level": "强相关", "basis": ["主要研究对象", "跨学科应用关系"], "rationale": "深部地球物质、构造和演化研究与地质学形成对象层交叉。"}}
+    ]
+  }
+}
