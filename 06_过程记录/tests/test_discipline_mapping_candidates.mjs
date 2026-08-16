@@ -96,6 +96,14 @@ for (const major of humanitiesAndSocialScienceScope) {
   assert.notEqual(row.review_status, "尚未完成复核");
 }
 
+const stemScope = undergraduate.filter((record) =>
+  ["07", "08", "09", "10"].includes(record.category_code));
+for (const major of stemScope) {
+  const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
+  assert.ok(row, `missing review ledger: ${major.major_code}`);
+  assert.notEqual(row.review_status, "尚未完成复核");
+}
+
 const candidates = generateCandidates({ undergraduate, graduate, classRules, overrides });
 const candidatesAgain = generateCandidates({ undergraduate, graduate, classRules, overrides });
 assert.deepEqual(candidatesAgain, candidates);
@@ -176,11 +184,63 @@ for (const major of humanitiesAndSocialScienceScope) {
   assert.deepEqual(new Set(row.zero_mapping_types), expectedZeroTypes, `${major.major_code} has inconsistent zero types`);
 }
 
+for (const major of stemScope) {
+  const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
+  const majorCandidateIds = new Set(
+    candidates
+      .filter((candidate) => candidate.undergraduate_code === major.major_code)
+      .map((candidate) => candidate.mapping_id),
+  );
+  const acceptedIds = new Set(row.accepted_mapping_ids);
+  const rejectedIds = new Set(row.rejected_mapping_ids);
+  assert.equal(acceptedIds.size, row.accepted_mapping_ids.length, `${major.major_code} duplicates accepted IDs`);
+  assert.equal(rejectedIds.size, row.rejected_mapping_ids.length, `${major.major_code} duplicates rejected IDs`);
+  assert.ok([...acceptedIds].every((mappingId) => !rejectedIds.has(mappingId)), `${major.major_code} overlaps decisions`);
+  assert.deepEqual(new Set([...acceptedIds, ...rejectedIds]), majorCandidateIds, `${major.major_code} incomplete decisions`);
+
+  const directTypes = new Set(
+    candidates
+      .filter((candidate) => acceptedIds.has(candidate.mapping_id)
+        && ["主映射/核心对应", "其他核心对应"].includes(candidate.relation_level))
+      .map((candidate) => candidate.graduate_type),
+  );
+  const expectedZeroTypes = new Set(
+    [academicType, professionalType].filter((graduateType) => !directTypes.has(graduateType)),
+  );
+  assert.equal(new Set(row.zero_mapping_types).size, row.zero_mapping_types.length, `${major.major_code} duplicates zero types`);
+  assert.deepEqual(new Set(row.zero_mapping_types), expectedZeroTypes, `${major.major_code} has inconsistent zero types`);
+}
+
 assert.ok(targets("哲学").some((target) => target.startsWith(`${academicType}|0101|`)));
 assert.ok(targets("法学").some((target) => target.startsWith(`${professionalType}|0351|`)));
 assert.ok(targets("计算机科学与技术").some((target) => target.startsWith(`${academicType}|0812|`)));
 assert.ok(targets("临床医学").some((target) => target.startsWith(`${professionalType}|1051|`)));
 assert.ok(targets("艺术设计学").some((target) => target.includes("1403")));
+assert.deepEqual(primaryAcademicTargets("系统科学与工程"), ["0711"]);
+assert.deepEqual(primaryAcademicTargets("生态学"), ["0713"]);
+assert.deepEqual(primaryAcademicTargets("人工智能"), ["1405"]);
+assert.deepEqual(primaryAcademicTargets("遥感科学与技术"), ["1404"]);
+assert.deepEqual(primaryAcademicTargets("采矿工程"), ["0819"]);
+assert.deepEqual(primaryAcademicTargets("石油工程"), ["0820"]);
+assert.deepEqual(primaryAcademicTargets("农学"), ["0901"]);
+assert.deepEqual(primaryAcademicTargets("园艺"), ["0902"]);
+assert.deepEqual(primaryAcademicTargets("植物保护"), ["0904"]);
+assert.deepEqual(primaryAcademicTargets("生态修复学"), ["0713"]);
+assert.deepEqual(primaryProfessionalTargets("针灸推拿学"), ["1059"]);
+assert.equal(mappingCandidate("地理信息科学", academicType, "0816").relation_level, "强相关");
+assert.equal(mappingCandidate("机器人工程", academicType, "1405").relation_level, "强相关");
+assert.equal(mappingCandidate("临床工程技术", professionalType, "1058").relation_level, "强相关");
+assert.ok(!targets("生物材料").some((target) => target.startsWith(`${academicType}|0806|`)));
+for (const majorName of ["动物医学", "兽医公共卫生", "食品营养与健康", "临床工程技术"]) {
+  assert.ok(!targets(majorName).some((target) => target.startsWith(`${professionalType}|1051|`)));
+}
+assert.ok(!targets("食品营养与健康").some((target) => target.startsWith(`${academicType}|1004|`)));
+assert.ok(!targets("动物药学").some((target) => target.startsWith(`${academicType}|1007|`)));
+for (const majorName of ["健康与医疗保障", "老年医学与健康"]) {
+  assert.deepEqual(reviewRow(majorName).accepted_mapping_ids, []);
+  assert.deepEqual(reviewRow(majorName).zero_mapping_types, [academicType, professionalType]);
+  assert.equal(reviewRow(majorName).review_status, "存在歧义，建议学科专家复核");
+}
 assert.deepEqual(primaryAcademicTargets("历史学"), ["0602"]);
 assert.deepEqual(primaryAcademicTargets("世界史"), ["0603"]);
 assert.deepEqual(primaryAcademicTargets("考古学"), ["0601"]);

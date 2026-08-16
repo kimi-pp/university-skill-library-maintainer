@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "record_count": 1876,
+    "record_count": 1978,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
-    "override_major_count": 73,
+    "override_major_count": 226,
     "generation_method_counts": {
       "军事学目录参考": 9,
-      "专业级例外": 113,
-      "专业类规则继承": 1754
+      "专业级例外": 327,
+      "专业类规则继承": 1642
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 211,
-      "高置信度候选": 1656,
+      "存在歧义，建议学科专家复核": 328,
+      "高置信度候选": 1641,
       "军事学限制": 9
     }
   },
@@ -9593,6 +9593,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-070105TK-A-1405",
+      "undergraduate_code": "070105TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能计算使用机器学习与智能算法，但本科专业的数学建模和计算理论仍是核心，智能科学仅保留方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-070201-A-0702",
       "undergraduate_code": "070201",
       "graduate_type": "学术学位一级学科",
@@ -9669,18 +9687,36 @@
       "undergraduate_code": "070205T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0702",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "该专业使用物理建模和动力系统方法，但研究对象不是一般物理现象，物理学仅保留方法相关。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-070205T-A-0711",
+      "undergraduate_code": "070205T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0711",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "物理学类以物质、能量及其相互作用规律和实验方法为共同核心，直接衔接物理学一级学科；全类没有单一专业学位出口。",
+      "rationale": "系统科学与工程以复杂系统、系统结构与涌现规律为主要研究对象，直接衔接系统科学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070206T-A-0702",
@@ -9863,6 +9899,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-070305T-A-0807",
+      "undergraduate_code": "070305T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0807",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "能源化学研究能量转换与储存中的化学过程，与动力工程及工程热物理形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-070305T-P-0856",
       "undergraduate_code": "070305T",
       "graduate_type": "专业学位类别",
@@ -9879,6 +9933,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-070305T-P-0858",
+      "undergraduate_code": "070305T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0858",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "电化学储能和能源转化构成能源动力工程场景，但不替代化学主学术出口。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070306T-A-0703",
@@ -9935,6 +10007,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-070307T-A-0830",
+      "undergraduate_code": "070307T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "资源化学面向资源转化与污染控制中的化学问题，与环境科学与工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-070307T-P-0856",
       "undergraduate_code": "070307T",
       "graduate_type": "专业学位类别",
@@ -9951,6 +10041,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-070307T-P-0857",
+      "undergraduate_code": "070307T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0857",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "资源评价和环境治理为应用场景，形成资源与环境专业学位的扩展关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070401-A-0704",
@@ -10025,6 +10133,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-070503-A-0833",
+      "undergraduate_code": "070503",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0833",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "主要研究或实践方法"
+      ],
+      "rationale": "人文地理与城乡规划共享空间规划对象和区域分析方法，但地理学仍是本专业主学术出口。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-070503-P-0853",
+      "undergraduate_code": "070503",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0853",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "典型职业或行业场景"
+      ],
+      "rationale": "规划编制和空间治理是重要应用场景，但不足以替代地理学核心连续性。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-070504-A-0705",
       "undergraduate_code": "070504",
       "graduate_type": "学术学位一级学科",
@@ -10041,6 +10185,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-070504-A-0816",
+      "undergraduate_code": "070504",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0816",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "地理信息科学与测绘科学共享空间数据获取、坐标基准和地理信息处理技术，但主要研究对象仍属地理学。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-070504-A-1404",
+      "undergraduate_code": "070504",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1404",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "遥感影像处理是地理信息的重要数据方法，属于方法交叉而非同一学科对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070601-A-0706",
@@ -10151,6 +10331,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-070604T-A-0705",
+      "undergraduate_code": "070604T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0705",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "地球系统科学同时研究陆面、水圈和地表过程，与地理学形成对象层交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-070604T-A-0706",
       "undergraduate_code": "070604T",
       "graduate_type": "学术学位一级学科",
@@ -10167,6 +10365,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-070604T-A-0707",
+      "undergraduate_code": "070604T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0707",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "海洋圈层及海气相互作用与海洋科学形成对象层交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070604T-P-0751",
@@ -10275,6 +10491,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-070703T-A-0830",
+      "undergraduate_code": "070703T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "海洋资源利用与海洋环境保护同环境科学与工程形成明确对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070703T-P-0857",
@@ -10493,6 +10727,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-070804TK-A-0704",
+      "undergraduate_code": "070804TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0704",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "行星形成、轨道与天体观测同天文学共享研究对象，但固体行星内部与空间探测仍保留地球物理主线。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-070804TK-A-0708",
       "undergraduate_code": "070804TK",
       "graduate_type": "学术学位一级学科",
@@ -10617,6 +10869,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-070903T-A-0816",
+      "undergraduate_code": "070903T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0816",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "地球信息科学使用测绘、遥感与空间数据技术，属于面向地质对象的地理空间方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070903T-P-0857",
@@ -10781,40 +11051,76 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-071003-A-0714",
+      "undergraduate_code": "071003",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0714",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "序列和组学数据推断使用统计建模方法，与统计学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-071003-A-0812",
+      "undergraduate_code": "071003",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "生物信息学以生物数据为研究对象，算法与计算方法同计算机科学形成强相关，但不把方法相似提升为计算机核心对应。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-071004-A-0710",
       "undergraduate_code": "071004",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0710",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "核心知识基础"
+        "核心知识基础",
+        "跨学科应用关系"
       ],
-      "rationale": "生物科学类共享生命过程、遗传进化和实验生物学基础，直接衔接生物学；生态学与部分类内专业研究对象交叠，但不替代全类主映射。",
-      "skills_behavior": "默认标签",
+      "rationale": "生物学提供个体、种群与进化基础，但不替代生态系统层面的主学科连续性。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-071004-A-0713",
       "undergraduate_code": "071004",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0713",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "跨学科应用关系"
+        "核心知识基础"
       ],
-      "rationale": "生物科学类共享生命过程、遗传进化和实验生物学基础，直接衔接生物学；生态学与部分类内专业研究对象交叠，但不替代全类主映射。",
-      "skills_behavior": "扩展检索",
+      "rationale": "生态学专业直接研究生物与环境相互作用、生态系统结构和过程，与生态学一级学科同对象衔接。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-071005T-A-0710",
@@ -10851,6 +11157,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-071006T-A-0402",
+      "undergraduate_code": "071006T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0402",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "认知与行为神经研究同心理学共享脑与行为对象，但神经科学的生物机制研究仍以生物学为主。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-071006T-A-0710",
@@ -10979,6 +11303,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-071103TK-A-0710",
+      "undergraduate_code": "071103TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0710",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "心理、脑与认知科学涉及神经生物机制，与生物学形成对象交叉但不改变心理学主出口。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-071103TK-P-0454",
       "undergraduate_code": "071103TK",
       "graduate_type": "专业学位类别",
@@ -11085,6 +11427,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-071203T-A-0812",
+      "undergraduate_code": "071203T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "数据科学共享计算、算法和数据工程方法，但统计推断仍是本专业的核心知识主线。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-071203T-P-0252",
@@ -11361,36 +11721,72 @@
       "undergraduate_code": "080205",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0802",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "核心知识基础",
+        "跨学科应用关系"
+      ],
+      "rationale": "机械结构与制造知识支撑产品实现，但机械工程不是工业设计的主研究对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080205-A-1403",
+      "undergraduate_code": "080205",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1403",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要研究对象",
+        "主要研究或实践方法"
       ],
-      "rationale": "机械类共同覆盖机械设计、制造、机电系统与装备，直接衔接机械工程一级学科和机械专业学位。",
+      "rationale": "工业设计以产品、用户和设计创新为主要对象，直接衔接设计学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080205-P-0855",
       "undergraduate_code": "080205",
       "graduate_type": "专业学位类别",
       "graduate_code": "0855",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "工程产品开发形成机械领域应用关系，但不替代设计培养出口。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080205-P-1357",
+      "undergraduate_code": "080205",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1357",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "机械类共同覆盖机械设计、制造、机电系统与装备，直接衔接机械工程一级学科和机械专业学位。",
+      "rationale": "产品设计与设计实践的培养出口直接衔接设计专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080206-A-0802",
@@ -11663,6 +12059,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080213T-A-0811",
+      "undergraduate_code": "080213T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能制造的产线控制、状态估计与优化同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080213T-A-1405",
+      "undergraduate_code": "080213T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "制造智能使用学习与决策算法，但制造系统仍是主要工程对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080213T-P-0855",
       "undergraduate_code": "080213T",
       "graduate_type": "专业学位类别",
@@ -11697,6 +12129,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080214T-A-0811",
+      "undergraduate_code": "080214T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能车辆的感知、控制与规划同控制科学形成技术交叉，但车辆工程仍是主对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080214T-P-0855",
@@ -11829,36 +12279,90 @@
       "undergraduate_code": "080218T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0802",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "核心知识基础",
+        "跨学科应用关系"
+      ],
+      "rationale": "机械产品实现是部分载体，不构成机械工程核心连续性。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080218T-A-1403",
+      "undergraduate_code": "080218T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1403",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要研究对象",
+        "主要研究或实践方法"
       ],
-      "rationale": "机械类共同覆盖机械设计、制造、机电系统与装备，直接衔接机械工程一级学科和机械专业学位。",
+      "rationale": "智能交互设计以用户、交互体验和产品服务系统为对象，直接衔接设计学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080218T-A-1405",
+      "undergraduate_code": "080218T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能交互使用感知和学习算法，与智能科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080218T-P-0855",
       "undergraduate_code": "080218T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0855",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能硬件开发形成机械工程应用关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080218T-P-1357",
+      "undergraduate_code": "080218T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1357",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "机械类共同覆盖机械设计、制造、机电系统与装备，直接衔接机械工程一级学科和机械专业学位。",
+      "rationale": "交互与体验设计实践直接衔接设计专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080219T-A-0802",
@@ -11913,6 +12417,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080220T-A-0828",
+      "undergraduate_code": "080220T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0828",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "农林智能装备面向农业和林业作业系统，与农业工程形成明确应用对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080220T-P-0855",
@@ -12149,24 +12671,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080401-A-0806",
-      "undergraduate_code": "080401",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080401-P-0856",
       "undergraduate_code": "080401",
       "graduate_type": "专业学位类别",
@@ -12203,24 +12707,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080402-A-0806",
-      "undergraduate_code": "080402",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080402-P-0856",
       "undergraduate_code": "080402",
       "graduate_type": "专业学位类别",
@@ -12254,24 +12740,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080403-A-0806",
-      "undergraduate_code": "080403",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -12351,18 +12819,18 @@
       "undergraduate_code": "080405",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "核心知识基础",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "金属材料工程共享冶金材料基础，但主要研究成分、组织、性能与加工，冶金工程不作为另一核心对应。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080405-P-0856",
@@ -12398,24 +12866,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080406-A-0806",
-      "undergraduate_code": "080406",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -12455,24 +12905,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080407-A-0806",
-      "undergraduate_code": "080407",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080407-P-0856",
       "undergraduate_code": "080407",
       "graduate_type": "专业学位类别",
@@ -12506,24 +12938,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080408-A-0806",
-      "undergraduate_code": "080408",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -12563,24 +12977,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080409T-A-0806",
-      "undergraduate_code": "080409T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080409T-P-0856",
       "undergraduate_code": "080409T",
       "graduate_type": "专业学位类别",
@@ -12614,24 +13010,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080410T-A-0806",
-      "undergraduate_code": "080410T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -12671,24 +13049,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080411T-A-0806",
-      "undergraduate_code": "080411T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080411T-P-0856",
       "undergraduate_code": "080411T",
       "graduate_type": "专业学位类别",
@@ -12722,24 +13082,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080412T-A-0806",
-      "undergraduate_code": "080412T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -12779,22 +13121,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080413T-A-0806",
+      "mapping_id": "MAP-080413T-A-1406",
       "undergraduate_code": "080413T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "1406",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "纳米尺度结构与表征同纳米科学与工程形成对象交叉，但材料组成和性能仍是主线。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080413T-P-0856",
@@ -12833,22 +13175,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080414T-A-0806",
+      "mapping_id": "MAP-080414T-A-0807",
       "undergraduate_code": "080414T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "0807",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "新能源材料服务能量转换和储存系统，与动力工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080414T-P-0856",
@@ -12869,6 +13211,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080414T-P-0858",
+      "undergraduate_code": "080414T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0858",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "储能与能源器件是能源动力应用场景，但材料与化工仍为主专业出口。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080415T-A-0805",
       "undergraduate_code": "080415T",
       "graduate_type": "学术学位一级学科",
@@ -12884,24 +13244,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080415T-A-0806",
-      "undergraduate_code": "080415T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -12941,24 +13283,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080416T-A-0806",
-      "undergraduate_code": "080416T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080416T-P-0856",
       "undergraduate_code": "080416T",
       "graduate_type": "专业学位类别",
@@ -12995,22 +13319,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080417T-A-0806",
+      "mapping_id": "MAP-080417T-A-0811",
       "undergraduate_code": "080417T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "智能材料结构的感知、驱动与控制同控制科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080417T-P-0856",
@@ -13049,22 +13373,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080418T-A-0806",
+      "mapping_id": "MAP-080418T-A-0809",
       "undergraduate_code": "080418T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "0809",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "光电材料器件与电子科学共享器件和光电子技术体系。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080418T-P-0856",
@@ -13103,22 +13427,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080419T-A-0806",
+      "mapping_id": "MAP-080419T-A-0831",
       "undergraduate_code": "080419T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "0831",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "生物材料面向医疗植入和组织界面，与生物医学工程形成应用对象交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080419T-P-0856",
@@ -13139,6 +13463,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080419T-P-0860",
+      "undergraduate_code": "080419T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0860",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "生物医用材料研发形成生物与医药工程场景，但不构成人体临床专业对应。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080420T-A-0805",
       "undergraduate_code": "080420T",
       "graduate_type": "学术学位一级学科",
@@ -13157,22 +13499,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080420T-A-0806",
+      "mapping_id": "MAP-080420T-A-1405",
       "undergraduate_code": "080420T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "材料智能技术使用机器学习开展材料发现和表征，智能科学仅为方法交叉，材料仍是研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080420T-P-0856",
@@ -13211,22 +13553,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080421T-A-0806",
+      "mapping_id": "MAP-080421T-A-0809",
       "undergraduate_code": "080421T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "graduate_code": "0809",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "电子信息材料服务半导体和电子器件，与电子科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080421T-P-0856",
@@ -13262,24 +13604,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080422T-A-0806",
-      "undergraduate_code": "080422T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0806",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -13323,18 +13647,18 @@
       "undergraduate_code": "080423T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0806",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "核心知识基础",
+        "跨学科应用关系"
       ],
-      "rationale": "材料类共享材料结构、性能、制备与表征知识，主要衔接材料科学与工程和材料与化工；冶金方向保留冶金工程核心候选并由专业级规则提升。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "稀土材料涉及冶金制备，但主要研究材料组织与性能，冶金工程保留强相关而非核心对应。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080423T-P-0856",
@@ -13407,6 +13731,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080502T-A-0830",
+      "undergraduate_code": "080502T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "能源与环境系统工程同时研究排放、环境影响和治理系统，与环境科学与工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080502T-P-0857",
+      "undergraduate_code": "080502T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0857",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "污染控制与环境治理形成资源与环境实践关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080502T-P-0858",
@@ -13587,6 +13947,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080507TK-A-0830",
+      "undergraduate_code": "080507TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "可持续能源涉及排放、生命周期与环境约束，与环境科学与工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080507TK-P-0857",
+      "undergraduate_code": "080507TK",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0857",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "能源转型中的环境治理形成资源与环境实践关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080507TK-P-0858",
@@ -13971,36 +14367,90 @@
       "undergraduate_code": "080610TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0808",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "功率器件服务电力变换和电气系统，形成电气工程应用关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080610TK-A-0809",
+      "undergraduate_code": "080610TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0809",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电气类以电能生产、传输、控制和电气装备为共同核心，直接衔接电气工程一级学科及能源动力专业学位。",
+      "rationale": "大功率半导体以功率器件、芯片与封装为核心，电子科学与技术比通用电气工程更直接。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080610TK-A-1401",
+      "undergraduate_code": "080610TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1401",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "器件工艺、芯片集成与集成电路科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080610TK-P-0854",
+      "undergraduate_code": "080610TK",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0854",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "关键技术体系",
+        "培养出口"
+      ],
+      "rationale": "半导体器件和电子系统研发直接衔接电子信息专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080610TK-P-0858",
       "undergraduate_code": "080610TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "0858",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "典型职业或行业场景",
+        "跨学科应用关系"
       ],
-      "rationale": "电气类以电能生产、传输、控制和电气装备为共同核心，直接衔接电气工程一级学科及能源动力专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "功率半导体应用于能源动力系统，但不是能源动力主培养出口。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080701-A-0809",
@@ -14061,36 +14511,18 @@
       "undergraduate_code": "080702",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0809",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "专业与同名电子科学与技术一级学科直接衔接。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080702-A-0810",
-      "undergraduate_code": "080702",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080702-P-0854",
@@ -14111,40 +14543,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080703-A-0809",
-      "undergraduate_code": "080703",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0809",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-080703-A-0810",
       "undergraduate_code": "080703",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "通信系统、网络与信号传输直接衔接信息与通信工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080703-P-0854",
@@ -14172,7 +14586,7 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "主要研究对象",
+        "核心知识基础",
         "关键技术体系"
       ],
       "rationale": "微电子科学与工程直接衔接电子科学与技术一级学科。",
@@ -14180,6 +14594,24 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080704-A-1401",
+      "undergraduate_code": "080704",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1401",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "集成电路设计与制造同集成电路科学与工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
       "generation_method": "专业级例外"
     },
     {
@@ -14205,36 +14637,18 @@
       "undergraduate_code": "080705",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0809",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "光电子器件与系统直接衔接电子科学与技术。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080705-A-0810",
-      "undergraduate_code": "080705",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080705-P-0854",
@@ -14331,18 +14745,18 @@
       "undergraduate_code": "080707T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "广播电视信号采集、传输和网络系统直接衔接信息与通信工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080707T-P-0854",
@@ -14385,18 +14799,36 @@
       "undergraduate_code": "080708T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "水声信号处理、通信和探测系统主要衔接信息与通信工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080708T-A-0824",
+      "undergraduate_code": "080708T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0824",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "水声装备服务船舶与海洋工程场景。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080708T-P-0854",
@@ -14421,36 +14853,18 @@
       "undergraduate_code": "080709T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0809",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "电子封装的器件、互连和可靠性技术直接衔接电子科学与技术。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-080709T-A-0810",
-      "undergraduate_code": "080709T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080709T-P-0854",
@@ -14475,36 +14889,36 @@
       "undergraduate_code": "080710T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0809",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "芯片设计与器件基础直接衔接电子科学与技术。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-080710T-A-0810",
+      "mapping_id": "MAP-080710T-A-1401",
       "undergraduate_code": "080710T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
+      "graduate_code": "1401",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "集成电路设计与集成系统同集成电路科学与工程形成明确技术交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080710T-P-0854",
@@ -14559,6 +14973,24 @@
       "review_status": "高置信度候选",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080711T-A-0831",
+      "undergraduate_code": "080711T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0831",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "医学信息系统和医学信号处理服务医疗工程对象，与生物医学工程形成应用交叉；不据医学一词映射临床医学。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080711T-P-0854",
@@ -14849,40 +15281,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080717T-A-0809",
+      "mapping_id": "MAP-080717T-A-0812",
       "undergraduate_code": "080717T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0809",
+      "graduate_code": "0812",
       "relation_level": "其他核心对应",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
+      "rationale": "算法、数据结构与计算系统同计算机科学与技术形成其他核心对应。",
       "skills_behavior": "默认辅助标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-080717T-A-0810",
+      "mapping_id": "MAP-080717T-A-1405",
       "undergraduate_code": "080717T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "graduate_code": "1405",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "人工智能以感知、学习、推理与自主决策为核心，直接衔接智能科学与技术。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080717T-P-0854",
@@ -14925,18 +15357,36 @@
       "undergraduate_code": "080718T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "海洋信息采集、传输和处理主要衔接信息与通信工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080718T-A-0824",
+      "undergraduate_code": "080718T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0824",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "海洋信息系统服务海洋工程对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080718T-P-0854",
@@ -15011,6 +15461,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080720T-A-0804",
+      "undergraduate_code": "080720T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0804",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "智能测控以传感、测量、仪器和测试系统为核心，直接衔接仪器科学与技术。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080720T-A-0809",
       "undergraduate_code": "080720T",
       "graduate_type": "学术学位一级学科",
@@ -15065,40 +15533,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080721T-A-0809",
+      "mapping_id": "MAP-080721T-A-0812",
       "undergraduate_code": "080721T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0809",
+      "graduate_code": "0812",
       "relation_level": "其他核心对应",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
+      "rationale": "计算机视觉的软件算法与计算系统形成计算机科学其他核心对应。",
       "skills_behavior": "默认辅助标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-080721T-A-0810",
+      "mapping_id": "MAP-080721T-A-1405",
       "undergraduate_code": "080721T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "graduate_code": "1405",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "视觉感知、学习和理解直接衔接智能科学与技术。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080721T-P-0854",
@@ -15141,18 +15609,36 @@
       "undergraduate_code": "080722T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0810",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "视听信号编码、传输与处理主要衔接信息与通信工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080722T-A-1405",
+      "undergraduate_code": "080722T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能内容理解与生成使用智能算法，属于方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080722T-P-0854",
@@ -15177,36 +15663,36 @@
       "undergraduate_code": "080723TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0809",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "半导体器件、工艺与装备直接衔接电子科学与技术。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-080723TK-A-0810",
+      "mapping_id": "MAP-080723TK-A-1401",
       "undergraduate_code": "080723TK",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0810",
-      "relation_level": "其他核心对应",
+      "graduate_code": "1401",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "电子信息类横跨电子器件、光电和通信系统，专业实践统一衔接电子信息；学术端同时覆盖电子科学与技术和信息与通信工程，不制造单一全类主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "晶圆制造和工艺集成同集成电路科学与工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080723TK-P-0854",
@@ -15315,6 +15801,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080803T-A-1405",
+      "undergraduate_code": "080803T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "机器人感知、学习与自主决策同智能科学形成方法交叉，控制科学仍是系统核心。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080803T-P-0854",
@@ -15461,6 +15965,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080807T-A-1405",
+      "undergraduate_code": "080807T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "工业智能使用学习与优化方法，但工业控制系统仍是主要工程对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080807T-P-0854",
       "undergraduate_code": "080807T",
       "graduate_type": "专业学位类别",
@@ -15495,6 +16017,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080808T-A-1403",
+      "undergraduate_code": "080808T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1403",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "创意设计与交互表达同设计学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080808T-P-0854",
@@ -15573,36 +16113,36 @@
       "undergraduate_code": "080902",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0812",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "其他核心对应",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "计算理论、系统和算法基础同计算机科学与技术形成其他核心对应。",
+      "skills_behavior": "默认辅助标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080902-A-0835",
       "undergraduate_code": "080902",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0835",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "关键技术体系",
-        "跨学科应用关系"
+        "核心知识基础",
+        "关键技术体系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "软件工程专业与同名一级学科在软件方法、体系结构和工程过程上直接衔接。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080902-P-0854",
@@ -15843,18 +16383,18 @@
       "undergraduate_code": "080907T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0812",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "其他核心对应",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "算法、计算系统和软件基础同计算机科学与技术形成其他核心对应。",
+      "skills_behavior": "默认辅助标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080907T-A-0835",
@@ -15873,6 +16413,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080907T-A-1405",
+      "undergraduate_code": "080907T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "智能科学与技术专业与同名一级学科直接衔接。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080907T-P-0854",
@@ -15911,6 +16469,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080908T-A-0816",
+      "undergraduate_code": "080908T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0816",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "空间信息获取、表达与服务同测绘科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080908T-A-0835",
       "undergraduate_code": "080908T",
       "graduate_type": "学术学位一级学科",
@@ -15927,6 +16503,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080908T-A-1404",
+      "undergraduate_code": "080908T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1404",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "遥感影像和空间观测是空间信息的重要数据方法。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080908T-P-0854",
@@ -16001,6 +16595,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-080910T-A-0714",
+      "undergraduate_code": "080910T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0714",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "数据科学使用统计推断和不确定性建模，与统计学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-080910T-A-0812",
       "undergraduate_code": "080910T",
       "graduate_type": "学术学位一级学科",
@@ -16059,18 +16671,18 @@
       "undergraduate_code": "080911TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0812",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "其他核心对应",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "系统、网络和计算基础同计算机科学形成其他核心对应。",
+      "skills_behavior": "默认辅助标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080911TK-A-0835",
@@ -16089,6 +16701,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080911TK-A-0839",
+      "undergraduate_code": "080911TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0839",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "网络空间安全专业与同名一级学科共享网络、系统和数据安全研究对象。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080911TK-P-0854",
@@ -16167,18 +16797,18 @@
       "undergraduate_code": "080913T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0812",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "电影制作使用计算图形和数字制作技术，计算机科学仅是实现方法。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080913T-A-0835",
@@ -16199,40 +16829,58 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080913T-P-0854",
+      "mapping_id": "MAP-080913T-A-1301",
+      "undergraduate_code": "080913T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1301",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "主要研究或实践方法"
+      ],
+      "rationale": "电影制作以视听作品、叙事和制作实践为对象，直接衔接艺术学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080913T-P-1354",
       "undergraduate_code": "080913T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0854",
+      "graduate_code": "1354",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
+      "rationale": "电影创作、制作与视听叙事实践直接衔接戏剧与影视专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080914TK-A-0812",
       "undergraduate_code": "080914TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0812",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "计算系统是保密技术载体，保留强相关而非共同核心。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080914TK-A-0835",
@@ -16251,6 +16899,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-080914TK-A-0839",
+      "undergraduate_code": "080914TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0839",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "保密技术以信息保密、系统防护与安全管理技术为对象，主要衔接网络空间安全。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080914TK-P-0854",
@@ -16437,18 +17103,18 @@
       "undergraduate_code": "080918TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0812",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "计算理论与系统支撑密码实现，保留强相关。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080918TK-A-0835",
@@ -16469,22 +17135,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-080918TK-P-0854",
+      "mapping_id": "MAP-080918TK-A-0839",
+      "undergraduate_code": "080918TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0839",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "密码科学与技术以密码理论、协议和安全系统为对象，主要衔接网络空间安全。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-080918TK-P-1452",
       "undergraduate_code": "080918TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0854",
+      "graduate_code": "1452",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "计算机类本科专业与计算机科学与技术一级学科直接衔接，并与电子信息专业学位类别的计算机技术方向高度相关；软件工程作为共享工程方法的强相关候选。",
+      "rationale": "密码工程、应用和管理实践直接衔接密码专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-080919T-A-0812",
@@ -16577,6 +17261,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081002-A-0807",
+      "undergraduate_code": "081002",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0807",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "建筑能源系统与热工过程同动力工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081002-A-0814",
       "undergraduate_code": "081002",
       "graduate_type": "学术学位一级学科",
@@ -16593,6 +17295,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081002-P-0858",
+      "undergraduate_code": "081002",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0858",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "建筑节能与冷热源系统形成能源动力工程场景。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081002-P-0859",
@@ -16629,6 +17349,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081003-A-0830",
+      "undergraduate_code": "081003",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "水处理和水环境保护与环境科学与工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-081003-P-0857",
+      "undergraduate_code": "081003",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0857",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "水污染治理形成资源与环境实践关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081003-P-0859",
@@ -16793,6 +17549,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081008T-A-0811",
+      "undergraduate_code": "081008T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能建造中的自动控制和施工系统优化同控制科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-081008T-A-0812",
+      "undergraduate_code": "081008T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "数字建模和工程软件同计算机科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081008T-A-0814",
       "undergraduate_code": "081008T",
       "graduate_type": "学术学位一级学科",
@@ -16919,6 +17711,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081011T-A-0815",
+      "undergraduate_code": "081011T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0815",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "城市水循环、供排水和水资源调度同水利工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081011T-P-0859",
       "undergraduate_code": "081011T",
       "graduate_type": "专业学位类别",
@@ -16955,6 +17765,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081012T-A-0823",
+      "undergraduate_code": "081012T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0823",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "智慧交通设施和交通组织同交通运输工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081012T-P-0859",
       "undergraduate_code": "081012T",
       "graduate_type": "专业学位类别",
@@ -16973,6 +17801,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081012T-P-0861",
+      "undergraduate_code": "081012T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0861",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "智慧交通工程实践形成交通运输专业关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-081013T-A-0812",
+      "undergraduate_code": "081013T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "工程软件使用计算系统和算法实现土木分析，计算机科学是方法支撑。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081013T-A-0814",
       "undergraduate_code": "081013T",
       "graduate_type": "学术学位一级学科",
@@ -16989,6 +17853,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081013T-A-0835",
+      "undergraduate_code": "081013T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0835",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "软件工程方法支撑工程软件开发，但土木工程对象保持主线。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081013T-P-0859",
@@ -17025,6 +17907,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081014T-A-0833",
+      "undergraduate_code": "081014T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0833",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "城市更新涉及空间规划和建成环境治理，同城乡规划学形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-081014T-P-0853",
+      "undergraduate_code": "081014T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0853",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "更新规划与实施形成城乡规划实践关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081014T-P-0859",
@@ -17225,6 +18143,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081106T-A-0812",
+      "undergraduate_code": "081106T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智慧水利使用数据平台和计算模型，计算机科学仅为技术方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081106T-A-0815",
       "undergraduate_code": "081106T",
       "graduate_type": "学术学位一级学科",
@@ -17319,36 +18255,36 @@
       "undergraduate_code": "081202",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0816",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "其他核心对应",
+      "is_primary": false,
       "relation_basis": [
-        "主要研究或实践方法",
+        "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "测绘类共享测量、导航、遥感和地理空间信息技术，直接衔接测绘科学与技术及资源与环境；遥感科学与技术是方法体系交叉的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "测绘基准、摄影测量与空间信息处理形成其他核心对应。",
+      "skills_behavior": "默认辅助标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081202-A-1404",
       "undergraduate_code": "081202",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1404",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "关键技术体系",
-        "跨学科应用关系"
+        "核心知识基础",
+        "关键技术体系"
       ],
-      "rationale": "测绘类共享测量、导航、遥感和地理空间信息技术，直接衔接测绘科学与技术及资源与环境；遥感科学与技术是方法体系交叉的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "遥感科学与技术专业与同名一级学科在传感、反演和对地观测体系上直接衔接。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081202-P-0857",
@@ -17367,6 +18303,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081203T-A-0810",
+      "undergraduate_code": "081203T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0810",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "导航信号、定位通信和信息传输同信息与通信工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081203T-A-0816",
@@ -17531,6 +18485,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081206TK-A-0812",
+      "undergraduate_code": "081206TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "时空数据库与计算服务使用计算机方法，但测绘时空基准仍是核心。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081206TK-A-0816",
       "undergraduate_code": "081206TK",
       "graduate_type": "学术学位一级学科",
@@ -17657,40 +18629,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-081302-P-0856",
+      "mapping_id": "MAP-081302-A-1007",
       "undergraduate_code": "081302",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "0856",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1007",
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "跨学科应用关系"
       ],
-      "rationale": "化工与制药类共享反应、分离、过程设计与工程放大基础，主要衔接化学工程与技术和材料与化工；制药方向与生物与医药形成强相关。",
-      "skills_behavior": "默认标签",
+      "rationale": "药物性质、制剂和质量知识同药学形成学科交叉，但工程过程仍是学术主线。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081302-P-0860",
       "undergraduate_code": "081302",
       "graduate_type": "专业学位类别",
       "graduate_code": "0860",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "关键技术体系",
-        "跨学科应用关系"
+        "主要研究对象",
+        "培养出口"
       ],
-      "rationale": "化工与制药类共享反应、分离、过程设计与工程放大基础，主要衔接化学工程与技术和材料与化工；制药方向与生物与医药形成强相关。",
-      "skills_behavior": "扩展检索",
+      "rationale": "制药工程的药物生产、工艺和质量工程直接衔接生物与医药专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081303T-A-0817",
@@ -17711,6 +18683,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081303T-A-0830",
+      "undergraduate_code": "081303T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "资源循环与污染减排同环境科学与工程形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081303T-P-0856",
       "undergraduate_code": "081303T",
       "graduate_type": "专业学位类别",
@@ -17729,6 +18719,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081303T-P-0857",
+      "undergraduate_code": "081303T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0857",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "废物资源化和环境治理形成资源与环境实践关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081303T-P-0860",
       "undergraduate_code": "081303T",
       "graduate_type": "专业学位类别",
@@ -17745,6 +18753,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081304T-A-0807",
+      "undergraduate_code": "081304T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0807",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "能源化工过程同能量转换系统形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081304T-A-0817",
@@ -17783,6 +18809,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081304T-P-0858",
+      "undergraduate_code": "081304T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0858",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "能源生产与转化形成能源动力应用关系。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081304T-P-0860",
       "undergraduate_code": "081304T",
       "graduate_type": "专业学位类别",
@@ -17819,40 +18863,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-081305T-P-0856",
+      "mapping_id": "MAP-081305T-A-0836",
       "undergraduate_code": "081305T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "0856",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
-      ],
-      "rationale": "化工与制药类共享反应、分离、过程设计与工程放大基础，主要衔接化学工程与技术和材料与化工；制药方向与生物与医药形成强相关。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-081305T-P-0860",
-      "undergraduate_code": "081305T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "0860",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0836",
       "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "关键技术体系",
         "跨学科应用关系"
       ],
-      "rationale": "化工与制药类共享反应、分离、过程设计与工程放大基础，主要衔接化学工程与技术和材料与化工；制药方向与生物与医药形成强相关。",
+      "rationale": "发酵、细胞工厂和生物制造同生物工程形成技术交叉。",
       "skills_behavior": "扩展检索",
       "military_restriction": false,
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-081305T-P-0860",
+      "undergraduate_code": "081305T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0860",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "培养出口"
+      ],
+      "rationale": "工业生物过程与生物制造直接衔接生物与医药专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081306T-A-0817",
@@ -17871,6 +18915,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081306T-A-0837",
+      "undergraduate_code": "081306T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0837",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "化工危险源、事故预防和过程安全同安全科学形成对象交叉，但安全一词不改变化工主线。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081306T-P-0856",
@@ -18033,6 +19095,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081309T-A-1405",
+      "undergraduate_code": "081309T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能分子工程使用机器学习进行分子设计，智能科学仅为方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081309T-P-0856",
@@ -18251,6 +19331,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081406T-A-0812",
+      "undergraduate_code": "081406T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能地球探测使用计算成像和数据分析，计算机科学为方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081406T-A-0818",
       "undergraduate_code": "081406T",
       "graduate_type": "学术学位一级学科",
@@ -18269,6 +19367,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081406T-A-1405",
+      "undergraduate_code": "081406T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能反演和识别使用学习算法，不改变地质探测对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081406T-P-0857",
       "undergraduate_code": "081406T",
       "graduate_type": "专业学位类别",
@@ -18285,6 +19401,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081407T-A-0812",
+      "undergraduate_code": "081407T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "资源环境大数据工程使用数据平台和算法，计算机科学为方法支撑而非对象连续。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081407T-A-0818",
@@ -18327,36 +19461,18 @@
       "undergraduate_code": "081501",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "采矿工程以固体矿床开采系统为对象，直接衔接矿业工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-081501-A-0820",
-      "undergraduate_code": "081501",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081501-P-0857",
@@ -18377,40 +19493,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-081502-A-0819",
-      "undergraduate_code": "081502",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-081502-A-0820",
       "undergraduate_code": "081502",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "石油工程以油气藏、钻完井和采油工程为对象，直接衔接石油与天然气工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081502-P-0857",
@@ -18435,36 +19533,18 @@
       "undergraduate_code": "081503",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "矿物加工工程以矿物分选和加工过程为对象，直接衔接矿业工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-081503-A-0820",
-      "undergraduate_code": "081503",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081503-P-0857",
@@ -18485,40 +19565,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-081504-A-0819",
-      "undergraduate_code": "081504",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-081504-A-0820",
       "undergraduate_code": "081504",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "油气储运工程以油气集输、管网和储运系统为对象，直接衔接石油与天然气工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081504-P-0857",
@@ -18543,36 +19605,18 @@
       "undergraduate_code": "081505T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "矿物资源工程以固体矿产开发与利用为对象，直接衔接矿业工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-081505T-A-0820",
-      "undergraduate_code": "081505T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081505T-P-0857",
@@ -18593,40 +19637,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-081506T-A-0819",
-      "undergraduate_code": "081506T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-081506T-A-0820",
       "undergraduate_code": "081506T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "海洋油气工程以海上油气勘探开发系统为对象，直接衔接石油与天然气工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081506T-P-0857",
@@ -18651,36 +19677,36 @@
       "undergraduate_code": "081507T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "智能采矿仍以矿山开采系统为主要对象，直接衔接矿业工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-081507T-A-0820",
+      "mapping_id": "MAP-081507T-A-1405",
       "undergraduate_code": "081507T",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0820",
-      "relation_level": "其他核心对应",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "智能采矿使用感知、学习和自主决策，智能科学为方法交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081507T-P-0857",
@@ -18701,40 +19727,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-081508TK-A-0819",
-      "undergraduate_code": "081508TK",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-081508TK-A-0820",
       "undergraduate_code": "081508TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0820",
-      "relation_level": "其他核心对应",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "碳储科学与工程以地下储层评价、注入和封存工程为对象，主要衔接石油与天然气工程。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-081508TK-A-0830",
+      "undergraduate_code": "081508TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0830",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "跨学科应用关系"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "地质封存服务温室气体减排，与环境科学形成对象交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081508TK-P-0857",
@@ -18755,40 +19781,40 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081509TK-A-0806",
+      "undergraduate_code": "081509TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0806",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "稀土选冶与提取同冶金工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081509TK-A-0819",
       "undergraduate_code": "081509TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0819",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "关键技术体系"
+        "核心知识基础"
       ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "稀土科学与工程包含矿物资源开发与选冶，主要衔接矿业工程。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-081509TK-A-0820",
-      "undergraduate_code": "081509TK",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0820",
-      "relation_level": "其他核心对应",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "关键技术体系"
-      ],
-      "rationale": "矿业类横跨固体矿产、石油天然气与储运工程，专业实践共同衔接资源与环境；学术端分别保留矿业工程和石油与天然气工程，避免虚设单一主学科。",
-      "skills_behavior": "默认辅助标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081509TK-P-0857",
@@ -19871,6 +20897,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081904T-A-0811",
+      "undergraduate_code": "081904T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "海洋机器人的运动控制和自主系统同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081904T-A-0824",
       "undergraduate_code": "081904T",
       "graduate_type": "学术学位一级学科",
@@ -19887,6 +20931,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081904T-A-1405",
+      "undergraduate_code": "081904T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "感知、学习和自主决策同智能科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081904T-P-0855",
@@ -19907,6 +20969,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081905T-A-0812",
+      "undergraduate_code": "081905T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0812",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智慧海洋使用计算平台和数据工程，计算机科学为方法支撑。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081905T-A-0824",
       "undergraduate_code": "081905T",
       "graduate_type": "学术学位一级学科",
@@ -19925,6 +21005,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-081905T-A-1405",
+      "undergraduate_code": "081905T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "海洋智能分析使用学习算法，但海洋工程对象保持主线。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-081905T-P-0855",
       "undergraduate_code": "081905T",
       "graduate_type": "专业学位类别",
@@ -19941,6 +21039,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081906T-A-0811",
+      "undergraduate_code": "081906T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能海洋装备的控制与自治同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081906T-A-0824",
@@ -19995,6 +21111,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-081907T-A-1405",
+      "undergraduate_code": "081907T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "海洋智能与无人技术使用智能感知和决策方法，但主要工程对象仍是海洋系统。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-081907T-P-0855",
@@ -20267,6 +21401,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082008T-A-0810",
+      "undergraduate_code": "082008T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0810",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "航空通信和信息系统同信息与通信工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-082008T-A-0811",
+      "undergraduate_code": "082008T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "飞行控制、导航和状态估计同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082008T-A-0825",
       "undergraduate_code": "082008T",
       "graduate_type": "学术学位一级学科",
@@ -20303,6 +21473,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082009T-A-0811",
+      "undergraduate_code": "082009T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "无人机控制与自主系统同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082009T-A-0825",
       "undergraduate_code": "082009T",
       "graduate_type": "学术学位一级学科",
@@ -20319,6 +21507,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082009T-A-1405",
+      "undergraduate_code": "082009T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "自主感知与决策同智能科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082009T-P-0855",
@@ -20357,6 +21563,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082010T-A-1405",
+      "undergraduate_code": "082010T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能飞行器使用学习和自主决策方法，但航空飞行器仍是主要工程对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082010T-P-0855",
       "undergraduate_code": "082010T",
       "graduate_type": "专业学位类别",
@@ -20373,6 +21597,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082011T-A-0807",
+      "undergraduate_code": "082011T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0807",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "电推进中的能量转换和热过程同动力工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082011T-A-0825",
@@ -20409,6 +21651,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082011T-P-0858",
+      "undergraduate_code": "082011T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0858",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "电推进能源系统形成能源动力工程场景。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082012T-A-0825",
@@ -21221,22 +22481,58 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-082306T-P-0951",
+      "mapping_id": "MAP-082306T-P-0857",
       "undergraduate_code": "082306T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0951",
+      "graduate_code": "0857",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究对象",
+        "培养出口"
       ],
-      "rationale": "农业工程类以农业机械、电气化、水土工程和智能装备为共同对象，直接衔接农业工程，主要行业培养出口归入农业专业学位。",
+      "rationale": "土地整治、国土空间生态修复与资源环境工程实践直接衔接资源与环境专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-082306T-P-0951",
+      "undergraduate_code": "082306T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0951",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "农田整治形成农业应用场景，但不作为通用农业主出口。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-082307T-A-0811",
+      "undergraduate_code": "082307T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "农业智能装备控制同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082307T-A-0828",
@@ -21257,6 +22553,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082307T-A-1405",
+      "undergraduate_code": "082307T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "农业装备感知与决策使用智能方法。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082307T-P-0951",
       "undergraduate_code": "082307T",
       "graduate_type": "专业学位类别",
@@ -21275,6 +22589,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082308T-A-0811",
+      "undergraduate_code": "082308T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0811",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "农业机器人的控制、规划和系统集成同控制科学形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082308T-A-0828",
       "undergraduate_code": "082308T",
       "graduate_type": "学术学位一级学科",
@@ -21291,6 +22623,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082308T-A-1405",
+      "undergraduate_code": "082308T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "农业机器人感知和自主决策同智能科学形成方法交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082308T-P-0951",
@@ -21435,6 +22785,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082404T-A-1403",
+      "undergraduate_code": "082404T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1403",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "家具产品与空间设计同设计学形成方法交叉，林业材料和制造仍是工程主线。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082404T-P-0856",
@@ -21851,6 +23219,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082602T-P-1058",
+      "undergraduate_code": "082602T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1058",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "假肢矫形的医疗技术应用场景与医学技术专业学位形成强相关；该关系不表示临床执业或资格准入。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082603T-A-0831",
       "undergraduate_code": "082603T",
       "graduate_type": "学术学位一级学科",
@@ -21903,6 +23289,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082603T-P-1058",
+      "undergraduate_code": "082603T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1058",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "临床工程的医疗技术应用场景与医学技术专业学位形成强相关；该关系不表示临床执业或资格准入。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082604T-A-0831",
@@ -21959,6 +23363,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082604T-P-1058",
+      "undergraduate_code": "082604T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1058",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "康复工程的医疗技术应用场景与医学技术专业学位形成强相关；该关系不表示临床执业或资格准入。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082605T-A-0831",
       "undergraduate_code": "082605T",
       "graduate_type": "学术学位一级学科",
@@ -22011,6 +23433,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082605T-P-1058",
+      "undergraduate_code": "082605T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1058",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "典型职业或行业场景",
+        "跨学科应用关系"
+      ],
+      "rationale": "健康科学与技术的医疗技术应用场景与医学技术专业学位形成强相关；该关系不表示临床执业或资格准入。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082701-A-0832",
@@ -22895,6 +24335,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-082903T-A-1004",
+      "undergraduate_code": "082903T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1004",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "职业危害识别、暴露评价和健康防护同公共卫生形成对象交叉，但职业卫生工程仍以工程控制为主。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-082903T-P-0857",
       "undergraduate_code": "082903T",
       "graduate_type": "专业学位类别",
@@ -22965,6 +24423,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-082905TK-A-1405",
+      "undergraduate_code": "082905TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智慧应急使用智能感知、预测和决策方法，但安全与应急系统仍是研究对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-082905TK-P-0857",
@@ -23597,6 +25073,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090101-A-0901",
+      "undergraduate_code": "090101",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "农学以作物生长、遗传育种与栽培为核心，直接衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090101-P-0951",
       "undergraduate_code": "090101",
       "graduate_type": "专业学位类别",
@@ -23613,6 +25107,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090102-A-0902",
+      "undergraduate_code": "090102",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0902",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "园艺以果树、蔬菜和观赏植物生产为核心，直接衔接园艺学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090102-P-0951",
@@ -23633,6 +25145,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090103-A-0904",
+      "undergraduate_code": "090103",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0904",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "植物保护以植物病虫草害监测与防控为核心，直接衔接植物保护。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090103-P-0951",
       "undergraduate_code": "090103",
       "graduate_type": "专业学位类别",
@@ -23649,6 +25179,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090104-A-0901",
+      "undergraduate_code": "090104",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "植物科学与技术以作物生产和改良为主要农业对象，主要衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090104-P-0951",
@@ -23669,6 +25217,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090105-A-0901",
+      "undergraduate_code": "090105",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "种子科学与工程以作物种质、育种、种子生产与质量为核心，直接衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090105-P-0951",
       "undergraduate_code": "090105",
       "graduate_type": "专业学位类别",
@@ -23685,6 +25251,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090106-A-0902",
+      "undergraduate_code": "090106",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0902",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "设施农业主要研究设施条件下园艺作物生产，主要衔接园艺学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090106-P-0951",
@@ -23705,6 +25289,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090107T-A-0902",
+      "undergraduate_code": "090107T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0902",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "茶学以茶树栽培、育种与茶产品为核心，主要衔接园艺学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090107T-P-0951",
       "undergraduate_code": "090107T",
       "graduate_type": "专业学位类别",
@@ -23721,6 +25323,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090108T-A-0901",
+      "undergraduate_code": "090108T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "烟草以烟草作物育种、栽培和品质为核心，主要衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090108T-P-0951",
@@ -23741,6 +25361,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090109T-A-0710",
+      "undergraduate_code": "090109T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0710",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "核心知识基础",
+        "跨学科应用关系"
+      ],
+      "rationale": "应用生物科学共享生物学知识与实验方法，但不同学校培养方案的农业对象差异较大，不设学术主映射。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090109T-P-0951",
       "undergraduate_code": "090109T",
       "graduate_type": "专业学位类别",
@@ -23757,6 +25395,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090110T-A-0901",
+      "undergraduate_code": "090110T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "农艺教育的学科知识核心是作物生产与农艺，主要衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090110T-P-0951",
@@ -23777,6 +25433,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090111T-A-0902",
+      "undergraduate_code": "090111T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0902",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "园艺教育的学科知识核心是园艺植物生产，主要衔接园艺学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090111T-P-0951",
       "undergraduate_code": "090111T",
       "graduate_type": "专业学位类别",
@@ -23793,6 +25467,60 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090112T-A-0828",
+      "undergraduate_code": "090112T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0828",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "农业传感、装备和作业系统同农业工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090112T-A-0901",
+      "undergraduate_code": "090112T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "智慧农业仍以作物生产系统为主要对象，主要衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090112T-A-1405",
+      "undergraduate_code": "090112T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1405",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "智能分析与决策为农业对象提供方法支撑。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090112T-P-0951",
@@ -23813,6 +25541,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090113T-A-0710",
+      "undergraduate_code": "090113T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0710",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "菌物科学与工程以真菌生物学、遗传与利用为主要对象，直接衔接生物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090113T-A-0904",
+      "undergraduate_code": "090113T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0904",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "植物病原真菌和有益菌应用同植物保护形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090113T-P-0951",
       "undergraduate_code": "090113T",
       "graduate_type": "专业学位类别",
@@ -23829,6 +25593,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090114T-A-0903",
+      "undergraduate_code": "090114T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0903",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "肥料利用与土壤养分管理同农业资源与环境形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090114T-A-0904",
+      "undergraduate_code": "090114T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0904",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "农药化肥以有害生物防控及农业投入品应用为主要对象，主要衔接植物保护。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090114T-P-0951",
@@ -23849,6 +25649,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090115T-A-0710",
+      "undergraduate_code": "090115T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0710",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "核心知识基础",
+        "跨学科应用关系"
+      ],
+      "rationale": "分子遗传和生物技术同生物学形成基础交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090115T-A-0904",
+      "undergraduate_code": "090115T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0904",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "生物农药科学与工程以生物防治和农药研发应用为核心，主要衔接植物保护。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090115T-P-0951",
       "undergraduate_code": "090115T",
       "graduate_type": "专业学位类别",
@@ -23867,6 +25703,42 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090116TK-A-0710",
+      "undergraduate_code": "090116TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0710",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "核心知识基础",
+        "跨学科应用关系"
+      ],
+      "rationale": "分子遗传和生物技术同生物学形成基础交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090116TK-A-0901",
+      "undergraduate_code": "090116TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "生物育种科学以作物遗传改良和育种理论为核心，主要衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090116TK-P-0951",
       "undergraduate_code": "090116TK",
       "graduate_type": "专业学位类别",
@@ -23883,6 +25755,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090117TK-A-0710",
+      "undergraduate_code": "090117TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0710",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "核心知识基础",
+        "跨学科应用关系"
+      ],
+      "rationale": "分子遗传和生物技术同生物学形成基础交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090117TK-A-0901",
+      "undergraduate_code": "090117TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0901",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "生物育种技术以作物遗传改良和育种技术为核心，主要衔接作物学。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090117TK-P-0951",
@@ -23979,36 +25887,36 @@
       "undergraduate_code": "090202",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0713",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "主要研究或实践方法"
-      ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-090202-A-0903",
-      "undergraduate_code": "090202",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0903",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "野生动物与自然保护区管理以种群、群落、栖息地和保护生态为核心，直接衔接生态学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090202-A-0907",
+      "undergraduate_code": "090202",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0907",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "森林与野生动物保护同林学形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090202-A-0910",
@@ -24029,22 +25937,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-090202-P-0951",
+      "mapping_id": "MAP-090202-P-0954",
       "undergraduate_code": "090202",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0951",
+      "graduate_code": "0954",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "自然保护地和野生动物保护实践主要衔接林业专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090203-A-0713",
@@ -24069,36 +25977,36 @@
       "undergraduate_code": "090203",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0903",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "主要研究对象",
-        "核心知识基础"
+        "核心知识基础",
+        "跨学科应用关系"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "默认标签",
+      "rationale": "土壤、水分和土地资源知识同农业资源与环境形成交叉。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090203-A-0910",
       "undergraduate_code": "090203",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0910",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "跨学科应用关系"
+        "核心知识基础"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "扩展检索",
+      "rationale": "水土保持与荒漠化防治专业与同名一级学科直接衔接。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090203-P-0951",
@@ -24135,6 +26043,42 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-090204T-A-0807",
+      "undergraduate_code": "090204T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0807",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "生物质能源转化同动力工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090204T-A-0836",
+      "undergraduate_code": "090204T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0836",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "生物质转化与生物制造同生物工程形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090204T-A-0903",
@@ -24267,36 +26211,36 @@
       "undergraduate_code": "090206T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0713",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "主要研究或实践方法"
-      ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-090206T-A-0903",
-      "undergraduate_code": "090206T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0903",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "湿地保护与恢复以湿地生态系统结构、过程和恢复为核心，直接衔接生态学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090206T-A-0903",
+      "undergraduate_code": "090206T",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0903",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "湿地土壤和水资源管理同农业资源与环境形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090206T-A-0910",
@@ -24317,58 +26261,58 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-090206T-P-0951",
+      "mapping_id": "MAP-090206T-P-0954",
       "undergraduate_code": "090206T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0951",
+      "graduate_code": "0954",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "湿地保护与自然资源管理实践主要衔接林业专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090207TK-A-0713",
       "undergraduate_code": "090207TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0713",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "主要研究或实践方法"
-      ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-090207TK-A-0903",
-      "undergraduate_code": "090207TK",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0903",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "国家公园建设与管理以保护地生态系统和生物多样性为核心，主要衔接生态学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090207TK-A-0907",
+      "undergraduate_code": "090207TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0907",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "森林生态系统与保护地经营同林学形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090207TK-A-0910",
@@ -24389,58 +26333,58 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-090207TK-P-0951",
+      "mapping_id": "MAP-090207TK-P-0954",
       "undergraduate_code": "090207TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0951",
+      "graduate_code": "0954",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "国家公园保护、监测和自然资源管理实践主要衔接林业专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090208TK-A-0713",
       "undergraduate_code": "090208TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0713",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究对象",
-        "主要研究或实践方法"
-      ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-090208TK-A-0903",
-      "undergraduate_code": "090208TK",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "0903",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "生态修复学以受损生态系统过程、恢复机制和修复评价为核心，直接衔接生态学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-090208TK-A-0903",
+      "undergraduate_code": "090208TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0903",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "土壤和土地退化修复同农业资源与环境形成对象交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090208TK-A-0910",
@@ -24461,22 +26405,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-090208TK-P-0951",
+      "mapping_id": "MAP-090208TK-P-0954",
       "undergraduate_code": "090208TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0951",
+      "graduate_code": "0954",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
+      "rationale": "生态保护修复与自然资源管理实践主要衔接林业专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090209T-A-0713",
@@ -25073,6 +27017,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090502-P-0862",
+      "undergraduate_code": "090502",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0862",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "跨学科应用关系"
+      ],
+      "rationale": "园林规划、植物景观与营造同风景园林专业学位形成实践交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090502-P-0954",
       "undergraduate_code": "090502",
       "graduate_type": "专业学位类别",
@@ -25307,6 +27269,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-090604TK-A-0906",
+      "undergraduate_code": "090604TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0906",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "跨学科应用关系"
+      ],
+      "rationale": "水生动物疾病与兽医学共享动物疾病研究对象。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-090604TK-A-0908",
       "undergraduate_code": "090604TK",
       "graduate_type": "学术学位一级学科",
@@ -25325,22 +27305,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-090604TK-P-0951",
+      "mapping_id": "MAP-090604TK-P-0952",
       "undergraduate_code": "090604TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0951",
+      "graduate_code": "0952",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "水产类以水生生物养殖、渔业资源和水生动物健康为核心，直接衔接水产一级学科，产业培养出口归入农业专业学位。",
+      "rationale": "水生动物疾病诊断、防治与健康管理直接衔接兽医专业学位；目录关系不代表执业资格。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090605T-A-0908",
@@ -26045,24 +28025,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-100501K-P-1059",
-      "undergraduate_code": "100501K",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-100502K-A-1005",
       "undergraduate_code": "100502K",
       "graduate_type": "学术学位一级学科",
@@ -26085,36 +28047,36 @@
       "undergraduate_code": "100502K",
       "graduate_type": "专业学位类别",
       "graduate_code": "1057",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "跨学科应用关系"
       ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "中医基础和辨证论治同中医专业学位形成强相关，但针灸为更直接出口。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-100502K-P-1059",
       "undergraduate_code": "100502K",
       "graduate_type": "专业学位类别",
       "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
+        "培养出口",
+        "典型职业或行业场景"
       ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "针灸推拿的专门理论、操作与临床实践直接衔接针灸专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-100503K-A-1005",
@@ -26150,24 +28112,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-100503K-P-1059",
-      "undergraduate_code": "100503K",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -26207,24 +28151,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-100504K-P-1059",
-      "undergraduate_code": "100504K",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-100505K-A-1005",
       "undergraduate_code": "100505K",
       "graduate_type": "学术学位一级学科",
@@ -26258,24 +28184,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-100505K-P-1059",
-      "undergraduate_code": "100505K",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -26315,24 +28223,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-100506K-P-1059",
-      "undergraduate_code": "100506K",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-100507K-A-1005",
       "undergraduate_code": "100507K",
       "graduate_type": "学术学位一级学科",
@@ -26366,24 +28256,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-100507K-P-1059",
-      "undergraduate_code": "100507K",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -26423,24 +28295,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-100508TK-P-1059",
-      "undergraduate_code": "100508TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-100509TK-A-1005",
       "undergraduate_code": "100509TK",
       "graduate_type": "学术学位一级学科",
@@ -26474,24 +28328,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-100509TK-P-1059",
-      "undergraduate_code": "100509TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -26639,24 +28475,6 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-100512TK-P-1059",
-      "undergraduate_code": "100512TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-100513TK-A-1005",
       "undergraduate_code": "100513TK",
       "graduate_type": "学术学位一级学科",
@@ -26690,24 +28508,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-100513TK-P-1059",
-      "undergraduate_code": "100513TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1059",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "跨学科应用关系"
-      ],
-      "rationale": "中医学类共享中医理论、辨证与诊疗方法，直接衔接中医学及中医专业学位；针灸只覆盖部分类内专业，保留为强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -27519,6 +29319,42 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-101018TK-A-0827",
+      "undergraduate_code": "101018TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0827",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "关键技术体系",
+        "跨学科应用关系"
+      ],
+      "rationale": "辐射探测、核技术和防护同核科学与技术形成技术交叉。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-101018TK-A-0831",
+      "undergraduate_code": "101018TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0831",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "核医学工程以医学成像、探测设备和临床工程系统为核心，直接衔接生物医学工程。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-101018TK-P-1058",
