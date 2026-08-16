@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "record_count": 1875,
+    "record_count": 1876,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
-    "override_major_count": 70,
+    "override_major_count": 73,
     "generation_method_counts": {
       "军事学目录参考": 9,
-      "专业级例外": 107,
-      "专业类规则继承": 1759
+      "专业级例外": 113,
+      "专业类规则继承": 1754
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 206,
-      "高置信度候选": 1660,
+      "存在歧义，建议学科专家复核": 211,
+      "高置信度候选": 1656,
       "军事学限制": 9
     }
   },
@@ -5241,36 +5241,54 @@
       "undergraduate_code": "0502104TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0502",
+      "relation_level": "强相关",
+      "is_primary": false,
+      "relation_basis": [
+        "主要研究对象",
+        "核心知识基础"
+      ],
+      "rationale": "区域国别学使用外语文献、区域文化阐释和跨文化研究方法，与外国语言文学共享资料与方法基础，但研究对象还包括区域政治、经济和社会。",
+      "skills_behavior": "扩展检索",
+      "military_restriction": false,
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
+    },
+    {
+      "mapping_id": "MAP-0502104TK-A-1407",
+      "undergraduate_code": "0502104TK",
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "1407",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "外国语言文学类共享外语能力、语言文化与跨文化研究基础，学术上衔接外国语言文学，翻译专业学位覆盖其主要语言实践出口。",
+      "rationale": "区域国别学专业与同名一级学科共享特定国家和区域的政治、经济、社会与文化研究对象，形成直接学术衔接。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-0502104TK-P-0551",
       "undergraduate_code": "0502104TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "0551",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "外国语言文学类共享外语能力、语言文化与跨文化研究基础，学术上衔接外国语言文学，翻译专业学位覆盖其主要语言实践出口。",
-      "skills_behavior": "默认标签",
+      "rationale": "翻译仅为区域国别研究中的外语资料处理和跨文化沟通工具，不是该专业的主要职业训练或培养出口，故仅保留延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-0502105T-A-0502",
@@ -5331,18 +5349,18 @@
       "undergraduate_code": "0502106TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "0551",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "外国语言文学类共享外语能力、语言文化与跨文化研究基础，学术上衔接外国语言文学，翻译专业学位覆盖其主要语言实践出口。",
-      "skills_behavior": "默认标签",
+      "rationale": "计算语言学以语料、形式模型、算法和自然语言处理为方法核心；机器翻译只是应用与评测场景，不等同翻译专业学位的口笔译职业训练。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-0502107TK-A-0502",
@@ -5367,18 +5385,18 @@
       "undergraduate_code": "0502107TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "0551",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "外国语言文学类共享外语能力、语言文化与跨文化研究基础，学术上衔接外国语言文学，翻译专业学位覆盖其主要语言实践出口。",
-      "skills_behavior": "默认标签",
+      "rationale": "语言智能以语言技术、智能系统和人机语言交互为核心；翻译只是智能语言应用场景之一，不构成翻译专业学位的直接培养出口。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-050211-A-0502",
@@ -8913,18 +8931,18 @@
       "undergraduate_code": "050310T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0503",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "主要研究或实践方法"
       ],
-      "rationale": "新闻传播学类共同研究信息传播、媒体与公共沟通，直接衔接新闻传播学和新闻与传播专业学位；出版方向由专业级例外补充。",
-      "skills_behavior": "默认标签",
+      "rationale": "会展与新闻传播学共享受众研究、内容策划和公共传播方法，但主要研究对象是会展活动及其运营，不构成新闻传播学直接学术主映射。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-050310T-P-0552",

@@ -282,6 +282,44 @@
         "target": {"graduate_type": "专业学位类别", "code": "0551", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "手语翻译专业的双语转换、口笔译规范和无障碍沟通实践直接衔接翻译专业学位。"}
       }
     ],
+    "0502104TK": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0502",
+        "relation_level": "强相关",
+        "rationale": "区域国别学使用外语文献、区域文化阐释和跨文化研究方法，与外国语言文学共享资料与方法基础，但研究对象还包括区域政治、经济和社会。"
+      },
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0551",
+        "relation_level": "延伸相关",
+        "rationale": "翻译仅为区域国别研究中的外语资料处理和跨文化沟通工具，不是该专业的主要职业训练或培养出口，故仅保留延伸关系。"
+      },
+      {
+        "action": "add",
+        "target": {"graduate_type": "学术学位一级学科", "code": "1407", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"], "rationale": "区域国别学专业与同名一级学科共享特定国家和区域的政治、经济、社会与文化研究对象，形成直接学术衔接。"}
+      }
+    ],
+    "0502106TK": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0551",
+        "relation_level": "延伸相关",
+        "rationale": "计算语言学以语料、形式模型、算法和自然语言处理为方法核心；机器翻译只是应用与评测场景，不等同翻译专业学位的口笔译职业训练。"
+      }
+    ],
+    "0502107TK": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0551",
+        "relation_level": "延伸相关",
+        "rationale": "语言智能以语言技术、智能系统和人机语言交互为核心；翻译只是智能语言应用场景之一，不构成翻译专业学位的直接培养出口。"
+      }
+    ],
     "050305": [
       {
         "action": "replace_primary",
@@ -297,6 +335,13 @@
       }
     ],
     "050310T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0503",
+        "relation_level": "强相关",
+        "rationale": "会展与新闻传播学共享受众研究、内容策划和公共传播方法，但主要研究对象是会展活动及其运营，不构成新闻传播学直接学术主映射。"
+      },
       {
         "action": "downgrade",
         "graduate_type": "专业学位类别",

@@ -137,6 +137,11 @@ function primaryProfessionalTargets(majorName) {
     .map((candidate) => candidate.graduate_code);
 }
 
+function reviewRow(majorName) {
+  const code = undergraduate.find((record) => record.major_name === majorName).major_code;
+  return ledger.records.find((record) => record.undergraduate_code === code);
+}
+
 assert.ok(targets("哲学").some((target) => target.startsWith(`${academicType}|0101|`)));
 assert.ok(targets("法学").some((target) => target.startsWith(`${professionalType}|0351|`)));
 assert.ok(targets("计算机科学与技术").some((target) => target.startsWith(`${academicType}|0812|`)));
@@ -167,6 +172,32 @@ assert.deepEqual(
     .map((candidate) => candidate.undergraduate_code),
   ["030202", "030203", "030204T", "030206TK"],
 );
+assert.deepEqual(targets("区域国别学"), [
+  `${academicType}|0502|强相关`,
+  `${academicType}|1407|主映射/核心对应`,
+  `${professionalType}|0551|延伸相关`,
+]);
+assert.deepEqual(primaryAcademicTargets("区域国别学"), ["1407"]);
+assert.deepEqual(primaryProfessionalTargets("区域国别学"), []);
+assert.deepEqual(reviewRow("区域国别学").zero_mapping_types, [professionalType]);
+assert.equal(reviewRow("区域国别学").review_status, "已依据规则复核");
+for (const majorName of ["计算语言学", "语言智能"]) {
+  assert.deepEqual(targets(majorName), [
+    `${academicType}|0502|主映射/核心对应`,
+    `${professionalType}|0551|延伸相关`,
+  ]);
+  assert.deepEqual(primaryProfessionalTargets(majorName), []);
+  assert.deepEqual(reviewRow(majorName).zero_mapping_types, [professionalType]);
+  assert.equal(reviewRow(majorName).review_status, "存在歧义，建议学科专家复核");
+}
+assert.deepEqual(targets("会展"), [
+  `${academicType}|0503|强相关`,
+  `${professionalType}|0552|强相关`,
+]);
+assert.deepEqual(primaryAcademicTargets("会展"), []);
+assert.deepEqual(primaryProfessionalTargets("会展"), []);
+assert.deepEqual(reviewRow("会展").zero_mapping_types, [academicType, professionalType]);
+assert.equal(reviewRow("会展").review_status, "存在歧义，建议学科专家复核");
 assert.ok(candidates.every((candidate) => candidate.review_status !== "已依据规则复核"));
 assert.ok(candidates.every((candidate) => graduateKeys.has(`${candidate.graduate_type}|${candidate.graduate_code}`)));
 assert.ok(candidates.every((candidate) => candidate.mapping_id === `MAP-${candidate.undergraduate_code}-${candidate.graduate_type === academicType ? "A" : "P"}-${candidate.graduate_code}`));
