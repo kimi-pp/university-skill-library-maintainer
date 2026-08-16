@@ -142,6 +142,40 @@ function reviewRow(majorName) {
   return ledger.records.find((record) => record.undergraduate_code === code);
 }
 
+function mappingCandidate(majorName, graduateType, graduateCode) {
+  const code = undergraduate.find((record) => record.major_name === majorName).major_code;
+  return candidates.find((candidate) => candidate.undergraduate_code === code
+    && candidate.graduate_type === graduateType
+    && candidate.graduate_code === graduateCode);
+}
+
+for (const major of humanitiesAndSocialScienceScope) {
+  const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
+  const majorCandidateIds = new Set(
+    candidates
+      .filter((candidate) => candidate.undergraduate_code === major.major_code)
+      .map((candidate) => candidate.mapping_id),
+  );
+  const acceptedIds = new Set(row.accepted_mapping_ids);
+  const rejectedIds = new Set(row.rejected_mapping_ids);
+  assert.equal(acceptedIds.size, row.accepted_mapping_ids.length, `${major.major_code} duplicates accepted IDs`);
+  assert.equal(rejectedIds.size, row.rejected_mapping_ids.length, `${major.major_code} duplicates rejected IDs`);
+  assert.ok([...acceptedIds].every((mappingId) => !rejectedIds.has(mappingId)), `${major.major_code} overlaps decisions`);
+  assert.deepEqual(new Set([...acceptedIds, ...rejectedIds]), majorCandidateIds, `${major.major_code} incomplete decisions`);
+
+  const directTypes = new Set(
+    candidates
+      .filter((candidate) => acceptedIds.has(candidate.mapping_id)
+        && ["主映射/核心对应", "其他核心对应"].includes(candidate.relation_level))
+      .map((candidate) => candidate.graduate_type),
+  );
+  const expectedZeroTypes = new Set(
+    [academicType, professionalType].filter((graduateType) => !directTypes.has(graduateType)),
+  );
+  assert.equal(new Set(row.zero_mapping_types).size, row.zero_mapping_types.length, `${major.major_code} duplicates zero types`);
+  assert.deepEqual(new Set(row.zero_mapping_types), expectedZeroTypes, `${major.major_code} has inconsistent zero types`);
+}
+
 assert.ok(targets("哲学").some((target) => target.startsWith(`${academicType}|0101|`)));
 assert.ok(targets("法学").some((target) => target.startsWith(`${professionalType}|0351|`)));
 assert.ok(targets("计算机科学与技术").some((target) => target.startsWith(`${academicType}|0812|`)));
@@ -198,6 +232,21 @@ assert.deepEqual(primaryAcademicTargets("会展"), []);
 assert.deepEqual(primaryProfessionalTargets("会展"), []);
 assert.deepEqual(reviewRow("会展").zero_mapping_types, [academicType, professionalType]);
 assert.equal(reviewRow("会展").review_status, "存在歧义，建议学科专家复核");
+const sharedMethodBases = ["主要研究或实践方法", "跨学科应用关系"];
+for (const [majorName, graduateType, graduateCode] of [
+  ["区域国别学", academicType, "0502"],
+  ["区域国别学", professionalType, "0551"],
+  ["计算语言学", professionalType, "0551"],
+  ["语言智能", professionalType, "0551"],
+  ["会展", academicType, "0503"],
+  ["会展", professionalType, "0552"],
+]) {
+  assert.deepEqual(
+    mappingCandidate(majorName, graduateType, graduateCode).relation_basis,
+    sharedMethodBases,
+    `${majorName} ${graduateCode} must replace inherited relation bases`,
+  );
+}
 assert.ok(candidates.every((candidate) => candidate.review_status !== "已依据规则复核"));
 assert.ok(candidates.every((candidate) => graduateKeys.has(`${candidate.graduate_type}|${candidate.graduate_code}`)));
 assert.ok(candidates.every((candidate) => candidate.mapping_id === `MAP-${candidate.undergraduate_code}-${candidate.graduate_type === academicType ? "A" : "P"}-${candidate.graduate_code}`));
@@ -274,6 +323,7 @@ const syntheticOverrides = {
         graduate_type: professionalType,
         graduate_code: "0251",
         relation_level: "强相关",
+        basis: sharedMethodBases,
         rationale: "该专业只与金融形成强相关关系。",
       },
       {
@@ -308,7 +358,24 @@ assert.deepEqual(
     ["MAP-X00101-P-0251", "强相关", false, "专业级例外"],
   ],
 );
+assert.deepEqual(
+  syntheticCandidates.find((candidate) => candidate.mapping_id === "MAP-X00101-P-0251").relation_basis,
+  sharedMethodBases,
+);
 assert.equal(syntheticCandidates.some((candidate) => candidate.undergraduate_code === "X00102"), false);
+
+const invalidDowngradeOverrides = structuredClone(syntheticOverrides);
+invalidDowngradeOverrides.major_overrides.X00101
+  .find((action) => action.action === "downgrade").basis = [];
+assert.throws(
+  () => generateCandidates({
+    undergraduate: syntheticUndergraduate,
+    graduate: syntheticGraduate,
+    classRules: syntheticClassRules,
+    overrides: invalidDowngradeOverrides,
+  }),
+  /downgrade\.basis.*(至少需要一项|at least one)/i,
+);
 
 assert.throws(
   () => generateCandidates({

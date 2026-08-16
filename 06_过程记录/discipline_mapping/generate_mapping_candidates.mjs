@@ -57,6 +57,15 @@ function reviewStatusFor(relationLevel) {
     : AMBIGUOUS_REVIEW;
 }
 
+function validateBasis(basis, field) {
+  requireArray(basis, field);
+  if (basis.length === 0) fail(`${field} 至少需要一项关系依据`);
+  if (new Set(basis).size !== basis.length) fail(`${field} 不能重复`);
+  for (const value of basis) {
+    if (!relationBases.has(value)) fail(`${field} 包含不允许的关系依据 ${String(value)}`);
+  }
+}
+
 function validateTarget(target, field, graduateType, graduateByKey) {
   requireObject(target, field);
   requireNonEmptyString(graduateType, `${field}.graduate_type`);
@@ -64,12 +73,7 @@ function validateTarget(target, field, graduateType, graduateByKey) {
   requireNonEmptyString(target.code, `${field}.code`);
   requireNonEmptyString(target.level, `${field}.level`);
   if (!relationLevels.has(target.level)) fail(`${field}.level 不是允许的关系层级`);
-  requireArray(target.basis, `${field}.basis`);
-  if (target.basis.length === 0) fail(`${field}.basis 至少需要一项关系依据`);
-  if (new Set(target.basis).size !== target.basis.length) fail(`${field}.basis 不能重复`);
-  for (const basis of target.basis) {
-    if (!relationBases.has(basis)) fail(`${field}.basis 包含不允许的关系依据 ${String(basis)}`);
-  }
+  validateBasis(target.basis, `${field}.basis`);
   const key = endpoint(graduateType, target.code);
   if (!graduateByKey.has(key)) fail(`${field} 引用的研究生目录对象不存在：${key}`);
 }
@@ -207,10 +211,13 @@ function applyOverrides({ major, targets, actions, graduateByKey, hasExplicitOve
     const key = endpoint(action.graduate_type, action.graduate_code);
     const inherited = targets.get(key);
     if (!inherited) fail(`${major.major_code}.downgrade 找不到继承目标 ${key}`);
+    const replacesBasis = Object.hasOwn(action, "basis");
+    if (replacesBasis) validateBasis(action.basis, `${major.major_code}.downgrade.basis`);
     targets.set(key, {
       ...inherited,
       relation_level: action.relation_level,
       is_primary: false,
+      relation_basis: replacesBasis ? [...action.basis] : inherited.relation_basis,
       rationale: action.rationale,
       generation_method: OVERRIDE_METHOD,
     });
