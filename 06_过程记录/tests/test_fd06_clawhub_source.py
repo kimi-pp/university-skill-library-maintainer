@@ -2,14 +2,54 @@ from __future__ import annotations
 
 import hashlib
 import importlib.util
+import inspect
 import json
 import sys
+import tempfile
+import unittest
 from pathlib import Path
 
-import pytest
-
-
 ROOT = Path(__file__).resolve().parents[2]
+
+
+class MonkeyPatch:
+    """Small standard-library replacement for the fixture this module needs."""
+
+    def __init__(self):
+        self._changes: list[tuple[object, str, object]] = []
+
+    def setattr(self, target: object, name: str, value: object) -> None:
+        self._changes.append((target, name, getattr(target, name)))
+        setattr(target, name, value)
+
+    def undo(self) -> None:
+        for target, name, original in reversed(self._changes):
+            setattr(target, name, original)
+
+
+def _run_function_test(function) -> None:
+    patcher = MonkeyPatch()
+    try:
+        with tempfile.TemporaryDirectory() as temporary:
+            fixtures = {"monkeypatch": patcher, "tmp_path": Path(temporary)}
+            kwargs = {
+                name: fixtures[name]
+                for name in inspect.signature(function).parameters
+            }
+            function(**kwargs)
+    finally:
+        patcher.undo()
+
+
+def load_tests(loader, tests, pattern):
+    suite = unittest.TestSuite()
+    for name, function in sorted(globals().items()):
+        if name.startswith("test_") and callable(function):
+            suite.addTest(unittest.FunctionTestCase(
+                lambda function=function: _run_function_test(function),
+                description=name,
+            ))
+    return suite
 
 
 def load_script(name: str):
@@ -212,7 +252,7 @@ def test_clawhub_snapshot_rejects_content_that_breaks_declared_hash(monkeypatch,
         "skill_path": "SKILL.md",
     }
 
-    with pytest.raises(ValueError, match="SHA-256"):
+    with unittest.TestCase().assertRaisesRegex(ValueError, "SHA-256"):
         module.clawhub_skill_snapshot(candidate)
 
 
@@ -331,18 +371,14 @@ def test_package_frontmatter_license_is_evidence_when_repository_license_is_unkn
     }
 
 
-@pytest.mark.parametrize(
-    ("declared", "expected"),
-    [
+def test_license_display_names_normalize_to_supported_spdx():
+    module = load_script("fd06_snapshot_and_audit.py")
+    for declared, expected in (
         ("MIT license", "MIT"),
         (
             "Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
             "CC-BY-NC-4.0",
         ),
-    ],
-)
-def test_license_display_names_normalize_to_supported_spdx(declared, expected):
-    module = load_script("fd06_snapshot_and_audit.py")
-
-    assert module.normalize_license_id(declared) == expected
-    assert module.license_is_usable(module.normalize_license_id(declared))
+    ):
+        assert module.normalize_license_id(declared) == expected
+        assert module.license_is_usable(module.normalize_license_id(declared))

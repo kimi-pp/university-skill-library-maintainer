@@ -73,10 +73,7 @@ PLAIN_FIELDS = (
     "plain_prerequisites", "plain_limitations", "plain_integration",
     "plain_verification",
 )
-KNOWN_LEGACY_TEST_EXCEPTIONS = (
-    "test_artifact_generator.ArtifactGeneratorTests.test_catalog_is_valid_and_has_expected_category_counts",
-    "test_artifact_generator.ArtifactGeneratorTests.test_manifest_contains_six_independent_deliverables",
-)
+KNOWN_LEGACY_TEST_EXCEPTIONS = ()
 
 
 class VisualExpectations(NamedTuple):
@@ -404,6 +401,23 @@ def _reference_label(value: str) -> str:
     return " ".join(value.strip().casefold().split())
 
 
+def _markdown_link_audit_text(text: str) -> str:
+    """Remove Markdown constructs whose brackets are not link syntax."""
+    lines: list[str] = []
+    fence: str | None = None
+    for line in text.splitlines(keepends=True):
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})", line)
+        if fence is not None:
+            if marker and marker.group(1)[0] == fence[0] and len(marker.group(1)) >= len(fence):
+                fence = None
+            continue
+        if marker:
+            fence = marker.group(1)
+            continue
+        lines.append(re.sub(r"^(\s*(?:[-+*]|\d+[.)])\s+)\[[ xX]\]\s+", r"\1", line))
+    return "".join(lines)
+
+
 def _check_markdown_target(root: Path, page: Path, raw: str) -> bool:
     raw = raw.strip()
     if raw.startswith("<") and raw.endswith(">"):
@@ -430,7 +444,7 @@ def verify_markdown_links(root: Path, paths: list[Path]) -> dict:
     checked = 0
     local = 0
     for page in paths:
-        text = page.read_text(encoding="utf-8")
+        text = _markdown_link_audit_text(page.read_text(encoding="utf-8"))
         definitions: dict[str, str] = {}
         for definition in _REFERENCE_DEFINITION_RE.finditer(text):
             definitions.setdefault(_reference_label(definition.group(1)), definition.group(2))

@@ -12,6 +12,7 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from unittest.mock import patch
 
 from docx import Document
 from PIL import Image, ImageDraw
@@ -308,6 +309,31 @@ class DeliveryArchiveAndLinkTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "CommonMark|坏链|空格"):
                 self.verifier.verify_markdown_links(root, [page])
 
+    def test_link_audit_ignores_fenced_code_and_task_list_syntax_but_rejects_real_broken_links(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            page = root / "INDEX.md"
+            page.write_text(
+                "- [ ] Run the task\n"
+                "[ ]: missing-task.md\n\n"
+                "```javascript\n"
+                "const formula = values[0][0];\n"
+                "[code-item]: missing-code.md\n"
+                "[code-item]\n"
+                "```\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                self.verifier.verify_markdown_links(root, [page]),
+                {"markdown_files": 1, "links": 0, "local_links": 0},
+            )
+            page.write_text(
+                page.read_text(encoding="utf-8") + "\n[real broken](missing-real.md)\n",
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(ValueError, "坏链"):
+                self.verifier.verify_markdown_links(root, [page])
+
     def test_reference_style_bad_link_and_untracked_markdown_are_not_skipped(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -594,7 +620,31 @@ class ProjectResultAndSafetyTests(unittest.TestCase):
             self.assertEqual(list((root / "06_过程记录/verification").glob("*.tmp")), [])
 
     def test_formal_result_schema_counts_digest_and_manual_boundaries(self):
-        result = self.verifier.verify_project(PROJECT_ROOT)
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            copy_contract_data(root)
+            delivery = {
+                "manifest": [], "delivery_files": 132,
+                "document_files": 66, "spreadsheet_files": 66,
+            }
+            navigation = {
+                "leaf_pages": 61, "domain_indexes": 5, "total_indexes": 1,
+                "markdown_files": 272, "links": 1261, "local_links": 670,
+            }
+            visual = {
+                "docx_pages": 259, "worksheets": 264, "segments": 20,
+                "review_images": 543, "review_batches": 19,
+                "inventory_digest": "80888dde132a1b3e0ef6069458efd3f6e1f5cde813b04f97efa895e91ca6d0f2",
+            }
+            with (
+                patch.object(self.verifier, "verify_manifest_and_delivery", return_value=delivery),
+                patch.object(self.verifier, "verify_originals_and_archive", return_value={"archived": 10}),
+                patch.object(self.verifier, "verify_navigation", return_value=navigation),
+                patch.object(self.verifier, "verify_office_structure", return_value={"docx_verified": 66, "xlsx_verified": 66, "worksheets_verified": 264}),
+                patch.object(self.verifier, "verify_visual_evidence", return_value=visual),
+                patch.object(self.verifier, "verify_visible_text", return_value={"text_sources": 518, "text_issues": 0}),
+            ):
+                result = self.verifier.verify_project(root)
         self.assertIs(result["complete"], True)
         self.assertEqual(
             list(result["counts"].values()),

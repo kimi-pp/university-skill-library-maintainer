@@ -23,7 +23,7 @@ class ArtifactGeneratorTests(unittest.TestCase):
         validate_catalog(CANDIDATES, CATEGORIES, REPOSITORIES)
         self.assertEqual(
             {cat: len(records_for_category(CANDIDATES, cat)) for cat in CATEGORIES},
-            {"01": 20, "02": 22, "03": 31},
+            {"01": 20, "02": 22, "03": 31, "04": 29, "05": 55},
         )
 
     def test_validation_rejects_duplicate_ids(self):
@@ -36,10 +36,10 @@ class ArtifactGeneratorTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "仓库元数据"):
             validate_catalog(bad, CATEGORIES, REPOSITORIES)
 
-    def test_manifest_contains_six_independent_deliverables(self):
+    def test_manifest_contains_ten_independent_deliverables(self):
         manifest = build_manifest(CATEGORIES)
-        self.assertEqual(len(manifest), 6)
-        self.assertEqual(len({item["path"] for item in manifest}), 6)
+        self.assertEqual(len(manifest), 10)
+        self.assertEqual(len({item["path"] for item in manifest}), 10)
         self.assertEqual({item["format"] for item in manifest}, {"xlsx", "docx"})
         self.assertTrue(all(item["category"] in CATEGORIES for item in manifest))
 
