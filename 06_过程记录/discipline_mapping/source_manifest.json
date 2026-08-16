@@ -1,0 +1,41 @@
+{
+    "accessed_at":  "2026-08-16",
+    "sources":  [
+                    {
+                        "id":  "undergraduate_2026_pdf",
+                        "kind":  "pdf",
+                        "title":  "普通高等学校本科专业目录（2026年）",
+                        "publisher":  "教育部",
+                        "publication_date":  "2026-04-28",
+                        "accessed_at":  "2026-08-16",
+                        "url":  "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf",
+                        "local_path":  "source_snapshots/undergraduate_2026.pdf",
+                        "sha256":  "51026248004546171620678895e991a6f0ada1ebf0de6498fe8c563873b43f11",
+                        "applies_to":  "本科专业目录"
+                    },
+                    {
+                        "id":  "graduate_2022_pdf",
+                        "kind":  "pdf",
+                        "title":  "研究生教育学科专业目录（2022年）",
+                        "publisher":  "国务院学位委员会、教育部",
+                        "publication_date":  "2022-09-13",
+                        "accessed_at":  "2026-08-16",
+                        "url":  "https://www.moe.gov.cn/srcsite/A22/moe_833/202209/W020220914572994461110.pdf",
+                        "local_path":  "source_snapshots/graduate_2022.pdf",
+                        "sha256":  "9693faf68dd3156afc0f580fadbfe4f64dd1a815eedf1f1e56b992887a7b0fba",
+                        "applies_to":  "研究生基础目录"
+                    },
+                    {
+                        "id":  "graduate_2025_correspondence",
+                        "kind":  "html",
+                        "title":  "教育部办公厅关于印发《有关学科专业调整对应关系表》等的通知",
+                        "publisher":  "教育部办公厅",
+                        "publication_date":  "2025-02-10",
+                        "accessed_at":  "2026-08-16",
+                        "url":  "https://www.moe.gov.cn/srcsite/A22/s7065/202506/t20250611_1193766.html",
+                        "local_path":  "source_snapshots/graduate_2025_correspondence.html",
+                        "sha256":  "0bb523b690fa89bb51b296985b08b39b53d991a8b2aca16ceb3db2571fc17096",
+                        "applies_to":  "研究生新旧目录对应关系（不改变2022版现行名称）"
+                    }
+                ]
+}
