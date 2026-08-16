@@ -9,10 +9,15 @@ grad = json.loads((ROOT / "graduate_effective.json").read_text("utf-8"))["record
 
 assert len(ug) == 883
 assert len({x["category_code"] for x in ug}) == 13
-assert len({x["class_code"] for x in ug}) == 92
+assert len({x["class_code"] for x in ug if x["class_code"] is not None}) == 92
 assert len({x["major_code"] for x in ug}) == 883
 assert {"具身智能", "脑机科学与技术"} <= {x["major_name"] for x in ug}
 assert all(isinstance(x["major_code"], str) for x in ug)
+assert all(
+    x["class_code"] is None and x["class_name"] is None
+    for x in ug
+    if x["category_code"] == "14"
+)
 
 academic = [x for x in grad_base if x["object_type"] == "学术学位一级学科"]
 professional = [x for x in grad_base if x["object_type"] == "专业学位类别"]
@@ -47,6 +52,15 @@ assert spec and spec.loader
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
+category_transition = module.parse_undergraduate(
+    "[[PAGE 1]]\n13 学科门类：艺术学\n1305 设计学类\n130501 艺术设计学\n"
+    "14 学科门类：交叉学科\n140012TK 具身智能（注：授予工学学士学位）"
+)
+category_14_record = next(x for x in category_transition if x["category_code"] == "14")
+assert category_14_record["class_code"] is None
+assert category_14_record["class_name"] is None
+assert "1305" not in json.dumps(category_14_record, ensure_ascii=False)
+
 malformed_ug = module.parse_undergraduate(
     "[[PAGE 7]]\n01 学科门类：哲学\n0101 哲学类\n010101 哲学\n010102\n01010X 错误专业\n01010"
 )
@@ -55,6 +69,20 @@ assert malformed_ug.exceptions == [
     {"page": 7, "raw_line": "010102", "reason": "unparseable digit-leading catalog line"},
     {"page": 7, "raw_line": "01010X 错误专业", "reason": "unparseable digit-leading catalog line"},
     {"page": 7, "raw_line": "01010", "reason": "unparseable digit-leading catalog line"},
+]
+
+conflicting_duplicate = module.parse_graduate_base(
+    "[[PAGE 3]]\n01 哲学\n0101 哲学\f[[PAGE 4]]\n01 哲学\n0101 错误哲学"
+)
+assert [(x["object_code"], x["object_name"]) for x in conflicting_duplicate] == [
+    ("0101", "哲学")
+]
+assert conflicting_duplicate.exceptions == [
+    {
+        "page": 4,
+        "raw_line": "0101 错误哲学",
+        "reason": "duplicate code has conflicting current identity",
+    }
 ]
 
 correspondence_fixture = module.parse_correspondence(

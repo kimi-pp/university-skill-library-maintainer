@@ -130,6 +130,7 @@ def parse_undergraduate(text: str) -> list[dict]:
         category_match = category_pattern.match(line)
         if category_match:
             category = (category_match.group(1), normalize_text(category_match.group(2)))
+            professional_class = None
             continue
         class_match = class_pattern.match(line)
         if class_match:
@@ -154,7 +155,7 @@ def parse_undergraduate(text: str) -> list[dict]:
         if (
             not name
             or category is None
-            or professional_class is None
+            or (professional_class is None and category[0] != "14")
             or not code.startswith(category[0])
         ):
             exceptions.append({"page": page, "raw_line": line})
@@ -170,8 +171,8 @@ def parse_undergraduate(text: str) -> list[dict]:
             {
                 "category_code": category[0],
                 "category_name": category[1],
-                "class_code": professional_class[0],
-                "class_name": professional_class[1],
+                "class_code": professional_class[0] if professional_class else None,
+                "class_name": professional_class[1] if professional_class else None,
                 "major_code": code,
                 "major_name": name,
                 "attributes": attributes,
@@ -209,7 +210,7 @@ def _graduate_record(
 def parse_graduate_base(text: str) -> list[dict]:
     object_pattern = re.compile(r"^(\d{4})\s+(.+)$")
     category_pattern = re.compile(r"^(\d{2})\s+(.+)$")
-    records: list[dict[str, Any]] = []
+    records: list[tuple[dict[str, Any], int, str]] = []
     exceptions: list[dict[str, Any]] = []
     category: tuple[str, str] | None = None
 
@@ -244,13 +245,17 @@ def parse_graduate_base(text: str) -> list[dict]:
         if master_only:
             notes.append("仅授硕士专业学位")
         records.append(
-            _graduate_record(
-                category,
-                code,
-                name,
-                object_type,
-                ["硕士"] if master_only else ["博士", "硕士"],
-                notes,
+            (
+                _graduate_record(
+                    category,
+                    code,
+                    name,
+                    object_type,
+                    ["硕士"] if master_only else ["博士", "硕士"],
+                    notes,
+                ),
+                page,
+                line,
             )
         )
 
@@ -259,18 +264,22 @@ def parse_graduate_base(text: str) -> list[dict]:
             if implied:
                 implied_code = implied.group(1)
                 records.append(
-                    _graduate_record(
-                        category,
-                        implied_code,
-                        name,
-                        "专业学位类别",
-                        ["博士", "硕士"],
-                        [f"由{code}条目注释明确列出"],
+                    (
+                        _graduate_record(
+                            category,
+                            implied_code,
+                            name,
+                            "专业学位类别",
+                            ["博士", "硕士"],
+                            [f"由{code}条目注释明确列出"],
+                        ),
+                        page,
+                        line,
                     )
                 )
 
     deduplicated: dict[tuple[str, str], dict[str, Any]] = {}
-    for record in records:
+    for record, page, raw_line in records:
         key = (record["object_type"], record["object_code"])
         existing = deduplicated.get(key)
         if existing is None:
@@ -282,8 +291,8 @@ def parse_graduate_base(text: str) -> list[dict]:
         ):
             exceptions.append(
                 {
-                    "page": None,
-                    "raw_line": json.dumps(record, ensure_ascii=False, sort_keys=True),
+                    "page": page,
+                    "raw_line": raw_line,
                     "reason": "duplicate code has conflicting current identity",
                 }
             )
