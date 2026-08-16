@@ -164,8 +164,8 @@ function validateOverrideActions(majorCode, actions) {
   if (zeroActions.length > 0 && actions.length !== 1) fail(`${majorCode} 的 confirmed_zero 不能与其他动作并用`);
 }
 
-function applyOverrides({ major, targets, actions, graduateByKey }) {
-  if (!actions) return targets;
+function applyOverrides({ major, targets, actions, graduateByKey, hasExplicitOverride }) {
+  if (!hasExplicitOverride) return targets;
   validateOverrideActions(major.major_code, actions);
   if (actions[0].action === "confirmed_zero") return new Map();
 
@@ -328,12 +328,13 @@ export function generateCandidates({ undergraduate, graduate, classRules, overri
   const generated = [];
   for (const major of [...undergraduate].sort((left, right) => left.major_code.localeCompare(right.major_code, "en"))) {
     let targets = new Map();
+    const hasExplicitOverride = Object.hasOwn(overrides.major_overrides, major.major_code);
     if (major.class_code !== null) {
       const rule = classRuleByCode.get(major.class_code);
       if (!rule) fail(`本科专业 ${major.major_code} 缺少专业类规则 ${major.class_code}`);
       if (rule.class_name !== major.class_name) fail(`${major.class_code} 的规则名称与本科目录不一致`);
       targets = seedFromClassRule(major, rule, graduateByKey);
-    } else if (!Object.hasOwn(overrides.major_overrides, major.major_code)) {
+    } else if (!hasExplicitOverride) {
       fail(`未设置专业类的本科专业 ${major.major_code} 必须提供显式专业级例外或零映射决定`);
     }
 
@@ -342,6 +343,7 @@ export function generateCandidates({ undergraduate, graduate, classRules, overri
       targets,
       actions: overrides.major_overrides[major.major_code],
       graduateByKey,
+      hasExplicitOverride,
     });
     assertPrimaryCapacity(targets, major.major_code);
     for (const candidate of targets.values()) generated.push(finalizeCandidate(candidate, graduateByKey));

@@ -298,6 +298,18 @@ assert.throws(
   /专业类.*(例外|决定)|null-class.*(override|decision)/i,
 );
 
+for (const [label, overrideValue] of [
+  ["empty array", []],
+  ["non-array object", {}],
+  ["null", null],
+]) {
+  assert.throws(
+    () => generateNullClassCandidateWithOverride(overrideValue),
+    /major_overrides\.140099T.*(必须是数组|不能为空)|override.*(array|empty)/i,
+    `null-class override must reject ${label}`,
+  );
+}
+
 assert.throws(
   () => generateCandidates({
     undergraduate: [undergraduateRecord("X00104", "重复新增专业", "X001")],
@@ -322,6 +334,21 @@ assert.throws(
 
 function target(code, level) {
   return { code, level, basis: ["核心知识基础"] };
+}
+
+function generateNullClassCandidateWithOverride(overrideValue) {
+  return generateCandidates({
+    undergraduate: [{
+      ...undergraduateRecord("140099T", "未决交叉专业", null),
+      class_name: null,
+    }],
+    graduate: [],
+    classRules: { class_rules: [] },
+    overrides: {
+      supported_actions: syntheticOverrides.supported_actions,
+      major_overrides: { "140099T": overrideValue },
+    },
+  });
 }
 
 function graduateRecord(objectType, objectCode, objectName, categoryCode) {
