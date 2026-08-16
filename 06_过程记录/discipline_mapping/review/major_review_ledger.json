@@ -1,0 +1,3318 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "undergraduate_code": "010101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-010101-A-0101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "哲学：依据哲学问题、思想传统与论证方法复核。接受哲学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "010102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-010102-A-0101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "逻辑学：依据哲学问题、思想传统与论证方法复核。接受哲学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "010103K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-010103K-A-0101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "宗教学：依据哲学问题、思想传统与论证方法复核。接受哲学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "010104T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-010104T-A-0101",
+        "MAP-010104T-P-0151"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "伦理学：依据哲学问题、思想传统与论证方法复核。接受哲学（主映射/核心对应）、应用伦理（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020101-A-0201",
+        "MAP-020101-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "经济学：依据经济分析、计量方法与政策研究复核。接受理论经济学（其他核心对应）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020102-A-0201",
+        "MAP-020102-A-0202",
+        "MAP-020102-P-0252"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "经济统计学：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）、应用统计（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020103T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020103T-A-0201",
+        "MAP-020103T-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "国民经济管理：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020104T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020104T-A-0201",
+        "MAP-020104T-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "资源与环境经济学：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020105T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020105T-A-0201",
+        "MAP-020105T-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "商务经济学：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020106T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020106T-A-0201",
+        "MAP-020106T-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "能源经济：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020107T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020107T-A-0201",
+        "MAP-020107T-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "劳动经济学：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020108T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020108T-A-0201",
+        "MAP-020108T-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "经济工程：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020109T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020109T-A-0201",
+        "MAP-020109T-A-0202",
+        "MAP-020109T-P-0258"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "数字经济：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）、数字经济（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020110TK",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-020110TK-A-0201",
+        "MAP-020110TK-A-0202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "低空经济与管理：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。低空产业的经济学与管理学主出口随培养方案而异，建议专家确认主方向。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020111T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-020111T-A-0201",
+        "MAP-020111T-A-0202",
+        "MAP-020111T-P-1257"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "资源环境审计：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）、审计（主映射/核心对应）。应用经济学与审计之间的主出口取决于经济评价和鉴证训练的比重。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020201K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020201K-A-0202",
+        "MAP-020201K-P-0253"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "财政学：依据公共财政、税收制度与税务实践复核。接受应用经济学（主映射/核心对应）、税务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020202-A-0202",
+        "MAP-020202-P-0253"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "税收学：依据公共财政、税收制度与税务实践复核。接受应用经济学（主映射/核心对应）、税务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020203TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020203TK-A-0202",
+        "MAP-020203TK-P-0253"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际税收：依据公共财政、税收制度与税务实践复核。接受应用经济学（主映射/核心对应）、税务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020301K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020301K-A-0202",
+        "MAP-020301K-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "金融学：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020302-A-0202",
+        "MAP-020302-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "金融工程：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020303-A-0202",
+        "MAP-020303-P-0255"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "保险学：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、保险（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020304-A-0202",
+        "MAP-020304-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "投资学：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020305T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020305T-A-0202",
+        "MAP-020305T-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "金融数学：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020306T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020306T-A-0202",
+        "MAP-020306T-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "信用管理：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020307T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020307T-A-0202",
+        "MAP-020307T-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "经济与金融：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020308T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020308T-A-0202",
+        "MAP-020308T-P-0255"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "精算学：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、保险（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020309T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020309T-A-0202",
+        "MAP-020309T-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "互联网金融：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020310T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020310T-A-0202",
+        "MAP-020310T-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "金融科技：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020311TK",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-020311TK-A-0202",
+        "MAP-020311TK-P-1257"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "金融审计：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、审计（主映射/核心对应）。应用经济学与审计之间的主出口取决于金融分析和鉴证训练的比重。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020312TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020312TK-A-0202",
+        "MAP-020312TK-P-0251"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "数字金融：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、金融（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020401-A-0202",
+        "MAP-020401-P-0254"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际经济与贸易：依据国际贸易、开放经济与跨境经营复核。接受应用经济学（主映射/核心对应）、国际商务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020402",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020402-A-0202",
+        "MAP-020402-P-0254"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "贸易经济：依据国际贸易、开放经济与跨境经营复核。接受应用经济学（主映射/核心对应）、国际商务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020403T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020403T-A-0202",
+        "MAP-020403T-P-0254"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际经济发展合作：依据国际贸易、开放经济与跨境经营复核。接受应用经济学（主映射/核心对应）、国际商务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "020404TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-020404TK-A-0202",
+        "MAP-020404TK-P-0254"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "数字贸易：依据国际贸易、开放经济与跨境经营复核。接受应用经济学（主映射/核心对应）、国际商务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030101K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030101K-A-0301",
+        "MAP-030101K-P-0351"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "法学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、法律（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030102T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030102T-A-0301",
+        "MAP-030102T-P-0354"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "知识产权：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、知识产权（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030103T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-030103T-A-0301"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-030103T-P-0351"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "监狱学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）。拒绝法律（主映射/核心对应）；监狱与矫正制度可由法学研究，但不等同于通用法律职业训练。专业学位未形成直接对应，显式记零。监狱学在法学、公安学与矫正实践之间存在边界，建议专家复核学术主出口。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030104T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030104T-A-0301",
+        "MAP-030104T-P-0351"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "信用风险管理与法律防控：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、法律（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030105T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030105T-A-0301",
+        "MAP-030105T-P-0351"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际经贸规则：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、法律（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030106TK",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-030106TK-A-0301",
+        "MAP-030106TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "司法警察学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、警务（主映射/核心对应）。司法警察学保留法学学术基础并转向警务职业出口，学术主方向仍需专家确认。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030107TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030107TK-A-0301",
+        "MAP-030107TK-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "社区矫正：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、社会工作（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030108TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030108TK-A-0308"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "纪检监察：依据法律制度、法律方法与对应职业实践复核。接受纪检监察学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030109TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030109TK-A-0301",
+        "MAP-030109TK-P-0351"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际法：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、法律（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030110TK",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-030110TK-A-0301"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-030110TK-P-0351"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "司法鉴定学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）。拒绝法律（主映射/核心对应）；司法鉴定以证据检验和鉴定技术为主要实践，不等同于通用法律职业训练。专业学位未形成直接对应，显式记零。司法鉴定学横跨法学与鉴定技术，建议专家确认学术主出口。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030111TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030111TK-A-1402"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "国家安全学：依据法律制度、法律方法与对应职业实践复核。接受国家安全学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030112TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030112TK-A-1402"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "海外利益安全：依据法律制度、法律方法与对应职业实践复核。接受国家安全学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030201-A-0302",
+        "MAP-030201-P-0355"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "政治学与行政学：依据政治制度、国际关系与治理对象复核。接受政治学（主映射/核心对应）、国际事务（强相关）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030202-A-0302",
+        "MAP-030202-P-0355"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际政治：依据政治制度、国际关系与治理对象复核。接受政治学（主映射/核心对应）、国际事务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030203-A-0302",
+        "MAP-030203-P-0355"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "外交学：依据政治制度、国际关系与治理对象复核。接受政治学（主映射/核心对应）、国际事务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030204T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030204T-A-0302",
+        "MAP-030204T-P-0355"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际事务与国际关系：依据政治制度、国际关系与治理对象复核。接受政治学（主映射/核心对应）、国际事务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030205T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030205T-A-0302"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-030205T-P-0355"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "政治学、经济学与哲学：依据政治制度、国际关系与治理对象复核。接受政治学（主映射/核心对应）。拒绝国际事务（强相关）；政治学、经济学与哲学的跨领域培养不以国际事务为稳定共同出口。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030206TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030206TK-A-0302",
+        "MAP-030206TK-P-0355"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际组织与全球治理：依据政治制度、国际关系与治理对象复核。接受政治学（主映射/核心对应）、国际事务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030301-A-0303",
+        "MAP-030301-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "社会学：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）、社会工作（强相关）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030302-A-0303",
+        "MAP-030302-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "社会工作：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）、社会工作（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030303T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030303T-A-0303"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-030303T-P-0352"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "人类学：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）。拒绝社会工作（主映射/核心对应）；人类学的民族志研究方法与社会工作的服务和干预训练不同，专业类归属不足以确立主映射。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030304T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030304T-A-0303",
+        "MAP-030304T-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "女性学：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）、社会工作（强相关）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030305T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030305T-A-0303",
+        "MAP-030305T-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "家政学：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）、社会工作（强相关）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030306T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030306T-A-0303",
+        "MAP-030306T-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "老年学：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）、社会工作（强相关）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030307T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030307T-A-0303",
+        "MAP-030307T-P-0352"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "社会政策：依据社会调查、群体与社区研究及社会服务复核。接受社会学（主映射/核心对应）、社会工作（强相关）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030401-A-0304"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "民族学：依据族群、文化与民族社会研究复核。接受民族学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030501",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030501-A-0305"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "科学社会主义：依据马克思主义理论、党史与思想政治教育复核。接受马克思主义理论（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030502",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030502-A-0305"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "中国共产党历史：依据马克思主义理论、党史与思想政治教育复核。接受马克思主义理论（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030503",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030503-A-0305",
+        "MAP-030503-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "思想政治教育：依据马克思主义理论、党史与思想政治教育复核。接受马克思主义理论（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030504T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030504T-A-0305"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "马克思主义理论：依据马克思主义理论、党史与思想政治教育复核。接受马克思主义理论（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030505TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030505TK-A-0305"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "工会学：依据马克思主义理论、党史与思想政治教育复核。接受马克思主义理论（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030601K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030601K-A-0306",
+        "MAP-030601K-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "治安学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030602K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030602K-A-0306",
+        "MAP-030602K-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "侦查学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030603K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030603K-A-0306",
+        "MAP-030603K-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "边防管理：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030604TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030604TK-A-0306",
+        "MAP-030604TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "禁毒学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030605TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030605TK-A-0306",
+        "MAP-030605TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "警犬技术：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030606TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030606TK-A-0306",
+        "MAP-030606TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "经济犯罪侦查：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030607TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030607TK-A-0306",
+        "MAP-030607TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "边防指挥：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030608TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030608TK-A-0306",
+        "MAP-030608TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "消防指挥：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030609TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030609TK-A-0306",
+        "MAP-030609TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "警卫学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030610TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030610TK-A-0306",
+        "MAP-030610TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "公安情报学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030611TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030611TK-A-0306",
+        "MAP-030611TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "犯罪学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030612TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030612TK-A-0306",
+        "MAP-030612TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "公安管理学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030613TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030613TK-A-0306",
+        "MAP-030613TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "涉外警务：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030614TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030614TK-A-0306",
+        "MAP-030614TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国内安全保卫：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030615TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030615TK-A-0306",
+        "MAP-030615TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "警务指挥与战术：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030616TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030616TK-A-0306",
+        "MAP-030616TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "技术侦查学：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030617TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030617TK-A-0306",
+        "MAP-030617TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "海警执法：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030618TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030618TK-A-0306",
+        "MAP-030618TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "公安政治工作：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030619TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030619TK-A-0306",
+        "MAP-030619TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "移民管理：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030620TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030620TK-A-0306",
+        "MAP-030620TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "出入境管理：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030621TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030621TK-A-0306",
+        "MAP-030621TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "反恐警务：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030622TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030622TK-A-0306",
+        "MAP-030622TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "消防政治工作：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030623TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030623TK-A-0306",
+        "MAP-030623TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "铁路警务：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030624TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030624TK-A-0306",
+        "MAP-030624TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "森林消防：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "030625TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-030625TK-A-0306",
+        "MAP-030625TK-P-0353"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "政治安全保卫：依据公安治理、侦查执法与警务实践复核。接受公安学（主映射/核心对应）、警务（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040101-A-0401",
+        "MAP-040101-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "教育学：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040102-A-0401",
+        "MAP-040102-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "科学教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040103-A-0401",
+        "MAP-040103-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "人文教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040104-A-0401",
+        "MAP-040104-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "教育技术学：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040105-A-0401",
+        "MAP-040105-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "艺术教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040106-A-0401",
+        "MAP-040106-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "学前教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040107",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040107-A-0401",
+        "MAP-040107-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "小学教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040108",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040108-A-0401",
+        "MAP-040108-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "特殊教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040109T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040109T-A-0401",
+        "MAP-040109T-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "华文教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040110TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040110TK-A-0401",
+        "MAP-040110TK-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "教育康复学：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040111T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040111T-A-0401",
+        "MAP-040111T-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "卫生教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040112T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-040112T-A-0401",
+        "MAP-040112T-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "认知科学与技术：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。认知科学与技术可能偏教育、心理或计算方向，当前按目录专业类保留教育学主映射。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040113T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040113T-A-0401",
+        "MAP-040113T-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "融合教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040114TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040114TK-A-0401",
+        "MAP-040114TK-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "劳动教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040115T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040115T-A-0401",
+        "MAP-040115T-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "家庭教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040116TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040116TK-A-0401",
+        "MAP-040116TK-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "孤独症儿童教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040117TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040117TK-A-0401",
+        "MAP-040117TK-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "人工智能教育：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040118T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040118T-A-0401",
+        "MAP-040118T-P-0451"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "婴幼儿发展与健康管理：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040201-A-0403",
+        "MAP-040201-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "体育教育：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040202K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040202K-A-0403",
+        "MAP-040202K-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "运动训练：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040203-A-0403",
+        "MAP-040203-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "社会体育指导与管理：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040204K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040204K-A-0403",
+        "MAP-040204K-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "武术与民族传统体育：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040205-A-0403",
+        "MAP-040205-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "运动人体科学：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040206T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040206T-A-0403",
+        "MAP-040206T-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "运动康复：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040207T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040207T-A-0403",
+        "MAP-040207T-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "休闲体育：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040208T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040208T-A-0403",
+        "MAP-040208T-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "体能训练：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040209T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040209T-A-0403",
+        "MAP-040209T-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "冰雪运动：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040210TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040210TK-A-0403",
+        "MAP-040210TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "电子竞技运动与管理：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040211TK",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-040211TK-A-0403",
+        "MAP-040211TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "智能体育工程：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。智能体育工程横跨体育学与工程技术，当前按培养对象保留体育学主映射。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040212TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040212TK-A-0403",
+        "MAP-040212TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "体育旅游：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040213T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040213T-A-0403",
+        "MAP-040213T-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "运动能力开发：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040214TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040214TK-A-0403",
+        "MAP-040214TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "足球运动：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040215TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040215TK-A-0403",
+        "MAP-040215TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "马术运动与管理：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040216T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040216T-A-0403",
+        "MAP-040216T-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "体育康养：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040217TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040217TK-A-0403",
+        "MAP-040217TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "航空运动：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "040218TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-040218TK-A-0403",
+        "MAP-040218TK-P-0452"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "太极拳：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050101-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "汉语言文学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050102-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "汉语言：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050103-A-0501",
+        "MAP-050103-P-0453"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "汉语国际教育：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）、国际中文教育（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050104-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "中国少数民族语言文学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050105-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "古典文献学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050106T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050106T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "应用语言学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050107T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050107T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "秘书学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050108T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050108T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "中国语言与文化：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050109T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050109T-A-0501",
+        "MAP-050109T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "手语翻译：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050110T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-050110T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "数字人文：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。数字人文可能偏中国语言文学、历史或计算方法，当前按目录专业类保留中国语言文学。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050111T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050111T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "中国古典学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050112T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050112T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "汉学与中国学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050113T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050113T-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "应用中文：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050114TK",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-050114TK-A-0501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "语言科学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。语言科学可能跨中国语言文学、外国语言文学与认知方向，建议专家确认学术主出口。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050200T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050200T-A-0502",
+        "MAP-050200T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "桑戈语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050201-A-0502",
+        "MAP-050201-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "英语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050202-A-0502",
+        "MAP-050202-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "俄语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050203-A-0502",
+        "MAP-050203-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "德语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050204-A-0502",
+        "MAP-050204-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "法语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050205-A-0502",
+        "MAP-050205-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "西班牙语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050206-A-0502",
+        "MAP-050206-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "阿拉伯语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050207-A-0502",
+        "MAP-050207-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "日语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050208-A-0502",
+        "MAP-050208-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "波斯语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050209-A-0502",
+        "MAP-050209-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "朝鲜语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050210-A-0502",
+        "MAP-050210-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "菲律宾语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502100T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502100T-A-0502",
+        "MAP-0502100T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "语言学：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502101T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502101T-A-0502",
+        "MAP-0502101T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "塔玛齐格特语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502102T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502102T-A-0502",
+        "MAP-0502102T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "爪哇语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502103T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502103T-A-0502",
+        "MAP-0502103T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "旁遮普语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502104TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502104TK-A-0502",
+        "MAP-0502104TK-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "区域国别学：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502105T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502105T-A-0502",
+        "MAP-0502105T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "法律英语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502106TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502106TK-A-0502",
+        "MAP-0502106TK-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "计算语言学：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "0502107TK",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-0502107TK-A-0502",
+        "MAP-0502107TK-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "语言智能：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050211-A-0502",
+        "MAP-050211-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "梵语巴利语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050212-A-0502",
+        "MAP-050212-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "印度尼西亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050213",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050213-A-0502",
+        "MAP-050213-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "印地语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050214",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050214-A-0502",
+        "MAP-050214-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "柬埔寨语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050215",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050215-A-0502",
+        "MAP-050215-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "老挝语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050216",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050216-A-0502",
+        "MAP-050216-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "缅甸语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050217",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050217-A-0502",
+        "MAP-050217-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "马来语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050218",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050218-A-0502",
+        "MAP-050218-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "蒙古语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050219",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050219-A-0502",
+        "MAP-050219-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "僧伽罗语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050220",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050220-A-0502",
+        "MAP-050220-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "泰语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050221",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050221-A-0502",
+        "MAP-050221-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "乌尔都语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050222",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050222-A-0502",
+        "MAP-050222-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "希伯来语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050223",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050223-A-0502",
+        "MAP-050223-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "越南语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050224",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050224-A-0502",
+        "MAP-050224-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "豪萨语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050225",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050225-A-0502",
+        "MAP-050225-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "斯瓦希里语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050226",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050226-A-0502",
+        "MAP-050226-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "阿尔巴尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050227",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050227-A-0502",
+        "MAP-050227-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "保加利亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050228",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050228-A-0502",
+        "MAP-050228-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "波兰语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050229",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050229-A-0502",
+        "MAP-050229-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "捷克语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050230",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050230-A-0502",
+        "MAP-050230-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "斯洛伐克语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050231",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050231-A-0502",
+        "MAP-050231-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "罗马尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050232",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050232-A-0502",
+        "MAP-050232-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "葡萄牙语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050233",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050233-A-0502",
+        "MAP-050233-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "瑞典语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050234",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050234-A-0502",
+        "MAP-050234-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "塞尔维亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050235",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050235-A-0502",
+        "MAP-050235-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "土耳其语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050236",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050236-A-0502",
+        "MAP-050236-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "希腊语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050237",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050237-A-0502",
+        "MAP-050237-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "匈牙利语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050238",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050238-A-0502",
+        "MAP-050238-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "意大利语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050239",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050239-A-0502",
+        "MAP-050239-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "泰米尔语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050240",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050240-A-0502",
+        "MAP-050240-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "普什图语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050241",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050241-A-0502",
+        "MAP-050241-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "世界语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050242",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050242-A-0502",
+        "MAP-050242-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "孟加拉语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050243",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050243-A-0502",
+        "MAP-050243-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "尼泊尔语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050244",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050244-A-0502",
+        "MAP-050244-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "克罗地亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050245",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050245-A-0502",
+        "MAP-050245-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "荷兰语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050246",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050246-A-0502",
+        "MAP-050246-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "芬兰语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050247",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050247-A-0502",
+        "MAP-050247-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "乌克兰语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050248",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050248-A-0502",
+        "MAP-050248-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "挪威语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050249",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050249-A-0502",
+        "MAP-050249-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "丹麦语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050250",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050250-A-0502",
+        "MAP-050250-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "冰岛语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050251",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050251-A-0502",
+        "MAP-050251-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "爱尔兰语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050252",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050252-A-0502",
+        "MAP-050252-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "拉脱维亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050253",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050253-A-0502",
+        "MAP-050253-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "立陶宛语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050254",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050254-A-0502",
+        "MAP-050254-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "斯洛文尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050255",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050255-A-0502",
+        "MAP-050255-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "爱沙尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050256",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050256-A-0502",
+        "MAP-050256-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "马耳他语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050257",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050257-A-0502",
+        "MAP-050257-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "哈萨克语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050258",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050258-A-0502",
+        "MAP-050258-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "乌兹别克语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050259",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050259-A-0502",
+        "MAP-050259-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "祖鲁语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050260",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050260-A-0502",
+        "MAP-050260-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "拉丁语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050261",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050261-A-0502",
+        "MAP-050261-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "翻译：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050262",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050262-A-0502",
+        "MAP-050262-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "商务英语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050263T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050263T-A-0502",
+        "MAP-050263T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "阿姆哈拉语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050264T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050264T-A-0502",
+        "MAP-050264T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "吉尔吉斯语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050265T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050265T-A-0502",
+        "MAP-050265T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "索马里语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050266T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050266T-A-0502",
+        "MAP-050266T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "土库曼语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050267T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050267T-A-0502",
+        "MAP-050267T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "加泰罗尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050268T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050268T-A-0502",
+        "MAP-050268T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "约鲁巴语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050269T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050269T-A-0502",
+        "MAP-050269T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "亚美尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050270T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050270T-A-0502",
+        "MAP-050270T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "马达加斯加语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050271T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050271T-A-0502",
+        "MAP-050271T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "格鲁吉亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050272T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050272T-A-0502",
+        "MAP-050272T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "阿塞拜疆语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050273T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050273T-A-0502",
+        "MAP-050273T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "阿非利卡语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050274T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050274T-A-0502",
+        "MAP-050274T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "马其顿语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050275T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050275T-A-0502",
+        "MAP-050275T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "塔吉克语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050276T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050276T-A-0502",
+        "MAP-050276T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "茨瓦纳语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050277T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050277T-A-0502",
+        "MAP-050277T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "恩德贝莱语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050278T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050278T-A-0502",
+        "MAP-050278T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "科摩罗语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050279T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050279T-A-0502",
+        "MAP-050279T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "克里奥尔语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050280T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050280T-A-0502",
+        "MAP-050280T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "绍纳语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050281T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050281T-A-0502",
+        "MAP-050281T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "提格雷尼亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050282T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050282T-A-0502",
+        "MAP-050282T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "白俄罗斯语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050283T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050283T-A-0502",
+        "MAP-050283T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "毛利语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050284T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050284T-A-0502",
+        "MAP-050284T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "汤加语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050285T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050285T-A-0502",
+        "MAP-050285T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "萨摩亚语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050286T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050286T-A-0502",
+        "MAP-050286T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "库尔德语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050287T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050287T-A-0502",
+        "MAP-050287T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "比斯拉马语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050288T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050288T-A-0502",
+        "MAP-050288T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "达里语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050289T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050289T-A-0502",
+        "MAP-050289T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "德顿语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050290T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050290T-A-0502",
+        "MAP-050290T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "迪维希语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050291T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050291T-A-0502",
+        "MAP-050291T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "斐济语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050292T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050292T-A-0502",
+        "MAP-050292T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "库克群岛毛利语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050293T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050293T-A-0502",
+        "MAP-050293T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "隆迪语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050294T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050294T-A-0502",
+        "MAP-050294T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "卢森堡语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050295T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050295T-A-0502",
+        "MAP-050295T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "卢旺达语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050296T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050296T-A-0502",
+        "MAP-050296T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "纽埃语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050297T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050297T-A-0502",
+        "MAP-050297T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "皮金语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050298T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050298T-A-0502",
+        "MAP-050298T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "切瓦语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050299T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050299T-A-0502",
+        "MAP-050299T-P-0551"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "塞苏陀语：依据目标语言、区域文化、文学与翻译实践复核。接受外国语言文学（主映射/核心对应）、翻译（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050301-A-0503",
+        "MAP-050301-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "新闻学：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050302-A-0503",
+        "MAP-050302-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "广播电视学：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050303-A-0503",
+        "MAP-050303-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "广告学：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050304-A-0503",
+        "MAP-050304-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "传播学：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050305-A-0503",
+        "MAP-050305-P-0553"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "编辑出版学：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、出版（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050306T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050306T-A-0503",
+        "MAP-050306T-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "网络与新媒体：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050307T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050307T-A-0503",
+        "MAP-050307T-P-0553"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "数字出版：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、出版（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050308T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050308T-A-0503",
+        "MAP-050308T-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "时尚传播：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050309T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-050309T-A-0503",
+        "MAP-050309T-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [],
+      "review_note": "国际新闻与传播：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（主映射/核心对应）。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "050310T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-050310T-A-0503",
+        "MAP-050310T-P-0552"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "会展：依据新闻传播、内容生产与媒介实践复核。接受新闻传播学（主映射/核心对应）、新闻与传播（强相关）。专业学位未形成直接对应，显式记零。会展在传播与旅游管理之间跨界，新闻与传播仅保留有明确受众和内容方法依据的强相关。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-060101-A-0602",
+        "MAP-060101-A-0603"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060101-A-0601"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "历史学：依据史料、物质遗存、历史解释与文化遗产复核。接受中国史（主映射/核心对应）、世界史（强相关）。拒绝考古学（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-060102-A-0602",
+        "MAP-060102-A-0603"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060102-A-0601"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "世界史：依据史料、物质遗存、历史解释与文化遗产复核。接受中国史（强相关）、世界史（主映射/核心对应）。拒绝考古学（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-060103-A-0601",
+        "MAP-060103-A-0602"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060103-A-0603"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "考古学：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（主映射/核心对应）、中国史（强相关）。拒绝世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060104",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-060104-A-0601",
+        "MAP-060104-A-0602",
+        "MAP-060104-P-0651"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060104-A-0603"
+      ],
+      "zero_mapping_types": [
+        "学术学位一级学科"
+      ],
+      "review_note": "文物与博物馆学：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、中国史（强相关）、博物馆（主映射/核心对应）。拒绝世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位未形成直接对应，显式记零。博物馆学的学术出口可偏考古学或历史学，专业出口则直接衔接博物馆。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060105T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-060105T-A-0601",
+        "MAP-060105T-P-1451"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060105T-A-0602",
+        "MAP-060105T-A-0603"
+      ],
+      "zero_mapping_types": [
+        "学术学位一级学科"
+      ],
+      "review_note": "文物保护技术：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、文物（主映射/核心对应）。拒绝中国史（强相关）、世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位未形成直接对应，显式记零。文物保护技术在考古材料研究与保护工程之间跨界，建议专家确认学术主出口。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060106T",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "MAP-060106T-A-0603"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060106T-A-0601",
+        "MAP-060106T-A-0602"
+      ],
+      "zero_mapping_types": [
+        "专业学位类别"
+      ],
+      "review_note": "外国语言与外国历史：依据史料、物质遗存、历史解释与文化遗产复核。接受世界史（主映射/核心对应）。拒绝考古学（强相关）、中国史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。专业学位未形成直接对应，显式记零。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060107T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-060107T-A-0601",
+        "MAP-060107T-P-1451"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060107T-A-0602",
+        "MAP-060107T-A-0603"
+      ],
+      "zero_mapping_types": [
+        "学术学位一级学科"
+      ],
+      "review_note": "文化遗产：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、文物（主映射/核心对应）。拒绝中国史（强相关）、世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位未形成直接对应，显式记零。文化遗产在考古学、历史学与保护实践之间跨界，建议专家确认学术主出口。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060108T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-060108T-A-0601",
+        "MAP-060108T-A-0602"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060108T-A-0603"
+      ],
+      "zero_mapping_types": [
+        "学术学位一级学科",
+        "专业学位类别"
+      ],
+      "review_note": "古文字学：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、中国史（强相关）。拒绝世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位、专业学位未形成直接对应，显式记零。古文字材料兼具考古遗存与历史文献属性，不强行指定单一学术主映射，建议专家确认。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    },
+    {
+      "undergraduate_code": "060109T",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "MAP-060109T-A-0602",
+        "MAP-060109T-A-0603"
+      ],
+      "rejected_mapping_ids": [
+        "MAP-060109T-A-0601"
+      ],
+      "zero_mapping_types": [
+        "学术学位一级学科",
+        "专业学位类别"
+      ],
+      "review_note": "科学史：依据史料、物质遗存、历史解释与文化遗产复核。接受中国史（强相关）、世界史（强相关）。拒绝考古学（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位、专业学位未形成直接对应，显式记零。科学史可能按研究区域分别进入中国史或世界史，两个强相关方向不强行设主映射。",
+      "reviewed_at": "2026-08-17T00:00:00+08:00"
+    }
+  ]
+}

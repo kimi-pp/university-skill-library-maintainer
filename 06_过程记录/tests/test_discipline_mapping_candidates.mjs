@@ -17,6 +17,9 @@ const classRules = JSON.parse(
 const overrides = JSON.parse(
   await fs.readFile(new URL("rules/major_overrides.json", root), "utf8"),
 );
+const ledger = JSON.parse(
+  await fs.readFile(new URL("review/major_review_ledger.json", root), "utf8"),
+);
 
 const academicType = "学术学位一级学科";
 const professionalType = "专业学位类别";
@@ -84,6 +87,14 @@ assert.deepEqual(
   new Set(overrides.supported_actions),
   new Set(["add", "remove", "replace_primary", "downgrade", "confirmed_zero"]),
 );
+
+const humanitiesAndSocialScienceScope = undergraduate.filter((record) =>
+  ["01", "02", "03", "04", "05", "06"].includes(record.category_code));
+for (const major of humanitiesAndSocialScienceScope) {
+  const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
+  assert.ok(row, `missing review ledger: ${major.major_code}`);
+  assert.notEqual(row.review_status, "尚未完成复核");
+}
 
 const candidates = generateCandidates({ undergraduate, graduate, classRules, overrides });
 const candidatesAgain = generateCandidates({ undergraduate, graduate, classRules, overrides });

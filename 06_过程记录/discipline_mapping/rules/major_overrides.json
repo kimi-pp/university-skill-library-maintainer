@@ -2,11 +2,154 @@
   "schema_version": "1.0",
   "supported_actions": ["add", "remove", "replace_primary", "downgrade", "confirmed_zero"],
   "major_overrides": {
+    "010104T": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0151", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "伦理学专业的规范伦理、职业伦理与公共伦理训练直接衔接应用伦理专业学位。"}
+      }
+    ],
+    "020102": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "经济统计学使用经济理论构造统计指标和解释经济数据，与理论经济学共享经济建模方法，但主要学术出口仍是应用经济学。"
+      },
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0252", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "经济统计学的统计建模、数据分析与实证训练直接衔接应用统计专业学位。"}
+      }
+    ],
+    "020103T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "国民经济管理以宏观经济理论解释总量运行和政策调控，与理论经济学共享宏观分析对象和模型，但主要出口仍是应用经济学。"
+      }
+    ],
+    "020104T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "资源与环境经济学使用外部性、公共品和福利分析等经济理论研究资源环境问题，与理论经济学共享分析方法但研究对象更偏应用。"
+      }
+    ],
+    "020105T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "商务经济学以微观经济模型分析企业、市场和商业决策，与理论经济学共享微观分析方法但培养重心在应用场景。"
+      }
+    ],
+    "020106T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "能源经济使用供需、价格和产业组织模型研究能源市场，与理论经济学共享建模方法但研究对象属于应用经济领域。"
+      }
+    ],
+    "020107T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "劳动经济学使用个体选择、工资形成和劳动力市场模型，与理论经济学共享微观分析方法，同时直接归入应用经济学。"
+      }
+    ],
+    "020108T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "经济工程以经济模型、优化和系统分析为方法基础，与理论经济学共享模型化研究方法但主要面向应用决策。"
+      }
+    ],
+    "020109T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "数字经济使用经济理论解释平台、数据要素和数字市场，与理论经济学共享机制分析方法但主要出口仍是应用经济学。"
+      },
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0258", "level": "主映射/核心对应", "basis": ["主要研究对象", "培养出口"], "rationale": "数字经济专业的平台经济、数据要素和数字产业实践与同名数字经济专业学位直接衔接。"}
+      }
+    ],
+    "020110TK": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "低空经济与管理使用产业组织、供需和规制模型研究低空产业，与理论经济学共享经济分析方法但研究对象和出口更偏应用与管理。"
+      }
+    ],
+    "020111T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "学术学位一级学科",
+        "graduate_code": "0201",
+        "relation_level": "强相关",
+        "rationale": "资源环境审计使用公共经济与外部性理论评价资源环境责任，与理论经济学共享解释框架但主要面向应用经济和审计实践。"
+      },
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "1257", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "资源环境审计的证据获取、责任评价和鉴证实践直接衔接审计专业学位。"}
+      }
+    ],
+    "020303": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0255", "level": "主映射/核心对应", "basis": ["主要研究对象", "培养出口"], "rationale": "保险学以风险承保、保险产品和保险经营为核心，保险专业学位比通用金融专业学位更直接。"}
+      }
+    ],
+    "020308T": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0255", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "精算学以保险风险计量、定价和准备金评估为核心，职业训练直接衔接保险专业学位。"}
+      }
+    ],
+    "020311TK": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "1257", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "金融审计以金融机构审计、风险鉴证和审计证据为核心，审计专业学位比通用金融专业学位更直接。"}
+      }
+    ],
     "030102T": [
       {
         "action": "replace_primary",
         "graduate_type": "专业学位类别",
         "target": {"code": "0354", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "知识产权专业的制度知识与职业训练直接衔接知识产权专业学位，替代法学类通用的法律专业主映射。"}
+      }
+    ],
+    "030106TK": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0353", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "司法警察学面向司法机关警务执法、警务保障和安全管理，职业训练直接衔接警务专业学位。"}
+      }
+    ],
+    "030107TK": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0352", "level": "主映射/核心对应", "basis": ["主要研究对象", "典型职业或行业场景"], "rationale": "社区矫正以社区中的罪犯矫治、社会支持和再融入服务为核心实践对象，直接衔接社会工作专业学位。"}
       }
     ],
     "030108TK": [
@@ -20,6 +163,32 @@
         "graduate_type": "专业学位类别",
         "graduate_code": "0351",
         "rationale": "纪检监察的主要培养出口并非通用法律职业训练，不继承法学类的法律专业学位主映射。"
+      }
+    ],
+    "030111TK": [
+      {
+        "action": "remove",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0351",
+        "rationale": "国家安全学的主要研究对象是总体国家安全与风险治理，并非通用法律职业训练，不保留法律专业学位主映射。"
+      },
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "1402", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"], "rationale": "国家安全学专业与同名交叉学科共享总体国家安全、风险识别与安全治理研究对象，形成直接学术衔接。"}
+      }
+    ],
+    "030112TK": [
+      {
+        "action": "remove",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0351",
+        "rationale": "海外利益安全以境外风险、海外权益保护和安全治理为对象，不以通用法律职业训练为主要出口。"
+      },
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "1402", "level": "主映射/核心对应", "basis": ["主要研究对象", "跨学科应用关系"], "rationale": "海外利益安全以国家海外权益、跨境风险与安全治理为核心对象，直接衔接国家安全学。"}
       }
     ],
     "030202": [
@@ -50,10 +219,67 @@
         "target": {"code": "0355", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "国际组织与全球治理专业面向国际组织运行和全球公共治理实践，直接衔接国际事务专业学位。"}
       }
     ],
+    "030301": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0352",
+        "relation_level": "强相关",
+        "rationale": "社会学与社会工作共享社会调查、社区研究和社会问题干预对象，但社会学以解释性研究为主，故保留强相关而非直接主映射。"
+      }
+    ],
+    "030304T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0352",
+        "relation_level": "强相关",
+        "rationale": "女性学与社会工作在性别平等、弱势群体服务和社区干预对象上交叉，但职业知识体系并不完全相同。"
+      }
+    ],
+    "030305T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0352",
+        "relation_level": "强相关",
+        "rationale": "家政学与社会工作共享家庭服务、社区支持和生活福利对象，但家政管理与社会工作专业训练并不等同。"
+      }
+    ],
+    "030306T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0352",
+        "relation_level": "强相关",
+        "rationale": "老年学与社会工作在老龄社会、养老服务和个案支持对象上直接交叉，但老年学还包含人口与健康研究，故降为强相关。"
+      }
+    ],
+    "030307T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0352",
+        "relation_level": "强相关",
+        "rationale": "社会政策与社会工作共享福利制度、服务供给和政策评估对象，但前者偏政策分析，故保留强相关关系。"
+      }
+    ],
+    "030503": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0451", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "思想政治教育专业的课程教学、教师培养和学校德育实践直接衔接教育专业学位。"}
+      }
+    ],
     "050103": [
       {
         "action": "add",
         "target": {"graduate_type": "专业学位类别", "code": "0453", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "汉语国际教育专业的语言教学、跨文化传播与教师实践直接衔接国际中文教育专业学位。"}
+      }
+    ],
+    "050109T": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0551", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "手语翻译专业的双语转换、口笔译规范和无障碍沟通实践直接衔接翻译专业学位。"}
       }
     ],
     "050305": [
@@ -61,6 +287,22 @@
         "action": "replace_primary",
         "graduate_type": "专业学位类别",
         "target": {"code": "0553", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "编辑出版学以内容策划、编辑加工和出版传播为主要职业体系，出版专业学位比新闻与传播更直接。"}
+      }
+    ],
+    "050307T": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "专业学位类别",
+        "target": {"code": "0553", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "数字出版以数字内容编辑、产品制作和出版运营为核心，出版专业学位比新闻与传播更直接。"}
+      }
+    ],
+    "050310T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0552",
+        "relation_level": "强相关",
+        "rationale": "会展与新闻传播共享受众分析、内容策划和公共传播方法，但会展运营并非新闻传播职业体系本身，故仅保留强相关。"
       }
     ],
     "060101": [
@@ -82,6 +324,31 @@
         "action": "replace_primary",
         "graduate_type": "学术学位一级学科",
         "target": {"code": "0601", "level": "主映射/核心对应", "basis": ["主要研究对象", "主要研究或实践方法"], "rationale": "考古学专业以物质遗存、田野调查和考古解释为核心，直接衔接考古学一级学科。"}
+      }
+    ],
+    "060104": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "0651", "level": "主映射/核心对应", "basis": ["主要研究对象", "培养出口"], "rationale": "文物与博物馆学以藏品、博物馆和公共文化服务为核心对象，直接衔接博物馆专业学位。"}
+      }
+    ],
+    "060105T": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "1451", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "文物保护技术的材料检测、病害诊断、修复与预防性保护实践直接衔接文物专业学位。"}
+      }
+    ],
+    "060106T": [
+      {
+        "action": "replace_primary",
+        "graduate_type": "学术学位一级学科",
+        "target": {"code": "0603", "level": "主映射/核心对应", "basis": ["主要研究对象", "核心知识基础"], "rationale": "外国语言与外国历史以外国史料、区域历史和跨文化解释为核心，主要学术出口直接衔接世界史。"}
+      }
+    ],
+    "060107T": [
+      {
+        "action": "add",
+        "target": {"graduate_type": "专业学位类别", "code": "1451", "level": "主映射/核心对应", "basis": ["主要研究对象", "培养出口"], "rationale": "文化遗产专业的遗产调查、保护、阐释和活化实践直接衔接文物专业学位。"}
       }
     ],
     "070704T": [

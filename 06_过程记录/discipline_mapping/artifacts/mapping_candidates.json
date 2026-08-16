@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "record_count": 1868,
+    "record_count": 1875,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
-    "override_major_count": 39,
+    "override_major_count": 70,
     "generation_method_counts": {
       "军事学目录参考": 9,
-      "专业级例外": 73,
-      "专业类规则继承": 1786
+      "专业级例外": 107,
+      "专业类规则继承": 1759
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 191,
-      "高置信度候选": 1668,
+      "存在歧义，建议学科专家复核": 206,
+      "高置信度候选": 1660,
       "军事学限制": 9
     }
   },
@@ -89,6 +89,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-010104T-P-0151",
+      "undergraduate_code": "010104T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0151",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "核心知识基础",
+        "培养出口"
+      ],
+      "rationale": "伦理学专业的规范伦理、职业伦理与公共伦理训练直接衔接应用伦理专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-020101-A-0201",
       "undergraduate_code": "020101",
       "graduate_type": "学术学位一级学科",
@@ -129,18 +147,18 @@
       "undergraduate_code": "020102",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "经济统计学使用经济理论构造统计指标和解释经济数据，与理论经济学共享经济建模方法，但主要学术出口仍是应用经济学。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020102-A-0202",
@@ -161,22 +179,40 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-020102-P-0252",
+      "undergraduate_code": "020102",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0252",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "培养出口"
+      ],
+      "rationale": "经济统计学的统计建模、数据分析与实证训练直接衔接应用统计专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-020103T-A-0201",
       "undergraduate_code": "020103T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "国民经济管理以宏观经济理论解释总量运行和政策调控，与理论经济学共享宏观分析对象和模型，但主要出口仍是应用经济学。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020103T-A-0202",
@@ -201,18 +237,18 @@
       "undergraduate_code": "020104T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "资源与环境经济学使用外部性、公共品和福利分析等经济理论研究资源环境问题，与理论经济学共享分析方法但研究对象更偏应用。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020104T-A-0202",
@@ -237,18 +273,18 @@
       "undergraduate_code": "020105T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "商务经济学以微观经济模型分析企业、市场和商业决策，与理论经济学共享微观分析方法但培养重心在应用场景。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020105T-A-0202",
@@ -273,18 +309,18 @@
       "undergraduate_code": "020106T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "能源经济使用供需、价格和产业组织模型研究能源市场，与理论经济学共享建模方法但研究对象属于应用经济领域。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020106T-A-0202",
@@ -309,18 +345,18 @@
       "undergraduate_code": "020107T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "劳动经济学使用个体选择、工资形成和劳动力市场模型，与理论经济学共享微观分析方法，同时直接归入应用经济学。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020107T-A-0202",
@@ -345,18 +381,18 @@
       "undergraduate_code": "020108T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "经济工程以经济模型、优化和系统分析为方法基础，与理论经济学共享模型化研究方法但主要面向应用决策。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020108T-A-0202",
@@ -381,18 +417,18 @@
       "undergraduate_code": "020109T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "数字经济使用经济理论解释平台、数据要素和数字市场，与理论经济学共享机制分析方法但主要出口仍是应用经济学。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020109T-A-0202",
@@ -413,22 +449,40 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-020109T-P-0258",
+      "undergraduate_code": "020109T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0258",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "培养出口"
+      ],
+      "rationale": "数字经济专业的平台经济、数据要素和数字产业实践与同名数字经济专业学位直接衔接。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-020110TK-A-0201",
       "undergraduate_code": "020110TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "低空经济与管理使用产业组织、供需和规制模型研究低空产业，与理论经济学共享经济分析方法但研究对象和出口更偏应用与管理。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020110TK-A-0202",
@@ -453,18 +507,18 @@
       "undergraduate_code": "020111T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0201",
-      "relation_level": "其他核心对应",
+      "relation_level": "强相关",
       "is_primary": false,
       "relation_basis": [
         "核心知识基础",
         "主要研究对象"
       ],
-      "rationale": "经济学类共同训练经济分析、计量方法与政策研究，主要衔接应用经济学，并保留理论经济学作为基础理论方向；类内培养出口差异较大，不统一指定专业学位主映射。",
-      "skills_behavior": "默认辅助标签",
+      "rationale": "资源环境审计使用公共经济与外部性理论评价资源环境责任，与理论经济学共享解释框架但主要面向应用经济和审计实践。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
+      "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020111T-A-0202",
@@ -483,6 +537,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-020111T-P-1257",
+      "undergraduate_code": "020111T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1257",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "培养出口"
+      ],
+      "rationale": "资源环境审计的证据获取、责任评价和鉴证实践直接衔接审计专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020201K-A-0202",
@@ -683,22 +755,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-020303-P-0251",
+      "mapping_id": "MAP-020303-P-0255",
       "undergraduate_code": "020303",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0251",
+      "graduate_code": "0255",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究对象",
+        "培养出口"
       ],
-      "rationale": "金融学类共享金融市场、资产定价与风险管理知识，学术上衔接应用经济学，专业实践主要进入金融领域；保险等细分出口留待专业级调整。",
+      "rationale": "保险学以风险承保、保险产品和保险经营为核心，保险专业学位比通用金融专业学位更直接。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020304-A-0202",
@@ -863,22 +935,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-020308T-P-0251",
+      "mapping_id": "MAP-020308T-P-0255",
       "undergraduate_code": "020308T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0251",
+      "graduate_code": "0255",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究或实践方法",
+        "培养出口"
       ],
-      "rationale": "金融学类共享金融市场、资产定价与风险管理知识，学术上衔接应用经济学，专业实践主要进入金融领域；保险等细分出口留待专业级调整。",
+      "rationale": "精算学以保险风险计量、定价和准备金评估为核心，职业训练直接衔接保险专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020309T-A-0202",
@@ -971,22 +1043,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-020311TK-P-0251",
+      "mapping_id": "MAP-020311TK-P-1257",
       "undergraduate_code": "020311TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0251",
+      "graduate_code": "1257",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究或实践方法",
+        "培养出口"
       ],
-      "rationale": "金融学类共享金融市场、资产定价与风险管理知识，学术上衔接应用经济学，专业实践主要进入金融领域；保险等细分出口留待专业级调整。",
+      "rationale": "金融审计以金融机构审计、风险鉴证和审计证据为核心，审计专业学位比通用金融专业学位更直接。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-020312TK-A-0202",
@@ -1367,22 +1439,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-030106TK-P-0351",
+      "mapping_id": "MAP-030106TK-P-0353",
       "undergraduate_code": "030106TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0351",
+      "graduate_code": "0353",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。",
+      "rationale": "司法警察学面向司法机关警务执法、警务保障和安全管理，职业训练直接衔接警务专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030107TK-A-0301",
@@ -1403,22 +1475,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-030107TK-P-0351",
+      "mapping_id": "MAP-030107TK-P-0352",
       "undergraduate_code": "030107TK",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0351",
+      "graduate_code": "0352",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
+        "主要研究对象",
         "典型职业或行业场景"
       ],
-      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。",
+      "rationale": "社区矫正以社区中的罪犯矫治、社会支持和再融入服务为核心实践对象，直接衔接社会工作专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030108TK-A-0308",
@@ -1511,76 +1583,40 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-030111TK-A-0301",
+      "mapping_id": "MAP-030111TK-A-1402",
       "undergraduate_code": "030111TK",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0301",
+      "graduate_code": "1402",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
         "核心知识基础"
       ],
-      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。",
+      "rationale": "国家安全学专业与同名交叉学科共享总体国家安全、风险识别与安全治理研究对象，形成直接学术衔接。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-030111TK-P-0351",
-      "undergraduate_code": "030111TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "0351",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
-      ],
-      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-030112TK-A-0301",
+      "mapping_id": "MAP-030112TK-A-1402",
       "undergraduate_code": "030112TK",
       "graduate_type": "学术学位一级学科",
-      "graduate_code": "0301",
+      "graduate_code": "1402",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
         "主要研究对象",
-        "核心知识基础"
+        "跨学科应用关系"
       ],
-      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。",
+      "rationale": "海外利益安全以国家海外权益、跨境风险与安全治理为核心对象，直接衔接国家安全学。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-030112TK-P-0351",
-      "undergraduate_code": "030112TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "0351",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
-      ],
-      "rationale": "法学类以法律规范、制度与法律方法为共同核心，直接衔接法学一级学科和法律专业学位；知识产权、纪检监察等专门方向由专业级例外细化。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030201-A-0302",
@@ -1821,18 +1857,18 @@
       "undergraduate_code": "030301",
       "graduate_type": "专业学位类别",
       "graduate_code": "0352",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "社会学类共享社会结构、群体与社会调查方法，直接衔接社会学一级学科；社会服务和社会治理实践与社会工作专业学位高度相关。",
-      "skills_behavior": "默认标签",
+      "rationale": "社会学与社会工作共享社会调查、社区研究和社会问题干预对象，但社会学以解释性研究为主，故保留强相关而非直接主映射。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030302-A-0303",
@@ -1929,18 +1965,18 @@
       "undergraduate_code": "030304T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0352",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "社会学类共享社会结构、群体与社会调查方法，直接衔接社会学一级学科；社会服务和社会治理实践与社会工作专业学位高度相关。",
-      "skills_behavior": "默认标签",
+      "rationale": "女性学与社会工作在性别平等、弱势群体服务和社区干预对象上交叉，但职业知识体系并不完全相同。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030305T-A-0303",
@@ -1965,18 +2001,18 @@
       "undergraduate_code": "030305T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0352",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "社会学类共享社会结构、群体与社会调查方法，直接衔接社会学一级学科；社会服务和社会治理实践与社会工作专业学位高度相关。",
-      "skills_behavior": "默认标签",
+      "rationale": "家政学与社会工作共享家庭服务、社区支持和生活福利对象，但家政管理与社会工作专业训练并不等同。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030306T-A-0303",
@@ -2001,18 +2037,18 @@
       "undergraduate_code": "030306T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0352",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "社会学类共享社会结构、群体与社会调查方法，直接衔接社会学一级学科；社会服务和社会治理实践与社会工作专业学位高度相关。",
-      "skills_behavior": "默认标签",
+      "rationale": "老年学与社会工作在老龄社会、养老服务和个案支持对象上直接交叉，但老年学还包含人口与健康研究，故降为强相关。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030307T-A-0303",
@@ -2037,18 +2073,18 @@
       "undergraduate_code": "030307T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0352",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "社会学类共享社会结构、群体与社会调查方法，直接衔接社会学一级学科；社会服务和社会治理实践与社会工作专业学位高度相关。",
-      "skills_behavior": "默认标签",
+      "rationale": "社会政策与社会工作共享福利制度、服务供给和政策评估对象，但前者偏政策分析，故保留强相关关系。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030401-A-0304",
@@ -2121,6 +2157,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-030503-P-0451",
+      "undergraduate_code": "030503",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0451",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "培养出口",
+        "典型职业或行业场景"
+      ],
+      "rationale": "思想政治教育专业的课程教学、教师培养和学校德育实践直接衔接教育专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-030504T-A-0305",
@@ -4533,6 +4587,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-050109T-P-0551",
+      "undergraduate_code": "050109T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0551",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究或实践方法",
+        "培养出口"
+      ],
+      "rationale": "手语翻译专业的双语转换、口笔译规范和无障碍沟通实践直接衔接翻译专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-050110T-A-0501",
@@ -8747,22 +8819,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-050307T-P-0552",
+      "mapping_id": "MAP-050307T-P-0553",
       "undergraduate_code": "050307T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "0552",
+      "graduate_code": "0553",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "关键技术体系",
+        "培养出口"
       ],
-      "rationale": "新闻传播学类共同研究信息传播、媒体与公共沟通，直接衔接新闻传播学和新闻与传播专业学位；出版方向由专业级例外补充。",
+      "rationale": "数字出版以数字内容编辑、产品制作和出版运营为核心，出版专业学位比新闻与传播更直接。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-050308T-A-0503",
@@ -8859,18 +8931,18 @@
       "undergraduate_code": "050310T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0552",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
         "培养出口",
         "典型职业或行业场景"
       ],
-      "rationale": "新闻传播学类共同研究信息传播、媒体与公共沟通，直接衔接新闻传播学和新闻与传播专业学位；出版方向由专业级例外补充。",
-      "skills_behavior": "默认标签",
+      "rationale": "会展与新闻传播共享受众分析、内容策划和公共传播方法，但会展运营并非新闻传播职业体系本身，故仅保留强相关。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-060101-A-0601",
@@ -9089,6 +9161,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-060104-P-0651",
+      "undergraduate_code": "060104",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "0651",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "培养出口"
+      ],
+      "rationale": "文物与博物馆学以藏品、博物馆和公共文化服务为核心对象，直接衔接博物馆专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-060105T-A-0601",
       "undergraduate_code": "060105T",
       "graduate_type": "学术学位一级学科",
@@ -9143,6 +9233,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-060105T-P-1451",
+      "undergraduate_code": "060105T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1451",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "关键技术体系",
+        "培养出口"
+      ],
+      "rationale": "文物保护技术的材料检测、病害诊断、修复与预防性保护实践直接衔接文物专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-060106T-A-0601",
       "undergraduate_code": "060106T",
       "graduate_type": "学术学位一级学科",
@@ -9183,18 +9291,18 @@
       "undergraduate_code": "060106T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0603",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "跨学科应用关系"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "历史学类共享史料批判、历史解释和文化遗产知识，但中国史、世界史与考古学研究对象不同，因此三个一级学科只作类级强相关候选，由具备直接衔接的具体专业显式提升。",
-      "skills_behavior": "扩展检索",
+      "rationale": "外国语言与外国历史以外国史料、区域历史和跨文化解释为核心，主要学术出口直接衔接世界史。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-060107T-A-0601",
@@ -9249,6 +9357,24 @@
       "review_status": "存在歧义，建议学科专家复核",
       "confidence": "中",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-060107T-P-1451",
+      "undergraduate_code": "060107T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1451",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "主要研究对象",
+        "培养出口"
+      ],
+      "rationale": "文化遗产专业的遗产调查、保护、阐释和活化实践直接衔接文物专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-060108T-A-0601",
