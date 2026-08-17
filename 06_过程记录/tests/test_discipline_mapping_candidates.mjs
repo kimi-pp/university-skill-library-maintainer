@@ -21,6 +21,18 @@ const ledger = JSON.parse(
   await fs.readFile(new URL("review/major_review_ledger.json", root), "utf8"),
 );
 
+assert.equal(ledger.records.length, 883);
+assert.equal(new Set(ledger.records.map((record) => record.undergraduate_code)).size, 883);
+assert.equal(ledger.records.filter((record) => record.review_status === "尚未完成复核").length, 0);
+const gradLedger = JSON.parse(
+  await fs.readFile(new URL("review/graduate_review_ledger.json", root), "utf8"),
+);
+assert.equal(gradLedger.records.length, graduate.length);
+assert.deepEqual(
+  new Set(gradLedger.records.map((record) => `${record.graduate_type}|${record.graduate_code}`)),
+  new Set(graduate.map((record) => `${record.object_type}|${record.object_code}`)),
+);
+
 const academicType = "学术学位一级学科";
 const professionalType = "专业学位类别";
 const approvedBases = new Set([
@@ -90,7 +102,7 @@ assert.deepEqual(
 
 const humanitiesAndSocialScienceScope = undergraduate.filter((record) =>
   ["01", "02", "03", "04", "05", "06"].includes(record.category_code));
-for (const major of humanitiesAndSocialScienceScope) {
+for (const major of undergraduate) {
   const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
   assert.ok(row, `missing review ledger: ${major.major_code}`);
   assert.notEqual(row.review_status, "尚未完成复核");
@@ -157,7 +169,66 @@ function mappingCandidate(majorName, graduateType, graduateCode) {
     && candidate.graduate_code === graduateCode);
 }
 
-for (const major of humanitiesAndSocialScienceScope) {
+assert.deepEqual(targets("管理科学"), [
+  `${academicType}|1201|主映射/核心对应`,
+]);
+assert.deepEqual(targets("工商管理"), [
+  `${academicType}|1202|主映射/核心对应`,
+  `${professionalType}|1251|主映射/核心对应`,
+]);
+assert.deepEqual(targets("行政管理"), [
+  `${academicType}|1204|主映射/核心对应`,
+  `${professionalType}|1252|主映射/核心对应`,
+]);
+assert.deepEqual(targets("信息资源管理"), [
+  `${academicType}|1205|主映射/核心对应`,
+  `${professionalType}|1255|主映射/核心对应`,
+]);
+assert.deepEqual(targets("物流管理"), [
+  `${academicType}|1201|主映射/核心对应`,
+  `${professionalType}|1256|主映射/核心对应`,
+]);
+assert.deepEqual(targets("电子商务"), [
+  `${academicType}|1202|主映射/核心对应`,
+  `${professionalType}|1251|主映射/核心对应`,
+]);
+assert.deepEqual(targets("旅游管理"), [
+  `${academicType}|1202|主映射/核心对应`,
+  `${professionalType}|1254|主映射/核心对应`,
+]);
+assert.deepEqual(primaryProfessionalTargets("会计学"), ["1253"]);
+assert.deepEqual(primaryProfessionalTargets("财务会计教育"), ["1253"]);
+assert.deepEqual(primaryProfessionalTargets("资产评估"), ["0256"]);
+assert.deepEqual(primaryProfessionalTargets("工程审计"), ["1257"]);
+assert.deepEqual(primaryProfessionalTargets("审计学"), ["1257"]);
+assert.deepEqual(primaryProfessionalTargets("内部审计"), ["1257"]);
+assert.deepEqual(targets("音乐表演"), [
+  `${academicType}|1301|主映射/核心对应`,
+  `${professionalType}|1352|主映射/核心对应`,
+]);
+assert.deepEqual(targets("舞蹈表演"), [
+  `${academicType}|1301|主映射/核心对应`,
+  `${professionalType}|1353|主映射/核心对应`,
+]);
+assert.deepEqual(targets("曲艺"), [
+  `${academicType}|1301|主映射/核心对应`,
+  `${professionalType}|1355|主映射/核心对应`,
+]);
+const currentArtCodes = new Set(["1301", "1403", "1352", "1353", "1354", "1355", "1356", "1357"]);
+const artMajorCodes = new Set(
+  undergraduate.filter((record) => record.category_code === "13").map((record) => record.major_code),
+);
+assert.ok(
+  candidates
+    .filter((candidate) => artMajorCodes.has(candidate.undergraduate_code)
+      && ["13", "14"].includes(
+        graduate.find((record) => record.object_type === candidate.graduate_type
+          && record.object_code === candidate.graduate_code).category_code,
+      ))
+    .every((candidate) => currentArtCodes.has(candidate.graduate_code)),
+);
+
+for (const major of undergraduate) {
   const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
   const majorCandidateIds = new Set(
     candidates
@@ -184,31 +255,43 @@ for (const major of humanitiesAndSocialScienceScope) {
   assert.deepEqual(new Set(row.zero_mapping_types), expectedZeroTypes, `${major.major_code} has inconsistent zero types`);
 }
 
-for (const major of stemScope) {
-  const row = ledger.records.find((record) => record.undergraduate_code === major.major_code);
-  const majorCandidateIds = new Set(
-    candidates
-      .filter((candidate) => candidate.undergraduate_code === major.major_code)
-      .map((candidate) => candidate.mapping_id),
-  );
-  const acceptedIds = new Set(row.accepted_mapping_ids);
-  const rejectedIds = new Set(row.rejected_mapping_ids);
-  assert.equal(acceptedIds.size, row.accepted_mapping_ids.length, `${major.major_code} duplicates accepted IDs`);
-  assert.equal(rejectedIds.size, row.rejected_mapping_ids.length, `${major.major_code} duplicates rejected IDs`);
-  assert.ok([...acceptedIds].every((mappingId) => !rejectedIds.has(mappingId)), `${major.major_code} overlaps decisions`);
-  assert.deepEqual(new Set([...acceptedIds, ...rejectedIds]), majorCandidateIds, `${major.major_code} incomplete decisions`);
+const acceptedMappingIds = new Set(ledger.records.flatMap((record) => record.accepted_mapping_ids));
+const reverseStates = new Set([
+  "有核心本科对应",
+  "仅有强相关或延伸本科对应",
+  "已确认无直接对应本科专业",
+  "军事学限制，仅目录参考",
+]);
+for (const graduateRecord of graduate) {
+  const row = gradLedger.records.find((record) => record.graduate_type === graduateRecord.object_type
+    && record.graduate_code === graduateRecord.object_code);
+  assert.ok(row, `missing graduate review ledger: ${graduateRecord.object_type}|${graduateRecord.object_code}`);
+  assert.equal(row.graduate_name, graduateRecord.object_name);
+  assert.ok(reverseStates.has(row.reverse_state));
+  assert.ok(typeof row.review_note === "string" && row.review_note.trim().length > 0);
 
-  const directTypes = new Set(
-    candidates
-      .filter((candidate) => acceptedIds.has(candidate.mapping_id)
-        && ["主映射/核心对应", "其他核心对应"].includes(candidate.relation_level))
-      .map((candidate) => candidate.graduate_type),
+  const acceptedRelations = candidates.filter((candidate) => acceptedMappingIds.has(candidate.mapping_id)
+    && candidate.graduate_type === graduateRecord.object_type
+    && candidate.graduate_code === graduateRecord.object_code);
+  assert.deepEqual(
+    row.accepted_mapping_ids,
+    acceptedRelations.map((candidate) => candidate.mapping_id),
+    `${graduateRecord.object_type}|${graduateRecord.object_code} reverse evidence mismatch`,
   );
-  const expectedZeroTypes = new Set(
-    [academicType, professionalType].filter((graduateType) => !directTypes.has(graduateType)),
-  );
-  assert.equal(new Set(row.zero_mapping_types).size, row.zero_mapping_types.length, `${major.major_code} duplicates zero types`);
-  assert.deepEqual(new Set(row.zero_mapping_types), expectedZeroTypes, `${major.major_code} has inconsistent zero types`);
+  const restricted = graduateRecord.category_code === "11"
+    || (graduateRecord.object_type === academicType && graduateRecord.object_code === "0826");
+  const hasCore = acceptedRelations.some((candidate) =>
+    ["主映射/核心对应", "其他核心对应"].includes(candidate.relation_level));
+  const hasRelated = acceptedRelations.some((candidate) =>
+    ["强相关", "延伸相关"].includes(candidate.relation_level));
+  const expectedState = restricted
+    ? "军事学限制，仅目录参考"
+    : hasCore
+      ? "有核心本科对应"
+      : hasRelated
+        ? "仅有强相关或延伸本科对应"
+        : "已确认无直接对应本科专业";
+  assert.equal(row.reverse_state, expectedState, `${graduateRecord.object_type}|${graduateRecord.object_code} reverse state mismatch`);
 }
 
 assert.ok(targets("哲学").some((target) => target.startsWith(`${academicType}|0101|`)));
@@ -377,6 +460,9 @@ const restrictedArmamentCandidates = candidates.filter(
 );
 assert.equal(restrictedArmamentCandidates.length, 8);
 for (const candidate of restrictedArmamentCandidates) {
+  assert.ok(!candidate.rationale.includes("直接衔接兵器科学与技术"));
+  assert.ok(candidate.rationale.includes("仅保留受限目录参考"));
+  assert.ok(candidate.rationale.includes("不产生可消费的 Skills 行为"));
   assert.deepEqual(
     {
       relation_level: candidate.relation_level,

@@ -3894,6 +3894,101 @@
         }
       }
     ],
+    "120103": [
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "1256", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "工程管理的项目组织、成本进度和工程决策实践直接衔接工程管理专业学位。"}}
+    ],
+    "120104": [
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "1256", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "房地产开发项目的策划、建设与运营管理直接衔接工程管理专业学位。"}}
+    ],
+    "120105": [
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "1256", "level": "主映射/核心对应", "basis": ["培养出口", "典型职业或行业场景"], "rationale": "工程造价的投资控制、计量计价和项目成本管理直接衔接工程管理专业学位。"}}
+    ],
+    "120109T": [
+      {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "1257", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "工程审计以审计准则、工程造价核查和风险控制为核心，直接衔接审计专业学位。"}}
+    ],
+    "120203K": [
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1253", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "会计确认、计量、报告和鉴证训练直接衔接会计专业学位，而非笼统工商管理出口。"}}
+    ],
+    "120207": [
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1257", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "审计准则、鉴证、内部控制和风险评价直接衔接审计专业学位。"}}
+    ],
+    "120208": [
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "0256", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "价值评估理论、方法和资产估值实践直接衔接资产评估专业学位，而非笼统工商管理出口。"}}
+    ],
+    "120213T": [
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1253", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "财务会计教育的会计知识和职业教学出口首先衔接会计专业学位。"}}
+    ],
+    "120218T": [
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1257", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "内部审计以组织内部鉴证、控制与风险治理为核心，直接衔接审计专业学位。"}}
+    ],
+    "130201": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "音乐表演不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "声乐或器乐表演训练直接衔接音乐专业学位。"}}
+    ],
+    "130202": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "音乐学不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "音乐理论、创作与实践训练直接衔接音乐专业学位。"}}
+    ],
+    "130203": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "作曲与作曲技术理论不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "作曲、配器和音乐技术理论直接衔接音乐专业学位。"}}
+    ],
+    "130204": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "舞蹈表演不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "舞蹈身体训练、排演和舞台实践直接衔接舞蹈专业学位。"}}
+    ],
+    "130205": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "舞蹈学不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "舞蹈理论、训练和实践直接衔接舞蹈专业学位。"}}
+    ],
+    "130206": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "舞蹈编导不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "舞蹈编创、排演和作品呈现直接衔接舞蹈专业学位。"}}
+    ],
+    "130207T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "舞蹈教育不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "舞蹈训练与教学实践直接衔接舞蹈专业学位。"}}
+    ],
+    "130208TK": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "航空服务艺术与管理不以音乐创作或表演为核心，不继承音乐专业学位候选。"},
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "航空服务艺术与管理不以舞蹈创作或表演为核心，不继承舞蹈专业学位候选。"}
+    ],
+    "130209T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "流行音乐不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "流行音乐演唱、演奏与创作实践直接衔接音乐专业学位。"}}
+    ],
+    "130210T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "音乐治疗不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "音乐治疗以音乐实践为核心媒介，直接衔接音乐专业学位，并保留健康应用边界。"}}
+    ],
+    "130211T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "流行舞蹈不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "流行舞蹈训练、编创和表演实践直接衔接舞蹈专业学位。"}}
+    ],
+    "130212T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "音乐教育不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["核心知识基础", "培养出口"], "rationale": "音乐理论、技能与教学实践直接衔接音乐专业学位。"}}
+    ],
+    "130213TK": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "冰雪舞蹈表演不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "冰雪舞蹈的动作编创、排演与表演直接衔接舞蹈专业学位。"}}
+    ],
+    "130214TK": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1352", "rationale": "舞蹈治疗不继承音乐专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1353", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "跨学科应用关系"], "rationale": "舞蹈治疗以身体动作与舞蹈实践为核心媒介，直接衔接舞蹈专业学位，并保留健康应用边界。"}}
+    ],
+    "130215T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "音乐科技不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["关键技术体系", "主要研究或实践方法"], "rationale": "音乐科技以音乐创作、制作和声音技术实践为核心，直接衔接音乐专业学位。"}}
+    ],
+    "130216T": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1353", "rationale": "乐器智造不继承舞蹈专业学位候选。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1352", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "乐器设计制造服务音乐演奏与声音实践，主要衔接音乐专业学位。"}}
+    ],
+    "130314TK": [
+      {"action": "remove", "graduate_type": "专业学位类别", "graduate_code": "1354", "rationale": "曲艺不继承面向戏剧、电影、广播电视等方向的戏剧与影视专业学位主映射。"},
+      {"action": "replace_primary", "graduate_type": "专业学位类别", "target": {"code": "1355", "level": "主映射/核心对应", "basis": ["主要研究或实践方法", "培养出口"], "rationale": "曲艺说唱、表演和创作实践直接衔接现行戏曲与曲艺专业学位。"}}
+    ],
     "140001TK": [
       {"action": "add", "target": {"graduate_type": "学术学位一级学科", "code": "0811", "level": "主映射/核心对应", "basis": ["核心知识基础", "关键技术体系"], "rationale": "未来机器人专业以感知、控制、规划和机器人系统集成为核心，直接衔接控制科学与工程。"}},
       {"action": "add", "target": {"graduate_type": "专业学位类别", "code": "0854", "level": "主映射/核心对应", "basis": ["关键技术体系", "培养出口"], "rationale": "机器人软硬件系统开发是电子信息专业学位的重要工程出口。"}},

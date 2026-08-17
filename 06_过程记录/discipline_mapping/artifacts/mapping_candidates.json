@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "record_count": 1977,
+    "record_count": 1963,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
-    "override_major_count": 226,
+    "override_major_count": 252,
     "generation_method_counts": {
       "军事学目录参考": 17,
-      "专业级例外": 329,
-      "专业类规则继承": 1631
+      "专业级例外": 354,
+      "专业类规则继承": 1592
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 330,
-      "高置信度候选": 1630,
+      "存在歧义，建议学科专家复核": 297,
+      "高置信度候选": 1649,
       "军事学限制": 17
     }
   },
@@ -21699,7 +21699,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -21753,7 +21753,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -21807,7 +21807,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -21861,7 +21861,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -21915,7 +21915,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -21969,7 +21969,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -22023,7 +22023,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -22077,7 +22077,7 @@
         "主要研究对象",
         "关键技术体系"
       ],
-      "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
+      "rationale": "兵器科学与技术（0826）仅保留受限目录参考，不产生可消费的 Skills 行为。",
       "skills_behavior": "仅目录查看",
       "military_restriction": true,
       "review_status": "军事学限制",
@@ -29483,6 +29483,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-120103-P-1256",
+      "undergraduate_code": "120103",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1256",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "培养出口",
+        "典型职业或行业场景"
+      ],
+      "rationale": "工程管理的项目组织、成本进度和工程决策实践直接衔接工程管理专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-120104-A-1201",
       "undergraduate_code": "120104",
       "graduate_type": "学术学位一级学科",
@@ -29501,6 +29519,24 @@
       "generation_method": "专业类规则继承"
     },
     {
+      "mapping_id": "MAP-120104-P-1256",
+      "undergraduate_code": "120104",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1256",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "培养出口",
+        "典型职业或行业场景"
+      ],
+      "rationale": "房地产开发项目的策划、建设与运营管理直接衔接工程管理专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
+    },
+    {
       "mapping_id": "MAP-120105-A-1201",
       "undergraduate_code": "120105",
       "graduate_type": "学术学位一级学科",
@@ -29517,6 +29553,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-120105-P-1256",
+      "undergraduate_code": "120105",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1256",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "培养出口",
+        "典型职业或行业场景"
+      ],
+      "rationale": "工程造价的投资控制、计量计价和项目成本管理直接衔接工程管理专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120106TK-A-1201",
@@ -29589,6 +29643,24 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业类规则继承"
+    },
+    {
+      "mapping_id": "MAP-120109T-P-1257",
+      "undergraduate_code": "120109T",
+      "graduate_type": "专业学位类别",
+      "graduate_code": "1257",
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
+      "relation_basis": [
+        "核心知识基础",
+        "培养出口"
+      ],
+      "rationale": "工程审计以审计准则、工程造价核查和风险控制为核心，直接衔接审计专业学位。",
+      "skills_behavior": "默认标签",
+      "military_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120110T-A-1201",
@@ -29717,22 +29789,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-120203K-P-1251",
+      "mapping_id": "MAP-120203K-P-1253",
       "undergraduate_code": "120203K",
       "graduate_type": "专业学位类别",
-      "graduate_code": "1251",
+      "graduate_code": "1253",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "培养出口"
       ],
-      "rationale": "工商管理类共同研究企业经营、组织、市场和财务管理，直接衔接工商管理学及工商管理专业学位；会计、审计等专门出口留待专业级细化。",
+      "rationale": "会计确认、计量、报告和鉴证训练直接衔接会计专业学位，而非笼统工商管理出口。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120204-A-1202",
@@ -29861,22 +29933,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-120207-P-1251",
+      "mapping_id": "MAP-120207-P-1257",
       "undergraduate_code": "120207",
       "graduate_type": "专业学位类别",
-      "graduate_code": "1251",
+      "graduate_code": "1257",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "培养出口"
       ],
-      "rationale": "工商管理类共同研究企业经营、组织、市场和财务管理，直接衔接工商管理学及工商管理专业学位；会计、审计等专门出口留待专业级细化。",
+      "rationale": "审计准则、鉴证、内部控制和风险评价直接衔接审计专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120208-A-1202",
@@ -29897,22 +29969,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-120208-P-1251",
+      "mapping_id": "MAP-120208-P-0256",
       "undergraduate_code": "120208",
       "graduate_type": "专业学位类别",
-      "graduate_code": "1251",
+      "graduate_code": "0256",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "培养出口"
       ],
-      "rationale": "工商管理类共同研究企业经营、组织、市场和财务管理，直接衔接工商管理学及工商管理专业学位；会计、审计等专门出口留待专业级细化。",
+      "rationale": "价值评估理论、方法和资产估值实践直接衔接资产评估专业学位，而非笼统工商管理出口。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120209-A-1202",
@@ -30077,22 +30149,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-120213T-P-1251",
+      "mapping_id": "MAP-120213T-P-1253",
       "undergraduate_code": "120213T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "1251",
+      "graduate_code": "1253",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "培养出口"
       ],
-      "rationale": "工商管理类共同研究企业经营、组织、市场和财务管理，直接衔接工商管理学及工商管理专业学位；会计、审计等专门出口留待专业级细化。",
+      "rationale": "财务会计教育的会计知识和职业教学出口首先衔接会计专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120214T-A-1202",
@@ -30257,22 +30329,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-120218T-P-1251",
+      "mapping_id": "MAP-120218T-P-1257",
       "undergraduate_code": "120218T",
       "graduate_type": "专业学位类别",
-      "graduate_code": "1251",
+      "graduate_code": "1257",
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "核心知识基础",
+        "培养出口"
       ],
-      "rationale": "工商管理类共同研究企业经营、组织、市场和财务管理，直接衔接工商管理学及工商管理专业学位；会计、审计等专门出口留待专业级细化。",
+      "rationale": "内部审计以组织内部鉴证、控制与风险治理为核心，直接衔接审计专业学位。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-120219TK-A-1202",
@@ -32007,36 +32079,18 @@
       "undergraduate_code": "130201",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "声乐或器乐表演训练直接衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130201-P-1353",
-      "undergraduate_code": "130201",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130202-A-1301",
@@ -32061,36 +32115,18 @@
       "undergraduate_code": "130202",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
+        "核心知识基础",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "音乐理论、创作与实践训练直接衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130202-P-1353",
-      "undergraduate_code": "130202",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130203-A-1301",
@@ -32115,36 +32151,18 @@
       "undergraduate_code": "130203",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "作曲、配器和音乐技术理论直接衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130203-P-1353",
-      "undergraduate_code": "130203",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130204-A-1301",
@@ -32165,40 +32183,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130204-P-1352",
-      "undergraduate_code": "130204",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130204-P-1353",
       "undergraduate_code": "130204",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "舞蹈身体训练、排演和舞台实践直接衔接舞蹈专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130205-A-1301",
@@ -32219,40 +32219,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130205-P-1352",
-      "undergraduate_code": "130205",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130205-P-1353",
       "undergraduate_code": "130205",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
+        "核心知识基础",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "舞蹈理论、训练和实践直接衔接舞蹈专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130206-A-1301",
@@ -32273,40 +32255,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130206-P-1352",
-      "undergraduate_code": "130206",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130206-P-1353",
       "undergraduate_code": "130206",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "舞蹈编创、排演和作品呈现直接衔接舞蹈专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130207T-A-1301",
@@ -32327,40 +32291,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130207T-P-1352",
-      "undergraduate_code": "130207T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130207T-P-1353",
       "undergraduate_code": "130207T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "舞蹈训练与教学实践直接衔接舞蹈专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130208TK-A-1301",
@@ -32378,42 +32324,6 @@
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130208TK-P-1352",
-      "undergraduate_code": "130208TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130208TK-P-1353",
-      "undergraduate_code": "130208TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
       "generation_method": "专业类规则继承"
     },
     {
@@ -32439,36 +32349,18 @@
       "undergraduate_code": "130209T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "流行音乐演唱、演奏与创作实践直接衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130209T-P-1353",
-      "undergraduate_code": "130209T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130210T-A-1301",
@@ -32493,36 +32385,18 @@
       "undergraduate_code": "130210T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
-        "培养出口"
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "音乐治疗以音乐实践为核心媒介，直接衔接音乐专业学位，并保留健康应用边界。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130210T-P-1353",
-      "undergraduate_code": "130210T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130211T-A-1301",
@@ -32543,40 +32417,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130211T-P-1352",
-      "undergraduate_code": "130211T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130211T-P-1353",
       "undergraduate_code": "130211T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "流行舞蹈训练、编创和表演实践直接衔接舞蹈专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130212T-A-1301",
@@ -32601,36 +32457,18 @@
       "undergraduate_code": "130212T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
+        "核心知识基础",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "音乐理论、技能与教学实践直接衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130212T-P-1353",
-      "undergraduate_code": "130212T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130213TK-A-1301",
@@ -32651,40 +32489,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130213TK-P-1352",
-      "undergraduate_code": "130213TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130213TK-P-1353",
       "undergraduate_code": "130213TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "冰雪舞蹈的动作编创、排演与表演直接衔接舞蹈专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130214TK-A-1301",
@@ -32705,40 +32525,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130214TK-P-1352",
-      "undergraduate_code": "130214TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130214TK-P-1353",
       "undergraduate_code": "130214TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
-        "培养出口"
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "舞蹈治疗以身体动作与舞蹈实践为核心媒介，直接衔接舞蹈专业学位，并保留健康应用边界。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130215T-A-1301",
@@ -32763,36 +32565,18 @@
       "undergraduate_code": "130215T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
+        "关键技术体系",
+        "主要研究或实践方法"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "音乐科技以音乐创作、制作和声音技术实践为核心，直接衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130215T-P-1353",
-      "undergraduate_code": "130215T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130216T-A-1301",
@@ -32817,36 +32601,18 @@
       "undergraduate_code": "130216T",
       "graduate_type": "专业学位类别",
       "graduate_code": "1352",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
-        "主要研究或实践方法",
+        "关键技术体系",
         "培养出口"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
+      "rationale": "乐器设计制造服务音乐演奏与声音实践，主要衔接音乐专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-130216T-P-1353",
-      "undergraduate_code": "130216T",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1353",
-      "relation_level": "强相关",
-      "is_primary": false,
-      "relation_basis": [
-        "主要研究或实践方法",
-        "培养出口"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "扩展检索",
-      "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130301-A-1301",
@@ -33569,40 +33335,22 @@
       "generation_method": "专业类规则继承"
     },
     {
-      "mapping_id": "MAP-130314TK-P-1354",
-      "undergraduate_code": "130314TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "1354",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
-      ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130314TK-P-1355",
       "undergraduate_code": "130314TK",
       "graduate_type": "专业学位类别",
       "graduate_code": "1355",
-      "relation_level": "强相关",
-      "is_primary": false,
+      "relation_level": "主映射/核心对应",
+      "is_primary": true,
       "relation_basis": [
         "主要研究或实践方法",
-        "跨学科应用关系"
+        "培养出口"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "扩展检索",
+      "rationale": "曲艺说唱、表演和创作实践直接衔接现行戏曲与曲艺专业学位。",
+      "skills_behavior": "默认标签",
       "military_restriction": false,
-      "review_status": "存在歧义，建议学科专家复核",
-      "confidence": "中",
-      "generation_method": "专业类规则继承"
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130315TK-A-1301",

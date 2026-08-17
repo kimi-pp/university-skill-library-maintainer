@@ -257,6 +257,10 @@ function applyOverrides({ major, targets, actions, graduateByKey, hasExplicitOve
 function finalizeCandidate(candidate, graduateByKey) {
   const graduate = graduateByKey.get(endpoint(candidate.graduate_type, candidate.graduate_code));
   const isMilitary = isMilitaryRestrictedObject(graduate);
+  const isExplicitlyRestricted = policy.military_restricted_objects.some(
+    (record) => record.graduate_type === candidate.graduate_type
+      && record.graduate_code === candidate.graduate_code,
+  );
   const relationLevel = isMilitary ? policy.military_rule.relation_level : candidate.relation_level;
   const isPrimary = isMilitary ? policy.military_rule.is_primary : candidate.is_primary;
   const skillsBehavior = isMilitary
@@ -274,7 +278,9 @@ function finalizeCandidate(candidate, graduateByKey) {
     relation_level: relationLevel,
     is_primary: isPrimary,
     relation_basis: [...candidate.relation_basis],
-    rationale: candidate.rationale,
+    rationale: isExplicitlyRestricted
+      ? `${graduate.object_name}（${graduate.object_code}）仅保留受限目录参考，不产生可消费的 Skills 行为。`
+      : candidate.rationale,
     skills_behavior: skillsBehavior,
     military_restriction: isMilitary,
     review_status: reviewStatus,
