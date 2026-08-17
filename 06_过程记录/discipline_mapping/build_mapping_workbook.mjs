@@ -198,6 +198,7 @@ export function buildWorkbook(bundle, sources, policy) {
   guide.getRange("A4:A14").format.columnWidth = 22;
   guide.getRange("B4:B14").format.columnWidth = 92;
   guide.getRange("A5:B14").format.rowHeight = 38;
+  guide.getRange("B14").format.numberFormat = "yyyy-mm-dd";
   guide.freezePanes.freezeRows(2);
 
   const undergraduateRows = bundle.undergraduate.map((item) => {
@@ -349,6 +350,7 @@ export function buildWorkbook(bundle, sources, policy) {
     rowHeight: 48,
   });
   const ugIndexSheet = sheets.get("本科专业反向索引");
+  ugIndexSheet.getRange(`I5:I${ugIndexRange.lastRow}`).format.numberFormat = "yyyy-mm-dd";
   ugIndexSheet.getRange(`G5:G${ugIndexRange.lastRow}`).dataValidation = { rule: { type: "list", values: policy.review_statuses } };
   addEqualsFormatting(ugIndexSheet.getRange(`U5:U${ugIndexRange.lastRow}`), "无合适研究生直接对应", { fill: palette.paleRed, font: { bold: true } });
   addEqualsFormatting(ugIndexSheet.getRange(`U5:U${ugIndexRange.lastRow}`), "部分类型无直接对应", { fill: palette.paleGold });
@@ -388,6 +390,7 @@ export function buildWorkbook(bundle, sources, policy) {
     rowHeight: 48,
   });
   const gradIndexSheet = sheets.get("研究生学科反向索引");
+  gradIndexSheet.getRange(`H5:H${gradIndexRange.lastRow}`).format.numberFormat = "yyyy-mm-dd";
   addEqualsFormatting(gradIndexSheet.getRange(`F5:F${gradIndexRange.lastRow}`), "已确认无直接对应本科专业", { fill: palette.paleGold, font: { bold: true } });
   addEqualsFormatting(gradIndexSheet.getRange(`F5:F${gradIndexRange.lastRow}`), "军事学限制，仅目录参考", { fill: palette.paleRed, font: { bold: true } });
 
@@ -425,7 +428,7 @@ export function buildWorkbook(bundle, sources, policy) {
     source.sha256,
     source.applies_to,
   ]);
-  writeTableSheet(sheets.get("来源台账"), {
+  const sourceRange = writeTableSheet(sheets.get("来源台账"), {
     title: "官方来源与文件校验台账",
     note: "网址以纯文本保留；SHA-256 对应仓库中的固定快照，用于复核来源完整性。",
     headers: ["来源ID", "类型", "标题", "发布单位", "发布日期", "访问日期", "官方网址", "本地快照", "SHA-256", "适用范围"],
@@ -437,6 +440,7 @@ export function buildWorkbook(bundle, sources, policy) {
     freezeColumns: 3,
     rowHeight: 52,
   });
+  sheets.get("来源台账").getRange(`E5:F${sourceRange.lastRow}`).format.numberFormat = "yyyy-mm-dd";
 
   const qaRows = bundle.qa_findings.map((finding) => [
     finding.finding_id,
