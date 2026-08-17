@@ -1,0 +1,7 @@
+{
+  "metadata": {
+    "rule_version": "2026-08-17",
+    "operations": ["add", "remove", "replace", "set_level", "set_primary", "restrict"]
+  },
+  "records": []
+}
