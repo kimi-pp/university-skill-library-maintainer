@@ -66,10 +66,6 @@ function canonicalName(value) {
     "服务与管理",
     "运营与管理",
     "设计与制作",
-    "应用技术",
-    "工程技术",
-    "生产技术",
-    "管理技术",
     "技术应用",
     "技术",
     "制作",
@@ -100,7 +96,7 @@ function nameSimilarity(leftName, rightName) {
   if (!left || !right) return 0;
   if (left === right) return 1;
   if (
-    Math.min(left.length, right.length) >= 2 &&
+    Math.min(left.length, right.length) >= 3 &&
     (left.includes(right) || right.includes(left))
   ) {
     return 0.78 + 0.2 * (Math.min(left.length, right.length) / Math.max(left.length, right.length));

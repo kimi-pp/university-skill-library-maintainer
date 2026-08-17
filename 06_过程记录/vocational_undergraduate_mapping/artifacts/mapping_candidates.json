@@ -2,7 +2,7 @@
   "metadata": {
     "generated_at": "2026-08-17",
     "mapping_id_format": "VUG-<vocational_code>-<undergraduate_code>",
-    "record_count": 1078,
+    "record_count": 1048,
     "vocational_count": 811,
     "class_rule_count": 97,
     "method": "97个专业类保守种子＋专业名称约束＋专业级覆盖规则"
@@ -109,26 +109,6 @@
       "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-410105-090111T",
-      "vocational_code": "410105",
-      "undergraduate_code": "090111T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“园艺技术”与本科“园艺教育”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4101",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-410105-090101",
       "vocational_code": "410105",
       "undergraduate_code": "090101",
@@ -147,6 +127,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4101",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-410105-090111T",
+      "vocational_code": "410105",
+      "undergraduate_code": "090111T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“园艺技术”与本科“园艺教育”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4101",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-410106-090103",
@@ -227,26 +227,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4101",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-410109-090108T",
-      "vocational_code": "410109",
-      "undergraduate_code": "090108T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“烟草栽培与加工技术”与本科“烟草”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4101",
-      "candidate_score": 0.8371
     },
     {
       "mapping_id": "VUG-410109-090101",
@@ -629,26 +609,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-410201-090505T",
-      "vocational_code": "410201",
-      "undergraduate_code": "090505T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“林业技术”与本科“智慧林业”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4102",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-410201-090501",
       "vocational_code": "410201",
       "undergraduate_code": "090501",
@@ -667,6 +627,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4102",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-410201-090505T",
+      "vocational_code": "410201",
+      "undergraduate_code": "090505T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“林业技术”与本科“智慧林业”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4102",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-410202-090502",
@@ -1489,26 +1469,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-420102-070901",
-      "vocational_code": "420102",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“地质调查与矿产普查”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4201",
-      "candidate_score": 0.8244
-    },
-    {
       "mapping_id": "VUG-420102-081401",
       "vocational_code": "420102",
       "undergraduate_code": "081401",
@@ -1527,26 +1487,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4201",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-420103-070901",
-      "vocational_code": "420103",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“生态地质调查”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4201",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-420103-081401",
@@ -1569,26 +1509,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-420104-070901",
-      "vocational_code": "420104",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“矿产地质勘查”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4201",
-      "candidate_score": 0.8467
-    },
-    {
       "mapping_id": "VUG-420104-081401",
       "vocational_code": "420104",
       "undergraduate_code": "081401",
@@ -1607,26 +1527,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4201",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-420105-070901",
-      "vocational_code": "420105",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“煤田地质勘查”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4201",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-420105-081401",
@@ -1689,26 +1589,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-420201-070901",
-      "vocational_code": "420201",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“工程地质勘查”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4202",
-      "candidate_score": 0.8467
-    },
-    {
       "mapping_id": "VUG-420201-081401",
       "vocational_code": "420201",
       "undergraduate_code": "081401",
@@ -1727,26 +1607,6 @@
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4202",
       "candidate_score": 0.5
-    },
-    {
-      "mapping_id": "VUG-420202-070901",
-      "vocational_code": "420202",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“水文与工程地质”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4202",
-      "candidate_score": 0.8371
     },
     {
       "mapping_id": "VUG-420202-081401",
@@ -1772,8 +1632,8 @@
       "mapping_id": "VUG-420203-070901",
       "vocational_code": "420203",
       "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -1786,7 +1646,7 @@
       "rationale": "高职“矿山地质”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4202",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-420203-081401",
@@ -1889,26 +1749,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-420207-070901",
-      "vocational_code": "420207",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“地质灾害调查与防治”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4202",
-      "candidate_score": 0.8244
-    },
-    {
       "mapping_id": "VUG-420207-081401",
       "vocational_code": "420207",
       "undergraduate_code": "081401",
@@ -1929,26 +1769,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-420208-070901",
-      "vocational_code": "420208",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“环境地质工程”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4202",
-      "candidate_score": 0.8467
-    },
-    {
       "mapping_id": "VUG-420208-081401",
       "vocational_code": "420208",
       "undergraduate_code": "081401",
@@ -1967,26 +1787,6 @@
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4202",
       "candidate_score": 0.9133
-    },
-    {
-      "mapping_id": "VUG-420209-070901",
-      "vocational_code": "420209",
-      "undergraduate_code": "070901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“城市地质勘查”与本科“地质学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4202",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-420209-081401",
@@ -2032,21 +1832,21 @@
       "mapping_id": "VUG-420302-081201",
       "vocational_code": "420302",
       "undergraduate_code": "081201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“测绘工程技术”与本科“测绘工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4203",
-      "candidate_score": 0.88
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-420303-070504",
@@ -2352,21 +2152,21 @@
       "mapping_id": "VUG-420406-081502",
       "vocational_code": "420406",
       "undergraduate_code": "081502",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“石油工程技术”与本科“石油工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4204",
-      "candidate_score": 0.88
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-420501-081501",
@@ -2672,61 +2472,21 @@
       "mapping_id": "VUG-420802-082502",
       "vocational_code": "420802",
       "undergraduate_code": "082502",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“环境工程技术”与本科“环境工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4208",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-420802-082503",
-      "vocational_code": "420802",
-      "undergraduate_code": "082503",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“环境工程技术”与本科“环境科学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4208",
-      "candidate_score": 0.9133
-    },
-    {
-      "mapping_id": "VUG-420802-082506T",
-      "vocational_code": "420802",
-      "undergraduate_code": "082506T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“环境工程技术”与本科“资源环境科学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4208",
-      "candidate_score": 0.86
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-420802-082501",
@@ -2747,6 +2507,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4208",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-420802-082504",
+      "vocational_code": "420802",
+      "undergraduate_code": "082504",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“环境工程技术”与本科“环境生态工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4208",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-420803-082501",
@@ -3401,12 +3181,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "典型职业或行业场景"
+        "关键技术体系"
       ],
-      "rationale": "热能与发电工程类与本科能源动力类共享热能转换、动力设备和发电系统。 对“热能动力工程技术”先保留专业类层面的强相关候选。",
-      "generation_method": "专业类种子规则",
+      "rationale": "高职“热能动力工程技术”与本科“能源与动力工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4302",
-      "candidate_score": 0.4
+      "candidate_score": 0.5455
     },
     {
       "mapping_id": "VUG-430202-080501",
@@ -3607,26 +3387,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4303",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-430304-080506TK",
-      "vocational_code": "430304",
-      "undergraduate_code": "080506TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“氢能技术应用”与本科“氢能科学与工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4303",
-      "candidate_score": 0.8371
     },
     {
       "mapping_id": "VUG-430304-080501",
@@ -3989,9 +3749,9 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-430601-080402",
+      "mapping_id": "VUG-430601-080405",
       "vocational_code": "430601",
-      "undergraduate_code": "080402",
+      "undergraduate_code": "080405",
       "relation_level": "其他核心对应",
       "skills_behavior": "默认辅助标签",
       "consumable": true,
@@ -4003,35 +3763,15 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“材料工程技术”与本科“材料物理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-430601-080403",
-      "vocational_code": "430601",
-      "undergraduate_code": "080403",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“材料工程技术”与本科“材料化学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“材料工程技术”与本科“金属材料工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4306",
       "candidate_score": 0.9133
     },
     {
-      "mapping_id": "VUG-430601-080412T",
+      "mapping_id": "VUG-430601-080406",
       "vocational_code": "430601",
-      "undergraduate_code": "080412T",
+      "undergraduate_code": "080406",
       "relation_level": "其他核心对应",
       "skills_behavior": "默认辅助标签",
       "consumable": true,
@@ -4043,10 +3783,10 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“材料工程技术”与本科“功能材料”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“材料工程技术”与本科“无机非金属材料工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.88
+      "candidate_score": 0.8689
     },
     {
       "mapping_id": "VUG-430601-080401",
@@ -4069,24 +3809,24 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-430602-080420T",
+      "mapping_id": "VUG-430602-080407",
       "vocational_code": "430602",
-      "undergraduate_code": "080420T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "080407",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
+        "主要培养或实践对象",
         "关键技术体系"
       ],
-      "rationale": "高职“高分子材料智能制造技术”与本科“材料智能技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.8689
+      "rationale": "高分子材料智能制造技术与高分子材料与工程共享高分子材料对象、制备工艺与智能制造技术体系。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430602",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-430602-080401",
@@ -4101,17 +3841,17 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "典型职业或行业场景"
+        "关键技术体系"
       ],
-      "rationale": "非金属材料类与本科材料类共享材料制备、表征和工程应用知识基础。 对“高分子材料智能制造技术”先保留专业类层面的强相关候选。",
-      "generation_method": "专业类种子规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.4
+      "rationale": "两者共享材料结构、性能、制备与表征等通用材料科学基础。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430602",
+      "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-430602-080407",
+      "mapping_id": "VUG-430602-080420T",
       "vocational_code": "430602",
-      "undergraduate_code": "080407",
+      "undergraduate_code": "080420T",
       "relation_level": "强相关",
       "skills_behavior": "扩展检索",
       "consumable": true,
@@ -4120,33 +3860,33 @@
       "review_status": "高置信度候选",
       "confidence": "中",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "关键技术体系",
+        "核心知识基础"
       ],
-      "rationale": "高职“高分子材料智能制造技术”与本科“高分子材料与工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.5333
+      "rationale": "专业中的智能制造环节与材料智能技术共享材料数据、智能控制和先进制造方法。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430602",
+      "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-430603-080420T",
+      "mapping_id": "VUG-430603-080408",
       "vocational_code": "430603",
-      "undergraduate_code": "080420T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "080408",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
+        "主要培养或实践对象",
         "关键技术体系"
       ],
-      "rationale": "高职“复合材料智能制造技术”与本科“材料智能技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.88
+      "rationale": "复合材料智能制造技术与复合材料与工程共享复合材料对象、成型工艺和质量控制体系。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430603",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-430603-080401",
@@ -4161,12 +3901,32 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "典型职业或行业场景"
+        "关键技术体系"
       ],
-      "rationale": "非金属材料类与本科材料类共享材料制备、表征和工程应用知识基础。 对“复合材料智能制造技术”先保留专业类层面的强相关候选。",
-      "generation_method": "专业类种子规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.4
+      "rationale": "两者共享材料结构、性能、制备与表征等通用材料科学基础。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430603",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-430603-080420T",
+      "vocational_code": "430603",
+      "undergraduate_code": "080420T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "关键技术体系",
+        "主要实践或研究方法"
+      ],
+      "rationale": "专业中的智能制造环节与材料智能技术共享数字化工艺、智能装备和材料数据方法。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430603",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-430604-080401",
@@ -4269,6 +4029,26 @@
       "candidate_score": 0.4
     },
     {
+      "mapping_id": "VUG-430608-080406",
+      "vocational_code": "430608",
+      "undergraduate_code": "080406",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "核心知识基础"
+      ],
+      "rationale": "炭材料通常按无机非金属材料体系组织，其制备、结构与性能知识与无机非金属材料工程直接连续。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430608",
+      "candidate_score": 1
+    },
+    {
       "mapping_id": "VUG-430608-080401",
       "vocational_code": "430608",
       "undergraduate_code": "080401",
@@ -4281,32 +4061,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "典型职业或行业场景"
+        "主要实践或研究方法"
       ],
-      "rationale": "非金属材料类与本科材料类共享材料制备、表征和工程应用知识基础。 对“炭材料工程技术”先保留专业类层面的强相关候选。",
-      "generation_method": "专业类种子规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-430608-080403",
-      "vocational_code": "430608",
-      "undergraduate_code": "080403",
-      "relation_level": "强相关",
-      "skills_behavior": "扩展检索",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“炭材料工程技术”与本科“材料化学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4306",
-      "candidate_score": 0.5
+      "rationale": "两者共享材料结构、性能、制备与表征等通用材料科学基础。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-430608",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-430609-080401",
@@ -4346,7 +4106,7 @@
       "rationale": "高职“电子信息材料应用技术”与本科“电子信息材料”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4306",
-      "candidate_score": 1
+      "candidate_score": 0.93
     },
     {
       "mapping_id": "VUG-430610-080401",
@@ -4387,6 +4147,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4307",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-430701-080405",
+      "vocational_code": "430701",
+      "undergraduate_code": "080405",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“建筑材料工程技术”与本科“金属材料工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4307",
+      "candidate_score": 0.6
     },
     {
       "mapping_id": "VUG-430702-080401",
@@ -4472,8 +4252,8 @@
       "mapping_id": "VUG-440101-082801",
       "vocational_code": "440101",
       "undergraduate_code": "082801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -4486,14 +4266,14 @@
       "rationale": "高职“建筑设计”与本科“建筑学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4401",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-440102-082801",
       "vocational_code": "440102",
       "undergraduate_code": "082801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -4501,19 +4281,19 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“建筑装饰工程技术”与本科“建筑学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "建筑设计类与本科建筑、设计学类共享空间设计、建成环境和表达方法。 对“建筑装饰工程技术”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4401",
-      "candidate_score": 0.88
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-440103-082801",
       "vocational_code": "440103",
       "undergraduate_code": "082801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -4521,32 +4301,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“古建筑工程技术”与本科“建筑学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "建筑设计类与本科建筑、设计学类共享空间设计、建成环境和表达方法。 对“古建筑工程技术”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4401",
-      "candidate_score": 0.9133
-    },
-    {
-      "mapping_id": "VUG-440104-082803",
-      "vocational_code": "440104",
-      "undergraduate_code": "082803",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“园林工程技术”与本科“风景园林”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4401",
-      "candidate_score": 0.88
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-440104-082801",
@@ -4612,8 +4372,8 @@
       "mapping_id": "VUG-440106-082801",
       "vocational_code": "440106",
       "undergraduate_code": "082801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -4621,32 +4381,72 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“建筑室内设计”与本科“建筑学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "建筑设计类与本科建筑、设计学类共享空间设计、建成环境和表达方法。 对“建筑室内设计”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4401",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-440107-080906",
+      "vocational_code": "440107",
+      "undergraduate_code": "080906",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "关键技术体系",
+        "主要实践或研究方法"
+      ],
+      "rationale": "建筑动画技术与数字媒体技术共享三维建模、实时渲染、交互表达和数字内容生产技术体系。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-440107",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-440107-082801",
       "vocational_code": "440107",
       "undergraduate_code": "082801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "中",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景",
+        "核心知识基础"
       ],
-      "rationale": "高职“建筑动画技术”与本科“建筑学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4401",
-      "candidate_score": 0.88
+      "rationale": "建筑动画服务建筑方案表达与空间可视化，与建筑学共享建筑空间和设计表达场景。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-440107",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-440107-130310",
+      "vocational_code": "440107",
+      "undergraduate_code": "130310",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "主要实践或研究方法",
+        "典型职业或行业场景"
+      ],
+      "rationale": "两者共享动画制作、视听表达和数字内容创作方法，但建筑动画的应用对象更专门。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-440107",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-440108-082801",
@@ -4747,46 +4547,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4402",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-440301-081002",
-      "vocational_code": "440301",
-      "undergraduate_code": "081002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“建筑工程技术”与本科“建筑环境与能源应用工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4403",
-      "candidate_score": 0.8164
-    },
-    {
-      "mapping_id": "VUG-440301-081004",
-      "vocational_code": "440301",
-      "undergraduate_code": "081004",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“建筑工程技术”与本科“建筑电气与智能化”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4403",
-      "candidate_score": 0.83
     },
     {
       "mapping_id": "VUG-440301-081001",
@@ -4989,26 +4749,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-440402-081004",
-      "vocational_code": "440402",
-      "undergraduate_code": "081004",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“建筑电气工程技术”与本科“建筑电气与智能化”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4404",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-440402-081001",
       "vocational_code": "440402",
       "undergraduate_code": "081001",
@@ -5027,6 +4767,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4404",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-440402-081004",
+      "vocational_code": "440402",
+      "undergraduate_code": "081004",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“建筑电气工程技术”与本科“建筑电气与智能化”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4404",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-440403-081001",
@@ -5067,26 +4827,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4404",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-440404-081004",
-      "vocational_code": "440404",
-      "undergraduate_code": "081004",
-      "relation_level": "强相关",
-      "skills_behavior": "扩展检索",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“建筑智能化工程技术”与本科“建筑电气与智能化”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4404",
-      "candidate_score": 0.5455
     },
     {
       "mapping_id": "VUG-440405-081001",
@@ -5269,26 +5009,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-440602-081003",
-      "vocational_code": "440602",
-      "undergraduate_code": "081003",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“给排水工程技术”与本科“给排水科学与工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4406",
-      "candidate_score": 0.855
-    },
-    {
       "mapping_id": "VUG-440602-081001",
       "vocational_code": "440602",
       "undergraduate_code": "081001",
@@ -5307,6 +5027,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4406",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-440602-081003",
+      "vocational_code": "440602",
+      "undergraduate_code": "081003",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“给排水工程技术”与本科“给排水科学与工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4406",
+      "candidate_score": 0.5455
     },
     {
       "mapping_id": "VUG-440603-081001",
@@ -5432,21 +5172,21 @@
       "mapping_id": "VUG-440703-120209",
       "vocational_code": "440703",
       "undergraduate_code": "120209",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“现代物业管理”与本科“物业管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4407",
-      "candidate_score": 0.9133
+      "rationale": "现代物业管理与物业管理均以物业资产、设施服务和社区运营为主要培养与实践对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-440703",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-440703-120101",
@@ -5461,32 +5201,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "典型职业或行业场景"
+        "主要实践或研究方法"
       ],
-      "rationale": "房地产类与本科管理科学工程、工商管理共享不动产经营和项目管理场景。 对“现代物业管理”先保留专业类层面的强相关候选。",
-      "generation_method": "专业类种子规则",
-      "source_rule_id": "CLASS-4407",
-      "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-440703-120216T",
-      "vocational_code": "440703",
-      "undergraduate_code": "120216T",
-      "relation_level": "强相关",
-      "skills_behavior": "扩展检索",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“现代物业管理”与本科“创业管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4407",
-      "candidate_score": 0.5
+      "rationale": "两者共享组织管理、运营决策和服务流程等管理科学基础。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-440703",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-450101-081102",
@@ -5612,21 +5332,21 @@
       "mapping_id": "VUG-450203-081101",
       "vocational_code": "450203",
       "undergraduate_code": "081101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“水利水电工程技术”与本科“水利水电工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4502",
-      "candidate_score": 0.9133
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-450204-081101",
@@ -5903,7 +5623,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“机械设计与制造”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“机械设计与制造”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -5943,7 +5663,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“数字化设计与制造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“数字化设计与制造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -5963,7 +5683,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“数控技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“数控技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -5983,7 +5703,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“机械制造及自动化”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“机械制造及自动化”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6043,30 +5763,30 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“工业设计”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“工业设计”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-460106-080205",
+      "mapping_id": "VUG-460106-120701",
       "vocational_code": "460106",
-      "undergraduate_code": "080205",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "120701",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
-      "rationale": "高职“工业工程技术”与本科“工业设计”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“工业工程技术”与本科“工业工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4601",
-      "candidate_score": 0.88
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-460106-080201",
@@ -6083,7 +5803,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“工业工程技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“工业工程技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6123,7 +5843,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“材料成型及控制技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“材料成型及控制技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6143,7 +5863,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“现代铸造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“现代铸造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6163,7 +5883,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“现代锻压技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“现代锻压技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6183,7 +5903,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“智能焊接技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“智能焊接技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6203,7 +5923,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“工业材料表面处理技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“工业材料表面处理技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6243,7 +5963,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“增材制造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“增材制造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6263,7 +5983,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“模具设计与制造”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“模具设计与制造”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6283,7 +6003,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“特种加工技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“特种加工技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6303,7 +6023,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“智能光电制造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“智能光电制造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6323,7 +6043,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“电线电缆制造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“电线电缆制造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6343,7 +6063,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“内燃机制造与应用技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“内燃机制造与应用技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6363,7 +6083,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“机械装备制造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“机械装备制造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6383,7 +6103,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“工业产品质量检测技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“工业产品质量检测技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6403,7 +6123,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“理化测试与质检技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“理化测试与质检技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6423,7 +6143,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“电力装备智造与维护技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“电力装备智造与维护技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -6443,7 +6163,7 @@
         "核心知识基础",
         "典型职业或行业场景"
       ],
-      "rationale": "机械设计制造类与本科机械类共享机械设计、制造工艺和装备技术体系。 对“轴承设计与制造技术”先保留专业类层面的强相关候选。",
+      "rationale": "机械设计制造类与本科机械、工业工程类共享机械设计、制造工艺和生产系统技术。 对“轴承设计与制造技术”先保留专业类层面的强相关候选。",
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4601",
       "candidate_score": 0.4
@@ -7029,24 +6749,24 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-460405-081802",
+      "mapping_id": "VUG-460405-081806T",
       "vocational_code": "460405",
-      "undergraduate_code": "081802",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "081806T",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
+        "主要培养或实践对象",
         "关键技术体系"
       ],
-      "rationale": "高职“轨道交通工程机械制造与维护”与本科“交通工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4604",
-      "candidate_score": 0.8415
+      "rationale": "轨道交通工程机械制造与维护与交通设备与控制工程共享轨道交通装备、机电控制和运维保障对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-460405",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-460405-081801",
@@ -7060,20 +6780,40 @@
       "review_status": "高置信度候选",
       "confidence": "中",
       "relation_basis": [
-        "核心知识基础",
-        "典型职业或行业场景"
+        "典型职业或行业场景",
+        "核心知识基础"
       ],
-      "rationale": "轨道装备类与本科交通运输、机械类共享轨道车辆和装备技术体系。 对“轨道交通工程机械制造与维护”先保留专业类层面的强相关候选。",
-      "generation_method": "专业类种子规则",
-      "source_rule_id": "CLASS-4604",
-      "candidate_score": 0.4
+      "rationale": "两者共享轨道交通运输系统、运营组织和安全保障场景。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-460405",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-460405-081802",
+      "vocational_code": "460405",
+      "undergraduate_code": "081802",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "典型职业或行业场景",
+        "关键技术体系"
+      ],
+      "rationale": "两者在轨道工程运行、设备保障和交通系统场景上具有直接关联。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-460405",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-460501-081901",
       "vocational_code": "460501",
       "undergraduate_code": "081901",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -7081,12 +6821,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“船舶工程技术”与本科“船舶与海洋工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "船舶与海洋工程装备类与本科海洋工程、机械类共享船海装备对象。 对“船舶工程技术”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4605",
-      "candidate_score": 0.8371
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-460502-081901",
@@ -7309,6 +7049,26 @@
       "candidate_score": 0.4
     },
     {
+      "mapping_id": "VUG-460511-081902T",
+      "vocational_code": "460511",
+      "undergraduate_code": "081902T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“海洋电力工程技术”与本科“海洋工程与技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4605",
+      "candidate_score": 0.5
+    },
+    {
       "mapping_id": "VUG-460512-081901",
       "vocational_code": "460512",
       "undergraduate_code": "081901",
@@ -7384,26 +7144,6 @@
         "关键技术体系"
       ],
       "rationale": "高职“海洋智能机器人应用技术”与本科“海洋机器人”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4605",
-      "candidate_score": 0.6
-    },
-    {
-      "mapping_id": "VUG-460514-081907T",
-      "vocational_code": "460514",
-      "undergraduate_code": "081907T",
-      "relation_level": "强相关",
-      "skills_behavior": "扩展检索",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“海洋智能机器人应用技术”与本科“海洋智能与无人技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4605",
       "candidate_score": 0.5
@@ -7832,8 +7572,8 @@
       "mapping_id": "VUG-470101-071002",
       "vocational_code": "470101",
       "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -7846,7 +7586,7 @@
       "rationale": "高职“食品生物技术”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-470101-083001",
@@ -7872,8 +7612,8 @@
       "mapping_id": "VUG-470102-071002",
       "vocational_code": "470102",
       "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -7886,7 +7626,7 @@
       "rationale": "高职“药品生物技术”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-470102-083001",
@@ -7912,8 +7652,8 @@
       "mapping_id": "VUG-470103-071002",
       "vocational_code": "470103",
       "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -7926,7 +7666,7 @@
       "rationale": "高职“农业生物技术”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-470103-083001",
@@ -7952,8 +7692,8 @@
       "mapping_id": "VUG-470104-071002",
       "vocational_code": "470104",
       "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -7966,7 +7706,7 @@
       "rationale": "高职“化工生物技术”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-470104-083001",
@@ -7989,26 +7729,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-470105-071002",
-      "vocational_code": "470105",
-      "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“生物产品检验检疫”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.83
-    },
-    {
       "mapping_id": "VUG-470105-083001",
       "vocational_code": "470105",
       "undergraduate_code": "083001",
@@ -8027,26 +7747,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4701",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-470106-071002",
-      "vocational_code": "470106",
-      "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“绿色生物制造技术”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-470106-083004T",
@@ -8132,8 +7832,8 @@
       "mapping_id": "VUG-470107-071002",
       "vocational_code": "470107",
       "undergraduate_code": "071002",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -8146,7 +7846,7 @@
       "rationale": "高职“生物信息技术”与本科“生物技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-470107-083001",
@@ -8752,41 +8452,21 @@
       "mapping_id": "VUG-480201-081702",
       "vocational_code": "480201",
       "undergraduate_code": "081702",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“包装工程技术”与本科“包装工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4802",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-480201-130512T",
-      "vocational_code": "480201",
-      "undergraduate_code": "130512T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“包装工程技术”与本科“包装设计”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4802",
-      "candidate_score": 0.88
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-480201-081701",
@@ -8987,46 +8667,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4804",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-480402-130513TK",
-      "vocational_code": "480402",
-      "undergraduate_code": "130513TK",
-      "relation_level": "强相关",
-      "skills_behavior": "扩展检索",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“服装设计与工艺”与本科“珠宝首饰设计与工艺”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4804",
-      "candidate_score": 0.5714
-    },
-    {
-      "mapping_id": "VUG-480403-081605T",
-      "vocational_code": "480403",
-      "undergraduate_code": "081605T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“丝绸技术”与本科“丝绸设计与工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4804",
-      "candidate_score": 0.8371
     },
     {
       "mapping_id": "VUG-480403-081601",
@@ -9389,26 +9029,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-490105-082705",
-      "vocational_code": "490105",
-      "undergraduate_code": "082705",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“酿酒技术”与本科“酿酒工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4901",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-490105-082701",
       "vocational_code": "490105",
       "undergraduate_code": "082701",
@@ -9427,6 +9047,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-4901",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-490105-082705",
+      "vocational_code": "490105",
+      "undergraduate_code": "082705",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“酿酒技术”与本科“酿酒工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-4901",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-490106-082701",
@@ -9469,6 +9109,46 @@
       "candidate_score": 0.4
     },
     {
+      "mapping_id": "VUG-490201-081302",
+      "vocational_code": "490201",
+      "undergraduate_code": "081302",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "关键技术体系"
+      ],
+      "rationale": "药品生产技术与制药工程均以药品工业化生产、工艺控制和质量保障为核心对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490201",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490202-083002T",
+      "vocational_code": "490202",
+      "undergraduate_code": "083002T",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "关键技术体系"
+      ],
+      "rationale": "生物制药技术与生物制药均围绕生物药物制备、生产工艺和质量控制。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490202",
+      "candidate_score": 1
+    },
+    {
       "mapping_id": "VUG-490203-100702",
       "vocational_code": "490203",
       "undergraduate_code": "100702",
@@ -9489,9 +9169,189 @@
       "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-490205-100805T",
+      "mapping_id": "VUG-490204-081302",
+      "vocational_code": "490204",
+      "undergraduate_code": "081302",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "关键技术体系"
+      ],
+      "rationale": "化学制药技术与制药工程共享化学药物生产、反应工艺和工程放大对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490204",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490205-090402",
       "vocational_code": "490205",
-      "undergraduate_code": "100805T",
+      "undergraduate_code": "090402",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "核心知识基础"
+      ],
+      "rationale": "兽药制药技术与动物药学均以动物用药物为主要对象，共享药理、制剂、质量控制和安全使用知识。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490205",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490205-081302",
+      "vocational_code": "490205",
+      "undergraduate_code": "081302",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "关键技术体系",
+        "典型职业或行业场景"
+      ],
+      "rationale": "兽药工业化生产与制药工程共享药品生产工艺、装备、工程放大和质量保障体系。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490205",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490206-100705T",
+      "vocational_code": "490206",
+      "undergraduate_code": "100705T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "主要实践或研究方法",
+        "典型职业或行业场景"
+      ],
+      "rationale": "药品质量与安全与药物分析共享药品检测、质量评价和质量控制方法。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490206",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490207-081302",
+      "vocational_code": "490207",
+      "undergraduate_code": "081302",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "关键技术体系",
+        "典型职业或行业场景"
+      ],
+      "rationale": "制药设备应用技术服务于制药生产装备运行，与制药工程共享制药工艺和生产系统场景。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490207",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490208-100704T",
+      "vocational_code": "490208",
+      "undergraduate_code": "100704T",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "典型职业或行业场景"
+      ],
+      "rationale": "药品经营与管理与药事管理均以药品流通、合规和药事治理为主要对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490208",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490209-100704T",
+      "vocational_code": "490209",
+      "undergraduate_code": "100704T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "典型职业或行业场景",
+        "培养出口"
+      ],
+      "rationale": "食品药品监督管理与药事管理在药品监管、合规和质量治理场景上直接相关。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490209",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490210-140011TK",
+      "vocational_code": "490210",
+      "undergraduate_code": "140011TK",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "关键技术体系"
+      ],
+      "rationale": "智能医疗装备技术与医疗器械与装备工程均以智能医疗装备的研发、应用和运维为对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490210",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490211-140011TK",
+      "vocational_code": "490211",
+      "undergraduate_code": "140011TK",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "关键技术体系"
+      ],
+      "rationale": "医用电子仪器技术与医疗器械与装备工程共享医用电子设备、检测和维护技术。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490211",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490212-082601",
+      "vocational_code": "490212",
+      "undergraduate_code": "082601",
       "relation_level": "强相关",
       "skills_behavior": "扩展检索",
       "consumable": true,
@@ -9503,30 +9363,130 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“兽药制药技术”与本科“中药制药”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-4902",
-      "candidate_score": 0.6667
+      "rationale": "医用材料与应用与生物医学工程在医用材料、生物相容性和医疗应用方面强相关。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490212",
+      "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-490215-082604T",
-      "vocational_code": "490215",
-      "undergraduate_code": "082604T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "mapping_id": "VUG-490213-140011TK",
+      "vocational_code": "490213",
+      "undergraduate_code": "140011TK",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "典型职业或行业场景"
+      ],
+      "rationale": "医疗器械维护与管理与医疗器械与装备工程共享医疗装备运维和全生命周期管理对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490213",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490214-140011TK",
+      "vocational_code": "490214",
+      "undergraduate_code": "140011TK",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "中",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "典型职业或行业场景"
+      ],
+      "rationale": "医疗器械经营与服务与医疗器械与装备工程共享医疗器械对象和技术服务场景。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490214",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490215-082604T",
+      "vocational_code": "490215",
+      "undergraduate_code": "082604T",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“康复工程技术”与本科“康复工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-4902",
-      "candidate_score": 0.88
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490216-082702",
+      "vocational_code": "490216",
+      "undergraduate_code": "082702",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "主要实践或研究方法",
+        "典型职业或行业场景"
+      ],
+      "rationale": "保健食品质量与管理与食品质量与安全共享食品检测、质量控制和合规场景。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490216",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490217-100708T",
+      "vocational_code": "490217",
+      "undergraduate_code": "100708T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "典型职业或行业场景"
+      ],
+      "rationale": "化妆品经营与管理与化妆品科学与技术共享化妆品对象、质量知识和行业场景。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490217",
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-490218-100708T",
+      "vocational_code": "490218",
+      "undergraduate_code": "100708T",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
+      "consumable": true,
+      "is_primary": true,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "高",
+      "relation_basis": [
+        "主要培养或实践对象",
+        "主要实践或研究方法"
+      ],
+      "rationale": "化妆品质量与安全与化妆品科学与技术共享产品安全评价、检测和质量控制对象。",
+      "generation_method": "专业级覆盖规则",
+      "source_rule_id": "MAJOR-490218",
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-490301-082703",
@@ -10192,21 +10152,21 @@
       "mapping_id": "VUG-500303-081804K",
       "vocational_code": "500303",
       "undergraduate_code": "081804K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“轮机工程技术”与本科“轮机工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5003",
-      "candidate_score": 0.88
+      "candidate_score": 1
     },
     {
       "mapping_id": "VUG-500303-081801",
@@ -10789,6 +10749,26 @@
       "candidate_score": 0.4
     },
     {
+      "mapping_id": "VUG-500601-081802",
+      "vocational_code": "500601",
+      "undergraduate_code": "081802",
+      "relation_level": "其他核心对应",
+      "skills_behavior": "默认辅助标签",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“城市轨道交通工程技术”与本科“交通工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5006",
+      "candidate_score": 0.88
+    },
+    {
       "mapping_id": "VUG-500601-081801",
       "vocational_code": "500601",
       "undergraduate_code": "081801",
@@ -10989,9 +10969,9 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-510101-080714T",
+      "mapping_id": "VUG-510101-080701",
       "vocational_code": "510101",
-      "undergraduate_code": "080714T",
+      "undergraduate_code": "080701",
       "relation_level": "主映射/核心对应",
       "skills_behavior": "默认标签",
       "consumable": true,
@@ -11003,15 +10983,15 @@
         "主要培养或实践对象",
         "核心知识基础"
       ],
-      "rationale": "高职“电子信息工程技术”与本科“电子信息科学与技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“电子信息工程技术”与本科“电子信息工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5101",
-      "candidate_score": 0.94
+      "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-510101-080701",
+      "mapping_id": "VUG-510101-080706",
       "vocational_code": "510101",
-      "undergraduate_code": "080701",
+      "undergraduate_code": "080706",
       "relation_level": "其他核心对应",
       "skills_behavior": "默认辅助标签",
       "consumable": true,
@@ -11023,10 +11003,30 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“电子信息工程技术”与本科“电子信息工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“电子信息工程技术”与本科“信息工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5101",
       "candidate_score": 0.9133
+    },
+    {
+      "mapping_id": "VUG-510101-080714T",
+      "vocational_code": "510101",
+      "undergraduate_code": "080714T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“电子信息工程技术”与本科“电子信息科学与技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5101",
+      "candidate_score": 0.6667
     },
     {
       "mapping_id": "VUG-510102-080701",
@@ -11689,26 +11689,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-510216-080918TK",
-      "vocational_code": "510216",
-      "undergraduate_code": "080918TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“密码技术应用”与本科“密码科学与技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5102",
-      "candidate_score": 0.9133
-    },
-    {
       "mapping_id": "VUG-510216-080901",
       "vocational_code": "510216",
       "undergraduate_code": "080901",
@@ -11727,6 +11707,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5102",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-510216-080918TK",
+      "vocational_code": "510216",
+      "undergraduate_code": "080918TK",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“密码技术应用”与本科“密码科学与技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5102",
+      "candidate_score": 0.6667
     },
     {
       "mapping_id": "VUG-510217-080901",
@@ -12047,46 +12047,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5103",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-510309-080705",
-      "vocational_code": "510309",
-      "undergraduate_code": "080705",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“电信服务与管理”与本科“光电信息科学与工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5103",
-      "candidate_score": 0.8244
-    },
-    {
-      "mapping_id": "VUG-510309-080715T",
-      "vocational_code": "510309",
-      "undergraduate_code": "080715T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“电信服务与管理”与本科“电信工程及管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5103",
-      "candidate_score": 0.8371
     },
     {
       "mapping_id": "VUG-510309-080701",
@@ -12452,8 +12412,8 @@
       "mapping_id": "VUG-520401K-100510TK",
       "vocational_code": "520401K",
       "undergraduate_code": "100510TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -12466,14 +12426,14 @@
       "rationale": "高职“中医学”与本科“中医康复学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520401K-100511TK",
       "vocational_code": "520401K",
       "undergraduate_code": "100511TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -12486,7 +12446,7 @@
       "rationale": "高职“中医学”与本科“中医养生学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520402K-100513TK",
@@ -12512,8 +12472,8 @@
       "mapping_id": "VUG-520402K-100501K",
       "vocational_code": "520402K",
       "undergraduate_code": "100501K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -12526,7 +12486,7 @@
       "rationale": "高职“中医骨伤”与本科“中医学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520403K-100502K",
@@ -12669,31 +12629,11 @@
       "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-520410-100802",
-      "vocational_code": "520410",
-      "undergraduate_code": "100802",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“中药学”与本科“中药资源与开发”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.8371
-    },
-    {
       "mapping_id": "VUG-520410-100805T",
       "vocational_code": "520410",
       "undergraduate_code": "100805T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -12706,7 +12646,7 @@
       "rationale": "高职“中药学”与本科“中药制药”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520411-100804T",
@@ -12749,26 +12689,6 @@
       "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-520414-100801",
-      "vocational_code": "520414",
-      "undergraduate_code": "100801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“中药材生产与加工”与本科“中药学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.83
-    },
-    {
       "mapping_id": "VUG-520415-100805T",
       "vocational_code": "520415",
       "undergraduate_code": "100805T",
@@ -12792,8 +12712,8 @@
       "mapping_id": "VUG-520415-100801",
       "vocational_code": "520415",
       "undergraduate_code": "100801",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -12806,7 +12726,7 @@
       "rationale": "高职“中药制药”与本科“中药学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520416-100510TK",
@@ -12832,8 +12752,8 @@
       "mapping_id": "VUG-520416-100501K",
       "vocational_code": "520416",
       "undergraduate_code": "100501K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -12846,27 +12766,7 @@
       "rationale": "高职“中医康复技术”与本科“中医学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-520417-100501K",
-      "vocational_code": "520417",
-      "undergraduate_code": "100501K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“中医养生保健”与本科“中医学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5204",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520417-100511TK",
@@ -13289,26 +13189,6 @@
       "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-520704-120410T",
-      "vocational_code": "520704",
-      "undergraduate_code": "120410T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“健康大数据管理与服务”与本科“健康服务与管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5207",
-      "candidate_score": 0.82
-    },
-    {
       "mapping_id": "VUG-520704-100401K",
       "vocational_code": "520704",
       "undergraduate_code": "100401K",
@@ -13329,26 +13209,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-520801-120410T",
-      "vocational_code": "520801",
-      "undergraduate_code": "120410T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“健康管理”与本科“健康服务与管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5208",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-520801-120401",
       "vocational_code": "520801",
       "undergraduate_code": "120401",
@@ -13367,6 +13227,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5208",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-520801-120410T",
+      "vocational_code": "520801",
+      "undergraduate_code": "120410T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“健康管理”与本科“健康服务与管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5208",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520802-120401",
@@ -13412,8 +13292,8 @@
       "mapping_id": "VUG-520804-071101",
       "vocational_code": "520804",
       "undergraduate_code": "071101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -13426,7 +13306,7 @@
       "rationale": "高职“心理咨询”与本科“心理学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5208",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-520804-120401",
@@ -13467,26 +13347,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5208",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-520806-120410T",
-      "vocational_code": "520806",
-      "undergraduate_code": "120410T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“生殖健康管理”与本科“健康服务与管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5208",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-520806-120401",
@@ -13752,8 +13612,8 @@
       "mapping_id": "VUG-530104-020201K",
       "vocational_code": "530104",
       "undergraduate_code": "020201K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -13761,12 +13621,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“财政支出绩效管理”与本科“财政学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "财政税务类与本科财政学类共享财政制度、税收业务和公共经济基础。 对“财政支出绩效管理”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5301",
-      "candidate_score": 0.83
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530201-020301K",
@@ -13792,8 +13652,8 @@
       "mapping_id": "VUG-530201-020302",
       "vocational_code": "530201",
       "undergraduate_code": "020302",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -13806,14 +13666,14 @@
       "rationale": "高职“金融服务与管理”与本科“金融工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5302",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-530201-020305T",
       "vocational_code": "530201",
       "undergraduate_code": "020305T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -13826,7 +13686,7 @@
       "rationale": "高职“金融服务与管理”与本科“金融数学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5302",
-      "candidate_score": 0.9133
+      "candidate_score": 0.6667
     },
     {
       "mapping_id": "VUG-530202-020310T",
@@ -13852,8 +13712,8 @@
       "mapping_id": "VUG-530202-020301K",
       "vocational_code": "530202",
       "undergraduate_code": "020301K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -13866,27 +13726,7 @@
       "rationale": "高职“金融科技应用”与本科“金融学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5302",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-530203-020303",
-      "vocational_code": "530203",
-      "undergraduate_code": "020303",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“保险实务”与本科“保险学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5302",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-530203-020301K",
@@ -13907,6 +13747,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5302",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-530203-020303",
+      "vocational_code": "530203",
+      "undergraduate_code": "020303",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“保险实务”与本科“保险学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5302",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-530204-020306T",
@@ -13992,8 +13852,8 @@
       "mapping_id": "VUG-530207-020301K",
       "vocational_code": "530207",
       "undergraduate_code": "020301K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14006,14 +13866,14 @@
       "rationale": "高职“国际金融”与本科“金融学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5302",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-530208-020301K",
       "vocational_code": "530208",
       "undergraduate_code": "020301K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14026,7 +13886,7 @@
       "rationale": "高职“农村金融”与本科“金融学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5302",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-530301-120204",
@@ -14072,8 +13932,8 @@
       "mapping_id": "VUG-530302-120203K",
       "vocational_code": "530302",
       "undergraduate_code": "120203K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14081,32 +13941,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“大数据与会计”与本科“会计学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "财务会计类与本科工商管理类中的会计财务方向共享核算和财务管理体系。 对“大数据与会计”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5303",
-      "candidate_score": 0.8467
-    },
-    {
-      "mapping_id": "VUG-530303-120207",
-      "vocational_code": "530303",
-      "undergraduate_code": "120207",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“大数据与审计”与本科“审计学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5303",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530303-120203K",
@@ -14132,8 +13972,8 @@
       "mapping_id": "VUG-530304-120203K",
       "vocational_code": "530304",
       "undergraduate_code": "120203K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14141,12 +13981,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“会计信息管理”与本科“会计学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "财务会计类与本科工商管理类中的会计财务方向共享核算和财务管理体系。 对“会计信息管理”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5303",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530305-120203K",
@@ -14192,8 +14032,8 @@
       "mapping_id": "VUG-530401-071201",
       "vocational_code": "530401",
       "undergraduate_code": "071201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14201,19 +14041,19 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“统计与大数据分析”与本科“统计学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "统计类与本科统计学、经济学类共享数据采集、分析和经济应用方法。 对“统计与大数据分析”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5304",
-      "candidate_score": 0.83
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530402-071201",
       "vocational_code": "530402",
       "undergraduate_code": "071201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14221,19 +14061,19 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“统计与会计核算”与本科“统计学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "统计类与本科统计学、经济学类共享数据采集、分析和经济应用方法。 对“统计与会计核算”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5304",
-      "candidate_score": 0.8371
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530403-071201",
       "vocational_code": "530403",
       "undergraduate_code": "071201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -14241,12 +14081,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“市场调查与统计分析”与本科“统计学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "统计类与本科统计学、经济学类共享数据采集、分析和经济应用方法。 对“市场调查与统计分析”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5304",
-      "candidate_score": 0.8244
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530501-020401",
@@ -14829,44 +14669,44 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-530801-120601",
-      "vocational_code": "530801",
-      "undergraduate_code": "120601",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“物流工程技术”与本科“物流管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5308",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-530801-120602",
       "vocational_code": "530801",
       "undergraduate_code": "120602",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "主映射/核心对应",
+      "skills_behavior": "默认标签",
       "consumable": true,
-      "is_primary": false,
+      "is_primary": true,
       "sensitive_restriction": false,
       "review_status": "高置信度候选",
-      "confidence": "中",
+      "confidence": "高",
       "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
+        "主要培养或实践对象",
+        "核心知识基础"
       ],
       "rationale": "高职“物流工程技术”与本科“物流工程”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5308",
-      "candidate_score": 0.88
+      "candidate_score": 1
+    },
+    {
+      "mapping_id": "VUG-530801-120601",
+      "vocational_code": "530801",
+      "undergraduate_code": "120601",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "典型职业或行业场景"
+      ],
+      "rationale": "物流类与本科物流管理工程类共享供应链、仓储运输和物流系统对象。 对“物流工程技术”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
+      "source_rule_id": "CLASS-5308",
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-530802-120601",
@@ -16149,26 +15989,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-550112-130401",
-      "vocational_code": "550112",
-      "undergraduate_code": "130401",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“工艺美术品设计”与本科“美术学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5501",
-      "candidate_score": 0.8371
-    },
-    {
       "mapping_id": "VUG-550112-130507",
       "vocational_code": "550112",
       "undergraduate_code": "130507",
@@ -16427,26 +16247,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5501",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-550118-130404",
-      "vocational_code": "550118",
-      "undergraduate_code": "130404",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“摄影与摄像艺术”与本科“摄影”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5501",
-      "candidate_score": 0.8371
     },
     {
       "mapping_id": "VUG-550118-130501",
@@ -16812,8 +16612,8 @@
       "mapping_id": "VUG-550126-130403",
       "vocational_code": "550126",
       "undergraduate_code": "130403",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -16826,7 +16626,7 @@
       "rationale": "高职“雕塑设计”与本科“雕塑”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5501",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550126-130501",
@@ -16992,8 +16792,8 @@
       "mapping_id": "VUG-550201-130202",
       "vocational_code": "550201",
       "undergraduate_code": "130202",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17006,14 +16806,14 @@
       "rationale": "高职“音乐表演”与本科“音乐学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550201-130301",
       "vocational_code": "550201",
       "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17026,7 +16826,7 @@
       "rationale": "高职“音乐表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550202-130204",
@@ -17049,26 +16849,6 @@
       "candidate_score": 1
     },
     {
-      "mapping_id": "VUG-550202-130205",
-      "vocational_code": "550202",
-      "undergraduate_code": "130205",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“舞蹈表演”与本科“舞蹈学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-550202-130213TK",
       "vocational_code": "550202",
       "undergraduate_code": "130213TK",
@@ -17089,11 +16869,31 @@
       "candidate_score": 0.9133
     },
     {
+      "mapping_id": "VUG-550202-130205",
+      "vocational_code": "550202",
+      "undergraduate_code": "130205",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“舞蹈表演”与本科“舞蹈学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5502",
+      "candidate_score": 0.5
+    },
+    {
       "mapping_id": "VUG-550203-130301",
       "vocational_code": "550203",
       "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17106,14 +16906,14 @@
       "rationale": "高职“戏曲表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550204-130301",
       "vocational_code": "550204",
       "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17126,14 +16926,14 @@
       "rationale": "高职“表演艺术”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
-      "mapping_id": "VUG-550205-130301",
+      "mapping_id": "VUG-550205-130304",
       "vocational_code": "550205",
-      "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "130304",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17143,17 +16943,17 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“戏剧影视表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“戏剧影视表演”与本科“戏剧影视文学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8467
+      "candidate_score": 0.6667
     },
     {
-      "mapping_id": "VUG-550205-130302",
+      "mapping_id": "VUG-550205-130306",
       "vocational_code": "550205",
-      "undergraduate_code": "130302",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "130306",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17163,17 +16963,17 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“戏剧影视表演”与本科“戏剧学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“戏剧影视表演”与本科“戏剧影视导演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8467
+      "candidate_score": 0.6
     },
     {
-      "mapping_id": "VUG-550205-130312T",
+      "mapping_id": "VUG-550205-130307",
       "vocational_code": "550205",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "undergraduate_code": "130307",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17183,17 +16983,17 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“戏剧影视表演”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“戏剧影视表演”与本科“戏剧影视美术设计”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550206-130301",
       "vocational_code": "550206",
       "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17206,14 +17006,14 @@
       "rationale": "高职“歌舞表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550207-130301",
       "vocational_code": "550207",
       "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17226,14 +17026,14 @@
       "rationale": "高职“曲艺表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550207-130314TK",
       "vocational_code": "550207",
       "undergraduate_code": "130314TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17246,47 +17046,7 @@
       "rationale": "高职“曲艺表演”与本科“曲艺”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-550208-130202",
-      "vocational_code": "550208",
-      "undergraduate_code": "130202",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“音乐剧表演”与本科“音乐学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.86
-    },
-    {
-      "mapping_id": "VUG-550208-130301",
-      "vocational_code": "550208",
-      "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“音乐剧表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.86
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550208-130315TK",
@@ -17309,11 +17069,11 @@
       "candidate_score": 0.9
     },
     {
-      "mapping_id": "VUG-550210-130202",
-      "vocational_code": "550210",
-      "undergraduate_code": "130202",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "mapping_id": "VUG-550208-130201",
+      "vocational_code": "550208",
+      "undergraduate_code": "130201",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17323,10 +17083,10 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“现代流行音乐”与本科“音乐学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“音乐剧表演”与本科“音乐表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5714
     },
     {
       "mapping_id": "VUG-550210-130209T",
@@ -17352,8 +17112,8 @@
       "mapping_id": "VUG-550211-130202",
       "vocational_code": "550211",
       "undergraduate_code": "130202",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17366,7 +17126,7 @@
       "rationale": "高职“戏曲音乐”与本科“音乐学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550212-130202",
@@ -17392,8 +17152,8 @@
       "mapping_id": "VUG-550212-130201",
       "vocational_code": "550212",
       "undergraduate_code": "130201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17406,14 +17166,14 @@
       "rationale": "高职“音乐制作”与本科“音乐表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550212-130315TK",
       "vocational_code": "550212",
       "undergraduate_code": "130315TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17426,7 +17186,7 @@
       "rationale": "高职“音乐制作”与本科“音乐剧”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.9133
+      "candidate_score": 0.6667
     },
     {
       "mapping_id": "VUG-550215-130206",
@@ -17452,8 +17212,8 @@
       "mapping_id": "VUG-550215-130205",
       "vocational_code": "550215",
       "undergraduate_code": "130205",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17466,14 +17226,14 @@
       "rationale": "高职“舞蹈编导”与本科“舞蹈学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550216-130202",
       "vocational_code": "550216",
       "undergraduate_code": "130202",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17486,134 +17246,14 @@
       "rationale": "高职“音乐传播”与本科“音乐学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-550217-130301",
-      "vocational_code": "550217",
-      "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“时尚表演与传播”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8371
-    },
-    {
-      "mapping_id": "VUG-550219-130203",
-      "vocational_code": "550219",
-      "undergraduate_code": "130203",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“作曲技术”与本科“作曲与作曲技术理论”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8244
-    },
-    {
-      "mapping_id": "VUG-550220-130301",
-      "vocational_code": "550220",
-      "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“现代魔术设计与表演”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.8244
-    },
-    {
-      "mapping_id": "VUG-550221-130301",
-      "vocational_code": "550221",
-      "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“现代杂技表演艺术”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5502",
-      "candidate_score": 0.83
-    },
-    {
-      "mapping_id": "VUG-550301-030401",
-      "vocational_code": "550301",
-      "undergraduate_code": "030401",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“民族表演艺术”与本科“民族学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5503",
-      "candidate_score": 0.8467
-    },
-    {
-      "mapping_id": "VUG-550301-130301",
-      "vocational_code": "550301",
-      "undergraduate_code": "130301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“民族表演艺术”与本科“表演”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5503",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-550302-030401",
       "vocational_code": "550302",
       "undergraduate_code": "030401",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17626,67 +17266,7 @@
       "rationale": "高职“民族美术”与本科“民族学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5503",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-550303-030401",
-      "vocational_code": "550303",
-      "undergraduate_code": "030401",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“民族服装与饰品”与本科“民族学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5503",
-      "candidate_score": 0.8371
-    },
-    {
-      "mapping_id": "VUG-550304-030401",
-      "vocational_code": "550304",
-      "undergraduate_code": "030401",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“民族传统技艺”与本科“民族学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5503",
-      "candidate_score": 0.8467
-    },
-    {
-      "mapping_id": "VUG-550305-030401",
-      "vocational_code": "550305",
-      "undergraduate_code": "030401",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“中国少数民族语言文化”与本科“民族学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5503",
-      "candidate_score": 0.82
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-560101-050301",
@@ -17712,8 +17292,8 @@
       "mapping_id": "VUG-560102-050301",
       "vocational_code": "560102",
       "undergraduate_code": "050301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -17721,32 +17301,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“网络新闻与传播”与本科“新闻学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "新闻出版类与本科新闻传播、轻工类共享内容生产、编辑出版和印刷传播场景。 对“网络新闻与传播”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5601",
-      "candidate_score": 0.8371
-    },
-    {
-      "mapping_id": "VUG-560102-050304",
-      "vocational_code": "560102",
-      "undergraduate_code": "050304",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“网络新闻与传播”与本科“传播学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5601",
-      "candidate_score": 0.8371
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-560102-050309T",
@@ -17909,26 +17469,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-560202-130312T",
-      "vocational_code": "560202",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“广播影视节目制作”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.8467
-    },
-    {
       "mapping_id": "VUG-560202-050302",
       "vocational_code": "560202",
       "undergraduate_code": "050302",
@@ -17989,26 +17529,6 @@
       "candidate_score": 0.6
     },
     {
-      "mapping_id": "VUG-560204-130312T",
-      "vocational_code": "560204",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“影视编导”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-560204-050302",
       "vocational_code": "560204",
       "undergraduate_code": "050302",
@@ -18049,11 +17569,31 @@
       "candidate_score": 0.5
     },
     {
+      "mapping_id": "VUG-560204-130312T",
+      "vocational_code": "560204",
+      "undergraduate_code": "130312T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“影视编导”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5602",
+      "candidate_score": 0.5
+    },
+    {
       "mapping_id": "VUG-560205-050301",
       "vocational_code": "560205",
       "undergraduate_code": "050301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18066,7 +17606,7 @@
       "rationale": "高职“新闻采编与制作”与本科“新闻学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-560205-050302",
@@ -18089,46 +17629,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-560206-130310",
-      "vocational_code": "560206",
-      "undergraduate_code": "130310",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“影视动画”与本科“动画”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.88
-    },
-    {
-      "mapping_id": "VUG-560206-130312T",
-      "vocational_code": "560206",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“影视动画”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-560206-050302",
       "vocational_code": "560206",
       "undergraduate_code": "050302",
@@ -18149,11 +17649,11 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-560207-130312T",
-      "vocational_code": "560207",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "mapping_id": "VUG-560206-130310",
+      "vocational_code": "560206",
+      "undergraduate_code": "130310",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18163,10 +17663,30 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“影视制片管理”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“影视动画”与本科“动画”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5
+    },
+    {
+      "mapping_id": "VUG-560206-130312T",
+      "vocational_code": "560206",
+      "undergraduate_code": "130312T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“影视动画”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5602",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-560207-050302",
@@ -18189,26 +17709,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-560208-130312T",
-      "vocational_code": "560208",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“影视多媒体技术”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.86
-    },
-    {
       "mapping_id": "VUG-560208-050302",
       "vocational_code": "560208",
       "undergraduate_code": "050302",
@@ -18227,26 +17727,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5602",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-560209-130312T",
-      "vocational_code": "560209",
-      "undergraduate_code": "130312T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“影视照明技术与艺术”与本科“影视技术”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.8244
     },
     {
       "mapping_id": "VUG-560209-050302",
@@ -18369,26 +17849,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-560215-050304",
-      "vocational_code": "560215",
-      "undergraduate_code": "050304",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“传播与策划”与本科“传播学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.86
-    },
-    {
       "mapping_id": "VUG-560215-050302",
       "vocational_code": "560215",
       "undergraduate_code": "050302",
@@ -18407,26 +17867,6 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5602",
       "candidate_score": 0.4
-    },
-    {
-      "mapping_id": "VUG-560216-050303",
-      "vocational_code": "560216",
-      "undergraduate_code": "050303",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“全媒体广告策划与营销”与本科“广告学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5602",
-      "candidate_score": 0.82
     },
     {
       "mapping_id": "VUG-560216-050302",
@@ -18472,8 +17912,8 @@
       "mapping_id": "VUG-570101K-040101",
       "vocational_code": "570101K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18486,7 +17926,7 @@
       "rationale": "高职“早期教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570102K-040106",
@@ -18512,8 +17952,8 @@
       "mapping_id": "VUG-570102K-040101",
       "vocational_code": "570102K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18526,7 +17966,7 @@
       "rationale": "高职“学前教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570103K-040107",
@@ -18552,8 +17992,8 @@
       "mapping_id": "VUG-570103K-040101",
       "vocational_code": "570103K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18566,7 +18006,7 @@
       "rationale": "高职“小学教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570103K-040102",
@@ -18592,8 +18032,8 @@
       "mapping_id": "VUG-570104K-040101",
       "vocational_code": "570104K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18601,12 +18041,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“小学语文教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "教育类与本科教育学类共享教学对象、课程实施和教育支持方法。 对“小学语文教育”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-570104K-040103",
@@ -18649,11 +18089,11 @@
       "candidate_score": 0.5
     },
     {
-      "mapping_id": "VUG-570105K-040101",
-      "vocational_code": "570105K",
-      "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "mapping_id": "VUG-570104K-040109T",
+      "vocational_code": "570104K",
+      "undergraduate_code": "040109T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18663,10 +18103,10 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“小学数学教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“小学语文教育”与本科“华文教育”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570105K-040107",
@@ -18687,6 +18127,26 @@
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
       "candidate_score": 0.75
+    },
+    {
+      "mapping_id": "VUG-570105K-040101",
+      "vocational_code": "570105K",
+      "undergraduate_code": "040101",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "典型职业或行业场景"
+      ],
+      "rationale": "教育类与本科教育学类共享教学对象、课程实施和教育支持方法。 对“小学数学教育”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
+      "source_rule_id": "CLASS-5701",
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-570105K-040102",
@@ -18712,8 +18172,8 @@
       "mapping_id": "VUG-570106K-040101",
       "vocational_code": "570106K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18721,12 +18181,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“小学英语教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "教育类与本科教育学类共享教学对象、课程实施和教育支持方法。 对“小学英语教育”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-570106K-040107",
@@ -18747,26 +18207,6 @@
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
       "candidate_score": 0.5
-    },
-    {
-      "mapping_id": "VUG-570107K-040101",
-      "vocational_code": "570107K",
-      "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“小学科学教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-570107K-040102",
@@ -18809,11 +18249,31 @@
       "candidate_score": 0.75
     },
     {
+      "mapping_id": "VUG-570107K-040101",
+      "vocational_code": "570107K",
+      "undergraduate_code": "040101",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "典型职业或行业场景"
+      ],
+      "rationale": "教育类与本科教育学类共享教学对象、课程实施和教育支持方法。 对“小学科学教育”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
+      "source_rule_id": "CLASS-5701",
+      "candidate_score": 0.4
+    },
+    {
       "mapping_id": "VUG-570108K-040101",
       "vocational_code": "570108K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18826,14 +18286,14 @@
       "rationale": "高职“音乐教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570109K-040101",
       "vocational_code": "570109K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18846,7 +18306,7 @@
       "rationale": "高职“美术教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570109K-040105",
@@ -18872,8 +18332,8 @@
       "mapping_id": "VUG-570110K-040101",
       "vocational_code": "570110K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18886,14 +18346,14 @@
       "rationale": "高职“体育教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570111K-040101",
       "vocational_code": "570111K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18901,19 +18361,19 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“小学道德与法治教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "教育类与本科教育学类共享教学对象、课程实施和教育支持方法。 对“小学道德与法治教育”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.8244
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-570112K-040101",
       "vocational_code": "570112K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18926,7 +18386,7 @@
       "rationale": "高职“舞蹈教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570113K-040105",
@@ -18952,8 +18412,8 @@
       "mapping_id": "VUG-570113K-040101",
       "vocational_code": "570113K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -18966,7 +18426,7 @@
       "rationale": "高职“艺术教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570114K-040108",
@@ -18992,8 +18452,8 @@
       "mapping_id": "VUG-570114K-040101",
       "vocational_code": "570114K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19006,14 +18466,14 @@
       "rationale": "高职“特殊教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570115K-040101",
       "vocational_code": "570115K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19026,14 +18486,14 @@
       "rationale": "高职“现代教育技术”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570116K-040101",
       "vocational_code": "570116K",
       "undergraduate_code": "040101",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19041,12 +18501,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“心理健康教育”与本科“教育学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "教育类与本科教育学类共享教学对象、课程实施和教育支持方法。 对“心理健康教育”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5701",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-570117K-040101",
@@ -19092,8 +18552,8 @@
       "mapping_id": "VUG-570201-050201",
       "vocational_code": "570201",
       "undergraduate_code": "050201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19106,14 +18566,14 @@
       "rationale": "高职“商务英语”与本科“英语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570202-050201",
       "vocational_code": "570202",
       "undergraduate_code": "050201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19126,14 +18586,14 @@
       "rationale": "高职“应用英语”与本科“英语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570203-050201",
       "vocational_code": "570203",
       "undergraduate_code": "050201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19146,14 +18606,14 @@
       "rationale": "高职“旅游英语”与本科“英语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570205-050207",
       "vocational_code": "570205",
       "undergraduate_code": "050207",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19166,14 +18626,14 @@
       "rationale": "高职“商务日语”与本科“日语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570206-050207",
       "vocational_code": "570206",
       "undergraduate_code": "050207",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19186,14 +18646,14 @@
       "rationale": "高职“应用日语”与本科“日语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570207-050207",
       "vocational_code": "570207",
       "undergraduate_code": "050207",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19206,14 +18666,14 @@
       "rationale": "高职“旅游日语”与本科“日语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570209-050113T",
       "vocational_code": "570209",
       "undergraduate_code": "050113T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19226,14 +18686,14 @@
       "rationale": "高职“中文”与本科“应用中文”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570210-050202",
       "vocational_code": "570210",
       "undergraduate_code": "050202",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19246,14 +18706,14 @@
       "rationale": "高职“应用俄语”与本科“俄语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570211-050204",
       "vocational_code": "570211",
       "undergraduate_code": "050204",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19266,7 +18726,7 @@
       "rationale": "高职“应用法语”与本科“法语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570212-050205",
@@ -19292,8 +18752,8 @@
       "mapping_id": "VUG-570213-050203",
       "vocational_code": "570213",
       "undergraduate_code": "050203",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19306,14 +18766,14 @@
       "rationale": "高职“应用德语”与本科“德语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570214-050220",
       "vocational_code": "570214",
       "undergraduate_code": "050220",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19326,7 +18786,7 @@
       "rationale": "高职“应用泰语”与本科“泰语”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5702",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570215-050223",
@@ -19692,8 +19152,8 @@
       "mapping_id": "VUG-570311-040201",
       "vocational_code": "570311",
       "undergraduate_code": "040201",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19706,14 +19166,14 @@
       "rationale": "高职“体育运营与管理”与本科“体育教育”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5703",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570311-040207T",
       "vocational_code": "570311",
       "undergraduate_code": "040207T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19726,14 +19186,14 @@
       "rationale": "高职“体育运营与管理”与本科“休闲体育”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5703",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570311-040212TK",
       "vocational_code": "570311",
       "undergraduate_code": "040212TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -19746,7 +19206,7 @@
       "rationale": "高职“体育运营与管理”与本科“体育旅游”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5703",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-570312-040210TK",
@@ -20072,8 +19532,8 @@
       "mapping_id": "VUG-580101K-030601K",
       "vocational_code": "580101K",
       "undergraduate_code": "030601K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -20086,7 +19546,7 @@
       "rationale": "高职“治安管理”与本科“治安学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5801",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-580101K-030612TK",
@@ -20269,26 +19729,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-580301K-030602K",
-      "vocational_code": "580301K",
-      "undergraduate_code": "030602K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“刑事侦查”与本科“侦查学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5803",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-580301K-030601K",
       "vocational_code": "580301K",
       "undergraduate_code": "030601K",
@@ -20307,6 +19747,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5803",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-580301K-030602K",
+      "vocational_code": "580301K",
+      "undergraduate_code": "030602K",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“刑事侦查”与本科“侦查学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5803",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-580302K-030625TK",
@@ -20332,8 +19792,8 @@
       "mapping_id": "VUG-580302K-030601K",
       "vocational_code": "580302K",
       "undergraduate_code": "030601K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -20341,12 +19801,12 @@
       "confidence": "中",
       "relation_basis": [
         "核心知识基础",
-        "关键技术体系"
+        "典型职业或行业场景"
       ],
-      "rationale": "高职“政治安全保卫”与本科“治安学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
+      "rationale": "侦查类与本科公安学、公安技术和法学共享侦查对象、证据和执法场景。 对“政治安全保卫”先保留专业类层面的强相关候选。",
+      "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5803",
-      "candidate_score": 0.8467
+      "candidate_score": 0.4
     },
     {
       "mapping_id": "VUG-580302K-030614TK",
@@ -20387,46 +19847,6 @@
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5803",
       "candidate_score": 1
-    },
-    {
-      "mapping_id": "VUG-580303K-030602K",
-      "vocational_code": "580303K",
-      "undergraduate_code": "030602K",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“经济犯罪侦查”与本科“侦查学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5803",
-      "candidate_score": 0.8467
-    },
-    {
-      "mapping_id": "VUG-580303K-030611TK",
-      "vocational_code": "580303K",
-      "undergraduate_code": "030611TK",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“经济犯罪侦查”与本科“犯罪学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5803",
-      "candidate_score": 0.8467
     },
     {
       "mapping_id": "VUG-580303K-030601K",
@@ -20832,8 +20252,8 @@
       "mapping_id": "VUG-590101-030301",
       "vocational_code": "590101",
       "undergraduate_code": "030301",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -20846,7 +20266,7 @@
       "rationale": "高职“社会工作”与本科“社会学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5901",
-      "candidate_score": 0.88
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-590101-120401",
@@ -21329,26 +20749,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-590301-030305T",
-      "vocational_code": "590301",
-      "undergraduate_code": "030305T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“现代家政服务与管理”与本科“家政学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5903",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-590301-030301",
       "vocational_code": "590301",
       "undergraduate_code": "030301",
@@ -21369,11 +20769,11 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-590302-120410T",
-      "vocational_code": "590302",
-      "undergraduate_code": "120410T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
+      "mapping_id": "VUG-590301-030305T",
+      "vocational_code": "590301",
+      "undergraduate_code": "030305T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
       "consumable": true,
       "is_primary": false,
       "sensitive_restriction": false,
@@ -21383,10 +20783,10 @@
         "核心知识基础",
         "关键技术体系"
       ],
-      "rationale": "高职“智慧健康养老服务与管理”与本科“健康服务与管理”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "rationale": "高职“现代家政服务与管理”与本科“家政学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
       "generation_method": "专业名称与专业类规则",
       "source_rule_id": "CLASS-5903",
-      "candidate_score": 0.8467
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-590302-030301",
@@ -21509,26 +20909,6 @@
       "candidate_score": 0.4
     },
     {
-      "mapping_id": "VUG-590308-030306T",
-      "vocational_code": "590308",
-      "undergraduate_code": "030306T",
-      "relation_level": "其他核心对应",
-      "skills_behavior": "默认辅助标签",
-      "consumable": true,
-      "is_primary": false,
-      "sensitive_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "中",
-      "relation_basis": [
-        "核心知识基础",
-        "关键技术体系"
-      ],
-      "rationale": "高职“老年教育服务与管理”与本科“老年学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
-      "generation_method": "专业名称与专业类规则",
-      "source_rule_id": "CLASS-5903",
-      "candidate_score": 0.88
-    },
-    {
       "mapping_id": "VUG-590308-030301",
       "vocational_code": "590308",
       "undergraduate_code": "030301",
@@ -21547,6 +20927,26 @@
       "generation_method": "专业类种子规则",
       "source_rule_id": "CLASS-5903",
       "candidate_score": 0.4
+    },
+    {
+      "mapping_id": "VUG-590308-030306T",
+      "vocational_code": "590308",
+      "undergraduate_code": "030306T",
+      "relation_level": "强相关",
+      "skills_behavior": "扩展检索",
+      "consumable": true,
+      "is_primary": false,
+      "sensitive_restriction": false,
+      "review_status": "高置信度候选",
+      "confidence": "中",
+      "relation_basis": [
+        "核心知识基础",
+        "关键技术体系"
+      ],
+      "rationale": "高职“老年教育服务与管理”与本科“老年学”处于规则限定的对应专业类，并在专业名称指向的培养对象或关键技术上具有连续性。",
+      "generation_method": "专业名称与专业类规则",
+      "source_rule_id": "CLASS-5903",
+      "candidate_score": 0.5
     },
     {
       "mapping_id": "VUG-590401-050101",
