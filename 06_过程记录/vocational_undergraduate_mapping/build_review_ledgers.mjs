@@ -6,9 +6,20 @@ import { validateReviewRow } from "./mapping_schema.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const catalogPath = path.join(scriptDir, "catalogs", "vocational_effective_2026.json");
+const undergraduatePath = path.join(
+  path.dirname(scriptDir),
+  "discipline_mapping",
+  "catalogs",
+  "undergraduate_2026.json",
+);
 const candidatePath = path.join(scriptDir, "artifacts", "mapping_candidates.json");
 const decisionPath = path.join(scriptDir, "rules", "vocational_review_decisions.json");
 const outputPath = path.join(scriptDir, "review", "vocational_review_ledger.json");
+const reverseOutputPath = path.join(
+  scriptDir,
+  "review",
+  "undergraduate_reverse_ledger.json",
+);
 
 async function readJson(filePath) {
   return JSON.parse((await fs.readFile(filePath, "utf8")).replace(/^\uFEFF/, ""));
@@ -20,8 +31,9 @@ function selectedPrefixes() {
   return new Set(scope.split(",").map((value) => value.trim()).filter(Boolean));
 }
 
-const [catalogPayload, candidatePayload, decisionPayload] = await Promise.all([
+const [catalogPayload, undergraduatePayload, candidatePayload, decisionPayload] = await Promise.all([
   readJson(catalogPath),
+  readJson(undergraduatePath),
   readJson(candidatePath),
   readJson(decisionPath),
 ]);
@@ -104,4 +116,62 @@ await fs.writeFile(
   )}\n`,
   "utf8",
 );
-console.log(`vocational review ledger: ${records.length}`);
+
+const acceptedIds = new Set(records.flatMap((row) => row.accepted_mapping_ids));
+const acceptedByUndergraduate = new Map();
+for (const candidate of candidatePayload.records) {
+  if (!acceptedIds.has(candidate.mapping_id)) continue;
+  const rows = acceptedByUndergraduate.get(candidate.undergraduate_code) ?? [];
+  rows.push(candidate);
+  acceptedByUndergraduate.set(candidate.undergraduate_code, rows);
+}
+const reverseRecords = undergraduatePayload.records.map((major) => {
+  const accepted = acceptedByUndergraduate.get(major.major_code) ?? [];
+  const mappingIdsByLevel = Object.fromEntries(
+    ["主映射/核心对应", "其他核心对应", "强相关", "延伸相关", "目录参考"].map(
+      (level) => [
+        level,
+        accepted
+          .filter((row) => row.relation_level === level)
+          .map((row) => row.mapping_id)
+          .sort(),
+      ],
+    ),
+  );
+  const consumable = accepted.filter((row) => row.consumable);
+  const hasCore = consumable.some((row) =>
+    ["主映射/核心对应", "其他核心对应"].includes(row.relation_level),
+  );
+  const coverageState = hasCore
+    ? "有核心高职专科对应"
+    : consumable.length > 0
+      ? "仅有强相关或延伸高职专科对应"
+      : accepted.some((row) => row.sensitive_restriction)
+        ? "仅有敏感目录参考"
+        : "无高职专科对应";
+  return {
+    undergraduate_code: major.major_code,
+    undergraduate_name: major.major_name,
+    coverage_state: coverageState,
+    mapping_ids_by_level: mappingIdsByLevel,
+    zero_accepted_consumable: consumable.length === 0,
+    reviewed_at: "2026-08-17",
+  };
+});
+await fs.writeFile(
+  reverseOutputPath,
+  `${JSON.stringify(
+    {
+      metadata: {
+        generated_at: "2026-08-17",
+        record_count: reverseRecords.length,
+        method: "仅依据高职复核台账中的 accepted_mapping_ids 反向聚合",
+      },
+      records: reverseRecords,
+    },
+    null,
+    2,
+  )}\n`,
+  "utf8",
+);
+console.log(`vocational review ledger: ${records.length}; undergraduate reverse: ${reverseRecords.length}`);

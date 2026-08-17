@@ -1,10 +1,11 @@
 {
   "metadata": {
     "generated_at": "2026-08-17",
-    "record_count": 381,
-    "completed_count": 381,
+    "record_count": 811,
+    "completed_count": 811,
     "scope": [
-      "4"
+      "4",
+      "5"
     ]
   },
   "records": [
@@ -4669,6 +4670,5342 @@
       "review_status": "已依据规则复核",
       "accepted_mapping_ids": [
         "VUG-490302-082701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500101-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500102-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500103-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500104-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500105-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500106-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500107",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500107-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500108",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500108-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500109",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500109-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500110",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500110-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500111",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500111-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500112",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500112-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500113",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500113-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500114",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500114-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500115",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500115-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500201-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500202-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500203-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500204-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500205-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500206-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500207-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500208-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500209-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500210-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500211-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500212-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500301-081801",
+        "VUG-500301-081803K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500302-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500303-081801",
+        "VUG-500303-081804K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500304-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500305-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500306",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500306-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500307",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500307-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500308",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500308-081801",
+        "VUG-500308-081808TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500309",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500309-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500310",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500310-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500401-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500402",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500402-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500403",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500403-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500404",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500404-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500405",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500405-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500406",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500406-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500407",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500407-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500408",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500408-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500409",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500409-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500410",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500410-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500411",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500411-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500412",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500412-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500413",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500413-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500414",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500414-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500415",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500415-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500416",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500416-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500417",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500417-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500418",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500418-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500501",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500501-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500502",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500502-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500601",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500601-081801",
+        "VUG-500601-081802"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500602",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500602-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500603",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500603-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500604",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500604-080802T",
+        "VUG-500604-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500605",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500605-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500606",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500606-081801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500701",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500701-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500702",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500702-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "500703",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-500703-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510101-080701",
+        "VUG-510101-080706",
+        "VUG-510101-080714T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510102-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510103-080701",
+        "VUG-510103-080716T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510104-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510105-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510106-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510107",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510107-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510108",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510108-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510109",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510109-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510110",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510110-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510111",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510111-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510201-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510202-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510203-080901",
+        "VUG-510203-080902"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510204-080901",
+        "VUG-510204-080906"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510205-080901",
+        "VUG-510205-080910T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510206-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510207-080901",
+        "VUG-510207-080904K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510208-080901",
+        "VUG-510208-080916T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510209-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510210-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510211-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510212-080901",
+        "VUG-510212-080917T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510213",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510213-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510214",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510214-080901",
+        "VUG-510214-080919T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510215",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510215-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510216",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510216-080901",
+        "VUG-510216-080918TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510217",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510217-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510218",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510218-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510219",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510219-080901",
+        "VUG-510219-080907T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510220",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510220-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510221",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510221-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510301-080701",
+        "VUG-510301-080703"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510302-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510303-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510304-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510305-080701",
+        "VUG-510305-080703"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510306",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510306-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510307",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510307-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510308",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510308-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510309",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510309-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510310",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510310-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510311",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510311-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510312",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510312-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510313",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510313-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510314",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510314-080701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510401-080701",
+        "VUG-510401-080710T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "510402",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-510402-080701",
+        "VUG-510402-080702",
+        "VUG-510402-080704"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520101K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520101K-100201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520102K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520102K-100301K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520201-101101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520202-101101K",
+        "VUG-520202-101102TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520301-100701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520401K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520401K-100501K",
+        "VUG-520401K-100510TK",
+        "VUG-520401K-100511TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520402K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520402K-100501K",
+        "VUG-520402K-100513TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520403K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520403K-100502K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520404K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520404K-100504K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520405K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520405K-100503K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520406K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520406K-100505K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520407K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520407K-100508TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520408K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520408K-100507K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520409K",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "VUG-520409K-100501K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "本科目录无同名朝医学专业，暂按民族传统医学知识基础保留至中医学的强相关关系，建议民族医学专家复核。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520410",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520410-100801",
+        "VUG-520410-100805T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520411",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520411-100804T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520412",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "VUG-520412-100801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "本科目录无同名维药学专业，暂按民族药物鉴定、炮制与制剂基础保留至中药学的强相关关系，建议民族药学专家复核。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520413",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520413-100803T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520414",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520414-100801",
+        "VUG-520414-100802"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520415",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520415-100801",
+        "VUG-520415-100805T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520416",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520416-100501K",
+        "VUG-520416-100510TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520417",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520417-100511TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520418",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520418-082710T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520501",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520501-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520502",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520502-101001",
+        "VUG-520502-101003"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520503",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520503-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520504",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520504-101001",
+        "VUG-520504-101006"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520505",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520505-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520506",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520506-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520507",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520507-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520508",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520508-101001",
+        "VUG-520508-101007"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520601",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520601-101001",
+        "VUG-520601-101005",
+        "VUG-520601-101009T",
+        "VUG-520601-101010T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520602",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520602-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520603",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520603-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520701",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520701-100401K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520702",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520702-100401K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520703K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520703K-100401K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520704",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520704-100401K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520801",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520801-120401",
+        "VUG-520801-120410T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520802",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520802-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520803",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520803-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520804",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520804-071101",
+        "VUG-520804-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520805",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520805-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520806",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520806-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520807",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520807-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520808",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520808-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520901",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520901-100204TK",
+        "VUG-520901-101001",
+        "VUG-520901-101004"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520902",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520902-100204TK",
+        "VUG-520902-101001",
+        "VUG-520902-101004"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "520903",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-520903-101001"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530101-020201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530102-020201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530103-020201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530104-020201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530201-020301K",
+        "VUG-530201-020302",
+        "VUG-530201-020305T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530202-020301K",
+        "VUG-530202-020310T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530203-020301K",
+        "VUG-530203-020303"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530204-020301K",
+        "VUG-530204-020306T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530205-020301K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530206-020301K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530207-020301K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530208-020301K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530301-120203K",
+        "VUG-530301-120204"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530302-120203K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530303-120203K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530304-120203K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530305-120203K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530306",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530306-120203K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530401-071201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530402",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530402-071201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530403",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530403-071201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530501",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530501-020401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530502",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530502-020401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530503",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530503-020401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530504",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530504-020401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530505",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530505-020401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530506",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530506-020401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530601",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530601-120201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530602",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530602-120201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530603",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530603-120201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530604",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530604-120201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530605",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530605-120201K",
+        "VUG-530605-120202",
+        "VUG-530605-120214T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530606",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530606-120201K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530701",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530701-120801",
+        "VUG-530701-120802T",
+        "VUG-530701-120803T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530702",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530702-120801",
+        "VUG-530702-120802T",
+        "VUG-530702-120803T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530703",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530703-120801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530704",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530704-120801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530705",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530705-120801",
+        "VUG-530705-120802T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530706",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530706-120801"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530801",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530801-120601",
+        "VUG-530801-120602"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530802",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530802-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530803",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530803-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530804",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530804-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530805",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530805-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530806",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530806-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530807",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530807-120601",
+        "VUG-530807-120602"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530808",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530808-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530809",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530809-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530810",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530810-120601",
+        "VUG-530810-120604T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "530811",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-530811-120601"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540101-120901K",
+        "VUG-540101-120904T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540102-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540103-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540104-120901K",
+        "VUG-540104-120904T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540105-120901K",
+        "VUG-540105-120904T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540106-120901K",
+        "VUG-540106-120902"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540107",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540107-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540108",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540108-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540109",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540109-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540110",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540110-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540111",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540111-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540112",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540112-120901K",
+        "VUG-540112-120903"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540113",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540113-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540114",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540114-120901K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540201-082701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540202-082701",
+        "VUG-540202-082708T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540203-082701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540204-082701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "540205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-540205-082701"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550101-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550102-130501",
+        "VUG-550102-130502"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550103-130408TK",
+        "VUG-550103-130501",
+        "VUG-550103-130508"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550104-130501",
+        "VUG-550104-130504"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550105-130501",
+        "VUG-550105-130505"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550106-130501",
+        "VUG-550106-130503"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550107",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550107-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550108",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550108-130501",
+        "VUG-550108-130506"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550109",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550109-130501",
+        "VUG-550109-130515TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550110",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550110-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550111",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550111-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550112",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550112-130501",
+        "VUG-550112-130507"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550113",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550113-130501",
+        "VUG-550113-130502"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550114",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550114-130501",
+        "VUG-550114-130503"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550115",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550115-130501",
+        "VUG-550115-130504"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550116",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550116-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550117",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550117-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550118",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550118-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550119",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550119-130403",
+        "VUG-550119-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550120",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550120-130501",
+        "VUG-550120-130504"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550121",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550121-130501",
+        "VUG-550121-130502"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550122",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550122-130507",
+        "VUG-550122-130510TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550123",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550123-130501",
+        "VUG-550123-130513TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550124",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550124-130501",
+        "VUG-550124-130513TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550125",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550125-130103T",
+        "VUG-550125-130507"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550126",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550126-130403",
+        "VUG-550126-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550127",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550127-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550128",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550128-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550129",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550129-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550130",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550130-130504",
+        "VUG-550130-130507"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550131",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550131-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550201-130201",
+        "VUG-550201-130202",
+        "VUG-550201-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550202-130204",
+        "VUG-550202-130205",
+        "VUG-550202-130213TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550203-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550204-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550205-130301",
+        "VUG-550205-130304",
+        "VUG-550205-130306",
+        "VUG-550205-130307"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550206-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550207-130301",
+        "VUG-550207-130314TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550208-130201",
+        "VUG-550208-130315TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550209-130204",
+        "VUG-550209-130211T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550210-130209T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550211-130202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550212-130202",
+        "VUG-550212-130203",
+        "VUG-550212-130215T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550213",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550213-130201",
+        "VUG-550213-130203"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550214",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550214-130201",
+        "VUG-550214-130215T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550215",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550215-130205",
+        "VUG-550215-130206"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550216",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550216-130202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550217",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550217-130301",
+        "VUG-550217-130505"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550218",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550218-130307",
+        "VUG-550218-130501"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550219",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550219-130203"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550220",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "VUG-550220-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "本科目录无同名魔术专业，仅保留至表演的强相关关系，不作为默认标签，建议表演艺术专家复核。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550221",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "VUG-550221-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "本科目录无同名杂技专业，仅保留至表演的强相关关系，不作为默认标签，建议表演艺术专家复核。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550301-130301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550302-130401",
+        "VUG-550302-130402",
+        "VUG-550302-130507"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550303-130505",
+        "VUG-550303-130507"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550304-130103T",
+        "VUG-550304-130507"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550305-030401",
+        "VUG-550305-050104"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550306",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550306-130307"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550401-120210"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550402",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550402-120210"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550403",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550403-120210",
+        "VUG-550403-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550404",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550404-060105T",
+        "VUG-550404-130409T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550405",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550405-060103"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550406",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550406-060104"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550407",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550407-120501",
+        "VUG-550407-120502"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550408",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550408-060105T",
+        "VUG-550408-130409T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "550409",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-550409-060104",
+        "VUG-550409-080906"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560101-050301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560102-050301",
+        "VUG-560102-050309T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560103-050301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560104-050301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560105-050301",
+        "VUG-560105-050307T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560106-050301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560201-050302",
+        "VUG-560201-130309"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560202-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560203-050302",
+        "VUG-560203-080707T",
+        "VUG-560203-130312T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560204-050302",
+        "VUG-560204-130305",
+        "VUG-560204-130312T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560205-050301",
+        "VUG-560205-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560206-050302",
+        "VUG-560206-130310",
+        "VUG-560206-130312T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560207-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560208-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560209-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560210-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560211-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560212-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560213",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560213-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560214",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560214-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560215",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560215-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560216",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560216-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "560217",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-560217-050302"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570101K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570101K-040101",
+        "VUG-570101K-040106"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570102K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570102K-040101",
+        "VUG-570102K-040106"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570103K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570103K-040101",
+        "VUG-570103K-040102",
+        "VUG-570103K-040107"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570104K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570104K-040101",
+        "VUG-570104K-040107",
+        "VUG-570104K-050101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570105K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570105K-040101",
+        "VUG-570105K-040102",
+        "VUG-570105K-040107"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570106K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570106K-040101",
+        "VUG-570106K-040107"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570107K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570107K-040101",
+        "VUG-570107K-040102",
+        "VUG-570107K-040107"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570108K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570108K-040101",
+        "VUG-570108K-130212T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570109K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570109K-040101",
+        "VUG-570109K-040105",
+        "VUG-570109K-130401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570110K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570110K-040101",
+        "VUG-570110K-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570111K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570111K-040101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570112K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570112K-040101",
+        "VUG-570112K-130207T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570113K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570113K-040101",
+        "VUG-570113K-040105"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570114K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570114K-040101",
+        "VUG-570114K-040108"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570115K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570115K-040101",
+        "VUG-570115K-040104"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570116K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570116K-040101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570117K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570117K-040101"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570201-050201",
+        "VUG-570201-050262"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570202-050201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570203-050201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570204-050209"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570205-050207"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570206-050207"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570207-050207"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570208",
+      "review_status": "已确认无直接对应",
+      "accepted_mapping_ids": [],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": true,
+      "review_note": "已核对本科目录与专业类边界，未发现培养对象、知识基础或技术体系可构成稳定映射的本科专业。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570209-050101",
+        "VUG-570209-050113T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570210-050202"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570211-050204"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570212-050205"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570213",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570213-050203"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570214",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570214-050220"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570215",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570215-050223"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570216",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570216-050206"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570301-040201",
+        "VUG-570301-040203"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570302-040201",
+        "VUG-570302-040207T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570303-040201",
+        "VUG-570303-040202K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570304-040201",
+        "VUG-570304-040204K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570305-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570306",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570306-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570307",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570307-040201",
+        "VUG-570307-040203"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570308",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570308-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570309",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570309-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570310",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570310-040201",
+        "VUG-570310-040208T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570311",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570311-040201",
+        "VUG-570311-040207T",
+        "VUG-570311-040212TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570312",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570312-040201",
+        "VUG-570312-040210TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570313",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570313-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570314",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570314-040201",
+        "VUG-570314-040209T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570315",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570315-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570316",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570316-040201"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "570317",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-570317-040201",
+        "VUG-570317-040214TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580101K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580101K-030601K",
+        "VUG-580101K-030612TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580102K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580102K-030601K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580103K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580103K-030601K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580104K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580104K-030601K",
+        "VUG-580104K-030615TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580201K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580201K-083101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580202K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580202K-083101K",
+        "VUG-580202K-083108TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580203K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580203K-083101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580301K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580301K-030601K",
+        "VUG-580301K-030602K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580302K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580302K-030601K",
+        "VUG-580302K-030614TK",
+        "VUG-580302K-030625TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580303K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580303K-030601K",
+        "VUG-580303K-030606TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580304K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580304K-030601K",
+        "VUG-580304K-030604TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580401-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580402",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580402-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580403",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580403-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580501K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580501K-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580502",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580502-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580503K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580503K-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580504K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580504K-030101K",
+        "VUG-580504K-030106TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580505",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580505-030101K",
+        "VUG-580505-030107TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580506K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580506K-030101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580601K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580601K-030602K",
+        "VUG-580601K-083101K"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580602K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580602K-030101K",
+        "VUG-580602K-080901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580603",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580603-030110TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580604K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580604K-080904K",
+        "VUG-580604K-080911TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580605K",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580605K-030107TK",
+        "VUG-580605K-071102"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580606K",
+      "review_status": "存在歧义，建议学科专家复核",
+      "accepted_mapping_ids": [
+        "VUG-580606K-030604TK",
+        "VUG-580606K-071102"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "戒毒矫治兼具禁毒治理、心理干预和矫正教育属性，仅保留强相关关系，不设默认标签，建议司法与心理专家联合复核。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580701",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580701-082901",
+        "VUG-580701-083104TK"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580702",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580702-082901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "580703",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-580703-082901"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590101",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590101-030301",
+        "VUG-590101-030302",
+        "VUG-590101-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590102",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590102-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590103",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590103-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590104",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590104-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590105",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590105-120401",
+        "VUG-590105-120409T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590106",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590106-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590107",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590107-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590201",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590201-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590202",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590202-120206"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590203",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590203-120401",
+        "VUG-590203-120403"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590204",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590204-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590205",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590205-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590206",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590206-120401",
+        "VUG-590206-120402"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590207",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590207-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590208",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590208-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590209",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590209-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590210",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590210-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590211",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590211-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590212",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590212-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590213",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590213-120401"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590301",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590301-030301",
+        "VUG-590301-030305T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590302",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590302-030301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590303",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590303-030301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590304",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590304-030301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590305",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590305-030301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590306",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590306-030301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590307",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590307-030301"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": true,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590308",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590308-030301",
+        "VUG-590308-030306T",
+        "VUG-590308-120414T"
+      ],
+      "rejected_mapping_ids": [],
+      "zero_direct": false,
+      "zero_all": false,
+      "review_note": "已按培养对象、核心知识、关键技术和职业场景复核全部候选；通过者按既定强度保留供 Skills 标签与检索使用。",
+      "reviewed_at": "2026-08-17"
+    },
+    {
+      "vocational_code": "590401",
+      "review_status": "已依据规则复核",
+      "accepted_mapping_ids": [
+        "VUG-590401-050101"
       ],
       "rejected_mapping_ids": [],
       "zero_direct": true,

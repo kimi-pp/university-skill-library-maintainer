@@ -3,5 +3,36 @@
     "review_date": "2026-08-17",
     "method": "在专业类保守规则基础上，按培养对象、知识基础、关键技术和职业场景逐专业审查候选；误触发关系在覆盖规则中移除或在此拒绝。"
   },
-  "records": []
+  "records": [
+    {
+      "vocational_code": "520409K",
+      "review_status": "存在歧义，建议学科专家复核",
+      "rejected_mapping_ids": [],
+      "review_note": "本科目录无同名朝医学专业，暂按民族传统医学知识基础保留至中医学的强相关关系，建议民族医学专家复核。"
+    },
+    {
+      "vocational_code": "520412",
+      "review_status": "存在歧义，建议学科专家复核",
+      "rejected_mapping_ids": [],
+      "review_note": "本科目录无同名维药学专业，暂按民族药物鉴定、炮制与制剂基础保留至中药学的强相关关系，建议民族药学专家复核。"
+    },
+    {
+      "vocational_code": "550220",
+      "review_status": "存在歧义，建议学科专家复核",
+      "rejected_mapping_ids": [],
+      "review_note": "本科目录无同名魔术专业，仅保留至表演的强相关关系，不作为默认标签，建议表演艺术专家复核。"
+    },
+    {
+      "vocational_code": "550221",
+      "review_status": "存在歧义，建议学科专家复核",
+      "rejected_mapping_ids": [],
+      "review_note": "本科目录无同名杂技专业，仅保留至表演的强相关关系，不作为默认标签，建议表演艺术专家复核。"
+    },
+    {
+      "vocational_code": "580606K",
+      "review_status": "存在歧义，建议学科专家复核",
+      "rejected_mapping_ids": [],
+      "review_note": "戒毒矫治兼具禁毒治理、心理干预和矫正教育属性，仅保留强相关关系，不设默认标签，建议司法与心理专家联合复核。"
+    }
+  ]
 }
