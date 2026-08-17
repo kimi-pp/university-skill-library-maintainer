@@ -1,0 +1,60 @@
+{
+  "undergraduate_count": 883,
+  "graduate_count": 184,
+  "mapping_count": 1915,
+  "undergraduate_index_count": 883,
+  "graduate_index_count": 184,
+  "undergraduate_zero_mapping_count": 8,
+  "undergraduate_no_accepted_mapping_count": 4,
+  "undergraduate_partial_zero_mapping_count": 172,
+  "graduate_zero_mapping_count": 4,
+  "graduate_no_accepted_mapping_count": 19,
+  "military_mapping_count": 17,
+  "consumable_mapping_count": 1898,
+  "qa_finding_count": 48,
+  "blocking_finding_count": 0,
+  "review_finding_count": 42,
+  "notice_finding_count": 6,
+  "over_broad_review_threshold": 50,
+  "relation_level_counts": {
+    "主映射/核心对应": 1569,
+    "其他核心对应": 32,
+    "强相关": 286,
+    "延伸相关": 11,
+    "目录参考": 17
+  },
+  "skills_behavior_counts": {
+    "默认标签": 1569,
+    "默认辅助标签": 32,
+    "扩展检索": 286,
+    "跨学科召回": 11,
+    "仅目录查看": 17
+  },
+  "mapping_review_status_counts": {
+    "已依据规则复核": 1844,
+    "存在歧义，建议学科专家复核": 54,
+    "军事学限制": 17
+  },
+  "undergraduate_review_status_counts": {
+    "已依据规则复核": 853,
+    "存在歧义，建议学科专家复核": 28,
+    "已确认无直接对应": 2
+  },
+  "graduate_reverse_state_counts": {
+    "仅有强相关或延伸本科对应": 1,
+    "军事学限制，仅目录参考": 18,
+    "已确认无直接对应本科专业": 4,
+    "有核心本科对应": 161
+  },
+  "qa_severity_counts": {
+    "需复核": 42,
+    "提示": 6
+  },
+  "qa_check_counts": {
+    "EXPERT_REVIEW_REQUIRED": 28,
+    "GRADUATE_ZERO_MAPPING": 4,
+    "MISSING_CORE_MAPPING": 1,
+    "OVER_BROAD_GRADUATE_COVERAGE": 7,
+    "UNDERGRADUATE_ZERO_MAPPING": 8
+  }
+}

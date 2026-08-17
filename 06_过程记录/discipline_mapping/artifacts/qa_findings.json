@@ -1,0 +1,462 @@
+[
+  {
+    "finding_id": "QA-0001",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "020110TK",
+    "message": "低空经济与管理：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）。专业学位未形成直接对应，显式记零。低空产业的经济学与管理学主出口随培养方案而异，建议专家确认主方向。"
+  },
+  {
+    "finding_id": "QA-0002",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "020111T",
+    "message": "资源环境审计：依据经济分析、计量方法与政策研究复核。接受理论经济学（强相关）、应用经济学（主映射/核心对应）、审计（主映射/核心对应）。应用经济学与审计之间的主出口取决于经济评价和鉴证训练的比重。"
+  },
+  {
+    "finding_id": "QA-0003",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "020311TK",
+    "message": "金融审计：依据金融市场、风险计量与职业出口复核。接受应用经济学（主映射/核心对应）、审计（主映射/核心对应）。应用经济学与审计之间的主出口取决于金融分析和鉴证训练的比重。"
+  },
+  {
+    "finding_id": "QA-0004",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "030103T",
+    "message": "监狱学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）。拒绝法律（主映射/核心对应）；监狱与矫正制度可由法学研究，但不等同于通用法律职业训练。专业学位未形成直接对应，显式记零。监狱学在法学、公安学与矫正实践之间存在边界，建议专家复核学术主出口。"
+  },
+  {
+    "finding_id": "QA-0005",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "030106TK",
+    "message": "司法警察学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）、警务（主映射/核心对应）。司法警察学保留法学学术基础并转向警务职业出口，学术主方向仍需专家确认。"
+  },
+  {
+    "finding_id": "QA-0006",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "030110TK",
+    "message": "司法鉴定学：依据法律制度、法律方法与对应职业实践复核。接受法学（主映射/核心对应）。拒绝法律（主映射/核心对应）；司法鉴定以证据检验和鉴定技术为主要实践，不等同于通用法律职业训练。专业学位未形成直接对应，显式记零。司法鉴定学横跨法学与鉴定技术，建议专家确认学术主出口。"
+  },
+  {
+    "finding_id": "QA-0007",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "040112T",
+    "message": "认知科学与技术：依据教育理论、课程教学与教育服务复核。接受教育学（主映射/核心对应）、教育（主映射/核心对应）。认知科学与技术可能偏教育、心理或计算方向，当前按目录专业类保留教育学主映射。"
+  },
+  {
+    "finding_id": "QA-0008",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "040211TK",
+    "message": "智能体育工程：依据运动训练、体育教育与人体运动科学复核。接受体育学（主映射/核心对应）、体育（主映射/核心对应）。智能体育工程横跨体育学与工程技术，当前按培养对象保留体育学主映射。"
+  },
+  {
+    "finding_id": "QA-0009",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "050110T",
+    "message": "数字人文：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。数字人文可能偏中国语言文学、历史或计算方法，当前按目录专业类保留中国语言文学。"
+  },
+  {
+    "finding_id": "QA-0010",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "050114TK",
+    "message": "语言科学：依据汉语言、文献、文学与语言应用复核。接受中国语言文学（主映射/核心对应）。专业学位未形成直接对应，显式记零。语言科学可能跨中国语言文学、外国语言文学与认知方向，建议专家确认学术主出口。"
+  },
+  {
+    "finding_id": "QA-0011",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "0502106TK",
+    "message": "计算语言学：语言结构和语料研究保留外国语言文学学术主映射；计算模型、算法和自然语言处理使其与计算学科存在主出口歧义，建议专家复核。机器翻译只是应用与评测场景，翻译专业学位降为延伸相关；专业学位未形成直接对应，显式记零。"
+  },
+  {
+    "finding_id": "QA-0012",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "0502107TK",
+    "message": "语言智能：语言知识与语料基础保留外国语言文学学术主映射；语言技术、智能系统和人机语言交互使其与智能科学存在主出口歧义，建议专家复核。翻译仅是智能语言应用场景之一，翻译专业学位降为延伸相关；专业学位未形成直接对应，显式记零。"
+  },
+  {
+    "finding_id": "QA-0013",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "050310T",
+    "message": "会展：主要研究对象是会展活动及其运营；新闻传播学和新闻与传播仅因共享受众研究、内容策划与公共传播方法保留强相关。学术学位、专业学位均未形成直接对应，显式记零。会展在传播与旅游管理之间跨界，建议学科专家复核主出口。"
+  },
+  {
+    "finding_id": "QA-0014",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "060104",
+    "message": "文物与博物馆学：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、中国史（强相关）、博物馆（主映射/核心对应）。拒绝世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位未形成直接对应，显式记零。博物馆学的学术出口可偏考古学或历史学，专业出口则直接衔接博物馆。"
+  },
+  {
+    "finding_id": "QA-0015",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "060105T",
+    "message": "文物保护技术：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、文物（主映射/核心对应）。拒绝中国史（强相关）、世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位未形成直接对应，显式记零。文物保护技术在考古材料研究与保护工程之间跨界，建议专家确认学术主出口。"
+  },
+  {
+    "finding_id": "QA-0016",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "060107T",
+    "message": "文化遗产：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、文物（主映射/核心对应）。拒绝中国史（强相关）、世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位未形成直接对应，显式记零。文化遗产在考古学、历史学与保护实践之间跨界，建议专家确认学术主出口。"
+  },
+  {
+    "finding_id": "QA-0017",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "060108T",
+    "message": "古文字学：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、中国史（强相关）。拒绝世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位、专业学位未形成直接对应，显式记零。古文字材料兼具考古遗存与历史文献属性，不强行指定单一学术主映射，建议专家确认。"
+  },
+  {
+    "finding_id": "QA-0018",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "060109T",
+    "message": "科学史：依据史料、物质遗存、历史解释与文化遗产复核。接受中国史（强相关）、世界史（强相关）。拒绝考古学（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位、专业学位未形成直接对应，显式记零。科学史可能按研究区域分别进入中国史或世界史，两个强相关方向不强行设主映射。"
+  },
+  {
+    "finding_id": "QA-0019",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "070604T",
+    "message": "地球系统科学：依据基础科学研究对象、理论体系与实验或计算方法逐项复核。接受地理学（强相关）、大气科学（主映射/核心对应）、海洋科学（强相关）、气象（强相关）。专业学位类别未形成直接核心对应，显式记零。地球系统科学综合大气圈、水圈、岩石圈和生物圈过程；暂保留大气科学学术主线，并将气象专业学位降为强相关和显式专业零，建议专家核验多圈层培养方案的主出口。"
+  },
+  {
+    "finding_id": "QA-0020",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "070804TK",
+    "message": "行星科学：依据基础科学研究对象、理论体系与实验或计算方法逐项复核。接受天文学（强相关）、地球物理学（主映射/核心对应）。专业学位类别未形成直接核心对应，显式记零。行星科学横跨天文学、地球物理与空间探测；暂保留地球物理学学术主线并移除缺乏行星特定出口证据的资源与环境候选，建议专家核验培养出口。"
+  },
+  {
+    "finding_id": "QA-0021",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "071005T",
+    "message": "整合科学：依据基础科学研究对象、理论体系与实验或计算方法逐项复核。接受生物学（主映射/核心对应）、生态学（强相关）。专业学位类别未形成直接核心对应，显式记零。整合科学在生命科学、物质科学和数据方法之间的具体学术主出口依赖学校培养方案；暂保留目录所属生物学主线，建议专家核验课程与毕业去向。"
+  },
+  {
+    "finding_id": "QA-0022",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "080215T",
+    "message": "仿生科学与工程：依据工程对象、关键技术体系与工程培养出口逐项复核。接受机械工程（主映射/核心对应）、机械（主映射/核心对应）。仿生科学与工程可能以机械结构、生物机理或材料系统为主，不同培养方案差异显著；暂保留机械主线，建议专家核验主要研究对象。"
+  },
+  {
+    "finding_id": "QA-0023",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "081405T",
+    "message": "旅游地学与规划工程：依据工程对象、关键技术体系与工程培养出口逐项复核。接受地质资源与地质工程（主映射/核心对应）、资源与环境（主映射/核心对应）。旅游地学与规划工程横跨地质资源、地理和空间规划；现有目录类规则保留地质工程主线，建议专家核验规划课程和培养出口。"
+  },
+  {
+    "finding_id": "QA-0024",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "082605T",
+    "message": "健康科学与技术：依据工程对象、关键技术体系与工程培养出口逐项复核。接受生物医学工程（主映射/核心对应）、电子信息（强相关）、医学技术（强相关）。拒绝生物与医药（强相关），原因是专业类继承未形成该专业的研究对象连续性。专业学位类别未形成直接核心对应，显式记零。健康科学与技术可能侧重医疗器械、健康工程或健康服务技术；保留生物医学工程主线并仅把医学技术列为强相关，建议专家核验培养方案。"
+  },
+  {
+    "finding_id": "QA-0025",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "090109T",
+    "message": "应用生物科学：依据农业生产对象、生态系统、动物健康或资源经营出口逐项复核。接受生物学（强相关）、农业（主映射/核心对应）。学术学位一级学科未形成直接核心对应，显式记零。应用生物科学在不同学校可偏作物应用、生物技术或资源利用；仅保留农业专业出口和生物学强相关，不设学术主映射，建议专家核验。"
+  },
+  {
+    "finding_id": "QA-0026",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "090204T",
+    "message": "生物质科学与工程：依据农业生产对象、生态系统、动物健康或资源经营出口逐项复核。接受动力工程及工程热物理（强相关）、生物工程（强相关）、农业（强相关）。拒绝生态学（强相关）、农业资源与环境（主映射/核心对应）、水土保持与荒漠化防治学（强相关），原因是专业类继承未形成该专业的研究对象连续性。学术学位一级学科、专业学位类别未形成直接核心对应，显式记零。生物质科学与工程可能偏资源环境、生物转化、材料或能源利用；拒绝不连续的类级学术候选，并将通用农业专业学位降为场景强相关，学术与专业均显式记零，建议专家判定主出口。"
+  },
+  {
+    "finding_id": "QA-0027",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "101016TK",
+    "message": "健康与医疗保障：依据人体医学对象、公共卫生、药学、医学技术或护理培养出口逐项复核。未接受任何直接或扩展候选。拒绝医学技术（主映射/核心对应），原因是专业类继承未形成该专业的研究对象连续性。学术学位一级学科、专业学位类别未形成直接核心对应，显式记零。目录关系仅表示学术或培养衔接，不构成执业资格、准入或报考资格判断。健康与医疗保障可能偏医疗技术保障、卫生管理或社会保障；专业名称不足以确认医学技术核心连续性，暂拒绝该类继承候选并建议专家核验。"
+  },
+  {
+    "finding_id": "QA-0028",
+    "severity": "需复核",
+    "check_code": "EXPERT_REVIEW_REQUIRED",
+    "category": "建议专家复核",
+    "entity_type": "undergraduate",
+    "entity_key": "101017TK",
+    "message": "老年医学与健康：依据人体医学对象、公共卫生、药学、医学技术或护理培养出口逐项复核。未接受任何直接或扩展候选。拒绝医学技术（主映射/核心对应），原因是专业类继承未形成该专业的研究对象连续性。学术学位一级学科、专业学位类别未形成直接核心对应，显式记零。目录关系仅表示学术或培养衔接，不构成执业资格、准入或报考资格判断。老年医学与健康可能偏老年健康服务、康复技术或临床支持；专业名称不足以推定临床医学或医学技术核心对应，暂拒绝继承候选并建议专家核验。"
+  },
+  {
+    "finding_id": "QA-0029",
+    "severity": "需复核",
+    "check_code": "MISSING_CORE_MAPPING",
+    "category": "缺少核心映射",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|1406",
+    "message": "该研究生对象仅有强相关或延伸关系，未形成核心本科对应。"
+  },
+  {
+    "finding_id": "QA-0030",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "专业学位类别|0551",
+    "message": "翻译 对应 109 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 109,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0031",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "专业学位类别|0854",
+    "message": "电子信息 对应 66 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 66,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0032",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "专业学位类别|0855",
+    "message": "机械 对应 53 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 53,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0033",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "专业学位类别|0856",
+    "message": "材料与化工 对应 55 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 55,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0034",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "专业学位类别|0857",
+    "message": "资源与环境 对应 54 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 54,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0035",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|0502",
+    "message": "外国语言文学 对应 108 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 108,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0036",
+    "severity": "需复核",
+    "check_code": "OVER_BROAD_GRADUATE_COVERAGE",
+    "category": "研究生覆盖范围过宽",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|1301",
+    "message": "艺术学 对应 51 个本科专业，建议抽查是否存在过宽规则。",
+    "details": {
+      "mapping_count": 51,
+      "review_threshold": 50
+    }
+  },
+  {
+    "finding_id": "QA-0037",
+    "severity": "需复核",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "本科零映射",
+    "entity_type": "undergraduate",
+    "entity_key": "050310T",
+    "message": "会展：主要研究对象是会展活动及其运营；新闻传播学和新闻与传播仅因共享受众研究、内容策划与公共传播方法保留强相关。学术学位、专业学位均未形成直接对应，显式记零。会展在传播与旅游管理之间跨界，建议学科专家复核主出口。"
+  },
+  {
+    "finding_id": "QA-0038",
+    "severity": "需复核",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "本科零映射",
+    "entity_type": "undergraduate",
+    "entity_key": "060108T",
+    "message": "古文字学：依据史料、物质遗存、历史解释与文化遗产复核。接受考古学（强相关）、中国史（强相关）。拒绝世界史（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位、专业学位未形成直接对应，显式记零。古文字材料兼具考古遗存与历史文献属性，不强行指定单一学术主映射，建议专家确认。"
+  },
+  {
+    "finding_id": "QA-0039",
+    "severity": "需复核",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "本科零映射",
+    "entity_type": "undergraduate",
+    "entity_key": "060109T",
+    "message": "科学史：依据史料、物质遗存、历史解释与文化遗产复核。接受中国史（强相关）、世界史（强相关）。拒绝考古学（强相关）；仅保留与本专业共享明确研究对象或方法的历史分支，排除研究对象不直接重合的专业类候选。学术学位、专业学位未形成直接对应，显式记零。科学史可能按研究区域分别进入中国史或世界史，两个强相关方向不强行设主映射。"
+  },
+  {
+    "finding_id": "QA-0040",
+    "severity": "需复核",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "本科零映射",
+    "entity_type": "undergraduate",
+    "entity_key": "090204T",
+    "message": "生物质科学与工程：依据农业生产对象、生态系统、动物健康或资源经营出口逐项复核。接受动力工程及工程热物理（强相关）、生物工程（强相关）、农业（强相关）。拒绝生态学（强相关）、农业资源与环境（主映射/核心对应）、水土保持与荒漠化防治学（强相关），原因是专业类继承未形成该专业的研究对象连续性。学术学位一级学科、专业学位类别未形成直接核心对应，显式记零。生物质科学与工程可能偏资源环境、生物转化、材料或能源利用；拒绝不连续的类级学术候选，并将通用农业专业学位降为场景强相关，学术与专业均显式记零，建议专家判定主出口。"
+  },
+  {
+    "finding_id": "QA-0041",
+    "severity": "需复核",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "本科零映射",
+    "entity_type": "undergraduate",
+    "entity_key": "101016TK",
+    "message": "健康与医疗保障：依据人体医学对象、公共卫生、药学、医学技术或护理培养出口逐项复核。未接受任何直接或扩展候选。拒绝医学技术（主映射/核心对应），原因是专业类继承未形成该专业的研究对象连续性。学术学位一级学科、专业学位类别未形成直接核心对应，显式记零。目录关系仅表示学术或培养衔接，不构成执业资格、准入或报考资格判断。健康与医疗保障可能偏医疗技术保障、卫生管理或社会保障；专业名称不足以确认医学技术核心连续性，暂拒绝该类继承候选并建议专家核验。"
+  },
+  {
+    "finding_id": "QA-0042",
+    "severity": "需复核",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "本科零映射",
+    "entity_type": "undergraduate",
+    "entity_key": "101017TK",
+    "message": "老年医学与健康：依据人体医学对象、公共卫生、药学、医学技术或护理培养出口逐项复核。未接受任何直接或扩展候选。拒绝医学技术（主映射/核心对应），原因是专业类继承未形成该专业的研究对象连续性。学术学位一级学科、专业学位类别未形成直接核心对应，显式记零。目录关系仅表示学术或培养衔接，不构成执业资格、准入或报考资格判断。老年医学与健康可能偏老年健康服务、康复技术或临床支持；专业名称不足以推定临床医学或医学技术核心对应，暂拒绝继承候选并建议专家核验。"
+  },
+  {
+    "finding_id": "QA-0043",
+    "severity": "提示",
+    "check_code": "GRADUATE_ZERO_MAPPING",
+    "category": "研究生零映射",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|0307",
+    "message": "本科复核账本中没有已接受的核心、强相关或延伸关系；拒绝候选不用于推断反向核心状态。"
+  },
+  {
+    "finding_id": "QA-0044",
+    "severity": "提示",
+    "check_code": "GRADUATE_ZERO_MAPPING",
+    "category": "研究生零映射",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|0712",
+    "message": "本科复核账本中没有已接受的核心、强相关或延伸关系；拒绝候选不用于推断反向核心状态。"
+  },
+  {
+    "finding_id": "QA-0045",
+    "severity": "提示",
+    "check_code": "GRADUATE_ZERO_MAPPING",
+    "category": "研究生零映射",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|0803",
+    "message": "本科复核账本中没有已接受的核心、强相关或延伸关系；拒绝候选不用于推断反向核心状态。"
+  },
+  {
+    "finding_id": "QA-0046",
+    "severity": "提示",
+    "check_code": "GRADUATE_ZERO_MAPPING",
+    "category": "研究生零映射",
+    "entity_type": "graduate",
+    "entity_key": "学术学位一级学科|1009",
+    "message": "本科复核账本中没有已接受的核心、强相关或延伸关系；拒绝候选不用于推断反向核心状态。"
+  },
+  {
+    "finding_id": "QA-0047",
+    "severity": "提示",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "已确认无映射",
+    "entity_type": "undergraduate",
+    "entity_key": "130208TK",
+    "message": "航空服务艺术与管理：按现行1301艺术学的历史、理论和评论研究边界逐专业复核。航空服务艺术与管理以航空服务、礼仪和运营管理为主要对象，不以艺术历史、理论或评论研究为核心，移除艺术学学术候选。未接受任何直接或相关候选。专业学位关系保持独立裁定。学术学位一级学科、专业学位类别未形成已接受核心关系，显式记零。"
+  },
+  {
+    "finding_id": "QA-0048",
+    "severity": "提示",
+    "check_code": "UNDERGRADUATE_ZERO_MAPPING",
+    "category": "已确认无映射",
+    "entity_type": "undergraduate",
+    "entity_key": "140002TK",
+    "message": "交叉工程：该2026交叉学科本科专业无专业类字段，依据专业级显式决定逐项复核。未接受任何直接或相关候选。学术学位一级学科、专业学位类别未形成已接受核心关系，显式记零。"
+  }
+]
