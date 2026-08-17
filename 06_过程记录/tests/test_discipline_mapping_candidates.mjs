@@ -202,18 +202,60 @@ assert.deepEqual(primaryProfessionalTargets("资产评估"), ["0256"]);
 assert.deepEqual(primaryProfessionalTargets("工程审计"), ["1257"]);
 assert.deepEqual(primaryProfessionalTargets("审计学"), ["1257"]);
 assert.deepEqual(primaryProfessionalTargets("内部审计"), ["1257"]);
-assert.deepEqual(targets("音乐表演"), [
-  `${academicType}|1301|主映射/核心对应`,
-  `${professionalType}|1352|主映射/核心对应`,
-]);
 assert.deepEqual(targets("舞蹈表演"), [
-  `${academicType}|1301|主映射/核心对应`,
+  `${academicType}|1301|强相关`,
   `${professionalType}|1353|主映射/核心对应`,
 ]);
 assert.deepEqual(targets("曲艺"), [
-  `${academicType}|1301|主映射/核心对应`,
+  `${academicType}|1301|强相关`,
   `${professionalType}|1355|主映射/核心对应`,
 ]);
+assert.deepEqual(targets("音乐学"), [
+  `${academicType}|1301|主映射/核心对应`,
+  `${professionalType}|1352|主映射/核心对应`,
+]);
+assert.deepEqual(targets("音乐表演"), [
+  `${academicType}|1301|强相关`,
+  `${professionalType}|1352|主映射/核心对应`,
+]);
+assert.deepEqual(primaryAcademicTargets("音乐表演"), []);
+assert.deepEqual(reviewRow("音乐表演").zero_mapping_types, [academicType]);
+assert.equal(mappingCandidate("动画", academicType, "1301").relation_level, "强相关");
+assert.deepEqual(primaryAcademicTargets("动画"), []);
+assert.ok(reviewRow("动画").zero_mapping_types.includes(academicType));
+assert.deepEqual(targets("航空服务艺术与管理"), []);
+assert.deepEqual(reviewRow("航空服务艺术与管理").accepted_mapping_ids, []);
+assert.deepEqual(reviewRow("航空服务艺术与管理").zero_mapping_types, [academicType, professionalType]);
+assert.equal(reviewRow("航空服务艺术与管理").review_status, "已确认无直接对应");
+
+const artTheoryAdjudicationScope = undergraduate.filter((record) =>
+  ["1302", "1303", "1304"].includes(record.class_code));
+assert.equal(artTheoryAdjudicationScope.length, 49);
+for (const major of artTheoryAdjudicationScope) {
+  const actions = overrides.major_overrides[major.major_code] ?? [];
+  const academicDecisions = actions.filter((action) => {
+    if (action.action === "replace_primary") {
+      return action.graduate_type === academicType && action.target.code === "1301";
+    }
+    return ["downgrade", "remove"].includes(action.action)
+      && action.graduate_type === academicType
+      && action.graduate_code === "1301";
+  });
+  assert.equal(academicDecisions.length, 1, `${major.major_code} must explicitly adjudicate academic 1301`);
+  const decision = academicDecisions[0];
+  const decisionRationale = decision.rationale ?? decision.target.rationale;
+  assert.ok(decisionRationale.includes(major.major_name), `${major.major_code} needs a major-specific rationale`);
+  const candidate = mappingCandidate(major.major_name, academicType, "1301");
+  if (decision.action === "replace_primary") {
+    assert.equal(decision.target.level, "主映射/核心对应");
+    assert.equal(candidate.relation_level, "主映射/核心对应");
+  } else if (decision.action === "downgrade") {
+    assert.ok(["强相关", "延伸相关"].includes(decision.relation_level));
+    assert.equal(candidate.relation_level, decision.relation_level);
+  } else {
+    assert.equal(candidate, undefined);
+  }
+}
 const currentArtCodes = new Set(["1301", "1403", "1352", "1353", "1354", "1355", "1356", "1357"]);
 const artMajorCodes = new Set(
   undergraduate.filter((record) => record.category_code === "13").map((record) => record.major_code),

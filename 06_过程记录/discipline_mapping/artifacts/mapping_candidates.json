@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "record_count": 1963,
+    "record_count": 1961,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
-    "override_major_count": 252,
+    "override_major_count": 284,
     "generation_method_counts": {
       "军事学目录参考": 17,
-      "专业级例外": 354,
-      "专业类规则继承": 1592
+      "专业级例外": 401,
+      "专业类规则继承": 1543
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 297,
-      "高置信度候选": 1649,
+      "存在歧义，建议学科专家复核": 337,
+      "高置信度候选": 1607,
       "军事学限制": 17
     }
   },
@@ -32061,18 +32061,18 @@
       "undergraduate_code": "130201",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "音乐表演以演唱、演奏和舞台实践为核心，与艺术学的音乐史论和评论研究形成方法与材料交叉，但不是直接学术对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130201-P-1352",
@@ -32100,15 +32100,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
+      "rationale": "音乐学以音乐历史、理论与评论研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130202-P-1352",
@@ -32133,18 +32133,18 @@
       "undergraduate_code": "130203",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "作曲与作曲技术理论以作品创作、配器和作曲技法为核心，与艺术学共享音乐理论方法，但不以历史和评论研究为主要对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130203-P-1352",
@@ -32169,18 +32169,18 @@
       "undergraduate_code": "130204",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "舞蹈表演以身体训练、排演和舞台呈现为核心，与艺术学的舞蹈史论研究共享作品与分析材料，但不是直接学术对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130204-P-1353",
@@ -32208,15 +32208,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
+      "rationale": "舞蹈学以舞蹈历史、理论和批评研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130205-P-1353",
@@ -32241,18 +32241,18 @@
       "undergraduate_code": "130206",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "舞蹈编导以动作编创、排演和作品生产为核心，与艺术学共享舞蹈分析方法，但不以历史、理论和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130206-P-1353",
@@ -32277,18 +32277,18 @@
       "undergraduate_code": "130207T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "舞蹈教育以舞蹈技能训练与教学法为核心，与艺术学共享舞蹈理论材料，但不以艺术史论和评论为直接研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130207T-P-1353",
@@ -32309,40 +32309,22 @@
       "generation_method": "专业级例外"
     },
     {
-      "mapping_id": "MAP-130208TK-A-1301",
-      "undergraduate_code": "130208TK",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
       "mapping_id": "MAP-130209T-A-1301",
       "undergraduate_code": "130209T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "流行音乐以演唱、演奏、创作与制作实践为核心，与艺术学共享音乐文化分析材料，但不形成直接史论研究对应。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130209T-P-1352",
@@ -32367,18 +32349,18 @@
       "undergraduate_code": "130210T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "典型职业或行业场景",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "音乐治疗以健康干预和治疗实践为主要对象，艺术学的音乐史论仅提供背景材料，属于跨学科延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130210T-P-1352",
@@ -32403,18 +32385,18 @@
       "undergraduate_code": "130211T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "流行舞蹈以动作训练、编创和表演实践为核心，与艺术学共享舞蹈文化分析材料，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130211T-P-1353",
@@ -32439,18 +32421,18 @@
       "undergraduate_code": "130212T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "音乐教育以音乐技能培养和教学法为核心，与艺术学共享音乐理论材料，但不以历史、理论和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130212T-P-1352",
@@ -32475,18 +32457,18 @@
       "undergraduate_code": "130213TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "冰雪舞蹈表演以冰雪场景中的动作训练与表演为核心，与艺术学共享舞蹈分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130213TK-P-1353",
@@ -32511,18 +32493,18 @@
       "undergraduate_code": "130214TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "典型职业或行业场景",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "舞蹈治疗以身心健康干预为主要对象，艺术学的舞蹈史论仅提供背景材料，属于跨学科延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130214TK-P-1353",
@@ -32547,18 +32529,18 @@
       "undergraduate_code": "130215T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
+      "rationale": "音乐科技以声音技术、制作系统和数字工具为核心，艺术学史论只提供应用语境，属于技术侧延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130215T-P-1352",
@@ -32577,24 +32559,6 @@
       "review_status": "高置信度候选",
       "confidence": "高",
       "generation_method": "专业级例外"
-    },
-    {
-      "mapping_id": "MAP-130216T-A-1301",
-      "undergraduate_code": "130216T",
-      "graduate_type": "学术学位一级学科",
-      "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
-      ],
-      "rationale": "音乐与舞蹈学类共享艺术理论、表演和创作训练，学术上衔接艺术学；音乐与舞蹈专业学位分别覆盖类内不同方向，故都仅作待专业级裁定的强相关候选。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
     },
     {
       "mapping_id": "MAP-130216T-P-1352",
@@ -32619,18 +32583,18 @@
       "undergraduate_code": "130301",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "表演以角色塑造、身体声音训练和舞台实践为核心，与艺术学共享表演分析材料，但不以历史、理论和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130301-P-1354",
@@ -32676,15 +32640,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
+      "rationale": "戏剧学以戏剧历史、理论和批评研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130302-P-1354",
@@ -32730,15 +32694,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
+      "rationale": "电影学以电影历史、理论和批评研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130303-P-1354",
@@ -32784,15 +32748,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
+      "rationale": "戏剧影视文学以戏剧影视文本、理论和批评研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130304-P-1354",
@@ -32835,18 +32799,18 @@
       "undergraduate_code": "130305",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "广播电视编导以节目策划、导演和视听创作为核心，与艺术学共享作品分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130305-P-1354",
@@ -32889,18 +32853,18 @@
       "undergraduate_code": "130306",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "戏剧影视导演以排演、调度和影像叙事创作为核心，与艺术学共享戏剧影视分析材料，但不以史论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130306-P-1354",
@@ -32943,18 +32907,18 @@
       "undergraduate_code": "130307",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "戏剧影视美术设计以场景、造型和舞台视觉创作为核心，与艺术学共享审美分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130307-P-1354",
@@ -32997,18 +32961,18 @@
       "undergraduate_code": "130308",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "录音艺术以声音采集、制作和听觉创作为核心，与艺术学共享声音作品分析材料，但不以历史理论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130308-P-1354",
@@ -33051,18 +33015,18 @@
       "undergraduate_code": "130309",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "播音与主持艺术以语言表达、节目主持和传播实践为核心，与艺术学共享表演分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130309-P-1354",
@@ -33105,18 +33069,18 @@
       "undergraduate_code": "130310",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "动画以造型、运动、叙事和影像创作为核心，与艺术学共享作品分析方法，但不以历史、理论和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130310-P-1354",
@@ -33159,18 +33123,18 @@
       "undergraduate_code": "130311T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "影视摄影与制作以摄影、灯光、剪辑和影像生产为核心，与艺术学共享影视作品分析材料，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130311T-P-1354",
@@ -33213,18 +33177,18 @@
       "undergraduate_code": "130312T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "影视技术以成像、后期和制作技术体系为核心，艺术学史论仅提供作品语境，属于技术侧延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130312T-P-1354",
@@ -33267,18 +33231,18 @@
       "undergraduate_code": "130313T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "戏剧教育以戏剧训练和教学实践为核心，与艺术学共享戏剧理论材料，但不以历史和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130313T-P-1354",
@@ -33321,18 +33285,18 @@
       "undergraduate_code": "130314TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "曲艺以说唱表演、节目编创和舞台实践为核心，与艺术学共享曲艺分析材料，但不以历史、理论和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130314TK-P-1355",
@@ -33357,18 +33321,18 @@
       "undergraduate_code": "130315TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "音乐剧以歌唱、表演、舞蹈和综合舞台创作为核心，与艺术学共享作品分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130315TK-P-1354",
@@ -33411,18 +33375,18 @@
       "undergraduate_code": "130316T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "数字戏剧以数字媒介中的戏剧创作和演出实践为核心，与艺术学共享戏剧分析材料，但不以史论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130316T-P-1354",
@@ -33465,18 +33429,18 @@
       "undergraduate_code": "130317T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "数字演艺设计以演出视觉、交互和数字内容设计为核心，与艺术学共享演艺作品分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130317T-P-1354",
@@ -33519,18 +33483,18 @@
       "undergraduate_code": "130318T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "戏剧与影视学类共享表演、编导、影像和视听创作基础，学术上衔接艺术学，主要实践出口衔接戏剧与影视；戏曲与曲艺只覆盖部分方向。",
-      "skills_behavior": "默认标签",
+      "rationale": "智能影像艺术以智能生成、计算影像和技术创作为核心，艺术学史论提供解释语境，属于技术侧延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130318T-P-1354",
@@ -33576,15 +33540,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
+      "rationale": "美术学以美术历史、理论和批评研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130401-P-1356",
@@ -33609,18 +33573,18 @@
       "undergraduate_code": "130402",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "绘画以造型、媒介和绘画创作为核心，与艺术学共享美术作品分析材料，但不以历史理论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130402-P-1356",
@@ -33645,18 +33609,18 @@
       "undergraduate_code": "130403",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "雕塑以三维造型、材料和空间创作为核心，与艺术学共享美术分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130403-P-1356",
@@ -33681,18 +33645,18 @@
       "undergraduate_code": "130404",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "摄影以影像采集、表达和创作实践为核心，与艺术学共享视觉作品分析材料，但不以史论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130404-P-1356",
@@ -33720,15 +33684,15 @@
       "relation_level": "主映射/核心对应",
       "is_primary": true,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究对象",
+        "核心知识基础"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
+      "rationale": "书法学以书法历史、理论和批评研究为核心，直接对应现行艺术学一级学科的学术范围。",
       "skills_behavior": "默认标签",
       "military_restriction": false,
       "review_status": "高置信度候选",
       "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130405T-P-1356",
@@ -33753,18 +33717,18 @@
       "undergraduate_code": "130406T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "中国画以笔墨、造型和绘画创作为核心，与艺术学共享中国美术分析材料，但不以历史理论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130406T-P-1356",
@@ -33789,18 +33753,18 @@
       "undergraduate_code": "130407TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "实验艺术以材料实验、观念和跨媒介创作为核心，与艺术学共享当代艺术分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130407TK-P-1356",
@@ -33825,18 +33789,18 @@
       "undergraduate_code": "130408TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "跨媒体艺术以媒介融合和艺术创作为核心，与艺术学共享作品分析方法，但不以历史、理论和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130408TK-P-1356",
@@ -33861,18 +33825,18 @@
       "undergraduate_code": "130409T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "关键技术体系",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "文物保护与修复以材料诊断、保护技术和修复实践为核心，艺术学史论仅提供对象语境，属于技术侧延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130409T-P-1356",
@@ -33897,18 +33861,18 @@
       "undergraduate_code": "130410T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "漫画以图像叙事、造型和创作实践为核心，与艺术学共享视觉作品分析材料，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130410T-P-1356",
@@ -33933,18 +33897,18 @@
       "undergraduate_code": "130411T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "纤维艺术以纤维材料、工艺和造型创作为核心，与艺术学共享艺术作品分析方法，但不以史论评论为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130411T-P-1356",
@@ -33969,18 +33933,18 @@
       "undergraduate_code": "130412TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "科技艺术以科技媒介和实验性艺术创作为核心，与艺术学共享作品分析方法，但不是直接历史理论评论研究。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130412TK-P-1356",
@@ -34005,18 +33969,18 @@
       "undergraduate_code": "130413TK",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "美术教育以美术技能培养和教学法为核心，与艺术学共享美术理论材料，但不以历史和评论研究为直接对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130413TK-P-1356",
@@ -34041,18 +34005,18 @@
       "undergraduate_code": "130414T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "虚拟空间艺术以沉浸环境、空间媒介和数字创作为核心，与艺术学共享作品分析方法，但不是直接史论研究对象。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130414T-P-1356",
@@ -34077,18 +34041,18 @@
       "undergraduate_code": "130415T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "1301",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "延伸相关",
+      "is_primary": false,
       "relation_basis": [
-        "核心知识基础",
-        "主要研究或实践方法"
+        "典型职业或行业场景",
+        "跨学科应用关系"
       ],
-      "rationale": "美术学类共享视觉艺术史论、造型和创作方法，学术上衔接艺术学，实践培养直接衔接美术与书法专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "艺术治疗以身心健康干预和治疗实践为主要对象，艺术学史论仅提供背景材料，属于跨学科延伸关系。",
+      "skills_behavior": "跨学科召回",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "低",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-130415T-P-1356",
