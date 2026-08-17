@@ -1,0 +1,89 @@
+﻿{
+    "accessed_at":  "2026-08-17",
+    "sources":  [
+                    {
+                        "id":  "vocational_2021_base",
+                        "kind":  "docx",
+                        "title":  "职业教育专业目录（2021年）",
+                        "publisher":  "教育部",
+                        "publication_date":  "2021-03-17",
+                        "url":  "https://www.moe.gov.cn/srcsite/A07/moe_953/202103/W020210319595911145604.docx",
+                        "local_path":  "source_snapshots/vocational_2021_base.docx",
+                        "applies_to":  "职业教育专业基础目录",
+                        "sha256":  "9ab5f9c9b8069e33b49120994b3992eaaebfa3eb704a350dc95460a6165b820b",
+                        "size_bytes":  212522
+                    },
+                    {
+                        "id":  "vocational_2025_supplement",
+                        "kind":  "doc",
+                        "title":  "2025年职业教育专业目录增补清单",
+                        "publisher":  "教育部办公厅",
+                        "publication_date":  "2025-12-01",
+                        "url":  "https://www.moe.gov.cn/srcsite/A07/moe_737/s3876_qt/202601/W020260106393908779349.doc",
+                        "local_path":  "source_snapshots/vocational_2025_supplement.doc",
+                        "applies_to":  "2025年职业教育专业目录增补沿革",
+                        "sha256":  "aae85786f812dc8c52d5d6f5dd3fa7d4948e07a5504f80bcce3bbb9dd846415f",
+                        "size_bytes":  147456
+                    },
+                    {
+                        "id":  "vocational_effective_2026_07",
+                        "kind":  "docx",
+                        "title":  "职业教育专业目录（2021年）（更新时间：2026年7月）",
+                        "publisher":  "教育部",
+                        "publication_date":  "2026-07-16",
+                        "url":  "https://www.moe.gov.cn/s78/A07/zcs_ztzl/2017_zt06/17zt06_bznr/zhijiao/202607/P020260714589584937536.docx",
+                        "local_path":  "source_snapshots/vocational_effective_2026_07.docx",
+                        "applies_to":  "截至2026年7月的现行职业教育专业完整目录",
+                        "sha256":  "52da92f899852713f1d4c40f9669db4ab4e6062bffea1b9689d47a740b6ed197",
+                        "size_bytes":  910395
+                    },
+                    {
+                        "id":  "vocational_2021_notice",
+                        "kind":  "html",
+                        "title":  "教育部关于印发《职业教育专业目录（2021年）》的通知",
+                        "publisher":  "教育部",
+                        "publication_date":  "2021-03-19",
+                        "url":  "https://www.moe.gov.cn/srcsite/A07/moe_953/202103/t20210319_521135.html",
+                        "local_path":  "source_snapshots/vocational_2021_notice.html",
+                        "applies_to":  "基础目录发布说明与744个高职专科专业基线",
+                        "sha256":  "48dbb39fc12d8887c4ba8fe8c10946b832df7a511a6dbd8e1cf093a1c6a52d14",
+                        "size_bytes":  19343
+                    },
+                    {
+                        "id":  "vocational_2025_notice",
+                        "kind":  "html",
+                        "title":  "教育部办公厅关于做好2026年职业教育拟招生专业设置管理工作的通知",
+                        "publisher":  "教育部办公厅",
+                        "publication_date":  "2025-12-01",
+                        "url":  "https://www.moe.gov.cn/srcsite/A07/moe_737/s3876_qt/202601/t20260105_1425685.html",
+                        "local_path":  "source_snapshots/vocational_2025_notice.html",
+                        "applies_to":  "2025年增补清单发布依据",
+                        "sha256":  "4475b2a2b58aceb4e5c68d6e88da6b7923bc70883b47f416adf605fd9a6f3da5",
+                        "size_bytes":  26125
+                    },
+                    {
+                        "id":  "vocational_2026_release",
+                        "kind":  "html",
+                        "title":  "《职业教育专业目录》增补27个新专业",
+                        "publisher":  "教育部",
+                        "publication_date":  "2026-07-16",
+                        "url":  "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202607/t20260715_1443823.html",
+                        "local_path":  "source_snapshots/vocational_2026_release.html",
+                        "applies_to":  "2026年新增9个高职专科专业及执行时间说明",
+                        "sha256":  "d061c3b7fb11463ed2520f5b14909b11c51d903e950f0bb9cc72eab6a2e7c1f9",
+                        "size_bytes":  16586
+                    },
+                    {
+                        "id":  "vocational_2026_qa",
+                        "kind":  "html",
+                        "title":  "教育部职业教育与成人教育司负责人就2026年《职业教育专业目录》专业增补答记者问",
+                        "publisher":  "教育部",
+                        "publication_date":  "2026-07-16",
+                        "url":  "https://www.moe.gov.cn/jyb_xwfb/s271/202607/t20260715_1443829.html",
+                        "local_path":  "source_snapshots/vocational_2026_qa.html",
+                        "applies_to":  "2026年增补口径说明",
+                        "sha256":  "73c03b5753457094eca73149bd1b8f2857a071d7800b87a93a4541b49a1514b9",
+                        "size_bytes":  20943
+                    }
+                ]
+}
