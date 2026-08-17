@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-17",
+  "vocational_count": 811,
+  "undergraduate_count": 883,
+  "class_count": 97,
+  "mapping_count": 1084,
+  "consumable_mapping_count": 1084,
+  "primary_mapping_count": 193,
+  "vocational_zero_direct": 569,
+  "vocational_zero_all": 1,
+  "undergraduate_zero_consumable": 580,
+  "expert_review_count": 5,
+  "notice_count": 10,
+  "blocking_count": 0,
+  "relation_level_counts": {
+    "主映射/核心对应": 193,
+    "其他核心对应": 66,
+    "强相关": 822,
+    "延伸相关": 3,
+    "目录参考": 0
+  }
+}

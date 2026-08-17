@@ -1,0 +1,97 @@
+{
+  "blocking": [],
+  "review": [
+    {
+      "code": "EXPERT_REVIEW_RECOMMENDED",
+      "vocational_code": "520409K",
+      "vocational_name": "朝医学",
+      "message": "本科目录无同名朝医学专业，暂按民族传统医学知识基础保留至中医学的强相关关系，建议民族医学专家复核。"
+    },
+    {
+      "code": "EXPERT_REVIEW_RECOMMENDED",
+      "vocational_code": "520412",
+      "vocational_name": "维药学",
+      "message": "本科目录无同名维药学专业，暂按民族药物鉴定、炮制与制剂基础保留至中药学的强相关关系，建议民族药学专家复核。"
+    },
+    {
+      "code": "EXPERT_REVIEW_RECOMMENDED",
+      "vocational_code": "550220",
+      "vocational_name": "现代魔术设计与表演",
+      "message": "本科目录无同名魔术专业，仅保留至表演的强相关关系，不作为默认标签，建议表演艺术专家复核。"
+    },
+    {
+      "code": "EXPERT_REVIEW_RECOMMENDED",
+      "vocational_code": "550221",
+      "vocational_name": "现代杂技表演艺术",
+      "message": "本科目录无同名杂技专业，仅保留至表演的强相关关系，不作为默认标签，建议表演艺术专家复核。"
+    },
+    {
+      "code": "EXPERT_REVIEW_RECOMMENDED",
+      "vocational_code": "580606K",
+      "vocational_name": "戒毒矫治技术",
+      "message": "戒毒矫治兼具禁毒治理、心理干预和矫正教育属性，仅保留强相关关系，不设默认标签，建议司法与心理专家联合复核。"
+    }
+  ],
+  "notice": [
+    {
+      "code": "CONFIRMED_NO_MAPPING",
+      "vocational_code": "570208",
+      "vocational_name": "应用外语",
+      "message": "已核对本科目录与专业类边界，未发现培养对象、知识基础或技术体系可构成稳定映射的本科专业。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "430507",
+      "vocational_name": "储能材料装备智能运维技术",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "460514",
+      "vocational_name": "海洋智能机器人应用技术",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "500115",
+      "vocational_name": "高原铁路智能建造与运维",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "510313",
+      "vocational_name": "智能体通信技术",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "510314",
+      "vocational_name": "车联网通信技术",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "540114",
+      "vocational_name": "旅居康养运营与管理",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "550306",
+      "vocational_name": "剧装戏具设计与制作",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "570117K",
+      "vocational_name": "婴幼儿家庭养育与指导",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    },
+    {
+      "code": "ENROLLMENT_EFFECTIVE_2027",
+      "vocational_code": "590308",
+      "vocational_name": "老年教育服务与管理",
+      "message": "该专业列入2026年目录增补，自2027年起执行招生。"
+    }
+  ]
+}
