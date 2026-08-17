@@ -1,0 +1,66 @@
+{
+  "relation_levels": [
+    "主映射/核心对应",
+    "其他核心对应",
+    "强相关",
+    "延伸相关",
+    "目录参考"
+  ],
+  "skills_behaviors": [
+    "默认标签",
+    "默认辅助标签",
+    "扩展检索",
+    "跨学科召回",
+    "仅目录查看",
+    "无"
+  ],
+  "review_statuses": [
+    "已依据规则复核",
+    "高置信度候选",
+    "存在歧义，建议学科专家复核",
+    "已确认无直接对应",
+    "尚未完成复核",
+    "敏感专业限制",
+    "目录版本差异待处理"
+  ],
+  "confidence_levels": [
+    "高",
+    "中",
+    "低"
+  ],
+  "relation_bases": [
+    "主要培养或实践对象",
+    "核心知识基础",
+    "主要实践或研究方法",
+    "关键技术体系",
+    "典型职业或行业场景",
+    "培养出口",
+    "教育部目录或正式说明中的明确衔接",
+    "跨学科应用关系"
+  ],
+  "relation_behavior_rules": {
+    "主映射/核心对应": "默认标签",
+    "其他核心对应": "默认辅助标签",
+    "强相关": "扩展检索",
+    "延伸相关": "跨学科召回",
+    "目录参考": "仅目录查看"
+  },
+  "restricted_undergraduate_class_codes": [
+    "0821"
+  ],
+  "restricted_object_keywords": [
+    "武器",
+    "弹药",
+    "军用装备",
+    "兵器",
+    "作战"
+  ],
+  "sensitive_rule": {
+    "relation_level": "目录参考",
+    "is_primary": false,
+    "skills_behavior": "仅目录查看",
+    "sensitive_restriction": true,
+    "consumable": false,
+    "review_status": "敏感专业限制"
+  }
+}
