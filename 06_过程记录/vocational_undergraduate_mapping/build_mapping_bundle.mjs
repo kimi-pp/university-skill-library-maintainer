@@ -20,6 +20,7 @@ export async function buildMappingBundle() {
     ledgerPayload,
     reversePayload,
     sourceManifest,
+    disciplineSourceManifest,
     inputManifest,
   ] = await Promise.all([
     readJson(path.join(scriptDir, "catalogs", "vocational_effective_2026.json")),
@@ -31,6 +32,7 @@ export async function buildMappingBundle() {
     readJson(path.join(scriptDir, "review", "vocational_review_ledger.json")),
     readJson(path.join(scriptDir, "review", "undergraduate_reverse_ledger.json")),
     readJson(path.join(scriptDir, "source_manifest.json")),
+    readJson(path.join(processRoot, "discipline_mapping", "source_manifest.json")),
     readJson(path.join(scriptDir, "input_manifest.json")),
   ]);
 
@@ -192,7 +194,12 @@ export async function buildMappingBundle() {
     undergraduate_index: undergraduateIndex,
     class_aggregation: classAggregation,
     sources: {
-      official_sources: sourceManifest.sources,
+      official_sources: [
+        ...sourceManifest.sources,
+        ...disciplineSourceManifest.sources.filter(
+          (source) => source.id === "undergraduate_2026_pdf",
+        ),
+      ],
       input_manifest: inputManifest,
     },
     qa,

@@ -61,6 +61,9 @@ assert.equal(summary.class_count, 97);
 assert.equal(summary.mapping_count, bundle.mappings.length);
 assert.equal(summary.blocking_count, 0);
 assert.equal(summary.expert_review_count, 5);
+assert.ok(
+  bundle.sources.official_sources.some((source) => source.id === "undergraduate_2026_pdf"),
+);
 assert.equal(
   summary.vocational_zero_all,
   bundle.vocational_index.filter((row) => row.zero_all).length,

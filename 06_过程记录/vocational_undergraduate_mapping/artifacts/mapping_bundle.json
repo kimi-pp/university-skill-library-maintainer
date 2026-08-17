@@ -83179,6 +83179,18 @@
         "applies_to": "2026年增补口径说明",
         "sha256": "73c03b5753457094eca73149bd1b8f2857a071d7800b87a93a4541b49a1514b9",
         "size_bytes": 20943
+      },
+      {
+        "id": "undergraduate_2026_pdf",
+        "kind": "pdf",
+        "title": "普通高等学校本科专业目录（2026年）",
+        "publisher": "教育部",
+        "publication_date": "2026-04-28",
+        "accessed_at": "2026-08-16",
+        "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf",
+        "local_path": "source_snapshots/undergraduate_2026.pdf",
+        "sha256": "51026248004546171620678895e991a6f0ada1ebf0de6498fe8c563873b43f11",
+        "applies_to": "本科专业目录"
       }
     ],
     "input_manifest": {
