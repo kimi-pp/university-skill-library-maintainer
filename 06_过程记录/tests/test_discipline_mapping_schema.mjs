@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 
+import policy from "../discipline_mapping/rules/mapping_policy.json" with { type: "json" };
 import {
   CONFIDENCE_LEVELS,
   GRADUATE_OBJECT_TYPES,
@@ -26,6 +27,12 @@ const graduateByKey = new Map([
   ["学术学位一级学科|0809", {
     object_code: "0809",
     object_name: "电子科学与技术",
+    object_type: "学术学位一级学科",
+    category_code: "08",
+  }],
+  ["学术学位一级学科|0826", {
+    object_code: "0826",
+    object_name: "兵器科学与技术",
     object_type: "学术学位一级学科",
     category_code: "08",
   }],
@@ -72,6 +79,17 @@ const militaryMapping = Object.freeze({
   confidence: "中",
 });
 
+const restrictedArmamentMapping = Object.freeze({
+  ...ordinaryMapping,
+  mapping_id: "MAP-080901-A-0826",
+  graduate_code: "0826",
+});
+const restrictedArmamentReference = Object.freeze({
+  ...restrictedArmamentMapping,
+  ...MILITARY_RULE,
+  confidence: "中",
+});
+
 assert.deepEqual(RELATION_LEVELS, ["主映射/核心对应", "其他核心对应", "强相关", "延伸相关", "目录参考"]);
 assert.deepEqual(SKILLS_BEHAVIORS, ["默认标签", "默认辅助标签", "扩展检索", "跨学科召回", "仅目录查看", "无"]);
 assert.deepEqual(REVIEW_STATUSES, ["已依据规则复核", "高置信度候选", "存在歧义，建议学科专家复核", "已确认无直接对应", "尚未完成复核", "军事学限制", "目录版本差异待处理"]);
@@ -85,10 +103,18 @@ assert.deepEqual(MILITARY_RULE, {
   military_restriction: true,
   review_status: "军事学限制",
 });
+assert.deepEqual(policy.military_restricted_objects, [
+  { graduate_type: "学术学位一级学科", graduate_code: "0826" },
+]);
 
 assert.equal(graduateKey("学术学位一级学科", "0812"), "学术学位一级学科|0812");
 assert.doesNotThrow(() => validateMappingRecord(ordinaryMapping, undergraduateByCode, graduateByKey));
 assert.doesNotThrow(() => validateMappingRecord(militaryMapping, undergraduateByCode, graduateByKey));
+assert.doesNotThrow(() => validateMappingRecord(restrictedArmamentReference, undergraduateByCode, graduateByKey));
+assert.throws(
+  () => validateMappingRecord(restrictedArmamentMapping, undergraduateByCode, graduateByKey),
+  /军事学|受限/,
+);
 
 assert.throws(
   () => validateMappingRecord({ ...ordinaryMapping, undergraduate_code: "999999" }, undergraduateByCode, graduateByKey),

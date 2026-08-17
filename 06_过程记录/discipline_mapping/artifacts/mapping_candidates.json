@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "record_count": 1978,
+    "record_count": 1977,
     "undergraduate_major_count": 883,
     "class_rule_count": 92,
     "override_major_count": 226,
     "generation_method_counts": {
-      "军事学目录参考": 9,
-      "专业级例外": 327,
-      "专业类规则继承": 1642
+      "军事学目录参考": 17,
+      "专业级例外": 329,
+      "专业类规则继承": 1631
     },
     "review_status_counts": {
-      "存在歧义，建议学科专家复核": 328,
-      "高置信度候选": 1641,
-      "军事学限制": 9
+      "存在歧义，建议学科专家复核": 330,
+      "高置信度候选": 1630,
+      "军事学限制": 17
     }
   },
   "records": [
@@ -10389,18 +10389,18 @@
       "undergraduate_code": "070604T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0751",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "主要研究或实践方法",
+        "跨学科应用关系"
       ],
-      "rationale": "大气科学类围绕大气过程、观测预报和气候系统，直接衔接大气科学一级学科及气象专业学位。",
-      "skills_behavior": "默认标签",
+      "rationale": "地球系统科学综合大气圈、水圈、岩石圈与生物圈过程，气象观测和预测只覆盖其中部分方法与应用，不构成气象专业学位核心出口。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-070701-A-0707",
@@ -10754,24 +10754,6 @@
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
-      ],
-      "rationale": "地球物理学类以物理方法探测地球及空间环境，直接衔接地球物理学，工程探测、防灾和资源环境实践与资源与环境专业学位相连。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
-    },
-    {
-      "mapping_id": "MAP-070804TK-P-0857",
-      "undergraduate_code": "070804TK",
-      "graduate_type": "专业学位类别",
-      "graduate_code": "0857",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
-      "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
       ],
       "rationale": "地球物理学类以物理方法探测地球及空间环境，直接衔接地球物理学，工程探测、防灾和资源环境实践与资源与环境专业学位相连。",
       "skills_behavior": "默认标签",
@@ -21711,18 +21693,18 @@
       "undergraduate_code": "082101",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082101-A-1108",
@@ -21765,18 +21747,18 @@
       "undergraduate_code": "082102",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082102-A-1108",
@@ -21819,18 +21801,18 @@
       "undergraduate_code": "082103",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082103-A-1108",
@@ -21873,18 +21855,18 @@
       "undergraduate_code": "082104",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082104-A-1108",
@@ -21927,18 +21909,18 @@
       "undergraduate_code": "082105",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082105-A-1108",
@@ -21981,18 +21963,18 @@
       "undergraduate_code": "082106",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082106-A-1108",
@@ -22035,18 +22017,18 @@
       "undergraduate_code": "082107",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082107-A-1108",
@@ -22089,18 +22071,18 @@
       "undergraduate_code": "082108T",
       "graduate_type": "学术学位一级学科",
       "graduate_code": "0826",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "目录参考",
+      "is_primary": false,
       "relation_basis": [
         "主要研究对象",
         "关键技术体系"
       ],
       "rationale": "兵器类以武器系统、发射、制导、弹药与特种装备技术为核心，直接衔接兵器科学与技术；军事装备学只保留受限目录参考关系。",
-      "skills_behavior": "默认标签",
-      "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "skills_behavior": "仅目录查看",
+      "military_restriction": true,
+      "review_status": "军事学限制",
+      "confidence": "中",
+      "generation_method": "军事学目录参考"
     },
     {
       "mapping_id": "MAP-082108T-A-1108",
@@ -26121,18 +26103,18 @@
       "undergraduate_code": "090204T",
       "graduate_type": "专业学位类别",
       "graduate_code": "0951",
-      "relation_level": "主映射/核心对应",
-      "is_primary": true,
+      "relation_level": "强相关",
+      "is_primary": false,
       "relation_basis": [
-        "培养出口",
-        "典型职业或行业场景"
+        "典型职业或行业场景",
+        "跨学科应用关系"
       ],
-      "rationale": "自然保护与环境生态类以农业资源、生态保护和国土修复为共同对象，主要衔接农业资源与环境及农业专业学位，并与水土保持、生态学形成方法和对象交叉。",
-      "skills_behavior": "默认标签",
+      "rationale": "生物质原料可能来自农业生产场景，但专业核心可能偏生物转化、材料或能源利用；在培养方案明确前，农业专业学位仅保留应用场景强相关。",
+      "skills_behavior": "扩展检索",
       "military_restriction": false,
-      "review_status": "高置信度候选",
-      "confidence": "高",
-      "generation_method": "专业类规则继承"
+      "review_status": "存在歧义，建议学科专家复核",
+      "confidence": "中",
+      "generation_method": "专业级例外"
     },
     {
       "mapping_id": "MAP-090205T-A-0713",

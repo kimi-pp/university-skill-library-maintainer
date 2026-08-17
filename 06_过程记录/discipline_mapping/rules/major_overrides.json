@@ -559,6 +559,17 @@
     ],
     "070604T": [
       {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0751",
+        "relation_level": "强相关",
+        "basis": [
+          "主要研究或实践方法",
+          "跨学科应用关系"
+        ],
+        "rationale": "地球系统科学综合大气圈、水圈、岩石圈与生物圈过程，气象观测和预测只覆盖其中部分方法与应用，不构成气象专业学位核心出口。"
+      },
+      {
         "action": "add",
         "target": {
           "graduate_type": "学术学位一级学科",
@@ -607,6 +618,12 @@
       }
     ],
     "070804TK": [
+      {
+        "action": "remove",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0857",
+        "rationale": "行星科学研究行星形成、演化、内部结构与空间环境，不能仅因继承地球物理学类规则而推定资源与环境专业学位出口；在获得行星探测培养证据前移除该候选。"
+      },
       {
         "action": "add",
         "target": {
@@ -3537,6 +3554,17 @@
       }
     ],
     "090204T": [
+      {
+        "action": "downgrade",
+        "graduate_type": "专业学位类别",
+        "graduate_code": "0951",
+        "relation_level": "强相关",
+        "basis": [
+          "典型职业或行业场景",
+          "跨学科应用关系"
+        ],
+        "rationale": "生物质原料可能来自农业生产场景，但专业核心可能偏生物转化、材料或能源利用；在培养方案明确前，农业专业学位仅保留应用场景强相关。"
+      },
       {
         "action": "add",
         "target": {

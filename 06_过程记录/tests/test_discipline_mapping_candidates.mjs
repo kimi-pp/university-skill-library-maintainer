@@ -227,6 +227,29 @@ assert.deepEqual(primaryAcademicTargets("园艺"), ["0902"]);
 assert.deepEqual(primaryAcademicTargets("植物保护"), ["0904"]);
 assert.deepEqual(primaryAcademicTargets("生态修复学"), ["0713"]);
 assert.deepEqual(primaryProfessionalTargets("针灸推拿学"), ["1059"]);
+assert.deepEqual(targets("地球系统科学"), [
+  `${academicType}|0705|强相关`,
+  `${academicType}|0706|主映射/核心对应`,
+  `${academicType}|0707|强相关`,
+  `${professionalType}|0751|强相关`,
+]);
+assert.deepEqual(primaryProfessionalTargets("地球系统科学"), []);
+assert.deepEqual(reviewRow("地球系统科学").zero_mapping_types, [professionalType]);
+assert.equal(reviewRow("地球系统科学").review_status, "存在歧义，建议学科专家复核");
+assert.deepEqual(targets("行星科学"), [
+  `${academicType}|0704|强相关`,
+  `${academicType}|0708|主映射/核心对应`,
+]);
+assert.deepEqual(primaryProfessionalTargets("行星科学"), []);
+assert.deepEqual(reviewRow("行星科学").zero_mapping_types, [professionalType]);
+assert.equal(reviewRow("行星科学").review_status, "存在歧义，建议学科专家复核");
+assert.deepEqual(primaryProfessionalTargets("生物质科学与工程"), []);
+assert.deepEqual(reviewRow("生物质科学与工程").zero_mapping_types, [academicType, professionalType]);
+assert.equal(reviewRow("生物质科学与工程").review_status, "存在歧义，建议学科专家复核");
+assert.equal(
+  mappingCandidate("生物质科学与工程", professionalType, "0951").relation_level,
+  "强相关",
+);
 assert.equal(mappingCandidate("地理信息科学", academicType, "0816").relation_level, "强相关");
 assert.equal(mappingCandidate("机器人工程", academicType, "1405").relation_level, "强相关");
 assert.equal(mappingCandidate("临床工程技术", professionalType, "1058").relation_level, "强相关");
@@ -343,6 +366,52 @@ for (const candidate of candidates) {
     );
   }
 }
+
+const armamentMajors = undergraduate.filter((record) => record.class_code === "0821");
+assert.equal(armamentMajors.length, 8);
+const armamentCodes = new Set(armamentMajors.map((record) => record.major_code));
+const restrictedArmamentCandidates = candidates.filter(
+  (candidate) => armamentCodes.has(candidate.undergraduate_code)
+    && candidate.graduate_type === academicType
+    && candidate.graduate_code === "0826",
+);
+assert.equal(restrictedArmamentCandidates.length, 8);
+for (const candidate of restrictedArmamentCandidates) {
+  assert.deepEqual(
+    {
+      relation_level: candidate.relation_level,
+      is_primary: candidate.is_primary,
+      skills_behavior: candidate.skills_behavior,
+      military_restriction: candidate.military_restriction,
+      review_status: candidate.review_status,
+      generation_method: candidate.generation_method,
+    },
+    {
+      relation_level: "目录参考",
+      is_primary: false,
+      skills_behavior: "仅目录查看",
+      military_restriction: true,
+      review_status: "军事学限制",
+      generation_method: "军事学目录参考",
+    },
+  );
+}
+const consumableArmamentBundle = structuredClone(candidates);
+Object.assign(
+  consumableArmamentBundle.find((candidate) => candidate.mapping_id === "MAP-082101-A-0826"),
+  {
+    relation_level: "主映射/核心对应",
+    is_primary: true,
+    skills_behavior: "默认标签",
+    military_restriction: false,
+    review_status: "高置信度候选",
+    generation_method: "专业类规则继承",
+  },
+);
+assert.throws(
+  () => validateBundle({ undergraduate, graduate, mappings: consumableArmamentBundle }),
+  /军事学|受限/,
+);
 
 const syntheticGraduate = [
   graduateRecord(academicType, "0101", "哲学", "01"),

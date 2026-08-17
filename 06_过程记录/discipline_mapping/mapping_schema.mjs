@@ -7,6 +7,9 @@ export const CONFIDENCE_LEVELS = Object.freeze([...policy.confidence_levels]);
 export const RELATION_BASES = Object.freeze([...policy.relation_bases]);
 export const GRADUATE_OBJECT_TYPES = Object.freeze([...policy.graduate_object_types]);
 export const MILITARY_RULE = Object.freeze({ ...policy.military_rule });
+export const MILITARY_RESTRICTED_OBJECTS = Object.freeze(
+  policy.military_restricted_objects.map((record) => Object.freeze({ ...record })),
+);
 
 const relationLevels = new Set(RELATION_LEVELS);
 const skillsBehaviors = new Set(SKILLS_BEHAVIORS);
@@ -14,6 +17,9 @@ const reviewStatuses = new Set(REVIEW_STATUSES);
 const confidenceLevels = new Set(CONFIDENCE_LEVELS);
 const relationBases = new Set(RELATION_BASES);
 const graduateObjectTypes = new Set(GRADUATE_OBJECT_TYPES);
+const militaryRestrictedObjectKeys = new Set(
+  MILITARY_RESTRICTED_OBJECTS.map((record) => graduateKey(record.graduate_type, record.graduate_code)),
+);
 
 function fail(message) {
   throw new Error(`映射记录无效：${message}`);
@@ -38,6 +44,12 @@ function sameMilitaryTuple(record) {
 /** Returns a stable catalog key without changing the supplied code string. */
 export function graduateKey(type, code) {
   return `${type}|${code}`;
+}
+
+/** Returns true for graduate objects that must never produce consumable Skills behavior. */
+export function isMilitaryRestrictedObject(record) {
+  return record.category_code === policy.military_category_code
+    || militaryRestrictedObjectKeys.has(graduateKey(record.object_type, record.object_code));
 }
 
 /**
@@ -80,7 +92,7 @@ export function validateMappingRecord(record, ugByCode, gradByKey) {
     fail("只有主映射/核心对应可以标记 is_primary=true");
   }
 
-  const militaryRelation = graduate.category_code === policy.military_category_code || record.military_restriction;
+  const militaryRelation = isMilitaryRestrictedObject(graduate) || record.military_restriction;
   if (militaryRelation && !sameMilitaryTuple(record)) {
     fail("军事学关系只能保留为目录参考，且不得产生 Skills 标签或检索行为");
   }

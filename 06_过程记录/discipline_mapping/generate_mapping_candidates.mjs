@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import policy from "./rules/mapping_policy.json" with { type: "json" };
-import { graduateKey, validateBundle } from "./mapping_schema.mjs";
+import { graduateKey, isMilitaryRestrictedObject, validateBundle } from "./mapping_schema.mjs";
 
 const ACADEMIC_TYPE = "学术学位一级学科";
 const PROFESSIONAL_TYPE = "专业学位类别";
@@ -256,7 +256,7 @@ function applyOverrides({ major, targets, actions, graduateByKey, hasExplicitOve
 
 function finalizeCandidate(candidate, graduateByKey) {
   const graduate = graduateByKey.get(endpoint(candidate.graduate_type, candidate.graduate_code));
-  const isMilitary = graduate.category_code === policy.military_category_code;
+  const isMilitary = isMilitaryRestrictedObject(graduate);
   const relationLevel = isMilitary ? policy.military_rule.relation_level : candidate.relation_level;
   const isPrimary = isMilitary ? policy.military_rule.is_primary : candidate.is_primary;
   const skillsBehavior = isMilitary

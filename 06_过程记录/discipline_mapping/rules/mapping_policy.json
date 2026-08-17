@@ -50,6 +50,12 @@
     "目录参考": "仅目录查看"
   },
   "military_category_code": "11",
+  "military_restricted_objects": [
+    {
+      "graduate_type": "学术学位一级学科",
+      "graduate_code": "0826"
+    }
+  ],
   "military_rule": {
     "relation_level": "目录参考",
     "is_primary": false,
