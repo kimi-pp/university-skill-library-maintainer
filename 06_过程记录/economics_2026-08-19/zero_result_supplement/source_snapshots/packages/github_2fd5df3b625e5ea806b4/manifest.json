@@ -1,0 +1,12 @@
+[
+  {
+    "path": "apps/cli/src/templates/shared-skills/prd/SKILL.md",
+    "size": 20678,
+    "sha256": "924368b3aa62d9b35156197069e5d5713275d43e28105bef0ae7e2ecaa554916"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1070,
+    "sha256": "1a1f4aac7d821be8af8aba7af95961c51383308927804a7b34d0bba8bb601d50"
+  }
+]

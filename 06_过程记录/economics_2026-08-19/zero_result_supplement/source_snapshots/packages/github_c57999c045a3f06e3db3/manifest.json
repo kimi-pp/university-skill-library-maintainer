@@ -1,0 +1,12 @@
+[
+  {
+    "path": "backend/browser_act_packs/search-research/google-news-api-skill/SKILL.md",
+    "size": 6013,
+    "sha256": "2b7625306fcf37989977282112e2a79e259a63b4850926e844a1e8a43933d0f6"
+  },
+  {
+    "path": "LICENSE",
+    "size": 10417,
+    "sha256": "4c33c9ed6163ac0f004273daece0fa17b78e02aa8e1aa1d671367211062031be"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1070,
+    "sha256": "068fdddcf2a53418de163dc16a3c10922fed57499570fa6d43caaa7fd53e7a3b"
+  },
+  {
+    "path": "packages/config-maintenance/.apm/skills/config-modernizer/SKILL.md",
+    "size": 3166,
+    "sha256": "ba6928ba120093fd96f5380a4322d008cf4eab97a7a811f0f4282f54af329fc4"
+  }
+]

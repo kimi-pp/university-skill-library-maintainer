@@ -1,0 +1,12 @@
+[
+  {
+    "path": "crates/hive-core/bundled-personas/system/finance/tax-advisor/skills/tax-research/SKILL.md",
+    "size": 6405,
+    "sha256": "14e39a8a169c2e851ab3e6c2cc4cfca8998df09296ea660da2404a222f479c95"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1068,
+    "sha256": "2f99b418c75a4d658498e5649110d435f0c8a5011186ce38ee17e11c7e9e4a3c"
+  }
+]

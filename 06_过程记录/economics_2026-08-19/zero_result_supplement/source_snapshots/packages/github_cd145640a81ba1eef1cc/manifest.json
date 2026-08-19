@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1063,
+    "sha256": "ef7d36972d1d94ce65b4084e72b4a4fdbfe1e77d2e97ff97cf4436b394893399"
+  },
+  {
+    "path": "spaice_agent/bundled_skills/antigravity/energy-procurement/SKILL.md",
+    "size": 29823,
+    "sha256": "1ee383bf47ced66ae95eb2f82dfec731ee10443ad5baf5b39dcdab2bc5e5af9a"
+  }
+]

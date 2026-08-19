@@ -1,0 +1,12 @@
+[
+  {
+    "path": ".agent-bus/skills/eos-storage-cleanup/SKILL.md",
+    "size": 15426,
+    "sha256": "e28d95f7715e8bad4cf0732ceb870ffb9b8476624fac957381447773470f8ead"
+  },
+  {
+    "path": "LICENSE",
+    "size": 34523,
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+  }
+]

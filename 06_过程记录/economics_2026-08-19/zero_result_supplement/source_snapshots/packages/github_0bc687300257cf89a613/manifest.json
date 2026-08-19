@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 2365,
+    "sha256": "8f3402345e300f761d2213b3755effed21d21a2c33a08cf7f1a0adc2655ecf29"
+  },
+  {
+    "path": "packages/agent-core/src/skill/catalog/luokai-aegisops-ai/SKILL.md",
+    "size": 5396,
+    "sha256": "aa14be8e5a6edf7f36cec9579307b7482ba527719730401f36fc10271a99e3ce"
+  }
+]

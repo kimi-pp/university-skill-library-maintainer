@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "a52162e578c12f21b6a7025e8049a45a414b6997eb20bd70ae4e646be9313261"
+  },
+  {
+    "path": "plugins/workflow/skills/one-pager/SKILL.md",
+    "size": 6392,
+    "sha256": "05541384d98019ec1b6bc2ee37f12cbf3163e4b613866074568fec6d06fb91dd"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1072,
+    "sha256": "6e3b1d4225fb6ba4b09ca06953cf7fafa25dfff3d85363e56219dc2140f30ce6"
+  },
+  {
+    "path": "src/data/SKILL.md",
+    "size": 10327,
+    "sha256": "aa56fb460adaac07825c145716edbe6fc0804b3f661a71e00df1a993eb30a9a6"
+  }
+]

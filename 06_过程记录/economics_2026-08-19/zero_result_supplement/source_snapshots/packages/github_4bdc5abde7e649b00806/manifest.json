@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1093,
+    "sha256": "e4bafd89341d4a9af66ad224e7c8c7ac0a519726396b652a737a4a48978ea0d9"
+  },
+  {
+    "path": "src/skills/augur-buffett/SKILL.md",
+    "size": 7298,
+    "sha256": "a0eab290db675e1834d0776aa5a297716754ab5ea503c7745c23ed0f6bc65149"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "integrations/claude-code/skills/security/SKILL.md",
+    "size": 211407,
+    "sha256": "84af2460394b933abefb4722c03e3960e9debb96c2364916844228da4ac33fb7"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1071,
+    "sha256": "ed0ec7e555dd4d2dd942f86798afb4aad00b35f3f2dbf41586bf2c3a209d0b0c"
+  }
+]

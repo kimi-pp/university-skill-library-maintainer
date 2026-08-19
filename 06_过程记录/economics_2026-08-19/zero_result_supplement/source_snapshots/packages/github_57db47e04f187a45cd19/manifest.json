@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 10350,
+    "sha256": "286108223d119fa61c7be529000e76470f649b0d3a2bd1f06a7727f296136e56"
+  },
+  {
+    "path": "src/skills/loan-document-reviewer/SKILL.md",
+    "size": 53649,
+    "sha256": "03f85979a5b41ac7ed17cb7382e1f70efa59c89598057aa8e2216d5e6aab3766"
+  }
+]

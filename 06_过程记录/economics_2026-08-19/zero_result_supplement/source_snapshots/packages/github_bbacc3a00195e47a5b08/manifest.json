@@ -1,0 +1,12 @@
+[
+  {
+    "path": "examples/maestro-voice-insurance-skills/skills/human_handoff/skill.md",
+    "size": 717,
+    "sha256": "3a7f73214cf8c590fe1982c343d86036ec2f679f149194039565953fc73ca1ed"
+  },
+  {
+    "path": "LICENSE",
+    "size": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  }
+]

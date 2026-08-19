@@ -1,23 +1,25 @@
 {
   "schema_version": "economics-adjudication-v1",
-  "deduplicated_candidate_count": 166,
-  "formal_candidate_count": 29,
-  "excluded_candidate_count": 137,
+  "deduplicated_candidate_count": 1534,
+  "formal_candidate_count": 95,
+  "excluded_candidate_count": 1439,
   "exclusion_reason_counts": {
-    "incomplete_description": 33,
-    "license_missing": 72,
-    "license_not_allowed": 73,
-    "professional_mismatch": 90,
-    "security_grade_not_formal": 54,
-    "skill_definition_missing": 4
+    "incomplete_description": 337,
+    "license_missing": 658,
+    "license_not_allowed": 727,
+    "maintenance_failure": 1,
+    "professional_mismatch": 1282,
+    "score_one_observation": 6,
+    "security_grade_not_formal": 514,
+    "skill_definition_missing": 40
   },
   "per_major": {
     "020101": {
       "major_name": "经济学",
       "class_code": "0201",
       "deduplicated_candidate_count": 38,
-      "formal_candidate_count": 3,
-      "excluded_candidate_count": 35
+      "formal_candidate_count": 2,
+      "excluded_candidate_count": 34
     },
     "020102": {
       "major_name": "经济统计学",
@@ -29,30 +31,30 @@
     "020103T": {
       "major_name": "国民经济管理",
       "class_code": "0201",
-      "deduplicated_candidate_count": 0,
+      "deduplicated_candidate_count": 1,
       "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "excluded_candidate_count": 1
     },
     "020104T": {
       "major_name": "资源与环境经济学",
       "class_code": "0201",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 29,
+      "formal_candidate_count": 13,
+      "excluded_candidate_count": 15
     },
     "020105T": {
       "major_name": "商务经济学",
       "class_code": "0201",
       "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 2,
+      "formal_candidate_count": 1,
       "excluded_candidate_count": 0
     },
     "020106T": {
       "major_name": "能源经济",
       "class_code": "0201",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 72,
+      "formal_candidate_count": 2,
+      "excluded_candidate_count": 69
     },
     "020107T": {
       "major_name": "劳动经济学",
@@ -78,16 +80,16 @@
     "020110TK": {
       "major_name": "低空经济与管理",
       "class_code": "0201",
-      "deduplicated_candidate_count": 0,
+      "deduplicated_candidate_count": 16,
       "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "excluded_candidate_count": 15
     },
     "020111T": {
       "major_name": "资源环境审计",
       "class_code": "0201",
-      "deduplicated_candidate_count": 0,
+      "deduplicated_candidate_count": 9,
       "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "excluded_candidate_count": 9
     },
     "020201K": {
       "major_name": "财政学",
@@ -100,56 +102,56 @@
       "major_name": "税收学",
       "class_code": "0202",
       "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 1,
+      "formal_candidate_count": 2,
       "excluded_candidate_count": 0
     },
     "020203TK": {
       "major_name": "国际税收",
       "class_code": "0202",
-      "deduplicated_candidate_count": 6,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 5
+      "deduplicated_candidate_count": 93,
+      "formal_candidate_count": 8,
+      "excluded_candidate_count": 84
     },
     "020301K": {
       "major_name": "金融学",
       "class_code": "0203",
       "deduplicated_candidate_count": 19,
-      "formal_candidate_count": 6,
+      "formal_candidate_count": 11,
       "excluded_candidate_count": 12
     },
     "020302": {
       "major_name": "金融工程",
       "class_code": "0203",
-      "deduplicated_candidate_count": 4,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 4
+      "deduplicated_candidate_count": 120,
+      "formal_candidate_count": 2,
+      "excluded_candidate_count": 114
     },
     "020303": {
       "major_name": "保险学",
       "class_code": "0203",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 629,
+      "formal_candidate_count": 8,
+      "excluded_candidate_count": 618
     },
     "020304": {
       "major_name": "投资学",
       "class_code": "0203",
       "deduplicated_candidate_count": 5,
-      "formal_candidate_count": 2,
+      "formal_candidate_count": 8,
       "excluded_candidate_count": 5
     },
     "020305T": {
       "major_name": "金融数学",
       "class_code": "0203",
       "deduplicated_candidate_count": 5,
-      "formal_candidate_count": 1,
+      "formal_candidate_count": 3,
       "excluded_candidate_count": 5
     },
     "020306T": {
       "major_name": "信用管理",
       "class_code": "0203",
       "deduplicated_candidate_count": 5,
-      "formal_candidate_count": 1,
+      "formal_candidate_count": 2,
       "excluded_candidate_count": 4
     },
     "020307T": {
@@ -162,65 +164,65 @@
     "020308T": {
       "major_name": "精算学",
       "class_code": "0203",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 41,
+      "formal_candidate_count": 5,
+      "excluded_candidate_count": 32
     },
     "020309T": {
       "major_name": "互联网金融",
       "class_code": "0203",
-      "deduplicated_candidate_count": 12,
+      "deduplicated_candidate_count": 74,
       "formal_candidate_count": 0,
-      "excluded_candidate_count": 12
+      "excluded_candidate_count": 72
     },
     "020310T": {
       "major_name": "金融科技",
       "class_code": "0203",
       "deduplicated_candidate_count": 42,
-      "formal_candidate_count": 1,
+      "formal_candidate_count": 2,
       "excluded_candidate_count": 40
     },
     "020311TK": {
       "major_name": "金融审计",
       "class_code": "0203",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 228,
+      "formal_candidate_count": 3,
+      "excluded_candidate_count": 225
     },
     "020312TK": {
       "major_name": "数字金融",
       "class_code": "0203",
-      "deduplicated_candidate_count": 0,
+      "deduplicated_candidate_count": 14,
       "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "excluded_candidate_count": 14
     },
     "020401": {
       "major_name": "国际经济与贸易",
       "class_code": "0204",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 1,
+      "formal_candidate_count": 2,
+      "excluded_candidate_count": 1
     },
     "020402": {
       "major_name": "贸易经济",
       "class_code": "0204",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 21,
+      "formal_candidate_count": 6,
+      "excluded_candidate_count": 14
     },
     "020403T": {
       "major_name": "国际经济发展合作",
       "class_code": "0204",
-      "deduplicated_candidate_count": 0,
+      "deduplicated_candidate_count": 34,
       "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "excluded_candidate_count": 34
     },
     "020404TK": {
       "major_name": "数字贸易",
       "class_code": "0204",
-      "deduplicated_candidate_count": 0,
-      "formal_candidate_count": 0,
-      "excluded_candidate_count": 0
+      "deduplicated_candidate_count": 9,
+      "formal_candidate_count": 1,
+      "excluded_candidate_count": 8
     }
   }
 }

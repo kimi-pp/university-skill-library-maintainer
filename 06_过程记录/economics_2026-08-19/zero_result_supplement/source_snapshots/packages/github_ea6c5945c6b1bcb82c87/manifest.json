@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "79e969cdf161c6a768adcfc83cea0250e86a1be50e24fde4acee6674a7097707"
+  },
+  {
+    "path": "skillpacks/claude-code/runtime/host-skills/metabot-metaapp/SKILL.md",
+    "size": 37909,
+    "sha256": "9f75f7670aee3ae29b41eb7d28a621691dd8eaa3e91260bb957b509cd4a1ae81"
+  }
+]

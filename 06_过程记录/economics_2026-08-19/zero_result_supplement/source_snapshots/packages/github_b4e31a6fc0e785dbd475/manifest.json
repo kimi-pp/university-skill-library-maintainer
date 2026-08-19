@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 2365,
+    "sha256": "8f3402345e300f761d2213b3755effed21d21a2c33a08cf7f1a0adc2655ecf29"
+  },
+  {
+    "path": "packages/agent-core/src/skill/catalog/luokai-it-manager-hospital/SKILL.md",
+    "size": 5883,
+    "sha256": "d11c8e18e2c16a96b2ea5cd3166296aee4c6fc9af0f61ecd025460076dce24d3"
+  }
+]

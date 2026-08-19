@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1398,
+    "sha256": "012777e4f6793cfef93f48c606604d1d46a1a0e3dde3befab9ff25a7572c52c5"
+  },
+  {
+    "path": "plugins/ravenclaude-core/skills/agent-quality-rubric/SKILL.md",
+    "size": 10753,
+    "sha256": "11e07d9b1c657104386c12412104a3c1bcbbe5a207e0d5e9a1dca489528b0d16"
+  }
+]

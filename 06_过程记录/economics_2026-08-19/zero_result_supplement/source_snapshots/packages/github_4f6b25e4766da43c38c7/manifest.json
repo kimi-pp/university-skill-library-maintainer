@@ -1,0 +1,12 @@
+[
+  {
+    "path": "includes/bundled-skills/wp-plugin-bootstrap/SKILL.md",
+    "size": 18695,
+    "sha256": "98eb44583f3f61f114cd04ba08d3d8c81e1f7bbd75feaddb33bb9f3c8f375cef"
+  },
+  {
+    "path": "LICENSE",
+    "size": 34539,
+    "sha256": "5957e5895678ffa84e560f3dcaaf090f5639a18c7c403a662fbe92766516cfe9"
+  }
+]

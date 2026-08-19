@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 20138,
+    "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+  },
+  {
+    "path": "plugins/archirules/skills/help/SKILL.md",
+    "size": 9168,
+    "sha256": "e336b6cb498c8d0c69cd55db49386520dcff5a807832cf9b85fccf7a02c9097a"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1068,
+    "sha256": "72f91cf97074a5463275cccc1ed0dcc32a14541a0156edf09b54c9421b3ef36b"
+  },
+  {
+    "path": "plugins/pnge-economics/skills/fred-prices/SKILL.md",
+    "size": 17388,
+    "sha256": "0bd1611fc88e8b113074e5415975ee9d81ee71806de5abc0eb7fe22af993432b"
+  }
+]

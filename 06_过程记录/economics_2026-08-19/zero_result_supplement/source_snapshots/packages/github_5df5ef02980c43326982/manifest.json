@@ -1,0 +1,12 @@
+[
+  {
+    "path": "agents/stockexpert-agent/skills/short-scanner/SKILL.md",
+    "size": 13230,
+    "sha256": "d0fb29d10ebffa2003ae1b9a0ffca1912a1197d99d26e383dff489b0040247b8"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1066,
+    "sha256": "831eb948788e1a7e0687abab8f311d50b8a7f04cc24d349c557385d50c86695d"
+  }
+]

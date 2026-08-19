@@ -1,0 +1,12 @@
+[
+  {
+    "path": ".agents/skills/restaurantpos-checkout-finance/SKILL.md",
+    "size": 1886,
+    "sha256": "f78c3bdd9cb2ebda8e867a6c0a169a4958edd284e4f327aaaaf69775ed6cc57d"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "6ebf954fb69dafe42bb953fe93ad4c652458e2f7824fe63abd180562b7cc36b8"
+  }
+]

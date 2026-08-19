@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1076,
+    "sha256": "7db4511d514c95fea902c7d0ecb4bac1e353bdb93b8675d161d81a6ca0b1bc06"
+  },
+  {
+    "path": "plugins/red-team-operations/skills/adversary-emulation/SKILL.md",
+    "size": 10633,
+    "sha256": "e1339ad2593b82423f39734ac44d7348ad32d4f6374191529706e3c9842c8047"
+  }
+]

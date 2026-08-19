@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 2365,
+    "sha256": "8f3402345e300f761d2213b3755effed21d21a2c33a08cf7f1a0adc2655ecf29"
+  },
+  {
+    "path": "packages/agent-core/src/skill/catalog/luokai-private-equity-expert/SKILL.md",
+    "size": 24926,
+    "sha256": "20a5101f367f0184d521957c86b1412182b66d2efd6b657c524d1fcb45cb1c33"
+  }
+]

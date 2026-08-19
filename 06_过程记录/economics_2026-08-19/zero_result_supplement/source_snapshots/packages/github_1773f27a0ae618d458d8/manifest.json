@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1064,
+    "sha256": "50bc6e75845f4acdfb7c1df6e67f0fb9a0d80486b34e583c78d89637fa94865e"
+  },
+  {
+    "path": "src/skills/api-analytics-setup-posthog/SKILL.md",
+    "size": 7722,
+    "sha256": "f383b18d1bde48bf988ed22a0964d1773412f0deb5ce7ee66d6f7d8818f287e1"
+  }
+]

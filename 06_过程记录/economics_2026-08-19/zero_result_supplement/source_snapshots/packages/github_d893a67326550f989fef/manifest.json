@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "79e969cdf161c6a768adcfc83cea0250e86a1be50e24fde4acee6674a7097707"
+  },
+  {
+    "path": "skillpacks/openclaw/runtime/host-skills/metabot-metaapp/SKILL.md",
+    "size": 37905,
+    "sha256": "d4ed7eb2a34458d4abec5874664f659c15ed21b03aa67578a1c687f9b57ef23c"
+  }
+]

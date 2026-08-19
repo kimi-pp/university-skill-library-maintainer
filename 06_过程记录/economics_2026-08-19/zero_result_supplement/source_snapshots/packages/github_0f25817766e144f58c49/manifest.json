@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1072,
+    "sha256": "af5de2ba2f6087e4b00c4e9e88ab504eac84db53a756f528a23bb3ca5a1fc360"
+  },
+  {
+    "path": "packages/harness-core/skills/energy-procurement/SKILL.md",
+    "size": 30077,
+    "sha256": "327e576abe1137eef72f6a42c4e30324ca78429fa89a7f60e9ee906dae993aa3"
+  }
+]

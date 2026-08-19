@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1070,
+    "sha256": "823ba5a88840e36781ca081ae66719d1474f18a9f221f01e3fbc7fb48fb62f83"
+  },
+  {
+    "path": "plugins/frank-gstack-superpowers/references/upstreams/gstack/commits/026751ea2012ec7cbedc149ba615929a20026501/ship/SKILL.md",
+    "size": 160802,
+    "sha256": "c65c61b535fa6865384c70f03ddc7dce68d04b0b20ffce33e9cacba26cd17c15"
+  }
+]

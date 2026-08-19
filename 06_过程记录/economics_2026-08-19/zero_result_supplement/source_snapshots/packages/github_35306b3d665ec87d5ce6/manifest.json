@@ -1,0 +1,12 @@
+[
+  {
+    "path": "agents/skills/gemini-cli/owasp-logging-monitoring/SKILL.md",
+    "size": 7930,
+    "sha256": "0a7235699126acd314ca8d6ba83518d6c18642ff51dbb22144ea7ab6fd0371b3"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1078,
+    "sha256": "9e921f4afe97ba893e9ee9883bd5106152cd26ddb58a1901010fb8afc64fb5f5"
+  }
+]

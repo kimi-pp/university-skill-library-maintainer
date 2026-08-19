@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1093,
+    "sha256": "6015c93f4c588aaebb4d0df3361ae5179243adadcb0e59c041a5a413aea5d073"
+  },
+  {
+    "path": "skills/terraform-multi-account/SKILL.md",
+    "size": 12465,
+    "sha256": "aa30f3657e2658db8612434cb51e57974692f0d5fe308bb001694858dbae816d"
+  }
+]

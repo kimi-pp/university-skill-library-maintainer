@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1066,
+    "sha256": "32af38b5ad0f3ce9316b2256acabbb17a280d744c04a0d9778ece5589d972869"
+  },
+  {
+    "path": "plugins/us-stock-analysis/skills/bear-case/SKILL.md",
+    "size": 13044,
+    "sha256": "5e5df91aa6ab8dfdff790ff630b436ff5262ef54e267795d8e4c3a5b5d47c744"
+  }
+]

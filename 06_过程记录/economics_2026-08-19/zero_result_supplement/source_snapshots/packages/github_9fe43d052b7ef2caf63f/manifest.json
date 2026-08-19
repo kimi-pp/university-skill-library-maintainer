@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1076,
+    "sha256": "7db4511d514c95fea902c7d0ecb4bac1e353bdb93b8675d161d81a6ca0b1bc06"
+  },
+  {
+    "path": "plugins/audit-trails/skills/audit-trail-patterns/SKILL.md",
+    "size": 8074,
+    "sha256": "7c93af5622788538e87168ed7f76375a3199f34ed3401071dee023a72ff422a3"
+  }
+]

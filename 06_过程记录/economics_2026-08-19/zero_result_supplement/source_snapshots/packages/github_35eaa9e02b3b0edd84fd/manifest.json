@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1100,
+    "sha256": "291fd5e0c73b2784fe5ea4a0fe9aec03ac8ff4f1f0561ac53245b2d23a0ebcd4"
+  },
+  {
+    "path": "plugins/capability-plugins/regulatory-change-management/skills/regulatory-impact-assessment/SKILL.md",
+    "size": 24511,
+    "sha256": "cbe49199d8aba7e5429156e725e956e0940dcefd294317353f6290d8461d055e"
+  }
+]

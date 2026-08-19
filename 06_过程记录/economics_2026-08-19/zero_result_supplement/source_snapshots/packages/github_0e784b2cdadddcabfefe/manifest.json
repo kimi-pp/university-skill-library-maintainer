@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1066,
+    "sha256": "e56fbb5b3d95756f3fa1cfefa24732ec79f18ece1ad08a4e79e00df57e8b198c"
+  },
+  {
+    "path": "test/fixtures/golden/claude-ship-SKILL.md",
+    "size": 145370,
+    "sha256": "dda0f6fa8b7f3599eda6e3da2b222fe974138ee4d9c036c5e682343ff1e1ea51"
+  }
+]

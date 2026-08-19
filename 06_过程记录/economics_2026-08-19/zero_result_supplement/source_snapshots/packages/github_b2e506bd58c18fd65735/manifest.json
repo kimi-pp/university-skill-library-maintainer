@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 2365,
+    "sha256": "8f3402345e300f761d2213b3755effed21d21a2c33a08cf7f1a0adc2655ecf29"
+  },
+  {
+    "path": "packages/agent-core/src/skill/catalog/luokai-google-news-api-skill/SKILL.md",
+    "size": 6075,
+    "sha256": "eeb5d06069db43e369cd9bd502b92736af6e7aff03027744d3ea536ade67d937"
+  }
+]

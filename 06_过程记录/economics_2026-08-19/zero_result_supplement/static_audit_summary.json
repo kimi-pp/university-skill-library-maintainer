@@ -1,0 +1,14 @@
+{
+  "raw_record_count": 3352,
+  "unique_candidate_count": 3352,
+  "audit_row_count": 3352,
+  "snapshot_success_count": 3352,
+  "snapshot_failed_count": 0,
+  "formal_audit_gate_count": 954,
+  "security_grade_counts": {
+    "SA": 2244,
+    "SB": 122,
+    "SB-A": 968,
+    "SX": 18
+  }
+}

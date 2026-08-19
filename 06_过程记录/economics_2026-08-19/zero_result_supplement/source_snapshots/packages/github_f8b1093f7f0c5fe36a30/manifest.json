@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1073,
+    "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d"
+  },
+  {
+    "path": "skills/azure-ai-document-intelligence-ts/SKILL.md",
+    "size": 9110,
+    "sha256": "09c941d3e671e8745c195ce1f72a0006dafd9488bce90203a49a4bc29cf8f0a5"
+  }
+]

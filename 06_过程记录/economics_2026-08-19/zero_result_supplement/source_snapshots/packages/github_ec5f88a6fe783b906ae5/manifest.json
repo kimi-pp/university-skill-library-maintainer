@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1100,
+    "sha256": "291fd5e0c73b2784fe5ea4a0fe9aec03ac8ff4f1f0561ac53245b2d23a0ebcd4"
+  },
+  {
+    "path": "plugins/capability-plugins/compliance-testing/skills/workpaper-drafter/SKILL.md",
+    "size": 16091,
+    "sha256": "86c1622a38391acdfaf69b80c4b03cfc563195d2b270f937d2456739047a247f"
+  }
+]

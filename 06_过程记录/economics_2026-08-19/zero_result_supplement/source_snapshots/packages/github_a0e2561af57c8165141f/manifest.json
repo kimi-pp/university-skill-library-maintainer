@@ -1,0 +1,12 @@
+[
+  {
+    "path": "features/common/skills/sqlite-bank-space-diagnosis/SKILL.md",
+    "size": 5740,
+    "sha256": "31ab6f10c7a992588b2190fcf7abb0aa8472756c064192f64881c49eac6b1bc8"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1076,
+    "sha256": "a9b74263c26b235389a537c0bc756f11c46dcf864b042748bc093a7c87d90671"
+  }
+]

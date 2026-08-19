@@ -1,0 +1,12 @@
+[
+  {
+    "path": "agent-swarm/skills/energy-procurement/SKILL.md",
+    "size": 30077,
+    "sha256": "327e576abe1137eef72f6a42c4e30324ca78429fa89a7f60e9ee906dae993aa3"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1074,
+    "sha256": "5d868266194407c7cf45e8969faf7fad51032ba2442084210e590bf26653922d"
+  }
+]

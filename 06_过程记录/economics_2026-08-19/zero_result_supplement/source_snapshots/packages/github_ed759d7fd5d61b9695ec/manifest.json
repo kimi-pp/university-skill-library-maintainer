@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1071,
+    "sha256": "18a87eaf5c6017a3ffc7a3c4927627d530cc1541406cb3e705576a1b8c47c6bd"
+  },
+  {
+    "path": "plugins/pm-insurance/skills/insurance-claim-appeal/SKILL.md",
+    "size": 5420,
+    "sha256": "c9b96183b05e081a52c35c672a0da178f573d7986fbe63ea7ad8a928c8503227"
+  }
+]

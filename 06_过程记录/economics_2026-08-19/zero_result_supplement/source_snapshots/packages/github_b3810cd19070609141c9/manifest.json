@@ -1,0 +1,12 @@
+[
+  {
+    "path": "agents/finance/controller-accounting/financial-audit-preparer/SKILL.md",
+    "size": 5509,
+    "sha256": "f0726658f049a49efc312ece115e841bd2d8b337cdc47d6abd4e543058931c37"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1078,
+    "sha256": "91f1835c1fffb26db7e6cea4c751c2834480efa3a25a68216537d4284d09b677"
+  }
+]

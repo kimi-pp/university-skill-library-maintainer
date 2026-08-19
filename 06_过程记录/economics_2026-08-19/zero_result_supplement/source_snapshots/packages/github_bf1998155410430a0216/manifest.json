@@ -1,0 +1,12 @@
+[
+  {
+    "path": "examples/full/skills/document-review/SKILL.md",
+    "size": 2056,
+    "sha256": "dac29534a66dae0ee8eabdbdac8dc3bb42896af9b3d39d68d86302d4477aef75"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1081,
+    "sha256": "51f6415076027cb33b014b29a08b10cbbcc67467341ea3a2a4c542713bba35a5"
+  }
+]

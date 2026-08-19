@@ -1,0 +1,12 @@
+[
+  {
+    "path": "config/agents/skills/energy-procurement/SKILL.md",
+    "size": 29503,
+    "sha256": "439528c619495cb6d3a2eb753d95fd468cd5bec5d10bfec2fead690fddd8e9b9"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1070,
+    "sha256": "62ff47e3c6189e006ec560b15aebf3bfd5925a59a7278ad9212ae26d0d85baf7"
+  }
+]

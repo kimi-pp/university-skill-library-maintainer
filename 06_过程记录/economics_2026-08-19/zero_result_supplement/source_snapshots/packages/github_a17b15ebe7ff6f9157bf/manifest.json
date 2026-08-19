@@ -1,0 +1,12 @@
+[
+  {
+    "path": "experiments/runs/2026-05-27_23-02-48_game-of-life-example-mapping_v5.1-testlist-scope-fix-oc_deepseek-v4-flash/.opencode/skills/test-list/SKILL.md",
+    "size": 4093,
+    "sha256": "53ae84fbe20001ff2c7ddf65042738627b1a4861b8ee1cbf1b532cafe08e38b4"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1069,
+    "sha256": "264a9b68e7a57391c65280c631fc3615aab63f04ad77de03688ef1653f31ccc8"
+  }
+]

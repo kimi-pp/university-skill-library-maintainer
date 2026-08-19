@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "c12fe935bb539c0805ccc7e3eef9cdd3b4b6d41e961a7b22236ff244ed5d6c3a"
+  },
+  {
+    "path": "skill/.agents/skills/aegisops-ai/SKILL.md",
+    "size": 5344,
+    "sha256": "0aa841e2906ecd3ce5938b2e633bd1b30341e3886cea4b653d87583c5c6cff5c"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 10944,
+    "sha256": "82383aa672b16d8c3cd8a132829df4e5902db8cc890518565c341bcbb4e23598"
+  },
+  {
+    "path": "src/process/resources/assistant/engineering/everything-in-claude-code/skills/energy-procurement/SKILL.md",
+    "size": 31323,
+    "sha256": "0f4f231a411cbea376d43a0839e2469f706d160eaa3da2aa80f5a831f79c90e1"
+  }
+]

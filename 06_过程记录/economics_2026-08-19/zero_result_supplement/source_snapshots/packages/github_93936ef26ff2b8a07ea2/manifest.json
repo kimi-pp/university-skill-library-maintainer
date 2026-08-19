@@ -1,0 +1,12 @@
+[
+  {
+    "path": ".claude/skills/document-pipeline/SKILL.md",
+    "size": 5748,
+    "sha256": "13b9a4fb1e46195b0f078794b00613b4ac409820e06ad5e183483e1d1338d5b9"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1072,
+    "sha256": "e88a5a7e1f5ab7c313c62965725ec26ecbfb979ab5239ab257c918e82bc7b2ce"
+  }
+]

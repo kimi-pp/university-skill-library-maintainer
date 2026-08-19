@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 947,
+    "sha256": "7cb750713252efd1d578837ba8785b61319109906f0c10b87adab7cf4badfc42"
+  },
+  {
+    "path": "plugins/bench-open-model/skills/bench-open-model/SKILL.md",
+    "size": 17276,
+    "sha256": "88bca3e3522c99c05af27e874cc8357e20705b4070dff932f1424f476df31ed1"
+  }
+]

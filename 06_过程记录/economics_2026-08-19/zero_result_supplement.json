@@ -1,0 +1,483 @@
+{
+  "schema_version": "economics-zero-result-supplement-v1",
+  "initial_zero_major_count": 16,
+  "round3_job_count": 128,
+  "round3_latest_success_count": 128,
+  "raw_record_count": 3613,
+  "new_unique_native_count": 3352,
+  "audit_row_count": 3352,
+  "still_zero_major_codes": [
+    "020103T",
+    "020110TK",
+    "020111T",
+    "020309T",
+    "020312TK",
+    "020403T"
+  ],
+  "per_major": {
+    "020103T": {
+      "major_name": "国民经济管理",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 3
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 3,
+      "new_unique_native_count": 3,
+      "audited_candidate_count": 3,
+      "final_formal_count": 0
+    },
+    "020104T": {
+      "major_name": "资源与环境经济学",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 107
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 107,
+      "new_unique_native_count": 101,
+      "audited_candidate_count": 101,
+      "final_formal_count": 13
+    },
+    "020106T": {
+      "major_name": "能源经济",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 742
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 742,
+      "new_unique_native_count": 729,
+      "audited_candidate_count": 729,
+      "final_formal_count": 2
+    },
+    "020110TK": {
+      "major_name": "低空经济与管理",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 48
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 48,
+      "new_unique_native_count": 48,
+      "audited_candidate_count": 48,
+      "final_formal_count": 0
+    },
+    "020111T": {
+      "major_name": "资源环境审计",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 17
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 17,
+      "new_unique_native_count": 17,
+      "audited_candidate_count": 17,
+      "final_formal_count": 0
+    },
+    "020203TK": {
+      "major_name": "国际税收",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 160
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 160,
+      "new_unique_native_count": 160,
+      "audited_candidate_count": 160,
+      "final_formal_count": 8
+    },
+    "020302": {
+      "major_name": "金融工程",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 268
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 268,
+      "new_unique_native_count": 253,
+      "audited_candidate_count": 253,
+      "final_formal_count": 2
+    },
+    "020303": {
+      "major_name": "保险学",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 1002
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 1002,
+      "new_unique_native_count": 794,
+      "audited_candidate_count": 794,
+      "final_formal_count": 8
+    },
+    "020308T": {
+      "major_name": "精算学",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 79
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 79,
+      "new_unique_native_count": 77,
+      "audited_candidate_count": 77,
+      "final_formal_count": 5
+    },
+    "020309T": {
+      "major_name": "互联网金融",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 200
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 200,
+      "new_unique_native_count": 199,
+      "audited_candidate_count": 199,
+      "final_formal_count": 0
+    },
+    "020311TK": {
+      "major_name": "金融审计",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 824
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 824,
+      "new_unique_native_count": 822,
+      "audited_candidate_count": 822,
+      "final_formal_count": 3
+    },
+    "020312TK": {
+      "major_name": "数字金融",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 19
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 19,
+      "new_unique_native_count": 17,
+      "audited_candidate_count": 17,
+      "final_formal_count": 0
+    },
+    "020401": {
+      "major_name": "国际经济与贸易",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 3
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 3,
+      "new_unique_native_count": 3,
+      "audited_candidate_count": 3,
+      "final_formal_count": 2
+    },
+    "020402": {
+      "major_name": "贸易经济",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 52
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 52,
+      "new_unique_native_count": 51,
+      "audited_candidate_count": 51,
+      "final_formal_count": 6
+    },
+    "020403T": {
+      "major_name": "国际经济发展合作",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 65
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 65,
+      "new_unique_native_count": 64,
+      "audited_candidate_count": 64,
+      "final_formal_count": 0
+    },
+    "020404TK": {
+      "major_name": "数字贸易",
+      "platforms": {
+        "SkillHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "ClawHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        },
+        "GitHub": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 24
+        },
+        "Hugging Face Spaces": {
+          "query_count": 2,
+          "success_count": 2,
+          "result_count": 0
+        }
+      },
+      "raw_record_count": 24,
+      "new_unique_native_count": 14,
+      "audited_candidate_count": 14,
+      "final_formal_count": 1
+    }
+  }
+}

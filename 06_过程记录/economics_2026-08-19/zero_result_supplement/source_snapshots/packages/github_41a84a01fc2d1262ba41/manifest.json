@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "79e969cdf161c6a768adcfc83cea0250e86a1be50e24fde4acee6674a7097707"
+  },
+  {
+    "path": "skillpacks/workbuddy/runtime/shared-skills/metabot-metaapp/SKILL.md",
+    "size": 37541,
+    "sha256": "ceeaeb9769dc86e82dcbbb03bc4184079671c24372ba00d75f28af9032e6483a"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1067,
+    "sha256": "da6fc5b1c0ed9929f91afd4874ea6d8f3b6e2311b6d3d39227270bb8ebdc9b00"
+  },
+  {
+    "path": "plugins/ultracode-workflows/skills/workflow-authoring/SKILL.md",
+    "size": 17342,
+    "sha256": "5959a3d340934eb3f1ebecd348e89de8c39592eba1d86708fb51e213917c5724"
+  }
+]

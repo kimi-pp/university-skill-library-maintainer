@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1100,
+    "sha256": "291fd5e0c73b2784fe5ea4a0fe9aec03ac8ff4f1f0561ac53245b2d23a0ebcd4"
+  },
+  {
+    "path": "plugins/capability-plugins/risk-reporting/skills/attestation-pack/SKILL.md",
+    "size": 15531,
+    "sha256": "d6dab7652c7a2c7ec6a67e672e74fa118fbb70b62dcceeda329c6305799ceae0"
+  }
+]

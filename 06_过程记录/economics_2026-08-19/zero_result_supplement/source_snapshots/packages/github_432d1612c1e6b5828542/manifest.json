@@ -1,0 +1,12 @@
+[
+  {
+    "path": ".claude/skills/doc-review/skill.md",
+    "size": 7346,
+    "sha256": "b8f10d6c4c650f2e6c44561a5dc290e2fa8b5083f8cc2127e7e19e3e9e1f0c6c"
+  },
+  {
+    "path": "LICENSE",
+    "size": 11300,
+    "sha256": "dd424909cfebf7d0a12db22fd31a713d985760f080de9ba79a775160e22fa6ff"
+  }
+]

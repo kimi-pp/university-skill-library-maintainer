@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1069,
+    "sha256": "b3efcc6288ad5eb75008f147f5cfd229b2085e122094fd23a7d138b9a2cda721"
+  },
+  {
+    "path": "plugins/bizops/skills/energy-procurement/SKILL.md",
+    "size": 30071,
+    "sha256": "95c9362ff8121d3101afbcd7e74fee1208421d490c7817a86c420ec4acf5c47e"
+  }
+]

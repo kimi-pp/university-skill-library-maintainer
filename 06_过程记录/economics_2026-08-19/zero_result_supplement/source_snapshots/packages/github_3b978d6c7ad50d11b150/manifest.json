@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 2365,
+    "sha256": "8f3402345e300f761d2213b3755effed21d21a2c33a08cf7f1a0adc2655ecf29"
+  },
+  {
+    "path": "packages/agent-core/src/skill/catalog/luokai-it-manager-pro/SKILL.md",
+    "size": 5775,
+    "sha256": "131395cfdffbbfe28e23e9709830b2450caf9f84a1f277f419b22ed4bcb6345e"
+  }
+]

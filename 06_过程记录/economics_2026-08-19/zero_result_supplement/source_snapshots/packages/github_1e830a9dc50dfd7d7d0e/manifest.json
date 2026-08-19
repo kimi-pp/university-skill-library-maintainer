@@ -1,0 +1,12 @@
+[
+  {
+    "path": ".agents/skills/gstack-ship/SKILL.md",
+    "size": 145232,
+    "sha256": "bb7ea575f535fb7dc0e67d2115c69d7b43cc7b198fc749432b85cfcadaa1d9d2"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1065,
+    "sha256": "43f864bcea3d8ed74289d3da203172f01cac34ff54a2e03659764df90a472560"
+  }
+]

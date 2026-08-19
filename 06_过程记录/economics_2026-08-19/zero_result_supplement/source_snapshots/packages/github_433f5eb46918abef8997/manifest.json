@@ -1,0 +1,12 @@
+[
+  {
+    "path": "kit/.agent/skills/azure-ai-document-intelligence-dotnet/SKILL.md",
+    "size": 11517,
+    "sha256": "56feaf609a5fb30fed47fe7b37b5757c833abf2e8d679832f888883ff686d481"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1084,
+    "sha256": "bba918e22cdf40783613cee1ac01805b5ac4b71a313c004346bdaa6869ffaa82"
+  }
+]

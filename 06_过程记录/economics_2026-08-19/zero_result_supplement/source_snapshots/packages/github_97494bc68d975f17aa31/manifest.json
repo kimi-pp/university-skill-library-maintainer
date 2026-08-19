@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1064,
+    "sha256": "52fc1abd3c906f1c6609168cdff1f3a035a6fcf1c86b30aaff891786b7769d0c"
+  },
+  {
+    "path": "vuln-scout/skills/compliance-mapping/SKILL.md",
+    "size": 7144,
+    "sha256": "16c3a7c0d54dc9e15f738a8d0bbbbfd68273f267daaf0071ef2678b2661492d0"
+  }
+]

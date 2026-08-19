@@ -122,6 +122,24 @@ def test_short_method_marker_does_not_match_inside_idea():
     assert result["professional_relevance_pass"] is False
 
 
+def test_insurance_keyword_alone_does_not_make_generic_seo_formal():
+    module = load_module()
+    profiles = [
+        {"major_code": "020303", "major_name": "保险学", "class_code": "0203", "core_learning_domains": ["保险定价"], "typical_tasks": ["保险数据分析"], "inclusion_rules": [], "search_terms": {"en": ["insurance"]}},
+    ]
+    row = base_row(skill_name="seo", skill_description="SEO campaign planning for insurance companies.", skill_text="A generic marketing workflow.", major_codes=["020303"])
+    assert module.adjudicate(row, profiles)["professional_relevance_pass"] is False
+
+
+def test_insurance_claim_workflow_remains_relevant():
+    module = load_module()
+    profiles = [
+        {"major_code": "020303", "major_name": "保险学", "class_code": "0203", "core_learning_domains": ["保险理赔"], "typical_tasks": ["理赔数据分析"], "inclusion_rules": [], "search_terms": {"en": ["insurance claims"]}},
+    ]
+    row = base_row(skill_name="insurance-claims-analysis", skill_description="Analyze insurance claim patterns and fraud risk.", skill_text="Input claim data. Workflow steps produce a claims analysis report.", major_codes=["020303"])
+    assert module.adjudicate(row, profiles)["professional_relevance_pass"] is True
+
+
 def test_external_api_requires_nonempty_network_evidence():
     module = load_module()
     row = base_row(external_api="是", network_behavior="无")

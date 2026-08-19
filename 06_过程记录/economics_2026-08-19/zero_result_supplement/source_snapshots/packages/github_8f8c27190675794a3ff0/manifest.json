@@ -1,0 +1,12 @@
+[
+  {
+    "path": "harnesses/operations/audit-report/skills/audit-report/skill.md",
+    "size": 7649,
+    "sha256": "c1fa5e39db9f586a152b18ad37f05d49bb4a3048d325a751a50e1e001c725deb"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1065,
+    "sha256": "08d6d6dd2c2bd100f1da09ba058484c696ff208fc6401c9d3862c627c3295830"
+  }
+]

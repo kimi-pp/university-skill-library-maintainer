@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 11358,
+    "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+  },
+  {
+    "path": "packages/desktop/resources/skills/recurring-spending/SKILL.md",
+    "size": 5570,
+    "sha256": "48572887f19c53d56611a077def809d2fb4878a2925b5086cdb993bac9d35534"
+  }
+]

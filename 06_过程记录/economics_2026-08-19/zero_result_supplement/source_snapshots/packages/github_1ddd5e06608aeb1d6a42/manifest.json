@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1093,
+    "sha256": "f82967794529d3fc7c8ae7053f1f94be566a3b30a826799afd2b691c9ef81611"
+  },
+  {
+    "path": "plugins/heaptrace-compliance/skills/audit-log/SKILL.md",
+    "size": 53755,
+    "sha256": "29a3d3dbd1e31650099a46e36dcda85caff97201fc3ef731e1ac80215ed1af30"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE.md",
+    "size": 20359,
+    "sha256": "491133b39caed09df40be7047d5341ff9961b425e8bdf660540fd68d8de6c59f"
+  },
+  {
+    "path": "plugins/ecc/skills/energy-procurement/SKILL.md",
+    "size": 30077,
+    "sha256": "327e576abe1137eef72f6a42c4e30324ca78429fa89a7f60e9ee906dae993aa3"
+  }
+]

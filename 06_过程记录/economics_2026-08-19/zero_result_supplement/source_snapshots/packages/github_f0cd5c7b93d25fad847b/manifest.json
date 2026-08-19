@@ -1,0 +1,12 @@
+[
+  {
+    "path": "agent-skills/eg-income-tax/SKILL.md",
+    "size": 21120,
+    "sha256": "fe106981acfaa3cf1678a679893d4a4d48d2bc106ed9b62b37a243f6af2591bd"
+  },
+  {
+    "path": "LICENSE",
+    "size": 34523,
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+  }
+]

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import unicodedata
 from collections import defaultdict
@@ -91,12 +92,23 @@ def _skill_path(row: dict[str, Any]) -> Path | None:
     return None
 
 
+def _read_text_path(path: Path) -> str:
+    target = str(path.resolve())
+    if os.name == "nt" and not target.startswith("\\\\?\\"):
+        target = "\\\\?\\" + target
+    return Path(target).read_text(encoding="utf-8", errors="replace")
+
+
 def hydrate(row: dict[str, Any]) -> dict[str, Any]:
     result = dict(row)
     text = str(result.get("skill_text") or "")
     path = _skill_path(result)
     if not text and path:
-        text = path.read_text(encoding="utf-8", errors="replace")
+        try:
+            text = _read_text_path(path)
+        except OSError as exc:
+            result["evidence_read_error"] = f"{type(exc).__name__}: {exc}"
+            text = ""
     name, description = extract_skill_identity(text, str(result.get("skill_path") or ""))
     content_sha = str(result.get("skill_content_sha256") or "")
     if not content_sha:
