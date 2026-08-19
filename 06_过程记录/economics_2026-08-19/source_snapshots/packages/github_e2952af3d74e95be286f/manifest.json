@@ -1,0 +1,12 @@
+[
+  {
+    "path": ".agents/skills/omd-locale-adapter/SKILL.md",
+    "size": 5027,
+    "sha256": "0624ea0586aaef6b5dbc52ba61eff76dc755f569ec77f18c09e6f52fc6426bb4"
+  },
+  {
+    "path": "LICENSE",
+    "size": 1173,
+    "sha256": "c3e75188c18ff44c40a47e7dbfc4e109a390531b5478b4547e4f05755a1451ee"
+  }
+]

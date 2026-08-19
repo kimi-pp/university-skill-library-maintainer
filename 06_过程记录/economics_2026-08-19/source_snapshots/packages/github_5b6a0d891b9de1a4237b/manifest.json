@@ -1,0 +1,12 @@
+[
+  {
+    "path": "apps/backend/skills/builtin/arxiv-search-skill/SKILL.md",
+    "size": 17072,
+    "sha256": "a45c0641b5f637232ca260bdbea8184bc541a22800810c4fb30d1d38041f4cb6"
+  },
+  {
+    "path": "LICENSE",
+    "size": 11357,
+    "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+  }
+]

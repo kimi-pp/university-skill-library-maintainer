@@ -1,0 +1,502 @@
+[
+  {
+    "path": "_meta.json",
+    "size": 593013,
+    "sha256": "1fcda8c76b6c153a278f0fcd0a1c4f8749b260ece24e11d194294f7d79d108bb"
+  },
+  {
+    "path": "backups/README.md",
+    "size": 3571,
+    "sha256": "6f425eb45c1b7d02d0afe2763926597a71f51583a3789ebac5184c6a5e61b9b9"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "size": 7970,
+    "sha256": "5f146e22e9eaae5807ae34c7b9029866bdbd1468eb4982a1545c76a5de005803"
+  },
+  {
+    "path": "data/01-kpi-benchmark-library.md",
+    "size": 27291,
+    "sha256": "0559a57325fdc5ed2b9fd622e9abfaf5061cfcd15b4cd2c0e2753fdfc2184108"
+  },
+  {
+    "path": "data/02-regulation-traceability-index.md",
+    "size": 17872,
+    "sha256": "207b1e4c5fce385f5500c97fd38c57cab42a4a43e89c3b3368b1af66480d94fa"
+  },
+  {
+    "path": "data/03-software-vendor-directory.md",
+    "size": 21822,
+    "sha256": "1c48df96632d7e13abb865e39420619d43bacaccf74d9de706125fde18b7106c"
+  },
+  {
+    "path": "data/04-hardware-vendor-directory.md",
+    "size": 18613,
+    "sha256": "648d5402a8811da6ec91e6f7a50bad3c0b107d2dd61c9816b4c4a3305856c666"
+  },
+  {
+    "path": "data/05-industry-events-and-media-calendar.md",
+    "size": 19781,
+    "sha256": "1ff6389c379298c33497d73c852ff8d4b1318c6f40545c476e2d0cfc0218cc00"
+  },
+  {
+    "path": "data/06-bilingual-glossary.md",
+    "size": 68451,
+    "sha256": "d689b875f76f1be122c6b9b5228d6939a5ff3155296bd1d476902d8a323e121e"
+  },
+  {
+    "path": "data/07-apac-regional-differences.md",
+    "size": 24083,
+    "sha256": "87111cc93994ea8746aff14129d821befb9f0f70763bcc8d4634d9a8a665818a"
+  },
+  {
+    "path": "data/08-knowledge-graph-template.md",
+    "size": 11845,
+    "sha256": "abfd96374836785929397e3fa864cd8dbc88b03943579c661e6d5a3c38eaded7"
+  },
+  {
+    "path": "data/09-algorithm-kernel-library.md",
+    "size": 22152,
+    "sha256": "cb19fc83006df0ff4bab28416463ced6ca574501d40947bcdd35d3869c77e8a7"
+  },
+  {
+    "path": "data/10-hardware-fault-tree-library.md",
+    "size": 148515,
+    "sha256": "17f3ccd3d2b1798c78f3a1902f58922e1b6618d980e0e3804799b9523f083552"
+  },
+  {
+    "path": "data/11-network-fault-tree-library.md",
+    "size": 56901,
+    "sha256": "4ee2e6c8a2530dbdd7e971e043e1d3f5a84bff5ae3f8599165d2c0ea148f8f0c"
+  },
+  {
+    "path": "data/12-software-fault-tree-library.md",
+    "size": 70125,
+    "sha256": "16d39eb49375311e067993a50451af732f5eddecfef2834fa482875ca3fbcd1b"
+  },
+  {
+    "path": "data/13-inspection-and-maintenance-calendar.md",
+    "size": 28042,
+    "sha256": "b320335c531928b8221824d62c59833823ec3a8464d3fe0df988305dcde588ca"
+  },
+  {
+    "path": "data/14-repair-scripts-and-sla-library.md",
+    "size": 25121,
+    "sha256": "5c21e51361d8bc420dc1528d8b883302cb5b1ff7c227aab1573ccc36b0bb0496"
+  },
+  {
+    "path": "data/15-procurement-and-cost-benchmark.md",
+    "size": 16240,
+    "sha256": "71db6b79c6a40a1e28ca11852215fc6387df7bdcfb8443343227184e6d5e02c0"
+  },
+  {
+    "path": "data/16-freshness-ledger.md",
+    "size": 17945,
+    "sha256": "599f001ac1a57fc21d05bbf87a73e4b1bf3d9c29e02839f1d256b72a529934c7"
+  },
+  {
+    "path": "data/17-semantic-consistency-scan.md",
+    "size": 9864,
+    "sha256": "b2735e6d61e793e073a64498ea0305edbab63b63d5a90775f31a31d82a2790dd"
+  },
+  {
+    "path": "data/18-external-source-monitor.md",
+    "size": 13281,
+    "sha256": "32740d02bfae574bd5582b9f23c4f8da1dc127e9a186fb14008f058ece7c50c6"
+  },
+  {
+    "path": "data/19-golden-qa-benchmark.md",
+    "size": 47011,
+    "sha256": "ce76ff45bafe159add796b6f82b6d8c1211840b2d09a45d13bf820898d0308fd"
+  },
+  {
+    "path": "data/20-micro-details-ledger.md",
+    "size": 135263,
+    "sha256": "66d78d5ac2571e5d1ebc9e2127f8ba9d983f638058c83c09787d5bfeeeef312b"
+  },
+  {
+    "path": "data/21-anti-pattern-library.md",
+    "size": 58914,
+    "sha256": "07bad504963d59e3eba4b060c7a5c602c9aa777d7c43c6414d7030e26f5b8052"
+  },
+  {
+    "path": "examples/01-format-big-box-multipurpose.md",
+    "size": 16007,
+    "sha256": "ddc71467fa3c1b1218782c8159a821acec40c9ea6c7805202dd05c6a52275623"
+  },
+  {
+    "path": "examples/04-format-yoga-pilates.md",
+    "size": 11350,
+    "sha256": "700a7542e9effc82f054bcdf62a06617663ea597450efcdcdcbd0d82644b967e"
+  },
+  {
+    "path": "examples/05-format-boxing-mma.md",
+    "size": 11402,
+    "sha256": "38881cb9d12bd8aa622151554cdb3dd9d8c7a68f8098f5f4c590ca7cc125b42c"
+  },
+  {
+    "path": "examples/06-format-swim-club.md",
+    "size": 11676,
+    "sha256": "f73a5e682e6adf39ee6945923866a6e6390986f9db9356571f86ceb3240ff932"
+  },
+  {
+    "path": "examples/07-format-corporate-gym.md",
+    "size": 11476,
+    "sha256": "b2608ae44f0a133774ea6762062af7b78609a919b21658d8ba77eee2688fc620"
+  },
+  {
+    "path": "examples/08-format-chain-hq.md",
+    "size": 12216,
+    "sha256": "042354f7fb406eaddc559ffd9945d79494f313c8c9810470a8c4d0e823799ecd"
+  },
+  {
+    "path": "examples/09-market-china-mainland.md",
+    "size": 16989,
+    "sha256": "1a0e2c0839fde56e8c5c2b638313ed1ab0b7a7e474ffa7910d7e9767421e3bfb"
+  },
+  {
+    "path": "examples/11-market-taiwan-china.md",
+    "size": 15496,
+    "sha256": "795210eaa1c095200c5b93c6ba0461d1fafc66e1363faf435c651fef073497ee"
+  },
+  {
+    "path": "examples/14-market-australia-nz.md",
+    "size": 16546,
+    "sha256": "c4ab37413aeb8e092e79327d91d3eb1af5f6286c4448f27bd8348068cdf82f63"
+  },
+  {
+    "path": "examples/15-market-singapore.md",
+    "size": 14679,
+    "sha256": "68ef7d9f69a6dd54eaaf99555360a205626ed2b8c2ce203d98d1afb935db232e"
+  },
+  {
+    "path": "examples/18-market-indonesia.md",
+    "size": 14311,
+    "sha256": "b7a82e9f6a044ce6995a2c1a771f1c51dc939ec7d1ab9eb4347c793a35a1aa9a"
+  },
+  {
+    "path": "examples/19-market-vietnam.md",
+    "size": 12122,
+    "sha256": "b616ff9b9fe8a1987bd7d29a4c84a8db3a21d73570c0edf6bdabec3d6c45287f"
+  },
+  {
+    "path": "examples/20-market-india.md",
+    "size": 12356,
+    "sha256": "80ac0c6783bc60fda139bc9ac19ff1aa7c4f8f22130803cf79f5442398c14e4e"
+  },
+  {
+    "path": "examples/23-failure-prepaid-collapse.md",
+    "size": 9503,
+    "sha256": "3c9ae2bda49e5cc5c59afab8882820bcbe1b039c4c41a30e51dc442d869c189b"
+  },
+  {
+    "path": "examples/24-failure-face-entry-compliance.md",
+    "size": 7737,
+    "sha256": "dc892c7541647f5270e6cd76e2e743251aee6b3238d1e951c99882fee4ce7704"
+  },
+  {
+    "path": "examples/26-failure-churn-model-bias.md",
+    "size": 8003,
+    "sha256": "ca468bb9ebca07ecee22ff9e45e5f20d32a14db37b5557270bd14faba4b70a2f"
+  },
+  {
+    "path": "examples/27-failure-unmanned-night-incident.md",
+    "size": 7629,
+    "sha256": "ab9b14dddec94b37e69bd32119f20eeefdb85f15596ea18ed4d99274ace60377"
+  },
+  {
+    "path": "examples/28-failure-diy-app.md",
+    "size": 6934,
+    "sha256": "4333a9fc83e28f5b0bd61b6bde2e3359f78f47eca67eae19f91f71b7027df03b"
+  },
+  {
+    "path": "examples/30-failure-ups-skipped-outage.md",
+    "size": 7430,
+    "sha256": "393095a2aa1fe4b71497d7f807d51ca52d19aa3c0ed38cb91c38d8dff0c86fdf"
+  },
+  {
+    "path": "examples/31-capstone-apac-multi-market-rollout.md",
+    "size": 27563,
+    "sha256": "853dd8e21d7d40ac9c4df8d3949414ba68f80bf2c662efa1beaee4724d4d9eec"
+  },
+  {
+    "path": "examples/32-capstone-ai-transformation-big-box.md",
+    "size": 23846,
+    "sha256": "84e9354347f29b2d8be546c0e81c00e16104f7cb95046665a3e26636bc25b5fe"
+  },
+  {
+    "path": "examples/33-capstone-franchise-turnaround.md",
+    "size": 21529,
+    "sha256": "5d20920111bb0a56b10ea8182aca7c4db27e5bc62b429473934e9e798dae0184"
+  },
+  {
+    "path": "README.md",
+    "size": 14602,
+    "sha256": "455ff02c8a881d4307f8687192b0c723eff4644d7a2dd934732be17625e423ed"
+  },
+  {
+    "path": "scripts/build_metajson.py",
+    "size": 11201,
+    "sha256": "2f6e7153aad71919b5f9b2a64c722632d244f9b41c891758c73b7893877102e9"
+  },
+  {
+    "path": "scripts/freshness_state.json",
+    "size": 218,
+    "sha256": "fed76efef50d6c2a6ce34ec3f7067e31e4d449ac8f98de16663a80ee0725a328"
+  },
+  {
+    "path": "scripts/self_iterate.py",
+    "size": 43147,
+    "sha256": "0b32e250492df0a7bb1768a8792369dba79ba1ade6d22b53c3352d97c7a12dc9"
+  },
+  {
+    "path": "SKILL.md",
+    "size": 251604,
+    "sha256": "09407faaa7b26a8434b85d8ba813a8c295f10de41ebd754fec10f3360849d440"
+  },
+  {
+    "path": "templates/01-three-year-digital-strategy.md",
+    "size": 10847,
+    "sha256": "4975a3f48a19ec2bb11e658bd26bc4d191cb262bb4c52806731b72076b926bf0"
+  },
+  {
+    "path": "templates/02-annual-it-budget.md",
+    "size": 11298,
+    "sha256": "9234308285be91cb2deba31505ed0d17a2c6319e320dba3bcacf84e4081519a5"
+  },
+  {
+    "path": "templates/03-board-report-deck-outline.md",
+    "size": 12224,
+    "sha256": "ab1b72279d062009cb4143c51f0410d129085e48d428f8592298f729609f1b8d"
+  },
+  {
+    "path": "templates/04-digital-charter-and-stage-gate.md",
+    "size": 11213,
+    "sha256": "953daf4f6cab14e89813924f7e5e7e8779d788e32dd27bd30a34456fb9eef0b2"
+  },
+  {
+    "path": "templates/05-fdmm-assessment-worksheet.md",
+    "size": 11535,
+    "sha256": "d5ed06d619c43ab70552432b1d01d8f470c020211d6fc84afebca0353053c3a1"
+  },
+  {
+    "path": "templates/06-digital-org-and-raci.md",
+    "size": 11498,
+    "sha256": "e479beb8a7d63681847674b6c32c4dec9c3f63bf0e8b01268466b5b823247e53"
+  },
+  {
+    "path": "templates/07-roi-business-case.md",
+    "size": 11638,
+    "sha256": "4add8740b21cad1e636fbeda6bdd5e0ac8396f9f5a8d1981190c4bbac31c1703"
+  },
+  {
+    "path": "templates/08-pilot-validation-plan.md",
+    "size": 11426,
+    "sha256": "25c8cecda64c4e50c751eb485cb18b37c923dc6c3f104d1818f3f5159202c860"
+  },
+  {
+    "path": "templates/09-mms-selection-scorecard.md",
+    "size": 16274,
+    "sha256": "4290b3ccf6d53b6569459660fe3ba8367e8451876d63c18b96928202404bed07"
+  },
+  {
+    "path": "templates/10-member-app-requirements.md",
+    "size": 11851,
+    "sha256": "3846c292ae5dd5e8fd49986357b4b8b9bf12e63a458a0675122c97c666fe6a5b"
+  },
+  {
+    "path": "templates/11-pos-payment-setup.md",
+    "size": 11833,
+    "sha256": "ddacb974c0fb63fccb3ff040a1605c6522f14203d5434768e39da452ffe18a30"
+  },
+  {
+    "path": "templates/12-access-control-gate-spec.md",
+    "size": 12081,
+    "sha256": "88b43055e8bcc1d4388ff258575c8dab40a599709016a1a47650828951a61144"
+  },
+  {
+    "path": "templates/13-smart-locker-spec.md",
+    "size": 11048,
+    "sha256": "af3581dd362bd84b60728402f6cc22a81c283efa2fb42ecc108ca2d85340fdac"
+  },
+  {
+    "path": "templates/14-iot-equipment-onboarding.md",
+    "size": 12205,
+    "sha256": "43023ee7130215448b60675b1f9016e8398c2d92bc0b0b001ee7b05a875df555"
+  },
+  {
+    "path": "templates/15-body-assessment-data-integration.md",
+    "size": 11473,
+    "sha256": "fccab6b4d38e7fbb0ddebb64a93086115f70141eeb1d85b99dcae7cee070672d"
+  },
+  {
+    "path": "templates/16-digital-signage-plan.md",
+    "size": 11679,
+    "sha256": "f25544be22922a9ae8fe242e81ec0ed866d22aa8d91fc899b359a26eb9bddfe5"
+  },
+  {
+    "path": "templates/17-network-build-and-acceptance.md",
+    "size": 9412,
+    "sha256": "edaa04ca3cc96643f5e0f544337f039e2a446c0708240955eb701c7375665453"
+  },
+  {
+    "path": "templates/18-server-room-checklist.md",
+    "size": 8091,
+    "sha256": "96516a4707421e23e66fd29b778aea48590553df7678eb27f76e2e78eb562b2c"
+  },
+  {
+    "path": "templates/19-new-club-it-gantt.md",
+    "size": 7792,
+    "sha256": "122877f78173b3cda086f0fc609a30e4cbe6c8eec92e104019879af0b519f979"
+  },
+  {
+    "path": "templates/20-rfp-technical-spec.md",
+    "size": 8659,
+    "sha256": "5ae897c8ef567ea0afc2f80bc8e1b160c78ff85af73e598a60c5a4eba3d3b902"
+  },
+  {
+    "path": "templates/21-vendor-evaluation-matrix.md",
+    "size": 7260,
+    "sha256": "ebc522ae82b38897591e4a9718bcb1f463e13895b0087f0cb05c3746f697cd10"
+  },
+  {
+    "path": "templates/22-data-migration-plan.md",
+    "size": 8038,
+    "sha256": "d6a3a36356176eba34f1090d6e5479ca7bc909688fd87695eabf311e9c5165d3"
+  },
+  {
+    "path": "templates/23-cross-border-data-transfer-tia.md",
+    "size": 9254,
+    "sha256": "7b8c2cba154b42de7826079874dda2868e7f7cf6956e6082d9faa4c0e7589449"
+  },
+  {
+    "path": "templates/24-churn-prediction-project.md",
+    "size": 15039,
+    "sha256": "af73bea472547080cbb9f4d29d547b136c1e82aaa4d258684dbdf7b8f407c841"
+  },
+  {
+    "path": "templates/25-smart-scheduling-rollout.md",
+    "size": 10587,
+    "sha256": "15fc6fe6618b572bf0ff5bc97580e829c8de94aec5d470e1c7e73140c5820e0f"
+  },
+  {
+    "path": "templates/26-cv-posture-pilot.md",
+    "size": 10998,
+    "sha256": "b5f54fb8bdb24d0c8837ebcc87183471e8a8b11d024f9d4b26d48d66e4bcf632"
+  },
+  {
+    "path": "templates/27-ai-customer-service-launch.md",
+    "size": 10048,
+    "sha256": "42fa580bc3a75970064b619a8155ac729d72df862c9148f8b7144e124d48ac26"
+  },
+  {
+    "path": "templates/28-data-platform-blueprint.md",
+    "size": 11325,
+    "sha256": "7cbc897479bec8b1d6263c74582700ed822cdca26b2cfbdcae9dc72a595e29ae"
+  },
+  {
+    "path": "templates/29-data-governance-lite.md",
+    "size": 10835,
+    "sha256": "54383a038b697c0f8422bed0141468fe5d0daea2a9438720151a4088d05b9973"
+  },
+  {
+    "path": "templates/30-it-asset-register.md",
+    "size": 9389,
+    "sha256": "f2218c7c9606a0171a41eea4a2394e23c6f58289b390bb1f4cb17468ca0d1a7e"
+  },
+  {
+    "path": "templates/31-ticket-and-repair-form.md",
+    "size": 8259,
+    "sha256": "aab636a12fe0538ff4288a4e73120ff3a22b7e75f8a6a7ced09c4603784cf8c9"
+  },
+  {
+    "path": "templates/32-inspection-checklist-pack.md",
+    "size": 9410,
+    "sha256": "a6b4f5cd07dfe5637beb09ba7907f2d6c02987e498979a18f55a3221733e1162"
+  },
+  {
+    "path": "templates/33-account-permission-matrix.md",
+    "size": 8287,
+    "sha256": "34325cfbcacfabeba2770e20d07e8d483935124227f6ffefb796bda7dafee2e1"
+  },
+  {
+    "path": "templates/34-backup-strategy-worksheet.md",
+    "size": 7027,
+    "sha256": "643f18f303f13f14e738ecd10ca67203b508f0f3bb528892e14d65533be842c2"
+  },
+  {
+    "path": "templates/35-sla-contract-review.md",
+    "size": 7660,
+    "sha256": "127cca0bfb7f51743c1afdf71b5901f8e0ab452ecb8ee2af8a0bd279f5a8718a"
+  },
+  {
+    "path": "templates/36-renewal-negotiation-prep.md",
+    "size": 6958,
+    "sha256": "90996cf3287db5838cba688d23a123c1e456082cd3916099780a24a736254489"
+  },
+  {
+    "path": "templates/37-energy-management-log.md",
+    "size": 6289,
+    "sha256": "35b8924fa6819ad0953d2fe050602cf41757b57474fff37c50975af6ddda7142"
+  },
+  {
+    "path": "templates/38-emergency-contact-card.md",
+    "size": 5866,
+    "sha256": "19edede49177572c2893855b2698f74099de3415996f56b290d757d49938e11e"
+  },
+  {
+    "path": "templates/39-integration-inventory.md",
+    "size": 6037,
+    "sha256": "8ab20f98a4827cb3262fef1ad0096bd6be32504eb722c99f70167d49a19e1565"
+  },
+  {
+    "path": "templates/40-consent-ledger.md",
+    "size": 7217,
+    "sha256": "9f904709fb601984aed04299048574268161a2f2b2ff6eee02449188c8cbb015"
+  },
+  {
+    "path": "templates/41-incident-postmortem.md",
+    "size": 6327,
+    "sha256": "acfef2259a78f00c78a836f8787d43cd998eefa5b8c36e11f977fd2ce6aadc7d"
+  },
+  {
+    "path": "templates/42-franchise-digital-kit.md",
+    "size": 11879,
+    "sha256": "c447efe9d236d3645543194e27b290773054048f04540d934bd8075a639a4ef7"
+  },
+  {
+    "path": "templates/43-site-selection-scorecard.md",
+    "size": 9413,
+    "sha256": "1ade7b0cd46837d05dad4246fd88c73a441edbda903a147b2b04bcdc2acb9694"
+  },
+  {
+    "path": "templates/44-multi-market-rollout-plan.md",
+    "size": 9607,
+    "sha256": "fc7f10b60005fd072e3ac26532bdc12a7874e488f0782dcb0c00b849ac417946"
+  },
+  {
+    "path": "templates/45-ma-systems-integration.md",
+    "size": 9825,
+    "sha256": "c1d2ba7ce0479fe1ecd7d6b6d2d922aac597fdb84c6e1a58174161c78af23287"
+  },
+  {
+    "path": "templates/46-hq-noc-dashboard-spec.md",
+    "size": 9426,
+    "sha256": "357c708f592b531cf5fea06f84a628f0d9da4cd013ddb5ac89138f9f5a92c6c7"
+  },
+  {
+    "path": "templates/47-growth-campaign-brief.md",
+    "size": 17687,
+    "sha256": "896d6112266890326fe4f92ce1a7f9c156e4f4179d303b19030e2411e41054ef"
+  },
+  {
+    "path": "templates/48-experiment-log.md",
+    "size": 18129,
+    "sha256": "4e6ac0f8c7fa0c0ef242290764c053d63ccfc2eef73f3943f78cde23ca5104b1"
+  },
+  {
+    "path": "templates/49-project-retrospective.md",
+    "size": 16501,
+    "sha256": "25bd4c56a247cd951cbc2dc2ce6a273f0a00c2b72e5131719aa70d74ccf3d948"
+  }
+]

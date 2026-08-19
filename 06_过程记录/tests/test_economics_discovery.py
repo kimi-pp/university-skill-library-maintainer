@@ -10,6 +10,7 @@ RUN_ROOT = PROJECT / "06_过程记录" / "economics_2026-08-19"
 CLIENTS_PATH = RUN_ROOT / "platform_clients.py"
 DISCOVERY_PATH = RUN_ROOT / "discover_economics.py"
 VERIFY_PATH = RUN_ROOT / "verify_discovery.py"
+AUDIT_PATH = RUN_ROOT / "snapshot_and_audit.py"
 
 
 def load_module(path: Path, name: str):
@@ -217,3 +218,77 @@ def test_verifier_rejects_missing_saved_response(tmp_path):
     response.unlink()
     result = verifier.verify_discovery(matrix, tmp_path)
     assert any("响应文件缺失" in error for error in result["errors"])
+
+
+def test_audit_rejects_unfixed_or_unlicensed_candidate():
+    audit = load_module(AUDIT_PATH, "economics_snapshot_audit")
+    candidate = {
+        "platform": "GitHub",
+        "candidate_native_id": "owner/repo:SKILL.md",
+        "candidate_url": "https://github.com/owner/repo/blob/main/SKILL.md",
+        "raw": {"path": "SKILL.md", "repository": {"full_name": "owner/repo"}},
+    }
+    result = audit.audit_fixture(candidate, {"SKILL.md": b"# Safe Skill\n"}, {})
+    assert result["formal_eligible"] is False
+    assert {"fixed_version_missing", "license_missing"}.issubset(result["blocking_reasons"])
+
+
+def test_plain_markdown_skill_has_no_remote_api_or_local_interface():
+    audit = load_module(AUDIT_PATH, "economics_snapshot_audit")
+    candidate = {
+        "platform": "GitHub",
+        "candidate_native_id": "owner/repo:SKILL.md",
+        "candidate_url": "https://github.com/owner/repo/blob/" + "a" * 40 + "/SKILL.md",
+        "raw": {
+            "path": "SKILL.md",
+            "sha": "b" * 40,
+            "repository": {"full_name": "owner/repo"},
+        },
+    }
+    result = audit.audit_fixture(
+        candidate,
+        {"SKILL.md": "# Economic reasoning\nRead the user's table and explain the result.\n".encode()},
+        {"license": {"spdx_id": "MIT"}, "pushed_at": "2026-08-01T00:00:00Z"},
+    )
+    assert result["external_api"] == "否"
+    assert result["network_behavior"] == "无"
+    assert result["local_interface"] == "不使用"
+    assert result["security_grade"] == "SA"
+
+
+def test_audit_separates_remote_api_local_runtime_and_file_interface():
+    audit = load_module(AUDIT_PATH, "economics_snapshot_audit")
+    candidate = {
+        "platform": "GitHub",
+        "candidate_native_id": "owner/repo:SKILL.md",
+        "candidate_url": "https://github.com/owner/repo/blob/" + "a" * 40 + "/SKILL.md",
+        "raw": {
+            "path": "SKILL.md",
+            "sha": "b" * 40,
+            "repository": {"full_name": "owner/repo"},
+        },
+    }
+    content = b"Use Python pandas to read input.csv. Query https://api.worldbank.org/v2 and save report.csv."
+    result = audit.audit_fixture(
+        candidate,
+        {"SKILL.md": content},
+        {"license": {"spdx_id": "Apache-2.0"}, "pushed_at": "2026-07-01T00:00:00Z"},
+    )
+    assert result["external_api"] == "是"
+    assert "api.worldbank.org" in result["network_behavior"]
+    assert "Python" in result["local_runtime"]
+    assert "CSV" in result["local_interface"]
+    assert result["network_behavior"] != "无"
+
+
+def test_package_manifest_hash_is_deterministic():
+    audit = load_module(AUDIT_PATH, "economics_snapshot_audit")
+    files_a = {"b.txt": b"two", "a.txt": b"one"}
+    files_b = {"a.txt": b"one", "b.txt": b"two"}
+    assert audit.package_manifest_sha256(files_a) == audit.package_manifest_sha256(files_b)
+
+
+if __name__ == "__main__":
+    import pytest
+
+    raise SystemExit(pytest.main([__file__]))

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1093,
+    "sha256": "e4bafd89341d4a9af66ad224e7c8c7ac0a519726396b652a737a4a48978ea0d9"
+  },
+  {
+    "path": "src/skills/augur-munger/SKILL.md",
+    "size": 8023,
+    "sha256": "d4e1adfbab60e6f1580429631df4be45c090f01d2d66fccebcae7fbe17b4c78b"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "LICENSE",
+    "size": 1093,
+    "sha256": "e4bafd89341d4a9af66ad224e7c8c7ac0a519726396b652a737a4a48978ea0d9"
+  },
+  {
+    "path": "src/skills/augur-graham/SKILL.md",
+    "size": 6995,
+    "sha256": "4c1134442ee9da23dad6ba0af09b2a0a8ab994e4d0db33f5df56ce7072eda28b"
+  }
+]

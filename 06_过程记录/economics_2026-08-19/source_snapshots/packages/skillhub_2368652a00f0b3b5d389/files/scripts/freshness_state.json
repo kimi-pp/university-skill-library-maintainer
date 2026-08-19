@@ -1,0 +1,9 @@
+{
+  "last_run": "2026-07-29",
+  "next_due": "2026-08-28",
+  "schedule": "RRULE:FREQ=MONTHLY;BYMONTHDAY=27",
+  "overdue_count": 0,
+  "quarantine_count": 0,
+  "hook_count_at_last_scan": 133,
+  "engine_version": "1.0.0"
+}
