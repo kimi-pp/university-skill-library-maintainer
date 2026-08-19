@@ -1,0 +1,3132 @@
+{
+  "schema_version": "economics-class-delivery-v1",
+  "generated_on": "2026-08-19",
+  "category_code": "02",
+  "category_name": "经济学",
+  "class_code": "0203",
+  "class_name": "金融学类",
+  "major_count": 12,
+  "formal_count": 42,
+  "profiles": [
+    {
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "货币金融与金融机构",
+        "金融市场、公司金融与投资",
+        "金融风险、监管与数据分析"
+      ],
+      "typical_tasks": [
+        "分析利率、市场和金融机构数据",
+        "评估融资与资产配置方案",
+        "识别信用、市场与流动性风险"
+      ],
+      "inclusion_rules": [
+        "直接服务金融市场、机构、融资或风险分析",
+        "具备金融数据、模型或业务规则支撑"
+      ],
+      "exclusion_boundaries": [
+        "泛财经新闻或荐股文案",
+        "仅做个人记账、报销或营销"
+      ],
+      "search_terms": {
+        "zh": [
+          "金融学",
+          "金融市场分析",
+          "公司金融",
+          "金融风险"
+        ],
+        "en": [
+          "finance",
+          "financial market analysis",
+          "corporate finance",
+          "financial risk"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs"
+      ]
+    },
+    {
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "衍生品定价与资产定价",
+        "随机过程、数值方法与金融计算",
+        "对冲、组合与量化风险管理"
+      ],
+      "typical_tasks": [
+        "定价期权和衍生工具",
+        "构建对冲与组合优化模型",
+        "计算VaR及压力情景"
+      ],
+      "inclusion_rules": [
+        "必须包含金融产品的数学建模或风险量化",
+        "方法须支持定价、对冲或组合决策"
+      ],
+      "exclusion_boundaries": [
+        "纯软件工程或一般机器学习",
+        "只做交易观点生成而无模型与验证"
+      ],
+      "search_terms": {
+        "zh": [
+          "金融工程",
+          "衍生品定价",
+          "组合优化",
+          "量化风险"
+        ],
+        "en": [
+          "financial engineering",
+          "derivatives pricing",
+          "portfolio optimization",
+          "quantitative risk"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs"
+      ]
+    },
+    {
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "保险原理与风险管理",
+        "寿险、非寿险与再保险",
+        "核保、理赔、产品和保险监管"
+      ],
+      "typical_tasks": [
+        "设计和分析保险产品",
+        "辅助核保、理赔与风险分类",
+        "评估保险经营和监管数据"
+      ],
+      "inclusion_rules": [
+        "直接服务保险产品、经营或风险转移",
+        "使用保险规则、保单、赔付或风险数据"
+      ],
+      "exclusion_boundaries": [
+        "普通合同摘要或客服机器人",
+        "泛金融工具而无保险业务对象"
+      ],
+      "search_terms": {
+        "zh": [
+          "保险学",
+          "核保理赔",
+          "保险产品",
+          "保险风险管理"
+        ],
+        "en": [
+          "insurance",
+          "underwriting and claims",
+          "insurance products",
+          "insurance risk management"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs"
+      ]
+    },
+    {
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "证券估值与投资分析",
+        "资产配置与投资组合",
+        "公司价值、另类投资与绩效评价"
+      ],
+      "typical_tasks": [
+        "开展证券和公司估值",
+        "构建并回测投资组合",
+        "分析投资绩效、风险和归因"
+      ],
+      "inclusion_rules": [
+        "直接支持资产估值、配置或绩效分析",
+        "必须提供数据、模型或可核验分析过程"
+      ],
+      "exclusion_boundaries": [
+        "只生成荐股、喊单或收益承诺",
+        "泛理财内容营销"
+      ],
+      "search_terms": {
+        "zh": [
+          "投资学",
+          "证券估值",
+          "资产配置",
+          "投资组合绩效"
+        ],
+        "en": [
+          "investment analysis",
+          "security valuation",
+          "asset allocation",
+          "portfolio performance"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs"
+      ]
+    },
+    {
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "概率、随机过程与金融数学",
+        "资产定价和衍生证券",
+        "金融时间序列与数值计算"
+      ],
+      "typical_tasks": [
+        "推导和计算金融模型",
+        "模拟随机价格和利率过程",
+        "分析金融时间序列和定价误差"
+      ],
+      "inclusion_rules": [
+        "数学方法必须直接用于金融问题",
+        "支持定价、随机建模或金融计算"
+      ],
+      "exclusion_boundaries": [
+        "一般数学解题器而无金融应用",
+        "泛财经写作和市场资讯摘要"
+      ],
+      "search_terms": {
+        "zh": [
+          "金融数学",
+          "随机过程",
+          "资产定价",
+          "金融时间序列"
+        ],
+        "en": [
+          "financial mathematics",
+          "stochastic processes",
+          "asset pricing",
+          "financial time series"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs",
+        "pku_financial_mathematics_program"
+      ]
+    },
+    {
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学",
+        "管理学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "信用信息、评级与征信",
+        "信用风险计量与评分",
+        "信用政策、合规和不良资产管理"
+      ],
+      "typical_tasks": [
+        "构建信用评分和评级模型",
+        "分析企业或个人信用报告",
+        "监测违约、授信与组合信用风险"
+      ],
+      "inclusion_rules": [
+        "直接处理信用主体、信用数据或授信风险",
+        "支持评级、评分、征信或信用政策"
+      ],
+      "exclusion_boundaries": [
+        "社交信誉打分或不透明的人格判断",
+        "普通客户关系管理与催收话术"
+      ],
+      "search_terms": {
+        "zh": [
+          "信用管理",
+          "信用评分",
+          "征信分析",
+          "违约风险"
+        ],
+        "en": [
+          "credit management",
+          "credit scoring",
+          "credit reporting",
+          "default risk"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs"
+      ]
+    },
+    {
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "经济学理论与宏观分析",
+        "货币金融、金融市场与机构",
+        "计量经济与经济金融预测"
+      ],
+      "typical_tasks": [
+        "联动分析宏观经济和金融市场",
+        "预测经济金融指标",
+        "评估货币、金融与产业政策"
+      ],
+      "inclusion_rules": [
+        "经济与金融两个维度均有实质支撑",
+        "用于宏观金融、政策或经济金融数据分析"
+      ],
+      "exclusion_boundaries": [
+        "仅覆盖企业财务或个人理财",
+        "泛经济新闻摘要而无模型或政策分析"
+      ],
+      "search_terms": {
+        "zh": [
+          "经济与金融",
+          "宏观金融",
+          "经济金融预测",
+          "货币政策分析"
+        ],
+        "en": [
+          "economics and finance",
+          "macro-finance",
+          "economic and financial forecasting",
+          "monetary policy analysis"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs"
+      ]
+    },
+    {
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学",
+        "理学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "概率统计、风险模型与生存分析",
+        "寿险与年金精算",
+        "非寿险精算、准备金与偿付能力"
+      ],
+      "typical_tasks": [
+        "计算保费、准备金和年金",
+        "建立损失分布与风险模型",
+        "开展经验分析、偿付能力和精算评估"
+      ],
+      "inclusion_rules": [
+        "必须直接支持精算定价、准备金或风险模型",
+        "包含概率统计、生命表、损失或生存数据"
+      ],
+      "exclusion_boundaries": [
+        "泛财经写作、荐股或一般金融资讯",
+        "仅做保险客服、营销或合同摘要"
+      ],
+      "search_terms": {
+        "zh": [
+          "精算学",
+          "寿险精算",
+          "非寿险精算",
+          "风险模型"
+        ],
+        "en": [
+          "actuarial science",
+          "life contingencies",
+          "non-life actuarial",
+          "actuarial risk models"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs",
+        "pku_financial_mathematics_program"
+      ]
+    },
+    {
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "互联网金融模式与平台经济",
+        "数字支付、网络借贷与平台运营",
+        "大数据风控、监管与消费者保护"
+      ],
+      "typical_tasks": [
+        "分析互联网金融交易与用户风险",
+        "评估支付、借贷或平台业务模式",
+        "监测互联网金融合规和运营指标"
+      ],
+      "inclusion_rules": [
+        "金融业务对象与互联网平台机制必须同时存在",
+        "支持支付、借贷、平台运营或数字风控"
+      ],
+      "exclusion_boundaries": [
+        "普通电商运营或社媒营销",
+        "纯网站开发和支付接口接入"
+      ],
+      "search_terms": {
+        "zh": [
+          "互联网金融",
+          "数字支付",
+          "网络借贷",
+          "互联网金融风控"
+        ],
+        "en": [
+          "internet finance",
+          "digital payments",
+          "online lending",
+          "internet financial risk"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs",
+        "ahut_internet_finance_program"
+      ]
+    },
+    {
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "金融理论与金融业务",
+        "Python、机器学习与金融大数据",
+        "区块链、智能风控与监管科技"
+      ],
+      "typical_tasks": [
+        "开发金融数据分析和风控模型",
+        "分析量化投资或智能投顾",
+        "评估支付、区块链和监管科技应用"
+      ],
+      "inclusion_rules": [
+        "技术必须直接作用于金融场景",
+        "支持金融数据、产品、风险或监管的可复核实现"
+      ],
+      "exclusion_boundaries": [
+        "通用AI或区块链开发而无金融任务",
+        "只做金融营销内容和资讯问答"
+      ],
+      "search_terms": {
+        "zh": [
+          "金融科技",
+          "金融机器学习",
+          "智能风控",
+          "监管科技"
+        ],
+        "en": [
+          "fintech",
+          "machine learning in finance",
+          "intelligent risk control",
+          "regtech"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs",
+        "bit_fintech_program"
+      ]
+    },
+    {
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业",
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "金融学、会计与审计理论",
+        "金融机构内部控制与风险",
+        "银行、证券、保险及金融大数据审计"
+      ],
+      "typical_tasks": [
+        "执行金融机构审计程序",
+        "分析金融业务内部控制和风险",
+        "利用数据识别金融审计异常与证据"
+      ],
+      "inclusion_rules": [
+        "审计对象必须是金融机构、业务或监管活动",
+        "支持审计证据、控制测试或金融风险核验"
+      ],
+      "exclusion_boundaries": [
+        "普通财务审计或会计记账",
+        "纯金融预测、交易或荐股工具"
+      ],
+      "search_terms": {
+        "zh": [
+          "金融审计",
+          "商业银行审计",
+          "金融内部控制",
+          "金融大数据审计"
+        ],
+        "en": [
+          "financial audit",
+          "bank audit",
+          "financial internal control",
+          "financial data audit"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs",
+        "nau_financial_audit_program"
+      ]
+    },
+    {
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业",
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "数字金融基础设施与业务",
+        "金融数据、人工智能与云计算",
+        "数字普惠金融、智能风控与数字监管"
+      ],
+      "typical_tasks": [
+        "设计和评估数字金融产品",
+        "分析数字金融数据和用户风险",
+        "研究数字支付、普惠金融和监管机制"
+      ],
+      "inclusion_rules": [
+        "数字技术与金融业务必须形成闭环",
+        "支持数字产品、数据决策、风控或监管"
+      ],
+      "exclusion_boundaries": [
+        "纯软件、云平台或通用数据工具",
+        "互联网营销和泛金融内容生成"
+      ],
+      "search_terms": {
+        "zh": [
+          "数字金融",
+          "数智金融",
+          "数字普惠金融",
+          "数字金融风控"
+        ],
+        "en": [
+          "digital finance",
+          "intelligent finance",
+          "digital financial inclusion",
+          "digital finance risk"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "nufe_finance_programs",
+        "pku_digital_finance_program"
+      ]
+    }
+  ],
+  "formal_candidates": [
+    {
+      "skill_id": "ECON-SK-0045",
+      "skill_name": "accounting-and-economics-research",
+      "skill_description": "Use when targeting 《会计与经济研究》(Accounting and Economics Research — 上海市教委主管、上海立信会计金融学院主办、双向匿名评审、不收版面费的财经双月刊) or deciding whether a Chinese accounting/finance/econ manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/citation house style, official-submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "da933d5abf82eb7672854be4d43476d41d09b97e31fb2cd9b6bc02a41f3b3a96",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_5b88ff98044ead280b9d/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_5b88ff98044ead280b9d/files/Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_5b88ff98044ead280b9d/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "金融学",
+            "finance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0046",
+      "skill_name": "chinese-review-of-financial-studies",
+      "skill_description": "Use when targeting 《金融评论》(Chinese Review of Financial Studies — 中国社会科学院金融研究所主办、2009 年创刊、不收版面费的金融学术双月刊) or deciding whether a Chinese finance manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/JEL house style, citation-quota rule, official ajcass.com submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "c66b304318e50f4558a8c75e1e2db695788bdc3c7383033078e9a140b707e869",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1759306b4273093b5437/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1759306b4273093b5437/files/Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1759306b4273093b5437/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "金融学",
+            "financial",
+            "finance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0047",
+      "skill_name": "journal-of-financial-research",
+      "skill_description": "Use when targeting 《金融研究》(Journal of Financial Research) — the PBC-affiliated top finance journal in China. Apply to monetary policy, banking, capital markets, corporate finance, financial risk and regulation, and fintech papers, balancing rigorous identification with concrete financial-system policy relevance. Distinguishes macro-finance from micro corporate-finance framings.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K",
+        "020307T",
+        "020310T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "10ca8a36e5413a3a02e2b24336ed716988138588dc9552dcfb60c897a921f795",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f03aed29812fbb2c4d39/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f03aed29812fbb2c4d39/files/Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f03aed29812fbb2c4d39/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "monetary policy",
+            "banking",
+            "corporate finance",
+            "financial risk",
+            "corporate",
+            "financial",
+            "finance",
+            "market",
+            "risk"
+          ]
+        },
+        {
+          "major_code": "020307T",
+          "major_name": "经济与金融",
+          "matched_terms": [
+            "macro-finance",
+            "financial",
+            "monetary",
+            "finance",
+            "policy"
+          ]
+        },
+        {
+          "major_code": "020310T",
+          "major_name": "金融科技",
+          "matched_terms": [
+            "fintech",
+            "finance",
+            "risk"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0048",
+      "skill_name": "modern-financial-research",
+      "skill_description": "Use when targeting 《现代金融研究》(Modern Financial Research — 中国工商银行与中国现代金融学会主办、2024 年由《金融论坛》改为现名、不收任何费用、仅邮箱投稿) or deciding whether a Chinese finance manuscript fits this venue. Encodes the journal's bank/policy fit, framing, double-blind review, email-only submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "a7ea33c5d4f5dc84a88113400f8c9871f6e8744e741225f2ae6a34c3bd70cfbb",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_00450fe1e77bb6192bcf/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_00450fe1e77bb6192bcf/files/Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_00450fe1e77bb6192bcf/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "金融学",
+            "financial",
+            "finance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0049",
+      "skill_name": "studies-of-financial-economics",
+      "skill_description": "Use when targeting 《金融经济学研究》(Studies of Financial Economics — 广东金融学院主办、双向匿名评审、不收版面费的金融学术双月刊) or deciding whether a Chinese finance/econ manuscript fits this journal. Encodes the journal's fit, framing, fee-free policy, word-count/abstract house style, official採编-system submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K",
+        "020307T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "da8bbbdd6728e20885c7442e847d0319a664faf3e5c82eda25ed84d306e04d6e",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_6bbf2f10c5b3229f240d/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_6bbf2f10c5b3229f240d/files/Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_6bbf2f10c5b3229f240d/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "financial economics",
+            "金融学",
+            "financial",
+            "finance"
+          ]
+        },
+        {
+          "major_code": "020307T",
+          "major_name": "经济与金融",
+          "matched_terms": [
+            "financial economics",
+            "金融经济",
+            "economics",
+            "financial",
+            "economic",
+            "finance",
+            "policy"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0050",
+      "skill_name": "studies-of-international-finance",
+      "skill_description": "Use when targeting 《国际金融研究》(Studies of International Finance — 中国银行股份有限公司与中国国际金融学会主办、1985 年创刊的国际金融月刊) or deciding whether a Chinese finance manuscript fits this top-tier venue. Encodes the journal's global-finance fit, framing, abstract/keyword house style, official chinaifs.org.cn submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "4623b3e146dc767f8a8b9bbf6e1edf4b60f0c027c23400ceb73486ff84b82ea9",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9bd1d865d87a0193ab51/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9bd1d865d87a0193ab51/files/Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9bd1d865d87a0193ab51/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "金融学",
+            "finance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0051",
+      "skill_name": "China-CF-Study",
+      "skill_description": "根据研究者提供的**研究计划书（Research Proposal）**执行基于中国制度环境的公司金融类实证研究全流程。**启动后第一件事：根据计划书的主题、识别策略、贡献边际与样本范围，从中国-context 英文顶级期刊池（JF/JFE/RFS/JFQA/MS/JCF/JBF/JAR/JAE/TAR/CAR/JIBS/China Economic Review/PBFJ 等 25+ 期刊）中推荐 5 本最匹配的目标期刊（[J1]–[J5]），等待研究者明确选定一本；该期刊决定 main.tex 的 bibliographystyle、Section 骨架、Introduction 风格与表注规范**。然后用 Python 完成数据清洗、描述性统计、基准回归、内生性检验（IV/2SLS、DML）、平行趋势、异质性、机制、稳健性检验与图表绘制。LaTeX 表格和图像严格遵循 template/ 示例格式，研究逻辑与排版严格遵循 rule/ 下的《通用实证研究逻辑与规范总结》与《回归表写作规范总结》。数据集与政策集从 asset/ 中按计划书中的关键词检索。**当计划书预期的实证结果无法实现时（系数不显著、平行趋势不通过、IV 弱工具、机制不成立等），skill 自动切换备选方案直至完成研究项目**。最终交付物：Python 代码 + LaTeX 表格 + 图像（.pdf/.png）。触发条件：研究者提交研究计划书（含 X→Y 假设、识别策略、样本、政策冲击等）。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python、Stata",
+      "local_interface": "CSV、JSON、PDF、DOCX",
+      "file_behavior": "只读本地文件",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Auto-Empirical-Research-Skills/skills/67-econfin-workflow-toolkit/China-CF-study/SKILL.md",
+      "fixed_version": "6dffda59ea2401b60f0dae232f4cf63d5e400778",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T03:45:29Z",
+      "repository_stars": 17,
+      "package_manifest_sha256": "84366f65f6387844029bb3c74ffd3f46251b78307bcec17979c205caa059cf1a",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_21a0ee040e54f746a70b/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_21a0ee040e54f746a70b/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_21a0ee040e54f746a70b/files/mirrors/repos/brycewang-stanford@Auto-Empirical-Research-Skills/skills/67-econfin-workflow-toolkit/China-CF-study/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "公司金融"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0052",
+      "skill_name": "jbf-contribution-framing",
+      "skill_description": "Use when sharpening the contribution claim for a Journal of Banking & Finance paper so the manuscript explains why the result matters for banking, financial intermediation, markets, regulation, or corporate finance.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Banking-and-Finance-Skills/skills/jbf-contribution-framing/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "dd60f0bad3814d67e90a768d6953cd91410323a367e5432c58505ff114f675fa",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_be09d6e1f612b4bd2c56/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_be09d6e1f612b4bd2c56/files/Journal-of-Banking-and-Finance-Skills/skills/jbf-contribution-framing/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_be09d6e1f612b4bd2c56/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "banking",
+            "corporate finance",
+            "corporate",
+            "financial",
+            "finance",
+            "market"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0053",
+      "skill_name": "Central Bank Governor Intelligence - Monetary Policy Leadership Decision Modeling",
+      "skill_description": "Central Bank Governor Intelligence - Monetary Policy Leadership Decision Modeling",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Microsoft Excel",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/pauljbernard/headElf/blob/2c1e23eb08d7ce7d74981661c8c51b1bcb277dcc/skills/personas/political/central-bank-governor-intelligence/skill.md",
+      "fixed_version": "2c1e23eb08d7ce7d74981661c8c51b1bcb277dcc",
+      "license": "MIT",
+      "maintenance_date": "2026-03-03T23:11:19Z",
+      "repository_stars": 5,
+      "package_manifest_sha256": "140bf2d4daa7a0ae19ba2557a3875a392efd10144edfa91dfb443b3bbe245ffe",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_85f0cfcee8aef1bbb86e/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_85f0cfcee8aef1bbb86e/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_85f0cfcee8aef1bbb86e/files/skills/personas/political/central-bank-governor-intelligence/skill.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "monetary policy"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0054",
+      "skill_name": "Finance & Insurance Intelligence",
+      "skill_description": "Description Comprehensive executive intelligence for Finance & Insurance sector (8.0% of US GDP, $1.7T+ annual revenue). Provides specialized C-suite decision-making capabilities for banking, insurance, investment services, credit services, capital markets, wealth management, and financial technology innovation.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Microsoft Excel",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/pauljbernard/headElf/blob/2c1e23eb08d7ce7d74981661c8c51b1bcb277dcc/skills/industry/finance-insurance/skill.md",
+      "fixed_version": "2c1e23eb08d7ce7d74981661c8c51b1bcb277dcc",
+      "license": "MIT",
+      "maintenance_date": "2026-03-03T23:11:19Z",
+      "repository_stars": 5,
+      "package_manifest_sha256": "898d5fb830542201955f3698cf51ec33d62e50373962c6222b9d3dc617627afc",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b2223b69cdeb811c6108/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b2223b69cdeb811c6108/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b2223b69cdeb811c6108/files/skills/industry/finance-insurance/skill.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "banking",
+            "financial",
+            "finance",
+            "market"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0055",
+      "skill_name": "financial-analysis",
+      "skill_description": "Domain expertise for financial markets, investment analysis, corporate finance, risk management, and energy finance.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020301K",
+      "primary_major_name": "金融学",
+      "applicable_major_codes": [
+        "020301K",
+        "020304"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "本地CLI",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/gmifsud/llm-skill-vault/blob/dd1c8184a5f7147cf7e8ebbe39680c74eddaed2b/skills/financial-analysis/SKILL.md",
+      "fixed_version": "dd1c8184a5f7147cf7e8ebbe39680c74eddaed2b",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-06-23T15:01:09Z",
+      "repository_stars": 0,
+      "package_manifest_sha256": "337a70fb023f8d640f781fdea5bef656fecd8335ba1ab9898bc1b544184dfa61",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b04b88c6ab1c4d24e606/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b04b88c6ab1c4d24e606/files/LICENSE.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b04b88c6ab1c4d24e606/files/skills/financial-analysis/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "matched_terms": [
+            "corporate finance",
+            "corporate",
+            "financial",
+            "finance",
+            "market",
+            "risk"
+          ]
+        },
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "investment analysis",
+            "investment"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0056",
+      "skill_name": "finance-skills",
+      "skill_description": "8 finance skills. Trigger: financial modeling, market data, risk analysis, quantitative finance. Design: data sources, quantitative methods, and regulatory frameworks.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020302",
+      "primary_major_name": "金融工程",
+      "applicable_major_codes": [
+        "020302"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python、Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/wentorai/research-plugins/blob/bf44b3cd617fa94c8a1b254c5d1987142ca3d631/skills/domains/finance/SKILL.md",
+      "fixed_version": "bf44b3cd617fa94c8a1b254c5d1987142ca3d631",
+      "license": "MIT",
+      "maintenance_date": "2026-06-19T03:04:02Z",
+      "repository_stars": 273,
+      "package_manifest_sha256": "b5bf51642c11d3579daba8274d29feda01cf98234cc97a3b21629bdb1113057c",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8400e8e8bdefd5fd6e49/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8400e8e8bdefd5fd6e49/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8400e8e8bdefd5fd6e49/files/skills/domains/finance/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020302",
+          "major_name": "金融工程",
+          "matched_terms": [
+            "quantitative finance",
+            "quantitative",
+            "financial",
+            "risk"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0057",
+      "skill_name": "quant-analyst",
+      "skill_description": "Expert in quantitative finance, algorithmic trading, and financial data analysis using Python (Pandas/NumPy), statistical modeling, and machine learning.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020302",
+      "primary_major_name": "金融工程",
+      "applicable_major_codes": [
+        "020302"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/majiayu000/claude-skill-registry/blob/58cb5003544bf1f45b2779f10365fd6ed0e95353/skills/analysis/quant-analyst-skill/SKILL.md",
+      "fixed_version": "58cb5003544bf1f45b2779f10365fd6ed0e95353",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T02:46:06Z",
+      "repository_stars": 569,
+      "package_manifest_sha256": "2e0161e7f650feb79fa49aa5f06223ee7a66aed3d30bfbddc6bcdb18087cc977",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_aca3c9471bbfdc0682a4/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_aca3c9471bbfdc0682a4/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_aca3c9471bbfdc0682a4/files/skills/analysis/quant-analyst-skill/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020302",
+          "major_name": "金融工程",
+          "matched_terms": [
+            "quantitative finance",
+            "quantitative",
+            "financial"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0058",
+      "skill_name": "claims-material-check-life-insurance-assistant",
+      "skill_description": "当用户需要对寿险理赔申请资料做结构化受理预审、材料完整性检查、死亡事实与身故原因相关证明核验、申请人和受益人资格资料检查、补件清单整理或受理前问题识别时使用本 skill。适用于检查理赔申请书、被保险人身份证明、申请人或受益人身份证明、银行卡信息、死亡证明、户籍注销证明、火化证明、亲属关系证明、受益人证明、医院病历、抢救记录、出院记录、公安或司法证明、事故证明、殡葬资料等是否齐全、清晰、有效、相互一致，并输出适合理赔受理、补件沟通和内部留痕的检查结果。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "JSON",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/claims-material-check-life-insurance-assistant/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "4ecbc4a74ccac791e57725ed9210e2e7af9080e117ba736e61e8d67ee9854db5",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_cecf34306d32ab7e8984/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_cecf34306d32ab7e8984/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_cecf34306d32ab7e8984/files/Skills/claims-material-check-life-insurance-assistant/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "寿险理赔",
+            "insurance",
+            "claims",
+            "寿险",
+            "理赔"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0059",
+      "skill_name": "directors-officers-guide",
+      "skill_description": "Guide D&O insurance selection and coverage analysis. TRIGGERS - Use when user needs help with directors-officers-guide related tasks.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/directors-officers-guide/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "801c226ca095900551f0b598770f5a413c304a8d5de831d76ae38eec0c7ce031",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ef4d6dcca27234b981e2/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ef4d6dcca27234b981e2/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ef4d6dcca27234b981e2/files/Skills/directors-officers-guide/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "coverage analysis",
+            "insurance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0060",
+      "skill_name": "health-insurance-underwriting-questionnaire-assistant",
+      "skill_description": "当用户需要对健康险投保问卷进行专业、结构化的核保审查，提取健康告知中的异常病史、既往诊疗、检查异常、住院手术史、长期用药、慢病管理和其他健康风险信息，并生成适合健康险核保、补问流转和人工审查的结构化分析结果时使用本 skill。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "JSON",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/aifinlab/FinClaw/blob/9e62862d1412157fa03ffd1f0b74969dcf0ed66c/skills/health-insurance-underwriting-questionnaire-assistant/SKILL.md",
+      "fixed_version": "9e62862d1412157fa03ffd1f0b74969dcf0ed66c",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-05-13T07:48:55Z",
+      "repository_stars": 229,
+      "package_manifest_sha256": "18775bd8982fcd7e9b2e3083a1d912ab7665b30b7f210e997592fc880ebe0b77",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6c2093e803732b1da977/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6c2093e803732b1da977/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6c2093e803732b1da977/files/skills/health-insurance-underwriting-questionnaire-assistant/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "underwriting",
+            "insurance",
+            "核保"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0061",
+      "skill_name": "insurance-needs-analysis",
+      "skill_description": "Conduct insurance needs analysis with gap identification. TRIGGERS - Use when user needs help with insurance-needs-analysis related tasks.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/insurance-needs-analysis/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "3213483252f55b5313a4f056d5265aead7c66f7dcb9b1054ed0dfe6a16007ccb",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d3393791351f90830918/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d3393791351f90830918/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d3393791351f90830918/files/Skills/insurance-needs-analysis/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "insurance needs analysis",
+            "insurance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0062",
+      "skill_name": "analyzing-life-insurance-products",
+      "skill_description": "Evaluates life insurance product structures with cash value analysis, cost comparisons, and suitability assessment. Use when analyzing life products, comparing insurance costs, or assessing product suitability.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/analyzing-life-insurance-products/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "aeba79e10f9bf7b09370d9b5de8d90d0c944f78de9dea7096c8f78d2bfa29e05",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_98db1dfbd0c2b5e3ac79/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_98db1dfbd0c2b5e3ac79/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_98db1dfbd0c2b5e3ac79/files/Skills/analyzing-life-insurance-products/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "insurance product",
+            "insurance",
+            "products"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0063",
+      "skill_name": "insurance-claim-appeal",
+      "skill_description": "Appeal a denied insurance claim — read the real reason for the denial, find the strongest grounds, and draft the appeal with the evidence that answers it. Use when asked to appeal a denied claim, my insurance claim was rejected, the insurer won't pay, or how do I fight a claim denial. Produces a decode of the denial reason, the best grounds to appeal on, a structured appeal letter citing your policy, the evidence checklist, deadlines to watch, and the external-review/ombudsman escalation. Not legal or regulated advice.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/mohitagw15856/pm-claude-skills/blob/e70f5757e8b9dc19de0865c98d037215c44663bb/plugins/pm-insurance/skills/insurance-claim-appeal/SKILL.md",
+      "fixed_version": "e70f5757e8b9dc19de0865c98d037215c44663bb",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T08:31:45Z",
+      "repository_stars": 1294,
+      "package_manifest_sha256": "4c0a427841e1ffedeb663ddc89dd526569a22a8219ecc93237c8d6479d7f6b36",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ed759d7fd5d61b9695ec/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ed759d7fd5d61b9695ec/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ed759d7fd5d61b9695ec/files/plugins/pm-insurance/skills/insurance-claim-appeal/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "insurance claim",
+            "insurance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0064",
+      "skill_name": "managing-insurance-capital-modeling",
+      "skill_description": "Structures insurance capital model analysis with economic capital, regulatory capital, and rating agency capital comparison. Use when modeling insurance capital, comparing capital frameworks, or assessing capital adequacy.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/managing-insurance-capital-modeling/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "9d8ff0b80e3c45b70a80180feb2eef5e44aff18240ea41a9371e104e265341f8",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a86851ae893e58ba0709/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a86851ae893e58ba0709/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a86851ae893e58ba0709/files/Skills/managing-insurance-capital-modeling/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "insurance capital",
+            "insurance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0065",
+      "skill_name": "managing-insurance-fraud-detection",
+      "skill_description": "Structures insurance fraud detection with red flag identification, investigation protocols, and SIU referral documentation. Use when detecting insurance fraud, investigating suspicious claims, or documenting fraud indicators.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020303",
+      "primary_major_name": "保险学",
+      "applicable_major_codes": [
+        "020303"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/managing-insurance-fraud-detection/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "d3542d77cec797484f9858a243199763d436164729a5848d02dd9dce2e982aff",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_66161aee52432ef981e1/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_66161aee52432ef981e1/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_66161aee52432ef981e1/files/Skills/managing-insurance-fraud-detection/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "insurance fraud",
+            "insurance",
+            "claims"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0066",
+      "skill_name": "fin-m-and-a",
+      "skill_description": "M&A integration playbook covering eight modules: strategic rationale, target screening, due diligence (financial/legal/commercial), valuation with valuation bridge, synergy analysis, deal structuring (stock vs. asset, cash vs. equity, earn-out), SPA key clauses, and post-merger integration (PMI). Use for deal evaluation, valuation disputes, structure design, earn-out design, synergy breakdown, integration risk, or hostile takeover defense. Triggers: 『併購』『收購』『M&A』『盡職調查』『DD』『估值橋』『綜效』『earn-out』『換股比例』『PMI』『買殼』『借殼上市』『敵意併購』『交易結構』. For Taiwan EMBA 財管組 case studies and term reports (台大／政大／陽交). Complements Asgard `biz-dcf` and `fin-modeling` (valuation tools) plus `biz-corporate-governance` (governance layer) by providing the transaction-layer framework.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "本地CLI",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/asgard-ai-platform/skills/blob/4e7f4f8e389847757a5a4236c2f1ed9813359179/fin-m-and-a/SKILL.md",
+      "fixed_version": "4e7f4f8e389847757a5a4236c2f1ed9813359179",
+      "license": "MIT",
+      "maintenance_date": "2026-06-06T05:50:09Z",
+      "repository_stars": 227,
+      "package_manifest_sha256": "5584fa819a95846369f85895c45af7c9d0ea066c4a8a9131ba6db24dc2d4fba2",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_1a504334d22762a92e75/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_1a504334d22762a92e75/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_1a504334d22762a92e75/files/fin-m-and-a/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "valuation",
+            "估值",
+            "asset"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0067",
+      "skill_name": "Investment Analysis (A股/港股投资分析)",
+      "skill_description": "Systematic investment research workflow for A-share and Hong Kong stock markets using AI-powered analysis. Use when conducting sector selection, supply chain analysis, financial report verification, or market sentiment evaluation. 系统化的 A 股/港股投资研究工作流程，适用于赛道筛选、产业链分析、财报验证和市场情绪评估。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "CSV、PDF、本地CLI",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/Linearl/linearleaf_skill_repo/blob/65691555b3bf10ce633276e3975f7123820046ea/invest_analysis/SKILL.md",
+      "fixed_version": "65691555b3bf10ce633276e3975f7123820046ea",
+      "license": "GPL-3.0",
+      "maintenance_date": "2026-05-26T07:16:04Z",
+      "repository_stars": 3,
+      "package_manifest_sha256": "d99133caf77376e7f4aad297f83940b06be4e551893d8d6e5b1501b8d7ae6be3",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8e4d6fe030175c0242a9/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8e4d6fe030175c0242a9/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8e4d6fe030175c0242a9/files/invest_analysis/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "investment analysis",
+            "投资分析",
+            "investment",
+            "valuation"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0068",
+      "skill_name": "Investment Analysis (Buy-Hold, BRRRR, Flip)",
+      "skill_description": "Evaluates a property across three investment strategies — Buy & Hold, BRRRR, and Fix & Flip — with feasibility scores, multi-year projections, tax benefits, and break-even analysis",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Microsoft Excel",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/zubair-trabzada/ai-realestate-claude/blob/d435ddd36346e7e5108f2e8a4bb36d2149865313/skills/realestate-invest/SKILL.md",
+      "fixed_version": "d435ddd36346e7e5108f2e8a4bb36d2149865313",
+      "license": "MIT",
+      "maintenance_date": "2026-04-29T22:58:17Z",
+      "repository_stars": 144,
+      "package_manifest_sha256": "295f26df3b3f9ec67adddde7b490c905736eb3ee7df2d7e750d7401fefb08abe",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_53ff11e261acc414b617/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_53ff11e261acc414b617/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_53ff11e261acc414b617/files/skills/realestate-invest/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "investment analysis",
+            "investment"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0069",
+      "skill_name": "investment-memo",
+      "skill_description": "Structured investment committee memo builder for equity long/short, PE/VC, credit, and real estate investments. Activate when the user mentions IC memo, investment memo, investment committee, buy recommendation, sell recommendation, commit/pass decision, credit memo, lending decision, acquisition memo, position recommendation, underwriting memo, deal memo, or asks for help structuring an investment case for a committee, portfolio manager, or credit committee. ---",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "本地CLI",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/tmcga/alpha-stack/blob/eefe76525242e7484f966afe6147ddfeba9e4ffb/skills/investment-memo/SKILL.md",
+      "fixed_version": "eefe76525242e7484f966afe6147ddfeba9e4ffb",
+      "license": "MIT",
+      "maintenance_date": "2026-05-13T02:16:51Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "6435b84eac3e100a235dbd5b04a8c02f0ef0483b9df368abdf052ad1e42e20b8",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6e9a28173a83143dab9b/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6e9a28173a83143dab9b/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6e9a28173a83143dab9b/files/skills/investment-memo/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "investment memo",
+            "investment",
+            "portfolio"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0070",
+      "skill_name": "new-investment-brain",
+      "skill_description": "融合原六大脑程序化框架 + SOIC价值链/护城河 + financial-analysis双轨财务 + Serenity Chokepoint策略 v7.7(🧭COMPASS四柱21维+🆕DIS6生命周期维度+🔄三阶段演变+📋Watchlist再发现闭环+💰GIVG 2D+Time矩阵+🧭CITA跨界发现·全行业通用) + 三种时刻(AJI🍶/RPI🍓/GATE🛡️) + 六大脑深度分析(🆕估值脑/风险脑新增生命周期诊断) + 12人投资委员会 + 📊 Phase 0 Data Canvas + 🟢 ESG Bonus + 🆕 industry-deep-driller双技能联动 + 🆕 六大脑自进化系统 + 🆕 全球七地市场 + 🆕 双地形狩猎框架(🔥热门深度+🧊冷门广度) + 防幻觉验证 + 持久化知识管理。输出七态(🟢强烈买入/🟢买入/🟡持有/🟠减持/🔴强烈卖出/📋Watchlist/🔄再进入)。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/Jonathonwang001/new-investment-brain/blob/e76ed2907e96e5a38fe164244043a27f321f64ea/SKILL.md",
+      "fixed_version": "e76ed2907e96e5a38fe164244043a27f321f64ea",
+      "license": "MIT",
+      "maintenance_date": "2026-07-16T16:23:57Z",
+      "repository_stars": 4,
+      "package_manifest_sha256": "a5e77a65c68d94b53b4b6d781be8e8e0f2a71f8aef998b958beb994586a5c059",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_671a8a1b7ea98499bdd0/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_671a8a1b7ea98499bdd0/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_671a8a1b7ea98499bdd0/files/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "估值",
+            "investment"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0071",
+      "skill_name": "snow-finance-cn",
+      "skill_description": "A股中国股票市场全能金融分析技能（10大核心能力）。能力一：个股深度分析（含盈利质量评分+信披风险扫描）；能力二：多维股票筛选+反向规避；能力三：行业全景研究+宏观景气追踪；能力四：多股横向对比；能力五：持仓监控与风险预警；能力六：事件驱动分析；能力七：量化因子分析；能力八：IPO/新股分析；能力九：指数/板块分析；能力十：股价K线预测（含免责声明）。触发词: 分析股票、股票研究、估值报告、财务分析、A股、港股、筛选股票、选股、行业研究、产业链、对比分析、持仓监控、公告事件、因子分析、新股IPO、指数板块、股价预测、K线预测。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/jiannanya/snow-finance-cn/blob/e573057457a412199efc580a9c3efbd4d23b211b/SKILL.md",
+      "fixed_version": "e573057457a412199efc580a9c3efbd4d23b211b",
+      "license": "MIT",
+      "maintenance_date": "2026-05-15T08:33:46Z",
+      "repository_stars": 0,
+      "package_manifest_sha256": "157301e93cefd594217eb8c9a40b06ee71d6c6eed066bc4aeb30cb7fbd568c89",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_93625dd3eb0098ee49ef/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_93625dd3eb0098ee49ef/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_93625dd3eb0098ee49ef/files/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "估值"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0072",
+      "skill_name": "capital-allocation-advisor",
+      "skill_description": "Multi-jurisdiction reference framework for corporate capital allocation, investment appraisal (NPV, IRR, MIRR, payback, profitability index), cost of capital (WACC, CAPM, hurdle rates), M&A valuation methods (DCF, trading comparables, precedent transactions, accretion/dilution), capital return policy (dividends vs. buybacks vs. reinvestment with ROIC > WACC test), and sensitivity/scenario analysis. Jurisdictional and tax overlays for US, EU, UK, Japan, China, India, and Australia. Advisory only — not investment advice and not a fairness opinion.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020304",
+      "primary_major_name": "投资学",
+      "applicable_major_codes": [
+        "020304"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "本地CLI",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/VincentChuWaiChow/vanguard-frontier-agentic/blob/7845f7be54e39afc6bb862a2fb8cd134ccd5b9e3/skills/finance/capital-allocation-advisor/SKILL.md",
+      "fixed_version": "7845f7be54e39afc6bb862a2fb8cd134ccd5b9e3",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-08-18T16:07:20Z",
+      "repository_stars": 21,
+      "package_manifest_sha256": "4d5eb2893bd846bad778f7fa7450547a50e8c01da5ea77576eb4364c72ba2420",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_636d76f0fe36c2d9aa11/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_636d76f0fe36c2d9aa11/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_636d76f0fe36c2d9aa11/files/skills/finance/capital-allocation-advisor/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "valuation",
+            "allocation",
+            "investment"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0073",
+      "skill_name": "journal-of-management-sciences-china",
+      "skill_description": "Use when targeting 《管理科学学报》(Journal of Management Sciences in China) — the NSFC-flagship for quantitative / mathematical management science (operations research, decision analysis, mathematical finance, behavioral operations, system modeling). Apply when a paper needs rigorous models, proofs, or algorithms — NOT empirical-survey or case work (that is 管理世界 / 南开管理评论).",
+      "primary_class_code": "0203",
+      "primary_major_code": "020305T",
+      "primary_major_name": "金融数学",
+      "applicable_major_codes": [
+        "020305T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "330acd5623280778bc064b7b9b2e8b3da660b82079ab73c72442ff093af74b62",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_7c5140ab8c02306a7e89/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_7c5140ab8c02306a7e89/files/Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_7c5140ab8c02306a7e89/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020305T",
+          "major_name": "金融数学",
+          "matched_terms": [
+            "mathematical finance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0074",
+      "skill_name": "mathematical-finance",
+      "skill_description": "Use when targeting Mathematical Finance or deciding whether a quantitative / mathematical-finance manuscript fits this venue. Encodes the journal's fit, framing, method-and-evidence bar, house style, official-submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020305T",
+      "primary_major_name": "金融数学",
+      "applicable_major_codes": [
+        "020305T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/English-SocialScience-Journal-Skills/skills/mathematical-finance/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "44108f7c8c6c140be163f803646b4f1505d8e7dfc4807a47eb41021de3563ecb",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_01be0dc9a2a8c0c9c4ac/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_01be0dc9a2a8c0c9c4ac/files/English-SocialScience-Journal-Skills/skills/mathematical-finance/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_01be0dc9a2a8c0c9c4ac/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020305T",
+          "major_name": "金融数学",
+          "matched_terms": [
+            "mathematical finance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0075",
+      "skill_name": "ai-volatility-prediction",
+      "skill_description": "Implements forecast volatility for risk management and option pricing",
+      "primary_class_code": "0203",
+      "primary_major_code": "020305T",
+      "primary_major_name": "金融数学",
+      "applicable_major_codes": [
+        "020305T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "JSON",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/paulpas/agent-skill-router/blob/03735f82d38538c0a7ba34a6056fa8e5e3704be8/skills/trading/ai-volatility-prediction/SKILL.md",
+      "fixed_version": "03735f82d38538c0a7ba34a6056fa8e5e3704be8",
+      "license": "MIT",
+      "maintenance_date": "2026-08-17T19:06:49Z",
+      "repository_stars": 4,
+      "package_manifest_sha256": "3dab3828516e97dc9137f97471017300e64b3d9d47c8169f72ff2fe497b0c8eb",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d11194a21596dde444ac/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d11194a21596dde444ac/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d11194a21596dde444ac/files/skills/trading/ai-volatility-prediction/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020305T",
+          "major_name": "金融数学",
+          "matched_terms": [
+            "option pricing",
+            "pricing"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0076",
+      "skill_name": "risk-modeling-guide",
+      "skill_description": "Financial risk modeling including VaR, stress testing, and credit risk",
+      "primary_class_code": "0203",
+      "primary_major_code": "020306T",
+      "primary_major_name": "信用管理",
+      "applicable_major_codes": [
+        "020306T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "PDF",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/wentorai/research-plugins/blob/bf44b3cd617fa94c8a1b254c5d1987142ca3d631/skills/domains/finance/risk-modeling-guide/SKILL.md",
+      "fixed_version": "bf44b3cd617fa94c8a1b254c5d1987142ca3d631",
+      "license": "MIT",
+      "maintenance_date": "2026-06-19T03:04:02Z",
+      "repository_stars": 273,
+      "package_manifest_sha256": "637c7991be7c6e5f2e763ef273280c1866476d45655e7f5fe36fe464c1c785f6",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_c8311cd264dde34edaaf/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_c8311cd264dde34edaaf/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_c8311cd264dde34edaaf/files/skills/domains/finance/risk-modeling-guide/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020306T",
+          "major_name": "信用管理",
+          "matched_terms": [
+            "credit risk",
+            "credit",
+            "risk"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0077",
+      "skill_name": "credit-scorecard-builder",
+      "skill_description": "数据信用评分卡构建：以数据质量 + 主体信用 + 交易表现构建评分模型。当开展信用评价业务时使用。",
+      "primary_class_code": "0203",
+      "primary_major_code": "020306T",
+      "primary_major_name": "信用管理",
+      "applicable_major_codes": [
+        "020306T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/kukuyuhai/agentic-data-element/blob/6cfbf94abb68cbc872ad2fe4e615ef90fd2c648b/skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md",
+      "fixed_version": "6cfbf94abb68cbc872ad2fe4e615ef90fd2c648b",
+      "license": "MIT",
+      "maintenance_date": "2026-07-21T13:24:54Z",
+      "repository_stars": 0,
+      "package_manifest_sha256": "8b38c9877f9ae83c32e825765f7cc42ec42663ac42eb752b2e0db4f33233426a",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_818ee86bcc8c09a8f46a/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_818ee86bcc8c09a8f46a/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_818ee86bcc8c09a8f46a/files/skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020306T",
+          "major_name": "信用管理",
+          "matched_terms": [
+            "信用评分",
+            "credit",
+            "评分"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0078",
+      "skill_name": "advanced-short-term-actuarial-mathematics",
+      "skill_description": "Guides advanced short-term actuarial mathematics aligned with SOA ASTAM and P&C/health-adjacent modeling—severity and frequency distributions, aggregate and compound loss models, Bühlmann and Bühlmann-Straub credibility, ratemaking and experience rating, short-term reserving at the math level, MLE and goodness-of-fit, and risk measures (VaR, TVaR). Tool-agnostic and concept-first. Use when the user mentions advanced short-term actuarial mathematics, ASTAM, severity model, frequency model, aggregate loss, compound distribution, Bühlmann credibility, experience rating, ratemaking, pure premium, negative binomial frequency, tail factor, TVaR, or short-term actuarial models—not life contingencies (life-health-insurance), Excel workpapers only (actuarial-analyst), appointed actuary sign-off (actuary, appointed-chief-actuary), assumption governance (assumption-setting), P&C legal/operations depth (property-casualty-insurance), or general ML (data-scientist, quantitative-researcher). ---",
+      "primary_class_code": "0203",
+      "primary_major_code": "020308T",
+      "primary_major_name": "精算学",
+      "applicable_major_codes": [
+        "020308T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Microsoft Excel",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/daemon-blockint-tech/Agentic-Enteprises-Skill/blob/526df1c1377ee392ce2448c370d597c42da75402/advanced-short-term-actuarial-mathematics/SKILL.md",
+      "fixed_version": "526df1c1377ee392ce2448c370d597c42da75402",
+      "license": "MIT",
+      "maintenance_date": "2026-05-20T04:29:39Z",
+      "repository_stars": 7,
+      "package_manifest_sha256": "936f83e9505673ee7e515eb60ac8d14c15b61864c88c4de791ad160ada0c7d70",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9874b703a1e7316213a8/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9874b703a1e7316213a8/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9874b703a1e7316213a8/files/advanced-short-term-actuarial-mathematics/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020308T",
+          "major_name": "精算学",
+          "matched_terms": [
+            "actuarial",
+            "life contingencies",
+            "contingencies",
+            "models",
+            "life",
+            "risk"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0079",
+      "skill_name": "analyzing-health-insurance-plans",
+      "skill_description": "Evaluates health insurance plan structures with actuarial value, network analysis, and cost projection. Use when analyzing health plans, comparing coverage, or projecting healthcare costs.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020308T",
+      "primary_major_name": "精算学",
+      "applicable_major_codes": [
+        "020308T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Microsoft Excel",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/analyzing-health-insurance-plans/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "1f32082f1e8413d603d93d30ad05cf6cbcb861a54d6daa51bdb2561c8956853a",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_739fa16f3478f9c1c86f/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_739fa16f3478f9c1c86f/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_739fa16f3478f9c1c86f/files/Skills/analyzing-health-insurance-plans/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020308T",
+          "major_name": "精算学",
+          "matched_terms": [
+            "actuarial"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0080",
+      "skill_name": "analyzing-loss-reserves",
+      "skill_description": "Evaluates loss reserve adequacy with development triangle analysis and actuarial methods. Use when analyzing reserves, interpreting loss triangles, or assessing reserve adequacy.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020308T",
+      "primary_major_name": "精算学",
+      "applicable_major_codes": [
+        "020308T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/analyzing-loss-reserves/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "225fb174af1364b216cc6ce3d2d4f52c5bf891e4b4e0fa5ddb5050dda7894867",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_90b5fc9f8ca4b2f8735f/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_90b5fc9f8ca4b2f8735f/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_90b5fc9f8ca4b2f8735f/files/Skills/analyzing-loss-reserves/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020308T",
+          "major_name": "精算学",
+          "matched_terms": [
+            "actuarial"
+          ]
+        },
+        {
+          "major_code": "020303",
+          "major_name": "保险学",
+          "matched_terms": [
+            "loss reserve"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0081",
+      "skill_name": "analyzing-premium-pricing",
+      "skill_description": "Structures actuarial pricing analysis with loss cost estimation, expense loading, and rate adequacy testing. Use when analyzing premium rates, calculating rate indications, or assessing pricing adequacy.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020308T",
+      "primary_major_name": "精算学",
+      "applicable_major_codes": [
+        "020308T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/FDU-INS/Insurance-Skills/blob/b22eca2e974f918ce591c5b2bd829fb7510e0191/Skills/analyzing-premium-pricing/SKILL.md",
+      "fixed_version": "b22eca2e974f918ce591c5b2bd829fb7510e0191",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-07-12T04:54:34Z",
+      "repository_stars": 67,
+      "package_manifest_sha256": "fdf719999d2d2864d5267f5f8c4ad9d8b465cd52f4dbd8272602d8333f9d42bf",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_67bdbb3ef7c442d79ac4/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_67bdbb3ef7c442d79ac4/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_67bdbb3ef7c442d79ac4/files/Skills/analyzing-premium-pricing/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020308T",
+          "major_name": "精算学",
+          "matched_terms": [
+            "actuarial"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0082",
+      "skill_name": "validation-by-educational-experience",
+      "skill_description": "Guides Validation by Educational Experience (VEE) for North American actuarial credential paths (SOA, CAS)—how VEE fits preliminary requirements, current topic areas (Economics, Accounting & Finance, Mathematical Statistics; subject to society updates), approved-course criteria, candidate workflow and documentation, SOA vs CAS submission timing relative to ASA/ACAS progress, international/transfer considerations, and common pitfalls. Use for VEE, validation by educational experience, VEE credit, actuarial VEE requirements, SOA VEE, CAS VEE, VEE economics, VEE statistics, VEE accounting and finance, college credit for actuarial exams, submit VEE transcript—not deep exam study (pre-actuarial-foundations, advanced-short-term-actuarial-mathematics, advanced-long-term-actuarial-mathematics), workpapers (actuarial-analyst), signing (associate-actuary, appointed-chief-actuary), official transcript qualification rulings, or generic degree planning. ---",
+      "primary_class_code": "0203",
+      "primary_major_code": "020308T",
+      "primary_major_name": "精算学",
+      "applicable_major_codes": [
+        "020308T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/daemon-blockint-tech/Agentic-Enteprises-Skill/blob/526df1c1377ee392ce2448c370d597c42da75402/validation-by-educational-experience/SKILL.md",
+      "fixed_version": "526df1c1377ee392ce2448c370d597c42da75402",
+      "license": "MIT",
+      "maintenance_date": "2026-05-20T04:29:39Z",
+      "repository_stars": 7,
+      "package_manifest_sha256": "d0803d10078e8e7079b84e389439caffc08c7a86a57a745ddaa2805946f96116",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b341b50d9633446b050a/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b341b50d9633446b050a/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b341b50d9633446b050a/files/validation-by-educational-experience/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020308T",
+          "major_name": "精算学",
+          "matched_terms": [
+            "actuarial"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0083",
+      "skill_name": "tw-fintech-compliance",
+      "skill_description": "Navigate Taiwan fintech regulations including FSC oversight, electronic payment laws, VASP rules, AML/KYC requirements, and the regulatory sandbox. Use this skill when the user is building a fintech product in Taiwan, needs to understand licensing requirements, assess crypto/VASP compliance, or apply for the regulatory sandbox — even if they say 'do we need a license', 'crypto regulation in Taiwan', 'KYC requirements', or 'fintech sandbox application'.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020310T",
+      "primary_major_name": "金融科技",
+      "applicable_major_codes": [
+        "020310T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/asgard-ai-platform/skills/blob/4e7f4f8e389847757a5a4236c2f1ed9813359179/tw-fintech-compliance/SKILL.md",
+      "fixed_version": "4e7f4f8e389847757a5a4236c2f1ed9813359179",
+      "license": "MIT",
+      "maintenance_date": "2026-06-06T05:50:09Z",
+      "repository_stars": 227,
+      "package_manifest_sha256": "5ae67706ca4e20eb0296a392f80b75d6e57e292cc1814faec0a69d103146a3c9",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1dd9427d1615e399e22c/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1dd9427d1615e399e22c/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1dd9427d1615e399e22c/files/tw-fintech-compliance/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020310T",
+          "major_name": "金融科技",
+          "matched_terms": [
+            "fintech"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0084",
+      "skill_name": "audit-preparation",
+      "skill_description": "Prepare for financial audits — document checklist, reconciliation review, internal control testing, timeline planning, and auditor communication. TRIGGER when: user says /audit-preparation, needs to prepare for a financial audit, or asks about audit readiness.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020311TK",
+      "primary_major_name": "金融审计",
+      "applicable_major_codes": [
+        "020311TK"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/ashutoshsrivastava17/skill-library/blob/f23b0e8a0dbd78de08160153542c6f2e8f710618/finance/skills/audit-preparation/SKILL.md",
+      "fixed_version": "f23b0e8a0dbd78de08160153542c6f2e8f710618",
+      "license": "MIT",
+      "maintenance_date": "2026-04-09T08:49:55Z",
+      "repository_stars": 8,
+      "package_manifest_sha256": "8f5c877596e401dc2b93eab30ff703c6aaf819046276c6042d9735c0bb80818f",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_28be4337c517d9e0702b/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_28be4337c517d9e0702b/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_28be4337c517d9e0702b/files/finance/skills/audit-preparation/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020311TK",
+          "major_name": "金融审计",
+          "matched_terms": [
+            "financial audit",
+            "financial",
+            "internal",
+            "control",
+            "audit"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0085",
+      "skill_name": "audit-checklist",
+      "skill_description": "When the user wants to perform an internal audit, review controls, or prepare for an external financial audit. Also use when the user mentions \"internal controls,\" \"compliance check,\" \"preparing for audit,\" \"Sox compliance,\" \"audit readiness,\" \"checking for gaps,\" or \"inventory audit.\" Use this for both operational and financial audits.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020311TK",
+      "primary_major_name": "金融审计",
+      "applicable_major_codes": [
+        "020311TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/GAJETOso/financeskills/blob/6268e90bbbf619f55b6579736c26ee0a38908b33/skills/audit-checklist/SKILL.md",
+      "fixed_version": "6268e90bbbf619f55b6579736c26ee0a38908b33",
+      "license": "MIT",
+      "maintenance_date": "2026-08-01T07:50:55Z",
+      "repository_stars": 12,
+      "package_manifest_sha256": "ac723bf054ea01ed77ceb6e51c8cb4ce19b0d395696fd050560d247e431b2dae",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e9fe5f2549d8444e752c/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e9fe5f2549d8444e752c/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e9fe5f2549d8444e752c/files/skills/audit-checklist/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020311TK",
+          "major_name": "金融审计",
+          "matched_terms": [
+            "financial audit",
+            "financial",
+            "internal",
+            "control",
+            "audit"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0086",
+      "skill_name": "bank-audit-checklist",
+      "skill_description": "Create bank audit checklists with regulatory requirements. TRIGGERS - Use when user needs help with bank-audit-checklist related tasks.",
+      "primary_class_code": "0203",
+      "primary_major_code": "020311TK",
+      "primary_major_name": "金融审计",
+      "applicable_major_codes": [
+        "020311TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/lionelsimai/claude-skills-collection/blob/5c3b481f1879c5ff119dfd350987d250531a49eb/skills/bank-audit-checklist/SKILL.md",
+      "fixed_version": "5c3b481f1879c5ff119dfd350987d250531a49eb",
+      "license": "MIT",
+      "maintenance_date": "2026-02-08T07:55:57Z",
+      "repository_stars": 22,
+      "package_manifest_sha256": "f68b226ff1699145992bfe6088ef20c982deacb84840b78c4edc4c810953ee91",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_92e01b82b1587f7c2098/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_92e01b82b1587f7c2098/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_92e01b82b1587f7c2098/files/skills/bank-audit-checklist/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020311TK",
+          "major_name": "金融审计",
+          "matched_terms": [
+            "bank audit",
+            "audit",
+            "bank"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    }
+  ],
+  "major_search_status": [
+    {
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "deduplicated_candidate_count": 19,
+      "formal_count": 11,
+      "excluded_candidate_count": 12,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "deduplicated_candidate_count": 120,
+      "formal_count": 2,
+      "excluded_candidate_count": 114,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 268,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020303",
+      "major_name": "保险学",
+      "deduplicated_candidate_count": 629,
+      "formal_count": 8,
+      "excluded_candidate_count": 618,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 1002,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020304",
+      "major_name": "投资学",
+      "deduplicated_candidate_count": 5,
+      "formal_count": 8,
+      "excluded_candidate_count": 5,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "deduplicated_candidate_count": 5,
+      "formal_count": 3,
+      "excluded_candidate_count": 5,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "deduplicated_candidate_count": 5,
+      "formal_count": 2,
+      "excluded_candidate_count": 4,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "deduplicated_candidate_count": 3,
+      "formal_count": 2,
+      "excluded_candidate_count": 2,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "deduplicated_candidate_count": 41,
+      "formal_count": 5,
+      "excluded_candidate_count": 32,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 79,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "deduplicated_candidate_count": 74,
+      "formal_count": 0,
+      "excluded_candidate_count": 72,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 200,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "已完成四平台专项补查；未发现同时通过专业相关性、固定版本、许可证和静态安全门的 Skill。"
+    },
+    {
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "deduplicated_candidate_count": 42,
+      "formal_count": 2,
+      "excluded_candidate_count": 40,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "deduplicated_candidate_count": 228,
+      "formal_count": 3,
+      "excluded_candidate_count": 225,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 824,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "deduplicated_candidate_count": 14,
+      "formal_count": 0,
+      "excluded_candidate_count": 14,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 19,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "已完成四平台专项补查；未发现同时通过专业相关性、固定版本、许可证和静态安全门的 Skill。"
+    }
+  ],
+  "profile_sources": [
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "确定经济学门类、专业类、专业代码、专业名称及学位门类。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部",
+      "source_id": "moe_undergraduate_catalog_2026",
+      "title": "普通高等学校本科专业目录（2026年）",
+      "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "约束经济学、财政学、金融学、经济与贸易四个专业类的共同理论、方法和能力基础。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部高等学校教学指导委员会",
+      "source_id": "moe_economics_quality_standard",
+      "title": "普通高等学校本科专业类教学质量国家标准（经济学门类）",
+      "url": "https://jwc.cueb.edu.cn/pgzx/docs/2023-12/882f50ac15434106b120a27f44e3d303.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "用于金融学类共同基础及金融工程、保险等专业差异校准。",
+      "major_codes": [
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK"
+      ],
+      "publisher": "南京财经大学",
+      "source_id": "nufe_finance_programs",
+      "title": "金融学院本科培养方案",
+      "url": "https://jrxy.nufe.edu.cn/bksjy/pyfa.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定金融数学与精算中的概率、随机过程、金融时间序列、寿险精算和衍生证券内容。",
+      "major_codes": [
+        "020305T",
+        "020308T"
+      ],
+      "publisher": "北京大学",
+      "source_id": "pku_financial_mathematics_program",
+      "title": "金融数学系本科生培养方案",
+      "url": "https://www.math.pku.edu.cn/finance/jxgz/pyfa/117222.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定互联网金融业务、平台运营、大数据金融、支付结算、风险管理和监管内容。",
+      "major_codes": [
+        "020309T"
+      ],
+      "publisher": "安徽工业大学",
+      "source_id": "ahut_internet_finance_program",
+      "title": "互联网金融本科指导性培养方案（2023版）",
+      "url": "https://jwc.ahut.edu.cn/__local/B/52/79/0B84148CA72E14EA6456BAB3A4C_1209671A_24A8F.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定金融理论、Python、大数据、人工智能与金融应用的交叉培养内容。",
+      "major_codes": [
+        "020310T"
+      ],
+      "publisher": "北京理工大学",
+      "source_id": "bit_fintech_program",
+      "title": "金融科技专业培养方案（2024版）",
+      "url": "https://jwb.bit.edu.cn/docs/2026-03/b8af4e36bbce45a990ec3d04c3710f3c.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定金融学、金融工程、金融法规、风险和审计方法的复合边界。",
+      "major_codes": [
+        "020311TK"
+      ],
+      "publisher": "南京审计大学",
+      "source_id": "nau_financial_audit_program",
+      "title": "金融工程（金融审计方向）专业介绍",
+      "url": "https://skema.nau.edu.cn/jrgcwjrsjfxw/list.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定数字金融中的金融、经济、人工智能、大数据和云计算交叉应用。",
+      "major_codes": [
+        "020312TK"
+      ],
+      "publisher": "北京大学",
+      "source_id": "pku_digital_finance_program",
+      "title": "北京大学数智金融项目培养方案",
+      "url": "https://www.gsm.pku.edu.cn/undergraduate/info/1166/7567.htm"
+    }
+  ],
+  "attrition": {
+    "deduplicated_candidate_count": 1185,
+    "formal_candidate_count": 42,
+    "excluded_candidate_count": 1143,
+    "global_reason_counts": {
+      "incomplete_description": 337,
+      "license_missing": 658,
+      "license_not_allowed": 727,
+      "maintenance_failure": 1,
+      "professional_mismatch": 1282,
+      "score_one_observation": 6,
+      "security_grade_not_formal": 514,
+      "skill_definition_missing": 40
+    }
+  },
+  "method_note": "四社区联网发现；固定版本静态核验；专业任务匹配；跨平台与功能级去重；评分不抵消硬门槛。"
+}

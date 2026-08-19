@@ -1,0 +1,2609 @@
+{
+  "schema_version": "economics-class-delivery-v1",
+  "generated_on": "2026-08-19",
+  "category_code": "02",
+  "category_name": "经济学",
+  "class_code": "0201",
+  "class_name": "经济学类",
+  "major_count": 11,
+  "formal_count": 33,
+  "profiles": [
+    {
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "微观经济学与宏观经济学",
+        "计量经济学与因果推断",
+        "经济政策与制度分析"
+      ],
+      "typical_tasks": [
+        "建立并检验经济模型",
+        "分析宏观与微观经济数据",
+        "评估经济政策和制度效果"
+      ],
+      "inclusion_rules": [
+        "直接支持经济模型、经济数据或政策分析",
+        "方法能用于实证经济研究或经济预测"
+      ],
+      "exclusion_boundaries": [
+        "仅做泛财经资讯摘要",
+        "仅做企业文案、销售或通用办公"
+      ],
+      "search_terms": {
+        "zh": [
+          "经济学分析",
+          "计量经济学",
+          "因果推断",
+          "经济政策评估"
+        ],
+        "en": [
+          "economics analysis",
+          "econometrics",
+          "causal inference",
+          "economic policy evaluation"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "概率统计与抽样调查",
+        "国民经济核算与经济指标",
+        "经济计量与数据建模"
+      ],
+      "typical_tasks": [
+        "清洗和汇总经济统计数据",
+        "构造经济指标与统计报表",
+        "完成回归、预测和统计推断"
+      ],
+      "inclusion_rules": [
+        "直接处理经济统计数据或指标",
+        "提供可复核的统计建模、抽样或预测能力"
+      ],
+      "exclusion_boundaries": [
+        "只生成图表而不含统计分析",
+        "面向自然科学实验且不能迁移到经济数据"
+      ],
+      "search_terms": {
+        "zh": [
+          "经济统计",
+          "国民经济核算",
+          "抽样调查",
+          "经济预测"
+        ],
+        "en": [
+          "economic statistics",
+          "national accounts",
+          "survey sampling",
+          "economic forecasting"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "宏观经济运行与调控",
+        "国民经济核算与规划",
+        "产业、区域与发展政策"
+      ],
+      "typical_tasks": [
+        "监测国民经济运行",
+        "编制发展规划与情景方案",
+        "评估产业和区域政策"
+      ],
+      "inclusion_rules": [
+        "直接服务宏观监测、规划或政策模拟",
+        "能将多部门经济数据组织为决策依据"
+      ],
+      "exclusion_boundaries": [
+        "企业内部的一般项目管理",
+        "只做新闻汇编而不支持经济决策"
+      ],
+      "search_terms": {
+        "zh": [
+          "国民经济管理",
+          "宏观经济监测",
+          "经济规划",
+          "政策模拟"
+        ],
+        "en": [
+          "national economic management",
+          "macroeconomic monitoring",
+          "economic planning",
+          "policy simulation"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "资源与环境经济学",
+        "外部性、公共品与环境政策",
+        "自然资源价值核算与成本收益分析"
+      ],
+      "typical_tasks": [
+        "评估环境政策经济影响",
+        "开展资源环境价值核算",
+        "分析碳市场、能源与生态治理机制"
+      ],
+      "inclusion_rules": [
+        "经济学方法必须直接作用于资源环境问题",
+        "支持估值、政策评估或资源配置"
+      ],
+      "exclusion_boundaries": [
+        "仅做环境科普或污染监测",
+        "纯生态建模但没有经济决策或估值环节"
+      ],
+      "search_terms": {
+        "zh": [
+          "资源环境经济学",
+          "环境估值",
+          "碳市场分析",
+          "环境政策评估"
+        ],
+        "en": [
+          "environmental economics",
+          "environmental valuation",
+          "carbon market analysis",
+          "environmental policy evaluation"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "管理经济学与企业决策",
+        "需求、定价与市场结构",
+        "产业竞争与商业数据分析"
+      ],
+      "typical_tasks": [
+        "预测市场需求",
+        "分析价格与竞争策略",
+        "评估企业经营方案的经济效果"
+      ],
+      "inclusion_rules": [
+        "直接支持企业经济决策或市场结构分析",
+        "包含需求、成本、定价或竞争的量化依据"
+      ],
+      "exclusion_boundaries": [
+        "纯营销文案与社媒运营",
+        "通用商业计划模板而无经济分析"
+      ],
+      "search_terms": {
+        "zh": [
+          "商务经济学",
+          "管理经济学",
+          "需求预测",
+          "定价分析"
+        ],
+        "en": [
+          "business economics",
+          "managerial economics",
+          "demand forecasting",
+          "pricing analysis"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "能源市场与能源政策",
+        "能源需求、价格与投资经济",
+        "碳约束和能源转型经济学"
+      ],
+      "typical_tasks": [
+        "预测能源需求与价格",
+        "评估能源项目经济性",
+        "分析能源政策和转型路径"
+      ],
+      "inclusion_rules": [
+        "能源对象与经济分析必须同时存在",
+        "支持能源市场、政策、投资或碳约束决策"
+      ],
+      "exclusion_boundaries": [
+        "纯电力工程仿真",
+        "泛ESG文案或能源新闻聚合"
+      ],
+      "search_terms": {
+        "zh": [
+          "能源经济",
+          "能源市场",
+          "能源项目经济评价",
+          "能源转型"
+        ],
+        "en": [
+          "energy economics",
+          "energy markets",
+          "energy project appraisal",
+          "energy transition"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "劳动市场与就业理论",
+        "工资、收入分配与人力资本",
+        "劳动微观计量与社会保障"
+      ],
+      "typical_tasks": [
+        "分析就业和工资数据",
+        "评估劳动与社会保障政策",
+        "研究人力资本和劳动力流动"
+      ],
+      "inclusion_rules": [
+        "直接处理劳动市场、工资或就业政策",
+        "采用经济学或计量方法而非仅人事流程"
+      ],
+      "exclusion_boundaries": [
+        "通用招聘筛选或绩效管理",
+        "劳动法文本问答但无劳动经济分析"
+      ],
+      "search_terms": {
+        "zh": [
+          "劳动经济学",
+          "就业分析",
+          "工资差距",
+          "人力资本"
+        ],
+        "en": [
+          "labor economics",
+          "employment analysis",
+          "wage inequality",
+          "human capital"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "数量经济与系统分析",
+        "运筹优化与决策科学",
+        "工程项目经济与资源配置"
+      ],
+      "typical_tasks": [
+        "建立经济系统仿真模型",
+        "优化资源配置与项目组合",
+        "开展技术经济和项目评价"
+      ],
+      "inclusion_rules": [
+        "必须把优化、系统或工程方法用于经济决策",
+        "支持资源配置、项目评价或复杂决策"
+      ],
+      "exclusion_boundaries": [
+        "纯机械、土木或软件工程设计",
+        "只有通用项目管理而无经济模型"
+      ],
+      "search_terms": {
+        "zh": [
+          "经济工程",
+          "数量经济",
+          "运筹优化",
+          "技术经济评价"
+        ],
+        "en": [
+          "economic engineering",
+          "quantitative economics",
+          "operations research",
+          "engineering economy"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program"
+      ]
+    },
+    {
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "平台经济、网络效应与数据要素",
+        "数字产业与产业数字化",
+        "数字经济测度与实证分析"
+      ],
+      "typical_tasks": [
+        "测度数字经济发展",
+        "分析平台市场和网络效应",
+        "评估企业或产业数字化转型"
+      ],
+      "inclusion_rules": [
+        "经济机制与数字技术场景必须同时存在",
+        "支持数字经济测度、平台分析或转型决策"
+      ],
+      "exclusion_boundaries": [
+        "纯软件开发或通用数据工程",
+        "仅做电商营销和内容生成"
+      ],
+      "search_terms": {
+        "zh": [
+          "数字经济",
+          "平台经济",
+          "数据要素",
+          "产业数字化"
+        ],
+        "en": [
+          "digital economy",
+          "platform economics",
+          "data as a factor",
+          "industrial digitalization"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program",
+        "lzufe_digital_economy_program"
+      ]
+    },
+    {
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "管理学"
+      ],
+      "attributes": [
+        "特设专业",
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "低空产业经济与商业模式",
+        "低空运行管理与政策法规",
+        "安全风险、基础设施与数据决策"
+      ],
+      "typical_tasks": [
+        "分析低空产业链与市场规模",
+        "评估低空运营和基础设施方案",
+        "研究空域政策、合规和风险管理"
+      ],
+      "inclusion_rules": [
+        "必须直接作用于低空经济运行或管理",
+        "经济管理内容须与航空、空域或低空产业对象绑定"
+      ],
+      "exclusion_boundaries": [
+        "无人机飞控或航模制作本身",
+        "航空新闻、旅游宣传或泛商业策划"
+      ],
+      "search_terms": {
+        "zh": [
+          "低空经济",
+          "低空运营管理",
+          "低空产业规划",
+          "空域政策"
+        ],
+        "en": [
+          "low-altitude economy",
+          "low-altitude operations",
+          "low-altitude industry planning",
+          "airspace policy"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program",
+        "ucass_low_altitude_economy_program"
+      ]
+    },
+    {
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "资源环境审计理论与方法",
+        "自然资源资产与环境绩效核算",
+        "生态环境法规、数据和审计证据"
+      ],
+      "typical_tasks": [
+        "核验资源环境数据和审计证据",
+        "开展自然资源资产或环境绩效审计",
+        "识别生态环境合规与政策执行风险"
+      ],
+      "inclusion_rules": [
+        "审计方法必须与资源环境对象直接结合",
+        "支持证据核验、绩效评价或责任认定"
+      ],
+      "exclusion_boundaries": [
+        "普通会计记账或通用财务审计",
+        "单纯环境监测、GIS制图或环保宣传"
+      ],
+      "search_terms": {
+        "zh": [
+          "资源环境审计",
+          "自然资源资产审计",
+          "环境绩效审计",
+          "生态审计数据"
+        ],
+        "en": [
+          "environmental audit",
+          "natural resource asset audit",
+          "environmental performance audit",
+          "ecological audit data"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "tsinghua_economics_program",
+        "nau_resource_environment_audit_program"
+      ]
+    }
+  ],
+  "formal_candidates": [
+    {
+      "skill_id": "ECON-SK-0001",
+      "skill_name": "Econfin-Proposal",
+      "skill_description": "金融经济学实证论文计划书生成器。根据用户提供的研究方向，生成包含标题、假说、数据来源、实证策略、 预期结果表格、稳健性检验、异质性分析、机制检验等12个完整模块的研究计划书。 内置中国微观/宏观数据库（皮皮侠1599个数据集、马克数据377个数据集）和WRDS国际数据库索引， 自动匹配可用数据源。融合Edmans (2024) \"Learnings From 1000 Rejections\"的编辑视角作为质量护栏， 确保选题具有真正的边际贡献而非\"just another determinant of Y\"。 当用户提到以下任何情境时触发：写研究计划书、research proposal、论文开题、选题+计划、 帮我设计一个实证研究、empirical research design、我想研究X对Y的影响怎么做、 帮我找个能发表的选题、generate proposal、写一个可以投稿的研究方案、 研究设计、identification strategy、DID/RDD/IV研究设计。 即使用户只是描述了一个经济金融现象并想知道\"能不能做成论文\"，也应考虑使用此技能。 ---",
+      "primary_class_code": "0201",
+      "primary_major_code": "020101",
+      "primary_major_name": "经济学",
+      "applicable_major_codes": [
+        "020101"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+      "fixed_version": "6dffda59ea2401b60f0dae232f4cf63d5e400778",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T03:45:29Z",
+      "repository_stars": 17,
+      "package_manifest_sha256": "9f8779974be15cf9c930cbc89d84b2a03035eb55856aa8f6ecb0da3631528bed",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29d74e5f9f81e282f556/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29d74e5f9f81e282f556/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29d74e5f9f81e282f556/files/mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020101",
+          "major_name": "经济学",
+          "matched_terms": [
+            "经济学实证",
+            "经济学"
+          ]
+        },
+        {
+          "major_code": "020307T",
+          "major_name": "经济与金融",
+          "matched_terms": [
+            "金融经济",
+            "分析"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0002",
+      "skill_name": "论文workflow",
+      "skill_description": "经济学实证论文 9 阶段标准工作流。Use when user starts a new empirical economics paper (course / dissertation / journal). Triggers on /论文workflow, \"paper workflow\", \"empirical econ paper\", or descriptions of starting an econ paper task with deadline + word count.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020101",
+      "primary_major_name": "经济学",
+      "applicable_major_codes": [
+        "020101"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python、R、Stata",
+      "local_interface": "CSV、DOCX",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/CalebLiu/econ-paper-workflow/blob/4cba86d3ae50f679c125802f33fd780432653d56/SKILL.md",
+      "fixed_version": "4cba86d3ae50f679c125802f33fd780432653d56",
+      "license": "MIT",
+      "maintenance_date": "2026-06-02T20:42:51Z",
+      "repository_stars": 15,
+      "package_manifest_sha256": "fb373701c3c5168ea2fca5939eb5a6c8f626630662ef2ef532411d9ce92b2d19",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e4f1288bf52391249ced/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e4f1288bf52391249ced/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e4f1288bf52391249ced/files/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020101",
+          "major_name": "经济学",
+          "matched_terms": [
+            "empirical economics",
+            "经济学实证",
+            "economics",
+            "economic",
+            "经济学"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0003",
+      "skill_name": "ssci-plots",
+      "skill_description": "Publication-ready statistical figures for SSCI/SCI journals across psychology, economics, public health, sociology, political science, geography, methodology. Validated matplotlib styling, CVD-safe palettes (Tol, Okabe-Ito, ggsci, aesthetic sets), APA 7 formatting, 12 journal presets (APA, Elsevier, Wiley, SAGE, Psych Science, ASA, Nature, Science, NEJM, Lancet, BMJ, JAMA), 55+ chart types. Use when creating academic figures, path/SEM diagrams, heatmaps, forest plots, error-bar charts, mediation diagrams, event-study plots, RD plots, Kaplan-Meier curves, choropleths, causal DAGs, or any journal submission figure. Also use for publication-quality figures even without explicit \"APA\" or \"SSCI\" mention.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020102",
+      "primary_major_name": "经济统计学",
+      "applicable_major_codes": [
+        "020102"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python、Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/O0000-code/SSCI-Plots/blob/f697b922e8fc11ca13a61f29d58c1f83963c5b1b/SKILL.md",
+      "fixed_version": "f697b922e8fc11ca13a61f29d58c1f83963c5b1b",
+      "license": "MIT",
+      "maintenance_date": "2026-05-17T17:54:22Z",
+      "repository_stars": 4,
+      "package_manifest_sha256": "b18a8a39ab5f544cb721b030104949258e9e47d6b8908db71dec1153ca66921e",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_c4d4ce58bf095341edb3/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_c4d4ce58bf095341edb3/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_c4d4ce58bf095341edb3/files/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020102",
+          "major_name": "经济统计学",
+          "matched_terms": [
+            "statistical figures",
+            "event-study",
+            "economic"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0004",
+      "skill_name": "jeem-identification",
+      "skill_description": "Use when the identification argument is the bottleneck for a Journal of Environmental Economics and Management (JEEM) manuscript — an environmental-policy causal design, a climate/weather IV, or a revealed- or stated-preference valuation. Stress-tests the data-to-welfare mapping before exhibits are finalized; it does not invent evidence or citations.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-identification/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "c38468bd0cc685051373db67c09949220e6cef9ecde233076f6480a6b9cf3aa1",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9a7fcd4500ba0c39adb5/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9a7fcd4500ba0c39adb5/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-identification/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9a7fcd4500ba0c39adb5/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics",
+            "valuation",
+            "policy"
+          ]
+        },
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "valuation"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0005",
+      "skill_name": "jeem-literature-positioning",
+      "skill_description": "Use when the contribution of a Journal of Environmental Economics and Management (JEEM) manuscript relative to the environmental-economics frontier and its sibling journals is fuzzy or undersold. Stakes the claim against the field; it does not invent evidence or citations.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-literature-positioning/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "46c6f0faa0963702349a5ea8a647d4ca9ac961c1af97e7f96e76f6f63dbacaed",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_1db2a366cb94989bdb84/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_1db2a366cb94989bdb84/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-literature-positioning/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_1db2a366cb94989bdb84/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0006",
+      "skill_name": "jeem-rebuttal",
+      "skill_description": "Use when a Journal of Environmental Economics and Management (JEEM) decision letter or referee report needs a response strategy — triaging R&R demands, planning new spatial/valuation robustness, and writing the response letter the editor and field referees expect. Plans the revision; it loops back to the analysis skills for the actual work.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-rebuttal/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "62634e8a20d74d46e3c18cae2757e0e779bc8037b4856b9d15b438064489e06b",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9845f51639bcc647634b/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9845f51639bcc647634b/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-rebuttal/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9845f51639bcc647634b/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics",
+            "valuation"
+          ]
+        },
+        {
+          "major_code": "020304",
+          "major_name": "投资学",
+          "matched_terms": [
+            "valuation"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0007",
+      "skill_name": "jeem-referee-strategy",
+      "skill_description": "Use when pre-empting the objections a Journal of Environmental Economics and Management (JEEM) referee will raise — the environmental-economist's reflexes on sorting, spatial SEs, leakage, hypothetical bias, and scope — before submission or in an R&R. Anticipates and defuses pushback; it does not replace the rebuttal letter (jeem-rebuttal).",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-referee-strategy/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "c95e1b6f63b7c3c980163329c25d057ee42b3c1ea01c0cfb58cf92bc1a89a157",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6a63b1df0d3ddf54d436/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6a63b1df0d3ddf54d436/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-referee-strategy/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_6a63b1df0d3ddf54d436/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0008",
+      "skill_name": "jeem-replication-package",
+      "skill_description": "Use when assembling the data and code deposit for a Journal of Environmental Economics and Management (JEEM) manuscript — meeting JEEM's data-availability/replication expectation, documenting monitoring/satellite/admin/restricted environmental data, and writing a README that reproduces every exhibit. Builds the package; it does not run the analysis or invent data.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-replication-package/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "6e0db05e9352021b31f227b1d9e27015e5977049c4f113f2382ae416f6a765d1",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b040c6a7c6f45748870e/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b040c6a7c6f45748870e/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-replication-package/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b040c6a7c6f45748870e/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0009",
+      "skill_name": "jeem-robustness",
+      "skill_description": "Use when a Journal of Environmental Economics and Management (JEEM) manuscript's headline estimate — a damage, WTP, pass-through, or treatment effect — must be shown to survive specification, spatial, sample, and inference choices. Builds the targeted robustness suite environmental-economics referees expect; it does not establish primary identification (jeem-identification) or format exhibits (jeem-tables-figures).",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-robustness/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "b67e50f0995506ed0156455634d57fba5a127e56345b41173a9ad242c8dd0de1",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_fce4bdc01cad5f2ed0c1/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_fce4bdc01cad5f2ed0c1/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-robustness/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_fce4bdc01cad5f2ed0c1/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0010",
+      "skill_name": "jeem-submission",
+      "skill_description": "Use when running the final pre-submission preflight for a Journal of Environmental Economics and Management (JEEM) manuscript via Elsevier Editorial Manager — the scope/style desk-screen, submission fee, abstract/length limits, data-availability statement, and declarations. Final checks; it does not draft content.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-submission/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "f8cffaa1ad3dcae912dd495a2575a3e9a3e827437ba361f54110183e8f8a3c34",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_82e96fec4ff07810baee/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_82e96fec4ff07810baee/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-submission/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_82e96fec4ff07810baee/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0011",
+      "skill_name": "jeem-tables-figures",
+      "skill_description": "Use when the exhibits of a Journal of Environmental Economics and Management (JEEM) manuscript — regression tables, event-study plots, maps, WTP/demand-curve figures — do not yet show the environmental signal cleanly. Designs publication-grade exhibits in JEEM/Elsevier house style; it does not run the analysis (jeem-robustness) or write the prose (jeem-writing-style).",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-tables-figures/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "a211f33242361a2c1e12926e4f12e8c2817b4b995725237ee79dfd8bedafb9ca",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_06c1795ff314b9841db7/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_06c1795ff314b9841db7/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-tables-figures/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_06c1795ff314b9841db7/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        },
+        {
+          "major_code": "020102",
+          "major_name": "经济统计学",
+          "matched_terms": [
+            "event-study",
+            "economic"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0012",
+      "skill_name": "jeem-topic-selection",
+      "skill_description": "Use when scoping or scope-testing a Journal of Environmental Economics and Management (JEEM) manuscript — confirming the environmental/resource mechanism is load-bearing and the question clears the field-journal bar before any analysis is finalized. Decides fit and routes; it does not invent evidence or citations.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-topic-selection/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "5250ad29deb7b87de49c07454ef5a7ce0c5cfd412dacdbfd24991b753a40e099",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_fa104b15fc1875d30720/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_fa104b15fc1875d30720/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-topic-selection/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_fa104b15fc1875d30720/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0013",
+      "skill_name": "jeem-workflow",
+      "skill_description": "Use when deciding which jeem-* sub-skill to invoke next, or when sequencing manuscript work from scoping through rebuttal for a Journal of Environmental Economics and Management (JEEM) submission. Routes — it does not replace — the specialized skills.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SB",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "存在受控文件写出",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-workflow/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "92df757ee01a7bafc4716e08424c680a547ca2215634df97cce8eb287a7d3d3d",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_99d40873bf6abd889aab/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_99d40873bf6abd889aab/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-workflow/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_99d40873bf6abd889aab/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0014",
+      "skill_name": "jeem-writing-style",
+      "skill_description": "Use when the introduction, abstract, or prose of a Journal of Environmental Economics and Management (JEEM) manuscript misses the field voice — when the environmental mechanism → welfare → policy chain is buried or the contribution does not land in the first page. Polishes the framing late; it does not establish identification or results.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-writing-style/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "17be4118913481482d6932dfbfef0e9e9c610446bc4b1f3307a68b298802a150",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_00f29a669eea1e6cef9c/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_00f29a669eea1e6cef9c/files/Journal-of-Environmental-Economics-and-Management-Skills/skills/jeem-writing-style/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_00f29a669eea1e6cef9c/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics",
+            "policy"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0015",
+      "skill_name": "journal-of-environmental-economics-and-management",
+      "skill_description": "Use when targeting Journal of Environmental Economics and Management (JEEM) or deciding whether an environmental- or resource-economics manuscript fits this venue. Encodes the journal's fit, framing, method-and-evidence bar, house style, official-submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/English-SocialScience-Journal-Skills/skills/journal-of-environmental-economics-and-management/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "5173223d9f80b2fa888e9adcbbd5712b0c7ab1b333c3c2a6b8ec62fa2dc2ffd9",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_78339daf9741b42fee65/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_78339daf9741b42fee65/files/English-SocialScience-Journal-Skills/skills/journal-of-environmental-economics-and-management/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_78339daf9741b42fee65/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0016",
+      "skill_name": "research-ideation",
+      "skill_description": "Generate structured research questions, hypotheses, and empirical strategies from a topic or dataset within the sewage/environmental economics space. This skill should be used when asked to \"brainstorm research questions\", \"what else can we do with this data\", \"research ideas\", or \"ideation\".",
+      "primary_class_code": "0201",
+      "primary_major_code": "020104T",
+      "primary_major_name": "资源与环境经济学",
+      "applicable_major_codes": [
+        "020104T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Auto-Empirical-Research-Skills/skills/41-sticerd-eee-sewage-econometrics-check/skills/research-ideation/SKILL.md",
+      "fixed_version": "6dffda59ea2401b60f0dae232f4cf63d5e400778",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T03:45:29Z",
+      "repository_stars": 17,
+      "package_manifest_sha256": "3f765518e3704c3de2b598fdbb7d936c7139410549cad511a33ade5e51d09e28",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_2689e7f9b31452d05b5b/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_2689e7f9b31452d05b5b/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_2689e7f9b31452d05b5b/files/mirrors/repos/brycewang-stanford@Auto-Empirical-Research-Skills/skills/41-sticerd-eee-sewage-econometrics-check/skills/research-ideation/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "matched_terms": [
+            "environmental economics",
+            "environmental",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0017",
+      "skill_name": "gtm-revenue-engine",
+      "skill_description": "Go-to-market and revenue operations engine covering market sizing (TAM/SAM/SOM), ICP definition, pricing strategy, PLG vs SLG decision framework, sales process design, channel strategy, B2B/B2C/marketplace GTM playbooks, enterprise sales, customer acquisition cost optimization, demand generation, content marketing, SEO/SEM, partnership strategy, expansion revenue, and international market entry. Includes India GTM stack with tier 1/2/3 city strategy, WhatsApp commerce, UPI integration, vernacular marketing, India SaaS benchmarks, D2C India playbook, India enterprise sales cycles, and government procurement (GeM portal). Use when user mentions go to market, GTM, sales, pricing, customer acquisition, CAC, LTV, funnel, pipeline, revenue, ARR, MRR, churn, retention, PLG, product led growth, sales led, enterprise sales, channel partner, marketplace, B2B, B2C, D2C, SaaS metrics, conversion, onboarding, activation, demand generation, SEO, content marketing, India market entry, WhatsApp business, UPI, GeM, or any revenue/growth activity.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020105T",
+      "primary_major_name": "商务经济学",
+      "applicable_major_codes": [
+        "020105T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Microsoft Excel",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/TECHKNOWMAD-LABS/founder-arsenal/blob/93be697e3ba54c0d4985e31de65ea028066d73f2/skills/gtm-revenue-engine/SKILL.md",
+      "fixed_version": "93be697e3ba54c0d4985e31de65ea028066d73f2",
+      "license": "MIT",
+      "maintenance_date": "2026-07-20T15:55:10Z",
+      "repository_stars": 0,
+      "package_manifest_sha256": "5c37735f7467662126b5cc3ffc294806c8d930c84aac9f0221f1b1c29ea1b2d5",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ef7d320b90638b6696cf/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ef7d320b90638b6696cf/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ef7d320b90638b6696cf/files/skills/gtm-revenue-engine/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020105T",
+          "major_name": "商务经济学",
+          "matched_terms": [
+            "pricing strategy",
+            "business",
+            "pricing",
+            "demand"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0018",
+      "skill_name": "thermodynamic-economics",
+      "skill_description": "Thermodynamic foundations for distributed systems design. Use when analyzing energy flows, EROEI calculations, autopoietic closure, or validating economic models against physical constraints. Triggers: energy economics, thermodynamic analysis, EROEI, autopoiesis, Energy Seneca, heterotroph/autotroph analysis, network energy costs, Fourth Transition concepts. ---",
+      "primary_class_code": "0201",
+      "primary_major_code": "020106T",
+      "primary_major_name": "能源经济",
+      "applicable_major_codes": [
+        "020106T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Python",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/majiayu000/claude-skill-registry/blob/58cb5003544bf1f45b2779f10365fd6ed0e95353/skills/design/thermodynamic-economics-ardeshir-krzy/SKILL.md",
+      "fixed_version": "58cb5003544bf1f45b2779f10365fd6ed0e95353",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T02:46:06Z",
+      "repository_stars": 569,
+      "package_manifest_sha256": "b2839fddda2551f56fb29efc0dbd203a2fa9df7c1c879f174919802af67249cb",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ba8f11ee5489fd8f27ea/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ba8f11ee5489fd8f27ea/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_ba8f11ee5489fd8f27ea/files/skills/design/thermodynamic-economics-ardeshir-krzy/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020106T",
+          "major_name": "能源经济",
+          "matched_terms": [
+            "energy economics",
+            "transition",
+            "economics",
+            "energy"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0019",
+      "skill_name": "energy-procurement",
+      "skill_description": "You are a senior energy procurement manager at a large commercial and industrial (C&I) consumer with multiple facilities across regulated and deregulated electricity markets. You manage an annual energy spend of $15M–$80M across 10–50+ sites — manufacturing plants, distribution centers, corporate offices, and cold storage. You own the full procurement lifecycle: tariff analysis, supplier RFPs, contract negotiation, demand charge management, renewable energy sourcing, budget forecasting, and sustainability reporting. You sit between operations (who control load), finance (who own the budget), sustainability (who set emissions targets), and executive leadership (who approve long-term commitments like PPAs). Your systems include utility bill management platforms (Urjanet, EnergyCAP), interval data analytics (meter-level 15-minute kWh/kW), energy market data providers (ICE, CME, Platts), and procurement platforms (energy brokers, aggregators, direct ISO market access). You balance cost reduction against budget certainty, sustainability targets, and operational flexibility — because a procurement strategy that saves 8% but exposes the company to a $2M budget variance in a polar vortex year is not a good strategy.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020106T",
+      "primary_major_name": "能源经济",
+      "applicable_major_codes": [
+        "020106T"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/loulanyue/awesome-claude-notes/blob/8481e67a3d17d5a2a0821901029862b526477b18/docs/pt-BR/skills/energy-procurement/SKILL.md",
+      "fixed_version": "8481e67a3d17d5a2a0821901029862b526477b18",
+      "license": "MIT",
+      "maintenance_date": "2026-08-05T12:49:14Z",
+      "repository_stars": 264,
+      "package_manifest_sha256": "60e38101499178a6e8b1d58ac2b1754f7d18cb3d8fcf519a01636ccef0bc67ed",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_322f49885ada43e8710f/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_322f49885ada43e8710f/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_322f49885ada43e8710f/files/docs/pt-BR/skills/energy-procurement/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020106T",
+          "major_name": "能源经济",
+          "matched_terms": [
+            "energy market",
+            "markets",
+            "energy"
+          ]
+        },
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "forecasting",
+            "operations"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0020",
+      "skill_name": "studies-in-labor-economics",
+      "skill_description": "Use when targeting 《劳动经济研究》(Studies in Labor Economics) or deciding whether a Chinese social-science/econ/management manuscript fits this journal. Applies the journal's fit, framing, method, house-style, official-submission-check, and desk-reject heuristics.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020107T",
+      "primary_major_name": "劳动经济学",
+      "applicable_major_codes": [
+        "020107T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "be17438f078620d2e8461fffca4d6665be63ccfac96062a61422342f201dc4fd",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_bb0495673c731193ac43/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_bb0495673c731193ac43/files/Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_bb0495673c731193ac43/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020107T",
+          "major_name": "劳动经济学",
+          "matched_terms": [
+            "labor economics",
+            "劳动经济",
+            "economics",
+            "labor"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0021",
+      "skill_name": "journal-of-quantitative-technological-economics",
+      "skill_description": "Use when targeting 《数量经济技术经济研究》(The Journal of Quantitative & Technological Economics, JQTE) — the CASS journal for quantitative economics, econometric methods, technical economics, input-output, macro-econometric forecasting, and technology/innovation evaluation. Apply when the contribution is method-application or measurement (productivity, efficiency, forecasting) rather than a pure causal-policy narrative.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "040dace337598e9d82645b46c7556c67eef6c7e3b00cf62c94c29a04096d9d98",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_78d0770b847002109921/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_78d0770b847002109921/files/Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_78d0770b847002109921/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "quantitative economics",
+            "econometric methods",
+            "input-output",
+            "forecasting",
+            "数量经济",
+            "quantitative",
+            "economics",
+            "economic"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0022",
+      "skill_name": "jqte-econometric-methods",
+      "skill_description": "Use when the empirical core of a 《数量经济技术经济研究》 (JQTE) manuscript is an econometric model — time series, cointegration, mixed-frequency, VAR/SVAR, state-space, or panel / macro-econometrics. Enforces correct model setup, stationarity / unit-root and cointegration diagnostics, and lag/specification justification. Use when the method itself is the contribution rather than a causal identification claim.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/data-science-and-ml/jqte-econometric-methods/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "ea00dcd1d55addd18acbf8250873b5dd677502ca3f4cc7a2a4e6bf4df25669c7",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e51debfa2e0e4addaf0f/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e51debfa2e0e4addaf0f/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e51debfa2e0e4addaf0f/files/library/data-science-and-ml/jqte-econometric-methods/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "数量经济"
+          ]
+        },
+        {
+          "major_code": "020101",
+          "major_name": "经济学",
+          "matched_terms": [
+            "econometrics",
+            "causal"
+          ]
+        },
+        {
+          "major_code": "020102",
+          "major_name": "经济统计学",
+          "matched_terms": [
+            "time series"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0023",
+      "skill_name": "jqte-fit-positioning",
+      "skill_description": "Use to judge whether a manuscript fits 《数量经济技术经济研究》 (JQTE) and to decide how to frame its contribution — measurement, forecasting, or method-application versus clean causal inference — before investing in revision. The most common save: stopping a strong measurement paper from being dressed up as a weak causal study, and routing genuinely clean-causal work elsewhere.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/marketing-and-growth/jqte-fit-positioning/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "945a7e50d176da871a8407f7ad73623cb7be957b1e3e426de0bf68bb890b3de8",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41f2483766c1c8e900aa/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41f2483766c1c8e900aa/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41f2483766c1c8e900aa/files/library/marketing-and-growth/jqte-fit-positioning/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "forecasting",
+            "数量经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0024",
+      "skill_name": "jqte-implications",
+      "skill_description": "Use when writing the policy / practice implications of a 《数量经济技术经济研究》 (JQTE) manuscript — translating measurement, forecasting, or decomposition results into concrete guidance for planning, forecasting, industrial, or technology decisions. JQTE expects a substantive policy section (≥ 1000 characters, except pure-method papers) grounded in the paper's own quantitative findings.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-implications/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "18269cd2c25a9bde50b5a6c7f05e10c6dd3492b063a47f4dcf8fe97ba8a8bde7",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_2408298afcdd7973d7b9/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_2408298afcdd7973d7b9/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_2408298afcdd7973d7b9/files/library/research-and-academic/jqte-implications/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "forecasting",
+            "数量经济",
+            "quantitative"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0025",
+      "skill_name": "jqte-literature-review",
+      "skill_description": "Use when building the literature review for a 《数量经济技术经济研究》 (JQTE) manuscript — organizing it around the method lineage (how a quantity has been measured / a series forecast / a structure decomposed) and the China-data application gap, rather than a chronological pile of recent empirical citations. Use after the topic and contribution type are set.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-literature-review/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "5de4ac96eedb8788f2cd8a798f781d20433e6c23d03a3c47cb8d0925e3b28acf",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d8cff332a0fe9bd24585/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d8cff332a0fe9bd24585/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d8cff332a0fe9bd24585/files/library/research-and-academic/jqte-literature-review/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "数量经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0026",
+      "skill_name": "jqte-measurement",
+      "skill_description": "Use when the contribution of a 《数量经济技术经济研究》 (JQTE) manuscript is productivity / efficiency / index measurement — TFP, Malmquist, DEA, SFA, technical-progress decomposition, or index construction. Enforces transparent, reproducible construction plus sensitivity to method and parameter choices. This is the centerpiece skill for the journal's measurement track.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-measurement/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "ca91c5bae7abc401060a5e1e26ca36db85a02098a83525c99fcd671851bddf27",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_63d2d72652a651008236/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_63d2d72652a651008236/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_63d2d72652a651008236/files/library/research-and-academic/jqte-measurement/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "dea",
+            "sfa",
+            "数量经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0027",
+      "skill_name": "jqte-rebuttal",
+      "skill_description": "Use when responding to peer-review / R&R comments on a 《数量经济技术经济研究》 (JQTE) manuscript — structuring a point-by-point response letter that addresses the journal's characteristic concerns (method transparency, measurement / parameter sensitivity, out-of-sample evaluation, CGE/IO reproducibility, data caliber) and reframing weak-causal pushback toward the paper's real measurement contribution. Use only after the manuscript itself is revised.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-rebuttal/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "726324422f1dc72accce319176341ccfd11e7d85c16dd4ddb5eb85e99907033a",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29806df9b49c647c0ed6/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29806df9b49c647c0ed6/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29806df9b49c647c0ed6/files/library/research-and-academic/jqte-rebuttal/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "cge",
+            "数量经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0028",
+      "skill_name": "jqte-sensitivity",
+      "skill_description": "Use to design and report robustness for a 《数量经济技术经济研究》 (JQTE) manuscript where the contribution is measurement, a model, or a forecast — focusing on sensitivity to method choice, parameter / specification, data caliber, and sample window, rather than the placebo / parallel-trends battery of a causal paper. Use after the main estimates exist.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-sensitivity/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "2bbadfcdb2d7f88588ad7bc387cc726e5f25313155d9f63b6d078f45322a305a",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_0b529ebdc9cba38e7cb5/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_0b529ebdc9cba38e7cb5/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_0b529ebdc9cba38e7cb5/files/library/research-and-academic/jqte-sensitivity/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "数量经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0029",
+      "skill_name": "jqte-submission",
+      "skill_description": "Use for the pre-submission preflight to 《数量经济技术经济研究》 (JQTE) — checking footnote conventions (脚式编排, renumbered per page), title/keyword/abstract format, the ≥1000-character policy section, reproducibility of the method section, the online submission system (jqte.net), and anonymity. Use right before submitting; verify every numeric rule against the journal's current 投稿须知.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-submission/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "3a6d4852c1d5966d218a6f5e251e12bf3d66ae69c3086c84b1e25ed1c3136eff",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_53a3faa9a58fba045ed7/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_53a3faa9a58fba045ed7/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_53a3faa9a58fba045ed7/files/library/research-and-academic/jqte-submission/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "数量经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0030",
+      "skill_name": "jqte-tables-figures",
+      "skill_description": "Use when finalizing tables and figures for a 《数量经济技术经济研究》 (JQTE) manuscript — making sure measurement / forecast / decomposition results carry quantitative interpretation (magnitudes, units, shares, rankings, trends) rather than only significance stars, and that every table/figure states its source and method. Use after estimates and sensitivity are settled.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-tables-figures/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "1f9d6f0ae5728a358d1a7afee54011a7798207d63ba59f93a0f302dd0a1521a8",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41a3fd4d0764ca4177f3/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41a3fd4d0764ca4177f3/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41a3fd4d0764ca4177f3/files/library/research-and-academic/jqte-tables-figures/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "数量经济",
+            "quantitative"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0031",
+      "skill_name": "jqte-topic-selection",
+      "skill_description": "Use to sharpen a topic for 《数量经济技术经济研究》 (JQTE) — turning a vague empirical idea into a measurement / forecasting / method-application question with a clear quantitative object, a method-side novelty, and value for China's planning or technology decisions. Use before drafting, when the contribution shape is still fuzzy.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020108T",
+      "primary_major_name": "经济工程",
+      "applicable_major_codes": [
+        "020108T"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-topic-selection/SKILL.md",
+      "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+      "license": "MIT",
+      "maintenance_date": "2026-07-30T19:46:16Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "57ee78d7ebfdff0d0023d4542f746127bf41cd48a1836e8a095b1b2fd7f61cf5",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9afd562652ab6b13505c/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9afd562652ab6b13505c/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9afd562652ab6b13505c/files/library/research-and-academic/jqte-topic-selection/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "matched_terms": [
+            "forecasting",
+            "数量经济",
+            "quantitative"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0032",
+      "skill_name": "china-industrial-economics",
+      "skill_description": "Use when targeting 《中国工业经济》(China Industrial Economics) — a top journal for industrial organization, firm behavior, regional/innovation/digital economy with empirical rigor and strong policy relevance. Apply when a paper needs exhaustive robustness, clean China-policy quasi-experiments, mechanism + heterogeneity, and actionable industrial-policy implications. Famous for methodological rigor norms.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020109T",
+      "primary_major_name": "数字经济",
+      "applicable_major_codes": [
+        "020109T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "a61c96fa4bec9ff9eb980bda9bd7c3d2c4b41eccee58a06b76de879a42caf4c3",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_56b5b3d1a236f157c35c/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_56b5b3d1a236f157c35c/files/Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_56b5b3d1a236f157c35c/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020109T",
+          "major_name": "数字经济",
+          "matched_terms": [
+            "digital economy",
+            "industrial",
+            "economics",
+            "digital",
+            "economy"
+          ]
+        },
+        {
+          "major_code": "020105T",
+          "major_name": "商务经济学",
+          "matched_terms": [
+            "industrial organization",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0033",
+      "skill_name": "cie-topic-selection",
+      "skill_description": "Use to sharpen a topic for 《中国工业经济》 (China Industrial Economics) — anchoring on a clean China-policy quasi-experiment, firm behavior, industrial organization, or the digital economy, backed by stylized facts and 3–5 marginal contributions. Use before drafting, when the research question or contribution is fuzzy.",
+      "primary_class_code": "0201",
+      "primary_major_code": "020109T",
+      "primary_major_name": "数字经济",
+      "applicable_major_codes": [
+        "020109T"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "cb800a8f698d84bd7d1a226f6fac81f7c399005db1b1a973b14e6864b6805bb5",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_b59c25028756a3db7a8c/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_b59c25028756a3db7a8c/files/China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_b59c25028756a3db7a8c/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020109T",
+          "major_name": "数字经济",
+          "matched_terms": [
+            "digital economy",
+            "industrial",
+            "economics",
+            "digital",
+            "economy"
+          ]
+        },
+        {
+          "major_code": "020105T",
+          "major_name": "商务经济学",
+          "matched_terms": [
+            "industrial organization",
+            "economics"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    }
+  ],
+  "major_search_status": [
+    {
+      "major_code": "020101",
+      "major_name": "经济学",
+      "deduplicated_candidate_count": 38,
+      "formal_count": 2,
+      "excluded_candidate_count": 34,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "deduplicated_candidate_count": 0,
+      "formal_count": 1,
+      "excluded_candidate_count": 0,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "deduplicated_candidate_count": 1,
+      "formal_count": 0,
+      "excluded_candidate_count": 1,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 3,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "已完成四平台专项补查；未发现同时通过专业相关性、固定版本、许可证和静态安全门的 Skill。"
+    },
+    {
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "deduplicated_candidate_count": 29,
+      "formal_count": 13,
+      "excluded_candidate_count": 15,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 107,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "deduplicated_candidate_count": 0,
+      "formal_count": 1,
+      "excluded_candidate_count": 0,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "deduplicated_candidate_count": 72,
+      "formal_count": 2,
+      "excluded_candidate_count": 69,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 742,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "deduplicated_candidate_count": 2,
+      "formal_count": 1,
+      "excluded_candidate_count": 1,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "deduplicated_candidate_count": 19,
+      "formal_count": 11,
+      "excluded_candidate_count": 7,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "deduplicated_candidate_count": 7,
+      "formal_count": 2,
+      "excluded_candidate_count": 5,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "deduplicated_candidate_count": 16,
+      "formal_count": 0,
+      "excluded_candidate_count": 15,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 48,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "已完成四平台专项补查；未发现同时通过专业相关性、固定版本、许可证和静态安全门的 Skill。"
+    },
+    {
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "deduplicated_candidate_count": 9,
+      "formal_count": 0,
+      "excluded_candidate_count": 9,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 17,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "已完成四平台专项补查；未发现同时通过专业相关性、固定版本、许可证和静态安全门的 Skill。"
+    }
+  ],
+  "profile_sources": [
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "确定经济学门类、专业类、专业代码、专业名称及学位门类。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部",
+      "source_id": "moe_undergraduate_catalog_2026",
+      "title": "普通高等学校本科专业目录（2026年）",
+      "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "约束经济学、财政学、金融学、经济与贸易四个专业类的共同理论、方法和能力基础。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部高等学校教学指导委员会",
+      "source_id": "moe_economics_quality_standard",
+      "title": "普通高等学校本科专业类教学质量国家标准（经济学门类）",
+      "url": "https://jwc.cueb.edu.cn/pgzx/docs/2023-12/882f50ac15434106b120a27f44e3d303.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "用于经济学类共同的微观、宏观、计量与劳动、环境资源等应用经济学内容校准。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T"
+      ],
+      "publisher": "清华大学",
+      "source_id": "tsinghua_economics_program",
+      "title": "清华大学经济学专业本科培养方案",
+      "url": "https://www.tsinghua.edu.cn/jxjywj/bkzy2023/zxzy/51-1.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定数字经济专业的数据分析、平台经济、数字化转型和信息技术交叉内容。",
+      "major_codes": [
+        "020109T"
+      ],
+      "publisher": "兰州财经大学",
+      "source_id": "lzufe_digital_economy_program",
+      "title": "数字经济专业本科人才培养方案",
+      "url": "https://economic.lzufe.edu.cn/info/2556/5609.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定低空经济运行、产业与政策法规、管理、数据处理和风险意识等培养内容。",
+      "major_codes": [
+        "020110TK"
+      ],
+      "publisher": "中国社会科学院大学",
+      "source_id": "ucass_low_altitude_economy_program",
+      "title": "低空经济与管理专业介绍",
+      "url": "https://fae.ucass.edu.cn/info/1021/3968.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定审计学与资源环境、经济管理、法学、数据科学、地理科学和生态学的交叉边界。",
+      "major_codes": [
+        "020111T"
+      ],
+      "publisher": "南京审计大学",
+      "source_id": "nau_resource_environment_audit_program",
+      "title": "资源环境审计专业本科人才培养方案研讨会",
+      "url": "https://news.nau.edu.cn/2026/0604/c5797a158413/page.htm"
+    }
+  ],
+  "attrition": {
+    "deduplicated_candidate_count": 193,
+    "formal_candidate_count": 33,
+    "excluded_candidate_count": 156,
+    "global_reason_counts": {
+      "incomplete_description": 337,
+      "license_missing": 658,
+      "license_not_allowed": 727,
+      "maintenance_failure": 1,
+      "professional_mismatch": 1282,
+      "score_one_observation": 6,
+      "security_grade_not_formal": 514,
+      "skill_definition_missing": 40
+    }
+  },
+  "method_note": "四社区联网发现；固定版本静态核验；专业任务匹配；跨平台与功能级去重；评分不抵消硬门槛。"
+}

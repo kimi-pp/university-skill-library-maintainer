@@ -1,0 +1,905 @@
+{
+  "schema_version": "economics-class-delivery-v1",
+  "generated_on": "2026-08-19",
+  "category_code": "02",
+  "category_name": "经济学",
+  "class_code": "0204",
+  "class_name": "经济与贸易类",
+  "major_count": 4,
+  "formal_count": 9,
+  "profiles": [
+    {
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "国际经济学与国际贸易理论",
+        "贸易政策、WTO规则与国际商法",
+        "国际贸易实务、结算、物流与跨境电商"
+      ],
+      "typical_tasks": [
+        "分析国际贸易数据和市场准入",
+        "处理贸易合同、结算与单证",
+        "评估贸易政策、关税和供应链影响"
+      ],
+      "inclusion_rules": [
+        "直接服务跨境贸易理论、政策或实务",
+        "涉及贸易规则、交易、结算、物流或国际市场"
+      ],
+      "exclusion_boundaries": [
+        "国内电商营销和通用商务文案",
+        "仅翻译文本而无国际经贸任务"
+      ],
+      "search_terms": {
+        "zh": [
+          "国际经济与贸易",
+          "国际贸易分析",
+          "贸易政策",
+          "跨境贸易实务"
+        ],
+        "en": [
+          "international economics and trade",
+          "international trade analysis",
+          "trade policy",
+          "cross-border trade operations"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zju_international_trade_program"
+      ]
+    },
+    {
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "流通经济、产业与市场组织",
+        "批发零售、商业模式与消费市场",
+        "供应链、物流与商品流通"
+      ],
+      "typical_tasks": [
+        "分析流通渠道和零售数据",
+        "优化商品供应链与商业网络",
+        "评估消费市场和商业模式"
+      ],
+      "inclusion_rules": [
+        "直接服务商品流通、批零市场或供应链经济",
+        "支持渠道、零售、物流或商业组织分析"
+      ],
+      "exclusion_boundaries": [
+        "泛企业管理和营销文案",
+        "纯仓储软件或物流路径算法而无贸易经济决策"
+      ],
+      "search_terms": {
+        "zh": [
+          "贸易经济",
+          "流通经济",
+          "零售分析",
+          "商业供应链"
+        ],
+        "en": [
+          "trade economics",
+          "circulation economics",
+          "retail analytics",
+          "commercial supply chain"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zju_international_trade_program"
+      ]
+    },
+    {
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业"
+      ],
+      "core_learning_domains": [
+        "发展经济学与国际发展理论",
+        "国际组织、发展援助与合作政策",
+        "发展项目评价、融资与国别风险"
+      ],
+      "typical_tasks": [
+        "设计和评估国际发展合作项目",
+        "监测援助项目绩效和资金",
+        "开展国别、贫困与可持续发展分析"
+      ],
+      "inclusion_rules": [
+        "必须直接服务国际发展或合作项目",
+        "支持项目评价、援助管理、发展融资或国别分析"
+      ],
+      "exclusion_boundaries": [
+        "一般国际商务或外贸营销",
+        "公益宣传、翻译或旅行规划"
+      ],
+      "search_terms": {
+        "zh": [
+          "国际经济发展合作",
+          "发展援助",
+          "发展项目评价",
+          "国别风险"
+        ],
+        "en": [
+          "international development cooperation",
+          "development aid",
+          "development project evaluation",
+          "country risk"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zju_international_trade_program",
+        "sdufe_development_cooperation_program"
+      ]
+    },
+    {
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业",
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "数字贸易理论、测度与国际规则",
+        "跨境电商、数字服务与平台贸易",
+        "跨境数据流、数字支付和智慧供应链"
+      ],
+      "typical_tasks": [
+        "分析数字贸易规模、结构和规则",
+        "评估跨境平台与数字服务业务",
+        "研究数据跨境、数字支付与供应链合规"
+      ],
+      "inclusion_rules": [
+        "必须直接服务跨境数字交易、规则或基础设施",
+        "支持数字贸易测度、平台、数据流或供应链决策"
+      ],
+      "exclusion_boundaries": [
+        "普通电商文案、直播脚本或国内店铺运营",
+        "泛AI工具、网站开发或数字营销"
+      ],
+      "search_terms": {
+        "zh": [
+          "数字贸易",
+          "跨境电商分析",
+          "跨境数据流",
+          "数字贸易规则"
+        ],
+        "en": [
+          "digital trade",
+          "cross-border e-commerce analytics",
+          "cross-border data flows",
+          "digital trade rules"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zju_international_trade_program",
+        "btbu_digital_trade_program"
+      ]
+    }
+  ],
+  "formal_candidates": [
+    {
+      "skill_id": "ECON-SK-0087",
+      "skill_name": "xborder-logistics",
+      "skill_description": "Design cross-border logistics strategies including direct mail, overseas warehousing, and bonded warehouse models for international e-commerce. Use this skill when the user needs to ship products internationally, choose a logistics model for cross-border sales, optimize shipping costs, or set up fulfillment in a foreign market — even if they say 'ship to Southeast Asia', 'overseas warehouse vs direct shipping', 'customs clearance', or 'reduce international shipping time'.",
+      "primary_class_code": "0204",
+      "primary_major_code": "020401",
+      "primary_major_name": "国际经济与贸易",
+      "applicable_major_codes": [
+        "020401"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/asgard-ai-platform/skills/blob/4e7f4f8e389847757a5a4236c2f1ed9813359179/xborder-logistics/SKILL.md",
+      "fixed_version": "4e7f4f8e389847757a5a4236c2f1ed9813359179",
+      "license": "MIT",
+      "maintenance_date": "2026-06-06T05:50:09Z",
+      "repository_stars": 227,
+      "package_manifest_sha256": "903db3fab9b7e15e424a4fc30e408c951ee8bb376097eae8bf61fe95704e54b5",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a2cf645f23273e9226b0/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a2cf645f23273e9226b0/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a2cf645f23273e9226b0/files/xborder-logistics/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020401",
+          "major_name": "国际经济与贸易",
+          "matched_terms": [
+            "customs",
+            "international",
+            "cross-border"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0088",
+      "skill_name": "trade-economics",
+      "skill_description": "International trade — comparative advantage, trade policy. Cover Ricardo, H-O, tariffs, WTO, GVCs.",
+      "primary_class_code": "0204",
+      "primary_major_code": "020401",
+      "primary_major_name": "国际经济与贸易",
+      "applicable_major_codes": [
+        "020401"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brainbytes-dev/everything-claude-finance/blob/71f43fc82f5d493802de01a5ce70079ffaa784fc/skills/economics/trade-economics/SKILL.md",
+      "fixed_version": "71f43fc82f5d493802de01a5ce70079ffaa784fc",
+      "license": "MIT",
+      "maintenance_date": "2026-03-14T23:27:46Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "77eb83685f0a3924cb9ccaa29b07d2c2ab5c7c4fd9849c3e5e370885d843c7af",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b347f0cc0b6836f7bf6b/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b347f0cc0b6836f7bf6b/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b347f0cc0b6836f7bf6b/files/skills/economics/trade-economics/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020401",
+          "major_name": "国际经济与贸易",
+          "matched_terms": [
+            "international trade",
+            "trade policy",
+            "international",
+            "economics",
+            "policy",
+            "trade"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0089",
+      "skill_name": "cte-abstract",
+      "skill_description": "Use when drafting or revising the 中文摘要 or 英文 abstract for a 《财贸经济》(Finance & Trade Economics, CTE) manuscript — the CSSCI 财经权威期刊 run by 中国社会科学院财经战略研究院. 当摘要写成\"为高质量发展提供新思路\"式套话、缺核心数据 / 识别策略 / 量化发现、或中英文语义不对齐时使用。Enforces the five-sentence pattern, requires quantified findings with named data sources (CSMAR / WIND / CEIC / 统计年鉴), and forbids empty-significance phrases.",
+      "primary_class_code": "0204",
+      "primary_major_code": "020402",
+      "primary_major_name": "贸易经济",
+      "applicable_major_codes": [
+        "020402"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Finance-and-Trade-Economics-Skills/skills/cte-abstract/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "f91cf66e0f42e01f3b5c09b0c3608e6d59c4532576134bc87899d763318ded16",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8f3b7b449d9c225c35f3/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8f3b7b449d9c225c35f3/files/Finance-and-Trade-Economics-Skills/skills/cte-abstract/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_8f3b7b449d9c225c35f3/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "matched_terms": [
+            "trade economics",
+            "economics",
+            "trade",
+            "经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0090",
+      "skill_name": "cte-identification",
+      "skill_description": "Use when the empirical identification strategy is the bottleneck for a 《财贸经济》 manuscript — fiscal / tax / financial / trade policy shocks and firm- / city- / bank-level quasi-experimental designs (DID, IV, RDD, DML). Stress-tests the design and the policy endogeneity before drafting tables. 本技能服务于《财贸经济》(Finance & Trade Economics, CTE)。",
+      "primary_class_code": "0204",
+      "primary_major_code": "020402",
+      "primary_major_name": "贸易经济",
+      "applicable_major_codes": [
+        "020402"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Finance-and-Trade-Economics-Skills/skills/cte-identification/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "f770409873dbfdb34fe3546c57ccfe7abed5a7420ba0cf8f6402f9b680c373a2",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b12572c4b5b21b89a22a/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b12572c4b5b21b89a22a/files/Finance-and-Trade-Economics-Skills/skills/cte-identification/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_b12572c4b5b21b89a22a/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "matched_terms": [
+            "trade economics",
+            "economics",
+            "trade",
+            "经济"
+          ]
+        },
+        {
+          "major_code": "020401",
+          "major_name": "国际经济与贸易",
+          "matched_terms": [
+            "trade policy",
+            "economics",
+            "policy",
+            "trade"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0091",
+      "skill_name": "cte-style",
+      "skill_description": "Use when polishing the language and rhetoric of a 《财贸经济》 manuscript — eliminating empty-significance phrases, fixing the \"加强完善推进\" policy formula, replacing method-flexing with identifiable mechanism, and aligning tense / person / hedging with CSSCI house style. 本技能服务于《财贸经济》(Finance & Trade Economics, CTE)。",
+      "primary_class_code": "0204",
+      "primary_major_code": "020402",
+      "primary_major_name": "贸易经济",
+      "applicable_major_codes": [
+        "020402"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Finance-and-Trade-Economics-Skills/skills/cte-style/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "83da4df16808503a185678ff9336a32933af28a77ef1c82ce75e386fef1bb623",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_285c89b334c112cd8d05/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_285c89b334c112cd8d05/files/Finance-and-Trade-Economics-Skills/skills/cte-style/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_285c89b334c112cd8d05/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "matched_terms": [
+            "trade economics",
+            "economics",
+            "trade",
+            "经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0092",
+      "skill_name": "cte-submission",
+      "skill_description": "Use when running the final pre-submission preflight for 《财贸经济》 — format, word count, blind review, references, anti-plagiarism, author info, transparent data sourcing, and supplementary files. 本技能服务于《财贸经济》(Finance & Trade Economics, CTE)。",
+      "primary_class_code": "0204",
+      "primary_major_code": "020402",
+      "primary_major_name": "贸易经济",
+      "applicable_major_codes": [
+        "020402"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Finance-and-Trade-Economics-Skills/skills/cte-submission/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "294e3fbadfa694c589aeb0364ad76fdebb6f7f656a3ce041227ccfa302441607",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_3b3d424ef06fcb326d71/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_3b3d424ef06fcb326d71/files/Finance-and-Trade-Economics-Skills/skills/cte-submission/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_3b3d424ef06fcb326d71/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "matched_terms": [
+            "trade economics",
+            "economics",
+            "trade",
+            "经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0093",
+      "skill_name": "cte-tables-figures",
+      "skill_description": "Use when finalizing regression tables and figures for a 《财贸经济》 manuscript. Enforces three-line table style, footnote conventions, column-count discipline, transparent data sourcing, and figure aesthetics. 本技能服务于《财贸经济》(Finance & Trade Economics, CTE)。",
+      "primary_class_code": "0204",
+      "primary_major_code": "020402",
+      "primary_major_name": "贸易经济",
+      "applicable_major_codes": [
+        "020402"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "Stata",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Finance-and-Trade-Economics-Skills/skills/cte-tables-figures/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "cc206b0481c6f5aa1ab237f0d250ea559305236a4d8075b2998242c0db14547f",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d911dd8304f0e6b1aa41/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d911dd8304f0e6b1aa41/files/Finance-and-Trade-Economics-Skills/skills/cte-tables-figures/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_d911dd8304f0e6b1aa41/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "matched_terms": [
+            "trade economics",
+            "economics",
+            "trade",
+            "经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0094",
+      "skill_name": "finance-and-trade-economics",
+      "skill_description": "Use when targeting 《财贸经济》(Finance and Trade Economics — 中国社会科学院主管、财经战略研究院主办的月刊, 2016 年起仅网络在线投稿) or deciding whether a public-finance/tax/trade-circulation manuscript fits this venue. Encodes the journal's online-only submission, 匿名正文/顺序编码制 house style, official re-check, and desk-reject heuristics.",
+      "primary_class_code": "0204",
+      "primary_major_code": "020402",
+      "primary_major_name": "贸易经济",
+      "applicable_major_codes": [
+        "020402"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/finance-and-trade-economics/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "1c6dd68413fee8d306dcb6f379019f3e8fee32f83e9125dab2efe881b6685a60",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e9623b55f563df584186/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e9623b55f563df584186/files/Chinese-SocialScience-Journal-Skills/skills/finance-and-trade-economics/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e9623b55f563df584186/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "matched_terms": [
+            "trade economics",
+            "circulation",
+            "economics",
+            "trade",
+            "经济"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0095",
+      "skill_name": "ecommerce-platform-audit-requirements",
+      "skill_description": "Use when scoping or specifying an e-commerce platform, payment, API, security, AI, data protection, integration, and remediation audit for SMEs or cross-border digital trade programmes.",
+      "primary_class_code": "0204",
+      "primary_major_code": "020404TK",
+      "primary_major_name": "数字贸易",
+      "applicable_major_codes": [
+        "020404TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/peterbamuhigire/chwezi-dev-engine/blob/e366d31aad80b90b173a2a641f8fefdd5bb9aa26/skills/architecture/ecommerce-platform-audit-requirements/SKILL.md",
+      "fixed_version": "e366d31aad80b90b173a2a641f8fefdd5bb9aa26",
+      "license": "MIT",
+      "maintenance_date": "2026-08-17T21:12:43Z",
+      "repository_stars": 25,
+      "package_manifest_sha256": "849ce897ec8cfe04603229a19386b305c0708ff7b1227999949a3c8c939b84d4",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_87c579151e775c584c2e/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_87c579151e775c584c2e/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_87c579151e775c584c2e/files/skills/architecture/ecommerce-platform-audit-requirements/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020404TK",
+          "major_name": "数字贸易",
+          "matched_terms": [
+            "digital trade",
+            "cross-border",
+            "e-commerce",
+            "digital",
+            "trade",
+            "data"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    }
+  ],
+  "major_search_status": [
+    {
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "deduplicated_candidate_count": 1,
+      "formal_count": 2,
+      "excluded_candidate_count": 1,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 3,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "deduplicated_candidate_count": 21,
+      "formal_count": 6,
+      "excluded_candidate_count": 14,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 52,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "deduplicated_candidate_count": 34,
+      "formal_count": 0,
+      "excluded_candidate_count": 34,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 65,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "已完成四平台专项补查；未发现同时通过专业相关性、固定版本、许可证和静态安全门的 Skill。"
+    },
+    {
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "deduplicated_candidate_count": 9,
+      "formal_count": 1,
+      "excluded_candidate_count": 8,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 24,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    }
+  ],
+  "profile_sources": [
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "确定经济学门类、专业类、专业代码、专业名称及学位门类。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部",
+      "source_id": "moe_undergraduate_catalog_2026",
+      "title": "普通高等学校本科专业目录（2026年）",
+      "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "约束经济学、财政学、金融学、经济与贸易四个专业类的共同理论、方法和能力基础。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部高等学校教学指导委员会",
+      "source_id": "moe_economics_quality_standard",
+      "title": "普通高等学校本科专业类教学质量国家标准（经济学门类）",
+      "url": "https://jwc.cueb.edu.cn/pgzx/docs/2023-12/882f50ac15434106b120a27f44e3d303.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定国际贸易理论、政策、实务、国际商法、数字贸易与跨文化能力。",
+      "major_codes": [
+        "020401",
+        "020402"
+      ],
+      "publisher": "浙江大学",
+      "source_id": "zju_international_trade_program",
+      "title": "国际经济与贸易专业介绍",
+      "url": "https://zdzsc.zju.edu.cn/2023/0623/c87426a2775174/page.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定发展经济学、国际组织、发展援助和国际合作项目的培养内容。",
+      "major_codes": [
+        "020403T"
+      ],
+      "publisher": "山东财经大学",
+      "source_id": "sdufe_development_cooperation_program",
+      "title": "国际经济发展合作专业培养方案",
+      "url": "https://site.sdufe.edu.cn/info/1044/2171.htm"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "限定数字贸易规则、数字服务、平台、供应链、跨境业务和数据分析内容。",
+      "major_codes": [
+        "020404TK"
+      ],
+      "publisher": "北京工商大学",
+      "source_id": "btbu_digital_trade_program",
+      "title": "贸易经济（数字贸易方向）专业介绍",
+      "url": "https://zsb.btbu.edu.cn/bkzn/zyjj/jjxy1/0806e3b4c01a420a8959e199d080b432.htm"
+    }
+  ],
+  "attrition": {
+    "deduplicated_candidate_count": 65,
+    "formal_candidate_count": 9,
+    "excluded_candidate_count": 57,
+    "global_reason_counts": {
+      "incomplete_description": 337,
+      "license_missing": 658,
+      "license_not_allowed": 727,
+      "maintenance_failure": 1,
+      "professional_mismatch": 1282,
+      "score_one_observation": 6,
+      "security_grade_not_formal": 514,
+      "skill_definition_missing": 40
+    }
+  },
+  "method_note": "四社区联网发现；固定版本静态核验；专业任务匹配；跨平台与功能级去重；评分不抵消硬门槛。"
+}

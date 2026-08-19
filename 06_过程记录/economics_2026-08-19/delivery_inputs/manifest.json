@@ -1,0 +1,10 @@
+{
+  "schema_version": "economics-delivery-input-manifest-v1",
+  "payload_count": 4,
+  "hashes": {
+    "0201.json": "2f65ca423d6f42089897573716ab6fd99abd5cefdb661f95fa81f1faf11109bd",
+    "0202.json": "b79ca6779919a16eac5353953287ef7206aefeb26a6066a04f813cceb716094d",
+    "0203.json": "e1b9c7493c6926fb2ef22b9f5ceacd39be1104ad2374ae6bebc9f8a8e0493842",
+    "0204.json": "68f6b6daf0d022d5ecb7a4de841309209a3af18eb62c670a564b9f1ef0962f0c"
+  }
+}

@@ -1,0 +1,907 @@
+{
+  "schema_version": "economics-class-delivery-v1",
+  "generated_on": "2026-08-19",
+  "category_code": "02",
+  "category_name": "经济学",
+  "class_code": "0202",
+  "class_name": "财政学类",
+  "major_count": 3,
+  "formal_count": 11,
+  "profiles": [
+    {
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "公共经济学与财政理论",
+        "政府预算、支出与绩效",
+        "财政政策、政府债务与财政关系"
+      ],
+      "typical_tasks": [
+        "分析财政收支和预算数据",
+        "评估公共支出绩效",
+        "模拟财政政策和政府债务影响"
+      ],
+      "inclusion_rules": [
+        "直接服务政府财政、预算或公共支出决策",
+        "支持财政政策、债务或绩效的可复核分析"
+      ],
+      "exclusion_boundaries": [
+        "企业财务会计和报销流程",
+        "泛公共管理文案而无财政数据"
+      ],
+      "search_terms": {
+        "zh": [
+          "财政学",
+          "政府预算",
+          "财政政策",
+          "公共支出绩效"
+        ],
+        "en": [
+          "public finance",
+          "government budgeting",
+          "fiscal policy",
+          "public expenditure performance"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zufe_public_finance_tax_programs"
+      ]
+    },
+    {
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [],
+      "core_learning_domains": [
+        "税收理论与中国税制",
+        "税法、税务会计与征管",
+        "税收合规、筹划与风险管理"
+      ],
+      "typical_tasks": [
+        "计算和复核涉税事项",
+        "分析税收政策影响",
+        "识别企业税务合规与风险"
+      ],
+      "inclusion_rules": [
+        "直接处理税制、税务数据或合规规则",
+        "输出须可追溯到具体税种、规则或业务事实"
+      ],
+      "exclusion_boundaries": [
+        "普通财务记账而无涉税事项",
+        "无来源的自动报税或规避监管建议"
+      ],
+      "search_terms": {
+        "zh": [
+          "税收学",
+          "中国税制",
+          "税务合规",
+          "税收政策分析"
+        ],
+        "en": [
+          "taxation",
+          "China tax system",
+          "tax compliance",
+          "tax policy analysis"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zufe_public_finance_tax_programs"
+      ]
+    },
+    {
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "degree_categories": [
+        "经济学"
+      ],
+      "attributes": [
+        "特设专业",
+        "国家控制布点专业"
+      ],
+      "core_learning_domains": [
+        "国际税收规则与税收协定",
+        "跨境税务、转让定价与反避税",
+        "数字经济税收与全球税收治理"
+      ],
+      "typical_tasks": [
+        "分析税收协定适用",
+        "开展跨境税务合规和转让定价分析",
+        "评估BEPS及全球最低税规则影响"
+      ],
+      "inclusion_rules": [
+        "必须直接服务跨境税收规则或业务",
+        "支持协定、转让定价、反避税或全球治理分析"
+      ],
+      "exclusion_boundaries": [
+        "国内单一税种计算且无跨境要素",
+        "无合规依据的避税方案生成"
+      ],
+      "search_terms": {
+        "zh": [
+          "国际税收",
+          "税收协定",
+          "转让定价",
+          "BEPS"
+        ],
+        "en": [
+          "international taxation",
+          "tax treaties",
+          "transfer pricing",
+          "BEPS"
+        ]
+      },
+      "source_ids": [
+        "moe_undergraduate_catalog_2026",
+        "moe_economics_quality_standard",
+        "zufe_public_finance_tax_programs"
+      ]
+    }
+  ],
+  "formal_candidates": [
+    {
+      "skill_id": "ECON-SK-0034",
+      "skill_name": "public-finance-research",
+      "skill_description": "Use when targeting 《财政研究》(Public Finance Research — 财政部主管、中国财政学会主办、不收版面费的财政学权威核心月刊, CNKI 采编系统) or deciding whether a Chinese public-finance manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/citation house style, official-submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020201K",
+      "primary_major_name": "财政学",
+      "applicable_major_codes": [
+        "020201K"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "961baffd4818f2704f135fd35aaab7edd3aab49f2a7d3a699350204e8c9c0f56",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f984ad8ff28d23426368/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f984ad8ff28d23426368/files/Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f984ad8ff28d23426368/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020201K",
+          "major_name": "财政学",
+          "matched_terms": [
+            "public finance",
+            "财政学",
+            "finance",
+            "public"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0035",
+      "skill_name": "tax-research",
+      "skill_description": "Use when targeting 《税务研究》(Taxation Research — 中国税务杂志社主办的税务学术月刊, 在线投约稿系统 tg.ctax.org.cn) or deciding whether a Chinese tax/public-finance manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/citation house style, official-submission re-check, and desk-reject heuristics.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020202",
+      "primary_major_name": "税收学",
+      "applicable_major_codes": [
+        "020202"
+      ],
+      "quality_score": 5,
+      "quality_label": "金牌 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+      "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+      "license": "MIT",
+      "maintenance_date": "2026-08-09T10:24:51Z",
+      "repository_stars": 1005,
+      "package_manifest_sha256": "8ba8aa2e136caec29bd42d1030319f8ca002d5d4686cb73d0e776e26839a8167",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d6600bd9ba3a6799f934/manifest.json",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d6600bd9ba3a6799f934/files/Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+        "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d6600bd9ba3a6799f934/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020202",
+          "major_name": "税收学",
+          "matched_terms": [
+            "taxation"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0036",
+      "skill_name": "swedish-accounting-compliance",
+      "skill_description": "Swedish accounting law and compliance reference for developers building accounting software. Use this skill whenever working on features that touch Swedish bookkeeping rules, tax compliance, chart of accounts, financial reporting, or regulatory requirements. Triggers include any mention of BFL, BFNAR, BAS kontoplan, SIE4, K2/K3, momsdeklaration, Skatteverket integration, verifikationer, löpande bokföring, årsbokslut, årsredovisning, bokföringsskyldighet, or Swedish accounting compliance in general. Also trigger when the user is checking whether a feature, data model, or workflow complies with Swedish accounting law, or when implementing tax calculations, invoice requirements, or financial reporting for Swedish entities. Use this skill even if the user just asks \"is this compliant?\" or \"what does the law say about X?\" in a Swedish accounting context. This skill is a compliance oracle, not an end-user guide.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020202",
+      "primary_major_name": "税收学",
+      "applicable_major_codes": [
+        "020202"
+      ],
+      "quality_score": 4,
+      "quality_label": "优质 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/erp-mafia/swedish-accounting-skills/blob/707b5c4bdcff815851ccb2f069e8c32604f6cd38/.claude/skills/swedish-accounting-compliance/SKILL.md",
+      "fixed_version": "707b5c4bdcff815851ccb2f069e8c32604f6cd38",
+      "license": "MIT",
+      "maintenance_date": "2026-05-14T18:53:49Z",
+      "repository_stars": 84,
+      "package_manifest_sha256": "3f0625dfb1f18d33b2fc6dcf2cdb7ac9e84805a8b026b728b44f5dcb8d58adc3",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_aa66192dc2072f850706/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_aa66192dc2072f850706/files/.claude/skills/swedish-accounting-compliance/SKILL.md",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_aa66192dc2072f850706/files/LICENSE"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020202",
+          "major_name": "税收学",
+          "matched_terms": [
+            "tax compliance",
+            "compliance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0037",
+      "skill_name": "billing-taxation",
+      "skill_description": "Use when identifying tax, billing, and revenue recognition obligations for software products sold globally. Covers service type classification and billing codes, VAT/GST/sales tax, invoicing requirements, revenue recognition (ASC 606/IFRS 15), cloud credits and stored-value models, and money transmission risks for prepaid systems. USE FOR: sales tax, VAT, GST, billing codes, service classification, invoicing requirements, revenue recognition, ASC 606, IFRS 15, cloud credits, stored value, prepaid credits, tax nexus, digital services tax, e-invoicing, withholding tax, transfer pricing DO NOT USE FOR: payment processing compliance (use financial-regulation), consumer refund policies (use consumer-protection), contract pricing terms (use contracts), tax return preparation (consult a tax advisor)",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "B",
+      "readiness": "微调后可用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "本地CLI",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/Tyler-R-Kendrick/agent-skills/blob/b6b5c287c759ad66cf0d8788a9d956b5397bbe70/skills/legal/billing-taxation/SKILL.md",
+      "fixed_version": "b6b5c287c759ad66cf0d8788a9d956b5397bbe70",
+      "license": "MIT",
+      "maintenance_date": "2026-06-09T11:52:42Z",
+      "repository_stars": 10,
+      "package_manifest_sha256": "ca752fc3a06e2aaf010c999b9b52fafc0515527d026d9b8a4f5176fd1186a096",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e3b8b45d9e18870d6e45/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e3b8b45d9e18870d6e45/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_e3b8b45d9e18870d6e45/files/skills/legal/billing-taxation/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "transfer pricing",
+            "taxation",
+            "transfer",
+            "pricing"
+          ]
+        },
+        {
+          "major_code": "020202",
+          "major_name": "税收学",
+          "matched_terms": [
+            "taxation",
+            "compliance",
+            "system"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0038",
+      "skill_name": "International Tax Issue Spotter",
+      "skill_description": "Use when issue-spotting cross-border tax questions into a source-cited issue map and missing-facts list for tax counsel, without concluding treaty, withholding, PE, or CFC/PFIC treatment.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/zgbrenner/agentcounsel/blob/3b2cace3160051027a81a1ec1a41df5667145a9d/skills/tax/international-tax-issue-spotter/SKILL.md",
+      "fixed_version": "3b2cace3160051027a81a1ec1a41df5667145a9d",
+      "license": "MIT",
+      "maintenance_date": "2026-08-05T08:04:24Z",
+      "repository_stars": 17,
+      "package_manifest_sha256": "fd06678fadb2c2a39b1b2a664d65c2fe14e4caa906bec2f695e635b0850a7f74",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_3f0771d83ebf7cad9765/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_3f0771d83ebf7cad9765/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_3f0771d83ebf7cad9765/files/skills/tax/international-tax-issue-spotter/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "international tax",
+            "cross-border tax",
+            "international"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0039",
+      "skill_name": "tax-law",
+      "skill_description": "Tax law skill for tax compliance, planning, and disputes. Use when the user needs assistance with federal or state taxes, tax planning, IRS matters, tax structuring, corporate taxes, or international tax. Triggers on keywords like \"tax\", \"IRS\", \"income tax\", \"corporate tax\", \"tax planning\", \"deduction\", \"tax credit\", \"1031 exchange\", \"transfer pricing\", \"SALT\", \"tax audit\".",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/judicialmind/legal-skills/blob/916ec5a4328a893cc57b4e0ecb9958b761901ca1/skills/tax-law/SKILL.md",
+      "fixed_version": "916ec5a4328a893cc57b4e0ecb9958b761901ca1",
+      "license": "MIT",
+      "maintenance_date": "2026-03-20T09:21:31Z",
+      "repository_stars": 20,
+      "package_manifest_sha256": "f5af9d9c15c5cd82e0160b6023f93f5fac11fd24ca7c5da24ca53334ee703825",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_633a4ee28ebbc1ca0aca/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_633a4ee28ebbc1ca0aca/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_633a4ee28ebbc1ca0aca/files/skills/tax-law/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "international tax",
+            "transfer pricing",
+            "international",
+            "transfer",
+            "pricing"
+          ]
+        },
+        {
+          "major_code": "020202",
+          "major_name": "税收学",
+          "matched_terms": [
+            "tax compliance",
+            "compliance"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0040",
+      "skill_name": "tax-residency-primer",
+      "skill_description": "Orient yourself on your tax-residency situation after moving countries — the questions that determine where you owe tax, the double-taxation and dual-residency traps, and what to pin down before you file — so you know what to ask a cross-border tax professional. Use when someone says 'am I tax resident in [country]', 'do I pay tax in two countries', 'moved countries mid-year, what about tax', or 'tax residency rules'. Produces a residency-question map, the trap list, a document checklist, and the questions for a professional. Strictly not tax advice — it orients and routes to a qualified adviser.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 3,
+      "quality_label": "标准 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/mohitagw15856/pm-claude-skills/blob/e70f5757e8b9dc19de0865c98d037215c44663bb/skills/tax-residency-primer/SKILL.md",
+      "fixed_version": "e70f5757e8b9dc19de0865c98d037215c44663bb",
+      "license": "MIT",
+      "maintenance_date": "2026-08-19T08:31:45Z",
+      "repository_stars": 1294,
+      "package_manifest_sha256": "9dcb1dc4573dfb9f80834d25785afd6f12e8ea818644ef89b705057b7b500fd2",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9f3ea69e41d95e9d4268/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9f3ea69e41d95e9d4268/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9f3ea69e41d95e9d4268/files/skills/tax-residency-primer/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "cross-border tax",
+            "taxation"
+          ]
+        },
+        {
+          "major_code": "020202",
+          "major_name": "税收学",
+          "matched_terms": [
+            "taxation"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0041",
+      "skill_name": "analyzing-international-tax-planning",
+      "skill_description": "Evaluates international tax structures with BEPS considerations, treaty analysis, and repatriation planning. Use when planning international tax, analyzing tax treaties, or structuring cross-border operations.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/CaseMark/skills/blob/e69795285fb559231b67bd3731c91c640c924a64/skills/finance/analyzing-international-tax-planning/SKILL.md",
+      "fixed_version": "e69795285fb559231b67bd3731c91c640c924a64",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-08-07T17:46:45Z",
+      "repository_stars": 35,
+      "package_manifest_sha256": "46ff4d7f36493b8ebbabf908feb0c3ce4fb7290c062368ddf5c28d5079de718a",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_82d4ac03ad7b0b319cc6/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_82d4ac03ad7b0b319cc6/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_82d4ac03ad7b0b319cc6/files/skills/finance/analyzing-international-tax-planning/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "international tax",
+            "international",
+            "tax treaties",
+            "treaties",
+            "beps"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0042",
+      "skill_name": "international-tax",
+      "skill_description": "International tax structures — double taxation treaties, BEPS, Pillar 1/2.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/brainbytes-dev/everything-claude-finance/blob/71f43fc82f5d493802de01a5ce70079ffaa784fc/skills/tax/international-tax/SKILL.md",
+      "fixed_version": "71f43fc82f5d493802de01a5ce70079ffaa784fc",
+      "license": "MIT",
+      "maintenance_date": "2026-03-14T23:27:46Z",
+      "repository_stars": 2,
+      "package_manifest_sha256": "b38563f50cac84abaaded74240432d61fff4ea205f477e994e65560cec1db8d2",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9200ab9079810d691536/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9200ab9079810d691536/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_9200ab9079810d691536/files/skills/tax/international-tax/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "international tax",
+            "international",
+            "taxation",
+            "treaties",
+            "beps"
+          ]
+        },
+        {
+          "major_code": "020202",
+          "major_name": "税收学",
+          "matched_terms": [
+            "taxation"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0043",
+      "skill_name": "kb-tax-ksa",
+      "skill_description": "Use when a user asks about Saudi Arabian tax law, zakat obligations, VAT, withholding tax, real estate transactions tax, or ZATCA compliance for any entity structure operating in or paying into the Kingdom. Covers corporate income tax, excise, transfer pricing, permanent establishment, tax treaties, and Vision 2030 incentive zones. Triggers on any KSA-jurisdiction tax or zakat question.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/sboghossian/mini-claude-for-legal/blob/a3bdc4e807ada2afdcd2cdb83da50676bdbdc697/skills/kb/kb-tax-ksa/SKILL.md",
+      "fixed_version": "a3bdc4e807ada2afdcd2cdb83da50676bdbdc697",
+      "license": "MIT",
+      "maintenance_date": "2026-05-14T08:31:47Z",
+      "repository_stars": 12,
+      "package_manifest_sha256": "1d8ab9c52df4b2efb1496077986d804ebb848592b0cf4c35a5173b0e16d6034d",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_72eb2494aaa9402c0b1c/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_72eb2494aaa9402c0b1c/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_72eb2494aaa9402c0b1c/files/skills/kb/kb-tax-ksa/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "transfer pricing",
+            "tax treaties",
+            "transfer",
+            "treaties",
+            "pricing"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    },
+    {
+      "skill_id": "ECON-SK-0044",
+      "skill_name": "transfer-pricing-pillar-two-advisor",
+      "skill_description": "Multi-jurisdiction reference framework for OECD transfer pricing (arm's length principle, five TP methods, BEPS Action 13 documentation, CbCR) and OECD Pillar Two GloBE rules (IIR, UTPR, QDMTT, ETR computation, SBIE carve-outs, safe harbors, deferred tax divergence under IAS 12 vs. ASC 740). Advisory only — never files tax returns, submits CbCR, or engages in competent authority proceedings.",
+      "primary_class_code": "0202",
+      "primary_major_code": "020203TK",
+      "primary_major_name": "国际税收",
+      "applicable_major_codes": [
+        "020203TK"
+      ],
+      "quality_score": 2,
+      "quality_label": "可用 Skill",
+      "verification_status": "全部通过（未实测）",
+      "security_grade": "SA",
+      "access_difficulty": "A",
+      "readiness": "可直接使用",
+      "external_api": "否",
+      "network_behavior": "无",
+      "credential_behavior": "无",
+      "local_runtime": "不使用",
+      "local_interface": "不使用",
+      "file_behavior": "无",
+      "platforms": [
+        "GitHub"
+      ],
+      "canonical_url": "https://github.com/VincentChuWaiChow/vanguard-frontier-agentic/blob/7845f7be54e39afc6bb862a2fb8cd134ccd5b9e3/skills/finance/transfer-pricing-pillar-two-advisor/SKILL.md",
+      "fixed_version": "7845f7be54e39afc6bb862a2fb8cd134ccd5b9e3",
+      "license": "Apache-2.0",
+      "maintenance_date": "2026-08-18T16:07:20Z",
+      "repository_stars": 21,
+      "package_manifest_sha256": "64144aca8702ea084dff3dc95b280edda04b2ba0b6b370961a2958d0d71abc01",
+      "evidence_paths": [
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a80504fe3f5933084eb4/manifest.json",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a80504fe3f5933084eb4/files/LICENSE",
+        "06_过程记录/economics_2026-08-19/zero_result_supplement/source_snapshots/packages/github_a80504fe3f5933084eb4/files/skills/finance/transfer-pricing-pillar-two-advisor/SKILL.md"
+      ],
+      "professional_relevance_evidence": [
+        {
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "matched_terms": [
+            "transfer pricing",
+            "transfer",
+            "pricing",
+            "beps"
+          ]
+        }
+      ],
+      "deduplication_note": "已按上游、固定内容和功能指纹全局去重；本条仅在一个主专业类正式收录。",
+      "usage_boundary": "仅完成固定版本静态核验，未安装、未运行；涉及真实教学科研数据时须按校内制度复核。"
+    }
+  ],
+  "major_search_status": [
+    {
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "deduplicated_candidate_count": 1,
+      "formal_count": 1,
+      "excluded_candidate_count": 0,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020202",
+      "major_name": "税收学",
+      "deduplicated_candidate_count": 0,
+      "formal_count": 2,
+      "excluded_candidate_count": 0,
+      "supplement_completed": false,
+      "supplement_platforms": [],
+      "supplement_result_counts": {},
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    },
+    {
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "deduplicated_candidate_count": 93,
+      "formal_count": 8,
+      "excluded_candidate_count": 84,
+      "supplement_completed": true,
+      "supplement_platforms": [
+        "SkillHub",
+        "ClawHub",
+        "GitHub",
+        "Hugging Face Spaces"
+      ],
+      "supplement_result_counts": {
+        "SkillHub": 0,
+        "ClawHub": 0,
+        "GitHub": 160,
+        "Hugging Face Spaces": 0
+      },
+      "zero_result_note": "首轮及补查后有正式收录项。"
+    }
+  ],
+  "profile_sources": [
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "确定经济学门类、专业类、专业代码、专业名称及学位门类。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部",
+      "source_id": "moe_undergraduate_catalog_2026",
+      "title": "普通高等学校本科专业目录（2026年）",
+      "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "教育部",
+      "evidence_use": "约束经济学、财政学、金融学、经济与贸易四个专业类的共同理论、方法和能力基础。",
+      "major_codes": [
+        "020101",
+        "020102",
+        "020103T",
+        "020104T",
+        "020105T",
+        "020106T",
+        "020107T",
+        "020108T",
+        "020109T",
+        "020110TK",
+        "020111T",
+        "020201K",
+        "020202",
+        "020203TK",
+        "020301K",
+        "020302",
+        "020303",
+        "020304",
+        "020305T",
+        "020306T",
+        "020307T",
+        "020308T",
+        "020309T",
+        "020310T",
+        "020311TK",
+        "020312TK",
+        "020401",
+        "020402",
+        "020403T",
+        "020404TK"
+      ],
+      "publisher": "教育部高等学校教学指导委员会",
+      "source_id": "moe_economics_quality_standard",
+      "title": "普通高等学校本科专业类教学质量国家标准（经济学门类）",
+      "url": "https://jwc.cueb.edu.cn/pgzx/docs/2023-12/882f50ac15434106b120a27f44e3d303.pdf"
+    },
+    {
+      "accessed_at": "2026-08-19",
+      "authority": "高校官网",
+      "evidence_use": "区分公共财政、国内税收和跨境税收治理、合规及实务。",
+      "major_codes": [
+        "020201K",
+        "020202",
+        "020203TK"
+      ],
+      "publisher": "浙江财经大学",
+      "source_id": "zufe_public_finance_tax_programs",
+      "title": "财政学、税收学与国际税收专业介绍",
+      "url": "https://cz.zufe.edu.cn/rcpy/bks/zyjs1.htm"
+    }
+  ],
+  "attrition": {
+    "deduplicated_candidate_count": 94,
+    "formal_candidate_count": 11,
+    "excluded_candidate_count": 84,
+    "global_reason_counts": {
+      "incomplete_description": 337,
+      "license_missing": 658,
+      "license_not_allowed": 727,
+      "maintenance_failure": 1,
+      "professional_mismatch": 1282,
+      "score_one_observation": 6,
+      "security_grade_not_formal": 514,
+      "skill_definition_missing": 40
+    }
+  },
+  "method_note": "四社区联网发现；固定版本静态核验；专业任务匹配；跨平台与功能级去重；评分不抵消硬门槛。"
+}
