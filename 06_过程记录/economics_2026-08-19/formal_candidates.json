@@ -1,0 +1,3740 @@
+[
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "29d74e5f9f81e282f5567ebf318e77ff85266cdd2cc806eccc4280332442fa72",
+    "candidate_native_id": "gabrielmoreira/agent-skills-mirror:mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+    "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 经济学 economics analysis"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29d74e5f9f81e282f556/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29d74e5f9f81e282f556/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29d74e5f9f81e282f556/files/mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "LICENSE",
+        "sha256": "f557ceb6462e320536e72736668cff8aee94a6b1bdb784a1bc0726599982322c",
+        "size": 1072
+      },
+      {
+        "path": "mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+        "sha256": "9645f6d285ec6a51e02a92d1231fdc77f06538ff5d56b292c13de53a89f0fe82",
+        "size": 18364
+      }
+    ],
+    "fixed_version": "6dffda59ea2401b60f0dae232f4cf63d5e400778",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "Stata",
+    "maintenance_date": "2026-08-19T03:45:29Z",
+    "major_codes": [
+      "020101"
+    ],
+    "major_names": [
+      "经济学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "9f8779974be15cf9c930cbc89d84b2a03035eb55856aa8f6ecb0da3631528bed",
+    "platform": "GitHub",
+    "publisher": "gabrielmoreira",
+    "query_ids": [
+      "ECON-020101-GH-R1-0005"
+    ],
+    "repository": "gabrielmoreira/agent-skills-mirror",
+    "repository_pushed_at": "2026-08-19T03:45:29Z",
+    "repository_stars": 17,
+    "repository_updated_at": "2026-08-19T03:45:52Z",
+    "security_grade": "SA",
+    "skill_path": "mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "Econfin-Proposal",
+    "skill_description": "金融经济学实证论文计划书生成器。根据用户提供的研究方向，生成包含标题、假说、数据来源、实证策略、 预期结果表格、稳健性检验、异质性分析、机制检验等12个完整模块的研究计划书。 内置中国微观/宏观数据库（皮皮侠1599个数据集、马克数据377个数据集）和WRDS国际数据库索引， 自动匹配可用数据源。融合Edmans (2024) \"Learnings From 1000 Rejections\"的编辑视角作为质量护栏， 确保选题具有真正的边际贡献而非\"just another determinant of Y\"。 当用户提到以下任何情境时触发：写研究计划书、research proposal、论文开题、选题+计划、 帮我设计一个实证研究、empirical research design、我想研究X对Y的影响怎么做、 帮我找个能发表的选题、generate proposal、写一个可以投稿的研究方案、 研究设计、identification strategy、DID/RDD/IV研究设计。 即使用户只是描述了一个经济金融现象并想知道\"能不能做成论文\"，也应考虑使用此技能。 ---",
+    "skill_content_sha256": "9645f6d285ec6a51e02a92d1231fdc77f06538ff5d56b292c13de53a89f0fe82",
+    "canonical_source_key": "github:brycewang-stanford/awesome-agent-skills-for-empirical-research:skills/67-econfin-workflow-toolkit/econfin-proposal/skill.md",
+    "function_fingerprint": "cdcebc03ae892f751586127dc05c98a61edcef4dc379dde6fd82016ed6e5a256",
+    "candidate_uid": "9bd51614445bf70ab3359301ffb74b6dcab33e15dc8cdec403d19393cfcdb6d9",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "0d4bd4d9a23ee6e7e941b0a23312b2d0b8df75188dbcc4703ed389243dcf6ef6",
+      "1c019af8aa02778d503c9df997ccc21a34adbf6fef544a80b35bbc29ef43ad7e",
+      "29d74e5f9f81e282f5567ebf318e77ff85266cdd2cc806eccc4280332442fa72",
+      "5de7fa340a1ae04634780da10280a5d535a5dae9f7f3d8a889ac13ddb39e2e9f",
+      "6598fdda659cb8ea8e63d3eb27647426133b6fa581b2c617e78f28c05f7859c9"
+    ],
+    "duplicate_count": 4,
+    "source_candidates": [
+      {
+        "candidate_key": "29d74e5f9f81e282f5567ebf318e77ff85266cdd2cc806eccc4280332442fa72",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Agent-Skills-for-Empirical-Research/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-agent-skills-for-empirical-research:skills/67-econfin-workflow-toolkit/econfin-proposal/skill.md"
+      },
+      {
+        "candidate_key": "6598fdda659cb8ea8e63d3eb27647426133b6fa581b2c617e78f28c05f7859c9",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Auto-Empirical-Research-Skills/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/auto-empirical-research-skills:skills/67-econfin-workflow-toolkit/econfin-proposal/skill.md"
+      },
+      {
+        "candidate_key": "5de7fa340a1ae04634780da10280a5d535a5dae9f7f3d8a889ac13ddb39e2e9f",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/blob/036fdeb145ccb8d67efff08e8eeb9cfc882314fd/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/auto-empirical-research-skills:skills/67-econfin-workflow-toolkit/econfin-proposal/skill.md"
+      },
+      {
+        "candidate_key": "0d4bd4d9a23ee6e7e941b0a23312b2d0b8df75188dbcc4703ed389243dcf6ef6",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/caixinyu2017-star/xixi/blob/fb8627427141b5d4ae9cb424fb38225b20d3ae9d/plugins/auto-empirical-research-skills/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+        "canonical_source_key": "github:caixinyu2017-star/xixi:plugins/auto-empirical-research-skills/skills/67-econfin-workflow-toolkit/econfin-proposal/skill.md"
+      },
+      {
+        "candidate_key": "1c019af8aa02778d503c9df997ccc21a34adbf6fef544a80b35bbc29ef43ad7e",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gaoxingkele/mylib/blob/ef31a232402452810f087b681f49ffce6714eecb/Auto-Empirical-Research-Skills/skills/67-econfin-workflow-toolkit/econfin-proposal/SKILL.md",
+        "canonical_source_key": "github:gaoxingkele/mylib:auto-empirical-research-skills/skills/67-econfin-workflow-toolkit/econfin-proposal/skill.md"
+      }
+    ],
+    "skill_text_sha256": "9645f6d285ec6a51e02a92d1231fdc77f06538ff5d56b292c13de53a89f0fe82",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020101",
+        "major_name": "经济学",
+        "matched_terms": [
+          "经济学实证",
+          "经济学"
+        ]
+      },
+      {
+        "major_code": "020307T",
+        "major_name": "经济与金融",
+        "matched_terms": [
+          "金融经济",
+          "分析"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020101",
+      "020307T"
+    ],
+    "primary_major_code": "020101",
+    "primary_major_name": "经济学",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0001"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "e4f1288bf52391249ced3075aa985e70e7691d2f97d0b8c505e3934bc87d2c49",
+    "candidate_native_id": "CalebLiu/econ-paper-workflow:SKILL.md",
+    "canonical_url": "https://github.com/CalebLiu/econ-paper-workflow/blob/4cba86d3ae50f679c125802f33fd780432653d56/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 经济学 economics analysis"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e4f1288bf52391249ced/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e4f1288bf52391249ced/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e4f1288bf52391249ced/files/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "LICENSE",
+        "sha256": "8e3f6226669c10e8471ce726f0a196a66392db367d1709cb7e50850b7018c075",
+        "size": 1089
+      },
+      {
+        "path": "SKILL.md",
+        "sha256": "712502c28e8b6e5d7301d18f193ad7bdff5e0e98d2ae7d8650e92f0e10fabc95",
+        "size": 5234
+      }
+    ],
+    "fixed_version": "4cba86d3ae50f679c125802f33fd780432653d56",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "CSV、DOCX",
+    "local_runtime": "Python、R、Stata",
+    "maintenance_date": "2026-06-02T20:42:51Z",
+    "major_codes": [
+      "020101"
+    ],
+    "major_names": [
+      "经济学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "fb373701c3c5168ea2fca5939eb5a6c8f626630662ef2ef532411d9ce92b2d19",
+    "platform": "GitHub",
+    "publisher": "CalebLiu",
+    "query_ids": [
+      "ECON-020101-GH-R1-0005"
+    ],
+    "repository": "CalebLiu/econ-paper-workflow",
+    "repository_pushed_at": "2026-06-02T20:42:51Z",
+    "repository_stars": 15,
+    "repository_updated_at": "2026-08-09T01:20:50Z",
+    "security_grade": "SA",
+    "skill_path": "SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "论文workflow",
+    "skill_description": "经济学实证论文 9 阶段标准工作流。Use when user starts a new empirical economics paper (course / dissertation / journal). Triggers on /论文workflow, \"paper workflow\", \"empirical econ paper\", or descriptions of starting an econ paper task with deadline + word count.",
+    "skill_content_sha256": "712502c28e8b6e5d7301d18f193ad7bdff5e0e98d2ae7d8650e92f0e10fabc95",
+    "canonical_source_key": "github:calebliu/econ-paper-workflow:skill.md",
+    "function_fingerprint": "c0a7756f5fcea13813b4f57a0241a2a7becab1307f0264a188f17865b726b186",
+    "candidate_uid": "7e1b5a8708b6b26aeebb0f5684fe589e5e6e6600d8a1a15a4347cebb54d3e78e",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "e4f1288bf52391249ced3075aa985e70e7691d2f97d0b8c505e3934bc87d2c49"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "e4f1288bf52391249ced3075aa985e70e7691d2f97d0b8c505e3934bc87d2c49",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/CalebLiu/econ-paper-workflow/blob/4cba86d3ae50f679c125802f33fd780432653d56/SKILL.md",
+        "canonical_source_key": "github:calebliu/econ-paper-workflow:skill.md"
+      }
+    ],
+    "skill_text_sha256": "712502c28e8b6e5d7301d18f193ad7bdff5e0e98d2ae7d8650e92f0e10fabc95",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020101",
+        "major_name": "经济学",
+        "matched_terms": [
+          "empirical economics",
+          "经济学实证",
+          "economics",
+          "economic",
+          "经济学"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020101"
+    ],
+    "primary_major_code": "020101",
+    "primary_major_name": "经济学",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0002"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "bb0495673c731193ac43358b4e1564bb6bd7ada9fcdf45a327c28d920cc50e1a",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 劳动经济学 labor economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_bb0495673c731193ac43/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_bb0495673c731193ac43/files/Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_bb0495673c731193ac43/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+        "sha256": "977c040a8813a0b41a19de2ee9138b66d62ceec75a8fccab9052245323878f2e",
+        "size": 4420
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020107T"
+    ],
+    "major_names": [
+      "劳动经济学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "be17438f078620d2e8461fffca4d6665be63ccfac96062a61422342f201dc4fd",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020107T-GH-R1-0053"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "studies-in-labor-economics",
+    "skill_description": "Use when targeting 《劳动经济研究》(Studies in Labor Economics) or deciding whether a Chinese social-science/econ/management manuscript fits this journal. Applies the journal's fit, framing, method, house-style, official-submission-check, and desk-reject heuristics.",
+    "skill_content_sha256": "977c040a8813a0b41a19de2ee9138b66d62ceec75a8fccab9052245323878f2e",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-in-labor-economics/skill.md",
+    "function_fingerprint": "dcf626973c32f28968e927ca7e8738a5ddb752549fea91f508ea5611ef212c56",
+    "candidate_uid": "eea6e5ed1cce1d3384a1fce739b85a5ca2d80a2387dfc010a0e91b5c92793080",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "00a438ccd43b4432b7eb49e2f9964f2ed2631a4f3072b502e0aecbeb81abe114",
+      "5f28e970473ea67f3c31030546800153f6fe9cd26f9a726bee69e8ffc0a5dbdf",
+      "bb0495673c731193ac43358b4e1564bb6bd7ada9fcdf45a327c28d920cc50e1a"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "bb0495673c731193ac43358b4e1564bb6bd7ada9fcdf45a327c28d920cc50e1a",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-in-labor-economics/skill.md"
+      },
+      {
+        "candidate_key": "00a438ccd43b4432b7eb49e2f9964f2ed2631a4f3072b502e0aecbeb81abe114",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/studies-in-labor-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-in-labor-economics/skill.md"
+      },
+      {
+        "candidate_key": "5f28e970473ea67f3c31030546800153f6fe9cd26f9a726bee69e8ffc0a5dbdf",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/studies-in-labor-economics/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/studies-in-labor-economics/skill.md"
+      }
+    ],
+    "skill_text_sha256": "977c040a8813a0b41a19de2ee9138b66d62ceec75a8fccab9052245323878f2e",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020107T",
+        "major_name": "劳动经济学",
+        "matched_terms": [
+          "labor economics",
+          "劳动经济",
+          "economics",
+          "labor"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020107T"
+    ],
+    "primary_major_code": "020107T",
+    "primary_major_name": "劳动经济学",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0003"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "78d0770b84700210992122e1e1b13255f2e79e3bd5e10f672a04bafbc93e8657",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_78d0770b847002109921/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_78d0770b847002109921/files/Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_78d0770b847002109921/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+        "sha256": "93f62c10b56445cad29c3d3f2dbc257f2b9e1eb863005369735331b420d813b2",
+        "size": 5825
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "040dace337598e9d82645b46c7556c67eef6c7e3b00cf62c94c29a04096d9d98",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "journal-of-quantitative-technological-economics",
+    "skill_description": "Use when targeting 《数量经济技术经济研究》(The Journal of Quantitative & Technological Economics, JQTE) — the CASS journal for quantitative economics, econometric methods, technical economics, input-output, macro-econometric forecasting, and technology/innovation evaluation. Apply when the contribution is method-application or measurement (productivity, efficiency, forecasting) rather than a pure causal-policy narrative.",
+    "skill_content_sha256": "93f62c10b56445cad29c3d3f2dbc257f2b9e1eb863005369735331b420d813b2",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-quantitative-technological-economics/skill.md",
+    "function_fingerprint": "b49df7178c15a7af7b8b93e81f322c5a5bb3adbeefd195b91d58c60151530cc3",
+    "candidate_uid": "ad2b69d4773f9f8c30050050578fab341779ed495c0145df4ddedc1a58984746",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "78d0770b84700210992122e1e1b13255f2e79e3bd5e10f672a04bafbc93e8657",
+      "7d754cf9cc30f9cdb793e37bc9e57bf021aa0dcc24d3307fa7f5088efd52ffdc",
+      "a91243d3d673340c33cb863dae57c727b1c4776c7d076217820afb061cce0d41"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "78d0770b84700210992122e1e1b13255f2e79e3bd5e10f672a04bafbc93e8657",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-quantitative-technological-economics/skill.md"
+      },
+      {
+        "candidate_key": "7d754cf9cc30f9cdb793e37bc9e57bf021aa0dcc24d3307fa7f5088efd52ffdc",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/journal-of-quantitative-technological-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-quantitative-technological-economics/skill.md"
+      },
+      {
+        "candidate_key": "a91243d3d673340c33cb863dae57c727b1c4776c7d076217820afb061cce0d41",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/journal-of-quantitative-technological-economics/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/journal-of-quantitative-technological-economics/skill.md"
+      }
+    ],
+    "skill_text_sha256": "93f62c10b56445cad29c3d3f2dbc257f2b9e1eb863005369735331b420d813b2",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "quantitative economics",
+          "econometric methods",
+          "input-output",
+          "forecasting",
+          "数量经济",
+          "quantitative",
+          "economics",
+          "economic"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0004"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "e51debfa2e0e4addaf0f13e1cf824877ad0b054c5a2ce4da8592f73e8c3ef39a",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/data-science-and-ml/jqte-econometric-methods/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/data-science-and-ml/jqte-econometric-methods/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e51debfa2e0e4addaf0f/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e51debfa2e0e4addaf0f/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_e51debfa2e0e4addaf0f/files/library/data-science-and-ml/jqte-econometric-methods/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/data-science-and-ml/jqte-econometric-methods/SKILL.md",
+        "sha256": "67c27cc3349402a794f6acaa74fbbf51b12f45d4b58331094fbeef16e95d4d4f",
+        "size": 7593
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "Stata",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "ea00dcd1d55addd18acbf8250873b5dd677502ca3f4cc7a2a4e6bf4df25669c7",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/data-science-and-ml/jqte-econometric-methods/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-econometric-methods",
+    "skill_description": "Use when the empirical core of a 《数量经济技术经济研究》 (JQTE) manuscript is an econometric model — time series, cointegration, mixed-frequency, VAR/SVAR, state-space, or panel / macro-econometrics. Enforces correct model setup, stationarity / unit-root and cointegration diagnostics, and lag/specification justification. Use when the method itself is the contribution rather than a causal identification claim.",
+    "skill_content_sha256": "67c27cc3349402a794f6acaa74fbbf51b12f45d4b58331094fbeef16e95d4d4f",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/data-science-and-ml/jqte-econometric-methods/skill.md",
+    "function_fingerprint": "5c8aa8e24507be65bc09d90a3861c6edf1651f4172b666e8a9031b175c16c253",
+    "candidate_uid": "bebf6c05ea4c70d5884883a5ffa0573ee956534c95967dfeef08bb73b3b07f50",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "e51debfa2e0e4addaf0f13e1cf824877ad0b054c5a2ce4da8592f73e8c3ef39a"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "e51debfa2e0e4addaf0f13e1cf824877ad0b054c5a2ce4da8592f73e8c3ef39a",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/data-science-and-ml/jqte-econometric-methods/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/data-science-and-ml/jqte-econometric-methods/skill.md"
+      }
+    ],
+    "skill_text_sha256": "67c27cc3349402a794f6acaa74fbbf51b12f45d4b58331094fbeef16e95d4d4f",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "数量经济"
+        ]
+      },
+      {
+        "major_code": "020101",
+        "major_name": "经济学",
+        "matched_terms": [
+          "econometrics",
+          "causal"
+        ]
+      },
+      {
+        "major_code": "020102",
+        "major_name": "经济统计学",
+        "matched_terms": [
+          "time series"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T",
+      "020101",
+      "020102"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0005"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "41f2483766c1c8e900aa87fc4673ea876ea2a2f8845ea2923dfedb7c1182e1b4",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/marketing-and-growth/jqte-fit-positioning/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/marketing-and-growth/jqte-fit-positioning/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41f2483766c1c8e900aa/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41f2483766c1c8e900aa/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41f2483766c1c8e900aa/files/library/marketing-and-growth/jqte-fit-positioning/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/marketing-and-growth/jqte-fit-positioning/SKILL.md",
+        "sha256": "335966822190676b6849ce1bfe24497f37ac6226efdc6481f5e817aa1f86c210",
+        "size": 6727
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "945a7e50d176da871a8407f7ad73623cb7be957b1e3e426de0bf68bb890b3de8",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/marketing-and-growth/jqte-fit-positioning/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-fit-positioning",
+    "skill_description": "Use to judge whether a manuscript fits 《数量经济技术经济研究》 (JQTE) and to decide how to frame its contribution — measurement, forecasting, or method-application versus clean causal inference — before investing in revision. The most common save: stopping a strong measurement paper from being dressed up as a weak causal study, and routing genuinely clean-causal work elsewhere.",
+    "skill_content_sha256": "335966822190676b6849ce1bfe24497f37ac6226efdc6481f5e817aa1f86c210",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/marketing-and-growth/jqte-fit-positioning/skill.md",
+    "function_fingerprint": "9d7f2620381d0099ecaf980ee8322666119e2fc0ebae8d448b8a1d4c1cbd8cbe",
+    "candidate_uid": "f812967669b98cebc88f73a1c99aacb9f39cce55c6077d13d1bf707ca454418e",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "41f2483766c1c8e900aa87fc4673ea876ea2a2f8845ea2923dfedb7c1182e1b4"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "41f2483766c1c8e900aa87fc4673ea876ea2a2f8845ea2923dfedb7c1182e1b4",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/marketing-and-growth/jqte-fit-positioning/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/marketing-and-growth/jqte-fit-positioning/skill.md"
+      }
+    ],
+    "skill_text_sha256": "335966822190676b6849ce1bfe24497f37ac6226efdc6481f5e817aa1f86c210",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "forecasting",
+          "数量经济"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0006"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "2408298afcdd7973d7b943fdd390f73f148626d611eb1dec54986fb2eecd0172",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-implications/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-implications/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_2408298afcdd7973d7b9/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_2408298afcdd7973d7b9/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_2408298afcdd7973d7b9/files/library/research-and-academic/jqte-implications/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-implications/SKILL.md",
+        "sha256": "2a66b3b833235a1e7b7cfbe2e6cd5e4baa4d36e5ea4065f29e14e55bc87e1ace",
+        "size": 6328
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "18269cd2c25a9bde50b5a6c7f05e10c6dd3492b063a47f4dcf8fe97ba8a8bde7",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-implications/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-implications",
+    "skill_description": "Use when writing the policy / practice implications of a 《数量经济技术经济研究》 (JQTE) manuscript — translating measurement, forecasting, or decomposition results into concrete guidance for planning, forecasting, industrial, or technology decisions. JQTE expects a substantive policy section (≥ 1000 characters, except pure-method papers) grounded in the paper's own quantitative findings.",
+    "skill_content_sha256": "2a66b3b833235a1e7b7cfbe2e6cd5e4baa4d36e5ea4065f29e14e55bc87e1ace",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-implications/skill.md",
+    "function_fingerprint": "fe0c34bb2035c525a46a4679fe91928c8aea2c88af00e90e977c11e50a13c5b9",
+    "candidate_uid": "5514ba2e886270a04c5245f718a701113bfaf6a7a7c4a26892fb8ab00fefd8b3",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "2408298afcdd7973d7b943fdd390f73f148626d611eb1dec54986fb2eecd0172"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "2408298afcdd7973d7b943fdd390f73f148626d611eb1dec54986fb2eecd0172",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-implications/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-implications/skill.md"
+      }
+    ],
+    "skill_text_sha256": "2a66b3b833235a1e7b7cfbe2e6cd5e4baa4d36e5ea4065f29e14e55bc87e1ace",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "forecasting",
+          "数量经济",
+          "quantitative"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0007"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "d8cff332a0fe9bd24585a9bec1ab1d502f936416a7fe9007bd4ef4d23b7ab043",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-literature-review/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-literature-review/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d8cff332a0fe9bd24585/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d8cff332a0fe9bd24585/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d8cff332a0fe9bd24585/files/library/research-and-academic/jqte-literature-review/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-literature-review/SKILL.md",
+        "sha256": "7e9e3243a7a67b945cd37b9957dd40860d0e32545c7b7bdc7b651b2f1c389694",
+        "size": 6047
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "5de4ac96eedb8788f2cd8a798f781d20433e6c23d03a3c47cb8d0925e3b28acf",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-literature-review/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-literature-review",
+    "skill_description": "Use when building the literature review for a 《数量经济技术经济研究》 (JQTE) manuscript — organizing it around the method lineage (how a quantity has been measured / a series forecast / a structure decomposed) and the China-data application gap, rather than a chronological pile of recent empirical citations. Use after the topic and contribution type are set.",
+    "skill_content_sha256": "7e9e3243a7a67b945cd37b9957dd40860d0e32545c7b7bdc7b651b2f1c389694",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-literature-review/skill.md",
+    "function_fingerprint": "de84a6eaff7a4aa2ce867316122251676ae25234294619f5033db3073d7d4223",
+    "candidate_uid": "48b262920bbdd664cab87aec457b9d0f62dcea6e0a1f5786edac34b8147b33c1",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "d8cff332a0fe9bd24585a9bec1ab1d502f936416a7fe9007bd4ef4d23b7ab043"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "d8cff332a0fe9bd24585a9bec1ab1d502f936416a7fe9007bd4ef4d23b7ab043",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-literature-review/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-literature-review/skill.md"
+      }
+    ],
+    "skill_text_sha256": "7e9e3243a7a67b945cd37b9957dd40860d0e32545c7b7bdc7b651b2f1c389694",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "数量经济"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0008"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "63d2d72652a651008236bfcfeb3941ddc8398cab4e4548283527420b54bb2139",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-measurement/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-measurement/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_63d2d72652a651008236/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_63d2d72652a651008236/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_63d2d72652a651008236/files/library/research-and-academic/jqte-measurement/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-measurement/SKILL.md",
+        "sha256": "0a806d260563eaca5a288b7b911dd8c1a2c94ac31adf3be393be90920bd205a2",
+        "size": 7364
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "Stata",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "ca91c5bae7abc401060a5e1e26ca36db85a02098a83525c99fcd671851bddf27",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-measurement/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-measurement",
+    "skill_description": "Use when the contribution of a 《数量经济技术经济研究》 (JQTE) manuscript is productivity / efficiency / index measurement — TFP, Malmquist, DEA, SFA, technical-progress decomposition, or index construction. Enforces transparent, reproducible construction plus sensitivity to method and parameter choices. This is the centerpiece skill for the journal's measurement track.",
+    "skill_content_sha256": "0a806d260563eaca5a288b7b911dd8c1a2c94ac31adf3be393be90920bd205a2",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-measurement/skill.md",
+    "function_fingerprint": "43740624aab59a4007bab926b7424f7eda164a3c7dd217d70eb26a7cb6d9d878",
+    "candidate_uid": "3e998376f38ba787e0975d506557e7b6d02641e3145545d1288f049cc1841adc",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "63d2d72652a651008236bfcfeb3941ddc8398cab4e4548283527420b54bb2139"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "63d2d72652a651008236bfcfeb3941ddc8398cab4e4548283527420b54bb2139",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-measurement/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-measurement/skill.md"
+      }
+    ],
+    "skill_text_sha256": "0a806d260563eaca5a288b7b911dd8c1a2c94ac31adf3be393be90920bd205a2",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "dea",
+          "sfa",
+          "数量经济"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0009"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "29806df9b49c647c0ed65b335c3cced59408ce7c36ddc3276c8c0b296b09be5f",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-rebuttal/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-rebuttal/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29806df9b49c647c0ed6/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29806df9b49c647c0ed6/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_29806df9b49c647c0ed6/files/library/research-and-academic/jqte-rebuttal/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-rebuttal/SKILL.md",
+        "sha256": "d9795e4a9cfad9cdd9d101ff25e3fbc0c6cf628c5c9927f77d778f0073b6c8f0",
+        "size": 6487
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "726324422f1dc72accce319176341ccfd11e7d85c16dd4ddb5eb85e99907033a",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-rebuttal/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-rebuttal",
+    "skill_description": "Use when responding to peer-review / R&R comments on a 《数量经济技术经济研究》 (JQTE) manuscript — structuring a point-by-point response letter that addresses the journal's characteristic concerns (method transparency, measurement / parameter sensitivity, out-of-sample evaluation, CGE/IO reproducibility, data caliber) and reframing weak-causal pushback toward the paper's real measurement contribution. Use only after the manuscript itself is revised.",
+    "skill_content_sha256": "d9795e4a9cfad9cdd9d101ff25e3fbc0c6cf628c5c9927f77d778f0073b6c8f0",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-rebuttal/skill.md",
+    "function_fingerprint": "871024e9d7cbad83f91b204f2091a226972335c09674ac11e5805e1620b2ab21",
+    "candidate_uid": "84426c01fb35e0a3b5c692ef2c7af8fe43ef99985f238f969c59df58c66ac82f",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "29806df9b49c647c0ed65b335c3cced59408ce7c36ddc3276c8c0b296b09be5f"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "29806df9b49c647c0ed65b335c3cced59408ce7c36ddc3276c8c0b296b09be5f",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-rebuttal/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-rebuttal/skill.md"
+      }
+    ],
+    "skill_text_sha256": "d9795e4a9cfad9cdd9d101ff25e3fbc0c6cf628c5c9927f77d778f0073b6c8f0",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "cge",
+          "数量经济"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0010"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "0b529ebdc9cba38e7cb5af0a93359fc095a94182082457d8f05ffe2c84c7a7e5",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-sensitivity/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-sensitivity/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_0b529ebdc9cba38e7cb5/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_0b529ebdc9cba38e7cb5/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_0b529ebdc9cba38e7cb5/files/library/research-and-academic/jqte-sensitivity/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-sensitivity/SKILL.md",
+        "sha256": "fae90807987c5c18a9afd86cbc91b8f63463d02565e340094af47b41f6ce265b",
+        "size": 6221
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "2bbadfcdb2d7f88588ad7bc387cc726e5f25313155d9f63b6d078f45322a305a",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-sensitivity/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-sensitivity",
+    "skill_description": "Use to design and report robustness for a 《数量经济技术经济研究》 (JQTE) manuscript where the contribution is measurement, a model, or a forecast — focusing on sensitivity to method choice, parameter / specification, data caliber, and sample window, rather than the placebo / parallel-trends battery of a causal paper. Use after the main estimates exist.",
+    "skill_content_sha256": "fae90807987c5c18a9afd86cbc91b8f63463d02565e340094af47b41f6ce265b",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-sensitivity/skill.md",
+    "function_fingerprint": "e2d82bf27198fbb42c83787edf3c41d799afbdac6177e809faef715437567a2d",
+    "candidate_uid": "8b15ead944e72c265b65b9d383eb175f837df0ea79ee20db8e7abec6b5012f66",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "0b529ebdc9cba38e7cb5af0a93359fc095a94182082457d8f05ffe2c84c7a7e5"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "0b529ebdc9cba38e7cb5af0a93359fc095a94182082457d8f05ffe2c84c7a7e5",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-sensitivity/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-sensitivity/skill.md"
+      }
+    ],
+    "skill_text_sha256": "fae90807987c5c18a9afd86cbc91b8f63463d02565e340094af47b41f6ce265b",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "数量经济"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0011"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "53a3faa9a58fba045ed7812477d06195c540c6792e40bb3ebb509b30f55f8a9a",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-submission/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-submission/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_53a3faa9a58fba045ed7/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_53a3faa9a58fba045ed7/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_53a3faa9a58fba045ed7/files/library/research-and-academic/jqte-submission/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-submission/SKILL.md",
+        "sha256": "a5c965ceb9f94812de6b71426032f516deb8b8c4b58a2895adcaf719db8ac5bd",
+        "size": 6746
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "3a6d4852c1d5966d218a6f5e251e12bf3d66ae69c3086c84b1e25ed1c3136eff",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-submission/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-submission",
+    "skill_description": "Use for the pre-submission preflight to 《数量经济技术经济研究》 (JQTE) — checking footnote conventions (脚式编排, renumbered per page), title/keyword/abstract format, the ≥1000-character policy section, reproducibility of the method section, the online submission system (jqte.net), and anonymity. Use right before submitting; verify every numeric rule against the journal's current 投稿须知.",
+    "skill_content_sha256": "a5c965ceb9f94812de6b71426032f516deb8b8c4b58a2895adcaf719db8ac5bd",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-submission/skill.md",
+    "function_fingerprint": "141610a6432cddf92105e635d366c894e3cbdc6057da59980dc4883687e5c41b",
+    "candidate_uid": "43a0666c432b37e2cc1097e9874540a5c1429e1a418c5d8dd8d89b27217bf5c6",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "53a3faa9a58fba045ed7812477d06195c540c6792e40bb3ebb509b30f55f8a9a"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "53a3faa9a58fba045ed7812477d06195c540c6792e40bb3ebb509b30f55f8a9a",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-submission/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-submission/skill.md"
+      }
+    ],
+    "skill_text_sha256": "a5c965ceb9f94812de6b71426032f516deb8b8c4b58a2895adcaf719db8ac5bd",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "数量经济"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0012"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "41a3fd4d0764ca4177f32e8c32b62f1c77801b6f4ce91541478066e7ae5a6b3c",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-tables-figures/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-tables-figures/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41a3fd4d0764ca4177f3/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41a3fd4d0764ca4177f3/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_41a3fd4d0764ca4177f3/files/library/research-and-academic/jqte-tables-figures/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-tables-figures/SKILL.md",
+        "sha256": "09d9c7928608be01199d4cef1c58a2b83fa85dc4539de94640c6db11fe42a6de",
+        "size": 6727
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "Stata",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "1f9d6f0ae5728a358d1a7afee54011a7798207d63ba59f93a0f302dd0a1521a8",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-tables-figures/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-tables-figures",
+    "skill_description": "Use when finalizing tables and figures for a 《数量经济技术经济研究》 (JQTE) manuscript — making sure measurement / forecast / decomposition results carry quantitative interpretation (magnitudes, units, shares, rankings, trends) rather than only significance stars, and that every table/figure states its source and method. Use after estimates and sensitivity are settled.",
+    "skill_content_sha256": "09d9c7928608be01199d4cef1c58a2b83fa85dc4539de94640c6db11fe42a6de",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-tables-figures/skill.md",
+    "function_fingerprint": "067011c330612794ac1a7c259c2b9246918f5167cd13351f2cc2c5b18a4e804e",
+    "candidate_uid": "bd44300524bc55c03e3fffc67472920f896489fc6ef4b8408afc5bac7668098a",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "41a3fd4d0764ca4177f32e8c32b62f1c77801b6f4ce91541478066e7ae5a6b3c"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "41a3fd4d0764ca4177f32e8c32b62f1c77801b6f4ce91541478066e7ae5a6b3c",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-tables-figures/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-tables-figures/skill.md"
+      }
+    ],
+    "skill_text_sha256": "09d9c7928608be01199d4cef1c58a2b83fa85dc4539de94640c6db11fe42a6de",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "数量经济",
+          "quantitative"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0013"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "9afd562652ab6b13505ce32856b4db8df223789f388ff47cae146c6bdbef1774",
+    "candidate_native_id": "thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-topic-selection/SKILL.md",
+    "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-topic-selection/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9afd562652ab6b13505c/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9afd562652ab6b13505c/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9afd562652ab6b13505c/files/library/research-and-academic/jqte-topic-selection/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "library/research-and-academic/jqte-topic-selection/SKILL.md",
+        "sha256": "c65aa6723d58a5582807ac5f2206dffb3436e22ca834bc90379413832cb56e02",
+        "size": 5952
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "e4af10f004f1e06a47663e22d2ab3738f247c5d5c43044606edad767dd10123d",
+        "size": 1646
+      }
+    ],
+    "fixed_version": "1c6d3294f059862aec20847d680c13fd96cc7671",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-30T19:46:16Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "57ee78d7ebfdff0d0023d4542f746127bf41cd48a1836e8a095b1b2fd7f61cf5",
+    "platform": "GitHub",
+    "publisher": "thedixitjain",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "thedixitjain/the-mega-skill-library",
+    "repository_pushed_at": "2026-07-30T19:46:16Z",
+    "repository_stars": 2,
+    "repository_updated_at": "2026-08-14T02:51:10Z",
+    "security_grade": "SA",
+    "skill_path": "library/research-and-academic/jqte-topic-selection/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "jqte-topic-selection",
+    "skill_description": "Use to sharpen a topic for 《数量经济技术经济研究》 (JQTE) — turning a vague empirical idea into a measurement / forecasting / method-application question with a clear quantitative object, a method-side novelty, and value for China's planning or technology decisions. Use before drafting, when the contribution shape is still fuzzy.",
+    "skill_content_sha256": "c65aa6723d58a5582807ac5f2206dffb3436e22ca834bc90379413832cb56e02",
+    "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-topic-selection/skill.md",
+    "function_fingerprint": "1e58b59b2be3fd27dbd9864a17e12a79e1966e28472aa5e8b33def59e69d8bd1",
+    "candidate_uid": "d4ced2bb465a5c99389cf6eafd6c101effb0a98b3d00027396e7a2e1d082321c",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "9afd562652ab6b13505ce32856b4db8df223789f388ff47cae146c6bdbef1774"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "9afd562652ab6b13505ce32856b4db8df223789f388ff47cae146c6bdbef1774",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/jqte-topic-selection/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/jqte-topic-selection/skill.md"
+      }
+    ],
+    "skill_text_sha256": "c65aa6723d58a5582807ac5f2206dffb3436e22ca834bc90379413832cb56e02",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020108T",
+        "major_name": "经济工程",
+        "matched_terms": [
+          "forecasting",
+          "数量经济",
+          "quantitative"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020108T"
+    ],
+    "primary_major_code": "020108T",
+    "primary_major_name": "经济工程",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0014"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "56b5b3d1a236f157c35c3b71deefb96db636e25b249f00eaf39c4d38bfa5eaac",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数字经济 digital economy"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_56b5b3d1a236f157c35c/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_56b5b3d1a236f157c35c/files/Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_56b5b3d1a236f157c35c/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+        "sha256": "15a925ce3b9454ae0a2bedb114e60ccf03f6f673fc9f08d235f017092b782ddd",
+        "size": 5433
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020109T"
+    ],
+    "major_names": [
+      "数字经济"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "a61c96fa4bec9ff9eb980bda9bd7c3d2c4b41eccee58a06b76de879a42caf4c3",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020109T-GH-R1-0069"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "china-industrial-economics",
+    "skill_description": "Use when targeting 《中国工业经济》(China Industrial Economics) — a top journal for industrial organization, firm behavior, regional/innovation/digital economy with empirical rigor and strong policy relevance. Apply when a paper needs exhaustive robustness, clean China-policy quasi-experiments, mechanism + heterogeneity, and actionable industrial-policy implications. Famous for methodological rigor norms.",
+    "skill_content_sha256": "15a925ce3b9454ae0a2bedb114e60ccf03f6f673fc9f08d235f017092b782ddd",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/china-industrial-economics/skill.md",
+    "function_fingerprint": "92b66af1455c00c2d11fbc44a58dcca53bc71540dfd013b7cd3262e3c9cfaa33",
+    "candidate_uid": "1f224927147e1bcc9ed34351a36f73a1e39d9d5be163d0f0c87922fee618d616",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "189d6faee807eeaf6fc8398d128495f941aa211119973cd767537175e7dbd8e7",
+      "56b5b3d1a236f157c35c3b71deefb96db636e25b249f00eaf39c4d38bfa5eaac",
+      "9f5fb754bd923c1ec16bafa29ca53b2c5667c66bd7c6427519e0233652898faa"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "56b5b3d1a236f157c35c3b71deefb96db636e25b249f00eaf39c4d38bfa5eaac",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/china-industrial-economics/skill.md"
+      },
+      {
+        "candidate_key": "189d6faee807eeaf6fc8398d128495f941aa211119973cd767537175e7dbd8e7",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/china-industrial-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/china-industrial-economics/skill.md"
+      },
+      {
+        "candidate_key": "9f5fb754bd923c1ec16bafa29ca53b2c5667c66bd7c6427519e0233652898faa",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/china-industrial-economics/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/china-industrial-economics/skill.md"
+      }
+    ],
+    "skill_text_sha256": "15a925ce3b9454ae0a2bedb114e60ccf03f6f673fc9f08d235f017092b782ddd",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020109T",
+        "major_name": "数字经济",
+        "matched_terms": [
+          "digital economy",
+          "industrial",
+          "economics",
+          "digital",
+          "economy"
+        ]
+      },
+      {
+        "major_code": "020105T",
+        "major_name": "商务经济学",
+        "matched_terms": [
+          "industrial organization",
+          "economics"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020109T",
+      "020105T"
+    ],
+    "primary_major_code": "020109T",
+    "primary_major_name": "数字经济",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0015"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "b59c25028756a3db7a8cded3ce763ce779a371e6483431c437464d116ea64420",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数字经济 digital economy"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_b59c25028756a3db7a8c/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_b59c25028756a3db7a8c/files/China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_b59c25028756a3db7a8c/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+        "sha256": "ea155b4278a6e554953dacaf2c7d3860ea9bf1e8da8e46333a31e63ccd63daf2",
+        "size": 5715
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020109T"
+    ],
+    "major_names": [
+      "数字经济"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "cb800a8f698d84bd7d1a226f6fac81f7c399005db1b1a973b14e6864b6805bb5",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020109T-GH-R1-0069"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "cie-topic-selection",
+    "skill_description": "Use to sharpen a topic for 《中国工业经济》 (China Industrial Economics) — anchoring on a clean China-policy quasi-experiment, firm behavior, industrial organization, or the digital economy, backed by stylized facts and 3–5 marginal contributions. Use before drafting, when the research question or contribution is fuzzy.",
+    "skill_content_sha256": "ea155b4278a6e554953dacaf2c7d3860ea9bf1e8da8e46333a31e63ccd63daf2",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:china-industrial-economics-skills/skills/cie-topic-selection/skill.md",
+    "function_fingerprint": "82a25df0f2846333bac43ad94534a44d59b62342f7b551c9ef849febb3822062",
+    "candidate_uid": "65ab754d9577b1f785189a1f3faa5ff6d10f8214479a9f6cea97e1bffbe3f8cc",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "7a9861f77cf88b6c4f5a2a0f558894d96882baa202c0ee0cc79ba176ab37fa8e",
+      "b02026d069352afcfb6093483af3fee31e5db780c393403edefcdb1c69d9ce1a",
+      "b59c25028756a3db7a8cded3ce763ce779a371e6483431c437464d116ea64420"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "b59c25028756a3db7a8cded3ce763ce779a371e6483431c437464d116ea64420",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:china-industrial-economics-skills/skills/cie-topic-selection/skill.md"
+      },
+      {
+        "candidate_key": "b02026d069352afcfb6093483af3fee31e5db780c393403edefcdb1c69d9ce1a",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/China-Industrial-Economics-Skills/skills/cie-topic-selection/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:china-industrial-economics-skills/skills/cie-topic-selection/skill.md"
+      },
+      {
+        "candidate_key": "7a9861f77cf88b6c4f5a2a0f558894d96882baa202c0ee0cc79ba176ab37fa8e",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/cie-topic-selection/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/cie-topic-selection/skill.md"
+      }
+    ],
+    "skill_text_sha256": "ea155b4278a6e554953dacaf2c7d3860ea9bf1e8da8e46333a31e63ccd63daf2",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020109T",
+        "major_name": "数字经济",
+        "matched_terms": [
+          "digital economy",
+          "industrial",
+          "economics",
+          "digital",
+          "economy"
+        ]
+      },
+      {
+        "major_code": "020105T",
+        "major_name": "商务经济学",
+        "matched_terms": [
+          "industrial organization",
+          "economics"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020109T",
+      "020105T"
+    ],
+    "primary_major_code": "020109T",
+    "primary_major_name": "数字经济",
+    "primary_class_code": "0201",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0016"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "f984ad8ff28d2342636809e0493e0e6b3c8db70f96f524796aaf305c31dd605a",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 财政学 public finance"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f984ad8ff28d23426368/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f984ad8ff28d23426368/files/Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f984ad8ff28d23426368/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+        "sha256": "c970d4303ba513586bf88036ba86c028e81a25a90d34fd5320efc2ce68686140",
+        "size": 5898
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020201K"
+    ],
+    "major_names": [
+      "财政学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "961baffd4818f2704f135fd35aaab7edd3aab49f2a7d3a699350204e8c9c0f56",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020201K-GH-R1-0093"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "public-finance-research",
+    "skill_description": "Use when targeting 《财政研究》(Public Finance Research — 财政部主管、中国财政学会主办、不收版面费的财政学权威核心月刊, CNKI 采编系统) or deciding whether a Chinese public-finance manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/citation house style, official-submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "c970d4303ba513586bf88036ba86c028e81a25a90d34fd5320efc2ce68686140",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/public-finance-research/skill.md",
+    "function_fingerprint": "baf5b419b74c62fe369f02d5b7615153d4fed5411698c820a4672b80f910cc39",
+    "candidate_uid": "3828380e877c5d9dd5a1f72314bb14b2500d3e0aba8eaca0c1c0eefce2e314fc",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "60aa5fe9c4da2d1257d4796351e2eaf3f7268da4c0e58e0471b1b9e493c9bee6",
+      "b85de6df7eba578f6f1b434f7ab2533a6b20207da59619e9c1010d3f924fde86",
+      "f984ad8ff28d2342636809e0493e0e6b3c8db70f96f524796aaf305c31dd605a"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "f984ad8ff28d2342636809e0493e0e6b3c8db70f96f524796aaf305c31dd605a",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/public-finance-research/skill.md"
+      },
+      {
+        "candidate_key": "60aa5fe9c4da2d1257d4796351e2eaf3f7268da4c0e58e0471b1b9e493c9bee6",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/public-finance-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/public-finance-research/skill.md"
+      },
+      {
+        "candidate_key": "b85de6df7eba578f6f1b434f7ab2533a6b20207da59619e9c1010d3f924fde86",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/public-finance-research/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/public-finance-research/skill.md"
+      }
+    ],
+    "skill_text_sha256": "c970d4303ba513586bf88036ba86c028e81a25a90d34fd5320efc2ce68686140",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020201K",
+        "major_name": "财政学",
+        "matched_terms": [
+          "public finance",
+          "财政学",
+          "finance",
+          "public"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020201K"
+    ],
+    "primary_major_code": "020201K",
+    "primary_major_name": "财政学",
+    "primary_class_code": "0202",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0017"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "d6600bd9ba3a6799f93417ba0a6d32b1bb8fe39ba4b16f67b85ad51e49830788",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 国际税收 international taxation"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d6600bd9ba3a6799f934/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d6600bd9ba3a6799f934/files/Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_d6600bd9ba3a6799f934/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+        "sha256": "3a5614ae2db7531283aad65eb1e2a9f182cf7ff854bf588c0d74f79cf0c22164",
+        "size": 5847
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020203TK"
+    ],
+    "major_names": [
+      "国际税收"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "8ba8aa2e136caec29bd42d1030319f8ca002d5d4686cb73d0e776e26839a8167",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020203TK-GH-R1-0109"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "tax-research",
+    "skill_description": "Use when targeting 《税务研究》(Taxation Research — 中国税务杂志社主办的税务学术月刊, 在线投约稿系统 tg.ctax.org.cn) or deciding whether a Chinese tax/public-finance manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/citation house style, official-submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "3a5614ae2db7531283aad65eb1e2a9f182cf7ff854bf588c0d74f79cf0c22164",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/tax-research/skill.md",
+    "function_fingerprint": "7c872a7491e804cc2b79154d384ef33f69a3b80585a3e711de453688844ac96a",
+    "candidate_uid": "849c7404518a9e665d0e435506fd2363d7e55b6b58b8e016f1462e201e714272",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "19c1f7e1cddc7e53c02241ea53913ba30ac178415f35b98824ef10d6db110a72",
+      "d6600bd9ba3a6799f93417ba0a6d32b1bb8fe39ba4b16f67b85ad51e49830788",
+      "dc435b17eb66f44bfb38d7afd5f5d8864381211c59383fb6594bb73dab68945b"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "d6600bd9ba3a6799f93417ba0a6d32b1bb8fe39ba4b16f67b85ad51e49830788",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/tax-research/skill.md"
+      },
+      {
+        "candidate_key": "dc435b17eb66f44bfb38d7afd5f5d8864381211c59383fb6594bb73dab68945b",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/tax-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/tax-research/skill.md"
+      },
+      {
+        "candidate_key": "19c1f7e1cddc7e53c02241ea53913ba30ac178415f35b98824ef10d6db110a72",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/tax-research/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/tax-research/skill.md"
+      }
+    ],
+    "skill_text_sha256": "3a5614ae2db7531283aad65eb1e2a9f182cf7ff854bf588c0d74f79cf0c22164",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020202",
+        "major_name": "税收学",
+        "matched_terms": [
+          "taxation"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020202"
+    ],
+    "primary_major_code": "020202",
+    "primary_major_name": "税收学",
+    "primary_class_code": "0202",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0018"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "5b88ff98044ead280b9d139c7ee3c600cdcbe3a9a70ae634dfb180177e266812",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融学 finance"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_5b88ff98044ead280b9d/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_5b88ff98044ead280b9d/files/Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_5b88ff98044ead280b9d/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+        "sha256": "215b89150e1bc9ea8090a7f5e68414f79a28a3eff205224947e1439d1f327d5b",
+        "size": 6020
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020301K"
+    ],
+    "major_names": [
+      "金融学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "da933d5abf82eb7672854be4d43476d41d09b97e31fb2cd9b6bc02a41f3b3a96",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020301K-GH-R1-0117"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "accounting-and-economics-research",
+    "skill_description": "Use when targeting 《会计与经济研究》(Accounting and Economics Research — 上海市教委主管、上海立信会计金融学院主办、双向匿名评审、不收版面费的财经双月刊) or deciding whether a Chinese accounting/finance/econ manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/citation house style, official-submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "215b89150e1bc9ea8090a7f5e68414f79a28a3eff205224947e1439d1f327d5b",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/accounting-and-economics-research/skill.md",
+    "function_fingerprint": "4cdb1adaee25946d020f0d988591a73421d0e8a54750168754e0a7ed94a29738",
+    "candidate_uid": "b417618904a3bab73f9bca52e9a1cc7e80b2933563dbe47fcd15dc2f2bca001a",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "36d5ad91b9cba4664673ffd0a64ac22f59ab3c7b47bd790237f6f58a1b25621e",
+      "5b88ff98044ead280b9d139c7ee3c600cdcbe3a9a70ae634dfb180177e266812",
+      "e57ee2ec461c2ad46ad53677da61bacd8bdaf987ab608db320a089e5ad5a7cbd"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "5b88ff98044ead280b9d139c7ee3c600cdcbe3a9a70ae634dfb180177e266812",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/accounting-and-economics-research/skill.md"
+      },
+      {
+        "candidate_key": "e57ee2ec461c2ad46ad53677da61bacd8bdaf987ab608db320a089e5ad5a7cbd",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/accounting-and-economics-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/accounting-and-economics-research/skill.md"
+      },
+      {
+        "candidate_key": "36d5ad91b9cba4664673ffd0a64ac22f59ab3c7b47bd790237f6f58a1b25621e",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/accounting-and-economics-research/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/accounting-and-economics-research/skill.md"
+      }
+    ],
+    "skill_text_sha256": "215b89150e1bc9ea8090a7f5e68414f79a28a3eff205224947e1439d1f327d5b",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020301K",
+        "major_name": "金融学",
+        "matched_terms": [
+          "金融学",
+          "finance"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020301K"
+    ],
+    "primary_major_code": "020301K",
+    "primary_major_name": "金融学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0019"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "1759306b4273093b5437b6ab77bf3d9476d4e02cdd6986144c5ffa5194aab7f5",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融学 finance"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1759306b4273093b5437/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1759306b4273093b5437/files/Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1759306b4273093b5437/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+        "sha256": "aaeb9fd3d1ccc52e8d6b934f8794e94afd3e226d682ccf3484ff88fd07211f3f",
+        "size": 6161
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020301K"
+    ],
+    "major_names": [
+      "金融学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "c66b304318e50f4558a8c75e1e2db695788bdc3c7383033078e9a140b707e869",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020301K-GH-R1-0117"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "chinese-review-of-financial-studies",
+    "skill_description": "Use when targeting 《金融评论》(Chinese Review of Financial Studies — 中国社会科学院金融研究所主办、2009 年创刊、不收版面费的金融学术双月刊) or deciding whether a Chinese finance manuscript fits this venue. Encodes the journal's fit, framing, abstract/keyword/JEL house style, citation-quota rule, official ajcass.com submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "aaeb9fd3d1ccc52e8d6b934f8794e94afd3e226d682ccf3484ff88fd07211f3f",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/chinese-review-of-financial-studies/skill.md",
+    "function_fingerprint": "ed612cb5b8a7eab45d39e29c9208925676bf9442edf1d421ee29f566932e6a2d",
+    "candidate_uid": "ab7f472eeaa9349a12e9485ad7c566291a22690c7bf3ab6136f405bde3d7cc12",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "1759306b4273093b5437b6ab77bf3d9476d4e02cdd6986144c5ffa5194aab7f5",
+      "788b5f5a45c5bd7b2a4dd68d3e73dce7bf7d7bed9cf13d08e5c4f8bd4c58a35b",
+      "e2cc05985c4d6eff12dfc812d3386b1587a1b39e351eb90605119ef9e76d11c1"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "1759306b4273093b5437b6ab77bf3d9476d4e02cdd6986144c5ffa5194aab7f5",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/chinese-review-of-financial-studies/skill.md"
+      },
+      {
+        "candidate_key": "788b5f5a45c5bd7b2a4dd68d3e73dce7bf7d7bed9cf13d08e5c4f8bd4c58a35b",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/chinese-review-of-financial-studies/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/chinese-review-of-financial-studies/skill.md"
+      },
+      {
+        "candidate_key": "e2cc05985c4d6eff12dfc812d3386b1587a1b39e351eb90605119ef9e76d11c1",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/business-and-finance/chinese-review-of-financial-studies/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/business-and-finance/chinese-review-of-financial-studies/skill.md"
+      }
+    ],
+    "skill_text_sha256": "aaeb9fd3d1ccc52e8d6b934f8794e94afd3e226d682ccf3484ff88fd07211f3f",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020301K",
+        "major_name": "金融学",
+        "matched_terms": [
+          "金融学",
+          "financial",
+          "finance"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020301K"
+    ],
+    "primary_major_code": "020301K",
+    "primary_major_name": "金融学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0020"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "f03aed29812fbb2c4d39cc1cb4ee04658e64aa88a491bb974c6dd1d700f47381",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 宏观金融 macro-finance",
+      "filename:SKILL.md 金融学 finance",
+      "filename:SKILL.md 金融科技 fintech"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f03aed29812fbb2c4d39/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f03aed29812fbb2c4d39/files/Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_f03aed29812fbb2c4d39/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+        "sha256": "ccfa1b10909f980b22d1caf10cff3daac1e773c9b49b7bb698ec0c3efc4521fd",
+        "size": 5524
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020301K",
+      "020307T",
+      "020310T"
+    ],
+    "major_names": [
+      "经济与金融",
+      "金融学",
+      "金融科技"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "10ca8a36e5413a3a02e2b24336ed716988138588dc9552dcfb60c897a921f795",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020301K-GH-R1-0117",
+      "ECON-020307T-GH-R2-0166",
+      "ECON-020310T-GH-R1-0189"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "journal-of-financial-research",
+    "skill_description": "Use when targeting 《金融研究》(Journal of Financial Research) — the PBC-affiliated top finance journal in China. Apply to monetary policy, banking, capital markets, corporate finance, financial risk and regulation, and fintech papers, balancing rigorous identification with concrete financial-system policy relevance. Distinguishes macro-finance from micro corporate-finance framings.",
+    "skill_content_sha256": "ccfa1b10909f980b22d1caf10cff3daac1e773c9b49b7bb698ec0c3efc4521fd",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-financial-research/skill.md",
+    "function_fingerprint": "c99e40b089b8c90d8520b21717ce43305ae6700cd3ad196ee313200bfc2861e3",
+    "candidate_uid": "c18f8ef089629b5e7e30856362cd68dc90ccc45b4b42714ff4100caafa9c85de",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "41df0af284855f74ff0e90109a7c809f855120500669fb0f76e64debb8ec797e",
+      "dbb008de2bf48dba487a19e3b2580086511b61b65c692f647e90804e5633b812",
+      "f03aed29812fbb2c4d39cc1cb4ee04658e64aa88a491bb974c6dd1d700f47381"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "f03aed29812fbb2c4d39cc1cb4ee04658e64aa88a491bb974c6dd1d700f47381",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-financial-research/skill.md"
+      },
+      {
+        "candidate_key": "dbb008de2bf48dba487a19e3b2580086511b61b65c692f647e90804e5633b812",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/journal-of-financial-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-financial-research/skill.md"
+      },
+      {
+        "candidate_key": "41df0af284855f74ff0e90109a7c809f855120500669fb0f76e64debb8ec797e",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/journal-of-financial-research/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/journal-of-financial-research/skill.md"
+      }
+    ],
+    "skill_text_sha256": "ccfa1b10909f980b22d1caf10cff3daac1e773c9b49b7bb698ec0c3efc4521fd",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020301K",
+        "major_name": "金融学",
+        "matched_terms": [
+          "monetary policy",
+          "banking",
+          "corporate finance",
+          "financial risk",
+          "corporate",
+          "financial",
+          "finance",
+          "market",
+          "risk"
+        ]
+      },
+      {
+        "major_code": "020307T",
+        "major_name": "经济与金融",
+        "matched_terms": [
+          "macro-finance",
+          "financial",
+          "monetary",
+          "finance",
+          "policy"
+        ]
+      },
+      {
+        "major_code": "020310T",
+        "major_name": "金融科技",
+        "matched_terms": [
+          "fintech",
+          "finance",
+          "risk"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020301K"
+    ],
+    "primary_major_code": "020301K",
+    "primary_major_name": "金融学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0021"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "00450fe1e77bb6192bcf06539d3893bbeabeb21398fc824e94e0fddac12cbb24",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融学 finance"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_00450fe1e77bb6192bcf/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_00450fe1e77bb6192bcf/files/Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_00450fe1e77bb6192bcf/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+        "sha256": "00395b5284125f7956375c34d24223b3548bf7d9a5d5d29cdb8ad5d698687f6c",
+        "size": 6426
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020301K"
+    ],
+    "major_names": [
+      "金融学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "a7ea33c5d4f5dc84a88113400f8c9871f6e8744e741225f2ae6a34c3bd70cfbb",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020301K-GH-R1-0117"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "modern-financial-research",
+    "skill_description": "Use when targeting 《现代金融研究》(Modern Financial Research — 中国工商银行与中国现代金融学会主办、2024 年由《金融论坛》改为现名、不收任何费用、仅邮箱投稿) or deciding whether a Chinese finance manuscript fits this venue. Encodes the journal's bank/policy fit, framing, double-blind review, email-only submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "00395b5284125f7956375c34d24223b3548bf7d9a5d5d29cdb8ad5d698687f6c",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/modern-financial-research/skill.md",
+    "function_fingerprint": "6c052ad00fb62f01ab453040f48fb8b5aac65ffcbd8fba559b63133b9606be97",
+    "candidate_uid": "03d32ac87ce99388465e20f177ce8f5954b88c2a392f3382ac582a5d3370d6b3",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "00450fe1e77bb6192bcf06539d3893bbeabeb21398fc824e94e0fddac12cbb24",
+      "366e6c8ac747f19ebeb7f811278cc030f444cd503cc1924ee038112454367fac",
+      "8a183d7b70240d6d9742ea748a91e67a490efc041e250c6b0c50c23e48d7a74c"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "00450fe1e77bb6192bcf06539d3893bbeabeb21398fc824e94e0fddac12cbb24",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/modern-financial-research/skill.md"
+      },
+      {
+        "candidate_key": "8a183d7b70240d6d9742ea748a91e67a490efc041e250c6b0c50c23e48d7a74c",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/modern-financial-research/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/modern-financial-research/skill.md"
+      },
+      {
+        "candidate_key": "366e6c8ac747f19ebeb7f811278cc030f444cd503cc1924ee038112454367fac",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/modern-financial-research/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/modern-financial-research/skill.md"
+      }
+    ],
+    "skill_text_sha256": "00395b5284125f7956375c34d24223b3548bf7d9a5d5d29cdb8ad5d698687f6c",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020301K",
+        "major_name": "金融学",
+        "matched_terms": [
+          "金融学",
+          "银行",
+          "financial",
+          "finance"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020301K"
+    ],
+    "primary_major_code": "020301K",
+    "primary_major_name": "金融学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0022"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "6bbf2f10c5b3229f240d7091f8fd3eda34899475eabdc23bbe175db3a899efc3",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融学 finance"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_6bbf2f10c5b3229f240d/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_6bbf2f10c5b3229f240d/files/Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_6bbf2f10c5b3229f240d/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+        "sha256": "23dd3f082ad2b2844390affc6159bdce77a711665e452f676b9de986dfeea923",
+        "size": 6496
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020301K"
+    ],
+    "major_names": [
+      "金融学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "da8bbbdd6728e20885c7442e847d0319a664faf3e5c82eda25ed84d306e04d6e",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020301K-GH-R1-0117"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "studies-of-financial-economics",
+    "skill_description": "Use when targeting 《金融经济学研究》(Studies of Financial Economics — 广东金融学院主办、双向匿名评审、不收版面费的金融学术双月刊) or deciding whether a Chinese finance/econ manuscript fits this journal. Encodes the journal's fit, framing, fee-free policy, word-count/abstract house style, official採编-system submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "23dd3f082ad2b2844390affc6159bdce77a711665e452f676b9de986dfeea923",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-of-financial-economics/skill.md",
+    "function_fingerprint": "dfe2fdc6ca9442604ff1a51c79e09d6aaf17961edd736d39dcfdf22815bc6f1f",
+    "candidate_uid": "78426eb741004f7707865fc35d54449646f17e249ad90f8488b29d3c26d3a932",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "18d5e0c22624e53804929efbc0ecb3af4a975303bd09cc331b3245c88ae00861",
+      "6bbf2f10c5b3229f240d7091f8fd3eda34899475eabdc23bbe175db3a899efc3",
+      "b02d176c3f3c98fe9cca1921a2de872dc2956e0257c17ab8220e06c172e74fcd"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "6bbf2f10c5b3229f240d7091f8fd3eda34899475eabdc23bbe175db3a899efc3",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-of-financial-economics/skill.md"
+      },
+      {
+        "candidate_key": "b02d176c3f3c98fe9cca1921a2de872dc2956e0257c17ab8220e06c172e74fcd",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/studies-of-financial-economics/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-of-financial-economics/skill.md"
+      },
+      {
+        "candidate_key": "18d5e0c22624e53804929efbc0ecb3af4a975303bd09cc331b3245c88ae00861",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/business-and-finance/studies-of-financial-economics/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/business-and-finance/studies-of-financial-economics/skill.md"
+      }
+    ],
+    "skill_text_sha256": "23dd3f082ad2b2844390affc6159bdce77a711665e452f676b9de986dfeea923",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020301K",
+        "major_name": "金融学",
+        "matched_terms": [
+          "financial economics",
+          "金融学",
+          "financial",
+          "finance"
+        ]
+      },
+      {
+        "major_code": "020307T",
+        "major_name": "经济与金融",
+        "matched_terms": [
+          "financial economics",
+          "金融经济",
+          "economics",
+          "financial",
+          "economic",
+          "finance",
+          "policy"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020301K",
+      "020307T"
+    ],
+    "primary_major_code": "020301K",
+    "primary_major_name": "金融学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0023"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "9bd1d865d87a0193ab51275446f2a129952c8515855708443faf420b11bb8dd1",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融学 finance"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9bd1d865d87a0193ab51/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9bd1d865d87a0193ab51/files/Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_9bd1d865d87a0193ab51/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+        "sha256": "b4a53424c86ba9cba2da769b331f3ac85ae0441400ea86b843307a432bdfd4ce",
+        "size": 6311
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020301K"
+    ],
+    "major_names": [
+      "金融学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "4623b3e146dc767f8a8b9bbf6e1edf4b60f0c027c23400ceb73486ff84b82ea9",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020301K-GH-R1-0117"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "studies-of-international-finance",
+    "skill_description": "Use when targeting 《国际金融研究》(Studies of International Finance — 中国银行股份有限公司与中国国际金融学会主办、1985 年创刊的国际金融月刊) or deciding whether a Chinese finance manuscript fits this top-tier venue. Encodes the journal's global-finance fit, framing, abstract/keyword house style, official chinaifs.org.cn submission re-check, and desk-reject heuristics.",
+    "skill_content_sha256": "b4a53424c86ba9cba2da769b331f3ac85ae0441400ea86b843307a432bdfd4ce",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-of-international-finance/skill.md",
+    "function_fingerprint": "e31a1db63279a8508ec0dda8343f82478ccced8f118eb00ea666521c72504bab",
+    "candidate_uid": "06d41899b98dec194fb9fbd37ff8178e6b066dc3b8ff33e9eaec213cc6cce036",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "2c69ed0c539b76058431194284d8e8b6f2aa43c7e51a7bdbb4f5201be945685e",
+      "9bd1d865d87a0193ab51275446f2a129952c8515855708443faf420b11bb8dd1",
+      "f73481ebdeda578789c4e8460458b40f46da32df46500936cc0418cfe1cf1368"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "9bd1d865d87a0193ab51275446f2a129952c8515855708443faf420b11bb8dd1",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-of-international-finance/skill.md"
+      },
+      {
+        "candidate_key": "f73481ebdeda578789c4e8460458b40f46da32df46500936cc0418cfe1cf1368",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/studies-of-international-finance/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/studies-of-international-finance/skill.md"
+      },
+      {
+        "candidate_key": "2c69ed0c539b76058431194284d8e8b6f2aa43c7e51a7bdbb4f5201be945685e",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/business-and-finance/studies-of-international-finance/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/business-and-finance/studies-of-international-finance/skill.md"
+      }
+    ],
+    "skill_text_sha256": "b4a53424c86ba9cba2da769b331f3ac85ae0441400ea86b843307a432bdfd4ce",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020301K",
+        "major_name": "金融学",
+        "matched_terms": [
+          "金融学",
+          "银行",
+          "finance"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020301K"
+    ],
+    "primary_major_code": "020301K",
+    "primary_major_name": "金融学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0024"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "671a8a1b7ea98499bdd0b703b287bbd2e7d3e0c7f2f3558cb0f97c24d6af567e",
+    "candidate_native_id": "Jonathonwang001/new-investment-brain:SKILL.md",
+    "canonical_url": "https://github.com/Jonathonwang001/new-investment-brain/blob/e76ed2907e96e5a38fe164244043a27f321f64ea/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 经济学 economics analysis"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_671a8a1b7ea98499bdd0/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_671a8a1b7ea98499bdd0/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_671a8a1b7ea98499bdd0/files/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "LICENSE",
+        "sha256": "516d8659df8ee7688d07cc483a621c5410bbaf0adf046106744e79604176b1ae",
+        "size": 1394
+      },
+      {
+        "path": "SKILL.md",
+        "sha256": "d403045f8d731276567153151475af40c13a0111cf054ac3ce8e94911de29462",
+        "size": 66979
+      }
+    ],
+    "fixed_version": "e76ed2907e96e5a38fe164244043a27f321f64ea",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "Python",
+    "maintenance_date": "2026-07-16T16:23:57Z",
+    "major_codes": [
+      "020101"
+    ],
+    "major_names": [
+      "经济学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "a5e77a65c68d94b53b4b6d781be8e8e0f2a71f8aef998b958beb994586a5c059",
+    "platform": "GitHub",
+    "publisher": "Jonathonwang001",
+    "query_ids": [
+      "ECON-020101-GH-R1-0005"
+    ],
+    "repository": "Jonathonwang001/new-investment-brain",
+    "repository_pushed_at": "2026-07-16T16:23:57Z",
+    "repository_stars": 4,
+    "repository_updated_at": "2026-07-16T16:25:55Z",
+    "security_grade": "SA",
+    "skill_path": "SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "new-investment-brain",
+    "skill_description": "融合原六大脑程序化框架 + SOIC价值链/护城河 + financial-analysis双轨财务 + Serenity Chokepoint策略 v7.7(🧭COMPASS四柱21维+🆕DIS6生命周期维度+🔄三阶段演变+📋Watchlist再发现闭环+💰GIVG 2D+Time矩阵+🧭CITA跨界发现·全行业通用) + 三种时刻(AJI🍶/RPI🍓/GATE🛡️) + 六大脑深度分析(🆕估值脑/风险脑新增生命周期诊断) + 12人投资委员会 + 📊 Phase 0 Data Canvas + 🟢 ESG Bonus + 🆕 industry-deep-driller双技能联动 + 🆕 六大脑自进化系统 + 🆕 全球七地市场 + 🆕 双地形狩猎框架(🔥热门深度+🧊冷门广度) + 防幻觉验证 + 持久化知识管理。输出七态(🟢强烈买入/🟢买入/🟡持有/🟠减持/🔴强烈卖出/📋Watchlist/🔄再进入)。",
+    "skill_content_sha256": "d403045f8d731276567153151475af40c13a0111cf054ac3ce8e94911de29462",
+    "canonical_source_key": "github:jonathonwang001/new-investment-brain:skill.md",
+    "function_fingerprint": "2d421d577639e696abb1c6b47efeb507e971ea5fc13cef976b7e571496048789",
+    "candidate_uid": "b75dc4066285e2bbc99fdd6d6e37a3528332ee50d1698cd4e0cd2168fc145a17",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "671a8a1b7ea98499bdd0b703b287bbd2e7d3e0c7f2f3558cb0f97c24d6af567e"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "671a8a1b7ea98499bdd0b703b287bbd2e7d3e0c7f2f3558cb0f97c24d6af567e",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/Jonathonwang001/new-investment-brain/blob/e76ed2907e96e5a38fe164244043a27f321f64ea/SKILL.md",
+        "canonical_source_key": "github:jonathonwang001/new-investment-brain:skill.md"
+      }
+    ],
+    "skill_text_sha256": "d403045f8d731276567153151475af40c13a0111cf054ac3ce8e94911de29462",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020304",
+        "major_name": "投资学",
+        "matched_terms": [
+          "估值",
+          "investment"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020304"
+    ],
+    "primary_major_code": "020304",
+    "primary_major_name": "投资学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "quality_score": 3,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0025"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "93625dd3eb0098ee49ef916fae7a0f842cd531f2e34000fdb67f8b692805c43f",
+    "candidate_native_id": "jiannanya/snow-finance-cn:SKILL.md",
+    "canonical_url": "https://github.com/jiannanya/snow-finance-cn/blob/e573057457a412199efc580a9c3efbd4d23b211b/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融市场分析 financial market analysis"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_93625dd3eb0098ee49ef/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_93625dd3eb0098ee49ef/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_93625dd3eb0098ee49ef/files/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "LICENSE",
+        "sha256": "9706d18bdd7a587e535dcb473820a05442f20e05c8ff084b257177680471f781",
+        "size": 1066
+      },
+      {
+        "path": "SKILL.md",
+        "sha256": "82bb16bf4e2367d1aa4914252cb735e0eabcf9f162ebf49b7cb4dcfede51c27c",
+        "size": 51077
+      }
+    ],
+    "fixed_version": "e573057457a412199efc580a9c3efbd4d23b211b",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "Python",
+    "maintenance_date": "2026-05-15T08:33:46Z",
+    "major_codes": [
+      "020301K"
+    ],
+    "major_names": [
+      "金融学"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "157301e93cefd594217eb8c9a40b06ee71d6c6eed066bc4aeb30cb7fbd568c89",
+    "platform": "GitHub",
+    "publisher": "jiannanya",
+    "query_ids": [
+      "ECON-020301K-GH-R2-0118"
+    ],
+    "repository": "jiannanya/snow-finance-cn",
+    "repository_pushed_at": "2026-05-15T08:33:46Z",
+    "repository_stars": 0,
+    "repository_updated_at": "2026-05-15T08:33:50Z",
+    "security_grade": "SA",
+    "skill_path": "SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "snow-finance-cn",
+    "skill_description": "A股中国股票市场全能金融分析技能（10大核心能力）。能力一：个股深度分析（含盈利质量评分+信披风险扫描）；能力二：多维股票筛选+反向规避；能力三：行业全景研究+宏观景气追踪；能力四：多股横向对比；能力五：持仓监控与风险预警；能力六：事件驱动分析；能力七：量化因子分析；能力八：IPO/新股分析；能力九：指数/板块分析；能力十：股价K线预测（含免责声明）。触发词: 分析股票、股票研究、估值报告、财务分析、A股、港股、筛选股票、选股、行业研究、产业链、对比分析、持仓监控、公告事件、因子分析、新股IPO、指数板块、股价预测、K线预测。",
+    "skill_content_sha256": "82bb16bf4e2367d1aa4914252cb735e0eabcf9f162ebf49b7cb4dcfede51c27c",
+    "canonical_source_key": "github:jiannanya/snow-finance-cn:skill.md",
+    "function_fingerprint": "3c6b17fcb2495582e563404d9f2ed7545340b3cdaa23dd991b45e314f0dce5b5",
+    "candidate_uid": "2c975bc3a148bea6af55e6619c65725e4a7c3f0ecaac356caea7a064430e91fe",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "93625dd3eb0098ee49ef916fae7a0f842cd531f2e34000fdb67f8b692805c43f"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "93625dd3eb0098ee49ef916fae7a0f842cd531f2e34000fdb67f8b692805c43f",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/jiannanya/snow-finance-cn/blob/e573057457a412199efc580a9c3efbd4d23b211b/SKILL.md",
+        "canonical_source_key": "github:jiannanya/snow-finance-cn:skill.md"
+      }
+    ],
+    "skill_text_sha256": "82bb16bf4e2367d1aa4914252cb735e0eabcf9f162ebf49b7cb4dcfede51c27c",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020304",
+        "major_name": "投资学",
+        "matched_terms": [
+          "估值"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020304"
+    ],
+    "primary_major_code": "020304",
+    "primary_major_name": "投资学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "quality_score": 3,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0026"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "7c5140ab8c02306a7e89044f86538f210a8f5f702e231c50c5797d9f7178d409",
+    "candidate_native_id": "brycewang-stanford/Awesome-Journal-Skills:Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+    "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 数量经济 quantitative economics"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_7c5140ab8c02306a7e89/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_7c5140ab8c02306a7e89/files/Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_7c5140ab8c02306a7e89/files/LICENSE"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+        "sha256": "2801e0cf1470cf0a53c145a1fcf41da011569360c3f9eaede96dcdb412dd3165",
+        "size": 5448
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bad075617318f23249188e9f4561c8f5fa1a3e992d1e6c95a8740750aba98540",
+        "size": 1067
+      }
+    ],
+    "fixed_version": "d7125f7bae8eb19c923a75cbc3daca6df957e7cc",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-08-09T10:24:51Z",
+    "major_codes": [
+      "020108T"
+    ],
+    "major_names": [
+      "经济工程"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "330acd5623280778bc064b7b9b2e8b3da660b82079ab73c72442ff093af74b62",
+    "platform": "GitHub",
+    "publisher": "brycewang-stanford",
+    "query_ids": [
+      "ECON-020108T-GH-R2-0062"
+    ],
+    "repository": "brycewang-stanford/Awesome-Journal-Skills",
+    "repository_pushed_at": "2026-08-09T10:24:51Z",
+    "repository_stars": 1005,
+    "repository_updated_at": "2026-08-19T06:26:14Z",
+    "security_grade": "SA",
+    "skill_path": "Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "journal-of-management-sciences-china",
+    "skill_description": "Use when targeting 《管理科学学报》(Journal of Management Sciences in China) — the NSFC-flagship for quantitative / mathematical management science (operations research, decision analysis, mathematical finance, behavioral operations, system modeling). Apply when a paper needs rigorous models, proofs, or algorithms — NOT empirical-survey or case work (that is 管理世界 / 南开管理评论).",
+    "skill_content_sha256": "2801e0cf1470cf0a53c145a1fcf41da011569360c3f9eaede96dcdb412dd3165",
+    "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-management-sciences-china/skill.md",
+    "function_fingerprint": "2211ef3d350252a62b7744ac98ad890409be9f617d0c32ae8328b3b9d7a83ffa",
+    "candidate_uid": "5cf468922b2dfd3ccc8b7f0a6fa0e0b284ab366dc0c9d0faa8272b89d22e3038",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "11a962f6a2ba1e028850e7fd277d2e63aa435ab32d1d8df68d5e2ed7d110846c",
+      "7ad2e5941364da7ed2b892f3544485b978195128f6af131eba371e921436462a",
+      "7c5140ab8c02306a7e89044f86538f210a8f5f702e231c50c5797d9f7178d409"
+    ],
+    "duplicate_count": 2,
+    "source_candidates": [
+      {
+        "candidate_key": "7c5140ab8c02306a7e89044f86538f210a8f5f702e231c50c5797d9f7178d409",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/brycewang-stanford/Awesome-Journal-Skills/blob/d7125f7bae8eb19c923a75cbc3daca6df957e7cc/Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-management-sciences-china/skill.md"
+      },
+      {
+        "candidate_key": "11a962f6a2ba1e028850e7fd277d2e63aa435ab32d1d8df68d5e2ed7d110846c",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/gabrielmoreira/agent-skills-mirror/blob/6dffda59ea2401b60f0dae232f4cf63d5e400778/mirrors/repos/brycewang-stanford@Awesome-Journal-Skills/Chinese-SocialScience-Journal-Skills/skills/journal-of-management-sciences-china/SKILL.md",
+        "canonical_source_key": "github:brycewang-stanford/awesome-journal-skills:chinese-socialscience-journal-skills/skills/journal-of-management-sciences-china/skill.md"
+      },
+      {
+        "candidate_key": "7ad2e5941364da7ed2b892f3544485b978195128f6af131eba371e921436462a",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/thedixitjain/the-mega-skill-library/blob/1c6d3294f059862aec20847d680c13fd96cc7671/library/research-and-academic/journal-of-management-sciences-china/SKILL.md",
+        "canonical_source_key": "github:thedixitjain/the-mega-skill-library:library/research-and-academic/journal-of-management-sciences-china/skill.md"
+      }
+    ],
+    "skill_text_sha256": "2801e0cf1470cf0a53c145a1fcf41da011569360c3f9eaede96dcdb412dd3165",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020305T",
+        "major_name": "金融数学",
+        "matched_terms": [
+          "mathematical finance"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020305T"
+    ],
+    "primary_major_code": "020305T",
+    "primary_major_name": "金融数学",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "quality_score": 5,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0027"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "818ee86bcc8c09a8f46a09e53d682571649e9082ff900eeb75a3d3b044329be0",
+    "candidate_native_id": "kukuyuhai/agentic-data-element:skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md",
+    "canonical_url": "https://github.com/kukuyuhai/agentic-data-element/blob/6cfbf94abb68cbc872ad2fe4e615ef90fd2c648b/skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 信用评分 credit scoring"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_818ee86bcc8c09a8f46a/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_818ee86bcc8c09a8f46a/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_818ee86bcc8c09a8f46a/files/skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "LICENSE",
+        "sha256": "fc3a7092db9288b7aa6a609f9d95a55e2adfbb2be8db349ec9209b5f02bc14e1",
+        "size": 1090
+      },
+      {
+        "path": "skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md",
+        "sha256": "9c0398eeea6d496f1a3e370e39f634c1670f4b81e89b193943fbfc8b27a89fa7",
+        "size": 10740
+      }
+    ],
+    "fixed_version": "6cfbf94abb68cbc872ad2fe4e615ef90fd2c648b",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-07-21T13:24:54Z",
+    "major_codes": [
+      "020306T"
+    ],
+    "major_names": [
+      "信用管理"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "8b38c9877f9ae83c32e825765f7cc42ec42663ac42eb752b2e0db4f33233426a",
+    "platform": "GitHub",
+    "publisher": "kukuyuhai",
+    "query_ids": [
+      "ECON-020306T-GH-R2-0158"
+    ],
+    "repository": "kukuyuhai/agentic-data-element",
+    "repository_pushed_at": "2026-07-21T13:24:54Z",
+    "repository_stars": 0,
+    "repository_updated_at": "2026-07-21T13:29:08Z",
+    "security_grade": "SA",
+    "skill_path": "skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "credit-scorecard-builder",
+    "skill_description": "数据信用评分卡构建：以数据质量 + 主体信用 + 交易表现构建评分模型。当开展信用评价业务时使用。",
+    "skill_content_sha256": "9c0398eeea6d496f1a3e370e39f634c1670f4b81e89b193943fbfc8b27a89fa7",
+    "canonical_source_key": "github:kukuyuhai/agentic-data-element:skills/role/data-credit-appraiser/credit-scorecard-builder/skill.md",
+    "function_fingerprint": "5feb38a5a49e869d19e56907cf095c0cd626d03d21e2e0704dbcdd87c02a2fe4",
+    "candidate_uid": "77df741e3844c97ec1599342655b75cd13695bd3aae3d15d6fabbd551724d307",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "818ee86bcc8c09a8f46a09e53d682571649e9082ff900eeb75a3d3b044329be0"
+    ],
+    "duplicate_count": 0,
+    "source_candidates": [
+      {
+        "candidate_key": "818ee86bcc8c09a8f46a09e53d682571649e9082ff900eeb75a3d3b044329be0",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/kukuyuhai/agentic-data-element/blob/6cfbf94abb68cbc872ad2fe4e615ef90fd2c648b/skills/role/data-credit-appraiser/credit-scorecard-builder/SKILL.md",
+        "canonical_source_key": "github:kukuyuhai/agentic-data-element:skills/role/data-credit-appraiser/credit-scorecard-builder/skill.md"
+      }
+    ],
+    "skill_text_sha256": "9c0398eeea6d496f1a3e370e39f634c1670f4b81e89b193943fbfc8b27a89fa7",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020306T",
+        "major_name": "信用管理",
+        "matched_terms": [
+          "信用评分",
+          "credit",
+          "评分"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020306T"
+    ],
+    "primary_major_code": "020306T",
+    "primary_major_name": "信用管理",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "quality_score": 3,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0028"
+  },
+  {
+    "audit_date": "2026-08-19",
+    "blocking_reasons": [],
+    "candidate_key": "1dd9427d1615e399e22c29c4dd3ae71bf21bbae0c2720ef5d694907524533206",
+    "candidate_native_id": "asgard-ai-platform/skills:tw-fintech-compliance/SKILL.md",
+    "canonical_url": "https://github.com/asgard-ai-platform/skills/blob/4e7f4f8e389847757a5a4236c2f1ed9813359179/tw-fintech-compliance/SKILL.md",
+    "credential_behavior": "无",
+    "discovery_queries": [
+      "filename:SKILL.md 金融科技 fintech"
+    ],
+    "evidence_paths": [
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1dd9427d1615e399e22c/manifest.json",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1dd9427d1615e399e22c/files/LICENSE",
+      "06_过程记录/economics_2026-08-19/source_snapshots/packages/github_1dd9427d1615e399e22c/files/tw-fintech-compliance/SKILL.md"
+    ],
+    "executable_behavior": "无",
+    "external_api": "否",
+    "file_behavior": "无",
+    "file_inventory": [
+      {
+        "path": "LICENSE",
+        "sha256": "8d61114e503bbdb100175cdb8b1085bad188a37b5eb15fb69c2e98d8a8007f65",
+        "size": 1101
+      },
+      {
+        "path": "tw-fintech-compliance/SKILL.md",
+        "sha256": "b08c3175818621430f3f1ae2b6ba6fcf9c31520b3a1c9b8c0a463a54c7b947fb",
+        "size": 6479
+      }
+    ],
+    "fixed_version": "4e7f4f8e389847757a5a4236c2f1ed9813359179",
+    "formal_eligible": true,
+    "license": "MIT",
+    "license_allowed": true,
+    "local_interface": "不使用",
+    "local_runtime": "不使用",
+    "maintenance_date": "2026-06-06T05:50:09Z",
+    "major_codes": [
+      "020310T"
+    ],
+    "major_names": [
+      "金融科技"
+    ],
+    "network_behavior": "无",
+    "package_manifest_sha256": "5ae67706ca4e20eb0296a392f80b75d6e57e292cc1814faec0a69d103146a3c9",
+    "platform": "GitHub",
+    "publisher": "asgard-ai-platform",
+    "query_ids": [
+      "ECON-020310T-GH-R1-0189"
+    ],
+    "repository": "asgard-ai-platform/skills",
+    "repository_pushed_at": "2026-06-06T05:50:09Z",
+    "repository_stars": 227,
+    "repository_updated_at": "2026-08-17T08:16:11Z",
+    "security_grade": "SA",
+    "skill_path": "tw-fintech-compliance/SKILL.md",
+    "snapshot_scope": "fixed SKILL.md and fixed-commit repository license",
+    "snapshot_status": "success",
+    "verification_status": "全部通过（未实测）",
+    "skill_name": "tw-fintech-compliance",
+    "skill_description": "Navigate Taiwan fintech regulations including FSC oversight, electronic payment laws, VASP rules, AML/KYC requirements, and the regulatory sandbox. Use this skill when the user is building a fintech product in Taiwan, needs to understand licensing requirements, assess crypto/VASP compliance, or apply for the regulatory sandbox — even if they say 'do we need a license', 'crypto regulation in Taiwan', 'KYC requirements', or 'fintech sandbox application'.",
+    "skill_content_sha256": "b08c3175818621430f3f1ae2b6ba6fcf9c31520b3a1c9b8c0a463a54c7b947fb",
+    "canonical_source_key": "github:asgard-ai-platform/skills:tw-fintech-compliance/skill.md",
+    "function_fingerprint": "a45a2b92ea618719020f0d047eb6263007b27f796c9362edf8db9733d031a81a",
+    "candidate_uid": "0019b780b246ac6b12da98439a14e00a8c829fc6de063e2c51fc3c71a4e75f60",
+    "discovery_platforms": [
+      "GitHub"
+    ],
+    "duplicate_member_keys": [
+      "1dd9427d1615e399e22c29c4dd3ae71bf21bbae0c2720ef5d694907524533206",
+      "2ce50ba88c7a2f60ce1ee6ce950be18f436fa01f81c85478926828c1a186d1c6",
+      "7fb4cf1aaade8535d67547139ebadf267b447a905cf3e4762842512c6fdc9380",
+      "c9cde107e238c332aef3ce04e3c13acc4f78ae7640606a83596af437b428d1e1"
+    ],
+    "duplicate_count": 3,
+    "source_candidates": [
+      {
+        "candidate_key": "1dd9427d1615e399e22c29c4dd3ae71bf21bbae0c2720ef5d694907524533206",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/asgard-ai-platform/skills/blob/4e7f4f8e389847757a5a4236c2f1ed9813359179/tw-fintech-compliance/SKILL.md",
+        "canonical_source_key": "github:asgard-ai-platform/skills:tw-fintech-compliance/skill.md"
+      },
+      {
+        "candidate_key": "2ce50ba88c7a2f60ce1ee6ce950be18f436fa01f81c85478926828c1a186d1c6",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/charlieviettq/awesome-agent-skill/blob/c567ae426d55fa498e919fc0f5a37c582d5c7a2c/.claude/skills/tw-fintech-compliance/SKILL.md",
+        "canonical_source_key": "github:charlieviettq/awesome-agent-skill:.claude/skills/tw-fintech-compliance/skill.md"
+      },
+      {
+        "candidate_key": "c9cde107e238c332aef3ce04e3c13acc4f78ae7640606a83596af437b428d1e1",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/charlieviettq/awesome-agent-skill/blob/c567ae426d55fa498e919fc0f5a37c582d5c7a2c/.cursor/skills/asgard-ai-platform/tw-fintech-compliance/SKILL.md",
+        "canonical_source_key": "github:charlieviettq/awesome-agent-skill:.cursor/skills/asgard-ai-platform/tw-fintech-compliance/skill.md"
+      },
+      {
+        "candidate_key": "7fb4cf1aaade8535d67547139ebadf267b447a905cf3e4762842512c6fdc9380",
+        "platform": "GitHub",
+        "canonical_url": "https://github.com/aibot88/sec_skill_store/blob/608120788167d56f99e31449e411e603ed250dc6/skills/claudskills/tw-fintech-compliance/SKILL.md",
+        "canonical_source_key": "github:aibot88/sec_skill_store:skills/claudskills/tw-fintech-compliance/skill.md"
+      }
+    ],
+    "skill_text_sha256": "b08c3175818621430f3f1ae2b6ba6fcf9c31520b3a1c9b8c0a463a54c7b947fb",
+    "professional_relevance_pass": true,
+    "professional_relevance_evidence": [
+      {
+        "major_code": "020310T",
+        "major_name": "金融科技",
+        "matched_terms": [
+          "fintech"
+        ]
+      }
+    ],
+    "matched_major_codes": [
+      "020310T"
+    ],
+    "primary_major_code": "020310T",
+    "primary_major_name": "金融科技",
+    "primary_class_code": "0203",
+    "admission_flags": {
+      "description_complete": true,
+      "prerequisites_clear": true,
+      "license_allowed": true,
+      "source_traceable": true
+    },
+    "admission_pass": true,
+    "bonus_flags": [
+      true,
+      true,
+      true,
+      false,
+      false
+    ],
+    "quality_score": 4,
+    "exclusion_reasons": [],
+    "formal_included": true,
+    "skill_id": "ECON-SK-0029"
+  }
+]
