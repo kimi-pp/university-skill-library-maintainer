@@ -6,6 +6,7 @@ import importlib.util
 import json
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
@@ -209,8 +210,13 @@ def production_clients() -> dict[str, Callable[[str], tuple[list[dict[str, Any]]
     session = requests.Session()
     session.headers.update({"User-Agent": "University-Skills-Research/1.0 read-only discovery"})
 
+    last_github_call = [0.0]
+
     def gh_runner(args: list[str]):
-        return subprocess.run(
+        wait_seconds = 6.5 - (time.monotonic() - last_github_call[0])
+        if wait_seconds > 0:
+            time.sleep(wait_seconds)
+        run = subprocess.run(
             args,
             capture_output=True,
             text=True,
@@ -218,6 +224,8 @@ def production_clients() -> dict[str, Callable[[str], tuple[list[dict[str, Any]]
             errors="replace",
             check=False,
         )
+        last_github_call[0] = time.monotonic()
+        return run
 
     return {
         "SkillHub": lambda query: platform.skillhub_search(query, session),
