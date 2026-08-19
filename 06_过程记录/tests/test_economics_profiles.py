@@ -7,14 +7,25 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parents[2]
 RUN_ROOT = PROJECT / "06_过程记录" / "economics_2026-08-19"
 MODULE_PATH = RUN_ROOT / "build_professional_profiles.py"
+QUERY_MODULE_PATH = RUN_ROOT / "build_query_matrix.py"
 SCOPE_PATH = RUN_ROOT / "economics_scope.json"
 LEDGER_PATH = RUN_ROOT / "profile_source_ledger.jsonl"
 PROFILES_PATH = RUN_ROOT / "professional_profiles.json"
+QUERY_MATRIX_PATH = RUN_ROOT / "query_matrix.json"
 
 
 def load_module():
     assert MODULE_PATH.is_file(), "专业画像构建模块尚未实现"
     spec = importlib.util.spec_from_file_location("build_professional_profiles", MODULE_PATH)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_query_module():
+    assert QUERY_MODULE_PATH.is_file(), "双语查询矩阵模块尚未实现"
+    spec = importlib.util.spec_from_file_location("build_query_matrix", QUERY_MODULE_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     spec.loader.exec_module(module)
@@ -109,3 +120,63 @@ def test_checked_in_profiles_and_ledger_are_reproducible():
     assert PROFILES_PATH.is_file()
     assert LEDGER_PATH.is_file()
     assert module.validate_checked_in_outputs(SCOPE_PATH, PROFILES_PATH, LEDGER_PATH) == []
+
+
+def test_every_major_has_all_four_platforms_and_two_rounds():
+    module = load_query_module()
+    profiles = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
+    matrix = module.build_query_matrix(profiles)
+    official_codes = {row["major_code"] for row in profiles["profiles"]}
+    platforms = {"SkillHub", "ClawHub", "GitHub", "Hugging Face Spaces"}
+
+    for code in official_codes:
+        rows = [row for row in matrix["jobs"] if row["major_code"] == code]
+        assert {row["platform"] for row in rows} == platforms
+        assert {row["round"] for row in rows} == {1, 2}
+        for platform in platforms:
+            platform_rows = [row for row in rows if row["platform"] == platform]
+            assert len(platform_rows) == 2
+
+
+def test_query_ids_queries_and_term_types_are_stable_and_nonempty():
+    import re
+    import unicodedata
+
+    module = load_query_module()
+    profiles = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
+    matrix = module.build_query_matrix(profiles)
+    jobs = matrix["jobs"]
+    assert len(jobs) == 30 * 4 * 2
+    assert len({row["query_id"] for row in jobs}) == len(jobs)
+    assert len({(row["major_code"], row["platform"], row["round"], row["query"]) for row in jobs}) == len(jobs)
+    for row in jobs:
+        assert re.fullmatch(r"ECON-[0-9A-Z]+-(?:SH|CH|GH|HF)-R[12]-\d{4}", row["query_id"])
+        assert row["query"].strip()
+        assert row["query"] == unicodedata.normalize("NFC", row["query"])
+        assert row["term_types"]
+        assert "structure" in row["term_types"]
+
+
+def test_round_one_uses_professional_name_and_round_two_uses_tasks():
+    module = load_query_module()
+    profiles = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
+    by_code = {row["major_code"]: row for row in profiles["profiles"]}
+    jobs = module.build_query_matrix(profiles)["jobs"]
+    for row in jobs:
+        profile = by_code[row["major_code"]]
+        if row["round"] == 1:
+            assert profile["major_name"] in row["query"]
+            assert "professional_name" in row["term_types"]
+        else:
+            task_terms = profile["search_terms"]["zh"][:2] + profile["search_terms"]["en"][:2]
+            assert any(term in row["query"] for term in task_terms)
+            assert "method_or_task" in row["term_types"]
+
+
+def test_checked_in_query_matrix_is_reproducible():
+    module = load_query_module()
+    assert QUERY_MATRIX_PATH.is_file()
+    profiles = json.loads(PROFILES_PATH.read_text(encoding="utf-8"))
+    expected = module.build_query_matrix(profiles)
+    actual = json.loads(QUERY_MATRIX_PATH.read_text(encoding="utf-8"))
+    assert actual == expected

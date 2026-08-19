@@ -1,0 +1,3859 @@
+{
+  "schema_version": "1.0",
+  "category_code": "02",
+  "category_name": "经济学",
+  "profile_count": 30,
+  "platforms": [
+    "SkillHub",
+    "ClawHub",
+    "GitHub",
+    "Hugging Face Spaces"
+  ],
+  "rounds": [
+    1,
+    2
+  ],
+  "job_count": 240,
+  "jobs": [
+    {
+      "query_id": "ECON-020101-SH-R1-0001",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "经济学 economics analysis skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-SH-R2-0002",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "计量经济学 econometrics skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-CH-R1-0003",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "经济学 economics analysis claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-CH-R2-0004",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "计量经济学 econometrics skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-GH-R1-0005",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 经济学 economics analysis",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-GH-R2-0006",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 计量经济学 econometrics",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-HF-R1-0007",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "经济学 economics analysis space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020101-HF-R2-0008",
+      "major_code": "020101",
+      "major_name": "经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "计量经济学 econometrics app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-SH-R1-0009",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "经济统计学 economic statistics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-SH-R2-0010",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "国民经济核算 national accounts skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-CH-R1-0011",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "经济统计学 economic statistics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-CH-R2-0012",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "国民经济核算 national accounts skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-GH-R1-0013",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 经济统计学 economic statistics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-GH-R2-0014",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 国民经济核算 national accounts",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-HF-R1-0015",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "经济统计学 economic statistics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020102-HF-R2-0016",
+      "major_code": "020102",
+      "major_name": "经济统计学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "国民经济核算 national accounts app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-SH-R1-0017",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "国民经济管理 national economic management skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-SH-R2-0018",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "宏观经济监测 macroeconomic monitoring skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-CH-R1-0019",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "国民经济管理 national economic management claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-CH-R2-0020",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "宏观经济监测 macroeconomic monitoring skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-GH-R1-0021",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 国民经济管理 national economic management",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-GH-R2-0022",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 宏观经济监测 macroeconomic monitoring",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-HF-R1-0023",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "国民经济管理 national economic management space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020103T-HF-R2-0024",
+      "major_code": "020103T",
+      "major_name": "国民经济管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "宏观经济监测 macroeconomic monitoring app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-SH-R1-0025",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "资源与环境经济学 environmental economics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-SH-R2-0026",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "环境估值 environmental valuation skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-CH-R1-0027",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "资源与环境经济学 environmental economics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-CH-R2-0028",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "环境估值 environmental valuation skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-GH-R1-0029",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 资源与环境经济学 environmental economics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-GH-R2-0030",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 环境估值 environmental valuation",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-HF-R1-0031",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "资源与环境经济学 environmental economics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020104T-HF-R2-0032",
+      "major_code": "020104T",
+      "major_name": "资源与环境经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "环境估值 environmental valuation app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-SH-R1-0033",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "商务经济学 business economics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-SH-R2-0034",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "管理经济学 managerial economics skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-CH-R1-0035",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "商务经济学 business economics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-CH-R2-0036",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "管理经济学 managerial economics skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-GH-R1-0037",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 商务经济学 business economics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-GH-R2-0038",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 管理经济学 managerial economics",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-HF-R1-0039",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "商务经济学 business economics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020105T-HF-R2-0040",
+      "major_code": "020105T",
+      "major_name": "商务经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "管理经济学 managerial economics app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-SH-R1-0041",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "能源经济 energy economics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-SH-R2-0042",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "能源市场 energy markets skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-CH-R1-0043",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "能源经济 energy economics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-CH-R2-0044",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "能源市场 energy markets skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-GH-R1-0045",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 能源经济 energy economics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-GH-R2-0046",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 能源市场 energy markets",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-HF-R1-0047",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "能源经济 energy economics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020106T-HF-R2-0048",
+      "major_code": "020106T",
+      "major_name": "能源经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "能源市场 energy markets app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-SH-R1-0049",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "劳动经济学 labor economics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-SH-R2-0050",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "就业分析 employment analysis skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-CH-R1-0051",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "劳动经济学 labor economics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-CH-R2-0052",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "就业分析 employment analysis skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-GH-R1-0053",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 劳动经济学 labor economics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-GH-R2-0054",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 就业分析 employment analysis",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-HF-R1-0055",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "劳动经济学 labor economics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020107T-HF-R2-0056",
+      "major_code": "020107T",
+      "major_name": "劳动经济学",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "就业分析 employment analysis app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-SH-R1-0057",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "经济工程 economic engineering skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-SH-R2-0058",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "数量经济 quantitative economics skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-CH-R1-0059",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "经济工程 economic engineering claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-CH-R2-0060",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "数量经济 quantitative economics skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-GH-R1-0061",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 经济工程 economic engineering",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-GH-R2-0062",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 数量经济 quantitative economics",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-HF-R1-0063",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "经济工程 economic engineering space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020108T-HF-R2-0064",
+      "major_code": "020108T",
+      "major_name": "经济工程",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "数量经济 quantitative economics app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-SH-R1-0065",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "数字经济 digital economy skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-SH-R2-0066",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "平台经济 platform economics skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-CH-R1-0067",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "数字经济 digital economy claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-CH-R2-0068",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "平台经济 platform economics skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-GH-R1-0069",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 数字经济 digital economy",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-GH-R2-0070",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 平台经济 platform economics",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-HF-R1-0071",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "数字经济 digital economy space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020109T-HF-R2-0072",
+      "major_code": "020109T",
+      "major_name": "数字经济",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "平台经济 platform economics app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-SH-R1-0073",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "低空经济与管理 low-altitude economy skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-SH-R2-0074",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "低空运营管理 low-altitude operations skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-CH-R1-0075",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "低空经济与管理 low-altitude economy claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-CH-R2-0076",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "低空运营管理 low-altitude operations skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-GH-R1-0077",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 低空经济与管理 low-altitude economy",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-GH-R2-0078",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 低空运营管理 low-altitude operations",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-HF-R1-0079",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "低空经济与管理 low-altitude economy space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020110TK-HF-R2-0080",
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "低空运营管理 low-altitude operations app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-SH-R1-0081",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "资源环境审计 environmental audit skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-SH-R2-0082",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "自然资源资产审计 natural resource asset audit skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-CH-R1-0083",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "资源环境审计 environmental audit claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-CH-R2-0084",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "自然资源资产审计 natural resource asset audit skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-GH-R1-0085",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 资源环境审计 environmental audit",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-GH-R2-0086",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 自然资源资产审计 natural resource asset audit",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-HF-R1-0087",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "资源环境审计 environmental audit space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020111T-HF-R2-0088",
+      "major_code": "020111T",
+      "major_name": "资源环境审计",
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "自然资源资产审计 natural resource asset audit app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-SH-R1-0089",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "财政学 public finance skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-SH-R2-0090",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "政府预算 government budgeting skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-CH-R1-0091",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "财政学 public finance claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-CH-R2-0092",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "政府预算 government budgeting skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-GH-R1-0093",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 财政学 public finance",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-GH-R2-0094",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 政府预算 government budgeting",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-HF-R1-0095",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "财政学 public finance space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020201K-HF-R2-0096",
+      "major_code": "020201K",
+      "major_name": "财政学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "政府预算 government budgeting app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-SH-R1-0097",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "税收学 taxation skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-SH-R2-0098",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "中国税制 China tax system skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-CH-R1-0099",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "税收学 taxation claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-CH-R2-0100",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "中国税制 China tax system skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-GH-R1-0101",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 税收学 taxation",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-GH-R2-0102",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 中国税制 China tax system",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-HF-R1-0103",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "税收学 taxation space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020202-HF-R2-0104",
+      "major_code": "020202",
+      "major_name": "税收学",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "中国税制 China tax system app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-SH-R1-0105",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "国际税收 international taxation skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-SH-R2-0106",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "税收协定 tax treaties skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-CH-R1-0107",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "国际税收 international taxation claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-CH-R2-0108",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "税收协定 tax treaties skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-GH-R1-0109",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 国际税收 international taxation",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-GH-R2-0110",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 税收协定 tax treaties",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-HF-R1-0111",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "国际税收 international taxation space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020203TK-HF-R2-0112",
+      "major_code": "020203TK",
+      "major_name": "国际税收",
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "税收协定 tax treaties app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-SH-R1-0113",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "金融学 finance skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-SH-R2-0114",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "金融市场分析 financial market analysis skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-CH-R1-0115",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "金融学 finance claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-CH-R2-0116",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "金融市场分析 financial market analysis skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-GH-R1-0117",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 金融学 finance",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-GH-R2-0118",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 金融市场分析 financial market analysis",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-HF-R1-0119",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "金融学 finance space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020301K-HF-R2-0120",
+      "major_code": "020301K",
+      "major_name": "金融学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "金融市场分析 financial market analysis app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-SH-R1-0121",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "金融工程 financial engineering skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-SH-R2-0122",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "衍生品定价 derivatives pricing skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-CH-R1-0123",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "金融工程 financial engineering claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-CH-R2-0124",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "衍生品定价 derivatives pricing skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-GH-R1-0125",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 金融工程 financial engineering",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-GH-R2-0126",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 衍生品定价 derivatives pricing",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-HF-R1-0127",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "金融工程 financial engineering space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020302-HF-R2-0128",
+      "major_code": "020302",
+      "major_name": "金融工程",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "衍生品定价 derivatives pricing app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-SH-R1-0129",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "保险学 insurance skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-SH-R2-0130",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "核保理赔 underwriting and claims skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-CH-R1-0131",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "保险学 insurance claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-CH-R2-0132",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "核保理赔 underwriting and claims skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-GH-R1-0133",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 保险学 insurance",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-GH-R2-0134",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 核保理赔 underwriting and claims",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-HF-R1-0135",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "保险学 insurance space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020303-HF-R2-0136",
+      "major_code": "020303",
+      "major_name": "保险学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "核保理赔 underwriting and claims app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-SH-R1-0137",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "投资学 investment analysis skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-SH-R2-0138",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "证券估值 security valuation skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-CH-R1-0139",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "投资学 investment analysis claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-CH-R2-0140",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "证券估值 security valuation skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-GH-R1-0141",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 投资学 investment analysis",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-GH-R2-0142",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 证券估值 security valuation",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-HF-R1-0143",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "投资学 investment analysis space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020304-HF-R2-0144",
+      "major_code": "020304",
+      "major_name": "投资学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "证券估值 security valuation app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-SH-R1-0145",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "金融数学 financial mathematics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-SH-R2-0146",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "随机过程 stochastic processes skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-CH-R1-0147",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "金融数学 financial mathematics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-CH-R2-0148",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "随机过程 stochastic processes skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-GH-R1-0149",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 金融数学 financial mathematics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-GH-R2-0150",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 随机过程 stochastic processes",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-HF-R1-0151",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "金融数学 financial mathematics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020305T-HF-R2-0152",
+      "major_code": "020305T",
+      "major_name": "金融数学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "随机过程 stochastic processes app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-SH-R1-0153",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "信用管理 credit management skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-SH-R2-0154",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "信用评分 credit scoring skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-CH-R1-0155",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "信用管理 credit management claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-CH-R2-0156",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "信用评分 credit scoring skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-GH-R1-0157",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 信用管理 credit management",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-GH-R2-0158",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 信用评分 credit scoring",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-HF-R1-0159",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "信用管理 credit management space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020306T-HF-R2-0160",
+      "major_code": "020306T",
+      "major_name": "信用管理",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "信用评分 credit scoring app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-SH-R1-0161",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "经济与金融 economics and finance skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-SH-R2-0162",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "宏观金融 macro-finance skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-CH-R1-0163",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "经济与金融 economics and finance claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-CH-R2-0164",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "宏观金融 macro-finance skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-GH-R1-0165",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 经济与金融 economics and finance",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-GH-R2-0166",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 宏观金融 macro-finance",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-HF-R1-0167",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "经济与金融 economics and finance space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020307T-HF-R2-0168",
+      "major_code": "020307T",
+      "major_name": "经济与金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "宏观金融 macro-finance app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-SH-R1-0169",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "精算学 actuarial science skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-SH-R2-0170",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "寿险精算 life contingencies skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-CH-R1-0171",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "精算学 actuarial science claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-CH-R2-0172",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "寿险精算 life contingencies skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-GH-R1-0173",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 精算学 actuarial science",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-GH-R2-0174",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 寿险精算 life contingencies",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-HF-R1-0175",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "精算学 actuarial science space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020308T-HF-R2-0176",
+      "major_code": "020308T",
+      "major_name": "精算学",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "寿险精算 life contingencies app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-SH-R1-0177",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "互联网金融 internet finance skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-SH-R2-0178",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "数字支付 digital payments skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-CH-R1-0179",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "互联网金融 internet finance claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-CH-R2-0180",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "数字支付 digital payments skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-GH-R1-0181",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 互联网金融 internet finance",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-GH-R2-0182",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 数字支付 digital payments",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-HF-R1-0183",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "互联网金融 internet finance space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020309T-HF-R2-0184",
+      "major_code": "020309T",
+      "major_name": "互联网金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "数字支付 digital payments app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-SH-R1-0185",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "金融科技 fintech skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-SH-R2-0186",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "金融机器学习 machine learning in finance skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-CH-R1-0187",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "金融科技 fintech claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-CH-R2-0188",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "金融机器学习 machine learning in finance skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-GH-R1-0189",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 金融科技 fintech",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-GH-R2-0190",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 金融机器学习 machine learning in finance",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-HF-R1-0191",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "金融科技 fintech space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020310T-HF-R2-0192",
+      "major_code": "020310T",
+      "major_name": "金融科技",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "金融机器学习 machine learning in finance app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-SH-R1-0193",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "金融审计 financial audit skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-SH-R2-0194",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "商业银行审计 bank audit skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-CH-R1-0195",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "金融审计 financial audit claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-CH-R2-0196",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "商业银行审计 bank audit skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-GH-R1-0197",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 金融审计 financial audit",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-GH-R2-0198",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 商业银行审计 bank audit",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-HF-R1-0199",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "金融审计 financial audit space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020311TK-HF-R2-0200",
+      "major_code": "020311TK",
+      "major_name": "金融审计",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "商业银行审计 bank audit app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-SH-R1-0201",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "数字金融 digital finance skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-SH-R2-0202",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "数智金融 intelligent finance skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-CH-R1-0203",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "数字金融 digital finance claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-CH-R2-0204",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "数智金融 intelligent finance skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-GH-R1-0205",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 数字金融 digital finance",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-GH-R2-0206",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 数智金融 intelligent finance",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-HF-R1-0207",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "数字金融 digital finance space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020312TK-HF-R2-0208",
+      "major_code": "020312TK",
+      "major_name": "数字金融",
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "数智金融 intelligent finance app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-SH-R1-0209",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "国际经济与贸易 international economics and trade skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-SH-R2-0210",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "国际贸易分析 international trade analysis skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-CH-R1-0211",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "国际经济与贸易 international economics and trade claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-CH-R2-0212",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "国际贸易分析 international trade analysis skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-GH-R1-0213",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 国际经济与贸易 international economics and trade",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-GH-R2-0214",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 国际贸易分析 international trade analysis",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-HF-R1-0215",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "国际经济与贸易 international economics and trade space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020401-HF-R2-0216",
+      "major_code": "020401",
+      "major_name": "国际经济与贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "国际贸易分析 international trade analysis app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-SH-R1-0217",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "贸易经济 trade economics skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-SH-R2-0218",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "流通经济 circulation economics skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-CH-R1-0219",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "贸易经济 trade economics claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-CH-R2-0220",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "流通经济 circulation economics skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-GH-R1-0221",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 贸易经济 trade economics",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-GH-R2-0222",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 流通经济 circulation economics",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-HF-R1-0223",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "贸易经济 trade economics space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020402-HF-R2-0224",
+      "major_code": "020402",
+      "major_name": "贸易经济",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "流通经济 circulation economics app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-SH-R1-0225",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "国际经济发展合作 international development cooperation skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-SH-R2-0226",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "发展援助 development aid skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-CH-R1-0227",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "国际经济发展合作 international development cooperation claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-CH-R2-0228",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "发展援助 development aid skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-GH-R1-0229",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 国际经济发展合作 international development cooperation",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-GH-R2-0230",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 发展援助 development aid",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-HF-R1-0231",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "国际经济发展合作 international development cooperation space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020403T-HF-R2-0232",
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "发展援助 development aid app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-SH-R1-0233",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 1,
+      "query": "数字贸易 digital trade skill SKILL.md",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-SH-R2-0234",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "SkillHub",
+      "platform_code": "SH",
+      "round": 2,
+      "query": "跨境电商分析 cross-border e-commerce analytics skill agent",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-CH-R1-0235",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 1,
+      "query": "数字贸易 digital trade claw skill agent",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-CH-R2-0236",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "ClawHub",
+      "platform_code": "CH",
+      "round": 2,
+      "query": "跨境电商分析 cross-border e-commerce analytics skill workflow",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-GH-R1-0237",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 1,
+      "query": "filename:SKILL.md 数字贸易 digital trade",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-GH-R2-0238",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "GitHub",
+      "platform_code": "GH",
+      "round": 2,
+      "query": "filename:SKILL.md 跨境电商分析 cross-border e-commerce analytics",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-HF-R1-0239",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 1,
+      "query": "数字贸易 digital trade space",
+      "term_types": [
+        "professional_name",
+        "english_domain",
+        "structure"
+      ]
+    },
+    {
+      "query_id": "ECON-020404TK-HF-R2-0240",
+      "major_code": "020404TK",
+      "major_name": "数字贸易",
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "platform": "Hugging Face Spaces",
+      "platform_code": "HF",
+      "round": 2,
+      "query": "跨境电商分析 cross-border e-commerce analytics app tool",
+      "term_types": [
+        "method_or_task",
+        "bilingual",
+        "structure"
+      ]
+    }
+  ]
+}
