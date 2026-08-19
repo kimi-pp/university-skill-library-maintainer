@@ -1,0 +1,76 @@
+{
+  "category_code": "02",
+  "old_major_count": 20,
+  "current_major_count": 30,
+  "net_change": 10,
+  "code_changes": [
+    {
+      "major_name": "互联网金融",
+      "old_code": "020305T",
+      "current_code": "020309T"
+    },
+    {
+      "major_name": "信用管理",
+      "old_code": "020307T",
+      "current_code": "020306T"
+    },
+    {
+      "major_name": "数字经济",
+      "old_code": "020108T",
+      "current_code": "020109T"
+    },
+    {
+      "major_name": "经济与金融",
+      "old_code": "020308T",
+      "current_code": "020307T"
+    },
+    {
+      "major_name": "金融数学",
+      "old_code": "020306T",
+      "current_code": "020305T"
+    }
+  ],
+  "added_majors": [
+    {
+      "major_code": "020108T",
+      "major_name": "经济工程"
+    },
+    {
+      "major_code": "020110TK",
+      "major_name": "低空经济与管理"
+    },
+    {
+      "major_code": "020111T",
+      "major_name": "资源环境审计"
+    },
+    {
+      "major_code": "020203TK",
+      "major_name": "国际税收"
+    },
+    {
+      "major_code": "020308T",
+      "major_name": "精算学"
+    },
+    {
+      "major_code": "020310T",
+      "major_name": "金融科技"
+    },
+    {
+      "major_code": "020311TK",
+      "major_name": "金融审计"
+    },
+    {
+      "major_code": "020312TK",
+      "major_name": "数字金融"
+    },
+    {
+      "major_code": "020403T",
+      "major_name": "国际经济发展合作"
+    },
+    {
+      "major_code": "020404TK",
+      "major_name": "数字贸易"
+    }
+  ],
+  "removed_majors": []
+}

@@ -1,0 +1,520 @@
+{
+  "category_code": "02",
+  "category_name": "经济学",
+  "class_count": 4,
+  "major_count": 30,
+  "source_id": "undergraduate_2026_pdf",
+  "classes": [
+    {
+      "class_code": "0201",
+      "class_name": "经济学类",
+      "major_count": 11,
+      "majors": [
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020101",
+          "major_name": "经济学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020102",
+          "major_name": "经济统计学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020103T",
+          "major_name": "国民经济管理",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020104T",
+          "major_name": "资源与环境经济学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020105T",
+          "major_name": "商务经济学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020106T",
+          "major_name": "能源经济",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020107T",
+          "major_name": "劳动经济学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020108T",
+          "major_name": "经济工程",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020109T",
+          "major_name": "数字经济",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业",
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "管理学"
+          ],
+          "duration": null,
+          "major_code": "020110TK",
+          "major_name": "低空经济与管理",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0201",
+          "class_name": "经济学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020111T",
+          "major_name": "资源环境审计",
+          "source_id": "undergraduate_2026_pdf"
+        }
+      ]
+    },
+    {
+      "class_code": "0202",
+      "class_name": "财政学类",
+      "major_count": 3,
+      "majors": [
+        {
+          "attributes": [
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0202",
+          "class_name": "财政学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020201K",
+          "major_name": "财政学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0202",
+          "class_name": "财政学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020202",
+          "major_name": "税收学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业",
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0202",
+          "class_name": "财政学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020203TK",
+          "major_name": "国际税收",
+          "source_id": "undergraduate_2026_pdf"
+        }
+      ]
+    },
+    {
+      "class_code": "0203",
+      "class_name": "金融学类",
+      "major_count": 12,
+      "majors": [
+        {
+          "attributes": [
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020301K",
+          "major_name": "金融学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020302",
+          "major_name": "金融工程",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020303",
+          "major_name": "保险学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020304",
+          "major_name": "投资学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020305T",
+          "major_name": "金融数学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学",
+            "管理学"
+          ],
+          "duration": null,
+          "major_code": "020306T",
+          "major_name": "信用管理",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020307T",
+          "major_name": "经济与金融",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学",
+            "理学"
+          ],
+          "duration": null,
+          "major_code": "020308T",
+          "major_name": "精算学",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020309T",
+          "major_name": "互联网金融",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020310T",
+          "major_name": "金融科技",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业",
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020311TK",
+          "major_name": "金融审计",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业",
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0203",
+          "class_name": "金融学类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020312TK",
+          "major_name": "数字金融",
+          "source_id": "undergraduate_2026_pdf"
+        }
+      ]
+    },
+    {
+      "class_code": "0204",
+      "class_name": "经济与贸易类",
+      "major_count": 4,
+      "majors": [
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0204",
+          "class_name": "经济与贸易类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020401",
+          "major_name": "国际经济与贸易",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0204",
+          "class_name": "经济与贸易类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020402",
+          "major_name": "贸易经济",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0204",
+          "class_name": "经济与贸易类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020403T",
+          "major_name": "国际经济发展合作",
+          "source_id": "undergraduate_2026_pdf"
+        },
+        {
+          "attributes": [
+            "特设专业",
+            "国家控制布点专业"
+          ],
+          "category_code": "02",
+          "category_name": "经济学",
+          "class_code": "0204",
+          "class_name": "经济与贸易类",
+          "degree_categories": [
+            "经济学"
+          ],
+          "duration": null,
+          "major_code": "020404TK",
+          "major_name": "数字贸易",
+          "source_id": "undergraduate_2026_pdf"
+        }
+      ]
+    }
+  ],
+  "source": {
+    "id": "undergraduate_2026_pdf",
+    "kind": "pdf",
+    "title": "普通高等学校本科专业目录（2026年）",
+    "publisher": "教育部",
+    "publication_date": "2026-04-28",
+    "accessed_at": "2026-08-16",
+    "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf",
+    "local_path": "source_snapshots/undergraduate_2026.pdf",
+    "sha256": "51026248004546171620678895e991a6f0ada1ebf0de6498fe8c563873b43f11",
+    "applies_to": "本科专业目录"
+  }
+}
