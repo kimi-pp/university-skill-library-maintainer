@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "matrix_job_count": 240,
+  "terminal_event_count": 244,
+  "latest_terminal_count": 240,
+  "latest_success_count": 240,
+  "historical_failed_attempts": 4,
+  "retried_query_count": 4,
+  "page_event_count": 240,
+  "raw_candidate_record_count": 309,
+  "platform_latest_success_counts": {
+    "ClawHub": 60,
+    "GitHub": 60,
+    "Hugging Face Spaces": 60,
+    "SkillHub": 60
+  },
+  "errors": []
+}

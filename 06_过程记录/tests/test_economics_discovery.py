@@ -9,6 +9,7 @@ PROJECT = Path(__file__).resolve().parents[2]
 RUN_ROOT = PROJECT / "06_过程记录" / "economics_2026-08-19"
 CLIENTS_PATH = RUN_ROOT / "platform_clients.py"
 DISCOVERY_PATH = RUN_ROOT / "discover_economics.py"
+VERIFY_PATH = RUN_ROOT / "verify_discovery.py"
 
 
 def load_module(path: Path, name: str):
@@ -172,3 +173,47 @@ def test_failed_query_is_recorded_as_failure_not_zero_results(tmp_path):
     assert terminal[0]["complete"] is False
     assert terminal[0]["result_count"] is None
     assert "query parsing fatal" in terminal[0]["error"]
+
+
+def test_verifier_accepts_complete_latest_terminal_and_response_hashes(tmp_path):
+    discovery = load_module(DISCOVERY_PATH, "discover_economics")
+    verifier = load_module(VERIFY_PATH, "verify_economics_discovery")
+
+    def fake_client(query):
+        return ([{"id": "candidate-1"}], [{
+            "page": 1,
+            "item_count": 1,
+            "is_last_page": True,
+            "response_sha256": "ignored",
+            "response_bytes": b'{"ok":true}',
+            "request_url": "https://example.test/search",
+        }])
+
+    matrix = small_matrix()
+    discovery.run_discovery(matrix, tmp_path, clients={"SkillHub": fake_client})
+    result = verifier.verify_discovery(matrix, tmp_path)
+    assert result["errors"] == []
+    assert result["latest_success_count"] == 1
+    assert result["historical_failed_attempts"] == 0
+
+
+def test_verifier_rejects_missing_saved_response(tmp_path):
+    discovery = load_module(DISCOVERY_PATH, "discover_economics")
+    verifier = load_module(VERIFY_PATH, "verify_economics_discovery")
+
+    def fake_client(query):
+        return ([], [{
+            "page": 1,
+            "item_count": 0,
+            "is_last_page": True,
+            "response_sha256": "ignored",
+            "response_bytes": b'{}',
+            "request_url": "https://example.test/search",
+        }])
+
+    matrix = small_matrix()
+    discovery.run_discovery(matrix, tmp_path, clients={"SkillHub": fake_client})
+    response = next((tmp_path / "raw_responses").rglob("page_*.json"))
+    response.unlink()
+    result = verifier.verify_discovery(matrix, tmp_path)
+    assert any("响应文件缺失" in error for error in result["errors"])
