@@ -167,6 +167,6 @@ def _expect_timezone(value: Any) -> str:
         raise SettingsError("workflow.timezone 必须为时区名称")
     try:
         ZoneInfo(value)
-    except ZoneInfoNotFoundError as exc:
+    except (ValueError, ZoneInfoNotFoundError) as exc:
         raise SettingsError("workflow.timezone 不是有效 IANA 时区") from exc
     return value

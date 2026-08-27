@@ -86,6 +86,12 @@ class SettingsTest(unittest.TestCase):
         with self.assertRaises(SettingsError):
             load_settings(self.write(VALID.replace("config_version = 1", "config_version = 1\nconfig_version = 1")))
 
+    def test_rejects_malformed_timezone_as_settings_error(self):
+        for timezone in ("", "/absolute/path", "../bad"):
+            with self.subTest(timezone=timezone):
+                with self.assertRaises(SettingsError):
+                    load_settings(self.write(VALID.replace('timezone = "Asia/Shanghai"', f'timezone = "{timezone}"')))
+
     def test_settings_hash_matches_file_bytes(self):
         path = self.write(VALID)
         self.assertEqual(settings_sha256(path), hashlib.sha256(path.read_bytes()).hexdigest())
