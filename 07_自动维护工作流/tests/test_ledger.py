@@ -2,12 +2,14 @@ import tempfile
 import unittest
 import zipfile
 from datetime import date, datetime
+from hashlib import sha256
 from pathlib import Path
 
 from openpyxl import load_workbook
 from openpyxl.worksheet.table import Table
 
-from skill_maintainer.ledger import LedgerStore
+from skill_maintainer.catalog import TaskProfileReadError, load_task_profiles_from_ledger
+from skill_maintainer.ledger import LedgerStore, ProfessionalTaskMapUpgradeError, upgrade_professional_task_maps
 from skill_maintainer.ledger_schema import (
     CURRENT_SKILL_COLUMNS,
     ERROR_DUPLICATE_CANONICAL_SOURCE,
@@ -106,6 +108,30 @@ def formal_row(number: int = 1, **overrides):
     return row
 
 
+def create_legacy_task_map_workbook(path: Path) -> None:
+    """构造一个具备命名表的实际 10 列旧版主台账。"""
+    store = LedgerStore.create(path)
+    store.append_rows("专业任务映射", [{
+        "映射标识": "PROFILE-0818",
+        "内部标识": "LEGACY-0818",
+        "专业代码": "0818",
+        "专业名称": "交通运输类",
+        "专业任务": "交通运行分析",
+        "输入": "OD矩阵",
+        "输出": "分析报告",
+        "适用理由": "旧版映射",
+        "使用限制": "需人工复核",
+        "相关度": 5,
+    }])
+    worksheet = store.workbook["专业任务映射"]
+    worksheet.delete_cols(11, 6)
+    table = next(iter(worksheet.tables.values()))
+    table.ref = "A1:J2"
+    table.autoFilter.ref = table.ref
+    store.workbook.save(path)
+    store.workbook.close()
+
+
 class LedgerStoreTest(unittest.TestCase):
     def setUp(self):
         self.tempdir = tempfile.TemporaryDirectory()
@@ -196,6 +222,50 @@ class LedgerStoreTest(unittest.TestCase):
             table_xml = archive.read("xl/tables/table3.xml")
         self.assertNotIn(b"<autoFilter", worksheet_xml)
         self.assertIn(b'<autoFilter ref="A1:P521"', table_xml)
+
+    def test_legacy_task_map_upgrade_is_staged_immutable_and_requires_profile_completion(self):
+        legacy_path = Path(self.tempdir.name) / "legacy-10-columns.xlsx"
+        staged_path = Path(self.tempdir.name) / "upgraded-16-columns.xlsx"
+        current_copy_path = Path(self.tempdir.name) / "current-copy.xlsx"
+        create_legacy_task_map_workbook(legacy_path)
+        source_sha = sha256(legacy_path.read_bytes()).hexdigest()
+
+        summary = upgrade_professional_task_maps(legacy_path, staged_path)
+
+        self.assertTrue(summary.upgraded_legacy_schema)
+        self.assertEqual(summary.source_sha256, source_sha)
+        self.assertEqual(summary.legacy_profile_rows_requiring_completion, 1)
+        self.assertEqual(sha256(legacy_path.read_bytes()).hexdigest(), source_sha)
+        self.assertEqual(LedgerStore.load(legacy_path).workbook["专业任务映射"].max_column, 10)
+
+        upgraded = LedgerStore.load(staged_path)
+        self.assertEqual(upgraded.workbook["专业任务映射"].max_column, 16)
+        self.assertEqual(upgraded.rows("专业任务映射")[0]["软件/数据库/流程"], "需补录")
+        self.assertEqual(upgraded.validate(), [])
+        upgraded.workbook.close()
+        with self.assertRaises(TaskProfileReadError):
+            load_task_profiles_from_ledger(staged_path)
+
+        copied_summary = upgrade_professional_task_maps(staged_path, current_copy_path)
+        self.assertFalse(copied_summary.upgraded_legacy_schema)
+        self.assertEqual(copied_summary.legacy_profile_rows_requiring_completion, 0)
+        self.assertEqual(copied_summary.source_sha256, copied_summary.staging_sha256)
+        self.assertEqual(LedgerStore.load(current_copy_path).workbook["专业任务映射"].max_column, 16)
+
+    def test_legacy_upgrade_keeps_requested_output_absent_or_unmodified_when_source_is_invalid(self):
+        invalid_source = Path(self.tempdir.name) / "invalid-legacy.xlsx"
+        output = Path(self.tempdir.name) / "must-not-change.xlsx"
+        create_legacy_task_map_workbook(invalid_source)
+        workbook = LedgerStore.load(invalid_source).workbook
+        workbook["专业任务映射"]["A1"] = "未知字段"
+        workbook.save(invalid_source)
+        workbook.close()
+        output.write_bytes(b"unchanged target bytes")
+
+        with self.assertRaises(ProfessionalTaskMapUpgradeError):
+            upgrade_professional_task_maps(invalid_source, output)
+
+        self.assertEqual(output.read_bytes(), b"unchanged target bytes")
 
     def test_validation_reports_stable_codes_for_formal_row_failures(self):
         cases = (

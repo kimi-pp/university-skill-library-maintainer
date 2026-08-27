@@ -161,7 +161,7 @@ class SixDimensionQueryTest(unittest.TestCase):
                 "映射标识": "PROFILE-0818",
                 "专业代码": "0818",
                 "专业名称": "交通运输类",
-                "专业别名": "交通运输；transportation engineering",
+                "专业别名": "交通运输，transportation engineering",
                 "核心课程": "交通工程学",
                 "研究方法": "traffic flow prediction",
                 "工作任务": "route optimisation",
@@ -175,9 +175,11 @@ class SixDimensionQueryTest(unittest.TestCase):
         jobs = build_queries(scope)
 
         self.assertEqual(scope.task_profile.methods, ("traffic flow prediction",))
+        self.assertEqual(scope.task_profile.professional_aliases, ("交通运输", "transportation engineering"))
         self.assertEqual({job.dimension for job in jobs}, {
             "professional_alias", "core_course", "method", "work_task", "output_or_data", "software_database_or_process",
         })
+        self.assertEqual(len(jobs), 28)
 
     def test_excel_profile_reader_rejects_incomplete_and_duplicate_profiles(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
+from copy import copy
 from dataclasses import dataclass
 from datetime import date, datetime
 from hashlib import sha256
+import os
 from pathlib import Path
+import shutil
+import tempfile
 from typing import Any, Iterable, Mapping
 
 from openpyxl import Workbook, load_workbook
@@ -42,6 +46,20 @@ class LedgerSnapshot:
     sha256: str | None
     row_counts: dict[str, int]
     sheet_names: tuple[str, ...]
+
+
+class ProfessionalTaskMapUpgradeError(ValueError):
+    """旧版专业任务映射不能安全地升级为当前 Excel schema。"""
+
+
+@dataclass(frozen=True)
+class ProfessionalTaskMapUpgradeSummary:
+    source_path: Path
+    staging_path: Path
+    source_sha256: str
+    staging_sha256: str
+    upgraded_legacy_schema: bool
+    legacy_profile_rows_requiring_completion: int
 
 
 def validate_current_skill_row(row: Mapping[str, Any]) -> list[str]:
@@ -304,3 +322,114 @@ class LedgerStore:
             row_counts={spec.name: len(self.rows(spec.name)) for spec in SHEET_SPECS},
             sheet_names=tuple(self.workbook.sheetnames),
         )
+
+
+def upgrade_professional_task_maps(
+    source_path: str | Path,
+    staging_path: str | Path,
+) -> ProfessionalTaskMapUpgradeSummary:
+    """无损地把 10 列专业任务映射暂存升级到当前 16 列 schema。"""
+    source = Path(source_path).resolve()
+    target = Path(staging_path).resolve()
+    if source == target:
+        raise ProfessionalTaskMapUpgradeError("升级暂存路径不得覆盖源主台账。")
+    source_sha = sha256(source.read_bytes()).hexdigest()
+    temporary: Path | None = None
+    workbook: Workbook | None = None
+    try:
+        workbook = load_workbook(source, data_only=False)
+        if "专业任务映射" not in workbook.sheetnames:
+            raise ProfessionalTaskMapUpgradeError("源主台账缺少专业任务映射工作表。")
+        worksheet = workbook["专业任务映射"]
+        current_columns = SHEET_SPECS_BY_NAME["专业任务映射"].columns
+        legacy_columns = current_columns[:10]
+        headers = tuple(worksheet.cell(1, index).value for index in range(1, worksheet.max_column + 1))
+        if headers == current_columns:
+            workbook.close()
+            workbook = None
+            temporary = _new_upgrade_tempfile(target)
+            shutil.copyfile(source, temporary)
+            return _validate_and_publish_upgrade(
+                source, target, source_sha, temporary, upgraded_legacy_schema=False, legacy_profile_rows_requiring_completion=0
+            )
+        if headers != legacy_columns:
+            raise ProfessionalTaskMapUpgradeError("专业任务映射不是受支持的 10 列旧版或当前 16 列 schema。")
+        table = worksheet.tables.get(SHEET_SPECS_BY_NAME["专业任务映射"].table_name)
+        if table is None:
+            raise ProfessionalTaskMapUpgradeError("旧版专业任务映射缺少 ProfessionalTaskMaps 命名表。")
+
+        header_template = worksheet.cell(1, len(legacy_columns))
+        legacy_rows_requiring_completion = 0
+        for index, column_name in enumerate(current_columns[len(legacy_columns):], start=len(legacy_columns) + 1):
+            cell = worksheet.cell(1, index, column_name)
+            cell._style = copy(header_template._style)
+            cell.font = copy(header_template.font)
+            cell.fill = copy(header_template.fill)
+            cell.border = copy(header_template.border)
+            cell.alignment = copy(header_template.alignment)
+            cell.protection = copy(header_template.protection)
+            worksheet.column_dimensions[get_column_letter(index)].width = max(14, min(34, len(column_name) * 2 + 4))
+        for row_number in range(2, worksheet.max_row + 1):
+            if not LedgerStore._has_value(worksheet.cell(row_number, 3).value):
+                continue
+            legacy_rows_requiring_completion += 1
+            template = worksheet.cell(row_number, len(legacy_columns))
+            for index in range(len(legacy_columns) + 1, len(current_columns) + 1):
+                cell = worksheet.cell(row_number, index, "需补录")
+                cell._style = copy(template._style)
+                cell.alignment = copy(template.alignment)
+        table.ref = f"A1:{get_column_letter(len(current_columns))}{max(2, worksheet.max_row)}"
+        table.autoFilter.ref = table.ref
+        temporary = _new_upgrade_tempfile(target)
+        workbook.save(temporary)
+        workbook.close()
+        workbook = None
+        return _validate_and_publish_upgrade(
+            source,
+            target,
+            source_sha,
+            temporary,
+            upgraded_legacy_schema=True,
+            legacy_profile_rows_requiring_completion=legacy_rows_requiring_completion,
+        )
+    except ProfessionalTaskMapUpgradeError:
+        raise
+    except Exception as exc:
+        raise ProfessionalTaskMapUpgradeError(f"专业任务映射升级失败：{exc}") from exc
+    finally:
+        if workbook is not None:
+            workbook.close()
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
+
+
+def _new_upgrade_tempfile(target: Path) -> Path:
+    handle = tempfile.NamedTemporaryFile(prefix="professional-task-map-upgrade-", suffix=".xlsx", dir=target.parent, delete=False)
+    handle.close()
+    return Path(handle.name)
+
+
+def _validate_and_publish_upgrade(
+    source: Path,
+    target: Path,
+    source_sha: str,
+    temporary: Path,
+    *,
+    upgraded_legacy_schema: bool,
+    legacy_profile_rows_requiring_completion: int,
+) -> ProfessionalTaskMapUpgradeSummary:
+    staged = LedgerStore.load(temporary)
+    errors = staged.validate()
+    staged.workbook.close()
+    if errors:
+        raise ProfessionalTaskMapUpgradeError("升级后主台账校验失败：" + "；".join(errors))
+    staging_sha = sha256(temporary.read_bytes()).hexdigest()
+    os.replace(temporary, target)
+    return ProfessionalTaskMapUpgradeSummary(
+        source_path=source,
+        staging_path=target,
+        source_sha256=source_sha,
+        staging_sha256=staging_sha,
+        upgraded_legacy_schema=upgraded_legacy_schema,
+        legacy_profile_rows_requiring_completion=legacy_profile_rows_requiring_completion,
+    )

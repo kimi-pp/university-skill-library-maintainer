@@ -167,7 +167,8 @@ _PROFILE_COLUMNS = (
     "成果或数据对象",
     "软件/数据库/流程",
 )
-_PROFILE_SPLIT_RE = re.compile(r"[；;、,\r\n]+")
+_PROFILE_SPLIT_RE = re.compile(r"[；;、,，\r\n]+")
+_PROFILE_PLACEHOLDERS = frozenset({"需补录"})
 
 
 def load_catalog_with_ledger(catalog_path: Path, ledger_path: Path) -> Catalog:
@@ -183,7 +184,7 @@ def load_task_profiles_from_ledger(ledger_path: Path) -> Mapping[str, TaskProfil
     rows = LedgerStore.load(ledger_path).rows("专业任务映射")
     profiles: dict[str, TaskProfile] = {}
     for row_data in rows:
-        if not any(_has_visible_value(row_data.get(column)) for column in _PROFILE_COLUMNS):
+        if not any(_has_present_value(row_data.get(column)) for column in _PROFILE_COLUMNS):
             continue
         scope_id = _required_text(row_data.get("专业代码"), "专业代码")
         if scope_id in profiles:
@@ -330,6 +331,10 @@ def _optional_text(value: object) -> str | None:
 
 
 def _has_visible_value(value: Any) -> bool:
+    return type(value) is str and bool(value.strip()) and value.strip() not in _PROFILE_PLACEHOLDERS
+
+
+def _has_present_value(value: Any) -> bool:
     return type(value) is str and bool(value.strip())
 
 
