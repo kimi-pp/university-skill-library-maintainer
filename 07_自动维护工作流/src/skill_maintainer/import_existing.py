@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Iterable, Mapping
 from zipfile import BadZipFile, ZipFile
 
+from .ledger import validate_current_skill_row
 from .ledger_schema import CURRENT_SKILL_COLUMNS, CURRENT_SKILL_OPTIONAL_COLUMNS
 
 if TYPE_CHECKING:
@@ -298,7 +299,7 @@ def _groups(records: Iterable[ImportedRecord]) -> dict[str, list[ImportedRecord]
     validated_ids = {
         _first(record.values, "内部标识")
         for record in items
-        if _is_formal_record(record) and _first(record.values, "内部标识")
+        if _is_validated_historical_record(record) and _first(record.values, "内部标识")
     }
     stable_seen: dict[str, int] = {}
     for index, record in enumerate(items):
@@ -339,9 +340,14 @@ def _is_formal_record(record: ImportedRecord) -> bool:
 def _group_stable_id(group: Iterable[ImportedRecord]) -> str:
     for record in group:
         stable_id = _first(record.values, "内部标识")
-        if stable_id and _is_formal_record(record):
+        if stable_id and _is_validated_historical_record(record):
             return stable_id
     return ""
+
+
+def _is_validated_historical_record(record: ImportedRecord) -> bool:
+    stable_id = _first(record.values, "内部标识")
+    return bool(stable_id) and not validate_current_skill_row(_formal_row(record, stable_id))
 
 
 def _stable_id(record: ImportedRecord, existing: str, canonical_source: str) -> str:

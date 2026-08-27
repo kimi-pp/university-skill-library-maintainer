@@ -184,6 +184,26 @@ class ExistingDeliveryImportTest(unittest.TestCase):
 
         self.assertRegex(summary.stable_ids[0], r"^IMP-01-[0-9A-F]{12}$")
 
+    def test_semantically_invalid_historical_id_cannot_override_generated_id(self):
+        valid_without_id = self.formal_record(**{"内部标识": None})
+        invalid_values = dict(valid_without_id.values)
+        invalid_values.update({"内部标识": "UNVALIDATED-SEMANTIC-001", "许可证": "待确认"})
+        invalid_with_id = ImportedRecord(self.root / "invalid.xlsx", 2, invalid_values)
+
+        summary = build_initial_ledger(self.inventory_for(valid_without_id, invalid_with_id), self.root / "staging" / "invalid-semantic-id.xlsx")
+
+        self.assertRegex(summary.stable_ids[0], r"^IMP-01-[0-9A-F]{12}$")
+
+    def test_semantically_valid_historical_id_wins_over_generated_id(self):
+        valid_with_id = self.formal_record(**{"内部标识": "GH-01-0999"})
+        no_id_values = dict(valid_with_id.values)
+        no_id_values.pop("内部标识")
+        valid_without_id = ImportedRecord(self.root / "no-id.xlsx", 2, no_id_values)
+
+        summary = build_initial_ledger(self.inventory_for(valid_without_id, valid_with_id), self.root / "staging" / "valid-semantic-id.xlsx")
+
+        self.assertEqual(summary.stable_ids, ("GH-01-0999",))
+
     def test_ambiguous_identity_group_keeps_every_source_as_observation(self):
         primary = self.formal_record()
         ambiguous = ImportedRecord(

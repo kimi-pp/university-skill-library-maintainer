@@ -44,6 +44,40 @@ class LedgerSnapshot:
     sheet_names: tuple[str, ...]
 
 
+def validate_current_skill_row(row: Mapping[str, Any]) -> list[str]:
+    """返回单条当前 Skill 正式语义校验的稳定错误码。"""
+    errors: list[str] = []
+    if str(row["入库层级"] or "").strip() != "正式":
+        return [ERROR_NON_FORMAL_CURRENT_SKILL]
+    if any(not LedgerStore._has_value(row[column]) for column in CURRENT_SKILL_REQUIRED_COLUMNS):
+        errors.append(ERROR_FORMAL_MISSING_REQUIRED_FACT)
+    if not str(row["固定版本"] or "").strip():
+        errors.append(ERROR_MISSING_FIXED_VERSION)
+    license_value = row["许可证"]
+    license_name = license_value.strip().casefold() if type(license_value) is str else ""
+    if type(license_value) is not str or license_name in {"", "待确认", "无许可证声明", "未明确", "未知", "unknown", "n/a", "none", "null", "-"}:
+        errors.append(ERROR_FORMAL_UNKNOWN_LICENSE)
+    if row["来源平台"] not in ALLOWED_SOURCE_PLATFORMS:
+        errors.append(ERROR_INVALID_SOURCE_PLATFORM)
+    remote_call = str(row["外部联网/API 调用"] or "").strip()
+    endpoint = str(row["远程服务端点"] or "").strip()
+    if remote_call not in {"是", "否"}:
+        errors.append(ERROR_INVALID_REMOTE_CALL_FLAG)
+    if remote_call == "是" and not endpoint:
+        errors.append(ERROR_REMOTE_ENDPOINT_REQUIRED)
+    endpoint_lower = endpoint.lower()
+    if remote_call == "是" and any(name in endpoint_lower for name in ("abaqus", "ansys", "matlab", "autocad")):
+        errors.append(ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT)
+    if row["验证状态"] not in {"全部通过（未实测）", "全部通过（已实测）"}:
+        errors.append(ERROR_FORMAL_INVALID_VALIDATION_STATUS)
+    quality_score = row["质量评分"]
+    if row["安全等级"] not in {"SA", "SB"}:
+        errors.append(ERROR_FORMAL_INVALID_SECURITY_GRADE)
+    if isinstance(quality_score, bool) or not isinstance(quality_score, int) or quality_score < 2 or quality_score > 5:
+        errors.append(ERROR_FORMAL_INVALID_QUALITY_SCORE)
+    return list(dict.fromkeys(errors))
+
+
 class LedgerStore:
     """所有字段均通过表头名称读取，避免依赖固定列号。"""
 
@@ -236,35 +270,7 @@ class LedgerStore:
 
         if current_skill_rows is not None:
             for row in current_skill_rows:
-                if str(row["入库层级"] or "").strip() != "正式":
-                    errors.append(ERROR_NON_FORMAL_CURRENT_SKILL)
-                    continue
-                if any(not self._has_value(row[column]) for column in CURRENT_SKILL_REQUIRED_COLUMNS):
-                    errors.append(ERROR_FORMAL_MISSING_REQUIRED_FACT)
-                if not str(row["固定版本"] or "").strip():
-                    errors.append(ERROR_MISSING_FIXED_VERSION)
-                license_value = row["许可证"]
-                license_name = license_value.strip().casefold() if type(license_value) is str else ""
-                if type(license_value) is not str or license_name in {"", "待确认", "无许可证声明", "未明确", "未知", "unknown", "n/a", "none", "null", "-"}:
-                    errors.append(ERROR_FORMAL_UNKNOWN_LICENSE)
-                if row["来源平台"] not in ALLOWED_SOURCE_PLATFORMS:
-                    errors.append(ERROR_INVALID_SOURCE_PLATFORM)
-                remote_call = str(row["外部联网/API 调用"] or "").strip()
-                endpoint = str(row["远程服务端点"] or "").strip()
-                if remote_call not in {"是", "否"}:
-                    errors.append(ERROR_INVALID_REMOTE_CALL_FLAG)
-                if remote_call == "是" and not endpoint:
-                    errors.append(ERROR_REMOTE_ENDPOINT_REQUIRED)
-                endpoint_lower = endpoint.lower()
-                if remote_call == "是" and any(name in endpoint_lower for name in ("abaqus", "ansys", "matlab", "autocad")):
-                    errors.append(ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT)
-                if row["验证状态"] not in {"全部通过（未实测）", "全部通过（已实测）"}:
-                    errors.append(ERROR_FORMAL_INVALID_VALIDATION_STATUS)
-                if row["安全等级"] not in {"SA", "SB"}:
-                    errors.append(ERROR_FORMAL_INVALID_SECURITY_GRADE)
-                quality_score = row["质量评分"]
-                if isinstance(quality_score, bool) or not isinstance(quality_score, int) or quality_score < 2 or quality_score > 5:
-                    errors.append(ERROR_FORMAL_INVALID_QUALITY_SCORE)
+                errors.extend(validate_current_skill_row(row))
         return list(dict.fromkeys(errors))
 
     @staticmethod
