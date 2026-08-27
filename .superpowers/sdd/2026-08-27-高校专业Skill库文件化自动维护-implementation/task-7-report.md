@@ -46,3 +46,7 @@ Review-fix TDD RED covered the destination-link escape, missing/wrong packets, r
 ## Review-fix round 2
 
 A final identity-binding regression showed that the service previously trusted only the outer `review_packets` mapping key. It now rejects any packet whose embedded `candidate_id` differs from the candidate ID in the transient review decision, even when version, source, license, safety and evidence fields otherwise match. The new test was RED before the check and is included in the focused suite.
+
+## Review-fix round 3
+
+Candidate identity is now mandatory at every boundary: JSON parsing rejects missing or blank decision IDs, direct decision validation rejects blank IDs, packet validation rejects blank packet IDs and always compares the two IDs, and `build_review_packet` rejects any candidate/snapshot pair that cannot supply an ID. The regression covers the former empty-key mapping attack, a directly constructed blank decision, and packet construction without an identity.

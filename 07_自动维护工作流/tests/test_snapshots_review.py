@@ -151,7 +151,7 @@ class ReviewContractTest(unittest.TestCase):
             relevance_score=4,
             quality_bonus_flags=(True, True, True, True, True),
         )
-        return ReviewDecision(observed, judgments, DerivedFields())
+        return ReviewDecision(observed, judgments, DerivedFields(), "org/example")
 
     def _packet(self, decision, *, fixed_version=None):
         facts = decision.observed_facts
@@ -214,6 +214,37 @@ class ReviewContractTest(unittest.TestCase):
         errors = validate_review(decision, packet)
         self.assertIn("observed_facts.fixed_version: 与审查包固定版本不一致", errors)
 
+    def test_candidate_id_is_required_for_parsed_direct_and_packet_build_paths(self):
+        decision = self._decision()
+        payload = self._payload(decision)
+        payload.pop("candidate_id")
+        packet = self._packet(decision)
+        empty_identity_packet = ReviewPacket(
+            "different/candidate", packet.fixed_version, packet.canonical_source, packet.license,
+            packet.security_grade, packet.rule_versions, packet.evidence_paths, packet.snapshot_files,
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            body = json.dumps({"decisions": [payload]}, ensure_ascii=False).encode("utf-8")
+            with self.assertRaisesRegex(ValueError, "review_decision.candidate_id: 必须提供非空候选标识"):
+                apply_reviews_from_stream(io.BytesIO(body), store, {"": empty_identity_packet})
+        direct = ReviewDecision(decision.observed_facts, decision.project_judgments, candidate_id="")
+        self.assertIn(
+            "review_decision.candidate_id: 必须提供非空候选标识",
+            validate_review(direct, packet),
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            source = Path(temporary) / "candidate"
+            source.mkdir()
+            (source / "SKILL.md").write_text("# example", encoding="utf-8")
+            snapshot = build_snapshot(SnapshotCandidate("", "a" * 40, source), Path(temporary) / "snapshot")
+            with self.assertRaisesRegex(ValueError, "candidate_id"):
+                build_review_packet({
+                    "canonical_source": decision.observed_facts.canonical_source,
+                    "license": decision.observed_facts.license,
+                    "security_grade": decision.observed_facts.security_grade,
+                }, snapshot)
+
     def test_apply_review_rejects_missing_packet_and_tampered_ledger_row(self):
         decision = self._decision()
         tampered_row = {"内部标识": "GH-01-0001", "固定版本": "attacker-version"}
@@ -246,7 +277,7 @@ class ReviewContractTest(unittest.TestCase):
         unknown = ProjectJudgments("未知层级", True, True, 4, ())
         self.assertIn(
             "project_judgments.record_tier: 只能为正式推荐、条件候选或需适配候选",
-            validate_review(ReviewDecision(parsed.observed_facts, unknown)),
+            validate_review(ReviewDecision(parsed.observed_facts, unknown, candidate_id=parsed.candidate_id)),
         )
 
     def test_conditional_and_adaptation_cannot_be_directly_deployed(self):
@@ -256,13 +287,13 @@ class ReviewContractTest(unittest.TestCase):
                 judgments = ProjectJudgments(tier, True, True, 4, ())
                 self.assertIn(
                     "project_judgments.direct_deployable: 条件候选和需适配候选不得直接部署",
-                    validate_review(ReviewDecision(decision.observed_facts, judgments)),
+                    validate_review(ReviewDecision(decision.observed_facts, judgments, candidate_id=decision.candidate_id)),
                 )
 
     def test_application_routes_conditional_candidate_to_observations_not_current_skill(self):
         decision = self._decision()
         judgments = ProjectJudgments("条件候选", True, False, 4, ())
-        decision = ReviewDecision(decision.observed_facts, judgments)
+        decision = ReviewDecision(decision.observed_facts, judgments, candidate_id=decision.candidate_id)
         observation = {
             "观察标识": "OBS-01", "候选名称": "example", "Canonical source": decision.observed_facts.canonical_source,
             "观察状态": "条件候选", "许可证": decision.observed_facts.license,
@@ -310,7 +341,7 @@ class ReviewContractTest(unittest.TestCase):
 
     def test_relevance_two_is_not_product_displayable(self):
         decision = self._decision()
-        decision = ReviewDecision(decision.observed_facts, ProjectJudgments("正式推荐", True, True, 2, ()), decision.derived_fields)
+        decision = ReviewDecision(decision.observed_facts, ProjectJudgments("正式推荐", True, True, 2, ()), decision.derived_fields, decision.candidate_id)
         errors = validate_review(decision)
         self.assertIn("project_judgments.display_in_product: 相关度低于 3/5 不得展示", errors)
 
@@ -330,7 +361,7 @@ class ReviewContractTest(unittest.TestCase):
 
     def test_derived_quality_score_cannot_override_observed_facts_or_project_judgments(self):
         decision = self._decision()
-        decision = ReviewDecision(decision.observed_facts, decision.project_judgments, DerivedFields(quality_score=4))
+        decision = ReviewDecision(decision.observed_facts, decision.project_judgments, DerivedFields(quality_score=4), decision.candidate_id)
         self.assertIn(
             "derived_fields.quality_score: 必须由事实和项目判断重新计算",
             validate_review(decision),
@@ -358,6 +389,7 @@ class ReviewContractTest(unittest.TestCase):
             store = LedgerStore.create(Path(temporary) / "source.xlsx")
             payload = {
                 "decisions": [{
+                    "candidate_id": "org/example",
                     "observed_facts": {
                         "fixed_version": "a" * 40,
                         "entry_description_complete": "false",

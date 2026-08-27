@@ -71,6 +71,9 @@ class ReviewDecision:
         if isinstance(bonuses, bool): bonuses = (bonuses,)
         if not isinstance(bonuses, (list, tuple)) or not all(isinstance(item, bool) for item in bonuses):
             raise ValueError("project_judgments.quality_bonus_flags 必须为布尔数组")
+        candidate_id = str(payload.get("candidate_id", "")).strip()
+        if not candidate_id:
+            raise ValueError("review_decision.candidate_id: 必须提供非空候选标识")
         tier = str(judgments.get("record_tier", ""))
         tier = _LEGACY_RECORD_TIERS.get(tier, tier)
         return cls(
@@ -88,7 +91,7 @@ class ReviewDecision:
                 tuple(bool(item) for item in bonuses),
             ),
             DerivedFields(derived.get("quality_score"), derived.get("ledger_row")),
-            str(payload.get("candidate_id", "")),
+            candidate_id,
         )
 
 
@@ -109,6 +112,8 @@ def build_review_packet(candidate: object, snapshot: SnapshotManifest) -> Review
     canonical_source = _candidate_value(candidate, "canonical_source", "canonical_source_hint")
     license_name = _candidate_value(candidate, "license")
     security_grade = _candidate_value(candidate, "security_grade")
+    if not candidate_id.strip():
+        raise ValueError("review_packet.candidate_id: 必须提供非空候选标识")
     if not all((canonical_source, license_name, security_grade)):
         raise ValueError("审查包必须包含 canonical source、许可证和安全等级事实")
     rule_versions = {
@@ -128,6 +133,8 @@ def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None
     facts = decision.observed_facts
     judgments = decision.project_judgments
     errors: list[str] = []
+    if not decision.candidate_id.strip():
+        errors.append("review_decision.candidate_id: 必须提供非空候选标识")
     if not facts.fixed_version.strip():
         errors.append("observed_facts.fixed_version: 必须提供固定版本")
     if facts.remote_api_call not in {"是", "否"}:
@@ -157,7 +164,9 @@ def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None
     if decision.derived_fields.quality_score is not None and decision.derived_fields.quality_score != score_quality(decision):
         errors.append("derived_fields.quality_score: 必须由事实和项目判断重新计算")
     if packet is not None:
-        if decision.candidate_id and packet.candidate_id != decision.candidate_id:
+        if not packet.candidate_id.strip():
+            errors.append("review_packet.candidate_id: 必须提供非空候选标识")
+        if packet.candidate_id != decision.candidate_id:
             errors.append("review_packet.candidate_id: 与审查决定候选标识不一致")
         if packet.fixed_version != facts.fixed_version:
             errors.append("observed_facts.fixed_version: 与审查包固定版本不一致")
