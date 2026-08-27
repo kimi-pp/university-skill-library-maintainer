@@ -27,3 +27,16 @@ Using the project Python with `PYTHONPATH=07_自动维护工作流/src`:
 
 - No network access occurred. Candidate Skills were not installed, imported, executed, or sent to candidate-controlled commands.
 - `cli.py` was deliberately not changed. Task 9 owns the staged single-writer coordination that persists dedup aliases and invokes version decisions; Task 13 owns CLI wiring.
+
+## Independent-review repair
+
+- URL normalization now retains query and fragment identity exactly; it only normalizes the scheme/host case, a terminal slash and a terminal `.git` suffix.
+- Deduplication is group-safe and order-independent. It rejects known source, upstream/entry or function conflicts before a merge; a bridge candidate cannot transitively join incompatible groups. Existing current/alias ledger identities are the only source of stable-ID reuse, while a conflicting candidate-supplied ID becomes `manual_review`.
+- Content-hash fallback and version comparison accept only an exact 64-hex SHA-256. Empty tags do not create alias observations.
+- Version promotion now requires a capability-issued `VersionDecision.approve` carrying a valid Task 7 `ReviewDecision` and `ReviewPacket`. Application revalidates both and exactly binds their identity, version, source, licence, security grade and evidence to the persisted full current row and observed version.
+- Promotion writes on a shadow `LedgerStore` cloned from an in-memory workbook byte snapshot. History append and current-row update both run there; any failure discards the shadow and leaves the original workbook object, all in-memory rows and the source-ledger file bytes unchanged. Only a successful pair swaps in the shadow workbook.
+
+Fresh repair verification:
+
+- Focused Task 8 suite: 20/20 passed.
+- Full workflow suite: 122/122 passed.

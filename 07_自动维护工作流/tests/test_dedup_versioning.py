@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+from unittest.mock import patch
 from dataclasses import replace
 from datetime import date
 from pathlib import Path
@@ -7,6 +8,7 @@ from pathlib import Path
 from skill_maintainer.dedup import canonical_key, deduplicate
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
+from skill_maintainer.review import ObservedFacts, ProjectJudgments, ReviewDecision, ReviewPacket
 from skill_maintainer.versioning import VersionDecision, apply_approved_version, compare_version
 
 
@@ -29,7 +31,7 @@ def formal_row(number: int = 1, **overrides):
         "Skill入口路径": "SKILL.md",
         "发布者": "example",
         "固定版本": f"v{number}.0.0",
-        "固定版本内容指纹": f"sha256:{number:064x}",
+        "固定版本内容指纹": f"{number:064x}",
         "许可证": "MIT",
         "外部联网/API 调用": "否",
         "远程服务端点": "",
@@ -49,7 +51,7 @@ def candidate(platform: str, source_url: str, **overrides):
         "canonical_source": "https://github.com/acme/course-designer",
         "upstream_identity": "acme/course-designer",
         "entry_path": "skills/course/SKILL.md",
-        "content_hash": "sha256:" + "a" * 64,
+        "content_hash": "a" * 64,
         "name": "Course Designer",
         "function": "build a course outline from a syllabus",
         "observed_on": "2026-08-27",
@@ -86,7 +88,7 @@ class DeduplicationTest(unittest.TestCase):
                 canonical_source="https://huggingface.co/spaces/acme/course-designer",
                 upstream_identity="acme/course-designer-space",
                 entry_path="app.py",
-                content_hash="sha256:" + "b" * 64,
+                content_hash="b" * 64,
                 function="generate classroom illustrations from prompts",
             ),
         ), self.ledger)
@@ -130,6 +132,69 @@ class DeduplicationTest(unittest.TestCase):
         self.assertEqual(merged.product_count, 1)
         self.assertEqual(separate.product_count, 3)
 
+    def test_query_and_fragment_are_identity_not_tracking_noise(self):
+        first = candidate("GitHub", "https://github.com/acme/course-designer?id=one", canonical_source="https://github.com/acme/course-designer?id=one")
+        second = candidate("GitHub", "https://github.com/acme/course-designer?id=two#entry", canonical_source="https://github.com/acme/course-designer?id=two#entry")
+
+        self.assertNotEqual(canonical_key(first), canonical_key(second))
+        self.assertEqual(deduplicate((first, second), self.ledger).product_count, 2)
+
+    def test_same_canonical_repository_with_different_known_entry_paths_stays_separate(self):
+        first = candidate("GitHub", "https://github.com/acme/mono", canonical_source="https://github.com/acme/mono", entry_path="skills/a/SKILL.md")
+        second = candidate("GitHub", "https://github.com/acme/mono", canonical_source="https://github.com/acme/mono", entry_path="skills/b/SKILL.md")
+
+        self.assertEqual(deduplicate((first, second), self.ledger).product_count, 2)
+
+    def test_transitive_pair_evidence_cannot_merge_across_a_strong_identity_conflict(self):
+        first = candidate("GitHub", "https://github.com/acme/a", canonical_source="https://github.com/acme/a", upstream_identity="", entry_path="", content_hash="c" * 64)
+        bridge = candidate("ClawHub", "https://clawhub.example/bridge", canonical_source="", upstream_identity="acme/shared", entry_path="SKILL.md", content_hash="c" * 64)
+        third = candidate("GitHub", "https://github.com/acme/c", canonical_source="https://github.com/acme/c", upstream_identity="acme/shared", entry_path="SKILL.md", content_hash="d" * 64)
+
+        result = deduplicate((first, bridge, third), self.ledger)
+
+        self.assertEqual(result.product_count, 2)
+        self.assertEqual(len({item["内部标识"] for item in result.skills}), 2)
+
+    def test_existing_source_alias_reuses_ledger_stable_id_but_untrusted_candidate_id_cannot(self):
+        current = formal_row(8, **{"内部标识": "EXISTING-8", "Canonical source": "https://github.com/acme/existing"})
+        self.ledger.append_rows("当前Skill", [current])
+        self.ledger.append_rows("来源别名", [{
+            "别名标识": "existing-alias", "内部标识": "EXISTING-8", "来源平台": "ClawHub",
+            "来源地址": "https://clawhub.example/acme/existing", "Canonical source": current["Canonical source"],
+            "关系类型": "跨平台别名", "去重依据": "已验证", "记录日期": "2026-08-27",
+        }])
+        alias_discovery = candidate("ClawHub", "https://clawhub.example/acme/existing", canonical_source="", upstream_identity="", entry_path="", content_hash="e" * 64, **{"内部标识": "ATTACKER"})
+        conflict = candidate("GitHub", "https://github.com/other/skill", canonical_source="https://github.com/other/skill", upstream_identity="other/skill", entry_path="SKILL.md", content_hash="f" * 64, **{"内部标识": "EXISTING-8"})
+
+        reused = deduplicate((alias_discovery,), self.ledger)
+        rejected = deduplicate((conflict,), self.ledger)
+
+        self.assertEqual(reused.skills[0]["内部标识"], "EXISTING-8")
+        self.assertNotEqual(rejected.skills[0]["内部标识"], "EXISTING-8")
+        self.assertTrue(any(item["原因"] == "untrusted_stable_id_conflict" for item in rejected.manual_review))
+
+    def test_stable_ids_are_independent_of_candidate_input_order(self):
+        candidates = (
+            candidate("GitHub", "https://github.com/acme/z", canonical_source="https://github.com/acme/z", upstream_identity="acme/z", content_hash="1" * 64),
+            candidate("GitHub", "https://github.com/acme/a", canonical_source="https://github.com/acme/a", upstream_identity="acme/a", content_hash="2" * 64),
+        )
+
+        forward = deduplicate(candidates, self.ledger)
+        reverse = deduplicate(tuple(reversed(candidates)), self.ledger)
+
+        forward_ids = {item["Canonical source"]: item["内部标识"] for item in forward.skills}
+        reverse_ids = {item["Canonical source"]: item["内部标识"] for item in reverse.skills}
+        self.assertEqual(forward_ids, reverse_ids)
+
+    def test_malformed_hash_never_merges_and_conflicting_identity_blocks_hash_fallback_without_entry(self):
+        malformed_first = candidate("GitHub", "https://github.com/acme/first", canonical_source="", upstream_identity="", entry_path="", content_hash="unknown")
+        malformed_second = candidate("ClawHub", "https://clawhub.example/second", canonical_source="", upstream_identity="", entry_path="", content_hash="unknown")
+        conflicting_first = candidate("GitHub", "https://github.com/acme/first", canonical_source="https://github.com/acme/first", upstream_identity="", entry_path="", content_hash="3" * 64)
+        conflicting_second = candidate("GitHub", "https://github.com/acme/second", canonical_source="https://github.com/acme/second", upstream_identity="", entry_path="", content_hash="3" * 64)
+
+        self.assertEqual(deduplicate((malformed_first, malformed_second), self.ledger).product_count, 2)
+        self.assertEqual(deduplicate((conflicting_first, conflicting_second), self.ledger).product_count, 2)
+
     def test_rerun_is_idempotent_for_stable_ids_and_aliases(self):
         candidates = (
             candidate("SkillHub", "https://skillhub.example/acme/course-designer"),
@@ -156,13 +221,37 @@ class VersionRetentionTest(unittest.TestCase):
         value = {
             "内部标识": self.current["内部标识"],
             "fixed_version": "v2.0.0",
-            "content_hash": "sha256:" + "f" * 64,
+            "content_hash": "f" * 64,
             "canonical_source": self.current["Canonical source"],
             "source_url": "https://github.com/example/skill-1/releases/tag/v2.0.0",
             "evidence_paths": ("snapshots/v2/SKILL.md",),
+            "license": self.current["许可证"],
+            "security_grade": self.current["安全等级"],
         }
         value.update(overrides)
         return value
+
+    def approved(self, change, *, current=None, observed=None):
+        current = current or change.current
+        observed = observed or change.observed
+        facts = ObservedFacts(
+            fixed_version=observed["fixed_version"], entry_description_complete=True,
+            prerequisites_clear_and_available=True, license=observed["license"],
+            canonical_source=observed["canonical_source"], evidence_paths=tuple(observed["evidence_paths"]),
+            remote_api_call="否", remote_endpoints=(), local_professional_software="无",
+            local_script_plugin_interface="不使用", security_grade=observed["security_grade"],
+            verification_status="全部通过（未实测）",
+        )
+        review = ReviewDecision(
+            facts, ProjectJudgments("正式推荐", True, True, 5, (True,)), candidate_id=current["内部标识"],
+        )
+        packet = ReviewPacket(
+            current["内部标识"], observed["fixed_version"], observed["canonical_source"], observed["license"],
+            observed["security_grade"], {"SKILL_RESEARCH_WORKFLOW": "1.4"}, tuple(observed["evidence_paths"]), ("SKILL.md",),
+        )
+        return VersionDecision.approve(
+            change, review, packet, review_date="2026-08-27", conclusion_change="完整复审通过",
+        )
 
     def test_unchanged_hash_does_nothing_and_new_tag_is_alias_observation_only(self):
         unchanged = compare_version(self.current, self.observed(
@@ -191,25 +280,19 @@ class VersionRetentionTest(unittest.TestCase):
 
     def test_accepted_change_appends_history_before_current_and_append_failure_preserves_current(self):
         change = compare_version(self.current, self.observed())
-        decision = VersionDecision.from_change(
-            change,
-            outcome="accepted",
-            review_date="2026-08-27",
-            conclusion_change="安全、许可证和专业映射已完整复审",
-        )
-        original_append = self.ledger.append_rows
+        decision = self.approved(change)
+        original_append = LedgerStore.append_rows
 
-        def fail_history(sheet, rows):
+        def fail_history(store, sheet, rows):
             if sheet == "版本历史":
                 raise OSError("simulated append failure")
-            return original_append(sheet, rows)
+            return original_append(store, sheet, rows)
 
-        self.ledger.append_rows = fail_history
-        with self.assertRaises(OSError):
-            apply_approved_version(self.ledger, decision)
+        with patch.object(LedgerStore, "append_rows", fail_history):
+            with self.assertRaises(OSError):
+                apply_approved_version(self.ledger, decision)
         self.assertEqual(self.ledger.rows("当前Skill"), [self.current])
         self.assertEqual(self.ledger.rows("版本历史"), [])
-        self.ledger.append_rows = original_append
 
         apply_approved_version(self.ledger, decision)
 
@@ -225,7 +308,7 @@ class VersionRetentionTest(unittest.TestCase):
 
     def test_history_integrity_checks_and_rerun_are_idempotent(self):
         change = compare_version(self.current, self.observed())
-        accepted = VersionDecision.from_change(change, outcome="accepted")
+        accepted = self.approved(change)
         with self.assertRaisesRegex(ValueError, "固定版本内容指纹"):
             compare_version(self.current, self.observed(content_hash=""))
         with self.assertRaisesRegex(ValueError, "history_fields"):
@@ -239,12 +322,49 @@ class VersionRetentionTest(unittest.TestCase):
 
     def test_existing_history_identity_with_old_current_is_rejected(self):
         change = compare_version(self.current, self.observed())
-        accepted = VersionDecision.from_change(change, outcome="accepted")
+        accepted = self.approved(change)
         apply_approved_version(self.ledger, accepted)
         self.ledger.upsert_skill(self.current)
 
         with self.assertRaisesRegex(ValueError, "版本历史"):
             apply_approved_version(self.ledger, accepted)
+
+    def test_non_hex_hash_and_blank_observed_version_cannot_create_updates_or_aliases(self):
+        with self.assertRaisesRegex(ValueError, "SHA-256"):
+            compare_version(self.current, self.observed(content_hash="not-a-sha"))
+        blank_version = compare_version(self.current, self.observed(fixed_version="", content_hash=self.current["固定版本内容指纹"]))
+
+        self.assertEqual(blank_version.status, "unchanged")
+        apply_approved_version(self.ledger, VersionDecision.from_change(blank_version, outcome="accepted"))
+        self.assertEqual(self.ledger.rows("来源别名"), [])
+
+    def test_upsert_failure_rolls_back_appended_history_and_ledger_state(self):
+        change = compare_version(self.current, self.observed())
+        decision = self.approved(change)
+        original_workbook = self.ledger.workbook
+        source_bytes = self.ledger.source_path.read_bytes()
+        def fail_upsert(store, row):
+            raise OSError("simulated current-row failure")
+
+        with patch.object(LedgerStore, "upsert_skill", fail_upsert):
+            with self.assertRaises(OSError):
+                apply_approved_version(self.ledger, decision)
+
+        self.assertEqual(self.ledger.rows("当前Skill"), [self.current])
+        self.assertEqual(self.ledger.rows("版本历史"), [])
+        self.assertIs(self.ledger.workbook, original_workbook)
+        self.assertEqual(self.ledger.source_path.read_bytes(), source_bytes)
+
+    def test_accepted_change_requires_trusted_task7_review_and_binds_persisted_current_row(self):
+        change = compare_version(self.current, self.observed())
+        with self.assertRaisesRegex(ValueError, "trusted review"):
+            apply_approved_version(self.ledger, VersionDecision.from_change(change, outcome="accepted"))
+
+        forged_current = dict(self.current, **{"许可证": "Attacker-License"})
+        forged_change = replace(change, current=forged_current)
+        forged = self.approved(forged_change, current=forged_current)
+        with self.assertRaisesRegex(ValueError, "当前Skill"):
+            apply_approved_version(self.ledger, forged)
 
     def test_deleted_upstream_marks_attention_without_deleting_current_or_snapshot(self):
         change = compare_version(self.current, self.observed(availability="deleted"))
