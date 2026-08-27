@@ -6,8 +6,11 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 import json
+import os
 from pathlib import Path
+from stat import S_ISREG
 from typing import Callable, Literal, Mapping, Protocol
+from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -93,6 +96,61 @@ class SnapshotResult:
     error: SourceError | None = None
 
 
+@dataclass(frozen=True)
+class EvidenceRoot:
+    """经解析和反链接检查的证据根；所有持久化证据必须经此对象写入。"""
+
+    root: Path
+
+    def __post_init__(self) -> None:
+        resolved = self.root.resolve(strict=True)
+        if not resolved.is_dir() or _is_link_or_reparse(self.root):
+            raise ValueError("EvidenceRoot 必须是现有的非链接目录")
+        object.__setattr__(self, "root", resolved)
+
+    def write(self, relative_destination: Path, content: bytes) -> Path:
+        if relative_destination.is_absolute() or ".." in relative_destination.parts:
+            raise ValueError("证据目标必须是 EvidenceRoot 内的相对路径")
+        destination = self.root.joinpath(relative_destination)
+        self._ensure_safe_parents(destination.parent)
+        resolved_parent = destination.parent.resolve(strict=True)
+        if self.root not in (resolved_parent, *resolved_parent.parents):
+            raise ValueError("证据目标超出 EvidenceRoot")
+        if destination.exists():
+            if _is_link_or_reparse(destination) or not S_ISREG(destination.stat().st_mode):
+                raise ValueError("证据目标必须是普通文件")
+            existing_sha = sha256(destination.read_bytes()).hexdigest()
+            requested_sha = sha256(content).hexdigest()
+            if existing_sha != requested_sha:
+                raise ValueError(f"证据快照已存在且内容不同：{destination}")
+            return destination
+        flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+        descriptor = os.open(destination, flags, 0o600)
+        try:
+            with os.fdopen(descriptor, "wb") as handle:
+                handle.write(content)
+                handle.flush()
+                os.fsync(handle.fileno())
+        except BaseException:
+            raise
+        if _is_link_or_reparse(destination) or not S_ISREG(destination.stat().st_mode):
+            raise ValueError("证据写入后不是普通文件")
+        if sha256(destination.read_bytes()).hexdigest() != sha256(content).hexdigest():
+            raise OSError("证据快照写入后的 SHA-256 不一致")
+        return destination
+
+    def _ensure_safe_parents(self, parent: Path) -> None:
+        relative = parent.relative_to(self.root)
+        current = self.root
+        for part in relative.parts:
+            current = current / part
+            if current.exists():
+                if _is_link_or_reparse(current) or not current.is_dir():
+                    raise ValueError("证据目录包含链接、重解析点或普通文件")
+            else:
+                current.mkdir()
+
+
 class SourceAdapter(Protocol):
     def search(self, job: QueryJob, watermark: "Watermark | None") -> SearchBatch: ...
 
@@ -127,17 +185,6 @@ def urllib_transport(url: str, timeout: float) -> HttpResponse:
         raise
 
 
-def write_immutable_bytes(destination: Path, content: bytes) -> Path:
-    """只允许创建或复用内容相同的证据快照，避免静默覆盖。"""
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    if destination.exists():
-        if destination.read_bytes() != content:
-            raise ValueError(f"证据快照已存在且内容不同：{destination}")
-        return destination
-    destination.write_bytes(content)
-    return destination
-
-
 class PagedHttpAdapter:
     """各 HTTP 注册表的分页和错误语义；子类仅提供 URL 与字段映射。"""
 
@@ -150,7 +197,7 @@ class PagedHttpAdapter:
         timeout: float = 20,
         retries: int = 1,
         page_size: int = 50,
-        evidence_directory: Path | None = None,
+        evidence_root: EvidenceRoot | None = None,
     ) -> None:
         if timeout <= 0 or retries < 0 or page_size <= 0:
             raise ValueError("timeout、retries 和 page_size 必须为正当值")
@@ -158,7 +205,7 @@ class PagedHttpAdapter:
         self.timeout = timeout
         self.retries = retries
         self.page_size = page_size
-        self.evidence_directory = evidence_directory
+        self.evidence_root = evidence_root
 
     def search(self, job: QueryJob, watermark: "Watermark | None") -> SearchBatch:
         if job.platform != self.platform:
@@ -169,7 +216,7 @@ class PagedHttpAdapter:
         page = 1
         while True:
             url = self.search_url(job, watermark, page)
-            response, attempts, error = self._get(url)
+            response, attempts, error = self._get(url, job.query_id)
             if error is not None:
                 requests.append(SourceRequestEvent(self.platform, job.query_id, url, page, error.status_code, attempts, None, None))
                 errors.append(error)
@@ -182,13 +229,20 @@ class PagedHttpAdapter:
                 requests.append(SourceRequestEvent(self.platform, job.query_id, url, page, response.status, attempts, digest, response.body))
                 errors.append(SourceError(self.platform, job.query_id, f"invalid-json: {exc}", response.status, url))
                 return self._batch(job, candidates, requests, errors)
-            records = self.records_from_payload(payload)
-            last_page = self.is_last_page(payload, records, page)
+            raw_records = self.records_from_payload(payload)
+            coverage_error = self.incremental_coverage_error(raw_records, watermark, job, url)
+            records = self.filter_records(raw_records, watermark)
+            last_page = self.is_last_page(payload, raw_records, page) or self.should_stop_incremental(raw_records, watermark)
             evidence_path = self._save_page_evidence(page, digest, response.body)
             requests.append(SourceRequestEvent(
                 self.platform, job.query_id, url, page, response.status, attempts, digest, response.body, last_page, evidence_path
             ))
             candidates.extend(self.normalize_record(record, job, digest) for record in records)
+            if coverage_error is not None:
+                errors.append(coverage_error)
+                return SearchBatch(
+                    self.platform, job, "partial", tuple(sorted(candidates, key=_candidate_sort_key)), tuple(requests), tuple(errors)
+                )
             if last_page:
                 return SearchBatch(
                     self.platform, job, "complete", tuple(sorted(candidates, key=_candidate_sort_key)), tuple(requests), tuple(errors)
@@ -196,7 +250,8 @@ class PagedHttpAdapter:
             page += 1
 
     def latest_version(self, identity: str) -> VersionObservation:
-        response, _, error = self._get(identity)
+        endpoint = self.identity_endpoint(identity)
+        response, _, error = self._get(endpoint, "latest-version")
         observed_at = datetime.now(timezone.utc)
         if error is not None or response is None:
             return VersionObservation(self.platform, identity, None, observed_at, None, error)
@@ -208,20 +263,23 @@ class PagedHttpAdapter:
         except (UnicodeDecodeError, json.JSONDecodeError, TypeError) as exc:
             return VersionObservation(
                 self.platform, identity, None, observed_at, sha256(response.body).hexdigest(),
-                SourceError(self.platform, "version", f"invalid-json: {exc}", response.status, identity),
+                SourceError(self.platform, "latest-version", f"invalid-json: {exc}", response.status, endpoint),
             )
 
     def snapshot(self, identity: str, version: str | None, destination: Path) -> SnapshotResult:
-        response, _, error = self._get(identity)
+        if self.evidence_root is None:
+            return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "必须显式提供 EvidenceRoot", None, None))
+        endpoint = self.version_endpoint(identity, version)
+        response, _, error = self._get(endpoint, "snapshot")
         if error is not None or response is None:
             return SnapshotResult(self.platform, identity, version, destination, None, error)
         try:
-            write_immutable_bytes(destination, response.body)
-        except OSError | ValueError as exc:
-            return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", str(exc), response.status, identity))
-        return SnapshotResult(self.platform, identity, version, destination, sha256(response.body).hexdigest())
+            saved = self.evidence_root.write(destination, response.body)
+        except (OSError, ValueError) as exc:
+            return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", str(exc), response.status, endpoint))
+        return SnapshotResult(self.platform, identity, version, saved, sha256(response.body).hexdigest())
 
-    def _get(self, url: str) -> tuple[HttpResponse | None, int, SourceError | None]:
+    def _get(self, url: str, query_id: str = "") -> tuple[HttpResponse | None, int, SourceError | None]:
         attempts = 0
         last_message = ""
         last_status: int | None = None
@@ -233,21 +291,21 @@ class PagedHttpAdapter:
                 last_message, last_status = str(exc), None
                 if attempt < self.retries:
                     continue
-                return None, attempts, SourceError(self.platform, "", f"network-error: {last_message}", None, url)
+                return None, attempts, SourceError(self.platform, query_id, f"network-error: {last_message}", None, url)
             if 200 <= response.status < 300:
                 return response, attempts, None
             last_status = response.status
             last_message = _response_error_message(response.body)
             # Query syntax errors are deterministic; retrying them is both misleading and noisy.
             if response.status == 422 or not _retryable_status(response.status) or attempt == self.retries:
-                return None, attempts, SourceError(self.platform, "", last_message or f"http-{response.status}", response.status, url)
+                return None, attempts, SourceError(self.platform, query_id, last_message or f"http-{response.status}", response.status, url)
         raise AssertionError("不可到达")
 
     def _save_page_evidence(self, page: int, digest: str, body: bytes) -> Path | None:
-        if self.evidence_directory is None:
+        if self.evidence_root is None:
             return None
         filename = f"{_safe_component(self.platform)}-page-{page:04d}-{digest}.json"
-        return write_immutable_bytes(self.evidence_directory / filename, body)
+        return self.evidence_root.write(Path(filename), body)
 
     def _batch(
         self,
@@ -281,6 +339,24 @@ class PagedHttpAdapter:
                 return not bool(payload["next"])
         return len(records) < self.page_size
 
+    def filter_records(self, records: list[Mapping[str, object]], watermark: "Watermark | None") -> list[Mapping[str, object]]:
+        return records
+
+    def should_stop_incremental(self, records: list[Mapping[str, object]], watermark: "Watermark | None") -> bool:
+        return False
+
+    def incremental_coverage_error(
+        self, records: list[Mapping[str, object]], watermark: "Watermark | None", job: QueryJob, url: str
+    ) -> SourceError | None:
+        return None
+
+    def identity_endpoint(self, identity: str) -> str:
+        raise ValueError(f"{self.platform} 未定义 identity 到 API endpoint 的映射")
+
+    def version_endpoint(self, identity: str, version: str | None) -> str:
+        endpoint = self.identity_endpoint(identity)
+        return endpoint if not version else f"{endpoint}?{urlencode({'version': version})}"
+
     def normalize_record(self, record: Mapping[str, object], job: QueryJob, evidence_sha: str) -> SourceCandidate:
         native_id = _first_text(record, "id", "slug", "name")
         display_name = _first_text(record, "name", "title", "id", "slug")
@@ -305,7 +381,7 @@ def doctor_smoke(adapter: PagedHttpAdapter, *, platform: str) -> DoctorSmokeResu
         raise ValueError("doctor 探针平台必须与适配器一致")
     probe = QueryJob("Q-doctor-smoke", "doctor", platform, "doctor", "university skill")
     url = adapter.search_url(probe, None, 1)
-    response, _, error = adapter._get(url)
+    response, _, error = adapter._get(url, probe.query_id)
     if error is not None:
         return DoctorSmokeResult(platform, False, 1, error.status_code, error.message)
     assert response is not None
@@ -420,6 +496,13 @@ def _candidate_sort_key(candidate: SourceCandidate) -> tuple[str, str, str]:
 
 def _safe_component(value: str) -> str:
     return "".join(character if character.isalnum() else "-" for character in value).strip("-").lower() or "source"
+
+
+def _is_link_or_reparse(path: Path) -> bool:
+    if path.is_symlink():
+        return True
+    attributes = getattr(path.stat(), "st_file_attributes", 0)
+    return bool(attributes & 0x400)  # FILE_ATTRIBUTE_REPARSE_POINT on Windows
 
 
 def _as_utc(value: object) -> datetime | None:

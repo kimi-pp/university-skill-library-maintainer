@@ -41,3 +41,27 @@ Automation settings were not changed or enabled. No candidate rows, ledger rows,
 ## Boundary note
 
 The Task 6 protocol exposes the doctor-only probe but does not wire it into the placeholder CLI. That wiring is explicitly scheduled for Task 13; changing `cli.py` here would cross the approved task boundary.
+
+## Fix round 1 — source contract hardening
+
+The review findings were verified against commit `ef13b490`. The repair adds 9 focused source-contract tests (16 total):
+
+- `EvidenceRoot` is now an explicit, resolved and non-link/reparse evidence boundary. It rejects escapes and linked paths, uses exclusive ordinary-file creation, rereads the SHA-256, and returns source errors for directory, permission and immutable-content-conflict snapshot failures.
+- The GitHub command-runner route parses JSON HTTP errors from `stderr`; a 422 is reported with `status_code=422` and the originating `query_id` after exactly one command invocation. It also resolves `owner/repo` or a GitHub discovery URL to repository metadata, resolves the default branch to a commit SHA, then snapshots that fixed commit archive.
+- SkillHub, ClawHub and Hugging Face Spaces map native IDs (and supported discovery URLs) to their API endpoints. Their fixed-version snapshots are read-only metadata responses, persisted only inside the explicit `EvidenceRoot`; GitHub persists its fixed commit archive. Tests cover version and content hashes, HTTP errors and the no-write error path.
+- Hugging Face incremental discovery now sorts newest-first and filters client-side strictly later than the stored watermark; an unparseable/missing timestamp returns `partial` so a watermark cannot advance. The actual REST endpoint accepts `sort=lastModified&direction=-1`, which is the wire-format equivalent of descending `last_modified`; the initially requested `sort=last_modified&direction=desc` was confirmed by the doctor probe to return HTTP 400 and was not retained as a non-working parameter spelling.
+- Search-created `SourceError` objects now retain the originating `QueryJob.query_id`.
+
+Fix-round TDD RED:
+
+1. The new security-contract test initially failed because `EvidenceRoot` did not exist.
+2. The baseline verification found direct review defects: raw identity URLs, arbitrary evidence directory writes, blank search error query IDs, ignored GitHub `stderr` 422 errors/retries, unsafe exception-union syntax, and Hugging Face's unsupported incremental parameter.
+3. Changing the test to the endpoint's accepted REST spelling produced the expected two URL assertion failures before the final Hugging Face wire-format change.
+
+Fresh fix-round verification with the locked Python runtime:
+
+- focused source suite: 16/16 passed;
+- complete workflow suite: 66/66 passed;
+- `git diff --check`: clean.
+
+The final doctor-only one-page, fixed-query smoke reported HTTP 200 for SkillHub, ClawHub, GitHub and Hugging Face Spaces. It supplies no `EvidenceRoot`, parses no candidates, writes no ledger rows, and keeps automation disabled.
