@@ -201,7 +201,7 @@ class SourceAdapterContractTest(unittest.TestCase):
             calls.append(arguments)
             bodies = (
                 b'{"full_name":"org/repo","default_branch":"main"}',
-                b'{"sha":"012345"}',
+                b'{"sha":"0123456789abcdef0123456789abcdef01234567"}',
                 b"fixed archive bytes",
             )
             return SimpleNamespace(returncode=0, stdout=bodies[len(calls) - 1], stderr=b"")
@@ -210,13 +210,55 @@ class SourceAdapterContractTest(unittest.TestCase):
             adapter = GitHubAdapter(command_runner=runner, evidence_root=EvidenceRoot(Path(temporary)))
             observation = adapter.latest_version("https://github.com/org/repo")
             snapshot = adapter.snapshot("org/repo", observation.version, Path("repo.zip"))
-            self.assertEqual(observation.version, "012345")
+            self.assertEqual(observation.version, "0123456789abcdef0123456789abcdef01234567")
             self.assertEqual(snapshot.sha256, hashlib.sha256(b"fixed archive bytes").hexdigest())
             self.assertEqual(calls, [
                 ["gh", "api", "--method", "GET", "/repos/org/repo"],
                 ["gh", "api", "--method", "GET", "/repos/org/repo/commits/main"],
-                ["gh", "api", "--method", "GET", "/repos/org/repo/zipball/012345"],
+                ["gh", "api", "--method", "GET", "/repos/org/repo/zipball/0123456789abcdef0123456789abcdef01234567"],
             ])
+
+    def test_github_search_candidate_identity_closes_the_version_and_snapshot_loop(self):
+        calls = []
+
+        def runner(arguments):
+            calls.append(arguments)
+            bodies = (
+                b'{"total_count":1,"items":[{"id":42,"full_name":"org/repo","html_url":"https://github.com/org/repo"}]}',
+                b'{"full_name":"org/repo","default_branch":"main"}',
+                b'{"sha":"0123456789abcdef0123456789abcdef01234567"}',
+                b"fixed archive bytes",
+            )
+            return SimpleNamespace(returncode=0, stdout=bodies[len(calls) - 1], stderr=b"")
+
+        with tempfile.TemporaryDirectory() as temporary:
+            adapter = GitHubAdapter(command_runner=runner, evidence_root=EvidenceRoot(Path(temporary)))
+            candidate = adapter.search(job("GitHub"), None).candidates[0]
+            observation = adapter.latest_version(candidate.native_id)
+            snapshot = adapter.snapshot(candidate.native_id, observation.version, Path("repo.zip"))
+            self.assertEqual(candidate.native_id, "org/repo")
+            self.assertEqual(candidate.popularity["repository_id"], 42)
+            self.assertEqual(snapshot.sha256, hashlib.sha256(b"fixed archive bytes").hexdigest())
+            self.assertEqual(calls[-3:], [
+                ["gh", "api", "--method", "GET", "/repos/org/repo"],
+                ["gh", "api", "--method", "GET", "/repos/org/repo/commits/main"],
+                ["gh", "api", "--method", "GET", "/repos/org/repo/zipball/0123456789abcdef0123456789abcdef01234567"],
+            ])
+
+    def test_github_snapshot_rejects_non_immutable_refs_without_a_network_call(self):
+        calls = []
+
+        def runner(arguments):
+            calls.append(arguments)
+            return SimpleNamespace(returncode=0, stdout=b"archive", stderr=b"")
+
+        with tempfile.TemporaryDirectory() as temporary:
+            adapter = GitHubAdapter(command_runner=runner, evidence_root=EvidenceRoot(Path(temporary)))
+            for version in (None, "", "main", "v1.2.3", "a" * 39, "g" * 40, "a" * 41):
+                with self.subTest(version=version):
+                    result = adapter.snapshot("org/repo", version, Path("repo.zip"))
+                    self.assertIsNotNone(result.error)
+            self.assertEqual(calls, [])
 
     def test_version_and_snapshot_preserve_http_errors_without_writing_evidence(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -264,6 +306,51 @@ class SourceAdapterContractTest(unittest.TestCase):
                 self.skipTest("当前环境不允许创建用于安全回归的符号链接")
             with self.assertRaises(ValueError):
                 root.write(Path("linked/escape.json"), b"data")
+
+    def test_evidence_root_retries_a_concurrent_same_content_exclusive_create(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root_path = Path(temporary)
+            root = EvidenceRoot(root_path)
+            original_open = os.open
+            calls = []
+
+            def concurrent_open(path, flags, mode):
+                calls.append(path)
+                if len(calls) == 1:
+                    Path(path).write_bytes(b"stable")
+                    raise FileExistsError("concurrent writer")
+                return original_open(path, flags, mode)
+
+            with patch("skill_maintainer.sources.base.os.open", side_effect=concurrent_open):
+                self.assertEqual(root.write(Path("race.json"), b"stable"), root_path / "race.json")
+            self.assertEqual(len(calls), 1)
+
+    def test_search_turns_page_evidence_write_errors_into_a_query_scoped_batch_error(self):
+        payload = {"items": []}
+        raw = json.dumps(payload).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            root_path = Path(temporary)
+            name = f"skillhub-page-0001-{hashlib.sha256(raw).hexdigest()}.json"
+            (root_path / name).mkdir()
+            batch = SkillHubAdapter(
+                transport=FakeHttp([(200, payload)]), evidence_root=EvidenceRoot(root_path)
+            ).search(job(), None)
+            self.assertEqual(batch.status, "failed")
+            self.assertEqual(batch.errors[0].query_id, "Q-test")
+            self.assertIn("普通文件", batch.errors[0].message)
+
+    def test_search_keeps_already_discovered_candidates_as_partial_when_evidence_write_fails(self):
+        payload = {"items": [{"id": "one", "name": "One"}]}
+        raw = json.dumps(payload).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            root_path = Path(temporary)
+            name = f"skillhub-page-0001-{hashlib.sha256(raw).hexdigest()}.json"
+            (root_path / name).mkdir()
+            batch = SkillHubAdapter(
+                transport=FakeHttp([(200, payload)]), evidence_root=EvidenceRoot(root_path)
+            ).search(job(), None)
+            self.assertEqual(batch.status, "partial")
+            self.assertEqual([candidate.native_id for candidate in batch.candidates], ["one"])
 
 
 class SourceWatermarkTest(unittest.TestCase):

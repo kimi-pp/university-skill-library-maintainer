@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 from stat import S_ISREG
+import time
 from typing import Callable, Literal, Mapping, Protocol
 from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
@@ -116,28 +117,45 @@ class EvidenceRoot:
         resolved_parent = destination.parent.resolve(strict=True)
         if self.root not in (resolved_parent, *resolved_parent.parents):
             raise ValueError("证据目标超出 EvidenceRoot")
-        if destination.exists():
-            if _is_link_or_reparse(destination) or not S_ISREG(destination.stat().st_mode):
-                raise ValueError("证据目标必须是普通文件")
-            existing_sha = sha256(destination.read_bytes()).hexdigest()
-            requested_sha = sha256(content).hexdigest()
-            if existing_sha != requested_sha:
-                raise ValueError(f"证据快照已存在且内容不同：{destination}")
-            return destination
+        requested_sha = sha256(content).hexdigest()
         flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
-        descriptor = os.open(destination, flags, 0o600)
-        try:
+        for attempt in range(3):
+            if destination.exists():
+                existing_sha = self._stable_existing_sha(destination)
+                if existing_sha == requested_sha:
+                    return destination
+                if existing_sha is not None and attempt == 2:
+                    raise ValueError(f"证据快照已存在且内容不同：{destination}")
+                time.sleep(0.01)
+                continue
+            try:
+                descriptor = os.open(destination, flags, 0o600)
+            except FileExistsError:
+                time.sleep(0.01)
+                continue
             with os.fdopen(descriptor, "wb") as handle:
                 handle.write(content)
                 handle.flush()
                 os.fsync(handle.fileno())
-        except BaseException:
-            raise
+            if _is_link_or_reparse(destination) or not S_ISREG(destination.stat().st_mode):
+                raise ValueError("证据写入后不是普通文件")
+            if sha256(destination.read_bytes()).hexdigest() != requested_sha:
+                raise OSError("证据快照写入后的 SHA-256 不一致")
+            return destination
+        raise OSError(f"证据快照排他创建未在限定重试内稳定：{destination}")
+
+    @staticmethod
+    def _stable_existing_sha(destination: Path) -> str | None:
         if _is_link_or_reparse(destination) or not S_ISREG(destination.stat().st_mode):
-            raise ValueError("证据写入后不是普通文件")
-        if sha256(destination.read_bytes()).hexdigest() != sha256(content).hexdigest():
-            raise OSError("证据快照写入后的 SHA-256 不一致")
-        return destination
+            raise ValueError("证据目标必须是普通文件")
+        before = destination.stat()
+        first = destination.read_bytes()
+        time.sleep(0.01)
+        after = destination.stat()
+        second = destination.read_bytes()
+        if (before.st_size, before.st_mtime_ns, sha256(first).digest()) != (after.st_size, after.st_mtime_ns, sha256(second).digest()):
+            return None
+        return sha256(second).hexdigest()
 
     def _ensure_safe_parents(self, parent: Path) -> None:
         relative = parent.relative_to(self.root)
@@ -233,11 +251,18 @@ class PagedHttpAdapter:
             coverage_error = self.incremental_coverage_error(raw_records, watermark, job, url)
             records = self.filter_records(raw_records, watermark)
             last_page = self.is_last_page(payload, raw_records, page) or self.should_stop_incremental(raw_records, watermark)
-            evidence_path = self._save_page_evidence(page, digest, response.body)
+            candidates.extend(self.normalize_record(record, job, digest) for record in records)
+            try:
+                evidence_path = self._save_page_evidence(page, digest, response.body)
+            except (OSError, ValueError) as exc:
+                requests.append(SourceRequestEvent(
+                    self.platform, job.query_id, url, page, response.status, attempts, digest, response.body, False, None
+                ))
+                errors.append(SourceError(self.platform, job.query_id, f"evidence-write-error: {exc}", response.status, url))
+                return self._batch(job, candidates, requests, errors)
             requests.append(SourceRequestEvent(
                 self.platform, job.query_id, url, page, response.status, attempts, digest, response.body, last_page, evidence_path
             ))
-            candidates.extend(self.normalize_record(record, job, digest) for record in records)
             if coverage_error is not None:
                 errors.append(coverage_error)
                 return SearchBatch(

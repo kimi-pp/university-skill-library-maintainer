@@ -65,3 +65,22 @@ Fresh fix-round verification with the locked Python runtime:
 - `git diff --check`: clean.
 
 The final doctor-only one-page, fixed-query smoke reported HTTP 200 for SkillHub, ClawHub, GitHub and Hugging Face Spaces. It supplies no `EvidenceRoot`, parses no candidates, writes no ledger rows, and keeps automation disabled.
+
+## Fix round 2 — identity and concurrent-evidence closure
+
+The re-review found that the GitHub search identity and snapshot interface did not form a closed loop, and that the evidence writer still surfaced a concurrent-create or search-page write failure as an uncaught exception. The repair adds 5 focused tests (21 source tests total):
+
+- GitHub candidates now use `full_name` (`owner/repo`) as `native_id`; the numerical GitHub repository ID is retained only as `popularity["repository_id"]`. A search candidate is passed through `latest_version` and a fixed archive snapshot in one command-runner test.
+- GitHub snapshots now reject blank refs, branch names, tags, short/long identifiers and non-hex values before calling `gh`. Only a full 40- or 64-hex commit SHA reaches the archive endpoint.
+- `EvidenceRoot` handles a bounded exclusive-create race: after `EEXIST` it only reuses an existing file if two observations show stable, complete same-content bytes. It does not overwrite a competing file.
+- Page-evidence persistence failures are converted to `SourceError` with the active `query_id`: no candidates yields `failed`; already discovered candidates yield `partial`. No exception escapes the source adapter.
+
+Fix-round 2 RED (21-test focused run before repair): numerical GitHub identity `42` raised `ValueError` in `latest_version`; `main`, tags, short/long/non-hex refs each invoked the archive endpoint; concurrent `O_EXCL` raised `FileExistsError`; and an evidence directory collision escaped `search` as `ValueError`.
+
+Fresh fix-round 2 verification with the locked Python runtime:
+
+- focused source suite: 21/21 passed;
+- complete workflow suite: 71/71 passed;
+- `git diff --check`: clean.
+
+The final doctor-only one-page probe again reported HTTP 200 for all four platforms and made no evidence, ledger or candidate writes.

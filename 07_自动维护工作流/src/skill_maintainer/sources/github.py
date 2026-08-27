@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from hashlib import sha256
 import json
 from pathlib import Path
+import re
 import subprocess
 from typing import Callable, Mapping
 from urllib.parse import quote, urlencode, urlparse
@@ -18,6 +19,7 @@ from ..queries import QueryJob
 GITHUB_API = "https://api.github.com"
 GITHUB_SEARCH_CEILING = 1000
 GitHubCommandRunner = Callable[[list[str]], object]
+_COMMIT_SHA_RE = re.compile(r"[0-9a-fA-F]{40}(?:[0-9a-fA-F]{24})?\Z")
 
 
 class GitHubAdapter(PagedHttpAdapter):
@@ -122,7 +124,7 @@ class GitHubAdapter(PagedHttpAdapter):
     def snapshot(self, identity: str, version: str | None, destination: Path) -> SnapshotResult:
         if self.evidence_root is None:
             return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "必须显式提供 EvidenceRoot"))
-        if not version:
+        if not isinstance(version, str) or not _COMMIT_SHA_RE.fullmatch(version):
             return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "GitHub 快照必须使用固定 commit SHA"))
         endpoint = f"{self.identity_endpoint(identity)}/zipball/{quote(version, safe='')}"
         response, _, error = self._get(endpoint, "snapshot")
@@ -135,8 +137,12 @@ class GitHubAdapter(PagedHttpAdapter):
         return SnapshotResult(self.platform, identity, version, saved, sha256(response.body).hexdigest())
 
     def normalize_record(self, record: Mapping[str, object], job: QueryJob, evidence_sha: str) -> SourceCandidate:
-        native_id = _optional_first(record, "id", "full_name") or ""
+        native_id = _optional_first(record, "full_name") or ""
         name = _optional_first(record, "full_name", "name") or native_id
+        popularity = dict(_popularity(record))
+        repository_id = record.get("id")
+        if isinstance(repository_id, int) and not isinstance(repository_id, bool):
+            popularity["repository_id"] = repository_id
         return SourceCandidate(
             self.platform,
             native_id,
@@ -146,7 +152,7 @@ class GitHubAdapter(PagedHttpAdapter):
             name,
             _optional_first(record, "owner"),
             _optional_first(record, "pushed_at", "updated_at"),
-            _popularity(record),
+            popularity,
             job.query_id,
             evidence_sha,
         )
