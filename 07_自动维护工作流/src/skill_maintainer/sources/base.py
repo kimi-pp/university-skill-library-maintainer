@@ -244,7 +244,7 @@ class PagedHttpAdapter:
             try:
                 payload = json.loads(response.body.decode("utf-8"))
             except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-                requests.append(SourceRequestEvent(self.platform, job.query_id, url, page, response.status, attempts, digest, response.body))
+                requests.append(SourceRequestEvent(self.platform, job.query_id, url, page, response.status, attempts, None, response.body))
                 errors.append(SourceError(self.platform, job.query_id, f"invalid-json: {exc}", response.status, url))
                 return self._batch(job, candidates, requests, errors)
             raw_records = self.records_from_payload(payload)
@@ -256,7 +256,7 @@ class PagedHttpAdapter:
                 evidence_path = self._save_page_evidence(page, digest, response.body)
             except (OSError, ValueError) as exc:
                 requests.append(SourceRequestEvent(
-                    self.platform, job.query_id, url, page, response.status, attempts, digest, response.body, False, None
+                    self.platform, job.query_id, url, page, response.status, attempts, None, response.body, False, None
                 ))
                 errors.append(SourceError(self.platform, job.query_id, f"evidence-write-error: {exc}", response.status, url))
                 return self._batch(job, candidates, requests, errors)
@@ -339,7 +339,7 @@ class PagedHttpAdapter:
         requests: list[SourceRequestEvent],
         errors: list[SourceError],
     ) -> SearchBatch:
-        status: SearchStatus = "partial" if candidates else "failed"
+        status: SearchStatus = "partial" if any(event.response_sha256 for event in requests) else "failed"
         return SearchBatch(self.platform, job, status, tuple(sorted(candidates, key=_candidate_sort_key)), tuple(requests), tuple(errors))
 
     def search_url(self, job: QueryJob, watermark: "Watermark | None", page: int) -> str:

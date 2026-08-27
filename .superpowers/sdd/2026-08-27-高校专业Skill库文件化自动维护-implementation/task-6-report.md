@@ -84,3 +84,16 @@ Fresh fix-round 2 verification with the locked Python runtime:
 - `git diff --check`: clean.
 
 The final doctor-only one-page probe again reported HTTP 200 for all four platforms and made no evidence, ledger or candidate writes.
+
+## Fix round 3 — page-based partial coverage
+
+`SearchBatch` failure classification now uses previously completed response pages (`SourceRequestEvent.response_sha256`) rather than the number of normalized candidates. This preserves the distinction between an empty but successfully covered page and a failed first page.
+
+TDD RED added two empty-result pagination cases: an initial successful `items=[]; has_next=true` page followed by HTTP 503, and the same initial page followed by a second-page evidence-directory collision. Both were incorrectly `failed` under the candidate-count rule; both are now `partial`. An evidence failure on the first page remains `failed`, even if that page had candidate objects, because no completed/evidenced page exists.
+
+Fresh fix-round 3 verification with the locked Python runtime:
+
+- focused source suite: 23/23 passed;
+- complete workflow suite: 73/73 passed;
+- `git diff --check`: clean;
+- doctor-only one-page fixed-query probe: HTTP 200 for all four platforms, with no writes and automation still disabled.

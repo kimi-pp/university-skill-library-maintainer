@@ -88,6 +88,35 @@ class SourceAdapterContractTest(unittest.TestCase):
         self.assertEqual(batch.errors[0].status_code, 503)
         self.assertEqual(batch.errors[0].query_id, "Q-test")
 
+    def test_completed_empty_first_page_makes_second_http_failure_partial(self):
+        batch = ClawHubAdapter(
+            transport=FakeHttp([
+                (200, {"results": [], "has_next": True}),
+                (503, {"error": "unavailable"}),
+            ]),
+            retries=0,
+        ).search(job("ClawHub"), None)
+
+        self.assertEqual(batch.status, "partial")
+        self.assertEqual(batch.candidates, ())
+        self.assertIsNotNone(batch.requests[0].response_sha256)
+
+    def test_completed_empty_first_page_makes_second_evidence_failure_partial(self):
+        first = {"items": [], "has_next": True}
+        second = {"items": []}
+        with tempfile.TemporaryDirectory() as temporary:
+            root_path = Path(temporary)
+            digest = hashlib.sha256(json.dumps(second).encode("utf-8")).hexdigest()
+            (root_path / f"skillhub-page-0002-{digest}.json").mkdir()
+            batch = SkillHubAdapter(
+                transport=FakeHttp([(200, first), (200, second)]),
+                evidence_root=EvidenceRoot(root_path),
+            ).search(job(), None)
+
+        self.assertEqual(batch.status, "partial")
+        self.assertEqual(batch.candidates, ())
+        self.assertEqual(batch.errors[0].query_id, "Q-test")
+
     def test_github_stops_at_the_search_ceiling_and_does_not_retry_query_parse_errors(self):
         pages = [(200, {"total_count": 1001, "items": [{"id": index, "full_name": f"org/{index}", "html_url": f"https://github.com/org/{index}"}]}) for index in range(10)]
         transport = FakeHttp(pages)
@@ -339,7 +368,7 @@ class SourceAdapterContractTest(unittest.TestCase):
             self.assertEqual(batch.errors[0].query_id, "Q-test")
             self.assertIn("普通文件", batch.errors[0].message)
 
-    def test_search_keeps_already_discovered_candidates_as_partial_when_evidence_write_fails(self):
+    def test_first_page_evidence_failure_is_failed_even_when_it_has_candidates(self):
         payload = {"items": [{"id": "one", "name": "One"}]}
         raw = json.dumps(payload).encode("utf-8")
         with tempfile.TemporaryDirectory() as temporary:
@@ -349,7 +378,7 @@ class SourceAdapterContractTest(unittest.TestCase):
             batch = SkillHubAdapter(
                 transport=FakeHttp([(200, payload)]), evidence_root=EvidenceRoot(root_path)
             ).search(job(), None)
-            self.assertEqual(batch.status, "partial")
+            self.assertEqual(batch.status, "failed")
             self.assertEqual([candidate.native_id for candidate in batch.candidates], ["one"])
 
 
