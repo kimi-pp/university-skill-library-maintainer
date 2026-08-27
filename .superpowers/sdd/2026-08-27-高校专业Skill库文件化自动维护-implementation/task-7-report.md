@@ -42,3 +42,7 @@ Review-fix TDD RED covered the destination-link escape, missing/wrong packets, r
 - Focused Task 7 suite: 27/27 passed.
 - Full workflow suite: 101/101 passed.
 - `git diff --check`: no whitespace errors.
+
+## Review-fix round 2
+
+A final identity-binding regression showed that the service previously trusted only the outer `review_packets` mapping key. It now rejects any packet whose embedded `candidate_id` differs from the candidate ID in the transient review decision, even when version, source, license, safety and evidence fields otherwise match. The new test was RED before the check and is included in the focused suite.

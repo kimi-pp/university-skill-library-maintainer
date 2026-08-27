@@ -157,6 +157,8 @@ def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None
     if decision.derived_fields.quality_score is not None and decision.derived_fields.quality_score != score_quality(decision):
         errors.append("derived_fields.quality_score: 必须由事实和项目判断重新计算")
     if packet is not None:
+        if decision.candidate_id and packet.candidate_id != decision.candidate_id:
+            errors.append("review_packet.candidate_id: 与审查决定候选标识不一致")
         if packet.fixed_version != facts.fixed_version:
             errors.append("observed_facts.fixed_version: 与审查包固定版本不一致")
         if not packet.evidence_paths:

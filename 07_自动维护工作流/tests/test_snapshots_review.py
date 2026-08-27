@@ -228,6 +228,14 @@ class ReviewContractTest(unittest.TestCase):
             attacker_body = json.dumps({"decisions": [self._payload(attacker)]}, ensure_ascii=False).encode("utf-8")
             with self.assertRaisesRegex(ValueError, "observed_facts.fixed_version: 与审查包固定版本不一致"):
                 apply_reviews_from_stream(io.BytesIO(attacker_body), store, {"org/example": self._packet(decision)})
+            wrong_identity_packet = ReviewPacket(
+                "other/candidate", decision.observed_facts.fixed_version, decision.observed_facts.canonical_source,
+                decision.observed_facts.license, decision.observed_facts.security_grade,
+                {"SKILL_RESEARCH_WORKFLOW": "1.4"}, decision.observed_facts.evidence_paths, ("SKILL.md",),
+            )
+            untampered_body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
+            with self.assertRaisesRegex(ValueError, "review_packet.candidate_id: 与审查决定候选标识不一致"):
+                apply_reviews_from_stream(io.BytesIO(untampered_body), store, {"org/example": wrong_identity_packet})
             self.assertEqual(store.rows("当前Skill"), [])
 
     def test_parser_normalizes_legacy_formal_only_at_the_boundary_and_rejects_unknown_tier(self):
