@@ -61,3 +61,15 @@ Fresh verification after this round:
 
 - Focused Task 7 suite: 30/30 passed.
 - Full workflow suite: 127/127 passed.
+
+## Review-fix round 5 — snapshot trust root and bounded state
+
+- The trust chain now begins only at a successful `build_snapshot` return. Its `SnapshotManifest` identity and every immutable contract field are registered weakly in `snapshots.py`; `build_review_packet` consumes that registration before it can register a review packet.
+- Hand-built, copied, replaced or field-altered manifests fail before a packet, receipt or promotion can be created. A caller-supplied candidate ID must also equal the registered snapshot candidate ID.
+- Packet and receipt registries now hold weak identities rather than strong object references. Consumed receipts are removed immediately; `clear_review_run_state()` (which also clears unconsumed snapshot state) gives the Task 9 orchestrator a `finally` cleanup boundary without changing failure-retry behavior before finalization.
+
+Fresh verification after this round:
+
+- Focused Task 7 suite: 33/33 passed.
+- Focused Task 8 suite: 23/23 passed.
+- Full workflow suite: 130/130 passed.

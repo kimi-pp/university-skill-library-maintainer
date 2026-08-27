@@ -3,11 +3,14 @@ import json
 import tempfile
 import unittest
 import zipfile
+from copy import copy
+from dataclasses import replace
 from pathlib import Path
 from unittest.mock import patch
 
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
+from skill_maintainer import review as review_module
 from skill_maintainer.snapshots import SnapshotCandidate, SnapshotLimits, SnapshotManifest, build_snapshot
 from skill_maintainer.review import (
     AppliedReview,
@@ -158,10 +161,16 @@ class ReviewContractTest(unittest.TestCase):
     def _packet(self, decision, *, fixed_version=None, candidate_id="org/example"):
         facts = decision.observed_facts
         version = fixed_version or facts.fixed_version
-        return build_review_packet(
-            {"id": candidate_id, "canonical_source": facts.canonical_source, "license": facts.license, "security_grade": facts.security_grade},
-            SnapshotManifest(candidate_id, version, Path("."), facts.evidence_paths, (), (), 0, "d" * 64),
-        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "candidate"
+            source.mkdir()
+            (source / "SKILL.md").write_text("# review evidence", encoding="utf-8")
+            snapshot = build_snapshot(SnapshotCandidate(candidate_id, version, source, facts.evidence_paths), root / "snapshot")
+            return build_review_packet(
+                {"id": candidate_id, "canonical_source": facts.canonical_source, "license": facts.license, "security_grade": facts.security_grade},
+                snapshot,
+            )
 
     @staticmethod
     def _payload(decision, *, ledger_row=None):
@@ -386,10 +395,11 @@ class ReviewContractTest(unittest.TestCase):
         body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
         with tempfile.TemporaryDirectory() as temporary:
             store = LedgerStore.create(Path(temporary) / "source.xlsx")
-            receipt, = apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": self._packet(decision)})
+            packet = self._packet(decision)
+            receipt, = apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": packet})
 
         self.assertEqual(receipt.candidate_id, "org/example")
-        self.assertEqual(receipt.fixed_content_hash, "d" * 64)
+        self.assertEqual(receipt.fixed_content_hash, packet.fixed_content_hash)
         self.assertIs(validate_applied_review(receipt), receipt)
         fake = AppliedReview(
             receipt.candidate_id, receipt.fixed_version, receipt.canonical_source, receipt.license,
@@ -408,6 +418,53 @@ class ReviewContractTest(unittest.TestCase):
         body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
         with tempfile.TemporaryDirectory() as temporary:
             store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            with self.assertRaisesRegex(ValueError, "受信"):
+                apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": packet})
+
+    def test_self_constructed_snapshot_manifest_cannot_register_a_review_packet(self):
+        decision = self._decision()
+        forged_manifest = SnapshotManifest(
+            "org/example", decision.observed_facts.fixed_version, Path("."), decision.observed_facts.evidence_paths,
+            (), (), 0, "d" * 64,
+        )
+
+        with self.assertRaisesRegex(ValueError, "快照"):
+            build_review_packet({
+                "id": "org/example", "canonical_source": decision.observed_facts.canonical_source,
+                "license": decision.observed_facts.license, "security_grade": decision.observed_facts.security_grade,
+            }, forged_manifest)
+
+    def test_copied_replaced_or_mutated_snapshot_manifest_cannot_register_a_review_packet(self):
+        decision = self._decision()
+        candidate = {
+            "id": "org/example", "canonical_source": decision.observed_facts.canonical_source,
+            "license": decision.observed_facts.license, "security_grade": decision.observed_facts.security_grade,
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "candidate"
+            source.mkdir()
+            (source / "SKILL.md").write_text("# evidence", encoding="utf-8")
+            manifest = build_snapshot(SnapshotCandidate("org/example", decision.observed_facts.fixed_version, source, decision.observed_facts.evidence_paths), root / "snapshot")
+            for forged in (copy(manifest), replace(manifest, fixed_content_hash="a" * 64)):
+                with self.subTest(kind=type(forged).__name__):
+                    with self.assertRaisesRegex(ValueError, "快照"):
+                        build_review_packet(candidate, forged)
+            object.__setattr__(manifest, "fixed_version", "attacker-version")
+            with self.assertRaisesRegex(ValueError, "快照"):
+                build_review_packet(candidate, manifest)
+
+    def test_clear_review_run_state_releases_packets_and_unconsumed_receipts(self):
+        decision = self._decision()
+        body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            packet = self._packet(decision)
+            receipt, = apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": packet})
+            self.assertIs(validate_applied_review(receipt), receipt)
+            review_module.clear_review_run_state()
+            with self.assertRaisesRegex(ValueError, "receipt"):
+                validate_applied_review(receipt)
             with self.assertRaisesRegex(ValueError, "受信"):
                 apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": packet})
 

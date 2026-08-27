@@ -7,9 +7,10 @@ import json
 from pathlib import Path
 import re
 from typing import Any, BinaryIO, Mapping, TextIO
+import weakref
 
 from .ledger import LedgerStore
-from .snapshots import SnapshotManifest
+from .snapshots import SnapshotManifest, clear_snapshot_run_state, consume_trusted_snapshot
 
 
 _UNKNOWN_LICENSES = frozenset({"", "待确认", "无许可证声明", "未明确", "未知", "unknown", "n/a", "none", "null", "-"})
@@ -125,22 +126,24 @@ class AppliedReview:
 
 @dataclass
 class _ReceiptRecord:
-    receipt: AppliedReview
+    receipt: weakref.ReferenceType[AppliedReview]
     facts: tuple[str, str, str, str, str, tuple[str, ...], str]
-    consumed: bool = False
 
 
 _APPLIED_REVIEW_RECEIPTS: dict[int, _ReceiptRecord] = {}
-_TRUSTED_REVIEW_PACKETS: dict[int, tuple[ReviewPacket, tuple[str, str, str, str, str, tuple[str, ...], tuple[str, ...], str]]] = {}
+_TRUSTED_REVIEW_PACKETS: dict[int, tuple[weakref.ReferenceType[ReviewPacket], tuple[str, str, str, str, str, tuple[str, ...], tuple[str, ...], str]]] = {}
 
 
 def build_review_packet(candidate: object, snapshot: SnapshotManifest) -> ReviewPacket:
-    candidate_id = _candidate_id(candidate) or snapshot.candidate_id
+    supplied_candidate_id = _candidate_id(candidate)
+    candidate_id = supplied_candidate_id or snapshot.candidate_id
     canonical_source = _candidate_value(candidate, "canonical_source", "canonical_source_hint")
     license_name = _candidate_value(candidate, "license")
     security_grade = _candidate_value(candidate, "security_grade")
     if not candidate_id.strip():
         raise ValueError("review_packet.candidate_id: 必须提供非空候选标识")
+    if supplied_candidate_id and supplied_candidate_id != snapshot.candidate_id:
+        raise ValueError("review_packet.candidate_id: 必须与快照候选标识一致")
     if not all((canonical_source, license_name, security_grade)):
         raise ValueError("审查包必须包含 canonical source、许可证和安全等级事实")
     rule_versions = {
@@ -150,10 +153,11 @@ def build_review_packet(candidate: object, snapshot: SnapshotManifest) -> Review
         "SOURCE_POLICY": "2026-08-07",
         "DATA_DICTIONARY": "2026-08-09",
     }
-    packet = ReviewPacket(candidate_id, snapshot.fixed_version, canonical_source, license_name, security_grade, rule_versions,
-                        tuple(dict.fromkeys((*snapshot.source_evidence_paths, *snapshot.evidence_paths))),
-                        tuple(item.path for item in snapshot.files), snapshot.fixed_content_hash)
-    _TRUSTED_REVIEW_PACKETS[id(packet)] = (packet, _packet_facts(packet))
+    trusted_snapshot = consume_trusted_snapshot(snapshot)
+    packet = ReviewPacket(candidate_id, trusted_snapshot.fixed_version, canonical_source, license_name, security_grade, rule_versions,
+                        tuple(dict.fromkeys((*trusted_snapshot.source_evidence_paths, *trusted_snapshot.evidence_paths))),
+                        tuple(item.path for item in trusted_snapshot.files), trusted_snapshot.fixed_content_hash)
+    _register_packet(packet)
     return packet
 
 
@@ -274,17 +278,24 @@ def apply_reviews_from_stream(
 def validate_applied_review(receipt: object) -> AppliedReview:
     """验证收据确由本模块的实际应用边界签发且尚未消费。"""
     record = _APPLIED_REVIEW_RECEIPTS.get(id(receipt))
-    if record is None or record.receipt is not receipt or record.consumed:
+    if record is None or record.receipt() is not receipt:
         raise ValueError("trusted Task 7 review receipt is required and unused")
-    if _receipt_facts(record.receipt) != record.facts:
+    if _receipt_facts(receipt) != record.facts:
         raise ValueError("trusted Task 7 review receipt has been tampered")
-    return record.receipt
+    return receipt
 
 
 def consume_applied_review(receipt: object) -> None:
     """只应在版本影子工作簿成功替换后调用，失败重试仍可使用收据。"""
     validated = validate_applied_review(receipt)
-    _APPLIED_REVIEW_RECEIPTS[id(validated)].consumed = True
+    _APPLIED_REVIEW_RECEIPTS.pop(id(validated), None)
+
+
+def clear_review_run_state() -> None:
+    """供 Task 9 在每次运行的 finally 中清理未消费的审查状态。"""
+    _TRUSTED_REVIEW_PACKETS.clear()
+    _APPLIED_REVIEW_RECEIPTS.clear()
+    clear_snapshot_run_state()
 
 
 def _issue_applied_review(decision: ReviewDecision, packet: ReviewPacket) -> AppliedReview:
@@ -293,7 +304,7 @@ def _issue_applied_review(decision: ReviewDecision, packet: ReviewPacket) -> App
         decision.candidate_id, facts.fixed_version, facts.canonical_source, facts.license,
         facts.security_grade, facts.evidence_paths, _valid_hash(packet.fixed_content_hash),
     )
-    _APPLIED_REVIEW_RECEIPTS[id(receipt)] = _ReceiptRecord(receipt, _receipt_facts(receipt))
+    _register_receipt(receipt)
     return receipt
 
 
@@ -306,7 +317,29 @@ def _receipt_facts(receipt: AppliedReview) -> tuple[str, str, str, str, str, tup
 
 def _trusted_review_packet(packet: object) -> bool:
     record = _TRUSTED_REVIEW_PACKETS.get(id(packet))
-    return bool(record and record[0] is packet and _packet_facts(packet) == record[1])
+    return bool(record and record[0]() is packet and _packet_facts(packet) == record[1])
+
+
+def _register_packet(packet: ReviewPacket) -> None:
+    identity = id(packet)
+
+    def _discard(reference: weakref.ReferenceType[ReviewPacket]) -> None:
+        record = _TRUSTED_REVIEW_PACKETS.get(identity)
+        if record is not None and record[0] is reference:
+            _TRUSTED_REVIEW_PACKETS.pop(identity, None)
+
+    _TRUSTED_REVIEW_PACKETS[identity] = (weakref.ref(packet, _discard), _packet_facts(packet))
+
+
+def _register_receipt(receipt: AppliedReview) -> None:
+    identity = id(receipt)
+
+    def _discard(reference: weakref.ReferenceType[AppliedReview]) -> None:
+        record = _APPLIED_REVIEW_RECEIPTS.get(identity)
+        if record is not None and record.receipt is reference:
+            _APPLIED_REVIEW_RECEIPTS.pop(identity, None)
+
+    _APPLIED_REVIEW_RECEIPTS[identity] = _ReceiptRecord(weakref.ref(receipt, _discard), _receipt_facts(receipt))
 
 
 def _packet_facts(packet: ReviewPacket) -> tuple[str, str, str, str, str, tuple[str, ...], tuple[str, ...], str]:

@@ -9,6 +9,7 @@ from pathlib import Path, PurePosixPath
 from stat import S_ISLNK, S_ISREG
 import tarfile
 from typing import Iterable
+import weakref
 import zipfile
 
 
@@ -48,6 +49,9 @@ class SnapshotManifest:
     files: tuple[SnapshotFile, ...]
     total_bytes: int
     fixed_content_hash: str
+
+
+_TRUSTED_MANIFESTS: dict[int, tuple[weakref.ReferenceType[SnapshotManifest], tuple[object, ...]]] = {}
 
 
 _HASHABLE_SUFFIXES = frozenset({
@@ -100,7 +104,7 @@ def build_snapshot(
         content_fingerprint.update(b"\0")
         content_fingerprint.update(sha256(content).digest())
     evidence_prefix = target.name
-    return SnapshotManifest(
+    manifest = SnapshotManifest(
         candidate.candidate_id,
         candidate.fixed_version,
         target,
@@ -109,6 +113,43 @@ def build_snapshot(
         tuple(files),
         sum(item.size for item in files),
         content_fingerprint.hexdigest(),
+    )
+    _register_manifest(manifest)
+    return manifest
+
+
+def consume_trusted_snapshot(manifest: object) -> SnapshotManifest:
+    """只允许真实构建出的未篡改快照进入一次审查包构建。"""
+    record = _TRUSTED_MANIFESTS.get(id(manifest))
+    if record is None or record[0]() is not manifest or _manifest_facts(manifest) != record[1]:
+        raise ValueError("审查包必须使用已构建且未篡改的快照清单")
+    _TRUSTED_MANIFESTS.pop(id(manifest), None)
+    return manifest
+
+
+def clear_snapshot_run_state() -> None:
+    """供编排层 finally 调用，释放未消费的本次运行快照身份。"""
+    _TRUSTED_MANIFESTS.clear()
+
+
+def _register_manifest(manifest: SnapshotManifest) -> None:
+    identity = id(manifest)
+
+    def _discard(reference: weakref.ReferenceType[SnapshotManifest]) -> None:
+        record = _TRUSTED_MANIFESTS.get(identity)
+        if record is not None and record[0] is reference:
+            _TRUSTED_MANIFESTS.pop(identity, None)
+
+    _TRUSTED_MANIFESTS[identity] = (weakref.ref(manifest, _discard), _manifest_facts(manifest))
+
+
+def _manifest_facts(manifest: object) -> tuple[object, ...]:
+    if not isinstance(manifest, SnapshotManifest):
+        return ()
+    return (
+        manifest.candidate_id, manifest.fixed_version, manifest.destination,
+        tuple(manifest.source_evidence_paths), tuple(manifest.evidence_paths), tuple(manifest.files),
+        manifest.total_bytes, manifest.fixed_content_hash,
     )
 
 

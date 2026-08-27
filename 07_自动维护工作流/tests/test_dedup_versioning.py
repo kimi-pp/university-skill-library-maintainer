@@ -5,14 +5,26 @@ import unittest
 from unittest.mock import patch
 from dataclasses import replace
 from datetime import date
+from hashlib import sha256
 from pathlib import Path
 
 from skill_maintainer.dedup import canonical_key, deduplicate
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
 from skill_maintainer.review import ObservedFacts, ProjectJudgments, ReviewDecision, apply_reviews_from_stream, build_review_packet
-from skill_maintainer.snapshots import SnapshotManifest
+from skill_maintainer.snapshots import SnapshotCandidate, build_snapshot
 from skill_maintainer.versioning import VersionDecision, apply_approved_version, compare_version
+
+
+def review_snapshot_hash() -> str:
+    content = b"# review evidence"
+    digest = sha256()
+    digest.update(b"SKILL.md")
+    digest.update(b"\0")
+    digest.update(str(len(content)).encode("ascii"))
+    digest.update(b"\0")
+    digest.update(sha256(content).digest())
+    return digest.hexdigest()
 
 
 def formal_row(number: int = 1, **overrides):
@@ -244,7 +256,7 @@ class VersionRetentionTest(unittest.TestCase):
         value = {
             "内部标识": self.current["内部标识"],
             "fixed_version": "v2.0.0",
-            "content_hash": "f" * 64,
+            "content_hash": review_snapshot_hash(),
             "canonical_source": self.current["Canonical source"],
             "source_url": "https://github.com/example/skill-1/releases/tag/v2.0.0",
             "evidence_paths": ("snapshots/v2/SKILL.md",),
@@ -268,12 +280,18 @@ class VersionRetentionTest(unittest.TestCase):
         review = ReviewDecision(
             facts, ProjectJudgments("正式推荐", True, True, 5, (True,)), candidate_id=current["内部标识"],
         )
-        packet = build_review_packet(
-            {"id": current["内部标识"], "canonical_source": observed["canonical_source"], "license": observed["license"], "security_grade": observed["security_grade"]},
-            SnapshotManifest(
-                current["内部标识"], observed["fixed_version"], Path("."), tuple(observed["evidence_paths"]), (), (), 0, observed["content_hash"],
-            ),
-        )
+        with tempfile.TemporaryDirectory(dir=self.temporary.name) as temporary:
+            root = Path(temporary)
+            source = root / "candidate"
+            source.mkdir()
+            (source / "SKILL.md").write_text("# review evidence", encoding="utf-8")
+            snapshot = build_snapshot(
+                SnapshotCandidate(current["内部标识"], observed["fixed_version"], source, tuple(observed["evidence_paths"])), root / "snapshot",
+            )
+            packet = build_review_packet(
+                {"id": current["内部标识"], "canonical_source": observed["canonical_source"], "license": observed["license"], "security_grade": observed["security_grade"]},
+                snapshot,
+            )
         payload = {
             "decisions": [{
                 "candidate_id": review.candidate_id,

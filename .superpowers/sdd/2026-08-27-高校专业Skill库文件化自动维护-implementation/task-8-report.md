@@ -54,3 +54,15 @@ Fresh verification after this round:
 - Focused Task 8 suite: 23/23 passed.
 - Full workflow suite: 127/127 passed.
 - `git diff --check`: no whitespace errors.
+
+## Independent-review repair round 3 — snapshot provenance
+
+- A review receipt can no longer descend from a caller-constructed `SnapshotManifest`. Only the weakly identity-registered object returned from `build_snapshot` can construct one review packet, and its complete manifest tuple is checked again at consumption.
+- Review packet and receipt registries are weak-reference based; consumed receipts are removed immediately, while `clear_review_run_state()` permits explicit per-run cleanup after orchestration finalization. The shadow-workbook failure path still leaves an unconsumed receipt valid for retry.
+
+Fresh verification after this round:
+
+- Focused Task 7 suite: 33/33 passed.
+- Focused Task 8 suite: 23/23 passed.
+- Full workflow suite: 130/130 passed.
+- `git diff --check`: no whitespace errors.
