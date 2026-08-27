@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import os
 import re
 import tempfile
 import xml.etree.ElementTree as ET
@@ -48,6 +49,12 @@ class ImportedRecord:
 
 
 @dataclass(frozen=True)
+class WordUncertainty:
+    source_path: Path
+    reason: str
+
+
+@dataclass(frozen=True)
 class ImportInventory:
     root: Path
     records: tuple[ImportedRecord, ...]
@@ -59,6 +66,11 @@ class ImportInventory:
     duplicate_group_count: int
     ambiguous_record_count: int
     word_excel_count_mismatch: bool
+    word_uncertainties: tuple[WordUncertainty, ...] = ()
+
+    @property
+    def word_uncertainty_count(self) -> int:
+        return len(self.word_uncertainties)
 
 
 @dataclass(frozen=True)
@@ -79,12 +91,16 @@ def scan_existing_deliveries(root: Path) -> ImportInventory:
     word_files = tuple(sorted(resolved.rglob("*.docx")))
     records: list[ImportedRecord] = []
     word_skill_count = 0
+    word_uncertainties: list[WordUncertainty] = []
     for path in (*excel_files, *word_files):
         source_hashes[path.relative_to(resolved)] = hashlib.sha256(path.read_bytes()).hexdigest()
     for path in excel_files:
         records.extend(_read_xlsx_records(path))
     for path in word_files:
-        word_skill_count += _count_docx_skill_rows(path)
+        count, uncertainty = _inspect_docx_skill_rows(path)
+        word_skill_count += count
+        if uncertainty:
+            word_uncertainties.append(WordUncertainty(path, uncertainty))
     duplicate_group_count = sum(1 for group in _groups(records).values() if len(group) > 1)
     ambiguous_record_count = sum(1 for record in records if _is_ambiguous(record))
     return ImportInventory(
@@ -98,11 +114,14 @@ def scan_existing_deliveries(root: Path) -> ImportInventory:
         duplicate_group_count=duplicate_group_count,
         ambiguous_record_count=ambiguous_record_count,
         word_excel_count_mismatch=bool(word_files) and word_skill_count != len(records),
+        word_uncertainties=tuple(word_uncertainties),
     )
 
 
 def build_initial_ledger(inventory: ImportInventory, output: Path) -> ImportSummary:
     """把可证明为正式条目的历史记录写入新的暂存 Excel 主台账。"""
+    if inventory.word_uncertainties:
+        raise ValueError("Word 结构无法确定，阻断自动正式导入")
     if inventory.word_excel_count_mismatch:
         raise ValueError("Word/Excel 数量不一致，阻断自动正式导入")
     output = Path(output).resolve()
@@ -111,27 +130,31 @@ def build_initial_ledger(inventory: ImportInventory, output: Path) -> ImportSumm
     alias_rows: list[dict[str, object]] = []
     observation_rows: list[dict[str, object]] = []
     from .ledger import LedgerStore
-    for canonical_source, group in sorted(_groups(inventory.records).items()):
+    for _, group in sorted(_groups(inventory.records).items()):
         if any(_is_ambiguous(record) for record in group):
             for record in group:
-                if _is_ambiguous(record):
-                    observation_rows.append(_observation_row(record))
+                observation_rows.append(_observation_row(record, "同一身份组含历史字段“API 或外部服务”，所有来源均需人工对账；不得推断为远程 API"))
             continue
         formal = next((record for record in group if _is_formal_record(record)), None)
         if formal is None:
             for record in group:
                 observation_rows.append(_observation_row(record, "历史字段不足，需人工对账后才可进入正式台账"))
             continue
-        stable_id = _stable_id(formal, canonical_source)
+        stable_id = _stable_id(formal, _group_stable_id(group), formal.canonical_source)
         current_rows.append(_formal_row(formal, stable_id))
         alias_rows.extend(_alias_row(record, stable_id, formal) for record in group)
     with tempfile.TemporaryDirectory(prefix="ledger-import-", dir=output.parent) as directory:
         scratch = Path(directory) / "building.xlsx"
+        candidate = Path(directory) / "validated.xlsx"
         store = LedgerStore.create(scratch)
         store.append_rows("当前Skill", current_rows)
         store.append_rows("来源别名", alias_rows)
         store.append_rows("候选观察", observation_rows)
-        store.save_staged(output)
+        errors = store.validate()
+        if errors:
+            raise ValueError("初始台账预校验失败：" + "；".join(errors))
+        store.save_staged(candidate)
+        os.replace(candidate, output)
     return ImportSummary(
         output=output,
         written=True,
@@ -234,29 +257,67 @@ def _canonical_header(header: str) -> str:
     return normalized
 
 
-def _count_docx_skill_rows(path: Path) -> int:
+def _inspect_docx_skill_rows(path: Path) -> tuple[int, str | None]:
     try:
         with ZipFile(path) as archive:
             root = ET.fromstring(archive.read("word/document.xml"))
     except (BadZipFile, KeyError, ET.ParseError):
-        return 0
+        return 0, "无法读取 Word 文档结构"
     count = 0
+    found_recognized_table = False
     for table in root.findall(f".//{_DOCX}tbl"):
         rows = table.findall(f"{_DOCX}tr")
         if not rows:
             continue
-        header = "".join(rows[0].itertext()).strip()
-        if _canonical_header(header) != "Skill名称":
+        header_cells = ["".join(cell.itertext()).strip() for cell in rows[0].findall(f"{_DOCX}tc")]
+        if "Skill名称" not in {_canonical_header(header) for header in header_cells}:
             continue
+        found_recognized_table = True
         count += sum(1 for row in rows[1:] if "".join(row.itertext()).strip())
-    return count
+    if found_recognized_table:
+        return count, None
+    return 0, "未发现可确定的 Skill名称 表头"
 
 
 def _groups(records: Iterable[ImportedRecord]) -> dict[str, list[ImportedRecord]]:
+    items = list(records)
+    parents = list(range(len(items)))
+
+    def find(index: int) -> int:
+        while parents[index] != index:
+            parents[index] = parents[parents[index]]
+            index = parents[index]
+        return index
+
+    def union(first: int, second: int) -> None:
+        first_root, second_root = find(first), find(second)
+        if first_root != second_root:
+            parents[second_root] = first_root
+
+    canonical_seen: dict[str, int] = {}
+    validated_ids = {
+        _first(record.values, "内部标识")
+        for record in items
+        if _is_formal_record(record) and _first(record.values, "内部标识")
+    }
+    stable_seen: dict[str, int] = {}
+    for index, record in enumerate(items):
+        canonical = record.canonical_source
+        if canonical:
+            if canonical in canonical_seen:
+                union(index, canonical_seen[canonical])
+            else:
+                canonical_seen[canonical] = index
+        stable_id = _first(record.values, "内部标识")
+        if stable_id and stable_id in validated_ids:
+            if stable_id in stable_seen:
+                union(index, stable_seen[stable_id])
+            else:
+                stable_seen[stable_id] = index
     result: dict[str, list[ImportedRecord]] = {}
-    for record in records:
-        key = record.canonical_source or f"untraced:{record.source_path}:{record.source_row}"
-        result.setdefault(key, []).append(record)
+    for index, record in enumerate(items):
+        root = find(index)
+        result.setdefault(f"group-{root:06d}", []).append(record)
     return result
 
 
@@ -268,11 +329,22 @@ def _is_formal_record(record: ImportedRecord) -> bool:
     values = record.values
     if values.get("入库层级") != "正式":
         return False
-    return all(values.get(column, "").strip() for column in CURRENT_SKILL_COLUMNS if column not in CURRENT_SKILL_OPTIONAL_COLUMNS)
+    return all(
+        values.get(column, "").strip()
+        for column in CURRENT_SKILL_COLUMNS
+        if column not in CURRENT_SKILL_OPTIONAL_COLUMNS and column != "内部标识"
+    )
 
 
-def _stable_id(record: ImportedRecord, canonical_source: str) -> str:
-    existing = record.values.get("内部标识", "").strip()
+def _group_stable_id(group: Iterable[ImportedRecord]) -> str:
+    for record in group:
+        stable_id = _first(record.values, "内部标识")
+        if stable_id and _is_formal_record(record):
+            return stable_id
+    return ""
+
+
+def _stable_id(record: ImportedRecord, existing: str, canonical_source: str) -> str:
     if existing:
         return existing
     category = record.values.get("功能一级分类", "IMP").strip() or "IMP"
@@ -341,11 +413,14 @@ def main() -> int:
     args = parser.parse_args()
     inventory = scan_existing_deliveries(args.root)
     print(
-        "Excel记录={}; Word记录={}; 重复组={}; 歧义记录={}; Word/Excel不一致={}".format(
+        "Excel文件={}; Word文件={}; Excel记录={}; Word记录={}; 重复组={}; 歧义记录={}; Word不确定文件={}; Word/Excel不一致={}".format(
+            len(inventory.excel_files),
+            len(inventory.word_files),
             inventory.excel_skill_count,
             inventory.word_skill_count,
             inventory.duplicate_group_count,
             inventory.ambiguous_record_count,
+            inventory.word_uncertainty_count,
             "是" if inventory.word_excel_count_mismatch else "否",
         )
     )
