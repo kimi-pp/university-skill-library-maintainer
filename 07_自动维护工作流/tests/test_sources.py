@@ -42,6 +42,19 @@ class FakeHttp:
 
 
 class SourceAdapterContractTest(unittest.TestCase):
+    def test_invalid_json_keeps_response_hash_but_first_page_is_not_completed(self):
+        body = b"not json"
+
+        class RawTransport:
+            def __call__(self, url, timeout):
+                return HttpResponse(url, 200, body)
+
+        batch = SkillHubAdapter(transport=RawTransport()).search(job(), None)
+
+        self.assertEqual(batch.status, "failed")
+        self.assertEqual(batch.requests[0].response_sha256, hashlib.sha256(body).hexdigest())
+        self.assertFalse(batch.requests[0].completed)
+
     def test_doctor_smoke_uses_a_fixed_query_and_never_follows_pagination(self):
         transport = FakeHttp([(200, {"items": [{"id": "one"}], "has_next": True})])
         result = doctor_smoke(SkillHubAdapter(transport=transport), platform="SkillHub")
@@ -367,6 +380,8 @@ class SourceAdapterContractTest(unittest.TestCase):
             self.assertEqual(batch.status, "failed")
             self.assertEqual(batch.errors[0].query_id, "Q-test")
             self.assertIn("普通文件", batch.errors[0].message)
+            self.assertEqual(batch.requests[0].response_sha256, hashlib.sha256(raw).hexdigest())
+            self.assertFalse(batch.requests[0].completed)
 
     def test_first_page_evidence_failure_is_failed_even_when_it_has_candidates(self):
         payload = {"items": [{"id": "one", "name": "One"}]}

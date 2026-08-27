@@ -97,3 +97,16 @@ Fresh fix-round 3 verification with the locked Python runtime:
 - complete workflow suite: 73/73 passed;
 - `git diff --check`: clean;
 - doctor-only one-page fixed-query probe: HTTP 200 for all four platforms, with no writes and automation still disabled.
+
+## Fix round 4 — response evidence versus completion state
+
+`SourceRequestEvent` now carries an explicit, backward-compatible `completed=False` field. A completed/evidenced page sets it to `True`; the response body SHA-256 remains present whenever an HTTP response body was received, including invalid JSON and an evidence-write failure. `_batch` uses `completed`, never the presence of a hash, to distinguish a failed first page from a partial run with an earlier completed page.
+
+TDD RED: the new invalid-JSON and first-page evidence-write tests showed both events had their response hashes erased (`None`) in order to represent “not completed.” GREEN keeps their exact SHA-256 while retaining `failed`; the earlier empty-first-page/second-failure tests remain `partial` through their explicit completed first event.
+
+Fresh fix-round 4 verification with the locked Python runtime:
+
+- focused source suite: 24/24 passed;
+- complete workflow suite: 74/74 passed;
+- `git diff --check`: clean;
+- doctor-only one-page fixed-query probe: all four platforms returned HTTP 200 without writes or automation changes.
