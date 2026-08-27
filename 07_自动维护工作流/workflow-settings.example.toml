@@ -1,0 +1,24 @@
+config_version = 1
+
+[workflow]
+enabled = false
+timezone = "Asia/Shanghai"
+
+[schedule]
+mode = "manual"
+start_time = "22:00"
+weekdays = ["Monday"]
+interval_days = 1
+day_of_month = 1
+
+[research]
+incremental_search = true
+full_recheck_interval_days = 7
+check_existing_skill_updates = true
+include_generic_skills = false
+
+[delivery]
+generate_word = true
+generate_excel = true
+only_refresh_affected_classes = true
+notify_on_no_change = false
