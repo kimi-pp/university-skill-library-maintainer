@@ -291,11 +291,17 @@ def consume_applied_review(receipt: object) -> None:
     _APPLIED_REVIEW_RECEIPTS.pop(id(validated), None)
 
 
-def clear_review_run_state() -> None:
-    """供 Task 9 在每次运行的 finally 中清理未消费的审查状态。"""
-    _TRUSTED_REVIEW_PACKETS.clear()
-    _APPLIED_REVIEW_RECEIPTS.clear()
-    clear_snapshot_run_state()
+def clear_review_run_state(*, packets: tuple[object, ...] | None = None, receipts: tuple[object, ...] | None = None) -> None:
+    """清理指定运行对象；无参数只保留给旧调用方的全局测试清理。"""
+    if packets is None and receipts is None:
+        _TRUSTED_REVIEW_PACKETS.clear()
+        _APPLIED_REVIEW_RECEIPTS.clear()
+        clear_snapshot_run_state()
+        return
+    for packet in packets or ():
+        _TRUSTED_REVIEW_PACKETS.pop(id(packet), None)
+    for receipt in receipts or ():
+        _APPLIED_REVIEW_RECEIPTS.pop(id(receipt), None)
 
 
 def _issue_applied_review(decision: ReviewDecision, packet: ReviewPacket) -> AppliedReview:
