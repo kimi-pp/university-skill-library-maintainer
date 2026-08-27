@@ -243,8 +243,9 @@ class LedgerStore:
                     errors.append(ERROR_FORMAL_MISSING_REQUIRED_FACT)
                 if not str(row["固定版本"] or "").strip():
                     errors.append(ERROR_MISSING_FIXED_VERSION)
-                license_name = str(row["许可证"] or "").strip().casefold()
-                if license_name in {"", "待确认", "无许可证声明", "未明确", "未知", "unknown", "n/a", "none", "null", "-"}:
+                license_value = row["许可证"]
+                license_name = license_value.strip().casefold() if type(license_value) is str else ""
+                if type(license_value) is not str or license_name in {"", "待确认", "无许可证声明", "未明确", "未知", "unknown", "n/a", "none", "null", "-"}:
                     errors.append(ERROR_FORMAL_UNKNOWN_LICENSE)
                 if row["来源平台"] not in ALLOWED_SOURCE_PLATFORMS:
                     errors.append(ERROR_INVALID_SOURCE_PLATFORM)

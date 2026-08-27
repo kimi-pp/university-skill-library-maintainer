@@ -214,6 +214,10 @@ class LedgerStoreTest(unittest.TestCase):
         self.store.append_rows("当前Skill", [formal_row(1, **{"验证状态": "全部通过（已实测）"})])
         self.assertNotIn(ERROR_FORMAL_INVALID_VALIDATION_STATUS, self.store.validate())
 
+    def test_formal_license_must_be_a_nonempty_plain_string(self):
+        self.store.append_rows("当前Skill", [formal_row(1, **{"许可证": 123})])
+        self.assertIn(ERROR_FORMAL_UNKNOWN_LICENSE, self.store.validate())
+
     def test_validation_rejects_extra_sheets_and_invalid_table_structure_before_staged_save(self):
         self.store.workbook.create_sheet("多余工作表")
         worksheet = self.store.workbook["当前Skill"]
