@@ -17,7 +17,10 @@ from skill_maintainer.ledger_schema import (
     ERROR_FORMAL_INVALID_SECURITY_GRADE,
     ERROR_FORMAL_INVALID_VALIDATION_STATUS,
     ERROR_FORMAL_MISSING_REQUIRED_FACT,
+    ERROR_INVALID_REMOTE_CALL_FLAG,
+    ERROR_INVALID_SOURCE_PLATFORM,
     ERROR_NON_FORMAL_CURRENT_SKILL,
+    SHEET_SPECS_BY_NAME,
     ERROR_FORMAL_UNKNOWN_LICENSE,
     ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT,
     ERROR_MISSING_FIXED_VERSION,
@@ -31,7 +34,11 @@ EXPECTED_SHEETS = (
 )
 
 EXPECTED_CURRENT_SKILL_COLUMNS = (
-    "内部标识", "Skill名称", "规范名称", "入库层级", "功能一级分类", "功能二级标签", "关联分类", "原生生态", "来源形态", "来源平台", "发现地址", "Canonical source", "上游项目地址", "Skill入口路径", "发布者", "固定版本", "固定版本内容指纹", "许可证", "简要功能", "详细功能摘要", "适用用户角色", "典型高校场景", "Codex兼容等级", "适配建议", "关联资源类型", "关联资源地址", "外部依赖", "外部联网/API 调用", "远程服务端点", "本地专业软件或运行时依赖", "本地脚本/插件接口", "可执行行为", "网络与数据行为", "凭据行为", "文件行为", "安全等级", "安全限制条件", "维护状态", "风险提示", "验证级别", "验证状态", "验证证据位置", "最近核验日期", "推荐优先级", "接入难度", "实施准备度", "质量评分", "重复或关联条目", "备注",
+    "内部标识", "Skill名称", "规范名称", "入库层级", "功能一级分类", "功能二级标签", "关联分类", "原生生态", "来源形态", "来源平台", "发现地址", "收集日期", "Canonical source", "上游项目地址", "Skill入口路径", "发布者", "固定版本", "固定版本内容指纹", "许可证", "简要功能", "详细功能摘要", "适用用户角色", "典型高校场景", "Codex兼容等级", "适配建议", "关联资源类型", "关联资源地址", "外部依赖", "外部联网/API 调用", "远程服务端点", "本地专业软件或运行时依赖", "本地脚本/插件接口", "可执行行为", "网络与数据行为", "凭据行为", "文件行为", "安全等级", "安全限制条件", "最近更新", "维护状态", "风险提示", "替代方案", "验证级别", "验证状态", "验证证据位置", "最近核验日期", "推荐优先级", "接入难度", "实施准备度", "质量评分", "重复或关联条目", "备注",
+)
+
+EXPECTED_SOURCE_ALIAS_COLUMNS = (
+    "别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "关系类型", "去重依据", "记录日期",
 )
 
 
@@ -48,6 +55,7 @@ def formal_row(number: int = 1, **overrides):
         "来源形态": "Skill",
         "来源平台": "GitHub",
         "发现地址": f"https://example.edu/discovery/{number}",
+        "收集日期": date(2026, 8, 20),
         "Canonical source": f"https://example.edu/skills/{number}",
         "上游项目地址": f"https://example.edu/upstream/{number}",
         "Skill入口路径": "SKILL.md",
@@ -74,8 +82,10 @@ def formal_row(number: int = 1, **overrides):
         "文件行为": "未见文件写入",
         "安全等级": "SA",
         "安全限制条件": "无额外限制",
+        "最近更新": date(2026, 8, 1),
         "维护状态": "活跃",
         "风险提示": "未见明显风险",
+        "替代方案": "无",
         "验证级别": "二级包内容验证",
         "最近核验日期": date(2026, 8, 27),
         "验证状态": "全部通过（未实测）",
@@ -101,6 +111,7 @@ class LedgerStoreTest(unittest.TestCase):
     def test_creates_exact_named_sheets_and_named_column_tables(self):
         self.assertEqual(tuple(self.store.workbook.sheetnames), EXPECTED_SHEETS)
         self.assertEqual(CURRENT_SKILL_COLUMNS, EXPECTED_CURRENT_SKILL_COLUMNS)
+        self.assertEqual(SHEET_SPECS_BY_NAME["来源别名"].columns, EXPECTED_SOURCE_ALIAS_COLUMNS)
         for sheet_name in EXPECTED_SHEETS:
             with self.subTest(sheet=sheet_name):
                 worksheet = self.store.workbook[sheet_name]
@@ -147,7 +158,7 @@ class LedgerStoreTest(unittest.TestCase):
             worksheet_xml = archive.read("xl/worksheets/sheet1.xml")
             table_xml = archive.read("xl/tables/table1.xml")
         self.assertNotIn(b"<autoFilter", worksheet_xml)
-        self.assertIn(b'<autoFilter ref="A1:AW521"', table_xml)
+        self.assertIn(b'<autoFilter ref="A1:AZ521"', table_xml)
 
     def test_validation_reports_stable_codes_for_formal_row_failures(self):
         cases = (
@@ -183,12 +194,25 @@ class LedgerStoreTest(unittest.TestCase):
             (formal_row(1, **{"验证状态": "前两步通过"}), ERROR_FORMAL_INVALID_VALIDATION_STATUS),
             (formal_row(1, **{"安全等级": "SB-A"}), ERROR_FORMAL_INVALID_SECURITY_GRADE),
             (formal_row(1, **{"质量评分": 1}), ERROR_FORMAL_INVALID_QUALITY_SCORE),
+            (formal_row(1, **{"质量评分": 2.5}), ERROR_FORMAL_INVALID_QUALITY_SCORE),
+            (formal_row(1, **{"来源平台": "UnknownMarketplace"}), ERROR_INVALID_SOURCE_PLATFORM),
+            (formal_row(1, **{"外部联网/API 调用": "可能"}), ERROR_INVALID_REMOTE_CALL_FLAG),
         )
         for row, error_code in cases:
             with self.subTest(error_code=error_code):
                 store = LedgerStore.create(Path(self.tempdir.name) / f"formal-{error_code}.xlsx")
                 store.append_rows("当前Skill", [row])
                 self.assertIn(error_code, store.validate())
+
+    def test_formal_license_placeholders_are_rejected_but_authorized_tested_status_is_kept(self):
+        placeholders = ("待确认", "无许可证声明", "未明确", "未知", " unknown ", "N/A", "NONE", "null", "-")
+        for license_name in placeholders:
+            with self.subTest(license_name=license_name):
+                store = LedgerStore.create(Path(self.tempdir.name) / f"license-{len(license_name)}.xlsx")
+                store.append_rows("当前Skill", [formal_row(1, **{"许可证": license_name})])
+                self.assertIn(ERROR_FORMAL_UNKNOWN_LICENSE, store.validate())
+        self.store.append_rows("当前Skill", [formal_row(1, **{"验证状态": "全部通过（已实测）"})])
+        self.assertNotIn(ERROR_FORMAL_INVALID_VALIDATION_STATUS, self.store.validate())
 
     def test_validation_rejects_extra_sheets_and_invalid_table_structure_before_staged_save(self):
         self.store.workbook.create_sheet("多余工作表")

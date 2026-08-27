@@ -14,6 +14,7 @@ from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter, range_boundaries
 
 from .ledger_schema import (
+    ALLOWED_SOURCE_PLATFORMS,
     ERROR_DUPLICATE_CANONICAL_SOURCE,
     ERROR_DUPLICATE_STABLE_ID,
     ERROR_EXTRA_WORKSHEET,
@@ -22,6 +23,8 @@ from .ledger_schema import (
     ERROR_FORMAL_INVALID_VALIDATION_STATUS,
     ERROR_FORMAL_MISSING_REQUIRED_FACT,
     ERROR_FORMAL_UNKNOWN_LICENSE,
+    ERROR_INVALID_REMOTE_CALL_FLAG,
+    ERROR_INVALID_SOURCE_PLATFORM,
     ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT,
     ERROR_MISSING_FIXED_VERSION,
     ERROR_REMOTE_ENDPOINT_REQUIRED,
@@ -240,21 +243,26 @@ class LedgerStore:
                     errors.append(ERROR_FORMAL_MISSING_REQUIRED_FACT)
                 if not str(row["固定版本"] or "").strip():
                     errors.append(ERROR_MISSING_FIXED_VERSION)
-                if str(row["许可证"] or "").strip().lower() in {"", "未明确", "未知", "unknown", "n/a"}:
+                license_name = str(row["许可证"] or "").strip().casefold()
+                if license_name in {"", "待确认", "无许可证声明", "未明确", "未知", "unknown", "n/a", "none", "null", "-"}:
                     errors.append(ERROR_FORMAL_UNKNOWN_LICENSE)
+                if row["来源平台"] not in ALLOWED_SOURCE_PLATFORMS:
+                    errors.append(ERROR_INVALID_SOURCE_PLATFORM)
                 remote_call = str(row["外部联网/API 调用"] or "").strip()
                 endpoint = str(row["远程服务端点"] or "").strip()
+                if remote_call not in {"是", "否"}:
+                    errors.append(ERROR_INVALID_REMOTE_CALL_FLAG)
                 if remote_call == "是" and not endpoint:
                     errors.append(ERROR_REMOTE_ENDPOINT_REQUIRED)
                 endpoint_lower = endpoint.lower()
                 if remote_call == "是" and any(name in endpoint_lower for name in ("abaqus", "ansys", "matlab", "autocad")):
                     errors.append(ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT)
-                if row["验证状态"] != "全部通过（未实测）":
+                if row["验证状态"] not in {"全部通过（未实测）", "全部通过（已实测）"}:
                     errors.append(ERROR_FORMAL_INVALID_VALIDATION_STATUS)
                 if row["安全等级"] not in {"SA", "SB"}:
                     errors.append(ERROR_FORMAL_INVALID_SECURITY_GRADE)
                 quality_score = row["质量评分"]
-                if isinstance(quality_score, bool) or not isinstance(quality_score, (int, float)) or quality_score < 2 or quality_score > 5:
+                if isinstance(quality_score, bool) or not isinstance(quality_score, int) or quality_score < 2 or quality_score > 5:
                     errors.append(ERROR_FORMAL_INVALID_QUALITY_SCORE)
         return list(dict.fromkeys(errors))
 
