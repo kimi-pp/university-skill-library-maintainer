@@ -7,12 +7,14 @@ from pathlib import Path
 from unittest.mock import patch
 
 from skill_maintainer.ledger import LedgerStore
+from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
 from skill_maintainer.snapshots import SnapshotCandidate, SnapshotLimits, build_snapshot
 from skill_maintainer.review import (
     DerivedFields,
     ObservedFacts,
     ProjectJudgments,
     ReviewDecision,
+    ReviewPacket,
     apply_reviews_from_stream,
     build_review_packet,
     score_quality,
@@ -68,6 +70,22 @@ class SnapshotContractTest(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "链接|重解析"):
             build_snapshot(self._candidate(source), self.root / "snapshot")
+
+    def test_linked_destination_is_rejected_before_resolution_or_external_write(self):
+        source = self.root / "candidate"
+        source.mkdir()
+        (source / "SKILL.md").write_text("# skill", encoding="utf-8")
+        outside = self.root / "outside"
+        outside.mkdir()
+        linked = self.root / "linked-destination"
+        try:
+            linked.symlink_to(outside, target_is_directory=True)
+        except OSError:
+            self.skipTest("当前环境不允许创建符号链接安全回归夹具")
+
+        with self.assertRaisesRegex(ValueError, "链接|重解析"):
+            build_snapshot(self._candidate(source), linked / "snapshot")
+        self.assertFalse((outside / "snapshot").exists())
 
     def test_snapshot_enforces_file_count_total_and_single_file_bounds(self):
         source = self.root / "candidate"
@@ -127,7 +145,7 @@ class ReviewContractTest(unittest.TestCase):
         facts.update(observed_overrides)
         observed = ObservedFacts(**facts)
         judgments = ProjectJudgments(
-            record_tier="正式",
+            record_tier="正式推荐",
             display_in_product=True,
             direct_deployable=True,
             relevance_score=4,
@@ -135,13 +153,53 @@ class ReviewContractTest(unittest.TestCase):
         )
         return ReviewDecision(observed, judgments, DerivedFields())
 
+    def _packet(self, decision, *, fixed_version=None):
+        facts = decision.observed_facts
+        return ReviewPacket(
+            "org/example", fixed_version or facts.fixed_version, facts.canonical_source, facts.license,
+            facts.security_grade, {"SKILL_RESEARCH_WORKFLOW": "1.4"}, facts.evidence_paths, ("SKILL.md",),
+        )
+
+    @staticmethod
+    def _payload(decision, *, ledger_row=None):
+        facts = decision.observed_facts
+        judgments = decision.project_judgments
+        return {
+            "candidate_id": "org/example",
+            "observed_facts": {
+                "fixed_version": facts.fixed_version,
+                "entry_description_complete": facts.entry_description_complete,
+                "prerequisites_clear_and_available": facts.prerequisites_clear_and_available,
+                "license": facts.license,
+                "canonical_source": facts.canonical_source,
+                "evidence_paths": list(facts.evidence_paths),
+                "remote_api_call": facts.remote_api_call,
+                "remote_endpoints": list(facts.remote_endpoints),
+                "local_professional_software": facts.local_professional_software,
+                "local_script_plugin_interface": facts.local_script_plugin_interface,
+                "security_grade": facts.security_grade,
+                "verification_status": facts.verification_status,
+            },
+            "project_judgments": {
+                "record_tier": judgments.record_tier,
+                "display_in_product": judgments.display_in_product,
+                "direct_deployable": judgments.direct_deployable,
+                "relevance_score": judgments.relevance_score,
+                "quality_bonus_flags": list(judgments.quality_bonus_flags),
+            },
+            "derived_fields": {"ledger_row": ledger_row} if ledger_row is not None else {},
+        }
+
     def test_packet_carries_rule_versions_and_snapshot_evidence_paths(self):
         with tempfile.TemporaryDirectory() as temporary:
             source = Path(temporary) / "candidate"
             source.mkdir()
             (source / "SKILL.md").write_text("# example", encoding="utf-8")
             snapshot = build_snapshot(SnapshotCandidate("org/example", "a" * 40, source, ("https://source.example/a",)), Path(temporary) / "snapshot")
-            packet = build_review_packet({"id": "org/example"}, snapshot)
+            packet = build_review_packet({
+                "id": "org/example", "canonical_source": "https://github.com/org/example", "license": "MIT",
+                "security_grade": "SA",
+            }, snapshot)
 
         self.assertIn("SKILL_RESEARCH_WORKFLOW", packet.rule_versions)
         self.assertIn("VALIDATION_PROTOCOL", packet.rule_versions)
@@ -149,6 +207,86 @@ class ReviewContractTest(unittest.TestCase):
 
     def test_abaqus_markdown_is_local_boundary_not_remote_api(self):
         self.assertEqual(validate_review(self._decision()), ())
+
+    def test_review_packet_binds_version_source_license_security_and_evidence(self):
+        decision = self._decision()
+        packet = self._packet(decision, fixed_version="b" * 40)
+        errors = validate_review(decision, packet)
+        self.assertIn("observed_facts.fixed_version: 与审查包固定版本不一致", errors)
+
+    def test_apply_review_rejects_missing_packet_and_tampered_ledger_row(self):
+        decision = self._decision()
+        tampered_row = {"内部标识": "GH-01-0001", "固定版本": "attacker-version"}
+        body = json.dumps({"decisions": [self._payload(decision, ledger_row=tampered_row)]}, ensure_ascii=False).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            with self.assertRaisesRegex(ValueError, "审查包"):
+                apply_reviews_from_stream(io.BytesIO(body), store, {})
+            with self.assertRaisesRegex(ValueError, "derived_fields.ledger_row.固定版本"):
+                apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": self._packet(decision)})
+            attacker = self._decision(fixed_version="attacker-version")
+            attacker_body = json.dumps({"decisions": [self._payload(attacker)]}, ensure_ascii=False).encode("utf-8")
+            with self.assertRaisesRegex(ValueError, "observed_facts.fixed_version: 与审查包固定版本不一致"):
+                apply_reviews_from_stream(io.BytesIO(attacker_body), store, {"org/example": self._packet(decision)})
+            self.assertEqual(store.rows("当前Skill"), [])
+
+    def test_parser_normalizes_legacy_formal_only_at_the_boundary_and_rejects_unknown_tier(self):
+        payload = self._payload(self._decision())
+        payload["project_judgments"]["record_tier"] = "正式"
+        parsed = ReviewDecision.from_mapping(payload)
+        self.assertEqual(parsed.project_judgments.record_tier, "正式推荐")
+        unknown = ProjectJudgments("未知层级", True, True, 4, ())
+        self.assertIn(
+            "project_judgments.record_tier: 只能为正式推荐、条件候选或需适配候选",
+            validate_review(ReviewDecision(parsed.observed_facts, unknown)),
+        )
+
+    def test_conditional_and_adaptation_cannot_be_directly_deployed(self):
+        decision = self._decision()
+        for tier in ("条件候选", "需适配候选"):
+            with self.subTest(tier=tier):
+                judgments = ProjectJudgments(tier, True, True, 4, ())
+                self.assertIn(
+                    "project_judgments.direct_deployable: 条件候选和需适配候选不得直接部署",
+                    validate_review(ReviewDecision(decision.observed_facts, judgments)),
+                )
+
+    def test_application_routes_conditional_candidate_to_observations_not_current_skill(self):
+        decision = self._decision()
+        judgments = ProjectJudgments("条件候选", True, False, 4, ())
+        decision = ReviewDecision(decision.observed_facts, judgments)
+        observation = {
+            "观察标识": "OBS-01", "候选名称": "example", "Canonical source": decision.observed_facts.canonical_source,
+            "观察状态": "条件候选", "许可证": decision.observed_facts.license,
+            "记录日期": "2026-08-27", "原因": "仍待人工条件复核",
+        }
+        body = json.dumps({"decisions": [self._payload(decision, ledger_row=observation)]}, ensure_ascii=False).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": self._packet(decision)})
+            self.assertEqual(store.rows("当前Skill"), [])
+            self.assertEqual(store.rows("候选观察")[0]["观察状态"], "条件候选")
+
+    def test_application_routes_formal_recommendation_to_current_skill_only(self):
+        decision = self._decision()
+        facts = decision.observed_facts
+        formal_row = {column: "已填" for column in CURRENT_SKILL_COLUMNS}
+        formal_row.update({
+            "内部标识": "GH-01-0001", "入库层级": "正式", "来源平台": "GitHub",
+            "固定版本": facts.fixed_version, "Canonical source": facts.canonical_source, "许可证": facts.license,
+            "安全等级": facts.security_grade, "质量评分": score_quality(decision),
+            "验证状态": facts.verification_status, "验证证据位置": "；".join(facts.evidence_paths),
+            "外部联网/API 调用": facts.remote_api_call, "远程服务端点": "",
+            "本地专业软件或运行时依赖": facts.local_professional_software,
+            "本地脚本/插件接口": facts.local_script_plugin_interface,
+        })
+        body = json.dumps({"decisions": [self._payload(decision, ledger_row=formal_row)]}, ensure_ascii=False).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": self._packet(decision)})
+            self.assertEqual(store.rows("当前Skill")[0]["内部标识"], "GH-01-0001")
+            self.assertEqual(store.rows("候选观察"), [])
+            self.assertEqual(store.validate(), [])
 
     def test_remote_endpoint_and_remote_api_flag_must_not_conflict(self):
         errors = validate_review(self._decision(remote_endpoints=("https://api.example",)))
@@ -164,7 +302,7 @@ class ReviewContractTest(unittest.TestCase):
 
     def test_relevance_two_is_not_product_displayable(self):
         decision = self._decision()
-        decision = ReviewDecision(decision.observed_facts, ProjectJudgments("正式", True, True, 2, ()), decision.derived_fields)
+        decision = ReviewDecision(decision.observed_facts, ProjectJudgments("正式推荐", True, True, 2, ()), decision.derived_fields)
         errors = validate_review(decision)
         self.assertIn("project_judgments.display_in_product: 相关度低于 3/5 不得展示", errors)
 
@@ -203,7 +341,7 @@ class ReviewContractTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             store = LedgerStore.create(Path(temporary) / "source.xlsx")
             stream = io.BytesIO(json.dumps({"decisions": []}, ensure_ascii=False).encode("utf-8"))
-            self.assertEqual(apply_reviews_from_stream(stream, store), ())
+            self.assertEqual(apply_reviews_from_stream(stream, store, {}), ())
             self.assertEqual(store.rows("当前Skill"), [])
             self.assertEqual(list(Path(temporary).glob("*.json")), [])
 
@@ -234,7 +372,7 @@ class ReviewContractTest(unittest.TestCase):
                 }]
             }
             with self.assertRaisesRegex(ValueError, "布尔"):
-                apply_reviews_from_stream(io.BytesIO(json.dumps(payload).encode("utf-8")), store)
+                apply_reviews_from_stream(io.BytesIO(json.dumps(payload).encode("utf-8")), store, {})
 
 
 if __name__ == "__main__":

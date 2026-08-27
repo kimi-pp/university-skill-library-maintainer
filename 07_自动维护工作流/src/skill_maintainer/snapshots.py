@@ -71,7 +71,7 @@ def build_snapshot(
     source = candidate.source_path.resolve(strict=True)
     if _is_link_or_reparse(candidate.source_path):
         raise ValueError("候选来源不得是链接或重解析点")
-    target = Path(destination).resolve()
+    target = _safe_destination(destination)
     if target.exists():
         if _is_link_or_reparse(target) or not target.is_dir():
             raise ValueError("快照目标必须是非链接目录或不存在目录")
@@ -197,12 +197,35 @@ def _archive_records(source: Path, limits: SnapshotLimits) -> Iterable[tuple[Pur
 
 
 def _create_safe_target(target: Path) -> None:
-    parent = target.parent
-    if _is_link_or_reparse(parent):
-        raise ValueError("快照目标父目录不得是链接或重解析点")
+    _assert_existing_components_are_safe(target.parent)
     target.mkdir(parents=False)
     if _is_link_or_reparse(target):
         raise ValueError("快照目标不得是链接或重解析点")
+
+
+def _safe_destination(destination: str | Path) -> Path:
+    """在 resolve 前保留调用方指定路径的链接/重解析点边界。"""
+    requested = Path(destination)
+    target = requested.absolute()
+    _assert_existing_components_are_safe(target)
+    return target
+
+
+def _assert_existing_components_are_safe(path: Path) -> None:
+    """逐段检查原始路径；不能让 resolve 把中间链接折叠到外部目录。"""
+    if not path.is_absolute():
+        path = path.absolute()
+    parts = path.parts
+    current = Path(parts[0]) if parts else path
+    if _is_link_or_reparse(current):
+        raise ValueError("快照目标包含链接或重解析点")
+    for part in parts[1:]:
+        current = current / part
+        if current.exists() or current.is_symlink():
+            if _is_link_or_reparse(current):
+                raise ValueError("快照目标包含链接或重解析点")
+        else:
+            break
 
 
 def _safe_target_file(root: Path, relative: PurePosixPath) -> Path:
