@@ -11,13 +11,10 @@ from typing import Any, Mapping
 
 from openpyxl import load_workbook
 
-from .review import ReviewDecision, ReviewPacket, validate_review
+from .review import AppliedReview, consume_applied_review, validate_applied_review
 
 
 _SHA256 = re.compile(r"[0-9a-f]{64}", re.IGNORECASE)
-_APPROVAL_CAPABILITY = object()
-
-
 @dataclass(frozen=True)
 class VersionChange:
     status: str
@@ -34,20 +31,20 @@ class VersionDecision:
     conclusion_change: str = ""
     evidence_paths: tuple[str, ...] = ()
     history_fields: Mapping[str, Any] = field(default_factory=dict)
-    review_decision: ReviewDecision | None = None
-    review_packet: ReviewPacket | None = None
-    _capability: object | None = field(default=None, repr=False, compare=False)
+    applied_review: AppliedReview | None = None
 
     @classmethod
     def from_change(cls, change: VersionChange, *, outcome: str, review_date: str = "", conclusion_change: str = "", evidence_paths: tuple[str, ...] | None = None) -> "VersionDecision":
+        if outcome == "accepted" and change.requires_full_review:
+            raise ValueError("changed content accepted version requires a trusted review receipt")
         paths = evidence_paths if evidence_paths is not None else tuple(change.observed.get("evidence_paths", ()))
         return cls(change, outcome, review_date, conclusion_change, tuple(str(item) for item in paths))
 
     @classmethod
-    def approve(cls, change: VersionChange, review_decision: ReviewDecision, review_packet: ReviewPacket, *, review_date: str, conclusion_change: str) -> "VersionDecision":
-        if validate_review(review_decision, review_packet):
-            raise ValueError("Task 7 review contract 无效")
-        return cls(change, "accepted", review_date, conclusion_change, (), {}, review_decision, review_packet, _APPROVAL_CAPABILITY)
+    def accept_from_applied_review(cls, change: VersionChange, receipt: object, *, review_date: str, conclusion_change: str) -> "VersionDecision":
+        if not change.requires_full_review:
+            raise ValueError("review receipt can only accept changed content")
+        return cls(change, "accepted", review_date, conclusion_change, (), {}, validate_applied_review(receipt))
 
 
 def compare_version(current: Mapping[str, Any], observed: Mapping[str, Any]) -> VersionChange:
@@ -79,14 +76,15 @@ def apply_approved_version(ledger: object, decision: VersionDecision) -> None:
             _append_version_alias_once(ledger, change)
         return
     persisted = _persisted_current(ledger, change)
+    receipt = _validate_accepted_review(decision, persisted)
     history = _history_row(change, decision)
     existing_history = {str(row.get("版本记录标识") or "") for row in ledger.rows("版本历史")}
     if history["版本记录标识"] in existing_history:
         if _observed_version(persisted) == _observed_version(change.observed) and _current_hash(persisted) == _observed_hash(change.observed):
             return
         raise ValueError("版本历史标识已存在，但当前Skill 未处于该已接受版本")
-    _validate_accepted_review(decision, persisted)
     _apply_transactionally(ledger, history, change, persisted)
+    consume_applied_review(receipt)
 
 
 def _persisted_current(ledger: object, change: VersionChange) -> Mapping[str, Any]:
@@ -103,23 +101,21 @@ def _persisted_current(ledger: object, change: VersionChange) -> Mapping[str, An
     return persisted
 
 
-def _validate_accepted_review(decision: VersionDecision, persisted: Mapping[str, Any]) -> None:
-    review, packet, observed = decision.review_decision, decision.review_packet, decision.change.observed
-    if decision._capability is not _APPROVAL_CAPABILITY or review is None or packet is None:
-        raise ValueError("accepted version requires trusted review approval")
-    errors = validate_review(review, packet)
-    if errors:
-        raise ValueError("Task 7 review contract 无效：" + "；".join(errors))
-    facts = review.observed_facts
+def _validate_accepted_review(decision: VersionDecision, persisted: Mapping[str, Any]) -> AppliedReview:
+    receipt = validate_applied_review(decision.applied_review)
+    observed = decision.change.observed
     expected = (
         str(persisted.get("内部标识") or ""), _observed_version(observed),
         str(persisted.get("Canonical source") or ""), str(persisted.get("许可证") or ""),
-        str(persisted.get("安全等级") or ""), tuple(str(item) for item in observed.get("evidence_paths", ())),
+        str(persisted.get("安全等级") or ""), tuple(str(item) for item in observed.get("evidence_paths", ())), _observed_hash(observed),
     )
-    actual = (review.candidate_id, facts.fixed_version, facts.canonical_source, facts.license, facts.security_grade, facts.evidence_paths)
-    packet_actual = (packet.candidate_id, packet.fixed_version, packet.canonical_source, packet.license, packet.security_grade, packet.evidence_paths)
-    if review.project_judgments.record_tier != "正式推荐" or actual != expected or packet_actual != expected:
+    actual = (
+        receipt.candidate_id, receipt.fixed_version, receipt.canonical_source, receipt.license,
+        receipt.security_grade, receipt.evidence_paths, receipt.fixed_content_hash,
+    )
+    if actual != expected:
         raise ValueError("Task 7 review 与当前Skill/观察版本不精确绑定")
+    return receipt
 
 
 def _apply_transactionally(ledger: object, history: Mapping[str, Any], change: VersionChange, persisted: Mapping[str, Any]) -> None:

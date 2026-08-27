@@ -66,9 +66,16 @@ def deduplicate(candidates: Sequence[object], ledger: object | None) -> DedupRes
     skills: list[dict[str, Any]] = []
     aliases: list[dict[str, Any]] = []
     group_by_index: dict[int, int] = {}
+    inconsistent_reviews: list[dict[str, Any]] = []
     groups.sort(key=lambda group: min(_candidate_sort_key(normalized[index]) for index in group))
     for group_number, indexes in enumerate(groups):
         indexes.sort(key=lambda index: _candidate_sort_key(normalized[index]))
+        for index in indexes:
+            group_by_index[index] = group_number
+        proven = set().union(*(candidate_ids[index] for index in indexes))
+        if len(proven) > 1:
+            inconsistent_reviews.extend(_inconsistent_ledger_reviews(indexes, normalized, proven))
+            continue
         representative = normalized[indexes[0]]
         stable_id = _stable_id(indexes, normalized, candidate_ids)
         canonical = _normalized_url(_value(representative, "canonical_source", "Canonical source"))
@@ -77,12 +84,12 @@ def deduplicate(candidates: Sequence[object], ledger: object | None) -> DedupRes
         skill["Canonical source"] = canonical
         skills.append(skill)
         for index in indexes:
-            group_by_index[index] = group_number
             alias = _alias_row(normalized[index], stable_id, canonical, _reason_for(index, indexes, normalized))
             if alias["别名标识"] not in existing_alias_ids and not any(item["别名标识"] == alias["别名标识"] for item in aliases):
                 aliases.append(alias)
 
     manual_review = _manual_reviews(normalized, group_by_index)
+    manual_review.extend(inconsistent_reviews)
     manual_review.extend(_untrusted_id_reviews(normalized, candidate_ids, occupied_ids))
     return DedupResult(tuple(skills), tuple(aliases), tuple(_unique_rows(manual_review, "观察标识")))
 
@@ -197,6 +204,20 @@ def _untrusted_id_reviews(candidates: list[Mapping[str, Any]], ledger_ids: list[
             "观察状态": "manual_review", "许可证": _value(candidate, "license", "许可证") or "待确认",
             "记录日期": _value(candidate, "observed_on", "收集日期"), "原因": "untrusted_stable_id_conflict"})
     return reviews
+
+
+def _inconsistent_ledger_reviews(indexes: list[int], candidates: list[Mapping[str, Any]], stable_ids: set[str]) -> list[dict[str, Any]]:
+    """一个发现不能同时继承多个既有稳定标识，宁可停在人工复核。"""
+    rows: list[dict[str, Any]] = []
+    ids = "；".join(sorted(stable_ids))
+    for index in indexes:
+        candidate = candidates[index]
+        material = "|".join((_candidate_identity(candidate), ids))
+        rows.append({"观察标识": f"inconsistent-ledger-{sha256(material.encode('utf-8')).hexdigest()[:16]}",
+            "候选名称": _value(candidate, "name", "Skill名称"), "Canonical source": _normalized_url(_value(candidate, "canonical_source", "Canonical source")),
+            "观察状态": "manual_review", "许可证": _value(candidate, "license", "许可证") or "待确认",
+            "记录日期": _value(candidate, "observed_on", "收集日期"), "原因": "inconsistent_ledger"})
+    return rows
 
 
 def _manual_reviews(candidates: list[Mapping[str, Any]], group_by_index: Mapping[int, int]) -> list[dict[str, Any]]:

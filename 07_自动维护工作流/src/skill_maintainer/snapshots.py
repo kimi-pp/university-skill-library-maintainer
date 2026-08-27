@@ -47,6 +47,7 @@ class SnapshotManifest:
     evidence_paths: tuple[str, ...]
     files: tuple[SnapshotFile, ...]
     total_bytes: int
+    fixed_content_hash: str
 
 
 _HASHABLE_SUFFIXES = frozenset({
@@ -85,6 +86,7 @@ def build_snapshot(
     else:
         raise ValueError("候选来源必须是普通目录或归档文件")
     files: list[SnapshotFile] = []
+    content_fingerprint = sha256()
     for relative, size, content in records:
         target_file = _safe_target_file(target, relative)
         target_file.parent.mkdir(parents=True, exist_ok=True)
@@ -92,6 +94,11 @@ def build_snapshot(
         with target_file.open("xb") as handle:
             handle.write(content)
         files.append(SnapshotFile(relative.as_posix(), size, digest))
+        content_fingerprint.update(relative.as_posix().encode("utf-8"))
+        content_fingerprint.update(b"\0")
+        content_fingerprint.update(str(size).encode("ascii"))
+        content_fingerprint.update(b"\0")
+        content_fingerprint.update(sha256(content).digest())
     evidence_prefix = target.name
     return SnapshotManifest(
         candidate.candidate_id,
@@ -101,6 +108,7 @@ def build_snapshot(
         tuple(f"{evidence_prefix}/{item.path}" for item in files),
         tuple(files),
         sum(item.size for item in files),
+        content_fingerprint.hexdigest(),
     )
 
 

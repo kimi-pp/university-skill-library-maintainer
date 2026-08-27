@@ -1,3 +1,5 @@
+import io
+import json
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -8,7 +10,8 @@ from pathlib import Path
 from skill_maintainer.dedup import canonical_key, deduplicate
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
-from skill_maintainer.review import ObservedFacts, ProjectJudgments, ReviewDecision, ReviewPacket
+from skill_maintainer.review import ObservedFacts, ProjectJudgments, ReviewDecision, apply_reviews_from_stream, build_review_packet
+from skill_maintainer.snapshots import SnapshotManifest
 from skill_maintainer.versioning import VersionDecision, apply_approved_version, compare_version
 
 
@@ -173,6 +176,26 @@ class DeduplicationTest(unittest.TestCase):
         self.assertNotEqual(rejected.skills[0]["内部标识"], "EXISTING-8")
         self.assertTrue(any(item["原因"] == "untrusted_stable_id_conflict" for item in rejected.manual_review))
 
+    def test_conflicting_current_and_alias_ledger_id_is_manual_review_not_a_third_skill(self):
+        first = formal_row(31, **{"内部标识": "EXISTING-A", "Canonical source": "https://github.com/acme/mono"})
+        second = formal_row(32, **{"内部标识": "EXISTING-B", "Canonical source": "https://github.com/acme/other"})
+        self.ledger.append_rows("当前Skill", [first, second])
+        self.ledger.append_rows("来源别名", [{
+            "别名标识": "alias-b", "内部标识": "EXISTING-B", "来源平台": "ClawHub",
+            "来源地址": "https://clawhub.example/acme/mono", "Canonical source": second["Canonical source"],
+            "关系类型": "跨平台别名", "去重依据": "已验证", "记录日期": "2026-08-27",
+        }])
+        discovery = candidate("ClawHub", "https://clawhub.example/acme/mono", canonical_source=first["Canonical source"])
+
+        forward = deduplicate((discovery,), self.ledger)
+        reverse = deduplicate(tuple(reversed((discovery,))), self.ledger)
+
+        self.assertEqual(forward.skills, ())
+        self.assertEqual(forward.aliases, ())
+        self.assertEqual(forward, reverse)
+        self.assertEqual(len(forward.manual_review), 1)
+        self.assertEqual(forward.manual_review[0]["原因"], "inconsistent_ledger")
+
     def test_stable_ids_are_independent_of_candidate_input_order(self):
         candidates = (
             candidate("GitHub", "https://github.com/acme/z", canonical_source="https://github.com/acme/z", upstream_identity="acme/z", content_hash="1" * 64),
@@ -245,12 +268,41 @@ class VersionRetentionTest(unittest.TestCase):
         review = ReviewDecision(
             facts, ProjectJudgments("正式推荐", True, True, 5, (True,)), candidate_id=current["内部标识"],
         )
-        packet = ReviewPacket(
-            current["内部标识"], observed["fixed_version"], observed["canonical_source"], observed["license"],
-            observed["security_grade"], {"SKILL_RESEARCH_WORKFLOW": "1.4"}, tuple(observed["evidence_paths"]), ("SKILL.md",),
+        packet = build_review_packet(
+            {"id": current["内部标识"], "canonical_source": observed["canonical_source"], "license": observed["license"], "security_grade": observed["security_grade"]},
+            SnapshotManifest(
+                current["内部标识"], observed["fixed_version"], Path("."), tuple(observed["evidence_paths"]), (), (), 0, observed["content_hash"],
+            ),
         )
-        return VersionDecision.approve(
-            change, review, packet, review_date="2026-08-27", conclusion_change="完整复审通过",
+        payload = {
+            "decisions": [{
+                "candidate_id": review.candidate_id,
+                "observed_facts": {
+                    "fixed_version": facts.fixed_version,
+                    "entry_description_complete": facts.entry_description_complete,
+                    "prerequisites_clear_and_available": facts.prerequisites_clear_and_available,
+                    "license": facts.license,
+                    "canonical_source": facts.canonical_source,
+                    "evidence_paths": list(facts.evidence_paths),
+                    "remote_api_call": facts.remote_api_call,
+                    "remote_endpoints": list(facts.remote_endpoints),
+                    "local_professional_software": facts.local_professional_software,
+                    "local_script_plugin_interface": facts.local_script_plugin_interface,
+                    "security_grade": facts.security_grade,
+                    "verification_status": facts.verification_status,
+                },
+                "project_judgments": {
+                    "record_tier": "正式推荐", "display_in_product": True, "direct_deployable": True,
+                    "relevance_score": 5, "quality_bonus_flags": [True],
+                },
+                "derived_fields": {},
+            }]
+        }
+        receipt, = apply_reviews_from_stream(
+            io.BytesIO(json.dumps(payload).encode("utf-8")), self.ledger, {current["内部标识"]: packet},
+        )
+        return VersionDecision.accept_from_applied_review(
+            change, receipt, review_date="2026-08-27", conclusion_change="完整复审通过",
         )
 
     def test_unchanged_hash_does_nothing_and_new_tag_is_alias_observation_only(self):
@@ -315,7 +367,8 @@ class VersionRetentionTest(unittest.TestCase):
             apply_approved_version(self.ledger, replace(accepted, history_fields={"old_hash": "attacker"}))
 
         apply_approved_version(self.ledger, accepted)
-        apply_approved_version(self.ledger, accepted)
+        with self.assertRaisesRegex(ValueError, "receipt"):
+            apply_approved_version(self.ledger, accepted)
 
         self.assertEqual(len(self.ledger.rows("版本历史")), 1)
         self.assertEqual(self.ledger.rows("当前Skill")[0]["固定版本"], self.observed()["fixed_version"])
@@ -325,9 +378,10 @@ class VersionRetentionTest(unittest.TestCase):
         accepted = self.approved(change)
         apply_approved_version(self.ledger, accepted)
         self.ledger.upsert_skill(self.current)
+        fresh_receipt = self.approved(change)
 
         with self.assertRaisesRegex(ValueError, "版本历史"):
-            apply_approved_version(self.ledger, accepted)
+            apply_approved_version(self.ledger, fresh_receipt)
 
     def test_non_hex_hash_and_blank_observed_version_cannot_create_updates_or_aliases(self):
         with self.assertRaisesRegex(ValueError, "SHA-256"):
@@ -357,7 +411,7 @@ class VersionRetentionTest(unittest.TestCase):
 
     def test_accepted_change_requires_trusted_task7_review_and_binds_persisted_current_row(self):
         change = compare_version(self.current, self.observed())
-        with self.assertRaisesRegex(ValueError, "trusted review"):
+        with self.assertRaisesRegex(ValueError, "receipt"):
             apply_approved_version(self.ledger, VersionDecision.from_change(change, outcome="accepted"))
 
         forged_current = dict(self.current, **{"许可证": "Attacker-License"})
@@ -365,6 +419,28 @@ class VersionRetentionTest(unittest.TestCase):
         forged = self.approved(forged_change, current=forged_current)
         with self.assertRaisesRegex(ValueError, "当前Skill"):
             apply_approved_version(self.ledger, forged)
+
+    def test_public_self_signed_review_factory_is_not_an_approval_capability(self):
+        change = compare_version(self.current, self.observed())
+
+        self.assertFalse(hasattr(VersionDecision, "approve"))
+        with self.assertRaisesRegex(ValueError, "receipt"):
+            VersionDecision.accept_from_applied_review(
+                change, object(), review_date="2026-08-27", conclusion_change="完整复审通过",
+            )
+
+    def test_tampered_or_reused_task7_receipt_cannot_accept_a_version(self):
+        change = compare_version(self.current, self.observed())
+        accepted = self.approved(change)
+        tampered = replace(accepted.applied_review, fixed_content_hash="a" * 64)
+        with self.assertRaisesRegex(ValueError, "receipt"):
+            VersionDecision.accept_from_applied_review(
+                change, tampered, review_date="2026-08-27", conclusion_change="完整复审通过",
+            )
+
+        apply_approved_version(self.ledger, accepted)
+        with self.assertRaisesRegex(ValueError, "receipt"):
+            apply_approved_version(self.ledger, accepted)
 
     def test_deleted_upstream_marks_attention_without_deleting_current_or_snapshot(self):
         change = compare_version(self.current, self.observed(availability="deleted"))

@@ -50,3 +50,14 @@ A final identity-binding regression showed that the service previously trusted o
 ## Review-fix round 3
 
 Candidate identity is now mandatory at every boundary: JSON parsing rejects missing or blank decision IDs, direct decision validation rejects blank IDs, packet validation rejects blank packet IDs and always compares the two IDs, and `build_review_packet` rejects any candidate/snapshot pair that cannot supply an ID. The regression covers the former empty-key mapping attack, a directly constructed blank decision, and packet construction without an identity.
+
+## Review-fix round 4 — applied-review receipts
+
+- `SnapshotManifest` now carries a fixed content SHA-256 computed deterministically from every snapshot file's relative path, byte count and content digest. `ReviewPacket` binds that hash in addition to its existing fixed-version facts.
+- Only `build_review_packet` registers a trusted packet identity. `apply_reviews_from_stream` rejects a caller-constructed or altered packet before it applies rows or issues an approval.
+- For every formal recommendation actually applied at the Task 7 boundary, `apply_reviews_from_stream` returns an `AppliedReview` runtime receipt. The review module keeps a private identity registry with an immutable fact tuple; forged or altered receipt objects fail validation.
+
+Fresh verification after this round:
+
+- Focused Task 7 suite: 30/30 passed.
+- Full workflow suite: 127/127 passed.

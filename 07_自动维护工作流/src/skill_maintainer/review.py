@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 import json
 from pathlib import Path
+import re
 from typing import Any, BinaryIO, Mapping, TextIO
 
 from .ledger import LedgerStore
@@ -16,6 +17,7 @@ _FINAL_STATUSES = frozenset({"全部通过（未实测）", "全部通过（已�
 _LOCAL_PRODUCTS = ("abaqus", "ansys", "matlab", "autocad")
 _RECORD_TIERS = frozenset({"正式推荐", "条件候选", "需适配候选"})
 _LEGACY_RECORD_TIERS = {"正式": "正式推荐"}
+_SHA256 = re.compile(r"[0-9a-f]{64}", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -105,6 +107,31 @@ class ReviewPacket:
     rule_versions: Mapping[str, str]
     evidence_paths: tuple[str, ...]
     snapshot_files: tuple[str, ...]
+    fixed_content_hash: str
+
+
+@dataclass(frozen=True)
+class AppliedReview:
+    """由已验证的审查应用边界签发的、单次可消费的运行时收据。"""
+
+    candidate_id: str
+    fixed_version: str
+    canonical_source: str
+    license: str
+    security_grade: str
+    evidence_paths: tuple[str, ...]
+    fixed_content_hash: str
+
+
+@dataclass
+class _ReceiptRecord:
+    receipt: AppliedReview
+    facts: tuple[str, str, str, str, str, tuple[str, ...], str]
+    consumed: bool = False
+
+
+_APPLIED_REVIEW_RECEIPTS: dict[int, _ReceiptRecord] = {}
+_TRUSTED_REVIEW_PACKETS: dict[int, tuple[ReviewPacket, tuple[str, str, str, str, str, tuple[str, ...], tuple[str, ...], str]]] = {}
 
 
 def build_review_packet(candidate: object, snapshot: SnapshotManifest) -> ReviewPacket:
@@ -123,9 +150,11 @@ def build_review_packet(candidate: object, snapshot: SnapshotManifest) -> Review
         "SOURCE_POLICY": "2026-08-07",
         "DATA_DICTIONARY": "2026-08-09",
     }
-    return ReviewPacket(candidate_id, snapshot.fixed_version, canonical_source, license_name, security_grade, rule_versions,
+    packet = ReviewPacket(candidate_id, snapshot.fixed_version, canonical_source, license_name, security_grade, rule_versions,
                         tuple(dict.fromkeys((*snapshot.source_evidence_paths, *snapshot.evidence_paths))),
-                        tuple(item.path for item in snapshot.files))
+                        tuple(item.path for item in snapshot.files), snapshot.fixed_content_hash)
+    _TRUSTED_REVIEW_PACKETS[id(packet)] = (packet, _packet_facts(packet))
+    return packet
 
 
 def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None) -> tuple[str, ...]:
@@ -170,6 +199,8 @@ def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None
             errors.append("review_packet.candidate_id: 与审查决定候选标识不一致")
         if packet.fixed_version != facts.fixed_version:
             errors.append("observed_facts.fixed_version: 与审查包固定版本不一致")
+        if not _valid_hash(packet.fixed_content_hash):
+            errors.append("review_packet.fixed_content_hash: 必须为精确 64 位十六进制 SHA-256")
         if not packet.evidence_paths:
             errors.append("review_packet.evidence_paths: 审查包缺少证据路径")
         if packet.canonical_source != facts.canonical_source:
@@ -203,7 +234,7 @@ def apply_reviews_from_stream(
     stream: BinaryIO | TextIO,
     staged_ledger: LedgerStore,
     review_packets: Mapping[str, ReviewPacket],
-) -> tuple[ReviewDecision, ...]:
+) -> tuple[AppliedReview, ...]:
     """读取一次 UTF-8 stdin JSON；只在内存中校验，绝不落地审查 JSON。"""
     raw = stream.read()
     if isinstance(raw, str):
@@ -221,20 +252,68 @@ def apply_reviews_from_stream(
     errors: list[str] = []
     for decision in decisions:
         packet = review_packets.get(decision.candidate_id)
-        if not isinstance(packet, ReviewPacket):
+        if not _trusted_review_packet(packet):
             errors.append("review_packet: 缺少受信且匹配候选的审查包")
             continue
         errors.extend(validate_review(decision, packet))
         errors.extend(_validate_ledger_row_binding(decision))
     if errors:
         raise ValueError("审查决定校验失败：" + "；".join(errors))
+    receipts: list[AppliedReview] = []
     for decision in decisions:
         row = decision.derived_fields.ledger_row
         if row is not None and decision.project_judgments.record_tier == "正式推荐":
             staged_ledger.upsert_skill(decision.derived_fields.ledger_row)
         elif row is not None:
             staged_ledger.append_rows("候选观察", [row])
-    return decisions
+        if decision.project_judgments.record_tier == "正式推荐":
+            receipts.append(_issue_applied_review(decision, review_packets[decision.candidate_id]))
+    return tuple(receipts)
+
+
+def validate_applied_review(receipt: object) -> AppliedReview:
+    """验证收据确由本模块的实际应用边界签发且尚未消费。"""
+    record = _APPLIED_REVIEW_RECEIPTS.get(id(receipt))
+    if record is None or record.receipt is not receipt or record.consumed:
+        raise ValueError("trusted Task 7 review receipt is required and unused")
+    if _receipt_facts(record.receipt) != record.facts:
+        raise ValueError("trusted Task 7 review receipt has been tampered")
+    return record.receipt
+
+
+def consume_applied_review(receipt: object) -> None:
+    """只应在版本影子工作簿成功替换后调用，失败重试仍可使用收据。"""
+    validated = validate_applied_review(receipt)
+    _APPLIED_REVIEW_RECEIPTS[id(validated)].consumed = True
+
+
+def _issue_applied_review(decision: ReviewDecision, packet: ReviewPacket) -> AppliedReview:
+    facts = decision.observed_facts
+    receipt = AppliedReview(
+        decision.candidate_id, facts.fixed_version, facts.canonical_source, facts.license,
+        facts.security_grade, facts.evidence_paths, _valid_hash(packet.fixed_content_hash),
+    )
+    _APPLIED_REVIEW_RECEIPTS[id(receipt)] = _ReceiptRecord(receipt, _receipt_facts(receipt))
+    return receipt
+
+
+def _receipt_facts(receipt: AppliedReview) -> tuple[str, str, str, str, str, tuple[str, ...], str]:
+    return (
+        receipt.candidate_id, receipt.fixed_version, receipt.canonical_source, receipt.license,
+        receipt.security_grade, tuple(receipt.evidence_paths), receipt.fixed_content_hash,
+    )
+
+
+def _trusted_review_packet(packet: object) -> bool:
+    record = _TRUSTED_REVIEW_PACKETS.get(id(packet))
+    return bool(record and record[0] is packet and _packet_facts(packet) == record[1])
+
+
+def _packet_facts(packet: ReviewPacket) -> tuple[str, str, str, str, str, tuple[str, ...], tuple[str, ...], str]:
+    return (
+        packet.candidate_id, packet.fixed_version, packet.canonical_source, packet.license,
+        packet.security_grade, tuple(packet.evidence_paths), tuple(packet.snapshot_files), packet.fixed_content_hash,
+    )
 
 
 def _unknown_license(value: str) -> bool:
@@ -269,6 +348,10 @@ def _candidate_value(candidate: object, *names: str) -> str:
         if value:
             return str(value)
     return ""
+
+
+def _valid_hash(value: str) -> str:
+    return value.casefold() if _SHA256.fullmatch(value.strip()) else ""
 
 
 def _validate_ledger_row_binding(decision: ReviewDecision) -> tuple[str, ...]:

@@ -8,8 +8,9 @@ from unittest.mock import patch
 
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
-from skill_maintainer.snapshots import SnapshotCandidate, SnapshotLimits, build_snapshot
+from skill_maintainer.snapshots import SnapshotCandidate, SnapshotLimits, SnapshotManifest, build_snapshot
 from skill_maintainer.review import (
+    AppliedReview,
     DerivedFields,
     ObservedFacts,
     ProjectJudgments,
@@ -18,6 +19,7 @@ from skill_maintainer.review import (
     apply_reviews_from_stream,
     build_review_packet,
     score_quality,
+    validate_applied_review,
     validate_review,
 )
 
@@ -153,11 +155,12 @@ class ReviewContractTest(unittest.TestCase):
         )
         return ReviewDecision(observed, judgments, DerivedFields(), "org/example")
 
-    def _packet(self, decision, *, fixed_version=None):
+    def _packet(self, decision, *, fixed_version=None, candidate_id="org/example"):
         facts = decision.observed_facts
-        return ReviewPacket(
-            "org/example", fixed_version or facts.fixed_version, facts.canonical_source, facts.license,
-            facts.security_grade, {"SKILL_RESEARCH_WORKFLOW": "1.4"}, facts.evidence_paths, ("SKILL.md",),
+        version = fixed_version or facts.fixed_version
+        return build_review_packet(
+            {"id": candidate_id, "canonical_source": facts.canonical_source, "license": facts.license, "security_grade": facts.security_grade},
+            SnapshotManifest(candidate_id, version, Path("."), facts.evidence_paths, (), (), 0, "d" * 64),
         )
 
     @staticmethod
@@ -204,6 +207,7 @@ class ReviewContractTest(unittest.TestCase):
         self.assertIn("SKILL_RESEARCH_WORKFLOW", packet.rule_versions)
         self.assertIn("VALIDATION_PROTOCOL", packet.rule_versions)
         self.assertIn("snapshot/SKILL.md", packet.evidence_paths)
+        self.assertRegex(packet.fixed_content_hash, r"^[0-9a-f]{64}$")
 
     def test_abaqus_markdown_is_local_boundary_not_remote_api(self):
         self.assertEqual(validate_review(self._decision()), ())
@@ -219,10 +223,7 @@ class ReviewContractTest(unittest.TestCase):
         payload = self._payload(decision)
         payload.pop("candidate_id")
         packet = self._packet(decision)
-        empty_identity_packet = ReviewPacket(
-            "different/candidate", packet.fixed_version, packet.canonical_source, packet.license,
-            packet.security_grade, packet.rule_versions, packet.evidence_paths, packet.snapshot_files,
-        )
+        empty_identity_packet = self._packet(decision, candidate_id="different/candidate")
         with tempfile.TemporaryDirectory() as temporary:
             store = LedgerStore.create(Path(temporary) / "source.xlsx")
             body = json.dumps({"decisions": [payload]}, ensure_ascii=False).encode("utf-8")
@@ -259,11 +260,7 @@ class ReviewContractTest(unittest.TestCase):
             attacker_body = json.dumps({"decisions": [self._payload(attacker)]}, ensure_ascii=False).encode("utf-8")
             with self.assertRaisesRegex(ValueError, "observed_facts.fixed_version: 与审查包固定版本不一致"):
                 apply_reviews_from_stream(io.BytesIO(attacker_body), store, {"org/example": self._packet(decision)})
-            wrong_identity_packet = ReviewPacket(
-                "other/candidate", decision.observed_facts.fixed_version, decision.observed_facts.canonical_source,
-                decision.observed_facts.license, decision.observed_facts.security_grade,
-                {"SKILL_RESEARCH_WORKFLOW": "1.4"}, decision.observed_facts.evidence_paths, ("SKILL.md",),
-            )
+            wrong_identity_packet = self._packet(decision, candidate_id="other/candidate")
             untampered_body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
             with self.assertRaisesRegex(ValueError, "review_packet.candidate_id: 与审查决定候选标识不一致"):
                 apply_reviews_from_stream(io.BytesIO(untampered_body), store, {"org/example": wrong_identity_packet})
@@ -383,6 +380,36 @@ class ReviewContractTest(unittest.TestCase):
             self.assertEqual(apply_reviews_from_stream(stream, store, {}), ())
             self.assertEqual(store.rows("当前Skill"), [])
             self.assertEqual(list(Path(temporary).glob("*.json")), [])
+
+    def test_formal_applied_review_issues_a_registry_backed_content_bound_receipt(self):
+        decision = self._decision()
+        body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            receipt, = apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": self._packet(decision)})
+
+        self.assertEqual(receipt.candidate_id, "org/example")
+        self.assertEqual(receipt.fixed_content_hash, "d" * 64)
+        self.assertIs(validate_applied_review(receipt), receipt)
+        fake = AppliedReview(
+            receipt.candidate_id, receipt.fixed_version, receipt.canonical_source, receipt.license,
+            receipt.security_grade, receipt.evidence_paths, receipt.fixed_content_hash,
+        )
+        with self.assertRaisesRegex(ValueError, "receipt"):
+            validate_applied_review(fake)
+
+    def test_self_constructed_packet_cannot_be_used_to_issue_a_receipt(self):
+        decision = self._decision()
+        packet = ReviewPacket(
+            "org/example", decision.observed_facts.fixed_version, decision.observed_facts.canonical_source,
+            decision.observed_facts.license, decision.observed_facts.security_grade,
+            {"SKILL_RESEARCH_WORKFLOW": "1.4"}, decision.observed_facts.evidence_paths, ("SKILL.md",), "d" * 64,
+        )
+        body = json.dumps({"decisions": [self._payload(decision)]}, ensure_ascii=False).encode("utf-8")
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            with self.assertRaisesRegex(ValueError, "受信"):
+                apply_reviews_from_stream(io.BytesIO(body), store, {"org/example": packet})
 
     def test_review_stdin_rejects_string_booleans_instead_of_treating_them_as_true(self):
         with tempfile.TemporaryDirectory() as temporary:

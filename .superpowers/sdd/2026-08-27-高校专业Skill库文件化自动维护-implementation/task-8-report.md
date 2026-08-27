@@ -40,3 +40,17 @@ Fresh repair verification:
 
 - Focused Task 8 suite: 20/20 passed.
 - Full workflow suite: 122/122 passed.
+
+## Independent-review repair round 2 — non-forgeable approval boundary
+
+- Removed the public `VersionDecision.approve` self-signing factory. Changed-content acceptance is created only with `VersionDecision.accept_from_applied_review`, which verifies a Task 7 receipt both when constructed and immediately before use.
+- The receipt is issued only after Task 7 validates a registered review packet and applies its formal decision to the caller-owned staged ledger. It binds candidate/stable ID, fixed version, canonical source, licence, security grade, evidence paths and the exact observed 64-hex fixed-content SHA-256.
+- Version promotion rechecks that binding against the complete persisted current row and observation. The receipt is consumed only after the shadow workbook has successfully appended history and swapped current; history/upsert failure leaves it usable for the retry. Forged, modified and reused receipts are rejected.
+- A discovery that resolves to more than one pre-existing ledger stable ID is now excluded from both automatic `skills` and aliases, producing deterministic `manual_review` / `inconsistent_ledger` output instead of inventing a third ID.
+
+Fresh verification after this round:
+
+- Focused Task 7 suite: 30/30 passed.
+- Focused Task 8 suite: 23/23 passed.
+- Full workflow suite: 127/127 passed.
+- `git diff --check`: no whitespace errors.
