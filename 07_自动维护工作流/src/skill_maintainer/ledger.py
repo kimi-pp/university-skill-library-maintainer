@@ -16,10 +16,17 @@ from openpyxl.utils import get_column_letter, range_boundaries
 from .ledger_schema import (
     ERROR_DUPLICATE_CANONICAL_SOURCE,
     ERROR_DUPLICATE_STABLE_ID,
+    ERROR_EXTRA_WORKSHEET,
+    ERROR_FORMAL_INVALID_QUALITY_SCORE,
+    ERROR_FORMAL_INVALID_SECURITY_GRADE,
+    ERROR_FORMAL_INVALID_VALIDATION_STATUS,
+    ERROR_FORMAL_MISSING_REQUIRED_FACT,
     ERROR_FORMAL_UNKNOWN_LICENSE,
     ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT,
     ERROR_MISSING_FIXED_VERSION,
     ERROR_REMOTE_ENDPOINT_REQUIRED,
+    ERROR_NON_FORMAL_CURRENT_SKILL,
+    CURRENT_SKILL_REQUIRED_COLUMNS,
     SHEET_SPECS,
     SHEET_SPECS_BY_NAME,
     SheetSpec,
@@ -123,9 +130,10 @@ class LedgerStore:
         if isinstance(value, str) and value.startswith(("https://", "http://")):
             cell.hyperlink = value
             cell.style = "Hyperlink"
-        if isinstance(value, (date, datetime)) or column_name.endswith("日期") or column_name.endswith("时间"):
-            if isinstance(value, (date, datetime)):
-                cell.number_format = "yyyy-mm-dd"
+        if isinstance(value, datetime):
+            cell.number_format = "yyyy-mm-dd hh:mm:ss"
+        elif isinstance(value, date):
+            cell.number_format = "yyyy-mm-dd"
         cell.alignment = Alignment(wrap_text=True, vertical="top")
 
     def append_rows(self, sheet: str, rows: Iterable[Mapping[str, Any]]) -> None:
@@ -180,6 +188,9 @@ class LedgerStore:
     def validate(self) -> list[str]:
         errors: list[str] = []
         current_skill_rows: list[dict[str, Any]] | None = None
+        expected_sheet_names = {spec.name for spec in SHEET_SPECS}
+        if set(self.workbook.sheetnames) - expected_sheet_names:
+            errors.append(ERROR_EXTRA_WORKSHEET)
         for spec in SHEET_SPECS:
             if spec.name not in self.workbook.sheetnames:
                 errors.append(f"台账错误-缺少工作表-{spec.name}")
@@ -191,12 +202,18 @@ class LedgerStore:
                 errors.extend(str(error).split("；"))
                 continue
             table = self._table(spec.name)
+            if len(worksheet.tables) != 1:
+                errors.append(f"台账错误-命名表数量错误-{spec.name}")
             if table is None:
                 errors.append(f"台账错误-缺少数据表-{spec.name}")
             else:
-                _, _, max_column, max_row = range_boundaries(table.ref)
-                if max_column != len(spec.columns) or max_row != max(2, worksheet.max_row):
+                expected_ref = f"A1:{get_column_letter(len(spec.columns))}{max(2, worksheet.max_row)}"
+                if table.ref != expected_ref:
                     errors.append(f"台账错误-数据表范围不一致-{spec.name}")
+                if table.autoFilter is None or table.autoFilter.ref != table.ref:
+                    errors.append(f"台账错误-数据表筛选范围不一致-{spec.name}")
+                if worksheet.auto_filter.ref is not None:
+                    errors.append(f"台账错误-工作表筛选不允许-{spec.name}")
             for unique_key in spec.unique_keys:
                 seen: set[tuple[str, ...]] = set()
                 for row in self.rows(spec.name):
@@ -216,8 +233,11 @@ class LedgerStore:
 
         if current_skill_rows is not None:
             for row in current_skill_rows:
-                if str(row["入库层级"]).strip() != "正式":
+                if str(row["入库层级"] or "").strip() != "正式":
+                    errors.append(ERROR_NON_FORMAL_CURRENT_SKILL)
                     continue
+                if any(not self._has_value(row[column]) for column in CURRENT_SKILL_REQUIRED_COLUMNS):
+                    errors.append(ERROR_FORMAL_MISSING_REQUIRED_FACT)
                 if not str(row["固定版本"] or "").strip():
                     errors.append(ERROR_MISSING_FIXED_VERSION)
                 if str(row["许可证"] or "").strip().lower() in {"", "未明确", "未知", "unknown", "n/a"}:
@@ -229,7 +249,18 @@ class LedgerStore:
                 endpoint_lower = endpoint.lower()
                 if remote_call == "是" and any(name in endpoint_lower for name in ("abaqus", "ansys", "matlab", "autocad")):
                     errors.append(ERROR_LOCAL_SOFTWARE_IN_REMOTE_ENDPOINT)
+                if row["验证状态"] != "全部通过（未实测）":
+                    errors.append(ERROR_FORMAL_INVALID_VALIDATION_STATUS)
+                if row["安全等级"] not in {"SA", "SB"}:
+                    errors.append(ERROR_FORMAL_INVALID_SECURITY_GRADE)
+                quality_score = row["质量评分"]
+                if isinstance(quality_score, bool) or not isinstance(quality_score, (int, float)) or quality_score < 2 or quality_score > 5:
+                    errors.append(ERROR_FORMAL_INVALID_QUALITY_SCORE)
         return list(dict.fromkeys(errors))
+
+    @staticmethod
+    def _has_value(value: Any) -> bool:
+        return value is not None and (not isinstance(value, str) or bool(value.strip()))
 
     def save_staged(self, path: str | Path) -> str:
         target = Path(path).resolve()
