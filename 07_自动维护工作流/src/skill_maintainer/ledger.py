@@ -76,7 +76,6 @@ class LedgerStore:
         table = Table(displayName=spec.table_name, ref=f"A1:{get_column_letter(len(spec.columns))}2")
         table.tableStyleInfo = TableStyleInfo(name="TableStyleMedium2", showRowStripes=True)
         worksheet.add_table(table)
-        worksheet.auto_filter.ref = table.ref
 
     def _spec(self, sheet: str) -> SheetSpec:
         try:
@@ -116,7 +115,6 @@ class LedgerStore:
             worksheet.add_table(table)
         table.ref = f"A1:{get_column_letter(len(spec.columns))}{max(2, worksheet.max_row)}"
         table.autoFilter.ref = table.ref
-        worksheet.auto_filter.ref = table.ref
 
     @staticmethod
     def _set_cell(cell, value: Any, column_name: str) -> None:

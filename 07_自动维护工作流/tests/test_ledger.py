@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+import zipfile
 from datetime import date
 from pathlib import Path
 
@@ -84,7 +85,7 @@ class LedgerStoreTest(unittest.TestCase):
         self.assertTrue(table.ref.endswith("521"))
         self.assertIsNotNone(table.autoFilter)
         self.assertEqual(table.autoFilter.ref, table.ref)
-        self.assertEqual(worksheet.auto_filter.ref, table.ref)
+        self.assertIsNone(worksheet.auto_filter.ref)
         self.assertEqual(worksheet.freeze_panes, "A2")
         self.assertEqual(
             worksheet.cell(2, columns["Canonical source"]).hyperlink.target,
@@ -93,6 +94,12 @@ class LedgerStoreTest(unittest.TestCase):
         self.assertIsInstance(worksheet.cell(2, columns["最近核验日期"]).value, date)
         self.assertEqual(len(checksum), 64)
         self.assertEqual(reopened.validate(), [])
+
+        with zipfile.ZipFile(staging_path) as archive:
+            worksheet_xml = archive.read("xl/worksheets/sheet1.xml")
+            table_xml = archive.read("xl/tables/table1.xml")
+        self.assertNotIn(b"<autoFilter", worksheet_xml)
+        self.assertIn(b'<autoFilter ref="A1:N521"', table_xml)
 
     def test_validation_reports_stable_codes_for_formal_row_failures(self):
         cases = (
