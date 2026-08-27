@@ -6,12 +6,17 @@ from dataclasses import dataclass, field
 from hashlib import sha256
 import json
 from pathlib import Path
-from typing import Callable, Mapping, Sequence
+import re
+from typing import Any, Callable, Mapping, Sequence
 from urllib.request import urlopen
 
 
 class CatalogSourceChangedError(RuntimeError):
     """目录公开源发生变化、但新快照和逐记录差异尚未归档。"""
+
+
+class TaskProfileReadError(ValueError):
+    """Excel 主台账中的专业任务画像不可作为完整、唯一的检索输入。"""
 
 
 @dataclass(frozen=True)
@@ -20,6 +25,14 @@ class CatalogSourceStatus:
     expected_sha: str
     actual_sha: str
     changed: bool
+
+
+@dataclass(frozen=True)
+class CatalogSnapshot:
+    """待启用的新目录记录及其所对应的公开源内容哈希。"""
+
+    rows: tuple["CatalogRow", ...]
+    source_sha: str
 
 
 @dataclass(frozen=True)
@@ -91,25 +104,38 @@ class Catalog:
     rows: tuple[CatalogRow, ...]
     task_profiles: Mapping[str, TaskProfile] = field(default_factory=dict)
     source_status: CatalogSourceStatus | None = None
-    new_snapshot_staged: bool = False
-    record_diff_staged: bool = False
+    staged_snapshot: CatalogSnapshot | None = None
+    staged_diff: CatalogDiff | None = None
 
-    def stage_new_snapshot(self) -> "Catalog":
+    def stage_new_snapshot(self, rows: Sequence[CatalogRow], *, snapshot_sha: str) -> "Catalog":
+        """绑定实际获取内容的哈希与显式解析出的新目录记录。"""
+        if not self.source_status or not self.source_status.changed:
+            raise CatalogSourceChangedError("只有已确认变化的目录源可以暂存新快照。")
+        if snapshot_sha != self.source_status.actual_sha:
+            raise CatalogSourceChangedError("新目录快照哈希必须等于本次公开源实际 SHA-256。")
+        new_rows = tuple(rows)
+        _require_unique_major_codes(new_rows)
         return Catalog(
             self.rows,
             self.task_profiles,
             self.source_status,
-            new_snapshot_staged=True,
-            record_diff_staged=self.record_diff_staged,
+            staged_snapshot=CatalogSnapshot(new_rows, snapshot_sha),
+            staged_diff=None,
         )
 
-    def stage_record_diff(self, _diff: CatalogDiff) -> "Catalog":
+    def stage_record_diff(self, diff: CatalogDiff) -> "Catalog":
+        """只接受由旧记录与已暂存新记录重新计算出的非空逐条差异。"""
+        if not self.source_status or not self.source_status.changed or self.staged_snapshot is None:
+            raise CatalogSourceChangedError("必须先绑定发生变化的公开源和新目录快照。")
+        expected = diff_catalog(self.rows, self.staged_snapshot.rows)
+        if not expected.has_record_changes or diff != expected:
+            raise CatalogSourceChangedError("必须暂存与旧、新目录逐记录比较完全一致的非空差异。")
         return Catalog(
             self.rows,
             self.task_profiles,
             self.source_status,
-            new_snapshot_staged=self.new_snapshot_staged,
-            record_diff_staged=True,
+            staged_snapshot=self.staged_snapshot,
+            staged_diff=diff,
         )
 
 
@@ -133,6 +159,47 @@ def load_catalog(path: Path) -> Catalog:
     return Catalog(rows=rows)
 
 
+_PROFILE_COLUMNS = (
+    "专业别名",
+    "核心课程",
+    "研究方法",
+    "工作任务",
+    "成果或数据对象",
+    "软件/数据库/流程",
+)
+_PROFILE_SPLIT_RE = re.compile(r"[；;、,\r\n]+")
+
+
+def load_catalog_with_ledger(catalog_path: Path, ledger_path: Path) -> Catalog:
+    """将目录证据与保存后的 Excel 主台账六维画像合并为内存 Catalog。"""
+    catalog = load_catalog(catalog_path)
+    return Catalog(rows=catalog.rows, task_profiles=load_task_profiles_from_ledger(ledger_path))
+
+
+def load_task_profiles_from_ledger(ledger_path: Path) -> Mapping[str, TaskProfile]:
+    """通过 LedgerStore 的命名列读取画像，不依赖工作表坐标，也不创建侧车文件。"""
+    from .ledger import LedgerStore
+
+    rows = LedgerStore.load(ledger_path).rows("专业任务映射")
+    profiles: dict[str, TaskProfile] = {}
+    for row_data in rows:
+        if not any(_has_visible_value(row_data.get(column)) for column in _PROFILE_COLUMNS):
+            continue
+        scope_id = _required_text(row_data.get("专业代码"), "专业代码")
+        if scope_id in profiles:
+            raise TaskProfileReadError(f"专业代码 {scope_id} 存在重复或歧义的六维任务画像。")
+        values = [_parse_visible_list(row_data.get(column), column, scope_id) for column in _PROFILE_COLUMNS]
+        profiles[scope_id] = TaskProfile(
+            professional_aliases=values[0],
+            core_courses=values[1],
+            methods=values[2],
+            work_tasks=values[3],
+            outputs_and_data=values[4],
+            software_databases_processes=values[5],
+        )
+    return profiles
+
+
 def diff_catalog(old_rows: Sequence[CatalogRow], new_rows: Sequence[CatalogRow]) -> CatalogDiff:
     """逐记录比较目录，明确区分新增、撤销、改名、代码和归属移动。"""
     old_by_code = {item.major_code: item for item in old_rows}
@@ -154,7 +221,13 @@ def diff_catalog(old_rows: Sequence[CatalogRow], new_rows: Sequence[CatalogRow])
 
     unmatched_old = [old_by_code[code] for code in sorted(old_by_code.keys() - new_by_code.keys())]
     unmatched_new = [new_by_code[code] for code in sorted(new_by_code.keys() - old_by_code.keys())]
-    new_by_name = {item.major_name: item for item in unmatched_new}
+    old_name_counts = _name_counts(unmatched_old)
+    new_name_counts = _name_counts(unmatched_new)
+    new_by_name = {
+        item.major_name: item
+        for item in unmatched_new
+        if old_name_counts.get(item.major_name) == 1 and new_name_counts[item.major_name] == 1
+    }
     code_changes: list[CatalogRecordChange] = []
     remaining_old: list[CatalogRow] = []
     changed_new_codes: set[str] = set()
@@ -178,9 +251,9 @@ def diff_catalog(old_rows: Sequence[CatalogRow], new_rows: Sequence[CatalogRow])
 
 def build_scopes(catalog: Catalog) -> tuple[ResearchScope, ...]:
     """构造 13 个非军事门类的检索范围，另加 99 跨学科通用。"""
-    _require_staged_catalog_change(catalog)
+    active_rows = _require_staged_catalog_change(catalog)
     class_groups: dict[str, list[CatalogRow]] = {}
-    for item in catalog.rows:
+    for item in active_rows:
         if item.category_code in {"11", "14"}:
             continue
         if item.class_code:
@@ -190,7 +263,7 @@ def build_scopes(catalog: Catalog) -> tuple[ResearchScope, ...]:
         _scope_for_class(class_code, rows, catalog.task_profiles)
         for class_code, rows in sorted(class_groups.items())
     ]
-    interdisciplinary = [item for item in catalog.rows if item.category_code == "14"]
+    interdisciplinary = [item for item in active_rows if item.category_code == "14"]
     scopes.extend(_scope_for_major(item, catalog.task_profiles) for item in interdisciplinary)
     scopes.append(
         ResearchScope(
@@ -231,10 +304,17 @@ def _scope_for_major(item: CatalogRow, profiles: Mapping[str, TaskProfile]) -> R
     )
 
 
-def _require_staged_catalog_change(catalog: Catalog) -> None:
+def _require_staged_catalog_change(catalog: Catalog) -> tuple[CatalogRow, ...]:
     if catalog.source_status and catalog.source_status.changed:
-        if not (catalog.new_snapshot_staged and catalog.record_diff_staged):
+        if catalog.staged_snapshot is None or catalog.staged_diff is None:
             raise CatalogSourceChangedError("目录公开源内容已变化；必须先暂存新快照和逐记录差异，才能生成检索范围。")
+        if catalog.staged_snapshot.source_sha != catalog.source_status.actual_sha:
+            raise CatalogSourceChangedError("暂存目录快照未绑定本次公开源实际 SHA-256。")
+        expected = diff_catalog(catalog.rows, catalog.staged_snapshot.rows)
+        if not expected.has_record_changes or catalog.staged_diff != expected:
+            raise CatalogSourceChangedError("暂存目录差异不是旧、新快照的精确非空逐记录差异。")
+        return catalog.staged_snapshot.rows
+    return catalog.rows
 
 
 def _read_public_bytes(url: str) -> bytes:
@@ -247,6 +327,32 @@ def _optional_text(value: object) -> str | None:
         return None
     text = str(value).strip()
     return text or None
+
+
+def _has_visible_value(value: Any) -> bool:
+    return type(value) is str and bool(value.strip())
+
+
+def _required_text(value: Any, column: str) -> str:
+    if not _has_visible_value(value):
+        raise TaskProfileReadError(f"专业任务映射缺少 {column}。")
+    return value.strip()
+
+
+def _parse_visible_list(value: Any, column: str, scope_id: str) -> tuple[str, ...]:
+    if not _has_visible_value(value):
+        raise TaskProfileReadError(f"专业代码 {scope_id} 缺少完整六维画像字段：{column}。")
+    terms = tuple(dict.fromkeys(term.strip() for term in _PROFILE_SPLIT_RE.split(value) if term.strip()))
+    if not terms:
+        raise TaskProfileReadError(f"专业代码 {scope_id} 的 {column} 没有可见检索词。")
+    return terms
+
+
+def _name_counts(rows: Sequence[CatalogRow]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for item in rows:
+        counts[item.major_name] = counts.get(item.major_name, 0) + 1
+    return counts
 
 
 def _require_unique_major_codes(rows: Sequence[CatalogRow]) -> None:

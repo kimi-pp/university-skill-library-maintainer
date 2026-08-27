@@ -41,6 +41,11 @@ EXPECTED_SOURCE_ALIAS_COLUMNS = (
     "别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "关系类型", "去重依据", "记录日期",
 )
 
+EXPECTED_PROFESSIONAL_TASK_MAP_COLUMNS = (
+    "映射标识", "内部标识", "专业代码", "专业名称", "专业任务", "输入", "输出", "适用理由", "使用限制", "相关度",
+    "专业别名", "核心课程", "研究方法", "工作任务", "成果或数据对象", "软件/数据库/流程",
+)
+
 
 def formal_row(number: int = 1, **overrides):
     row = {
@@ -112,6 +117,7 @@ class LedgerStoreTest(unittest.TestCase):
         self.assertEqual(tuple(self.store.workbook.sheetnames), EXPECTED_SHEETS)
         self.assertEqual(CURRENT_SKILL_COLUMNS, EXPECTED_CURRENT_SKILL_COLUMNS)
         self.assertEqual(SHEET_SPECS_BY_NAME["来源别名"].columns, EXPECTED_SOURCE_ALIAS_COLUMNS)
+        self.assertEqual(SHEET_SPECS_BY_NAME["专业任务映射"].columns, EXPECTED_PROFESSIONAL_TASK_MAP_COLUMNS)
         for sheet_name in EXPECTED_SHEETS:
             with self.subTest(sheet=sheet_name):
                 worksheet = self.store.workbook[sheet_name]
@@ -159,6 +165,37 @@ class LedgerStoreTest(unittest.TestCase):
             table_xml = archive.read("xl/tables/table1.xml")
         self.assertNotIn(b"<autoFilter", worksheet_xml)
         self.assertIn(b'<autoFilter ref="A1:AZ521"', table_xml)
+
+    def test_520_profile_rows_survive_saved_reopen_with_named_columns_and_ooxml_table_filter(self):
+        self.store.append_rows("专业任务映射", [{
+            "映射标识": f"PROFILE-{number:04d}",
+            "专业代码": f"P{number:04d}",
+            "专业名称": f"专业类 {number}",
+            "专业别名": f"别名 {number}",
+            "核心课程": "核心课程",
+            "研究方法": "研究方法",
+            "工作任务": "工作任务",
+            "成果或数据对象": "数据对象",
+            "软件/数据库/流程": "分析流程",
+        } for number in range(1, 521)])
+        staging_path = Path(self.tempdir.name) / "520-profiles.xlsx"
+        self.store.save_staged(staging_path)
+
+        reopened = LedgerStore.load(staging_path)
+        worksheet = reopened.workbook["专业任务映射"]
+        table = next(iter(worksheet.tables.values()))
+        columns = {cell.value: cell.column for cell in worksheet[1]}
+
+        self.assertEqual(len(reopened.rows("专业任务映射")), 520)
+        self.assertEqual(worksheet.cell(2, columns["专业代码"]).value, "P0001")
+        self.assertEqual(worksheet.freeze_panes, "A2")
+        self.assertEqual(table.autoFilter.ref, table.ref)
+        self.assertTrue(table.ref.endswith("521"))
+        with zipfile.ZipFile(staging_path) as archive:
+            worksheet_xml = archive.read("xl/worksheets/sheet3.xml")
+            table_xml = archive.read("xl/tables/table3.xml")
+        self.assertNotIn(b"<autoFilter", worksheet_xml)
+        self.assertIn(b'<autoFilter ref="A1:P521"', table_xml)
 
     def test_validation_reports_stable_codes_for_formal_row_failures(self):
         cases = (

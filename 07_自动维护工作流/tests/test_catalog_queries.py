@@ -1,5 +1,6 @@
 import hashlib
 import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -9,12 +10,15 @@ from skill_maintainer.catalog import (
     CatalogSourceChangedError,
     CatalogSourceStatus,
     TaskProfile,
+    TaskProfileReadError,
     build_scopes,
     diff_catalog,
     load_catalog,
+    load_catalog_with_ledger,
     verify_catalog_source,
 )
 from skill_maintainer.queries import PLATFORM_ORDER, build_queries
+from skill_maintainer.ledger import LedgerStore
 
 
 WORKTREE = Path(__file__).resolve().parents[2]
@@ -49,23 +53,47 @@ class CatalogScopeTest(unittest.TestCase):
         self.assertEqual(scopes[-1].scope_id, "99")
         self.assertEqual(scopes[-1].scope_name, "跨学科通用")
 
-    def test_changed_source_blocks_scope_building_until_snapshot_and_record_diff_are_staged(self):
+    def test_changed_source_rejects_empty_diff_wrong_diff_and_wrong_snapshot_hash(self):
         changed = CatalogSourceStatus(
             url="https://catalog.example/undergraduate.pdf",
             expected_sha="a" * 64,
             actual_sha="b" * 64,
             changed=True,
         )
-        catalog = Catalog(rows=(row(),), source_status=changed)
+        old_rows = (row(),)
+        new_rows = (row(major_name="新交通运输"),)
+        catalog = Catalog(rows=old_rows, source_status=changed)
 
         with self.assertRaises(CatalogSourceChangedError):
             build_scopes(catalog)
 
         with self.assertRaises(CatalogSourceChangedError):
-            build_scopes(catalog.stage_new_snapshot())
+            catalog.stage_new_snapshot(new_rows, snapshot_sha="c" * 64)
 
-        staged = catalog.stage_new_snapshot().stage_record_diff(diff_catalog((row(),), (row(),)))
-        self.assertEqual(build_scopes(staged)[0].scope_id, "0818")
+        staged = catalog.stage_new_snapshot(new_rows, snapshot_sha=changed.actual_sha)
+        with self.assertRaises(CatalogSourceChangedError):
+            staged.stage_record_diff(diff_catalog(old_rows, old_rows))
+        with self.assertRaises(CatalogSourceChangedError):
+            staged.stage_record_diff(diff_catalog(old_rows, (row(major_name="错误快照"),)))
+
+    def test_changed_source_uses_only_exact_nonempty_staged_snapshot_rows(self):
+        changed = CatalogSourceStatus(
+            url="https://catalog.example/undergraduate.pdf",
+            expected_sha="a" * 64,
+            actual_sha="b" * 64,
+            changed=True,
+        )
+        old_rows = (row(major_name="旧交通运输"),)
+        new_rows = (row(major_name="新交通运输"),)
+        staged = Catalog(rows=old_rows, source_status=changed).stage_new_snapshot(
+            new_rows,
+            snapshot_sha=changed.actual_sha,
+        ).stage_record_diff(diff_catalog(old_rows, new_rows))
+
+        scopes = build_scopes(staged)
+
+        self.assertEqual(scopes[0].rows, new_rows)
+        self.assertEqual(scopes[0].rows[0].major_name, "新交通运输")
 
     def test_injected_fetch_hash_gate_reports_content_change_without_claiming_official_unchanged(self):
         expected = hashlib.sha256(b"old catalog bytes").hexdigest()
@@ -110,8 +138,81 @@ class CatalogDiffTest(unittest.TestCase):
         self.assertEqual([(item.old.category_code, item.new.category_code) for item in diff.category_moves], [("07", "08")])
         self.assertTrue(diff.has_record_changes)
 
+    def test_duplicate_unmatched_names_remain_add_remove_instead_of_many_to_one_code_changes(self):
+        old_rows = (
+            row(major_code="080001", major_name="同名专业"),
+            row(major_code="080002", major_name="同名专业"),
+        )
+        new_rows = (row(major_code="080003", major_name="同名专业"),)
+
+        diff = diff_catalog(old_rows, new_rows)
+
+        self.assertEqual(diff.major_code_changes, ())
+        self.assertEqual([item.major_code for item in diff.removed], ["080001", "080002"])
+        self.assertEqual([item.major_code for item in diff.added], ["080003"])
+
 
 class SixDimensionQueryTest(unittest.TestCase):
+    def test_saved_reopened_excel_profile_is_attached_before_scope_and_query_building(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ledger_path = Path(directory) / "main-ledger.xlsx"
+            store = LedgerStore.create(ledger_path)
+            store.append_rows("专业任务映射", [{
+                "映射标识": "PROFILE-0818",
+                "专业代码": "0818",
+                "专业名称": "交通运输类",
+                "专业别名": "交通运输；transportation engineering",
+                "核心课程": "交通工程学",
+                "研究方法": "traffic flow prediction",
+                "工作任务": "route optimisation",
+                "成果或数据对象": "OD matrix",
+                "软件/数据库/流程": "SUMO traffic simulation",
+            }])
+            store.save_staged(Path(directory) / "staged.xlsx")
+            catalog = load_catalog_with_ledger(FIXTURE_PATH, Path(directory) / "staged.xlsx")
+
+        scope = next(item for item in build_scopes(catalog) if item.scope_id == "0818")
+        jobs = build_queries(scope)
+
+        self.assertEqual(scope.task_profile.methods, ("traffic flow prediction",))
+        self.assertEqual({job.dimension for job in jobs}, {
+            "professional_alias", "core_course", "method", "work_task", "output_or_data", "software_database_or_process",
+        })
+
+    def test_excel_profile_reader_rejects_incomplete_and_duplicate_profiles(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ledger_path = Path(directory) / "main-ledger.xlsx"
+            store = LedgerStore.create(ledger_path)
+            incomplete = {
+                "映射标识": "PROFILE-0818",
+                "专业代码": "0818",
+                "专业别名": "交通运输",
+            }
+            store.append_rows("专业任务映射", [incomplete])
+            incomplete_path = Path(directory) / "incomplete.xlsx"
+            store.save_staged(incomplete_path)
+            with self.assertRaises(TaskProfileReadError):
+                load_catalog_with_ledger(FIXTURE_PATH, incomplete_path)
+
+            duplicate = LedgerStore.create(Path(directory) / "duplicate-ledger.xlsx")
+            profile = {
+                "专业代码": "0818",
+                "专业别名": "交通运输",
+                "核心课程": "交通工程学",
+                "研究方法": "交通流预测",
+                "工作任务": "路径优化",
+                "成果或数据对象": "OD矩阵",
+                "软件/数据库/流程": "SUMO",
+            }
+            duplicate.append_rows("专业任务映射", [
+                {"映射标识": "PROFILE-0818-A", **profile},
+                {"映射标识": "PROFILE-0818-B", **profile},
+            ])
+            duplicate_path = Path(directory) / "duplicate.xlsx"
+            duplicate.save_staged(duplicate_path)
+            with self.assertRaises(TaskProfileReadError):
+                load_catalog_with_ledger(FIXTURE_PATH, duplicate_path)
+
     def test_transport_scope_emits_every_dimension_for_each_fixed_platform_with_stable_ids(self):
         profile = TaskProfile(
             professional_aliases=("交通运输", "transportation engineering"),

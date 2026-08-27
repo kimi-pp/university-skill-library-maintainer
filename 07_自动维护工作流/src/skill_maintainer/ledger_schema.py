@@ -39,7 +39,15 @@ ALLOWED_SOURCE_PLATFORMS = frozenset({
 SHEET_SPECS = (
     SheetSpec("当前Skill", "CurrentSkills", CURRENT_SKILL_COLUMNS, (("内部标识",), ("Canonical source",))),
     SheetSpec("来源别名", "SourceAliases", ("别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "关系类型", "去重依据", "记录日期"), (("别名标识",),)),
-    SheetSpec("专业任务映射", "ProfessionalTaskMaps", ("映射标识", "内部标识", "专业代码", "专业名称", "专业任务", "输入", "输出", "适用理由", "使用限制", "相关度"), (("映射标识",),)),
+    SheetSpec(
+        "专业任务映射",
+        "ProfessionalTaskMaps",
+        (
+            "映射标识", "内部标识", "专业代码", "专业名称", "专业任务", "输入", "输出", "适用理由", "使用限制", "相关度",
+            "专业别名", "核心课程", "研究方法", "工作任务", "成果或数据对象", "软件/数据库/流程",
+        ),
+        (("映射标识",),),
+    ),
     SheetSpec("版本历史", "VersionHistory", ("版本记录标识", "内部标识", "固定版本", "变更日期", "变更摘要", "证据位置"), (("版本记录标识",),)),
     SheetSpec("候选观察", "CandidateObservations", ("观察标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因"), (("观察标识",),)),
     SheetSpec("目录基线", "CatalogBaselines", ("目录版本", "目录名称", "公开地址", "SHA-256", "发布日期", "访问日期"), (("目录版本",),)),
