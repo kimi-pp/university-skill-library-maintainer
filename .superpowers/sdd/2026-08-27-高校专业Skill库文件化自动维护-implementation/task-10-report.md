@@ -174,3 +174,40 @@ Catalog 的最小可审计契约是：真实 `Catalog.staged_diff` 为主，逐�
 
 - `SourceRequestEvent` 当前没有请求发生时间字段，因此本轮严格写“未记录”，不从报告时间推断；若未来来源层增加可信时间戳，可在不改变现有事实边界的前提下扩列取值。
 - Word 9360 DXA grid + 120 DXA indent minor 仍按裁决留 Task 11；当前环境仍无 `soffice`，不宣称 DOCX 视觉门通过。
+
+## Fix round 3：专业范围精确绑定当前目录快照
+
+### TDD RED
+
+先只改 `test_reports.py` / `test_runner.py`，用独立矩阵覆盖 `08evil`、伪四位交叉学科 `1401`、空代码加军事自由文本、目录外但格式正确的 `0808`、军事学 `1101`、合法 `0809`、合法六位交叉学科专业 `140101` 和精确 `99`；另以真实 `RunCoordinator` / `PreparedRun` / `LedgerStore` adapter 验证无效新增正式映射必须在创建 `deliveries` 前失败。
+
+```powershell
+$env:PYTHONPATH='src'
+python -m unittest tests.test_reports.ReportContentTestCase.test_scope_mappings_must_match_exact_codes_in_the_captured_catalog tests.test_runner.RunnerTestCase.test_report_adapter_rejects_malformed_prefix_mapping_before_any_output -v
+```
+
+结果为 `Ran 2 tests in 24.016s`，`FAILED (failures=5)`。首错：`08evil` 实际返回为受影响 scope、期望空；同批还证明 `1401`、空代码军事文本、目录外 `0808` 被误纳入，且真实 adapter 对 `08evil` 未抛 `ReportBuildError` 并走到了文件生成路径。合法 `0809`、合法 `140101`、精确 `99` 和 `1101` 的预期在该矩阵中没有失败。
+
+随后补强 catalog staged diff 的同一边界，加入 malformed `08evil` class 与 `1401` major。RED 为 `Ran 1 test in 0.002s`，`FAILED (failures=1)`；实际错误地返回了 `0809 / 08evil / 1401`，期望仅合法 `0809`。
+
+### 最小实现
+
+- 从本轮捕获的 `Catalog` 构建批准代码集合；若存在 `staged_snapshot`，使用其 rows 作为当前有效目录，否则使用捕获 catalog 的 rows。没有维护全局专业代码白名单。
+- `01–10、12–13` 只接受当前目录中与门类一致的精确四位专业类代码；`14` 只接受当前目录中精确六位、以 `14` 开头的专业代码；`99` 仅精确值允许并规范为 `99 跨学科通用`。
+- `11`、其它门类、空代码、格式错误、目录中不存在的代码均被拒绝；同一代码出现冲突目录名称时也不建立批准 scope。输出 scope 名称取目录规范名称，不信任映射自由文本。
+- `_scope_index` 只从通过上述绑定的专业任务映射建立 scope，不再从 `当前Skill` 的非正式附加字段绕过映射门；目录基线变化也使用同一批准规则。
+- `_validate_new_formal_mappings` 接收 `prepared.catalog_snapshot`，并继续在 `deliveries` 目录创建前 fail-closed。catalog diff scope 同步增加四位/六位形状与门类前缀校验，避免 malformed staged row 进入交付范围。
+
+### GREEN 与最终验证
+
+- 首批定向 GREEN：`Ran 2 tests in 0.344s`，`OK`；真实无效 adapter 在生成前快速退出。
+- catalog staged diff 强化 GREEN：`Ran 1 test in 0.002s`，`OK`。
+- 最终 focused reports：`Ran 20 tests in 138.282s`，`OK`。
+- 最终 affected runner：`Ran 37 tests in 39.612s`，`OK`。
+- 最终全套：`python -m unittest discover -s tests -q` → `Ran 187 tests in 176.705s`，`OK`。
+- bundled Python `compileall -q src tests`、bundled Node `--check src/skill_maintainer/daily_xlsx_builder.mjs`、`git diff --check` 均以 0 退出。`git diff --check` 仅输出仓库既有 LF→CRLF 工作树提示，没有 whitespace error。
+
+### 保留顾虑
+
+- 本轮没有触碰 Task 11 的 Word 9360 DXA grid + 120 DXA indent 视觉项；当前环境仍无 `soffice`，不新增或伪称 DOCX 视觉通过证据。
+- 本轮只改变 scope 选择与 fail-closed 校验，没有重新生成报告模板或改变 artifact-tool Excel authoring/OOXML 兼容补丁；原 Task 10 的 12-sheet 渲染和公式扫描证据保持有效。

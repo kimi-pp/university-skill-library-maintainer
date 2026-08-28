@@ -99,6 +99,14 @@ notify_on_no_change = false
         })
         return row
 
+    @staticmethod
+    def report_scope_catalog() -> Catalog:
+        return Catalog((
+            CatalogRow("08", "工学", "0809", "计算机类", "080901", "计算机科学与技术"),
+            CatalogRow("11", "军事学", "1101", "军事类", "110101", "军事专业"),
+            CatalogRow("14", "交叉学科", None, None, "140101", "集成电路科学与工程"),
+        ))
+
     def report_review(self, stable_id: str, canonical_source: str):
         candidate_root = self.root / f"{stable_id}-candidate"
         candidate_root.mkdir()
@@ -239,7 +247,12 @@ notify_on_no_change = false
 
         packet, decision = self.report_review("UNMAPPED-REPORT-1", "https://github.com/example/unmapped-report")
         coordinator = self.coordinator(report_builder=make_project_report_builder(self.root))
-        prepared = coordinator.prepare(replace(self.request, review_packets={"UNMAPPED-REPORT-1": packet}))
+        request = replace(
+            self.request,
+            catalog_loader=self.report_scope_catalog,
+            review_packets={"UNMAPPED-REPORT-1": packet},
+        )
+        prepared = coordinator.prepare(request)
         coordinator.apply_reviews(prepared, (decision,))
         try:
             with self.assertRaisesRegex(ReportBuildError, "UNMAPPED-REPORT-1|专业任务映射"):
@@ -270,10 +283,50 @@ notify_on_no_change = false
         seeded.unlink()
         packet, decision = self.report_review("MILITARY-REPORT-1", "https://github.com/example/military-report")
         coordinator = self.coordinator(report_builder=make_project_report_builder(self.root))
-        prepared = coordinator.prepare(replace(self.request, review_packets={"MILITARY-REPORT-1": packet}))
+        request = replace(
+            self.request,
+            catalog_loader=self.report_scope_catalog,
+            review_packets={"MILITARY-REPORT-1": packet},
+        )
+        prepared = coordinator.prepare(request)
         coordinator.apply_reviews(prepared, (decision,))
         try:
             with self.assertRaisesRegex(ReportBuildError, "MILITARY-REPORT-1|军事|专业任务映射"):
+                coordinator.report_builder(prepared, prepared.staging_dir)
+            delivery = prepared.staging_dir / "deliveries"
+            self.assertTrue(not delivery.exists() or not any(delivery.iterdir()))
+        finally:
+            coordinator.abandon(prepared)
+
+    def test_report_adapter_rejects_malformed_prefix_mapping_before_any_output(self):
+        from skill_maintainer.reports import ReportBuildError, make_project_report_builder
+
+        production = self.root / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(production)
+        ledger.append_rows("专业任务映射", [{
+            "映射标识": "MAP-MALFORMED-1", "内部标识": "MALFORMED-REPORT-1",
+            "专业代码": "08evil", "专业名称": "伪造类", "专业任务": "伪造任务",
+            "输入": "数据", "输出": "报告", "适用理由": "不应纳入", "使用限制": "禁止", "相关度": "高",
+            "专业别名": "伪造", "核心课程": "伪造", "研究方法": "伪造", "工作任务": "伪造",
+            "成果或数据对象": "伪造", "软件/数据库/流程": "伪造",
+        }])
+        seeded = self.root / "ledger" / "malformed-seed.xlsx"
+        ledger.save_staged(seeded)
+        ledger.workbook.close()
+        shutil.copyfile(seeded, production)
+        seeded.unlink()
+
+        packet, decision = self.report_review("MALFORMED-REPORT-1", "https://github.com/example/malformed-report")
+        coordinator = self.coordinator(report_builder=make_project_report_builder(self.root))
+        request = replace(
+            self.request,
+            catalog_loader=self.report_scope_catalog,
+            review_packets={"MALFORMED-REPORT-1": packet},
+        )
+        prepared = coordinator.prepare(request)
+        coordinator.apply_reviews(prepared, (decision,))
+        try:
+            with self.assertRaisesRegex(ReportBuildError, "MALFORMED-REPORT-1|专业任务映射"):
                 coordinator.report_builder(prepared, prepared.staging_dir)
             delivery = prepared.staging_dir / "deliveries"
             self.assertTrue(not delivery.exists() or not any(delivery.iterdir()))

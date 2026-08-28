@@ -57,6 +57,17 @@ def formal_row(index: int, scope: str = "0809 计算机类") -> dict[str, object
     }
 
 
+def approved_scope_catalog() -> Catalog:
+    """A captured catalog whose exact codes define the report scope boundary."""
+
+    return Catalog((
+        CatalogRow("08", "工学", "0801", "力学类", "080101", "理论与应用力学"),
+        CatalogRow("08", "工学", "0809", "计算机类", "080901", "计算机科学与技术"),
+        CatalogRow("11", "军事学", "1101", "军事类", "110101", "军事专业"),
+        CatalogRow("14", "交叉学科", None, None, "140101", "集成电路科学与工程"),
+    ))
+
+
 def report_summary(count: int = 2) -> dict[str, object]:
     rows = [formal_row(index) for index in range(1, count + 1)]
     return {
@@ -190,7 +201,8 @@ class ReportContentTestCase(unittest.TestCase):
             "目录基线": [{"目录版本": "2025", "专业类": "0801 力学类"}],
         }
         alias_after = {**before, "来源别名": [{"内部标识": base_skill["内部标识"], "来源地址": "https://skillhub.example/alias"}]}
-        self.assertEqual(affected_scopes(before, alias_after), ())
+        catalog = approved_scope_catalog()
+        self.assertEqual(affected_scopes(before, alias_after, catalog_snapshot=catalog), ())
 
         cases = []
         added = formal_row(2, "0809 计算机类")
@@ -202,16 +214,26 @@ class ReportContentTestCase(unittest.TestCase):
         cases.append({**before, "目录基线": [{"目录版本": "2026", "专业类": "0801 力学类"}]})
         for after in cases:
             with self.subTest(after=after):
-                self.assertTrue(affected_scopes(before, after))
+                self.assertTrue(affected_scopes(before, after, catalog_snapshot=catalog))
 
     def test_affected_scope_includes_formal_validation_and_risk_conclusions(self):
         skill = formal_row(1, "0801 力学类")
         skill.update({"验证状态": "全部通过（未实测）", "风险提示": "低风险"})
-        before = {"当前Skill": [skill], "专业任务映射": [], "目录基线": []}
+        before = {
+            "当前Skill": [skill],
+            "专业任务映射": [{
+                "内部标识": skill["内部标识"], "专业代码": "0801",
+                "专业名称": "力学类", "专业任务": "建模",
+            }],
+            "目录基线": [],
+        }
         for field, value in (("验证状态", "部分通过"), ("风险提示", "需隔离运行")):
             after = {**before, "当前Skill": [{**skill, field: value}]}
             with self.subTest(field=field):
-                self.assertEqual(affected_scopes(before, after), ("0801 力学类",))
+                self.assertEqual(
+                    affected_scopes(before, after, catalog_snapshot=approved_scope_catalog()),
+                    ("0801 力学类",),
+                )
 
     def test_catalog_access_date_only_does_not_refresh_every_scope(self):
         skill = formal_row(1, "0801 力学类")
@@ -238,7 +260,9 @@ class ReportContentTestCase(unittest.TestCase):
     def test_catalog_snapshot_excludes_military_and_unapproved_categories(self):
         rows = (
             CatalogRow("08", "工学", "0809", "计算机类", "080901", "计算机科学与技术"),
+            CatalogRow("08", "工学", "08evil", "伪造类", "080999", "伪造专业"),
             CatalogRow("11", "军事学", "1101", "军事类", "110101", "军事专业"),
+            CatalogRow("14", "交叉学科", None, None, "1401", "伪交叉学科专业"),
             CatalogRow("15", "未批准门类", "1501", "未批准类", "150101", "未批准专业"),
         )
         catalog = Catalog((), staged_snapshot=CatalogSnapshot(rows, "c" * 64), staged_diff=diff_catalog((), rows))
@@ -253,7 +277,39 @@ class ReportContentTestCase(unittest.TestCase):
             "专业任务映射": [{"内部标识": skill["内部标识"], "专业代码": "0809", "专业名称": "计算机类", "专业任务": "课程分析"}],
             "目录基线": [],
         }
-        self.assertEqual(affected_scopes(before, after), ("0809 计算机类",))
+        self.assertEqual(
+            affected_scopes(before, after, catalog_snapshot=approved_scope_catalog()),
+            ("0809 计算机类",),
+        )
+
+    def test_scope_mappings_must_match_exact_codes_in_the_captured_catalog(self):
+        catalog = approved_scope_catalog()
+        cases = (
+            ("malformed-prefix", "08evil", "伪造类", ()),
+            ("fake-interdisciplinary-class", "1401", "伪交叉学科类", ()),
+            ("empty-code-military-text", "", "军事学自由文本", ()),
+            ("well-formed-but-absent", "0808", "自动化类", ()),
+            ("military-code", "1101", "军事类", ()),
+            ("real-class", "0809", "计算机类", ("0809 计算机类",)),
+            ("real-interdisciplinary-major", "140101", "集成电路科学与工程", ("140101 集成电路科学与工程",)),
+            ("generic", "99", "跨学科通用", ("99 跨学科通用",)),
+        )
+        for index, (label, code, name, expected) in enumerate(cases, start=1):
+            stable_id = f"SCOPE-{index}"
+            before = {"当前Skill": [], "专业任务映射": [], "目录基线": []}
+            after = {
+                "当前Skill": [{**formal_row(index, ""), "内部标识": stable_id}],
+                "专业任务映射": [{
+                    "内部标识": stable_id,
+                    "专业代码": code,
+                    "专业名称": name,
+                    "专业类": name if not code else "",
+                    "专业任务": "课程分析",
+                }],
+                "目录基线": [],
+            }
+            with self.subTest(label=label):
+                self.assertEqual(affected_scopes(before, after, catalog_snapshot=catalog), expected)
 
     def test_real_candidate_observations_are_normalized_for_both_candidate_sheets(self):
         self.require_runtime()

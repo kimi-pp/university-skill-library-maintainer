@@ -669,12 +669,66 @@ def _scope_code(row: Mapping[str, Any]) -> str:
     return match.group(1) if match else ""
 
 
-def _is_approved_scope_mapping(row: Mapping[str, Any]) -> bool:
+def _active_catalog_rows(catalog_snapshot: object | None) -> tuple[object, ...]:
+    """Read the exact active rows from this run's captured catalog."""
+
+    if catalog_snapshot is None:
+        return ()
+    if isinstance(catalog_snapshot, Mapping):
+        staged = catalog_snapshot.get("staged_snapshot")
+        if staged is not None:
+            staged_mapping = _plain_mapping(staged)
+            rows = staged_mapping.get("rows", ())
+        else:
+            rows = catalog_snapshot.get("rows", ())
+    else:
+        staged = getattr(catalog_snapshot, "staged_snapshot", None)
+        rows = getattr(staged, "rows", ()) if staged is not None else getattr(catalog_snapshot, "rows", ())
+    try:
+        return tuple(rows)
+    except TypeError:
+        return ()
+
+
+def _approved_catalog_scopes(catalog_snapshot: object | None) -> dict[str, str]:
+    names: dict[str, set[str]] = {}
+    for value in _active_catalog_rows(catalog_snapshot):
+        row = _plain_mapping(value)
+        category = str(row.get("category_code") or "").strip()
+        if category in _APPROVED_CATEGORY_CODES - {"14"}:
+            code = str(row.get("class_code") or "").strip()
+            name = str(row.get("class_name") or "").strip()
+            valid = re.fullmatch(r"\d{4}", code) is not None and code[:2] == category
+        elif category == "14":
+            code = str(row.get("major_code") or "").strip()
+            name = str(row.get("major_name") or "").strip()
+            valid = re.fullmatch(r"14\d{4}", code) is not None
+        else:
+            continue
+        if valid and name:
+            names.setdefault(code, set()).add(name)
+    return {
+        code: f"{code} {next(iter(scope_names))}"
+        for code, scope_names in names.items()
+        if len(scope_names) == 1
+    }
+
+
+def _approved_scope_name(row: Mapping[str, Any], catalog_snapshot: object | None) -> str:
     code = _scope_code(row)
-    return code == "99" or (len(code) >= 2 and code[:2] in _APPROVED_CATEGORY_CODES)
+    if code == "99":
+        return "99 跨学科通用"
+    return _approved_catalog_scopes(catalog_snapshot).get(code, "")
 
 
-def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[str, Any]], dict[str, tuple[tuple[str, str], ...]]]:
+def _is_approved_scope_mapping(row: Mapping[str, Any], catalog_snapshot: object | None) -> bool:
+    return bool(_approved_scope_name(row, catalog_snapshot))
+
+
+def _scope_index(
+    snapshot: object,
+    catalog_snapshot: object | None,
+) -> tuple[dict[str, set[str]], dict[str, dict[str, Any]], dict[str, tuple[tuple[str, str], ...]]]:
     skills = {
         str(row.get("内部标识") or "").strip(): row
         for row in _ledger_rows(snapshot, "当前Skill")
@@ -684,11 +738,8 @@ def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[
     mapping_fingerprints: dict[str, list[tuple[str, str]]] = {}
     for row in _ledger_rows(snapshot, "专业任务映射"):
         stable_id = str(row.get("内部标识") or "").strip()
-        scope = _scope_name(row)
+        scope = _approved_scope_name(row, catalog_snapshot)
         if not stable_id or not scope:
-            continue
-        code = _scope_code(row)
-        if code and not _is_approved_scope_mapping(row):
             continue
         scopes.setdefault(stable_id, set()).add(scope)
         material = tuple(sorted(
@@ -696,10 +747,6 @@ def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[
             if key not in {"映射标识", "mapping_id"} and value not in (None, "")
         ))
         mapping_fingerprints.setdefault(stable_id, []).append((scope, repr(material)))
-    for stable_id, row in skills.items():
-        scope = _scope_name(row)
-        if scope:
-            scopes.setdefault(stable_id, set()).add(scope)
     frozen = {key: tuple(sorted(value)) for key, value in mapping_fingerprints.items()}
     return scopes, skills, frozen
 
@@ -714,8 +761,12 @@ def _catalog_scope(row: object) -> str:
     if category_code == "14":
         code = str(mapping.get("major_code") or "").strip()
         name = str(mapping.get("major_name") or "").strip()
+        if re.fullmatch(r"14\d{4}", code) is None:
+            return ""
     else:
         code, name = class_code, class_name
+        if re.fullmatch(r"\d{4}", code) is None or code[:2] != category_code:
+            return ""
     return " ".join(value for value in (code, name) if value)
 
 
@@ -754,8 +805,8 @@ def _catalog_baseline_fingerprint(rows: Iterable[Mapping[str, Any]]) -> tuple[tu
 def affected_scopes(before: object, after: object, *, catalog_snapshot: object | None = None) -> tuple[str, ...]:
     """Return only scopes whose formal content or catalog boundary materially changed."""
 
-    before_scopes, before_skills, before_maps = _scope_index(before)
-    after_scopes, after_skills, after_maps = _scope_index(after)
+    before_scopes, before_skills, before_maps = _scope_index(before, catalog_snapshot)
+    after_scopes, after_skills, after_maps = _scope_index(after, catalog_snapshot)
     affected: set[str] = set()
     for stable_id in sorted(set(before_skills) | set(after_skills)):
         old = before_skills.get(stable_id)
@@ -773,7 +824,10 @@ def affected_scopes(before: object, after: object, *, catalog_snapshot: object |
     after_catalog = _ledger_rows(after, "目录基线")
     affected.update(_catalog_changed_scopes(catalog_snapshot))
     if _catalog_baseline_fingerprint(before_catalog) != _catalog_baseline_fingerprint(after_catalog):
-        catalog_scopes = {_scope_name(row) for row in before_catalog + after_catalog if _scope_name(row)}
+        catalog_scopes = {
+            scope for row in before_catalog + after_catalog
+            if (scope := _approved_scope_name(row, catalog_snapshot))
+        }
         affected.update(catalog_scopes or {scope for values in before_scopes.values() for scope in values} | {scope for values in after_scopes.values() for scope in values})
     return tuple(sorted(scope for scope in affected if scope))
 
@@ -959,7 +1013,7 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
     }
 
 
-def _validate_new_formal_mappings(before: object, after: object) -> None:
+def _validate_new_formal_mappings(before: object, after: object, catalog_snapshot: object | None) -> None:
     before_ids = {
         str(row.get("内部标识") or "").strip() for row in _ledger_rows(before, "当前Skill")
         if str(row.get("内部标识") or "").strip()
@@ -972,7 +1026,8 @@ def _validate_new_formal_mappings(before: object, after: object) -> None:
     for stable_id in sorted(after_ids - before_ids):
         approved = [
             row for row in mappings
-            if str(row.get("内部标识") or "").strip() == stable_id and _is_approved_scope_mapping(row)
+            if str(row.get("内部标识") or "").strip() == stable_id
+            and _is_approved_scope_mapping(row, catalog_snapshot)
         ]
         if not approved:
             raise ReportBuildError(f"新增正式项 {stable_id} 缺少非军事学、批准范围内的专业任务映射")
@@ -1000,7 +1055,7 @@ def make_project_report_builder(root: str | Path):
         before = LedgerStore.load(project.ledger)
         after = LedgerStore.load(staged_ledger)
         try:
-            _validate_new_formal_mappings(before, after)
+            _validate_new_formal_mappings(before, after, getattr(prepared, "catalog_snapshot", None))
             payload = _report_input_from_run(prepared, before, after)
             delivery = contained_child(staging, "deliveries")
             delivery.mkdir(parents=False, exist_ok=False)
