@@ -292,7 +292,7 @@ class RunCoordinator:
             if not isinstance(evidence, OfficeEvidenceBundle):
                 raise CoordinatorError("Office 发布结果必须是结构化证据")
             try:
-                evidence.assert_covers(office_paths)
+                evidence.assert_publication_roles(prepared.staging_ledger, office_paths)
             except OfficeVerificationError as exc:
                 raise CoordinatorError(f"Office 发布证据未通过：{exc}") from exc
             state.office_evidence = evidence

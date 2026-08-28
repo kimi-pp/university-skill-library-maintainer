@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
 from hashlib import sha256
 import json
@@ -10,6 +11,8 @@ import os
 from pathlib import Path
 import sys
 import tempfile
+import threading
+import time
 import unittest
 from unittest.mock import patch
 from zipfile import ZIP_DEFLATED, ZipFile
@@ -323,6 +326,40 @@ class OfficeVerificationTestCase(unittest.TestCase):
         self.assertTrue(result["error"])
         self.assertEqual(result["process_count_before"], result["process_count_after"])
 
+    def test_powershell_pdf_stability_probe_waits_for_two_equal_nonzero_sizes(self):
+        from skill_maintainer.office import _run_office
+
+        pdf = self.root / "slow-export.pdf"
+
+        def slow_writer():
+            time.sleep(0.10)
+            pdf.write_bytes(b"first")
+            time.sleep(0.04)
+            with pdf.open("ab") as stream:
+                stream.write(b"-final")
+
+        writer = threading.Thread(target=slow_writer)
+        writer.start()
+        try:
+            result = _run_office(
+                "-StableFileProbe", str(pdf),
+                "-StableTimeoutMilliseconds", "3000",
+                "-StablePollMilliseconds", "80",
+            )
+        finally:
+            writer.join(timeout=3)
+
+        self.assertTrue(result["passed"], result.get("error"))
+        self.assertEqual(result["stable_observations"], 2)
+        self.assertEqual(result["observed_size"], len(b"first-final"))
+        timeout = _run_office(
+            "-StableFileProbe", str(self.root / "never-created.pdf"),
+            "-StableTimeoutMilliseconds", "180",
+            "-StablePollMilliseconds", "50",
+        )
+        self.assertFalse(timeout["passed"])
+        self.assertEqual(timeout["error"], "word-pdf-stability-timeout")
+
     def test_renderer_contract_supports_clean_chinese_space_path_and_detects_header_footer_only_page(self):
         source = self.root / "中文 路径报告.docx"
         write_word(source)
@@ -444,6 +481,129 @@ class PublicationTestCase(unittest.TestCase):
             first.assert_covers((first_staging / "Skills主台账.xlsx",))
         second.assert_covers((second_staging / "Skills主台账.xlsx",))
 
+    def test_checks_issue_one_bundle_atomically_and_concurrently(self):
+        staging, _ = self.make_tree("run-check-issuance")
+        first_path = staging / "Skills主台账.xlsx"
+        second_path = staging / "second.xlsx"
+        write_excel(second_path, rows=1)
+
+        def issue_check(path):
+            result = {
+                "passed": True, "office_opened": True, "read_only": True,
+                "key_sheet": "当前Skill", "last_row": 2, "last_column": 2,
+                "last_value": "verified", "process_count_before": 0,
+                "process_count_after": 0, "error": None,
+            }
+            with patch("skill_maintainer.office._run_office", return_value=result):
+                return verify_excel(path, run_id=staging.name, role="ledger")
+
+        first = issue_check(first_path)
+        second = issue_check(second_path)
+        with self.assertRaisesRegex(OfficeVerificationError, "签发|受信|capability"):
+            OfficeEvidenceBundle.from_checks((first, replace(second)), run_id=staging.name)
+        first_bundle = OfficeEvidenceBundle.from_checks((first,), run_id=staging.name)
+        first_bundle.assert_covers((first_path,))
+        with self.assertRaisesRegex(OfficeVerificationError, "已签发|单次|capability"):
+            OfficeEvidenceBundle.from_checks((first,), run_id=staging.name)
+
+        concurrent_path = staging / "concurrent.xlsx"
+        write_excel(concurrent_path, rows=1)
+        concurrent_check = issue_check(concurrent_path)
+        barrier = threading.Barrier(2)
+
+        def sign_once():
+            barrier.wait(timeout=3)
+            try:
+                return OfficeEvidenceBundle.from_checks((concurrent_check,), run_id=staging.name)
+            except OfficeVerificationError as exc:
+                return exc
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            results = tuple(executor.map(lambda _: sign_once(), range(2)))
+        self.assertEqual(sum(isinstance(item, OfficeEvidenceBundle) for item in results), 1)
+        self.assertEqual(sum(isinstance(item, OfficeVerificationError) for item in results), 1)
+
+    def test_delivery_excel_verified_as_ledger_is_rejected_before_side_effects(self):
+        staging, production = self.make_tree("run-role-path-binding")
+        daily = staging / "deliveries" / "维护日报.xlsx"
+        workbook = Workbook()
+        current = workbook.active
+        current.title = "当前Skill"
+        current.append(["内部标识", "Skill名称"])
+        current.append(["WRONG-ROLE-1", "wrong-role"])
+        overview = workbook.create_sheet("执行概览")
+        overview.append(["项目", "结果"])
+        workbook.save(daily)
+        workbook.close()
+        wrong_daily = verify_excel(daily, run_id=staging.name, role="ledger")
+        self.assertTrue(wrong_daily.passed, wrong_daily.error)
+        ledger_result = {
+            "passed": True, "office_opened": True, "read_only": True,
+            "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
+            "last_value": "skill-2", "process_count_before": 0,
+            "process_count_after": 0, "error": None,
+        }
+        with patch("skill_maintainer.office._run_office", return_value=ledger_result):
+            ledger_check = verify_excel(
+                staging / "Skills主台账.xlsx", run_id=staging.name, role="ledger",
+            )
+        evidence = OfficeEvidenceBundle.from_checks(
+            (ledger_check, wrong_daily), run_id=staging.name,
+        )
+        authority = production / "ledger" / "Skills主台账.xlsx"
+        authority_before = authority.read_bytes()
+
+        with self.assertRaisesRegex(PublishError, "角色|daily|交付.*Excel"):
+            build_publish_plan(staging, production, office_evidence=evidence)
+
+        self.assertEqual(authority.read_bytes(), authority_before)
+        self.assertEqual(tuple((production / "ledger" / "archive").iterdir()), ())
+        self.assertEqual(tuple((production / "output" / "generations").iterdir()), ())
+
+    def test_publish_revalidates_role_path_binding_before_backup_or_generation(self):
+        staging, production = self.make_tree("run-role-boundary")
+        daily = staging / "deliveries" / "维护日报.xlsx"
+        workbook = Workbook()
+        current = workbook.active
+        current.title = "当前Skill"
+        current.append(["内部标识", "Skill名称"])
+        current.append(["ROLE-1", "role"])
+        overview = workbook.create_sheet("执行概览")
+        overview.append(["项目", "结果"])
+        overview.append(["运行状态", "完成"])
+        workbook.save(daily)
+        workbook.close()
+
+        def issued(path, role, key_sheet, last_value):
+            result = {
+                "passed": True, "office_opened": True, "read_only": True,
+                "key_sheet": key_sheet, "last_row": 2, "last_column": 2,
+                "last_value": last_value, "process_count_before": 0,
+                "process_count_after": 0, "error": None,
+            }
+            with patch("skill_maintainer.office._run_office", return_value=result):
+                return verify_excel(path, run_id=staging.name, role=role)
+
+        ledger = staging / "Skills主台账.xlsx"
+        correct = OfficeEvidenceBundle.from_checks((
+            issued(ledger, "ledger", "当前Skill", "skill-2"),
+            issued(daily, "daily", "执行概览", "完成"),
+        ), run_id=staging.name)
+        plan = build_publish_plan(staging, production, office_evidence=correct)
+        wrong = OfficeEvidenceBundle.from_checks((
+            issued(ledger, "ledger", "当前Skill", "skill-2"),
+            issued(daily, "ledger", "当前Skill", "role"),
+        ), run_id=staging.name)
+        forged = replace(plan, office_evidence=wrong, office_evidence_sha256=wrong.sha256)
+        authority_before = forged.authority_path.read_bytes()
+
+        with self.assertRaisesRegex(PublishError, "角色|daily|交付.*Excel"):
+            publish_atomically(forged)
+
+        self.assertEqual(forged.authority_path.read_bytes(), authority_before)
+        self.assertEqual(tuple(forged.backup_path.parent.iterdir()), ())
+        self.assertEqual(tuple(forged.generation_path.parent.iterdir()), ())
+
     def test_build_plan_binds_every_input_and_single_authority(self):
         staging, production = self.make_tree()
         plan = self.plan_for(staging, production)
@@ -547,6 +707,9 @@ class PublicationTestCase(unittest.TestCase):
         self.assertFalse(plan.generation_path.exists())
         with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
             plan.office_evidence.assert_covers((plan.staged_ledger,))
+        retry_plan = self.plan_for(staging, production)
+        receipt = publish_atomically(retry_plan)
+        self.assertTrue(receipt.generation_path.is_dir())
 
     def test_forged_delivery_traversal_is_rejected_before_any_publication(self):
         staging, production = self.make_tree()

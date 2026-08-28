@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import threading
 from typing import Any, Iterable
 import weakref
 
@@ -157,32 +158,71 @@ class OfficeEvidenceBundle:
     def from_checks(cls, checks: Iterable[OfficeCheck], *, run_id: str) -> "OfficeEvidenceBundle":
         normalized_run_id = _required_run_id(run_id)
         frozen = tuple(checks)
-        seen: set[Path] = set()
-        for check in frozen:
-            source = check.source_path.absolute()
-            if source in seen:
-                raise OfficeVerificationError(f"Office 证据重复绑定同一文件：{source}")
-            seen.add(source)
-            _require_trusted_check(check, normalized_run_id, final=True)
-            _validate_check(check)
-        bundle = cls(frozen, normalized_run_id, _evidence_digest(frozen, normalized_run_id))
-        _register_bundle(bundle)
-        return bundle
+        with _OFFICE_REGISTRY_LOCK:
+            seen: set[Path] = set()
+            records: list[_CheckRecord] = []
+            for check in frozen:
+                source = check.source_path.absolute()
+                if source in seen:
+                    raise OfficeVerificationError(f"Office 证据重复绑定同一文件：{source}")
+                seen.add(source)
+                _require_trusted_check(check, normalized_run_id, final=True, issued=False)
+                _validate_check(check)
+                records.append(_TRUSTED_CHECKS[id(check)])
+            bundle = cls(frozen, normalized_run_id, _evidence_digest(frozen, normalized_run_id))
+            try:
+                _register_bundle(bundle)
+                for record in records:
+                    record.issued = True
+                return bundle
+            except BaseException:
+                _TRUSTED_BUNDLES.pop(id(bundle), None)
+                for record in records:
+                    record.issued = False
+                raise
 
     def assert_covers(self, paths: Iterable[str | Path]) -> None:
-        _require_trusted_bundle(self, self.run_id)
-        required = {
-            Path(path).absolute()
-            for path in paths
-            if Path(path).suffix.casefold() in {".xlsx", ".docx"}
-        }
-        supplied = {check.source_path.absolute() for check in self.checks}
-        if required != supplied:
-            missing = sorted(str(path) for path in required - supplied)
-            extra = sorted(str(path) for path in supplied - required)
-            raise OfficeVerificationError(f"Office 证据未精确覆盖发布文件；缺失={missing}；多余={extra}")
-        for check in self.checks:
-            _validate_check(check)
+        with _OFFICE_REGISTRY_LOCK:
+            _require_trusted_bundle(self, self.run_id)
+            required = {
+                Path(path).absolute()
+                for path in paths
+                if Path(path).suffix.casefold() in {".xlsx", ".docx"}
+            }
+            supplied = {check.source_path.absolute() for check in self.checks}
+            if required != supplied:
+                missing = sorted(str(path) for path in required - supplied)
+                extra = sorted(str(path) for path in supplied - required)
+                raise OfficeVerificationError(f"Office 证据未精确覆盖发布文件；缺失={missing}；多余={extra}")
+            for check in self.checks:
+                _validate_check(check)
+
+    def assert_publication_roles(
+        self,
+        staged_ledger: str | Path,
+        paths: Iterable[str | Path],
+    ) -> None:
+        """Bind each approved Office kind/role to its exact publication path."""
+
+        ledger = Path(staged_ledger).absolute()
+        supplied_paths = tuple(Path(path).absolute() for path in paths)
+        with _OFFICE_REGISTRY_LOCK:
+            self.assert_covers(supplied_paths)
+            checks = {check.source_path.absolute(): check for check in self.checks}
+            ledger_check = checks.get(ledger)
+            if ledger_check is None or ledger_check.kind != "excel" or ledger_check.excel_role != "ledger":
+                raise OfficeVerificationError("暂存主台账必须绑定 kind=excel、role=ledger 的受信证据。")
+            for path in supplied_paths:
+                if path == ledger:
+                    continue
+                check = checks.get(path)
+                suffix = path.suffix.casefold()
+                if suffix == ".xlsx" and (
+                    check is None or check.kind != "excel" or check.excel_role != "daily"
+                ):
+                    raise OfficeVerificationError(f"交付 Excel 必须绑定 kind=excel、role=daily：{path}")
+                if suffix == ".docx" and (check is None or check.kind != "word"):
+                    raise OfficeVerificationError(f"交付 Word 必须绑定 kind=word：{path}")
 
 
 @dataclass
@@ -191,6 +231,7 @@ class _CheckRecord:
     run_id: str
     final: bool
     facts: tuple[object, ...]
+    issued: bool = False
 
 
 @dataclass
@@ -202,29 +243,32 @@ class _BundleRecord:
 
 _TRUSTED_CHECKS: dict[int, _CheckRecord] = {}
 _TRUSTED_BUNDLES: dict[int, _BundleRecord] = {}
+_OFFICE_REGISTRY_LOCK = threading.RLock()
 
 
 def consume_office_evidence(bundle: object, *, run_id: str) -> OfficeEvidenceBundle:
     """Consume the exact run-bound verifier capability immediately before authority replace."""
 
-    trusted = _require_trusted_bundle(bundle, _required_run_id(run_id))
-    _TRUSTED_BUNDLES.pop(id(trusted), None)
-    return trusted
+    with _OFFICE_REGISTRY_LOCK:
+        trusted = _require_trusted_bundle(bundle, _required_run_id(run_id))
+        _TRUSTED_BUNDLES.pop(id(trusted), None)
+        return trusted
 
 
 def clear_office_run_state(run_id: str | None = None) -> None:
     """Release only one run's transient verifier capabilities (or all in test cleanup)."""
 
-    if run_id is None:
-        _TRUSTED_CHECKS.clear()
-        _TRUSTED_BUNDLES.clear()
-        return
-    for identity, record in tuple(_TRUSTED_CHECKS.items()):
-        if record.run_id == run_id:
-            _TRUSTED_CHECKS.pop(identity, None)
-    for identity, record in tuple(_TRUSTED_BUNDLES.items()):
-        if record.run_id == run_id:
-            _TRUSTED_BUNDLES.pop(identity, None)
+    with _OFFICE_REGISTRY_LOCK:
+        if run_id is None:
+            _TRUSTED_CHECKS.clear()
+            _TRUSTED_BUNDLES.clear()
+            return
+        for identity, record in tuple(_TRUSTED_CHECKS.items()):
+            if record.run_id == run_id:
+                _TRUSTED_CHECKS.pop(identity, None)
+        for identity, record in tuple(_TRUSTED_BUNDLES.items()):
+            if record.run_id == run_id:
+                _TRUSTED_BUNDLES.pop(identity, None)
 
 
 def _required_run_id(run_id: str) -> str:
@@ -238,16 +282,24 @@ def _register_check(check: OfficeCheck, run_id: str, *, final: bool) -> None:
     identity = id(check)
 
     def _discard(reference: weakref.ReferenceType[OfficeCheck]) -> None:
-        record = _TRUSTED_CHECKS.get(identity)
-        if record is not None and record.check is reference:
-            _TRUSTED_CHECKS.pop(identity, None)
+        with _OFFICE_REGISTRY_LOCK:
+            record = _TRUSTED_CHECKS.get(identity)
+            if record is not None and record.check is reference:
+                _TRUSTED_CHECKS.pop(identity, None)
 
-    _TRUSTED_CHECKS[identity] = _CheckRecord(
-        weakref.ref(check, _discard), run_id, final, _check_facts(check),
-    )
+    with _OFFICE_REGISTRY_LOCK:
+        _TRUSTED_CHECKS[identity] = _CheckRecord(
+            weakref.ref(check, _discard), run_id, final, _check_facts(check),
+        )
 
 
-def _require_trusted_check(check: object, run_id: str, *, final: bool) -> OfficeCheck:
+def _require_trusted_check(
+    check: object,
+    run_id: str,
+    *,
+    final: bool,
+    issued: bool | None = None,
+) -> OfficeCheck:
     record = _TRUSTED_CHECKS.get(id(check))
     if (
         not isinstance(check, OfficeCheck)
@@ -255,9 +307,10 @@ def _require_trusted_check(check: object, run_id: str, *, final: bool) -> Office
         or record.check() is not check
         or record.run_id != run_id
         or record.final is not final
+        or (issued is not None and record.issued is not issued)
         or record.facts != _check_facts(check)
     ):
-        raise OfficeVerificationError("OfficeCheck 必须由当前运行的真实 verifier capability 签发且未篡改。")
+        raise OfficeVerificationError("OfficeCheck 必须由当前运行的真实 verifier capability 单次签发且未篡改。")
     return check
 
 
@@ -265,13 +318,15 @@ def _register_bundle(bundle: OfficeEvidenceBundle) -> None:
     identity = id(bundle)
 
     def _discard(reference: weakref.ReferenceType[OfficeEvidenceBundle]) -> None:
-        record = _TRUSTED_BUNDLES.get(identity)
-        if record is not None and record.bundle is reference:
-            _TRUSTED_BUNDLES.pop(identity, None)
+        with _OFFICE_REGISTRY_LOCK:
+            record = _TRUSTED_BUNDLES.get(identity)
+            if record is not None and record.bundle is reference:
+                _TRUSTED_BUNDLES.pop(identity, None)
 
-    _TRUSTED_BUNDLES[identity] = _BundleRecord(
-        weakref.ref(bundle, _discard), bundle.run_id, _bundle_facts(bundle),
-    )
+    with _OFFICE_REGISTRY_LOCK:
+        _TRUSTED_BUNDLES[identity] = _BundleRecord(
+            weakref.ref(bundle, _discard), bundle.run_id, _bundle_facts(bundle),
+        )
 
 
 def _require_trusted_bundle(bundle: object, run_id: str) -> OfficeEvidenceBundle:
@@ -285,7 +340,7 @@ def _require_trusted_bundle(bundle: object, run_id: str) -> OfficeEvidenceBundle
     ):
         raise OfficeVerificationError("OfficeEvidenceBundle 不是当前运行真实签发且未消费的受信 capability。")
     for check in bundle.checks:
-        _require_trusted_check(check, run_id, final=True)
+        _require_trusted_check(check, run_id, final=True, issued=True)
     return bundle
 
 
@@ -557,11 +612,12 @@ def bind_word_visual_decision(
 ) -> OfficeCheck:
     if not isinstance(decision, WordRenderDecision):
         raise OfficeVerificationError("Word 视觉判定必须使用结构化逐页决定。")
-    record = _TRUSTED_CHECKS.get(id(check))
-    if record is None:
-        raise OfficeVerificationError("Word OfficeCheck 必须由真实 verifier capability 签发后才能绑定视觉判定。")
-    active_run_id = _required_run_id(run_id if run_id is not None else record.run_id)
-    _require_trusted_check(check, active_run_id, final=False)
+    with _OFFICE_REGISTRY_LOCK:
+        record = _TRUSTED_CHECKS.get(id(check))
+        if record is None:
+            raise OfficeVerificationError("Word OfficeCheck 必须由真实 verifier capability 签发后才能绑定视觉判定。")
+        active_run_id = _required_run_id(run_id if run_id is not None else record.run_id)
+        _require_trusted_check(check, active_run_id, final=False, issued=False)
     if check.kind != "word" or not check.office_passed:
         raise OfficeVerificationError("只有完成 Word Office/PDF/逐页渲染的结果可以绑定视觉判定。")
     if check.process_count_before != check.process_count_after:
@@ -597,9 +653,11 @@ def bind_word_visual_decision(
         visual_reviewer=decision.reviewer,
         error=None if approved else "外部逐页视觉复核未通过。",
     )
-    _TRUSTED_CHECKS.pop(id(check), None)
-    if approved_check.passed:
-        _register_check(approved_check, active_run_id, final=True)
+    with _OFFICE_REGISTRY_LOCK:
+        _require_trusted_check(check, active_run_id, final=False, issued=False)
+        _TRUSTED_CHECKS.pop(id(check), None)
+        if approved_check.passed:
+            _register_check(approved_check, active_run_id, final=True)
     return approved_check
 
 
@@ -627,6 +685,7 @@ def _friendly_error(value: object) -> str | None:
         "excel-process-leak": "Excel COM 进程未精确返回验证前基线。",
         "word-not-read-only": "Word 未以只读方式打开。",
         "word-pdf-empty-or-missing": "Word PDF 导出为空或缺失。",
+        "word-pdf-stability-timeout": "Word PDF 导出后未在有界等待内稳定。",
         "word-pdf-target-exists": "Word PDF 目标在验证期间已存在，拒绝覆盖。",
         "word-process-leak": "Word COM 进程未精确返回验证前基线。",
     }

@@ -242,7 +242,9 @@ def build_publish_plan(
     if office_evidence.run_id != run_id:
         raise PublishError("Office 发布证据未绑定当前发布运行标识。")
     try:
-        office_evidence.assert_covers((staged_ledger, *delivery_paths))
+        office_evidence.assert_publication_roles(
+            staged_ledger, (staged_ledger, *delivery_paths),
+        )
     except OfficeVerificationError as exc:
         raise PublishError(f"Office 发布证据无效：{exc}") from exc
     return PublishPlan(
@@ -553,7 +555,7 @@ def _prepare_commit_arguments(
     if not isinstance(office_evidence, OfficeEvidenceBundle):
         raise PublishError("Runner 必须提供结构化 Office 证据。")
     try:
-        office_evidence.assert_covers(office_paths)
+        office_evidence.assert_publication_roles(staged, office_paths)
     except OfficeVerificationError as exc:
         raise PublishError(f"Runner Office 证据无效：{exc}") from exc
     _assert_generation_office_binding(staged, generation, office_evidence)
@@ -636,7 +638,7 @@ def _verify_prepared_commit_inputs(
     if _sha256(manifest) != generation_manifest_sha256:
         raise PublishError("Runner manifest 在提交边界变化。")
     try:
-        office_evidence.assert_covers(office_paths)
+        office_evidence.assert_publication_roles(staged, office_paths)
     except OfficeVerificationError as exc:
         raise PublishError(f"Runner Office 证据在提交边界失效：{exc}") from exc
     _assert_generation_office_binding(staged, generation, office_evidence)
@@ -697,7 +699,10 @@ def _verify_plan_inputs(plan: PublishPlan) -> None:
         if _sha256(source) != item.sha256:
             raise PublishError(f"暂存交付文件在发布计划形成后发生变化：{item.relative_path}")
     try:
-        plan.office_evidence.assert_covers((plan.staged_ledger, *(plan.deliveries_root / Path(item.relative_path) for item in plan.delivery_files)))
+        plan.office_evidence.assert_publication_roles(
+            plan.staged_ledger,
+            (plan.staged_ledger, *(plan.deliveries_root / Path(item.relative_path) for item in plan.delivery_files)),
+        )
     except OfficeVerificationError as exc:
         raise PublishError(f"Office 发布证据在提交边界无效：{exc}") from exc
     if plan.office_evidence.sha256 != plan.office_evidence_sha256:

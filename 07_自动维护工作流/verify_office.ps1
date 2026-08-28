@@ -4,7 +4,12 @@ param(
     [ValidateSet('ledger', 'daily')]
     [string]$ExcelRole = 'ledger',
     [string]$Word,
-    [string]$RenderDirectory
+    [string]$RenderDirectory,
+    [string]$StableFileProbe,
+    [ValidateRange(100, 30000)]
+    [int]$StableTimeoutMilliseconds = 10000,
+    [ValidateRange(10, 1000)]
+    [int]$StablePollMilliseconds = 100
 )
 
 $ErrorActionPreference = 'Stop'
@@ -31,8 +36,52 @@ function Wait-ForProcessBaseline([string]$Name, [int]$Baseline) {
     return (Get-ProcessCount $Name)
 }
 
+function Wait-ForStableFile([string]$Path, [int]$TimeoutMilliseconds, [int]$PollMilliseconds) {
+    $deadline = [DateTime]::UtcNow.AddMilliseconds($TimeoutMilliseconds)
+    [long]$lastSize = -1
+    [int]$stableObservations = 0
+    do {
+        if ([IO.File]::Exists($Path)) {
+            [long]$size = (Get-Item -LiteralPath $Path).Length
+            if ($size -gt 0) {
+                if ($size -eq $lastSize) {
+                    $stableObservations += 1
+                } else {
+                    $lastSize = $size
+                    $stableObservations = 1
+                }
+                if ($stableObservations -ge 2) {
+                    return @{ size = $size; stable_observations = $stableObservations }
+                }
+            } else {
+                $lastSize = -1
+                $stableObservations = 0
+            }
+        } else {
+            $lastSize = -1
+            $stableObservations = 0
+        }
+        Start-Sleep -Milliseconds $PollMilliseconds
+    } while ([DateTime]::UtcNow -lt $deadline)
+    throw 'word-pdf-stability-timeout'
+}
+
 function Write-Result([hashtable]$Result) {
     [Console]::Out.WriteLine(($Result | ConvertTo-Json -Compress -Depth 6))
+}
+
+if (-not [string]::IsNullOrWhiteSpace($StableFileProbe)) {
+    $probeResult = @{ passed = $false; observed_size = 0; stable_observations = 0; error = $null }
+    try {
+        $probe = Wait-ForStableFile ([IO.Path]::GetFullPath($StableFileProbe)) $StableTimeoutMilliseconds $StablePollMilliseconds
+        $probeResult.observed_size = [long]$probe.size
+        $probeResult.stable_observations = [int]$probe.stable_observations
+        $probeResult.passed = $true
+    } catch {
+        $probeResult.error = $_.Exception.Message
+    }
+    Write-Result $probeResult
+    exit 0
 }
 
 if ([string]::IsNullOrWhiteSpace($Excel) -eq [string]::IsNullOrWhiteSpace($Word)) {
@@ -205,9 +254,7 @@ try {
     if (-not $result.read_only) { throw 'word-not-read-only' }
     $result.page_count = [int]$document.ComputeStatistics(2)
     $document.ExportAsFixedFormat($pdf, 17)
-    if (-not [IO.File]::Exists($pdf) -or (Get-Item -LiteralPath $pdf).Length -le 0) {
-        throw 'word-pdf-empty-or-missing'
-    }
+    $null = Wait-ForStableFile $pdf $StableTimeoutMilliseconds $StablePollMilliseconds
     $result.pdf_path = $pdf
     $result.passed = $true
 } catch {
