@@ -90,3 +90,47 @@ result: Cell search matched 0 entries.
 - artifact-tool 2.8.6 暴露 `freezePanes.freezeRows(1)`，但导出的 XLSX 丢失 `<pane>`；其渲染器还把帮助文档列出的 `HYPERLINK()` 公式显示为实现提示。控制器明确允许后，唯一 JS builder 在 artifact-tool 完成全部值、公式、样式、表格和 XLSX 导出后，只对 12 个 worksheet 的 `sheetView` 和 URL 的 external hyperlink relationships 做确定性 ZIP/OOXML 后处理。没有使用 `openpyxl`、`xlsxwriter` 或 `pandas.ExcelWriter` 写报告；测试通过保存后复读锁定补丁结果。
 - DOCX 因缺少 `soffice` 没有页数、PDF 或逐页 PNG 证据，不能视为视觉发布通过；已完成结构 QA，并保留 Task 11 Office 门。
 - 520 行全表渲染产生约 11.6 MB 的纵向 PNG，生成和打开均成功，但正式使用时仍应由 Task 11 在 Microsoft Excel 中实际打开关键表和末行单元格。
+
+## Fix round 1：真实运行接线、安全边界与脱敏
+
+### 复审核实与 TDD RED
+
+复审意见与代码现状一致：`RunSummary` 不含报告所需的台账明细，Task 9 回调实际接收的是 `PreparedRun` 和本轮 staging root；旧实现没有可供 `RunCoordinator` 注入的真实适配器。其余问题也由现有实现直接复现：安全结论字段未进入 scope 指纹、目录访问日期制造噪声、文件名清洗碰撞、父链 reparse 未拒绝、多任务映射只取首条、测试写死用户缓存、`cmd.exe /c mklink` 经过 shell、排除原因自由文本原样输出。
+
+先只修改 `test_reports.py` 和 `test_runner.py`，使用调用环境提供的 Node/runtime，运行：
+
+```powershell
+$env:PYTHONPATH = (Resolve-Path 'src')
+$env:SKILL_MAINTAINER_NODE = 'C:\Users\34927\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+$env:SKILL_MAINTAINER_NODE_MODULES = 'C:\Users\34927\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules'
+python -m unittest -v tests.test_reports tests.test_runner.RunnerTestCase.test_real_report_adapter_uses_prepared_catalog_sources_and_both_ledgers_in_staging
+```
+
+首轮 RED 的首错是 `验证状态` 变化时 `affected_scopes` 实际返回 `()`、期望 `('0801 力学类',)`；同一测试的 `风险提示` 子用例也失败。后续同轮输出还确认：仅 `访问日期` 变化误刷新、`affected_scopes` 不接受 `catalog_snapshot`、未知排除自由文本泄漏、runtime reparse/错误 executable 未归一化拒绝、真实 report-builder adapter 缺失。每一项均因待实现行为缺失而失败。
+
+强化真实集成 fixture 时曾观察到 `新增正式推荐!A2=None`；核查 Task 7 契约后确认测试决定未提供 `DerivedFields.ledger_row`，因此它本来就不会向 staged ledger 写正式项。fixture 改为完整、内容绑定的真实审查决定后，适配器测试同时证明 production/staged ledger 差异进入日报；没有为错误 fixture 修改生产行为。
+
+### 最小实现
+
+- `PreparedRun` 保存 prepare 阶段已经取摘要并受 digest 约束的 `catalog_snapshot`。新增 `make_project_report_builder(root)`，绑定 `ProjectPaths`；它读取正式台账与 `prepared.staging_ledger`，使用 `prepared.source_runs` 和真实 `Catalog.staged_diff` 构造日报输入，只在 `prepared.staging_dir/deliveries` 写日报和受影响专业类交付。
+- `affected_scopes` 纳入验证级别/状态、风险提示、可执行/网络数据/凭据/文件行为、质量评分和实施准备度；`访问日期` 从目录基线实质指纹排除；真实 catalog 逐记录 added/removed/renamed/code/move 差异精确映射到专业类。
+- 专业类目录名使用“安全可读前缀 + 原 scope SHA-256 前 10 位”，避免 `A/B` 与 `A:B` 覆盖。写入前检查 output root 全父链及子目录均为 ordinary path，拒绝 symlink/junction/reparse；真实 adapter 只传 staging 内根目录。
+- 同一稳定 ID 的多条专业任务映射在用途、输入、输出和使用限制四个维度稳定去重、排序并聚合；Master Skill 仍只输出一行。
+- Node 与 `node_modules` 完全取自调用环境；测试不再覆盖调用者已有配置。生产验证普通路径/reparse、`node.exe` 名称及真实 `--version` 身份、artifact-tool 包形状；临时 `node_modules` 改用参数化 `Path.symlink_to`，不再调用 `cmd.exe` 或拼接 shell 命令，`&` 路径测试通过。
+- 排除原因只接受标准化代码/类别；未知自由文本统一输出“其他合规原因”，候选名称或夹带名称的原因文本不会进入 Word/Excel。
+
+Catalog 的最小可审计契约是：真实 `Catalog.staged_diff` 为主，逐记录变化同时考虑旧、新专业类；显式 mapping 的 `affected_scopes`/`changed_scopes` 仅作为兼容输入。没有从目录访问时间推断业务变化。
+
+### GREEN 与回归证据
+
+- `python -m unittest -v tests.test_reports` → `Ran 14 tests in 106.752s`，`OK`。
+- 强化后的真实 `PreparedRun` + `RunCoordinator` + `ProjectPaths` adapter 集成 → `Ran 1 test in 24.511s`，`OK`；保存后复读日报 `新增正式推荐!A2=REPORT-NEW-1`，来源审计含 `SkillHub/partial`，且唯一受影响专业类工作簿复读到既有稳定 ID。
+- `python -m unittest -v tests.test_runner`（强化 fixture 前的同一生产实现）→ `Ran 34 tests in 36.881s`，`OK`。
+- `python -m unittest discover -s tests -v`（强化 fixture 前的同一生产实现）→ `Ran 178 tests in 149.964s`，`OK`。
+- 提交前最终全套：`python -m unittest discover -s tests -v` → `Ran 178 tests in 150.526s`，`OK`。
+- `python -m compileall -q 07_自动维护工作流/src 07_自动维护工作流/tests`、`node --check daily_xlsx_builder.mjs`、`git diff --check` 均以 0 退出；针对生产 `reports.py` 与 `test_reports.py` 搜索 `cmd.exe`、`mklink` 和硬编码用户路径均无匹配。
+
+### 保留顾虑
+
+- Task 11 仍须处理既有 9360 DXA grid 加 120 DXA indent 的实际 Word 视觉门；本轮不改变该已裁决的 minor。
+- 当前环境仍无 `soffice`，所以没有新增 DOCX 页数/逐页 PNG 证据；不能宣称 Word 视觉门通过。原 Task 10 的结构 QA 和 12-sheet artifact-tool 渲染证据不因本轮数据接线修复失效。

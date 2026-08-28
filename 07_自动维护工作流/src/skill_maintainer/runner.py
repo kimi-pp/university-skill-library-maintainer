@@ -59,6 +59,7 @@ class PreparedRun:
     staging_ledger: Path
     settings_sha256: str
     source_runs: tuple[SourceRun, ...]
+    catalog_snapshot: object = field(repr=False, compare=False)
     _coordinator_token: str = field(repr=False, compare=False)
 
 
@@ -245,15 +246,16 @@ class RunCoordinator:
             }])
             self._save_ledger(ledger, staged_ledger)
             catalog = request.catalog_loader()
+            captured_catalog = catalog
             source_runs = tuple(request.discover(request, staging_dir) if request.discover else self.discover(request, staging_dir))
             self._validate_sources(source_runs)
             evidence_identity = self._bind_evidence(source_runs)
             self._write_source_statuses(staged_ledger, source_runs)
             self._inject("after_discovery")
-            prepared = PreparedRun(run_id, staging_dir, staged_ledger, config_sha, source_runs, self._token)
+            prepared = PreparedRun(run_id, staging_dir, staged_ledger, config_sha, source_runs, captured_catalog, self._token)
             self._states[run_id] = _State(
                 prepared, request, lock, _sha256(self.paths.ledger), _stat_identity(self.paths.ledger), self._tree_digest(staging_dir),
-                self._object_digest(catalog), self._object_digest(source_runs), dict(request.review_packets), evidence_identity,
+                self._object_digest(captured_catalog), self._object_digest(source_runs), dict(request.review_packets), evidence_identity,
                 output_digest=self._output_digest(),
             )
             return prepared

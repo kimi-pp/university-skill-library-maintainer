@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import asdict, is_dataclass
 from datetime import date, datetime
+from hashlib import sha256
 import json
 import os
 from pathlib import Path
@@ -21,6 +22,9 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
+
+from .ledger import LedgerStore
+from .paths import ProjectPaths, assert_ordinary_path, contained_child
 
 
 DAILY_WORD_SECTIONS = (
@@ -83,7 +87,36 @@ _MATERIAL_SKILL_FIELDS = (
     "维护状态",
     "推荐优先级",
     "适配建议",
+    "验证级别",
+    "验证状态",
+    "风险提示",
+    "可执行行为",
+    "网络与数据行为",
+    "凭据行为",
+    "文件行为",
+    "质量评分",
+    "实施准备度",
 )
+
+_EXCLUSION_REASON_ALIASES = {
+    "许可证不明确": "许可证不明确",
+    "license_unknown": "许可证不明确",
+    "license-unverified": "许可证不明确",
+    "安全要求未满足": "安全要求未满足",
+    "安全不符合": "安全要求未满足",
+    "security_rejected": "安全要求未满足",
+    "证据不足": "证据不足",
+    "insufficient_evidence": "证据不足",
+    "不在研究范围": "不在研究范围",
+    "out_of_scope": "不在研究范围",
+    "重复条目": "重复条目",
+    "duplicate": "重复条目",
+    "来源不可核验": "来源不可核验",
+    "source_unverifiable": "来源不可核验",
+    "质量门槛未满足": "质量门槛未满足",
+    "quality_below_threshold": "质量门槛未满足",
+    "其他合规原因": "其他合规原因",
+}
 
 
 class ReportBuildError(RuntimeError):
@@ -149,11 +182,16 @@ def _summary_payload(summary: object) -> dict[str, Any]:
         "source_statuses": dict(raw.get("source_statuses") or raw.get("来源状态") or {}),
     })
     # Exclusion candidate names are deliberately never serialized into a deliverable.
-    payload["exclusions"] = [
-        {"原因": str(row.get("原因") or row.get("reason") or "未分类原因").strip() or "未分类原因"}
-        for row in payload["exclusions"]
-    ]
+    payload["exclusions"] = [{"原因": _standard_exclusion_reason(row)} for row in payload["exclusions"]]
     return _json_value(payload)  # type: ignore[return-value]
+
+
+def _standard_exclusion_reason(row: Mapping[str, Any]) -> str:
+    raw = str(
+        row.get("原因代码") or row.get("reason_code") or row.get("原因类别")
+        or row.get("原因") or row.get("reason") or ""
+    ).strip()
+    return _EXCLUSION_REASON_ALIASES.get(raw.casefold(), _EXCLUSION_REASON_ALIASES.get(raw, "其他合规原因"))
 
 
 def _set_run_font(run, *, size: float = 11, bold: bool | None = None, color: str | None = None) -> None:
@@ -505,44 +543,61 @@ def _require_runtime_path(variable: str, *, directory: bool) -> Path:
     raw = os.environ.get(variable, "").strip()
     if not raw:
         raise ReportBuildError(f"缺少环境变量 {variable}；无法使用批准的可移植 Node 运行时")
-    path = Path(raw)
+    path = Path(raw).absolute()
     valid = path.is_dir() if directory else path.is_file()
     if not valid:
         kind = "目录" if directory else "文件"
         raise ReportBuildError(f"环境变量 {variable} 指向的{kind}不存在：{path}")
+    try:
+        assert_ordinary_path(path, require_directory=directory)
+    except ValueError as exc:
+        raise ReportBuildError(f"环境变量 {variable} 不得指向链接或重解析点：{path}") from exc
     return path
 
 
-def _make_node_modules_link(link: Path, target: Path) -> None:
-    if os.name == "nt":
+def _verify_node_identity(node: Path) -> None:
+    expected = "node.exe" if os.name == "nt" else "node"
+    if node.name.casefold() != expected.casefold():
+        raise ReportBuildError(f"SKILL_MAINTAINER_NODE 必须指向名为 {expected} 的 Node 可执行文件")
+    try:
         result = subprocess.run(
-            ["cmd.exe", "/d", "/c", "mklink", "/J", str(link), str(target)],
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            check=False,
+            [str(node), "--version"], capture_output=True, text=True, encoding="utf-8",
+            errors="replace", check=False, timeout=15,
         )
-        if result.returncode:
-            raise ReportBuildError(f"无法创建临时 node_modules junction：{result.stderr or result.stdout}")
-    else:
+    except (OSError, subprocess.SubprocessError) as exc:
+        raise ReportBuildError("SKILL_MAINTAINER_NODE 不是可执行的 Node 运行时") from exc
+    version = (result.stdout or "").strip()
+    if result.returncode or re.fullmatch(r"v\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?", version) is None:
+        raise ReportBuildError("SKILL_MAINTAINER_NODE 的可执行身份不是受支持的 Node 运行时")
+
+
+def _make_node_modules_link(link: Path, target: Path) -> None:
+    try:
         link.symlink_to(target, target_is_directory=True)
+    except (NotImplementedError, OSError) as exc:
+        raise ReportBuildError(f"无法以无 shell 方式创建临时 node_modules 链接：{exc}") from exc
 
 
 def _remove_node_modules_link(link: Path) -> None:
     if not link.exists() and not link.is_symlink():
         return
-    if os.name == "nt":
-        os.rmdir(link)
-    else:
+    if link.is_symlink():
         link.unlink()
+    else:
+        os.rmdir(link)
 
 
 def _run_xlsx_builder(payload: Mapping[str, Any], destination: Path, *, verify_dir: Path | None = None) -> None:
     node = _require_runtime_path("SKILL_MAINTAINER_NODE", directory=False)
     modules = _require_runtime_path("SKILL_MAINTAINER_NODE_MODULES", directory=True)
-    if not (modules / "@oai" / "artifact-tool").is_dir():
+    _verify_node_identity(node)
+    artifact_tool = modules / "@oai" / "artifact-tool"
+    if not artifact_tool.is_dir():
         raise ReportBuildError("SKILL_MAINTAINER_NODE_MODULES 中缺少 @oai/artifact-tool")
+    try:
+        assert_ordinary_path(artifact_tool, require_directory=True)
+    except ValueError as exc:
+        raise ReportBuildError("@oai/artifact-tool 必须位于普通、无重解析点的模块目录") from exc
     source_builder = Path(__file__).with_name("daily_xlsx_builder.mjs")
     if not source_builder.is_file():
         raise ReportBuildError(f"缺少 Excel 生成器：{source_builder.name}")
@@ -627,7 +682,52 @@ def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[
     return scopes, skills, frozen
 
 
-def affected_scopes(before: object, after: object) -> tuple[str, ...]:
+def _catalog_scope(row: object) -> str:
+    mapping = _plain_mapping(row)
+    category_code = str(mapping.get("category_code") or "").strip()
+    class_code = str(mapping.get("class_code") or "").strip()
+    class_name = str(mapping.get("class_name") or "").strip()
+    if category_code == "14":
+        code = str(mapping.get("major_code") or "").strip()
+        name = str(mapping.get("major_name") or "").strip()
+    else:
+        code, name = class_code, class_name
+    return " ".join(value for value in (code, name) if value)
+
+
+def _catalog_changed_scopes(catalog_snapshot: object | None) -> tuple[str, ...]:
+    if catalog_snapshot is None:
+        return ()
+    if isinstance(catalog_snapshot, Mapping):
+        explicit = catalog_snapshot.get("affected_scopes") or catalog_snapshot.get("changed_scopes") or ()
+        return tuple(sorted({str(value).strip() for value in explicit if str(value).strip()}))
+    diff = getattr(catalog_snapshot, "staged_diff", None)
+    if diff is None:
+        return ()
+    scopes: set[str] = set()
+    for field in ("added", "removed"):
+        for row in getattr(diff, field, ()):
+            scope = _catalog_scope(row)
+            if scope:
+                scopes.add(scope)
+    for field in ("renamed", "major_code_changes", "class_moves", "category_moves"):
+        for change in getattr(diff, field, ()):
+            for row in (getattr(change, "old", None), getattr(change, "new", None)):
+                if row is not None:
+                    scope = _catalog_scope(row)
+                    if scope:
+                        scopes.add(scope)
+    return tuple(sorted(scopes))
+
+
+def _catalog_baseline_fingerprint(rows: Iterable[Mapping[str, Any]]) -> tuple[tuple[tuple[str, str], ...], ...]:
+    return tuple(sorted(
+        tuple(sorted((str(key), str(value)) for key, value in row.items() if key != "访问日期" and value not in (None, "")))
+        for row in rows
+    ))
+
+
+def affected_scopes(before: object, after: object, *, catalog_snapshot: object | None = None) -> tuple[str, ...]:
     """Return only scopes whose formal content or catalog boundary materially changed."""
 
     before_scopes, before_skills, before_maps = _scope_index(before)
@@ -647,7 +747,8 @@ def affected_scopes(before: object, after: object) -> tuple[str, ...]:
             affected.update(old_scopes | new_scopes)
     before_catalog = _ledger_rows(before, "目录基线")
     after_catalog = _ledger_rows(after, "目录基线")
-    if before_catalog != after_catalog:
+    affected.update(_catalog_changed_scopes(catalog_snapshot))
+    if _catalog_baseline_fingerprint(before_catalog) != _catalog_baseline_fingerprint(after_catalog):
         catalog_scopes = {_scope_name(row) for row in before_catalog + after_catalog if _scope_name(row)}
         affected.update(catalog_scopes or {scope for values in before_scopes.values() for scope in values} | {scope for values in after_scopes.values() for scope in values})
     return tuple(sorted(scope for scope in affected if scope))
@@ -660,6 +761,29 @@ def _safe_scope_name(scope: str) -> str:
     return value
 
 
+def _scope_directory_name(scope: str) -> str:
+    return f"{_safe_scope_name(scope)}-{sha256(scope.encode('utf-8')).hexdigest()[:10]}"
+
+
+def _stable_join(values: Iterable[object]) -> str:
+    normalized = {str(value).strip() for value in values if str(value or "").strip()}
+    return "；".join(sorted(normalized))
+
+
+def _ordinary_output_root(output_root: str | Path) -> Path:
+    root = Path(output_root).absolute()
+    try:
+        assert_ordinary_path(root)
+        if root.exists():
+            assert_ordinary_path(root, require_directory=True)
+        else:
+            root.mkdir(parents=True, exist_ok=False)
+            assert_ordinary_path(root, require_directory=True)
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"专业类交付根目录必须是普通、无重解析父链的目录：{root}") from exc
+    return root
+
+
 def build_scope_deliveries(
     scopes: Iterable[str],
     ledger: object,
@@ -670,8 +794,7 @@ def build_scope_deliveries(
     master_rows = _ledger_rows(ledger, "当前Skill")
     mappings = _ledger_rows(ledger, "专业任务映射")
     by_id = {str(row.get("内部标识") or "").strip(): row for row in master_rows if str(row.get("内部标识") or "").strip()}
-    root = Path(output_root)
-    root.mkdir(parents=True, exist_ok=True)
+    root = _ordinary_output_root(output_root)
     outputs: list[Path] = []
     seen_scopes: set[str] = set()
     for raw_scope in scopes:
@@ -686,27 +809,142 @@ def build_scope_deliveries(
             if stable_id not in by_id:
                 continue
             row = dict(by_id[stable_id])
-            mapping = next(item for item in scope_maps if str(item.get("内部标识") or "").strip() == stable_id)
+            stable_maps = [item for item in scope_maps if str(item.get("内部标识") or "").strip() == stable_id]
             row.update({
                 "专业类": scope,
-                "用途": mapping.get("专业任务") or row.get("简要功能"),
-                "输入": mapping.get("输入") or row.get("输入"),
-                "输出": mapping.get("输出") or row.get("输出"),
-                "使用限制": mapping.get("使用限制") or row.get("安全限制条件"),
+                "用途": _stable_join(item.get("专业任务") for item in stable_maps) or row.get("简要功能"),
+                "输入": _stable_join(item.get("输入") for item in stable_maps) or row.get("输入"),
+                "输出": _stable_join(item.get("输出") for item in stable_maps) or row.get("输出"),
+                "使用限制": _stable_join(item.get("使用限制") for item in stable_maps) or row.get("安全限制条件"),
             })
             formal.append(row)
         payload = {
-            "run_id": f"scope-{_safe_scope_name(scope)}",
+            "run_id": f"scope-{_scope_directory_name(scope)}",
             "generated_at": datetime.now(),
             "formal_additions": formal,
             "affected_scopes": [scope],
             "source_statuses": {},
         }
-        directory = root / _safe_scope_name(scope)
-        directory.mkdir(parents=True, exist_ok=True)
-        docx_path = directory / "专业类Skill清单.docx"
-        xlsx_path = directory / "专业类Skill清单.xlsx"
+        directory = contained_child(root, _scope_directory_name(scope))
+        directory.mkdir(parents=False, exist_ok=True)
+        assert_ordinary_path(directory, require_directory=True)
+        docx_path = contained_child(directory, "专业类Skill清单.docx")
+        xlsx_path = contained_child(directory, "专业类Skill清单.xlsx")
         build_daily_docx(payload, docx_path)
         build_daily_xlsx(payload, xlsx_path)
         outputs.extend((docx_path, xlsx_path))
     return tuple(outputs)
+
+
+def _row_fingerprint(row: Mapping[str, Any]) -> str:
+    return json.dumps(_json_value(row), ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+def _new_ledger_rows(before: object, after: object, sheet: str) -> list[dict[str, Any]]:
+    old = {_row_fingerprint(row) for row in _ledger_rows(before, sheet)}
+    return [row for row in _ledger_rows(after, sheet) if _row_fingerprint(row) not in old]
+
+
+def _catalog_change_rows(catalog_snapshot: object) -> list[dict[str, str]]:
+    scopes = _catalog_changed_scopes(catalog_snapshot)
+    return [{"专业类": scope, "变化": "目录逐记录差异影响本专业类"} for scope in scopes]
+
+
+def _report_input_from_run(prepared: object, before: object, after: object) -> dict[str, Any]:
+    before_skills = {
+        str(row.get("内部标识") or "").strip(): row for row in _ledger_rows(before, "当前Skill")
+        if str(row.get("内部标识") or "").strip()
+    }
+    after_skills = {
+        str(row.get("内部标识") or "").strip(): row for row in _ledger_rows(after, "当前Skill")
+        if str(row.get("内部标识") or "").strip()
+    }
+    formal_additions = [after_skills[key] for key in sorted(set(after_skills) - set(before_skills))]
+    version_updates = [
+        {**after_skills[key], "原版本": before_skills[key].get("固定版本"), "新版本": after_skills[key].get("固定版本")}
+        for key in sorted(set(before_skills) & set(after_skills))
+        if str(before_skills[key].get("固定版本") or "") != str(after_skills[key].get("固定版本") or "")
+    ]
+    observations = _new_ledger_rows(before, after, "候选观察")
+
+    def observation_status(row: Mapping[str, Any]) -> str:
+        return str(row.get("观察状态") or "").strip()
+
+    conditional = [row for row in observations if observation_status(row) == "条件候选"]
+    adaptation = [row for row in observations if observation_status(row) == "需适配候选"]
+    updates_not_applied = [row for row in observations if observation_status(row) in {"发现更新未升级", "更新未升级"}]
+    exclusions = [
+        row for row in observations
+        if observation_status(row) in {"排除", "已排除", "不推荐", "拒绝"}
+    ]
+    source_runs = tuple(getattr(prepared, "source_runs", ()))
+    source_statuses = {str(run.platform): str(run.status) for run in source_runs}
+    source_requests = [
+        {
+            "来源平台": str(run.platform), "请求地址": str(getattr(run, "query", "__run__")),
+            "状态": str(run.status), "请求时间": datetime.now(),
+        }
+        for run in source_runs
+    ]
+    manual_reviews = [
+        {"事项": f"{run.platform} 覆盖状态为 {run.status}，需人工复核。"}
+        for run in source_runs if str(run.status).casefold() not in {"complete", "success", "ok"}
+    ]
+    catalog_snapshot = getattr(prepared, "catalog_snapshot", None)
+    return {
+        "run_id": str(getattr(prepared, "run_id", "未提供")),
+        "generated_at": datetime.now(),
+        "blocked": False,
+        "source_statuses": source_statuses,
+        "catalog_changes": _catalog_change_rows(catalog_snapshot),
+        "formal_additions": formal_additions,
+        "version_updates": version_updates,
+        "updates_not_applied": updates_not_applied,
+        "conditional_candidates": conditional,
+        "adaptation_candidates": adaptation,
+        "aliases": _new_ledger_rows(before, after, "来源别名"),
+        "affected_scopes": affected_scopes(before, after, catalog_snapshot=catalog_snapshot),
+        "exclusions": exclusions,
+        "manual_reviews": manual_reviews,
+        "source_requests": source_requests,
+    }
+
+
+def make_project_report_builder(root: str | Path):
+    """Bind the runner's pre-publication callback to one project's trusted paths."""
+
+    project = ProjectPaths.from_root(root)
+
+    def build(prepared: object, staging_root: Path) -> tuple[Path, ...]:
+        staging = Path(staging_root).absolute()
+        prepared_staging = Path(getattr(prepared, "staging_dir")).absolute()
+        staged_ledger = Path(getattr(prepared, "staging_ledger")).absolute()
+        try:
+            if staging != prepared_staging:
+                raise ValueError("runner callback 的 staging root 与 PreparedRun 不一致")
+            staging.relative_to(project.staging_root.absolute())
+            staged_ledger.relative_to(staging)
+            assert_ordinary_path(staging, require_directory=True)
+            assert_ordinary_path(staged_ledger)
+            assert_ordinary_path(project.ledger)
+        except (OSError, ValueError) as exc:
+            raise ReportBuildError("报告回调只能读取项目台账并写入本轮普通暂存目录") from exc
+        delivery = contained_child(staging, "deliveries")
+        delivery.mkdir(parents=False, exist_ok=False)
+        assert_ordinary_path(delivery, require_directory=True)
+        daily_docx = contained_child(delivery, "维护日报.docx")
+        daily_xlsx = contained_child(delivery, "维护日报.xlsx")
+        before = LedgerStore.load(project.ledger)
+        after = LedgerStore.load(staged_ledger)
+        try:
+            payload = _report_input_from_run(prepared, before, after)
+            build_daily_docx(payload, daily_docx)
+            build_daily_xlsx(payload, daily_xlsx)
+            scope_root = contained_child(delivery, "受影响专业类")
+            scope_outputs = build_scope_deliveries(payload["affected_scopes"], after, scope_root)
+            return (daily_docx, daily_xlsx, *scope_outputs)
+        finally:
+            before.workbook.close()
+            after.workbook.close()
+
+    return build

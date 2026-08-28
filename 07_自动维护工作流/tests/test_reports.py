@@ -7,12 +7,14 @@ import os
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from docx import Document
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt
 from openpyxl import load_workbook
 
+from skill_maintainer.catalog import Catalog, CatalogRow, CatalogSnapshot, diff_catalog
 from skill_maintainer.reports import (
     DAILY_SHEETS,
     DAILY_WORD_SECTIONS,
@@ -20,11 +22,10 @@ from skill_maintainer.reports import (
     build_daily_docx,
     build_daily_xlsx,
     build_scope_deliveries,
+    ReportBuildError,
+    _make_node_modules_link,
+    _remove_node_modules_link,
 )
-
-
-NODE = Path(r"C:\Users\34927\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe")
-NODE_MODULES = Path(r"C:\Users\34927\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules")
 
 
 def formal_row(index: int, scope: str = "0809 计算机类") -> dict[str, object]:
@@ -82,21 +83,13 @@ class ReportContentTestCase(unittest.TestCase):
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
-        self.old_node = os.environ.get("SKILL_MAINTAINER_NODE")
-        self.old_modules = os.environ.get("SKILL_MAINTAINER_NODE_MODULES")
-        os.environ["SKILL_MAINTAINER_NODE"] = str(NODE)
-        os.environ["SKILL_MAINTAINER_NODE_MODULES"] = str(NODE_MODULES)
-        self.addCleanup(self._restore_environment)
 
-    def _restore_environment(self) -> None:
-        if self.old_node is None:
-            os.environ.pop("SKILL_MAINTAINER_NODE", None)
-        else:
-            os.environ["SKILL_MAINTAINER_NODE"] = self.old_node
-        if self.old_modules is None:
-            os.environ.pop("SKILL_MAINTAINER_NODE_MODULES", None)
-        else:
-            os.environ["SKILL_MAINTAINER_NODE_MODULES"] = self.old_modules
+    def require_runtime(self) -> tuple[Path, Path]:
+        node = os.environ.get("SKILL_MAINTAINER_NODE")
+        modules = os.environ.get("SKILL_MAINTAINER_NODE_MODULES")
+        if not node or not modules:
+            self.skipTest("report integration requires caller-supplied SKILL_MAINTAINER_NODE and SKILL_MAINTAINER_NODE_MODULES")
+        return Path(node), Path(modules)
 
     def test_word_contains_fixed_sections_chinese_fields_and_non_execution_boundary(self):
         output = self.root / "日报.docx"
@@ -138,6 +131,7 @@ class ReportContentTestCase(unittest.TestCase):
             self.assertIn('w:w="120"', table._tbl.tblPr.xml)
 
     def test_excel_has_exact_sheets_dynamic_520_row_tables_and_operational_features(self):
+        self.require_runtime()
         output = self.root / "日报.xlsx"
         summary = report_summary(520)
         build_daily_xlsx(summary, output)
@@ -165,6 +159,24 @@ class ReportContentTestCase(unittest.TestCase):
         self.assertEqual(overview["B5"].value, 520)
         self.assertNotIn("绝不能泄露的落选项目名", "\n".join(str(cell.value or "") for sheet in workbook for row in sheet.iter_rows() for cell in row))
 
+    def test_exclusion_free_text_is_normalized_without_leaking_candidate_name(self):
+        self.require_runtime()
+        summary = report_summary()
+        summary["exclusions"] = [{"原因": "候选项目 secret-candidate 因维护者失联而排除"}]
+        docx = self.root / "脱敏.docx"
+        xlsx = self.root / "脱敏.xlsx"
+        build_daily_docx(summary, docx)
+        build_daily_xlsx(summary, xlsx)
+        document = Document(docx)
+        word_text = "\n".join(cell.text for table in document.tables for row in table.rows for cell in row.cells)
+        workbook = load_workbook(xlsx, data_only=False)
+        self.addCleanup(workbook.close)
+        excel_text = "\n".join(str(cell.value or "") for sheet in workbook for row in sheet.iter_rows() for cell in row)
+        for text in (word_text, excel_text):
+            self.assertNotIn("secret-candidate", text)
+            self.assertNotIn("维护者失联", text)
+            self.assertIn("其他合规原因", text)
+
     def test_affected_scope_refresh_is_material_and_alias_only_is_not(self):
         base_skill = formal_row(1, "0801 力学类")
         before = {
@@ -188,7 +200,39 @@ class ReportContentTestCase(unittest.TestCase):
             with self.subTest(after=after):
                 self.assertTrue(affected_scopes(before, after))
 
+    def test_affected_scope_includes_formal_validation_and_risk_conclusions(self):
+        skill = formal_row(1, "0801 力学类")
+        skill.update({"验证状态": "全部通过（未实测）", "风险提示": "低风险"})
+        before = {"当前Skill": [skill], "专业任务映射": [], "目录基线": []}
+        for field, value in (("验证状态", "部分通过"), ("风险提示", "需隔离运行")):
+            after = {**before, "当前Skill": [{**skill, field: value}]}
+            with self.subTest(field=field):
+                self.assertEqual(affected_scopes(before, after), ("0801 力学类",))
+
+    def test_catalog_access_date_only_does_not_refresh_every_scope(self):
+        skill = formal_row(1, "0801 力学类")
+        before = {
+            "当前Skill": [skill], "专业任务映射": [],
+            "目录基线": [{"目录版本": "2025", "SHA-256": "a" * 64, "访问日期": "2026-08-27"}],
+        }
+        after = {**before, "目录基线": [{**before["目录基线"][0], "访问日期": "2026-08-28"}]}
+        self.assertEqual(affected_scopes(before, after), ())
+
+    def test_catalog_snapshot_refreshes_only_exact_changed_professional_class(self):
+        old = (
+            CatalogRow("08", "工学", "0801", "力学类", "080101", "理论与应用力学"),
+            CatalogRow("08", "工学", "0809", "计算机类", "080901", "计算机科学与技术"),
+        )
+        new = (*old, CatalogRow("08", "工学", "0809", "计算机类", "080902", "软件工程"))
+        catalog = Catalog(old, staged_snapshot=CatalogSnapshot(new, "b" * 64), staged_diff=diff_catalog(old, new))
+        ledger = {
+            "当前Skill": [formal_row(1, "0801 力学类"), formal_row(2, "0809 计算机类")],
+            "专业任务映射": [], "目录基线": [],
+        }
+        self.assertEqual(affected_scopes(ledger, ledger, catalog_snapshot=catalog), ("0809 计算机类",))
+
     def test_scope_deliveries_reference_same_stable_ids_without_master_duplication(self):
+        self.require_runtime()
         shared = formal_row(1, "0809 计算机类")
         ledger = {
             "当前Skill": [shared],
@@ -206,6 +250,89 @@ class ReportContentTestCase(unittest.TestCase):
             text = "\n".join(p.text for p in document.paragraphs)
             text += "\n" + "\n".join(cell.text for table in document.tables for row in table.rows for cell in row.cells)
             self.assertEqual(text.count("GH-05-0001"), 1)
+
+    def test_scope_delivery_aggregates_multiple_task_mappings_for_one_stable_id(self):
+        self.require_runtime()
+        scope = "0809 计算机类"
+        shared = formal_row(1, scope)
+        ledger = {
+            "当前Skill": [shared],
+            "专业任务映射": [
+                {"映射标识": "M-2", "内部标识": shared["内部标识"], "专业类": scope, "专业任务": "实验排课", "输入": "实验安排", "输出": "冲突清单", "使用限制": "教师复核"},
+                {"映射标识": "M-1", "内部标识": shared["内部标识"], "专业类": scope, "专业任务": "课程分析", "输入": "课程表", "输出": "质量报告", "使用限制": "数据脱敏"},
+            ],
+        }
+        paths = build_scope_deliveries((scope,), ledger, self.root / "聚合交付")
+        document = Document(next(path for path in paths if path.suffix == ".docx"))
+        text = "\n".join(cell.text for table in document.tables for row in table.rows for cell in row.cells)
+        self.assertEqual(text.count("GH-05-0001"), 1)
+        for expected in ("实验排课", "课程分析", "实验安排", "课程表", "冲突清单", "质量报告", "教师复核", "数据脱敏"):
+            self.assertIn(expected, text)
+
+    def test_scope_names_that_sanitize_alike_have_distinct_deterministic_directories(self):
+        self.require_runtime()
+        ledger = {
+            "当前Skill": [formal_row(1, "A/B"), formal_row(2, "A:B")],
+            "专业任务映射": [
+                {"内部标识": "GH-05-0001", "专业类": "A/B", "专业任务": "甲"},
+                {"内部标识": "GH-05-0002", "专业类": "A:B", "专业任务": "乙"},
+            ],
+        }
+        first = build_scope_deliveries(("A/B", "A:B"), ledger, self.root / "碰撞")
+        self.assertEqual(len({path.parent.name for path in first}), 2)
+        second = build_scope_deliveries(("A:B", "A/B"), ledger, self.root / "碰撞复验")
+        self.assertEqual({path.parent.name for path in first}, {path.parent.name for path in second})
+
+    def test_scope_delivery_rejects_reparse_output_root_without_outside_side_effects(self):
+        outside = self.root / "outside"
+        outside.mkdir()
+        linked = self.root / "linked-output"
+        try:
+            linked.symlink_to(outside, target_is_directory=True)
+        except (NotImplementedError, OSError) as exc:
+            self.skipTest(f"test filesystem cannot create a directory link: {exc}")
+        with self.assertRaises(ValueError):
+            build_scope_deliveries(("0809 计算机类",), {"当前Skill": [], "专业任务映射": []}, linked)
+        self.assertEqual(list(outside.iterdir()), [])
+
+    def test_runtime_paths_reject_missing_reparse_and_wrong_node_identity(self):
+        real_node, real_modules = self.require_runtime()
+        with patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("SKILL_MAINTAINER_NODE", None)
+            with self.assertRaisesRegex(ReportBuildError, "SKILL_MAINTAINER_NODE"):
+                build_daily_xlsx(report_summary(), self.root / "missing.xlsx")
+
+        fake = self.root / "node.exe"
+        fake.write_text("not node", encoding="utf-8")
+        with patch.dict(os.environ, {"SKILL_MAINTAINER_NODE": str(fake), "SKILL_MAINTAINER_NODE_MODULES": str(real_modules)}):
+            with self.assertRaisesRegex(ReportBuildError, "Node|node"):
+                build_daily_xlsx(report_summary(), self.root / "wrong.xlsx")
+
+        node_link = self.root / "linked-node.exe"
+        modules_link = self.root / "linked-modules"
+        try:
+            node_link.symlink_to(real_node)
+            modules_link.symlink_to(real_modules, target_is_directory=True)
+        except (NotImplementedError, OSError) as exc:
+            self.skipTest(f"test filesystem cannot create runtime links: {exc}")
+        for node, modules in ((node_link, real_modules), (real_node, modules_link)):
+            with self.subTest(node=node, modules=modules), patch.dict(os.environ, {"SKILL_MAINTAINER_NODE": str(node), "SKILL_MAINTAINER_NODE_MODULES": str(modules)}):
+                with self.assertRaisesRegex(ReportBuildError, "链接|重解析点"):
+                    build_daily_xlsx(report_summary(), self.root / "linked.xlsx")
+
+    def test_node_modules_link_handles_ampersand_path_without_shell_parsing(self):
+        target = self.root / "modules & trusted"
+        target.mkdir()
+        link = self.root / "node_modules"
+        try:
+            _make_node_modules_link(link, target)
+        except (NotImplementedError, OSError) as exc:
+            self.skipTest(f"test filesystem cannot create a directory link: {exc}")
+        self.addCleanup(lambda: _remove_node_modules_link(link))
+        self.assertTrue(link.is_dir())
+        marker = target / "proof.txt"
+        marker.write_text("safe", encoding="utf-8")
+        self.assertEqual((link / "proof.txt").read_text(encoding="utf-8"), "safe")
 
     def test_committed_xlsx_template_reopens_with_all_required_sheets(self):
         template = Path(__file__).parents[1] / "templates" / "daily_review.xlsx"
