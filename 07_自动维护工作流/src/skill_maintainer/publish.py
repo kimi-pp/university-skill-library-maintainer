@@ -462,6 +462,14 @@ def commit_prepared_generation(
             if _sha256(backup_temp) != expected_authority_sha256:
                 raise PublishError("Runner 主台账备份哈希不一致。")
             _move_no_replace(backup_temp, backup, label="Runner 主台账备份")
+            backup_identity = _stat_identity(backup)
+        parent_pins.pin(backup, directory=False)
+        backup_handle_identity, backup_handle_sha256 = _verify_pinned_backup(
+            backup=backup,
+            expected_sha256=expected_authority_sha256,
+            expected_identity=backup_identity,
+            pins=parent_pins,
+        )
         generation_pins = _pin_tree(generation)
 
         _copy_fsynced(staged, authority_temp)
@@ -473,6 +481,8 @@ def commit_prepared_generation(
             generation_manifest_sha256=generation_manifest_sha256,
             office_evidence=office_evidence, office_scope=office_scope,
             office_paths=office_paths,
+            backup=backup, backup_handle_identity=backup_handle_identity,
+            backup_handle_sha256=backup_handle_sha256,
             production=production, generations=generations, archive=archive,
             parent_identities=parent_identities, parent_pins=parent_pins,
             generation=generation, generation_pins=generation_pins,
@@ -487,6 +497,8 @@ def commit_prepared_generation(
             generation_manifest_sha256=generation_manifest_sha256,
             office_evidence=office_evidence, office_scope=office_scope,
             office_paths=office_paths,
+            backup=backup, backup_handle_identity=backup_handle_identity,
+            backup_handle_sha256=backup_handle_sha256,
             production=production, generations=generations, archive=archive,
             parent_identities=parent_identities, parent_pins=parent_pins,
             generation=generation, generation_pins=generation_pins,
@@ -500,7 +512,7 @@ def commit_prepared_generation(
         os.replace(authority_temp, authority)
         return PublishReceipt(
             run_id=run_id, authority_path=authority, authority_sha256=staged_hash,
-            backup_path=backup, backup_sha256=expected_authority_sha256,
+            backup_path=backup, backup_sha256=backup_handle_sha256,
             generation_path=generation, generation_manifest_sha256=generation_manifest_sha256,
             office_evidence_sha256=office_evidence.sha256,
         )
@@ -675,6 +687,9 @@ def _verify_prepared_commit_inputs(
     office_evidence: OfficeEvidenceBundle,
     office_scope: OfficeRunScope,
     office_paths: tuple[Path, ...],
+    backup: Path,
+    backup_handle_identity: tuple[int, int, int, int],
+    backup_handle_sha256: str,
     production: Path,
     generations: Path,
     archive: Path,
@@ -699,7 +714,37 @@ def _verify_prepared_commit_inputs(
     _assert_generation_office_binding(staged, generation, office_evidence)
     _assert_container_paths(container_paths, container_identities, container_pins)
     _assert_prepared_parents(production, generations, archive, parent_identities, parent_pins)
+    _verify_pinned_backup(
+        backup=backup,
+        expected_sha256=backup_handle_sha256,
+        expected_identity=backup_handle_identity,
+        pins=parent_pins,
+    )
     _verify_pinned_tree(generation, generation_pins)
+
+
+def _verify_pinned_backup(
+    *,
+    backup: Path,
+    expected_sha256: str,
+    expected_identity: tuple[int, int, int, int] | None,
+    pins: _GenerationPins,
+) -> tuple[tuple[int, int, int, int], str]:
+    """Bind backup path and bytes to the deny-write/delete raw file handle."""
+
+    _require_ordinary_file(backup, label="已固定 Runner 主台账备份")
+    pins.assert_path(backup)
+    handle_identity = pins.identity(backup)
+    path_identity = _stat_identity(backup)
+    handle_sha256 = pins.sha256(backup)
+    path_sha256 = _sha256(backup)
+    if expected_identity is not None and handle_identity != expected_identity:
+        raise PublishError("Runner 主台账备份的固定句柄身份与初检身份不一致。")
+    if path_identity != handle_identity:
+        raise PublishError("Runner 主台账备份路径身份与固定句柄身份不一致。")
+    if handle_sha256 != expected_sha256 or path_sha256 != handle_sha256:
+        raise PublishError("Runner 主台账备份路径/固定句柄哈希不一致。")
+    return handle_identity, handle_sha256
 
 
 def _assert_generation_office_binding(

@@ -978,6 +978,7 @@ class PublicationTestCase(unittest.TestCase):
         self.assertEqual(file_sha256(plan.authority_path), plan.staged_ledger_sha256)
         self.assertTrue(receipt.backup_path.is_file())
         self.assertEqual(receipt.backup_sha256, plan.expected_authority_sha256)
+        self.assertEqual(file_sha256(receipt.backup_path), receipt.backup_sha256)
         self.assertEqual(receipt.office_evidence_sha256, plan.office_evidence_sha256)
         self.assertEqual(receipt.generation_path, plan.generation_path)
         self.assertTrue(receipt.generation_path.is_dir())
@@ -1125,6 +1126,60 @@ class PublicationTestCase(unittest.TestCase):
         self.assertTrue(plan.backup_path.is_file())
         with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
             plan.office_evidence.assert_covers((plan.staged_ledger,))
+
+    @unittest.skipUnless(os.name == "nt", "Windows backup handle pinning acceptance")
+    def test_backup_in_place_write_before_authority_replace_rejects_publication(self):
+        staging, production = self.make_tree("run-backup-write-boundary")
+        plan = self.plan_for(staging, production)
+        old_authority = plan.authority_path.read_bytes()
+        receipt = None
+        error = None
+
+        def tamper_backup() -> None:
+            changed = bytearray(plan.backup_path.read_bytes())
+            changed[-1] ^= 0x01
+            plan.backup_path.write_bytes(changed)
+
+        try:
+            receipt = publish_atomically(plan, before_authority_replace=tamper_backup)
+        except PublishError as exc:
+            error = exc
+
+        self.assertIsNotNone(
+            error,
+            f"backup原地改写后仍发布；receipt_backup_sha256={getattr(receipt, 'backup_sha256', None)}",
+        )
+        self.assertIsNone(receipt)
+        self.assertEqual(plan.authority_path.read_bytes(), old_authority)
+        self.assertFalse(plan.generation_path.exists())
+        self.assertFalse(any(production.rglob("*receipt*")))
+
+    @unittest.skipUnless(os.name == "nt", "Windows backup handle pinning acceptance")
+    def test_backup_identity_replace_before_authority_replace_rejects_publication(self):
+        staging, production = self.make_tree("run-backup-identity-boundary")
+        plan = self.plan_for(staging, production)
+        old_authority = plan.authority_path.read_bytes()
+        replacement = self.root / "same-bytes-replacement.xlsx"
+        replacement.write_bytes(old_authority)
+        receipt = None
+        error = None
+
+        def replace_backup_identity() -> None:
+            os.replace(replacement, plan.backup_path)
+
+        try:
+            receipt = publish_atomically(plan, before_authority_replace=replace_backup_identity)
+        except PublishError as exc:
+            error = exc
+
+        self.assertIsNotNone(
+            error,
+            f"backup身份替换后仍发布；receipt_backup_sha256={getattr(receipt, 'backup_sha256', None)}",
+        )
+        self.assertIsNone(receipt)
+        self.assertEqual(plan.authority_path.read_bytes(), old_authority)
+        self.assertFalse(plan.generation_path.exists())
+        self.assertFalse(any(production.rglob("*receipt*")))
 
     @unittest.skipUnless(os.name == "nt", "Windows directory handle pinning acceptance")
     def test_generation_and_parent_directories_are_handle_pinned_through_authority_replace(self):
