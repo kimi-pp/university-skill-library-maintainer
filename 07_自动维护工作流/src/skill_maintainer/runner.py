@@ -21,7 +21,7 @@ if os.name == "nt":
 from .dedup import deduplicate
 from .ledger import LedgerStore
 from .locking import SingleWriterLock
-from .office import OfficeEvidenceBundle, OfficeVerificationError
+from .office import OfficeEvidenceBundle, OfficeVerificationError, clear_office_run_state
 from .paths import ProjectPaths, assert_ordinary_path, contained_child, is_link_or_reparse
 from .publish import PublishError, PublishReceipt, commit_prepared_generation
 from .review import ReviewDecision, apply_reviews_from_stream, clear_review_run_state, consume_applied_review
@@ -654,6 +654,7 @@ class RunCoordinator:
             self._tree_digest(prepared.staging_dir)
         except ValueError as exc:
             raise CoordinatorError("回调输出含链接、重解析点或越界父目录") from exc
+        normalized: list[Path] = []
         for item in returned:
             path = item if item.is_absolute() else prepared.staging_dir / item
             try:
@@ -663,7 +664,28 @@ class RunCoordinator:
             except (OSError, RuntimeError, ValueError) as exc:
                 raise CoordinatorError("回调 artifact 不在普通暂存根目录内") from exc
             self._ensure_file_in_staging(prepared.staging_dir, path)
-        return tuple(item if item.is_absolute() else prepared.staging_dir / item for item in returned)
+            normalized.append(path.absolute())
+        delivery = prepared.staging_dir / "deliveries"
+        enumerated_office: set[Path] = set()
+        if delivery.exists():
+            try:
+                assert_ordinary_path(delivery, require_directory=True)
+                for path in delivery.rglob("*"):
+                    if is_link_or_reparse(path):
+                        raise ValueError(f"reparse:{path}")
+                    if path.is_file() and path.suffix.casefold() in {".docx", ".xlsx"}:
+                        assert_ordinary_path(path)
+                        enumerated_office.add(path.absolute())
+            except (OSError, RuntimeError, ValueError) as exc:
+                raise CoordinatorError("交付树 Office 枚举遇到链接、重解析点或非普通文件") from exc
+        returned_office = {
+            path for path in normalized if path.suffix.casefold() in {".docx", ".xlsx"}
+        }
+        if returned_office != enumerated_office:
+            missing = sorted(str(path) for path in enumerated_office - returned_office)
+            extra = sorted(str(path) for path in returned_office - enumerated_office)
+            raise CoordinatorError(f"report callback 未返回完整 Office artifact 集合；未返回={missing}；多余={extra}")
+        return tuple(normalized)
 
     def _prepare_generation(self, state: _State) -> tuple[Path, str, str]:
         self.paths.output.mkdir(parents=True, exist_ok=True)
@@ -789,7 +811,12 @@ class RunCoordinator:
                 except BaseException as exc:
                     warnings.append(f"registry-clear:{exc}")
                 finally:
-                    self._states.pop(state.prepared.run_id, None)
+                    try:
+                        clear_office_run_state(state.prepared.run_id)
+                    except BaseException as exc:
+                        warnings.append(f"office-registry-clear:{exc}")
+                    finally:
+                        self._states.pop(state.prepared.run_id, None)
         return tuple(warnings)
 
     def _remove_owned_staging(self, staging: Path) -> None:

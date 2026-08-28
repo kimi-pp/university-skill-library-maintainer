@@ -1,6 +1,8 @@
 [CmdletBinding()]
 param(
     [string]$Excel,
+    [ValidateSet('ledger', 'daily')]
+    [string]$ExcelRole = 'ledger',
     [string]$Word,
     [string]$RenderDirectory
 )
@@ -72,54 +74,73 @@ if (-not [string]::IsNullOrWhiteSpace($Excel)) {
         $worksheets = $workbook.Worksheets
         $currentSkill = -join ([char[]](0x5F53,0x524D,0x0053,0x006B,0x0069,0x006C,0x006C))
         $runRecord = -join ([char[]](0x8FD0,0x884C,0x8BB0,0x5F55))
-        $preferred = @($currentSkill, $runRecord)
+        $executionOverview = -join ([char[]](0x6267,0x884C,0x6982,0x89C8))
+        $preferred = if ($ExcelRole -eq 'daily') { @($executionOverview) } else { @($currentSkill, $runRecord) }
+        $selectedExtent = $null
+        $selectedHasData = $false
+        $firstExisting = $null
+        $firstExistingExtent = $null
         foreach ($name in $preferred) {
             $candidate = $null
-            $candidateUsed = $null
-            $candidateRows = $null
-            $candidateColumns = $null
             $candidateCells = $null
             $candidateLast = $null
+            $candidateColumns = $null
+            $candidateKeyColumn = $null
+            $candidateKeyLast = $null
             try {
                 $candidate = $worksheets.Item($name)
                 if ($null -ne $candidate) {
-                    $candidateUsed = $candidate.UsedRange
-                    $candidateRows = $candidateUsed.Rows
-                    $candidateColumns = $candidateUsed.Columns
-                    $candidateLastRow = [int]($candidateUsed.Row + $candidateRows.Count - 1)
-                    $candidateLastColumn = [int]($candidateUsed.Column + $candidateColumns.Count - 1)
                     $candidateCells = $candidate.Cells
-                    $candidateLast = $candidateCells.Item($candidateLastRow, $candidateLastColumn)
-                    if ($candidateLastRow -ge 2 -and -not [string]::IsNullOrWhiteSpace([string]$candidateLast.Value2)) {
+                    $candidateLast = $candidateCells.Find('*', [Type]::Missing, -4163, 2, 1, 2, $false, $false, $false)
+                    $candidateLastRow = if ($null -eq $candidateLast) { 0 } else { [int]$candidateLast.Row }
+                    $candidateLastColumn = if ($null -eq $candidateLast) { 0 } else { [int]$candidateLast.Column }
+                    $candidateLastValue = if ($null -eq $candidateLast -or $null -eq $candidateLast.Value2) { $null } else { [string]$candidateLast.Value2 }
+                    $candidateHasData = $candidateLastRow -ge 2 -and -not [string]::IsNullOrWhiteSpace([string]$candidateLastValue)
+                    if ($ExcelRole -eq 'ledger' -and $name -eq $currentSkill) {
+                        $candidateColumns = $candidate.Columns
+                        $candidateKeyColumn = $candidateColumns.Item(1)
+                        $candidateKeyLast = $candidateKeyColumn.Find('*', [Type]::Missing, -4163, 2, 1, 2, $false, $false, $false)
+                        $candidateHasData = $null -ne $candidateKeyLast -and [int]$candidateKeyLast.Row -ge 2 -and -not [string]::IsNullOrWhiteSpace([string]$candidateKeyLast.Value2)
+                    }
+                    if ($candidateHasData) {
+                        Release-ComObject $firstExisting
+                        $firstExisting = $null
                         $sheet = $candidate
                         $candidate = $null
+                        $selectedExtent = @($candidateLastRow, $candidateLastColumn, $candidateLastValue)
+                        $selectedHasData = $true
+                    } elseif ($null -eq $firstExisting) {
+                        $firstExisting = $candidate
+                        $candidate = $null
+                        $firstExistingExtent = @($candidateLastRow, $candidateLastColumn, $candidateLastValue)
                     }
                 }
             } catch { } finally {
+                Release-ComObject $candidateKeyLast
+                Release-ComObject $candidateKeyColumn
+                Release-ComObject $candidateColumns
                 Release-ComObject $candidateLast
                 Release-ComObject $candidateCells
-                Release-ComObject $candidateColumns
-                Release-ComObject $candidateRows
-                Release-ComObject $candidateUsed
                 Release-ComObject $candidate
             }
             if ($null -ne $sheet) { break }
         }
-        if ($null -eq $sheet) { $sheet = $worksheets.Item(1) }
+        if ($null -eq $sheet -and $null -ne $firstExisting) {
+            $sheet = $firstExisting
+            $firstExisting = $null
+            $selectedExtent = $firstExistingExtent
+            $selectedHasData = $false
+        }
+        if ($null -eq $sheet) { throw 'excel-key-sheet-missing' }
         $result.key_sheet = [string]$sheet.Name
-        $used = $sheet.UsedRange
-        $usedRows = $used.Rows
-        $usedColumns = $used.Columns
-        $lastRow = [int]($used.Row + $usedRows.Count - 1)
-        $lastColumn = [int]($used.Column + $usedColumns.Count - 1)
-        $cells = $sheet.Cells
-        $lastCell = $cells.Item($lastRow, $lastColumn)
-        $lastValue = $lastCell.Value2
+        $lastRow = [int]$selectedExtent[0]
+        $lastColumn = [int]$selectedExtent[1]
+        $lastValue = $selectedExtent[2]
         $result.last_row = $lastRow
         $result.last_column = $lastColumn
         $result.last_value = if ($null -eq $lastValue) { $null } else { [string]$lastValue }
         if (-not $result.read_only) { throw 'excel-not-read-only' }
-        if ($lastRow -lt 2 -or [string]::IsNullOrWhiteSpace([string]$lastValue)) {
+        if (-not $selectedHasData -or $lastRow -lt 2 -or [string]::IsNullOrWhiteSpace([string]$lastValue)) {
             throw 'excel-no-data-row'
         }
         $result.passed = $true
@@ -134,6 +155,7 @@ if (-not [string]::IsNullOrWhiteSpace($Excel)) {
         Release-ComObject $usedColumns
         Release-ComObject $usedRows
         Release-ComObject $used
+        Release-ComObject $firstExisting
         Release-ComObject $sheet
         Release-ComObject $worksheets
         Release-ComObject $workbook

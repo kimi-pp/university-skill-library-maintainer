@@ -85,36 +85,61 @@ notify_on_no_change = false
 
     @staticmethod
     def unit_office_verifier(prepared, artifacts):
-        """Hash-exact unit evidence; real hidden Office is covered by the integration test."""
-        from skill_maintainer.office import OfficeCheck, OfficeEvidenceBundle
+        """Exercise the real verifier issuance path with deterministic Office/renderer adapters."""
+        from skill_maintainer.office import (
+            OfficeEvidenceBundle,
+            WordRenderDecision,
+            bind_word_visual_decision,
+            verify_excel,
+            verify_word,
+        )
+
+        class UnitRenderer:
+            @staticmethod
+            def render(pdf, output_dir):
+                page = output_dir / "page-1.png"
+                page.write_bytes(b"unit-page-body")
+                return (page,), (1,)
 
         checks = []
         for path in artifacts:
             path = Path(path).absolute()
             if path.suffix.casefold() == ".xlsx":
-                checks.append(OfficeCheck(
-                    kind="excel", source_path=path, source_sha256=sha256(path.read_bytes()).hexdigest(),
-                    passed=True, office_passed=True, office_opened=True, read_only=True,
-                    key_sheet="当前Skill", last_row=2, last_column=1, last_value="verified",
-                    process_count_before=0, process_count_after=0,
-                ))
+                role = "ledger" if path == prepared.staging_ledger.absolute() else "daily"
+                key_sheet = "运行记录" if role == "ledger" else "执行概览"
+                result = {
+                    "passed": True, "office_opened": True, "read_only": True,
+                    "key_sheet": key_sheet, "last_row": 2, "last_column": 1,
+                    "last_value": "verified", "process_count_before": 0,
+                    "process_count_after": 0, "error": None,
+                }
+                with patch("skill_maintainer.office._run_office", return_value=result):
+                    checks.append(verify_excel(path, run_id=prepared.run_id, role=role))
             elif path.suffix.casefold() == ".docx":
                 evidence = prepared.staging_dir / ".office-evidence"
                 evidence.mkdir(exist_ok=True)
-                pdf = evidence / f"{path.stem}.pdf"
-                page = evidence / f"{path.stem}-page-1.png"
-                pdf.write_bytes(b"unit-pdf")
-                page.write_bytes(b"unit-page")
-                checks.append(OfficeCheck(
-                    kind="word", source_path=path, source_sha256=sha256(path.read_bytes()).hexdigest(),
-                    passed=True, office_passed=True, office_opened=True, read_only=True,
-                    pdf_path=pdf, pdf_sha256=sha256(pdf.read_bytes()).hexdigest(),
-                    page_paths=(page,), page_sha256=(sha256(page.read_bytes()).hexdigest(),),
-                    blank_pages=(), visual_reviewed=True, page_approved=(True,),
-                    visual_reviewer="unit evidence",
-                    process_count_before=0, process_count_after=0,
+                render = evidence / sha256(str(path).encode("utf-8")).hexdigest()[:16]
+
+                def office_word(*arguments):
+                    render_dir = Path(arguments[arguments.index("-RenderDirectory") + 1])
+                    pdf = render_dir / f"{path.stem}.office.pdf"
+                    pdf.write_bytes(b"unit-pdf")
+                    return {
+                        "passed": True, "office_opened": True, "read_only": True,
+                        "pdf_path": str(pdf), "page_count": 1,
+                        "process_count_before": 0, "process_count_after": 0, "error": None,
+                    }
+
+                with patch("skill_maintainer.office._run_office", side_effect=office_word):
+                    rendered = verify_word(
+                        path, render, renderer=UnitRenderer(), run_id=prepared.run_id,
+                    )
+                checks.append(bind_word_visual_decision(
+                    rendered,
+                    WordRenderDecision.from_check(rendered, approved=True, reviewer="unit evidence"),
+                    run_id=prepared.run_id,
                 ))
-        return OfficeEvidenceBundle.from_checks(tuple(checks))
+        return OfficeEvidenceBundle.from_checks(tuple(checks), run_id=prepared.run_id)
 
     @staticmethod
     def explicit_renderer(root: Path):
@@ -945,6 +970,36 @@ notify_on_no_change = false
             coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
         self.assertEqual(verifier_calls, [])
 
+    def test_report_callback_cannot_hide_extra_office_artifact_from_verification(self):
+        verifier_calls: list[tuple[Path, ...]] = []
+
+        def build_delivery(prepared, staging):
+            delivery = staging / "deliveries"
+            delivery.mkdir()
+            returned = delivery / "returned.xlsx"
+            workbook = Workbook()
+            workbook.active.title = "执行概览"
+            workbook.active.append(["项目", "结果"])
+            workbook.active.append(["运行状态", "完成"])
+            workbook.save(returned)
+            workbook.close()
+            (delivery / "invalid.docx").write_bytes(b"not-a-valid-docx")
+            return (returned,)
+
+        before = self.production_hashes()
+        coordinator = self.coordinator(
+            report_builder=build_delivery,
+            office_verifier=lambda prepared, artifacts: verifier_calls.append(artifacts),
+        )
+        prepared = coordinator.prepare(replace(self.request, requested_run_id="run-hidden-office"))
+        with self.assertRaisesRegex(CoordinatorError, "Office.*完整|完整.*Office|未返回"):
+            coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
+
+        self.assertEqual(verifier_calls, [])
+        self.assertEqual(before, self.production_hashes())
+        self.assertFalse((self.root / "output" / "generations" / prepared.run_id).exists())
+        self.assertFalse(any((self.root / "ledger" / "archive").glob("Skills主台账_*.xlsx")))
+
     def test_finalize_rejects_unstructured_boolean_office_result(self):
         coordinator = self.coordinator(office_verifier=lambda prepared, artifacts: True)
         prepared = coordinator.prepare(self.request)
@@ -967,7 +1022,7 @@ notify_on_no_change = false
             spreadsheet = deliveries / "自动查验表.xlsx"
             workbook = Workbook()
             sheet = workbook.active
-            sheet.title = "运行概览"
+            sheet.title = "执行概览"
             sheet.append(["项目", "结果"])
             sheet.append(["Office", "通过"])
             workbook.save(spreadsheet)
@@ -985,16 +1040,21 @@ notify_on_no_change = false
             checks = []
             for path in artifacts:
                 if path.suffix.casefold() == ".xlsx":
-                    excel_check = verify_excel(path)
+                    role = "ledger" if path == prepared.staging_ledger else "daily"
+                    excel_check = verify_excel(path, run_id=prepared.run_id, role=role)
                     self.assertTrue(excel_check.passed, excel_check.error)
                     checks.append(excel_check)
                 elif path.suffix.casefold() == ".docx":
-                    rendered = verify_word(path, prepared.staging_dir / f"render-{path.stem}", renderer=renderer)
+                    rendered = verify_word(
+                        path, prepared.staging_dir / f"render-{path.stem}",
+                        renderer=renderer, run_id=prepared.run_id,
+                    )
                     checks.append(bind_word_visual_decision(
                         rendered,
                         WordRenderDecision.from_check(rendered, approved=True, reviewer="Task11 integration"),
+                        run_id=prepared.run_id,
                     ))
-            return OfficeEvidenceBundle.from_checks(tuple(checks))
+            return OfficeEvidenceBundle.from_checks(tuple(checks), run_id=prepared.run_id)
 
         coordinator = self.coordinator(report_builder=build_reports, office_verifier=verify_all)
         prepared = coordinator.prepare(replace(self.request, requested_run_id="run-real-office-publication"))

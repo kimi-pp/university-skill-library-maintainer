@@ -10,6 +10,7 @@ from pathlib import Path
 import shutil
 import subprocess
 from typing import Any, Iterable
+import weakref
 
 from .paths import assert_ordinary_path, is_link_or_reparse
 
@@ -81,6 +82,7 @@ class OfficeCheck:
     office_passed: bool
     office_opened: bool
     read_only: bool
+    excel_role: str | None = None
     key_sheet: str | None = None
     last_row: int | None = None
     last_column: int | None = None
@@ -148,37 +150,27 @@ class OfficeEvidenceBundle:
     """Exact Office evidence for every Word/Excel artifact in a commit."""
 
     checks: tuple[OfficeCheck, ...]
+    run_id: str
     sha256: str
 
     @classmethod
-    def from_checks(cls, checks: Iterable[OfficeCheck]) -> "OfficeEvidenceBundle":
+    def from_checks(cls, checks: Iterable[OfficeCheck], *, run_id: str) -> "OfficeEvidenceBundle":
+        normalized_run_id = _required_run_id(run_id)
         frozen = tuple(checks)
         seen: set[Path] = set()
-        records: list[dict[str, object]] = []
         for check in frozen:
             source = check.source_path.absolute()
             if source in seen:
                 raise OfficeVerificationError(f"Office 证据重复绑定同一文件：{source}")
             seen.add(source)
+            _require_trusted_check(check, normalized_run_id, final=True)
             _validate_check(check)
-            records.append({
-                "kind": check.kind, "source_path": str(source),
-                "source_sha256": check.source_sha256, "pdf_sha256": check.pdf_sha256,
-                "page_sha256": list(check.page_sha256),
-                "body_nonwhite_pixels": list(check.body_nonwhite_pixels),
-                "visual_reviewed": check.visual_reviewed,
-                "page_approved": list(check.page_approved),
-                "visual_reviewer": check.visual_reviewer,
-                "process_count_before": check.process_count_before,
-                "process_count_after": check.process_count_after,
-            })
-        encoded = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
-        return cls(frozen, sha256(encoded).hexdigest())
+        bundle = cls(frozen, normalized_run_id, _evidence_digest(frozen, normalized_run_id))
+        _register_bundle(bundle)
+        return bundle
 
     def assert_covers(self, paths: Iterable[str | Path]) -> None:
-        rebuilt = type(self).from_checks(self.checks)
-        if rebuilt.sha256 != self.sha256:
-            raise OfficeVerificationError("Office 证据摘要与逐项证据不一致。")
+        _require_trusted_bundle(self, self.run_id)
         required = {
             Path(path).absolute()
             for path in paths
@@ -191,6 +183,167 @@ class OfficeEvidenceBundle:
             raise OfficeVerificationError(f"Office 证据未精确覆盖发布文件；缺失={missing}；多余={extra}")
         for check in self.checks:
             _validate_check(check)
+
+
+@dataclass
+class _CheckRecord:
+    check: weakref.ReferenceType[OfficeCheck]
+    run_id: str
+    final: bool
+    facts: tuple[object, ...]
+
+
+@dataclass
+class _BundleRecord:
+    bundle: weakref.ReferenceType[OfficeEvidenceBundle]
+    run_id: str
+    facts: tuple[object, ...]
+
+
+_TRUSTED_CHECKS: dict[int, _CheckRecord] = {}
+_TRUSTED_BUNDLES: dict[int, _BundleRecord] = {}
+
+
+def consume_office_evidence(bundle: object, *, run_id: str) -> OfficeEvidenceBundle:
+    """Consume the exact run-bound verifier capability immediately before authority replace."""
+
+    trusted = _require_trusted_bundle(bundle, _required_run_id(run_id))
+    _TRUSTED_BUNDLES.pop(id(trusted), None)
+    return trusted
+
+
+def clear_office_run_state(run_id: str | None = None) -> None:
+    """Release only one run's transient verifier capabilities (or all in test cleanup)."""
+
+    if run_id is None:
+        _TRUSTED_CHECKS.clear()
+        _TRUSTED_BUNDLES.clear()
+        return
+    for identity, record in tuple(_TRUSTED_CHECKS.items()):
+        if record.run_id == run_id:
+            _TRUSTED_CHECKS.pop(identity, None)
+    for identity, record in tuple(_TRUSTED_BUNDLES.items()):
+        if record.run_id == run_id:
+            _TRUSTED_BUNDLES.pop(identity, None)
+
+
+def _required_run_id(run_id: str) -> str:
+    normalized = str(run_id).strip()
+    if not normalized:
+        raise OfficeVerificationError("Office verifier capability 必须绑定非空运行标识。")
+    return normalized
+
+
+def _register_check(check: OfficeCheck, run_id: str, *, final: bool) -> None:
+    identity = id(check)
+
+    def _discard(reference: weakref.ReferenceType[OfficeCheck]) -> None:
+        record = _TRUSTED_CHECKS.get(identity)
+        if record is not None and record.check is reference:
+            _TRUSTED_CHECKS.pop(identity, None)
+
+    _TRUSTED_CHECKS[identity] = _CheckRecord(
+        weakref.ref(check, _discard), run_id, final, _check_facts(check),
+    )
+
+
+def _require_trusted_check(check: object, run_id: str, *, final: bool) -> OfficeCheck:
+    record = _TRUSTED_CHECKS.get(id(check))
+    if (
+        not isinstance(check, OfficeCheck)
+        or record is None
+        or record.check() is not check
+        or record.run_id != run_id
+        or record.final is not final
+        or record.facts != _check_facts(check)
+    ):
+        raise OfficeVerificationError("OfficeCheck 必须由当前运行的真实 verifier capability 签发且未篡改。")
+    return check
+
+
+def _register_bundle(bundle: OfficeEvidenceBundle) -> None:
+    identity = id(bundle)
+
+    def _discard(reference: weakref.ReferenceType[OfficeEvidenceBundle]) -> None:
+        record = _TRUSTED_BUNDLES.get(identity)
+        if record is not None and record.bundle is reference:
+            _TRUSTED_BUNDLES.pop(identity, None)
+
+    _TRUSTED_BUNDLES[identity] = _BundleRecord(
+        weakref.ref(bundle, _discard), bundle.run_id, _bundle_facts(bundle),
+    )
+
+
+def _require_trusted_bundle(bundle: object, run_id: str) -> OfficeEvidenceBundle:
+    record = _TRUSTED_BUNDLES.get(id(bundle))
+    if (
+        not isinstance(bundle, OfficeEvidenceBundle)
+        or record is None
+        or record.bundle() is not bundle
+        or record.run_id != run_id
+        or record.facts != _bundle_facts(bundle)
+    ):
+        raise OfficeVerificationError("OfficeEvidenceBundle 不是当前运行真实签发且未消费的受信 capability。")
+    for check in bundle.checks:
+        _require_trusted_check(check, run_id, final=True)
+    return bundle
+
+
+def _check_facts(check: object) -> tuple[object, ...]:
+    if not isinstance(check, OfficeCheck):
+        return ()
+    return (
+        check.kind, check.source_path.absolute(), check.source_sha256, check.passed,
+        check.office_passed, check.office_opened, check.read_only, check.excel_role,
+        check.key_sheet, check.last_row, check.last_column, check.last_value,
+        check.pdf_path.absolute() if check.pdf_path else None, check.pdf_sha256,
+        tuple(path.absolute() for path in check.page_paths), tuple(check.page_sha256),
+        tuple(check.body_nonwhite_pixels), tuple(check.blank_pages), check.visual_reviewed,
+        tuple(check.page_approved), check.visual_reviewer, check.process_count_before,
+        check.process_count_after, check.error,
+    )
+
+
+def _evidence_digest(checks: tuple[OfficeCheck, ...], run_id: str) -> str:
+    records = [{
+        "run_id": run_id,
+        "kind": check.kind,
+        "source_path": str(check.source_path.absolute()),
+        "source_sha256": check.source_sha256,
+        "passed": check.passed,
+        "office_passed": check.office_passed,
+        "office_opened": check.office_opened,
+        "read_only": check.read_only,
+        "excel_role": check.excel_role,
+        "key_sheet": check.key_sheet,
+        "last_row": check.last_row,
+        "last_column": check.last_column,
+        "last_value": check.last_value,
+        "pdf_path": str(check.pdf_path.absolute()) if check.pdf_path else None,
+        "pdf_sha256": check.pdf_sha256,
+        "page_paths": [str(path.absolute()) for path in check.page_paths],
+        "page_sha256": list(check.page_sha256),
+        "body_nonwhite_pixels": list(check.body_nonwhite_pixels),
+        "blank_pages": list(check.blank_pages),
+        "visual_reviewed": check.visual_reviewed,
+        "page_approved": list(check.page_approved),
+        "visual_reviewer": check.visual_reviewer,
+        "process_count_before": check.process_count_before,
+        "process_count_after": check.process_count_after,
+        "error": check.error,
+    } for check in checks]
+    encoded = json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return sha256(encoded).hexdigest()
+
+
+def _bundle_facts(bundle: object) -> tuple[object, ...]:
+    if not isinstance(bundle, OfficeEvidenceBundle):
+        return ()
+    return (
+        bundle.run_id, tuple(id(check) for check in bundle.checks),
+        tuple(_check_facts(check) for check in bundle.checks), bundle.sha256,
+        _evidence_digest(bundle.checks, bundle.run_id),
+    )
 
 
 def _sha256(path: Path) -> str:
@@ -211,13 +364,28 @@ def _validate_check(check: OfficeCheck) -> None:
         raise OfficeVerificationError(f"Office 进程未精确返回基线：{source}")
     if not source.is_file() or is_link_or_reparse(source) or _sha256(source) != check.source_sha256:
         raise OfficeVerificationError(f"Office 源文件缺失或哈希已变化：{source}")
-    if check.kind == "word":
+    if check.kind == "excel":
+        expected = {
+            "ledger": {"当前Skill", "运行记录"},
+            "daily": {"执行概览"},
+        }
+        if check.excel_role not in expected or check.key_sheet not in expected[check.excel_role]:
+            raise OfficeVerificationError(f"Excel 关键工作表未绑定文件角色：{source}")
+        if not check.last_row or check.last_row < 2 or not check.last_column or not (check.last_value or "").strip():
+            raise OfficeVerificationError(f"Excel 关键工作表没有正式数据行：{source}")
+    else:
         if not check.visual_reviewed or check.blank_pages:
             raise OfficeVerificationError(f"Word 未完成逐页视觉批准：{source}")
         if not check.pdf_path or not check.pdf_sha256 or not check.page_paths:
             raise OfficeVerificationError(f"Word PDF/逐页证据不完整：{source}")
-        if len(check.page_paths) != len(check.page_sha256):
+        if not (
+            len(check.page_paths)
+            == len(check.page_sha256)
+            == len(check.body_nonwhite_pixels)
+        ):
             raise OfficeVerificationError(f"Word 逐页证据数量不一致：{source}")
+        if any(count <= 0 for count in check.body_nonwhite_pixels):
+            raise OfficeVerificationError(f"Word 逐页正文像素证据无效：{source}")
         if check.page_approved != (True,) * len(check.page_sha256) or not (check.visual_reviewer or "").strip():
             raise OfficeVerificationError(f"Word 逐页批准枚举或复核者证据不完整：{source}")
         evidence = ((check.pdf_path, check.pdf_sha256), *zip(check.page_paths, check.page_sha256))
@@ -270,28 +438,55 @@ def _run_office(*arguments: str) -> dict[str, Any]:
     return result
 
 
-def verify_excel(path: str | Path) -> OfficeCheck:
+def verify_excel(
+    path: str | Path,
+    *,
+    run_id: str | None = None,
+    role: str = "ledger",
+) -> OfficeCheck:
     source = _ordinary_file(path, ".xlsx")
+    if role not in {"ledger", "daily"}:
+        raise OfficeVerificationError("Excel 文件角色只能为 ledger 或 daily。")
     source_hash = _sha256(source)
-    result = _run_office("-Excel", str(source))
+    result = _run_office("-Excel", str(source), "-ExcelRole", role)
     before = int(result.get("process_count_before") or 0)
     after = int(result.get("process_count_after") or 0)
     exact_baseline = before == after
-    passed = bool(result.get("passed")) and exact_baseline
+    key_sheet = _optional_text(result.get("key_sheet"))
+    last_row = _optional_int(result.get("last_row"))
+    last_column = _optional_int(result.get("last_column"))
+    last_value = _optional_text(result.get("last_value"))
+    expected_sheets = {"ledger": {"当前Skill", "运行记录"}, "daily": {"执行概览"}}
+    role_bound = key_sheet in expected_sheets[role]
+    populated = bool(last_row and last_row >= 2 and last_column and last_value)
+    passed = bool(result.get("passed")) and exact_baseline and role_bound and populated
     error = _friendly_error(result.get("error"))
     if not exact_baseline:
         error = "Excel COM 进程未精确返回验证前基线。"
-    return OfficeCheck(
+    elif not role_bound:
+        error = "缺少与文件角色匹配的关键工作表。"
+    elif not populated:
+        error = "关键工作表没有非空数据行或末尾数据单元格为空。"
+    check = OfficeCheck(
         kind="excel", source_path=source, source_sha256=source_hash,
         passed=passed, office_passed=passed,
         office_opened=bool(result.get("office_opened")), read_only=bool(result.get("read_only")),
-        key_sheet=_optional_text(result.get("key_sheet")), last_row=_optional_int(result.get("last_row")),
-        last_column=_optional_int(result.get("last_column")), last_value=_optional_text(result.get("last_value")),
+        excel_role=role,
+        key_sheet=key_sheet, last_row=last_row, last_column=last_column, last_value=last_value,
         process_count_before=before, process_count_after=after, error=error,
     )
+    if run_id is not None and check.passed:
+        _register_check(check, _required_run_id(run_id), final=True)
+    return check
 
 
-def verify_word(path: str | Path, render_dir: str | Path, *, renderer: RendererCommand) -> OfficeCheck:
+def verify_word(
+    path: str | Path,
+    render_dir: str | Path,
+    *,
+    renderer: RendererCommand,
+    run_id: str | None = None,
+) -> OfficeCheck:
     source = _ordinary_file(path, ".docx")
     source_hash = _sha256(source)
     render = Path(render_dir).absolute()
@@ -312,12 +507,13 @@ def verify_word(path: str | Path, render_dir: str | Path, *, renderer: RendererC
         error = _friendly_error(result.get("error")) or "Word Office 复读失败。"
         if not exact_baseline:
             error = "Word COM 进程未精确返回验证前基线。"
-        return OfficeCheck(
+        check = OfficeCheck(
             kind="word", source_path=source, source_sha256=source_hash,
             passed=False, office_passed=False, office_opened=bool(result.get("office_opened")),
             read_only=bool(result.get("read_only")), process_count_before=before,
             process_count_after=after, error=error,
         )
+        return check
     pdf = Path(pdf_text).absolute()
     try:
         pdf.relative_to(render)
@@ -332,7 +528,7 @@ def verify_word(path: str | Path, render_dir: str | Path, *, renderer: RendererC
         error = "逐页图像已生成；必须绑定外部视觉复核通过判定后方可发布。"
         if blank_pages:
             error = f"逐页渲染检测到无正文页面：{','.join(map(str, blank_pages))}"
-        return OfficeCheck(
+        check = OfficeCheck(
             kind="word", source_path=source, source_sha256=source_hash,
             passed=False, office_passed=True, office_opened=bool(result.get("office_opened")),
             read_only=bool(result.get("read_only")), pdf_path=pdf, pdf_sha256=_sha256(pdf),
@@ -340,6 +536,9 @@ def verify_word(path: str | Path, render_dir: str | Path, *, renderer: RendererC
             blank_pages=blank_pages, process_count_before=before, process_count_after=after,
             error=error,
         )
+        if run_id is not None and check.office_passed:
+            _register_check(check, _required_run_id(run_id), final=False)
+        return check
     except OfficeVerificationError as exc:
         return OfficeCheck(
             kind="word", source_path=source, source_sha256=source_hash,
@@ -350,7 +549,19 @@ def verify_word(path: str | Path, render_dir: str | Path, *, renderer: RendererC
         )
 
 
-def bind_word_visual_decision(check: OfficeCheck, decision: WordRenderDecision) -> OfficeCheck:
+def bind_word_visual_decision(
+    check: OfficeCheck,
+    decision: WordRenderDecision,
+    *,
+    run_id: str | None = None,
+) -> OfficeCheck:
+    if not isinstance(decision, WordRenderDecision):
+        raise OfficeVerificationError("Word 视觉判定必须使用结构化逐页决定。")
+    record = _TRUSTED_CHECKS.get(id(check))
+    if record is None:
+        raise OfficeVerificationError("Word OfficeCheck 必须由真实 verifier capability 签发后才能绑定视觉判定。")
+    active_run_id = _required_run_id(run_id if run_id is not None else record.run_id)
+    _require_trusted_check(check, active_run_id, final=False)
     if check.kind != "word" or not check.office_passed:
         raise OfficeVerificationError("只有完成 Word Office/PDF/逐页渲染的结果可以绑定视觉判定。")
     if check.process_count_before != check.process_count_after:
@@ -375,8 +586,10 @@ def bind_word_visual_decision(check: OfficeCheck, decision: WordRenderDecision) 
         raise OfficeVerificationError("外部视觉判定未绑定当前 Word/PDF 哈希。")
     if actual != expected:
         raise OfficeVerificationError("外部视觉判定必须逐页枚举并绑定每一页精确哈希。")
+    if not decision.reviewer.strip():
+        raise OfficeVerificationError("外部逐页视觉判定必须绑定非空复核者。")
     approved = bool(decision.pages) and all(page.approved for page in decision.pages)
-    return replace(
+    approved_check = replace(
         check,
         passed=approved,
         visual_reviewed=True,
@@ -384,6 +597,10 @@ def bind_word_visual_decision(check: OfficeCheck, decision: WordRenderDecision) 
         visual_reviewer=decision.reviewer,
         error=None if approved else "外部逐页视觉复核未通过。",
     )
+    _TRUSTED_CHECKS.pop(id(check), None)
+    if approved_check.passed:
+        _register_check(approved_check, active_run_id, final=True)
+    return approved_check
 
 
 def _optional_text(value: object) -> str | None:
@@ -406,6 +623,7 @@ def _friendly_error(value: object) -> str | None:
     messages = {
         "excel-not-read-only": "Excel 未以只读方式打开。",
         "excel-no-data-row": "关键工作表没有非空数据行或末尾数据单元格为空。",
+        "excel-key-sheet-missing": "缺少与文件角色匹配的关键工作表。",
         "excel-process-leak": "Excel COM 进程未精确返回验证前基线。",
         "word-not-read-only": "Word 未以只读方式打开。",
         "word-pdf-empty-or-missing": "Word PDF 导出为空或缺失。",

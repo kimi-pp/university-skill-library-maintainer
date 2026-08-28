@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 from dataclasses import replace
 from hashlib import sha256
 import json
@@ -19,9 +20,11 @@ from PIL import Image
 
 from skill_maintainer.office import (
     OfficeCheck,
+    OfficeEvidenceBundle,
     OfficeVerificationError,
     WordRenderDecision,
     bind_word_visual_decision,
+    clear_office_run_state,
     verify_excel,
     verify_word,
 )
@@ -115,6 +118,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
+        self.addCleanup(clear_office_run_state)
         self.root = Path(self.temporary.name)
 
     def test_excel_opens_read_only_reopens_and_keeps_520th_data_row(self):
@@ -137,6 +141,71 @@ class OfficeVerificationTestCase(unittest.TestCase):
         self.addCleanup(workbook.close)
         self.assertEqual(workbook["当前Skill"]["A521"].value, "GH-01-0520")
 
+    def test_excel_role_is_fail_closed_and_daily_overview_cannot_hide_behind_instructions(self):
+        daily = self.root / "维护日报.xlsx"
+        workbook = Workbook()
+        instructions = workbook.active
+        instructions.title = "使用说明"
+        instructions.append(["说明", "这张表有内容"])
+        overview = workbook.create_sheet("执行概览")
+        overview.append(["项目", "结果"])
+        workbook.save(daily)
+        workbook.close()
+
+        rejected = verify_excel(daily, run_id="run-daily-empty", role="daily")
+
+        self.assertFalse(rejected.passed)
+        self.assertEqual(rejected.key_sheet, "执行概览")
+        self.assertIn("数据行", rejected.error or "")
+
+        workbook = load_workbook(daily)
+        workbook["执行概览"].append(["运行状态", "完成"])
+        workbook.save(daily)
+        workbook.close()
+        accepted = verify_excel(daily, run_id="run-daily-filled", role="daily")
+        self.assertTrue(accepted.passed, accepted.error)
+        self.assertEqual(accepted.key_sheet, "执行概览")
+        self.assertEqual((accepted.last_row, accepted.last_column, accepted.last_value), (2, 2, "完成"))
+
+        arbitrary = self.root / "任意首表.xlsx"
+        workbook = Workbook()
+        workbook.active.title = "任意首表"
+        workbook.active.append(["项目", "结果"])
+        workbook.active.append(["伪装", "有数据"])
+        workbook.save(arbitrary)
+        workbook.close()
+        missing = verify_excel(arbitrary, run_id="run-ledger-missing", role="ledger")
+        self.assertFalse(missing.passed)
+        self.assertIn("关键工作表", missing.error or "")
+
+    def test_ledger_uses_run_record_when_current_skill_has_no_formal_id(self):
+        ledger = self.root / "ledger-with-nonformal-residue.xlsx"
+        workbook = Workbook()
+        current = workbook.active
+        current.title = "当前Skill"
+        current.append(["内部标识", "Skill名称"])
+        current["B2"] = "非正式残留说明"
+        runs = workbook.create_sheet("运行记录")
+        runs.append(["运行标识", "状态"])
+        runs.append(["run-ledger-fallback", "成功"])
+        workbook.save(ledger)
+        workbook.close()
+
+        check = verify_excel(ledger, run_id="run-ledger-fallback", role="ledger")
+
+        self.assertTrue(check.passed, check.error)
+        self.assertEqual(check.key_sheet, "运行记录")
+        self.assertEqual((check.last_row, check.last_column, check.last_value), (2, 2, "成功"))
+
+        workbook = load_workbook(ledger)
+        del workbook["运行记录"]
+        workbook.save(ledger)
+        workbook.close()
+        rejected = verify_excel(ledger, run_id="run-ledger-no-fallback", role="ledger")
+        self.assertFalse(rejected.passed)
+        self.assertEqual(rejected.key_sheet, "当前Skill")
+        self.assertIn("数据行", rejected.error or "")
+
     def test_excel_rejects_header_only_and_corrupt_inputs_without_leaking_processes(self):
         empty = self.root / "empty.xlsx"
         corrupt = self.root / "corrupt.xlsx"
@@ -158,8 +227,8 @@ class OfficeVerificationTestCase(unittest.TestCase):
         write_word(word_path)
 
         renderer = write_renderer_command(self.root)
-        first = verify_word(word_path, self.root / "render-first", renderer=renderer)
-        second = verify_word(word_path, self.root / "render-second", renderer=renderer)
+        first = verify_word(word_path, self.root / "render-first", renderer=renderer, run_id="run-word-first")
+        second = verify_word(word_path, self.root / "render-second", renderer=renderer, run_id="run-word-second")
 
         for check in (first, second):
             self.assertTrue(check.office_passed, check.error)
@@ -199,7 +268,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
         self.assertEqual(sentinel.read_text(encoding="utf-8"), "owned by caller")
         self.assertEqual(tuple(render.iterdir()), (sentinel,))
 
-    def test_word_visual_binding_rejects_stale_page_hash_and_blank_page(self):
+    def test_word_visual_binding_rejects_hand_constructed_check(self):
         page = self.root / "page-1.png"
         Image.new("RGB", (64, 64), "white").save(page)
         source = self.root / "sample.docx"
@@ -214,32 +283,8 @@ class OfficeVerificationTestCase(unittest.TestCase):
             process_count_before=0, process_count_after=0,
         )
         decision = WordRenderDecision.from_check(check, approved=True, reviewer="external")
-        with self.assertRaisesRegex(OfficeVerificationError, "空白"):
+        with self.assertRaisesRegex(OfficeVerificationError, "签发|capability"):
             bind_word_visual_decision(check, decision)
-
-        nonblank = self.root / "nonblank.png"
-        image = Image.new("RGB", (64, 64), "white")
-        image.putpixel((10, 10), (0, 0, 0))
-        image.save(nonblank)
-        current = replace(
-            check,
-            page_paths=(nonblank,), page_sha256=(file_sha256(nonblank),), blank_pages=(),
-        )
-        stale = WordRenderDecision.from_check(current, approved=True, reviewer="external")
-        nonblank.write_bytes(nonblank.read_bytes() + b"tampered")
-        with self.assertRaisesRegex(OfficeVerificationError, "哈希"):
-            bind_word_visual_decision(current, stale)
-
-        missing = self.root / "missing.png"
-        image.save(missing)
-        missing_check = replace(
-            check,
-            page_paths=(missing,), page_sha256=(file_sha256(missing),), blank_pages=(),
-        )
-        missing_decision = WordRenderDecision.from_check(missing_check, approved=True, reviewer="external")
-        missing.unlink()
-        with self.assertRaisesRegex(OfficeVerificationError, "缺失"):
-            bind_word_visual_decision(missing_check, missing_decision)
 
     def test_office_result_requires_exact_process_baseline_not_merely_no_increase(self):
         workbook_path = self.root / "baseline.xlsx"
@@ -291,37 +336,37 @@ class OfficeVerificationTestCase(unittest.TestCase):
         self.assertFalse(check.passed)
 
     def test_visual_decision_must_enumerate_and_approve_each_exact_page_hash(self):
-        from skill_maintainer.office import WordPageDecision
-
-        source, pdf = self.root / "two-pages.docx", self.root / "two-pages.pdf"
-        source.write_bytes(b"docx")
-        pdf.write_bytes(b"pdf")
-        pages = (self.root / "page-1.png", self.root / "page-2.png")
-        for index, page in enumerate(pages, start=1):
-            image = Image.new("RGB", (64, 64), "white")
-            image.putpixel((20, 20), (index, 0, 0))
-            image.save(page)
-        check = OfficeCheck(
-            kind="word", source_path=source, source_sha256=file_sha256(source), passed=False,
-            office_passed=True, office_opened=True, read_only=True, pdf_path=pdf,
-            pdf_sha256=file_sha256(pdf), page_paths=pages,
-            page_sha256=tuple(file_sha256(page) for page in pages), blank_pages=(),
-            process_count_before=0, process_count_after=0,
+        source = self.root / "decision-pages.docx"
+        write_word(source)
+        check = verify_word(
+            source, self.root / "decision-render", renderer=write_renderer_command(self.root),
+            run_id="run-incomplete-decision",
         )
         incomplete = WordRenderDecision(
             source_sha256=check.source_sha256,
             pdf_sha256=check.pdf_sha256 or "",
-            pages=(WordPageDecision(1, check.page_sha256[0], True),),
+            pages=(),
             reviewer="external",
         )
         with self.assertRaisesRegex(OfficeVerificationError, "每一页|逐页"):
             bind_word_visual_decision(check, incomplete)
+        complete = WordRenderDecision.from_check(check, approved=True, reviewer="external")
+        page = check.page_paths[0]
+        original = page.read_bytes()
+        page.write_bytes(original + b"tampered")
+        with self.assertRaisesRegex(OfficeVerificationError, "哈希"):
+            bind_word_visual_decision(check, complete)
+        page.write_bytes(original)
+        page.unlink()
+        with self.assertRaisesRegex(OfficeVerificationError, "缺失"):
+            bind_word_visual_decision(check, complete)
 
 
 class PublicationTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
+        self.addCleanup(clear_office_run_state)
         self.root = Path(self.temporary.name)
 
     def make_tree(self, name: str = "run-20260828-220000") -> tuple[Path, Path]:
@@ -340,12 +385,64 @@ class PublicationTestCase(unittest.TestCase):
 
     @staticmethod
     def evidence_for(staging: Path):
-        from skill_maintainer.office import OfficeEvidenceBundle
-
-        return OfficeEvidenceBundle.from_checks((trusted_excel_check(staging / "Skills主台账.xlsx"),))
+        ledger = staging / "Skills主台账.xlsx"
+        result = {
+            "passed": True, "office_opened": True, "read_only": True,
+            "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
+            "last_value": "skill-2", "process_count_before": 0,
+            "process_count_after": 0, "error": None,
+        }
+        with patch("skill_maintainer.office._run_office", return_value=result):
+            check = verify_excel(ledger, run_id=staging.name, role="ledger")
+        return OfficeEvidenceBundle.from_checks((check,), run_id=staging.name)
 
     def plan_for(self, staging: Path, production: Path):
         return build_publish_plan(staging, production, office_evidence=self.evidence_for(staging))
+
+    def test_only_real_verifier_capability_can_issue_run_bound_one_time_evidence(self):
+        staging, production = self.make_tree("run-office-capability")
+        ledger = staging / "Skills主台账.xlsx"
+        office_result = {
+            "passed": True, "office_opened": True, "read_only": True,
+            "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
+            "last_value": "skill-2", "process_count_before": 0,
+            "process_count_after": 0, "error": None,
+        }
+        with patch("skill_maintainer.office._run_office", return_value=office_result):
+            issued = verify_excel(ledger, run_id=staging.name, role="ledger")
+        bundle = OfficeEvidenceBundle.from_checks((issued,), run_id=staging.name)
+        bundle.assert_covers((ledger,))
+        bundle.assert_covers((ledger,))  # pre-publication validation remains retryable
+
+        for forged in (
+            trusted_excel_check(ledger), copy.copy(issued), replace(issued),
+            replace(issued, last_value="tampered"),
+        ):
+            with self.subTest(forged=forged.last_value):
+                with self.assertRaisesRegex(OfficeVerificationError, "签发|受信|capability"):
+                    OfficeEvidenceBundle.from_checks((forged,), run_id=staging.name)
+        with self.assertRaisesRegex(OfficeVerificationError, "运行|run"):
+            OfficeEvidenceBundle.from_checks((issued,), run_id="another-run")
+        for forged_bundle in (copy.copy(bundle), replace(bundle)):
+            with self.assertRaisesRegex(OfficeVerificationError, "签发|受信|capability"):
+                forged_bundle.assert_covers((ledger,))
+
+        plan = build_publish_plan(staging, production, office_evidence=bundle)
+        publish_atomically(plan)
+        with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
+            bundle.assert_covers((ledger,))
+
+    def test_registry_cleanup_is_scoped_to_its_own_run(self):
+        first_staging, _ = self.make_tree("run-registry-first")
+        second_staging, _ = self.make_tree("run-registry-second")
+        first = self.evidence_for(first_staging)
+        second = self.evidence_for(second_staging)
+
+        clear_office_run_state(first.run_id)
+
+        with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
+            first.assert_covers((first_staging / "Skills主台账.xlsx",))
+        second.assert_covers((second_staging / "Skills主台账.xlsx",))
 
     def test_build_plan_binds_every_input_and_single_authority(self):
         staging, production = self.make_tree()
@@ -448,6 +545,8 @@ class PublicationTestCase(unittest.TestCase):
 
         self.assertEqual(file_sha256(plan.authority_path), plan.expected_authority_sha256)
         self.assertFalse(plan.generation_path.exists())
+        with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
+            plan.office_evidence.assert_covers((plan.staged_ledger,))
 
     def test_forged_delivery_traversal_is_rejected_before_any_publication(self):
         staging, production = self.make_tree()
@@ -469,8 +568,13 @@ class PublicationTestCase(unittest.TestCase):
         staging, production = self.make_tree("run-office-evidence")
         report = staging / "deliveries" / "报告.docx"
         write_word(report)
+        evidence = self.evidence_for(staging)
         with self.assertRaisesRegex(PublishError, "Office.*证据|证据.*Office"):
-            build_publish_plan(staging, production, office_evidence=self.evidence_for(staging))
+            build_publish_plan(staging, production, office_evidence=evidence)
+        evidence.assert_covers((staging / "Skills主台账.xlsx",))
+        report.unlink()
+        plan = build_publish_plan(staging, production, office_evidence=evidence)
+        self.assertEqual(plan.office_evidence, evidence)
 
     def test_build_plan_rejects_forged_office_evidence_digest(self):
         staging, production = self.make_tree("run-forged-evidence")
@@ -508,6 +612,8 @@ class PublicationTestCase(unittest.TestCase):
         self.assertEqual(file_sha256(plan.authority_path), plan.staged_ledger_sha256)
         self.assertTrue(plan.generation_path.is_dir())
         self.assertTrue(plan.backup_path.is_file())
+        with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
+            plan.office_evidence.assert_covers((plan.staged_ledger,))
 
     @unittest.skipUnless(os.name == "nt", "Windows directory handle pinning acceptance")
     def test_generation_and_parent_directories_are_handle_pinned_through_authority_replace(self):

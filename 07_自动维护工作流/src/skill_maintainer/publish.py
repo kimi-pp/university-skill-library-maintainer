@@ -17,7 +17,12 @@ if os.name == "nt":
     import msvcrt
     from ctypes import wintypes
 
-from .office import OfficeEvidenceBundle, OfficeVerificationError
+from .office import (
+    OfficeEvidenceBundle,
+    OfficeVerificationError,
+    clear_office_run_state,
+    consume_office_evidence,
+)
 from .paths import assert_ordinary_path, is_link_or_reparse
 
 
@@ -234,6 +239,8 @@ def build_publish_plan(
         suffix += 1
     if not isinstance(office_evidence, OfficeEvidenceBundle):
         raise PublishError("发布计划必须绑定结构化 Office 证据。")
+    if office_evidence.run_id != run_id:
+        raise PublishError("Office 发布证据未绑定当前发布运行标识。")
     try:
         office_evidence.assert_covers((staged_ledger, *delivery_paths))
     except OfficeVerificationError as exc:
@@ -257,7 +264,11 @@ def publish_atomically(
     before_authority_replace: Callable[[], None] | None = None,
 ) -> PublishReceipt:
     """Install one immutable generation and linearize solely through the ledger."""
-    _validate_plan_shape(plan)
+    try:
+        _validate_plan_shape(plan)
+    except BaseException:
+        clear_office_run_state(plan.run_id)
+        raise
     pending_generation = plan.generation_path.parent / f".{plan.run_id}.pending"
     authority_temp = plan.authority_path.parent / f".{plan.authority_path.name}.{plan.run_id}.pending"
     backup_temp = plan.backup_path.parent / f".{plan.backup_path.name}.pending"
@@ -347,6 +358,7 @@ def publish_atomically(
             _remove_tree_if_owned(pending_generation, plan.generation_path.parent)
             if generation_installed:
                 _remove_tree_if_owned(plan.generation_path, plan.generation_path.parent)
+        clear_office_run_state(plan.run_id)
 
 
 def commit_prepared_generation(
@@ -376,14 +388,18 @@ def commit_prepared_generation(
     archive = production / "ledger" / "archive"
     ledger_parent = production / "ledger"
     output_parent = production / "output"
-    _require_ordinary_directory(production, label="生产根目录")
-    _require_ordinary_directory(ledger_parent, label="生产 ledger 目录")
-    _require_ordinary_directory(output_parent, label="生产 output 目录")
-    _require_ordinary_directory(generations, label="发布代次目录")
+    try:
+        _require_ordinary_directory(production, label="生产根目录")
+        _require_ordinary_directory(ledger_parent, label="生产 ledger 目录")
+        _require_ordinary_directory(output_parent, label="生产 output 目录")
+        _require_ordinary_directory(generations, label="发布代次目录")
+    except BaseException:
+        clear_office_run_state(run_id)
+        raise
     container_pins = _GenerationPins()
     container_paths = (production, ledger_parent, output_parent, generations)
-    container_identities = tuple(_directory_identity(path) for path in container_paths)
     try:
+        container_identities = tuple(_directory_identity(path) for path in container_paths)
         for path in container_paths:
             container_pins.pin(path, directory=True)
         _assert_container_paths(container_paths, container_identities, container_pins)
@@ -393,6 +409,7 @@ def commit_prepared_generation(
         _assert_container_paths(container_paths, container_identities, container_pins)
     except BaseException:
         container_pins.release()
+        clear_office_run_state(run_id)
         raise
     try:
         staged_hash, manifest, backup, backup_exists = _prepare_commit_arguments(
@@ -405,6 +422,7 @@ def commit_prepared_generation(
         )
     except BaseException:
         container_pins.release()
+        clear_office_run_state(run_id)
         raise
     backup_temp = archive / f".{backup.name}.{run_id}.pending"
     authority_temp = authority.parent / f".{authority.name}.{run_id}.commit"
@@ -453,6 +471,10 @@ def commit_prepared_generation(
             container_paths=container_paths, container_identities=container_identities,
             container_pins=container_pins,
         )
+        try:
+            consume_office_evidence(office_evidence, run_id=run_id)
+        except OfficeVerificationError as exc:
+            raise PublishError(f"Runner Office verifier capability 无效或已消费：{exc}") from exc
         os.replace(authority_temp, authority)
         return PublishReceipt(
             run_id=run_id, authority_path=authority, authority_sha256=staged_hash,
@@ -480,6 +502,7 @@ def commit_prepared_generation(
             pass
         _remove_file_if_owned(authority_temp, authority.parent)
         _remove_file_if_owned(backup_temp, archive)
+        clear_office_run_state(run_id)
 
 
 def _assert_prepared_parents(
@@ -628,9 +651,12 @@ def _assert_generation_office_binding(
     evidence: OfficeEvidenceBundle,
 ) -> None:
     deliveries = staged_ledger.parent / "deliveries"
+    evidence_relative: set[Path] = set()
+    ledger_checks = 0
     for check in evidence.checks:
         source = check.source_path.absolute()
         if source == staged_ledger:
+            ledger_checks += 1
             continue
         try:
             relative = source.relative_to(deliveries)
@@ -641,6 +667,18 @@ def _assert_generation_office_binding(
             raise PublishError(f"generation 缺少 Office 证据对应文件：{relative}")
         if _sha256(published) != check.source_sha256:
             raise PublishError(f"generation Office 文件与批准证据哈希不一致：{relative}")
+        evidence_relative.add(relative)
+    if ledger_checks != 1:
+        raise PublishError("Office 证据必须精确包含一份暂存主台账。")
+    generation_relative = {
+        path.relative_to(generation)
+        for path in generation.rglob("*")
+        if path.is_file() and path.suffix.casefold() in {".docx", ".xlsx"}
+    }
+    if generation_relative != evidence_relative:
+        missing = sorted(path.as_posix() for path in generation_relative - evidence_relative)
+        extra = sorted(path.as_posix() for path in evidence_relative - generation_relative)
+        raise PublishError(f"generation Office 文件集合与 verifier 证据不精确相等；无证据={missing}；无文件={extra}")
 
 
 def _verify_plan_inputs(plan: PublishPlan) -> None:
