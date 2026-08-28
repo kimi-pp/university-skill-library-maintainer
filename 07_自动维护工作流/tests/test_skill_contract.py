@@ -1,3 +1,4 @@
+import builtins
 import hashlib
 import importlib
 import os
@@ -9,6 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from skill_maintainer.cli import build_parser
+from skill_maintainer.office import RendererCommand
 from skill_maintainer.settings import SettingsError, load_settings
 
 
@@ -147,6 +149,10 @@ class SkillContractTest(unittest.TestCase):
         self.assertNotRegex(combined, r"[A-Za-z]:\\Users\\")
         self.assertNotIn(".cache/codex-runtimes", combined)
 
+    def test_renderer_command_documents_loader_bound_project_built_ownership(self):
+        self.assertIn("loader-bound dependencies", RendererCommand.__doc__)
+        self.assertIn("project-built entrypoint", RendererCommand.__doc__)
+
     def test_automation_prompt_has_only_bound_runtime_inputs(self):
         text = self.read(AUTOMATION_PROMPT_PATH)
         for token in (
@@ -244,26 +250,41 @@ class WorkspaceRendererBuilderTest(unittest.TestCase):
         self.addCleanup(self.tempdir.cleanup)
         self.root = Path(self.tempdir.name).absolute()
         self.runtime = self.root / "runtime" / "dependencies"
-        self.python = self.runtime / "python" / "python.exe"
-        self.packages = self.runtime / "python"
-        self.override = self.runtime / "bin" / "override"
-        self.fallback = self.runtime / "bin" / "fallback"
-        self.poppler_bin = self.runtime / "native" / "poppler" / "Library" / "bin"
-        for directory in (self.python.parent, self.override, self.fallback, self.poppler_bin):
+        paths = self.create_runtime(self.runtime)
+        self.python = paths["python"]
+        self.packages = paths["packages"]
+        self.override = paths["override"]
+        self.fallback = paths["fallback"]
+        self.poppler_bin = paths["poppler_bin"]
+
+    def create_runtime(self, runtime: Path) -> dict[str, Path]:
+        python = runtime / "python" / "python.exe"
+        packages = runtime / "python"
+        override = runtime / "bin" / "override"
+        fallback = runtime / "bin" / "fallback"
+        poppler_bin = runtime / "native" / "poppler" / "Library" / "bin"
+        for directory in (python.parent, override, fallback, poppler_bin):
             directory.mkdir(parents=True, exist_ok=True)
-        self.python.write_bytes(b"python")
-        (self.poppler_bin / "pdftoppm.exe").write_bytes(b"pdftoppm")
-        (self.poppler_bin / "pdfinfo.exe").write_bytes(b"pdfinfo")
-        nested = self.runtime / "native" / "poppler" / "bin"
+        python.write_bytes(b"python")
+        (poppler_bin / "pdftoppm.exe").write_bytes(b"pdftoppm")
+        (poppler_bin / "pdfinfo.exe").write_bytes(b"pdfinfo")
+        nested = runtime / "native" / "poppler" / "bin"
         nested.mkdir(parents=True)
         (nested / "pdftoppm.cmd").write_text(
             '@echo off\n"%~dp0..\\Library\\bin\\pdftoppm.exe" %*\n',
             encoding="utf-8",
         )
-        (self.override / "pdftoppm.cmd").write_text(
+        (override / "pdftoppm.cmd").write_text(
             '@echo off\nset "SCRIPT_DIR=%~dp0"\ncall "%SCRIPT_DIR%..\\..\\native\\poppler\\bin\\pdftoppm.cmd" %*\n',
             encoding="utf-8",
         )
+        return {
+            "python": python,
+            "packages": packages,
+            "override": override,
+            "fallback": fallback,
+            "poppler_bin": poppler_bin,
+        }
 
     def loader_output(self, **overrides: Path) -> str:
         values = {
@@ -354,6 +375,38 @@ class WorkspaceRendererBuilderTest(unittest.TestCase):
         ):
             module.build_workspace_renderer_command(self.loader_output(), PROJECT_ROOT)
 
+    def test_mixed_adjacent_and_fake_dependency_roots_are_rejected(self):
+        module = renderer_module()
+        other = self.create_runtime(self.root / "runtime-b" / "dependencies")
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(
+                self.loader_output(
+                    override=other["override"], fallback=other["fallback"]
+                ),
+                PROJECT_ROOT,
+            )
+
+        adjacent = self.create_runtime(self.root / "runtime" / "dependencies-adjacent")
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(
+                self.loader_output(
+                    override=adjacent["override"], fallback=adjacent["fallback"]
+                ),
+                PROJECT_ROOT,
+            )
+
+        fake_root = self.create_runtime(self.root / "fake-parent")
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(
+                self.loader_output(
+                    python=fake_root["python"],
+                    packages=fake_root["packages"],
+                    override=fake_root["override"],
+                    fallback=fake_root["fallback"],
+                ),
+                PROJECT_ROOT,
+            )
+
 
 class ProjectPdfRendererCliTest(unittest.TestCase):
     def setUp(self):
@@ -408,6 +461,37 @@ class ProjectPdfRendererCliTest(unittest.TestCase):
         self.assertTrue(result.stderr.startswith("renderer-error:"), result.stderr)
         self.assertEqual(sentinel.read_text(encoding="utf-8"), "keep")
         self.assertEqual(tuple(self.output.iterdir()), (sentinel,))
+
+    def test_package_lib_reparse_is_rejected_before_import_or_sys_path_change(self):
+        module = importlib.import_module("skill_maintainer.pdf_renderer")
+        outside = self.root / "outside"
+        (outside / "site-packages").mkdir(parents=True)
+        try:
+            (self.packages / "Lib").symlink_to(outside, target_is_directory=True)
+        except OSError as exc:
+            self.fail(f"test environment must support a directory reparse point: {exc}")
+        before = tuple(sys.path)
+        imports: list[str] = []
+        original_import = builtins.__import__
+
+        def import_spy(name, *args, **kwargs):
+            imports.append(name)
+            return original_import(name, *args, **kwargs)
+
+        argv = [
+            "--python-packages", str(self.packages),
+            "--pdftoppm", str(self.pdftoppm),
+            "--pdf", str(self.pdf),
+            "--output-dir", str(self.output),
+        ]
+        with patch("builtins.__import__", side_effect=import_spy), self.assertRaises(
+            module.PdfRendererError
+        ):
+            module.render(argv)
+        self.assertEqual(tuple(sys.path), before)
+        self.assertNotIn("pdf2image", imports)
+        self.assertNotIn("PIL", imports)
+        self.assertEqual(tuple(self.output.iterdir()), ())
 
 
 if __name__ == "__main__":

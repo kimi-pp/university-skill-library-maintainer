@@ -94,10 +94,37 @@ def render(argv: list[str] | None = None) -> dict[str, list[dict[str, Any]]]:
 
 
 def _extend_package_path(packages: Path) -> None:
-    candidates = (packages, packages / "Lib" / "site-packages")
+    root = _ordinary_directory(packages, "python-packages")
+    candidates = [root]
+    site_packages = root / "Lib" / "site-packages"
+    if site_packages.exists() or site_packages.is_symlink():
+        candidates.append(
+            _ordinary_descendant_directory(site_packages, root, "python site-packages")
+        )
     for candidate in reversed(candidates):
-        if candidate.is_dir() and not _is_link_or_reparse(candidate):
-            sys.path.insert(0, str(candidate))
+        sys.path.insert(0, str(candidate))
+
+
+def _ordinary_descendant_directory(path: Path, root: Path, label: str) -> Path:
+    try:
+        relative = path.relative_to(root)
+    except ValueError as exc:
+        raise PdfRendererError(f"{label} 越出 python-packages 根") from exc
+    current = root
+    for part in relative.parts:
+        current = current / part
+        if not current.exists() and not current.is_symlink():
+            raise PdfRendererError(f"{label} 路径段不存在：{current}")
+        if _is_link_or_reparse(current):
+            raise PdfRendererError(f"{label} 路径包含链接或重解析点：{current}")
+        if not current.is_dir():
+            raise PdfRendererError(f"{label} 路径段不是普通目录：{current}")
+    resolved = current.resolve(strict=True)
+    try:
+        resolved.relative_to(root)
+    except ValueError as exc:
+        raise PdfRendererError(f"{label} 解析后越出 python-packages 根") from exc
+    return resolved
 
 
 def _absolute(value: str, label: str) -> Path:

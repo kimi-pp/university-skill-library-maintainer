@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
 import re
 
@@ -37,12 +36,12 @@ def build_workspace_renderer_command(
     """Construct Task 11's command from the actual loader text and project root."""
     paths = _parse_loader_output(loader_output)
     python = _ordinary_file(paths["python"], "Python executable")
-    if python.name.lower() not in {"python.exe", "python"}:
+    if python.name.lower() != "python.exe":
         raise WorkspaceRendererError("工作区 Python 可执行文件名称无效。")
     packages = _ordinary_directory(paths["packages"], "Python packages")
     override = _ordinary_directory(paths["override"], "Override binaries")
     fallback = _ordinary_directory(paths["fallback"], "Fallback binaries")
-    runtime_root = _common_runtime_root((python, packages, override, fallback))
+    runtime_root = _validate_loader_topology(python, packages, override, fallback)
 
     project_path = Path(project_root)
     if not project_path.is_absolute():
@@ -115,19 +114,39 @@ def _ordinary_directory(path: Path, label: str) -> Path:
     return absolute.resolve(strict=True)
 
 
-def _common_runtime_root(paths: tuple[Path, ...]) -> Path:
-    try:
-        root = Path(os.path.commonpath(tuple(map(str, paths))))
-    except ValueError as exc:
-        raise WorkspaceRendererError("工作区依赖不属于同一运行时根。") from exc
-    root = _ordinary_directory(root, "workspace runtime root")
-    if root == Path(root.anchor):
-        raise WorkspaceRendererError("工作区依赖的共同根过宽。")
-    for path in paths:
-        try:
-            path.relative_to(root)
-        except ValueError as exc:
-            raise WorkspaceRendererError("工作区依赖越出共同运行时根。") from exc
+def _validate_loader_topology(
+    python: Path,
+    packages: Path,
+    override: Path,
+    fallback: Path,
+) -> Path:
+    roots = (
+        python.parent.parent,
+        packages.parent,
+        override.parent.parent,
+        fallback.parent.parent,
+    )
+    root = roots[0]
+    if any(candidate != root for candidate in roots[1:]):
+        raise WorkspaceRendererError("工作区依赖字段来自不同的 dependencies 运行时。")
+    if root.name.lower() != "dependencies":
+        raise WorkspaceRendererError("工作区依赖根目录名称必须为 dependencies。")
+    root = _ordinary_directory(root, "workspace dependencies root")
+    expected = {
+        "Python executable": root / "python" / "python.exe",
+        "Python packages": root / "python",
+        "Override binaries": root / "bin" / "override",
+        "Fallback binaries": root / "bin" / "fallback",
+    }
+    actual = {
+        "Python executable": python,
+        "Python packages": packages,
+        "Override binaries": override,
+        "Fallback binaries": fallback,
+    }
+    for label, expected_path in expected.items():
+        if actual[label] != expected_path:
+            raise WorkspaceRendererError(f"{label} 不属于同一 dependencies 运行时拓扑。")
     return root
 
 

@@ -22,7 +22,7 @@ class OfficeVerificationError(RuntimeError):
 
 @dataclass(frozen=True)
 class RendererCommand:
-    """Explicit loader-supplied PDF renderer command.
+    """PDF renderer command from loader-bound dependencies and a project-built entrypoint.
 
     The command receives ``--pdf ABSOLUTE`` and ``--output-dir ABSOLUTE`` and
     prints one JSON object with ordered page paths and body-pixel counts.
