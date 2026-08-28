@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
+import gc
 from hashlib import sha256
 import json
 import os
@@ -15,6 +16,7 @@ import threading
 import time
 import unittest
 from unittest.mock import patch
+import weakref
 from zipfile import ZIP_DEFLATED, ZipFile
 
 from docx import Document
@@ -28,6 +30,7 @@ from skill_maintainer.office import (
     WordRenderDecision,
     bind_word_visual_decision,
     clear_office_run_state,
+    issue_office_run_scope,
     verify_excel,
     verify_word,
 )
@@ -122,8 +125,35 @@ class OfficeVerificationTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
-        self.addCleanup(clear_office_run_state)
         self.root = Path(self.temporary.name)
+
+    def test_office_cleanup_requires_an_exact_scope_token(self):
+        with self.assertRaises(TypeError):
+            clear_office_run_state()
+
+    def test_exact_scope_cleanup_is_idempotent_and_gc_removes_its_tombstone(self):
+        from skill_maintainer import office as office_module
+
+        project = self.root / "gc-project"
+        staging = project / "staging" / "run-gc"
+        staging.mkdir(parents=True)
+        scope = issue_office_run_scope(
+            run_id="run-gc", staging_root=staging, project_root=project,
+        )
+        identity = id(scope)
+        reference = weakref.ref(scope)
+
+        clear_office_run_state(scope=scope)
+        clear_office_run_state(scope=scope)
+        self.assertIn(identity, office_module._TRUSTED_SCOPES)
+        self.assertFalse(office_module._TRUSTED_SCOPES[identity].active)
+
+        del scope
+        gc.collect()
+        self.assertIsNone(reference())
+        self.assertNotIn(identity, office_module._TRUSTED_SCOPES)
+        self.assertFalse(any(record.scope_identity == identity for record in office_module._TRUSTED_CHECKS.values()))
+        self.assertFalse(any(record.scope_identity == identity for record in office_module._TRUSTED_BUNDLES.values()))
 
     def test_excel_opens_read_only_reopens_and_keeps_520th_data_row(self):
         workbook_path = self.root / "ledger-520.xlsx"
@@ -156,7 +186,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
         workbook.save(daily)
         workbook.close()
 
-        rejected = verify_excel(daily, run_id="run-daily-empty", role="daily")
+        rejected = verify_excel(daily, role="daily")
 
         self.assertFalse(rejected.passed)
         self.assertEqual(rejected.key_sheet, "执行概览")
@@ -166,7 +196,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
         workbook["执行概览"].append(["运行状态", "完成"])
         workbook.save(daily)
         workbook.close()
-        accepted = verify_excel(daily, run_id="run-daily-filled", role="daily")
+        accepted = verify_excel(daily, role="daily")
         self.assertTrue(accepted.passed, accepted.error)
         self.assertEqual(accepted.key_sheet, "执行概览")
         self.assertEqual((accepted.last_row, accepted.last_column, accepted.last_value), (2, 2, "完成"))
@@ -178,7 +208,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
         workbook.active.append(["伪装", "有数据"])
         workbook.save(arbitrary)
         workbook.close()
-        missing = verify_excel(arbitrary, run_id="run-ledger-missing", role="ledger")
+        missing = verify_excel(arbitrary, role="ledger")
         self.assertFalse(missing.passed)
         self.assertIn("关键工作表", missing.error or "")
 
@@ -195,7 +225,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
         workbook.save(ledger)
         workbook.close()
 
-        check = verify_excel(ledger, run_id="run-ledger-fallback", role="ledger")
+        check = verify_excel(ledger, role="ledger")
 
         self.assertTrue(check.passed, check.error)
         self.assertEqual(check.key_sheet, "运行记录")
@@ -205,7 +235,7 @@ class OfficeVerificationTestCase(unittest.TestCase):
         del workbook["运行记录"]
         workbook.save(ledger)
         workbook.close()
-        rejected = verify_excel(ledger, run_id="run-ledger-no-fallback", role="ledger")
+        rejected = verify_excel(ledger, role="ledger")
         self.assertFalse(rejected.passed)
         self.assertEqual(rejected.key_sheet, "当前Skill")
         self.assertIn("数据行", rejected.error or "")
@@ -231,8 +261,14 @@ class OfficeVerificationTestCase(unittest.TestCase):
         write_word(word_path)
 
         renderer = write_renderer_command(self.root)
-        first = verify_word(word_path, self.root / "render-first", renderer=renderer, run_id="run-word-first")
-        second = verify_word(word_path, self.root / "render-second", renderer=renderer, run_id="run-word-second")
+        first_scope = issue_office_run_scope(
+            run_id="run-word-first", staging_root=self.root, project_root=self.root.parent,
+        )
+        second_scope = issue_office_run_scope(
+            run_id="run-word-second", staging_root=self.root, project_root=self.root.parent,
+        )
+        first = verify_word(word_path, self.root / "render-first", renderer=renderer, scope=first_scope)
+        second = verify_word(word_path, self.root / "render-second", renderer=renderer, scope=second_scope)
 
         for check in (first, second):
             self.assertTrue(check.office_passed, check.error)
@@ -249,11 +285,13 @@ class OfficeVerificationTestCase(unittest.TestCase):
         approved = bind_word_visual_decision(
             first,
             WordRenderDecision.from_check(first, approved=True, reviewer="Task 11 external visual review"),
+            scope=first_scope,
         )
         self.assertTrue(approved.passed, approved.error)
         rejected = bind_word_visual_decision(
             second,
             WordRenderDecision.from_check(second, approved=False, reviewer="Task 11 external visual review", rejected_pages=(1,)),
+            scope=second_scope,
         )
         self.assertFalse(rejected.passed)
         self.assertIn("视觉", rejected.error or "")
@@ -287,8 +325,11 @@ class OfficeVerificationTestCase(unittest.TestCase):
             process_count_before=0, process_count_after=0,
         )
         decision = WordRenderDecision.from_check(check, approved=True, reviewer="external")
+        scope = issue_office_run_scope(
+            run_id="run-forged-word", staging_root=self.root, project_root=self.root.parent,
+        )
         with self.assertRaisesRegex(OfficeVerificationError, "签发|capability"):
-            bind_word_visual_decision(check, decision)
+            bind_word_visual_decision(check, decision, scope=scope)
 
     def test_office_result_requires_exact_process_baseline_not_merely_no_increase(self):
         workbook_path = self.root / "baseline.xlsx"
@@ -378,7 +419,11 @@ class OfficeVerificationTestCase(unittest.TestCase):
         write_word(source)
         check = verify_word(
             source, self.root / "decision-render", renderer=write_renderer_command(self.root),
-            run_id="run-incomplete-decision",
+            scope=(scope := issue_office_run_scope(
+                run_id="run-incomplete-decision",
+                staging_root=self.root,
+                project_root=self.root.parent,
+            )),
         )
         incomplete = WordRenderDecision(
             source_sha256=check.source_sha256,
@@ -387,24 +432,23 @@ class OfficeVerificationTestCase(unittest.TestCase):
             reviewer="external",
         )
         with self.assertRaisesRegex(OfficeVerificationError, "每一页|逐页"):
-            bind_word_visual_decision(check, incomplete)
+            bind_word_visual_decision(check, incomplete, scope=scope)
         complete = WordRenderDecision.from_check(check, approved=True, reviewer="external")
         page = check.page_paths[0]
         original = page.read_bytes()
         page.write_bytes(original + b"tampered")
         with self.assertRaisesRegex(OfficeVerificationError, "哈希"):
-            bind_word_visual_decision(check, complete)
+            bind_word_visual_decision(check, complete, scope=scope)
         page.write_bytes(original)
         page.unlink()
         with self.assertRaisesRegex(OfficeVerificationError, "缺失"):
-            bind_word_visual_decision(check, complete)
+            bind_word_visual_decision(check, complete, scope=scope)
 
 
 class PublicationTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
-        self.addCleanup(clear_office_run_state)
         self.root = Path(self.temporary.name)
 
     def make_tree(self, name: str = "run-20260828-220000") -> tuple[Path, Path]:
@@ -442,8 +486,17 @@ class PublicationTestCase(unittest.TestCase):
         return tuple(records)
 
     @staticmethod
+    def scope_for(staging: Path):
+        return issue_office_run_scope(
+            run_id=staging.name,
+            staging_root=staging,
+            project_root=staging.parents[1],
+        )
+
+    @staticmethod
     def evidence_for(staging: Path):
         ledger = staging / "Skills主台账.xlsx"
+        scope = PublicationTestCase.scope_for(staging)
         result = {
             "passed": True, "office_opened": True, "read_only": True,
             "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
@@ -451,8 +504,8 @@ class PublicationTestCase(unittest.TestCase):
             "process_count_after": 0, "error": None,
         }
         with patch("skill_maintainer.office._run_office", return_value=result):
-            check = verify_excel(ledger, run_id=staging.name, role="ledger")
-        return OfficeEvidenceBundle.from_checks((check,), run_id=staging.name)
+            check = verify_excel(ledger, scope=scope, role="ledger")
+        return OfficeEvidenceBundle.from_checks((check,), scope=scope)
 
     def plan_for(self, staging: Path, production: Path):
         return build_publish_plan(staging, production, office_evidence=self.evidence_for(staging))
@@ -466,9 +519,10 @@ class PublicationTestCase(unittest.TestCase):
             "last_value": "skill-2", "process_count_before": 0,
             "process_count_after": 0, "error": None,
         }
+        scope = self.scope_for(staging)
         with patch("skill_maintainer.office._run_office", return_value=office_result):
-            issued = verify_excel(ledger, run_id=staging.name, role="ledger")
-        bundle = OfficeEvidenceBundle.from_checks((issued,), run_id=staging.name)
+            issued = verify_excel(ledger, scope=scope, role="ledger")
+        bundle = OfficeEvidenceBundle.from_checks((issued,), scope=scope)
         bundle.assert_covers((ledger,))
         bundle.assert_covers((ledger,))  # pre-publication validation remains retryable
 
@@ -478,9 +532,14 @@ class PublicationTestCase(unittest.TestCase):
         ):
             with self.subTest(forged=forged.last_value):
                 with self.assertRaisesRegex(OfficeVerificationError, "签发|受信|capability"):
-                    OfficeEvidenceBundle.from_checks((forged,), run_id=staging.name)
-        with self.assertRaisesRegex(OfficeVerificationError, "运行|run"):
-            OfficeEvidenceBundle.from_checks((issued,), run_id="another-run")
+                    OfficeEvidenceBundle.from_checks((forged,), scope=scope)
+        other_scope = issue_office_run_scope(
+            run_id="another-run",
+            staging_root=staging,
+            project_root=staging.parents[1],
+        )
+        with self.assertRaisesRegex(OfficeVerificationError, "scope|作用域|token|受信|capability|签发"):
+            OfficeEvidenceBundle.from_checks((issued,), scope=other_scope)
         for forged_bundle in (copy.copy(bundle), replace(bundle)):
             with self.assertRaisesRegex(OfficeVerificationError, "签发|受信|capability"):
                 forged_bundle.assert_covers((ledger,))
@@ -496,7 +555,7 @@ class PublicationTestCase(unittest.TestCase):
         first = self.evidence_for(first_staging)
         second = self.evidence_for(second_staging)
 
-        clear_office_run_state(first.run_id)
+        clear_office_run_state(scope=first.scope)
 
         with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
             first.assert_covers((first_staging / "Skills主台账.xlsx",))
@@ -512,7 +571,7 @@ class PublicationTestCase(unittest.TestCase):
                 second = self.evidence_for(second_staging)
 
                 if mode == "explicit-clear":
-                    clear_office_run_state(run_id, scope_root=first_staging)
+                    clear_office_run_state(scope=first.scope)
                 else:
                     plan = build_publish_plan(first_staging, first_production, office_evidence=first)
                     if mode == "success":
@@ -530,6 +589,101 @@ class PublicationTestCase(unittest.TestCase):
                 with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
                     first.assert_covers((first_staging / "Skills主台账.xlsx",))
                 second.assert_covers((second_staging / "Skills主台账.xlsx",))
+
+    def test_unforgeable_scope_tokens_isolate_same_run_and_same_canonical_staging(self):
+        from skill_maintainer import office as office_module
+
+        project = self.root / "token-project"
+        run_id = "run-token-isolation"
+        staging = project / ".runtime" / "staging" / run_id
+        staging.mkdir(parents=True)
+        ledger = staging / "Skills主台账.xlsx"
+        write_excel(ledger, rows=2)
+        result = {
+            "passed": True, "office_opened": True, "read_only": True,
+            "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
+            "last_value": "skill-2", "process_count_before": 0,
+            "process_count_after": 0, "error": None,
+        }
+        first_scope = office_module.issue_office_run_scope(
+            run_id=run_id, staging_root=staging, project_root=project,
+        )
+        second_scope = office_module.issue_office_run_scope(
+            run_id=run_id, staging_root=staging, project_root=project,
+        )
+        with patch("skill_maintainer.office._run_office", return_value=result):
+            first_check = verify_excel(ledger, scope=first_scope, role="ledger")
+            second_check = verify_excel(ledger, scope=second_scope, role="ledger")
+            second_extra = verify_excel(ledger, scope=second_scope, role="ledger")
+        first = OfficeEvidenceBundle.from_checks((first_check,), scope=first_scope)
+        second = OfficeEvidenceBundle.from_checks((second_check,), scope=second_scope)
+
+        deliveries = staging / "deliveries"
+        deliveries.mkdir()
+        (deliveries / "summary.txt").write_text("approved", encoding="utf-8")
+        production = project / "production"
+        (production / "ledger" / "archive").mkdir(parents=True)
+        (production / "output" / "generations").mkdir(parents=True)
+        write_excel(production / "ledger" / "Skills主台账.xlsx", rows=1)
+        plan = build_publish_plan(staging, production, office_evidence=first)
+        with self.assertRaisesRegex(PublishError, "OfficeRunScope|token|Office"):
+            publish_atomically(replace(plan, office_scope=second_scope))
+        first.assert_covers((ledger,))
+        second.assert_covers((ledger,))
+        with self.assertRaisesRegex(PublishError, "OfficeRunScope|token|Office"):
+            commit_prepared_generation(
+                production_root=production,
+                run_id=run_id,
+                staged_ledger=ledger,
+                expected_authority_sha256=file_sha256(production / "ledger" / "Skills主台账.xlsx"),
+                generation_path=production / "output" / "generations" / run_id,
+                generation_manifest_sha256="0" * 64,
+                office_evidence=first,
+                office_scope=second_scope,
+                office_paths=(ledger,),
+            )
+        first.assert_covers((ledger,))
+        second.assert_covers((ledger,))
+
+        with self.assertRaisesRegex(OfficeVerificationError, "scope|作用域|token|受信|capability|签发"):
+            OfficeEvidenceBundle.from_checks((second_extra,), scope=first_scope)
+        second_extra_bundle = OfficeEvidenceBundle.from_checks((second_extra,), scope=second_scope)
+        clear_office_run_state(scope=first_scope)
+        with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发|scope|token"):
+            first.assert_covers((ledger,))
+        second.assert_covers((ledger,))
+        second_extra_bundle.assert_covers((ledger,))
+
+        for forged_scope in (copy.copy(second_scope), replace(second_scope)):
+            with self.subTest(forged_scope=forged_scope):
+                with self.assertRaisesRegex(OfficeVerificationError, "scope|作用域|token|受信|capability|签发"):
+                    clear_office_run_state(scope=forged_scope)
+                second.assert_covers((ledger,))
+
+        nested = staging / "deliveries" / run_id
+        nested.mkdir(parents=True)
+        nested_ledger = nested / "nested.xlsx"
+        write_excel(nested_ledger, rows=1)
+        with patch("skill_maintainer.office._run_office", return_value=result):
+            nested_check = verify_excel(nested_ledger, scope=second_scope, role="ledger")
+        nested_bundle = OfficeEvidenceBundle.from_checks((nested_check,), scope=second_scope)
+        nested_bundle.assert_covers((nested_ledger,))
+
+        missing = project / ".runtime" / "staging" / "missing"
+        outside = self.root / "outside-token-project"
+        outside.mkdir()
+        alias = project / ".runtime" / "staging" / "alias"
+        alias.symlink_to(staging, target_is_directory=True)
+        for invalid_staging in (missing, outside, alias):
+            with self.subTest(invalid_staging=invalid_staging):
+                with self.assertRaisesRegex(OfficeVerificationError, "普通|项目|越出|链接|重解析|存在"):
+                    office_module.issue_office_run_scope(
+                        run_id=run_id,
+                        staging_root=invalid_staging,
+                        project_root=project,
+                    )
+
+        clear_office_run_state(scope=second_scope)
 
     def test_shared_commit_rejects_every_invalid_preflight_input_before_any_production_side_effect(self):
         cases = (
@@ -555,6 +709,7 @@ class PublicationTestCase(unittest.TestCase):
                 if case == "office-set-mismatch":
                     write_excel(generation / "unexpected.xlsx", rows=1)
                 if case == "wrong-role":
+                    scope = self.scope_for(staging)
                     result = {
                         "passed": True, "office_opened": True, "read_only": True,
                         "key_sheet": "执行概览", "last_row": 2, "last_column": 2,
@@ -563,11 +718,16 @@ class PublicationTestCase(unittest.TestCase):
                     }
                     with patch("skill_maintainer.office._run_office", return_value=result):
                         check = verify_excel(
-                            staging / "Skills主台账.xlsx", run_id=run_id, role="daily",
+                            staging / "Skills主台账.xlsx", scope=scope, role="daily",
                         )
-                    evidence = OfficeEvidenceBundle.from_checks((check,), run_id=run_id)
+                    evidence = OfficeEvidenceBundle.from_checks((check,), scope=scope)
                 elif case == "wrong-run":
                     evidence_run_id = f"{run_id}-evidence"
+                    scope = issue_office_run_scope(
+                        run_id=evidence_run_id,
+                        staging_root=staging,
+                        project_root=staging.parents[1],
+                    )
                     result = {
                         "passed": True, "office_opened": True, "read_only": True,
                         "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
@@ -576,9 +736,9 @@ class PublicationTestCase(unittest.TestCase):
                     }
                     with patch("skill_maintainer.office._run_office", return_value=result):
                         check = verify_excel(
-                            staging / "Skills主台账.xlsx", run_id=evidence_run_id, role="ledger",
+                            staging / "Skills主台账.xlsx", scope=scope, role="ledger",
                         )
-                    evidence = OfficeEvidenceBundle.from_checks((check,), run_id=evidence_run_id)
+                    evidence = OfficeEvidenceBundle.from_checks((check,), scope=scope)
                 else:
                     evidence = self.evidence_for(staging)
                     if case == "forged":
@@ -604,14 +764,71 @@ class PublicationTestCase(unittest.TestCase):
                         generation_path=commit_generation,
                         generation_manifest_sha256=file_sha256(manifest),
                         office_evidence=evidence,
+                        office_scope=evidence.scope,
                         office_paths=(staging / "Skills主台账.xlsx",),
                     )
 
                 self.assertEqual(self.tree_snapshot(production), before)
                 self.assertFalse((production / "ledger" / "archive").exists())
 
+    def test_existing_backup_path_is_validated_before_any_production_side_effect(self):
+        for case in ("missing", "outside", "link", "wrong-hash"):
+            with self.subTest(case=case):
+                run_id = f"run-existing-backup-{case}"
+                staging = self.root / "backup-preflight" / case / "staging" / run_id
+                production = self.root / "backup-preflight" / case / "production"
+                staging.mkdir(parents=True)
+                write_excel(staging / "Skills主台账.xlsx", rows=2)
+                (production / "ledger").mkdir(parents=True)
+                generations = production / "output" / "generations"
+                generation = generations / run_id
+                generation.mkdir(parents=True)
+                authority = production / "ledger" / "Skills主台账.xlsx"
+                write_excel(authority, rows=1)
+                manifest = generation / "generation-manifest.json"
+                manifest.write_text('{"prepared":true}', encoding="utf-8")
+                evidence = self.evidence_for(staging)
+                archive = production / "ledger" / "archive"
+                outside = self.root / "backup-preflight" / case / "outside.xlsx"
+                if case == "missing":
+                    backup = archive / "missing.xlsx"
+                elif case == "outside":
+                    outside.write_bytes(authority.read_bytes())
+                    backup = outside
+                else:
+                    archive.mkdir()
+                    backup = archive / f"{case}.xlsx"
+                    if case == "link":
+                        outside.write_bytes(authority.read_bytes())
+                        backup.symlink_to(outside)
+                    else:
+                        backup.write_bytes(b"wrong-backup")
+
+                before = self.tree_snapshot(production)
+                outside_before = outside.read_bytes() if outside.exists() else None
+                with self.assertRaisesRegex(PublishError, "备份|archive|普通|哈希|存在|越出"):
+                    commit_prepared_generation(
+                        production_root=production,
+                        run_id=run_id,
+                        staged_ledger=staging / "Skills主台账.xlsx",
+                        expected_authority_sha256=file_sha256(authority),
+                        generation_path=generation,
+                        generation_manifest_sha256=file_sha256(manifest),
+                        office_evidence=evidence,
+                        office_scope=evidence.scope,
+                        office_paths=(staging / "Skills主台账.xlsx",),
+                        backup_path=backup,
+                    )
+
+                self.assertEqual(self.tree_snapshot(production), before)
+                if case == "missing":
+                    self.assertFalse(archive.exists())
+                if outside_before is not None:
+                    self.assertEqual(outside.read_bytes(), outside_before)
+
     def test_checks_issue_one_bundle_atomically_and_concurrently(self):
         staging, _ = self.make_tree("run-check-issuance")
+        scope = self.scope_for(staging)
         first_path = staging / "Skills主台账.xlsx"
         second_path = staging / "second.xlsx"
         write_excel(second_path, rows=1)
@@ -624,16 +841,16 @@ class PublicationTestCase(unittest.TestCase):
                 "process_count_after": 0, "error": None,
             }
             with patch("skill_maintainer.office._run_office", return_value=result):
-                return verify_excel(path, run_id=staging.name, role="ledger")
+                return verify_excel(path, scope=scope, role="ledger")
 
         first = issue_check(first_path)
         second = issue_check(second_path)
         with self.assertRaisesRegex(OfficeVerificationError, "签发|受信|capability"):
-            OfficeEvidenceBundle.from_checks((first, replace(second)), run_id=staging.name)
-        first_bundle = OfficeEvidenceBundle.from_checks((first,), run_id=staging.name)
+            OfficeEvidenceBundle.from_checks((first, replace(second)), scope=scope)
+        first_bundle = OfficeEvidenceBundle.from_checks((first,), scope=scope)
         first_bundle.assert_covers((first_path,))
         with self.assertRaisesRegex(OfficeVerificationError, "已签发|单次|capability"):
-            OfficeEvidenceBundle.from_checks((first,), run_id=staging.name)
+            OfficeEvidenceBundle.from_checks((first,), scope=scope)
 
         concurrent_path = staging / "concurrent.xlsx"
         write_excel(concurrent_path, rows=1)
@@ -643,7 +860,7 @@ class PublicationTestCase(unittest.TestCase):
         def sign_once():
             barrier.wait(timeout=3)
             try:
-                return OfficeEvidenceBundle.from_checks((concurrent_check,), run_id=staging.name)
+                return OfficeEvidenceBundle.from_checks((concurrent_check,), scope=scope)
             except OfficeVerificationError as exc:
                 return exc
 
@@ -664,7 +881,8 @@ class PublicationTestCase(unittest.TestCase):
         overview.append(["项目", "结果"])
         workbook.save(daily)
         workbook.close()
-        wrong_daily = verify_excel(daily, run_id=staging.name, role="ledger")
+        scope = self.scope_for(staging)
+        wrong_daily = verify_excel(daily, scope=scope, role="ledger")
         self.assertTrue(wrong_daily.passed, wrong_daily.error)
         ledger_result = {
             "passed": True, "office_opened": True, "read_only": True,
@@ -674,10 +892,10 @@ class PublicationTestCase(unittest.TestCase):
         }
         with patch("skill_maintainer.office._run_office", return_value=ledger_result):
             ledger_check = verify_excel(
-                staging / "Skills主台账.xlsx", run_id=staging.name, role="ledger",
+                staging / "Skills主台账.xlsx", scope=scope, role="ledger",
             )
         evidence = OfficeEvidenceBundle.from_checks(
-            (ledger_check, wrong_daily), run_id=staging.name,
+            (ledger_check, wrong_daily), scope=scope,
         )
         authority = production / "ledger" / "Skills主台账.xlsx"
         authority_before = authority.read_bytes()
@@ -702,6 +920,7 @@ class PublicationTestCase(unittest.TestCase):
         overview.append(["运行状态", "完成"])
         workbook.save(daily)
         workbook.close()
+        scope = self.scope_for(staging)
 
         def issued(path, role, key_sheet, last_value):
             result = {
@@ -711,18 +930,18 @@ class PublicationTestCase(unittest.TestCase):
                 "process_count_after": 0, "error": None,
             }
             with patch("skill_maintainer.office._run_office", return_value=result):
-                return verify_excel(path, run_id=staging.name, role=role)
+                return verify_excel(path, scope=scope, role=role)
 
         ledger = staging / "Skills主台账.xlsx"
         correct = OfficeEvidenceBundle.from_checks((
             issued(ledger, "ledger", "当前Skill", "skill-2"),
             issued(daily, "daily", "执行概览", "完成"),
-        ), run_id=staging.name)
+        ), scope=scope)
         plan = build_publish_plan(staging, production, office_evidence=correct)
         wrong = OfficeEvidenceBundle.from_checks((
             issued(ledger, "ledger", "当前Skill", "skill-2"),
             issued(daily, "ledger", "当前Skill", "role"),
-        ), run_id=staging.name)
+        ), scope=scope)
         forged = replace(plan, office_evidence=wrong, office_evidence_sha256=wrong.sha256)
         authority_before = forged.authority_path.read_bytes()
 

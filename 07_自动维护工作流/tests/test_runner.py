@@ -114,7 +114,7 @@ notify_on_no_change = false
                     "process_count_after": 0, "error": None,
                 }
                 with patch("skill_maintainer.office._run_office", return_value=result):
-                    checks.append(verify_excel(path, run_id=prepared.run_id, role=role))
+                    checks.append(verify_excel(path, scope=prepared.office_scope, role=role))
             elif path.suffix.casefold() == ".docx":
                 evidence = prepared.staging_dir / ".office-evidence"
                 evidence.mkdir(exist_ok=True)
@@ -132,14 +132,14 @@ notify_on_no_change = false
 
                 with patch("skill_maintainer.office._run_office", side_effect=office_word):
                     rendered = verify_word(
-                        path, render, renderer=UnitRenderer(), run_id=prepared.run_id,
+                        path, render, renderer=UnitRenderer(), scope=prepared.office_scope,
                     )
                 checks.append(bind_word_visual_decision(
                     rendered,
                     WordRenderDecision.from_check(rendered, approved=True, reviewer="unit evidence"),
-                    run_id=prepared.run_id,
+                    scope=prepared.office_scope,
                 ))
-        return OfficeEvidenceBundle.from_checks(tuple(checks), run_id=prepared.run_id)
+        return OfficeEvidenceBundle.from_checks(tuple(checks), scope=prepared.office_scope)
 
     @staticmethod
     def explicit_renderer(root: Path):
@@ -1041,20 +1041,20 @@ notify_on_no_change = false
             for path in artifacts:
                 if path.suffix.casefold() == ".xlsx":
                     role = "ledger" if path == prepared.staging_ledger else "daily"
-                    excel_check = verify_excel(path, run_id=prepared.run_id, role=role)
+                    excel_check = verify_excel(path, scope=prepared.office_scope, role=role)
                     self.assertTrue(excel_check.passed, excel_check.error)
                     checks.append(excel_check)
                 elif path.suffix.casefold() == ".docx":
                     rendered = verify_word(
                         path, prepared.staging_dir / f"render-{path.stem}",
-                        renderer=renderer, run_id=prepared.run_id,
+                        renderer=renderer, scope=prepared.office_scope,
                     )
                     checks.append(bind_word_visual_decision(
                         rendered,
                         WordRenderDecision.from_check(rendered, approved=True, reviewer="Task11 integration"),
-                        run_id=prepared.run_id,
+                        scope=prepared.office_scope,
                     ))
-            return OfficeEvidenceBundle.from_checks(tuple(checks), run_id=prepared.run_id)
+            return OfficeEvidenceBundle.from_checks(tuple(checks), scope=prepared.office_scope)
 
         coordinator = self.coordinator(report_builder=build_reports, office_verifier=verify_all)
         prepared = coordinator.prepare(replace(self.request, requested_run_id="run-real-office-publication"))

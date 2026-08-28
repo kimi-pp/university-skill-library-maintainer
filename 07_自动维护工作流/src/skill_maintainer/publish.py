@@ -19,7 +19,9 @@ if os.name == "nt":
 
 from .office import (
     OfficeEvidenceBundle,
+    OfficeRunScope,
     OfficeVerificationError,
+    assert_office_evidence_owner,
     clear_office_run_state,
     consume_office_evidence,
 )
@@ -51,6 +53,7 @@ class PublishPlan:
     backup_path: Path
     generations_parent_identity: tuple[int, int, int, int]
     archive_parent_identity: tuple[int, int, int, int]
+    office_scope: OfficeRunScope
     office_evidence: OfficeEvidenceBundle
     office_evidence_sha256: str
 
@@ -253,7 +256,8 @@ def build_publish_plan(
         authority_path=authority, expected_authority_sha256=_sha256(authority),
         deliveries_root=deliveries, delivery_files=tuple(files), generation_path=generation,
         backup_path=backup, generations_parent_identity=_directory_identity(generations),
-        archive_parent_identity=_directory_identity(archive), office_evidence=office_evidence,
+        archive_parent_identity=_directory_identity(archive), office_scope=office_evidence.scope,
+        office_evidence=office_evidence,
         office_evidence_sha256=office_evidence.sha256,
     )
 
@@ -266,10 +270,16 @@ def publish_atomically(
     before_authority_replace: Callable[[], None] | None = None,
 ) -> PublishReceipt:
     """Install one immutable generation and linearize solely through the ledger."""
+    office_scope = _claim_office_scope(
+        office_evidence=plan.office_evidence,
+        office_scope=plan.office_scope,
+        run_id=plan.run_id,
+        staging_root=plan.staging_root,
+    )
     try:
         _validate_plan_shape(plan)
     except BaseException:
-        clear_office_run_state(plan.run_id, scope_root=plan.staging_root)
+        clear_office_run_state(scope=office_scope)
         raise
     pending_generation = plan.generation_path.parent / f".{plan.run_id}.pending"
     authority_temp = plan.authority_path.parent / f".{plan.authority_path.name}.{plan.run_id}.pending"
@@ -334,6 +344,7 @@ def publish_atomically(
             generation_path=plan.generation_path,
             generation_manifest_sha256=manifest_hash,
             office_evidence=plan.office_evidence,
+            office_scope=plan.office_scope,
             office_paths=(
                 plan.staged_ledger,
                 *(plan.deliveries_root / Path(item.relative_path) for item in plan.delivery_files),
@@ -360,7 +371,7 @@ def publish_atomically(
             _remove_tree_if_owned(pending_generation, plan.generation_path.parent)
             if generation_installed:
                 _remove_tree_if_owned(plan.generation_path, plan.generation_path.parent)
-        clear_office_run_state(plan.run_id, scope_root=plan.staging_root)
+        clear_office_run_state(scope=office_scope)
 
 
 def commit_prepared_generation(
@@ -372,6 +383,7 @@ def commit_prepared_generation(
     generation_path: str | Path,
     generation_manifest_sha256: str,
     office_evidence: OfficeEvidenceBundle,
+    office_scope: OfficeRunScope,
     office_paths: tuple[Path, ...],
     backup_path: Path | None = None,
     before_authority_replace: Callable[[], None] | None = None,
@@ -390,25 +402,32 @@ def commit_prepared_generation(
     archive = production / "ledger" / "archive"
     ledger_parent = production / "ledger"
     output_parent = production / "output"
+    owned_office_scope = _claim_office_scope(
+        office_evidence=office_evidence,
+        office_scope=office_scope,
+        run_id=run_id,
+        staging_root=staged.parent,
+    )
     try:
         _require_ordinary_directory(production, label="生产根目录")
         _require_ordinary_directory(ledger_parent, label="生产 ledger 目录")
         _require_ordinary_directory(output_parent, label="生产 output 目录")
         _require_ordinary_directory(generations, label="发布代次目录")
     except BaseException:
-        clear_office_run_state(run_id, scope_root=staged.parent)
+        clear_office_run_state(scope=owned_office_scope)
         raise
     try:
-        staged_hash, manifest, backup, backup_exists = _prepare_commit_arguments(
+        staged_hash, manifest, backup, backup_exists, backup_identity = _prepare_commit_arguments(
             staged=staged, authority=authority, generation=generation,
             generations=generations, archive=archive, run_id=run_id,
             expected_authority_sha256=expected_authority_sha256,
             generation_manifest_sha256=generation_manifest_sha256,
-            office_evidence=office_evidence, office_paths=office_paths,
+            office_evidence=office_evidence, office_scope=office_scope,
+            office_paths=office_paths,
             backup_path=backup_path,
         )
     except BaseException:
-        clear_office_run_state(run_id, scope_root=staged.parent)
+        clear_office_run_state(scope=owned_office_scope)
         raise
     container_pins = _GenerationPins()
     container_paths = (production, ledger_parent, output_parent, generations)
@@ -423,7 +442,7 @@ def commit_prepared_generation(
         _assert_container_paths(container_paths, container_identities, container_pins)
     except BaseException:
         container_pins.release()
-        clear_office_run_state(run_id, scope_root=staged.parent)
+        clear_office_run_state(scope=owned_office_scope)
         raise
     backup_temp = archive / f".{backup.name}.{run_id}.pending"
     authority_temp = authority.parent / f".{authority.name}.{run_id}.commit"
@@ -436,8 +455,8 @@ def commit_prepared_generation(
         _assert_prepared_parents(production, generations, archive, parent_identities, parent_pins)
         if backup_exists:
             _require_ordinary_file(backup, label="既有 Runner 主台账备份")
-            if _sha256(backup) != expected_authority_sha256:
-                raise PublishError("既有 Runner 主台账备份哈希不一致。")
+            if _sha256(backup) != expected_authority_sha256 or _stat_identity(backup) != backup_identity:
+                raise PublishError("既有 Runner 主台账备份哈希或身份不一致。")
         else:
             _copy_fsynced(authority, backup_temp)
             if _sha256(backup_temp) != expected_authority_sha256:
@@ -452,7 +471,8 @@ def commit_prepared_generation(
             authority=authority, expected_authority_sha256=expected_authority_sha256,
             staged=staged, staged_hash=staged_hash, manifest=manifest,
             generation_manifest_sha256=generation_manifest_sha256,
-            office_evidence=office_evidence, office_paths=office_paths,
+            office_evidence=office_evidence, office_scope=office_scope,
+            office_paths=office_paths,
             production=production, generations=generations, archive=archive,
             parent_identities=parent_identities, parent_pins=parent_pins,
             generation=generation, generation_pins=generation_pins,
@@ -465,7 +485,8 @@ def commit_prepared_generation(
             authority=authority, expected_authority_sha256=expected_authority_sha256,
             staged=staged, staged_hash=staged_hash, manifest=manifest,
             generation_manifest_sha256=generation_manifest_sha256,
-            office_evidence=office_evidence, office_paths=office_paths,
+            office_evidence=office_evidence, office_scope=office_scope,
+            office_paths=office_paths,
             production=production, generations=generations, archive=archive,
             parent_identities=parent_identities, parent_pins=parent_pins,
             generation=generation, generation_pins=generation_pins,
@@ -473,7 +494,7 @@ def commit_prepared_generation(
             container_pins=container_pins,
         )
         try:
-            consume_office_evidence(office_evidence, run_id=run_id, scope_root=staged.parent)
+            consume_office_evidence(office_evidence, scope=office_scope)
         except OfficeVerificationError as exc:
             raise PublishError(f"Runner Office verifier capability 无效或已消费：{exc}") from exc
         os.replace(authority_temp, authority)
@@ -503,7 +524,31 @@ def commit_prepared_generation(
             pass
         _remove_file_if_owned(authority_temp, authority.parent)
         _remove_file_if_owned(backup_temp, archive)
-        clear_office_run_state(run_id, scope_root=staged.parent)
+        clear_office_run_state(scope=owned_office_scope)
+
+
+def _claim_office_scope(
+    *,
+    office_evidence: object,
+    office_scope: object,
+    run_id: str,
+    staging_root: Path,
+) -> OfficeRunScope:
+    """Claim cleanup ownership only for one exact trusted bundle/token pair."""
+
+    if (
+        not isinstance(office_evidence, OfficeEvidenceBundle)
+        or not isinstance(office_scope, OfficeRunScope)
+        or office_evidence.scope is not office_scope
+        or office_scope.run_id != run_id
+        or office_scope.staging_root != staging_root.absolute()
+    ):
+        raise PublishError("Office 发布证据与 OfficeRunScope token、运行或暂存根不一致。")
+    try:
+        assert_office_evidence_owner(office_evidence, scope=office_scope)
+    except OfficeVerificationError as exc:
+        raise PublishError(f"Office 发布证据不属于当前 OfficeRunScope token：{exc}") from exc
+    return office_scope
 
 
 def _assert_prepared_parents(
@@ -538,9 +583,10 @@ def _prepare_commit_arguments(
     expected_authority_sha256: str,
     generation_manifest_sha256: str,
     office_evidence: OfficeEvidenceBundle,
+    office_scope: OfficeRunScope,
     office_paths: tuple[Path, ...],
     backup_path: Path | None,
-) -> tuple[str, Path, Path, bool]:
+) -> tuple[str, Path, Path, bool, tuple[int, int, int, int] | None]:
     _require_ordinary_file(staged, label="暂存主台账")
     _require_ordinary_file(authority, label="生产主台账")
     try:
@@ -555,6 +601,8 @@ def _prepare_commit_arguments(
         raise PublishError("Runner 必须提供结构化 Office 证据。")
     if office_evidence.run_id != run_id:
         raise PublishError("Runner Office 证据未绑定当前运行标识。")
+    if office_evidence.scope is not office_scope:
+        raise PublishError("Runner Office 证据未绑定当前 OfficeRunScope token。")
     try:
         office_evidence.assert_publication_roles(staged, office_paths)
     except OfficeVerificationError as exc:
@@ -571,11 +619,14 @@ def _prepare_commit_arguments(
         while backup.exists() or backup.is_symlink():
             backup = archive / f"Skills主台账_{timestamp}_{suffix}.xlsx"
             suffix += 1
-        return staged_hash, manifest, backup, False
+        return staged_hash, manifest, backup, False, None
     backup = Path(backup_path).absolute()
     if backup.parent != archive:
         raise PublishError("既有 Runner 备份路径越出 ledger/archive。")
-    return staged_hash, manifest, backup, True
+    _require_ordinary_file(backup, label="既有 Runner 主台账备份")
+    if _sha256(backup) != expected_authority_sha256:
+        raise PublishError("既有 Runner 主台账备份哈希不一致。")
+    return staged_hash, manifest, backup, True, _stat_identity(backup)
 
 
 def _assert_container_paths(
@@ -622,6 +673,7 @@ def _verify_prepared_commit_inputs(
     manifest: Path,
     generation_manifest_sha256: str,
     office_evidence: OfficeEvidenceBundle,
+    office_scope: OfficeRunScope,
     office_paths: tuple[Path, ...],
     production: Path,
     generations: Path,
@@ -638,6 +690,8 @@ def _verify_prepared_commit_inputs(
         raise PublishError("Runner ledger authority 在提交边界变化。")
     if _sha256(manifest) != generation_manifest_sha256:
         raise PublishError("Runner manifest 在提交边界变化。")
+    if office_evidence.scope is not office_scope:
+        raise PublishError("Runner OfficeRunScope token 在提交边界失效。")
     try:
         office_evidence.assert_publication_roles(staged, office_paths)
     except OfficeVerificationError as exc:
@@ -685,6 +739,8 @@ def _assert_generation_office_binding(
 
 
 def _verify_plan_inputs(plan: PublishPlan) -> None:
+    if plan.office_evidence.scope is not plan.office_scope:
+        raise PublishError("发布计划的 OfficeRunScope token 不一致。")
     _require_ordinary_file(plan.staged_ledger, label="暂存主台账")
     _require_ordinary_file(plan.authority_path, label="生产主台账")
     _fsync_file(plan.staged_ledger)
@@ -721,6 +777,8 @@ def _validate_plan_shape(plan: PublishPlan) -> None:
         raise PublishError("发布计划的版本化交付路径不符合项目结构。")
     if plan.backup_path.parent != plan.production_root / "ledger" / "archive":
         raise PublishError("发布计划的主台账备份路径不符合项目结构。")
+    if not isinstance(plan.office_scope, OfficeRunScope) or plan.office_evidence.scope is not plan.office_scope:
+        raise PublishError("发布计划未绑定同一个 OfficeRunScope token。")
     if not re.fullmatch(r"Skills主台账_\d{8}_\d{6}(?:_\d+)?\.xlsx", plan.backup_path.name):
         raise PublishError("发布计划的主台账备份文件名不符合约定。")
     if not plan.delivery_files:

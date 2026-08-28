@@ -21,7 +21,13 @@ if os.name == "nt":
 from .dedup import deduplicate
 from .ledger import LedgerStore
 from .locking import SingleWriterLock
-from .office import OfficeEvidenceBundle, OfficeVerificationError, clear_office_run_state
+from .office import (
+    OfficeEvidenceBundle,
+    OfficeRunScope,
+    OfficeVerificationError,
+    clear_office_run_state,
+    issue_office_run_scope,
+)
 from .paths import ProjectPaths, assert_ordinary_path, contained_child, is_link_or_reparse
 from .publish import PublishError, PublishReceipt, commit_prepared_generation
 from .review import ReviewDecision, apply_reviews_from_stream, clear_review_run_state, consume_applied_review
@@ -63,6 +69,7 @@ class PreparedRun:
     settings_sha256: str
     source_runs: tuple[SourceRun, ...]
     catalog_snapshot: object = field(repr=False, compare=False)
+    office_scope: OfficeRunScope = field(repr=False, compare=False)
     _coordinator_token: str = field(repr=False, compare=False)
 
 
@@ -151,6 +158,7 @@ class RunCoordinator:
         lock = SingleWriterLock(self.paths.lock)
         lock.acquire()
         staging_dir: Path | None = None
+        office_scope: OfficeRunScope | None = None
         try:
             run_id = self._run_id(request.requested_run_id)
             self._reclaim_orphan_generation(run_id)
@@ -159,6 +167,11 @@ class RunCoordinator:
                 raise CoordinatorError("运行暂存目录已存在或不是普通目录")
             staging_dir.mkdir(mode=0o700)
             assert_ordinary_path(staging_dir, require_directory=True)
+            office_scope = issue_office_run_scope(
+                run_id=run_id,
+                staging_root=staging_dir,
+                project_root=self.paths.root,
+            )
             staged_ledger = staging_dir / "Skills主台账.xlsx"
             shutil.copyfile(self.paths.ledger, staged_ledger)
             self._ensure_file_in_staging(staging_dir, staged_ledger)
@@ -175,7 +188,10 @@ class RunCoordinator:
             evidence_identity = self._bind_evidence(source_runs)
             self._write_source_statuses(staged_ledger, source_runs)
             self._inject("after_discovery")
-            prepared = PreparedRun(run_id, staging_dir, staged_ledger, config_sha, source_runs, captured_catalog, self._token)
+            prepared = PreparedRun(
+                run_id, staging_dir, staged_ledger, config_sha, source_runs,
+                captured_catalog, office_scope, self._token,
+            )
             self._states[run_id] = _State(
                 prepared, request, lock, _sha256(self.paths.ledger), _stat_identity(self.paths.ledger), self._tree_digest(staging_dir),
                 self._object_digest(captured_catalog), self._object_digest(source_runs), dict(request.review_packets), evidence_identity,
@@ -196,6 +212,11 @@ class RunCoordinator:
                 clear_review_run_state(packets=tuple(request.review_packets.values()))
             except BaseException:
                 pass
+            if office_scope is not None:
+                try:
+                    clear_office_run_state(scope=office_scope)
+                except BaseException:
+                    pass
             raise
 
     def apply_reviews(self, prepared: PreparedRun, decisions: Iterable[ReviewDecision]) -> ReviewApplySummary:
@@ -291,6 +312,8 @@ class RunCoordinator:
             evidence = self.office_verifier(prepared, office_paths)
             if not isinstance(evidence, OfficeEvidenceBundle):
                 raise CoordinatorError("Office 发布结果必须是结构化证据")
+            if evidence.scope is not prepared.office_scope:
+                raise CoordinatorError("Office 发布结果未绑定 Runner 持有的 OfficeRunScope token")
             try:
                 evidence.assert_publication_roles(prepared.staging_ledger, office_paths)
             except OfficeVerificationError as exc:
@@ -747,6 +770,7 @@ class RunCoordinator:
                 generation_path=generation,
                 generation_manifest_sha256=manifest_hash,
                 office_evidence=evidence,
+                office_scope=state.prepared.office_scope,
                 office_paths=office_paths,
             )
             state.committed, state.phase = True, "committed"
@@ -812,10 +836,7 @@ class RunCoordinator:
                     warnings.append(f"registry-clear:{exc}")
                 finally:
                     try:
-                        clear_office_run_state(
-                            state.prepared.run_id,
-                            scope_root=state.prepared.staging_dir,
-                        )
+                        clear_office_run_state(scope=state.prepared.office_scope)
                     except BaseException as exc:
                         warnings.append(f"office-registry-clear:{exc}")
                     finally:
