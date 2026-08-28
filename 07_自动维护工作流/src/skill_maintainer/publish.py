@@ -269,7 +269,7 @@ def publish_atomically(
     try:
         _validate_plan_shape(plan)
     except BaseException:
-        clear_office_run_state(plan.run_id)
+        clear_office_run_state(plan.run_id, scope_root=plan.staging_root)
         raise
     pending_generation = plan.generation_path.parent / f".{plan.run_id}.pending"
     authority_temp = plan.authority_path.parent / f".{plan.authority_path.name}.{plan.run_id}.pending"
@@ -360,7 +360,7 @@ def publish_atomically(
             _remove_tree_if_owned(pending_generation, plan.generation_path.parent)
             if generation_installed:
                 _remove_tree_if_owned(plan.generation_path, plan.generation_path.parent)
-        clear_office_run_state(plan.run_id)
+        clear_office_run_state(plan.run_id, scope_root=plan.staging_root)
 
 
 def commit_prepared_generation(
@@ -396,7 +396,19 @@ def commit_prepared_generation(
         _require_ordinary_directory(output_parent, label="生产 output 目录")
         _require_ordinary_directory(generations, label="发布代次目录")
     except BaseException:
-        clear_office_run_state(run_id)
+        clear_office_run_state(run_id, scope_root=staged.parent)
+        raise
+    try:
+        staged_hash, manifest, backup, backup_exists = _prepare_commit_arguments(
+            staged=staged, authority=authority, generation=generation,
+            generations=generations, archive=archive, run_id=run_id,
+            expected_authority_sha256=expected_authority_sha256,
+            generation_manifest_sha256=generation_manifest_sha256,
+            office_evidence=office_evidence, office_paths=office_paths,
+            backup_path=backup_path,
+        )
+    except BaseException:
+        clear_office_run_state(run_id, scope_root=staged.parent)
         raise
     container_pins = _GenerationPins()
     container_paths = (production, ledger_parent, output_parent, generations)
@@ -411,20 +423,7 @@ def commit_prepared_generation(
         _assert_container_paths(container_paths, container_identities, container_pins)
     except BaseException:
         container_pins.release()
-        clear_office_run_state(run_id)
-        raise
-    try:
-        staged_hash, manifest, backup, backup_exists = _prepare_commit_arguments(
-            staged=staged, authority=authority, generation=generation,
-            generations=generations, archive=archive, run_id=run_id,
-            expected_authority_sha256=expected_authority_sha256,
-            generation_manifest_sha256=generation_manifest_sha256,
-            office_evidence=office_evidence, office_paths=office_paths,
-            backup_path=backup_path,
-        )
-    except BaseException:
-        container_pins.release()
-        clear_office_run_state(run_id)
+        clear_office_run_state(run_id, scope_root=staged.parent)
         raise
     backup_temp = archive / f".{backup.name}.{run_id}.pending"
     authority_temp = authority.parent / f".{authority.name}.{run_id}.commit"
@@ -474,7 +473,7 @@ def commit_prepared_generation(
             container_pins=container_pins,
         )
         try:
-            consume_office_evidence(office_evidence, run_id=run_id)
+            consume_office_evidence(office_evidence, run_id=run_id, scope_root=staged.parent)
         except OfficeVerificationError as exc:
             raise PublishError(f"Runner Office verifier capability 无效或已消费：{exc}") from exc
         os.replace(authority_temp, authority)
@@ -504,7 +503,7 @@ def commit_prepared_generation(
             pass
         _remove_file_if_owned(authority_temp, authority.parent)
         _remove_file_if_owned(backup_temp, archive)
-        clear_office_run_state(run_id)
+        clear_office_run_state(run_id, scope_root=staged.parent)
 
 
 def _assert_prepared_parents(
@@ -554,6 +553,8 @@ def _prepare_commit_arguments(
         raise PublishError("生产主台账在提交前发生变化。")
     if not isinstance(office_evidence, OfficeEvidenceBundle):
         raise PublishError("Runner 必须提供结构化 Office 证据。")
+    if office_evidence.run_id != run_id:
+        raise PublishError("Runner Office 证据未绑定当前运行标识。")
     try:
         office_evidence.assert_publication_roles(staged, office_paths)
     except OfficeVerificationError as exc:

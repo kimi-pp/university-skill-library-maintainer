@@ -812,7 +812,10 @@ class RunCoordinator:
                     warnings.append(f"registry-clear:{exc}")
                 finally:
                     try:
-                        clear_office_run_state(state.prepared.run_id)
+                        clear_office_run_state(
+                            state.prepared.run_id,
+                            scope_root=state.prepared.staging_dir,
+                        )
                     except BaseException as exc:
                         warnings.append(f"office-registry-clear:{exc}")
                     finally:

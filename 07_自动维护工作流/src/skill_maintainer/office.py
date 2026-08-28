@@ -168,10 +168,16 @@ class OfficeEvidenceBundle:
                 seen.add(source)
                 _require_trusted_check(check, normalized_run_id, final=True, issued=False)
                 _validate_check(check)
-                records.append(_TRUSTED_CHECKS[id(check)])
+                record = _TRUSTED_CHECKS[id(check)]
+                _assert_check_within_scope(check, record.scope_root)
+                records.append(record)
+            scopes = {record.scope_root for record in records}
+            if len(scopes) != 1:
+                raise OfficeVerificationError("同一 OfficeEvidenceBundle 的全部证据必须位于同一暂存作用域。")
+            scope_root = next(iter(scopes))
             bundle = cls(frozen, normalized_run_id, _evidence_digest(frozen, normalized_run_id))
             try:
-                _register_bundle(bundle)
+                _register_bundle(bundle, scope_root)
                 for record in records:
                     record.issued = True
                 return bundle
@@ -184,6 +190,7 @@ class OfficeEvidenceBundle:
     def assert_covers(self, paths: Iterable[str | Path]) -> None:
         with _OFFICE_REGISTRY_LOCK:
             _require_trusted_bundle(self, self.run_id)
+            scope_root = _TRUSTED_BUNDLES[id(self)].scope_root
             required = {
                 Path(path).absolute()
                 for path in paths
@@ -196,6 +203,7 @@ class OfficeEvidenceBundle:
                 raise OfficeVerificationError(f"Office 证据未精确覆盖发布文件；缺失={missing}；多余={extra}")
             for check in self.checks:
                 _validate_check(check)
+                _assert_check_within_scope(check, scope_root)
 
     def assert_publication_roles(
         self,
@@ -208,6 +216,10 @@ class OfficeEvidenceBundle:
         supplied_paths = tuple(Path(path).absolute() for path in paths)
         with _OFFICE_REGISTRY_LOCK:
             self.assert_covers(supplied_paths)
+            scope_root = _TRUSTED_BUNDLES[id(self)].scope_root
+            _assert_paths_within_scope(supplied_paths, scope_root)
+            if ledger.parent.resolve(strict=True) != scope_root:
+                raise OfficeVerificationError("暂存主台账必须直接位于当前 verifier 暂存作用域根目录。")
             checks = {check.source_path.absolute(): check for check in self.checks}
             ledger_check = checks.get(ledger)
             if ledger_check is None or ledger_check.kind != "excel" or ledger_check.excel_role != "ledger":
@@ -229,6 +241,7 @@ class OfficeEvidenceBundle:
 class _CheckRecord:
     check: weakref.ReferenceType[OfficeCheck]
     run_id: str
+    scope_root: Path
     final: bool
     facts: tuple[object, ...]
     issued: bool = False
@@ -238,6 +251,7 @@ class _CheckRecord:
 class _BundleRecord:
     bundle: weakref.ReferenceType[OfficeEvidenceBundle]
     run_id: str
+    scope_root: Path
     facts: tuple[object, ...]
 
 
@@ -246,28 +260,52 @@ _TRUSTED_BUNDLES: dict[int, _BundleRecord] = {}
 _OFFICE_REGISTRY_LOCK = threading.RLock()
 
 
-def consume_office_evidence(bundle: object, *, run_id: str) -> OfficeEvidenceBundle:
+def consume_office_evidence(
+    bundle: object,
+    *,
+    run_id: str,
+    scope_root: str | Path | None = None,
+) -> OfficeEvidenceBundle:
     """Consume the exact run-bound verifier capability immediately before authority replace."""
 
     with _OFFICE_REGISTRY_LOCK:
         trusted = _require_trusted_bundle(bundle, _required_run_id(run_id))
+        if scope_root is not None and _scope_reference(scope_root) != _TRUSTED_BUNDLES[id(trusted)].scope_root:
+            raise OfficeVerificationError("OfficeEvidenceBundle 未绑定当前暂存作用域。")
         _TRUSTED_BUNDLES.pop(id(trusted), None)
         return trusted
 
 
-def clear_office_run_state(run_id: str | None = None) -> None:
+def clear_office_run_state(
+    run_id: str | None = None,
+    *,
+    scope_root: str | Path | None = None,
+) -> None:
     """Release only one run's transient verifier capabilities (or all in test cleanup)."""
 
     with _OFFICE_REGISTRY_LOCK:
         if run_id is None:
+            if scope_root is not None:
+                raise OfficeVerificationError("全局 Office registry 清理不能同时指定暂存作用域。")
             _TRUSTED_CHECKS.clear()
             _TRUSTED_BUNDLES.clear()
             return
+        normalized_run_id = _required_run_id(run_id)
+        selected_scope = _scope_reference(scope_root) if scope_root is not None else None
+        if selected_scope is None:
+            scopes = {
+                record.scope_root
+                for record in (*_TRUSTED_CHECKS.values(), *_TRUSTED_BUNDLES.values())
+                if record.run_id == normalized_run_id
+            }
+            if len(scopes) > 1:
+                raise OfficeVerificationError("同一运行标识存在多个暂存作用域，必须指定 scope_root 精确清理。")
+            selected_scope = next(iter(scopes), None)
         for identity, record in tuple(_TRUSTED_CHECKS.items()):
-            if record.run_id == run_id:
+            if record.run_id == normalized_run_id and (selected_scope is None or record.scope_root == selected_scope):
                 _TRUSTED_CHECKS.pop(identity, None)
         for identity, record in tuple(_TRUSTED_BUNDLES.items()):
-            if record.run_id == run_id:
+            if record.run_id == normalized_run_id and (selected_scope is None or record.scope_root == selected_scope):
                 _TRUSTED_BUNDLES.pop(identity, None)
 
 
@@ -278,8 +316,47 @@ def _required_run_id(run_id: str) -> str:
     return normalized
 
 
+def _scope_reference(path: str | Path) -> Path:
+    return Path(path).resolve(strict=False)
+
+
+def _scope_for_source(source: Path, run_id: str) -> Path:
+    source = source.absolute()
+    candidate = next((parent for parent in source.parents if parent.name == run_id), source.parent)
+    if not candidate.is_dir() or is_link_or_reparse(candidate):
+        raise OfficeVerificationError(f"Office verifier 暂存作用域必须是普通目录：{candidate}")
+    try:
+        assert_ordinary_path(candidate, require_directory=True)
+    except ValueError as exc:
+        raise OfficeVerificationError(f"Office verifier 暂存作用域路径不安全：{candidate}") from exc
+    return candidate.resolve(strict=True)
+
+
+def _assert_paths_within_scope(paths: Iterable[str | Path], scope_root: Path) -> None:
+    for value in paths:
+        path = Path(value).absolute()
+        if not path.is_file() or is_link_or_reparse(path):
+            raise OfficeVerificationError(f"Office 证据作用域内必须是普通文件：{path}")
+        try:
+            assert_ordinary_path(path)
+            path.resolve(strict=True).relative_to(scope_root)
+        except (OSError, ValueError) as exc:
+            raise OfficeVerificationError(f"Office 证据越出当前暂存作用域：{path}") from exc
+
+
+def _assert_check_within_scope(check: OfficeCheck, scope_root: Path) -> None:
+    paths: tuple[Path, ...] = (
+        check.source_path,
+        *((check.pdf_path,) if check.pdf_path is not None else ()),
+        *check.page_paths,
+    )
+    _assert_paths_within_scope(paths, scope_root)
+
+
 def _register_check(check: OfficeCheck, run_id: str, *, final: bool) -> None:
     identity = id(check)
+    scope_root = _scope_for_source(check.source_path, run_id)
+    _assert_check_within_scope(check, scope_root)
 
     def _discard(reference: weakref.ReferenceType[OfficeCheck]) -> None:
         with _OFFICE_REGISTRY_LOCK:
@@ -289,7 +366,7 @@ def _register_check(check: OfficeCheck, run_id: str, *, final: bool) -> None:
 
     with _OFFICE_REGISTRY_LOCK:
         _TRUSTED_CHECKS[identity] = _CheckRecord(
-            weakref.ref(check, _discard), run_id, final, _check_facts(check),
+            weakref.ref(check, _discard), run_id, scope_root, final, _check_facts(check),
         )
 
 
@@ -314,7 +391,7 @@ def _require_trusted_check(
     return check
 
 
-def _register_bundle(bundle: OfficeEvidenceBundle) -> None:
+def _register_bundle(bundle: OfficeEvidenceBundle, scope_root: Path) -> None:
     identity = id(bundle)
 
     def _discard(reference: weakref.ReferenceType[OfficeEvidenceBundle]) -> None:
@@ -325,7 +402,7 @@ def _register_bundle(bundle: OfficeEvidenceBundle) -> None:
 
     with _OFFICE_REGISTRY_LOCK:
         _TRUSTED_BUNDLES[identity] = _BundleRecord(
-            weakref.ref(bundle, _discard), bundle.run_id, _bundle_facts(bundle),
+            weakref.ref(bundle, _discard), bundle.run_id, scope_root, _bundle_facts(bundle),
         )
 
 
@@ -341,6 +418,8 @@ def _require_trusted_bundle(bundle: object, run_id: str) -> OfficeEvidenceBundle
         raise OfficeVerificationError("OfficeEvidenceBundle 不是当前运行真实签发且未消费的受信 capability。")
     for check in bundle.checks:
         _require_trusted_check(check, run_id, final=True, issued=True)
+        if _TRUSTED_CHECKS[id(check)].scope_root != record.scope_root:
+            raise OfficeVerificationError("OfficeEvidenceBundle 的 Check 暂存作用域不一致。")
     return bundle
 
 

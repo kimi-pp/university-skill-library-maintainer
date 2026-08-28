@@ -35,6 +35,7 @@ from skill_maintainer.publish import (
     PublishFile,
     PublishError,
     build_publish_plan,
+    commit_prepared_generation,
     publish_atomically,
 )
 
@@ -420,6 +421,26 @@ class PublicationTestCase(unittest.TestCase):
         write_excel(production / "ledger" / "Skills主台账.xlsx", rows=1)
         return staging, production
 
+    def make_scoped_tree(self, project: str, run_id: str) -> tuple[Path, Path]:
+        staging = self.root / project / "staging" / run_id
+        production = self.root / project / "production"
+        deliveries = staging / "deliveries"
+        deliveries.mkdir(parents=True)
+        (deliveries / "检查摘要.txt").write_text("approved", encoding="utf-8")
+        write_excel(staging / "Skills主台账.xlsx", rows=2)
+        (production / "ledger" / "archive").mkdir(parents=True)
+        (production / "output" / "generations").mkdir(parents=True)
+        write_excel(production / "ledger" / "Skills主台账.xlsx", rows=1)
+        return staging, production
+
+    @staticmethod
+    def tree_snapshot(root: Path) -> tuple[tuple[str, str, bytes | None], ...]:
+        records: list[tuple[str, str, bytes | None]] = []
+        for path in sorted(root.rglob("*"), key=lambda item: item.relative_to(root).as_posix()):
+            relative = path.relative_to(root).as_posix()
+            records.append((relative, "directory", None) if path.is_dir() else (relative, "file", path.read_bytes()))
+        return tuple(records)
+
     @staticmethod
     def evidence_for(staging: Path):
         ledger = staging / "Skills主台账.xlsx"
@@ -480,6 +501,114 @@ class PublicationTestCase(unittest.TestCase):
         with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
             first.assert_covers((first_staging / "Skills主台账.xlsx",))
         second.assert_covers((second_staging / "Skills主台账.xlsx",))
+
+    def test_same_requested_run_id_cleanup_is_isolated_by_staging_scope(self):
+        run_id = "run-shared-across-projects"
+        for mode in ("success", "failure", "base-exception", "explicit-clear"):
+            with self.subTest(mode=mode):
+                first_staging, first_production = self.make_scoped_tree(f"{mode}-project-a", run_id)
+                second_staging, _ = self.make_scoped_tree(f"{mode}-project-b", run_id)
+                first = self.evidence_for(first_staging)
+                second = self.evidence_for(second_staging)
+
+                if mode == "explicit-clear":
+                    clear_office_run_state(run_id, scope_root=first_staging)
+                else:
+                    plan = build_publish_plan(first_staging, first_production, office_evidence=first)
+                    if mode == "success":
+                        publish_atomically(plan)
+                    elif mode == "failure":
+                        with self.assertRaisesRegex(PublishError, "注入失败"):
+                            publish_atomically(plan, fail_at="generation-replace")
+                    else:
+                        def stop_before_backup() -> None:
+                            raise SystemExit("stop before backup replace")
+
+                        with self.assertRaises(SystemExit):
+                            publish_atomically(plan, before_backup_replace=stop_before_backup)
+
+                with self.assertRaisesRegex(OfficeVerificationError, "消费|受信|签发"):
+                    first.assert_covers((first_staging / "Skills主台账.xlsx",))
+                second.assert_covers((second_staging / "Skills主台账.xlsx",))
+
+    def test_shared_commit_rejects_every_invalid_preflight_input_before_any_production_side_effect(self):
+        cases = (
+            "wrong-role", "forged", "wrong-run", "wrong-generation-path",
+            "wrong-authority-hash", "office-set-mismatch",
+        )
+        for case in cases:
+            with self.subTest(case=case):
+                run_id = f"run-preflight-{case}"
+                staging = self.root / case / "staging" / run_id
+                production = self.root / case / "production"
+                staging.mkdir(parents=True)
+                write_excel(staging / "Skills主台账.xlsx", rows=2)
+                (production / "ledger").mkdir(parents=True)
+                generations = production / "output" / "generations"
+                generation = generations / run_id
+                generation.mkdir(parents=True)
+                write_excel(production / "ledger" / "Skills主台账.xlsx", rows=1)
+                (generation / "payload.txt").write_text("prepared", encoding="utf-8")
+                manifest = generation / "generation-manifest.json"
+                manifest.write_text('{"prepared":true}', encoding="utf-8")
+
+                if case == "office-set-mismatch":
+                    write_excel(generation / "unexpected.xlsx", rows=1)
+                if case == "wrong-role":
+                    result = {
+                        "passed": True, "office_opened": True, "read_only": True,
+                        "key_sheet": "执行概览", "last_row": 2, "last_column": 2,
+                        "last_value": "完成", "process_count_before": 0,
+                        "process_count_after": 0, "error": None,
+                    }
+                    with patch("skill_maintainer.office._run_office", return_value=result):
+                        check = verify_excel(
+                            staging / "Skills主台账.xlsx", run_id=run_id, role="daily",
+                        )
+                    evidence = OfficeEvidenceBundle.from_checks((check,), run_id=run_id)
+                elif case == "wrong-run":
+                    evidence_run_id = f"{run_id}-evidence"
+                    result = {
+                        "passed": True, "office_opened": True, "read_only": True,
+                        "key_sheet": "当前Skill", "last_row": 3, "last_column": 2,
+                        "last_value": "skill-2", "process_count_before": 0,
+                        "process_count_after": 0, "error": None,
+                    }
+                    with patch("skill_maintainer.office._run_office", return_value=result):
+                        check = verify_excel(
+                            staging / "Skills主台账.xlsx", run_id=evidence_run_id, role="ledger",
+                        )
+                    evidence = OfficeEvidenceBundle.from_checks((check,), run_id=evidence_run_id)
+                else:
+                    evidence = self.evidence_for(staging)
+                    if case == "forged":
+                        evidence = replace(evidence)
+
+                commit_generation = (
+                    generations / "wrong-generation-name"
+                    if case == "wrong-generation-path" else generation
+                )
+                expected_authority = (
+                    "0" * 64
+                    if case == "wrong-authority-hash"
+                    else file_sha256(production / "ledger" / "Skills主台账.xlsx")
+                )
+
+                before = self.tree_snapshot(production)
+                with self.assertRaisesRegex(PublishError, "Office|证据|ledger|主台账|发布代次|generation"):
+                    commit_prepared_generation(
+                        production_root=production,
+                        run_id=run_id,
+                        staged_ledger=staging / "Skills主台账.xlsx",
+                        expected_authority_sha256=expected_authority,
+                        generation_path=commit_generation,
+                        generation_manifest_sha256=file_sha256(manifest),
+                        office_evidence=evidence,
+                        office_paths=(staging / "Skills主台账.xlsx",),
+                    )
+
+                self.assertEqual(self.tree_snapshot(production), before)
+                self.assertFalse((production / "ledger" / "archive").exists())
 
     def test_checks_issue_one_bundle_atomically_and_concurrently(self):
         staging, _ = self.make_tree("run-check-issuance")
