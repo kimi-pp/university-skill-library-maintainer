@@ -107,6 +107,42 @@ notify_on_no_change = false
             CatalogRow("14", "交叉学科", None, None, "140101", "集成电路科学与工程"),
         ))
 
+    def assert_report_mapping_rejected_before_output(self, stable_id: str, code: str, name: str) -> None:
+        from skill_maintainer.reports import ReportBuildError, make_project_report_builder
+
+        production = self.root / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(production)
+        ledger.append_rows("专业任务映射", [{
+            "映射标识": f"MAP-{stable_id}", "内部标识": stable_id,
+            "专业代码": code, "专业名称": name, "专业任务": "不应纳入的任务",
+            "输入": "数据", "输出": "报告", "适用理由": "不应纳入", "使用限制": "禁止", "相关度": "高",
+            "专业别名": name, "核心课程": name, "研究方法": name, "工作任务": name,
+            "成果或数据对象": name, "软件/数据库/流程": name,
+        }])
+        seeded = self.root / "ledger" / f"{stable_id}-seed.xlsx"
+        ledger.save_staged(seeded)
+        ledger.workbook.close()
+        shutil.copyfile(seeded, production)
+        seeded.unlink()
+
+        packet, decision = self.report_review(stable_id, f"https://github.com/example/{stable_id.lower()}")
+        coordinator = self.coordinator(report_builder=make_project_report_builder(self.root))
+        request = replace(
+            self.request,
+            requested_run_id=f"run-reject-{stable_id.lower()}",
+            catalog_loader=self.report_scope_catalog,
+            review_packets={stable_id: packet},
+        )
+        prepared = coordinator.prepare(request)
+        coordinator.apply_reviews(prepared, (decision,))
+        try:
+            with self.assertRaisesRegex(ReportBuildError, f"{stable_id}|专业任务映射"):
+                coordinator.report_builder(prepared, prepared.staging_dir)
+            delivery = prepared.staging_dir / "deliveries"
+            self.assertTrue(not delivery.exists() or not any(delivery.iterdir()))
+        finally:
+            coordinator.abandon(prepared)
+
     def report_review(self, stable_id: str, canonical_source: str):
         candidate_root = self.root / f"{stable_id}-candidate"
         candidate_root.mkdir()
@@ -332,6 +368,17 @@ notify_on_no_change = false
             self.assertTrue(not delivery.exists() or not any(delivery.iterdir()))
         finally:
             coordinator.abandon(prepared)
+
+    def test_report_adapter_rejects_blank_code_even_when_name_starts_with_approved_code(self):
+        if not os.environ.get("SKILL_MAINTAINER_NODE") or not os.environ.get("SKILL_MAINTAINER_NODE_MODULES"):
+            self.skipTest("report integration requires caller-supplied Node runtime")
+        cases = (
+            ("BLANK-ORDINARY-REPORT-1", "0809 任意自由文本"),
+            ("BLANK-MILITARY-REPORT-1", "0809 军事自由文本"),
+        )
+        for stable_id, name in cases:
+            with self.subTest(name=name):
+                self.assert_report_mapping_rejected_before_output(stable_id, "", name)
 
     def test_all_failure_points_leave_production_bytes_identical(self):
         points = ("after_discovery", "after_review", "report", "office", "reopen", "before_publish")

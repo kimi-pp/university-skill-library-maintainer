@@ -662,11 +662,9 @@ def _scope_name(row: Mapping[str, Any]) -> str:
 
 
 def _scope_code(row: Mapping[str, Any]) -> str:
-    direct = str(row.get("专业代码") or "").strip()
-    if direct:
-        return direct
-    match = re.match(r"^(\d{2,6})(?:\s|$)", _scope_name(row))
-    return match.group(1) if match else ""
+    """Return only the explicit ledger code used by approval decisions."""
+
+    return str(row.get("专业代码") or "").strip()
 
 
 def _active_catalog_rows(catalog_snapshot: object | None) -> tuple[object, ...]:

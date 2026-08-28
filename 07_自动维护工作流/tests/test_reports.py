@@ -196,7 +196,10 @@ class ReportContentTestCase(unittest.TestCase):
         base_skill = formal_row(1, "0801 力学类")
         before = {
             "当前Skill": [base_skill],
-            "专业任务映射": [{"内部标识": base_skill["内部标识"], "专业类": "0801 力学类", "专业任务": "建模"}],
+            "专业任务映射": [{
+                "内部标识": base_skill["内部标识"], "专业代码": "0801",
+                "专业名称": "力学类", "专业任务": "建模",
+            }],
             "来源别名": [],
             "目录基线": [{"目录版本": "2025", "专业类": "0801 力学类"}],
         }
@@ -206,7 +209,10 @@ class ReportContentTestCase(unittest.TestCase):
 
         cases = []
         added = formal_row(2, "0809 计算机类")
-        cases.append({**before, "当前Skill": [base_skill, added], "专业任务映射": before["专业任务映射"] + [{"内部标识": added["内部标识"], "专业类": "0809 计算机类", "专业任务": "数据分析"}]})
+        cases.append({**before, "当前Skill": [base_skill, added], "专业任务映射": before["专业任务映射"] + [{
+            "内部标识": added["内部标识"], "专业代码": "0809",
+            "专业名称": "计算机类", "专业任务": "数据分析",
+        }]})
         cases.append({**before, "当前Skill": [{**base_skill, "固定版本": "v2.0"}]})
         cases.append({**before, "当前Skill": [{**base_skill, "许可证": "BSD-3-Clause"}]})
         cases.append({**before, "当前Skill": [{**base_skill, "安全等级": "SB"}]})
@@ -288,6 +294,8 @@ class ReportContentTestCase(unittest.TestCase):
             ("malformed-prefix", "08evil", "伪造类", ()),
             ("fake-interdisciplinary-class", "1401", "伪交叉学科类", ()),
             ("empty-code-military-text", "", "军事学自由文本", ()),
+            ("empty-code-leading-valid-ordinary-text", "", "0809 任意自由文本", ()),
+            ("empty-code-leading-valid-military-text", "", "0809 军事自由文本", ()),
             ("well-formed-but-absent", "0808", "自动化类", ()),
             ("military-code", "1101", "军事类", ()),
             ("real-class", "0809", "计算机类", ("0809 计算机类",)),

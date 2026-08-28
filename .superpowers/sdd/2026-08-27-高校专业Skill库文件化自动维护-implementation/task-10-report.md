@@ -211,3 +211,30 @@ python -m unittest tests.test_reports.ReportContentTestCase.test_scope_mappings_
 
 - 本轮没有触碰 Task 11 的 Word 9360 DXA grid + 120 DXA indent 视觉项；当前环境仍无 `soffice`，不新增或伪称 DOCX 视觉通过证据。
 - 本轮只改变 scope 选择与 fail-closed 校验，没有重新生成报告模板或改变 artifact-tool Excel authoring/OOXML 兼容补丁；原 Task 10 的 12-sheet 渲染和公式扫描证据保持有效。
+
+## Fix round 4：审批代码禁止从名称回退推导
+
+### TDD RED
+
+在精确 scope 矩阵中新增“空显式 `专业代码` + `0809 任意自由文本`”及“空显式 `专业代码` + `0809 军事自由文本`”两例；真实 adapter 以两个独立 subcase 验证二者都必须在创建 `deliveries` 前拒绝。
+
+- scope 矩阵两项均 RED：实际都被规范成 `0809 计算机类`，期望空。
+- 真实 adapter：`Ran 1 test in 49.362s`，`FAILED (failures=2)`；两个 subcase 均未抛 `ReportBuildError`，证明都走过了产出前门。
+
+### 最小实现
+
+`_scope_code` 现在只返回专业任务映射中显式的 `专业代码` 字段。审批、mapping index 和新增正式映射 fail-closed 不再从 `专业名称` 或 `专业类` 的数字前缀推导代码。展示所需的 `_scope_name` 保持独立，不参与批准决定。既有测试 fixture 中用于审批的旧 `专业类` 合并文本改为显式 `专业代码` / `专业名称`，与真实 ledger schema 对齐。
+
+显式合法 `0809`、`140101` 和精确 `99` 继续由完整 scope 矩阵覆盖并允许；本轮没有改变受信 `Catalog` diff 兼容路径。
+
+### GREEN 与最终验证
+
+- 定向 scope + 两个真实 adapter subcase：`Ran 2 tests in 0.688s`，`OK`；失败发生在生成前。
+- focused reports：`Ran 20 tests in 133.671s`，`OK`。
+- affected runner：`Ran 38 tests in 49.080s`，`OK`。
+- full suite：`Ran 188 tests in 194.854s`，`OK`。
+- bundled Python `compileall -q src tests`、bundled Node `--check src/skill_maintainer/daily_xlsx_builder.mjs`、`git diff --check` 均以 0 退出；diff check 仅有 LF→CRLF 提示，无 whitespace error。
+
+### 保留顾虑
+
+- 本轮仍不处理 Task 11 的 Word 几何与 `soffice` 视觉门；没有改变或重新宣称既有视觉证据。
