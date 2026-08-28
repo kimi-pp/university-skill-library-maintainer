@@ -1,0 +1,4 @@
+interface:
+  display_name: "高校 Skill 库维护"
+  short_description: "安全维护高校专业 Skill 台账、版本与 Word/Excel 查验交付"
+  default_prompt: "使用 $university-skill-library-maintainer 检查或运行本项目的文件化 Skill 库维护流程。"
