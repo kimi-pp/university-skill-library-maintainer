@@ -8,11 +8,13 @@ import json
 import os
 from pathlib import Path
 import shutil
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
 
-from openpyxl import load_workbook
+from docx import Document
+from openpyxl import Workbook, load_workbook
 
 from skill_maintainer.catalog import Catalog, CatalogRow, CatalogSnapshot, diff_catalog
 from skill_maintainer.ledger import LedgerStore
@@ -76,10 +78,61 @@ notify_on_no_change = false
                 SourceRun("GitHub", "failed"), SourceRun("Hugging Face Spaces", "failed"),
             ),
             "report_builder": lambda prepared, staging: (),
-            "office_verifier": lambda prepared, artifacts: True,
+            "office_verifier": self.unit_office_verifier,
         }
         options.update(overrides)
         return RunCoordinator(**options)
+
+    @staticmethod
+    def unit_office_verifier(prepared, artifacts):
+        """Hash-exact unit evidence; real hidden Office is covered by the integration test."""
+        from skill_maintainer.office import OfficeCheck, OfficeEvidenceBundle
+
+        checks = []
+        for path in artifacts:
+            path = Path(path).absolute()
+            if path.suffix.casefold() == ".xlsx":
+                checks.append(OfficeCheck(
+                    kind="excel", source_path=path, source_sha256=sha256(path.read_bytes()).hexdigest(),
+                    passed=True, office_passed=True, office_opened=True, read_only=True,
+                    key_sheet="当前Skill", last_row=2, last_column=1, last_value="verified",
+                    process_count_before=0, process_count_after=0,
+                ))
+            elif path.suffix.casefold() == ".docx":
+                evidence = prepared.staging_dir / ".office-evidence"
+                evidence.mkdir(exist_ok=True)
+                pdf = evidence / f"{path.stem}.pdf"
+                page = evidence / f"{path.stem}-page-1.png"
+                pdf.write_bytes(b"unit-pdf")
+                page.write_bytes(b"unit-page")
+                checks.append(OfficeCheck(
+                    kind="word", source_path=path, source_sha256=sha256(path.read_bytes()).hexdigest(),
+                    passed=True, office_passed=True, office_opened=True, read_only=True,
+                    pdf_path=pdf, pdf_sha256=sha256(pdf.read_bytes()).hexdigest(),
+                    page_paths=(page,), page_sha256=(sha256(page.read_bytes()).hexdigest(),),
+                    blank_pages=(), visual_reviewed=True, page_approved=(True,),
+                    visual_reviewer="unit evidence",
+                    process_count_before=0, process_count_after=0,
+                ))
+        return OfficeEvidenceBundle.from_checks(tuple(checks))
+
+    @staticmethod
+    def explicit_renderer(root: Path):
+        from skill_maintainer.office import RendererCommand
+
+        script = root / "测试 PDF 渲染器.py"
+        script.write_text(
+            "import argparse,json\n"
+            "from pathlib import Path\n"
+            "from pdf2image import convert_from_path\n"
+            "p=argparse.ArgumentParser();p.add_argument('--pdf');p.add_argument('--output-dir');a=p.parse_args()\n"
+            "out=Path(a.output_dir);pages=[]\n"
+            "for i,image in enumerate(convert_from_path(a.pdf,dpi=110,fmt='png',thread_count=1),1):\n"
+            " target=out/f'page-{i}.png';image.save(target,'PNG');pages.append({'path':target.name,'body_nonwhite_pixels':1})\n"
+            "print(json.dumps({'pages':pages},separators=(',',':')))\n",
+            encoding="utf-8",
+        )
+        return RendererCommand((sys.executable, str(script)))
 
     def production_hashes(self) -> dict[str, str]:
         result = {}
@@ -685,7 +738,7 @@ notify_on_no_change = false
 
         second = RunCoordinator(root=second_root, discover=lambda request, staging: (
             SourceRun("SkillHub", "partial"), SourceRun("ClawHub", "failed"), SourceRun("GitHub", "failed"), SourceRun("Hugging Face Spaces", "failed"),
-        ), report_builder=lambda prepared, staging: (), office_verifier=lambda prepared, artifacts: True)
+        ), report_builder=lambda prepared, staging: (), office_verifier=self.unit_office_verifier)
         request_b = RunRequest(settings_path=second_root / "workflow-settings.toml", catalog_loader=lambda: object(), review_packets={"packet-b": packet_b})
         prepared_b = second.prepare(request_b)
         self.assertEqual(second.apply_reviews(prepared_b, (decision_b,)).applied_count, 1)
@@ -892,6 +945,71 @@ notify_on_no_change = false
             coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
         self.assertEqual(verifier_calls, [])
 
+    def test_finalize_rejects_unstructured_boolean_office_result(self):
+        coordinator = self.coordinator(office_verifier=lambda prepared, artifacts: True)
+        prepared = coordinator.prepare(self.request)
+        with self.assertRaisesRegex(CoordinatorError, "Office.*证据|证据.*Office"):
+            coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
+
+    @unittest.skipUnless(os.name == "nt", "hidden Microsoft Office integration requires Windows")
+    def test_finalize_combines_real_office_per_page_evidence_backup_generation_and_ledger_authority(self):
+        from skill_maintainer.office import (
+            OfficeEvidenceBundle,
+            WordRenderDecision,
+            bind_word_visual_decision,
+            verify_excel,
+            verify_word,
+        )
+
+        def build_reports(prepared, staging):
+            deliveries = staging / "deliveries"
+            deliveries.mkdir()
+            spreadsheet = deliveries / "自动查验表.xlsx"
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.title = "运行概览"
+            sheet.append(["项目", "结果"])
+            sheet.append(["Office", "通过"])
+            workbook.save(spreadsheet)
+            workbook.close()
+            report = deliveries / "自动查验报告.docx"
+            document = Document()
+            document.add_heading("自动查验报告", level=1)
+            document.add_paragraph("本页正文用于逐页视觉验收与发布证据绑定。")
+            document.save(report)
+            return report, spreadsheet
+
+        renderer = self.explicit_renderer(self.root)
+
+        def verify_all(prepared, artifacts):
+            checks = []
+            for path in artifacts:
+                if path.suffix.casefold() == ".xlsx":
+                    excel_check = verify_excel(path)
+                    self.assertTrue(excel_check.passed, excel_check.error)
+                    checks.append(excel_check)
+                elif path.suffix.casefold() == ".docx":
+                    rendered = verify_word(path, prepared.staging_dir / f"render-{path.stem}", renderer=renderer)
+                    checks.append(bind_word_visual_decision(
+                        rendered,
+                        WordRenderDecision.from_check(rendered, approved=True, reviewer="Task11 integration"),
+                    ))
+            return OfficeEvidenceBundle.from_checks(tuple(checks))
+
+        coordinator = self.coordinator(report_builder=build_reports, office_verifier=verify_all)
+        prepared = coordinator.prepare(replace(self.request, requested_run_id="run-real-office-publication"))
+        summary = coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
+
+        self.assertFalse(summary.blocked)
+        self.assertTrue(summary.output_generation.is_dir())
+        self.assertTrue((summary.output_generation / "自动查验报告.docx").is_file())
+        self.assertTrue((summary.output_generation / "自动查验表.xlsx").is_file())
+        self.assertTrue(summary.publish_receipt.backup_path.is_file())
+        self.assertEqual(summary.publish_receipt.office_evidence_sha256, summary.office_evidence_sha256)
+        successor = self.coordinator()
+        next_run = successor.prepare(self.request)
+        successor.abandon(next_run)
+
     def test_system_exit_after_ledger_replace_preserves_committed_generation_and_releases_lock(self):
         coordinator = self.coordinator()
         prepared = coordinator.prepare(self.request)
@@ -908,6 +1026,8 @@ notify_on_no_change = false
                 coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
         generation = self.root / "output" / "generations" / prepared.run_id
         self.assertTrue(generation.is_dir())
+        archive = self.root / "ledger" / "archive"
+        self.assertEqual(len(tuple(archive.glob("Skills主台账_*.xlsx"))), 1)
         records = LedgerStore.load(self.root / "ledger" / "Skills主台账.xlsx").rows("运行记录")
         self.assertEqual(records[-1]["状态"], "成功")
         successor = self.coordinator()

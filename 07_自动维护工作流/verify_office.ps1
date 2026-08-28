@@ -23,7 +23,7 @@ function Wait-ForProcessBaseline([string]$Name, [int]$Baseline) {
     $deadline = [DateTime]::UtcNow.AddSeconds(15)
     do {
         $count = Get-ProcessCount $Name
-        if ($count -le $Baseline) { return $count }
+        if ($count -eq $Baseline) { return $count }
         Start-Sleep -Milliseconds 200
     } while ([DateTime]::UtcNow -lt $deadline)
     return (Get-ProcessCount $Name)
@@ -71,13 +71,39 @@ if (-not [string]::IsNullOrWhiteSpace($Excel)) {
         $result.read_only = [bool]$workbook.ReadOnly
         $worksheets = $workbook.Worksheets
         $currentSkill = -join ([char[]](0x5F53,0x524D,0x0053,0x006B,0x0069,0x006C,0x006C))
-        $runOverview = -join ([char[]](0x6267,0x884C,0x6982,0x89C8))
-        $preferred = @($currentSkill, $runOverview)
+        $runRecord = -join ([char[]](0x8FD0,0x884C,0x8BB0,0x5F55))
+        $preferred = @($currentSkill, $runRecord)
         foreach ($name in $preferred) {
+            $candidate = $null
+            $candidateUsed = $null
+            $candidateRows = $null
+            $candidateColumns = $null
+            $candidateCells = $null
+            $candidateLast = $null
             try {
                 $candidate = $worksheets.Item($name)
-                if ($null -ne $candidate) { $sheet = $candidate; break }
-            } catch { }
+                if ($null -ne $candidate) {
+                    $candidateUsed = $candidate.UsedRange
+                    $candidateRows = $candidateUsed.Rows
+                    $candidateColumns = $candidateUsed.Columns
+                    $candidateLastRow = [int]($candidateUsed.Row + $candidateRows.Count - 1)
+                    $candidateLastColumn = [int]($candidateUsed.Column + $candidateColumns.Count - 1)
+                    $candidateCells = $candidate.Cells
+                    $candidateLast = $candidateCells.Item($candidateLastRow, $candidateLastColumn)
+                    if ($candidateLastRow -ge 2 -and -not [string]::IsNullOrWhiteSpace([string]$candidateLast.Value2)) {
+                        $sheet = $candidate
+                        $candidate = $null
+                    }
+                }
+            } catch { } finally {
+                Release-ComObject $candidateLast
+                Release-ComObject $candidateCells
+                Release-ComObject $candidateColumns
+                Release-ComObject $candidateRows
+                Release-ComObject $candidateUsed
+                Release-ComObject $candidate
+            }
+            if ($null -ne $sheet) { break }
         }
         if ($null -eq $sheet) { $sheet = $worksheets.Item(1) }
         $result.key_sheet = [string]$sheet.Name
@@ -120,7 +146,7 @@ if (-not [string]::IsNullOrWhiteSpace($Excel)) {
         [GC]::WaitForPendingFinalizers()
         [GC]::Collect()
         $result.process_count_after = Wait-ForProcessBaseline 'EXCEL' $before
-        if ($result.process_count_after -gt $before) {
+        if ($result.process_count_after -ne $before) {
             $result.passed = $false
             $result.error = 'excel-process-leak'
         }
@@ -178,7 +204,7 @@ try {
     [GC]::WaitForPendingFinalizers()
     [GC]::Collect()
     $result.process_count_after = Wait-ForProcessBaseline 'WINWORD' $before
-    if ($result.process_count_after -gt $before) {
+    if ($result.process_count_after -ne $before) {
         $result.passed = $false
         $result.error = 'word-process-leak'
     }

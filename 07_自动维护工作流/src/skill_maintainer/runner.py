@@ -21,7 +21,9 @@ if os.name == "nt":
 from .dedup import deduplicate
 from .ledger import LedgerStore
 from .locking import SingleWriterLock
+from .office import OfficeEvidenceBundle, OfficeVerificationError
 from .paths import ProjectPaths, assert_ordinary_path, contained_child, is_link_or_reparse
+from .publish import PublishError, PublishReceipt, commit_prepared_generation
 from .review import ReviewDecision, apply_reviews_from_stream, clear_review_run_state, consume_applied_review
 from .settings import load_settings, settings_sha256
 from .sources.base import SourceRequestEvent, SourceWatermarkStore, Watermark
@@ -81,6 +83,8 @@ class RunSummary:
     published_ledger: Path | None
     output_generation: Path | None
     warnings: tuple[str, ...] = ()
+    office_evidence_sha256: str | None = None
+    publish_receipt: PublishReceipt | None = field(default=None, repr=False, compare=False)
 
 
 @dataclass
@@ -101,90 +105,8 @@ class _State:
     committed: bool = False
     phase: str = "prepared"
     review_summary: ReviewApplySummary | None = None
-
-
-class _GenerationPins:
-    """Windows deny-write/delete handles held across the sole ledger commit."""
-
-    _GENERIC_READ = 0x80000000
-    _FILE_SHARE_READ = 0x00000001
-    _OPEN_EXISTING = 3
-    _FILE_ATTRIBUTE_NORMAL = 0x00000080
-    _FILE_FLAG_BACKUP_SEMANTICS = 0x02000000
-    _FILE_FLAG_OPEN_REPARSE_POINT = 0x00200000
-    _INVALID_HANDLE_VALUE = -1
-    _DUPLICATE_SAME_ACCESS = 0x00000002
-
-    def __init__(self) -> None:
-        self._files: dict[Path, int] = {}
-        self._handles: list[int] = []
-
-    def pin(self, path: Path, *, directory: bool) -> None:
-        if os.name != "nt":
-            raise CoordinatorError("正式发布仅支持 Windows generation pin")
-        flags = self._FILE_FLAG_OPEN_REPARSE_POINT
-        if directory:
-            flags |= self._FILE_FLAG_BACKUP_SEMANTICS
-        else:
-            flags |= self._FILE_ATTRIBUTE_NORMAL
-        create_file = ctypes.windll.kernel32.CreateFileW
-        create_file.argtypes = (wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, wintypes.LPVOID,
-            wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE)
-        create_file.restype = wintypes.HANDLE
-        handle = create_file(
-            str(path), self._GENERIC_READ, self._FILE_SHARE_READ, None,
-            self._OPEN_EXISTING, flags, None,
-        )
-        if handle == wintypes.HANDLE(self._INVALID_HANDLE_VALUE).value:
-            raise CoordinatorError(f"无法固定 generation authority 路径：{path}")
-        value = int(handle)
-        self._handles.append(value)
-        if not directory:
-            self._files[path] = value
-
-    def sha256(self, path: Path) -> str:
-        handle = self._files[path]
-        digest = sha256()
-        buffer = ctypes.create_string_buffer(64 * 1024)
-        read = wintypes.DWORD()
-        read_file = ctypes.windll.kernel32.ReadFile
-        read_file.argtypes = (wintypes.HANDLE, wintypes.LPVOID, wintypes.DWORD, ctypes.POINTER(wintypes.DWORD), wintypes.LPVOID)
-        read_file.restype = wintypes.BOOL
-        while True:
-            if not read_file(wintypes.HANDLE(handle), buffer, len(buffer), ctypes.byref(read), None):
-                raise CoordinatorError(f"无法读取已固定 authority 文件：{path}")
-            if not read.value:
-                return digest.hexdigest()
-            digest.update(buffer.raw[:read.value])
-
-    def identity(self, path: Path) -> tuple[int, int, int, int]:
-        if os.name != "nt":
-            raise CoordinatorError("正式发布仅支持 Windows generation pin")
-        duplicate_handle = ctypes.windll.kernel32.DuplicateHandle
-        duplicate_handle.argtypes = (wintypes.HANDLE, wintypes.HANDLE, wintypes.HANDLE,
-            ctypes.POINTER(wintypes.HANDLE), wintypes.DWORD, wintypes.BOOL, wintypes.DWORD)
-        duplicate_handle.restype = wintypes.BOOL
-        process = ctypes.windll.kernel32.GetCurrentProcess()
-        duplicate = wintypes.HANDLE()
-        if not duplicate_handle(process, wintypes.HANDLE(self._files[path]), process,
-                ctypes.byref(duplicate), 0, False, self._DUPLICATE_SAME_ACCESS):
-            raise CoordinatorError(f"无法复验已固定 authority 文件身份：{path}")
-        descriptor = msvcrt.open_osfhandle(int(duplicate.value), os.O_RDONLY)
-        try:
-            result = os.fstat(descriptor)
-            return (getattr(result, "st_dev", 0), getattr(result, "st_ino", 0), result.st_size, result.st_mtime_ns)
-        finally:
-            os.close(descriptor)
-
-    def release(self) -> None:
-        if os.name == "nt":
-            close_handle = ctypes.windll.kernel32.CloseHandle
-            close_handle.argtypes = (wintypes.HANDLE,)
-            close_handle.restype = wintypes.BOOL
-            for handle in reversed(self._handles):
-                close_handle(wintypes.HANDLE(handle))
-        self._handles.clear()
-        self._files.clear()
+    office_evidence: OfficeEvidenceBundle | None = None
+    publish_receipt: PublishReceipt | None = None
 
 
 def _sha256(path: Path) -> str:
@@ -205,14 +127,14 @@ class RunCoordinator:
         root: str | Path,
         discover: Callable[[RunRequest, Path], Iterable[SourceRun]] | None = None,
         report_builder: Callable[[PreparedRun, Path], Iterable[Path]] | None = None,
-        office_verifier: Callable[[PreparedRun, tuple[Path, ...]], bool] | None = None,
+        office_verifier: Callable[[PreparedRun, tuple[Path, ...]], OfficeEvidenceBundle] | None = None,
         before_publish: Callable[[PreparedRun], None] | None = None,
         fail_at: str | None = None,
     ) -> None:
         self.paths = ProjectPaths.from_root(root)
         self.discover = discover or (lambda request, staging: ())
         self.report_builder = report_builder or (lambda prepared, staging: ())
-        self.office_verifier = office_verifier or (lambda prepared, artifacts: True)
+        self.office_verifier = office_verifier
         self.before_publish = before_publish
         self.fail_at = fail_at
         self._token = uuid.uuid4().hex
@@ -354,11 +276,6 @@ class RunCoordinator:
             self._save_ledger(ledger, prepared.staging_ledger)
             artifacts = self._artifacts_from_callback(prepared)
             self._inject("report")
-            if not self.office_verifier(prepared, artifacts):
-                raise CoordinatorError("Office/输出校验未通过")
-            self._inject("office")
-            self._reopen_staged_ledger(prepared.staging_ledger)
-            self._inject("reopen")
             state.staging_digest = self._tree_digest(prepared.staging_dir)
             if self.before_publish:
                 self.before_publish(prepared)
@@ -368,16 +285,36 @@ class RunCoordinator:
             self._assert_output_unchanged(state)
             output, delivery_hash, manifest_hash = self._prepare_generation(state)
             self._mark_run(prepared.staging_ledger, prepared.run_id, "成功", f"generation={output.relative_to(self.paths.root).as_posix()};delivery_sha256={delivery_hash};manifest_sha256={manifest_hash}")
+            office_paths = (prepared.staging_ledger, *artifacts)
+            if self.office_verifier is None:
+                raise CoordinatorError("缺少结构化 Office 发布证据提供器")
+            evidence = self.office_verifier(prepared, office_paths)
+            if not isinstance(evidence, OfficeEvidenceBundle):
+                raise CoordinatorError("Office 发布结果必须是结构化证据")
+            try:
+                evidence.assert_covers(office_paths)
+            except OfficeVerificationError as exc:
+                raise CoordinatorError(f"Office 发布证据未通过：{exc}") from exc
+            state.office_evidence = evidence
+            self._inject("office")
             self._reopen_staged_ledger(prepared.staging_ledger)
+            self._inject("reopen")
             state.staging_digest = self._tree_digest(prepared.staging_dir)
             self._ensure_staging_unchanged(state)
             self._assert_production_unchanged(state)
             self._verify_generation_authority(output, prepared.run_id, delivery_hash, manifest_hash)
             self._inject("before_commit")
-            self._commit_ledger_only(state, output, delivery_hash, manifest_hash)
+            receipt = self._commit_ledger_only(
+                state, output, delivery_hash, manifest_hash,
+                evidence=evidence, office_paths=office_paths,
+            )
+            state.publish_receipt = receipt
             # No callback, validation, or rollback occurs after this one linearization point.
             warnings = self._terminal(state, remove_staging=True, remove_generation=False)
-            return RunSummary(prepared.run_id, False, statuses, self.paths.ledger, output, warnings)
+            return RunSummary(
+                prepared.run_id, False, statuses, self.paths.ledger, output, warnings,
+                office_evidence_sha256=evidence.sha256, publish_receipt=receipt,
+            )
         except BaseException:
             if state.committed or self._production_has_committed_run(state):
                 state.committed, state.phase = True, "committed"
@@ -588,34 +525,6 @@ class RunCoordinator:
                     "identity": list(_stat_identity(item))})
         return rows
 
-    def _pin_generation_authority(self, generation: Path, run_id: str, delivery_hash: str, manifest_hash: str) -> _GenerationPins:
-        self._verify_generation_authority(generation, run_id, delivery_hash, manifest_hash)
-        manifest = generation / "generation-manifest.json"
-        pins = _GenerationPins()
-        try:
-            directories = [generation, *(item for item in generation.rglob("*") if item.is_dir())]
-            for directory in sorted(directories, key=lambda path: (len(path.parts), str(path).casefold())):
-                pins.pin(directory, directory=True)
-            for item in [manifest, *(generation / row["path"] for row in self._authority_files(generation, excluded=manifest))]:
-                pins.pin(item, directory=False)
-            return pins
-        except BaseException:
-            pins.release()
-            raise
-
-    def _verify_pinned_generation_authority(self, pins: _GenerationPins, generation: Path, run_id: str, delivery_hash: str, manifest_hash: str) -> None:
-        # Path checks catch namespace changes; handle checks make the bytes authoritative
-        # while denied write/delete sharing remains active.
-        self._verify_generation_authority(generation, run_id, delivery_hash, manifest_hash)
-        manifest = generation / "generation-manifest.json"
-        if pins.sha256(manifest) != manifest_hash:
-            raise CoordinatorError("已固定 manifest 在提交边界变化")
-        for row in self._authority_files(generation, excluded=manifest):
-            path = generation / str(row["path"])
-            identity = tuple(int(value) for value in row["identity"])
-            if _stat_identity(path) != identity or pins.identity(path) != identity or pins.sha256(path) != row["sha256"]:
-                raise CoordinatorError("已固定 generation 文件在提交边界变化")
-
     @staticmethod
     def _fsync_tree(root: Path) -> None:
         for item in root.rglob("*"):
@@ -794,29 +703,34 @@ class RunCoordinator:
                 shutil.rmtree(temporary_generation)
             raise
 
-    def _commit_ledger_only(self, state: _State, generation: Path, delivery_hash: str, manifest_hash: str) -> None:
-        target = self.paths.ledger
-        temporary = target.with_name(f".{target.name}.{state.prepared.run_id}.commit")
-        pins = self._pin_generation_authority(generation, state.prepared.run_id, delivery_hash, manifest_hash)
+    def _commit_ledger_only(
+        self,
+        state: _State,
+        generation: Path,
+        delivery_hash: str,
+        manifest_hash: str,
+        *,
+        evidence: OfficeEvidenceBundle,
+        office_paths: tuple[Path, ...],
+    ) -> PublishReceipt:
+        self._verify_generation_authority(
+            generation, state.prepared.run_id, delivery_hash, manifest_hash,
+        )
         try:
-            shutil.copyfile(state.prepared.staging_ledger, temporary)
-            self._ensure_file_in_staging(target.parent, temporary, require_staging=False)
-            with temporary.open("r+b") as handle:
-                self._flush_file(handle)
-            # All authority paths remain pinned and are rechecked after the staged ledger
-            # is durable but immediately before its one visible replacement.
-            self._verify_pinned_generation_authority(pins, generation, state.prepared.run_id, delivery_hash, manifest_hash)
-            os.replace(temporary, target)
+            receipt = commit_prepared_generation(
+                production_root=self.paths.root,
+                run_id=state.prepared.run_id,
+                staged_ledger=state.prepared.staging_ledger,
+                expected_authority_sha256=state.production_ledger_sha,
+                generation_path=generation,
+                generation_manifest_sha256=manifest_hash,
+                office_evidence=evidence,
+                office_paths=office_paths,
+            )
             state.committed, state.phase = True, "committed"
-        finally:
-            try:
-                if temporary.exists() and not is_link_or_reparse(temporary):
-                    temporary.unlink()
-            finally:
-                try:
-                    pins.release()
-                except BaseException:
-                    pass
+            return receipt
+        except PublishError as exc:
+            raise CoordinatorError(str(exc)) from exc
 
     def _production_has_committed_run(self, state: _State) -> bool:
         """Recover the linearization fact if an injected BaseException interrupts os.replace."""
