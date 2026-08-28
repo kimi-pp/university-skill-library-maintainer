@@ -1,15 +1,19 @@
 import hashlib
 import importlib
 import os
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from skill_maintainer.cli import build_parser
 from skill_maintainer.settings import SettingsError, load_settings
 
 
 WORKFLOW_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = WORKFLOW_ROOT.parent
 SKILL_ROOT = WORKFLOW_ROOT / "skill" / "university-skill-library-maintainer"
 SKILL_PATH = SKILL_ROOT / "SKILL.md"
 AUTOMATION_PROMPT_PATH = SKILL_ROOT / "assets" / "automation-prompt.md"
@@ -31,6 +35,10 @@ PUBLIC_COMMANDS = {
 
 def editor_module():
     return importlib.import_module("skill_maintainer.settings_editor")
+
+
+def renderer_module():
+    return importlib.import_module("skill_maintainer.workspace_renderer")
 
 
 def valid_toml(mode: str = "weekly") -> str:
@@ -125,14 +133,17 @@ class SkillContractTest(unittest.TestCase):
         self.assertIn("每天", text)
         self.assertIn("运行记录", text)
 
-    def test_renderer_is_loader_supplied_without_machine_paths(self):
+    def test_renderer_is_built_from_loader_fields_without_machine_paths(self):
         combined = "\n".join(
             self.read(path)
             for path in (SKILL_PATH, PROJECT_CONTRACT_PATH)
         )
         self.assertIn("工作区依赖加载器", combined)
         self.assertIn("RendererCommand", combined)
+        self.assertIn("build_workspace_renderer_command", combined)
+        self.assertIn("pdf_renderer.py", combined)
         self.assertIn("argv", combined)
+        self.assertNotIn("加载器提供的渲染 argv", combined)
         self.assertNotRegex(combined, r"[A-Za-z]:\\Users\\")
         self.assertNotIn(".cache/codex-runtimes", combined)
 
@@ -225,6 +236,178 @@ class SettingsEditorTest(unittest.TestCase):
         saved = load_settings(self.path)
         self.assertEqual(saved.schedule.mode, "monthly")
         self.assertEqual(saved.schedule.day_of_month, 28)
+
+
+class WorkspaceRendererBuilderTest(unittest.TestCase):
+    def setUp(self):
+        self.tempdir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tempdir.cleanup)
+        self.root = Path(self.tempdir.name).absolute()
+        self.runtime = self.root / "runtime" / "dependencies"
+        self.python = self.runtime / "python" / "python.exe"
+        self.packages = self.runtime / "python"
+        self.override = self.runtime / "bin" / "override"
+        self.fallback = self.runtime / "bin" / "fallback"
+        self.poppler_bin = self.runtime / "native" / "poppler" / "Library" / "bin"
+        for directory in (self.python.parent, self.override, self.fallback, self.poppler_bin):
+            directory.mkdir(parents=True, exist_ok=True)
+        self.python.write_bytes(b"python")
+        (self.poppler_bin / "pdftoppm.exe").write_bytes(b"pdftoppm")
+        (self.poppler_bin / "pdfinfo.exe").write_bytes(b"pdfinfo")
+        nested = self.runtime / "native" / "poppler" / "bin"
+        nested.mkdir(parents=True)
+        (nested / "pdftoppm.cmd").write_text(
+            '@echo off\n"%~dp0..\\Library\\bin\\pdftoppm.exe" %*\n',
+            encoding="utf-8",
+        )
+        (self.override / "pdftoppm.cmd").write_text(
+            '@echo off\nset "SCRIPT_DIR=%~dp0"\ncall "%SCRIPT_DIR%..\\..\\native\\poppler\\bin\\pdftoppm.cmd" %*\n',
+            encoding="utf-8",
+        )
+
+    def loader_output(self, **overrides: Path) -> str:
+        values = {
+            "python": self.python,
+            "packages": self.packages,
+            "override": self.override,
+            "fallback": self.fallback,
+        }
+        values.update(overrides)
+        return (
+            "Workspace dependencies are available for this local desktop thread.\n\n"
+            "### Workspace Dependencies\n"
+            "- Bundle version: `test-bundle`\n"
+            f"- Python executable: `{values['python']}`\n"
+            f"- Python packages: `{values['packages']}`\n"
+            f"- Override binaries: `{values['override']}`\n"
+            f"- Fallback binaries: `{values['fallback']}`\n"
+        )
+
+    def test_real_loader_shape_builds_project_renderer_argv_only_from_bound_paths(self):
+        module = renderer_module()
+        command = module.build_workspace_renderer_command(self.loader_output(), PROJECT_ROOT)
+        entrypoint = WORKFLOW_ROOT / "src" / "skill_maintainer" / "pdf_renderer.py"
+        self.assertEqual(
+            command.argv,
+            (
+                str(self.python),
+                str(entrypoint),
+                "--python-packages",
+                str(self.packages),
+                "--pdftoppm",
+                str(self.poppler_bin / "pdftoppm.exe"),
+            ),
+        )
+
+    def test_missing_loader_field_and_nonordinary_paths_fail_closed(self):
+        module = renderer_module()
+        missing = self.loader_output().replace(
+            f"- Fallback binaries: `{self.fallback}`\n", ""
+        )
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(missing, PROJECT_ROOT)
+
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(
+                self.loader_output(python=self.python.parent), PROJECT_ROOT
+            )
+
+        absent_project = self.root / "empty-project"
+        absent_project.mkdir()
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(self.loader_output(), absent_project)
+
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(self.loader_output(), Path("."))
+
+    def test_reparse_runtime_component_is_rejected(self):
+        module = renderer_module()
+        real_override = self.root / "real-override"
+        real_override.mkdir()
+        linked_override = self.runtime / "bin" / "linked-override"
+        try:
+            linked_override.symlink_to(real_override, target_is_directory=True)
+        except OSError as exc:
+            self.fail(f"test environment must support a directory reparse point: {exc}")
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(
+                self.loader_output(override=linked_override), PROJECT_ROOT
+            )
+
+    def test_wrapper_escape_and_path_fallback_are_rejected(self):
+        module = renderer_module()
+        outside = self.root / "outside" / "pdftoppm.exe"
+        outside.parent.mkdir()
+        outside.write_bytes(b"outside")
+        (self.override / "pdftoppm.cmd").write_text(
+            f'@echo off\n"{outside}" %*\n', encoding="utf-8"
+        )
+        with self.assertRaises(module.WorkspaceRendererError):
+            module.build_workspace_renderer_command(self.loader_output(), PROJECT_ROOT)
+
+        (self.override / "pdftoppm.cmd").unlink()
+        path_bin = self.root / "path-bin"
+        path_bin.mkdir()
+        (path_bin / "pdftoppm.exe").write_bytes(b"path")
+        with patch.dict(os.environ, {"PATH": str(path_bin)}), self.assertRaises(
+            module.WorkspaceRendererError
+        ):
+            module.build_workspace_renderer_command(self.loader_output(), PROJECT_ROOT)
+
+
+class ProjectPdfRendererCliTest(unittest.TestCase):
+    def setUp(self):
+        self.tempdir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tempdir.cleanup)
+        self.root = Path(self.tempdir.name).absolute()
+        self.entrypoint = WORKFLOW_ROOT / "src" / "skill_maintainer" / "pdf_renderer.py"
+        self.packages = self.root / "packages"
+        self.packages.mkdir()
+        self.pdftoppm = self.root / "pdftoppm.exe"
+        self.pdftoppm.write_bytes(b"not-used")
+        (self.root / "pdfinfo.exe").write_bytes(b"not-used")
+        self.pdf = self.root / "input.pdf"
+        self.pdf.write_bytes(b"%PDF-not-rendered")
+        self.output = self.root / "output"
+        self.output.mkdir()
+
+    def run_renderer(self, *, pdf: str | None = None):
+        return subprocess.run(
+            [
+                sys.executable,
+                str(self.entrypoint),
+                "--python-packages",
+                str(self.packages),
+                "--pdftoppm",
+                str(self.pdftoppm),
+                "--pdf",
+                str(self.pdf) if pdf is None else pdf,
+                "--output-dir",
+                str(self.output),
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+
+    def test_relative_pdf_fails_without_stdout_or_output(self):
+        result = self.run_renderer(pdf="relative.pdf")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(result.stdout, "")
+        self.assertTrue(result.stderr.startswith("renderer-error:"), result.stderr)
+        self.assertEqual(tuple(self.output.iterdir()), ())
+
+    def test_nonempty_output_fails_without_touching_existing_file(self):
+        sentinel = self.output / "keep.txt"
+        sentinel.write_text("keep", encoding="utf-8")
+        result = self.run_renderer()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(result.stdout, "")
+        self.assertTrue(result.stderr.startswith("renderer-error:"), result.stderr)
+        self.assertEqual(sentinel.read_text(encoding="utf-8"), "keep")
+        self.assertEqual(tuple(self.output.iterdir()), (sentinel,))
 
 
 if __name__ == "__main__":

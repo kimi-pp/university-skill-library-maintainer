@@ -17,9 +17,19 @@
 
 ## Word 渲染依赖
 
-Task 11 的 `RendererCommand` 接受显式 `argv`，随后自动追加 `--pdf ABSOLUTE` 与 `--output-dir ABSOLUTE`。渲染器必须返回一行 UTF-8 JSON，并按序列出 `page-1.png` 等页面及每页 `body_nonwhite_pixels`。
+Task 11 的 `RendererCommand` 接受显式 `argv`，随后自动追加 `--pdf ABSOLUTE` 与 `--output-dir ABSOLUTE`。项目自带入口为 `07_自动维护工作流/src/skill_maintainer/pdf_renderer.py`；它接收这两个参数以及基础 argv 中的 `--python-packages`、`--pdftoppm`，stdout 只返回一行 UTF-8 JSON，并按序列出 `page-1.png` 等页面及每页 `body_nonwhite_pixels`。
 
-每次运行必须先调用 Codex 工作区依赖加载器（`load_workspace_dependencies`），以返回的打包 Python/依赖信息取得安装包提供的渲染器 argv，再构造 `RendererCommand(argv=tuple(...))` 并传入最终核验。不得从默认 PATH、用户目录或缓存位置猜测运行时；加载器或打包渲染器不可用时停止发布。
+每次运行先调用 Codex 工作区依赖加载器（`load_workspace_dependencies`）。加载器返回 Python executable、Python packages、override binaries 和 fallback binaries，不直接返回渲染命令。把原始加载器文本与绝对项目根传入 `build_workspace_renderer_command(loader_output, project_root)`；该接口验证字段完整、绝对普通路径、共同运行时根和项目入口，沿加载器目录中的固定 `pdftoppm.cmd` 包装链解析同一运行时内的 `pdftoppm.exe`/`pdfinfo.exe`，然后构造：
+
+```text
+RendererCommand.argv = (
+  <loader Python>, <project>/07_自动维护工作流/src/skill_maintainer/pdf_renderer.py,
+  --python-packages, <loader Python packages>,
+  --pdftoppm, <loader-contained pdftoppm.exe>
+)
+```
+
+渲染入口拒绝相对路径、链接/重解析点、非普通 PDF、非空输出目录、越界页面名和缺失依赖；失败返回非零且不输出成功 JSON。不得从默认 PATH、用户名或缓存目录结构猜测任何路径；字段、入口或依赖不可用时停止发布。
 
 ## 自动任务契约
 

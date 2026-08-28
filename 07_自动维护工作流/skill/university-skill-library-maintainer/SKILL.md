@@ -61,7 +61,7 @@ description: Use when operating, scheduling, inspecting, repairing, or rebuildin
 2. 遇到配置哈希不一致、`enabled=false`、`mode=manual`、主台账无效，或重建范围前专业目录门发生变化，立即停止且不发布。
 3. `doctor` 通过后运行 `prepare`。只审核其固定版本快照和证据包，不浏览会漂移的默认分支来替代证据。
 4. 把逐项评审决定作为标准输入传给 `apply-reviews`；不要通过命令行参数、临时业务数据库或自由文本旁路提交。
-5. 调用工作区依赖加载器，取得本机打包运行时，构造 Task 11 的 `RendererCommand(argv=...)` 并将打包渲染器 argv 交给 `finalize`。不得嵌入用户名、盘符或缓存路径。
+5. 调用工作区依赖加载器，把其原始返回文本和绝对项目根传给 `build_workspace_renderer_command(loader_output, project_root)`。该接口只读取加载器明确返回的 Python、Python packages、override binaries 和 fallback binaries，验证普通路径并解析其中固定的 Poppler 包装入口，再用项目自带 `pdf_renderer.py` 构造 Task 11 的 `RendererCommand.argv`。把该命令交给 `finalize`；不得从 PATH、用户名或缓存布局猜测路径。
 6. 逐张检查最新生成的 Word `page-<N>.png`，对每页明确批准或拒绝。缺页、空白页、裁切、表格越界、页脚重叠或哈希不一致均拒绝发布。
 7. 完全无变化且成功时静默结束。只在变化、人工决定事项、覆盖显著下降或失败时通知。
 
@@ -87,4 +87,4 @@ description: Use when operating, scheduling, inspecting, repairing, or rebuildin
 | 为验证功能而运行候选 | 只读说明、包内容和静态数据流 |
 | 把条件或适配项计入正式推荐 | 三层分别保存、分别统计 |
 | 配置已编辑但未应用 | 哈希不匹配即停止 `scheduled-run` |
-| Word 能打开就直接发布 | 使用加载器提供的渲染 argv，并逐页检查 |
+| Word 能打开就直接发布 | 用加载器返回字段构造项目渲染命令，并逐页检查 |
