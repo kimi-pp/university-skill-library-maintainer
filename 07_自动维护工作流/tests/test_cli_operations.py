@@ -318,6 +318,40 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(stale.read_text(encoding="utf-8"), "previous")
         self.assertFalse(any(path.name.endswith((".pending", ".previous")) for path in skills_root.iterdir()))
 
+    def test_skill_previous_cleanup_failure_keeps_committed_new_tree(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        installed = skills_root / "university-skill-library-maintainer"
+        (installed / "SKILL.md").write_text("previous incomplete version", encoding="utf-8")
+        old_only = installed / "previous-only.txt"
+        old_only.write_text("old", encoding="utf-8")
+        real_rmtree = shutil.rmtree
+        attacked = False
+
+        def partially_remove_previous(path, *args, **kwargs):
+            nonlocal attacked
+            candidate = Path(path)
+            if candidate.name.endswith(".previous") and not attacked:
+                attacked = True
+                (candidate / "previous-only.txt").unlink()
+                raise OSError("injected partial previous cleanup failure")
+            return real_rmtree(path, *args, **kwargs)
+
+        with patch("skill_maintainer.cli.shutil.rmtree", side_effect=partially_remove_previous):
+            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertTrue(attacked)
+        self.assertEqual(result.exit_code, 0, result.message)
+        self.assertEqual(
+            cli._skill_tree_manifest(installed),
+            cli._skill_tree_manifest(workflow / "skill" / "university-skill-library-maintainer"),
+        )
+        self.assertFalse(old_only.exists())
+        self.assertTrue(result.details and result.details.get("warnings"))
+        self.assertTrue(any(path.name.endswith(".previous") for path in skills_root.iterdir()))
+
     def test_skill_root_reparse_with_missing_nested_target_causes_no_external_write(self):
         self._authority_fixture()
         workflow = self._workflow_fixture()
@@ -426,6 +460,18 @@ class CliOperationsTest(unittest.TestCase):
         report = cli.doctor_project(self.root, environment=_DoctorEnvironment())
         self.assertEqual(report.exit_code, 2)
 
+    def test_corrupt_authority_returns_machine_readable_operational_failure(self):
+        workflow = self._setup_project()
+        (workflow / "ledger" / "Skills主台账.xlsx").write_bytes(b"not-a-zip-workbook")
+        for command in ("doctor", "status", "apply-settings"):
+            with self.subTest(command=command):
+                output = io.StringIO()
+                with redirect_stdout(output):
+                    code = cli.main([command, "--project-root", str(self.root)])
+                self.assertEqual(code, 1, output.getvalue())
+                payload = json.loads(output.getvalue().splitlines()[-1])
+                self.assertEqual(payload.get("exit_code"), 1)
+
     def test_user_supplied_output_and_backup_validation_return_exit_two(self):
         workflow = self._setup_project()
         (self.root / "05_交付物").mkdir()
@@ -527,6 +573,53 @@ class CliOperationsTest(unittest.TestCase):
         result = cli.repair_ledger(self.root)
         self.assertEqual(result.exit_code, 3)
         self.assertEqual(result.valid_backups, ())
+
+    def test_repair_corrupt_authority_uses_only_backup_self_bound_to_verified_generation(self):
+        workflow = self._complete_protocol_run()
+        authority = workflow / "ledger" / "Skills主台账.xlsx"
+        archive = workflow / "ledger" / "archive"
+        committed_backup = archive / "Skills主台账_20260829_010203_1.xlsx"
+        shutil.copyfile(authority, committed_backup)
+        arbitrary = archive / "Skills主台账_20260829_010203_2.xlsx"
+        store = LedgerStore.create(arbitrary)
+        store.workbook.close()
+        authority.write_bytes(b"corrupt-current-authority")
+
+        listed = cli.repair_ledger(self.root)
+        self.assertEqual(listed.exit_code, 3, listed.message)
+        self.assertEqual(listed.valid_backups, (committed_backup.absolute(),))
+        recovered = cli.repair_ledger(self.root, backup=committed_backup)
+        self.assertEqual(recovered.exit_code, 0, recovered.message)
+        self.assertIsNotNone(recovered.recovery_candidate)
+        self.assertEqual(recovered.recovery_candidate.read_bytes(), committed_backup.read_bytes())
+
+    def test_repair_corrupt_authority_rechecks_identity_after_backup_self_binding(self):
+        workflow = self._complete_protocol_run()
+        authority = workflow / "ledger" / "Skills主台账.xlsx"
+        backup = workflow / "ledger" / "archive" / "Skills主台账_20260829_010203_1.xlsx"
+        shutil.copyfile(authority, backup)
+        replacement = backup.with_name("same-bytes-self-binding-replacement.xlsx")
+        shutil.copyfile(backup, replacement)
+        authority.write_bytes(b"corrupt-current-authority")
+        real_self_binding = cli._backup_self_binds_verified_generation
+        attacked = False
+
+        def bind_then_replace(workflow_path, candidate):
+            nonlocal attacked
+            result = real_self_binding(workflow_path, candidate)
+            if Path(candidate) == backup and result and not attacked:
+                attacked = True
+                os.replace(replacement, backup)
+            return result
+
+        with patch(
+            "skill_maintainer.cli._backup_self_binds_verified_generation",
+            side_effect=bind_then_replace,
+        ):
+            listed = cli.repair_ledger(self.root)
+        self.assertTrue(attacked)
+        self.assertEqual(listed.exit_code, 3)
+        self.assertNotIn(backup.absolute(), listed.valid_backups)
 
     def test_repair_accepts_publishers_same_second_backup_suffix(self):
         workflow, first = self._published_backup_fixture()
@@ -654,6 +747,21 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(result.exit_code, 1)
         self.assertFalse(output.exists())
         self.assertFalse(any("pending" in path.name for path in output.parent.iterdir()))
+
+    def test_rebuild_builder_failure_removes_only_new_empty_ancestors(self):
+        workflow = self._setup_project()
+        output_base = workflow / "output"
+        existing = output_base / "existing-parent"
+        existing.mkdir()
+        output = existing / "new-one" / "new-two" / "report"
+
+        def failing_word_builder(summary, path):
+            raise OSError("injected nested rebuild failure")
+
+        result = cli.rebuild_reports(self.root, output=output, word_builder=failing_word_builder)
+        self.assertEqual(result.exit_code, 1)
+        self.assertTrue(existing.is_dir())
+        self.assertEqual(list(existing.iterdir()), [])
 
     def _protocol_fixture(
         self,
@@ -931,6 +1039,56 @@ class CliOperationsTest(unittest.TestCase):
         self.assertFalse((workflow / "workflow-settings.toml").exists())
         self.assertFalse(skills_root.exists())
 
+    def test_installer_rejects_python_with_reparse_ancestor_before_any_state_write(self):
+        self._authority_fixture()
+        workflow = self.root / WORKFLOW
+        shutil.copytree(self.source_workflow, workflow)
+        linked_python_parent = Path(self.temporary.name) / "linked-python-parent"
+        linked_python_parent.symlink_to(Path(sys.executable).parent, target_is_directory=True)
+        skills_root = Path(self.temporary.name) / "Codex Skills 目录"
+        result = subprocess.run(
+            [
+                "powershell", "-NoProfile", "-File", str(workflow / "install.ps1"),
+                "-ProjectRoot", str(self.root),
+                "-PythonExe", str(linked_python_parent / Path(sys.executable).name),
+                "-CodexSkillsRoot", str(skills_root),
+            ],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=60,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse((workflow / ".venv").exists())
+        self.assertFalse((workflow / "workflow-settings.toml").exists())
+        self.assertFalse(skills_root.exists())
+
+    def test_installer_rejects_skills_root_reparse_ancestor_before_any_state_write(self):
+        self._authority_fixture()
+        workflow = self.root / WORKFLOW
+        shutil.copytree(self.source_workflow, workflow)
+        outside = Path(self.temporary.name) / "outside-skills"
+        outside.mkdir()
+        linked = Path(self.temporary.name) / "linked-skills"
+        linked.symlink_to(outside, target_is_directory=True)
+        result = subprocess.run(
+            [
+                "powershell", "-NoProfile", "-File", str(workflow / "install.ps1"),
+                "-ProjectRoot", str(self.root), "-PythonExe", sys.executable,
+                "-CodexSkillsRoot", str(linked / "missing" / "nested"),
+            ],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=180,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse((workflow / ".venv").exists())
+        self.assertFalse((workflow / "workflow-settings.toml").exists())
+        self.assertEqual(list(outside.iterdir()), [])
+
     def test_installer_runs_offline_in_chinese_space_path_and_is_idempotent(self):
         self._authority_fixture()
         workflow = self.root / WORKFLOW
@@ -940,6 +1098,18 @@ class CliOperationsTest(unittest.TestCase):
         installer = workflow / "install.ps1"
         environment = os.environ.copy()
         environment["PIP_NO_INDEX"] = "1"
+        poison = Path(self.temporary.name) / "poison-pythonpath"
+        poison_package = poison / "skill_maintainer"
+        poison_package.mkdir(parents=True)
+        (poison_package / "__init__.py").write_text("ORIGIN = 'poison'\n", encoding="utf-8")
+        pythonpath_marker = Path(self.temporary.name) / "external-pythonpath-executed.txt"
+        (poison / "sitecustomize.py").write_text(
+            "from pathlib import Path\n"
+            f"Path({str(pythonpath_marker)!r}).write_text('executed', encoding='utf-8')\n",
+            encoding="utf-8",
+        )
+        inherited_pythonpath = environment.get("PYTHONPATH")
+        environment["PYTHONPATH"] = str(poison) + (os.pathsep + inherited_pythonpath if inherited_pythonpath else "")
         command = [
             "powershell", "-NoProfile", "-File", str(installer),
             "-ProjectRoot", str(self.root), "-PythonExe", str(python),
@@ -947,6 +1117,7 @@ class CliOperationsTest(unittest.TestCase):
         ]
         first = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace", env=environment, timeout=180)
         self.assertEqual(first.returncode, 0, first.stdout + first.stderr)
+        self.assertFalse(pythonpath_marker.exists(), "installer Python inherited and executed external PYTHONPATH")
         settings_path = workflow / "workflow-settings.toml"
         settings = load_settings(settings_path)
         self.assertFalse(settings.workflow.enabled)
@@ -961,6 +1132,7 @@ class CliOperationsTest(unittest.TestCase):
                 str(workflow / "src"),
             ],
             capture_output=True,
+            env={key: value for key, value in environment.items() if key != "PYTHONPATH"},
             timeout=30,
         )
         self.assertEqual(imported.returncode, 0, imported.stderr)

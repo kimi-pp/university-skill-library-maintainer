@@ -13,6 +13,28 @@ param(
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
+function Assert-OrdinaryPathChain {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$LiteralPath
+    )
+
+    $current = [System.IO.Path]::GetFullPath($LiteralPath)
+    while (-not [string]::IsNullOrWhiteSpace($current)) {
+        if (Test-Path -LiteralPath $current) {
+            $item = Get-Item -LiteralPath $current -Force -ErrorAction Stop
+            if (($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) -ne 0) {
+                throw "Links and reparse points are not allowed in the path chain: $current"
+            }
+        }
+        $parent = [System.IO.Directory]::GetParent($current)
+        if ($null -eq $parent) {
+            break
+        }
+        $current = $parent.FullName
+    }
+}
+
 function Get-OrdinaryPath {
     param(
         [Parameter(Mandatory = $true)]
@@ -23,6 +45,7 @@ function Get-OrdinaryPath {
         [string]$Kind
     )
 
+    Assert-OrdinaryPathChain -LiteralPath $LiteralPath
     $item = Get-Item -LiteralPath $LiteralPath -Force -ErrorAction Stop
     if (($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) -ne 0) {
         throw "Links and reparse points are not allowed: $LiteralPath"
@@ -45,7 +68,7 @@ function Invoke-CheckedPython {
         [string[]]$Arguments
     )
 
-    & $Executable @Arguments
+    & $Executable -E -P @Arguments
     if ($LASTEXITCODE -ne 0) {
         throw "Python command failed with exit code $LASTEXITCODE."
     }
@@ -144,6 +167,10 @@ function Write-AtomicOwnedText {
     }
 }
 
+$originalPythonPath = [Environment]::GetEnvironmentVariable("PYTHONPATH", "Process")
+try {
+[Environment]::SetEnvironmentVariable("PYTHONPATH", $null, "Process")
+
 $resolvedProject = Get-OrdinaryPath -LiteralPath $ProjectRoot -Kind Directory
 $resolvedPython = Get-OrdinaryPath -LiteralPath $PythonExe -Kind File
 $scriptRoot = Get-OrdinaryPath -LiteralPath $PSScriptRoot -Kind Directory
@@ -184,10 +211,12 @@ if ([string]::IsNullOrWhiteSpace($CodexSkillsRoot)) {
     }
 }
 $resolvedSkillsParent = [System.IO.Path]::GetFullPath($CodexSkillsRoot)
+Assert-OrdinaryPathChain -LiteralPath $resolvedSkillsParent
 
 Invoke-CheckedPython -Executable $resolvedPython -Arguments @("--version")
 
 $venvRoot = Join-Path $resolvedWorkflow ".venv"
+Assert-OrdinaryPathChain -LiteralPath $venvRoot
 if (Test-Path -LiteralPath $venvRoot) {
     [void](Get-OrdinaryPath -LiteralPath $venvRoot -Kind Directory)
 }
@@ -200,7 +229,7 @@ Invoke-CheckedPython -Executable $venvPython -Arguments @(
     "-m", "pip", "install", "--disable-pip-version-check", "--requirement", $requirements
 )
 
-& $venvPython -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('wheel') else 1)"
+& $venvPython -E -P -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('wheel') else 1)"
 $wheelProbe = $LASTEXITCODE
 if ($wheelProbe -eq 0) {
     Invoke-CheckedPython -Executable $venvPython -Arguments @(
@@ -226,7 +255,7 @@ elseif ($wheelProbe -eq 1) {
     )
     Write-AtomicOwnedText -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned" -Content (
         "@rem university-skill-library-maintainer installer-owned" + [Environment]::NewLine +
-        "@`"%~dp0python.exe`" -m skill_maintainer.cli %*" + [Environment]::NewLine
+        "@`"%~dp0python.exe`" -E -P -m skill_maintainer.cli %*" + [Environment]::NewLine
     )
 }
 else {
@@ -258,3 +287,7 @@ Invoke-CheckedPython -Executable $venvPython -Arguments @(
 )
 
 Write-Output "Installation checks completed. No automation was created; settings remain disabled/manual."
+}
+finally {
+    [Environment]::SetEnvironmentVariable("PYTHONPATH", $originalPythonPath, "Process")
+}

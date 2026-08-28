@@ -48,13 +48,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\07_自动维�
 安装器执行以下幂等操作：
 
 - 在本目录创建或复用 `.venv`；
-- 按 `requirements.txt` 的精确版本安装依赖；若目标 venv 已提供 `wheel`，执行 `pip -e --no-build-isolation --no-deps`；离线环境没有 `wheel` 时，在该 venv 内原子写入指向本项目 `src` 的 ASCII `.pth` 和 `Scripts\skill-maintainer.cmd`，形成不复制源码、不联网的等价 editable 链接；
-- 将完整 Skill 包复制到同级私有暂存树，逐文件校验哈希和普通路径后再目录级切换；更新成功删除旧版残留，切换失败回滚完整旧树；
+- 安装调用链临时清空并在 `finally` 恢复外部 `PYTHONPATH`，Python 使用 `-E -P`；按 `requirements.txt` 的精确版本安装依赖。若目标 venv 已提供 `wheel`，执行 `pip -e --no-build-isolation --no-deps`；离线环境没有 `wheel` 时，在该 venv 内原子写入指向本项目 `src` 的 ASCII `.pth` 和 `Scripts\skill-maintainer.cmd`，形成不复制源码、不联网的等价 editable 链接；
+- 将完整 Skill 包复制到同级私有暂存树，逐文件校验哈希和普通路径后再目录级切换；切换完成即为新版本提交点，提交前失败回滚完整旧树，提交后旧目录清理失败只记录警告并保留完整新版本；
 - 仅补齐缺失的 `workflow-settings.toml`、`ledger`、`ledger/archive` 和 `output`；
 - 配置首次创建时保持 `enabled=false`、`mode="manual"`，既有配置绝不覆盖；
 - 最后运行 `doctor`；不创建、不更新、不启用任何自动任务。
 
-安装器不会覆盖并非由它创建的同名 `.pth` 或 `.cmd`；安装后还会验证 `skill_maintainer.__file__` 确实位于当前目标项目的 `07_自动维护工作流\src`，并实际执行 CLI `--help` 和 `doctor`。安装完成后重新打开 Codex 任务，使 Skill 加载器读取更新后的包。项目自带的 `workspace_renderer.py`、`pdf_renderer.py` 和依赖定义必须随工作流一起保留。
+安装器会在任何 venv、设置或 Skill 写入前检查项目根、脚本根、Python、Codex Skills 根及全部既存祖先，任一 symlink/junction/重解析点都会关闭失败。安装器不会覆盖并非由它创建的同名 `.pth` 或 `.cmd`；安装后还会在清洁环境中验证 `skill_maintainer.__file__` 确实位于当前目标项目的 `07_自动维护工作流\src`，并实际执行 CLI `--help` 和 `doctor`。安装完成后重新打开 Codex 任务，使 Skill 加载器读取更新后的包。项目自带的 `workspace_renderer.py`、`pdf_renderer.py` 和依赖定义必须随工作流一起保留。
 
 ## 命令与退出码
 
@@ -133,13 +133,13 @@ CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证�
 
 `doctor`、`status` 和 `apply-settings` 不从 PATH、固定用户名或 Codex 缓存布局猜测 renderer。只有在当前 Codex 环境取得工作区依赖加载器真实文本后，才可传入 `--loader-output` 验证 loader-bound renderer 前置条件。`status` 的“最新交付”只取最后一条成功运行记录绑定的 generation，并重新验证项目内包含关系、普通文件树、manifest SHA-256、delivery SHA-256 和 authority 文件集合；任意目录或篡改 generation 只会得到明确错误和 `latest_output=null`。
 
-`repair-ledger` 首次调用只列出 SHA-256 精确匹配成功运行记录中“快照SHA-256”、且该记录对应 generation/manifest/delivery 已复验通过的归档备份，并返回安全无操作。用户明确选定其中一个后再运行：
+`repair-ledger` 首次调用只列出具备独立发布绑定的归档备份，并返回安全无操作。主台账可读时，备份 SHA-256 必须精确匹配成功运行记录中的“快照SHA-256”，且对应 generation/manifest/delivery 复验通过；主台账已损坏或不可解析时，只允许备份自身结构有效、最后一条运行记录为成功、且该记录对应发布代次复验通过的旧 authority。仅有有效 Excel schema 而没有成功发布证据的文件不会放行。用户明确选定其中一个后再运行：
 
 ```powershell
 & $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot --backup 'D:\...\ledger\archive\Skills主台账_20260829_010203.xlsx'
 ```
 
-选定后，命令从单一文件句柄取得字节快照，并比较句柄与路径的读前/读后身份；路径替换、原地改写或哈希变化均拒绝。恢复候选先写同目录私有暂存文件、复读后再切换到 `ledger\recovery`，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；Word/Excel 先在同级私有目录完整生成后再目录级切换，可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。
+选定后，命令从单一文件句柄取得字节快照，并比较句柄与路径的读前/读后身份；路径替换、原地改写或哈希变化均拒绝。恢复候选先写同目录私有暂存文件、复读后再切换到 `ledger\recovery`，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；Word/Excel 先在同级私有目录完整生成后再目录级切换，可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。失败时只逆序清理本次创建、身份未变化且仍为空的嵌套祖先，既有目录不会删除。
 
 ## 迁移到另一台机器
 
