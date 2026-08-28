@@ -118,6 +118,10 @@ _EXCLUSION_REASON_ALIASES = {
     "其他合规原因": "其他合规原因",
 }
 
+_APPROVED_CATEGORY_CODES = frozenset({
+    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "12", "13", "14",
+})
+
 
 class ReportBuildError(RuntimeError):
     """A report could not be built with the approved portable runtime."""
@@ -427,6 +431,8 @@ def _add_skill_items(document: Document, rows: list[dict[str, Any]]) -> None:
             ("固定版本", row.get("固定版本") or row.get("新版本") or row.get("发现版本") or "未提供"),
             ("许可证", row.get("许可证") or "未提供"),
             ("URL", row.get("Canonical source") or row.get("来源地址") or row.get("发现地址") or "未提供"),
+            ("层级", row.get("入库层级") or row.get("观察状态") or "未提供"),
+            ("原因/结论", row.get("原因") or row.get("结论") or "未提供"),
         ))
 
 
@@ -655,6 +661,19 @@ def _scope_name(row: Mapping[str, Any]) -> str:
     return " ".join(item for item in (code, name) if item)
 
 
+def _scope_code(row: Mapping[str, Any]) -> str:
+    direct = str(row.get("专业代码") or "").strip()
+    if direct:
+        return direct
+    match = re.match(r"^(\d{2,6})(?:\s|$)", _scope_name(row))
+    return match.group(1) if match else ""
+
+
+def _is_approved_scope_mapping(row: Mapping[str, Any]) -> bool:
+    code = _scope_code(row)
+    return code == "99" or (len(code) >= 2 and code[:2] in _APPROVED_CATEGORY_CODES)
+
+
 def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[str, Any]], dict[str, tuple[tuple[str, str], ...]]]:
     skills = {
         str(row.get("内部标识") or "").strip(): row
@@ -667,6 +686,9 @@ def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[
         stable_id = str(row.get("内部标识") or "").strip()
         scope = _scope_name(row)
         if not stable_id or not scope:
+            continue
+        code = _scope_code(row)
+        if code and not _is_approved_scope_mapping(row):
             continue
         scopes.setdefault(stable_id, set()).add(scope)
         material = tuple(sorted(
@@ -685,6 +707,8 @@ def _scope_index(snapshot: object) -> tuple[dict[str, set[str]], dict[str, dict[
 def _catalog_scope(row: object) -> str:
     mapping = _plain_mapping(row)
     category_code = str(mapping.get("category_code") or "").strip()
+    if category_code not in _APPROVED_CATEGORY_CODES:
+        return ""
     class_code = str(mapping.get("class_code") or "").strip()
     class_name = str(mapping.get("class_name") or "").strip()
     if category_code == "14":
@@ -850,6 +874,23 @@ def _catalog_change_rows(catalog_snapshot: object) -> list[dict[str, str]]:
     return [{"专业类": scope, "变化": "目录逐记录差异影响本专业类"} for scope in scopes]
 
 
+def _normalize_candidate_observation(row: Mapping[str, Any]) -> dict[str, Any]:
+    stable_id = str(row.get("观察标识") or "").strip()
+    name = str(row.get("候选名称") or "").strip()
+    tier = str(row.get("观察状态") or "").strip()
+    reason = str(row.get("原因") or "").strip()
+    return {
+        **row,
+        "内部标识": stable_id,
+        "Skill名称": name,
+        "规范名称": name,
+        "入库层级": tier,
+        "结论": tier,
+        "用途": reason or tier,
+        "使用限制": reason or "须按候选层级完成人工复核",
+    }
+
+
 def _report_input_from_run(prepared: object, before: object, after: object) -> dict[str, Any]:
     before_skills = {
         str(row.get("内部标识") or "").strip(): row for row in _ledger_rows(before, "当前Skill")
@@ -870,8 +911,8 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
     def observation_status(row: Mapping[str, Any]) -> str:
         return str(row.get("观察状态") or "").strip()
 
-    conditional = [row for row in observations if observation_status(row) == "条件候选"]
-    adaptation = [row for row in observations if observation_status(row) == "需适配候选"]
+    conditional = [_normalize_candidate_observation(row) for row in observations if observation_status(row) == "条件候选"]
+    adaptation = [_normalize_candidate_observation(row) for row in observations if observation_status(row) == "需适配候选"]
     updates_not_applied = [row for row in observations if observation_status(row) in {"发现更新未升级", "更新未升级"}]
     exclusions = [
         row for row in observations
@@ -879,13 +920,21 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
     ]
     source_runs = tuple(getattr(prepared, "source_runs", ()))
     source_statuses = {str(run.platform): str(run.status) for run in source_runs}
-    source_requests = [
-        {
-            "来源平台": str(run.platform), "请求地址": str(getattr(run, "query", "__run__")),
-            "状态": str(run.status), "请求时间": datetime.now(),
-        }
-        for run in source_runs
-    ]
+    source_requests = []
+    for run in source_runs:
+        for event in tuple(getattr(run, "request_events", ())):
+            source_requests.append({
+                "来源平台": str(event.platform),
+                "请求地址": str(event.url),
+                "查询标识": str(event.query_id),
+                "页码": event.page,
+                "状态码": event.status_code if event.status_code is not None else "未记录",
+                "尝试次数": event.attempts,
+                "响应SHA-256": str(event.response_sha256 or "未记录"),
+                "证据位置": str(event.evidence_path) if event.evidence_path is not None else "未记录",
+                "完成": "是" if event.completed else "否",
+                "请求时间": "未记录",
+            })
     manual_reviews = [
         {"事项": f"{run.platform} 覆盖状态为 {run.status}，需人工复核。"}
         for run in source_runs if str(run.status).casefold() not in {"complete", "success", "ok"}
@@ -910,6 +959,25 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
     }
 
 
+def _validate_new_formal_mappings(before: object, after: object) -> None:
+    before_ids = {
+        str(row.get("内部标识") or "").strip() for row in _ledger_rows(before, "当前Skill")
+        if str(row.get("内部标识") or "").strip()
+    }
+    after_ids = {
+        str(row.get("内部标识") or "").strip() for row in _ledger_rows(after, "当前Skill")
+        if str(row.get("内部标识") or "").strip()
+    }
+    mappings = _ledger_rows(after, "专业任务映射")
+    for stable_id in sorted(after_ids - before_ids):
+        approved = [
+            row for row in mappings
+            if str(row.get("内部标识") or "").strip() == stable_id and _is_approved_scope_mapping(row)
+        ]
+        if not approved:
+            raise ReportBuildError(f"新增正式项 {stable_id} 缺少非军事学、批准范围内的专业任务映射")
+
+
 def make_project_report_builder(root: str | Path):
     """Bind the runner's pre-publication callback to one project's trusted paths."""
 
@@ -929,15 +997,16 @@ def make_project_report_builder(root: str | Path):
             assert_ordinary_path(project.ledger)
         except (OSError, ValueError) as exc:
             raise ReportBuildError("报告回调只能读取项目台账并写入本轮普通暂存目录") from exc
-        delivery = contained_child(staging, "deliveries")
-        delivery.mkdir(parents=False, exist_ok=False)
-        assert_ordinary_path(delivery, require_directory=True)
-        daily_docx = contained_child(delivery, "维护日报.docx")
-        daily_xlsx = contained_child(delivery, "维护日报.xlsx")
         before = LedgerStore.load(project.ledger)
         after = LedgerStore.load(staged_ledger)
         try:
+            _validate_new_formal_mappings(before, after)
             payload = _report_input_from_run(prepared, before, after)
+            delivery = contained_child(staging, "deliveries")
+            delivery.mkdir(parents=False, exist_ok=False)
+            assert_ordinary_path(delivery, require_directory=True)
+            daily_docx = contained_child(delivery, "维护日报.docx")
+            daily_xlsx = contained_child(delivery, "维护日报.xlsx")
             build_daily_docx(payload, daily_docx)
             build_daily_xlsx(payload, daily_xlsx)
             scope_root = contained_child(delivery, "受影响专业类")

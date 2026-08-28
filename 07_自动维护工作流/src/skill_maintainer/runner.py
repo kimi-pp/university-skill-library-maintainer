@@ -24,7 +24,7 @@ from .locking import SingleWriterLock
 from .paths import ProjectPaths, assert_ordinary_path, contained_child, is_link_or_reparse
 from .review import ReviewDecision, apply_reviews_from_stream, clear_review_run_state, consume_applied_review
 from .settings import load_settings, settings_sha256
-from .sources.base import SourceWatermarkStore, Watermark
+from .sources.base import SourceRequestEvent, SourceWatermarkStore, Watermark
 from .versioning import VersionDecision, apply_approved_version, compare_version
 
 
@@ -40,6 +40,7 @@ class SourceRun:
     watermark: str | None = None
     query: str = "__run__"
     evidence_files: tuple[Path, ...] = ()
+    request_events: tuple[SourceRequestEvent, ...] = ()
 
 
 @dataclass(frozen=True)

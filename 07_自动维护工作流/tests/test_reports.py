@@ -6,6 +6,7 @@ from datetime import datetime
 import os
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -15,6 +16,7 @@ from docx.shared import Inches, Pt
 from openpyxl import load_workbook
 
 from skill_maintainer.catalog import Catalog, CatalogRow, CatalogSnapshot, diff_catalog
+from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.reports import (
     DAILY_SHEETS,
     DAILY_WORD_SECTIONS,
@@ -25,7 +27,9 @@ from skill_maintainer.reports import (
     ReportBuildError,
     _make_node_modules_link,
     _remove_node_modules_link,
+    _report_input_from_run,
 )
+from skill_maintainer.runner import SourceRun
 
 
 def formal_row(index: int, scope: str = "0809 计算机类") -> dict[str, object]:
@@ -231,6 +235,91 @@ class ReportContentTestCase(unittest.TestCase):
         }
         self.assertEqual(affected_scopes(ledger, ledger, catalog_snapshot=catalog), ("0809 计算机类",))
 
+    def test_catalog_snapshot_excludes_military_and_unapproved_categories(self):
+        rows = (
+            CatalogRow("08", "工学", "0809", "计算机类", "080901", "计算机科学与技术"),
+            CatalogRow("11", "军事学", "1101", "军事类", "110101", "军事专业"),
+            CatalogRow("15", "未批准门类", "1501", "未批准类", "150101", "未批准专业"),
+        )
+        catalog = Catalog((), staged_snapshot=CatalogSnapshot(rows, "c" * 64), staged_diff=diff_catalog((), rows))
+        ledger = {"当前Skill": [], "专业任务映射": [], "目录基线": []}
+        self.assertEqual(affected_scopes(ledger, ledger, catalog_snapshot=catalog), ("0809 计算机类",))
+
+    def test_new_formal_with_mapping_refreshes_only_its_exact_scope(self):
+        before = {"当前Skill": [], "专业任务映射": [], "目录基线": []}
+        skill = formal_row(1, "0809 计算机类")
+        after = {
+            "当前Skill": [skill],
+            "专业任务映射": [{"内部标识": skill["内部标识"], "专业代码": "0809", "专业名称": "计算机类", "专业任务": "课程分析"}],
+            "目录基线": [],
+        }
+        self.assertEqual(affected_scopes(before, after), ("0809 计算机类",))
+
+    def test_real_candidate_observations_are_normalized_for_both_candidate_sheets(self):
+        self.require_runtime()
+        before_path = self.root / "before.xlsx"
+        after_path = self.root / "after.xlsx"
+        before = LedgerStore.create(before_path)
+        after = LedgerStore.create(self.root / "after-source.xlsx")
+        after.append_rows("候选观察", [
+            {"观察标识": "OBS-COND-1", "候选名称": "Conditional Candidate", "Canonical source": "https://example.test/conditional", "观察状态": "条件候选", "许可证": "MIT", "记录日期": datetime(2026, 8, 28), "原因": "仅限脱敏数据"},
+            {"观察标识": "OBS-ADAPT-1", "候选名称": "Adaptation Candidate", "Canonical source": "https://example.test/adaptation", "观察状态": "需适配候选", "许可证": "Apache-2.0", "记录日期": datetime(2026, 8, 28), "原因": "需本地适配"},
+        ])
+        after.save_staged(after_path)
+        prepared = SimpleNamespace(
+            run_id="candidate-report", catalog_snapshot=None,
+            source_runs=(SourceRun("SkillHub", "partial", query="not-a-url-query"),),
+        )
+        try:
+            payload = _report_input_from_run(prepared, before, after)
+            output = self.root / "candidate-report.xlsx"
+            word_output = self.root / "candidate-report.docx"
+            build_daily_docx(payload, word_output)
+            build_daily_xlsx(payload, output)
+            workbook = load_workbook(output, data_only=False)
+            self.addCleanup(workbook.close)
+            for sheet, stable_id, name, reason in (
+                ("条件候选", "OBS-COND-1", "Conditional Candidate", "仅限脱敏数据"),
+                ("需适配候选", "OBS-ADAPT-1", "Adaptation Candidate", "需本地适配"),
+            ):
+                self.assertEqual(workbook[sheet]["A2"].value, stable_id)
+                self.assertEqual(workbook[sheet]["B2"].value, name)
+                self.assertEqual(workbook[sheet]["L2"].value, reason)
+                self.assertEqual(workbook[sheet]["O2"].value, sheet)
+                self.assertEqual(workbook[sheet]["P2"].value, reason)
+                self.assertIsNotNone(workbook[sheet]["G2"].hyperlink)
+            document = Document(word_output)
+            word_text = "\n".join(cell.text for table in document.tables for row in table.rows for cell in row.cells)
+            self.assertIn("层级", word_text)
+            self.assertIn("原因/结论", word_text)
+        finally:
+            before.workbook.close()
+            after.workbook.close()
+
+    def test_source_query_without_request_events_creates_no_audit_row(self):
+        prepared = SimpleNamespace(
+            run_id="no-events", catalog_snapshot=None,
+            source_runs=(SourceRun("GitHub", "complete", query="campus skill query"),),
+        )
+        empty = {"当前Skill": [], "专业任务映射": [], "候选观察": [], "来源别名": [], "目录基线": []}
+        payload = _report_input_from_run(prepared, empty, empty)
+        self.assertEqual(payload["source_requests"], [])
+
+    def test_source_audit_hyperlinks_only_http_or_https_urls(self):
+        self.require_runtime()
+        summary = report_summary()
+        summary["source_requests"] = [
+            {"来源平台": "GitHub", "请求地址": "campus skill query", "状态": "未记录"},
+            {"来源平台": "SkillHub", "请求地址": "https://api.example.test/items", "状态": 200},
+        ]
+        output = self.root / "audit-links.xlsx"
+        build_daily_xlsx(summary, output)
+        workbook = load_workbook(output, data_only=False)
+        self.addCleanup(workbook.close)
+        audit = workbook["来源请求审计"]
+        self.assertIsNone(audit["B2"].hyperlink)
+        self.assertEqual(audit["B3"].hyperlink.target, "https://api.example.test/items")
+
     def test_scope_deliveries_reference_same_stable_ids_without_master_duplication(self):
         self.require_runtime()
         shared = formal_row(1, "0809 计算机类")
@@ -340,6 +429,12 @@ class ReportContentTestCase(unittest.TestCase):
         self.addCleanup(workbook.close)
         self.assertEqual(workbook.sheetnames, list(DAILY_SHEETS))
         self.assertEqual(workbook["使用说明"]["A2"].value, "报告用途")
+        self.assertEqual(workbook["条件候选"]["O1"].value, "层级")
+        self.assertEqual(workbook["条件候选"]["P1"].value, "原因/结论")
+        self.assertEqual(
+            [workbook["来源请求审计"].cell(1, column).value for column in range(1, 11)],
+            ["来源平台", "请求地址", "查询标识", "页码", "状态码", "尝试次数", "响应SHA-256", "证据位置", "完成", "请求时间"],
+        )
 
 
 if __name__ == "__main__":

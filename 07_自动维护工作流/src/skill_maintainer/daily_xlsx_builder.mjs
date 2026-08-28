@@ -73,7 +73,7 @@ const tableNames = {
 const hyperlinksBySheet = new Map();
 
 function registerHyperlink(sheetName, cell, target) {
-  if (!target) return;
+  if (!/^https?:\/\//i.test(asText(target).trim())) return;
   if (!hyperlinksBySheet.has(sheetName)) hyperlinksBySheet.set(sheetName, []);
   hyperlinksBySheet.get(sheetName).push({ cell, target });
 }
@@ -376,7 +376,7 @@ writeSheet("目录变化", ["专业类", "变化说明"], catalogRows, { widths:
 
 const skillHeaders = [
   "内部标识", "英文原名", "规范名称", "固定版本", "许可证", "来源平台", "Canonical source",
-  "中文用途与功能", "适用人员", "输入", "输出", "限制", "专业类", "收集日期",
+  "中文用途与功能", "适用人员", "输入", "输出", "限制", "专业类", "收集日期", "层级", "原因/结论",
 ];
 function skillMatrix(rows) {
   return rows.map((row) => [
@@ -394,11 +394,13 @@ function skillMatrix(rows) {
     asText(row["使用限制"] ?? row["安全限制条件"] ?? row["适配建议"]),
     asText(row["专业类"]),
     asDate(row["收集日期"] ?? row["记录日期"]),
+    asText(row["入库层级"] ?? row["观察状态"]),
+    asText(row["原因"] ?? row["结论"]),
   ]);
 }
 function writeSkillSheet(name, rows) {
   writeSheet(name, skillHeaders, skillMatrix(rows), {
-    widths: [16, 26, 28, 14, 16, 18, 48, 48, 28, 34, 34, 48, 24, 14],
+    widths: [16, 26, 28, 14, 16, 18, 48, 48, 28, 34, 34, 48, 24, 14, 18, 42],
     dateColumns: [13],
     centerColumns: [0, 3, 4, 5, 13],
   });
@@ -447,10 +449,21 @@ writeSheet("排除原因汇总", ["排除原因", "数量"], [...reasonCounts.en
 const requestRows = payload.source_requests.map((row) => [
   asText(row["来源平台"]),
   asText(row["请求地址"] ?? row.url),
-  asText(row["状态"] ?? row.status),
-  asDate(row["请求时间"] ?? row.requested_at),
+  asText(row["查询标识"] ?? row.query_id),
+  row["页码"] ?? row.page ?? "未记录",
+  row["状态码"] ?? row["状态"] ?? row.status ?? "未记录",
+  row["尝试次数"] ?? row.attempts ?? "未记录",
+  asText(row["响应SHA-256"] ?? row.response_sha256 ?? "未记录"),
+  asText(row["证据位置"] ?? row.evidence_path ?? "未记录"),
+  asText(row["完成"] ?? row.completed ?? "未记录"),
+  asText(row["请求时间"] ?? row.requested_at ?? "未记录"),
 ]);
-writeSheet("来源请求审计", ["来源平台", "请求地址", "状态", "请求时间"], requestRows, { widths: [22, 72, 16, 20], dateColumns: [3] });
+writeSheet(
+  "来源请求审计",
+  ["来源平台", "请求地址", "查询标识", "页码", "状态码", "尝试次数", "响应SHA-256", "证据位置", "完成", "请求时间"],
+  requestRows,
+  { widths: [18, 58, 24, 10, 12, 12, 42, 48, 10, 20], centerColumns: [3, 4, 5, 8] },
+);
 payload.source_requests.forEach((row, index) => {
   const url = asText(row["请求地址"] ?? row.url);
   registerHyperlink("来源请求审计", `B${index + 2}`, url);

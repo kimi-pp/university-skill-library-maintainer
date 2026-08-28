@@ -134,3 +134,43 @@ Catalog 的最小可审计契约是：真实 `Catalog.staged_diff` 为主，逐�
 
 - Task 11 仍须处理既有 9360 DXA grid 加 120 DXA indent 的实际 Word 视觉门；本轮不改变该已裁决的 minor。
 - 当前环境仍无 `soffice`，所以没有新增 DOCX 页数/逐页 PNG 证据；不能宣称 Word 视觉门通过。原 Task 10 的结构 QA 和 12-sheet artifact-tool 渲染证据不因本轮数据接线修复失效。
+
+## Fix round 2：新增正式映射门、候选 schema 与真实请求审计
+
+### TDD RED
+
+先只修改 `test_reports.py` / `test_runner.py`，运行 7 项针对性测试。结果：`Ran 7 tests in 60.015s`，`FAILED (failures=6, errors=1)`。
+
+首错为真实 catalog snapshot 同时增加 08、11、15 门类时，`affected_scopes` 实际返回 `0809 计算机类 / 1101 军事类 / 1501 未批准类`，期望只返回批准的 `0809 计算机类`。其余 RED 分别证明：
+
+- 条件候选与需适配候选使用真实 `观察标识/候选名称` 后，候选表 `A2` 为空；
+- 没有 request event 时仍把 `SourceRun.query` 和报告生成时间伪装成请求地址/请求时间；
+- 非 URL 检索词仍被建立 external hyperlink；
+- 未映射以及只有军事学映射的新增正式项均未阻断，且开始产出 delivery；
+- `SourceRun` 尚不接受 `request_events`，真实事件 fixture 抛出 `TypeError`。
+
+随后为“层级/原因/限制”可见性增加独立断言，候选表 `O2` 实际为空、期望“条件候选”，得到符合预期的 RED。模板复读也先得到 `条件候选!O1=None`、期望“层级”的 RED。
+
+### 最小实现
+
+- 定义批准门类代码 `01–10、12–14`；军事学 11 和未知/越界代码不进入 catalog affected scopes。交叉学科 14 继续按专业逐项，`99 跨学科通用`映射继续允许。
+- report adapter 在创建 `deliveries` 或任何文件前，比较 production/staged `当前Skill`，逐个验证新增正式 ID 至少存在一条批准范围内、非军事学专业任务映射；否则抛出含稳定 ID 的 `ReportBuildError`。已映射新增正式项只刷新其精确 scope。
+- 条件/适配 `候选观察`在内存报告边界规范化：`观察标识→内部标识`、`候选名称→Skill名称/规范名称`，并保留 Canonical URL、许可证、候选层级、原因和限制；不修改 ledger truth。Word 增加“层级”“原因/结论”，Excel 候选/Skill 表追加同名两列。
+- `SourceRun` 兼容性新增默认空元组 `request_events: tuple[SourceRequestEvent, ...]`。adapter 只展开真实事件的 platform、url、query_id、page、status_code、attempts、response SHA、evidence path、completed；事件无时间字段时明确写“未记录”。默认 query 不再制造审计行。
+- Excel 来源请求审计扩为 10 列精确事件字段；唯一 JS builder 只对 `http://` / `https://` 建 external hyperlink。模板 `daily_review.xlsx` 通过同一 artifact-tool 主路径重新生成，未使用 openpyxl 写入；artifact-tool 新建/导出/重导入 inspect 与公式错误扫描完成，12 张表保持不变，来源请求审计复读为 `A1:J1`。
+
+### GREEN 与回归证据
+
+- 新增 7 项定向合同：`Ran 7 tests in 48.608s`，`OK`。
+- 候选层级/原因强化与 mapped-formal exact-scope：`Ran 2 tests in 11.945s`，`OK`。
+- 更新模板复读：`Ran 1 test in 0.011s`，`OK`。
+- focused reports：`Ran 18 tests in 130.401s`，`OK`（随后增加 exact-scope/template 强化，最终数量见提交前验证）。
+- 最终 focused reports：`Ran 19 tests in 130.348s`，`OK`。
+- affected runner：`Ran 36 tests in 37.859s`，`OK`。
+- 最终全套：`python -m unittest discover -s tests -v` → `Ran 185 tests in 174.287s`，`OK`。
+- `python -m compileall -q 07_自动维护工作流/src 07_自动维护工作流/tests`、`node --check daily_xlsx_builder.mjs` 与 `git diff --check` 均以 0 退出。
+
+### 保留顾虑
+
+- `SourceRequestEvent` 当前没有请求发生时间字段，因此本轮严格写“未记录”，不从报告时间推断；若未来来源层增加可信时间戳，可在不改变现有事实边界的前提下扩列取值。
+- Word 9360 DXA grid + 120 DXA indent minor 仍按裁决留 Task 11；当前环境仍无 `soffice`，不宣称 DOCX 视觉门通过。

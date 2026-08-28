@@ -25,6 +25,7 @@ from skill_maintainer.runner import (
     RunRequest,
     SourceRun,
 )
+from skill_maintainer.sources.base import SourceRequestEvent
 from skill_maintainer.snapshots import SnapshotCandidate, build_snapshot
 
 
@@ -98,6 +99,33 @@ notify_on_no_change = false
         })
         return row
 
+    def report_review(self, stable_id: str, canonical_source: str):
+        candidate_root = self.root / f"{stable_id}-candidate"
+        candidate_root.mkdir()
+        (candidate_root / "SKILL.md").write_text(f"# {stable_id}", encoding="utf-8")
+        version = "c" * 40
+        evidence = (f"https://evidence.example/{stable_id}",)
+        snapshot = build_snapshot(
+            SnapshotCandidate(stable_id, version, candidate_root, evidence),
+            self.root / f"{stable_id}-snapshot",
+        )
+        packet = build_review_packet({
+            "id": stable_id, "canonical_source": canonical_source,
+            "license": "MIT", "security_grade": "SA",
+        }, snapshot)
+        proposed = self.formal_row(stable_id, version, snapshot.fixed_content_hash)
+        proposed.update({
+            "发现地址": canonical_source, "Canonical source": canonical_source,
+            "上游项目地址": canonical_source, "验证证据位置": "；".join(evidence),
+            "本地专业软件或运行时依赖": "无", "本地脚本/插件接口": "不使用", "质量评分": 2,
+        })
+        decision = ReviewDecision(
+            ObservedFacts(version, True, True, "MIT", canonical_source, evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"),
+            ProjectJudgments("正式推荐", True, True, 4, (True,)),
+            DerivedFields(quality_score=2, ledger_row=proposed), candidate_id=stable_id,
+        )
+        return packet, decision
+
     def test_live_lock_blocks_second_holder_and_stale_diagnostic_is_recoverable(self):
         lock_path = self.root / "runtime" / "writer.lock"
         first = SingleWriterLock(lock_path)
@@ -143,13 +171,22 @@ notify_on_no_change = false
         production = self.root / "ledger" / "Skills主台账.xlsx"
         ledger = LedgerStore.load(production)
         ledger.append_rows("当前Skill", [self.formal_row("EXISTING-REPORT-1", "v1", "a" * 64)])
-        ledger.append_rows("专业任务映射", [{
-            "映射标识": "MAP-REPORT-1", "内部标识": "EXISTING-REPORT-1",
-            "专业代码": "0809", "专业名称": "计算机类", "专业任务": "课程分析",
-            "输入": "课程表", "输出": "报告", "适用理由": "直接相关", "使用限制": "脱敏", "相关度": "高",
-            "专业别名": "计算机", "核心课程": "程序设计", "研究方法": "数据分析", "工作任务": "课程治理",
-            "成果或数据对象": "课程表", "软件/数据库/流程": "Python",
-        }])
+        ledger.append_rows("专业任务映射", [
+            {
+                "映射标识": "MAP-REPORT-1", "内部标识": "EXISTING-REPORT-1",
+                "专业代码": "0809", "专业名称": "计算机类", "专业任务": "课程分析",
+                "输入": "课程表", "输出": "报告", "适用理由": "直接相关", "使用限制": "脱敏", "相关度": "高",
+                "专业别名": "计算机", "核心课程": "程序设计", "研究方法": "数据分析", "工作任务": "课程治理",
+                "成果或数据对象": "课程表", "软件/数据库/流程": "Python",
+            },
+            {
+                "映射标识": "MAP-REPORT-NEW", "内部标识": "REPORT-NEW-1",
+                "专业代码": "0809", "专业名称": "计算机类", "专业任务": "课程分析",
+                "输入": "课程表", "输出": "报告", "适用理由": "直接相关", "使用限制": "脱敏", "相关度": "高",
+                "专业别名": "计算机", "核心课程": "程序设计", "研究方法": "数据分析", "工作任务": "课程治理",
+                "成果或数据对象": "课程表", "软件/数据库/流程": "Python",
+            },
+        ])
         seeded = self.root / "ledger" / "seed-report.xlsx"
         ledger.save_staged(seeded)
         ledger.workbook.close()
@@ -159,36 +196,16 @@ notify_on_no_change = false
         old_rows = (CatalogRow("08", "工学", "0801", "力学类", "080101", "理论与应用力学"),)
         new_rows = (*old_rows, CatalogRow("08", "工学", "0809", "计算机类", "080901", "计算机科学与技术"))
         catalog = Catalog(old_rows, staged_snapshot=CatalogSnapshot(new_rows, "b" * 64), staged_diff=diff_catalog(old_rows, new_rows))
+        request_event = SourceRequestEvent(
+            "GitHub", "query-0809", "https://api.github.com/search/repositories?q=campus", 2,
+            200, 3, "d" * 64, None, last_page=True,
+            evidence_path=self.root / "evidence" / "github-page-2.json", completed=True,
+        )
         sources = (
             SourceRun("SkillHub", "partial"), SourceRun("ClawHub", "failed"),
-            SourceRun("GitHub", "complete"), SourceRun("Hugging Face Spaces", "failed"),
+            SourceRun("GitHub", "complete", request_events=(request_event,)), SourceRun("Hugging Face Spaces", "failed"),
         )
-        candidate_root = self.root / "report-candidate"
-        candidate_root.mkdir()
-        (candidate_root / "SKILL.md").write_text("# report candidate", encoding="utf-8")
-        version = "c" * 40
-        evidence = ("https://evidence.example/report-candidate",)
-        snapshot = build_snapshot(
-            SnapshotCandidate("REPORT-NEW-1", version, candidate_root, evidence),
-            self.root / "report-snapshot",
-        )
-        packet = build_review_packet({
-            "id": "REPORT-NEW-1", "canonical_source": "https://github.com/example/report-new",
-            "license": "MIT", "security_grade": "SA",
-        }, snapshot)
-        proposed = self.formal_row("REPORT-NEW-1", version, snapshot.fixed_content_hash)
-        proposed.update({
-            "发现地址": "https://github.com/example/report-new",
-            "Canonical source": "https://github.com/example/report-new",
-            "上游项目地址": "https://github.com/example/report-new",
-            "验证证据位置": "；".join(evidence), "本地专业软件或运行时依赖": "无",
-            "本地脚本/插件接口": "不使用", "质量评分": 2,
-        })
-        decision = ReviewDecision(
-            ObservedFacts(version, True, True, "MIT", "https://github.com/example/report-new", evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"),
-            ProjectJudgments("正式推荐", True, True, 4, (True,)),
-            DerivedFields(quality_score=2, ledger_row=proposed), candidate_id="REPORT-NEW-1",
-        )
+        packet, decision = self.report_review("REPORT-NEW-1", "https://github.com/example/report-new")
         coordinator = self.coordinator(
             discover=lambda request, staging: sources,
             report_builder=make_project_report_builder(self.root),
@@ -202,15 +219,66 @@ notify_on_no_change = false
         self.assertTrue((generation / "维护日报.docx").is_file())
         daily = load_workbook(generation / "维护日报.xlsx", data_only=False)
         self.addCleanup(daily.close)
-        audit_text = "\n".join(str(cell.value or "") for row in daily["来源请求审计"].iter_rows() for cell in row)
-        self.assertIn("SkillHub", audit_text)
-        self.assertIn("partial", audit_text)
+        audit = daily["来源请求审计"]
+        audit_text = "\n".join(str(cell.value or "") for row in audit.iter_rows() for cell in row)
+        for expected in ("GitHub", request_event.url, "query-0809", "2", "200", "3", "d" * 64, str(request_event.evidence_path), "是", "未记录"):
+            self.assertIn(expected, audit_text)
+        self.assertNotIn("__run__", audit_text)
+        self.assertEqual(audit["B2"].hyperlink.target, request_event.url)
         self.assertEqual(daily["新增正式推荐"]["A2"].value, "REPORT-NEW-1")
         scope_books = tuple(generation.glob("受影响专业类/*/专业类Skill清单.xlsx"))
         self.assertEqual(len(scope_books), 1)
         scope_book = load_workbook(scope_books[0], data_only=False)
         self.addCleanup(scope_book.close)
         self.assertEqual(scope_book["新增正式推荐"]["A2"].value, "EXISTING-REPORT-1")
+
+    def test_report_adapter_rejects_unmapped_new_formal_before_any_output(self):
+        if not os.environ.get("SKILL_MAINTAINER_NODE") or not os.environ.get("SKILL_MAINTAINER_NODE_MODULES"):
+            self.skipTest("report integration requires caller-supplied Node runtime")
+        from skill_maintainer.reports import ReportBuildError, make_project_report_builder
+
+        packet, decision = self.report_review("UNMAPPED-REPORT-1", "https://github.com/example/unmapped-report")
+        coordinator = self.coordinator(report_builder=make_project_report_builder(self.root))
+        prepared = coordinator.prepare(replace(self.request, review_packets={"UNMAPPED-REPORT-1": packet}))
+        coordinator.apply_reviews(prepared, (decision,))
+        try:
+            with self.assertRaisesRegex(ReportBuildError, "UNMAPPED-REPORT-1|专业任务映射"):
+                coordinator.report_builder(prepared, prepared.staging_dir)
+            delivery = prepared.staging_dir / "deliveries"
+            self.assertTrue(not delivery.exists() or not any(delivery.iterdir()))
+        finally:
+            coordinator.abandon(prepared)
+
+    def test_report_adapter_rejects_military_mapping_before_any_output(self):
+        if not os.environ.get("SKILL_MAINTAINER_NODE") or not os.environ.get("SKILL_MAINTAINER_NODE_MODULES"):
+            self.skipTest("report integration requires caller-supplied Node runtime")
+        from skill_maintainer.reports import ReportBuildError, make_project_report_builder
+
+        production = self.root / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(production)
+        ledger.append_rows("专业任务映射", [{
+            "映射标识": "MAP-MILITARY-1", "内部标识": "MILITARY-REPORT-1",
+            "专业代码": "1101", "专业名称": "军事类", "专业任务": "军事任务",
+            "输入": "数据", "输出": "报告", "适用理由": "不应纳入", "使用限制": "禁止", "相关度": "高",
+            "专业别名": "军事", "核心课程": "军事", "研究方法": "军事", "工作任务": "军事",
+            "成果或数据对象": "军事", "软件/数据库/流程": "军事",
+        }])
+        seeded = self.root / "ledger" / "military-seed.xlsx"
+        ledger.save_staged(seeded)
+        ledger.workbook.close()
+        shutil.copyfile(seeded, production)
+        seeded.unlink()
+        packet, decision = self.report_review("MILITARY-REPORT-1", "https://github.com/example/military-report")
+        coordinator = self.coordinator(report_builder=make_project_report_builder(self.root))
+        prepared = coordinator.prepare(replace(self.request, review_packets={"MILITARY-REPORT-1": packet}))
+        coordinator.apply_reviews(prepared, (decision,))
+        try:
+            with self.assertRaisesRegex(ReportBuildError, "MILITARY-REPORT-1|军事|专业任务映射"):
+                coordinator.report_builder(prepared, prepared.staging_dir)
+            delivery = prepared.staging_dir / "deliveries"
+            self.assertTrue(not delivery.exists() or not any(delivery.iterdir()))
+        finally:
+            coordinator.abandon(prepared)
 
     def test_all_failure_points_leave_production_bytes_identical(self):
         points = ("after_discovery", "after_review", "report", "office", "reopen", "before_publish")
