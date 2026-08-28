@@ -68,7 +68,7 @@ function Invoke-CheckedPython {
         [string[]]$Arguments
     )
 
-    & $Executable -E -P @Arguments
+    & $Executable -I @Arguments
     if ($LASTEXITCODE -ne 0) {
         throw "Python command failed with exit code $LASTEXITCODE."
     }
@@ -167,9 +167,15 @@ function Write-AtomicOwnedText {
     }
 }
 
-$originalPythonPath = [Environment]::GetEnvironmentVariable("PYTHONPATH", "Process")
+$pythonEnvironmentNames = @("PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE")
+$originalPythonEnvironment = @{}
+foreach ($environmentName in $pythonEnvironmentNames) {
+    $originalPythonEnvironment[$environmentName] = [Environment]::GetEnvironmentVariable($environmentName, "Process")
+}
 try {
-[Environment]::SetEnvironmentVariable("PYTHONPATH", $null, "Process")
+foreach ($environmentName in $pythonEnvironmentNames) {
+    [Environment]::SetEnvironmentVariable($environmentName, $null, "Process")
+}
 
 $resolvedProject = Get-OrdinaryPath -LiteralPath $ProjectRoot -Kind Directory
 $resolvedPython = Get-OrdinaryPath -LiteralPath $PythonExe -Kind File
@@ -229,38 +235,48 @@ Invoke-CheckedPython -Executable $venvPython -Arguments @(
     "-m", "pip", "install", "--disable-pip-version-check", "--requirement", $requirements
 )
 
-& $venvPython -E -P -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('wheel') else 1)"
+$sitePackages = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Lib\site-packages") -Kind Directory
+$scriptsRoot = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Scripts") -Kind Directory
+$editableSource = Get-OrdinaryPath -LiteralPath (Join-Path $resolvedWorkflow "src") -Kind Directory
+$ownershipMarker = "# university-skill-library-maintainer installer-owned"
+$editableLink = Join-Path $sitePackages "university_skill_library_maintainer.pth"
+$commandLauncher = Join-Path $scriptsRoot "skill-maintainer.cmd"
+$nonIsolatedLauncher = Join-Path $scriptsRoot "skill-maintainer.exe"
+Assert-OwnedOrAbsent -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned"
+
+& $venvPython -I -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('wheel') else 1)"
 $wheelProbe = $LASTEXITCODE
 if ($wheelProbe -eq 0) {
+    if (Test-Path -LiteralPath $nonIsolatedLauncher) {
+        throw "Refusing to overwrite an existing non-isolated skill-maintainer.exe launcher."
+    }
     Invoke-CheckedPython -Executable $venvPython -Arguments @(
         "-m", "pip", "install", "--disable-pip-version-check", "--no-deps", "--no-build-isolation", "--editable", $resolvedWorkflow
     )
+    if (Test-Path -LiteralPath $nonIsolatedLauncher) {
+        [void](Get-OrdinaryPath -LiteralPath $nonIsolatedLauncher -Kind File)
+        Remove-Item -LiteralPath $nonIsolatedLauncher -Force
+    }
 }
 elseif ($wheelProbe -eq 1) {
     # Do not round-trip a Unicode path through native stdout: Windows PowerShell
     # 5.1 can decode Python's output with a different code page.
-    $sitePackages = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Lib\site-packages") -Kind Directory
-    $scriptsRoot = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Scripts") -Kind Directory
-    $editableSource = Get-OrdinaryPath -LiteralPath (Join-Path $resolvedWorkflow "src") -Kind Directory
-    $ownershipMarker = "# university-skill-library-maintainer installer-owned"
-    $editableLink = Join-Path $sitePackages "university_skill_library_maintainer.pth"
-    $commandLauncher = Join-Path $scriptsRoot "skill-maintainer.cmd"
     Assert-OwnedOrAbsent -LiteralPath $editableLink -OwnershipMarker $ownershipMarker
-    Assert-OwnedOrAbsent -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned"
     $sourceBase64 = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($editableSource))
     Write-AtomicOwnedText -LiteralPath $editableLink -OwnershipMarker $ownershipMarker -Content (
         $ownershipMarker + [Environment]::NewLine +
         "import base64,sys;sys.path.insert(0,base64.b64decode('$sourceBase64').decode('utf-8'))" +
         [Environment]::NewLine
     )
-    Write-AtomicOwnedText -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned" -Content (
-        "@rem university-skill-library-maintainer installer-owned" + [Environment]::NewLine +
-        "@`"%~dp0python.exe`" -E -P -m skill_maintainer.cli %*" + [Environment]::NewLine
-    )
 }
 else {
     throw "Cannot determine whether the target virtual environment provides wheel."
 }
+
+Write-AtomicOwnedText -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned" -Content (
+    "@rem university-skill-library-maintainer installer-owned" + [Environment]::NewLine +
+    "@`"%~dp0python.exe`" -I -m skill_maintainer.cli %*" + [Environment]::NewLine
+)
 
 $expectedSource = Get-OrdinaryPath -LiteralPath (Join-Path $resolvedWorkflow "src") -Kind Directory
 Invoke-CheckedPython -Executable $venvPython -Arguments @(
@@ -268,11 +284,7 @@ Invoke-CheckedPython -Executable $venvPython -Arguments @(
     "from pathlib import Path; import skill_maintainer; actual=Path(skill_maintainer.__file__).resolve(); expected=Path(__import__('sys').argv[1]).resolve(); raise SystemExit(0 if actual.is_relative_to(expected) else 1)",
     $expectedSource
 )
-$consoleCommand = Join-Path (Join-Path $venvRoot "Scripts") "skill-maintainer.exe"
-if (-not (Test-Path -LiteralPath $consoleCommand)) {
-    $consoleCommand = Join-Path (Join-Path $venvRoot "Scripts") "skill-maintainer.cmd"
-}
-$consoleCommand = Get-OrdinaryPath -LiteralPath $consoleCommand -Kind File
+$consoleCommand = Get-OrdinaryPath -LiteralPath $commandLauncher -Kind File
 & $consoleCommand --help | Out-Null
 if ($LASTEXITCODE -ne 0) {
     throw "Installed skill-maintainer command failed with exit code $LASTEXITCODE."
@@ -289,5 +301,11 @@ Invoke-CheckedPython -Executable $venvPython -Arguments @(
 Write-Output "Installation checks completed. No automation was created; settings remain disabled/manual."
 }
 finally {
-    [Environment]::SetEnvironmentVariable("PYTHONPATH", $originalPythonPath, "Process")
+    foreach ($environmentName in $pythonEnvironmentNames) {
+        [Environment]::SetEnvironmentVariable(
+            $environmentName,
+            $originalPythonEnvironment[$environmentName],
+            "Process"
+        )
+    }
 }

@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import tomllib
 import unittest
 from unittest.mock import patch
 
@@ -189,6 +190,14 @@ class CliOperationsTest(unittest.TestCase):
         self.root.mkdir()
         self.source_workflow = Path(__file__).resolve().parents[1]
 
+    def _bundled_python(self) -> Path:
+        candidate = (
+            Path.home() / ".cache" / "codex-runtimes" / "codex-primary-runtime"
+            / "dependencies" / "python" / "python.exe"
+        )
+        self.assertTrue(candidate.is_file(), f"bundled dependency runtime missing: {candidate}")
+        return candidate
+
     def _authority_fixture(self, *, missing: str | None = None) -> None:
         (self.root / "AGENTS.md").write_text("# authority\n", encoding="utf-8")
         rule_root = self.root / "01_规则"
@@ -316,9 +325,67 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(result.exit_code, 1)
         self.assertEqual(marker.read_text(encoding="utf-8"), "previous complete skill")
         self.assertEqual(stale.read_text(encoding="utf-8"), "previous")
-        self.assertFalse(any(path.name.endswith((".pending", ".previous")) for path in skills_root.iterdir()))
+        pending = tuple(path for path in skills_root.iterdir() if path.name.endswith(".pending"))
+        self.assertEqual(len(pending), 1)
+        self.assertIn(str(pending[0]), result.message)
+        self.assertFalse(any(path.name.endswith(".previous") for path in skills_root.iterdir()))
 
-    def test_skill_previous_cleanup_failure_keeps_committed_new_tree(self):
+    def test_skill_failed_switch_never_deletes_unknown_destination_to_force_rollback(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        installed = skills_root / cli.SKILL_NAME
+        (installed / "old-version.txt").write_text("old", encoding="utf-8")
+        real_rename = os.rename
+        calls = 0
+        previous_path: Path | None = None
+
+        def occupy_destination_then_fail(source, destination):
+            nonlocal calls, previous_path
+            calls += 1
+            if calls == 1:
+                result = real_rename(source, destination)
+                previous_path = Path(destination)
+                return result
+            if calls == 2:
+                Path(destination).mkdir()
+                (Path(destination) / "user-data.txt").write_text("must remain", encoding="utf-8")
+                raise OSError("injected switch failure after unknown destination appeared")
+            return real_rename(source, destination)
+
+        with patch("skill_maintainer.cli.os.rename", side_effect=occupy_destination_then_fail):
+            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(result.exit_code, 1)
+        self.assertEqual((installed / "user-data.txt").read_text(encoding="utf-8"), "must remain")
+        self.assertIsNotNone(previous_path)
+        self.assertEqual((previous_path / "old-version.txt").read_text(encoding="utf-8"), "old")
+        self.assertIn(str(installed), result.message)
+        self.assertIn(str(previous_path), result.message)
+
+    def test_skill_forged_previous_sidecar_never_authorizes_deletion(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        operation = "a" * 32
+        fake = skills_root / f".{cli.SKILL_NAME}.{operation}.previous"
+        fake.mkdir()
+        (fake / "user-data.txt").write_text("must remain", encoding="utf-8")
+        forged = skills_root / f".{cli.SKILL_NAME}.{operation}.previous.owner"
+        forged.write_bytes(
+            ("university-skill-library-maintainer previous tree\n" + operation + "\n").encode("ascii")
+        )
+
+        result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(result.exit_code, 0, result.message)
+        self.assertEqual((fake / "user-data.txt").read_text(encoding="utf-8"), "must remain")
+        self.assertTrue(forged.is_file())
+        self.assertTrue(result.details and any(str(fake) in item for item in result.details.get("warnings", ())))
+
+    def test_skill_update_preserves_previous_for_manual_cleanup(self):
         self._authority_fixture()
         workflow = self._workflow_fixture()
         skills_root = Path(self.temporary.name) / "Codex Skills"
@@ -328,21 +395,7 @@ class CliOperationsTest(unittest.TestCase):
         (installed / "SKILL.md").write_text("previous incomplete version", encoding="utf-8")
         old_only = installed / "previous-only.txt"
         old_only.write_text("old", encoding="utf-8")
-        real_rmtree = shutil.rmtree
-        attacked = False
-
-        def partially_remove_previous(path, *args, **kwargs):
-            nonlocal attacked
-            candidate = Path(path)
-            if candidate.name.endswith(".previous") and not attacked:
-                attacked = True
-                (candidate / "previous-only.txt").unlink()
-                raise OSError("injected partial previous cleanup failure")
-            return real_rmtree(path, *args, **kwargs)
-
-        with patch("skill_maintainer.cli.shutil.rmtree", side_effect=partially_remove_previous):
-            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
-        self.assertTrue(attacked)
+        result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
         self.assertEqual(result.exit_code, 0, result.message)
         self.assertEqual(
             cli._skill_tree_manifest(installed),
@@ -350,7 +403,133 @@ class CliOperationsTest(unittest.TestCase):
         )
         self.assertFalse(old_only.exists())
         self.assertTrue(result.details and result.details.get("warnings"))
-        self.assertTrue(any(path.name.endswith(".previous") for path in skills_root.iterdir()))
+        leftovers = tuple(path for path in skills_root.iterdir() if path.name.endswith(".previous"))
+        self.assertEqual(len(leftovers), 1)
+        self.assertEqual((leftovers[0] / "previous-only.txt").read_text(encoding="utf-8"), "old")
+        self.assertEqual((leftovers[0] / "SKILL.md").read_text(encoding="utf-8"), "previous incomplete version")
+        self.assertTrue(any(str(leftovers[0]) in item for item in result.details.get("warnings", ())))
+
+        unknown = skills_root / f".{cli.SKILL_NAME}.not-owned.previous"
+        unknown.mkdir()
+        outside = Path(self.temporary.name) / "outside-previous-link"
+        outside.mkdir()
+        (outside / "must-remain.txt").write_text("outside", encoding="utf-8")
+        linked = skills_root / f".{cli.SKILL_NAME}.{'f' * 32}.previous"
+        linked.symlink_to(outside, target_is_directory=True)
+
+        third = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(third.exit_code, 0, third.message)
+        self.assertTrue(leftovers[0].is_dir(), "cross-run cleanup must not delete an unknown tree")
+        self.assertTrue(unknown.is_dir(), "unknown similarly named tree must not be deleted")
+        self.assertTrue(linked.is_symlink(), "reparse previous entry must not be followed or deleted")
+        self.assertEqual((outside / "must-remain.txt").read_text(encoding="utf-8"), "outside")
+        warnings = tuple(third.details.get("warnings", ())) if third.details else ()
+        self.assertTrue(any(str(leftovers[0]) in item and "普通目录" in item for item in warnings))
+        self.assertTrue(any(str(linked) in item and "链接或重解析点" in item for item in warnings))
+
+    def test_skill_previous_replaced_after_commit_validation_is_never_deleted(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        installed = skills_root / cli.SKILL_NAME
+        real_manifest = cli._skill_tree_manifest
+        destination_checks = 0
+        previous_path: Path | None = None
+        held = skills_root / "held-committed-previous"
+
+        def replace_after_commit_validation(root):
+            nonlocal destination_checks, previous_path
+            result = real_manifest(root)
+            if Path(root) == installed:
+                destination_checks += 1
+                if destination_checks == 2:
+                    previous_path = next(
+                        path for path in skills_root.iterdir()
+                        if path.name.endswith(".previous") and not path.is_symlink()
+                    )
+                    os.rename(previous_path, held)
+                    previous_path.mkdir()
+                    (previous_path / "user-data.txt").write_text("must remain", encoding="utf-8")
+            return result
+
+        with patch("skill_maintainer.cli._skill_tree_manifest", side_effect=replace_after_commit_validation):
+            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(destination_checks, 2)
+        self.assertEqual(result.exit_code, 0, result.message)
+        self.assertIsNotNone(previous_path)
+        self.assertEqual((previous_path / "user-data.txt").read_text(encoding="utf-8"), "must remain")
+        self.assertTrue((held / "SKILL.md").is_file())
+        self.assertEqual(
+            cli._skill_tree_manifest(installed),
+            cli._skill_tree_manifest(workflow / "skill" / cli.SKILL_NAME),
+        )
+
+    def test_skill_unknown_pending_created_after_commit_is_never_deleted(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        installed = skills_root / cli.SKILL_NAME
+        real_manifest = cli._skill_tree_manifest
+        destination_checks = 0
+        unknown_pending: Path | None = None
+
+        def create_unknown_pending_after_commit(root):
+            nonlocal destination_checks, unknown_pending
+            result = real_manifest(root)
+            if Path(root) == installed:
+                destination_checks += 1
+                if destination_checks == 2:
+                    previous = next(path for path in skills_root.iterdir() if path.name.endswith(".previous"))
+                    operation = previous.name.removesuffix(".previous").rsplit(".", 1)[-1]
+                    unknown_pending = skills_root / f".{cli.SKILL_NAME}.{operation}.pending"
+                    unknown_pending.mkdir()
+                    (unknown_pending / "user-data.txt").write_text("must remain", encoding="utf-8")
+            return result
+
+        with patch("skill_maintainer.cli._skill_tree_manifest", side_effect=create_unknown_pending_after_commit):
+            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(result.exit_code, 0, result.message)
+        self.assertIsNotNone(unknown_pending)
+        self.assertEqual((unknown_pending / "user-data.txt").read_text(encoding="utf-8"), "must remain")
+        self.assertEqual(
+            cli._skill_tree_manifest(installed),
+            cli._skill_tree_manifest(workflow / "skill" / cli.SKILL_NAME),
+        )
+        self.assertTrue(result.details and any(str(unknown_pending) in item for item in result.details.get("warnings", ())))
+
+    def test_skill_stale_previous_replaced_after_status_is_never_deleted(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        stale = skills_root / f".{cli.SKILL_NAME}.{'b' * 32}.previous"
+        stale.mkdir()
+        (stale / "old-owned.txt").write_text("old", encoding="utf-8")
+        held = skills_root / "held-old-previous"
+        real_status = cli._stale_previous_status
+        replaced = False
+
+        def replace_after_status(candidate):
+            nonlocal replaced
+            result = real_status(candidate)
+            if Path(candidate) == stale and not replaced:
+                replaced = True
+                os.rename(stale, held)
+                stale.mkdir()
+                (stale / "user-data.txt").write_text("must remain", encoding="utf-8")
+            return result
+
+        with patch("skill_maintainer.cli._stale_previous_status", side_effect=replace_after_status):
+            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertTrue(replaced)
+        self.assertEqual(result.exit_code, 0, result.message)
+        self.assertEqual((stale / "user-data.txt").read_text(encoding="utf-8"), "must remain")
+        self.assertEqual((held / "old-owned.txt").read_text(encoding="utf-8"), "old")
 
     def test_skill_root_reparse_with_missing_nested_target_causes_no_external_write(self):
         self._authority_fixture()
@@ -601,23 +780,66 @@ class CliOperationsTest(unittest.TestCase):
         replacement = backup.with_name("same-bytes-self-binding-replacement.xlsx")
         shutil.copyfile(backup, replacement)
         authority.write_bytes(b"corrupt-current-authority")
-        real_self_binding = cli._backup_self_binds_verified_generation
+        real_capture = cli._capture_backup_snapshot
         attacked = False
 
-        def bind_then_replace(workflow_path, candidate):
+        def capture_then_replace(candidate):
             nonlocal attacked
-            result = real_self_binding(workflow_path, candidate)
-            if Path(candidate) == backup and result and not attacked:
+            result = real_capture(candidate)
+            if Path(candidate) == backup and not attacked:
                 attacked = True
                 os.replace(replacement, backup)
             return result
 
         with patch(
-            "skill_maintainer.cli._backup_self_binds_verified_generation",
-            side_effect=bind_then_replace,
+            "skill_maintainer.cli._capture_backup_snapshot",
+            side_effect=capture_then_replace,
         ):
             listed = cli.repair_ledger(self.root)
         self.assertTrue(attacked)
+        self.assertEqual(listed.exit_code, 3)
+        self.assertNotIn(backup.absolute(), listed.valid_backups)
+
+    def test_repair_rejects_backup_aba_swap_during_self_binding(self):
+        workflow = self._complete_protocol_run()
+        authority = workflow / "ledger" / "Skills主台账.xlsx"
+        archive = workflow / "ledger" / "archive"
+        backup = archive / "Skills主台账_20260829_010203_7.xlsx"
+        arbitrary = LedgerStore.create(backup)
+        arbitrary.workbook.close()
+        original_bytes = backup.read_bytes()
+        genuine = archive / "genuine-self-binding-source.xlsx"
+        shutil.copyfile(authority, genuine)
+        held_original = archive / "held-original-during-aba.xlsx"
+        authority.write_bytes(b"corrupt-current-authority")
+        real_self_binding = cli._backup_self_binds_verified_generation
+        attacked = False
+
+        def aba_bind(workflow_path, evidence):
+            nonlocal attacked
+            targets_backup = (
+                isinstance(evidence, (str, os.PathLike)) and Path(evidence) == backup
+            ) or (
+                not isinstance(evidence, (str, os.PathLike)) and not tuple(evidence)
+            )
+            if not targets_backup or attacked:
+                return real_self_binding(workflow_path, evidence)
+            attacked = True
+            os.replace(backup, held_original)
+            os.replace(genuine, backup)
+            try:
+                return real_self_binding(workflow_path, evidence)
+            finally:
+                os.replace(backup, genuine)
+                os.replace(held_original, backup)
+
+        with patch(
+            "skill_maintainer.cli._backup_self_binds_verified_generation",
+            side_effect=aba_bind,
+        ):
+            listed = cli.repair_ledger(self.root)
+        self.assertTrue(attacked)
+        self.assertEqual(backup.read_bytes(), original_bytes)
         self.assertEqual(listed.exit_code, 3)
         self.assertNotIn(backup.absolute(), listed.valid_backups)
 
@@ -676,18 +898,18 @@ class CliOperationsTest(unittest.TestCase):
         workflow, backup = self._published_backup_fixture()
         replacement = backup.parent / "same-bytes-new-identity.xlsx"
         shutil.copyfile(backup, replacement)
-        real_validation = cli._valid_ledger
+        real_validation = cli._validated_ledger_records
         attacked = False
 
-        def validate_then_replace(path):
+        def validate_then_replace(content):
             nonlocal attacked
-            result = real_validation(path)
-            if Path(path) == backup and result and not attacked:
+            result = real_validation(content)
+            if not attacked:
                 attacked = True
                 os.replace(replacement, backup)
             return result
 
-        with patch("skill_maintainer.cli._valid_ledger", side_effect=validate_then_replace):
+        with patch("skill_maintainer.cli._validated_ledger_records", side_effect=validate_then_replace):
             result = cli.repair_ledger(self.root, backup=backup)
         self.assertTrue(attacked)
         self.assertEqual(result.exit_code, 1)
@@ -1094,7 +1316,7 @@ class CliOperationsTest(unittest.TestCase):
         workflow = self.root / WORKFLOW
         shutil.copytree(self.source_workflow, workflow)
         skills_root = Path(self.temporary.name) / "Codex Skills 目录"
-        python = Path(sys.executable)
+        python = self._bundled_python()
         installer = workflow / "install.ps1"
         environment = os.environ.copy()
         environment["PIP_NO_INDEX"] = "1"
@@ -1151,6 +1373,71 @@ class CliOperationsTest(unittest.TestCase):
         second = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace", env=environment, timeout=180)
         self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
         self.assertEqual(settings_path.read_text(encoding="utf-8"), custom)
+
+    def test_installer_uses_isolated_python_for_simulated_user_site_attack(self):
+        self._authority_fixture()
+        workflow = self.root / WORKFLOW
+        shutil.copytree(self.source_workflow, workflow)
+        skills_root = Path(self.temporary.name) / "Codex Skills 目录"
+        marker = Path(self.temporary.name) / "simulated-user-site-executed.txt"
+        wrapper = Path(self.temporary.name) / "python-user-site-wrapper.cmd"
+        bundled_python = self._bundled_python()
+        wrapper.write_text(
+            "@echo off\r\n"
+            f'if /I not "%~1"=="-I" "{sys.executable}" -c "open(r\'{marker}\',\'a\').write(\'executed\')"\r\n'
+            f'"{bundled_python}" %*\r\n',
+            encoding="ascii",
+        )
+        environment = os.environ.copy()
+        environment["PIP_NO_INDEX"] = "1"
+        result = subprocess.run(
+            [
+                "powershell", "-NoProfile", "-File", str(workflow / "install.ps1"),
+                "-ProjectRoot", str(self.root), "-PythonExe", str(wrapper),
+                "-CodexSkillsRoot", str(skills_root),
+            ],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            env=environment,
+            timeout=180,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertFalse(marker.exists(), "an install-time Python process was not isolated")
+        venv_python = workflow / ".venv" / "Scripts" / "python.exe"
+        isolated_import = subprocess.run(
+            [
+                str(venv_python), "-I", "-c",
+                "from pathlib import Path; import skill_maintainer,sys; "
+                "raise SystemExit(0 if Path(skill_maintainer.__file__).resolve().is_relative_to(Path(sys.argv[1]).resolve()) else 1)",
+                str(workflow / "src"),
+            ],
+            capture_output=True,
+            env={key: value for key, value in environment.items() if key != "PYTHONPATH"},
+            timeout=30,
+        )
+        self.assertEqual(isolated_import.returncode, 0, isolated_import.stderr)
+        launcher = workflow / ".venv" / "Scripts" / "skill-maintainer.cmd"
+        self.assertTrue(launcher.is_file())
+        self.assertIn(" -I -m skill_maintainer.cli", launcher.read_text(encoding="ascii"))
+
+    def test_runtime_dependency_pins_are_complete_and_match_project_metadata(self):
+        expected = (
+            "openpyxl==3.1.5",
+            "python-docx==1.2.0",
+            "et-xmlfile==2.0.0",
+            "lxml==6.1.1",
+            "typing-extensions==4.16.0",
+        )
+        requirements = tuple(
+            line.strip()
+            for line in (self.source_workflow / "requirements.txt").read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        )
+        metadata = tomllib.loads((self.source_workflow / "pyproject.toml").read_text(encoding="utf-8"))
+        self.assertEqual(requirements, expected)
+        self.assertEqual(tuple(metadata["project"]["dependencies"]), expected)
 
     @unittest.skipUnless(importlib.util.find_spec("wheel") is None, "requires the offline editable fallback")
     def test_installer_fallback_refuses_non_owned_launcher_without_writing_link(self):

@@ -6,7 +6,13 @@ build-backend = "setuptools.build_meta"
 name = "university-skill-library-maintainer"
 version = "0.1.0"
 requires-python = ">=3.11,<3.14"
-dependencies = ["openpyxl==3.1.5", "python-docx==1.2.0"]
+dependencies = [
+    "openpyxl==3.1.5",
+    "python-docx==1.2.0",
+    "et-xmlfile==2.0.0",
+    "lxml==6.1.1",
+    "typing-extensions==4.16.0",
+]
 
 [project.scripts]
 skill-maintainer = "skill_maintainer.cli:main"

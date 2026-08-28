@@ -6,6 +6,7 @@ import argparse
 from dataclasses import asdict, dataclass, is_dataclass
 from datetime import datetime, timezone
 from hashlib import sha256
+from io import BytesIO
 import json
 import os
 from pathlib import Path
@@ -18,6 +19,7 @@ import uuid
 from typing import Callable, Iterable, Mapping, TextIO
 from zipfile import BadZipFile
 
+from openpyxl import load_workbook
 from openpyxl.utils.exceptions import InvalidFileException
 
 from .import_existing import build_initial_ledger, scan_existing_deliveries
@@ -60,6 +62,9 @@ REQUIRED_RULES = (
     "REPORTING_STANDARD.md",
 )
 BACKUP_PATTERN = re.compile(r"Skills主台账_\d{8}_\d{6}(?:_\d+)?\.xlsx\Z")
+PREVIOUS_SKILL_PATTERN = re.compile(
+    rf"\.{re.escape(SKILL_NAME)}\.([0-9a-f]{{32}})\.previous\Z"
+)
 
 # Task 14 must bind discovery -> fixed upstream snapshot -> trusted ReviewPacket.
 # Leaving this absent is safer than treating registry metadata as a reviewable Skill.
@@ -84,6 +89,10 @@ class CliOperationalError(RuntimeError):
 
 class CliInputError(ValueError):
     """A caller-supplied path or option violates the CLI contract."""
+
+
+class BackupUnstableError(CliOperationalError):
+    """A backup path or its open handle changed during immutable capture."""
 
 
 class ProtocolInputError(ValueError):
@@ -126,6 +135,15 @@ class RepairResult:
     valid_backups: tuple[Path, ...]
     recovery_candidate: Path | None = None
     message: str = ""
+
+
+@dataclass(frozen=True)
+class _BackupSnapshot:
+    path: Path
+    content: bytes
+    sha256: str
+    identity: tuple[int, int, int, int]
+    records: tuple[Mapping[str, object], ...]
 
 
 @dataclass(frozen=True)
@@ -238,17 +256,13 @@ def _copy_file_atomic(source: Path, destination: Path) -> None:
     assert_ordinary_path(destination.parent, require_directory=True)
     descriptor, name = tempfile.mkstemp(prefix=f".{destination.name}.", suffix=".tmp", dir=destination.parent)
     temporary = Path(name)
-    try:
-        with os.fdopen(descriptor, "wb") as handle:
-            handle.write(source.read_bytes())
-            handle.flush()
-            os.fsync(handle.fileno())
-        if is_link_or_reparse(temporary):
-            raise CliOperationalError("Skill 暂存文件不得是链接或重解析点")
-        os.replace(temporary, destination)
-    finally:
-        if temporary.exists() and not is_link_or_reparse(temporary):
-            temporary.unlink()
+    with os.fdopen(descriptor, "wb") as handle:
+        handle.write(source.read_bytes())
+        handle.flush()
+        os.fsync(handle.fileno())
+    if is_link_or_reparse(temporary):
+        raise CliOperationalError("Skill 暂存文件不得是链接或重解析点")
+    os.replace(temporary, destination)
 
 
 def _path_identity(path: Path) -> tuple[int, int, int, int]:
@@ -281,13 +295,25 @@ def _skill_tree_manifest(root: Path) -> tuple[tuple[object, ...], ...]:
     return tuple(entries)
 
 
-def _remove_owned_skill_tree(path: Path, parent: Path) -> None:
-    try:
-        path.relative_to(parent)
-    except ValueError:
-        return
-    if path.exists() and path.is_dir() and not is_link_or_reparse(path):
-        shutil.rmtree(path)
+def _stale_previous_status(path: Path) -> str:
+    if is_link_or_reparse(path):
+        return "链接或重解析点"
+    if path.is_dir():
+        return "普通目录"
+    if path.is_file():
+        return "普通文件"
+    return "其他文件系统项"
+
+
+def _report_stale_skill_previous(root: Path, *, warnings: list[str] | None) -> None:
+    """Report exact stale names without reading, moving, or deleting their trees."""
+
+    for candidate in tuple(root.iterdir()):
+        if PREVIOUS_SKILL_PATTERN.fullmatch(candidate.name) is None:
+            continue
+        status = _stale_previous_status(candidate)
+        if warnings is not None:
+            warnings.append(f"发现遗留 Skill 旧版目录（{status}，未自动处理）：{candidate}")
 
 
 def _install_skill(
@@ -305,6 +331,7 @@ def _install_skill(
     else:
         root.mkdir(parents=True, exist_ok=False)
         _ordinary_directory(root)
+    _report_stale_skill_previous(root, warnings=warnings)
     root_identity = _path_identity(root)
     destination = contained_child(root, SKILL_NAME)
     destination_identity = None
@@ -322,6 +349,7 @@ def _install_skill(
     staging.mkdir(mode=0o700)
     switched_previous = False
     committed = False
+    previous_identity: tuple[int, int, int, int] | None = None
     try:
         for entry in source_manifest:
             kind, relative = str(entry[0]), str(entry[1])
@@ -342,43 +370,52 @@ def _install_skill(
                 raise CliOperationalError("既有 Skill 目标在切换前发生变化")
             os.rename(destination, previous)
             switched_previous = True
+            previous_identity = _path_identity(previous)
         elif destination.exists() or destination.is_symlink():
             raise CliOperationalError("Skill 目标在切换前被占用")
-        try:
-            os.rename(staging, destination)
-            committed = True
-        except BaseException as switch_error:
-            if switched_previous and previous.exists() and not destination.exists() and not destination.is_symlink():
-                try:
-                    os.rename(previous, destination)
-                    switched_previous = False
-                except BaseException as rollback_error:
-                    if hasattr(switch_error, "add_note"):
-                        switch_error.add_note(f"Skill 旧版回滚失败：{rollback_error}")
-            raise
+        os.rename(staging, destination)
+        committed = True
         if _skill_tree_manifest(destination) != source_manifest:
             raise CliOperationalError("安装后的 Skill 树与完整暂存快照不一致")
         if switched_previous:
-            try:
-                _remove_owned_skill_tree(previous, root)
-            except BaseException as cleanup_error:
-                if warnings is not None:
-                    warnings.append(f"Skill 旧版目录清理未完成：{cleanup_error}")
+            if warnings is not None:
+                warnings.append(f"Skill 旧版目录待人工确认并备份后处理（未自动删除）：{previous}")
             switched_previous = False
+        if staging.exists() or staging.is_symlink():
+            if warnings is not None:
+                warnings.append(f"Skill 同名暂存路径在提交后出现，未自动处理：{staging}")
         return destination
     except BaseException as install_error:
-        if not committed and switched_previous and previous.exists() and not is_link_or_reparse(previous):
+        if (
+            not committed
+            and switched_previous
+            and previous_identity is not None
+            and not destination.exists()
+            and not destination.is_symlink()
+            and previous.exists()
+            and previous.is_dir()
+            and not is_link_or_reparse(previous)
+            and _path_identity(previous) == previous_identity
+        ):
             try:
-                _remove_owned_skill_tree(destination, root)
-                if not destination.exists() and not destination.is_symlink():
-                    os.rename(previous, destination)
-                    switched_previous = False
+                os.replace(previous, destination)
+                switched_previous = False
             except BaseException as rollback_error:
                 if hasattr(install_error, "add_note"):
                     install_error.add_note(f"Skill 旧版回滚失败：{rollback_error}")
+        manual_paths: list[str] = []
+        if switched_previous:
+            manual_paths.extend((str(previous), str(destination)))
+        if staging.exists() or staging.is_symlink():
+            manual_paths.append(str(staging))
+        if manual_paths:
+            detail = "；".join(manual_paths)
+            message = f"{install_error}；以下路径保留待人工确认，未自动删除或覆盖：{detail}"
+            if isinstance(install_error, Exception):
+                raise CliOperationalError(message) from install_error
+            if hasattr(install_error, "add_note"):
+                install_error.add_note(message)
         raise
-    finally:
-        _remove_owned_skill_tree(staging, root)
 
 
 def setup_project(
@@ -638,13 +675,24 @@ def build_apply_settings_plan(
     }
 
 
+def _validated_ledger_records(content: bytes) -> tuple[Mapping[str, object], ...]:
+    """Validate a ledger and obtain records from one immutable byte snapshot."""
+
+    workbook = load_workbook(BytesIO(content), data_only=False)
+    store = LedgerStore(workbook)
+    try:
+        errors = store.validate()
+        if errors:
+            raise CliOperationalError("台账快照未通过 schema 校验")
+        return tuple(store.rows("运行记录"))
+    finally:
+        workbook.close()
+
+
 def _valid_ledger(path: Path) -> bool:
     try:
-        store = LedgerStore.load(_ordinary_file(path, suffix=".xlsx"))
-        try:
-            return not store.validate()
-        finally:
-            store.workbook.close()
+        _capture_backup_snapshot(path)
+        return True
     except (OSError, ValueError, BadZipFile, InvalidFileException, KeyError, EOFError, CliOperationalError):
         return False
 
@@ -676,22 +724,16 @@ def _verified_success_records(workflow: Path, records: Iterable[Mapping[str, obj
     return tuple(verified)
 
 
-def _backup_self_binds_verified_generation(workflow: Path, path: Path) -> bool:
+def _backup_self_binds_verified_generation(
+    workflow: Path,
+    records: Iterable[Mapping[str, object]],
+) -> bool:
     """Accept an old authority only when its own last run proves a committed generation."""
 
-    try:
-        ledger = LedgerStore.load(_ordinary_file(path, suffix=".xlsx"))
-        try:
-            if ledger.validate():
-                return False
-            records = ledger.rows("运行记录")
-        finally:
-            ledger.workbook.close()
-        if not records or records[-1].get("状态") != "成功":
-            return False
-        return bool(_verified_success_records(workflow, (records[-1],)))
-    except (OSError, ValueError, BadZipFile, InvalidFileException, KeyError, EOFError, CliOperationalError):
+    materialized = tuple(records)
+    if not materialized or materialized[-1].get("状态") != "成功":
         return False
+    return bool(_verified_success_records(workflow, (materialized[-1],)))
 
 
 def _handle_identity(handle: object) -> tuple[int, int, int, int]:
@@ -704,28 +746,31 @@ def _handle_identity(handle: object) -> tuple[int, int, int, int]:
     )
 
 
-def _read_bound_backup_snapshot(
-    path: Path,
-    expected_sha256: str,
-    expected_identity: tuple[int, int, int, int],
-) -> bytes:
+def _capture_backup_snapshot(path: Path) -> _BackupSnapshot:
+    """Open a backup once and bind all validation to those immutable bytes."""
+
     path = _ordinary_file(path, suffix=".xlsx")
     path_before = _path_identity(path)
-    if path_before != expected_identity:
-        raise CliOperationalError("备份路径在验证与单句柄读取之间被替换")
     with path.open("rb") as handle:
         handle_before = _handle_identity(handle)
         if handle_before != path_before:
-            raise CliOperationalError("备份路径与已打开文件身份不一致")
+            raise BackupUnstableError("备份路径与已打开文件身份不一致")
         content = handle.read()
         handle_after = _handle_identity(handle)
     if handle_after != handle_before:
-        raise CliOperationalError("备份在单句柄读取期间被原地改写")
+        raise BackupUnstableError("备份在单句柄读取期间被原地改写")
     if not path.is_file() or is_link_or_reparse(path) or _path_identity(path) != path_before:
-        raise CliOperationalError("备份路径在单句柄读取后被替换")
-    if sha256(content).hexdigest() != expected_sha256:
-        raise CliOperationalError("备份字节快照与成功运行记录 SHA-256 不一致")
-    return content
+        raise BackupUnstableError("备份路径在单句柄读取后被替换")
+    records = _validated_ledger_records(content)
+    if not path.is_file() or is_link_or_reparse(path) or _path_identity(path) != path_before:
+        raise BackupUnstableError("备份路径在快照校验期间被替换")
+    return _BackupSnapshot(
+        path=path,
+        content=content,
+        sha256=sha256(content).hexdigest(),
+        identity=path_before,
+        records=records,
+    )
 
 
 def repair_ledger(project_root: str | Path, *, backup: str | Path | None = None) -> RepairResult:
@@ -752,7 +797,7 @@ def repair_ledger(project_root: str | Path, *, backup: str | Path | None = None)
             authority_records = None
         verified_records = _verified_success_records(workflow, authority_records or ())
         authorized_hashes = {item[2] for item in verified_records}
-        valid_evidence: dict[Path, tuple[str, tuple[int, int, int, int]]] = {}
+        valid_evidence: dict[Path, _BackupSnapshot] = {}
         unstable: set[Path] = set()
         for discovered in sorted(archive.iterdir()):
             path = discovered.absolute()
@@ -762,24 +807,27 @@ def repair_ledger(project_root: str | Path, *, backup: str | Path | None = None)
                 or not BACKUP_PATTERN.fullmatch(path.name)
             ):
                 continue
-            identity_before = _path_identity(path)
-            ledger_valid = _valid_ledger(path)
-            digest = _stream_sha256(path)
-            identity_after = _path_identity(path)
-            if identity_after != identity_before:
+            try:
+                evidence = _capture_backup_snapshot(path)
+            except BackupUnstableError:
                 unstable.add(path)
+                continue
+            except (OSError, ValueError, BadZipFile, InvalidFileException, KeyError, EOFError, CliOperationalError):
                 continue
             publication_bound = (
-                digest in authorized_hashes
+                evidence.sha256 in authorized_hashes
                 if authority_records is not None
-                else _backup_self_binds_verified_generation(workflow, path)
+                else _backup_self_binds_verified_generation(workflow, evidence.records)
             )
-            identity_final = _path_identity(path)
-            if identity_final != identity_before:
+            if (
+                not path.is_file()
+                or is_link_or_reparse(path)
+                or _path_identity(path) != evidence.identity
+            ):
                 unstable.add(path)
                 continue
-            if ledger_valid and publication_bound:
-                valid_evidence[path] = (digest, identity_final)
+            if publication_bound:
+                valid_evidence[path] = evidence
         valid = tuple(valid_evidence)
         if backup is None:
             return RepairResult(SAFE_NOOP, valid, None, "请选择一个已验证备份；当前主台账不会自动覆盖")
@@ -788,12 +836,17 @@ def repair_ledger(project_root: str | Path, *, backup: str | Path | None = None)
             raise CliOperationalError("所选备份在验证与哈希绑定之间被替换")
         if selected not in valid:
             raise CliInputError("所选文件不是当前可用的已验证备份")
-        selected_sha, selected_identity = valid_evidence[selected]
-        if _path_identity(selected) != selected_identity:
+        selected_evidence = valid_evidence[selected]
+        selected_sha = selected_evidence.sha256
+        if (
+            not selected.is_file()
+            or is_link_or_reparse(selected)
+            or _path_identity(selected) != selected_evidence.identity
+        ):
             raise CliOperationalError("所选备份在哈希绑定后被替换")
         if authority_records is not None and selected_sha not in authorized_hashes:
             raise CliOperationalError("所选备份未绑定已复验的成功运行记录")
-        snapshot = _read_bound_backup_snapshot(selected, selected_sha, selected_identity)
+        snapshot = selected_evidence.content
         recovery_root = workflow / "ledger" / "recovery"
         if recovery_root.exists():
             _ordinary_directory(recovery_root)

@@ -16,6 +16,7 @@ Task 13 已提供安装、诊断、设置、状态、修复、离线重建和同
 
 - Windows 10/11；生产调度只允许在 Windows 上运行。
 - 64 位 Python 3.11、3.12 或 3.13，并可创建 `venv`。
+- Python 环境须能取得 `requirements.txt` 固定的全部版本；完全离线安装时，这些包必须已存在于所给 Python 的系统 site-packages，或由使用者预先提供可用 wheelhouse。
 - Microsoft Word 和 Excel 桌面版，且已正确注册 COM。
 - GitHub CLI `gh` 可从当前 PowerShell 会话调用。
 - Codex 桌面应用；涉及 Word 渲染时，必须取得当前 Codex 工作区依赖加载器的真实返回文本。
@@ -48,8 +49,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\07_自动维�
 安装器执行以下幂等操作：
 
 - 在本目录创建或复用 `.venv`；
-- 安装调用链临时清空并在 `finally` 恢复外部 `PYTHONPATH`，Python 使用 `-E -P`；按 `requirements.txt` 的精确版本安装依赖。若目标 venv 已提供 `wheel`，执行 `pip -e --no-build-isolation --no-deps`；离线环境没有 `wheel` 时，在该 venv 内原子写入指向本项目 `src` 的 ASCII `.pth` 和 `Scripts\skill-maintainer.cmd`，形成不复制源码、不联网的等价 editable 链接；
-- 将完整 Skill 包复制到同级私有暂存树，逐文件校验哈希和普通路径后再目录级切换；切换完成即为新版本提交点，提交前失败回滚完整旧树，提交后旧目录清理失败只记录警告并保留完整新版本；
+- 安装调用链临时清空并在 `finally` 恢复 `PYTHONPATH`、`PYTHONHOME`、`PYTHONUSERBASE`，所有 Python 业务调用均使用隔离模式 `-I`；按 `requirements.txt` 的精确版本安装依赖。若目标 venv 已提供 `wheel`，执行 `pip -e --no-build-isolation --no-deps`；没有 `wheel` 时，在该 venv 内原子写入指向本项目 `src` 的 ASCII `.pth`，形成不复制源码的等价 editable 链接；两种路径都只交付并验证调用 `python.exe -I -m skill_maintainer.cli` 的 installer-owned `Scripts\skill-maintainer.cmd`；
+- 将完整 Skill 包复制到同级私有暂存树，逐文件校验哈希和普通路径后再目录级切换；切换完成即为新版本提交点；提交前失败时，仅在目标仍为空且旧目录身份精确匹配本次切换记录时原子恢复旧版，若目标被占用则保留目标、旧版和暂存路径并明确报错，绝不为回滚删除未知内容；成功提交后完整新版本保持生效，旧版 `.previous` 保留并在结果中报告待人工处理；后续安装也只报告精确命名的遗留路径及其普通目录/重解析点状态，不读取其内容，不自动删除、移动或覆盖；用户应在确认无人使用并自行备份后手工处理；
 - 仅补齐缺失的 `workflow-settings.toml`、`ledger`、`ledger/archive` 和 `output`；
 - 配置首次创建时保持 `enabled=false`、`mode="manual"`，既有配置绝不覆盖；
 - 最后运行 `doctor`；不创建、不更新、不启用任何自动任务。
@@ -62,7 +63,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\07_自动维�
 
 ```powershell
 $CliPython = "$ProjectRoot\07_自动维护工作流\.venv\Scripts\python.exe"
-& $CliPython -m skill_maintainer.cli status --project-root $ProjectRoot
+& $CliPython -I -m skill_maintainer.cli status --project-root $ProjectRoot
 ```
 
 公开命令固定为：
@@ -87,14 +88,14 @@ $CliPython = "$ProjectRoot\07_自动维护工作流\.venv\Scripts\python.exe"
 先只做盘点，不写台账：
 
 ```powershell
-& $CliPython -m skill_maintainer.cli import-existing --project-root $ProjectRoot --inventory-only
+& $CliPython -I -m skill_maintainer.cli import-existing --project-root $ProjectRoot --inventory-only
 ```
 
 确认文件数、重复组、Word 不确定项和 Word/Excel 数量差异后，才可显式输出到 `ledger\staging` 下的全新文件：
 
 ```powershell
 $Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入候选.xlsx"
-& $CliPython -m skill_maintainer.cli import-existing --project-root $ProjectRoot --output $Candidate
+& $CliPython -I -m skill_maintainer.cli import-existing --project-root $ProjectRoot --output $Candidate
 ```
 
 默认不带 `--inventory-only` 或 `--output` 时返回安全无操作。输出已存在、路径不在暂存区或解析存在不确定性时，不得自动覆盖正式主台账；必须由用户核查后决定后续处理。CLI 在创建缺失的嵌套目录前逐段验证项目内包含关系和链接/重解析点，拒绝经 junction 写到项目外。
@@ -102,8 +103,8 @@ $Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入�
 ## 编辑并应用运行设置
 
 ```powershell
-& $CliPython -m skill_maintainer.cli edit-settings --project-root $ProjectRoot
-& $CliPython -m skill_maintainer.cli apply-settings --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
+& $CliPython -I -m skill_maintainer.cli edit-settings --project-root $ProjectRoot
+& $CliPython -I -m skill_maintainer.cli apply-settings --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 ```
 
 可修改 `workflow.enabled`、`schedule.mode` 和 `schedule.start_time`，以及周、月或间隔参数。运行频率与启动时间都在 `workflow-settings.toml` 中设置，不使用 `.xlsx` 作为配置文件。
@@ -115,7 +116,7 @@ $Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入�
 生产驱动接通后，Codex Skill 才可调用：
 
 ```powershell
-& $CliPython -m skill_maintainer.cli run-now --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
+& $CliPython -I -m skill_maintainer.cli run-now --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 ```
 
 该命令保持一个进程存活：`prepare` 后输出一行 JSON 并等待逐候选结构化决定；`apply_reviews` 后完成报告和 Office 验证，在 Word 页面 PNG 就绪后再次输出一行 JSON 并等待每页决定；最后才 `finalize`。任一决定缺失、重复、哈希不绑定、页面拒绝、标准输入 EOF、`KeyboardInterrupt`、`SystemExit` 或其他失败，都终态清理未提交暂存和锁；清理诊断只附注原异常，不会掩盖它。发布线性化已经成功时不会误删已提交主台账或 generation。
@@ -125,10 +126,10 @@ CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证�
 ## 状态、诊断、备份与重建
 
 ```powershell
-& $CliPython -m skill_maintainer.cli doctor --project-root $ProjectRoot
-& $CliPython -m skill_maintainer.cli status --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
-& $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot
-& $CliPython -m skill_maintainer.cli rebuild-report --project-root $ProjectRoot
+& $CliPython -I -m skill_maintainer.cli doctor --project-root $ProjectRoot
+& $CliPython -I -m skill_maintainer.cli status --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
+& $CliPython -I -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot
+& $CliPython -I -m skill_maintainer.cli rebuild-report --project-root $ProjectRoot
 ```
 
 `doctor`、`status` 和 `apply-settings` 不从 PATH、固定用户名或 Codex 缓存布局猜测 renderer。只有在当前 Codex 环境取得工作区依赖加载器真实文本后，才可传入 `--loader-output` 验证 loader-bound renderer 前置条件。`status` 的“最新交付”只取最后一条成功运行记录绑定的 generation，并重新验证项目内包含关系、普通文件树、manifest SHA-256、delivery SHA-256 和 authority 文件集合；任意目录或篡改 generation 只会得到明确错误和 `latest_output=null`。
@@ -136,10 +137,10 @@ CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证�
 `repair-ledger` 首次调用只列出具备独立发布绑定的归档备份，并返回安全无操作。主台账可读时，备份 SHA-256 必须精确匹配成功运行记录中的“快照SHA-256”，且对应 generation/manifest/delivery 复验通过；主台账已损坏或不可解析时，只允许备份自身结构有效、最后一条运行记录为成功、且该记录对应发布代次复验通过的旧 authority。仅有有效 Excel schema 而没有成功发布证据的文件不会放行。用户明确选定其中一个后再运行：
 
 ```powershell
-& $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot --backup 'D:\...\ledger\archive\Skills主台账_20260829_010203.xlsx'
+& $CliPython -I -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot --backup 'D:\...\ledger\archive\Skills主台账_20260829_010203.xlsx'
 ```
 
-选定后，命令从单一文件句柄取得字节快照，并比较句柄与路径的读前/读后身份；路径替换、原地改写或哈希变化均拒绝。恢复候选先写同目录私有暂存文件、复读后再切换到 `ledger\recovery`，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；Word/Excel 先在同级私有目录完整生成后再目录级切换，可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。失败时只逆序清理本次创建、身份未变化且仍为空的嵌套祖先，既有目录不会删除。
+扫描备份时，命令从单一文件句柄一次取得不可变字节快照，绑定句柄身份、路径身份和 SHA-256，并仅从同一份内存字节完成 schema、运行记录和 generation authority 复验；选择后的恢复候选也只写这份初始快照。路径替换、原地改写或发布证据不匹配均拒绝。恢复候选先写同目录私有暂存文件、复读后再切换到 `ledger\recovery`，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；Word/Excel 先在同级私有目录完整生成后再目录级切换，可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。失败时只逆序清理本次创建、身份未变化且仍为空的嵌套祖先，既有目录不会删除。
 
 ## 迁移到另一台机器
 
