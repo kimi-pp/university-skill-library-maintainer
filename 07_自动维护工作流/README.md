@@ -48,13 +48,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\07_自动维�
 安装器执行以下幂等操作：
 
 - 在本目录创建或复用 `.venv`；
-- 按 `requirements.txt` 的精确版本安装依赖，并执行 editable install；
-- 将 `skill/university-skill-library-maintainer` 安装或更新到指定 Codex Skills 根目录；
+- 按 `requirements.txt` 的精确版本安装依赖；若目标 venv 已提供 `wheel`，执行 `pip -e --no-build-isolation --no-deps`；离线环境没有 `wheel` 时，在该 venv 内原子写入指向本项目 `src` 的 ASCII `.pth` 和 `Scripts\skill-maintainer.cmd`，形成不复制源码、不联网的等价 editable 链接；
+- 将完整 Skill 包复制到同级私有暂存树，逐文件校验哈希和普通路径后再目录级切换；更新成功删除旧版残留，切换失败回滚完整旧树；
 - 仅补齐缺失的 `workflow-settings.toml`、`ledger`、`ledger/archive` 和 `output`；
 - 配置首次创建时保持 `enabled=false`、`mode="manual"`，既有配置绝不覆盖；
 - 最后运行 `doctor`；不创建、不更新、不启用任何自动任务。
 
-安装完成后重新打开 Codex 任务，使 Skill 加载器读取更新后的包。项目自带的 `workspace_renderer.py`、`pdf_renderer.py` 和依赖定义必须随工作流一起保留。
+安装器不会覆盖并非由它创建的同名 `.pth` 或 `.cmd`；安装后还会验证 `skill_maintainer.__file__` 确实位于当前目标项目的 `07_自动维护工作流\src`，并实际执行 CLI `--help` 和 `doctor`。安装完成后重新打开 Codex 任务，使 Skill 加载器读取更新后的包。项目自带的 `workspace_renderer.py`、`pdf_renderer.py` 和依赖定义必须随工作流一起保留。
 
 ## 命令与退出码
 
@@ -97,18 +97,18 @@ $Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入�
 & $CliPython -m skill_maintainer.cli import-existing --project-root $ProjectRoot --output $Candidate
 ```
 
-默认不带 `--inventory-only` 或 `--output` 时返回安全无操作。输出已存在、路径不在暂存区或解析存在不确定性时，不得自动覆盖正式主台账；必须由用户核查后决定后续处理。
+默认不带 `--inventory-only` 或 `--output` 时返回安全无操作。输出已存在、路径不在暂存区或解析存在不确定性时，不得自动覆盖正式主台账；必须由用户核查后决定后续处理。CLI 在创建缺失的嵌套目录前逐段验证项目内包含关系和链接/重解析点，拒绝经 junction 写到项目外。
 
 ## 编辑并应用运行设置
 
 ```powershell
 & $CliPython -m skill_maintainer.cli edit-settings --project-root $ProjectRoot
-& $CliPython -m skill_maintainer.cli apply-settings --project-root $ProjectRoot
+& $CliPython -m skill_maintainer.cli apply-settings --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 ```
 
 可修改 `workflow.enabled`、`schedule.mode` 和 `schedule.start_time`，以及周、月或间隔参数。运行频率与启动时间都在 `workflow-settings.toml` 中设置，不使用 `.xlsx` 作为配置文件。
 
-`apply-settings` 绝不直接写原始自动任务，也不声称已经应用。它只返回经过验证的 schedule、渲染 prompt、TOML SHA-256、动作计划和“必须回读”标记。随后必须由 Task 12 Skill 调用 Codex 应用的自动任务更新能力，并回读核对项目根、计划、提示词和配置哈希。当前生产发现驱动未就绪，动作计划为启用时会失败；不要创建自动任务。
+`apply-settings` 绝不直接写原始自动任务，也不声称已经应用。它只返回经过验证的 schedule、渲染 prompt、TOML SHA-256、完整 doctor 结果、动作计划和“必须回读”标记。`production_ready` 同时要求 Windows、Python、`gh`、Word、Excel、五项规则、设置、台账、真实 loader-bound renderer 和可调用的生产驱动全部通过，不能只依据驱动工厂存在。随后必须由 Task 12 Skill 调用 Codex 应用的自动任务更新能力，并回读核对项目根、计划、提示词和配置哈希。当前生产发现驱动未就绪，动作计划为启用时会失败；不要创建自动任务。
 
 ## 手动运行与长驻双闸协议
 
@@ -118,7 +118,7 @@ $Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入�
 & $CliPython -m skill_maintainer.cli run-now --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 ```
 
-该命令保持一个进程存活：`prepare` 后输出一行 JSON 并等待逐候选结构化决定；`apply_reviews` 后完成报告和 Office 验证，在 Word 页面 PNG 就绪后再次输出一行 JSON 并等待每页决定；最后才 `finalize`。任一决定缺失、重复、哈希不绑定、页面拒绝、标准输入 EOF 或验证失败，都清理锁与未提交暂存，保留旧主台账和旧交付。
+该命令保持一个进程存活：`prepare` 后输出一行 JSON 并等待逐候选结构化决定；`apply_reviews` 后完成报告和 Office 验证，在 Word 页面 PNG 就绪后再次输出一行 JSON 并等待每页决定；最后才 `finalize`。任一决定缺失、重复、哈希不绑定、页面拒绝、标准输入 EOF、`KeyboardInterrupt`、`SystemExit` 或其他失败，都终态清理未提交暂存和锁；清理诊断只附注原异常，不会掩盖它。发布线性化已经成功时不会误删已提交主台账或 generation。
 
 CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证据和已批准的规则字段。
 
@@ -126,26 +126,26 @@ CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证�
 
 ```powershell
 & $CliPython -m skill_maintainer.cli doctor --project-root $ProjectRoot
-& $CliPython -m skill_maintainer.cli status --project-root $ProjectRoot
+& $CliPython -m skill_maintainer.cli status --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 & $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot
 & $CliPython -m skill_maintainer.cli rebuild-report --project-root $ProjectRoot
 ```
 
-`doctor` 不从 PATH、固定用户名或 Codex 缓存布局猜测 renderer。只有在当前 Codex 环境取得工作区依赖加载器真实文本后，才可传入 `--loader-output` 验证 loader-bound renderer 前置条件。
+`doctor`、`status` 和 `apply-settings` 不从 PATH、固定用户名或 Codex 缓存布局猜测 renderer。只有在当前 Codex 环境取得工作区依赖加载器真实文本后，才可传入 `--loader-output` 验证 loader-bound renderer 前置条件。`status` 的“最新交付”只取最后一条成功运行记录绑定的 generation，并重新验证项目内包含关系、普通文件树、manifest SHA-256、delivery SHA-256 和 authority 文件集合；任意目录或篡改 generation 只会得到明确错误和 `latest_output=null`。
 
-`repair-ledger` 首次调用只列出命名和内容均有效的归档备份，并返回安全无操作。用户明确选定其中一个后再运行：
+`repair-ledger` 首次调用只列出 SHA-256 精确匹配成功运行记录中“快照SHA-256”、且该记录对应 generation/manifest/delivery 已复验通过的归档备份，并返回安全无操作。用户明确选定其中一个后再运行：
 
 ```powershell
 & $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot --backup 'D:\...\ledger\archive\Skills主台账_20260829_010203.xlsx'
 ```
 
-命令只在 `ledger\recovery` 生成新的“恢复候选”，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。
+选定后，命令从单一文件句柄取得字节快照，并比较句柄与路径的读前/读后身份；路径替换、原地改写或哈希变化均拒绝。恢复候选先写同目录私有暂存文件、复读后再切换到 `ledger\recovery`，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；Word/Excel 先在同级私有目录完整生成后再目录级切换，可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。
 
 ## 迁移到另一台机器
 
 1. 停用并回读确认旧机器上的项目自动任务不存在。
 2. 关闭写入进程，复制完整项目目录，包括规则、工作流、主台账、归档和交付；不要复制正在运行的锁或自行拼接零散文件。
-3. 在新机器用新绝对路径再次运行 `install.ps1`。`.venv` 应由新机器重新建立；如复制包中含旧 `.venv`，先由用户确认并安全移除后再安装。
+3. 在新机器用新绝对路径再次运行 `install.ps1`。editable 链接绑定当前机器的项目路径，不能沿用旧机器链接；`.venv` 应由新机器重新建立。如复制包中含旧 `.venv`，先由用户确认并安全移除后再安装。
 4. 运行 `doctor`、`status`，重新取得该机器的真实 loader 输出，并执行 `apply-settings` 生成新路径绑定和配置 SHA-256。
 5. 只有 Task 14 生产驱动验收通过且全部诊断通过后，才由 Codex 应用更新并回读自动任务。
 

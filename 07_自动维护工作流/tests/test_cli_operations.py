@@ -5,6 +5,7 @@ from __future__ import annotations
 from contextlib import redirect_stdout
 from dataclasses import asdict, replace
 from hashlib import sha256
+import importlib.util
 import io
 import json
 import os
@@ -36,6 +37,10 @@ RULE_FILES = (
 )
 
 
+class _ProtocolAbort(BaseException):
+    pass
+
+
 class _DoctorEnvironment:
     def __init__(
         self,
@@ -56,11 +61,22 @@ class _DoctorEnvironment:
 
 
 class _RecordingOutput:
-    def __init__(self) -> None:
+    def __init__(self, *, exception_on_type: tuple[str, BaseException] | None = None) -> None:
         self.text = ""
         self.flush_count = 0
+        self.exception_on_type = exception_on_type
+        self.exception_raised = False
 
     def write(self, value: str) -> int:
+        if self.exception_on_type is not None and not self.exception_raised:
+            frame_type, exception = self.exception_on_type
+            try:
+                payload = json.loads(value)
+            except json.JSONDecodeError:
+                payload = {}
+            if payload.get("type") == frame_type:
+                self.exception_raised = True
+                raise exception
         self.text += value
         return len(value)
 
@@ -75,10 +91,18 @@ class _RecordingOutput:
 class _ReactiveInput:
     """Respond to the latest flushed request without precomputing evidence hashes."""
 
-    def __init__(self, output: _RecordingOutput, *, visual_approved: bool = True, eof_at: str | None = None) -> None:
+    def __init__(
+        self,
+        output: _RecordingOutput,
+        *,
+        visual_approved: bool = True,
+        eof_at: str | None = None,
+        exception_at: tuple[str, BaseException] | None = None,
+    ) -> None:
         self.output = output
         self.visual_approved = visual_approved
         self.eof_at = eof_at
+        self.exception_at = exception_at
         self.seen: set[str] = set()
 
     def readline(self) -> str:
@@ -87,6 +111,8 @@ class _ReactiveInput:
         if frame_type in self.seen:
             raise AssertionError(f"protocol requested {frame_type} twice")
         self.seen.add(frame_type)
+        if self.exception_at is not None and self.exception_at[0] == frame_type:
+            raise self.exception_at[1]
         if self.eof_at == frame_type:
             return ""
         if frame_type == "review_required":
@@ -124,6 +150,35 @@ class _UnitRenderer:
         page = output_dir / "page-1.png"
         page.write_bytes(b"visible-page-body")
         return (page,), (1,)
+
+
+class _AttackingReader:
+    def __init__(self, handle, attack, *, on_exit: bool) -> None:
+        self.handle = handle
+        self.attack = attack
+        self.on_exit = on_exit
+        self.attacked = False
+
+    def __enter__(self):
+        self.handle.__enter__()
+        return self
+
+    def __exit__(self, exception_type, exception, traceback):
+        result = self.handle.__exit__(exception_type, exception, traceback)
+        if self.on_exit and not self.attacked:
+            self.attacked = True
+            self.attack()
+        return result
+
+    def read(self, *args, **kwargs):
+        value = self.handle.read(*args, **kwargs)
+        if not self.on_exit and not self.attacked:
+            self.attacked = True
+            self.attack()
+        return value
+
+    def __getattr__(self, name):
+        return getattr(self.handle, name)
 
 
 class CliOperationsTest(unittest.TestCase):
@@ -187,7 +242,7 @@ class CliOperationsTest(unittest.TestCase):
         self._authority_fixture()
         workflow = self._workflow_fixture()
         first = cli.setup_project(self.root, source_workflow=workflow)
-        self.assertEqual(first.exit_code, 0)
+        self.assertEqual(first.exit_code, 0, first.message)
         settings_path = workflow / "workflow-settings.toml"
         settings = load_settings(settings_path)
         self.assertFalse(settings.workflow.enabled)
@@ -213,13 +268,98 @@ class CliOperationsTest(unittest.TestCase):
         workflow = self._workflow_fixture()
         skills_root = Path(self.temporary.name) / "Codex Skills"
         first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
-        self.assertEqual(first.exit_code, 0)
+        self.assertEqual(first.exit_code, 0, first.message)
         installed = skills_root / "university-skill-library-maintainer" / "SKILL.md"
         self.assertEqual(installed.read_bytes(), (workflow / "skill" / "university-skill-library-maintainer" / "SKILL.md").read_bytes())
         installed.write_text("stale", encoding="utf-8")
         second = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
         self.assertEqual(second.exit_code, 0)
         self.assertNotEqual(installed.read_text(encoding="utf-8"), "stale")
+
+    def test_skill_directory_update_removes_files_absent_from_new_source(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        installed = skills_root / "university-skill-library-maintainer"
+        stale = installed / "obsolete-from-old-version.txt"
+        stale.write_text("must disappear", encoding="utf-8")
+
+        second = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(second.exit_code, 0)
+        self.assertFalse(stale.exists())
+
+    def test_skill_directory_switch_failure_rolls_back_complete_previous_tree(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        skills_root = Path(self.temporary.name) / "Codex Skills"
+        first = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(first.exit_code, 0, first.message)
+        installed = skills_root / "university-skill-library-maintainer"
+        marker = installed / "SKILL.md"
+        marker.write_text("previous complete skill", encoding="utf-8")
+        stale = installed / "previous-only.txt"
+        stale.write_text("previous", encoding="utf-8")
+        original_rename = os.rename
+        calls = 0
+
+        def fail_install_switch(source, destination):
+            nonlocal calls
+            calls += 1
+            if calls == 2:
+                raise OSError("injected directory switch failure")
+            return original_rename(source, destination)
+
+        with patch("skill_maintainer.cli.os.rename", side_effect=fail_install_switch):
+            result = cli.setup_project(self.root, source_workflow=workflow, codex_skills_root=skills_root)
+        self.assertEqual(result.exit_code, 1)
+        self.assertEqual(marker.read_text(encoding="utf-8"), "previous complete skill")
+        self.assertEqual(stale.read_text(encoding="utf-8"), "previous")
+        self.assertFalse(any(path.name.endswith((".pending", ".previous")) for path in skills_root.iterdir()))
+
+    def test_skill_root_reparse_with_missing_nested_target_causes_no_external_write(self):
+        self._authority_fixture()
+        workflow = self._workflow_fixture()
+        outside = Path(self.temporary.name) / "outside-skills"
+        outside.mkdir()
+        linked = Path(self.temporary.name) / "linked-skills"
+        linked.symlink_to(outside, target_is_directory=True)
+
+        result = cli.setup_project(
+            self.root,
+            source_workflow=workflow,
+            codex_skills_root=linked / "missing" / "nested",
+        )
+        self.assertEqual(result.exit_code, 1)
+        self.assertEqual(list(outside.iterdir()), [])
+
+    def test_rebuild_reparse_output_with_missing_nested_target_causes_no_external_write(self):
+        workflow = self._setup_project()
+        output_root = workflow / "output"
+        output_root.rmdir()
+        outside = Path(self.temporary.name) / "outside-rebuild"
+        outside.mkdir()
+        output_root.symlink_to(outside, target_is_directory=True)
+
+        result = cli.rebuild_reports(self.root, output=output_root / "missing" / "nested")
+        self.assertEqual(result.exit_code, 1)
+        self.assertEqual(list(outside.iterdir()), [])
+
+    def test_import_reparse_staging_with_missing_nested_target_causes_no_external_write(self):
+        workflow = self._setup_project()
+        (self.root / "05_交付物").mkdir()
+        outside = Path(self.temporary.name) / "outside-import"
+        outside.mkdir()
+        staging = workflow / "ledger" / "staging"
+        staging.symlink_to(outside, target_is_directory=True)
+        output = staging / "missing" / "nested" / "首次导入.xlsx"
+
+        stream = io.StringIO()
+        with redirect_stdout(stream):
+            code = cli.main(["import-existing", "--project-root", str(self.root), "--output", str(output)])
+        self.assertEqual(code, 1)
+        self.assertEqual(list(outside.iterdir()), [])
 
     def test_doctor_checks_dependencies_rules_renderer_and_blocks_non_windows_production(self):
         workflow = self._setup_project()
@@ -280,6 +420,27 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(code, 2)
         self.assertEqual(json.loads(output.getvalue())["exit_code"], 2)
 
+    def test_doctor_invalid_configuration_returns_exit_two(self):
+        workflow = self._setup_project()
+        (workflow / "workflow-settings.toml").write_text("not = [valid", encoding="utf-8")
+        report = cli.doctor_project(self.root, environment=_DoctorEnvironment())
+        self.assertEqual(report.exit_code, 2)
+
+    def test_user_supplied_output_and_backup_validation_return_exit_two(self):
+        workflow = self._setup_project()
+        (self.root / "05_交付物").mkdir()
+        cases = (
+            ["import-existing", "--project-root", str(self.root), "--output", str(self.root / "outside.xlsx")],
+            ["rebuild-report", "--project-root", str(self.root), "--output", str(self.root / "outside-rebuild")],
+            ["repair-ledger", "--project-root", str(self.root), "--backup", str(workflow / "ledger" / "not-listed.xlsx")],
+        )
+        for arguments in cases:
+            with self.subTest(command=arguments[0]):
+                output = io.StringIO()
+                with redirect_stdout(output):
+                    code = cli.main(arguments)
+                self.assertEqual(code, 2, output.getvalue())
+
     def test_status_reports_driver_not_ready_and_import_defaults_to_safe_noop(self):
         self._setup_project()
         (self.root / "05_交付物").mkdir()
@@ -292,13 +453,59 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(code, 3)
         self.assertEqual(json.loads(output.getvalue())["excel_files"], 0)
 
-    def test_repair_lists_only_valid_backups_and_explicit_choice_never_overwrites_authority(self):
+    def test_status_ignores_unrecorded_generation_directory(self):
         workflow = self._setup_project()
+        fake = workflow / "output" / "generations" / "run-unrecorded"
+        fake.mkdir(parents=True)
+        (fake / "plausible.docx").write_bytes(b"not authoritative")
+
+        status = cli.status_project(self.root)
+        self.assertIsNone(status["latest_output"])
+        self.assertIn("成功运行记录", status["output_error"])
+
+    def test_status_rejects_tampered_generation_bound_by_last_success_record(self):
+        workflow = self._complete_protocol_run()
+        first = cli.status_project(self.root)
+        self.assertIsNotNone(first["latest_output"])
+        generation = Path(first["latest_output"])
+        delivery = next(path for path in generation.rglob("*.docx"))
+        delivery.write_bytes(delivery.read_bytes() + b"tampered")
+
+        tampered = cli.status_project(self.root)
+        self.assertIsNone(tampered["latest_output"])
+        self.assertIn("发布代次", tampered["output_error"])
+
+    def test_status_and_apply_plan_do_not_treat_driver_factory_as_full_production_readiness(self):
+        self._setup_project()
+        with patch("skill_maintainer.cli.PRODUCTION_DRIVER_FACTORY", object()):
+            status = cli.status_project(self.root)
+            plan = cli.build_apply_settings_plan(self.root)
+        self.assertFalse(status["production_ready"])
+        self.assertFalse(plan["production_ready"])
+        self.assertIn("doctor", status)
+        self.assertIn("doctor", plan)
+        self.assertEqual(status["doctor"].checks["production_driver"], "生产发现驱动配置不可调用")
+
+    def test_apply_settings_accepts_loader_output_for_full_doctor_plan(self):
+        self._setup_project()
+        output = io.StringIO()
+        try:
+            with redirect_stdout(output):
+                code = cli.main([
+                    "apply-settings", "--project-root", str(self.root),
+                    "--loader-output", "not-a-real-loader-result",
+                ])
+        except SystemExit as exc:
+            code = int(exc.code)
+        self.assertEqual(code, 0)
+        plan = json.loads(output.getvalue())
+        self.assertFalse(plan["production_ready"])
+        self.assertIn("doctor", plan)
+
+    def test_repair_lists_only_valid_backups_and_explicit_choice_never_overwrites_authority(self):
+        workflow, valid = self._published_backup_fixture()
         authority = workflow / "ledger" / "Skills主台账.xlsx"
         archive = workflow / "ledger" / "archive"
-        archive.mkdir(exist_ok=True)
-        valid = archive / "Skills主台账_20260829_010203.xlsx"
-        shutil.copyfile(authority, valid)
         (archive / "Skills主台账_20260829_010204.xlsx").write_bytes(b"not-an-xlsx")
         original_sha = sha256(authority.read_bytes()).hexdigest()
 
@@ -310,6 +517,98 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(sha256(authority.read_bytes()).hexdigest(), original_sha)
         self.assertIsNotNone(chosen.recovery_candidate)
         self.assertEqual(sha256(chosen.recovery_candidate.read_bytes()).hexdigest(), sha256(valid.read_bytes()).hexdigest())
+
+    def test_repair_excludes_valid_workbook_not_bound_to_successful_publication(self):
+        workflow = self._setup_project()
+        authority = workflow / "ledger" / "Skills主台账.xlsx"
+        unbound = workflow / "ledger" / "archive" / "Skills主台账_20260829_010203.xlsx"
+        shutil.copyfile(authority, unbound)
+
+        result = cli.repair_ledger(self.root)
+        self.assertEqual(result.exit_code, 3)
+        self.assertEqual(result.valid_backups, ())
+
+    def test_repair_accepts_publishers_same_second_backup_suffix(self):
+        workflow, first = self._published_backup_fixture()
+        collision = first.with_name(first.stem + "_1.xlsx")
+        shutil.copyfile(first, collision)
+
+        result = cli.repair_ledger(self.root)
+        self.assertEqual(result.exit_code, 3)
+        self.assertEqual(result.valid_backups, (first.absolute(), collision.absolute()))
+
+    def _assert_repair_rejects_live_backup_attack(self, *, replace_path: bool) -> None:
+        workflow, backup = self._published_backup_fixture()
+        authority = workflow / "ledger" / "Skills主台账.xlsx"
+        authority_sha = sha256(authority.read_bytes()).hexdigest()
+        replacement_bytes = authority.read_bytes()
+        original_open = Path.open
+        attacked = False
+        replacement = backup.parent / "replacement.xlsx"
+        replacement.write_bytes(replacement_bytes)
+
+        def attack():
+            nonlocal attacked
+            attacked = True
+            if replace_path:
+                os.replace(replacement, backup)
+            else:
+                with original_open(backup, "wb") as handle:
+                    handle.write(replacement_bytes)
+                    handle.flush()
+                    os.fsync(handle.fileno())
+
+        def open_with_attack(path, mode="r", *args, **kwargs):
+            handle = original_open(path, mode, *args, **kwargs)
+            if Path(path).absolute() == backup.absolute() and mode == "rb" and not attacked:
+                return _AttackingReader(handle, attack, on_exit=replace_path)
+            return handle
+
+        with patch.object(Path, "open", new=open_with_attack):
+            result = cli.repair_ledger(self.root, backup=backup)
+        self.assertTrue(attacked)
+        self.assertEqual(result.exit_code, 1)
+        self.assertIsNone(result.recovery_candidate)
+        self.assertEqual(sha256(authority.read_bytes()).hexdigest(), authority_sha)
+        recovery = workflow / "ledger" / "recovery"
+        self.assertFalse(recovery.exists() and any(recovery.iterdir()))
+
+    def test_repair_rejects_selected_backup_replaced_after_handle_read(self):
+        self._assert_repair_rejects_live_backup_attack(replace_path=True)
+
+    def test_repair_rejects_selected_backup_rewritten_in_place_during_handle_read(self):
+        self._assert_repair_rejects_live_backup_attack(replace_path=False)
+
+    def test_repair_rejects_backup_replaced_between_validation_and_hash_binding(self):
+        workflow, backup = self._published_backup_fixture()
+        replacement = backup.parent / "same-bytes-new-identity.xlsx"
+        shutil.copyfile(backup, replacement)
+        real_validation = cli._valid_ledger
+        attacked = False
+
+        def validate_then_replace(path):
+            nonlocal attacked
+            result = real_validation(path)
+            if Path(path) == backup and result and not attacked:
+                attacked = True
+                os.replace(replacement, backup)
+            return result
+
+        with patch("skill_maintainer.cli._valid_ledger", side_effect=validate_then_replace):
+            result = cli.repair_ledger(self.root, backup=backup)
+        self.assertTrue(attacked)
+        self.assertEqual(result.exit_code, 1)
+        self.assertIsNone(result.recovery_candidate)
+        recovery = workflow / "ledger" / "recovery"
+        self.assertFalse(recovery.exists() and any(recovery.iterdir()))
+
+    def test_repair_write_failure_leaves_no_partial_recovery_candidate(self):
+        workflow, backup = self._published_backup_fixture()
+        with patch("skill_maintainer.cli.os.fsync", side_effect=OSError("injected recovery flush failure")):
+            result = cli.repair_ledger(self.root, backup=backup)
+        self.assertEqual(result.exit_code, 1)
+        recovery = workflow / "ledger" / "recovery"
+        self.assertFalse(recovery.exists() and any(recovery.iterdir()))
 
     def test_rebuild_report_reads_only_current_ledger_and_never_calls_network(self):
         workflow = self._setup_project()
@@ -335,10 +634,43 @@ class CliOperationsTest(unittest.TestCase):
         self.assertEqual(sha256(authority.read_bytes()).hexdigest(), before)
         self.assertEqual({path.suffix for path in result.outputs}, {".docx", ".xlsx"})
 
-    def _protocol_fixture(self, *, visual_approved: bool = True, eof_at: str | None = None):
+    def test_rebuild_builder_failure_leaves_requested_output_absent(self):
         workflow = self._setup_project()
-        output = _RecordingOutput()
-        input_stream = _ReactiveInput(output, visual_approved=visual_approved, eof_at=eof_at)
+        output = workflow / "output" / "atomic-rebuild"
+
+        def word_builder(summary, path):
+            Document().save(path)
+            return Path(path)
+
+        def excel_builder(summary, path):
+            raise OSError("injected Excel builder failure")
+
+        result = cli.rebuild_reports(
+            self.root,
+            output=output,
+            word_builder=word_builder,
+            excel_builder=excel_builder,
+        )
+        self.assertEqual(result.exit_code, 1)
+        self.assertFalse(output.exists())
+        self.assertFalse(any("pending" in path.name for path in output.parent.iterdir()))
+
+    def _protocol_fixture(
+        self,
+        *,
+        visual_approved: bool = True,
+        eof_at: str | None = None,
+        exception_at: tuple[str, BaseException] | None = None,
+        output_exception: tuple[str, BaseException] | None = None,
+    ):
+        workflow = self._setup_project()
+        output = _RecordingOutput(exception_on_type=output_exception)
+        input_stream = _ReactiveInput(
+            output,
+            visual_approved=visual_approved,
+            eof_at=eof_at,
+            exception_at=exception_at,
+        )
         gate = cli.InteractiveOfficeGate(input_stream=input_stream, output_stream=output, renderer=_UnitRenderer())
 
         def build_reports(prepared, staging):
@@ -375,6 +707,33 @@ class CliOperationsTest(unittest.TestCase):
             requested_run_id="run-task13-offline",
         )
         return workflow, coordinator, request, input_stream, output
+
+    def _complete_protocol_run(self):
+        workflow, coordinator, request, input_stream, output = self._protocol_fixture()
+        with patch("skill_maintainer.office._run_office", side_effect=lambda *args: self._fake_office_result(list(args))):
+            code = cli.run_interactive_protocol(coordinator, request, input_stream=input_stream, output_stream=output)
+        self.assertEqual(code, 0, output.text)
+        return workflow
+
+    def _published_backup_fixture(self):
+        workflow = self._complete_protocol_run()
+        backups = sorted((workflow / "ledger" / "archive").glob("Skills主台账_*.xlsx"))
+        self.assertEqual(len(backups), 1)
+        return workflow, backups[0]
+
+    def _assert_runtime_released(self, workflow: Path) -> None:
+        self.assertFalse(any((workflow / ".runtime" / "staging").iterdir()))
+        lock = SingleWriterLock(workflow / ".runtime" / "writer.lock")
+        self.assertTrue(lock.acquire())
+        lock.release()
+
+    @staticmethod
+    def _force_coordinator_cleanup(coordinator: RunCoordinator) -> None:
+        for state in tuple(coordinator._states.values()):
+            try:
+                coordinator.abandon(state.prepared)
+            except BaseException:
+                pass
 
     @staticmethod
     def _fake_office_result(arguments):
@@ -431,6 +790,65 @@ class CliOperationsTest(unittest.TestCase):
         lock = SingleWriterLock(workflow / ".runtime" / "writer.lock")
         self.assertTrue(lock.acquire())
         lock.release()
+
+    def test_protocol_keyboard_interrupt_keeps_original_exception_and_cleans_runtime(self):
+        original = KeyboardInterrupt("operator interrupted review")
+        workflow, coordinator, request, input_stream, output = self._protocol_fixture(
+            exception_at=("review_required", original)
+        )
+        real_abandon = coordinator.abandon
+
+        def clean_then_report(prepared):
+            real_abandon(prepared)
+            raise RuntimeError("cleanup diagnostic")
+
+        try:
+            with patch.object(coordinator, "abandon", side_effect=clean_then_report):
+                with self.assertRaises(KeyboardInterrupt) as caught:
+                    cli.run_interactive_protocol(coordinator, request, input_stream=input_stream, output_stream=output)
+            self.assertIs(caught.exception, original)
+            self.assertIn("cleanup diagnostic", " ".join(getattr(caught.exception, "__notes__", ())))
+            self._assert_runtime_released(workflow)
+        finally:
+            self._force_coordinator_cleanup(coordinator)
+
+    def test_protocol_system_exit_and_custom_base_exception_clean_runtime(self):
+        for exception in (SystemExit(19), _ProtocolAbort("fatal control abort")):
+            with self.subTest(exception=type(exception).__name__):
+                with tempfile.TemporaryDirectory() as temporary:
+                    old_root, old_temporary = self.root, self.temporary
+                    self.root = Path(temporary) / "中文 项目"
+                    self.root.mkdir()
+                    coordinator = None
+                    try:
+                        workflow, coordinator, request, input_stream, output = self._protocol_fixture(
+                            exception_at=("review_required", exception)
+                        )
+                        with self.assertRaises(type(exception)) as caught:
+                            cli.run_interactive_protocol(
+                                coordinator, request, input_stream=input_stream, output_stream=output
+                            )
+                        self.assertIs(caught.exception, exception)
+                        self._assert_runtime_released(workflow)
+                    finally:
+                        if coordinator is not None:
+                            self._force_coordinator_cleanup(coordinator)
+                        self.root, self.temporary = old_root, old_temporary
+
+    def test_protocol_base_exception_after_commit_does_not_remove_committed_authority(self):
+        exception = SystemExit(23)
+        workflow, coordinator, request, input_stream, output = self._protocol_fixture(
+            output_exception=("run_complete", exception)
+        )
+        authority = workflow / "ledger" / "Skills主台账.xlsx"
+        before = sha256(authority.read_bytes()).hexdigest()
+        with patch("skill_maintainer.office._run_office", side_effect=lambda *args: self._fake_office_result(list(args))):
+            with self.assertRaises(SystemExit) as caught:
+                cli.run_interactive_protocol(coordinator, request, input_stream=input_stream, output_stream=output)
+        self.assertIs(caught.exception, exception)
+        self.assertNotEqual(sha256(authority.read_bytes()).hexdigest(), before)
+        self.assertTrue(any((workflow / "output" / "generations").iterdir()))
+        self._assert_runtime_released(workflow)
 
     def test_protocol_requires_one_decision_for_every_review_packet_before_publish(self):
         workflow, coordinator, request, input_stream, output = self._protocol_fixture()
@@ -533,7 +951,26 @@ class CliOperationsTest(unittest.TestCase):
         settings = load_settings(settings_path)
         self.assertFalse(settings.workflow.enabled)
         self.assertEqual(settings.schedule.mode, "manual")
-        self.assertTrue((workflow / ".venv" / "Scripts" / "python.exe").is_file())
+        venv_python = workflow / ".venv" / "Scripts" / "python.exe"
+        self.assertTrue(venv_python.is_file())
+        imported = subprocess.run(
+            [
+                str(venv_python), "-c",
+                "from pathlib import Path; import skill_maintainer,sys; "
+                "raise SystemExit(0 if Path(skill_maintainer.__file__).resolve().is_relative_to(Path(sys.argv[1]).resolve()) else 1)",
+                str(workflow / "src"),
+            ],
+            capture_output=True,
+            timeout=30,
+        )
+        self.assertEqual(imported.returncode, 0, imported.stderr)
+        self.assertTrue(
+            (workflow / ".venv" / "Scripts" / "skill-maintainer.exe").is_file()
+            or (workflow / ".venv" / "Scripts" / "skill-maintainer.cmd").is_file()
+        )
+        fallback_link = workflow / ".venv" / "Lib" / "site-packages" / "university_skill_library_maintainer.pth"
+        if fallback_link.exists():
+            self.assertTrue(fallback_link.read_bytes().isascii())
         self.assertTrue((skills_root / "university-skill-library-maintainer" / "SKILL.md").is_file())
         self.assertFalse(any("automation" in path.name.casefold() for path in workflow.rglob("*") if path.name != "automation-prompt.md"))
 
@@ -542,6 +979,40 @@ class CliOperationsTest(unittest.TestCase):
         second = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", errors="replace", env=environment, timeout=180)
         self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
         self.assertEqual(settings_path.read_text(encoding="utf-8"), custom)
+
+    @unittest.skipUnless(importlib.util.find_spec("wheel") is None, "requires the offline editable fallback")
+    def test_installer_fallback_refuses_non_owned_launcher_without_writing_link(self):
+        self._authority_fixture()
+        workflow = self.root / WORKFLOW
+        shutil.copytree(self.source_workflow, workflow)
+        subprocess.run(
+            [sys.executable, "-m", "venv", "--system-site-packages", str(workflow / ".venv")],
+            check=True,
+            capture_output=True,
+            timeout=60,
+        )
+        launcher = workflow / ".venv" / "Scripts" / "skill-maintainer.cmd"
+        launcher.write_text("user-owned launcher", encoding="utf-8")
+        environment = os.environ.copy()
+        environment["PIP_NO_INDEX"] = "1"
+        result = subprocess.run(
+            [
+                "powershell", "-NoProfile", "-File", str(workflow / "install.ps1"),
+                "-ProjectRoot", str(self.root), "-PythonExe", sys.executable,
+                "-CodexSkillsRoot", str(Path(self.temporary.name) / "Codex Skills 目录"),
+            ],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            env=environment,
+            timeout=180,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(launcher.read_text(encoding="utf-8"), "user-owned launcher")
+        self.assertFalse(
+            (workflow / ".venv" / "Lib" / "site-packages" / "university_skill_library_maintainer.pth").exists()
+        )
 
 
 if __name__ == "__main__":

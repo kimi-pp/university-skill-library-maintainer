@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import uuid
 from typing import Callable, Iterable, Mapping, TextIO
 from zipfile import BadZipFile
 
@@ -56,15 +57,31 @@ REQUIRED_RULES = (
     "DATA_DICTIONARY.md",
     "REPORTING_STANDARD.md",
 )
-BACKUP_PATTERN = re.compile(r"Skills主台账_\d{8}_\d{6}\.xlsx\Z")
+BACKUP_PATTERN = re.compile(r"Skills主台账_\d{8}_\d{6}(?:_\d+)?\.xlsx\Z")
 
 # Task 14 must bind discovery -> fixed upstream snapshot -> trusted ReviewPacket.
 # Leaving this absent is safer than treating registry metadata as a reviewable Skill.
 PRODUCTION_DRIVER_FACTORY: Callable[..., tuple[RunCoordinator, RunRequest]] | None = None
 
 
+def _production_driver_ready() -> bool:
+    return callable(PRODUCTION_DRIVER_FACTORY)
+
+
+def _production_driver_status() -> str:
+    if PRODUCTION_DRIVER_FACTORY is None:
+        return "生产发现驱动未配置"
+    if not callable(PRODUCTION_DRIVER_FACTORY):
+        return "生产发现驱动配置不可调用"
+    return "已配置"
+
+
 class CliOperationalError(RuntimeError):
     """A safe operation could not be completed in the current environment."""
+
+
+class CliInputError(ValueError):
+    """A caller-supplied path or option violates the CLI contract."""
 
 
 class ProtocolInputError(ValueError):
@@ -154,6 +171,27 @@ def _ordinary_file(path: Path, *, suffix: str | None = None) -> Path:
     return absolute
 
 
+def _create_contained_directories(base: Path, target: Path) -> Path:
+    base = _ordinary_directory(base)
+    target = target.absolute()
+    try:
+        relative = target.relative_to(base)
+    except ValueError as exc:
+        raise CliInputError(f"目标路径越出允许目录：{target}") from exc
+    assert_ordinary_path(target)
+    current = base
+    for part in relative.parts:
+        current = contained_child(current, part)
+        if current.exists():
+            _ordinary_directory(current)
+        elif current.is_symlink():
+            raise CliOperationalError(f"待创建目录不得是链接或重解析点：{current}")
+        else:
+            current.mkdir(mode=0o700)
+            _ordinary_directory(current)
+    return target
+
+
 def _read_authority_files(project_root: Path) -> dict[str, str]:
     paths = {"AGENTS.md": project_root / "AGENTS.md"}
     paths.update({name: project_root / "01_规则" / name for name in REQUIRED_RULES})
@@ -188,32 +226,123 @@ def _copy_file_atomic(source: Path, destination: Path) -> None:
             temporary.unlink()
 
 
+def _path_identity(path: Path) -> tuple[int, int, int, int]:
+    result = path.lstat()
+    if path.is_dir() and not is_link_or_reparse(path):
+        return (getattr(result, "st_dev", 0), getattr(result, "st_ino", 0), 0, 0)
+    return (
+        getattr(result, "st_dev", 0),
+        getattr(result, "st_ino", 0),
+        result.st_size,
+        result.st_mtime_ns,
+    )
+
+
+def _skill_tree_manifest(root: Path) -> tuple[tuple[object, ...], ...]:
+    _ordinary_directory(root)
+    entries: list[tuple[object, ...]] = []
+    for item in sorted(root.rglob("*"), key=lambda value: value.relative_to(root).as_posix().casefold()):
+        if is_link_or_reparse(item):
+            raise CliOperationalError(f"Skill 包不得包含链接或重解析点：{item}")
+        relative = item.relative_to(root).as_posix()
+        if item.is_dir():
+            _ordinary_directory(item)
+            entries.append(("directory", relative))
+        elif item.is_file():
+            _ordinary_file(item)
+            entries.append(("file", relative, sha256(item.read_bytes()).hexdigest()))
+        else:
+            raise CliOperationalError(f"Skill 包含不可复制的文件类型：{item}")
+    return tuple(entries)
+
+
+def _remove_owned_skill_tree(path: Path, parent: Path) -> None:
+    try:
+        path.relative_to(parent)
+    except ValueError:
+        return
+    if path.exists() and path.is_dir() and not is_link_or_reparse(path):
+        shutil.rmtree(path)
+
+
 def _install_skill(source_workflow: Path, codex_skills_root: Path) -> Path:
     source = source_workflow / "skill" / SKILL_NAME
-    _ordinary_directory(source)
+    source_manifest = _skill_tree_manifest(source)
     root = codex_skills_root.absolute()
+    assert_ordinary_path(root)
     if root.exists():
         _ordinary_directory(root)
     else:
         root.mkdir(parents=True, exist_ok=False)
         _ordinary_directory(root)
-    destination = root / SKILL_NAME
+    root_identity = _path_identity(root)
+    destination = contained_child(root, SKILL_NAME)
+    destination_identity = None
     if destination.exists():
-        _ordinary_directory(destination)
-    else:
-        destination.mkdir()
-    for item in sorted(source.rglob("*")):
-        if is_link_or_reparse(item):
-            raise CliOperationalError(f"Skill 包不得包含链接或重解析点：{item}")
-        target = destination / item.relative_to(source)
-        if item.is_dir():
-            target.mkdir(parents=True, exist_ok=True)
-            _ordinary_directory(target)
-        elif item.is_file():
-            _copy_file_atomic(item, target)
-        else:
-            raise CliOperationalError(f"Skill 包含不可复制的文件类型：{item}")
-    return destination
+        _skill_tree_manifest(destination)
+        destination_identity = _path_identity(destination)
+    elif destination.is_symlink():
+        raise CliOperationalError("Skill 目标不得是链接或重解析点")
+
+    operation = uuid.uuid4().hex
+    staging = contained_child(root, f".{SKILL_NAME}.{operation}.pending")
+    previous = contained_child(root, f".{SKILL_NAME}.{operation}.previous")
+    if staging.exists() or staging.is_symlink() or previous.exists() or previous.is_symlink():
+        raise CliOperationalError("Skill 目录级更新暂存路径发生冲突")
+    staging.mkdir(mode=0o700)
+    switched_previous = False
+    try:
+        for entry in source_manifest:
+            kind, relative = str(entry[0]), str(entry[1])
+            target = staging.joinpath(*Path(relative).parts)
+            if kind == "directory":
+                target.mkdir(parents=True, exist_ok=False)
+                _ordinary_directory(target)
+            else:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                _ordinary_directory(target.parent)
+                _copy_file_atomic(source.joinpath(*Path(relative).parts), target)
+        if _skill_tree_manifest(source) != source_manifest or _skill_tree_manifest(staging) != source_manifest:
+            raise CliOperationalError("Skill 源包或完整暂存树在切换前发生变化")
+        if _path_identity(root) != root_identity or is_link_or_reparse(root):
+            raise CliOperationalError("Codex Skills 根目录在更新期间发生变化")
+        if destination_identity is not None:
+            if not destination.exists() or is_link_or_reparse(destination) or _path_identity(destination) != destination_identity:
+                raise CliOperationalError("既有 Skill 目标在切换前发生变化")
+            os.rename(destination, previous)
+            switched_previous = True
+        elif destination.exists() or destination.is_symlink():
+            raise CliOperationalError("Skill 目标在切换前被占用")
+        try:
+            os.rename(staging, destination)
+        except BaseException as switch_error:
+            if switched_previous and previous.exists() and not destination.exists() and not destination.is_symlink():
+                try:
+                    os.rename(previous, destination)
+                    switched_previous = False
+                except BaseException as rollback_error:
+                    if hasattr(switch_error, "add_note"):
+                        switch_error.add_note(f"Skill 旧版回滚失败：{rollback_error}")
+            raise
+        if _skill_tree_manifest(destination) != source_manifest:
+            raise CliOperationalError("安装后的 Skill 树与完整暂存快照不一致")
+        if switched_previous:
+            _remove_owned_skill_tree(previous, root)
+            switched_previous = False
+        return destination
+    except BaseException as install_error:
+        if switched_previous and previous.exists() and not is_link_or_reparse(previous):
+            try:
+                _remove_owned_skill_tree(destination, root)
+                if not destination.exists() and not destination.is_symlink():
+                    os.rename(previous, destination)
+                    switched_previous = False
+            except BaseException as rollback_error:
+                if hasattr(install_error, "add_note"):
+                    install_error.add_note(f"Skill 旧版回滚失败：{rollback_error}")
+        raise
+    finally:
+        _remove_owned_skill_tree(staging, root)
 
 
 def setup_project(
@@ -278,7 +407,9 @@ def setup_project(
             "项目工作流结构已检查；仅补齐缺失状态，设置保持禁用/手动。",
             {"workflow_root": str(workflow), "skill": str(installed) if installed else None},
         )
-    except (OSError, ValueError, SettingsError, CliOperationalError) as exc:
+    except SettingsError as exc:
+        return OperationResult(INVALID_INPUT, str(exc))
+    except (OSError, ValueError, CliOperationalError) as exc:
         return OperationResult(OPERATIONAL_FAILURE, str(exc))
 
 
@@ -338,10 +469,15 @@ def doctor_project(project_root: str | Path, *, environment: DoctorEnvironment |
         errors.append("07_自动维护工作流不存在或不是普通目录")
 
     settings = None
+    configuration_invalid = False
     try:
         settings = load_settings(_ordinary_file(workflow / "workflow-settings.toml", suffix=".toml"))
         checks["settings"] = "有效"
-    except (OSError, ValueError, SettingsError, CliOperationalError) as exc:
+    except SettingsError as exc:
+        configuration_invalid = True
+        checks["settings"] = "无效"
+        errors.append(f"运行设置无效：{exc}")
+    except (OSError, ValueError, CliOperationalError) as exc:
         checks["settings"] = "无效"
         errors.append(f"运行设置无效：{exc}")
 
@@ -382,8 +518,8 @@ def doctor_project(project_root: str | Path, *, environment: DoctorEnvironment |
         checks["renderer"] = "等待 Codex 工作区依赖加载器"
         warnings.append("doctor 不从 PATH、用户名或缓存布局猜测 Word 渲染依赖")
 
-    driver_ready = PRODUCTION_DRIVER_FACTORY is not None
-    checks["production_driver"] = "已配置" if driver_ready else "生产发现驱动未配置"
+    driver_ready = _production_driver_ready()
+    checks["production_driver"] = _production_driver_status()
     production_requested = bool(settings and settings.workflow.enabled and settings.schedule.mode != "manual")
     windows = bool(getattr(env, "is_windows", False))
     if production_requested and not windows:
@@ -397,7 +533,8 @@ def doctor_project(project_root: str | Path, *, environment: DoctorEnvironment |
     if not driver_ready:
         warnings.append("Task 14 接通固定上游快照与受信 ReviewPacket 前不得启用自动任务")
     production_ready = not errors and windows and driver_ready and bool(loader_output)
-    return DoctorReport(OPERATIONAL_FAILURE if errors else SUCCESS, production_ready, checks, tuple(errors), tuple(warnings))
+    exit_code = INVALID_INPUT if configuration_invalid else (OPERATIONAL_FAILURE if errors else SUCCESS)
+    return DoctorReport(exit_code, production_ready, checks, tuple(errors), tuple(warnings))
 
 
 def _schedule_mapping(settings: object) -> dict[str, object]:
@@ -431,7 +568,11 @@ def _render_automation_prompt(project: Path, settings_path: Path, digest: str) -
     return template
 
 
-def build_apply_settings_plan(project_root: str | Path) -> dict[str, object]:
+def build_apply_settings_plan(
+    project_root: str | Path,
+    *,
+    environment: DoctorEnvironment | object | None = None,
+) -> dict[str, object]:
     """Validate settings and return an app-tool plan; never mutate automation."""
 
     project = _project_root(project_root)
@@ -440,6 +581,7 @@ def build_apply_settings_plan(project_root: str | Path) -> dict[str, object]:
     settings = load_settings(settings_path)
     digest = settings_sha256(settings_path)
     enabled_schedule = settings.workflow.enabled and settings.schedule.mode != "manual"
+    diagnostic = doctor_project(project, environment=environment)
     return {
         "project_root": str(project),
         "toml_path": str(settings_path),
@@ -448,7 +590,8 @@ def build_apply_settings_plan(project_root: str | Path) -> dict[str, object]:
         "schedule": _schedule_mapping(settings),
         "automation_action": "upsert" if enabled_schedule else "ensure_absent",
         "prompt": _render_automation_prompt(project, settings_path, digest),
-        "production_ready": bool(PRODUCTION_DRIVER_FACTORY is not None),
+        "production_ready": diagnostic.production_ready,
+        "doctor": diagnostic,
         "readback_required": True,
         "note": "必须由 Codex 应用自动任务更新工具执行并回读；CLI 未修改自动任务。",
     }
@@ -465,6 +608,67 @@ def _valid_ledger(path: Path) -> bool:
         return False
 
 
+def _stream_sha256(path: Path) -> str:
+    digest = sha256()
+    with open(path, "rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _verified_success_records(workflow: Path, records: Iterable[Mapping[str, object]]) -> tuple[tuple[Mapping[str, object], Path, str], ...]:
+    verifier = RunCoordinator(root=workflow)
+    verified: list[tuple[Mapping[str, object], Path, str]] = []
+    for record in records:
+        if record.get("状态") != "成功":
+            continue
+        snapshot_sha = str(record.get("快照SHA-256") or "").strip().lower()
+        if not re.fullmatch(r"[0-9a-f]{64}", snapshot_sha):
+            continue
+        try:
+            verifier._verify_recorded_generation(record)
+            relative = verifier._summary_fields(record.get("摘要")).get("generation", "")
+            generation = workflow.joinpath(*Path(relative).parts)
+        except (CoordinatorError, OSError, UnicodeError, ValueError):
+            continue
+        verified.append((record, generation, snapshot_sha))
+    return tuple(verified)
+
+
+def _handle_identity(handle: object) -> tuple[int, int, int, int]:
+    result = os.fstat(handle.fileno())
+    return (
+        getattr(result, "st_dev", 0),
+        getattr(result, "st_ino", 0),
+        result.st_size,
+        result.st_mtime_ns,
+    )
+
+
+def _read_bound_backup_snapshot(
+    path: Path,
+    expected_sha256: str,
+    expected_identity: tuple[int, int, int, int],
+) -> bytes:
+    path = _ordinary_file(path, suffix=".xlsx")
+    path_before = _path_identity(path)
+    if path_before != expected_identity:
+        raise CliOperationalError("备份路径在验证与单句柄读取之间被替换")
+    with path.open("rb") as handle:
+        handle_before = _handle_identity(handle)
+        if handle_before != path_before:
+            raise CliOperationalError("备份路径与已打开文件身份不一致")
+        content = handle.read()
+        handle_after = _handle_identity(handle)
+    if handle_after != handle_before:
+        raise CliOperationalError("备份在单句柄读取期间被原地改写")
+    if not path.is_file() or is_link_or_reparse(path) or _path_identity(path) != path_before:
+        raise CliOperationalError("备份路径在单句柄读取后被替换")
+    if sha256(content).hexdigest() != expected_sha256:
+        raise CliOperationalError("备份字节快照与成功运行记录 SHA-256 不一致")
+    return content
+
+
 def repair_ledger(project_root: str | Path, *, backup: str | Path | None = None) -> RepairResult:
     """List verified backups or copy an explicit one to a non-authority recovery candidate."""
 
@@ -476,31 +680,80 @@ def repair_ledger(project_root: str | Path, *, backup: str | Path | None = None)
         if not archive.exists():
             return RepairResult(SAFE_NOOP, (), None, "没有可恢复的验证备份")
         _ordinary_directory(archive)
-        valid = tuple(
-            path.absolute()
-            for path in sorted(archive.iterdir())
-            if path.is_file() and not is_link_or_reparse(path) and BACKUP_PATTERN.fullmatch(path.name) and _valid_ledger(path)
-        )
+        authority = LedgerStore.load(_ordinary_file(workflow / "ledger" / "Skills主台账.xlsx", suffix=".xlsx"))
+        try:
+            errors = authority.validate()
+            records = authority.rows("运行记录")
+        finally:
+            authority.workbook.close()
+        if errors:
+            raise CliOperationalError("当前主台账无效：" + "；".join(errors))
+        verified_records = _verified_success_records(workflow, records)
+        authorized_hashes = {item[2] for item in verified_records}
+        valid_evidence: dict[Path, tuple[str, tuple[int, int, int, int]]] = {}
+        unstable: set[Path] = set()
+        for discovered in sorted(archive.iterdir()):
+            path = discovered.absolute()
+            if (
+                not path.is_file()
+                or is_link_or_reparse(path)
+                or not BACKUP_PATTERN.fullmatch(path.name)
+            ):
+                continue
+            identity_before = _path_identity(path)
+            ledger_valid = _valid_ledger(path)
+            digest = _stream_sha256(path)
+            identity_after = _path_identity(path)
+            if identity_after != identity_before:
+                unstable.add(path)
+                continue
+            if ledger_valid and digest in authorized_hashes:
+                valid_evidence[path] = (digest, identity_after)
+        valid = tuple(valid_evidence)
         if backup is None:
             return RepairResult(SAFE_NOOP, valid, None, "请选择一个已验证备份；当前主台账不会自动覆盖")
         selected = Path(backup).absolute()
+        if selected in unstable:
+            raise CliOperationalError("所选备份在验证与哈希绑定之间被替换")
         if selected not in valid:
-            raise CliOperationalError("所选文件不是当前可用的已验证备份")
+            raise CliInputError("所选文件不是当前可用的已验证备份")
+        selected_sha, selected_identity = valid_evidence[selected]
+        if _path_identity(selected) != selected_identity:
+            raise CliOperationalError("所选备份在哈希绑定后被替换")
+        if selected_sha not in authorized_hashes:
+            raise CliOperationalError("所选备份未绑定已复验的成功运行记录")
+        snapshot = _read_bound_backup_snapshot(selected, selected_sha, selected_identity)
         recovery_root = workflow / "ledger" / "recovery"
-        recovery_root.mkdir(parents=True, exist_ok=True)
-        _ordinary_directory(recovery_root)
-        suffix = sha256(selected.read_bytes()).hexdigest()[:12]
+        if recovery_root.exists():
+            _ordinary_directory(recovery_root)
+        else:
+            _create_contained_directories(_ordinary_directory(workflow / "ledger"), recovery_root)
+        suffix = sha256(snapshot).hexdigest()[:12]
         candidate = recovery_root / f"Skills主台账_恢复候选_{datetime.now():%Y%m%d_%H%M%S}_{suffix}.xlsx"
         if candidate.exists() or candidate.is_symlink():
             raise CliOperationalError("恢复候选已存在，拒绝覆盖")
-        with candidate.open("xb") as handle:
-            handle.write(selected.read_bytes())
-            handle.flush()
-            os.fsync(handle.fileno())
-        if not _valid_ledger(candidate):
-            candidate.unlink()
-            raise CliOperationalError("恢复候选复读失败")
+        descriptor, temporary_name = tempfile.mkstemp(
+            prefix=f".{candidate.stem}.", suffix=".xlsx", dir=recovery_root
+        )
+        temporary = Path(temporary_name)
+        try:
+            with os.fdopen(descriptor, "wb") as handle:
+                handle.write(snapshot)
+                handle.flush()
+                os.fsync(handle.fileno())
+            if _stream_sha256(temporary) != selected_sha or not _valid_ledger(temporary):
+                raise CliOperationalError("恢复候选暂存复读失败")
+            if candidate.exists() or candidate.is_symlink():
+                raise CliOperationalError("恢复候选在切换前被占用")
+            os.rename(temporary, candidate)
+        finally:
+            if temporary.exists() and temporary.is_file() and not is_link_or_reparse(temporary):
+                temporary.unlink()
+        if _stream_sha256(candidate) != selected_sha or not _valid_ledger(candidate):
+            raise CliOperationalError("恢复候选切换后复读失败")
         return RepairResult(SUCCESS, valid, candidate, "已生成恢复候选；当前主台账保持不变")
+    except CliInputError as exc:
+        return RepairResult(INVALID_INPUT, (), None, str(exc))
     except (OSError, ValueError, CliOperationalError) as exc:
         return RepairResult(OPERATIONAL_FAILURE, (), None, str(exc))
 
@@ -550,24 +803,45 @@ def rebuild_reports(
             summary = _ledger_rebuild_summary(ledger)
         finally:
             ledger.workbook.close()
-        output_root = Path(output).absolute() if output is not None else workflow / "output" / "rebuild" / datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_base = _ordinary_directory(workflow / "output")
+        output_root = Path(output).absolute() if output is not None else output_base / "rebuild" / datetime.now().strftime("%Y%m%d_%H%M%S")
         try:
-            output_root.relative_to((workflow / "output").absolute())
+            output_root.relative_to(output_base)
         except ValueError as exc:
-            raise CliOperationalError("重建输出必须位于 07_自动维护工作流/output 内") from exc
-        if output_root.exists():
-            _ordinary_directory(output_root)
-            if any(output_root.iterdir()):
-                raise CliOperationalError("重建输出目录必须为空，拒绝覆盖")
-        else:
-            output_root.mkdir(parents=True, exist_ok=False)
-            _ordinary_directory(output_root)
-        word = contained_child(output_root, "Skill库离线重建报告.docx")
-        excel = contained_child(output_root, "Skill库离线重建表.xlsx")
-        outputs = (Path(word_builder(summary, word)).absolute(), Path(excel_builder(summary, excel)).absolute())
-        if sha256(ledger_path.read_bytes()).hexdigest() != ledger_sha:
-            raise CliOperationalError("离线重建期间主台账发生变化")
+            raise CliInputError("重建输出必须位于 07_自动维护工作流/output 内") from exc
+        assert_ordinary_path(output_root)
+        if output_root.exists() or output_root.is_symlink():
+            raise CliOperationalError("重建输出目标已存在，拒绝覆盖")
+        output_parent = _create_contained_directories(output_base, output_root.parent)
+        staging = contained_child(output_parent, f".{output_root.name}.{uuid.uuid4().hex}.pending")
+        if staging.exists() or staging.is_symlink():
+            raise CliOperationalError("重建暂存目录发生冲突")
+        staging.mkdir(mode=0o700)
+        try:
+            staged_word = contained_child(staging, "Skill库离线重建报告.docx")
+            staged_excel = contained_child(staging, "Skill库离线重建表.xlsx")
+            built_word = Path(word_builder(summary, staged_word)).absolute()
+            built_excel = Path(excel_builder(summary, staged_excel)).absolute()
+            if built_word != staged_word or built_excel != staged_excel:
+                raise CliOperationalError("重建器返回了暂存目录外的文件")
+            _ordinary_file(staged_word, suffix=".docx")
+            _ordinary_file(staged_excel, suffix=".xlsx")
+            if sha256(ledger_path.read_bytes()).hexdigest() != ledger_sha:
+                raise CliOperationalError("离线重建期间主台账发生变化")
+            if output_root.exists() or output_root.is_symlink():
+                raise CliOperationalError("重建输出目标在切换前被占用")
+            os.rename(staging, output_root)
+        except BaseException:
+            if staging.exists() and staging.is_dir() and not is_link_or_reparse(staging):
+                shutil.rmtree(staging)
+            raise
+        outputs = (
+            contained_child(output_root, "Skill库离线重建报告.docx"),
+            contained_child(output_root, "Skill库离线重建表.xlsx"),
+        )
         return RebuildResult(SUCCESS, outputs, "已从当前主台账离线重建 Word/Excel；未联网")
+    except CliInputError as exc:
+        return RebuildResult(INVALID_INPUT, (), str(exc))
     except (OSError, ValueError, CliOperationalError) as exc:
         return RebuildResult(OPERATIONAL_FAILURE, (), str(exc))
 
@@ -604,6 +878,16 @@ def _read_frame(input_stream: TextIO, *, expected_type: str, run_id: str) -> Map
     if payload.get("type") != expected_type or payload.get("run_id") != run_id:
         raise ProtocolInputError("协议帧类型或 run_id 与当前运行不一致")
     return payload
+
+
+def _abandon_after_failure(coordinator: RunCoordinator, prepared: object | None, original: BaseException) -> None:
+    if prepared is None:
+        return
+    try:
+        coordinator.abandon(prepared)
+    except BaseException as cleanup_error:
+        if hasattr(original, "add_note"):
+            original.add_note(f"运行终态清理诊断：{type(cleanup_error).__name__}: {cleanup_error}")
 
 
 @dataclass
@@ -743,21 +1027,16 @@ def run_interactive_protocol(
         _emit_frame(output_stream, {"type": "run_noop", "error": str(exc)})
         return SAFE_NOOP
     except ProtocolInputError as exc:
-        if prepared is not None:
-            try:
-                coordinator.abandon(prepared)
-            except (CoordinatorError, OSError, ValueError):
-                pass
+        _abandon_after_failure(coordinator, prepared, exc)
         _emit_frame(output_stream, {"type": "run_failed", "run_id": getattr(prepared, "run_id", None), "error": str(exc)})
         return INVALID_INPUT
     except (ProtocolEOF, CliOperationalError, CoordinatorError, OfficeVerificationError, OSError, ValueError) as exc:
-        if prepared is not None:
-            try:
-                coordinator.abandon(prepared)
-            except (CoordinatorError, OSError, ValueError):
-                pass
+        _abandon_after_failure(coordinator, prepared, exc)
         _emit_frame(output_stream, {"type": "run_failed", "run_id": getattr(prepared, "run_id", None), "error": str(exc)})
         return OPERATIONAL_FAILURE
+    except BaseException as exc:
+        _abandon_after_failure(coordinator, prepared, exc)
+        raise
 
 
 def _latest_success(rows: Iterable[Mapping[str, object]]) -> datetime | None:
@@ -775,7 +1054,11 @@ def _latest_success(rows: Iterable[Mapping[str, object]]) -> datetime | None:
     return max(values, default=None)
 
 
-def status_project(project_root: str | Path) -> dict[str, object]:
+def status_project(
+    project_root: str | Path,
+    *,
+    environment: DoctorEnvironment | object | None = None,
+) -> dict[str, object]:
     project = _project_root(project_root)
     workflow = _workflow_root(project)
     settings = load_settings(_ordinary_file(workflow / "workflow-settings.toml", suffix=".toml"))
@@ -788,18 +1071,27 @@ def status_project(project_root: str | Path) -> dict[str, object]:
     finally:
         ledger.workbook.close()
     next_run = next_run_at(settings, datetime.now(timezone.utc), _latest_success(records))
-    generations = workflow / "output" / "generations"
+    diagnostic = doctor_project(project, environment=environment)
+    successful = next((row for row in reversed(records) if row.get("状态") == "成功"), None)
     latest_output = None
-    if generations.is_dir() and not is_link_or_reparse(generations):
-        candidates = sorted(path for path in generations.iterdir() if path.is_dir() and not is_link_or_reparse(path))
-        latest_output = candidates[-1] if candidates else None
+    output_error = None
+    if successful is None:
+        output_error = "没有可验证的成功运行记录；未采用任意 generation 目录"
+    else:
+        verified = _verified_success_records(workflow, (successful,))
+        if verified:
+            latest_output = verified[0][1]
+        else:
+            output_error = "最后成功运行记录的发布代次、manifest 或 delivery 复验失败"
     return {
         "preview": schedule_preview(settings),
         "next_run_at": next_run,
         "latest_run": records[-1] if records else None,
         "latest_output": latest_output,
-        "production_ready": PRODUCTION_DRIVER_FACTORY is not None,
-        "production_driver": "已配置" if PRODUCTION_DRIVER_FACTORY is not None else "生产发现驱动未配置",
+        "output_error": output_error,
+        "production_ready": diagnostic.production_ready,
+        "production_driver": _production_driver_status(),
+        "doctor": diagnostic,
     }
 
 
@@ -830,12 +1122,14 @@ def build_parser() -> argparse.ArgumentParser:
         elif command == "edit-settings":
             subparser.set_defaults(handler=_handle_edit_settings)
         elif command == "apply-settings":
+            subparser.add_argument("--loader-output")
             subparser.set_defaults(handler=_handle_apply_settings)
         elif command in {"run-now", "scheduled-run"}:
             subparser.add_argument("--loader-output")
             subparser.add_argument("--expected-config-sha")
             subparser.set_defaults(handler=_handle_run)
         elif command == "status":
+            subparser.add_argument("--loader-output")
             subparser.set_defaults(handler=_handle_status)
         elif command == "repair-ledger":
             subparser.add_argument("--backup", type=Path)
@@ -869,10 +1163,16 @@ def _handle_import(args: argparse.Namespace) -> int:
     }
     if args.output is not None:
         output = Path(args.output).absolute()
-        staging_root = _workflow_root(project) / "ledger" / "staging"
-        output.relative_to(staging_root.absolute())
+        ledger_root = _ordinary_directory(_workflow_root(project) / "ledger")
+        staging_root = ledger_root / "staging"
+        try:
+            output.relative_to(staging_root.absolute())
+        except ValueError as exc:
+            raise CliInputError("首次导入输出必须位于 07_自动维护工作流/ledger/staging 内") from exc
+        assert_ordinary_path(output)
         if output.exists() or output.is_symlink():
             raise CliOperationalError("首次导入输出已存在，拒绝覆盖")
+        _create_contained_directories(ledger_root, output.parent)
         payload["import"] = build_initial_ledger(inventory, output)
     elif not args.inventory_only:
         payload["note"] = "首次必须先使用 --inventory-only；未写入任何台账"
@@ -902,7 +1202,10 @@ def _handle_edit_settings(args: argparse.Namespace) -> int:
 
 
 def _handle_apply_settings(args: argparse.Namespace) -> int:
-    plan = build_apply_settings_plan(args.project_root)
+    plan = build_apply_settings_plan(
+        args.project_root,
+        environment=current_doctor_environment(loader_output=args.loader_output),
+    )
     _print_json(plan)
     if plan["automation_action"] == "upsert" and not plan["production_ready"]:
         return OPERATIONAL_FAILURE
@@ -910,9 +1213,10 @@ def _handle_apply_settings(args: argparse.Namespace) -> int:
 
 
 def _handle_run(args: argparse.Namespace) -> int:
-    if PRODUCTION_DRIVER_FACTORY is None:
+    if not _production_driver_ready():
         _print_json({"type": "run_failed", "error": "生产发现驱动未配置；prepare 前停止，未联网、未创建暂存运行"})
         return OPERATIONAL_FAILURE
+    assert PRODUCTION_DRIVER_FACTORY is not None
     coordinator, request = PRODUCTION_DRIVER_FACTORY(
         project_root=Path(args.project_root).absolute(), command=args.command,
         loader_output=args.loader_output, expected_config_sha=args.expected_config_sha,
@@ -922,7 +1226,10 @@ def _handle_run(args: argparse.Namespace) -> int:
 
 
 def _handle_status(args: argparse.Namespace) -> int:
-    _print_json(status_project(args.project_root))
+    _print_json(status_project(
+        args.project_root,
+        environment=current_doctor_environment(loader_output=args.loader_output),
+    ))
     return SUCCESS
 
 
@@ -957,7 +1264,7 @@ def main(argv: list[str] | None = None) -> int:
         return INVALID_INPUT
     try:
         return int(handler(args))
-    except (SettingsError, ProtocolInputError, argparse.ArgumentTypeError) as exc:
+    except (SettingsError, CliInputError, ProtocolInputError, argparse.ArgumentTypeError) as exc:
         _print_json({"error": str(exc), "exit_code": INVALID_INPUT})
         return INVALID_INPUT
     except (CliOperationalError, CoordinatorError, OfficeVerificationError, OSError, ValueError) as exc:

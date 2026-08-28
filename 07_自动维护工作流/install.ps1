@@ -65,6 +65,85 @@ function Assert-RequiredTextFile {
     }
 }
 
+function Assert-OwnedOrAbsent {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$LiteralPath,
+
+        [Parameter(Mandatory = $true)]
+        [string]$OwnershipMarker
+    )
+
+    if (-not (Test-Path -LiteralPath $LiteralPath)) {
+        return
+    }
+    $fullName = Get-OrdinaryPath -LiteralPath $LiteralPath -Kind File
+    $strictUtf8 = New-Object System.Text.UTF8Encoding($false, $true)
+    $content = [System.IO.File]::ReadAllText($fullName, $strictUtf8)
+    if (-not $content.StartsWith($OwnershipMarker, [System.StringComparison]::Ordinal)) {
+        throw "Refusing to overwrite a file not owned by this installer: $LiteralPath"
+    }
+}
+
+function Write-AtomicOwnedText {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$LiteralPath,
+
+        [Parameter(Mandatory = $true)]
+        [string]$Content,
+
+        [Parameter(Mandatory = $true)]
+        [string]$OwnershipMarker
+    )
+
+    Assert-OwnedOrAbsent -LiteralPath $LiteralPath -OwnershipMarker $OwnershipMarker
+    $parent = Split-Path -Parent $LiteralPath
+    [void](Get-OrdinaryPath -LiteralPath $parent -Kind Directory)
+    $temporary = Join-Path $parent ("." + [System.IO.Path]::GetFileName($LiteralPath) + "." + [guid]::NewGuid().ToString("N") + ".pending")
+    $previous = Join-Path $parent ("." + [System.IO.Path]::GetFileName($LiteralPath) + "." + [guid]::NewGuid().ToString("N") + ".previous")
+    $strictUtf8 = New-Object System.Text.UTF8Encoding($false, $true)
+    try {
+        $stream = New-Object System.IO.FileStream(
+            $temporary,
+            [System.IO.FileMode]::CreateNew,
+            [System.IO.FileAccess]::Write,
+            [System.IO.FileShare]::None
+        )
+        try {
+            $writer = New-Object System.IO.StreamWriter($stream, $strictUtf8)
+            try {
+                $writer.Write($Content)
+                $writer.Flush()
+                $stream.Flush($true)
+            }
+            finally {
+                $writer.Dispose()
+            }
+        }
+        finally {
+            if ($null -ne $stream) {
+                $stream.Dispose()
+            }
+        }
+        Assert-OwnedOrAbsent -LiteralPath $LiteralPath -OwnershipMarker $OwnershipMarker
+        if (Test-Path -LiteralPath $LiteralPath) {
+            [System.IO.File]::Replace($temporary, $LiteralPath, $previous)
+        }
+        else {
+            [System.IO.File]::Move($temporary, $LiteralPath)
+        }
+    }
+    finally {
+        if (Test-Path -LiteralPath $temporary) {
+            Remove-Item -LiteralPath $temporary -Force
+        }
+        if (Test-Path -LiteralPath $previous) {
+            Remove-Item -LiteralPath $previous -Force
+        }
+    }
+}
+
 $resolvedProject = Get-OrdinaryPath -LiteralPath $ProjectRoot -Kind Directory
 $resolvedPython = Get-OrdinaryPath -LiteralPath $PythonExe -Kind File
 $scriptRoot = Get-OrdinaryPath -LiteralPath $PSScriptRoot -Kind Directory
@@ -120,9 +199,55 @@ $venvPython = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Scripts\python
 Invoke-CheckedPython -Executable $venvPython -Arguments @(
     "-m", "pip", "install", "--disable-pip-version-check", "--requirement", $requirements
 )
+
+& $venvPython -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('wheel') else 1)"
+$wheelProbe = $LASTEXITCODE
+if ($wheelProbe -eq 0) {
+    Invoke-CheckedPython -Executable $venvPython -Arguments @(
+        "-m", "pip", "install", "--disable-pip-version-check", "--no-deps", "--no-build-isolation", "--editable", $resolvedWorkflow
+    )
+}
+elseif ($wheelProbe -eq 1) {
+    # Do not round-trip a Unicode path through native stdout: Windows PowerShell
+    # 5.1 can decode Python's output with a different code page.
+    $sitePackages = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Lib\site-packages") -Kind Directory
+    $scriptsRoot = Get-OrdinaryPath -LiteralPath (Join-Path $venvRoot "Scripts") -Kind Directory
+    $editableSource = Get-OrdinaryPath -LiteralPath (Join-Path $resolvedWorkflow "src") -Kind Directory
+    $ownershipMarker = "# university-skill-library-maintainer installer-owned"
+    $editableLink = Join-Path $sitePackages "university_skill_library_maintainer.pth"
+    $commandLauncher = Join-Path $scriptsRoot "skill-maintainer.cmd"
+    Assert-OwnedOrAbsent -LiteralPath $editableLink -OwnershipMarker $ownershipMarker
+    Assert-OwnedOrAbsent -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned"
+    $sourceBase64 = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($editableSource))
+    Write-AtomicOwnedText -LiteralPath $editableLink -OwnershipMarker $ownershipMarker -Content (
+        $ownershipMarker + [Environment]::NewLine +
+        "import base64,sys;sys.path.insert(0,base64.b64decode('$sourceBase64').decode('utf-8'))" +
+        [Environment]::NewLine
+    )
+    Write-AtomicOwnedText -LiteralPath $commandLauncher -OwnershipMarker "@rem university-skill-library-maintainer installer-owned" -Content (
+        "@rem university-skill-library-maintainer installer-owned" + [Environment]::NewLine +
+        "@`"%~dp0python.exe`" -m skill_maintainer.cli %*" + [Environment]::NewLine
+    )
+}
+else {
+    throw "Cannot determine whether the target virtual environment provides wheel."
+}
+
+$expectedSource = Get-OrdinaryPath -LiteralPath (Join-Path $resolvedWorkflow "src") -Kind Directory
 Invoke-CheckedPython -Executable $venvPython -Arguments @(
-    "-m", "pip", "install", "--disable-pip-version-check", "--no-deps", "--no-build-isolation", "--editable", $resolvedWorkflow
+    "-c",
+    "from pathlib import Path; import skill_maintainer; actual=Path(skill_maintainer.__file__).resolve(); expected=Path(__import__('sys').argv[1]).resolve(); raise SystemExit(0 if actual.is_relative_to(expected) else 1)",
+    $expectedSource
 )
+$consoleCommand = Join-Path (Join-Path $venvRoot "Scripts") "skill-maintainer.exe"
+if (-not (Test-Path -LiteralPath $consoleCommand)) {
+    $consoleCommand = Join-Path (Join-Path $venvRoot "Scripts") "skill-maintainer.cmd"
+}
+$consoleCommand = Get-OrdinaryPath -LiteralPath $consoleCommand -Kind File
+& $consoleCommand --help | Out-Null
+if ($LASTEXITCODE -ne 0) {
+    throw "Installed skill-maintainer command failed with exit code $LASTEXITCODE."
+}
 
 Invoke-CheckedPython -Executable $venvPython -Arguments @(
     "-m", "skill_maintainer.cli", "setup", "--project-root", $resolvedProject,
