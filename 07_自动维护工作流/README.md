@@ -1,0 +1,158 @@
+# 高校专业 Skill 库文件化自动维护
+
+本目录提供 Windows 上的文件化维护工作流。Excel 主台账是唯一业务基线；每轮只读发现和静态审核候选，经结构化人工审核、Microsoft Office 验证和 Word 逐页视觉复核后，才原子发布新的主台账与中文 Word/Excel 交付物。工作流不使用业务数据库，也不会安装或执行候选 Skill。
+
+## 当前启用边界
+
+Task 13 已提供安装、诊断、设置、状态、修复、离线重建和同进程双闸运行协议。但四个平台的生产发现驱动尚未接通：市场元数据不能冒充固定版本 Skill 包，也不能绕过固定上游快照生成受信 ReviewPacket。因此，在 Task 14 完成生产驱动验收前：
+
+- `doctor` 和 `status` 会明确显示“生产发现驱动未配置”；
+- `run-now`、`scheduled-run` 会在 `prepare` 之前以操作失败退出，不联网、不创建暂存运行；
+- 不得启用或创建自动任务，不能宣称自动维护已可投产。
+
+这项限制不影响安装检查、既有交付盘点、TOML 编辑、台账备份检查或严格离线的报告重建。
+
+## 前置条件
+
+- Windows 10/11；生产调度只允许在 Windows 上运行。
+- 64 位 Python 3.11、3.12 或 3.13，并可创建 `venv`。
+- Microsoft Word 和 Excel 桌面版，且已正确注册 COM。
+- GitHub CLI `gh` 可从当前 PowerShell 会话调用。
+- Codex 桌面应用；涉及 Word 渲染时，必须取得当前 Codex 工作区依赖加载器的真实返回文本。
+- 目标项目根目录必须包含并可完整读取以下用户维护的规则：
+  1. `AGENTS.md`
+  2. `01_规则/SKILL_RESEARCH_WORKFLOW.md`
+  3. `01_规则/SECURITY_REVIEW_PROTOCOL.md`
+  4. `01_规则/DATA_DICTIONARY.md`
+  5. `01_规则/REPORTING_STANDARD.md`
+
+安装器不会从模板、旧报告或其他机器复制或伪造这些规则。任一规则缺失、为空、不可读、是链接/重解析点，均关闭失败。
+
+## 安装
+
+在 PowerShell 中显式填写项目根、Python 和 Codex Skills 根目录；中文与空格路径均受支持：
+
+```powershell
+$ProjectRoot = 'D:\高校AI工作台\高校AI技能库调研'
+$PythonExe = 'C:\Python312\python.exe'
+$CodexSkillsRoot = Join-Path $env:USERPROFILE '.codex\skills'
+
+powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\07_自动维护工作流\install.ps1" `
+  -ProjectRoot $ProjectRoot `
+  -PythonExe $PythonExe `
+  -CodexSkillsRoot $CodexSkillsRoot
+```
+
+参数严格为 `-ProjectRoot -PythonExe [-CodexSkillsRoot]`。省略 `-CodexSkillsRoot` 时，安装器只使用 `CODEX_HOME\skills`；若未设置 `CODEX_HOME`，使用当前 Windows 用户配置目录下的 `.codex\skills`，不猜测用户名或缓存布局。
+
+安装器执行以下幂等操作：
+
+- 在本目录创建或复用 `.venv`；
+- 按 `requirements.txt` 的精确版本安装依赖，并执行 editable install；
+- 将 `skill/university-skill-library-maintainer` 安装或更新到指定 Codex Skills 根目录；
+- 仅补齐缺失的 `workflow-settings.toml`、`ledger`、`ledger/archive` 和 `output`；
+- 配置首次创建时保持 `enabled=false`、`mode="manual"`，既有配置绝不覆盖；
+- 最后运行 `doctor`；不创建、不更新、不启用任何自动任务。
+
+安装完成后重新打开 Codex 任务，使 Skill 加载器读取更新后的包。项目自带的 `workspace_renderer.py`、`pdf_renderer.py` 和依赖定义必须随工作流一起保留。
+
+## 命令与退出码
+
+以下示例使用安装后的项目 Python，且所有命令都要求显式 `--project-root`：
+
+```powershell
+$CliPython = "$ProjectRoot\07_自动维护工作流\.venv\Scripts\python.exe"
+& $CliPython -m skill_maintainer.cli status --project-root $ProjectRoot
+```
+
+公开命令固定为：
+
+| 命令 | 作用 |
+|---|---|
+| `setup` | 仅补齐缺失结构和默认禁用/手动配置；可用 `--codex-skills-root` 更新 Skill |
+| `import-existing` | 保守盘点既有交付，或在指定暂存路径生成首次导入候选 |
+| `doctor` | 检查 Python、Word、Excel、`gh`、规则、台账、设置、renderer 和生产驱动 |
+| `edit-settings` | 打开中文 TOML 设置编辑器 |
+| `apply-settings` | 只校验设置并输出 schedule、prompt、配置 SHA-256 和自动任务动作计划 |
+| `run-now` | 同一受信进程内执行 prepare → 人工审核 → Office/逐页审核 → finalize |
+| `scheduled-run` | 供已绑定配置哈希的自动任务调用同一完整协议 |
+| `status` | 查看计划预览、最近运行、最新交付与生产驱动状态 |
+| `repair-ledger` | 只列有效备份；明确选择后生成恢复候选，不覆盖主台账 |
+| `rebuild-report` | 只读当前主台账、零网络重建 Word/Excel 报告 |
+
+退出码含义固定：`0` 成功，`1` 操作失败，`2` 输入或配置无效，`3` 安全无操作。内部 `prepare`、`apply-reviews`、`finalize` 不能跨进程单独调用；CLI 会拒绝重建运行时 capability。
+
+## 首次导入既有交付
+
+先只做盘点，不写台账：
+
+```powershell
+& $CliPython -m skill_maintainer.cli import-existing --project-root $ProjectRoot --inventory-only
+```
+
+确认文件数、重复组、Word 不确定项和 Word/Excel 数量差异后，才可显式输出到 `ledger\staging` 下的全新文件：
+
+```powershell
+$Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入候选.xlsx"
+& $CliPython -m skill_maintainer.cli import-existing --project-root $ProjectRoot --output $Candidate
+```
+
+默认不带 `--inventory-only` 或 `--output` 时返回安全无操作。输出已存在、路径不在暂存区或解析存在不确定性时，不得自动覆盖正式主台账；必须由用户核查后决定后续处理。
+
+## 编辑并应用运行设置
+
+```powershell
+& $CliPython -m skill_maintainer.cli edit-settings --project-root $ProjectRoot
+& $CliPython -m skill_maintainer.cli apply-settings --project-root $ProjectRoot
+```
+
+可修改 `workflow.enabled`、`schedule.mode` 和 `schedule.start_time`，以及周、月或间隔参数。运行频率与启动时间都在 `workflow-settings.toml` 中设置，不使用 `.xlsx` 作为配置文件。
+
+`apply-settings` 绝不直接写原始自动任务，也不声称已经应用。它只返回经过验证的 schedule、渲染 prompt、TOML SHA-256、动作计划和“必须回读”标记。随后必须由 Task 12 Skill 调用 Codex 应用的自动任务更新能力，并回读核对项目根、计划、提示词和配置哈希。当前生产发现驱动未就绪，动作计划为启用时会失败；不要创建自动任务。
+
+## 手动运行与长驻双闸协议
+
+生产驱动接通后，Codex Skill 才可调用：
+
+```powershell
+& $CliPython -m skill_maintainer.cli run-now --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
+```
+
+该命令保持一个进程存活：`prepare` 后输出一行 JSON 并等待逐候选结构化决定；`apply_reviews` 后完成报告和 Office 验证，在 Word 页面 PNG 就绪后再次输出一行 JSON 并等待每页决定；最后才 `finalize`。任一决定缺失、重复、哈希不绑定、页面拒绝、标准输入 EOF 或验证失败，都清理锁与未提交暂存，保留旧主台账和旧交付。
+
+CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证据和已批准的规则字段。
+
+## 状态、诊断、备份与重建
+
+```powershell
+& $CliPython -m skill_maintainer.cli doctor --project-root $ProjectRoot
+& $CliPython -m skill_maintainer.cli status --project-root $ProjectRoot
+& $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot
+& $CliPython -m skill_maintainer.cli rebuild-report --project-root $ProjectRoot
+```
+
+`doctor` 不从 PATH、固定用户名或 Codex 缓存布局猜测 renderer。只有在当前 Codex 环境取得工作区依赖加载器真实文本后，才可传入 `--loader-output` 验证 loader-bound renderer 前置条件。
+
+`repair-ledger` 首次调用只列出命名和内容均有效的归档备份，并返回安全无操作。用户明确选定其中一个后再运行：
+
+```powershell
+& $CliPython -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot --backup 'D:\...\ledger\archive\Skills主台账_20260829_010203.xlsx'
+```
+
+命令只在 `ledger\recovery` 生成新的“恢复候选”，不会自动替换 `ledger\Skills主台账.xlsx`。`rebuild-report` 严格只读当前主台账、零网络，不重新发现候选；可用 `--output` 指定项目内全新输出目录，已有目标拒绝覆盖。
+
+## 迁移到另一台机器
+
+1. 停用并回读确认旧机器上的项目自动任务不存在。
+2. 关闭写入进程，复制完整项目目录，包括规则、工作流、主台账、归档和交付；不要复制正在运行的锁或自行拼接零散文件。
+3. 在新机器用新绝对路径再次运行 `install.ps1`。`.venv` 应由新机器重新建立；如复制包中含旧 `.venv`，先由用户确认并安全移除后再安装。
+4. 运行 `doctor`、`status`，重新取得该机器的真实 loader 输出，并执行 `apply-settings` 生成新路径绑定和配置 SHA-256。
+5. 只有 Task 14 生产驱动验收通过且全部诊断通过后，才由 Codex 应用更新并回读自动任务。
+
+文件本身就是可迁移状态；没有需要搬迁的数据库。
+
+## 停用与卸载
+
+停用时把 `workflow.enabled` 设为 `false`、`schedule.mode` 设为 `manual`，运行 `apply-settings`，再由 Codex 应用删除本项目自动任务并回读确认不存在。
+
+卸载前保留 `ledger\Skills主台账.xlsx`、`ledger\archive` 和需要的 `output`。确认没有进程持有工作流后，可由用户删除项目内 `.venv`，以及 Codex Skills 根目录中的 `university-skill-library-maintainer`。不要删除规则、主台账、归档或既有交付；installer 与 CLI 均不会自动执行这些删除操作。
