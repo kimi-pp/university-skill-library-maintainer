@@ -7,11 +7,13 @@
 仓库默认以私有方式发布。登录有权限的 GitHub 账号后，可以选择以下任一方式下载：
 
 ```powershell
-git clone https://github.com/kimi-pp/university-skill-library-maintainer.git
+git -c core.longpaths=true clone https://github.com/kimi-pp/university-skill-library-maintainer.git
 Set-Location .\university-skill-library-maintainer
 ```
 
-也可以在 GitHub 仓库页面选择 **Code → Download ZIP**，解压后进入项目根目录。
+这里的 `-c core.longpaths=true` 只对本次 Git 命令生效，不修改用户的全局 Git 配置。仓库包含较深的历史快照路径，Windows 下不要省略该参数。
+
+也可以在 GitHub 仓库页面选择 **Code → Download ZIP**。使用 ZIP 时须确认 Windows 已启用长路径支持，并用支持长路径的解压工具解压到较短目录（例如 `D:\SkillLibrary`）；否则建议使用上面的 Git 命令。
 
 运行环境要求：Windows 10/11、64 位 Python 3.11–3.13、Microsoft Word/Excel 桌面版、GitHub CLI，以及 Codex 桌面应用。首次安装前请确认 Python 可执行文件的真实路径：
 
