@@ -11,7 +11,15 @@
 
 ## 阶段与证据
 
-`prepare` 只产生暂存台账、固定来源快照、评审包和候选交付。评审必须绑定固定版本内容指纹、证据清单与本轮 run ID。`apply-reviews` 只从标准输入读取结构化决定。`finalize` 必须通过单写者锁、台账一致性、Office 实际复读、逐页视觉决定和原子发布事务。
+`run-now` 与 `scheduled-run` 必须在同一长驻进程内持有单写者锁和瞬态 capability，顺序固定为：
+
+1. `prepare` 在本轮私有暂存目录获取来源证据与固定包，发出 `material_review_required`；
+2. Codex 只读检查固定包并回传与 run ID、版本、canonical source、内容哈希精确绑定的 `material_observations`；
+3. 进程消费仍在内存中的快照 capability，构建可信 ReviewPacket，再发出 `review_required`；
+4. Codex 依据项目规则与专业六维画像回传项目判断和 ledger row；
+5. `finalize` 完成 Office 复读并发出逐页视觉闸，批准后才原子发布。
+
+不得跨进程调用 `prepare`、`apply-reviews`、`finalize`，不得从磁盘恢复 capability。市场元数据或搜索响应 JSON 不得冒充 Skill 固定包；无法取得完整固定包的市场或 Hugging Face 条目只进入候选观察。
 
 任一证据缺失、身份或哈希变化、Office 复读失败、逐页拒绝或发布冲突都保留旧 authority，不得留下半提交代次。
 

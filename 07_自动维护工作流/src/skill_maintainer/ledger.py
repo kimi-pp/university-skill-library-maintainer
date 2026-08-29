@@ -240,6 +240,25 @@ class LedgerStore:
                 return
         self.append_rows(spec.name, [row])
 
+    def upsert_candidate_observation(self, row: Mapping[str, Any]) -> None:
+        """Keep a deterministic observation idempotent while allowing later facts to refresh it."""
+        observation_id = row.get("观察标识")
+        if not observation_id:
+            raise ValueError("候选观察 upsert 需要观察标识")
+        spec = self._spec("候选观察")
+        unknown = set(row) - set(spec.columns)
+        if unknown:
+            raise KeyError(f"候选观察 包含未知字段：{sorted(unknown)}")
+        columns = self._resolve_columns(spec.name)
+        worksheet = self.workbook[spec.name]
+        for row_number in range(2, worksheet.max_row + 1):
+            if worksheet.cell(row_number, columns["观察标识"]).value == observation_id:
+                for column_name in spec.columns:
+                    if column_name in row:
+                        self._set_cell(worksheet.cell(row_number, columns[column_name]), row[column_name], column_name)
+                return
+        self.append_rows(spec.name, [row])
+
     def validate(self) -> list[str]:
         errors: list[str] = []
         current_skill_rows: list[dict[str, Any]] | None = None

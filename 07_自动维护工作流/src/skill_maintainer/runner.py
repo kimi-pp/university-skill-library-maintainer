@@ -49,6 +49,7 @@ class SourceRun:
     query: str = "__run__"
     evidence_files: tuple[Path, ...] = ()
     request_events: tuple[SourceRequestEvent, ...] = ()
+    watermark_updates: tuple[tuple[str, str], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -59,6 +60,7 @@ class RunRequest:
     expected_config_sha: str | None = None
     requested_run_id: str | None = None
     review_packets: Mapping[str, object] = field(default_factory=dict)
+    material_reviewer: object | None = field(default=None, repr=False, compare=False)
 
 
 @dataclass(frozen=True)
@@ -106,6 +108,7 @@ class _State:
     source_digest: str
     review_packets: Mapping[str, object]
     evidence_identity: tuple[tuple[Path, str, tuple[int, int, int, int]], ...]
+    packets_bound: bool = False
     version_proposals: dict[str, Mapping[str, object]] = field(default_factory=dict)
     output_digest: str = ""
     owned_generation: Path | None = None
@@ -195,6 +198,7 @@ class RunCoordinator:
             self._states[run_id] = _State(
                 prepared, request, lock, _sha256(self.paths.ledger), _stat_identity(self.paths.ledger), self._tree_digest(staging_dir),
                 self._object_digest(captured_catalog), self._object_digest(source_runs), dict(request.review_packets), evidence_identity,
+                packets_bound=bool(request.review_packets),
                 output_digest=self._output_digest(),
             )
             return prepared
@@ -233,6 +237,7 @@ class RunCoordinator:
         except BaseException:
             self._fail_terminal(state)
             raise
+
         try:
             ledger = LedgerStore.load(prepared.staging_ledger)
             receipts: tuple[object, ...] = ()
@@ -242,7 +247,10 @@ class RunCoordinator:
                 payload = {"decisions": [self._decision_mapping(decision)]}
                 stream = io.BytesIO(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
                 packets = {decision.candidate_id: state.review_packets.get(decision.candidate_id)}
-                if decision.candidate_id in existing_ids:
+                if (
+                    decision.candidate_id in existing_ids
+                    and decision.project_judgments.record_tier == "正式推荐"
+                ):
                     shadow = prepared.staging_dir / f".version-review-{uuid.uuid4().hex}.xlsx"
                     shutil.copyfile(prepared.staging_ledger, shadow)
                     shadow_ledger = LedgerStore.load(shadow)
@@ -266,6 +274,16 @@ class RunCoordinator:
         except BaseException:
             self._fail_terminal(state)
             raise
+
+    def bind_review_packets(self, prepared: PreparedRun, packets: Mapping[str, object]) -> None:
+        """Bind same-process trusted packets after the fixed-material observation gate."""
+        state = self._state_for(prepared, allowed=("prepared",))
+        if state.packets_bound:
+            raise CoordinatorError("当前运行已绑定审查包，不得替换")
+        if not isinstance(packets, Mapping) or any(not str(key).strip() for key in packets):
+            raise CoordinatorError("审查包映射必须使用非空候选标识")
+        state.review_packets = dict(packets)
+        state.packets_bound = True
 
     def finalize(self, prepared: PreparedRun, reviews: ReviewApplySummary) -> RunSummary:
         state = self._state_for(prepared, allowed=("prepared", "reviews_applied"))
@@ -607,13 +625,36 @@ class RunCoordinator:
         result = deduplicate(candidates, ledger) if candidates else None
         if result is not None:
             observed = {str(row.get("观察标识") or "") for row in ledger.rows("候选观察")}
+            current_ids = {str(row.get("内部标识") or "") for row in ledger.rows("当前Skill")}
             today = datetime.now().date().isoformat()
             pending: list[dict[str, object]] = []
+            specially_observed: set[str] = set()
+            for skill in result.skills:
+                status = str(skill.get("observation_status") or "").strip()
+                if not status:
+                    continue
+                canonical = str(skill.get("Canonical source") or skill.get("canonical_source") or "").strip()
+                stable = str(skill.get("内部标识") or "").strip()
+                reason_code = str(skill.get("observation_reason_code") or "explicit-observation").strip()
+                reason = str(skill.get("observation_reason") or "需要人工复核").strip()
+                observation_id = f"observation-{sha256((stable + '|' + canonical + '|' + reason_code).encode('utf-8')).hexdigest()[:20]}"
+                specially_observed.add(stable)
+                if observation_id not in observed:
+                    pending.append({
+                        "观察标识": observation_id,
+                        "候选名称": str(skill.get("Skill名称") or skill.get("name") or stable),
+                        "Canonical source": canonical,
+                        "观察状态": status,
+                        "许可证": str(skill.get("许可证") or "待确认"),
+                        "记录日期": str(skill.get("observed_on") or today),
+                        "原因": reason,
+                    })
+                    observed.add(observation_id)
             for skill in result.skills:
                 canonical = str(skill.get("Canonical source") or skill.get("canonical_source") or "").strip()
                 stable = str(skill.get("内部标识") or "").strip()
                 observation_id = f"discovered-{sha256((stable + '|' + canonical).encode('utf-8')).hexdigest()[:20]}"
-                if observation_id not in observed:
+                if stable not in current_ids and stable not in specially_observed and observation_id not in observed:
                     pending.append({"观察标识": observation_id, "候选名称": str(skill.get("Skill名称") or skill.get("name") or stable),
                         "Canonical source": canonical, "观察状态": "待审查", "许可证": str(skill.get("许可证") or "待确认"),
                         "记录日期": today, "原因": "发现的规范候选；未完成 Task 7 审查，不进入当前Skill"})
@@ -630,7 +671,6 @@ class RunCoordinator:
             if pending:
                 ledger.append_rows("候选观察", pending)
             existing = {str(row.get("别名标识") or "") for row in ledger.rows("来源别名")}
-            current_ids = {str(row.get("内部标识") or "") for row in ledger.rows("当前Skill")}
             aliases = [row for row in result.aliases if row["别名标识"] not in existing and row["内部标识"] in current_ids]
             if aliases:
                 ledger.append_rows("来源别名", aliases)
@@ -638,8 +678,12 @@ class RunCoordinator:
         # openpyxl stores Excel's timezone-naive serial dates; source adapters normalize on read.
         now = datetime.now()
         for run in source_runs:
-            if run.status == "complete" and run.watermark:
-                watermarks.write(Watermark(run.platform, run.query, now, run.watermark, "本轮完整覆盖"))
+            if run.status == "complete":
+                if run.watermark_updates:
+                    for query, marker in run.watermark_updates:
+                        watermarks.write(Watermark(run.platform, query, now, marker, "本轮完整覆盖"))
+                elif run.watermark:
+                    watermarks.write(Watermark(run.platform, run.query, now, run.watermark, "本轮完整覆盖"))
 
     def _apply_version_transactions(self, ledger: LedgerStore, state: _State, reviews: ReviewApplySummary) -> None:
         receipts_by_id = {getattr(receipt, "candidate_id", ""): receipt for receipt in reviews.receipts}

@@ -4,13 +4,11 @@
 
 ## 当前启用边界
 
-Task 13 已提供安装、诊断、设置、状态、修复、离线重建和同进程双闸运行协议。但四个平台的生产发现驱动尚未接通：市场元数据不能冒充固定版本 Skill 包，也不能绕过固定上游快照生成受信 ReviewPacket。因此，在 Task 14 完成生产驱动验收前：
+四个平台的生产发现驱动已经接通并通过离线端到端验收。它按固定顺序检索 SkillHub、ClawHub、GitHub、Hugging Face Spaces；由已批准目录和 Excel 中的六维任务画像生成查询，执行水位增量或到期全量复核，并保存每个来源的真实请求、证据与状态。单一来源故障时继续其余来源；全部来源失败时关闭失败。全局去重后，同一 Skill 只保留一个稳定 ID。
 
-- `doctor` 和 `status` 会明确显示“生产发现驱动未配置”；
-- `run-now`、`scheduled-run` 会在 `prepare` 之前以操作失败退出，不联网、不创建暂存运行；
-- 不得启用或创建自动任务，不能宣称自动维护已可投产。
+生产运行仍保持人工、禁用状态：`workflow.enabled=false`、`schedule.mode="manual"`。安装、诊断和本轮验收不会创建、更新或启用自动任务；只有用户另行明确批准、全部诊断通过并由 Codex 应用更新能力回读核对后，才可改变该状态。候选 Skill 始终只做静态读取，不安装、不执行。
 
-这项限制不影响安装检查、既有交付盘点、TOML 编辑、台账备份检查或严格离线的报告重建。
+市场元数据只能作为候选观察材料。只有可追溯到规范上游且取得完整固定包的候选才可进入固定包审查；GitHub 包必须固定到 commit SHA。不能取得完整固定包的 SkillHub、ClawHub 或 Hugging Face 条目只进入待审查或条件观察，并写明原因，不能生成受信 ReviewPacket，也不能正式纳入。
 
 ## 前置条件
 
@@ -72,7 +70,7 @@ $CliPython = "$ProjectRoot\07_自动维护工作流\.venv\Scripts\python.exe"
 |---|---|
 | `setup` | 仅补齐缺失结构和默认禁用/手动配置；可用 `--codex-skills-root` 更新 Skill |
 | `import-existing` | 保守盘点既有交付，或在指定暂存路径生成首次导入候选 |
-| `doctor` | 检查 Python、Word、Excel、`gh`、规则、台账、设置、renderer 和生产驱动 |
+| `doctor` | 检查 Python、Word、Excel、`gh`、规则、台账、设置、renderer 和生产驱动；加 `--network` 时只读探测四个平台和教育部目录来源 |
 | `edit-settings` | 打开中文 TOML 设置编辑器 |
 | `apply-settings` | 只校验设置并输出 schedule、prompt、配置 SHA-256 和自动任务动作计划 |
 | `run-now` | 同一受信进程内执行 prepare → 人工审核 → Office/逐页审核 → finalize |
@@ -109,17 +107,23 @@ $Candidate = "$ProjectRoot\07_自动维护工作流\ledger\staging\首次导入�
 
 可修改 `workflow.enabled`、`schedule.mode` 和 `schedule.start_time`，以及周、月或间隔参数。运行频率与启动时间都在 `workflow-settings.toml` 中设置，不使用 `.xlsx` 作为配置文件。
 
-`apply-settings` 绝不直接写原始自动任务，也不声称已经应用。它只返回经过验证的 schedule、渲染 prompt、TOML SHA-256、完整 doctor 结果、动作计划和“必须回读”标记。`production_ready` 同时要求 Windows、Python、`gh`、Word、Excel、五项规则、设置、台账、真实 loader-bound renderer 和可调用的生产驱动全部通过，不能只依据驱动工厂存在。随后必须由 Task 12 Skill 调用 Codex 应用的自动任务更新能力，并回读核对项目根、计划、提示词和配置哈希。当前生产发现驱动未就绪，动作计划为启用时会失败；不要创建自动任务。
+`apply-settings` 绝不直接写原始自动任务，也不声称已经应用。它只返回经过验证的 schedule、渲染 prompt、TOML SHA-256、完整 doctor 结果、动作计划和“必须回读”标记。`production_ready` 同时要求 Windows、Python、`gh`、Word、Excel、五项规则、设置、台账、真实 loader-bound renderer 和可调用的生产驱动全部通过，不能只依据驱动工厂存在。随后必须由 Task 12 Skill 调用 Codex 应用的自动任务更新能力，并回读核对项目根、计划、提示词和配置哈希。默认禁用、手动设置不会自行创建自动任务。
 
-## 手动运行与长驻双闸协议
+## 手动运行与长驻三闸协议
 
-生产驱动接通后，Codex Skill 才可调用：
+完成安装和诊断后，Codex Skill 可在用户明确要求时调用：
 
 ```powershell
 & $CliPython -I -m skill_maintainer.cli run-now --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 ```
 
-该命令保持一个进程存活：`prepare` 后输出一行 JSON 并等待逐候选结构化决定；`apply_reviews` 后完成报告和 Office 验证，在 Word 页面 PNG 就绪后再次输出一行 JSON 并等待每页决定；最后才 `finalize`。任一决定缺失、重复、哈希不绑定、页面拒绝、标准输入 EOF、`KeyboardInterrupt`、`SystemExit` 或其他失败，都终态清理未提交暂存和锁；清理诊断只附注原异常，不会掩盖它。发布线性化已经成功时不会误删已提交主台账或 generation。
+该命令保持一个受信进程存活，不能跨进程从磁盘恢复 capability：
+
+1. `prepare` 在锁内为本轮建立私有暂存，发现候选并为可固定候选创建不可变快照；随后输出 `material_review_required`，包含逐包路径、SHA-256 和绑定标识。
+2. Codex 只读固定包和规则，回传许可证、安全、规范上游等可观察事实。进程校验事实与本轮包的精确绑定后，才在内存中构建受信 ReviewPacket，并输出 `review_required`。Codex 再依据专业核心任务映射、项目规则和固定证据回传 `formal`、`condition`、`adaptation` 或拒绝决定；程序不以名称关键词替代专业判断。
+3. 程序生成 Excel/Word，经真实 Office 打开后把 Word 转为 PDF 和逐页 PNG，输出 `page_review_required`。Codex逐页确认后，程序才执行 `finalize` 和原子发布。
+
+无固定包的候选仍记录来源覆盖与条件观察，但不能进入正式层。任一事实或决定缺失、重复、哈希不绑定、页面拒绝、标准输入 EOF、`KeyboardInterrupt`、`SystemExit` 或其他失败，都终态清理未提交暂存和锁；清理诊断只附注原异常，不会掩盖它。发布线性化已经成功时不会误删已提交主台账或 generation。
 
 CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证据和已批准的规则字段。
 
@@ -127,10 +131,13 @@ CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证�
 
 ```powershell
 & $CliPython -I -m skill_maintainer.cli doctor --project-root $ProjectRoot
+& $CliPython -I -m skill_maintainer.cli doctor --project-root $ProjectRoot --network
 & $CliPython -I -m skill_maintainer.cli status --project-root $ProjectRoot --loader-output '<工作区依赖加载器的原始返回文本>'
 & $CliPython -I -m skill_maintainer.cli repair-ledger --project-root $ProjectRoot
 & $CliPython -I -m skill_maintainer.cli rebuild-report --project-root $ProjectRoot
 ```
+
+`doctor --network` 严格只读，每个来源最多访问一个搜索页或探测端点，并另访问一次 Excel 目录基线中唯一的教育部 HTTPS 地址；它不下载 Skill 快照、不生成 ReviewPacket、不写台账或候选。真实端点失败会如实返回 `PARTIAL`，不会伪报通过，也不会改变离线验收结果。
 
 `doctor`、`status` 和 `apply-settings` 不从 PATH、固定用户名或 Codex 缓存布局猜测 renderer。只有在当前 Codex 环境取得工作区依赖加载器真实文本后，才可传入 `--loader-output` 验证 loader-bound renderer 前置条件。`status` 的“最新交付”只取最后一条成功运行记录绑定的 generation，并重新验证项目内包含关系、普通文件树、manifest SHA-256、delivery SHA-256 和 authority 文件集合；任意目录或篡改 generation 只会得到明确错误和 `latest_output=null`。
 
@@ -148,7 +155,7 @@ CLI 本身从不执行候选。Codex 只可静态读取固定版本快照、证�
 2. 关闭写入进程，复制完整项目目录，包括规则、工作流、主台账、归档和交付；不要复制正在运行的锁或自行拼接零散文件。
 3. 在新机器用新绝对路径再次运行 `install.ps1`。editable 链接绑定当前机器的项目路径，不能沿用旧机器链接；`.venv` 应由新机器重新建立。如复制包中含旧 `.venv`，先由用户确认并安全移除后再安装。
 4. 运行 `doctor`、`status`，重新取得该机器的真实 loader 输出，并执行 `apply-settings` 生成新路径绑定和配置 SHA-256。
-5. 只有 Task 14 生产驱动验收通过且全部诊断通过后，才由 Codex 应用更新并回读自动任务。
+5. 保持默认禁用和手动模式；只有用户另行明确批准且全部诊断通过后，才由 Codex 应用更新并回读自动任务。
 
 文件本身就是可迁移状态；没有需要搬迁的数据库。
 

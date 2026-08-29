@@ -112,9 +112,9 @@ class SkillContractTest(unittest.TestCase):
     def test_scheduled_run_contract_is_exact_and_fail_closed(self):
         text = self.read(SKILL_PATH)
         sequence = (
-            "读取规则 → 校验配置哈希 → doctor → prepare → 审核固定证据 → "
-            "通过标准输入应用评审 → finalize → 检查每一张 Word 页面图像 → "
-            "批准或拒绝发布 → 仅在有变化或失败时通知"
+            "读取规则 → 校验配置哈希 → doctor → 同一长驻进程 prepare → "
+            "材料事实观察 → 项目评审决定 → finalize → 逐页视觉决定 → "
+            "原子发布 → 仅在有变化或失败时通知"
         )
         self.assertIn(sequence, text)
         for blocker in (
@@ -461,6 +461,22 @@ class ProjectPdfRendererCliTest(unittest.TestCase):
         self.assertTrue(result.stderr.startswith("renderer-error:"), result.stderr)
         self.assertEqual(sentinel.read_text(encoding="utf-8"), "keep")
         self.assertEqual(tuple(self.output.iterdir()), (sentinel,))
+
+    def test_output_directory_may_contain_the_exact_word_com_input_pdf(self):
+        module = importlib.import_module("skill_maintainer.pdf_renderer")
+        word_pdf = self.output / "word.office.pdf"
+        self.pdf.replace(word_pdf)
+        argv = [
+            "--python-packages", str(self.packages),
+            "--pdftoppm", str(self.pdftoppm),
+            "--pdf", str(word_pdf),
+            "--output-dir", str(self.output),
+        ]
+        with patch.object(
+            module, "_extend_package_path", side_effect=RuntimeError("reached-loader")
+        ), self.assertRaisesRegex(RuntimeError, "reached-loader"):
+            module.render(argv)
+        self.assertEqual(tuple(self.output.iterdir()), (word_pdf,))
 
     def test_package_lib_reparse_is_rejected_before_import_or_sys_path_change(self):
         module = importlib.import_module("skill_maintainer.pdf_renderer")

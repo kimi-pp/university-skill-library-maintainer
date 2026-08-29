@@ -21,7 +21,7 @@ class _Parser(argparse.ArgumentParser):
 
 
 def render(argv: list[str] | None = None) -> dict[str, list[dict[str, Any]]]:
-    """Render an ordinary absolute PDF into an existing empty ordinary directory."""
+    """Render an ordinary PDF into an empty directory or beside that exact input PDF."""
     parser = _Parser(add_help=False)
     parser.add_argument("--python-packages", required=True)
     parser.add_argument("--pdftoppm", required=True)
@@ -38,8 +38,13 @@ def render(argv: list[str] | None = None) -> dict[str, list[dict[str, Any]]]:
     if pdf.suffix.lower() != ".pdf":
         raise PdfRendererError("输入文件扩展名必须为 .pdf")
     output = _ordinary_directory(_absolute(args.output_dir, "output-dir"), "output-dir")
-    if any(output.iterdir()):
-        raise PdfRendererError("输出目录必须为空")
+    existing = tuple(output.iterdir())
+    if existing and not (
+        len(existing) == 1
+        and not _is_link_or_reparse(existing[0])
+        and existing[0].absolute() == pdf
+    ):
+        raise PdfRendererError("输出目录只能为空，或仅包含本次 Word COM 生成的输入 PDF")
 
     _extend_package_path(packages)
     try:

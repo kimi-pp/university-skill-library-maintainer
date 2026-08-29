@@ -53,17 +53,19 @@ description: Use when operating, scheduling, inspecting, repairing, or rebuildin
 
 严格采用这一条链：
 
-读取规则 → 校验配置哈希 → doctor → prepare → 审核固定证据 → 通过标准输入应用评审 → finalize → 检查每一张 Word 页面图像 → 批准或拒绝发布 → 仅在有变化或失败时通知
+读取规则 → 校验配置哈希 → doctor → 同一长驻进程 prepare → 材料事实观察 → 项目评审决定 → finalize → 逐页视觉决定 → 原子发布 → 仅在有变化或失败时通知
 
 执行细则：
 
 1. 从自动任务提示词取得绝对项目根、绝对 TOML 路径和已应用 SHA-256；重新解析普通路径并重算哈希。
 2. 遇到配置哈希不一致、`enabled=false`、`mode=manual`、主台账无效，或重建范围前专业目录门发生变化，立即停止且不发布。
-3. `doctor` 通过后运行 `prepare`。只审核其固定版本快照和证据包，不浏览会漂移的默认分支来替代证据。
-4. 把逐项评审决定作为标准输入传给 `apply-reviews`；不要通过命令行参数、临时业务数据库或自由文本旁路提交。
-5. 调用工作区依赖加载器，把其原始返回文本和绝对项目根传给 `build_workspace_renderer_command(loader_output, project_root)`。该接口只读取加载器明确返回的 Python、Python packages、override binaries 和 fallback binaries，验证普通路径并解析其中固定的 Poppler 包装入口，再用项目自带 `pdf_renderer.py` 构造 Task 11 的 `RendererCommand.argv`。把该命令交给 `finalize`；不得从 PATH、用户名或缓存布局猜测路径。
-6. 逐张检查最新生成的 Word `page-<N>.png`，对每页明确批准或拒绝。缺页、空白页、裁切、表格越界、页脚重叠或哈希不一致均拒绝发布。
-7. 完全无变化且成功时静默结束。只在变化、人工决定事项、覆盖显著下降或失败时通知。
+3. `doctor` 通过后启动一次 `run-now` 或 `scheduled-run`，并保持同一长驻进程直到终态。不得跨进程执行或把 `prepare`、`apply-reviews`、`finalize` 拆成独立命令，也不得从磁盘恢复审查 capability。
+4. 收到 `material_review_required` 后，只读检查其中列出的固定包路径、固定版本、内容哈希、来源证据和静态文件；市场元数据、搜索响应 JSON 和未固定默认分支不是 Skill 内容。按当前 run ID 精确回传 `material_observations`，逐项给出许可证与安全事实。无完整固定包的候选只保留观察，不构造事实或 ReviewPacket。
+5. 程序用仍存活的快照 capability 构建并绑定可信 ReviewPacket 后，才会发出 `review_required`。依据项目规则、固定证据和六维专业任务画像回传专业相关性、层级、分数及完整 ledger row；名称关键词不能替代专业任务判断。
+6. 把材料事实与项目判断分别保存在上述两个结构化标准输入帧中；不要通过命令行参数、临时业务数据库或自由文本旁路提交。
+7. 调用工作区依赖加载器，把其原始返回文本和绝对项目根传给 `build_workspace_renderer_command(loader_output, project_root)`。该接口只读取加载器明确返回的 Python、Python packages、override binaries 和 fallback binaries，验证普通路径并解析其中固定的 Poppler 包装入口，再用项目自带 `pdf_renderer.py` 构造 Task 11 的 `RendererCommand.argv`。把该命令交给 `finalize`；不得从 PATH、用户名或缓存布局猜测路径。
+8. 收到 `word_visual_review_required` 后逐张检查最新生成的 Word `page-<N>.png`，对每页明确批准或拒绝。缺页、空白页、裁切、表格越界、页脚重叠或哈希不一致均拒绝发布。
+9. EOF、异常或任一闸失败时让同一进程清理 capability、暂存和锁。完全无变化且成功时静默结束；只在变化、人工决定事项、覆盖显著下降或失败时通知。
 
 `interval` 模式仍只建立每天在 `start_time` 触发的分发器；`scheduled-run` 从 Excel `运行记录` 读取上次成功时间，未满 `interval_days` 时以安全无操作码 3 退出。
 

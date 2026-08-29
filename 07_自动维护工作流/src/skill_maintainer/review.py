@@ -269,7 +269,7 @@ def apply_reviews_from_stream(
         if row is not None and decision.project_judgments.record_tier == "正式推荐":
             staged_ledger.upsert_skill(decision.derived_fields.ledger_row)
         elif row is not None:
-            staged_ledger.append_rows("候选观察", [row])
+            staged_ledger.upsert_candidate_observation(row)
         if decision.project_judgments.record_tier == "正式推荐":
             receipts.append(_issue_applied_review(decision, review_packets[decision.candidate_id]))
     return tuple(receipts)

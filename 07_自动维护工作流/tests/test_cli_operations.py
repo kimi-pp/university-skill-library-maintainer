@@ -593,7 +593,7 @@ class CliOperationsTest(unittest.TestCase):
         production = cli.doctor_project(self.root, environment=environment)
         self.assertEqual(production.exit_code, 1)
         self.assertIn("Windows", " ".join(production.errors))
-        self.assertIn("生产发现驱动未配置", " ".join(production.errors))
+        self.assertEqual(production.checks["production_driver"], "已配置")
 
     def test_doctor_fails_when_any_required_dependency_or_rule_is_missing(self):
         workflow = self._setup_project()
@@ -666,12 +666,12 @@ class CliOperationsTest(unittest.TestCase):
                     code = cli.main(arguments)
                 self.assertEqual(code, 2, output.getvalue())
 
-    def test_status_reports_driver_not_ready_and_import_defaults_to_safe_noop(self):
+    def test_status_reports_driver_configured_but_environment_not_ready_and_import_defaults_to_safe_noop(self):
         self._setup_project()
         (self.root / "05_交付物").mkdir()
         status = cli.status_project(self.root)
         self.assertFalse(status["production_ready"])
-        self.assertEqual(status["production_driver"], "生产发现驱动未配置")
+        self.assertEqual(status["production_driver"], "已配置")
         output = io.StringIO()
         with redirect_stdout(output):
             code = cli.main(["import-existing", "--project-root", str(self.root)])
@@ -1223,18 +1223,21 @@ class CliOperationsTest(unittest.TestCase):
         )
         self.assertFalse(any((workflow / ".runtime" / "staging").iterdir()))
 
-    def test_public_run_commands_fail_before_prepare_when_production_driver_is_unavailable(self):
+    def test_public_run_commands_fail_before_prepare_when_runtime_inputs_are_missing(self):
         workflow = self._setup_project()
-        for command in ("run-now", "scheduled-run"):
-            with self.subTest(command=command):
-                output = io.StringIO()
-                with redirect_stdout(output):
-                    code = cli.main([command, "--project-root", str(self.root)])
-                self.assertEqual(code, 1)
-                payload = json.loads(output.getvalue().splitlines()[-1])
-                self.assertEqual(payload["type"], "run_failed")
-                self.assertIn("生产发现驱动未配置", payload["error"])
-                self.assertFalse((workflow / ".runtime").exists())
+        output = io.StringIO()
+        with redirect_stdout(output):
+            code = cli.main(["run-now", "--project-root", str(self.root)])
+        self.assertEqual(code, 1)
+        payload = json.loads(output.getvalue().splitlines()[-1])
+        self.assertEqual(payload["type"], "run_failed")
+        self.assertIn("加载器", payload["error"])
+        output = io.StringIO()
+        with redirect_stdout(output):
+            code = cli.main(["scheduled-run", "--project-root", str(self.root)])
+        self.assertEqual(code, 2)
+        self.assertIn("SHA-256", json.loads(output.getvalue().splitlines()[-1])["error"])
+        self.assertFalse((workflow / ".runtime").exists())
 
     def test_independent_stage_commands_refuse_cross_process_capability_reconstruction(self):
         self._setup_project()

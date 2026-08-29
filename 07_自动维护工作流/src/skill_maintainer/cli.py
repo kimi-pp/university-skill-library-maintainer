@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import asdict, dataclass, is_dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 from io import BytesIO
 import json
@@ -16,6 +16,7 @@ import subprocess
 import sys
 import tempfile
 import uuid
+from zoneinfo import ZoneInfo
 from typing import Callable, Iterable, Mapping, TextIO
 from zipfile import BadZipFile
 
@@ -41,6 +42,7 @@ from .runner import CoordinatorError, RunCoordinator, RunRequest
 from .scheduling import next_run_at, schedule_preview
 from .settings import SettingsError, load_settings, settings_sha256
 from .workspace_renderer import WorkspaceRendererError, build_workspace_renderer_command
+from .production import ProductionDriverError, build_production_driver, run_network_smoke
 
 
 SUCCESS = 0
@@ -68,7 +70,7 @@ PREVIOUS_SKILL_PATTERN = re.compile(
 
 # Task 14 must bind discovery -> fixed upstream snapshot -> trusted ReviewPacket.
 # Leaving this absent is safer than treating registry metadata as a reviewable Skill.
-PRODUCTION_DRIVER_FACTORY: Callable[..., tuple[RunCoordinator, RunRequest]] | None = None
+PRODUCTION_DRIVER_FACTORY: Callable[..., tuple[RunCoordinator, RunRequest]] | None = build_production_driver
 
 
 def _production_driver_ready() -> bool:
@@ -1117,8 +1119,20 @@ def run_interactive_protocol(
     prepared = None
     try:
         prepared = coordinator.prepare(request)
+        review_packets = dict(request.review_packets)
+        if request.material_reviewer is not None:
+            reviewer = request.material_reviewer
+            frame = reviewer.material_review_frame(prepared)
+            if not isinstance(frame, Mapping) or frame.get("type") != "material_review_required" or frame.get("run_id") != prepared.run_id:
+                raise ProtocolInputError("固定材料评审请求未绑定当前 run_id")
+            _emit_frame(output_stream, frame)
+            observation_frame = _read_frame(
+                input_stream, expected_type="material_observations", run_id=prepared.run_id,
+            )
+            review_packets = dict(reviewer.apply_material_observations(prepared, observation_frame))
+            coordinator.bind_review_packets(prepared, review_packets)
         packets = []
-        for candidate_id, packet in sorted(request.review_packets.items()):
+        for candidate_id, packet in sorted(review_packets.items()):
             value = _json_value(packet)
             if isinstance(value, Mapping):
                 value = {**value, "candidate_id": candidate_id}
@@ -1138,7 +1152,7 @@ def run_interactive_protocol(
             decisions = tuple(ReviewDecision.from_mapping(value) for value in raw_decisions)
         except (TypeError, ValueError) as exc:
             raise ProtocolInputError(f"审查决定无效：{exc}") from exc
-        required_ids = set(request.review_packets)
+        required_ids = set(review_packets)
         supplied_ids = [decision.candidate_id for decision in decisions]
         if len(supplied_ids) != len(set(supplied_ids)) or set(supplied_ids) != required_ids:
             raise ProtocolInputError("审查决定必须按 candidate_id 精确覆盖全部 ReviewPacket，且不得重复或新增")
@@ -1171,16 +1185,18 @@ def run_interactive_protocol(
         raise
 
 
-def _latest_success(rows: Iterable[Mapping[str, object]]) -> datetime | None:
+def _latest_success(
+    rows: Iterable[Mapping[str, object]], *, assume_timezone: object = timezone.utc,
+) -> datetime | None:
     values = []
     for row in rows:
         value = row.get("成功完成时间")
         if isinstance(value, datetime):
-            values.append(value.replace(tzinfo=value.tzinfo or timezone.utc))
+            values.append(value.replace(tzinfo=value.tzinfo or assume_timezone))
         elif isinstance(value, str) and value.strip():
             try:
                 parsed = datetime.fromisoformat(value)
-                values.append(parsed.replace(tzinfo=parsed.tzinfo or timezone.utc))
+                values.append(parsed.replace(tzinfo=parsed.tzinfo or assume_timezone))
             except ValueError:
                 continue
     return max(values, default=None)
@@ -1202,7 +1218,10 @@ def status_project(
         records = ledger.rows("运行记录")
     finally:
         ledger.workbook.close()
-    next_run = next_run_at(settings, datetime.now(timezone.utc), _latest_success(records))
+    next_run = next_run_at(
+        settings, datetime.now(timezone.utc),
+        _latest_success(records, assume_timezone=ZoneInfo(settings.workflow.timezone)),
+    )
     diagnostic = doctor_project(project, environment=environment)
     successful = next((row for row in reversed(records) if row.get("状态") == "成功"), None)
     latest_output = None
@@ -1315,11 +1334,15 @@ def _handle_import(args: argparse.Namespace) -> int:
 
 
 def _handle_doctor(args: argparse.Namespace) -> int:
-    if args.network:
-        raise CliOperationalError("Task 14 验收前 doctor --network 尚未接通；未发出任何网络请求")
     report = doctor_project(args.project_root, environment=current_doctor_environment(loader_output=args.loader_output))
-    _print_json(report)
-    return report.exit_code
+    if not args.network:
+        _print_json(report)
+        return report.exit_code
+    smoke = run_network_smoke(ministry_url=_ministry_catalog_url(args.project_root))
+    _print_json({"local": report, "network": smoke})
+    if report.exit_code != SUCCESS:
+        return report.exit_code
+    return SUCCESS if smoke.status == "PASS" else OPERATIONAL_FAILURE
 
 
 def _handle_edit_settings(args: argparse.Namespace) -> int:
@@ -1351,6 +1374,9 @@ def _handle_apply_settings(args: argparse.Namespace) -> int:
 
 
 def _handle_run(args: argparse.Namespace) -> int:
+    preflight = _run_preflight(args)
+    if preflight is not None:
+        return preflight
     if not _production_driver_ready():
         _print_json({"type": "run_failed", "error": "生产发现驱动未配置；prepare 前停止，未联网、未创建暂存运行"})
         return OPERATIONAL_FAILURE
@@ -1361,6 +1387,68 @@ def _handle_run(args: argparse.Namespace) -> int:
         input_stream=sys.stdin, output_stream=sys.stdout,
     )
     return run_interactive_protocol(coordinator, request)
+
+
+def _run_preflight(args: argparse.Namespace) -> int | None:
+    """Reject inert or stale scheduled invocations before constructing a network driver."""
+    project = _project_root(args.project_root)
+    settings_path = _ordinary_file(_workflow_root(project) / "workflow-settings.toml", suffix=".toml")
+    settings = load_settings(settings_path)
+    actual_sha = settings_sha256(settings_path)
+    expected = str(args.expected_config_sha or "").strip()
+    if args.command == "scheduled-run":
+        if not expected:
+            raise CliInputError("scheduled-run 必须提供当前设置文件 SHA-256")
+        if expected != actual_sha:
+            raise CliInputError("自动任务配置哈希已过期；本轮未联网")
+        if not settings.workflow.enabled:
+            _print_json({"type": "run_noop", "reason": "工作流当前未启用；本轮未联网"})
+            return SAFE_NOOP
+        if settings.schedule.mode == "manual":
+            _print_json({"type": "run_noop", "reason": "运行模式为 manual；计划任务本轮未联网"})
+            return SAFE_NOOP
+        if settings.schedule.mode == "interval":
+            ledger = LedgerStore.load(_ordinary_file(
+                _workflow_root(project) / "ledger" / "Skills主台账.xlsx", suffix=".xlsx",
+            ))
+            try:
+                successful = tuple(row for row in ledger.rows("运行记录") if row.get("状态") == "成功")
+            finally:
+                ledger.workbook.close()
+            zone = ZoneInfo(settings.workflow.timezone)
+            now_local = datetime.now(timezone.utc).astimezone(zone)
+            last_success = _latest_success(successful, assume_timezone=zone)
+            if last_success is None:
+                due = datetime.combine(now_local.date(), settings.schedule.start_time, tzinfo=zone)
+            else:
+                due = last_success.astimezone(zone) + timedelta(days=settings.schedule.interval_days)
+            if now_local < due:
+                _print_json({
+                    "type": "run_noop",
+                    "reason": f"interval 尚未到期；下次最早运行时间 {due.isoformat()}",
+                })
+                return SAFE_NOOP
+    elif expected and expected != actual_sha:
+        raise CliInputError("请求配置哈希与当前设置不一致；本轮未联网")
+    if not args.loader_output:
+        _print_json({"type": "run_failed", "error": "缺少 Codex 工作区依赖加载器输出；prepare 前停止，未联网"})
+        return OPERATIONAL_FAILURE
+    return None
+
+
+def _ministry_catalog_url(project_root: str | Path) -> str:
+    workflow = _workflow_root(project_root)
+    ledger = LedgerStore.load(_ordinary_file(workflow / "ledger" / "Skills主台账.xlsx", suffix=".xlsx"))
+    try:
+        urls = tuple(dict.fromkeys(
+            str(row.get("公开地址") or "").strip() for row in ledger.rows("目录基线")
+            if str(row.get("公开地址") or "").strip()
+        ))
+    finally:
+        ledger.workbook.close()
+    if len(urls) != 1 or not urls[0].casefold().startswith("https://www.moe.gov.cn/"):
+        raise CliOperationalError("目录基线必须唯一绑定教育部 HTTPS 公开地址")
+    return urls[0]
 
 
 def _handle_status(args: argparse.Namespace) -> int:
@@ -1415,6 +1503,7 @@ def main(argv: list[str] | None = None) -> int:
         KeyError,
         EOFError,
         ValueError,
+        ProductionDriverError,
     ) as exc:
         _print_json({"error": str(exc), "exit_code": OPERATIONAL_FAILURE})
         return OPERATIONAL_FAILURE
