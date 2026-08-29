@@ -286,6 +286,48 @@ notify_on_no_change = false
         self.assertEqual(before, self.production_hashes())
         coordinator.abandon(prepared)
 
+    def test_apply_reviews_requires_one_exact_decision_for_each_bound_packet_before_mutation(self):
+        cases = ("duplicate", "missing", "extra")
+        for index, case in enumerate(cases, start=1):
+            with self.subTest(case=case):
+                suffix = f"{index}"
+                packet_a, decision_a = self.report_review(
+                    f"EXACT-A-{suffix}", f"https://github.com/example/exact-a-{suffix}",
+                )
+                packet_b, decision_b = self.report_review(
+                    f"EXACT-B-{suffix}", f"https://github.com/example/exact-b-{suffix}",
+                )
+                coordinator = self.coordinator()
+                prepared = coordinator.prepare(replace(
+                    self.request, requested_run_id=f"run-decision-exact-{case}",
+                    review_packets={
+                        decision_a.candidate_id: packet_a,
+                        decision_b.candidate_id: packet_b,
+                    },
+                ))
+                before = sha256(prepared.staging_ledger.read_bytes()).hexdigest()
+                if case == "duplicate":
+                    exclude = replace(
+                        decision_a,
+                        project_judgments=ProjectJudgments(
+                            "正式推荐", False, False, 1, (), "exclude", "security_rejected", "恶意行为",
+                        ),
+                        derived_fields=DerivedFields(),
+                    )
+                    supplied = (decision_a, exclude, decision_b)
+                elif case == "missing":
+                    supplied = (decision_a,)
+                else:
+                    supplied = (decision_a, decision_b, replace(decision_b, candidate_id="EXTRA-ID"))
+
+                with patch("skill_maintainer.runner.apply_reviews_from_stream") as apply:
+                    with self.assertRaisesRegex(CoordinatorError, "审查决定|候选标识|精确"):
+                        coordinator.apply_reviews(prepared, supplied)
+                    apply.assert_not_called()
+                self.assertEqual(sha256(prepared.staging_ledger.read_bytes()).hexdigest(), before)
+                self.assertEqual(coordinator._states[prepared.run_id].phase, "prepared")
+                coordinator.abandon(prepared)
+
     def test_review_packet_is_claimed_by_one_exact_prepared_run_and_dies_at_terminal(self):
         packet, _ = self.report_review("PACKET-OWNER-1", "https://github.com/example/packet-owner")
         first = self.coordinator()
@@ -448,6 +490,12 @@ notify_on_no_change = false
             if "#sha256=" in token:
                 self.assertEqual(sha256(resolved.read_bytes()).hexdigest(), token.rpartition("#sha256=")[2])
         self.assertTrue((summary.output_generation / "authority" / "fixed-snapshots" / f"{stable_id}.snapshot-manifest.json").is_file())
+        authority_manifest = json.loads(
+            (summary.output_generation / "generation-manifest.json").read_text(encoding="utf-8")
+        )
+        for item in authority_manifest["files"]:
+            self.assertEqual(set(item), {"path", "sha256", "size", "role"})
+            self.assertFalse(Path(item["path"]).is_absolute())
 
         second = self.coordinator()
         next_prepared = second.prepare(replace(self.request, requested_run_id="run-portable-evidence-next"))
@@ -455,6 +503,51 @@ notify_on_no_change = false
         self.assertTrue(summary.output_generation.is_dir())
         for token in evidence_value.split("；"):
             self.assertTrue((self.root / Path(token.partition("#sha256=")[0])).is_file())
+
+        copied_root = Path(self.temporary.name) / "复制后的 中文项目"
+        shutil.copytree(self.root, copied_root)
+        copied = self.coordinator(root=copied_root)
+        copied_ledger = LedgerStore.load(copied_root / "ledger" / "Skills主台账.xlsx")
+        successful = tuple(row for row in copied_ledger.rows("运行记录") if row.get("状态") == "成功")
+        copied_ledger.workbook.close()
+        self.assertEqual(len(successful), 2)
+        for record in successful:
+            copied._verify_recorded_generation(record)
+        unreferenced = copied_root / "output" / "generations" / "unreferenced-old"
+        unreferenced.mkdir()
+        (unreferenced / "retained.txt").write_text("not referenced by the ledger", encoding="utf-8")
+        copied_request = replace(
+            self.request, settings_path=copied_root / "workflow-settings.toml",
+            requested_run_id="run-portable-copy-next",
+        )
+        copied_prepared = copied.prepare(copied_request)
+        copied.abandon(copied_prepared)
+
+        first_generation = copied_root / Path(copied._summary_fields(successful[0]["摘要"])["generation"])
+        victim = next(path for path in first_generation.rglob("*") if path.is_file() and path.name != "generation-manifest.json")
+        victim.write_bytes(victim.read_bytes() + b"tampered")
+        discovery_calls = 0
+
+        def must_not_discover(request, staging):
+            nonlocal discovery_calls
+            discovery_calls += 1
+            return (
+                SourceRun("SkillHub", "complete"), SourceRun("ClawHub", "complete"),
+                SourceRun("GitHub", "complete"), SourceRun("Hugging Face Spaces", "complete"),
+            )
+
+        guard = self.coordinator(root=copied_root, discover=must_not_discover)
+        rejected_prepared = None
+        try:
+            with self.assertRaisesRegex(CoordinatorError, "发布代次|authority|证据"):
+                rejected_prepared = guard.prepare(replace(
+                    copied_request, requested_run_id="run-referenced-prior-tamper",
+                ))
+        finally:
+            if rejected_prepared is not None:
+                guard.abandon(rejected_prepared)
+        self.assertEqual(discovery_calls, 0)
+        self.assertFalse((copied_root / ".runtime" / "staging" / "run-referenced-prior-tamper").exists())
 
     def test_real_report_adapter_uses_prepared_catalog_sources_and_both_ledgers_in_staging(self):
         if not os.environ.get("SKILL_MAINTAINER_NODE") or not os.environ.get("SKILL_MAINTAINER_NODE_MODULES"):

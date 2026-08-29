@@ -4,6 +4,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 from contextlib import redirect_stdout
 from xml.sax.saxutils import escape
@@ -100,6 +101,7 @@ class ExistingDeliveryImportTest(unittest.TestCase):
         self.assertEqual(observation["观察状态"], "需人工对账")
         self.assertIn("API 或外部服务", observation["原因"])
         self.assertIn("不得推断为远程 API", observation["原因"])
+        self.assertEqual(str(observation["记录日期"]), date.today().isoformat())
 
     def test_word_excel_count_mismatch_is_reported_and_blocks_formal_import(self):
         deliveries = self.copy_fixture_tree("mismatch")

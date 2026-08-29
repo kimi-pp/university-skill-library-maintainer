@@ -16,12 +16,12 @@
 1. `prepare` 在本轮私有暂存目录获取来源证据与固定包，按规范上游仓库只查询和下载一次，再安全枚举其中每个 `SKILL.md` 独立入口并发出逐入口 `material_review_required`；正式项和非正式候选都参加版本复核；
 2. Codex 只读检查逐 `SKILL.md` 入口的候选精确固定包并回传与 run ID、版本、canonical source、入口、内容哈希和本候选证据精确绑定的 `material_observations`；
 3. 进程消费仍在内存中的快照 capability，构建只属于当前 PreparedRun、只能消费一次的可信 ReviewPacket，再发出 `review_required`；
-4. Codex 依据项目规则与专业六维画像回传项目判断、完整 ledger row 和批准范围的人工任务映射；三级展示项均绑定显式候选内部标识和入口，排除项或 `display=false` 使用非展示 outcome、结构化原因代码和中文说明；
+4. Codex 依据项目规则与专业六维画像回传项目判断、完整 ledger row 和批准范围的人工任务映射；决定 ID 集合必须唯一并精确等于本轮 ReviewPacket 集合，在任何 shadow 写入或回执前验证；三级展示项均绑定显式候选内部标识和入口，排除项或 `display=false` 使用非展示 outcome、结构化原因代码、中文说明和本轮有效记录日期；
 5. `finalize` 完成 Office 复读并发出逐页视觉闸，批准后才原子发布。
 
 不得跨进程调用 `prepare`、`apply-reviews`、`finalize`，不得从磁盘恢复 capability。EOF、放弃和任何异常都按 run 清理未消费的快照、ReviewPacket 和回执，不得清除其他 run。市场元数据或搜索响应 JSON 不得冒充 Skill 固定包；无法取得完整固定包的市场或 Hugging Face 条目只进入候选观察。根级 Skill 的固定快照覆盖除明确嵌套独立 Skill 子树和仓库元数据外的全部相关文件，嵌套 Skill 只覆盖自身子树。
 
-发布 generation 的 `authority` 必须持久包含本轮受信来源请求证据、固定归档、逐入口固定快照和快照清单；台账只保存从 generation 可移植解析的路径及绑定哈希。删除暂存后所有当前、候选和版本历史证据仍须存在且哈希匹配；仍被台账引用的前代 generation 必须保留。
+发布 generation 的 `authority` 必须持久包含本轮受信来源请求证据、固定归档、逐入口固定快照和快照清单；台账只保存从 generation 可移植解析的路径及绑定哈希。长期 manifest 文件项只含相对路径、SHA-256、字节数和逻辑角色；设备、inode 和 mtime 只作为单次运行内稳定句柄/TOCTOU pin，不得写入跨机器权威。删除暂存后所有当前、候选和版本历史证据仍须存在且哈希匹配；启动时在联网前验证最新成功代次与所有仍被业务表引用的前代 generation，未引用代次不参与此阻断门。
 
 任一证据缺失、身份或哈希变化、Office 复读失败、逐页拒绝或发布冲突都保留旧 authority，不得留下半提交代次。
 

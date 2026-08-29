@@ -219,6 +219,13 @@ class RunCoordinator:
         except BaseException:
             if 'run_id' in locals():
                 self._states.pop(run_id, None)
+            reviewer = request.material_reviewer
+            abort_unprepared = getattr(reviewer, "abort_unprepared", None) if reviewer is not None else None
+            if callable(abort_unprepared) and staging_dir is not None:
+                try:
+                    abort_unprepared(staging_dir)
+                except BaseException:
+                    pass
             if staging_dir is not None:
                 try:
                     self._remove_owned_staging(staging_dir)
@@ -242,6 +249,17 @@ class RunCoordinator:
     def apply_reviews(self, prepared: PreparedRun, decisions: Iterable[ReviewDecision]) -> ReviewApplySummary:
         state = self._state_for(prepared, allowed=("prepared", "reviews_applied"))
         decisions = tuple(decisions)
+        try:
+            decision_ids = tuple(str(decision.candidate_id).strip() for decision in decisions)
+        except (AttributeError, TypeError) as exc:
+            raise CoordinatorError("审查决定必须携带候选标识") from exc
+        if any(not candidate_id for candidate_id in decision_ids):
+            raise CoordinatorError("审查决定必须携带非空候选标识")
+        if len(decision_ids) != len(set(decision_ids)):
+            raise CoordinatorError("审查决定候选标识必须唯一")
+        expected_ids = set(state.review_packets)
+        if set(decision_ids) != expected_ids:
+            raise CoordinatorError("审查决定必须精确覆盖本轮全部受信审查包")
         decision_sha = self._decision_digest(decisions)
         if state.review_summary is not None:
             if state.review_summary.decision_sha256 != decision_sha:
@@ -430,13 +448,52 @@ class RunCoordinator:
         ledger = LedgerStore.load(self.paths.ledger)
         errors = ledger.validate()
         try:
-            successful = next((row for row in reversed(ledger.rows("运行记录")) if row.get("状态") == "成功"), None)
+            successful_rows = tuple(row for row in ledger.rows("运行记录") if row.get("状态") == "成功")
+            successful = successful_rows[-1] if successful_rows else None
             if successful is not None:
                 self._verify_recorded_generation(successful)
+            self._verify_referenced_generations(ledger, successful_rows)
         finally:
             ledger.workbook.close()
         if errors:
             raise CoordinatorError("生产主台账校验失败：" + "；".join(errors))
+
+    def _verify_referenced_generations(
+        self, ledger: LedgerStore, successful_rows: tuple[Mapping[str, object], ...],
+    ) -> None:
+        referenced: set[str] = set()
+        for sheet, field_name in (
+            ("当前Skill", "验证证据位置"),
+            ("候选观察", "验证证据位置"),
+            ("版本历史", "证据位置"),
+        ):
+            for row in ledger.rows(sheet):
+                for raw in str(row.get(field_name) or "").split("；"):
+                    token = raw.strip().partition("#sha256=")[0]
+                    if not token or token.startswith(("http://", "https://")):
+                        continue
+                    path = Path(token)
+                    if path.is_absolute():
+                        continue
+                    parts = path.parts
+                    if len(parts) >= 2 and parts[:2] == ("output", "generations"):
+                        if len(parts) < 5 or not parts[2] or parts[3] != "authority":
+                            raise CoordinatorError("业务台账证据代次路径结构无效")
+                        referenced.add(parts[2])
+        records_by_id: dict[str, Mapping[str, object]] = {}
+        for row in successful_rows:
+            run_id = str(row.get("运行标识") or "").strip()
+            if not run_id or run_id in records_by_id:
+                raise CoordinatorError("生产成功运行记录的运行标识缺失或重复")
+            records_by_id[run_id] = row
+        for run_id in sorted(referenced):
+            record = records_by_id.get(run_id)
+            if record is None:
+                raise CoordinatorError("业务台账引用的发布代次缺少成功运行记录")
+            relative = self._summary_fields(record.get("摘要")).get("generation", "")
+            if Path(relative).parts[:3] != ("output", "generations", run_id):
+                raise CoordinatorError("业务台账证据代次与成功运行记录不一致")
+            self._verify_recorded_generation(record)
 
     def _run_id(self, requested: str | None) -> str:
         value = requested or f"run-{uuid.uuid4().hex}"
@@ -586,21 +643,103 @@ class RunCoordinator:
             raise CoordinatorError("发布代次 manifest 与运行权威信息不一致")
         if _sha256(manifest) != manifest_hash or self._tree_digest_excluding(generation, manifest) != delivery_hash:
             raise CoordinatorError("发布代次在校验后被修改")
-        if payload.get("files") != self._authority_files(generation, excluded=manifest):
+        actual_files = self._authority_files(generation, excluded=manifest)
+        if self._portable_manifest_files(payload.get("files")) != actual_files:
             raise CoordinatorError("发布代次 authority 文件集合或身份不一致")
 
     @staticmethod
     def _authority_files(root: Path, *, excluded: Path | None = None) -> list[dict[str, object]]:
         rows: list[dict[str, object]] = []
+        resolved_root = root.resolve(strict=True)
         for item in sorted(root.rglob("*"), key=lambda path: str(path.relative_to(root)).casefold()):
             if item == excluded:
                 continue
             if is_link_or_reparse(item):
                 raise CoordinatorError("generation authority 包含链接或重解析点")
             if item.is_file():
-                rows.append({"path": item.relative_to(root).as_posix(), "sha256": _sha256(item),
-                    "identity": list(_stat_identity(item))})
+                try:
+                    assert_ordinary_path(item)
+                    item.resolve(strict=True).relative_to(resolved_root)
+                    path_before = _stat_identity(item)
+                    digest = sha256()
+                    size = 0
+                    with item.open("rb") as handle:
+                        handle_before = os.fstat(handle.fileno())
+                        handle_identity_before = (
+                            getattr(handle_before, "st_dev", 0), getattr(handle_before, "st_ino", 0),
+                            handle_before.st_size, handle_before.st_mtime_ns,
+                        )
+                        if handle_identity_before != path_before:
+                            raise CoordinatorError("generation authority 文件句柄身份不一致")
+                        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                            digest.update(chunk)
+                            size += len(chunk)
+                        handle_after = os.fstat(handle.fileno())
+                        handle_identity_after = (
+                            getattr(handle_after, "st_dev", 0), getattr(handle_after, "st_ino", 0),
+                            handle_after.st_size, handle_after.st_mtime_ns,
+                        )
+                    if handle_identity_before != handle_identity_after or path_before != _stat_identity(item):
+                        raise CoordinatorError("generation authority 文件在读取期间发生变化")
+                except (OSError, RuntimeError, ValueError) as exc:
+                    if isinstance(exc, CoordinatorError):
+                        raise
+                    raise CoordinatorError("generation authority 文件无法稳定读取") from exc
+                relative = item.relative_to(root).as_posix()
+                rows.append({
+                    "path": relative, "sha256": digest.hexdigest(), "size": size,
+                    "role": RunCoordinator._authority_role(relative),
+                })
         return rows
+
+    @staticmethod
+    def _authority_role(relative: str) -> str:
+        parts = Path(relative).parts
+        if len(parts) >= 2 and parts[0] == "authority" and parts[1] == "source-evidence":
+            return "source-evidence"
+        if len(parts) >= 2 and parts[0] == "authority" and parts[1] == "fixed-snapshots":
+            return "fixed-snapshot"
+        if Path(relative).suffix.casefold() in {".docx", ".xlsx"}:
+            return "office-delivery"
+        return "delivery"
+
+    @staticmethod
+    def _portable_manifest_files(value: object) -> list[dict[str, object]]:
+        if not isinstance(value, list):
+            raise CoordinatorError("发布代次 manifest files 结构无效")
+        normalized: list[dict[str, object]] = []
+        for row in value:
+            if not isinstance(row, Mapping):
+                raise CoordinatorError("发布代次 manifest 文件记录无效")
+            relative = str(row.get("path") or "")
+            path = Path(relative)
+            digest = str(row.get("sha256") or "").casefold()
+            if (not relative or path.is_absolute() or any(part in {"", ".", ".."} for part in path.parts)
+                    or len(digest) != 64 or any(character not in "0123456789abcdef" for character in digest)):
+                raise CoordinatorError("发布代次 manifest 文件路径或哈希无效")
+            if "identity" in row:
+                identity = row.get("identity")
+                if not isinstance(identity, list) or len(identity) != 4:
+                    raise CoordinatorError("旧版发布代次 manifest 身份记录无效")
+                try:
+                    size = int(identity[2])
+                except (TypeError, ValueError) as exc:
+                    raise CoordinatorError("旧版发布代次 manifest 文件大小无效") from exc
+                role = RunCoordinator._authority_role(relative)
+            else:
+                if set(row) != {"path", "sha256", "size", "role"}:
+                    raise CoordinatorError("发布代次 manifest 文件字段无效")
+                try:
+                    size = int(row.get("size"))
+                except (TypeError, ValueError) as exc:
+                    raise CoordinatorError("发布代次 manifest 文件大小无效") from exc
+                role = str(row.get("role") or "")
+                if role != RunCoordinator._authority_role(relative):
+                    raise CoordinatorError("发布代次 manifest 文件角色无效")
+            if size < 0:
+                raise CoordinatorError("发布代次 manifest 文件大小无效")
+            normalized.append({"path": relative, "sha256": digest, "size": size, "role": role})
+        return sorted(normalized, key=lambda row: str(row["path"]).casefold())
 
     @staticmethod
     def _fsync_tree(root: Path) -> None:

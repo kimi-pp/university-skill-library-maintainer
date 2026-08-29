@@ -472,6 +472,46 @@ class ReportContentTestCase(unittest.TestCase):
         self.assertEqual(len(captured[0]["updates_not_applied"]), 1)
         self.assertIn("上游入口删除", captured[0]["updates_not_applied"][0]["结论"])
 
+    def test_scope_delivery_surfaces_every_nonformal_update_for_retained_formal_across_scopes(self):
+        current = formal_row(1, "0809 计算机类")
+        scopes = ("0809 计算机类", "0201 经济学类")
+        mappings = [
+            {
+                "内部标识": current["内部标识"], "专业类": scope,
+                "专业任务": "课程分析", "输入": "课程表", "输出": "报告", "使用限制": "人工复核",
+            }
+            for scope in scopes
+        ]
+        for status in ("条件候选", "需适配候选", "排除", "attention_required"):
+            with self.subTest(status=status):
+                observation = {
+                    "观察标识": f"update-{status}", "内部标识": current["内部标识"],
+                    "候选名称": current["Skill名称"], "Canonical source": current["Canonical source"],
+                    "Skill入口路径": "SKILL.md", "观察状态": status, "许可证": "MIT",
+                    "记录日期": "2026-08-29", "原因": f"{status}版本未升级；保留旧版",
+                    "固定版本": "b" * 40, "固定版本内容指纹": "c" * 64,
+                    "验证证据位置": "evidence/update.json",
+                    "显示层级": "不展示" if status in {"排除", "attention_required"} else status,
+                }
+                ledger = {"当前Skill": [current], "候选观察": [observation], "专业任务映射": mappings}
+                captured = []
+                with patch(
+                    "skill_maintainer.reports.build_daily_docx",
+                    side_effect=lambda payload, path: captured.append(payload),
+                ), patch("skill_maintainer.reports.build_daily_xlsx", side_effect=lambda payload, path: None):
+                    build_scope_deliveries(scopes, ledger, self.root / f"scope-update-{status}")
+
+                self.assertEqual(len(captured), 2)
+                for payload in captured:
+                    self.assertEqual(len(payload["formal_additions"]), 1)
+                    self.assertEqual(payload["conditional_candidates"], [])
+                    self.assertEqual(payload["adaptation_candidates"], [])
+                    self.assertEqual(len(payload["updates_not_applied"]), 1)
+                    update = payload["updates_not_applied"][0]
+                    self.assertEqual(update["新版本"], "b" * 40)
+                    self.assertIn(status, update["结论"])
+                    self.assertIn("保留旧版", update["使用限制"])
+
     def test_source_audit_hyperlinks_only_http_or_https_urls(self):
         self.require_runtime()
         summary = report_summary()

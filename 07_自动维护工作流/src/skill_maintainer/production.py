@@ -164,6 +164,8 @@ class ProductionDriver:
         self._prepared_ref: weakref.ReferenceType[PreparedRun] | None = None
         self._coordinator_ref: weakref.ReferenceType[RunCoordinator] | None = None
         self._issued_packets: tuple[ReviewPacket, ...] = ()
+        self._provisional_staging: Path | None = None
+        self._provisional_manifests: tuple[SnapshotManifest, ...] = ()
 
     @property
     def review_materials(self) -> tuple[ReviewMaterial, ...]:
@@ -203,6 +205,10 @@ class ProductionDriver:
         """Run all six-dimensional jobs, aggregate four statuses, then snapshot once per global identity."""
         staging = Path(staging_dir).absolute()
         assert_ordinary_path(staging, require_directory=True)
+        if self._provisional_staging is not None or self._prepared_ref is not None:
+            raise ProductionDriverError("生产材料驱动已有未终结运行")
+        self._provisional_staging = staging
+        self._provisional_manifests = ()
         evidence_root_path = staging / "source-evidence"
         evidence_root_path.mkdir(exist_ok=False)
         assert_ordinary_path(evidence_root_path, require_directory=True)
@@ -479,6 +485,8 @@ class ProductionDriver:
                     None,
                 )
                 entry_id = str(tracked_entry.get("内部标识") or "") if tracked_entry else _entry_stable_id(canonical, entry_path)
+                if tracked_entry and str(tracked_entry.get("固定版本") or "").strip() == str(version.version):
+                    continue
                 if (entry_id, str(version.version)) in reviewed_nonformal_versions:
                     continue
                 entry_platforms = tuple(
@@ -500,6 +508,7 @@ class ProductionDriver:
                     destination=snapshot_root / _safe_component(entry_id),
                     source_evidence_paths=entry_source_evidence,
                 )
+                self._provisional_manifests = (*self._provisional_manifests, manifest)
                 evidence_by_platform["GitHub"].append(Path(manifest.manifest_evidence_path))
                 materials.append(ReviewMaterial(
                     entry_id, name if len(entries) == 1 else f"{name}:{entry_path}", canonical,
@@ -674,8 +683,25 @@ class ProductionDriver:
             authority(prepared)
         except CoordinatorError as exc:
             raise MaterialReviewError("材料评审 PreparedRun 不属于当前协调器") from exc
+        if self._provisional_staging != prepared.staging_dir.absolute():
+            raise MaterialReviewError("材料评审 PreparedRun 未绑定本轮发现暂存目录")
         self._prepared_ref = weakref.ref(prepared)
         self._coordinator_ref = weakref.ref(coordinator)
+        self._provisional_staging = None
+
+    def abort_unprepared(self, staging_dir: Path) -> None:
+        """Invalidate exact manifests created before PreparedRun registration completed."""
+        candidate = Path(staging_dir).absolute()
+        if self._prepared_ref is not None or self._provisional_staging != candidate:
+            return
+        clear_snapshot_manifests(self._provisional_manifests)
+        clear_review_run_state(packets=self._issued_packets)
+        self._issued_packets = ()
+        self._provisional_manifests = ()
+        self._provisional_staging = None
+        self._material_run_id = None
+        self._material_consumed = True
+        self._material_frame_issued = False
 
     def clear_prepared(self, prepared: PreparedRun) -> None:
         if self._prepared_ref is not None and self._prepared_ref() is prepared:
@@ -684,6 +710,8 @@ class ProductionDriver:
             self._issued_packets = ()
             self._prepared_ref = None
             self._coordinator_ref = None
+            self._provisional_staging = None
+            self._provisional_manifests = ()
             self._material_run_id = None
             self._material_consumed = True
 

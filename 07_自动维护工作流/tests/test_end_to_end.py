@@ -21,6 +21,7 @@ from skill_maintainer.dedup import deduplicate
 from skill_maintainer.import_existing import ImportInventory, ImportedRecord, build_initial_ledger
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
+from skill_maintainer.locking import SingleWriterLock
 from skill_maintainer.reports import make_project_report_builder
 from skill_maintainer.production import (
     MaterialReviewError,
@@ -267,15 +268,19 @@ notify_on_no_change = false
         shutil.copyfile(staged, ledger_path)
         staged.unlink()
 
-    def _append_tracked_entries(self, canonical: str, entries: tuple[tuple[str, str], ...]) -> None:
+    def _append_tracked_entries(
+        self, canonical: str, entries: tuple[tuple[str, str] | tuple[str, str, str], ...],
+    ) -> None:
         ledger_path = self.workflow / "ledger" / "Skills主台账.xlsx"
         ledger = LedgerStore.load(ledger_path)
-        for stable_id, entry in entries:
+        for item in entries:
+            stable_id, entry = item[:2]
+            version = item[2] if len(item) == 3 else "1" * 40
             row = {column: "已核验" for column in CURRENT_SKILL_COLUMNS}
             row.update({
                 "内部标识": stable_id, "Skill名称": stable_id, "规范名称": stable_id, "入库层级": "正式",
                 "来源平台": "GitHub", "发现地址": canonical, "Canonical source": canonical,
-                "上游项目地址": canonical, "Skill入口路径": entry, "固定版本": "1" * 40,
+                "上游项目地址": canonical, "Skill入口路径": entry, "固定版本": version,
                 "固定版本内容指纹": sha256(entry.encode()).hexdigest(), "许可证": "MIT",
                 "外部联网/API 调用": "否", "远程服务端点": "", "安全等级": "SA",
                 "验证状态": "全部通过（未实测）", "质量评分": 3,
@@ -406,6 +411,62 @@ notify_on_no_change = false
                          {("SK-A", "a/SKILL.md"), ("SK-B", "b/SKILL.md")})
         github_run = next(item for item in runs if item.platform == "GitHub")
         self.assertFalse(any(candidate.get("observation_reason_code") == "inconsistent_ledger" for candidate in github_run.candidates))
+
+    def test_mixed_formal_and_candidate_entries_only_review_the_entry_behind_latest(self):
+        canonical = "https://github.com/example/mixed-version-monorepo"
+        latest = "a" * 40
+        self._append_tracked_entries(canonical, (("SK-FORMAL-LATEST", "a/SKILL.md", latest),))
+        self._append_candidate_observation(
+            stable_id="SK-CANDIDATE-BEHIND", canonical=canonical,
+            entry="b/SKILL.md", version="1" * 40,
+        )
+        package = Path(self.temporary.name) / "mixed-version-package"
+        (package / "a").mkdir(parents=True)
+        (package / "b").mkdir()
+        (package / "a" / "SKILL.md").write_text("# A already latest", encoding="utf-8")
+        (package / "b" / "SKILL.md").write_text("# B updated", encoding="utf-8")
+
+        github = _Adapter("GitHub", (), package)
+        adapters = {name: (_Adapter(name, ()) if name != "GitHub" else github) for name in PLATFORM_ORDER}
+        driver = ProductionDriver(
+            project_root=self.project, adapters=adapters, catalog_loader=self._catalog,
+            now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc),
+        )
+        staging = self.workflow / ".runtime" / "staging" / "run-mixed-version"
+        staging.mkdir(parents=True)
+
+        driver.discover(RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog), staging)
+
+        self.assertEqual(github.latest_calls, [canonical])
+        self.assertEqual(len(github.snapshot_calls), 1)
+        self.assertEqual(
+            [(item.candidate_id, item.skill_entry_path) for item in driver.review_materials],
+            [("SK-CANDIDATE-BEHIND", "b/SKILL.md")],
+        )
+        self.assertFalse(any(item.candidate_id == "SK-FORMAL-LATEST" for item in driver.observations))
+
+        self._append_candidate_observation(
+            stable_id="SK-CANDIDATE-BEHIND", canonical=canonical,
+            entry="b/SKILL.md", version=latest,
+        )
+        second_github = _Adapter("GitHub", (), package)
+        second_adapters = {
+            name: (_Adapter(name, ()) if name != "GitHub" else second_github)
+            for name in PLATFORM_ORDER
+        }
+        second_driver = ProductionDriver(
+            project_root=self.project, adapters=second_adapters, catalog_loader=self._catalog,
+            now=lambda: datetime(2026, 8, 30, tzinfo=timezone.utc),
+        )
+        second_staging = self.workflow / ".runtime" / "staging" / "run-mixed-version-second"
+        second_staging.mkdir(parents=True)
+        second_driver.discover(
+            RunRequest(settings_path=self.settings, catalog_loader=second_driver.load_catalog),
+            second_staging,
+        )
+        self.assertEqual(second_github.latest_calls, [canonical])
+        self.assertEqual(second_github.snapshot_calls, [])
+        self.assertEqual(second_driver.review_materials, ())
 
     def test_rediscovered_monorepo_still_downloads_once_and_preserves_each_tracked_entry(self):
         canonical = "https://github.com/example/rediscovered-monorepo"
@@ -544,6 +605,58 @@ notify_on_no_change = false
                 "upstream_repository": material.upstream_repository,
                 "skill_entry_path": material.skill_entry_path,
             }, material._manifest)
+
+    def test_prepare_failure_after_production_discovery_invalidates_only_that_unprepared_run_manifests(self):
+        for mode in ("after_discovery", "invalid_sources", "base_exception"):
+            with self.subTest(mode=mode):
+                driver, _ = self._driver()
+                discover = driver.discover
+                if mode == "invalid_sources":
+                    def discover(request, staging, original=driver.discover):
+                        return original(request, staging)[:-1]
+                elif mode == "base_exception":
+                    def discover(request, staging, original=driver.discover):
+                        original(request, staging)
+                        raise KeyboardInterrupt("post-discovery interruption")
+                coordinator = RunCoordinator(
+                    root=self.workflow, discover=discover,
+                    fail_at="after_discovery" if mode == "after_discovery" else None,
+                )
+                run_id = f"run-unprepared-{mode.replace('_', '-')}"
+                request = RunRequest(
+                    settings_path=self.settings, catalog_loader=driver.load_catalog,
+                    discover=discover, material_reviewer=driver, requested_run_id=run_id,
+                )
+                expected_error = KeyboardInterrupt if mode == "base_exception" else (RuntimeError, CoordinatorError)
+                with self.assertRaises(expected_error):
+                    coordinator.prepare(request)
+                material = driver.review_materials[0]
+                with self.assertRaisesRegex(ValueError, "快照清单"):
+                    build_review_packet({
+                        "id": material.candidate_id,
+                        "canonical_source": material.canonical_source,
+                        "license": "MIT", "security_grade": "SA",
+                        "upstream_repository": material.upstream_repository,
+                        "skill_entry_path": material.skill_entry_path,
+                    }, material._manifest)
+                self.assertFalse((self.workflow / ".runtime" / "staging" / run_id).exists())
+                probe = SingleWriterLock(self.workflow / ".runtime" / "writer.lock")
+                self.assertTrue(probe.acquire())
+                probe.release()
+
+                unrelated_root = Path(self.temporary.name) / f"unrelated-{mode}"
+                unrelated_root.mkdir()
+                (unrelated_root / "SKILL.md").write_text("# unrelated", encoding="utf-8")
+                unrelated = build_snapshot(
+                    SnapshotCandidate(f"UNRELATED-{mode}", "f" * 40, unrelated_root, ("https://evidence.example",)),
+                    Path(self.temporary.name) / f"unrelated-snapshot-{mode}",
+                )
+                packet = build_review_packet({
+                    "id": f"UNRELATED-{mode}", "canonical_source": "https://github.com/example/unrelated",
+                    "license": "MIT", "security_grade": "SA",
+                    "upstream_repository": "https://github.com/example/unrelated", "skill_entry_path": "SKILL.md",
+                }, unrelated)
+                self.assertEqual(packet.candidate_id, f"UNRELATED-{mode}")
 
     def test_packet_created_by_material_gate_cannot_survive_terminal_before_binding(self):
         driver, _ = self._driver()

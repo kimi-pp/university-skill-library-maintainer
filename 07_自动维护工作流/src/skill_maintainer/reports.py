@@ -892,14 +892,29 @@ def build_scope_deliveries(
         for row in candidate_rows
         if str(row.get("内部标识") or "").strip() and str(row.get("观察状态") or "").strip() in {"条件候选", "需适配候选"}
     }
-    attention_by_id = {
-        str(row.get("内部标识") or "").strip(): _normalize_candidate_observation(row)
-        for row in sorted(candidate_rows, key=lambda item: (
-            str(item.get("记录日期") or ""), str(item.get("观察标识") or ""),
-        ))
-        if str(row.get("内部标识") or "").strip()
-        and str(row.get("观察状态") or "").strip() == "attention_required"
-    }
+    updates_by_id: dict[str, dict[str, Any]] = {}
+    for update_row in sorted(candidate_rows, key=lambda item: (
+        str(item.get("记录日期") or ""), str(item.get("观察标识") or ""),
+    )):
+        stable_id = str(update_row.get("内部标识") or "").strip()
+        status = str(update_row.get("观察状态") or "").strip()
+        if stable_id not in by_id or status not in {
+            "发现更新未升级", "更新未升级", "条件候选", "需适配候选", "排除", "attention_required",
+        }:
+            continue
+        current_version = str(by_id[stable_id].get("固定版本") or "").strip()
+        observed_version = str(update_row.get("固定版本") or "").strip()
+        if status != "attention_required" and observed_version and observed_version == current_version:
+            continue
+        normalized = _normalize_candidate_observation(update_row)
+        reason = str(update_row.get("原因") or status or "不得升级当前正式版本")
+        normalized.update({
+            "原版本": current_version,
+            "新版本": observed_version or "未取得",
+            "结论": reason,
+            "使用限制": f"{reason}；旧版本保留",
+        })
+        updates_by_id[stable_id] = normalized
     root = _ordinary_output_root(output_root)
     outputs: list[Path] = []
     seen_scopes: set[str] = set()
@@ -930,16 +945,10 @@ def build_scope_deliveries(
             tier = str(row.get("观察状态") or row.get("入库层级") or "").strip()
             if stable_id in by_id:
                 formal.append(row)
-                if stable_id in attention_by_id:
-                    attention = dict(attention_by_id[stable_id])
-                    attention.update({
-                        "专业类": scope,
-                        "原版本": str(by_id[stable_id].get("固定版本") or ""),
-                        "新版本": str(attention.get("固定版本") or "未取得"),
-                        "结论": str(attention.get("原因") or "上游入口需要关注"),
-                        "使用限制": f"{str(attention.get('原因') or '上游入口需要关注')}；旧版本保留",
-                    })
-                    updates_not_applied.append(attention)
+                if stable_id in updates_by_id:
+                    update = dict(updates_by_id[stable_id])
+                    update["专业类"] = scope
+                    updates_not_applied.append(update)
             elif tier == "条件候选":
                 conditional.append(row)
             elif tier == "需适配候选":

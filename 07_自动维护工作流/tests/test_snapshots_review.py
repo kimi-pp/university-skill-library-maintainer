@@ -5,6 +5,7 @@ import unittest
 import zipfile
 from copy import copy
 from dataclasses import replace
+from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
@@ -538,6 +539,7 @@ class ReviewContractTest(unittest.TestCase):
             row = store.rows("候选观察")[0]
             self.assertEqual((row["内部标识"], row["候选名称"], row["观察状态"], row["显示层级"]),
                              (decision.candidate_id, "", "排除", "不展示"))
+            self.assertEqual(date.fromisoformat(str(row["记录日期"])), date.today())
             self.assertEqual(store.rows("当前Skill"), [])
             self.assertEqual(store.rows("专业任务映射"), [])
 

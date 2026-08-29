@@ -9,6 +9,7 @@ import re
 import tempfile
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import TYPE_CHECKING, Iterable, Mapping
 from zipfile import BadZipFile, ZipFile
@@ -393,9 +394,17 @@ def _observation_row(record: ImportedRecord, reason: str | None = None) -> dict[
         "Canonical source": record.canonical_source,
         "观察状态": "需人工对账",
         "许可证": record.values.get("许可证", "待确认"),
-        "记录日期": _first(record.values, "收集日期") or "",
+        "记录日期": _valid_observation_date(_first(record.values, "收集日期")),
         "原因": detail,
     }
+
+
+def _valid_observation_date(value: str) -> str:
+    """保留可信历史日期；缺失或非法时记录本次导入日期。"""
+    try:
+        return date.fromisoformat(value).isoformat()
+    except (TypeError, ValueError):
+        return date.today().isoformat()
 
 
 def _first(values: Mapping[str, str], *names: str) -> str:

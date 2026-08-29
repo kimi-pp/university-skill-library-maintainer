@@ -187,6 +187,28 @@ class LedgerStoreTest(unittest.TestCase):
         self.assertIsNone(reopened.rows("候选观察")[0]["内部标识"])
         self.assertEqual(sha256(legacy_path.read_bytes()).hexdigest(), before, "load migration must not overwrite authority")
 
+    def test_candidate_observation_validation_rejects_missing_semantics_and_invalid_dates(self):
+        self.store.append_rows("候选观察", [
+            {
+                "观察标识": "invalid-display", "内部标识": "SK-DISPLAY", "候选名称": "",
+                "Canonical source": "https://example.test/display", "观察状态": "条件候选",
+                "许可证": "MIT", "记录日期": "not-a-date", "原因": "",
+            },
+            {
+                "观察标识": "invalid-exclusion", "内部标识": "SK-EXCLUDE", "候选名称": "",
+                "Canonical source": "https://example.test/exclude", "观察状态": "排除",
+                "许可证": "MIT", "记录日期": "", "原因": "安全禁止", "显示层级": "不展示",
+            },
+        ])
+
+        errors = self.store.validate()
+
+        self.assertTrue(any("候选名称" in error and "invalid-display" in error for error in errors))
+        self.assertTrue(any("记录日期" in error and "invalid-display" in error for error in errors))
+        self.assertTrue(any("原因" in error and "invalid-display" in error for error in errors))
+        self.assertTrue(any("记录日期" in error and "invalid-exclusion" in error for error in errors))
+        self.assertFalse(any("候选名称" in error and "invalid-exclusion" in error for error in errors))
+
     def test_load_compatibly_adds_reviewed_version_to_legacy_source_alias_sheet(self):
         legacy_path = Path(self.tempdir.name) / "legacy-source-alias.xlsx"
         self.store.append_rows("来源别名", [{

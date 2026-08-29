@@ -389,6 +389,27 @@ class LedgerStore:
                     seen.add(values)
             if spec.name == "当前Skill":
                 current_skill_rows = self.rows(spec.name)
+            elif spec.name == "候选观察":
+                for row in self.rows(spec.name):
+                    observation_id = str(row.get("观察标识") or "<缺少观察标识>").strip()
+                    status = str(row.get("观察状态") or "").strip()
+                    hidden = status in {"排除", "attention_required"} and str(row.get("显示层级") or "").strip() == "不展示"
+                    if not hidden and not str(row.get("候选名称") or "").strip():
+                        errors.append(f"台账错误-候选观察-{observation_id}-候选名称必填")
+                    if not str(row.get("原因") or "").strip():
+                        errors.append(f"台账错误-候选观察-{observation_id}-原因必填")
+                    record_date = row.get("记录日期")
+                    if isinstance(record_date, datetime):
+                        parsed_date = record_date.date()
+                    elif isinstance(record_date, date):
+                        parsed_date = record_date
+                    else:
+                        try:
+                            parsed_date = date.fromisoformat(str(record_date or "").strip())
+                        except ValueError:
+                            parsed_date = None
+                    if parsed_date is None:
+                        errors.append(f"台账错误-候选观察-{observation_id}-记录日期必须为YYYY-MM-DD")
 
         if current_skill_rows is not None:
             for row in current_skill_rows:
