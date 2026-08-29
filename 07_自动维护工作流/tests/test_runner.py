@@ -174,6 +174,7 @@ notify_on_no_change = false
             "上游项目地址": "https://github.com/example/skill", "Skill入口路径": "SKILL.md", "固定版本": version,
             "固定版本内容指纹": content_hash, "许可证": "MIT", "外部联网/API 调用": "否", "远程服务端点": "",
             "安全等级": "SA", "验证状态": "全部通过（未实测）", "质量评分": 3,
+            "验证证据位置": f"https://evidence.example/{stable_id}",
         })
         return row
 
@@ -417,7 +418,7 @@ notify_on_no_change = false
             "Skill入口路径": "SKILL.md", "观察状态": "attention_required", "许可证": "MIT",
             "记录日期": "2026-08-29", "原因": "上游仓库已删除；旧版本及快照保留",
             "固定版本": "1" * 40, "固定版本内容指纹": "2" * 64,
-            "验证证据位置": "evidence/github-delete.json", "原因代码": "upstream-deleted",
+            "验证证据位置": "https://evidence.example/github-delete.json", "原因代码": "upstream-deleted",
             "显示层级": "不展示",
         }
         source_runs = (
@@ -548,6 +549,91 @@ notify_on_no_change = false
                 guard.abandon(rejected_prepared)
         self.assertEqual(discovery_calls, 0)
         self.assertFalse((copied_root / ".runtime" / "staging" / "run-referenced-prior-tamper").exists())
+
+    def test_prepare_validates_every_persisted_evidence_token_before_discovery(self):
+        stable_id = "EXACT-EVIDENCE-TOKEN-1"
+
+        def discover(request, staging):
+            source_root = staging / "source-evidence" / "GitHub"
+            source_root.mkdir(parents=True)
+            evidence = source_root / "request.json"
+            evidence.write_bytes(b'{"status":200}')
+            observation = {
+                "观察标识": "exact-evidence-token-observation", "内部标识": stable_id,
+                "候选名称": "exact evidence token", "Canonical source": "https://github.com/example/exact",
+                "Skill入口路径": "SKILL.md", "观察状态": "attention_required", "许可证": "MIT",
+                "记录日期": "2026-08-29", "原因": "保留可审计证据", "固定版本": "a" * 40,
+                "固定版本内容指纹": "b" * 64, "验证证据位置": str(evidence),
+                "原因代码": "upstream-entry-deleted", "显示层级": "不展示",
+            }
+            return (
+                SourceRun("SkillHub", "complete"), SourceRun("ClawHub", "complete"),
+                SourceRun("GitHub", "partial", evidence_files=(evidence,), structured_observations=(observation,)),
+                SourceRun("Hugging Face Spaces", "complete"),
+            )
+
+        def build_delivery(prepared, staging):
+            delivery = staging / "deliveries"
+            delivery.mkdir()
+            report = delivery / "report.txt"
+            report.write_text("not evidence authority", encoding="utf-8")
+            return (report,)
+
+        coordinator = self.coordinator(discover=discover, report_builder=build_delivery)
+        prepared = coordinator.prepare(replace(self.request, requested_run_id="run-exact-evidence-token"))
+        summary = coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
+        ledger_path = self.root / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(ledger_path)
+        valid_token = str(ledger.rows("候选观察")[0]["验证证据位置"])
+        ledger.workbook.close()
+        valid_path = self.root / Path(valid_token.partition("#sha256=")[0])
+        valid_hash = sha256(valid_path.read_bytes()).hexdigest()
+        generation_relative = summary.output_generation.relative_to(self.root).as_posix()
+
+        attacks = {
+            "missing manifest member": f"{generation_relative}/authority/source-evidence/GitHub/not-found.json#sha256={'0' * 64}",
+            "wrong fragment digest": f"{valid_token.partition('#sha256=')[0]}#sha256={'0' * 64}",
+            "malformed fragment digest": f"{valid_token.partition('#sha256=')[0]}#sha256=abc",
+            "absolute local path": f"{valid_path}#sha256={valid_hash}",
+            "unpublished local path": "evidence/request.json",
+            "generation traversal": f"{generation_relative}/authority/../generation-manifest.json",
+            "delivery role is not evidence": f"{generation_relative}/report.txt",
+        }
+        for index, (label, attack) in enumerate(attacks.items(), 1):
+            with self.subTest(label=label):
+                copied_root = Path(self.temporary.name) / f"证据攻击副本 {index}"
+                shutil.copytree(self.root, copied_root)
+                copied_ledger_path = copied_root / "ledger" / "Skills主台账.xlsx"
+                copied_ledger = LedgerStore.load(copied_ledger_path)
+                worksheet = copied_ledger.workbook["候选观察"]
+                columns = copied_ledger._resolve_columns("候选观察")
+                copied_ledger._set_cell(
+                    worksheet.cell(2, columns["验证证据位置"]), attack, "验证证据位置",
+                )
+                staged = copied_root / "ledger" / "attacked.xlsx"
+                copied_ledger.save_staged(staged)
+                copied_ledger.workbook.close()
+                shutil.copyfile(staged, copied_ledger_path)
+                staged.unlink()
+                discovery_calls = 0
+
+                def must_not_discover(request, staging):
+                    nonlocal discovery_calls
+                    discovery_calls += 1
+                    return (
+                        SourceRun("SkillHub", "complete"), SourceRun("ClawHub", "complete"),
+                        SourceRun("GitHub", "complete"), SourceRun("Hugging Face Spaces", "complete"),
+                    )
+
+                guarded = self.coordinator(root=copied_root, discover=must_not_discover)
+                copied_request = replace(
+                    self.request, settings_path=copied_root / "workflow-settings.toml",
+                    requested_run_id=f"run-reject-evidence-token-{index}",
+                )
+                with self.assertRaisesRegex(CoordinatorError, "证据|authority|发布代次"):
+                    guarded.prepare(copied_request)
+                self.assertEqual(discovery_calls, 0)
+                self.assertFalse((copied_root / ".runtime" / "staging" / f"run-reject-evidence-token-{index}").exists())
 
     def test_real_report_adapter_uses_prepared_catalog_sources_and_both_ledgers_in_staging(self):
         if not os.environ.get("SKILL_MAINTAINER_NODE") or not os.environ.get("SKILL_MAINTAINER_NODE_MODULES"):

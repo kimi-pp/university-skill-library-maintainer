@@ -461,7 +461,7 @@ class RunCoordinator:
     def _verify_referenced_generations(
         self, ledger: LedgerStore, successful_rows: tuple[Mapping[str, object], ...],
     ) -> None:
-        referenced: set[str] = set()
+        referenced: dict[str, list[tuple[str, str | None]]] = {}
         for sheet, field_name in (
             ("当前Skill", "验证证据位置"),
             ("候选观察", "验证证据位置"),
@@ -469,17 +469,26 @@ class RunCoordinator:
         ):
             for row in ledger.rows(sheet):
                 for raw in str(row.get(field_name) or "").split("；"):
-                    token = raw.strip().partition("#sha256=")[0]
-                    if not token or token.startswith(("http://", "https://")):
+                    value = raw.strip()
+                    if not value or value.startswith(("http://", "https://")):
                         continue
+                    if value.count("#sha256=") > 1:
+                        raise CoordinatorError("业务台账证据哈希片段无效")
+                    token, separator, fragment = value.partition("#sha256=")
+                    digest = fragment.casefold() if separator else None
+                    if (not token or "#" in token or (digest is not None and (
+                            len(digest) != 64
+                            or any(character not in "0123456789abcdef" for character in digest)))):
+                        raise CoordinatorError("业务台账证据哈希片段无效")
                     path = Path(token)
-                    if path.is_absolute():
-                        continue
+                    if path.is_absolute() or any(part in {"", ".", ".."} for part in path.parts):
+                        raise CoordinatorError("业务台账证据必须使用安全的发布代次相对路径")
                     parts = path.parts
-                    if len(parts) >= 2 and parts[:2] == ("output", "generations"):
-                        if len(parts) < 5 or not parts[2] or parts[3] != "authority":
-                            raise CoordinatorError("业务台账证据代次路径结构无效")
-                        referenced.add(parts[2])
+                    if (len(parts) < 6 or parts[:2] != ("output", "generations")
+                            or not parts[2] or parts[3] != "authority"):
+                        raise CoordinatorError("业务台账证据代次路径结构无效")
+                    relative = Path(*parts[3:]).as_posix()
+                    referenced.setdefault(parts[2], []).append((relative, digest))
         records_by_id: dict[str, Mapping[str, object]] = {}
         for row in successful_rows:
             run_id = str(row.get("运行标识") or "").strip()
@@ -493,7 +502,16 @@ class RunCoordinator:
             relative = self._summary_fields(record.get("摘要")).get("generation", "")
             if Path(relative).parts[:3] != ("output", "generations", run_id):
                 raise CoordinatorError("业务台账证据代次与成功运行记录不一致")
-            self._verify_recorded_generation(record)
+            _, authority_files = self._verify_recorded_generation(record)
+            files_by_path = {str(item["path"]): item for item in authority_files}
+            for evidence_path, expected_digest in referenced[run_id]:
+                item = files_by_path.get(evidence_path)
+                if item is None:
+                    raise CoordinatorError("业务台账证据文件不属于发布代次 manifest")
+                if item.get("role") not in {"source-evidence", "fixed-snapshot"}:
+                    raise CoordinatorError("业务台账引用的发布代次文件不是允许的证据角色")
+                if expected_digest is not None and item.get("sha256") != expected_digest:
+                    raise CoordinatorError("业务台账证据哈希与发布代次文件不一致")
 
     def _run_id(self, requested: str | None) -> str:
         value = requested or f"run-{uuid.uuid4().hex}"
@@ -586,7 +604,9 @@ class RunCoordinator:
                 values[key] = value
         return values
 
-    def _verify_recorded_generation(self, record: Mapping[str, object]) -> None:
+    def _verify_recorded_generation(
+        self, record: Mapping[str, object],
+    ) -> tuple[Path, list[dict[str, object]]]:
         fields = self._summary_fields(record.get("摘要"))
         relative = fields.get("generation")
         delivery_hash, manifest_hash = fields.get("delivery_sha256"), fields.get("manifest_sha256")
@@ -600,7 +620,10 @@ class RunCoordinator:
             candidate.relative_to(self.paths.output / "generations")
         except ValueError as exc:
             raise CoordinatorError("生产成功运行记录指向项目外代次") from exc
-        self._verify_generation_authority(candidate, str(record.get("运行标识") or ""), delivery_hash, manifest_hash)
+        files = self._verify_generation_authority(
+            candidate, str(record.get("运行标识") or ""), delivery_hash, manifest_hash,
+        )
+        return candidate, files
 
     def _reclaim_orphan_generation(self, run_id: str) -> None:
         generation = contained_child(self.paths.output / "generations", run_id)
@@ -624,7 +647,9 @@ class RunCoordinator:
             raise CoordinatorError("同运行标识发布代次已被生产台账引用，拒绝回收")
         self._remove_generation(generation, self.paths.output / "generations")
 
-    def _verify_generation_authority(self, generation: Path, run_id: str, delivery_hash: str, manifest_hash: str) -> None:
+    def _verify_generation_authority(
+        self, generation: Path, run_id: str, delivery_hash: str, manifest_hash: str,
+    ) -> list[dict[str, object]]:
         try:
             generation.relative_to(self.paths.output / "generations")
         except ValueError as exc:
@@ -646,6 +671,7 @@ class RunCoordinator:
         actual_files = self._authority_files(generation, excluded=manifest)
         if self._portable_manifest_files(payload.get("files")) != actual_files:
             raise CoordinatorError("发布代次 authority 文件集合或身份不一致")
+        return actual_files
 
     @staticmethod
     def _authority_files(root: Path, *, excluded: Path | None = None) -> list[dict[str, object]]:

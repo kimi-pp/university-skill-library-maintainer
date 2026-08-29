@@ -65,7 +65,7 @@ description: Use when operating, scheduling, inspecting, repairing, or rebuildin
 6. 把材料事实与项目判断分别保存在上述两个结构化标准输入帧中；不要通过命令行参数、临时业务数据库或自由文本旁路提交。
 7. 调用工作区依赖加载器，把其原始返回文本和绝对项目根传给 `build_workspace_renderer_command(loader_output, project_root)`。该接口只读取加载器明确返回的 Python、Python packages、override binaries 和 fallback binaries，验证普通路径并解析其中固定的 Poppler 包装入口，再用项目自带 `pdf_renderer.py` 构造 Task 11 的 `RendererCommand.argv`。把该命令交给 `finalize`；不得从 PATH、用户名或缓存布局猜测路径。
 8. 收到 `word_visual_review_required` 后逐张检查最新生成的 Word `page-<N>.png`，对每页明确批准或拒绝。缺页、空白页、裁切、表格越界、页脚重叠或哈希不一致均拒绝发布。
-9. EOF、异常或任一闸失败时让同一进程只清理该 run 的快照 capability、ReviewPacket、暂存和锁；PreparedRun 尚未注册时也必须按本轮暂存身份撤销已创建 manifest。发布时确认来源请求证据、固定归档、逐入口快照和清单已进入 generation authority，台账相对路径在暂存删除后仍可解析且哈希匹配；长期 manifest 使用相对路径、SHA-256、字节数和逻辑角色，复制机器后重新做普通文件与稳定句柄复核。下一轮联网前验证最新成功代次和所有仍被业务表引用的前代 generation。完全无变化且成功时静默结束；只在变化、人工决定事项、覆盖显著下降或失败时通知。
+9. EOF、异常或任一闸失败时让同一进程只清理该 run 的快照 capability、ReviewPacket、暂存和锁；PreparedRun 尚未注册时也必须按本轮暂存身份撤销已创建 manifest。发布时确认来源请求证据、固定归档、逐入口快照和清单已进入 generation authority；台账中的每条本地证据必须逐条命中对应 manifest 的 `source-evidence` 或 `fixed-snapshot` 文件，安全相对路径和可选的 64 位 `#sha256=` 必须与稳定句柄实读内容一致。长期 manifest 使用相对路径、SHA-256、字节数和逻辑角色，复制机器后重新做普通文件与稳定句柄复核。下一轮联网前验证最新成功代次和所有仍被业务表引用的前代 generation。完全无变化且成功时静默结束；只在变化、人工决定事项、覆盖显著下降或失败时通知。
 
 `interval` 模式仍只建立每天在 `start_time` 触发的分发器；`scheduled-run` 从 Excel `运行记录` 读取上次成功时间，未满 `interval_days` 时以安全无操作码 3 退出。
 

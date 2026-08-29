@@ -1264,11 +1264,14 @@ notify_on_no_change = false
             "上游项目地址": "https://github.com/example/existing", "Skill入口路径": "SKILL.md", "固定版本": "1" * 40,
             "固定版本内容指纹": "2" * 64, "许可证": "MIT", "外部联网/API 调用": "否", "远程服务端点": "",
             "安全等级": "SA", "验证状态": "全部通过（未实测）", "质量评分": 3,
+            "验证证据位置": "https://evidence.example/existing",
         })
         ledger.append_rows("当前Skill", [row])
         candidate = self.root / "candidate"
         shutil.copytree(FIXTURES / "fixed-package", candidate)
-        snapshot = build_snapshot(SnapshotCandidate("SK-EXISTING", "3" * 40, candidate, ("evidence/SKILL.md",)), self.root / "snapshot")
+        snapshot = build_snapshot(SnapshotCandidate(
+            "SK-EXISTING", "3" * 40, candidate, ("https://evidence.example/SKILL.md",),
+        ), self.root / "snapshot")
         self.packet = build_review_packet({
             "candidate_id": "SK-EXISTING", "canonical_source": "https://github.com/example/existing",
             "upstream_repository": "https://github.com/example/existing", "skill_entry_path": "SKILL.md",
@@ -1297,11 +1300,11 @@ notify_on_no_change = false
             "观察状态": "条件候选", "许可证": "MIT", "记录日期": "2026-08-29",
             "原因": "发现新版本但许可证范围需要复核；保留旧固定版本。",
             "固定版本": "3" * 40, "固定版本内容指纹": self.packet.fixed_content_hash,
-            "验证证据位置": "evidence/SKILL.md", "显示层级": "条件候选",
+            "验证证据位置": "https://evidence.example/SKILL.md", "显示层级": "条件候选",
         }
         decision = ReviewDecision(
             ObservedFacts(
-                "3" * 40, True, True, "MIT", "https://github.com/example/existing", ("evidence/SKILL.md",),
+                "3" * 40, True, True, "MIT", "https://github.com/example/existing", ("https://evidence.example/SKILL.md",),
                 "否", (), "无", "不使用", "SB-A", "前两步通过",
             ),
             ProjectJudgments("条件候选", True, False, 4),

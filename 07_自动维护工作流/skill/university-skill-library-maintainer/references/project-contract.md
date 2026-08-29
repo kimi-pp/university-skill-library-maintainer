@@ -21,7 +21,7 @@
 
 不得跨进程调用 `prepare`、`apply-reviews`、`finalize`，不得从磁盘恢复 capability。EOF、放弃和任何异常都按 run 清理未消费的快照、ReviewPacket 和回执，不得清除其他 run。市场元数据或搜索响应 JSON 不得冒充 Skill 固定包；无法取得完整固定包的市场或 Hugging Face 条目只进入候选观察。根级 Skill 的固定快照覆盖除明确嵌套独立 Skill 子树和仓库元数据外的全部相关文件，嵌套 Skill 只覆盖自身子树。
 
-发布 generation 的 `authority` 必须持久包含本轮受信来源请求证据、固定归档、逐入口固定快照和快照清单；台账只保存从 generation 可移植解析的路径及绑定哈希。长期 manifest 文件项只含相对路径、SHA-256、字节数和逻辑角色；设备、inode 和 mtime 只作为单次运行内稳定句柄/TOCTOU pin，不得写入跨机器权威。删除暂存后所有当前、候选和版本历史证据仍须存在且哈希匹配；启动时在联网前验证最新成功代次与所有仍被业务表引用的前代 generation，未引用代次不参与此阻断门。
+发布 generation 的 `authority` 必须持久包含本轮受信来源请求证据、固定归档、逐入口固定快照和快照清单；台账只保存从 generation 可移植解析的路径及绑定哈希。每条本地证据必须逐条命中对应 manifest 中角色为 `source-evidence` 或 `fixed-snapshot` 的文件；拒绝绝对路径、非发布本地路径、路径逃逸、manifest 外文件和错误哈希片段。长期 manifest 文件项只含相对路径、SHA-256、字节数和逻辑角色；设备、inode 和 mtime 只作为单次运行内稳定句柄/TOCTOU pin，不得写入跨机器权威。删除暂存后所有当前、候选和版本历史证据仍须存在且哈希匹配；启动时在联网前验证最新成功代次与所有仍被业务表引用的前代 generation，未引用代次不参与此阻断门。
 
 任一证据缺失、身份或哈希变化、Office 复读失败、逐页拒绝或发布冲突都保留旧 authority，不得留下半提交代次。
 
