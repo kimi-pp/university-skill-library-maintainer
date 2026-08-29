@@ -32,12 +32,17 @@ CURRENT_SKILL_REQUIRED_COLUMNS = tuple(
     column for column in CURRENT_SKILL_COLUMNS if column not in CURRENT_SKILL_OPTIONAL_COLUMNS
 )
 
+CANDIDATE_OBSERVATION_COLUMNS = (
+    "观察标识", "内部标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因",
+    "固定版本", "固定版本内容指纹", "验证证据位置", "原因代码", "显示层级",
+)
+
 ALLOWED_SOURCE_PLATFORMS = frozenset({
     "SkillHub", "ClawHub", "GitHub", "Hugging Face Spaces", "GitLab", "Codeberg", "Gitee", "SourceHut", "Hugging Face", "开放 registry",
 })
 
 SHEET_SPECS = (
-    SheetSpec("当前Skill", "CurrentSkills", CURRENT_SKILL_COLUMNS, (("内部标识",), ("Canonical source",))),
+    SheetSpec("当前Skill", "CurrentSkills", CURRENT_SKILL_COLUMNS, (("内部标识",), ("上游项目地址", "Skill入口路径"))),
     SheetSpec("来源别名", "SourceAliases", ("别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "关系类型", "去重依据", "记录日期"), (("别名标识",),)),
     SheetSpec(
         "专业任务映射",
@@ -49,7 +54,7 @@ SHEET_SPECS = (
         (("映射标识",),),
     ),
     SheetSpec("版本历史", "VersionHistory", ("版本记录标识", "内部标识", "固定版本", "变更日期", "变更摘要", "证据位置"), (("版本记录标识",),)),
-    SheetSpec("候选观察", "CandidateObservations", ("观察标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因"), (("观察标识",),)),
+    SheetSpec("候选观察", "CandidateObservations", CANDIDATE_OBSERVATION_COLUMNS, (("观察标识",),)),
     SheetSpec("目录基线", "CatalogBaselines", ("目录版本", "目录名称", "公开地址", "SHA-256", "发布日期", "访问日期"), (("目录版本",),)),
     SheetSpec("来源水位", "SourceWatermarks", ("来源平台", "检索词", "水位时间", "水位标识", "备注"), (("来源平台", "检索词"),)),
     SheetSpec("运行记录", "RunRecords", ("运行标识", "运行类型", "开始时间", "成功完成时间", "状态", "摘要", "快照SHA-256"), (("运行标识",),)),

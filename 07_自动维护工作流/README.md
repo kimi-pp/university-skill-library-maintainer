@@ -32,7 +32,7 @@
 在 PowerShell 中显式填写项目根、Python 和 Codex Skills 根目录；中文与空格路径均受支持：
 
 ```powershell
-$ProjectRoot = 'D:\高校AI工作台\高校AI技能库调研'
+$ProjectRoot = (Get-Location).Path  # 请先切换到项目根目录
 $PythonExe = 'C:\Python312\python.exe'
 $CodexSkillsRoot = Join-Path $env:USERPROFILE '.codex\skills'
 

@@ -288,6 +288,40 @@ class ReportContentTestCase(unittest.TestCase):
             ("0809 计算机类",),
         )
 
+    def test_candidate_only_change_refreshes_every_human_mapped_scope_without_name_keyword(self):
+        candidate = {
+            "观察标识": "OBS-SK-SHARED-条件候选", "内部标识": "SK-SHARED",
+            "候选名称": "generic-table-helper", "Canonical source": "https://example.test/shared",
+            "观察状态": "条件候选", "许可证": "MIT", "原因": "需人工复核输入",
+            "固定版本": "a" * 40, "固定版本内容指纹": "b" * 64,
+            "验证证据位置": "evidence/shared/SKILL.md", "显示层级": "条件候选",
+        }
+        mappings = [
+            {"映射标识": "MAP-SK-SHARED-0801", "内部标识": "SK-SHARED", "专业代码": "0801", "专业名称": "力学类", "专业任务": "整理实验表", "输入": "测量表", "输出": "核验表", "适用理由": "支持实验数据准备", "使用限制": "人工复核", "相关度": 4},
+            {"映射标识": "MAP-SK-SHARED-0809", "内部标识": "SK-SHARED", "专业代码": "0809", "专业名称": "计算机类", "专业任务": "清洗评测表", "输入": "评测表", "输出": "核验表", "适用理由": "支持软件评测", "使用限制": "人工复核", "相关度": 4},
+        ]
+        before = {"当前Skill": [], "候选观察": [candidate], "专业任务映射": mappings, "目录基线": []}
+        after = {**before, "候选观察": [{**candidate, "固定版本": "c" * 40, "原因": "新版本仍需人工复核"}]}
+        self.assertEqual(
+            affected_scopes(before, after, catalog_snapshot=approved_scope_catalog()),
+            ("0801 力学类", "0809 计算机类"),
+        )
+
+        self.require_runtime()
+        paths = build_scope_deliveries(("0801 力学类", "0809 计算机类"), after, self.root / "候选跨专业")
+        self.assertEqual(len(paths), 4)
+        for workbook_path in (path for path in paths if path.suffix == ".xlsx"):
+            workbook = load_workbook(workbook_path, data_only=False)
+            try:
+                self.assertEqual(workbook["条件候选"]["A2"].value, "SK-SHARED")
+                for sheet_name in ("新增正式推荐", "需适配候选"):
+                    self.assertNotIn(
+                        "SK-SHARED",
+                        [cell.value for row in workbook[sheet_name].iter_rows() for cell in row],
+                    )
+            finally:
+                workbook.close()
+
     def test_scope_mappings_must_match_exact_codes_in_the_captured_catalog(self):
         catalog = approved_scope_catalog()
         cases = (
@@ -326,8 +360,8 @@ class ReportContentTestCase(unittest.TestCase):
         before = LedgerStore.create(before_path)
         after = LedgerStore.create(self.root / "after-source.xlsx")
         after.append_rows("候选观察", [
-            {"观察标识": "OBS-COND-1", "候选名称": "Conditional Candidate", "Canonical source": "https://example.test/conditional", "观察状态": "条件候选", "许可证": "MIT", "记录日期": datetime(2026, 8, 28), "原因": "仅限脱敏数据"},
-            {"观察标识": "OBS-ADAPT-1", "候选名称": "Adaptation Candidate", "Canonical source": "https://example.test/adaptation", "观察状态": "需适配候选", "许可证": "Apache-2.0", "记录日期": datetime(2026, 8, 28), "原因": "需本地适配"},
+            {"观察标识": "OBS-COND-1", "内部标识": "SK-COND-1", "候选名称": "Conditional Candidate", "Canonical source": "https://example.test/conditional", "观察状态": "条件候选", "许可证": "MIT", "记录日期": datetime(2026, 8, 28), "原因": "仅限脱敏数据"},
+            {"观察标识": "OBS-ADAPT-1", "内部标识": "SK-ADAPT-1", "候选名称": "Adaptation Candidate", "Canonical source": "https://example.test/adaptation", "观察状态": "需适配候选", "许可证": "Apache-2.0", "记录日期": datetime(2026, 8, 28), "原因": "需本地适配"},
         ])
         after.save_staged(after_path)
         prepared = SimpleNamespace(
@@ -343,8 +377,8 @@ class ReportContentTestCase(unittest.TestCase):
             workbook = load_workbook(output, data_only=False)
             self.addCleanup(workbook.close)
             for sheet, stable_id, name, reason in (
-                ("条件候选", "OBS-COND-1", "Conditional Candidate", "仅限脱敏数据"),
-                ("需适配候选", "OBS-ADAPT-1", "Adaptation Candidate", "需本地适配"),
+                ("条件候选", "SK-COND-1", "Conditional Candidate", "仅限脱敏数据"),
+                ("需适配候选", "SK-ADAPT-1", "Adaptation Candidate", "需本地适配"),
             ):
                 self.assertEqual(workbook[sheet]["A2"].value, stable_id)
                 self.assertEqual(workbook[sheet]["B2"].value, name)

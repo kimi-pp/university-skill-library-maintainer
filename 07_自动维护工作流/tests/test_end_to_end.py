@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 from dataclasses import replace
 from datetime import datetime, timezone
 from hashlib import sha256
@@ -14,7 +15,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from skill_maintainer import cli
+from skill_maintainer import cli, production as production_module
 from skill_maintainer.catalog import Catalog, CatalogRow, CatalogSourceStatus, TaskProfile, diff_catalog
 from skill_maintainer.dedup import deduplicate
 from skill_maintainer.import_existing import ImportInventory, ImportedRecord, build_initial_ledger
@@ -26,11 +27,12 @@ from skill_maintainer.production import (
     NetworkSmokeEntry,
     NetworkSmokeReport,
     ProductionDriver,
+    ProductionDriverError,
     build_production_driver,
     run_network_smoke,
 )
 from skill_maintainer.queries import PLATFORM_ORDER, QueryJob
-from skill_maintainer.runner import RunCoordinator, RunRequest, SourceRun
+from skill_maintainer.runner import CoordinatorError, RunCoordinator, RunRequest, SourceRun
 from skill_maintainer.runner import ReviewApplySummary, RunSummary
 from skill_maintainer.review import DerivedFields, ObservedFacts, ProjectJudgments, ReviewDecision, build_review_packet
 from skill_maintainer.snapshots import SnapshotCandidate, build_snapshot
@@ -67,7 +69,11 @@ class _Adapter:
             self.platform, job.query_id, f"https://fixture.invalid/{self.platform}/{len(self.search_calls)}",
             1, 200, 1, sha256(body).hexdigest(), body, True, None, True,
         )
-        return SearchBatch(self.platform, job, "complete", self.candidates, (event,), ())
+        bound_candidates = tuple(
+            replace(candidate, query_id=job.query_id, response_evidence_sha256=event.response_sha256)
+            for candidate in self.candidates
+        )
+        return SearchBatch(self.platform, job, "complete", bound_candidates, (event,), ())
 
     def latest_version(self, identity: str):
         self.latest_calls.append(identity)
@@ -97,6 +103,21 @@ class _DeletedGithubAdapter(_Adapter):
         )
 
 
+class _DeclaredHashMismatchAdapter(_Adapter):
+    def snapshot(self, identity: str, version: str | None, destination: Path):
+        result = super().snapshot(identity, version, destination)
+        return replace(result, sha256="0" * 64)
+
+
+class _LatestFailureAdapter(_Adapter):
+    def latest_version(self, identity: str):
+        self.latest_calls.append(identity)
+        return VersionObservation(
+            self.platform, identity, None, datetime(2026, 8, 29, tzinfo=timezone.utc), None,
+            SourceError(self.platform, "latest-version", "http-503", 503, f"https://api.fixture/{identity}"),
+        )
+
+
 class _ScenarioGithubAdapter(_Adapter):
     def __init__(self, candidates, package, versions, deleted):
         super().__init__("GitHub", candidates, package)
@@ -115,7 +136,14 @@ class _ScenarioGithubAdapter(_Adapter):
         )
 
 
-def _candidate(platform: str, native: str, discovery: str, canonical: str | None) -> SourceCandidate:
+def _candidate(
+    platform: str,
+    native: str,
+    discovery: str,
+    canonical: str | None,
+    *,
+    skill_entry_path: str | None = None,
+) -> SourceCandidate:
     return SourceCandidate(
         platform=platform,
         native_id=native,
@@ -128,6 +156,7 @@ def _candidate(platform: str, native: str, discovery: str, canonical: str | None
         popularity={},
         query_id="fixture-query",
         response_evidence_sha256="c" * 64,
+        skill_entry_path=skill_entry_path,
     )
 
 
@@ -215,6 +244,94 @@ notify_on_no_change = false
         shutil.copyfile(staged, ledger_path)
         staged.unlink()
 
+    def _append_tracked_entries(self, canonical: str, entries: tuple[tuple[str, str], ...]) -> None:
+        ledger_path = self.workflow / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(ledger_path)
+        for stable_id, entry in entries:
+            row = {column: "已核验" for column in CURRENT_SKILL_COLUMNS}
+            row.update({
+                "内部标识": stable_id, "Skill名称": stable_id, "规范名称": stable_id, "入库层级": "正式",
+                "来源平台": "GitHub", "发现地址": canonical, "Canonical source": canonical,
+                "上游项目地址": canonical, "Skill入口路径": entry, "固定版本": "1" * 40,
+                "固定版本内容指纹": sha256(entry.encode()).hexdigest(), "许可证": "MIT",
+                "外部联网/API 调用": "否", "远程服务端点": "", "安全等级": "SA",
+                "验证状态": "全部通过（未实测）", "质量评分": 3,
+            })
+            ledger.append_rows("当前Skill", [row])
+        staged = ledger_path.with_name("multi-entry-seed.xlsx")
+        ledger.save_staged(staged)
+        shutil.copyfile(staged, ledger_path)
+        staged.unlink()
+
+    def test_existing_monorepo_entries_are_checked_once_and_expand_to_unique_materials(self):
+        canonical = "https://github.com/example/monorepo"
+        self._append_tracked_entries(canonical, (("SK-A", "a/SKILL.md"), ("SK-B", "b/SKILL.md")))
+        package = Path(self.temporary.name) / "monorepo-package"
+        (package / "a").mkdir(parents=True)
+        (package / "b").mkdir()
+        (package / "a" / "SKILL.md").write_text("# A new", encoding="utf-8")
+        (package / "b" / "SKILL.md").write_text("# B new", encoding="utf-8")
+        github = _Adapter("GitHub", (), package)
+        adapters = {name: (_Adapter(name, ()) if name != "GitHub" else github) for name in PLATFORM_ORDER}
+        driver = ProductionDriver(project_root=self.project, adapters=adapters, catalog_loader=self._catalog,
+                                  now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc))
+        staging = self.workflow / ".runtime" / "staging" / "run-multi-entry"
+        staging.mkdir(parents=True)
+
+        runs = driver.discover(RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog), staging)
+
+        self.assertEqual(github.latest_calls, [canonical])
+        self.assertEqual(len(github.snapshot_calls), 1)
+        self.assertEqual({(item.candidate_id, item.skill_entry_path) for item in driver.review_materials},
+                         {("SK-A", "a/SKILL.md"), ("SK-B", "b/SKILL.md")})
+        github_run = next(item for item in runs if item.platform == "GitHub")
+        self.assertFalse(any(candidate.get("observation_reason_code") == "inconsistent_ledger" for candidate in github_run.candidates))
+
+    def test_rediscovered_monorepo_still_downloads_once_and_preserves_each_tracked_entry(self):
+        canonical = "https://github.com/example/rediscovered-monorepo"
+        self._append_tracked_entries(canonical, (("SK-REDISCOVER-A", "a/SKILL.md"), ("SK-REDISCOVER-B", "b/SKILL.md")))
+        package = Path(self.temporary.name) / "rediscovered-package"
+        (package / "a").mkdir(parents=True)
+        (package / "b").mkdir()
+        (package / "a" / "SKILL.md").write_text("# A updated", encoding="utf-8")
+        (package / "b" / "SKILL.md").write_text("# B updated", encoding="utf-8")
+        github = _Adapter("GitHub", (_candidate("GitHub", "example/rediscovered-monorepo", canonical, canonical),), package)
+        adapters = {name: (_Adapter(name, ()) if name != "GitHub" else github) for name in PLATFORM_ORDER}
+        driver = ProductionDriver(project_root=self.project, adapters=adapters, catalog_loader=self._catalog,
+                                  now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc))
+        staging = self.workflow / ".runtime" / "staging" / "run-rediscovered-multi-entry"
+        staging.mkdir(parents=True)
+
+        driver.discover(RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog), staging)
+
+        self.assertEqual(github.latest_calls, [canonical])
+        self.assertEqual(len(github.snapshot_calls), 1)
+        self.assertEqual({(item.candidate_id, item.skill_entry_path) for item in driver.review_materials}, {
+            ("SK-REDISCOVER-A", "a/SKILL.md"), ("SK-REDISCOVER-B", "b/SKILL.md"),
+        })
+
+    def test_removed_tracked_entry_is_attention_and_new_entry_never_inherits_old_identity(self):
+        canonical = "https://github.com/example/moved-entry"
+        self._append_tracked_entries(canonical, (("SK-OLD-A", "a/SKILL.md"),))
+        package = Path(self.temporary.name) / "moved-package"
+        (package / "b").mkdir(parents=True)
+        (package / "b" / "SKILL.md").write_text("# B new", encoding="utf-8")
+        github = _Adapter("GitHub", (), package)
+        adapters = {name: (_Adapter(name, ()) if name != "GitHub" else github) for name in PLATFORM_ORDER}
+        driver = ProductionDriver(project_root=self.project, adapters=adapters, catalog_loader=self._catalog,
+                                  now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc))
+        staging = self.workflow / ".runtime" / "staging" / "run-moved-entry"
+        staging.mkdir(parents=True)
+
+        runs = driver.discover(RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog), staging)
+
+        removed = next(item for item in driver.observations if item.reason_code == "upstream-entry-deleted")
+        self.assertEqual(removed.candidate_id, "SK-OLD-A")
+        self.assertEqual(len(driver.review_materials), 1)
+        self.assertNotEqual(driver.review_materials[0].candidate_id, "SK-OLD-A")
+        github_rows = next(item for item in runs if item.platform == "GitHub").candidates
+        self.assertTrue(any(row.get("内部标识") == "SK-OLD-A" and row.get("observation_status") == "attention_required" for row in github_rows))
+
     def test_discovery_uses_six_dimensions_fixed_platform_order_and_one_global_identity(self):
         driver, adapters = self._driver()
         staging = self.workflow / ".runtime" / "staging" / "run-red"
@@ -247,27 +364,73 @@ notify_on_no_change = false
 
     def test_material_gate_builds_trusted_packets_only_after_bound_observations(self):
         driver, _ = self._driver()
-        staging = self.workflow / ".runtime" / "staging" / "run-material"
-        staging.mkdir(parents=True)
-        request = RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog, discover=driver.discover)
-        runs = tuple(driver.discover(request, staging))
-        prepared = type("Prepared", (), {"run_id": "run-material", "source_runs": runs})()
+        coordinator = RunCoordinator(root=self.workflow, discover=driver.discover)
+        request = RunRequest(
+            settings_path=self.settings, catalog_loader=driver.load_catalog, discover=driver.discover,
+            material_reviewer=driver, requested_run_id="run-material",
+        )
+        prepared = coordinator.prepare(request)
+        try:
+            impostors = (
+                copy.copy(prepared),
+                replace(prepared),
+                type("Prepared", (), {"run_id": prepared.run_id, "source_runs": prepared.source_runs})(),
+            )
+            for impostor in impostors:
+                with self.subTest(impostor=type(impostor).__name__), self.assertRaises(MaterialReviewError):
+                    driver.material_review_frame(impostor)
 
-        output = io.StringIO()
-        first = driver.material_review_frame(prepared)
-        material = first["materials"][0]
-        response = {
-            "type": "material_observations", "run_id": "run-material", "observations": [{
-                "candidate_id": material["candidate_id"], "fixed_version": material["fixed_version"],
-                "fixed_content_hash": material["fixed_content_hash"], "canonical_source": material["canonical_source"],
-                "license": "MIT", "security_grade": "SA",
-            }],
-        }
-        packets = driver.apply_material_observations(prepared, response)
-        self.assertEqual(set(packets), {material["candidate_id"]})
-        self.assertEqual(packets[material["candidate_id"]].fixed_content_hash, material["fixed_content_hash"])
+            first = driver.material_review_frame(prepared)
+            with self.assertRaises(MaterialReviewError):
+                driver.material_review_frame(prepared)
+            material = first["materials"][0]
+            response = {
+                "type": "material_observations", "run_id": "run-material", "observations": [{
+                    "candidate_id": material["candidate_id"], "fixed_version": material["fixed_version"],
+                    "fixed_content_hash": material["fixed_content_hash"], "canonical_source": material["canonical_source"],
+                    "license": "MIT", "security_grade": "SA",
+                }],
+            }
+            for impostor in impostors:
+                with self.subTest(apply_impostor=type(impostor).__name__), self.assertRaises(MaterialReviewError):
+                    driver.apply_material_observations(impostor, response)
+            packets = driver.apply_material_observations(prepared, response)
+            self.assertEqual(set(packets), {material["candidate_id"]})
+            self.assertEqual(packets[material["candidate_id"]].fixed_content_hash, material["fixed_content_hash"])
+            with self.assertRaises(MaterialReviewError):
+                driver.apply_material_observations(prepared, response)
+        finally:
+            coordinator.abandon(prepared)
         with self.assertRaises(MaterialReviewError):
-            driver.apply_material_observations(prepared, response)
+            driver.material_review_frame(prepared)
+
+    def test_material_gate_rejects_a_real_prepared_run_from_another_project_with_the_same_run_id(self):
+        driver, _ = self._driver()
+        other_project = Path(self.temporary.name) / "另一个 项目"
+        other_workflow = other_project / WORKFLOW
+        shutil.copytree(self.workflow, other_workflow)
+        other_driver, other_adapters = self._driver()
+        other_driver = ProductionDriver(
+            project_root=other_project, adapters=other_adapters, catalog_loader=self._catalog,
+            now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc),
+        )
+        first = RunCoordinator(root=self.workflow, discover=driver.discover)
+        second = RunCoordinator(root=other_workflow, discover=other_driver.discover)
+        first_prepared = first.prepare(RunRequest(
+            settings_path=self.settings, catalog_loader=driver.load_catalog, discover=driver.discover,
+            material_reviewer=driver, requested_run_id="run-same-001",
+        ))
+        second_prepared = second.prepare(RunRequest(
+            settings_path=other_workflow / "workflow-settings.toml", catalog_loader=other_driver.load_catalog,
+            discover=other_driver.discover, material_reviewer=other_driver, requested_run_id="run-same-001",
+        ))
+        try:
+            with self.assertRaises(MaterialReviewError):
+                driver.material_review_frame(second_prepared)
+            self.assertEqual(driver.material_review_frame(first_prepared)["run_id"], "run-same-001")
+        finally:
+            first.abandon(first_prepared)
+            second.abandon(second_prepared)
 
     def test_one_failed_source_degrades_but_does_not_stop_later_sources(self):
         driver, adapters = self._driver()
@@ -282,6 +445,81 @@ notify_on_no_change = false
         self.assertEqual([run.status for run in runs], ["failed", "complete", "complete", "complete"])
         self.assertEqual(len(adapters["GitHub"].search_calls), 12)
         self.assertEqual(len(driver.review_materials), 1)
+
+    def test_declared_archive_hash_mismatch_never_builds_review_material(self):
+        driver, adapters = self._driver()
+        original = adapters["GitHub"]
+        driver.adapters["GitHub"] = _DeclaredHashMismatchAdapter(
+            "GitHub", original.candidates, FIXTURES / "fixed-package",
+        )
+        staging = self.workflow / ".runtime" / "staging" / "run-hash-mismatch"
+        staging.mkdir(parents=True)
+        request = RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog, discover=driver.discover)
+
+        runs = tuple(driver.discover(request, staging))
+
+        self.assertEqual(driver.review_materials, ())
+        self.assertTrue(any(item.reason_code == "archive-integrity-failed" for item in driver.observations))
+        github_run = next(item for item in runs if item.platform == "GitHub")
+        self.assertEqual(github_run.status, "partial")
+        self.assertEqual(github_run.watermark_updates, ())
+        self.assertTrue(any(event.query_id.startswith("snapshot:") for event in github_run.request_events))
+
+    def test_latest_version_failure_downgrades_source_and_blocks_all_watermarks(self):
+        driver, adapters = self._driver()
+        original = adapters["GitHub"]
+        driver.adapters["GitHub"] = _LatestFailureAdapter("GitHub", original.candidates, original.package)
+        staging = self.workflow / ".runtime" / "staging" / "run-latest-failure"
+        staging.mkdir(parents=True)
+        runs = driver.discover(RunRequest(settings_path=self.settings, catalog_loader=driver.load_catalog), staging)
+
+        github_run = next(item for item in runs if item.platform == "GitHub")
+        self.assertEqual(github_run.status, "partial")
+        self.assertEqual(github_run.watermark_updates, ())
+        failure = next(event for event in github_run.request_events if event.query_id.startswith("latest-version:"))
+        self.assertEqual(failure.status_code, 503)
+        self.assertFalse(failure.completed)
+
+    def test_archive_capture_rejects_reparse_replace_and_in_place_mutation(self):
+        capture = getattr(production_module, "_capture_archive_snapshot", None)
+        self.assertTrue(callable(capture), "production archive capture boundary is required")
+        if not callable(capture):
+            return
+        root = self.workflow / "archive-boundary"
+        root.mkdir()
+        archive = root / "candidate.zip"
+        archive.write_bytes(b"original archive bytes")
+        declared = sha256(archive.read_bytes()).hexdigest()
+
+        replacement = root / "replacement.zip"
+        replacement.write_bytes(b"replacement archive")
+        original_identity = production_module._archive_path_identity(archive)
+        with patch.object(
+            production_module, "_archive_path_identity",
+            side_effect=(original_identity, production_module._archive_path_identity(replacement)),
+        ):
+            with self.assertRaises(ProductionDriverError):
+                capture(archive, root, declared)
+
+        archive.write_bytes(b"original archive bytes")
+        original_identity = production_module._archive_path_identity(archive)
+        changed_identity = (*original_identity[:2], original_identity[2], original_identity[3] + 1)
+        with patch.object(
+            production_module, "_archive_handle_identity",
+            side_effect=(original_identity, changed_identity),
+        ):
+            with self.assertRaises(ProductionDriverError):
+                capture(archive, root, declared)
+
+        target = root / "target.zip"
+        target.write_bytes(b"target")
+        linked = root / "linked.zip"
+        try:
+            linked.symlink_to(target)
+        except OSError as exc:
+            self.skipTest(f"filesystem cannot create archive symlink fixture: {exc}")
+        with self.assertRaises(ProductionDriverError):
+            capture(linked, root, sha256(target.read_bytes()).hexdigest())
 
     def test_existing_github_skill_is_checked_even_when_search_does_not_rediscover_it(self):
         canonical = "https://github.com/example/tracked"
@@ -356,6 +594,62 @@ notify_on_no_change = false
         self.assertIsNotNone(catalog.source_status)
         self.assertFalse(catalog.source_status.changed)
         self.assertEqual(catalog.source_status.actual_sha, sha256(official).hexdigest())
+
+    def test_runner_rechecks_a_fresh_production_catalog_and_cleans_a_changed_run(self):
+        first_catalog = self._catalog()
+        changed_profile = replace(first_catalog.task_profiles["0201"], methods=("因果推断",))
+        second_catalog = replace(first_catalog, task_profiles={**first_catalog.task_profiles, "0201": changed_profile})
+        calls = 0
+
+        def changing_loader():
+            nonlocal calls
+            calls += 1
+            return first_catalog if calls <= 2 else second_catalog
+
+        driver = ProductionDriver(
+            project_root=self.project, adapters={name: _Adapter(name, ()) for name in PLATFORM_ORDER},
+            catalog_loader=changing_loader, now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc),
+        )
+        coordinator = RunCoordinator(root=self.workflow, discover=driver.discover)
+        request = RunRequest(
+            settings_path=self.settings, catalog_loader=driver.load_catalog, discover=driver.discover,
+            material_reviewer=driver, requested_run_id="run-catalog-change",
+        )
+        prepared = coordinator.prepare(request)
+        try:
+            with self.assertRaises(CoordinatorError):
+                coordinator.apply_reviews(prepared, ())
+        finally:
+            if prepared.staging_dir.exists():
+                coordinator.abandon(prepared)
+        self.assertFalse(prepared.staging_dir.exists())
+        self.assertGreaterEqual(calls, 3)
+        with self.assertRaises(MaterialReviewError):
+            driver.material_review_frame(prepared)
+
+    def test_fresh_equal_catalog_instances_allow_the_normal_runner_path(self):
+        calls = 0
+
+        def unchanged_loader():
+            nonlocal calls
+            calls += 1
+            return self._catalog()
+
+        driver = ProductionDriver(
+            project_root=self.project, adapters={name: _Adapter(name, ()) for name in PLATFORM_ORDER},
+            catalog_loader=unchanged_loader, now=lambda: datetime(2026, 8, 29, tzinfo=timezone.utc),
+        )
+        coordinator = RunCoordinator(root=self.workflow, discover=driver.discover)
+        request = RunRequest(
+            settings_path=self.settings, catalog_loader=driver.load_catalog, discover=driver.discover,
+            material_reviewer=driver, requested_run_id="run-catalog-unchanged",
+        )
+        prepared = coordinator.prepare(request)
+        try:
+            self.assertEqual(coordinator.apply_reviews(prepared, ()).applied_count, 0)
+            self.assertGreaterEqual(calls, 3)
+        finally:
+            coordinator.abandon(prepared)
 
 
 class _ProtocolMaterialReviewer:
@@ -640,9 +934,11 @@ notify_on_no_change = false
         )
         prepared = coordinator.prepare(request)
         observation = {
-            "观察标识": "OBS-REJECTED-VERSION", "候选名称": "existing", "Canonical source": "https://github.com/example/existing",
+            "观察标识": "OBS-SK-EXISTING-条件候选", "内部标识": "SK-EXISTING", "候选名称": "existing", "Canonical source": "https://github.com/example/existing",
             "观察状态": "条件候选", "许可证": "MIT", "记录日期": "2026-08-29",
             "原因": "发现新版本但许可证范围需要复核；保留旧固定版本。",
+            "固定版本": "3" * 40, "固定版本内容指纹": self.packet.fixed_content_hash,
+            "验证证据位置": "evidence/SKILL.md", "显示层级": "条件候选",
         }
         decision = ReviewDecision(
             ObservedFacts(
@@ -661,7 +957,7 @@ notify_on_no_change = false
         finally:
             staged_ledger.workbook.close()
             coordinator.abandon(prepared)
-        self.assertEqual([row["观察标识"] for row in rows], ["OBS-REJECTED-VERSION"])
+        self.assertEqual([row["观察标识"] for row in rows], ["OBS-SK-EXISTING-条件候选"])
         self.assertEqual(current[0]["固定版本"], "1" * 40)
 
     def test_discovered_existing_formal_skill_does_not_gain_a_false_pending_observation(self):
@@ -679,6 +975,37 @@ notify_on_no_change = false
             self.assertEqual(ledger.rows("候选观察"), [])
         finally:
             ledger.workbook.close()
+
+    def test_reviewed_condition_and_adaptation_never_gain_generic_pending_duplicates(self):
+        for tier in ("条件候选", "需适配候选"):
+            with self.subTest(tier=tier):
+                canonical = f"https://github.com/example/{tier}"
+                candidate = {
+                    "platform": "GitHub", "name": "generic helper", "source_url": canonical,
+                    "canonical_source": canonical, "upstream_identity": canonical, "entry_path": "SKILL.md",
+                }
+                stable_id = deduplicate((candidate,), None).skills[0]["内部标识"]
+                candidate["内部标识"] = stable_id
+                ledger = LedgerStore.load(self.root / "ledger" / "Skills主台账.xlsx")
+                try:
+                    ledger.upsert_candidate_observation({
+                        "观察标识": f"OBS-{stable_id}-{tier}", "内部标识": stable_id,
+                        "候选名称": "generic helper", "Canonical source": canonical,
+                        "观察状态": tier, "许可证": "MIT", "记录日期": "2026-08-29",
+                        "原因": "人工确认的专业任务候选", "固定版本": "3" * 40,
+                        "固定版本内容指纹": "4" * 64, "验证证据位置": "evidence/SKILL.md",
+                        "显示层级": tier,
+                    })
+                    coordinator = RunCoordinator(root=self.root)
+                    coordinator._apply_dedup_and_watermarks(
+                        ledger, (SourceRun("GitHub", "complete", candidates=(candidate,)),),
+                        reviewed_candidate_ids={stable_id}, reviewed_canonicals={canonical},
+                    )
+                    rows = [row for row in ledger.rows("候选观察") if row.get("内部标识") == stable_id]
+                    self.assertEqual([(row["观察标识"], row["观察状态"]) for row in rows],
+                                     [(f"OBS-{stable_id}-{tier}", tier)])
+                finally:
+                    ledger.workbook.close()
 
     def test_no_fixed_package_reason_is_persisted_instead_of_generic_pending_text(self):
         ledger = LedgerStore.load(self.root / "ledger" / "Skills主台账.xlsx")
@@ -754,11 +1081,17 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
             (rules / name).write_text(f"# {name}\nE2E fixture rule.\n", encoding="utf-8")
         self.skills_root = Path(self.temporary.name) / "Codex Skills"
         source_workflow = Path(__file__).parents[1]
+        self.workflow = self.project / WORKFLOW
+        shutil.copytree(
+            source_workflow,
+            self.workflow,
+            ignore=shutil.ignore_patterns(".venv", "__pycache__", "*.pyc", ".runtime", "ledger", "output", "workflow-settings.toml"),
+        )
         result = cli.setup_project(
-            self.project, source_workflow=source_workflow, codex_skills_root=self.skills_root,
+            self.project, source_workflow=self.workflow, codex_skills_root=self.skills_root,
         )
         self.assertEqual(result.exit_code, 0, result)
-        self.workflow = self.project / WORKFLOW
+        self.source_machine_roots = (source_workflow.parent, source_workflow.parents[2])
         self._import_520_rows()
         self.old_catalog, self.changed_catalog, self.current_catalog = self._catalogs()
         self.ids = self._seed_profiles_and_mappings()
@@ -836,6 +1169,7 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
         try:
             result = deduplicate([{
                 "platform": "GitHub", "source_url": canonical, "canonical_source": canonical, "name": canonical.rsplit("/", 1)[-1],
+                "upstream_identity": canonical, "entry_path": "SKILL.md",
             }], ledger)
         finally:
             ledger.workbook.close()
@@ -857,14 +1191,7 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
             "研究方法": "描述性统计", "工作任务": "数据清洗", "成果或数据对象": "统计表",
             "软件/数据库/流程": "Stata；数据质量检查",
         }
-        mappings = [profile]
-        for label, stable in ids.items():
-            mappings.append({
-                "映射标识": f"MAP-{label}", "内部标识": stable, "专业代码": "0201", "专业名称": "经济学类",
-                "专业任务": "整理经济统计数据", "输入": "公开统计表", "输出": "查验结果", "适用理由": "支持核心研究任务",
-                "使用限制": "人工复核", "相关度": 5,
-            })
-        ledger.append_rows("专业任务映射", mappings)
+        ledger.append_rows("专业任务映射", [profile])
         ledger.append_rows("目录基线", [{
             "目录版本": "2026", "目录名称": "本科专业目录", "公开地址": "https://www.moe.gov.cn/catalog.pdf",
             "SHA-256": "d" * 64, "发布日期": "2026-04-27", "访问日期": "2026-08-29",
@@ -889,10 +1216,16 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
         )
         versions = {canonical: f"{index:x}" * 40 for index, canonical in enumerate(canonicals.values(), start=4)}
         versions["https://github.com/e2e/deleted-upstream"] = "9" * 40
-        duplicate = _candidate("SkillHub", "formal-market", "https://skillhub.cn/formal", canonicals["formal"])
+        duplicate = _candidate(
+            "SkillHub", "formal-market", "https://skillhub.cn/formal", canonicals["formal"],
+            skill_entry_path="SKILL.md",
+        )
         adapters = {
             "SkillHub": _Adapter("SkillHub", (duplicate,)),
-            "ClawHub": _Adapter("ClawHub", (_candidate("ClawHub", "formal-mirror", "https://clawhub.ai/formal", canonicals["formal"]),)),
+            "ClawHub": _Adapter("ClawHub", (_candidate(
+                "ClawHub", "formal-mirror", "https://clawhub.ai/formal", canonicals["formal"],
+                skill_entry_path="SKILL.md",
+            ),)),
             "GitHub": _ScenarioGithubAdapter(
                 github_candidates, FIXTURES / "fixed-package", versions,
                 {"https://github.com/e2e/deleted-upstream"},
@@ -958,6 +1291,10 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
     def _decisions(self, driver: ProductionDriver, packets) -> tuple[ReviewDecision, ...]:
         decisions = []
         for material in driver.review_materials:
+            self.assertTrue(
+                material.approved_scopes,
+                f"production material lacks a query/catalog-bound scope: {material.candidate_id} {material.canonical_source}",
+            )
             canonical = material.canonical_source
             packet = packets[material.candidate_id]
             if canonical.endswith("new-formal") or canonical.endswith("accepted-upgrade"):
@@ -971,17 +1308,25 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
                 )
                 reason = "需封装本地流程后使用" if tier == "需适配候选" else "发现新版本但未升级；保留旧固定版本并待人工复核"
                 row = {
-                    "观察标识": f"OBS-{material.candidate_id}-{tier}", "候选名称": material.name,
+                    "观察标识": f"OBS-{material.candidate_id}-{tier}", "内部标识": material.candidate_id, "候选名称": material.name,
                     "Canonical source": canonical, "观察状态": tier, "许可证": "MIT",
                     "记录日期": "2026-08-29", "原因": reason,
+                    "固定版本": material.fixed_version, "固定版本内容指纹": packet.fixed_content_hash,
+                    "验证证据位置": "；".join(packet.evidence_paths), "显示层级": tier,
                 }
+            scope_mappings = tuple({
+                "映射标识": f"MAP-{material.candidate_id}-{code}", "内部标识": material.candidate_id,
+                "专业代码": code, "专业名称": name, "专业任务": "整理经济统计数据",
+                "输入": "公开统计表", "输出": "查验结果", "适用理由": "支持核心研究任务",
+                "使用限制": "人工复核", "相关度": 5,
+            } for code, name in material.approved_scopes)
             decisions.append(ReviewDecision(
                 ObservedFacts(
                     material.fixed_version, True, True, "MIT", canonical, packet.evidence_paths,
                     "否", (), "无", "不使用", security, verification,
                 ),
                 ProjectJudgments(tier, True, tier == "正式推荐", 5, bonuses),
-                DerivedFields(quality_score=3 if tier == "正式推荐" else 0, ledger_row=row),
+                DerivedFields(quality_score=3 if tier == "正式推荐" else 0, ledger_row=row, scope_mappings=scope_mappings),
                 material.candidate_id,
             ))
         return tuple(decisions)
@@ -1012,6 +1357,30 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
         reviews = coordinator.apply_reviews(prepared, self._decisions(driver, packets))
         return coordinator.finalize(prepared, reviews), driver
 
+    def test_portable_copy_has_disabled_manual_settings_and_no_source_machine_path_in_text_metadata(self):
+        settings = (self.workflow / "workflow-settings.toml").read_text(encoding="utf-8")
+        self.assertIn("enabled = false", settings)
+        self.assertIn('mode = "manual"', settings)
+        forbidden = {
+            str(path.absolute()).replace("\\", "/").casefold().rstrip("/")
+            for path in self.source_machine_roots
+        }
+        text_suffixes = {".md", ".toml", ".py", ".mjs", ".json", ".txt", ".ps1", ".cmd", ".pth", ".cfg", ".ini"}
+        metadata_names = {"metadata", "record", "direct_url.json", "pyvenv.cfg"}
+        violations: list[str] = []
+        for root in (self.project, self.skills_root):
+            for path in root.rglob("*"):
+                if not path.is_file() or (path.suffix.casefold() not in text_suffixes and path.name.casefold() not in metadata_names):
+                    continue
+                try:
+                    normalized = path.read_text(encoding="utf-8").replace("\\", "/").casefold()
+                except UnicodeDecodeError:
+                    continue
+                if any(value and value in normalized for value in forbidden):
+                    violations.append(str(path))
+        self.assertEqual(violations, [])
+        self.assertFalse(any(path.suffix.casefold() in {".db", ".sqlite", ".duckdb"} for path in self.workflow.rglob("*")))
+
     def test_setup_import_three_gates_finalize_twice_is_file_only_and_idempotent(self):
         first, first_driver = self._run_once("run-e2e-first", self.changed_catalog)
         first_ledger = LedgerStore.load(first.published_ledger)
@@ -1025,17 +1394,23 @@ class OfflineWorkflowEndToEndTest(unittest.TestCase):
         self.assertEqual(current["SK-UPGRADE"]["固定版本"], "7" * 40)
         self.assertEqual(current["SK-REJECT"]["固定版本"], "2" * 40)
         self.assertGreaterEqual(first_counts["候选观察"], 4)
-        self.assertGreaterEqual(len(aliases), 3)
+        # The GitHub repository recall row is intentionally excluded from the product
+        # alias table; the two exact marketplace entries bind to the one formal Skill.
+        self.assertEqual({row["来源平台"] for row in aliases}, {"SkillHub", "ClawHub"})
         self.assertTrue((first.output_generation / "受影响专业类").is_dir())
         self.assertTrue(any(item.reason_code == "upstream-deleted" for item in first_driver.observations))
 
-        second, _ = self._run_once("run-e2e-second", self.current_catalog)
+        second, second_driver = self._run_once("run-e2e-second", self.current_catalog)
         second_ledger = LedgerStore.load(second.published_ledger)
         try:
             second_counts = {sheet: len(second_ledger.rows(sheet)) for sheet in first_counts}
         finally:
             second_ledger.workbook.close()
         self.assertEqual(second_counts, first_counts)
+        self.assertFalse(any(
+            material.canonical_source.endswith(("new-condition", "new-adaptation", "rejected-upgrade"))
+            for material in second_driver.review_materials
+        ))
         self.assertFalse(any((second.output_generation / "受影响专业类").rglob("*.docx")))
         self.assertFalse(any((second.output_generation / "受影响专业类").rglob("*.xlsx")))
         self.assertFalse(any(path.suffix.casefold() in {".db", ".sqlite", ".duckdb"} for path in self.workflow.rglob("*")))

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from hashlib import sha256
+from io import BytesIO
 import os
 from pathlib import Path, PurePosixPath
 from stat import S_ISLNK, S_ISREG
@@ -18,9 +19,10 @@ class SnapshotLimits:
     max_files: int = 10_000
     max_total_bytes: int = 128 * 1024 * 1024
     max_file_bytes: int = 32 * 1024 * 1024
+    max_archive_bytes: int = 32 * 1024 * 1024
 
     def __post_init__(self) -> None:
-        if min(self.max_files, self.max_total_bytes, self.max_file_bytes) <= 0:
+        if min(self.max_files, self.max_total_bytes, self.max_file_bytes, self.max_archive_bytes) <= 0:
             raise ValueError("快照边界必须为正数")
 
 
@@ -89,6 +91,78 @@ def build_snapshot(
         records = tuple(_archive_records(source, active_limits))
     else:
         raise ValueError("候选来源必须是普通目录或归档文件")
+    return _materialize_snapshot(candidate, target, records)
+
+
+def build_archive_snapshot(
+    *, candidate_id: str, fixed_version: str, archive_bytes: bytes, archive_name: str,
+    destination: str | Path, source_evidence_paths: tuple[str, ...] = (),
+    limits: SnapshotLimits | None = None,
+) -> SnapshotManifest:
+    """Extract one immutable archive byte snapshot, never reopening its source path."""
+    if not candidate_id.strip() or not fixed_version.strip():
+        raise ValueError("候选标识和固定版本是构建归档快照的必填项")
+    active_limits = limits or SnapshotLimits()
+    if len(archive_bytes) > active_limits.max_archive_bytes:
+        raise ValueError("固定包压缩字节数超过硬边界")
+    target = _safe_destination(destination)
+    if target.exists():
+        if _is_link_or_reparse(target) or not target.is_dir():
+            raise ValueError("快照目标必须是非链接目录或不存在目录")
+    else:
+        _create_safe_target(target)
+    candidate = SnapshotCandidate(candidate_id, fixed_version, Path(archive_name), source_evidence_paths)
+    records = tuple(_archive_byte_records(bytes(archive_bytes), archive_name, active_limits))
+    return _materialize_snapshot(candidate, target, records)
+
+
+def archive_skill_entries(
+    archive_bytes: bytes, archive_name: str, limits: SnapshotLimits | None = None,
+) -> tuple[str, ...]:
+    """Return exact repository-relative SKILL.md entry paths from one archive."""
+    active = limits or SnapshotLimits()
+    if len(archive_bytes) > active.max_archive_bytes:
+        raise ValueError("固定包压缩字节数超过硬边界")
+    records = _repository_records(tuple(_archive_byte_records(bytes(archive_bytes), archive_name, active)))
+    entries = tuple(path.as_posix() for path, _, _ in records if path.name.casefold() == "skill.md")
+    return tuple(sorted(entries, key=str.casefold))
+
+
+def build_archive_entry_snapshot(
+    *, candidate_id: str, fixed_version: str, archive_bytes: bytes, archive_name: str,
+    skill_entry_path: str, destination: str | Path,
+    source_evidence_paths: tuple[str, ...] = (), limits: SnapshotLimits | None = None,
+) -> SnapshotManifest:
+    """Build a candidate-exact snapshot for one verified SKILL.md entry."""
+    active = limits or SnapshotLimits()
+    if len(archive_bytes) > active.max_archive_bytes:
+        raise ValueError("固定包压缩字节数超过硬边界")
+    entry = _validate_relative(PurePosixPath(skill_entry_path.replace("\\", "/")))
+    records = _repository_records(tuple(_archive_byte_records(bytes(archive_bytes), archive_name, active)))
+    available = {path.as_posix() for path, _, _ in records if path.name.casefold() == "skill.md"}
+    if entry.as_posix() not in available:
+        raise ValueError("Skill 入口路径不属于固定归档")
+    base = entry.parent
+    selected = []
+    for path, size, content in records:
+        if path == entry or (base != PurePosixPath(".") and path.is_relative_to(base)) or (
+            path.parent == PurePosixPath(".") and path.name.casefold() in {"license", "license.md", "copying", "notice"}
+        ):
+            selected.append((path, size, content))
+    target = _safe_destination(destination)
+    if target.exists():
+        if _is_link_or_reparse(target) or not target.is_dir():
+            raise ValueError("快照目标必须是非链接目录或不存在目录")
+    else:
+        _create_safe_target(target)
+    candidate = SnapshotCandidate(candidate_id, fixed_version, Path(archive_name), source_evidence_paths)
+    return _materialize_snapshot(candidate, target, selected)
+
+
+def _materialize_snapshot(
+    candidate: SnapshotCandidate, target: Path,
+    records: Iterable[tuple[PurePosixPath, int, bytes]],
+) -> SnapshotManifest:
     files: list[SnapshotFile] = []
     content_fingerprint = sha256()
     for relative, size, content in records:
@@ -211,8 +285,10 @@ def _archive_records(source: Path, limits: SnapshotLimits) -> Iterable[tuple[Pur
     suffixes = tuple(item.lower() for item in source.suffixes)
     if source.suffix.lower() == ".zip":
         with zipfile.ZipFile(source) as archive:
+            seen: set[str] = set()
             for info in sorted(archive.infolist(), key=lambda item: item.filename):
                 relative = _archive_relative(info.filename)
+                _accept_archive_name(relative, seen)
                 if info.is_dir():
                     continue
                 mode = info.external_attr >> 16
@@ -226,8 +302,10 @@ def _archive_records(source: Path, limits: SnapshotLimits) -> Iterable[tuple[Pur
         return
     if suffixes[-2:] in ((".tar", ".gz"), (".tar", ".bz2"), (".tar", ".xz")) or source.suffix.lower() == ".tar":
         with tarfile.open(source, "r:*") as archive:
+            seen: set[str] = set()
             for member in sorted(archive.getmembers(), key=lambda item: item.name):
                 relative = _archive_relative(member.name)
+                _accept_archive_name(relative, seen)
                 if member.isdir():
                     continue
                 if member.issym() or member.islnk() or not member.isfile():
@@ -243,6 +321,53 @@ def _archive_records(source: Path, limits: SnapshotLimits) -> Iterable[tuple[Pur
                 yield relative, member.size, content
         return
     raise ValueError("候选快照只支持目录、zip 或 tar 归档")
+
+
+def _archive_byte_records(
+    content: bytes, archive_name: str, limits: SnapshotLimits,
+) -> Iterable[tuple[PurePosixPath, int, bytes]]:
+    budget = _Budget(limits)
+    archive_path = Path(archive_name)
+    suffixes = tuple(item.lower() for item in archive_path.suffixes)
+    stream = BytesIO(content)
+    if archive_path.suffix.lower() == ".zip":
+        with zipfile.ZipFile(stream) as archive:
+            seen: set[str] = set()
+            for info in sorted(archive.infolist(), key=lambda item: item.filename):
+                relative = _archive_relative(info.filename)
+                _accept_archive_name(relative, seen)
+                if info.is_dir():
+                    continue
+                mode = info.external_attr >> 16
+                if S_ISLNK(mode):
+                    raise ValueError("归档包含链接或重解析点")
+                budget.accept(info.file_size)
+                member = archive.read(info)
+                if len(member) != info.file_size:
+                    raise ValueError("快照文件大小在读取时变化")
+                yield relative, info.file_size, member
+        return
+    if suffixes[-2:] in ((".tar", ".gz"), (".tar", ".bz2"), (".tar", ".xz")) or archive_path.suffix.lower() == ".tar":
+        with tarfile.open(fileobj=stream, mode="r:*") as archive:
+            seen: set[str] = set()
+            for member_info in sorted(archive.getmembers(), key=lambda item: item.name):
+                relative = _archive_relative(member_info.name)
+                _accept_archive_name(relative, seen)
+                if member_info.isdir():
+                    continue
+                if member_info.issym() or member_info.islnk() or not member_info.isfile():
+                    raise ValueError("归档包含链接、重解析点或非普通文件")
+                budget.accept(member_info.size)
+                handle = archive.extractfile(member_info)
+                if handle is None:
+                    raise ValueError("归档文件不可读取")
+                with handle:
+                    member = handle.read()
+                if len(member) != member_info.size:
+                    raise ValueError("快照文件大小在读取时变化")
+                yield relative, member_info.size, member
+        return
+    raise ValueError("候选快照只支持 zip 或 tar 归档")
 
 
 def _create_safe_target(target: Path) -> None:
@@ -299,9 +424,38 @@ def _archive_relative(name: str) -> PurePosixPath:
 
 
 def _validate_relative(path: PurePosixPath) -> PurePosixPath:
+    reserved = {"con", "prn", "aux", "nul", *(f"com{i}" for i in range(1, 10)), *(f"lpt{i}" for i in range(1, 10))}
     if path.is_absolute() or not path.parts or any(part in {"", ".", ".."} for part in path.parts):
         raise ValueError("候选快照包含路径穿越")
+    for part in path.parts:
+        stem = part.split(".", 1)[0].casefold()
+        if ":" in part or part.endswith((".", " ")) or stem in reserved:
+            raise ValueError("候选快照包含 Windows 不安全路径")
     return path
+
+
+def _accept_archive_name(path: PurePosixPath, seen: set[str]) -> None:
+    identity = path.as_posix().casefold()
+    if identity in seen:
+        raise ValueError("归档包含大小写冲突或重复路径")
+    seen.add(identity)
+
+
+def _repository_records(
+    records: tuple[tuple[PurePosixPath, int, bytes], ...],
+) -> tuple[tuple[PurePosixPath, int, bytes], ...]:
+    if not records:
+        return ()
+    first_parts = {record[0].parts[0] for record in records}
+    strip_root = len(first_parts) == 1 and all(len(record[0].parts) > 1 for record in records)
+    normalized = []
+    seen: set[str] = set()
+    for path, size, content in records:
+        relative = PurePosixPath(*path.parts[1:]) if strip_root else path
+        _validate_relative(relative)
+        _accept_archive_name(relative, seen)
+        normalized.append((relative, size, content))
+    return tuple(normalized)
 
 
 def _is_hashable(path: PurePosixPath) -> bool:

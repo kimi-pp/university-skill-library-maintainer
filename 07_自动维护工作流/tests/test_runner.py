@@ -234,6 +234,7 @@ notify_on_no_change = false
         packet = build_review_packet({
             "id": stable_id, "canonical_source": canonical_source,
             "license": "MIT", "security_grade": "SA",
+            "upstream_repository": canonical_source, "skill_entry_path": "SKILL.md",
         }, snapshot)
         proposed = self.formal_row(stable_id, version, snapshot.fixed_content_hash)
         proposed.update({
@@ -592,13 +593,17 @@ notify_on_no_change = false
         evidence = ("https://evidence.example/commit",)
         snapshot = build_snapshot(SnapshotCandidate("candidate-1", version, candidate_root, evidence), self.root / "snapshot")
         packet = build_review_packet(
-            {"id": "candidate-1", "canonical_source": "https://github.com/example/skill", "license": "MIT", "security_grade": "SA"},
+            {"id": "candidate-1", "canonical_source": "https://github.com/example/skill", "license": "MIT", "security_grade": "SA",
+             "upstream_repository": "https://github.com/example/skill", "skill_entry_path": "SKILL.md"},
             snapshot,
         )
+        ledger_row = self.formal_row("candidate-1", version, snapshot.fixed_content_hash)
+        ledger_row.update({"验证证据位置": "；".join(evidence), "本地专业软件或运行时依赖": "无",
+                           "本地脚本/插件接口": "不使用", "质量评分": 2})
         decision = ReviewDecision(
             ObservedFacts(version, True, True, "MIT", "https://github.com/example/skill", evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"),
             ProjectJudgments("正式推荐", True, True, 4, (True,)),
-            candidate_id="candidate-1",
+            DerivedFields(quality_score=2, ledger_row=ledger_row), "candidate-1",
         )
         coordinator = self.coordinator()
         prepared = coordinator.prepare(replace(self.request, review_packets={"candidate-1": packet}))
@@ -723,11 +728,12 @@ notify_on_no_change = false
         version = "d" * 40
         evidence = ("https://evidence.example/version",)
         snapshot = build_snapshot(SnapshotCandidate("EXISTING-1", version, candidate_root, evidence), self.root / "version-snapshot")
-        packet = build_review_packet({"id": "EXISTING-1", "canonical_source": "https://github.com/example/skill", "license": "MIT", "security_grade": "SA"}, snapshot)
+        packet = build_review_packet({"id": "EXISTING-1", "canonical_source": "https://github.com/example/skill", "license": "Apache-2.0", "security_grade": "SB", "upstream_repository": "https://github.com/example/skill", "skill_entry_path": "SKILL.md"}, snapshot)
         proposed = self.formal_row("EXISTING-1", version, snapshot.fixed_content_hash)
-        proposed.update({"验证证据位置": "；".join(evidence), "本地专业软件或运行时依赖": "无", "本地脚本/插件接口": "不使用", "质量评分": 2})
+        proposed.update({"许可证": "Apache-2.0", "安全等级": "SB", "简要功能": "新版本经复审的功能摘要", "外部依赖": "本地运行时 v2", "维护状态": "活跃",
+                         "验证证据位置": "；".join(evidence), "本地专业软件或运行时依赖": "无", "本地脚本/插件接口": "不使用", "质量评分": 2})
         decision = ReviewDecision(
-            ObservedFacts(version, True, True, "MIT", "https://github.com/example/skill", evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"),
+            ObservedFacts(version, True, True, "Apache-2.0", "https://github.com/example/skill", evidence, "否", (), "无", "不使用", "SB", "全部通过（未实测）"),
             ProjectJudgments("正式推荐", True, True, 4, (True,)), DerivedFields(quality_score=2, ledger_row=proposed), "EXISTING-1",
         )
         coordinator = self.coordinator()
@@ -738,6 +744,8 @@ notify_on_no_change = false
         coordinator.finalize(prepared, reviews)
         current = LedgerStore.load(production).rows("当前Skill")[0]
         self.assertEqual(current["固定版本"], version)
+        self.assertEqual((current["许可证"], current["安全等级"], current["简要功能"], current["外部依赖"]),
+                         ("Apache-2.0", "SB", "新版本经复审的功能摘要", "本地运行时 v2"))
 
     def test_one_project_terminal_cleanup_does_not_clear_another_projects_task7_packet(self):
         second_root = self.root.parent / "second-project"
@@ -751,8 +759,14 @@ notify_on_no_change = false
             (source / "SKILL.md").write_text(candidate_id, encoding="utf-8")
             version, evidence = "e" * 40, (f"https://evidence.example/{candidate_id}",)
             snapshot = build_snapshot(SnapshotCandidate(candidate_id, version, source, evidence), root / f"{candidate_id}-snapshot")
-            packet = build_review_packet({"id": candidate_id, "canonical_source": f"https://github.com/example/{candidate_id}", "license": "MIT", "security_grade": "SA"}, snapshot)
-            decision = ReviewDecision(ObservedFacts(version, True, True, "MIT", f"https://github.com/example/{candidate_id}", evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"), ProjectJudgments("正式推荐", True, True, 4, (True,)), candidate_id=candidate_id)
+            canonical = f"https://github.com/example/{candidate_id}"
+            packet = build_review_packet({"id": candidate_id, "canonical_source": canonical, "license": "MIT", "security_grade": "SA",
+                                          "upstream_repository": canonical, "skill_entry_path": "SKILL.md"}, snapshot)
+            row = self.formal_row(candidate_id, version, snapshot.fixed_content_hash)
+            row.update({"发现地址": canonical, "Canonical source": canonical, "上游项目地址": canonical,
+                        "验证证据位置": "；".join(evidence), "本地专业软件或运行时依赖": "无",
+                        "本地脚本/插件接口": "不使用", "质量评分": 2})
+            decision = ReviewDecision(ObservedFacts(version, True, True, "MIT", canonical, evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"), ProjectJudgments("正式推荐", True, True, 4, (True,)), DerivedFields(quality_score=2, ledger_row=row), candidate_id)
             return packet, decision
 
         packet_a, decision_a = packet_and_decision(self.root, "packet-a")
@@ -853,20 +867,20 @@ notify_on_no_change = false
         source.mkdir()
         (source / "SKILL.md").write_text("alias evidence", encoding="utf-8")
         version, evidence = "f" * 40, ("https://evidence.example/alias",)
-        snapshot = build_snapshot(SnapshotCandidate("native-review", version, source, evidence), self.root / "alias-snapshot")
-        packet = build_review_packet({"id": "native-review", "canonical_source": "https://github.com/example/alias", "license": "MIT", "security_grade": "SA"}, snapshot)
+        snapshot = build_snapshot(SnapshotCandidate("APPROVED-ALIAS-1", version, source, evidence), self.root / "alias-snapshot")
+        packet = build_review_packet({"id": "APPROVED-ALIAS-1", "canonical_source": "https://github.com/example/alias", "license": "MIT", "security_grade": "SA", "upstream_repository": "https://github.com/example/alias", "skill_entry_path": "SKILL.md"}, snapshot)
         approved = self.formal_row("APPROVED-ALIAS-1", version, snapshot.fixed_content_hash)
         approved.update({"Canonical source": "https://github.com/example/alias", "发现地址": "https://github.com/example/alias", "上游项目地址": "https://github.com/example/alias", "验证证据位置": "；".join(evidence), "本地专业软件或运行时依赖": "无", "本地脚本/插件接口": "不使用", "质量评分": 2})
         decision = ReviewDecision(
             ObservedFacts(version, True, True, "MIT", "https://github.com/example/alias", evidence, "否", (), "无", "不使用", "SA", "全部通过（未实测）"),
-            ProjectJudgments("正式推荐", True, True, 4, (True,)), DerivedFields(quality_score=2, ledger_row=approved), "native-review",
+            ProjectJudgments("正式推荐", True, True, 4, (True,)), DerivedFields(quality_score=2, ledger_row=approved), "APPROVED-ALIAS-1",
         )
         evidence_file = self.root / "alias-discovery.json"
         evidence_file.write_text("{}", encoding="utf-8")
         candidates = tuple({"id": f"native-{platform}", "native_id": f"native-{platform}", "platform": platform, "source_url": f"https://{platform.lower().replace(' ', '-')}.example/alias", "canonical_source": "https://github.com/example/alias", "upstream_identity": "example/alias", "entry_path": "SKILL.md", "content_hash": snapshot.fixed_content_hash} for platform in ("SkillHub", "ClawHub", "GitHub"))
         batches = tuple(SourceRun(item["platform"], "complete", candidates=(item,), evidence_files=(evidence_file,)) for item in candidates) + (SourceRun("Hugging Face Spaces", "failed"),)
         coordinator = self.coordinator(discover=lambda request, staging: batches)
-        prepared = coordinator.prepare(replace(self.request, review_packets={"native-review": packet}))
+        prepared = coordinator.prepare(replace(self.request, review_packets={"APPROVED-ALIAS-1": packet}))
         coordinator.finalize(prepared, coordinator.apply_reviews(prepared, (decision,)))
         aliases = LedgerStore.load(self.root / "ledger" / "Skills主台账.xlsx").rows("来源别名")
         self.assertEqual({row["来源平台"] for row in aliases}, {"SkillHub", "ClawHub", "GitHub"})

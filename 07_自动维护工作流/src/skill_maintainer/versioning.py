@@ -32,6 +32,7 @@ class VersionDecision:
     evidence_paths: tuple[str, ...] = ()
     history_fields: Mapping[str, Any] = field(default_factory=dict)
     applied_review: AppliedReview | None = None
+    proposed_row: Mapping[str, Any] | None = None
 
     @classmethod
     def from_change(cls, change: VersionChange, *, outcome: str, review_date: str = "", conclusion_change: str = "", evidence_paths: tuple[str, ...] | None = None) -> "VersionDecision":
@@ -41,10 +42,16 @@ class VersionDecision:
         return cls(change, outcome, review_date, conclusion_change, tuple(str(item) for item in paths))
 
     @classmethod
-    def accept_from_applied_review(cls, change: VersionChange, receipt: object, *, review_date: str, conclusion_change: str) -> "VersionDecision":
-        if not change.requires_full_review:
-            raise ValueError("review receipt can only accept changed content")
-        return cls(change, "accepted", review_date, conclusion_change, (), {}, validate_applied_review(receipt))
+    def accept_from_applied_review(
+        cls, change: VersionChange, receipt: object, *, review_date: str,
+        conclusion_change: str, proposed_row: Mapping[str, Any],
+    ) -> "VersionDecision":
+        if change.status not in {"full_review_required", "alias_observation"}:
+            raise ValueError("review receipt can only accept a reviewed version observation")
+        return cls(
+            change, "accepted", review_date, conclusion_change, (), {},
+            validate_applied_review(receipt), dict(proposed_row),
+        )
 
 
 def compare_version(current: Mapping[str, Any], observed: Mapping[str, Any]) -> VersionChange:
@@ -73,7 +80,10 @@ def apply_approved_version(ledger: object, decision: VersionDecision) -> None:
         raise ValueError("版本决定 outcome 只能为 accepted 或 rejected")
     if not change.requires_full_review:
         if change.status == "alias_observation" and _observed_version(change.observed):
+            persisted = _persisted_current(ledger, change)
+            receipt = _validate_accepted_review(decision, persisted)
             _append_version_alias_once(ledger, change)
+            consume_applied_review(receipt)
         return
     persisted = _persisted_current(ledger, change)
     receipt = _validate_accepted_review(decision, persisted)
@@ -83,7 +93,7 @@ def apply_approved_version(ledger: object, decision: VersionDecision) -> None:
         if _observed_version(persisted) == _observed_version(change.observed) and _current_hash(persisted) == _observed_hash(change.observed):
             return
         raise ValueError("版本历史标识已存在，但当前Skill 未处于该已接受版本")
-    _apply_transactionally(ledger, history, change, persisted)
+    _apply_transactionally(ledger, history, change, persisted, decision.proposed_row or {})
     consume_applied_review(receipt)
 
 
@@ -104,27 +114,37 @@ def _persisted_current(ledger: object, change: VersionChange) -> Mapping[str, An
 def _validate_accepted_review(decision: VersionDecision, persisted: Mapping[str, Any]) -> AppliedReview:
     receipt = validate_applied_review(decision.applied_review)
     observed = decision.change.observed
+    proposed = dict(decision.proposed_row or {})
+    if not proposed:
+        raise ValueError("版本接受决定必须绑定 Task 7 复审后的完整 proposed row")
+    for field_name in ("内部标识", "Canonical source", "上游项目地址", "Skill入口路径"):
+        if str(proposed.get(field_name) or "") != str(persisted.get(field_name) or ""):
+            raise ValueError(f"Task 7 proposed row 不得改变身份字段：{field_name}")
     expected = (
         str(persisted.get("内部标识") or ""), _observed_version(observed),
-        str(persisted.get("Canonical source") or ""), str(persisted.get("许可证") or ""),
-        str(persisted.get("安全等级") or ""), tuple(str(item) for item in observed.get("evidence_paths", ())), _observed_hash(observed),
+        str(proposed.get("Canonical source") or ""), str(proposed.get("许可证") or ""),
+        str(proposed.get("安全等级") or ""), tuple(str(item) for item in observed.get("evidence_paths", ())), _observed_hash(observed),
+        _mapping_sha256(proposed),
     )
     actual = (
         receipt.candidate_id, receipt.fixed_version, receipt.canonical_source, receipt.license,
-        receipt.security_grade, receipt.evidence_paths, receipt.fixed_content_hash,
+        receipt.security_grade, receipt.evidence_paths, receipt.fixed_content_hash, receipt.ledger_row_sha256,
     )
     if actual != expected:
         raise ValueError("Task 7 review 与当前Skill/观察版本不精确绑定")
     return receipt
 
 
-def _apply_transactionally(ledger: object, history: Mapping[str, Any], change: VersionChange, persisted: Mapping[str, Any]) -> None:
+def _apply_transactionally(
+    ledger: object, history: Mapping[str, Any], change: VersionChange,
+    persisted: Mapping[str, Any], proposed: Mapping[str, Any],
+) -> None:
     before = _workbook_bytes(ledger.workbook)
     staged_workbook = load_workbook(BytesIO(before), data_only=False)
     staged_ledger = ledger.__class__(staged_workbook, getattr(ledger, "source_path", None))
     try:
         staged_ledger.append_rows("版本历史", [history])
-        updated = dict(persisted)
+        updated = dict(proposed)
         updated["固定版本"], updated["固定版本内容指纹"] = _observed_version(change.observed), _observed_hash(change.observed)
         staged_ledger.upsert_skill(updated)
     except Exception:
@@ -194,3 +214,9 @@ def _observed_version(row: Mapping[str, Any]) -> str:
 
 def _valid_hash(value: str) -> str:
     return value.casefold() if _SHA256.fullmatch(value.strip()) else ""
+
+
+def _mapping_sha256(value: Mapping[str, Any]) -> str:
+    import json
+    payload = json.dumps(dict(value), ensure_ascii=False, sort_keys=True, separators=(",", ":"), default=str)
+    return sha256(payload.encode("utf-8")).hexdigest()

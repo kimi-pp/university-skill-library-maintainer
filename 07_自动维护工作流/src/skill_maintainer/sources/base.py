@@ -20,6 +20,8 @@ from ..queries import QueryJob
 
 
 SearchStatus = Literal["complete", "partial", "failed"]
+MAX_HTTP_RESPONSE_BYTES = 64 * 1024 * 1024
+MAX_ARCHIVE_BYTES = 32 * 1024 * 1024
 
 
 @dataclass(frozen=True)
@@ -42,6 +44,7 @@ class SourceCandidate:
     popularity: Mapping[str, int | float | str]
     query_id: str
     response_evidence_sha256: str
+    skill_entry_path: str | None = None
 
 
 @dataclass(frozen=True)
@@ -86,6 +89,8 @@ class VersionObservation:
     observed_at: datetime
     response_evidence_sha256: str | None
     error: SourceError | None = None
+    request_events: tuple[SourceRequestEvent, ...] = ()
+    evidence_paths: tuple[Path, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -96,6 +101,8 @@ class SnapshotResult:
     destination: Path
     sha256: str | None
     error: SourceError | None = None
+    request_events: tuple[SourceRequestEvent, ...] = ()
+    evidence_paths: tuple[Path, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -103,6 +110,7 @@ class EvidenceRoot:
     """经解析和反链接检查的证据根；所有持久化证据必须经此对象写入。"""
 
     root: Path
+    max_bytes: int = MAX_HTTP_RESPONSE_BYTES
 
     def __post_init__(self) -> None:
         resolved = self.root.resolve(strict=True)
@@ -111,6 +119,8 @@ class EvidenceRoot:
         object.__setattr__(self, "root", resolved)
 
     def write(self, relative_destination: Path, content: bytes) -> Path:
+        if len(content) > self.max_bytes:
+            raise ValueError("证据响应压缩字节数超过硬边界")
         if relative_destination.is_absolute() or ".." in relative_destination.parts:
             raise ValueError("证据目标必须是 EvidenceRoot 内的相对路径")
         destination = self.root.joinpath(relative_destination)
@@ -197,9 +207,15 @@ def urllib_transport(url: str, timeout: float) -> HttpResponse:
     request = Request(url, method="GET", headers={"Accept": "application/json"})
     try:
         with urlopen(request, timeout=timeout) as response:  # nosec B310 - adapter endpoints are constants
-            return HttpResponse(url=response.geturl(), status=response.status, body=response.read())
+            body = response.read(MAX_HTTP_RESPONSE_BYTES + 1)
+            if len(body) > MAX_HTTP_RESPONSE_BYTES:
+                raise OSError("HTTP 响应字节数超过硬边界")
+            return HttpResponse(url=response.geturl(), status=response.status, body=body)
     except HTTPError as error:
-        return HttpResponse(url=url, status=error.code, body=error.read())
+        body = error.read(MAX_HTTP_RESPONSE_BYTES + 1)
+        if len(body) > MAX_HTTP_RESPONSE_BYTES:
+            body = body[:MAX_HTTP_RESPONSE_BYTES]
+        return HttpResponse(url=url, status=error.code, body=body)
     except URLError:
         raise
 
@@ -277,33 +293,52 @@ class PagedHttpAdapter:
 
     def latest_version(self, identity: str) -> VersionObservation:
         endpoint = self.identity_endpoint(identity)
-        response, _, error = self._get(endpoint, "latest-version")
+        response, attempts, error = self._get(endpoint, "latest-version")
         observed_at = datetime.now(timezone.utc)
         if error is not None or response is None:
-            return VersionObservation(self.platform, identity, None, observed_at, None, error)
+            event = SourceRequestEvent(self.platform, "latest-version", endpoint, 1, getattr(error, "status_code", None), attempts, None, None)
+            return VersionObservation(self.platform, identity, None, observed_at, None, error, (event,))
+        event = self._postcheck_event("latest-version", endpoint, response, attempts, ".json")
         try:
             payload = json.loads(response.body.decode("utf-8"))
             records = self.records_from_payload(payload)
             record = records[0] if records else payload if isinstance(payload, Mapping) else {}
-            return VersionObservation(self.platform, identity, self.version_from_record(record), observed_at, sha256(response.body).hexdigest())
+            return VersionObservation(self.platform, identity, self.version_from_record(record), observed_at, sha256(response.body).hexdigest(), None, (event,), tuple(filter(None, (event.evidence_path,))))
         except (UnicodeDecodeError, json.JSONDecodeError, TypeError) as exc:
             return VersionObservation(
                 self.platform, identity, None, observed_at, sha256(response.body).hexdigest(),
-                SourceError(self.platform, "latest-version", f"invalid-json: {exc}", response.status, endpoint),
+                SourceError(self.platform, "latest-version", f"invalid-json: {exc}", response.status, endpoint), (event,), tuple(filter(None, (event.evidence_path,))),
             )
 
     def snapshot(self, identity: str, version: str | None, destination: Path) -> SnapshotResult:
         if self.evidence_root is None:
             return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "必须显式提供 EvidenceRoot", None, None))
         endpoint = self.version_endpoint(identity, version)
-        response, _, error = self._get(endpoint, "snapshot")
+        response, attempts, error = self._get(endpoint, "snapshot")
         if error is not None or response is None:
-            return SnapshotResult(self.platform, identity, version, destination, None, error)
+            event = SourceRequestEvent(self.platform, "snapshot", endpoint, 1, getattr(error, "status_code", None), attempts, None, None)
+            return SnapshotResult(self.platform, identity, version, destination, None, error, (event,))
+        if len(response.body) > MAX_ARCHIVE_BYTES:
+            error = SourceError(self.platform, "snapshot", "archive-compressed-byte-limit", response.status, endpoint)
+            event = SourceRequestEvent(self.platform, "snapshot", endpoint, 1, response.status, attempts, sha256(response.body).hexdigest(), None)
+            return SnapshotResult(self.platform, identity, version, destination, None, error, (event,))
         try:
             saved = self.evidence_root.write(destination, response.body)
         except (OSError, ValueError) as exc:
             return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", str(exc), response.status, endpoint))
-        return SnapshotResult(self.platform, identity, version, saved, sha256(response.body).hexdigest())
+        event = SourceRequestEvent(self.platform, "snapshot", endpoint, 1, response.status, attempts, sha256(response.body).hexdigest(), None, True, saved, True)
+        return SnapshotResult(self.platform, identity, version, saved, sha256(response.body).hexdigest(), None, (event,), (saved,))
+
+    def _postcheck_event(self, query_id: str, endpoint: str, response: HttpResponse, attempts: int, suffix: str) -> SourceRequestEvent:
+        digest = sha256(response.body).hexdigest()
+        evidence = None
+        completed = True
+        if self.evidence_root is not None:
+            try:
+                evidence = self.evidence_root.write(Path(f"{_safe_component(query_id)}-{digest}{suffix}"), response.body)
+            except (OSError, ValueError):
+                completed = False
+        return SourceRequestEvent(self.platform, query_id, endpoint, 1, response.status, attempts, digest, None, True, evidence, completed)
 
     def _get(self, url: str, query_id: str = "") -> tuple[HttpResponse | None, int, SourceError | None]:
         attempts = 0

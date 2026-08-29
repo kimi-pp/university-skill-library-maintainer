@@ -12,7 +12,7 @@ import subprocess
 from typing import Callable, Mapping
 from urllib.parse import quote, urlencode, urlparse
 
-from .base import HttpResponse, PagedHttpAdapter, SearchBatch, SnapshotResult, SourceCandidate, SourceError, VersionObservation, Watermark, _optional_first, _popularity
+from .base import MAX_ARCHIVE_BYTES, HttpResponse, PagedHttpAdapter, SearchBatch, SnapshotResult, SourceCandidate, SourceError, SourceRequestEvent, VersionObservation, Watermark, _optional_first, _popularity
 from ..queries import QueryJob
 
 
@@ -92,11 +92,14 @@ class GitHubAdapter(PagedHttpAdapter):
         return f"{GITHUB_API}/repos/{owner_repo}"
 
     def latest_version(self, identity: str) -> VersionObservation:
+        audit_id = f"latest-version:{identity}"
         metadata_endpoint = self.identity_endpoint(identity)
-        metadata, _, error = self._get(metadata_endpoint, "latest-version")
+        metadata, attempts, error = self._get(metadata_endpoint, "latest-version")
         observed_at = datetime.now(timezone.utc)
         if error is not None or metadata is None:
-            return VersionObservation(self.platform, identity, None, observed_at, None, error)
+            event = SourceRequestEvent(self.platform, audit_id, metadata_endpoint, 1, getattr(error, "status_code", None), attempts, None, None)
+            return VersionObservation(self.platform, identity, None, observed_at, None, error, (event,))
+        metadata_event = self._postcheck_event(f"{audit_id}:repository", metadata_endpoint, metadata, attempts, ".json")
         try:
             record = json.loads(metadata.body.decode("utf-8"))
             if not isinstance(record, Mapping):
@@ -105,11 +108,13 @@ class GitHubAdapter(PagedHttpAdapter):
             if not default_branch:
                 raise ValueError("repository metadata lacks default_branch")
         except (UnicodeDecodeError, json.JSONDecodeError, ValueError) as exc:
-            return VersionObservation(self.platform, identity, None, observed_at, sha256(metadata.body).hexdigest(), SourceError(self.platform, "latest-version", f"invalid-json: {exc}", metadata.status, metadata_endpoint))
+            return VersionObservation(self.platform, identity, None, observed_at, sha256(metadata.body).hexdigest(), SourceError(self.platform, "latest-version", f"invalid-json: {exc}", metadata.status, metadata_endpoint), (metadata_event,), tuple(filter(None, (metadata_event.evidence_path,))))
         commit_endpoint = f"{metadata_endpoint}/commits/{quote(default_branch, safe='')}"
-        commit, _, error = self._get(commit_endpoint, "latest-version")
+        commit, commit_attempts, error = self._get(commit_endpoint, "latest-version")
         if error is not None or commit is None:
-            return VersionObservation(self.platform, identity, None, observed_at, sha256(metadata.body).hexdigest(), error)
+            failed = SourceRequestEvent(self.platform, audit_id, commit_endpoint, 1, getattr(error, "status_code", None), commit_attempts, None, None)
+            return VersionObservation(self.platform, identity, None, observed_at, sha256(metadata.body).hexdigest(), error, (metadata_event, failed), tuple(filter(None, (metadata_event.evidence_path,))))
+        commit_event = self._postcheck_event(f"{audit_id}:commit", commit_endpoint, commit, commit_attempts, ".json")
         try:
             commit_record = json.loads(commit.body.decode("utf-8"))
             if not isinstance(commit_record, Mapping):
@@ -118,23 +123,31 @@ class GitHubAdapter(PagedHttpAdapter):
             if not version:
                 raise ValueError("commit metadata lacks sha")
         except (UnicodeDecodeError, json.JSONDecodeError, ValueError) as exc:
-            return VersionObservation(self.platform, identity, None, observed_at, sha256(commit.body).hexdigest(), SourceError(self.platform, "latest-version", f"invalid-json: {exc}", commit.status, commit_endpoint))
-        return VersionObservation(self.platform, identity, version, observed_at, sha256(commit.body).hexdigest())
+            return VersionObservation(self.platform, identity, None, observed_at, sha256(commit.body).hexdigest(), SourceError(self.platform, "latest-version", f"invalid-json: {exc}", commit.status, commit_endpoint), (metadata_event, commit_event), tuple(path for path in (metadata_event.evidence_path, commit_event.evidence_path) if path))
+        return VersionObservation(self.platform, identity, version, observed_at, sha256(commit.body).hexdigest(), None, (metadata_event, commit_event), tuple(path for path in (metadata_event.evidence_path, commit_event.evidence_path) if path))
 
     def snapshot(self, identity: str, version: str | None, destination: Path) -> SnapshotResult:
+        audit_id = f"snapshot:{identity}"
         if self.evidence_root is None:
             return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "必须显式提供 EvidenceRoot"))
         if not isinstance(version, str) or not _COMMIT_SHA_RE.fullmatch(version):
             return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "GitHub 快照必须使用固定 commit SHA"))
         endpoint = f"{self.identity_endpoint(identity)}/zipball/{quote(version, safe='')}"
-        response, _, error = self._get(endpoint, "snapshot")
+        response, attempts, error = self._get(endpoint, "snapshot")
         if error is not None or response is None:
-            return SnapshotResult(self.platform, identity, version, destination, None, error)
+            event = SourceRequestEvent(self.platform, audit_id, endpoint, 1, getattr(error, "status_code", None), attempts, None, None)
+            return SnapshotResult(self.platform, identity, version, destination, None, error, (event,))
+        digest = sha256(response.body).hexdigest()
+        if len(response.body) > MAX_ARCHIVE_BYTES:
+            event = SourceRequestEvent(self.platform, audit_id, endpoint, 1, response.status, attempts, digest, None)
+            return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", "archive-compressed-byte-limit", response.status, endpoint), (event,))
         try:
             saved = self.evidence_root.write(destination, response.body)
         except (OSError, ValueError) as exc:
-            return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", str(exc), response.status, endpoint))
-        return SnapshotResult(self.platform, identity, version, saved, sha256(response.body).hexdigest())
+            event = SourceRequestEvent(self.platform, audit_id, endpoint, 1, response.status, attempts, digest, None)
+            return SnapshotResult(self.platform, identity, version, destination, None, SourceError(self.platform, "snapshot", str(exc), response.status, endpoint), (event,))
+        event = SourceRequestEvent(self.platform, audit_id, endpoint, 1, response.status, attempts, digest, None, True, saved, True)
+        return SnapshotResult(self.platform, identity, version, saved, digest, None, (event,), (saved,))
 
     def normalize_record(self, record: Mapping[str, object], job: QueryJob, evidence_sha: str) -> SourceCandidate:
         native_id = _optional_first(record, "full_name") or ""

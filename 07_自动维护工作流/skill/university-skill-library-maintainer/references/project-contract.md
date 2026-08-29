@@ -14,9 +14,9 @@
 `run-now` 与 `scheduled-run` 必须在同一长驻进程内持有单写者锁和瞬态 capability，顺序固定为：
 
 1. `prepare` 在本轮私有暂存目录获取来源证据与固定包，发出 `material_review_required`；
-2. Codex 只读检查固定包并回传与 run ID、版本、canonical source、内容哈希精确绑定的 `material_observations`；
+2. Codex 只读检查逐 `SKILL.md` 入口的候选精确固定包并回传与 run ID、版本、canonical source、入口、内容哈希和本候选证据精确绑定的 `material_observations`；
 3. 进程消费仍在内存中的快照 capability，构建可信 ReviewPacket，再发出 `review_required`；
-4. Codex 依据项目规则与专业六维画像回传项目判断和 ledger row；
+4. Codex 依据项目规则与专业六维画像回传项目判断、完整 ledger row 和批准范围的人工任务映射；三级展示项均绑定显式候选内部标识，排除项使用非展示 outcome、结构化原因代码和中文说明；
 5. `finalize` 完成 Office 复读并发出逐页视觉闸，批准后才原子发布。
 
 不得跨进程调用 `prepare`、`apply-reviews`、`finalize`，不得从磁盘恢复 capability。市场元数据或搜索响应 JSON 不得冒充 Skill 固定包；无法取得完整固定包的市场或 Hugging Face 条目只进入候选观察。
@@ -37,7 +37,7 @@ RendererCommand.argv = (
 )
 ```
 
-渲染入口拒绝相对路径、链接/重解析点、非普通 PDF、非空输出目录、越界页面名和缺失依赖；失败返回非零且不输出成功 JSON。不得从默认 PATH、用户名或缓存目录结构猜测任何路径；字段、入口或依赖不可用时停止发布。
+渲染入口拒绝相对路径、链接/重解析点、非普通 PDF、除本次 Word COM 输入 PDF 外还含其他内容的输出目录、越界页面名和缺失依赖；失败返回非零且不输出成功 JSON。不得从默认 PATH、用户名或缓存目录结构猜测任何路径；字段、入口或依赖不可用时停止发布。
 
 ## 自动任务契约
 

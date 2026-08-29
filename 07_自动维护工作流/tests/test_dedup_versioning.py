@@ -11,13 +11,12 @@ from pathlib import Path
 from skill_maintainer.dedup import canonical_key, deduplicate
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.ledger_schema import CURRENT_SKILL_COLUMNS
-from skill_maintainer.review import ObservedFacts, ProjectJudgments, ReviewDecision, apply_reviews_from_stream, build_review_packet
+from skill_maintainer.review import DerivedFields, ObservedFacts, ProjectJudgments, ReviewDecision, apply_reviews_from_stream, build_review_packet
 from skill_maintainer.snapshots import SnapshotCandidate, build_snapshot
 from skill_maintainer.versioning import VersionDecision, apply_approved_version, compare_version
 
 
-def review_snapshot_hash() -> str:
-    content = b"# review evidence"
+def review_snapshot_hash(content: bytes = b"# review evidence") -> str:
     digest = sha256()
     digest.update(b"SKILL.md")
     digest.update(b"\0")
@@ -250,13 +249,14 @@ class VersionRetentionTest(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.ledger = LedgerStore.create(Path(self.temporary.name) / "ledger.xlsx")
         self.current = formal_row()
+        self.current["固定版本内容指纹"] = review_snapshot_hash()
         self.ledger.append_rows("当前Skill", [self.current])
 
     def observed(self, **overrides):
         value = {
             "内部标识": self.current["内部标识"],
             "fixed_version": "v2.0.0",
-            "content_hash": review_snapshot_hash(),
+            "content_hash": review_snapshot_hash(b"# changed evidence"),
             "canonical_source": self.current["Canonical source"],
             "source_url": "https://github.com/example/skill-1/releases/tag/v2.0.0",
             "evidence_paths": ("snapshots/v2/SKILL.md",),
@@ -277,19 +277,32 @@ class VersionRetentionTest(unittest.TestCase):
             local_script_plugin_interface="不使用", security_grade=observed["security_grade"],
             verification_status="全部通过（未实测）",
         )
+        proposed = {key: value.isoformat() if isinstance(value, date) else value for key, value in current.items()}
+        proposed.update({
+            "固定版本": observed["fixed_version"], "固定版本内容指纹": observed["content_hash"],
+            "Canonical source": observed["canonical_source"], "许可证": observed["license"],
+            "安全等级": observed["security_grade"], "质量评分": 2,
+            "验证状态": facts.verification_status, "验证证据位置": "；".join(facts.evidence_paths),
+            "外部联网/API 调用": facts.remote_api_call, "远程服务端点": "",
+            "本地专业软件或运行时依赖": facts.local_professional_software,
+            "本地脚本/插件接口": facts.local_script_plugin_interface,
+        })
         review = ReviewDecision(
-            facts, ProjectJudgments("正式推荐", True, True, 5, (True,)), candidate_id=current["内部标识"],
+            facts, ProjectJudgments("正式推荐", True, True, 5, (True,)),
+            DerivedFields(quality_score=2, ledger_row=proposed), current["内部标识"],
         )
         with tempfile.TemporaryDirectory(dir=self.temporary.name) as temporary:
             root = Path(temporary)
             source = root / "candidate"
             source.mkdir()
-            (source / "SKILL.md").write_text("# review evidence", encoding="utf-8")
+            content = b"# review evidence" if observed["content_hash"] == review_snapshot_hash() else b"# changed evidence"
+            (source / "SKILL.md").write_bytes(content)
             snapshot = build_snapshot(
                 SnapshotCandidate(current["内部标识"], observed["fixed_version"], source, tuple(observed["evidence_paths"])), root / "snapshot",
             )
             packet = build_review_packet(
-                {"id": current["内部标识"], "canonical_source": observed["canonical_source"], "license": observed["license"], "security_grade": observed["security_grade"]},
+                {"id": current["内部标识"], "canonical_source": observed["canonical_source"], "license": observed["license"], "security_grade": observed["security_grade"],
+                 "upstream_repository": current["上游项目地址"], "skill_entry_path": current["Skill入口路径"]},
                 snapshot,
             )
         payload = {
@@ -313,14 +326,16 @@ class VersionRetentionTest(unittest.TestCase):
                     "record_tier": "正式推荐", "display_in_product": True, "direct_deployable": True,
                     "relevance_score": 5, "quality_bonus_flags": [True],
                 },
-                "derived_fields": {},
+                "derived_fields": {"quality_score": 2, "ledger_row": proposed},
             }]
         }
+        review_ledger = LedgerStore.create(Path(self.temporary.name) / f"review-{len(list(Path(self.temporary.name).glob('review-*')))}.xlsx")
         receipt, = apply_reviews_from_stream(
-            io.BytesIO(json.dumps(payload).encode("utf-8")), self.ledger, {current["内部标识"]: packet},
+            io.BytesIO(json.dumps(payload).encode("utf-8")), review_ledger, {current["内部标识"]: packet},
         )
+        review_ledger.workbook.close()
         return VersionDecision.accept_from_applied_review(
-            change, receipt, review_date="2026-08-27", conclusion_change="完整复审通过",
+            change, receipt, review_date="2026-08-27", conclusion_change="完整复审通过", proposed_row=proposed,
         )
 
     def test_unchanged_hash_does_nothing_and_new_tag_is_alias_observation_only(self):
@@ -333,7 +348,7 @@ class VersionRetentionTest(unittest.TestCase):
         self.assertFalse(unchanged.requires_full_review)
         self.assertEqual(retagged.status, "alias_observation")
         self.assertFalse(retagged.requires_full_review)
-        apply_approved_version(self.ledger, VersionDecision.from_change(retagged, outcome="accepted"))
+        apply_approved_version(self.ledger, self.approved(retagged))
         self.assertEqual(self.ledger.rows("当前Skill"), [self.current])
         self.assertEqual(len(self.ledger.rows("版本历史")), 0)
         self.assertEqual(len(self.ledger.rows("来源别名")), 1)
@@ -444,7 +459,7 @@ class VersionRetentionTest(unittest.TestCase):
         self.assertFalse(hasattr(VersionDecision, "approve"))
         with self.assertRaisesRegex(ValueError, "receipt"):
             VersionDecision.accept_from_applied_review(
-                change, object(), review_date="2026-08-27", conclusion_change="完整复审通过",
+                change, object(), review_date="2026-08-27", conclusion_change="完整复审通过", proposed_row=self.current,
             )
 
     def test_tampered_or_reused_task7_receipt_cannot_accept_a_version(self):
@@ -453,7 +468,7 @@ class VersionRetentionTest(unittest.TestCase):
         tampered = replace(accepted.applied_review, fixed_content_hash="a" * 64)
         with self.assertRaisesRegex(ValueError, "receipt"):
             VersionDecision.accept_from_applied_review(
-                change, tampered, review_date="2026-08-27", conclusion_change="完整复审通过",
+                change, tampered, review_date="2026-08-27", conclusion_change="完整复审通过", proposed_row=accepted.proposed_row,
             )
 
         apply_approved_version(self.ledger, accepted)

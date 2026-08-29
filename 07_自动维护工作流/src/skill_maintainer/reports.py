@@ -732,6 +732,11 @@ def _scope_index(
         for row in _ledger_rows(snapshot, "当前Skill")
         if str(row.get("内部标识") or "").strip()
     }
+    for row in _ledger_rows(snapshot, "候选观察"):
+        stable_id = str(row.get("内部标识") or "").strip()
+        status = str(row.get("观察状态") or "").strip()
+        if stable_id and status in {"条件候选", "需适配候选"}:
+            skills[stable_id] = _normalize_candidate_observation(row)
     scopes: dict[str, set[str]] = {}
     mapping_fingerprints: dict[str, list[tuple[str, str]]] = {}
     for row in _ledger_rows(snapshot, "专业任务映射"):
@@ -814,10 +819,21 @@ def affected_scopes(before: object, after: object, *, catalog_snapshot: object |
         if old is None or new is None:
             affected.update(old_scopes | new_scopes)
             continue
-        old_material = tuple(str(old.get(field) or "") for field in _MATERIAL_SKILL_FIELDS)
-        new_material = tuple(str(new.get(field) or "") for field in _MATERIAL_SKILL_FIELDS)
+        old_material = tuple(str(old.get(field) or "") for field in (*_MATERIAL_SKILL_FIELDS, "观察状态", "原因", "验证证据位置"))
+        new_material = tuple(str(new.get(field) or "") for field in (*_MATERIAL_SKILL_FIELDS, "观察状态", "原因", "验证证据位置"))
         if old_material != new_material or before_maps.get(stable_id, ()) != after_maps.get(stable_id, ()):
             affected.update(old_scopes | new_scopes)
+    before_attention = {
+        (str(row.get("内部标识") or "").strip(), _row_fingerprint(row))
+        for row in _ledger_rows(before, "候选观察")
+        if str(row.get("观察状态") or "").strip() == "attention_required"
+    }
+    for row in _ledger_rows(after, "候选观察"):
+        stable_id = str(row.get("内部标识") or "").strip()
+        if str(row.get("观察状态") or "").strip() != "attention_required":
+            continue
+        if (stable_id, _row_fingerprint(row)) not in before_attention:
+            affected.update(before_scopes.get(stable_id, set()) | after_scopes.get(stable_id, set()))
     before_catalog = _ledger_rows(before, "目录基线")
     after_catalog = _ledger_rows(after, "目录基线")
     affected.update(_catalog_changed_scopes(catalog_snapshot))
@@ -868,8 +884,14 @@ def build_scope_deliveries(
     """Build one Word and one Excel copy for each materially affected scope."""
 
     master_rows = _ledger_rows(ledger, "当前Skill")
+    candidate_rows = _ledger_rows(ledger, "候选观察")
     mappings = _ledger_rows(ledger, "专业任务映射")
     by_id = {str(row.get("内部标识") or "").strip(): row for row in master_rows if str(row.get("内部标识") or "").strip()}
+    candidates_by_id = {
+        str(row.get("内部标识") or "").strip(): _normalize_candidate_observation(row)
+        for row in candidate_rows
+        if str(row.get("内部标识") or "").strip() and str(row.get("观察状态") or "").strip() in {"条件候选", "需适配候选"}
+    }
     root = _ordinary_output_root(output_root)
     outputs: list[Path] = []
     seen_scopes: set[str] = set()
@@ -881,10 +903,13 @@ def build_scope_deliveries(
         scope_maps = [row for row in mappings if _scope_name(row) == scope]
         ids = sorted({str(row.get("内部标识") or "").strip() for row in scope_maps if str(row.get("内部标识") or "").strip()})
         formal: list[dict[str, Any]] = []
+        conditional: list[dict[str, Any]] = []
+        adaptation: list[dict[str, Any]] = []
         for stable_id in ids:
-            if stable_id not in by_id:
+            source = by_id.get(stable_id) or candidates_by_id.get(stable_id)
+            if source is None:
                 continue
-            row = dict(by_id[stable_id])
+            row = dict(source)
             stable_maps = [item for item in scope_maps if str(item.get("内部标识") or "").strip() == stable_id]
             row.update({
                 "专业类": scope,
@@ -893,11 +918,19 @@ def build_scope_deliveries(
                 "输出": _stable_join(item.get("输出") for item in stable_maps) or row.get("输出"),
                 "使用限制": _stable_join(item.get("使用限制") for item in stable_maps) or row.get("安全限制条件"),
             })
-            formal.append(row)
+            tier = str(row.get("观察状态") or row.get("入库层级") or "").strip()
+            if stable_id in by_id:
+                formal.append(row)
+            elif tier == "条件候选":
+                conditional.append(row)
+            elif tier == "需适配候选":
+                adaptation.append(row)
         payload = {
             "run_id": f"scope-{_scope_directory_name(scope)}",
             "generated_at": datetime.now(),
             "formal_additions": formal,
+            "conditional_candidates": conditional,
+            "adaptation_candidates": adaptation,
             "affected_scopes": [scope],
             "source_statuses": {},
         }
@@ -927,7 +960,7 @@ def _catalog_change_rows(catalog_snapshot: object) -> list[dict[str, str]]:
 
 
 def _normalize_candidate_observation(row: Mapping[str, Any]) -> dict[str, Any]:
-    stable_id = str(row.get("观察标识") or "").strip()
+    stable_id = str(row.get("内部标识") or "").strip()
     name = str(row.get("候选名称") or "").strip()
     tier = str(row.get("观察状态") or "").strip()
     reason = str(row.get("原因") or "").strip()

@@ -27,11 +27,13 @@ class DedupResult:
 def canonical_key(candidate: object) -> str:
     """只使用已证明的身份；URL 查询和片段也是身份的一部分。"""
     canonical = _normalized_url(_value(candidate, "canonical_source", "Canonical source"))
+    upstream, entry = _upstream_entry(candidate)
+    if canonical and entry:
+        return f"source:{canonical}|entry:{entry}"
+    if _normalized_url(upstream) and entry:
+        return f"upstream:{_normalized_url(upstream)}|entry:{entry}"
     if canonical:
         return f"source:{canonical}"
-    upstream, entry = _upstream_entry(candidate)
-    if upstream and entry:
-        return f"upstream:{upstream}|entry:{entry}"
     content_hash = _valid_hash(_value(candidate, "content_hash", "固定版本内容指纹"))
     if content_hash:
         return f"hash:{content_hash}"
@@ -182,11 +184,17 @@ def _ledger_identity_ids(ledger: object | None) -> tuple[dict[str, set[str]], se
                 value = _normalized_url(str(row.get(field) or ""))
                 if value:
                     identities.setdefault(value, set()).add(stable_id)
+            upstream, entry = _upstream_entry(row)
+            if upstream and entry:
+                identities.setdefault(f"{upstream}|{entry}", set()).add(stable_id)
     return identities, occupied
 
 
 def _matching_ledger_ids(candidate: Mapping[str, Any], identities: Mapping[str, set[str]]) -> set[str]:
     matches: set[str] = set()
+    upstream, entry = _upstream_entry(candidate)
+    if _normalized_url(upstream) and entry:
+        return set(identities.get(f"{upstream}|{entry}", set()))
     for value in (_value(candidate, "canonical_source", "Canonical source"), _value(candidate, "source_url", "来源地址", "发现地址")):
         matches.update(identities.get(_normalized_url(value), set()))
     return matches

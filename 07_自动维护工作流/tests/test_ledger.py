@@ -161,6 +161,31 @@ class LedgerStoreTest(unittest.TestCase):
         self.assertEqual(worksheet.cell(2, 1).value, "GH-01-0001")
         self.assertTrue(table.ref.endswith("2"))
 
+    def test_load_compatibly_adds_explicit_candidate_identity_to_legacy_observation_sheet(self):
+        legacy_path = Path(self.tempdir.name) / "legacy-candidate-observation.xlsx"
+        self.store.append_rows("候选观察", [{
+            "观察标识": "legacy-observation", "候选名称": "legacy", "Canonical source": "https://example.test/legacy",
+            "观察状态": "条件候选", "许可证": "待确认", "记录日期": "2026-08-29", "原因": "历史观察",
+        }])
+        self.store.workbook.save(legacy_path)
+        workbook = load_workbook(legacy_path)
+        worksheet = workbook["候选观察"]
+        headers = [cell.value for cell in worksheet[1]]
+        if "内部标识" in headers:
+            worksheet.delete_cols(headers.index("内部标识") + 1)
+            table = worksheet.tables[SHEET_SPECS_BY_NAME["候选观察"].table_name]
+            table.ref = f"A1:G{max(2, worksheet.max_row)}"
+            table.autoFilter.ref = table.ref
+        workbook.save(legacy_path)
+        workbook.close()
+        before = sha256(legacy_path.read_bytes()).hexdigest()
+
+        reopened = LedgerStore.load(legacy_path)
+
+        self.assertIn("内部标识", reopened._resolve_columns("候选观察"))
+        self.assertIsNone(reopened.rows("候选观察")[0]["内部标识"])
+        self.assertEqual(sha256(legacy_path.read_bytes()).hexdigest(), before, "load migration must not overwrite authority")
+
     def test_520_formal_rows_survive_saved_reopen_with_table_filter_hyperlink_and_date(self):
         self.store.append_rows("当前Skill", [formal_row(number) for number in range(1, 521)])
         staging_path = Path(self.tempdir.name) / "520-fixture.xlsx"
@@ -274,7 +299,10 @@ class LedgerStoreTest(unittest.TestCase):
                 ERROR_DUPLICATE_STABLE_ID,
             ),
             (
-                [formal_row(1), formal_row(2, **{"Canonical source": "https://example.edu/skills/1"})],
+                [formal_row(1), formal_row(2, **{
+                    "Canonical source": "https://example.edu/skills/1",
+                    "上游项目地址": "https://example.edu/upstream/1", "Skill入口路径": "SKILL.md",
+                })],
                 ERROR_DUPLICATE_CANONICAL_SOURCE,
             ),
             ([formal_row(1, **{"固定版本": ""})], ERROR_MISSING_FIXED_VERSION),

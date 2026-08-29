@@ -110,6 +110,9 @@ class _State:
     evidence_identity: tuple[tuple[Path, str, tuple[int, int, int, int]], ...]
     packets_bound: bool = False
     version_proposals: dict[str, Mapping[str, object]] = field(default_factory=dict)
+    version_mapping_proposals: dict[str, tuple[Mapping[str, object], ...]] = field(default_factory=dict)
+    reviewed_candidate_ids: set[str] = field(default_factory=set)
+    reviewed_canonicals: set[str] = field(default_factory=set)
     output_digest: str = ""
     owned_generation: Path | None = None
     committed: bool = False
@@ -201,8 +204,15 @@ class RunCoordinator:
                 packets_bound=bool(request.review_packets),
                 output_digest=self._output_digest(),
             )
+            if request.material_reviewer is not None:
+                register = getattr(request.material_reviewer, "register_prepared", None)
+                if not callable(register):
+                    raise CoordinatorError("材料评审器缺少 PreparedRun authority 注册边界")
+                register(prepared, self.assert_prepared_authority)
             return prepared
         except BaseException:
+            if 'run_id' in locals():
+                self._states.pop(run_id, None)
             if staging_dir is not None:
                 try:
                     self._remove_owned_staging(staging_dir)
@@ -258,6 +268,7 @@ class RunCoordinator:
                         issued = apply_reviews_from_stream(stream, shadow_ledger, packets)
                         proposed = next(row for row in shadow_ledger.rows("当前Skill") if row["内部标识"] == decision.candidate_id)
                         state.version_proposals[decision.candidate_id] = proposed
+                        state.version_mapping_proposals[decision.candidate_id] = tuple(decision.derived_fields.scope_mappings)
                         received.extend(issued)
                     finally:
                         shadow_ledger.workbook.close()
@@ -266,6 +277,11 @@ class RunCoordinator:
                 else:
                     received.extend(apply_reviews_from_stream(stream, ledger, packets))
             receipts = tuple(received)
+            state.reviewed_candidate_ids.update(decision.candidate_id for decision in decisions)
+            state.reviewed_canonicals.update(
+                decision.observed_facts.canonical_source for decision in decisions
+                if decision.observed_facts.canonical_source
+            )
             self._save_ledger(ledger, prepared.staging_ledger)
             self._inject("after_review")
             summary = ReviewApplySummary(prepared.run_id, decision_sha, len(receipts), _sha256(prepared.staging_ledger), receipts)
@@ -284,6 +300,10 @@ class RunCoordinator:
             raise CoordinatorError("审查包映射必须使用非空候选标识")
         state.review_packets = dict(packets)
         state.packets_bound = True
+
+    def assert_prepared_authority(self, prepared: PreparedRun) -> None:
+        """Reject copies, replacements, forgeries, and terminal PreparedRun objects."""
+        self._state_for(prepared, allowed=("prepared",))
 
     def finalize(self, prepared: PreparedRun, reviews: ReviewApplySummary) -> RunSummary:
         state = self._state_for(prepared, allowed=("prepared", "reviews_applied"))
@@ -311,7 +331,11 @@ class RunCoordinator:
         try:
             ledger = LedgerStore.load(prepared.staging_ledger)
             self._apply_version_transactions(ledger, state, reviews)
-            self._apply_dedup_and_watermarks(ledger, prepared.source_runs)
+            self._apply_dedup_and_watermarks(
+                ledger, prepared.source_runs,
+                reviewed_candidate_ids=state.reviewed_candidate_ids,
+                reviewed_canonicals=state.reviewed_canonicals,
+            )
             self._save_ledger(ledger, prepared.staging_ledger)
             artifacts = self._artifacts_from_callback(prepared)
             self._inject("report")
@@ -620,8 +644,17 @@ class RunCoordinator:
         ledger.workbook.close()
         raise CoordinatorError("暂存运行记录缺失")
 
-    def _apply_dedup_and_watermarks(self, ledger: LedgerStore, source_runs: tuple[SourceRun, ...]) -> None:
-        candidates = tuple(candidate for run in source_runs for candidate in run.candidates)
+    def _apply_dedup_and_watermarks(
+        self, ledger: LedgerStore, source_runs: tuple[SourceRun, ...], *,
+        reviewed_candidate_ids: set[str] | None = None,
+        reviewed_canonicals: set[str] | None = None,
+    ) -> None:
+        reviewed_ids = reviewed_candidate_ids or set()
+        reviewed_sources = reviewed_canonicals or set()
+        candidates = tuple(
+            candidate for run in source_runs for candidate in run.candidates
+            if not (isinstance(candidate, Mapping) and candidate.get("repository_index_only"))
+        )
         result = deduplicate(candidates, ledger) if candidates else None
         if result is not None:
             observed = {str(row.get("观察标识") or "") for row in ledger.rows("候选观察")}
@@ -642,12 +675,18 @@ class RunCoordinator:
                 if observation_id not in observed:
                     pending.append({
                         "观察标识": observation_id,
+                        "内部标识": stable,
                         "候选名称": str(skill.get("Skill名称") or skill.get("name") or stable),
                         "Canonical source": canonical,
                         "观察状态": status,
                         "许可证": str(skill.get("许可证") or "待确认"),
                         "记录日期": str(skill.get("observed_on") or today),
                         "原因": reason,
+                        "固定版本": str(skill.get("fixed_version") or skill.get("version_hint") or ""),
+                        "固定版本内容指纹": str(skill.get("content_hash") or ""),
+                        "验证证据位置": str(skill.get("evidence_paths") or ""),
+                        "原因代码": reason_code,
+                        "显示层级": "不展示" if status in {"排除", "attention_required"} else status,
                     })
                     observed.add(observation_id)
             for skill in result.skills:
@@ -655,8 +694,10 @@ class RunCoordinator:
                 stable = str(skill.get("内部标识") or "").strip()
                 observation_id = f"discovered-{sha256((stable + '|' + canonical).encode('utf-8')).hexdigest()[:20]}"
                 if stable not in current_ids and stable not in specially_observed and observation_id not in observed:
+                    if stable in reviewed_ids or canonical in reviewed_sources:
+                        continue
                     pending.append({"观察标识": observation_id, "候选名称": str(skill.get("Skill名称") or skill.get("name") or stable),
-                        "Canonical source": canonical, "观察状态": "待审查", "许可证": str(skill.get("许可证") or "待确认"),
+                        "内部标识": stable, "Canonical source": canonical, "观察状态": "待审查", "许可证": str(skill.get("许可证") or "待确认"),
                         "记录日期": today, "原因": "发现的规范候选；未完成 Task 7 审查，不进入当前Skill"})
                     observed.add(observation_id)
             for manual in result.manual_review:
@@ -665,7 +706,7 @@ class RunCoordinator:
                 observation_id = f"manual-{sha256((canonical + '|' + reason).encode('utf-8')).hexdigest()[:20]}"
                 if observation_id not in observed:
                     pending.append({"观察标识": observation_id, "候选名称": str(manual.get("候选名称") or manual.get("name") or "候选"),
-                        "Canonical source": canonical, "观察状态": "人工复核", "许可证": str(manual.get("许可证") or "待确认"),
+                        "内部标识": str(manual.get("内部标识") or ""), "Canonical source": canonical, "观察状态": "人工复核", "许可证": str(manual.get("许可证") or "待确认"),
                         "记录日期": today, "原因": reason})
                     observed.add(observation_id)
             if pending:
@@ -707,9 +748,14 @@ class RunCoordinator:
                 "security_grade": receipt.security_grade,
             }
             change = compare_version(current, observed)
-            if change.status == "full_review_required":
-                decision = VersionDecision.accept_from_applied_review(change, receipt, review_date=datetime.now().date().isoformat(), conclusion_change="完整复审通过")
+            if change.status in {"full_review_required", "alias_observation"}:
+                decision = VersionDecision.accept_from_applied_review(
+                    change, receipt, review_date=datetime.now().date().isoformat(),
+                    conclusion_change="完整复审通过", proposed_row=proposed,
+                )
                 apply_approved_version(ledger, decision)
+                for mapping in state.version_mapping_proposals.get(candidate_id, ()):
+                    ledger.upsert_professional_task_mapping(mapping)
             else:
                 consume_applied_review(receipt)
 
@@ -861,6 +907,13 @@ class RunCoordinator:
                 except BaseException as exc:
                     warnings.append(f"generation-cleanup:{exc}")
         finally:
+            reviewer = state.request.material_reviewer
+            clear_prepared = getattr(reviewer, "clear_prepared", None) if reviewer is not None else None
+            if callable(clear_prepared):
+                try:
+                    clear_prepared(state.prepared)
+                except BaseException as exc:
+                    warnings.append(f"material-registry-clear:{exc}")
             try:
                 state.lock.release()
             except BaseException as exc:
@@ -961,7 +1014,11 @@ class RunCoordinator:
             "record_tier": judgments.record_tier, "display_in_product": judgments.display_in_product,
             "direct_deployable": judgments.direct_deployable, "relevance_score": judgments.relevance_score,
             "quality_bonus_flags": list(judgments.quality_bonus_flags),
-        }, "derived_fields": {"quality_score": derived.quality_score, "ledger_row": derived.ledger_row}}
+        }, "derived_fields": {
+            "quality_score": derived.quality_score,
+            "ledger_row": derived.ledger_row,
+            "scope_mappings": list(derived.scope_mappings),
+        }}
 
     def _decision_digest(self, decisions: tuple[ReviewDecision, ...]) -> str:
         payload = [self._decision_mapping(item) for item in decisions]

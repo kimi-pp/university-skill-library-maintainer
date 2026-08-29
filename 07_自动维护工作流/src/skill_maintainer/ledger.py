@@ -122,7 +122,45 @@ class LedgerStore:
     @classmethod
     def load(cls, path: str | Path) -> "LedgerStore":
         target = Path(path).resolve()
-        return cls(load_workbook(target, data_only=False), target)
+        workbook = load_workbook(target, data_only=False)
+        cls._upgrade_candidate_observation_identity(workbook)
+        return cls(workbook, target)
+
+    @staticmethod
+    def _upgrade_candidate_observation_identity(workbook: Workbook) -> None:
+        """Upgrade supported observation layouts in memory only.
+
+        The seven-column legacy layout lacked ``内部标识``; the intermediate
+        eight-column layout had it but predates version/evidence fields.
+        """
+        if "候选观察" not in workbook.sheetnames:
+            return
+        worksheet = workbook["候选观察"]
+        current = SHEET_SPECS_BY_NAME["候选观察"].columns
+        legacy = ("观察标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因")
+        legacy_full = tuple(column for column in current if column != "内部标识")
+        intermediate = ("观察标识", "内部标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因")
+        headers = tuple(worksheet.cell(1, index).value for index in range(1, worksheet.max_column + 1))
+        if headers == current:
+            return
+        if headers not in {legacy, legacy_full, intermediate}:
+            return
+        if headers in {legacy, legacy_full}:
+            worksheet.insert_cols(2)
+            worksheet.cell(1, 2, "内部标识")
+            worksheet.cell(1, 2).font = copy(worksheet.cell(1, 1).font)
+            worksheet.cell(1, 2).alignment = copy(worksheet.cell(1, 1).alignment)
+        for index, column in enumerate(current, start=1):
+            cell = worksheet.cell(1, index)
+            if cell.value in (None, ""):
+                cell.value = column
+                cell.font = copy(worksheet.cell(1, 1).font)
+                cell.alignment = copy(worksheet.cell(1, 1).alignment)
+            worksheet.column_dimensions[get_column_letter(index)].width = max(14, min(34, len(column) * 2 + 4))
+        table = worksheet.tables.get(SHEET_SPECS_BY_NAME["候选观察"].table_name)
+        if table is not None:
+            table.ref = f"A1:{get_column_letter(len(current))}{max(2, worksheet.max_row)}"
+            table.autoFilter.ref = table.ref
 
     @staticmethod
     def _initialize_sheet(worksheet, spec: SheetSpec) -> None:
@@ -259,6 +297,24 @@ class LedgerStore:
                 return
         self.append_rows(spec.name, [row])
 
+    def upsert_professional_task_mapping(self, row: Mapping[str, Any]) -> None:
+        mapping_id = row.get("映射标识")
+        if not mapping_id:
+            raise ValueError("专业任务映射 upsert 需要映射标识")
+        spec = self._spec("专业任务映射")
+        unknown = set(row) - set(spec.columns)
+        if unknown:
+            raise KeyError(f"专业任务映射 包含未知字段：{sorted(unknown)}")
+        columns = self._resolve_columns(spec.name)
+        worksheet = self.workbook[spec.name]
+        for row_number in range(2, worksheet.max_row + 1):
+            if worksheet.cell(row_number, columns["映射标识"]).value == mapping_id:
+                for column_name in spec.columns:
+                    if column_name in row:
+                        self._set_cell(worksheet.cell(row_number, columns[column_name]), row[column_name], column_name)
+                return
+        self.append_rows(spec.name, [row])
+
     def validate(self) -> list[str]:
         errors: list[str] = []
         current_skill_rows: list[dict[str, Any]] | None = None
@@ -297,7 +353,7 @@ class LedgerStore:
                     if values in seen:
                         if spec.name == "当前Skill" and unique_key == ("内部标识",):
                             errors.append(ERROR_DUPLICATE_STABLE_ID)
-                        elif spec.name == "当前Skill" and unique_key == ("Canonical source",):
+                        elif spec.name == "当前Skill" and unique_key == ("上游项目地址", "Skill入口路径"):
                             errors.append(ERROR_DUPLICATE_CANONICAL_SOURCE)
                         else:
                             errors.append(f"台账错误-重复唯一键-{spec.name}")
