@@ -25,8 +25,10 @@ from skill_maintainer import cli
 from skill_maintainer.ledger import LedgerStore
 from skill_maintainer.locking import SingleWriterLock
 from skill_maintainer.office import RendererCommand
+from skill_maintainer.review import build_review_packet
 from skill_maintainer.runner import RunCoordinator, RunRequest, SourceRun
 from skill_maintainer.settings import load_settings, settings_sha256
+from skill_maintainer.snapshots import SnapshotCandidate, build_snapshot
 
 
 WORKFLOW = "07_自动维护工作流"
@@ -1182,7 +1184,21 @@ class CliOperationsTest(unittest.TestCase):
 
     def test_protocol_requires_one_decision_for_every_review_packet_before_publish(self):
         workflow, coordinator, request, input_stream, output = self._protocol_fixture()
-        request = replace(request, review_packets={"candidate-1": {"fixed_snapshot": "offline"}})
+        source = workflow / "trusted-fixture-candidate"
+        source.mkdir()
+        (source / "SKILL.md").write_text("# trusted offline fixture\n", encoding="utf-8")
+        evidence = workflow / "trusted-fixture-evidence.json"
+        evidence.write_text('{"source":"offline"}', encoding="utf-8")
+        snapshot = build_snapshot(
+            SnapshotCandidate("candidate-1", "a" * 40, source, (str(evidence),)),
+            workflow / "trusted-fixture-snapshot",
+        )
+        packet = build_review_packet({
+            "candidate_id": "candidate-1", "canonical_source": "https://github.com/example/candidate-1",
+            "upstream_repository": "https://github.com/example/candidate-1", "skill_entry_path": "SKILL.md",
+            "license": "MIT", "security_grade": "SA",
+        }, snapshot)
+        request = replace(request, review_packets={"candidate-1": packet})
         authority = workflow / "ledger" / "Skills主台账.xlsx"
         before = sha256(authority.read_bytes()).hexdigest()
         code = cli.run_interactive_protocol(coordinator, request, input_stream=input_stream, output_stream=output)

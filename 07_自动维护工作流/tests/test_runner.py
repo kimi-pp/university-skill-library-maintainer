@@ -286,6 +286,176 @@ notify_on_no_change = false
         self.assertEqual(before, self.production_hashes())
         coordinator.abandon(prepared)
 
+    def test_review_packet_is_claimed_by_one_exact_prepared_run_and_dies_at_terminal(self):
+        packet, _ = self.report_review("PACKET-OWNER-1", "https://github.com/example/packet-owner")
+        first = self.coordinator()
+        prepared = first.prepare(replace(
+            self.request, requested_run_id="run-packet-owner-a",
+            review_packets={"PACKET-OWNER-1": packet},
+        ))
+
+        other_root = Path(self.temporary.name) / "另一个 项目"
+        other_root.mkdir()
+        shutil.copyfile(self.settings, other_root / "workflow-settings.toml")
+        LedgerStore.create(other_root / "ledger" / "Skills主台账.xlsx")
+        second = RunCoordinator(
+            root=other_root,
+            discover=lambda request, staging: (
+                SourceRun("SkillHub", "partial"), SourceRun("ClawHub", "failed"),
+                SourceRun("GitHub", "failed"), SourceRun("Hugging Face Spaces", "failed"),
+            ),
+            office_verifier=self.unit_office_verifier,
+        )
+        second_request = RunRequest(
+            settings_path=other_root / "workflow-settings.toml", catalog_loader=lambda: object(),
+            requested_run_id="run-packet-owner-b", review_packets={"PACKET-OWNER-1": packet},
+        )
+        with self.assertRaisesRegex((CoordinatorError, ValueError), "审查包|运行"):
+            second.prepare(second_request)
+
+        first.abandon(prepared)
+        with self.assertRaisesRegex((CoordinatorError, ValueError), "审查包|受信"):
+            second.prepare(replace(second_request, requested_run_id="run-packet-owner-c"))
+
+    def test_coordinator_preserves_structured_exclusion_outcome_and_digest(self):
+        stable_id = "EXCLUDE-EXISTING-1"
+        packet, include = self.report_review(stable_id, "https://github.com/example/exclude-existing")
+        production = self.root / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(production)
+        ledger.upsert_skill(self.formal_row(stable_id, "b" * 40, "b" * 64))
+        seeded = self.root / "ledger" / "seed-exclude.xlsx"
+        ledger.save_staged(seeded)
+        ledger.workbook.close()
+        shutil.copyfile(seeded, production)
+        seeded.unlink()
+        exclude = replace(
+            include,
+            project_judgments=ProjectJudgments(
+                "正式推荐", False, False, 1, (), "exclude",
+                "security_rejected", "发现禁止性安全行为",
+            ),
+            derived_fields=DerivedFields(),
+        )
+        coordinator = self.coordinator()
+        prepared = coordinator.prepare(replace(
+            self.request, requested_run_id="run-structured-exclude",
+            review_packets={stable_id: packet},
+        ))
+        self.assertNotEqual(
+            coordinator._decision_digest((include,)),
+            coordinator._decision_digest((exclude,)),
+        )
+        summary = coordinator.apply_reviews(prepared, (exclude,))
+        self.assertEqual(summary.receipts, ())
+        self.assertEqual(coordinator._states[prepared.run_id].version_proposals, {})
+        staged = LedgerStore.load(prepared.staging_ledger)
+        self.assertEqual(staged.rows("当前Skill")[0]["固定版本"], "b" * 40)
+        observation = staged.rows("候选观察")[0]
+        self.assertEqual((observation["观察状态"], observation["原因代码"]), ("排除", "security_rejected"))
+        staged.workbook.close()
+        coordinator.finalize(prepared, summary)
+        published = LedgerStore.load(production)
+        self.assertEqual(published.rows("当前Skill")[0]["固定版本"], "b" * 40)
+        self.assertEqual(published.rows("候选观察")[0]["固定版本"], include.observed_facts.fixed_version)
+        published.workbook.close()
+
+    def test_structured_upstream_deletion_observation_survives_finalize_without_repository_candidate(self):
+        stable_id = "DELETED-TRACKED-1"
+        production = self.root / "ledger" / "Skills主台账.xlsx"
+        ledger = LedgerStore.load(production)
+        ledger.upsert_skill(self.formal_row(stable_id, "1" * 40, "2" * 64))
+        seeded = self.root / "ledger" / "seed-deleted.xlsx"
+        ledger.save_staged(seeded)
+        ledger.workbook.close()
+        shutil.copyfile(seeded, production)
+        seeded.unlink()
+        observation = {
+            "观察标识": "attention-deleted-tracked-1", "内部标识": stable_id,
+            "候选名称": stable_id, "Canonical source": "https://github.com/example/skill",
+            "Skill入口路径": "SKILL.md", "观察状态": "attention_required", "许可证": "MIT",
+            "记录日期": "2026-08-29", "原因": "上游仓库已删除；旧版本及快照保留",
+            "固定版本": "1" * 40, "固定版本内容指纹": "2" * 64,
+            "验证证据位置": "evidence/github-delete.json", "原因代码": "upstream-deleted",
+            "显示层级": "不展示",
+        }
+        source_runs = (
+            SourceRun("SkillHub", "complete"), SourceRun("ClawHub", "complete"),
+            SourceRun("GitHub", "partial", structured_observations=(observation,)),
+            SourceRun("Hugging Face Spaces", "complete"),
+        )
+        coordinator = self.coordinator(discover=lambda request, staging: source_runs)
+        prepared = coordinator.prepare(replace(self.request, requested_run_id="run-persist-deletion"))
+        summary = coordinator.finalize(prepared, coordinator.apply_reviews(prepared, ()))
+
+        self.assertFalse(summary.blocked)
+        published = LedgerStore.load(production)
+        self.assertEqual(published.rows("当前Skill")[0]["固定版本"], "1" * 40)
+        row = published.rows("候选观察")[0]
+        self.assertEqual((row["内部标识"], row["原因代码"]), (stable_id, "upstream-deleted"))
+        published.workbook.close()
+
+    def test_generation_persists_portable_evidence_and_keeps_prior_generation_references(self):
+        stable_id = "PORTABLE-EVIDENCE-1"
+
+        def discover(request, staging):
+            source_root = staging / "source-evidence" / "GitHub"
+            snapshot_root = staging / "fixed-snapshots" / stable_id
+            source_root.mkdir(parents=True)
+            snapshot_root.mkdir(parents=True)
+            request_file = source_root / "request.json"
+            archive = source_root / "archive.zip"
+            entry = snapshot_root / "SKILL.md"
+            manifest = staging / "fixed-snapshots" / f"{stable_id}.snapshot-manifest.json"
+            request_file.write_bytes(b'{"status":200}')
+            archive.write_bytes(b"fixed archive")
+            entry.write_text("# reviewed skill", encoding="utf-8")
+            manifest.write_text(json.dumps({
+                "candidate_id": stable_id, "fixed_version": "a" * 40,
+                "fixed_content_hash": sha256(entry.read_bytes()).hexdigest(),
+                "files": [{"path": "SKILL.md", "sha256": sha256(entry.read_bytes()).hexdigest()}],
+            }, sort_keys=True), encoding="utf-8")
+            evidence = "；".join((str(request_file), f"{archive}#sha256={sha256(archive.read_bytes()).hexdigest()}", str(entry), str(manifest)))
+            observation = {
+                "观察标识": "portable-evidence-observation", "内部标识": stable_id,
+                "候选名称": "portable evidence", "Canonical source": "https://github.com/example/portable",
+                "Skill入口路径": "SKILL.md", "观察状态": "attention_required", "许可证": "MIT",
+                "记录日期": "2026-08-29", "原因": "上游入口删除；旧证据保留",
+                "固定版本": "a" * 40, "固定版本内容指纹": sha256(entry.read_bytes()).hexdigest(),
+                "验证证据位置": evidence, "原因代码": "upstream-entry-deleted", "显示层级": "不展示",
+            }
+            event = SourceRequestEvent(
+                "GitHub", "latest-version:portable", "https://api.github.com/repos/example/portable",
+                1, 404, 1, sha256(request_file.read_bytes()).hexdigest(), None, True, request_file, False,
+            )
+            return (
+                SourceRun("SkillHub", "complete"), SourceRun("ClawHub", "complete"),
+                SourceRun("GitHub", "partial", evidence_files=(request_file, archive), request_events=(event,),
+                          structured_observations=(observation,)),
+                SourceRun("Hugging Face Spaces", "complete"),
+            )
+
+        first = self.coordinator(discover=discover)
+        prepared = first.prepare(replace(self.request, requested_run_id="run-portable-evidence"))
+        summary = first.finalize(prepared, first.apply_reviews(prepared, ()))
+        ledger = LedgerStore.load(self.root / "ledger" / "Skills主台账.xlsx")
+        evidence_value = str(ledger.rows("候选观察")[0]["验证证据位置"])
+        ledger.workbook.close()
+        self.assertNotIn(str(prepared.staging_dir), evidence_value)
+        for token in evidence_value.split("；"):
+            relative = token.partition("#sha256=")[0]
+            resolved = self.root / Path(relative)
+            self.assertTrue(resolved.is_file(), token)
+            if "#sha256=" in token:
+                self.assertEqual(sha256(resolved.read_bytes()).hexdigest(), token.rpartition("#sha256=")[2])
+        self.assertTrue((summary.output_generation / "authority" / "fixed-snapshots" / f"{stable_id}.snapshot-manifest.json").is_file())
+
+        second = self.coordinator()
+        next_prepared = second.prepare(replace(self.request, requested_run_id="run-portable-evidence-next"))
+        second.finalize(next_prepared, second.apply_reviews(next_prepared, ()))
+        self.assertTrue(summary.output_generation.is_dir())
+        for token in evidence_value.split("；"):
+            self.assertTrue((self.root / Path(token.partition("#sha256=")[0])).is_file())
+
     def test_real_report_adapter_uses_prepared_catalog_sources_and_both_ledgers_in_staging(self):
         if not os.environ.get("SKILL_MAINTAINER_NODE") or not os.environ.get("SKILL_MAINTAINER_NODE_MODULES"):
             self.skipTest("report integration requires caller-supplied Node runtime")

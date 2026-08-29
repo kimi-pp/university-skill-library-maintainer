@@ -33,7 +33,7 @@ CURRENT_SKILL_REQUIRED_COLUMNS = tuple(
 )
 
 CANDIDATE_OBSERVATION_COLUMNS = (
-    "观察标识", "内部标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因",
+    "观察标识", "内部标识", "候选名称", "Canonical source", "Skill入口路径", "观察状态", "许可证", "记录日期", "原因",
     "固定版本", "固定版本内容指纹", "验证证据位置", "原因代码", "显示层级",
 )
 
@@ -43,7 +43,7 @@ ALLOWED_SOURCE_PLATFORMS = frozenset({
 
 SHEET_SPECS = (
     SheetSpec("当前Skill", "CurrentSkills", CURRENT_SKILL_COLUMNS, (("内部标识",), ("上游项目地址", "Skill入口路径"))),
-    SheetSpec("来源别名", "SourceAliases", ("别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "关系类型", "去重依据", "记录日期"), (("别名标识",),)),
+    SheetSpec("来源别名", "SourceAliases", ("别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "固定版本", "关系类型", "去重依据", "记录日期"), (("别名标识",),)),
     SheetSpec(
         "专业任务映射",
         "ProfessionalTaskMaps",

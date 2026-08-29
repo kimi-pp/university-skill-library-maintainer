@@ -2,17 +2,20 @@
 
 from __future__ import annotations
 
-from dataclasses import replace
+from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from hashlib import sha256
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
+import tempfile
+import threading
 from typing import Callable, Mapping
 from urllib.parse import quote, urlencode, urlparse
 
-from .base import MAX_ARCHIVE_BYTES, HttpResponse, PagedHttpAdapter, SearchBatch, SnapshotResult, SourceCandidate, SourceError, SourceRequestEvent, VersionObservation, Watermark, _optional_first, _popularity
+from .base import MAX_ARCHIVE_BYTES, MAX_HTTP_RESPONSE_BYTES, HttpResponse, PagedHttpAdapter, SearchBatch, SnapshotResult, SourceCandidate, SourceError, SourceRequestEvent, VersionObservation, Watermark, _optional_first, _popularity
 from ..queries import QueryJob
 
 
@@ -20,6 +23,15 @@ GITHUB_API = "https://api.github.com"
 GITHUB_SEARCH_CEILING = 1000
 GitHubCommandRunner = Callable[[list[str]], object]
 _COMMIT_SHA_RE = re.compile(r"[0-9a-fA-F]{40}(?:[0-9a-fA-F]{24})?\Z")
+_MAX_GH_STDERR_BYTES = 1024 * 1024
+
+
+@dataclass(frozen=True)
+class _GhOutcome:
+    returncode: int
+    stdout: bytes
+    stderr: bytes
+    exceeded: bool = False
 
 
 class GitHubAdapter(PagedHttpAdapter):
@@ -64,10 +76,15 @@ class GitHubAdapter(PagedHttpAdapter):
         endpoint = url.removeprefix(GITHUB_API)
         attempts = 0
         runner = self.command_runner or _run_gh
+        max_bytes = MAX_ARCHIVE_BYTES if "/zipball/" in endpoint else MAX_HTTP_RESPONSE_BYTES
         for attempt in range(self.retries + 1):
             attempts += 1
             try:
-                outcome = runner(["gh", "api", "--method", "GET", endpoint])
+                outcome = (
+                    _run_gh(["gh", "api", "--method", "GET", endpoint], max_bytes=max_bytes)
+                    if self.command_runner is None
+                    else runner(["gh", "api", "--method", "GET", endpoint])
+                )
                 code = int(getattr(outcome, "returncode", 0))
                 raw = getattr(outcome, "stdout", outcome if isinstance(outcome, (str, bytes)) else b"")
                 body = raw.encode("utf-8") if isinstance(raw, str) else bytes(raw)
@@ -77,6 +94,10 @@ class GitHubAdapter(PagedHttpAdapter):
                 if attempt < self.retries:
                     continue
                 return None, attempts, SourceError(self.platform, query_id, f"network-error: {exc}", None, url)
+            exceeded = bool(getattr(outcome, "exceeded", False)) or len(body) > max_bytes
+            if exceeded:
+                message = "archive-compressed-byte-limit" if max_bytes == MAX_ARCHIVE_BYTES else "http-response-byte-limit"
+                return None, attempts, SourceError(self.platform, query_id, message, None, url)
             if code == 0:
                 return HttpResponse(url, 200, body), attempts, None
             status, message = _gh_error(error_body or body)
@@ -181,8 +202,70 @@ class GitHubAdapter(PagedHttpAdapter):
             return {}
 
 
-def _run_gh(arguments: list[str]) -> subprocess.CompletedProcess[bytes]:
-    return subprocess.run(arguments, check=False, capture_output=True, timeout=20)
+def _run_gh(arguments: list[str], *, max_bytes: int = MAX_HTTP_RESPONSE_BYTES) -> _GhOutcome:
+    """Drain gh through bounded streams; stdout is never accumulated without a hard cap."""
+    if max_bytes <= 0:
+        raise ValueError("gh response byte limit must be positive")
+    with tempfile.TemporaryDirectory(prefix="skill-maintainer-gh-") as temporary:
+        stdout_path = Path(temporary) / "stdout.bin"
+        creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0) if os.name == "nt" else 0
+        process = subprocess.Popen(
+            arguments, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False,
+            creationflags=creationflags,
+        )
+        exceeded = threading.Event()
+        stderr_buffer = bytearray()
+
+        def read_stdout() -> None:
+            assert process.stdout is not None
+            total = 0
+            with stdout_path.open("xb") as handle:
+                while True:
+                    chunk = process.stdout.read(64 * 1024)
+                    if not chunk:
+                        break
+                    remaining = max(0, max_bytes + 1 - total)
+                    if remaining:
+                        handle.write(chunk[:remaining])
+                    total += len(chunk)
+                    if total > max_bytes and not exceeded.is_set():
+                        exceeded.set()
+                        try:
+                            process.terminate()
+                        except OSError:
+                            pass
+
+        def read_stderr() -> None:
+            assert process.stderr is not None
+            while True:
+                chunk = process.stderr.read(64 * 1024)
+                if not chunk:
+                    break
+                remaining = max(0, _MAX_GH_STDERR_BYTES - len(stderr_buffer))
+                if remaining:
+                    stderr_buffer.extend(chunk[:remaining])
+
+        stdout_thread = threading.Thread(target=read_stdout, daemon=True)
+        stderr_thread = threading.Thread(target=read_stderr, daemon=True)
+        stdout_thread.start()
+        stderr_thread.start()
+        timed_out = False
+        try:
+            process.wait(timeout=20)
+        except subprocess.TimeoutExpired:
+            timed_out = True
+            process.kill()
+            process.wait()
+        stdout_thread.join()
+        stderr_thread.join()
+        if process.stdout is not None:
+            process.stdout.close()
+        if process.stderr is not None:
+            process.stderr.close()
+        body = stdout_path.read_bytes() if stdout_path.is_file() else b""
+        if timed_out:
+            raise subprocess.TimeoutExpired(arguments, 20, output=body, stderr=bytes(stderr_buffer))
+        return _GhOutcome(int(process.returncode), body, bytes(stderr_buffer), exceeded.is_set())
 
 
 def _gh_error(body: bytes) -> tuple[int | None, str]:

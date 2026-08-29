@@ -892,6 +892,14 @@ def build_scope_deliveries(
         for row in candidate_rows
         if str(row.get("内部标识") or "").strip() and str(row.get("观察状态") or "").strip() in {"条件候选", "需适配候选"}
     }
+    attention_by_id = {
+        str(row.get("内部标识") or "").strip(): _normalize_candidate_observation(row)
+        for row in sorted(candidate_rows, key=lambda item: (
+            str(item.get("记录日期") or ""), str(item.get("观察标识") or ""),
+        ))
+        if str(row.get("内部标识") or "").strip()
+        and str(row.get("观察状态") or "").strip() == "attention_required"
+    }
     root = _ordinary_output_root(output_root)
     outputs: list[Path] = []
     seen_scopes: set[str] = set()
@@ -905,6 +913,7 @@ def build_scope_deliveries(
         formal: list[dict[str, Any]] = []
         conditional: list[dict[str, Any]] = []
         adaptation: list[dict[str, Any]] = []
+        updates_not_applied: list[dict[str, Any]] = []
         for stable_id in ids:
             source = by_id.get(stable_id) or candidates_by_id.get(stable_id)
             if source is None:
@@ -921,6 +930,16 @@ def build_scope_deliveries(
             tier = str(row.get("观察状态") or row.get("入库层级") or "").strip()
             if stable_id in by_id:
                 formal.append(row)
+                if stable_id in attention_by_id:
+                    attention = dict(attention_by_id[stable_id])
+                    attention.update({
+                        "专业类": scope,
+                        "原版本": str(by_id[stable_id].get("固定版本") or ""),
+                        "新版本": str(attention.get("固定版本") or "未取得"),
+                        "结论": str(attention.get("原因") or "上游入口需要关注"),
+                        "使用限制": f"{str(attention.get('原因') or '上游入口需要关注')}；旧版本保留",
+                    })
+                    updates_not_applied.append(attention)
             elif tier == "条件候选":
                 conditional.append(row)
             elif tier == "需适配候选":
@@ -931,6 +950,7 @@ def build_scope_deliveries(
             "formal_additions": formal,
             "conditional_candidates": conditional,
             "adaptation_candidates": adaptation,
+            "updates_not_applied": updates_not_applied,
             "affected_scopes": [scope],
             "source_statuses": {},
         }
@@ -996,9 +1016,44 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
     def observation_status(row: Mapping[str, Any]) -> str:
         return str(row.get("观察状态") or "").strip()
 
-    conditional = [_normalize_candidate_observation(row) for row in observations if observation_status(row) == "条件候选"]
-    adaptation = [_normalize_candidate_observation(row) for row in observations if observation_status(row) == "需适配候选"]
-    updates_not_applied = [row for row in observations if observation_status(row) in {"发现更新未升级", "更新未升级"}]
+    update_observations: list[dict[str, Any]] = []
+    update_fingerprints: set[str] = set()
+    for row in observations:
+        stable_id = str(row.get("内部标识") or "").strip()
+        status = observation_status(row)
+        if stable_id not in before_skills:
+            continue
+        current_version = str(before_skills[stable_id].get("固定版本") or "").strip()
+        observed_version = str(row.get("固定版本") or "").strip()
+        if status not in {"发现更新未升级", "更新未升级", "条件候选", "需适配候选", "排除", "attention_required"}:
+            continue
+        if status != "attention_required" and observed_version and observed_version == current_version:
+            continue
+        normalized = _normalize_candidate_observation(row)
+        normalized.update({
+            "原版本": current_version,
+            "新版本": observed_version or "未取得",
+            "结论": str(row.get("原因") or status),
+            "使用限制": (
+                f"{str(row.get('原因') or status)}；旧版本保留"
+                if status == "attention_required" else str(row.get("原因") or "不得升级当前正式版本")
+            ),
+        })
+        update_observations.append(normalized)
+        update_fingerprints.add(_row_fingerprint(row))
+    conditional = [
+        _normalize_candidate_observation(row) for row in observations
+        if observation_status(row) == "条件候选" and _row_fingerprint(row) not in update_fingerprints
+    ]
+    adaptation = [
+        _normalize_candidate_observation(row) for row in observations
+        if observation_status(row) == "需适配候选" and _row_fingerprint(row) not in update_fingerprints
+    ]
+    updates_not_applied = update_observations + [
+        row for row in observations
+        if observation_status(row) in {"发现更新未升级", "更新未升级"}
+        and _row_fingerprint(row) not in update_fingerprints
+    ]
     exclusions = [
         row for row in observations
         if observation_status(row) in {"排除", "已排除", "不推荐", "拒绝"}
@@ -1006,6 +1061,22 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
     source_runs = tuple(getattr(prepared, "source_runs", ()))
     source_statuses = {str(run.platform): str(run.status) for run in source_runs}
     source_requests = []
+
+    def portable_event_path(value: object) -> str:
+        if value is None:
+            return "未记录"
+        path = Path(value)
+        staging = Path(getattr(prepared, "staging_dir", Path("."))).absolute()
+        for name in ("source-evidence", "fixed-snapshots"):
+            root = staging / name
+            try:
+                relative = path.absolute().relative_to(root.absolute())
+            except ValueError:
+                continue
+            return (Path("output") / "generations" / str(getattr(prepared, "run_id", "")) /
+                    "authority" / name / relative).as_posix()
+        return str(value)
+
     for run in source_runs:
         for event in tuple(getattr(run, "request_events", ())):
             source_requests.append({
@@ -1016,7 +1087,7 @@ def _report_input_from_run(prepared: object, before: object, after: object) -> d
                 "状态码": event.status_code if event.status_code is not None else "未记录",
                 "尝试次数": event.attempts,
                 "响应SHA-256": str(event.response_sha256 or "未记录"),
-                "证据位置": str(event.evidence_path) if event.evidence_path is not None else "未记录",
+                "证据位置": portable_event_path(event.evidence_path),
                 "完成": "是" if event.completed else "否",
                 "请求时间": "未记录",
             })

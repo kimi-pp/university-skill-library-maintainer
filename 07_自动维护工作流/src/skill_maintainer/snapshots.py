@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from hashlib import sha256
 from io import BytesIO
+import json
 import os
 from pathlib import Path, PurePosixPath
 from stat import S_ISLNK, S_ISREG
@@ -51,6 +52,7 @@ class SnapshotManifest:
     files: tuple[SnapshotFile, ...]
     total_bytes: int
     fixed_content_hash: str
+    manifest_evidence_path: str = ""
 
 
 _TRUSTED_MANIFESTS: dict[int, tuple[weakref.ReferenceType[SnapshotManifest], tuple[object, ...]]] = {}
@@ -143,9 +145,17 @@ def build_archive_entry_snapshot(
     if entry.as_posix() not in available:
         raise ValueError("Skill 入口路径不属于固定归档")
     base = entry.parent
+    nested_skill_bases = {
+        PurePosixPath(value).parent
+        for value in available
+        if PurePosixPath(value).parent != PurePosixPath(".")
+    }
     selected = []
     for path, size, content in records:
-        if path == entry or (base != PurePosixPath(".") and path.is_relative_to(base)) or (
+        belongs_to_root = base == PurePosixPath(".") and not any(
+            path.is_relative_to(nested_base) for nested_base in nested_skill_bases
+        )
+        if path == entry or belongs_to_root or (base != PurePosixPath(".") and path.is_relative_to(base)) or (
             path.parent == PurePosixPath(".") and path.name.casefold() in {"license", "license.md", "copying", "notice"}
         ):
             selected.append((path, size, content))
@@ -178,15 +188,31 @@ def _materialize_snapshot(
         content_fingerprint.update(b"\0")
         content_fingerprint.update(sha256(content).digest())
     evidence_prefix = target.name
+    fixed_content_hash = content_fingerprint.hexdigest()
+    manifest_path = target.parent / f"{target.name}.snapshot-manifest.json"
+    payload = {
+        "candidate_id": candidate.candidate_id,
+        "fixed_version": candidate.fixed_version,
+        "fixed_content_hash": fixed_content_hash,
+        "files": [
+            {"path": item.path, "size": item.size, "sha256": item.sha256}
+            for item in files
+        ],
+    }
+    with manifest_path.open("x", encoding="utf-8", newline="\n") as handle:
+        json.dump(payload, handle, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        handle.flush()
+        os.fsync(handle.fileno())
     manifest = SnapshotManifest(
         candidate.candidate_id,
         candidate.fixed_version,
         target,
         tuple(candidate.source_evidence_paths),
-        tuple(f"{evidence_prefix}/{item.path}" for item in files),
+        tuple((*[f"{evidence_prefix}/{item.path}" for item in files], str(manifest_path))),
         tuple(files),
         sum(item.size for item in files),
-        content_fingerprint.hexdigest(),
+        fixed_content_hash,
+        str(manifest_path),
     )
     _register_manifest(manifest)
     return manifest
@@ -206,6 +232,14 @@ def clear_snapshot_run_state() -> None:
     _TRUSTED_MANIFESTS.clear()
 
 
+def clear_snapshot_manifests(manifests: Iterable[object]) -> None:
+    """Invalidate only the exact manifests owned by one run."""
+    for manifest in manifests:
+        record = _TRUSTED_MANIFESTS.get(id(manifest))
+        if record is not None and record[0]() is manifest:
+            _TRUSTED_MANIFESTS.pop(id(manifest), None)
+
+
 def _register_manifest(manifest: SnapshotManifest) -> None:
     identity = id(manifest)
 
@@ -223,7 +257,7 @@ def _manifest_facts(manifest: object) -> tuple[object, ...]:
     return (
         manifest.candidate_id, manifest.fixed_version, manifest.destination,
         tuple(manifest.source_evidence_paths), tuple(manifest.evidence_paths), tuple(manifest.files),
-        manifest.total_bytes, manifest.fixed_content_hash,
+        manifest.total_bytes, manifest.fixed_content_hash, manifest.manifest_evidence_path,
     )
 
 

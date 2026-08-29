@@ -26,10 +26,10 @@ from .ledger import LedgerStore
 from .paths import assert_ordinary_path, is_link_or_reparse
 from .queries import PLATFORM_ORDER, QueryJob, build_queries
 from .reports import make_project_report_builder
-from .review import ReviewPacket, build_review_packet
+from .review import ReviewPacket, build_review_packet, clear_review_run_state
 from .runner import CoordinatorError, PreparedRun, RunCoordinator, RunRequest, SourceRun
 from .settings import load_settings
-from .snapshots import SnapshotManifest, archive_skill_entries, build_archive_entry_snapshot
+from .snapshots import SnapshotManifest, archive_skill_entries, build_archive_entry_snapshot, clear_snapshot_manifests
 from .sources.base import (
     DoctorSmokeResult,
     EvidenceRoot,
@@ -67,6 +67,11 @@ class CandidateObservation:
     platforms: tuple[str, ...]
     reason_code: str
     detail: str
+    skill_entry_path: str = ""
+    fixed_version: str = ""
+    fixed_content_hash: str = ""
+    evidence_paths: tuple[str, ...] = ()
+    status: str = "条件候选"
 
 
 @dataclass(frozen=True)
@@ -158,6 +163,7 @@ class ProductionDriver:
         self._material_frame_issued = False
         self._prepared_ref: weakref.ReferenceType[PreparedRun] | None = None
         self._coordinator_ref: weakref.ReferenceType[RunCoordinator] | None = None
+        self._issued_packets: tuple[ReviewPacket, ...] = ()
 
     @property
     def review_materials(self) -> tuple[ReviewMaterial, ...]:
@@ -212,11 +218,20 @@ class ProductionDriver:
         try:
             watermarks = SourceWatermarkStore(ledger)
             tracked_rows = tuple(ledger.rows("当前Skill"))
+            candidate_rows = tuple(ledger.rows("候选观察"))
+            version_aliases = {
+                (str(row.get("内部标识") or "").strip(), str(row.get("固定版本") or "").strip())
+                for row in ledger.rows("来源别名")
+                if str(row.get("关系类型") or "").strip() == "版本别名观察"
+                and str(row.get("内部标识") or "").strip() and str(row.get("固定版本") or "").strip()
+            }
             reviewed_nonformal_versions = {
                 (str(row.get("内部标识") or "").strip(), str(row.get("固定版本") or "").strip())
-                for row in ledger.rows("候选观察")
-                if str(row.get("观察状态") or "").strip() in {"条件候选", "需适配候选"}
+                for row in candidate_rows
+                if str(row.get("观察状态") or "").strip() in {"条件候选", "需适配候选", "排除", "attention_required"}
+                and str(row.get("内部标识") or "").strip() and str(row.get("固定版本") or "").strip()
             }
+            reviewed_nonformal_versions.update(version_aliases)
             jobs_by_platform: dict[str, list[QueryJob]] = {platform: [] for platform in PLATFORM_ORDER}
             for scope in scopes:
                 for job in build_queries(scope):
@@ -225,6 +240,7 @@ class ProductionDriver:
             raw_by_platform: dict[str, list[dict[str, object]]] = {platform: [] for platform in PLATFORM_ORDER}
             requests_by_platform: dict[str, list[SourceRequestEvent]] = {platform: [] for platform in PLATFORM_ORDER}
             evidence_by_platform: dict[str, list[Path]] = {platform: [] for platform in PLATFORM_ORDER}
+            evidence_roots_by_platform: dict[str, EvidenceRoot] = {}
             statuses_by_platform: dict[str, list[str]] = {platform: [] for platform in PLATFORM_ORDER}
             postcheck_failed: dict[str, bool] = {platform: False for platform in PLATFORM_ORDER}
             watermark_updates: dict[str, list[tuple[str, str]]] = {platform: [] for platform in PLATFORM_ORDER}
@@ -234,6 +250,7 @@ class ProductionDriver:
                 platform_root = evidence_root_path / _safe_component(platform)
                 platform_root.mkdir()
                 evidence_root = EvidenceRoot(platform_root)
+                evidence_roots_by_platform[platform] = evidence_root
                 adapter = self.adapters[platform]
                 if isinstance(adapter, PagedHttpAdapter):
                     adapter.evidence_root = evidence_root
@@ -279,9 +296,16 @@ class ProductionDriver:
             str(item.get("canonical_source") or "") for item in all_candidates
             if str(item.get("canonical_source") or "")
         }
+        trackable_candidate_rows = tuple(
+            row for row in candidate_rows
+            if str(row.get("内部标识") or "").strip()
+            and str(row.get("Skill入口路径") or "").strip()
+            and str(row.get("固定版本") or "").strip()
+        )
+        tracked_identity_rows = (*tracked_rows, *trackable_candidate_rows)
         tracked_by_canonical: dict[str, list[Mapping[str, object]]] = {}
         if settings.research.check_existing_skill_updates:
-            for row in tracked_rows:
+            for row in tracked_identity_rows:
                 canonical = _normalize_url(str(row.get("Canonical source") or ""))
                 stable_id = str(row.get("内部标识") or "").strip()
                 if not stable_id or not _github_canonical(canonical):
@@ -291,7 +315,7 @@ class ProductionDriver:
                     continue
                 synthetic = {
                     "platform": "GitHub", "source_url": canonical, "canonical_source": canonical,
-                    "name": str(row.get("Skill名称") or stable_id), "publisher": "",
+                    "name": str(row.get("Skill名称") or row.get("候选名称") or stable_id), "publisher": "",
                     "version_hint": str(row.get("固定版本") or ""),
                     "updated_at": "", "observed_on": self._now().date().isoformat(),
                     "scope_id": "", "query_id": "existing-version-check",
@@ -304,6 +328,7 @@ class ProductionDriver:
 
         materials: list[ReviewMaterial] = []
         observations: list[CandidateObservation] = []
+        structured_by_platform: dict[str, list[dict[str, object]]] = {platform: [] for platform in PLATFORM_ORDER}
         unique_groups: dict[str, list[dict[str, object]]] = {}
         for item in all_candidates:
             stable_id = stable_by_identity.get(_identity_key(item), str(item.get("内部标识") or ""))
@@ -327,33 +352,71 @@ class ProductionDriver:
                 self._mark_group_observation(group, observation, status="条件候选")
                 continue
             version = github.latest_version(canonical)
-            self._record_postcheck(version, "GitHub", requests_by_platform, evidence_by_platform)
-            if getattr(version, "error", None) is not None or not getattr(version, "version", None):
+            version_complete = self._record_postcheck(
+                version, "GitHub", requests_by_platform, evidence_by_platform,
+                require_evidence=isinstance(github, PagedHttpAdapter),
+                evidence_root=evidence_roots_by_platform["GitHub"],
+            )
+            if getattr(version, "error", None) is not None or not getattr(version, "version", None) or not version_complete:
                 postcheck_failed["GitHub"] = True
                 deleted = _is_deleted_version_error(getattr(version, "error", None)) and canonical in tracked_by_canonical
-                observation = CandidateObservation(
-                    repository_observation_id, name, canonical, platforms,
-                    "upstream-deleted" if deleted else "fixed-version-unavailable",
-                    "上游已删除或不可用；保留既有当前版本和固定快照。" if deleted else
-                    "canonical GitHub 上游未能取得固定 commit SHA；不得进入正式评审。",
-                )
-                observations.append(observation)
-                self._mark_group_observation(group, observation, status="attention_required" if deleted else "条件候选")
+                if deleted:
+                    evidence = self._candidate_evidence(group, requests_by_platform)
+                    for tracked_row in tracked_by_canonical.get(canonical, ()):
+                        tracked_id = str(tracked_row.get("内部标识") or "").strip()
+                        tracked_entry = str(tracked_row.get("Skill入口路径") or "").strip()
+                        observation = CandidateObservation(
+                            tracked_id, str(tracked_row.get("Skill名称") or tracked_row.get("候选名称") or tracked_id),
+                            canonical, ("GitHub",), "upstream-deleted",
+                            "上游已删除或不可用；保留既有当前版本和固定快照。",
+                            tracked_entry, str(tracked_row.get("固定版本") or ""),
+                            str(tracked_row.get("固定版本内容指纹") or ""), evidence, "attention_required",
+                        )
+                        observations.append(observation)
+                        structured_by_platform["GitHub"].append(_candidate_observation_row(observation, now.date().isoformat()))
+                    if observations:
+                        self._mark_group_observation(group, observations[-1], status="attention_required")
+                else:
+                    reason_code = "postcheck-evidence-incomplete" if not version_complete else "fixed-version-unavailable"
+                    observation = CandidateObservation(
+                        repository_observation_id, name, canonical, platforms, reason_code,
+                        "版本核验请求缺少完整、持久化的请求证据；不得进入正式评审。" if not version_complete else
+                        "canonical GitHub 上游未能取得固定 commit SHA；不得进入正式评审。",
+                        status="attention_required" if not version_complete else "条件候选",
+                    )
+                    observations.append(observation)
+                    self._mark_group_observation(group, observation, status=observation.status)
+                    if not version_complete:
+                        structured_by_platform["GitHub"].append(_candidate_observation_row(observation, now.date().isoformat()))
                 continue
             tracked = tracked_by_canonical.get(canonical, [])
-            if tracked and all(str(row.get("固定版本") or "").strip() == str(version.version) for row in tracked):
+            if tracked and all(
+                str(row.get("固定版本") or "").strip() == str(version.version)
+                or (str(row.get("内部标识") or "").strip(), str(version.version)) in reviewed_nonformal_versions
+                for row in tracked
+            ):
                 continue
             archive_destination = self._snapshot_destination(github, evidence_root_path, repository_observation_id, version.version)
             snapshot = github.snapshot(canonical, version.version, archive_destination)
-            self._record_postcheck(snapshot, "GitHub", requests_by_platform, evidence_by_platform)
-            if getattr(snapshot, "error", None) is not None or not snapshot.sha256 or not Path(snapshot.destination).is_file():
+            snapshot_complete = self._record_postcheck(
+                snapshot, "GitHub", requests_by_platform, evidence_by_platform,
+                require_evidence=isinstance(github, PagedHttpAdapter),
+                evidence_root=evidence_roots_by_platform["GitHub"],
+            )
+            if (getattr(snapshot, "error", None) is not None or not snapshot.sha256
+                    or not Path(snapshot.destination).is_file() or not snapshot_complete):
                 postcheck_failed["GitHub"] = True
+                reason_code = "postcheck-evidence-incomplete" if not snapshot_complete else "fixed-package-unavailable"
                 observation = CandidateObservation(
-                    repository_observation_id, name, canonical, platforms, "fixed-package-unavailable",
+                    repository_observation_id, name, canonical, platforms, reason_code,
+                    "固定包下载请求缺少完整、持久化的请求证据；不得进入正式评审。" if not snapshot_complete else
                     "canonical GitHub 固定 commit archive 获取失败；不得伪造固定包评审材料。",
+                    status="attention_required" if not snapshot_complete else "条件候选",
                 )
                 observations.append(observation)
-                self._mark_group_observation(group, observation, status="条件候选")
+                self._mark_group_observation(group, observation, status=observation.status)
+                if not snapshot_complete:
+                    structured_by_platform["GitHub"].append(_candidate_observation_row(observation, now.date().isoformat()))
                 continue
             archive_path = Path(snapshot.destination).absolute()
             try:
@@ -380,7 +443,7 @@ class ProductionDriver:
                 continue
             archive_entry_keys = {_normalize_entry(value) for value in entries}
             for missing in (
-                row for row in tracked_rows
+                row for row in tracked_identity_rows
                 if _normalize_url(str(row.get("Canonical source") or "")) == canonical
                 and _normalize_entry(str(row.get("Skill入口路径") or "")) not in archive_entry_keys
             ):
@@ -390,8 +453,12 @@ class ProductionDriver:
                     missing_id, str(missing.get("Skill名称") or missing_id), canonical, ("GitHub",),
                     "upstream-entry-deleted",
                     f"新 commit 已不含既有 Skill 入口 {missing_entry}；保留旧正式版本和固定快照。",
+                    missing_entry, str(version.version), "",
+                    (*self._candidate_evidence(group, requests_by_platform), f"{archive_path}#sha256={capture.sha256}"),
+                    "attention_required",
                 )
                 observations.append(observation)
+                structured_by_platform["GitHub"].append(_candidate_observation_row(observation, now.date().isoformat()))
                 raw_by_platform["GitHub"].append({
                     "platform": "GitHub", "source_url": canonical, "canonical_source": canonical,
                     "upstream_identity": canonical, "entry_path": missing_entry,
@@ -407,7 +474,7 @@ class ProductionDriver:
             evidence_by_platform["GitHub"].append(archive_path)
             for entry_path in entries:
                 tracked_entry = next(
-                    (row for row in tracked_rows if _normalize_url(str(row.get("Canonical source") or "")) == canonical
+                    (row for row in tracked_identity_rows if _normalize_url(str(row.get("Canonical source") or "")) == canonical
                      and _normalize_entry(str(row.get("Skill入口路径") or "")) == _normalize_entry(entry_path)),
                     None,
                 )
@@ -433,6 +500,7 @@ class ProductionDriver:
                     destination=snapshot_root / _safe_component(entry_id),
                     source_evidence_paths=entry_source_evidence,
                 )
+                evidence_by_platform["GitHub"].append(Path(manifest.manifest_evidence_path))
                 materials.append(ReviewMaterial(
                     entry_id, name if len(entries) == 1 else f"{name}:{entry_path}", canonical,
                     version.version, manifest.fixed_content_hash, manifest.destination,
@@ -463,6 +531,7 @@ class ProductionDriver:
                 evidence_files=tuple(dict.fromkeys(evidence_by_platform[platform])),
                 request_events=tuple(requests_by_platform[platform]),
                 watermark_updates=tuple(watermark_updates[platform]),
+                structured_observations=tuple(structured_by_platform[platform]),
             )
             for platform in PLATFORM_ORDER
         )
@@ -521,7 +590,9 @@ class ProductionDriver:
         result: object, platform: str,
         requests_by_platform: dict[str, list[SourceRequestEvent]],
         evidence_by_platform: dict[str, list[Path]],
-    ) -> None:
+        *, require_evidence: bool = False,
+        evidence_root: EvidenceRoot | None = None,
+    ) -> bool:
         events = tuple(getattr(result, "request_events", ()) or ())
         if not events:
             error = getattr(result, "error", None)
@@ -535,10 +606,32 @@ class ProductionDriver:
                 getattr(error, "status_code", None) if error is not None else 200, 1,
                 digest, None, True, evidence_path, error is None,
             ),)
+        bound_events: list[SourceRequestEvent] = []
+        for event in events:
+            if event.evidence_path is None and not event.completed and evidence_root is not None:
+                audit = json.dumps({
+                    "platform": event.platform, "query_id": event.query_id, "url": event.url,
+                    "page": event.page, "status_code": event.status_code, "attempts": event.attempts,
+                    "response_sha256": event.response_sha256, "completed": event.completed,
+                    "error": str(getattr(getattr(result, "error", None), "message", "")),
+                }, ensure_ascii=False, sort_keys=True).encode("utf-8")
+                try:
+                    audit_path = evidence_root.write(
+                        Path(f"postcheck-audit-{sha256(audit).hexdigest()}.json"), audit,
+                    )
+                    event = replace(event, evidence_path=audit_path)
+                except (OSError, ValueError):
+                    pass
+            bound_events.append(event)
+        events = tuple(bound_events)
         requests_by_platform[platform].extend(events)
         evidence_by_platform[platform].extend(event.evidence_path for event in events if event.evidence_path is not None)
         evidence_by_platform[platform].extend(
             Path(path) for path in tuple(getattr(result, "evidence_paths", ()) or ()) if path is not None
+        )
+        return bool(events) and all(
+            event.completed and (not require_evidence or event.evidence_path is not None)
+            for event in events
         )
 
     @staticmethod
@@ -586,6 +679,9 @@ class ProductionDriver:
 
     def clear_prepared(self, prepared: PreparedRun) -> None:
         if self._prepared_ref is not None and self._prepared_ref() is prepared:
+            clear_snapshot_manifests(tuple(item._manifest for item in self._review_materials))
+            clear_review_run_state(packets=self._issued_packets)
+            self._issued_packets = ()
             self._prepared_ref = None
             self._coordinator_ref = None
             self._material_run_id = None
@@ -642,36 +738,43 @@ class ProductionDriver:
         if len(supplied) != len(set(supplied)) or set(supplied) != set(expected):
             raise MaterialReviewError("材料观察必须精确覆盖全部固定包，且不得重复或新增")
         packets: dict[str, ReviewPacket] = {}
-        for value in raw:
-            candidate_id = str(value.get("candidate_id") or "")
-            material = expected[candidate_id]
-            for field_name, expected_value in (
-                ("fixed_version", material.fixed_version),
-                ("fixed_content_hash", material.fixed_content_hash),
-                ("canonical_source", material.canonical_source),
-            ):
-                if str(value.get(field_name) or "") != expected_value:
-                    raise MaterialReviewError(f"{candidate_id} 的 {field_name} 未绑定当前固定材料")
-            license_name = str(value.get("license") or "").strip()
-            security_grade = str(value.get("security_grade") or "").strip()
-            if not license_name or security_grade not in {"SA", "SB", "SB-A", "X"}:
-                raise MaterialReviewError("材料观察必须给出许可证事实和允许的安全等级")
-            packet = build_review_packet(
-                {
-                    "candidate_id": candidate_id,
-                    "canonical_source": material.canonical_source,
-                    "license": license_name,
-                    "security_grade": security_grade,
-                    "upstream_repository": material.upstream_repository,
-                    "skill_entry_path": material.skill_entry_path,
-                    "approved_scopes": material.approved_scopes,
-                },
-                material._manifest,
-            )
-            if packet.fixed_content_hash != material.fixed_content_hash:
-                raise MaterialReviewError("ReviewPacket 未绑定当前固定内容哈希")
-            packets[candidate_id] = packet
+        try:
+            for value in raw:
+                candidate_id = str(value.get("candidate_id") or "")
+                material = expected[candidate_id]
+                for field_name, expected_value in (
+                    ("fixed_version", material.fixed_version),
+                    ("fixed_content_hash", material.fixed_content_hash),
+                    ("canonical_source", material.canonical_source),
+                ):
+                    if str(value.get(field_name) or "") != expected_value:
+                        raise MaterialReviewError(f"{candidate_id} 的 {field_name} 未绑定当前固定材料")
+                license_name = str(value.get("license") or "").strip()
+                security_grade = str(value.get("security_grade") or "").strip()
+                if not license_name or security_grade not in {"SA", "SB", "SB-A", "X"}:
+                    raise MaterialReviewError("材料观察必须给出许可证事实和允许的安全等级")
+                packet = build_review_packet(
+                    {
+                        "candidate_id": candidate_id,
+                        "canonical_source": material.canonical_source,
+                        "license": license_name,
+                        "security_grade": security_grade,
+                        "upstream_repository": material.upstream_repository,
+                        "skill_entry_path": material.skill_entry_path,
+                        "approved_scopes": material.approved_scopes,
+                    },
+                    material._manifest,
+                )
+                if packet.fixed_content_hash != material.fixed_content_hash:
+                    raise MaterialReviewError("ReviewPacket 未绑定当前固定内容哈希")
+                packets[candidate_id] = packet
+        except BaseException:
+            clear_review_run_state(packets=tuple(packets.values()))
+            clear_snapshot_manifests(tuple(item._manifest for item in self._review_materials))
+            self._material_consumed = True
+            raise
         self._material_consumed = True
+        self._issued_packets = tuple(packets.values())
         return packets
 
 
@@ -841,6 +944,29 @@ def _is_deleted_version_error(error: object | None) -> bool:
     status = getattr(error, "status_code", None)
     message = str(getattr(error, "message", "")).casefold()
     return status in {404, 410} or "not found" in message or "deleted" in message
+
+
+def _candidate_observation_row(observation: CandidateObservation, recorded_on: str) -> dict[str, object]:
+    material = "|".join((
+        observation.candidate_id, observation.canonical_source, observation.skill_entry_path,
+        observation.fixed_version, observation.reason_code,
+    ))
+    return {
+        "观察标识": f"observation-{sha256(material.encode('utf-8')).hexdigest()[:20]}",
+        "内部标识": observation.candidate_id,
+        "候选名称": observation.name or observation.candidate_id,
+        "Canonical source": observation.canonical_source,
+        "Skill入口路径": observation.skill_entry_path,
+        "观察状态": observation.status,
+        "许可证": "待确认",
+        "记录日期": recorded_on,
+        "原因": observation.detail,
+        "固定版本": observation.fixed_version,
+        "固定版本内容指纹": observation.fixed_content_hash,
+        "验证证据位置": "；".join(observation.evidence_paths),
+        "原因代码": observation.reason_code,
+        "显示层级": "不展示" if observation.status in {"排除", "attention_required"} else observation.status,
+    }
 
 
 def _safe_component(value: str) -> str:

@@ -352,6 +352,7 @@ class VersionRetentionTest(unittest.TestCase):
         self.assertEqual(self.ledger.rows("当前Skill"), [self.current])
         self.assertEqual(len(self.ledger.rows("版本历史")), 0)
         self.assertEqual(len(self.ledger.rows("来源别名")), 1)
+        self.assertEqual(self.ledger.rows("来源别名")[0]["固定版本"], retagged.observed["fixed_version"])
 
     def test_changed_content_requires_full_review_and_rejection_preserves_current_snapshot(self):
         change = compare_version(self.current, self.observed())

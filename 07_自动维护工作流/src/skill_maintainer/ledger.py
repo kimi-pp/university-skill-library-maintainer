@@ -124,7 +124,29 @@ class LedgerStore:
         target = Path(path).resolve()
         workbook = load_workbook(target, data_only=False)
         cls._upgrade_candidate_observation_identity(workbook)
+        cls._upgrade_source_alias_version(workbook)
         return cls(workbook, target)
+
+    @staticmethod
+    def _upgrade_source_alias_version(workbook: Workbook) -> None:
+        if "来源别名" not in workbook.sheetnames:
+            return
+        worksheet = workbook["来源别名"]
+        current = SHEET_SPECS_BY_NAME["来源别名"].columns
+        legacy = tuple(column for column in current if column != "固定版本")
+        headers = tuple(worksheet.cell(1, index).value for index in range(1, worksheet.max_column + 1))
+        if headers == current or headers != legacy:
+            return
+        position = current.index("固定版本") + 1
+        worksheet.insert_cols(position)
+        cell = worksheet.cell(1, position, "固定版本")
+        cell.font = copy(worksheet.cell(1, 1).font)
+        cell.alignment = copy(worksheet.cell(1, 1).alignment)
+        worksheet.column_dimensions[get_column_letter(position)].width = 20
+        table = worksheet.tables.get(SHEET_SPECS_BY_NAME["来源别名"].table_name)
+        if table is not None:
+            table.ref = f"A1:{get_column_letter(len(current))}{max(2, worksheet.max_row)}"
+            table.autoFilter.ref = table.ref
 
     @staticmethod
     def _upgrade_candidate_observation_identity(workbook: Workbook) -> None:
@@ -140,11 +162,18 @@ class LedgerStore:
         legacy = ("观察标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因")
         legacy_full = tuple(column for column in current if column != "内部标识")
         intermediate = ("观察标识", "内部标识", "候选名称", "Canonical source", "观察状态", "许可证", "记录日期", "原因")
+        previous = tuple(column for column in current if column != "Skill入口路径")
         headers = tuple(worksheet.cell(1, index).value for index in range(1, worksheet.max_column + 1))
         if headers == current:
             return
-        if headers not in {legacy, legacy_full, intermediate}:
+        if headers not in {legacy, legacy_full, intermediate, previous}:
             return
+        if headers == previous:
+            position = current.index("Skill入口路径") + 1
+            worksheet.insert_cols(position)
+            worksheet.cell(1, position, "Skill入口路径")
+            worksheet.cell(1, position).font = copy(worksheet.cell(1, 1).font)
+            worksheet.cell(1, position).alignment = copy(worksheet.cell(1, 1).alignment)
         if headers in {legacy, legacy_full}:
             worksheet.insert_cols(2)
             worksheet.cell(1, 2, "内部标识")

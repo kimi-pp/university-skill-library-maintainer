@@ -403,6 +403,75 @@ class ReportContentTestCase(unittest.TestCase):
         payload = _report_input_from_run(prepared, empty, empty)
         self.assertEqual(payload["source_requests"], [])
 
+    def test_existing_formal_candidate_observation_is_only_an_unapplied_update(self):
+        current = formal_row(1, "0809 计算机类")
+        observation = {
+            "观察标识": "review-v2", "内部标识": current["内部标识"], "候选名称": current["Skill名称"],
+            "Canonical source": current["Canonical source"], "Skill入口路径": "SKILL.md",
+            "观察状态": "条件候选", "许可证": "MIT", "记录日期": "2026-08-29",
+            "原因": "新版本许可证仍待确认", "固定版本": "b" * 40,
+            "固定版本内容指纹": "c" * 64, "验证证据位置": "evidence/new-version.json",
+            "显示层级": "条件候选",
+        }
+        before = {"当前Skill": [current], "候选观察": [], "来源别名": [], "专业任务映射": [], "目录基线": []}
+        after = {**before, "候选观察": [observation]}
+        prepared = SimpleNamespace(run_id="update-report", catalog_snapshot=None, source_runs=())
+
+        payload = _report_input_from_run(prepared, before, after)
+
+        self.assertEqual(payload["conditional_candidates"], [])
+        self.assertEqual(payload["adaptation_candidates"], [])
+        self.assertEqual(len(payload["updates_not_applied"]), 1)
+        self.assertEqual(payload["updates_not_applied"][0]["新版本"], "b" * 40)
+        self.assertIn("许可证", payload["updates_not_applied"][0]["结论"])
+
+    def test_upstream_deletion_is_an_unapplied_update_with_old_version_retained(self):
+        current = formal_row(1, "0809 计算机类")
+        attention = {
+            "观察标识": "deleted-v1", "内部标识": current["内部标识"], "候选名称": current["Skill名称"],
+            "Canonical source": current["Canonical source"], "Skill入口路径": "SKILL.md",
+            "观察状态": "attention_required", "许可证": "MIT", "记录日期": "2026-08-29",
+            "原因": "上游入口删除；旧版本保留", "固定版本": current["固定版本"],
+            "固定版本内容指纹": "d" * 64, "验证证据位置": "evidence/deleted.json",
+            "原因代码": "upstream-entry-deleted", "显示层级": "不展示",
+        }
+        mapping = {"内部标识": current["内部标识"], "专业代码": "0809", "专业名称": "计算机类", "专业任务": "课程分析"}
+        before = {"当前Skill": [current], "候选观察": [], "来源别名": [], "专业任务映射": [mapping], "目录基线": []}
+        after = {**before, "候选观察": [attention]}
+        prepared = SimpleNamespace(run_id="delete-report", catalog_snapshot=None, source_runs=())
+
+        payload = _report_input_from_run(prepared, before, after)
+
+        self.assertEqual(len(payload["updates_not_applied"]), 1)
+        self.assertIn("上游入口删除", payload["updates_not_applied"][0]["结论"])
+        self.assertIn("旧版本保留", payload["updates_not_applied"][0]["使用限制"])
+
+    def test_scope_delivery_surfaces_attention_alongside_retained_formal_row(self):
+        current = formal_row(1, "0809 计算机类")
+        attention = {
+            "观察标识": "deleted-scope", "内部标识": current["内部标识"], "候选名称": current["Skill名称"],
+            "Canonical source": current["Canonical source"], "Skill入口路径": "SKILL.md",
+            "观察状态": "attention_required", "许可证": "MIT", "记录日期": "2026-08-29",
+            "原因": "上游入口删除；旧版本保留", "固定版本": current["固定版本"],
+            "固定版本内容指纹": "d" * 64, "验证证据位置": "evidence/deleted.json",
+            "原因代码": "upstream-entry-deleted", "显示层级": "不展示",
+        }
+        ledger = {
+            "当前Skill": [current], "候选观察": [attention],
+            "专业任务映射": [{
+                "内部标识": current["内部标识"], "专业代码": "0809", "专业名称": "计算机类",
+                "专业任务": "课程分析", "输入": "课程表", "输出": "报告", "使用限制": "人工复核",
+            }],
+        }
+        captured = []
+        with patch("skill_maintainer.reports.build_daily_docx", side_effect=lambda payload, path: captured.append(payload)), \
+             patch("skill_maintainer.reports.build_daily_xlsx", side_effect=lambda payload, path: None):
+            build_scope_deliveries(("0809 计算机类",), ledger, self.root / "attention-scope")
+
+        self.assertEqual(len(captured[0]["formal_additions"]), 1)
+        self.assertEqual(len(captured[0]["updates_not_applied"]), 1)
+        self.assertIn("上游入口删除", captured[0]["updates_not_applied"][0]["结论"])
+
     def test_source_audit_hyperlinks_only_http_or_https_urls(self):
         self.require_runtime()
         summary = report_summary()

@@ -30,7 +30,10 @@ from .office import (
 )
 from .paths import ProjectPaths, assert_ordinary_path, contained_child, is_link_or_reparse
 from .publish import PublishError, PublishReceipt, commit_prepared_generation
-from .review import ReviewDecision, apply_reviews_from_stream, clear_review_run_state, consume_applied_review
+from .review import (
+    ReviewDecision, apply_reviews_from_stream, claim_review_packets,
+    clear_review_run_state, consume_applied_review,
+)
 from .settings import load_settings, settings_sha256
 from .sources.base import SourceRequestEvent, SourceWatermarkStore, Watermark
 from .versioning import VersionDecision, apply_approved_version, compare_version
@@ -50,6 +53,7 @@ class SourceRun:
     evidence_files: tuple[Path, ...] = ()
     request_events: tuple[SourceRequestEvent, ...] = ()
     watermark_updates: tuple[tuple[str, str], ...] = ()
+    structured_observations: tuple[Mapping[str, object], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -204,6 +208,8 @@ class RunCoordinator:
                 packets_bound=bool(request.review_packets),
                 output_digest=self._output_digest(),
             )
+            if request.review_packets:
+                claim_review_packets(tuple(request.review_packets.values()), prepared)
             if request.material_reviewer is not None:
                 register = getattr(request.material_reviewer, "register_prepared", None)
                 if not callable(register):
@@ -259,13 +265,14 @@ class RunCoordinator:
                 packets = {decision.candidate_id: state.review_packets.get(decision.candidate_id)}
                 if (
                     decision.candidate_id in existing_ids
+                    and decision.project_judgments.outcome == "include"
                     and decision.project_judgments.record_tier == "正式推荐"
                 ):
                     shadow = prepared.staging_dir / f".version-review-{uuid.uuid4().hex}.xlsx"
                     shutil.copyfile(prepared.staging_ledger, shadow)
                     shadow_ledger = LedgerStore.load(shadow)
                     try:
-                        issued = apply_reviews_from_stream(stream, shadow_ledger, packets)
+                        issued = apply_reviews_from_stream(stream, shadow_ledger, packets, packet_owner=prepared)
                         proposed = next(row for row in shadow_ledger.rows("当前Skill") if row["内部标识"] == decision.candidate_id)
                         state.version_proposals[decision.candidate_id] = proposed
                         state.version_mapping_proposals[decision.candidate_id] = tuple(decision.derived_fields.scope_mappings)
@@ -275,7 +282,7 @@ class RunCoordinator:
                         if shadow.exists() and not is_link_or_reparse(shadow):
                             shadow.unlink()
                 else:
-                    received.extend(apply_reviews_from_stream(stream, ledger, packets))
+                    received.extend(apply_reviews_from_stream(stream, ledger, packets, packet_owner=prepared))
             receipts = tuple(received)
             state.reviewed_candidate_ids.update(decision.candidate_id for decision in decisions)
             state.reviewed_canonicals.update(
@@ -298,6 +305,10 @@ class RunCoordinator:
             raise CoordinatorError("当前运行已绑定审查包，不得替换")
         if not isinstance(packets, Mapping) or any(not str(key).strip() for key in packets):
             raise CoordinatorError("审查包映射必须使用非空候选标识")
+        try:
+            claim_review_packets(tuple(packets.values()), prepared)
+        except ValueError as exc:
+            raise CoordinatorError(str(exc)) from exc
         state.review_packets = dict(packets)
         state.packets_bound = True
 
@@ -336,6 +347,7 @@ class RunCoordinator:
                 reviewed_candidate_ids=state.reviewed_candidate_ids,
                 reviewed_canonicals=state.reviewed_canonicals,
             )
+            self._stabilize_evidence_references(ledger, state)
             self._save_ledger(ledger, prepared.staging_ledger)
             artifacts = self._artifacts_from_callback(prepared)
             self._inject("report")
@@ -651,6 +663,17 @@ class RunCoordinator:
     ) -> None:
         reviewed_ids = reviewed_candidate_ids or set()
         reviewed_sources = reviewed_canonicals or set()
+        structured = [dict(row) for run in source_runs for row in run.structured_observations]
+        if structured:
+            seen = {str(row.get("观察标识") or "") for row in ledger.rows("候选观察")}
+            for row in structured:
+                observation_id = str(row.get("观察标识") or "").strip()
+                stable_id = str(row.get("内部标识") or "").strip()
+                if not observation_id or not stable_id:
+                    raise CoordinatorError("受信结构化观察必须绑定观察标识和内部标识")
+                if observation_id not in seen:
+                    ledger.upsert_candidate_observation(row)
+                    seen.add(observation_id)
         candidates = tuple(
             candidate for run in source_runs for candidate in run.candidates
             if not (isinstance(candidate, Mapping) and candidate.get("repository_index_only"))
@@ -678,6 +701,7 @@ class RunCoordinator:
                         "内部标识": stable,
                         "候选名称": str(skill.get("Skill名称") or skill.get("name") or stable),
                         "Canonical source": canonical,
+                        "Skill入口路径": str(skill.get("entry_path") or skill.get("Skill入口路径") or ""),
                         "观察状态": status,
                         "许可证": str(skill.get("许可证") or "待确认"),
                         "记录日期": str(skill.get("observed_on") or today),
@@ -698,6 +722,7 @@ class RunCoordinator:
                         continue
                     pending.append({"观察标识": observation_id, "候选名称": str(skill.get("Skill名称") or skill.get("name") or stable),
                         "内部标识": stable, "Canonical source": canonical, "观察状态": "待审查", "许可证": str(skill.get("许可证") or "待确认"),
+                        "Skill入口路径": str(skill.get("entry_path") or skill.get("Skill入口路径") or ""),
                         "记录日期": today, "原因": "发现的规范候选；未完成 Task 7 审查，不进入当前Skill"})
                     observed.add(observation_id)
             for manual in result.manual_review:
@@ -707,6 +732,7 @@ class RunCoordinator:
                 if observation_id not in observed:
                     pending.append({"观察标识": observation_id, "候选名称": str(manual.get("候选名称") or manual.get("name") or "候选"),
                         "内部标识": str(manual.get("内部标识") or ""), "Canonical source": canonical, "观察状态": "人工复核", "许可证": str(manual.get("许可证") or "待确认"),
+                        "Skill入口路径": str(manual.get("entry_path") or manual.get("Skill入口路径") or ""),
                         "记录日期": today, "原因": reason})
                     observed.add(observation_id)
             if pending:
@@ -819,6 +845,13 @@ class RunCoordinator:
                 shutil.copytree(delivery, temporary_generation)
             else:
                 temporary_generation.mkdir()
+            authority = temporary_generation / "authority"
+            for name in ("source-evidence", "fixed-snapshots"):
+                source = state.prepared.staging_dir / name
+                if source.exists():
+                    self._ensure_file_or_directory_in_staging(state.prepared.staging_dir, source)
+                    authority.mkdir(exist_ok=True)
+                    shutil.copytree(source, authority / name)
             # A synchronous callback is still allowed to leave a background writer.  Rehash
             # the source after copying, before a private generation becomes publishable.
             self._ensure_staging_unchanged(state)
@@ -837,6 +870,68 @@ class RunCoordinator:
             if temporary_generation.exists() and not is_link_or_reparse(temporary_generation):
                 shutil.rmtree(temporary_generation)
             raise
+
+    def _stabilize_evidence_references(self, ledger: LedgerStore, state: _State) -> None:
+        """Replace this run's temporary paths with portable generation authority paths."""
+        fields_by_sheet = {
+            "当前Skill": ("验证证据位置",),
+            "候选观察": ("验证证据位置",),
+            "版本历史": ("证据位置",),
+        }
+        staging = state.prepared.staging_dir.absolute()
+        roots = {
+            "source-evidence": staging / "source-evidence",
+            "fixed-snapshots": staging / "fixed-snapshots",
+        }
+        prefix = Path("output") / "generations" / state.prepared.run_id / "authority"
+
+        def portable(value: object) -> str:
+            tokens: list[str] = []
+            for raw_token in str(value or "").split("；"):
+                token = raw_token.strip()
+                if not token:
+                    continue
+                path_text, marker, declared = token.partition("#sha256=")
+                if path_text.startswith(("http://", "https://")):
+                    tokens.append(token)
+                    continue
+                path = Path(path_text)
+                match: tuple[str, Path] | None = None
+                if path.is_absolute():
+                    for name, root in roots.items():
+                        try:
+                            match = (name, path.absolute().relative_to(root.absolute()))
+                            break
+                        except ValueError:
+                            continue
+                elif not any(part in {"", ".", ".."} for part in path.parts):
+                    for name, root in roots.items():
+                        candidate = root.joinpath(*path.parts)
+                        if candidate.is_file():
+                            match = (name, path)
+                            break
+                if match is None:
+                    tokens.append(token)
+                    continue
+                name, relative = match
+                source = roots[name].joinpath(*relative.parts)
+                self._ensure_file_in_staging(staging, source)
+                if marker:
+                    if not re.fullmatch(r"[0-9a-fA-F]{64}", declared) or _sha256(source) != declared.casefold():
+                        raise CoordinatorError("证据路径声明哈希与本轮普通文件不一致")
+                stable = (prefix / name / relative).as_posix()
+                tokens.append(f"{stable}#sha256={declared.casefold()}" if marker else stable)
+            return "；".join(tokens)
+
+        import re
+        for sheet, fields in fields_by_sheet.items():
+            worksheet = ledger.workbook[sheet]
+            columns = ledger._resolve_columns(sheet)
+            for row_number in range(2, worksheet.max_row + 1):
+                for field_name in fields:
+                    cell = worksheet.cell(row_number, columns[field_name])
+                    if cell.value not in (None, ""):
+                        ledger._set_cell(cell, portable(cell.value), field_name)
 
     def _commit_ledger_only(
         self,
@@ -1014,6 +1109,9 @@ class RunCoordinator:
             "record_tier": judgments.record_tier, "display_in_product": judgments.display_in_product,
             "direct_deployable": judgments.direct_deployable, "relevance_score": judgments.relevance_score,
             "quality_bonus_flags": list(judgments.quality_bonus_flags),
+            "outcome": judgments.outcome,
+            "exclusion_reason_code": judgments.exclusion_reason_code,
+            "exclusion_reason": judgments.exclusion_reason,
         }, "derived_fields": {
             "quality_score": derived.quality_score,
             "ledger_row": derived.ledger_row,

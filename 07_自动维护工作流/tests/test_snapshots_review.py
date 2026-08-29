@@ -153,6 +153,42 @@ class SnapshotContractTest(unittest.TestCase):
         self.assertEqual({item.path for item in first.files}, {"a/SKILL.md", "a/helper.py", "LICENSE"})
         self.assertNotIn("b/SKILL.md", {item.path for item in first.files})
 
+    def test_root_skill_snapshot_includes_support_tree_but_excludes_nested_independent_skill(self):
+        archive = self.root / "root-and-nested.zip"
+        with zipfile.ZipFile(archive, "w") as handle:
+            handle.writestr("repo-root/SKILL.md", "# root")
+            handle.writestr("repo-root/scripts/install.ps1", "Write-Output root")
+            handle.writestr("repo-root/assets/config.json", '{"enabled": false}')
+            handle.writestr("repo-root/README.md", "root docs")
+            handle.writestr("repo-root/nested/SKILL.md", "# independent nested")
+            handle.writestr("repo-root/nested/scripts/run.py", "print('nested')")
+        content = archive.read_bytes()
+
+        root_manifest = build_archive_entry_snapshot(
+            candidate_id="SK-ROOT", fixed_version="a" * 40,
+            archive_bytes=content, archive_name=archive.name,
+            skill_entry_path="SKILL.md", destination=self.root / "root-entry",
+        )
+        nested_manifest = build_archive_entry_snapshot(
+            candidate_id="SK-NESTED", fixed_version="a" * 40,
+            archive_bytes=content, archive_name=archive.name,
+            skill_entry_path="nested/SKILL.md", destination=self.root / "nested-entry",
+        )
+
+        self.assertEqual(
+            {item.path for item in root_manifest.files},
+            {"SKILL.md", "scripts/install.ps1", "assets/config.json", "README.md"},
+        )
+        self.assertEqual(
+            {item.path for item in nested_manifest.files},
+            {"nested/SKILL.md", "nested/scripts/run.py"},
+        )
+        manifest_path = Path(root_manifest.manifest_evidence_path)
+        self.assertTrue(manifest_path.is_file())
+        persisted = json.loads(manifest_path.read_text(encoding="utf-8"))
+        self.assertEqual(persisted["fixed_content_hash"], root_manifest.fixed_content_hash)
+        self.assertEqual({item["path"] for item in persisted["files"]}, {item.path for item in root_manifest.files})
+
     def test_static_snapshot_hashes_only_text_code_and_config_without_running_candidate(self):
         source = self.root / "candidate"
         source.mkdir()
@@ -431,6 +467,7 @@ class ReviewContractTest(unittest.TestCase):
                     row = {
                         "观察标识": f"OBS-org/example-{tier}", "内部标识": "org/example", "候选名称": "example",
                         "Canonical source": decision.observed_facts.canonical_source,
+                        "Skill入口路径": packet.skill_entry_path,
                         "观察状态": tier, "许可证": "MIT", "记录日期": "2026-08-29", "原因": "人工确认候选层级",
                         "固定版本": decision.observed_facts.fixed_version,
                         "固定版本内容指纹": packet.fixed_content_hash,
@@ -537,6 +574,45 @@ class ReviewContractTest(unittest.TestCase):
                     validate_review(ReviewDecision(decision.observed_facts, judgments, candidate_id=decision.candidate_id)),
                 )
 
+    def test_include_must_be_displayable_and_direct_use_must_match_tier(self):
+        base = self._decision()
+        hidden = ReviewDecision(
+            base.observed_facts,
+            ProjectJudgments("条件候选", False, False, 4),
+            candidate_id=base.candidate_id,
+        )
+        formal_not_direct = ReviewDecision(
+            base.observed_facts,
+            ProjectJudgments("正式推荐", True, False, 4),
+            candidate_id=base.candidate_id,
+        )
+        self.assertTrue(any("display_in_product" in item for item in validate_review(hidden)))
+        self.assertTrue(any("direct_deployable" in item for item in validate_review(formal_not_direct)))
+
+    def test_display_candidate_row_requires_name_reason_and_iso_record_date(self):
+        base = self._decision()
+        decision = ReviewDecision(
+            base.observed_facts, ProjectJudgments("条件候选", True, False, 4),
+            candidate_id=base.candidate_id,
+        )
+        packet = self._packet(decision)
+        row = {
+            "观察标识": "OBS-org/example-条件候选", "内部标识": "org/example",
+            "候选名称": "", "Canonical source": decision.observed_facts.canonical_source,
+            "Skill入口路径": packet.skill_entry_path, "观察状态": "条件候选", "许可证": "MIT",
+            "记录日期": "not-a-date", "原因": "", "固定版本": decision.observed_facts.fixed_version,
+            "固定版本内容指纹": packet.fixed_content_hash,
+            "验证证据位置": "；".join(decision.observed_facts.evidence_paths), "显示层级": "条件候选",
+        }
+        payload = self._payload(decision, ledger_row=row)
+        with tempfile.TemporaryDirectory() as temporary:
+            store = LedgerStore.create(Path(temporary) / "source.xlsx")
+            with self.assertRaisesRegex(ValueError, "候选名称|记录日期|原因"):
+                apply_reviews_from_stream(
+                    io.BytesIO(json.dumps({"decisions": [payload]}, ensure_ascii=False).encode("utf-8")),
+                    store, {decision.candidate_id: packet},
+                )
+
     def test_application_routes_conditional_candidate_to_observations_not_current_skill(self):
         decision = self._decision()
         judgments = ProjectJudgments("条件候选", True, False, 4, ())
@@ -544,6 +620,7 @@ class ReviewContractTest(unittest.TestCase):
         packet = self._packet(decision)
         observation = {
             "观察标识": "OBS-org/example-条件候选", "内部标识": "org/example", "候选名称": "example", "Canonical source": decision.observed_facts.canonical_source,
+            "Skill入口路径": packet.skill_entry_path,
             "观察状态": "条件候选", "许可证": decision.observed_facts.license,
             "记录日期": "2026-08-27", "原因": "仍待人工条件复核",
             "固定版本": decision.observed_facts.fixed_version,

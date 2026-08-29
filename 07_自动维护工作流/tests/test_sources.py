@@ -1,6 +1,7 @@
 import hashlib
 import json
 import os
+import sys
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
@@ -18,7 +19,7 @@ from skill_maintainer.sources.base import (
     doctor_smoke,
 )
 from skill_maintainer.sources.clawhub import ClawHubAdapter
-from skill_maintainer.sources.github import GitHubAdapter
+from skill_maintainer.sources.github import GitHubAdapter, _run_gh
 from skill_maintainer.sources.huggingface import HuggingFaceAdapter
 from skill_maintainer.sources.skillhub import SkillHubAdapter
 
@@ -159,6 +160,15 @@ class SourceAdapterContractTest(unittest.TestCase):
         self.assertEqual(batch.errors[0].query_id, "Q-test")
         self.assertEqual(len(calls), 1)
         self.assertEqual(calls[0], ["gh", "api", "--method", "GET", "/search/repositories?q=chemistry+Skill&per_page=50&page=1"])
+
+    def test_default_gh_runner_streams_with_a_hard_cap_and_never_returns_full_oversize_stdout(self):
+        outcome = _run_gh(
+            [sys.executable, "-c", "import sys;sys.stdout.buffer.write(b'x'*4096)"],
+            max_bytes=1024,
+        )
+
+        self.assertTrue(outcome.exceeded)
+        self.assertLessEqual(len(outcome.stdout), 1025)
 
     def test_huggingface_uses_offset_pagination_and_can_persist_immutable_evidence(self):
         transport = FakeHttp([

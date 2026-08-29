@@ -25,7 +25,7 @@ description: Use when operating, scheduling, inspecting, repairing, or rebuildin
 
 - 不安装、不执行候选，不调用候选自身外部服务，不上传真实教学或科研数据。
 - 发现顺序固定为 SkillHub → ClawHub → GitHub → Hugging Face Spaces；单源失败必须标记覆盖降级。
-- 正式推荐、条件候选、需适配候选分别保存和统计。只有正式推荐可自动纳入；排除项名称不进入正式交付。
+- 正式推荐、条件候选、需适配候选分别保存和统计。只有正式推荐可自动纳入；`display=false` 或排除 outcome 只能进入非展示审计汇总，排除项名称不进入正式交付。
 - 军事学、恶意或涉密内容、不可审查载荷和实质无关项不得展示。
 - 外部远程 API、本地专业软件、本地脚本或插件接口分别记录。
 - 所有写入先进入暂存代次；不要直接改正式台账、既有交付或自动任务。
@@ -60,12 +60,12 @@ description: Use when operating, scheduling, inspecting, repairing, or rebuildin
 1. 从自动任务提示词取得绝对项目根、绝对 TOML 路径和已应用 SHA-256；重新解析普通路径并重算哈希。
 2. 遇到配置哈希不一致、`enabled=false`、`mode=manual`、主台账无效，或重建范围前专业目录门发生变化，立即停止且不发布。
 3. `doctor` 通过后启动一次 `run-now` 或 `scheduled-run`，并保持同一长驻进程直到终态。不得跨进程执行或把 `prepare`、`apply-reviews`、`finalize` 拆成独立命令，也不得从磁盘恢复审查 capability。
-4. 收到 `material_review_required` 后，只读检查其中逐个 `SKILL.md` 入口列出的固定包路径、固定版本、内容哈希、候选精确来源证据和静态文件；市场元数据、搜索响应 JSON 和未固定默认分支不是 Skill 内容。按当前 run ID 精确回传 `material_observations`，逐项给出许可证与安全事实。无完整固定包或无可识别入口的候选只保留观察，不构造事实或 ReviewPacket。
-5. 程序用仍存活的快照 capability 构建并绑定可信 ReviewPacket 后，才会发出 `review_required`。依据项目规则、固定证据和六维专业任务画像回传专业相关性、层级、分数、完整 ledger row，以及每个批准范围的人工任务映射（候选 ID、专业代码/名称、任务、输入、输出、理由、限制、相关度）。名称关键词不能替代专业任务判断。正式、条件、需适配都必须绑定同一候选身份和映射；实质不相关、相关度低于 3 或禁止风险应返回 `outcome=exclude`、`display=false`、`direct=false` 及结构化中文排除原因，不得伪装成三级展示项。
+4. 收到 `material_review_required` 后，只读检查其中逐个 `SKILL.md` 入口列出的固定包路径、固定版本、内容哈希、快照清单、候选精确来源证据和静态文件；市场元数据、搜索响应 JSON 和未固定默认分支不是 Skill 内容。根级 Skill 须覆盖除明确嵌套独立 Skill 子树和仓库元数据外的全部相关文件，嵌套 Skill 只审自身子树。按当前 run ID 精确回传 `material_observations`，逐项给出许可证与安全事实。无完整固定包或无可识别入口的候选只保留观察，不构造事实或 ReviewPacket。
+5. 程序用仍存活的快照 capability 构建、绑定当前 PreparedRun 并一次性消费可信 ReviewPacket 后，才会发出 `review_required`。依据项目规则、固定证据和六维专业任务画像回传专业相关性、层级、分数、完整 ledger row，以及每个批准范围的人工任务映射（候选 ID、专业代码/名称、任务、输入、输出、理由、限制、相关度）。名称关键词不能替代专业任务判断。正式、条件、需适配都必须绑定同一候选身份和映射；三级展示项的名称、日期、原因和限制须完整。实质不相关、相关度低于 3、禁止风险或明确不展示的项目应返回 `outcome=exclude`、`display=false`、`direct=false` 及结构化中文排除原因，不得伪装成三级展示项。
 6. 把材料事实与项目判断分别保存在上述两个结构化标准输入帧中；不要通过命令行参数、临时业务数据库或自由文本旁路提交。
 7. 调用工作区依赖加载器，把其原始返回文本和绝对项目根传给 `build_workspace_renderer_command(loader_output, project_root)`。该接口只读取加载器明确返回的 Python、Python packages、override binaries 和 fallback binaries，验证普通路径并解析其中固定的 Poppler 包装入口，再用项目自带 `pdf_renderer.py` 构造 Task 11 的 `RendererCommand.argv`。把该命令交给 `finalize`；不得从 PATH、用户名或缓存布局猜测路径。
 8. 收到 `word_visual_review_required` 后逐张检查最新生成的 Word `page-<N>.png`，对每页明确批准或拒绝。缺页、空白页、裁切、表格越界、页脚重叠或哈希不一致均拒绝发布。
-9. EOF、异常或任一闸失败时让同一进程清理 capability、暂存和锁。完全无变化且成功时静默结束；只在变化、人工决定事项、覆盖显著下降或失败时通知。
+9. EOF、异常或任一闸失败时让同一进程只清理该 run 的快照 capability、ReviewPacket、暂存和锁。发布时确认来源请求证据、固定归档、逐入口快照和清单已进入 generation authority，台账相对路径在暂存删除后仍可解析且哈希匹配；后续运行保留仍被引用的前代 generation。完全无变化且成功时静默结束；只在变化、人工决定事项、覆盖显著下降或失败时通知。
 
 `interval` 模式仍只建立每天在 `start_time` 触发的分发器；`scheduled-run` 从 Excel `运行记录` 读取上次成功时间，未满 `interval_days` 时以安全无操作码 3 退出。
 

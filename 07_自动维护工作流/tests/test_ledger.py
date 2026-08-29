@@ -40,7 +40,7 @@ EXPECTED_CURRENT_SKILL_COLUMNS = (
 )
 
 EXPECTED_SOURCE_ALIAS_COLUMNS = (
-    "别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "关系类型", "去重依据", "记录日期",
+    "别名标识", "内部标识", "来源平台", "来源地址", "Canonical source", "固定版本", "关系类型", "去重依据", "记录日期",
 )
 
 EXPECTED_PROFESSIONAL_TASK_MAP_COLUMNS = (
@@ -183,7 +183,33 @@ class LedgerStoreTest(unittest.TestCase):
         reopened = LedgerStore.load(legacy_path)
 
         self.assertIn("内部标识", reopened._resolve_columns("候选观察"))
+        self.assertIn("Skill入口路径", reopened._resolve_columns("候选观察"))
         self.assertIsNone(reopened.rows("候选观察")[0]["内部标识"])
+        self.assertEqual(sha256(legacy_path.read_bytes()).hexdigest(), before, "load migration must not overwrite authority")
+
+    def test_load_compatibly_adds_reviewed_version_to_legacy_source_alias_sheet(self):
+        legacy_path = Path(self.tempdir.name) / "legacy-source-alias.xlsx"
+        self.store.append_rows("来源别名", [{
+            "别名标识": "alias-legacy", "内部标识": "GH-01-0001", "来源平台": "GitHub",
+            "来源地址": "https://example.test/legacy", "Canonical source": "https://example.test/upstream",
+            "关系类型": "版本别名观察", "去重依据": "同一入口内容", "记录日期": "2026-08-29",
+        }])
+        self.store.workbook.save(legacy_path)
+        workbook = load_workbook(legacy_path)
+        worksheet = workbook["来源别名"]
+        headers = [cell.value for cell in worksheet[1]]
+        worksheet.delete_cols(headers.index("固定版本") + 1)
+        table = worksheet.tables[SHEET_SPECS_BY_NAME["来源别名"].table_name]
+        table.ref = f"A1:H{max(2, worksheet.max_row)}"
+        table.autoFilter.ref = table.ref
+        workbook.save(legacy_path)
+        workbook.close()
+        before = sha256(legacy_path.read_bytes()).hexdigest()
+
+        reopened = LedgerStore.load(legacy_path)
+
+        self.assertIn("固定版本", reopened._resolve_columns("来源别名"))
+        self.assertIsNone(reopened.rows("来源别名")[0]["固定版本"])
         self.assertEqual(sha256(legacy_path.read_bytes()).hexdigest(), before, "load migration must not overwrite authority")
 
     def test_520_formal_rows_survive_saved_reopen_with_table_filter_hyperlink_and_date(self):

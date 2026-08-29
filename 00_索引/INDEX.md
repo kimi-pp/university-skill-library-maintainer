@@ -22,7 +22,8 @@
 - 工作流入口：[README](<../07_自动维护工作流/README.md>)
 - 设置：`07_自动维护工作流/workflow-settings.toml`；默认 `enabled=false`、`mode="manual"`，频率和启动时间都在 TOML 中修改。
 - 唯一业务基线：`07_自动维护工作流/ledger/Skills主台账.xlsx`；不使用业务数据库。
-- 手动闭环：已批准目录与 Excel 六维任务画像 → SkillHub、ClawHub、GitHub、Hugging Face Spaces 固定顺序发现 → 全局去重 → 同进程固定包事实审查 → 分层决定 → Office 与 Word 逐页复核 → 原子发布 Word/Excel。
+- 手动闭环：已批准目录与 Excel 六维任务画像 → SkillHub、ClawHub、GitHub、Hugging Face Spaces 固定顺序发现 → 按规范上游与具体 `SKILL.md` 入口全局去重 → 同进程固定包事实审查 → 分层决定 → Office 与 Word 逐页复核 → 原子发布 Word/Excel 及可移植证据 authority。
+- 版本与证据：正式条目及条件、适配、排除观察都参加版本复核；已审版本别名避免重复复审。发布代次持久保存来源请求证据、固定归档、逐入口快照和清单，暂存删除后仍可按台账路径与哈希复核。
 - 只读联网诊断：`doctor --network` 对四个平台及教育部目录来源各访问至多一页或一个端点，不下载快照、不评审候选、不写台账。
 - 自动任务：安装和验收均不创建、不更新、不启用自动任务；只有用户另行明确批准并回读核对后才能改变默认状态。
 

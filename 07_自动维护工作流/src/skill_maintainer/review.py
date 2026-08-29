@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import date
 from hashlib import sha256
 from io import BytesIO
 import json
@@ -150,8 +151,15 @@ class _ReceiptRecord:
     facts: tuple[object, ...]
 
 
+@dataclass
+class _PacketRecord:
+    packet: weakref.ReferenceType[ReviewPacket]
+    facts: tuple[object, ...]
+    owner: weakref.ReferenceType[object] | None = None
+
+
 _APPLIED_REVIEW_RECEIPTS: dict[int, _ReceiptRecord] = {}
-_TRUSTED_REVIEW_PACKETS: dict[int, tuple[weakref.ReferenceType[ReviewPacket], tuple[object, ...]]] = {}
+_TRUSTED_REVIEW_PACKETS: dict[int, _PacketRecord] = {}
 
 
 def build_review_packet(candidate: object, snapshot: SnapshotManifest) -> ReviewPacket:
@@ -217,6 +225,8 @@ def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None
             errors.append("project_judgments.exclusion_reason: 必须提供中文说明")
     elif facts.security_grade == "X":
         errors.append("observed_facts.security_grade: X/禁止风险只能排除")
+    elif not judgments.display_in_product:
+        errors.append("project_judgments.display_in_product: include 结论必须展示；非展示项应使用排除结论")
     if not excluded and judgments.record_tier == "正式推荐" and _unknown_license(facts.license):
         errors.append("observed_facts.license: 正式条目许可证未明确")
     if not excluded and judgments.display_in_product and judgments.relevance_score < 3:
@@ -231,6 +241,8 @@ def validate_review(decision: ReviewDecision, packet: ReviewPacket | None = None
         errors.append("project_judgments.direct_deployable: SB-A 原包不得直接部署")
     if not excluded and judgments.record_tier in {"条件候选", "需适配候选"} and judgments.direct_deployable:
         errors.append("project_judgments.direct_deployable: 条件候选和需适配候选不得直接部署")
+    if not excluded and judgments.record_tier == "正式推荐" and not judgments.direct_deployable:
+        errors.append("project_judgments.direct_deployable: 正式推荐必须可直接部署")
     if decision.derived_fields.quality_score is not None and decision.derived_fields.quality_score != score_quality(decision):
         errors.append("derived_fields.quality_score: 必须由事实和项目判断重新计算")
     if packet is not None:
@@ -275,6 +287,7 @@ def apply_reviews_from_stream(
     stream: BinaryIO | TextIO,
     staged_ledger: LedgerStore,
     review_packets: Mapping[str, ReviewPacket],
+    *, packet_owner: object | None = None,
 ) -> tuple[AppliedReview, ...]:
     """读取一次 UTF-8 stdin JSON；只在内存中校验，绝不落地审查 JSON。"""
     raw = stream.read()
@@ -293,7 +306,7 @@ def apply_reviews_from_stream(
     errors: list[str] = []
     for decision in decisions:
         packet = review_packets.get(decision.candidate_id)
-        if not _trusted_review_packet(packet):
+        if not _trusted_review_packet(packet, owner=packet_owner):
             errors.append("review_packet: 缺少受信且匹配候选的审查包")
             continue
         errors.extend(validate_review(decision, packet))
@@ -358,6 +371,22 @@ def clear_review_run_state(*, packets: tuple[object, ...] | None = None, receipt
         _APPLIED_REVIEW_RECEIPTS.pop(id(receipt), None)
 
 
+def claim_review_packets(packets: tuple[object, ...], owner: object) -> None:
+    """Atomically bind trusted packets to one exact coordinator PreparedRun."""
+    records: list[_PacketRecord] = []
+    for packet in packets:
+        record = _TRUSTED_REVIEW_PACKETS.get(id(packet))
+        if record is None or record.packet() is not packet or _packet_facts(packet) != record.facts:
+            raise ValueError("审查包不是当前进程构建的受信对象")
+        claimed = record.owner() if record.owner is not None else None
+        if record.owner is not None and claimed is not owner:
+            raise ValueError("审查包已绑定另一运行或绑定运行已经终止")
+        records.append(record)
+    for record in records:
+        if record.owner is None:
+            record.owner = weakref.ref(owner)
+
+
 def _issue_applied_review(decision: ReviewDecision, packet: ReviewPacket) -> AppliedReview:
     facts = decision.observed_facts
     receipt = AppliedReview(
@@ -377,9 +406,14 @@ def _receipt_facts(receipt: AppliedReview) -> tuple[object, ...]:
     )
 
 
-def _trusted_review_packet(packet: object) -> bool:
+def _trusted_review_packet(packet: object, *, owner: object | None = None) -> bool:
     record = _TRUSTED_REVIEW_PACKETS.get(id(packet))
-    return bool(record and record[0]() is packet and _packet_facts(packet) == record[1])
+    if record is None or record.packet() is not packet or _packet_facts(packet) != record.facts:
+        return False
+    claimed = record.owner() if record.owner is not None else None
+    if owner is None:
+        return record.owner is None
+    return claimed is owner
 
 
 def _register_packet(packet: ReviewPacket) -> None:
@@ -387,10 +421,10 @@ def _register_packet(packet: ReviewPacket) -> None:
 
     def _discard(reference: weakref.ReferenceType[ReviewPacket]) -> None:
         record = _TRUSTED_REVIEW_PACKETS.get(identity)
-        if record is not None and record[0] is reference:
+        if record is not None and record.packet is reference:
             _TRUSTED_REVIEW_PACKETS.pop(identity, None)
 
-    _TRUSTED_REVIEW_PACKETS[identity] = (weakref.ref(packet, _discard), _packet_facts(packet))
+    _TRUSTED_REVIEW_PACKETS[identity] = _PacketRecord(weakref.ref(packet, _discard), _packet_facts(packet))
 
 
 def _register_receipt(receipt: AppliedReview) -> None:
@@ -490,6 +524,7 @@ def _validate_ledger_row_binding(decision: ReviewDecision, packet: ReviewPacket)
             "观察标识": f"OBS-{decision.candidate_id}-{tier}",
             "内部标识": decision.candidate_id,
             "Canonical source": facts.canonical_source,
+            "Skill入口路径": packet.skill_entry_path,
             "许可证": facts.license,
             "观察状态": tier,
             "固定版本": facts.fixed_version,
@@ -503,6 +538,16 @@ def _validate_ledger_row_binding(decision: ReviewDecision, packet: ReviewPacket)
         for field_name, value in expected.items()
         if row.get(field_name) != value
     ]
+    if tier != "正式推荐":
+        for field_name in ("候选名称", "原因", "记录日期"):
+            if not str(row.get(field_name) or "").strip():
+                errors.append(f"derived_fields.ledger_row.{field_name}: 展示候选必须填写")
+        record_date = str(row.get("记录日期") or "").strip()
+        if record_date:
+            try:
+                date.fromisoformat(record_date)
+            except ValueError:
+                errors.append("derived_fields.ledger_row.记录日期: 必须为 YYYY-MM-DD")
     return tuple(errors)
 
 
@@ -550,6 +595,7 @@ def _exclusion_row(decision: ReviewDecision, packet: ReviewPacket) -> dict[str, 
         "内部标识": decision.candidate_id,
         "候选名称": "",
         "Canonical source": facts.canonical_source,
+        "Skill入口路径": packet.skill_entry_path,
         "观察状态": "排除",
         "许可证": facts.license,
         "记录日期": "",

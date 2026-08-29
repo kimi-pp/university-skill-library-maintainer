@@ -186,7 +186,7 @@ def _append_version_alias_once(ledger: object, change: VersionChange) -> None:
         return
     ledger.append_rows("来源别名", [{"别名标识": alias_id, "内部标识": stable_id,
         "来源平台": str(change.observed.get("platform") or change.current.get("来源平台") or ""), "来源地址": source_url,
-        "Canonical source": str(change.current.get("Canonical source") or ""), "关系类型": "版本别名观察",
+        "Canonical source": str(change.current.get("Canonical source") or ""), "固定版本": version, "关系类型": "版本别名观察",
         "去重依据": "固定版本内容指纹一致；仅新增版本标签", "记录日期": str(change.observed.get("observed_on") or date.today().isoformat())}])
 
 
@@ -196,7 +196,9 @@ def _append_attention_once(ledger: object, change: VersionChange) -> None:
     if observation_id in {str(row.get("观察标识") or "") for row in ledger.rows("候选观察")}:
         return
     ledger.append_rows("候选观察", [{"观察标识": observation_id, "候选名称": str(change.current.get("Skill名称") or ""),
-        "Canonical source": source, "观察状态": "attention_required", "许可证": str(change.current.get("许可证") or "待确认"),
+        "内部标识": stable_id, "Canonical source": source,
+        "Skill入口路径": str(change.current.get("Skill入口路径") or ""),
+        "观察状态": "attention_required", "许可证": str(change.current.get("许可证") or "待确认"),
         "记录日期": str(change.observed.get("observed_on") or date.today().isoformat()), "原因": "上游已删除或不可用；保留既有当前版本和固定快照"}])
 
 
